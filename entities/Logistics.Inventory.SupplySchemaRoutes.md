@@ -28,15 +28,15 @@ Aggregate Root:
 | [Id](Logistics.Inventory.SupplySchemaRoutes.md#id) | guid |  
 | [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string (nullable) | Notes for this SupplySchemaRoute. 
 | [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (nullable) | Obsolete. Not used. (Used by the schematic control). 
-| [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route). [Required] [Default(0)] 
+| [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route). `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [SupplySchemata](Logistics.Inventory.SupplySchemata.md) | The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
+| [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
+| [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [SupplySchemata](Logistics.Inventory.SupplySchemata.md) | The `SupplySchema`(Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### TransitTimeDays
 
-Obsolete. Not used. (Time needed for the delivery of the goods using this route). [Required] [Default(0)]
+Obsolete. Not used. (Time needed for the delivery of the goods using this route). `Required` `Default(0)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -78,21 +78,21 @@ _Default Value_: **0**
 
 ### DestinationStore
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceStore
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SupplySchema
 
-The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]
+The `SupplySchema`(Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
 _Indexed_: **True**  

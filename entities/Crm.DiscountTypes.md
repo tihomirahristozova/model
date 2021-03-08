@@ -23,24 +23,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActionType](Crm.DiscountTypes.md#actiontype) | [ActionType](Crm.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts. [Required] [Default("A")] [Filter(multi eq)] 
-| [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. [Required] [Filter(multi eq)] 
-| [Code](Crm.DiscountTypes.md#code) | string | The unique code of the DiscountType. [Required] [Filter(eq)] 
+| [ActionType](Crm.DiscountTypes.md#actiontype) | [ActionType](Crm.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts. `Required` `Default("A")` `Filter(multi eq)` 
+| [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. `Required` `Filter(multi eq)` 
+| [Code](Crm.DiscountTypes.md#code) | string | The unique code of the DiscountType. `Required` `Filter(eq)` 
 | [Id](Crm.DiscountTypes.md#id) | guid |  
-| [IsSystem](Crm.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system. [Required] [Default(false)] [Filter(multi eq)] 
-| [Name](Crm.DiscountTypes.md#name) | string | The name of this DiscountType. [Required] [Filter(like)] 
+| [IsSystem](Crm.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system. `Required` `Default(false)` `Filter(multi eq)` 
+| [Name](Crm.DiscountTypes.md#name) | string | The name of this DiscountType. `Required` `Filter(like)` 
 | [Notes](Crm.DiscountTypes.md#notes) | string (nullable) | Notes for this DiscountType. 
-| [Ord](Crm.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. [Required] [Default(1)] [Filter(ge;le)] 
+| [Ord](Crm.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. `Required` `Default(1)` `Filter(ge;le)` 
 
 
 ## Attribute Details
 
 ### ActionType
 
-Specifies the way the discount is applied over the previous discounts. [Required] [Default("A")] [Filter(multi eq)]
+Specifies the way the discount is applied over the previous discounts. `Required` `Default("A")` `Filter(multi eq)`
 
 _Type_: **[ActionType](Crm.DiscountTypes.md#actiontype)**  
-Allowed values for the [ActionType](Crm.DiscountTypes.md#actiontype) data attribute  
+Allowed values for the `ActionType`(Crm.DiscountTypes.md#actiontype) data attribute  
 _Allowed Values (Crm.DiscountTypesRepository.ActionType Enum Members)_  
 
 | Value | Description |
@@ -55,10 +55,10 @@ _Default Value_: **Add**
 
 ### CalculationMethod
 
-Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. [Required] [Filter(multi eq)]
+Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. `Required` `Filter(multi eq)`
 
 _Type_: **[CalculationMethod](Crm.DiscountTypes.md#calculationmethod)**  
-Allowed values for the [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) data attribute  
+Allowed values for the `CalculationMethod`(Crm.DiscountTypes.md#calculationmethod) data attribute  
 _Allowed Values (Crm.DiscountTypesRepository.CalculationMethod Enum Members)_  
 
 | Value | Description |
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### Code
 
-The unique code of the DiscountType. [Required] [Filter(eq)]
+The unique code of the DiscountType. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -87,7 +87,7 @@ _Default Value_: **NewGuid**
 
 ### IsSystem
 
-Specifies whether this discount type is created and managed by the system. [Required] [Default(false)] [Filter(multi eq)]
+Specifies whether this discount type is created and managed by the system. `Required` `Default(false)` `Filter(multi eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -96,7 +96,7 @@ _Default Value_: **False**
 
 ### Name
 
-The name of this DiscountType. [Required] [Filter(like)]
+The name of this DiscountType. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -112,7 +112,7 @@ _Supports Order By_: **False**
 
 ### Ord
 
-Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. [Required] [Default(1)] [Filter(ge;le)]
+Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. `Required` `Default(1)` `Filter(ge;le)`
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  

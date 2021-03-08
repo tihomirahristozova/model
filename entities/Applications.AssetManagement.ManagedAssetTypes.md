@@ -25,25 +25,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.ManagedAssetTypes.md#code) | string | Unique code of the asset type. [Required] [Filter(multi eq;like)] [ORD] 
+| [Code](Applications.AssetManagement.ManagedAssetTypes.md#code) | string | Unique code of the asset type. `Required` `Filter(multi eq;like)` `ORD` 
 | [Id](Applications.AssetManagement.ManagedAssetTypes.md#id) | guid |  
-| [IsActive](Applications.AssetManagement.ManagedAssetTypes.md#isactive) | boolean | Specifies whether the asset type is active for choosing in drop-down choices. [Required] [Default(true)] 
-| [Name](Applications.AssetManagement.ManagedAssetTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset type. [Required] [Filter(multi eq;like)] 
+| [IsActive](Applications.AssetManagement.ManagedAssetTypes.md#isactive) | boolean | Specifies whether the asset type is active for choosing in drop-down choices. `Required` `Default(true)` 
+| [Name](Applications.AssetManagement.ManagedAssetTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset type. `Required` `Filter(multi eq;like)` 
 | [Notes](Applications.AssetManagement.ManagedAssetTypes.md#notes) | string (nullable) | Notes for this ManagedAssetType. 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| MaintenanceTypes | [ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md) | List of [ManagedAssetType<br />MaintenanceType](Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md) child objects, based on the [Applications.AssetManagement.ManagedAssetType<br />MaintenanceType.ManagedAssetType](Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md#managedassettype) back reference 
-| TrackedParameters | [ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md) | List of [ManagedAssetType<br />TrackedParameter](Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md) child objects, based on the [Applications.AssetManagement.ManagedAssetType<br />TrackedParameter.ManagedAssetType](Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md#managedassettype) back reference 
+| MaintenanceTypes | [ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md) | List of `ManagedAssetType<br />MaintenanceType`(Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md) child objects, based on the `Applications.AssetManagement.ManagedAssetType<br />MaintenanceType.ManagedAssetType`(Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md#managedassettype) back reference 
+| TrackedParameters | [ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md) | List of `ManagedAssetType<br />TrackedParameter`(Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md) child objects, based on the `Applications.AssetManagement.ManagedAssetType<br />TrackedParameter.ManagedAssetType`(Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md#managedassettype) back reference 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique code of the asset type. [Required] [Filter(multi eq;like)] [ORD]
+Unique code of the asset type. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the asset type is active for choosing in drop-down choices. [Required] [Default(true)]
+Specifies whether the asset type is active for choosing in drop-down choices. `Required` `Default(true)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -68,7 +68,7 @@ _Default Value_: **True**
 
 ### Name
 
-Multilanguage name of the asset type. [Required] [Filter(multi eq;like)]
+Multilanguage name of the asset type. `Required` `Filter(multi eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  

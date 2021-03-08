@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectRiskDiscussion.html#contributiontime">ContributionTime</a></td>
 <td>datetime</td>
-<td>The time, when the message was contributed. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</td>
+<td>The time, when the message was contributed. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRiskDiscussion.html#id">Id</a></td>
@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectRiskDiscussion.html#lastedittime">LastEditTime</a></td>
 <td>datetime (nullable)</td>
-<td>Contains the last edit time of the message. null if the message was never edited. [Filter(eq)] [ReadOnly]</td>
+<td>Contains the last edit time of the message. null if the message was never edited. <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRiskDiscussion.html#message">Message</a></td>
 <td>string</td>
-<td>The contents of the message. [Required]</td>
+<td>The contents of the message. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,18 +137,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectRiskDiscussion.html#contributedbyuser">ContributedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly]</td>
+<td>The user, who contributed (wrote) the message. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRiskDiscussion.html#projectrisk">ProjectRisk</a></td>
 <td><a href="Projects.ProjectRisks.html">ProjectRisks</a></td>
-<td>The <a href="Projects.ProjectRiskDiscussion.html#projectrisk">ProjectRisk</a> to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>ProjectRisk</code>(Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contributiontime">ContributionTime</h3>
-<p>The time, when the message was contributed. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</p>
+<p>The time, when the message was contributed. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -159,22 +159,22 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastedittime">LastEditTime</h3>
-<p>Contains the last edit time of the message. null if the message was never edited. [Filter(eq)] [ReadOnly]</p>
+<p>Contains the last edit time of the message. null if the message was never edited. <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="message">Message</h3>
-<p>The contents of the message. [Required]</p>
+<p>The contents of the message. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="contributedbyuser">ContributedByUser</h3>
-<p>The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly]</p>
+<p>The user, who contributed (wrote) the message. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projectrisk">ProjectRisk</h3>
-<p>The <a href="Projects.ProjectRiskDiscussion.html#projectrisk">ProjectRisk</a> to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>ProjectRisk</code>(Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectRisks.html">ProjectRisks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

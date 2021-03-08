@@ -105,7 +105,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Communities.Notifications.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC), when the notification was created. [Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]</td>
+<td>The exact server time (in UTC), when the notification was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Notifications.html#id">Id</a></td>
@@ -115,17 +115,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Communities.Notifications.html#isread">IsRead</a></td>
 <td>boolean</td>
-<td>Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Notifications.html#notificationclass">NotificationClass</a></td>
 <td>string</td>
-<td>The class of the notification from a predefined list of system classes. [Required] [Filter(multi eq)]</td>
+<td>The class of the notification from a predefined list of system classes. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Notifications.html#subject">Subject</a></td>
 <td>string (nullable)</td>
-<td>The short subject of the notification (in the Default Culture of the user). [Filter(eq;like)]</td>
+<td>The short subject of the notification (in the Default Culture of the user). <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,18 +142,18 @@ Default Search Member:<br>
 <tr>
 <td><a href="Communities.Notifications.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</td>
-<td>The data object about which the notification is created. Null means that the notification is not about any specific data object. [Filter(multi eq)]</td>
+<td>The data object about which the notification is created. Null means that the notification is not about any specific data object. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Notifications.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who is notified. [Required] [Filter(multi eq)]</td>
+<td>The user, who is notified. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact server time (in UTC), when the notification was created. [Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]</p>
+<p>The exact server time (in UTC), when the notification was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -164,28 +164,28 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isread">IsRead</h3>
-<p>Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="notificationclass">NotificationClass</h3>
-<p>The class of the notification from a predefined list of system classes. [Required] [Filter(multi eq)]</p>
+<p>The class of the notification from a predefined list of system classes. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="subject">Subject</h3>
-<p>The short subject of the notification (in the Default Culture of the user). [Filter(eq;like)]</p>
+<p>The short subject of the notification (in the Default Culture of the user). <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
-<p>The data object about which the notification is created. Null means that the notification is not about any specific data object. [Filter(multi eq)]</p>
+<p>The data object about which the notification is created. Null means that the notification is not about any specific data object. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<p>The user, who is notified. [Required] [Filter(multi eq)]</p>
+<p>The user, who is notified. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

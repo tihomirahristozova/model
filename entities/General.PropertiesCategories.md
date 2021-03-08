@@ -24,7 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.PropertiesCategories.md#id) | guid |  
-| [Name](General.PropertiesCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PropertiesCategory. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.PropertiesCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PropertiesCategory. `Required` `Filter(eq;like)` `ORD` 
 
 
 ## Attribute Details
@@ -38,7 +38,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this PropertiesCategory. [Required] [Filter(eq;like)] [ORD]
+The name of this PropertiesCategory. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  

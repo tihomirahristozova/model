@@ -25,23 +25,23 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [BackgroundColor](General.ProductCatalogs.md#backgroundcolor) | int32 (nullable) | When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format. 
 | [BackgroundImage](General.ProductCatalogs.md#backgroundimage) | byte[] (nullable) | The background image to be used for web visualization of the catalog. null means that background image won't be displayed. 
-| [BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right. [Required] [Default("L")] 
-| [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom. [Required] [Default("T")] 
-| [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. [Required] [Default("R")] 
-| [Code](General.ProductCatalogs.md#code) | string | Unique catalog code. [Required] 
+| [BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right. `Required` `Default("L")` 
+| [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom. `Required` `Default("T")` 
+| [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. `Required` `Default("R")` 
+| [Code](General.ProductCatalogs.md#code) | string | Unique catalog code. `Required` 
 | [FooterHtml](General.ProductCatalogs.md#footerhtml) | string (nullable) | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer. 
 | [HeaderHtml](General.ProductCatalogs.md#headerhtml) | string (nullable) | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header. 
 | [Id](General.ProductCatalogs.md#id) | guid |  
 | [Logo](General.ProductCatalogs.md#logo) | byte[] (nullable) | The logo of the product catalog. Used for web and other visualization of the catalog. 
-| [Name](General.ProductCatalogs.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). [Required] 
+| [Name](General.ProductCatalogs.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). `Required` 
 | [Notes](General.ProductCatalogs.md#notes) | string (nullable) | Notes for this ProductCatalog. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [RootProductGroup](General.ProductCatalogs.md#rootproductgroup) | [ProductGroups](General.Products.ProductGroups.md) | The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. [Required] [Filter(multi eq)] |
-| [WebSite](General.ProductCatalogs.md#website) | [WebSites](Systems.Core.WebSites.md) (nullable) | The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] [Introduced in version 19.1] |
+| [RootProductGroup](General.ProductCatalogs.md#rootproductgroup) | [ProductGroups](General.Products.ProductGroups.md) | The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. `Required` `Filter(multi eq)` |
+| [WebSite](General.ProductCatalogs.md#website) | [WebSites](Systems.Core.WebSites.md) (nullable) | The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. `Filter(multi eq)` `Introduced in version 19.1` |
 
 
 ## Attribute Details
@@ -64,10 +64,10 @@ _Supports Order By_: **False**
 
 ### BackgroundPositionHorizontal
 
-Horizontal position of the Background Image. L=Left, C=Center, R=Right. [Required] [Default("L")]
+Horizontal position of the Background Image. L=Left, C=Center, R=Right. `Required` `Default("L")`
 
 _Type_: **[BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal)**  
-Allowed values for the [BackgroundPositionHorizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) data attribute  
+Allowed values for the `BackgroundPositionHorizontal`(General.ProductCatalogs.md#backgroundpositionhorizontal) data attribute  
 _Allowed Values (General.ProductCatalogsRepository.BackgroundPositionHorizontal Enum Members)_  
 
 | Value | Description |
@@ -82,10 +82,10 @@ _Default Value_: **Left**
 
 ### BackgroundPositionVertical
 
-Vertical position of the Background Image. T=Top, C=Center, B=Bottom. [Required] [Default("T")]
+Vertical position of the Background Image. T=Top, C=Center, B=Bottom. `Required` `Default("T")`
 
 _Type_: **[BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical)**  
-Allowed values for the [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) data attribute  
+Allowed values for the `BackgroundPositionVertical`(General.ProductCatalogs.md#backgroundpositionvertical) data attribute  
 _Allowed Values (General.ProductCatalogsRepository.BackgroundPositionVertical Enum Members)_  
 
 | Value | Description |
@@ -100,10 +100,10 @@ _Default Value_: **Top**
 
 ### BackgroundRepeat
 
-Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. [Required] [Default("R")]
+Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. `Required` `Default("R")`
 
 _Type_: **[BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat)**  
-Allowed values for the [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) data attribute  
+Allowed values for the `BackgroundRepeat`(General.ProductCatalogs.md#backgroundrepeat) data attribute  
 _Allowed Values (General.ProductCatalogsRepository.BackgroundRepeat Enum Members)_  
 
 | Value | Description |
@@ -119,7 +119,7 @@ _Default Value_: **RepeatBothVerticallyAndHorizontally**
 
 ### Code
 
-Unique catalog code. [Required]
+Unique catalog code. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -158,7 +158,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-Product catalog name (multilanguage). [Required]
+Product catalog name (multilanguage). `Required`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
@@ -177,14 +177,14 @@ _Supports Order By_: **False**
 
 ### RootProductGroup
 
-The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. [Required] [Filter(multi eq)]
+The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. `Required` `Filter(multi eq)`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebSite
 
-The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] [Introduced in version 19.1]
+The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[WebSites](Systems.Core.WebSites.md) (nullable)**  
 _Indexed_: **True**  

@@ -1,8 +1,7 @@
----
+﻿---
 uid: Applications.Service
 ---
 # Applications.Service Namespace
-
 
 ## Entities
 - [ServiceActivities](Applications.Service.ServiceActivities.md)  
@@ -21,4 +20,6 @@ uid: Applications.Service
 - [ServiceOrders](Applications.Service.ServiceOrders.md)  
 - [Services](Applications.Service.Services.md)  
 - [ServiceTypes](Applications.Service.ServiceTypes.md)  
+
+Service.ServiceTypes.md)  
 

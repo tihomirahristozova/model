@@ -25,27 +25,27 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentData](General.DocumentVersions.md#documentdata) | byte[] (nullable) | Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). [ReadOnly] 
-| [DocumentDataFormat](General.DocumentVersions.md#documentdataformat) | string | The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. [Required] [Default("U")] [ReadOnly] 
-| [DocumentDataXML](General.DocumentVersions.md#documentdataxml) | string (nullable) | The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). [ReadOnly] 
+| [DocumentData](General.DocumentVersions.md#documentdata) | byte[] (nullable) | Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). `ReadOnly` 
+| [DocumentDataFormat](General.DocumentVersions.md#documentdataformat) | string | The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. `Required` `Default("U")` `ReadOnly` 
+| [DocumentDataXML](General.DocumentVersions.md#documentdataxml) | string (nullable) | The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). `ReadOnly` 
 | [Id](General.DocumentVersions.md#id) | guid |  
-| [State](General.DocumentVersions.md#state) | [State](General.DocumentVersions.md#state) | The state of the document by the time it was saved. [Required] [Default(0)] [Filter(multi eq)] [ReadOnly] 
-| [UpdateTime](General.DocumentVersions.md#updatetime) | datetime | The date and time when this version was saved. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly] 
-| [UpdateUser](General.DocumentVersions.md#updateuser) | string | The login name of the user that saved this version. [Required] [Filter(eq;like)] [ReadOnly] 
-| [Version](General.DocumentVersions.md#version) | int32 | The version number that is stored in this row. [Required] [Filter(eq;ge;le)] [ReadOnly] 
+| [State](General.DocumentVersions.md#state) | [State](General.DocumentVersions.md#state) | The state of the document by the time it was saved. `Required` `Default(0)` `Filter(multi eq)` `ReadOnly` 
+| [UpdateTime](General.DocumentVersions.md#updatetime) | datetime | The date and time when this version was saved. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly` 
+| [UpdateUser](General.DocumentVersions.md#updateuser) | string | The login name of the user that saved this version. `Required` `Filter(eq;like)` `ReadOnly` 
+| [Version](General.DocumentVersions.md#version) | int32 | The version number that is stored in this row. `Required` `Filter(eq;ge;le)` `ReadOnly` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentVersions.md#document) | [Documents](General.Documents.md) | The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
+| [Document](General.DocumentVersions.md#document) | [Documents](General.Documents.md) | The document whoose version is stored in this row. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
 
 
 ## Attribute Details
 
 ### DocumentData
 
-Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). [ReadOnly]
+Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). `ReadOnly`
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### DocumentDataFormat
 
-The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. [Required] [Default("U")] [ReadOnly]
+The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. `Required` `Default("U")` `ReadOnly`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -62,7 +62,7 @@ _Default Value_: **U**
 
 ### DocumentDataXML
 
-The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). [ReadOnly]
+The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). `ReadOnly`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -77,10 +77,10 @@ _Default Value_: **NewGuid**
 
 ### State
 
-The state of the document by the time it was saved. [Required] [Default(0)] [Filter(multi eq)] [ReadOnly]
+The state of the document by the time it was saved. `Required` `Default(0)` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[State](General.DocumentVersions.md#state)**  
-Allowed values for the [State](General.DocumentVersions.md#state) data attribute  
+Allowed values for the `State`(General.DocumentVersions.md#state) data attribute  
 _Allowed Values (General.DocumentVersionsRepository.State Enum Members)_  
 
 | Value | Description |
@@ -99,7 +99,7 @@ _Default Value_: **0**
 
 ### UpdateTime
 
-The date and time when this version was saved. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]
+The date and time when this version was saved. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly`
 
 _Type_: **datetime**  
 _Indexed_: **True**  
@@ -109,7 +109,7 @@ _Default Value_: **CurrentDateTime**
 
 ### UpdateUser
 
-The login name of the user that saved this version. [Required] [Filter(eq;like)] [ReadOnly]
+The login name of the user that saved this version. `Required` `Filter(eq;like)` `ReadOnly`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -117,7 +117,7 @@ _Supports Order By_: **False**
 
 ### Version
 
-The version number that is stored in this row. [Required] [Filter(eq;ge;le)] [ReadOnly]
+The version number that is stored in this row. `Required` `Filter(eq;ge;le)` `ReadOnly`
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -128,7 +128,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
+The document whoose version is stored in this row. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  

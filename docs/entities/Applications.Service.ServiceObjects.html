@@ -110,7 +110,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#name">Name</a></td>
 <td>string</td>
-<td>The name of this ServiceObject. [Required] [Filter(eq;like)]</td>
+<td>The name of this ServiceObject. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#notes">Notes</a></td>
@@ -120,7 +120,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#serialnumber">SerialNumber</a></td>
 <td>string (nullable)</td>
-<td>The serial number of the item, that is being serviced. [Filter(like)]</td>
+<td>The serial number of the item, that is being serviced. <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,27 +137,27 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
+<td>The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>When not-null identifies the product, from which the service object was created. [Filter(multi eq)]</td>
+<td>When not-null identifies the product, from which the service object was created. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#serialnumberobj">SerialNumberObj</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. [Filter(multi eq)]</td>
+<td>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#servicedproduct">ServicedProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. [Filter(multi eq)]</td>
+<td>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#serviceobjecttype">ServiceObjectType</a></td>
 <td><a href="Applications.Service.ServiceObjectTypes.html">ServiceObjectTypes</a> (nullable)</td>
-<td>When not null specifies the type of the service object. [Filter(multi eq)]</td>
+<td>When not null specifies the type of the service object. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this ServiceObject. [Required] [Filter(eq;like)]</p>
+<p>The name of this ServiceObject. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -180,7 +180,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>The serial number of the item, that is being serviced. [Filter(like)]</p>
+<p>The serial number of the item, that is being serviced. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -188,25 +188,25 @@ Default Search Member:<br>
 <code>IIF( ( obj.SerialNumberObj != null), null, obj.SerialNumber)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
+<p>The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>When not-null identifies the product, from which the service object was created. [Filter(multi eq)]</p>
+<p>When not-null identifies the product, from which the service object was created. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumberobj">SerialNumberObj</h3>
-<p>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. [Filter(multi eq)]</p>
+<p>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.SerialNumber != null), null, obj.SerialNumberObj)</code></p>
 <h3 id="servicedproduct">ServicedProduct</h3>
-<p>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. [Filter(multi eq)]</p>
+<p>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceobjecttype">ServiceObjectType</h3>
-<p>When not null specifies the type of the service object. [Filter(multi eq)]</p>
+<p>When not null specifies the type of the service object. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjectTypes.html">ServiceObjectTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -26,15 +26,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.MaintenanceProfilePlans.md#id) | guid |  
-| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. [Required] [Default(true)] [Introduced in version 18.2] 
+| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. `Required` `Default(true)` `Introduced in version 18.2` 
 | [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string (nullable) | Notes for this MaintenanceProfilePlan. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenancePlan](Applications.Fleet.MaintenanceProfilePlans.md#maintenanceplan) | [MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The maintenance plan, which is included in the profile. [Required] [Filter(multi eq)] |
-| [MaintenanceProfile](Applications.Fleet.MaintenanceProfilePlans.md#maintenanceprofile) | [MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) | The maintenance profile, which includes the plan. [Required] [Filter(multi eq)] [Owner] |
+| [MaintenancePlan](Applications.Fleet.MaintenanceProfilePlans.md#maintenanceplan) | [MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The maintenance plan, which is included in the profile. `Required` `Filter(multi eq)` |
+| [MaintenanceProfile](Applications.Fleet.MaintenanceProfilePlans.md#maintenanceprofile) | [MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) | The maintenance profile, which includes the plan. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. [Required] [Default(true)] [Introduced in version 18.2]
+True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. `Required` `Default(true)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -68,14 +68,14 @@ _Supports Order By_: **False**
 
 ### MaintenancePlan
 
-The maintenance plan, which is included in the profile. [Required] [Filter(multi eq)]
+The maintenance plan, which is included in the profile. `Required` `Filter(multi eq)`
 
 _Type_: **[MaintenancePlans](Applications.Fleet.MaintenancePlans.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceProfile
 
-The maintenance profile, which includes the plan. [Required] [Filter(multi eq)] [Owner]
+The maintenance profile, which includes the plan. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

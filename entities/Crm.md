@@ -1,8 +1,7 @@
----
+﻿---
 uid: Crm
 ---
 # Crm Namespace
-
 ## Namespaces
 - [Distribution](Crm.Distribution.md)  
 - [Invoicing](Crm.Invoicing.md)  
@@ -26,4 +25,6 @@ uid: Crm
 - [PromotionalPackageLines](Crm.PromotionalPackageLines.md)  
 - [PromotionalPackages](Crm.PromotionalPackages.md)  
 - [SalesPersons](Crm.SalesPersons.md)  
+
+ons.md)  
 

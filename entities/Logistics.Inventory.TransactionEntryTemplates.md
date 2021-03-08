@@ -30,8 +30,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealType](Logistics.Inventory.TransactionEntryTemplates.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [Route](Logistics.Inventory.TransactionEntryTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [DealType](Logistics.Inventory.TransactionEntryTemplates.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
+| [Route](Logistics.Inventory.TransactionEntryTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -56,14 +56,14 @@ _Default Value_: **NewGuid**
 
 ### DealType
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Route
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Indexed_: **True**  

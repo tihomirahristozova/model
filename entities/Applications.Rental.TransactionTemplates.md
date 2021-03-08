@@ -24,13 +24,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Rental.TransactionTemplates.md#id) | guid |  
-| [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created. [Required] 
+| [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Applications.Rental.TransactionTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route for which the transaction template is defined. [Required] [Filter(multi eq)] |
+| [Route](Applications.Rental.TransactionTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route for which the transaction template is defined. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -44,10 +44,10 @@ _Default Value_: **NewGuid**
 
 ### TransactionType
 
-Transaction type for the rent transaction that is to be created. [Required]
+Transaction type for the rent transaction that is to be created. `Required`
 
 _Type_: **[TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype)**  
-Allowed values for the [TransactionType](Applications.Rental.Transactions.md#transactiontype) data attribute  
+Allowed values for the `TransactionType`(Applications.Rental.Transactions.md#transactiontype) data attribute  
 _Allowed Values (Applications.Rental.TransactionsRepository.TransactionType Enum Members)_  
 
 | Value | Description |
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 ### Route
 
-The route for which the transaction template is defined. [Required] [Filter(multi eq)]
+The route for which the transaction template is defined. `Required` `Filter(multi eq)`
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

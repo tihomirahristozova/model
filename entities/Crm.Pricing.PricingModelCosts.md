@@ -26,17 +26,17 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AmountPercent](Crm.Pricing.PricingModelCosts.md#amountpercent) | decimal (nullable) | Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way. 
-| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount](../data-types.md#amount) (nullable) | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency] 
+| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount](../data-types.md#amount) (nullable) | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency` 
 | [Id](Crm.Pricing.PricingModelCosts.md#id) | guid |  
-| [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model. [Required] 
+| [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostType](Crm.Pricing.PricingModelCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)] |
-| [MeasurementUnit](Crm.Pricing.PricingModelCosts.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)] |
-| [PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner] |
+| [CostType](Crm.Pricing.PricingModelCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The cost type, which is listed for the pricing model. `Required` `Filter(multi eq)` |
+| [MeasurementUnit](Crm.Pricing.PricingModelCosts.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. `Filter(multi eq)` |
+| [PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | Pricing model, for which the cost is defined. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 ### AmountPerUnit
 
-Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]
+Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency`
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -66,7 +66,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-The consequtive number of the cost within the pricing model. [Required]
+The consequtive number of the cost within the pricing model. `Required`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -82,21 +82,21 @@ _Front-End Recalc Expressions:_
 
 ### CostType
 
-The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]
+The cost type, which is listed for the pricing model. `Required` `Filter(multi eq)`
 
 _Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MeasurementUnit
 
-The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]
+The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PricingModel
 
-Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]
+Pricing model, for which the cost is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PricingModels](Crm.Pricing.PricingModels.md)**  
 _Indexed_: **True**  

@@ -105,17 +105,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Shipment.Carriers.html#agreementenddate">AgreementEndDate</a></td>
 <td>date (nullable)</td>
-<td>The ending date of the agreement with this carrier. null for agreements which are still active. [Filter(eq;ge;le)]</td>
+<td>The ending date of the agreement with this carrier. null for agreements which are still active. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.Carriers.html#agreementstartdate">AgreementStartDate</a></td>
 <td>date</td>
-<td>The start date of the agreement with this carrier. [Required] [Default(Today)] [Filter(eq;ge;le)]</td>
+<td>The start date of the agreement with this carrier. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.Carriers.html#code">Code</a></td>
 <td>string</td>
-<td>Unique carrier code (or call sign). The code is unique within all enterprise companies. [Required] [Filter(eq;like)] [ORD]</td>
+<td>Unique carrier code (or call sign). The code is unique within all enterprise companies. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.Carriers.html#id">Id</a></td>
@@ -125,7 +125,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Shipment.Carriers.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the carrier agreement is active. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the carrier agreement is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.Carriers.html#notes">Notes</a></td>
@@ -147,29 +147,29 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Shipment.Carriers.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)]</td>
+<td>The enterprise company which signed the carrier agreement. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.Carriers.html#supplier">Supplier</a></td>
 <td><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></td>
-<td>The supplier contract with the carrier. [Required] [Filter(multi eq)]</td>
+<td>The supplier contract with the carrier. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="agreementenddate">AgreementEndDate</h3>
-<p>The ending date of the agreement with this carrier. null for agreements which are still active. [Filter(eq;ge;le)]</p>
+<p>The ending date of the agreement with this carrier. null for agreements which are still active. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="agreementstartdate">AgreementStartDate</h3>
-<p>The start date of the agreement with this carrier. [Required] [Default(Today)] [Filter(eq;ge;le)]</p>
+<p>The start date of the agreement with this carrier. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="code">Code</h3>
-<p>Unique carrier code (or call sign). The code is unique within all enterprise companies. [Required] [Filter(eq;like)] [ORD]</p>
+<p>Unique carrier code (or call sign). The code is unique within all enterprise companies. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -180,7 +180,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the carrier agreement is active. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the carrier agreement is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -192,11 +192,11 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)]</p>
+<p>The enterprise company which signed the carrier agreement. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="supplier">Supplier</h3>
-<p>The supplier contract with the carrier. [Required] [Filter(multi eq)]</p>
+<p>The supplier contract with the carrier. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

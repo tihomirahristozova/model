@@ -110,17 +110,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#creationtime">CreationTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the Recipe was created. [Filter(ge;le)] [ReadOnly]</td>
+<td>Date and time when the Recipe was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#creationuser">CreationUser</a></td>
 <td>string (nullable)</td>
-<td>Login name of the user, who created the Recipe. [Filter(like)] [ReadOnly]</td>
+<td>Login name of the user, who created the Recipe. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#expirydate">ExpiryDate</a></td>
 <td>datetime (nullable)</td>
-<td>The last date, when the recipe should be used. null means that the recipe might still be in use. [Filter(ge;le)]</td>
+<td>The last date, when the recipe should be used. null means that the recipe might still be in use. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#id">Id</a></td>
@@ -130,12 +130,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>Default for period: Release_Date - Expiry_Date. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Default for period: Release_Date - Expiry_Date. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#name">Name</a></td>
 <td>string</td>
-<td>The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)]</td>
+<td>The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#notes">Notes</a></td>
@@ -145,37 +145,37 @@ Default Search Member:<br>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#price">Price</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)]</td>
+<td>The price for the specified Produce_Quantity. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#priceperlot">PricePerLot</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)]</td>
+<td>Price for one lot of the product (according to Lot_Size_Quantity_Base). <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#producequantity">ProduceQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</td>
+<td>Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#releasedate">ReleaseDate</a></td>
 <td>datetime</td>
-<td>The date, when the recipe was released to production. [Required] [Default(Today)] [Filter(ge;le)]</td>
+<td>The date, when the recipe was released to production. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#scraprate">ScrapRate</a></td>
 <td>decimal</td>
-<td>The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. [Required] [Default(0)]</td>
+<td>The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#updatetime">UpdateTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the Recipe was last updated. [Filter(ge;le)] [ReadOnly]</td>
+<td>Date and time when the Recipe was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#updateuser">UpdateUser</a></td>
 <td>string (nullable)</td>
-<td>Login name of the user, who last updated the Recipe. [Filter(like)] [ReadOnly]</td>
+<td>Login name of the user, who last updated the Recipe. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -192,22 +192,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#currencydirectory">CurrencyDirectory</a></td>
 <td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</td>
-<td>Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)]</td>
+<td>Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#principalrecipe">PrincipalRecipe</a></td>
 <td><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a> (nullable)</td>
-<td>The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)]</td>
+<td>The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The Id of the produced product. [Filter(multi eq)]</td>
+<td>The Id of the produced product. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)]</td>
+<td>The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -224,28 +224,28 @@ Default Search Member:<br>
 <tr>
 <td>Ingredients</td>
 <td><a href="Production.Technologies.RecipeIngredients.html">RecipeIngredients</a></td>
-<td>List of <a href="Production.Technologies.RecipeIngredients.html">RecipeIngredient</a> child objects, based on the <a href="Production.Technologies.RecipeIngredients.html#recipe">Production.Technologies.RecipeIngredient.Recipe</a> back reference</td>
+<td>List of <code>RecipeIngredient</code>(Production.Technologies.RecipeIngredients.md) child objects, based on the <code>Production.Technologies.RecipeIngredient.Recipe</code>(Production.Technologies.RecipeIngredients.md#recipe) back reference</td>
 </tr>
 <tr>
 <td>Operations</td>
 <td><a href="Production.Technologies.RecipeOperations.html">RecipeOperations</a></td>
-<td>List of <a href="Production.Technologies.RecipeOperations.html">RecipeOperation</a> child objects, based on the <a href="Production.Technologies.RecipeOperations.html#recipe">Production.Technologies.RecipeOperation.Recipe</a> back reference</td>
+<td>List of <code>RecipeOperation</code>(Production.Technologies.RecipeOperations.md) child objects, based on the <code>Production.Technologies.RecipeOperation.Recipe</code>(Production.Technologies.RecipeOperations.md#recipe) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtime">CreationTime</h3>
-<p>Date and time when the Recipe was created. [Filter(ge;le)] [ReadOnly]</p>
+<p>Date and time when the Recipe was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<p>Login name of the user, who created the Recipe. [Filter(like)] [ReadOnly]</p>
+<p>Login name of the user, who created the Recipe. <code>Filter(like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="expirydate">ExpiryDate</h3>
-<p>The last date, when the recipe should be used. null means that the recipe might still be in use. [Filter(ge;le)]</p>
+<p>The last date, when the recipe should be used. null means that the recipe might still be in use. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -255,13 +255,13 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>Default for period: Release_Date - Expiry_Date. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Default for period: Release_Date - Expiry_Date. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)]</p>
+<p>The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -271,61 +271,61 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="price">Price</h3>
-<p>The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)]</p>
+<p>The price for the specified Produce_Quantity. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="priceperlot">PricePerLot</h3>
-<p>Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)]</p>
+<p>Price for one lot of the product (according to Lot_Size_Quantity_Base). <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="producequantity">ProduceQuantity</h3>
-<p>Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</p>
+<p>Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="releasedate">ReleaseDate</h3>
-<p>The date, when the recipe was released to production. [Required] [Default(Today)] [Filter(ge;le)]</p>
+<p>The date, when the recipe was released to production. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
-<p>The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. [Required] [Default(0)]</p>
+<p>The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<p>Date and time when the Recipe was last updated. [Filter(ge;le)] [ReadOnly]</p>
+<p>Date and time when the Recipe was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<p>Login name of the user, who last updated the Recipe. [Filter(like)] [ReadOnly]</p>
+<p>Login name of the user, who last updated the Recipe. <code>Filter(like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
-<p>Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)]</p>
+<p>Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="principalrecipe">PrincipalRecipe</h3>
-<p>The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)]</p>
+<p>The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>The Id of the produced product. [Filter(multi eq)]</p>
+<p>The Id of the produced product. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
-<p>The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)]</p>
+<p>The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

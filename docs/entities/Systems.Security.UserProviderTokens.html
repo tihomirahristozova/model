@@ -110,12 +110,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#loginprovidername">LoginProviderName</a></td>
 <td>string</td>
-<td>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)]</td>
+<td>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#tokenname">TokenName</a></td>
 <td>string</td>
-<td>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)]</td>
+<td>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#tokenvalue">TokenValue</a></td>
@@ -137,7 +137,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>User for which we store tokens. [Required] [Filter(multi eq)] [Owner]</td>
+<td>User for which we store tokens. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,12 +148,12 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="loginprovidername">LoginProviderName</h3>
-<p>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)]</p>
+<p>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tokenname">TokenName</h3>
-<p>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)]</p>
+<p>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -164,7 +164,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="user">User</h3>
-<p>User for which we store tokens. [Required] [Filter(multi eq)] [Owner]</p>
+<p>User for which we store tokens. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceType](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The allowed maintenance type for the asset type. [Required] [Filter(multi eq)] |
-| [ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner] |
+| [MaintenanceType](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The allowed maintenance type for the asset type. `Required` `Filter(multi eq)` |
+| [ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The asset type for which the allowed maintenance type is defined. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -85,14 +85,14 @@ _Supports Order By_: **False**
 
 ### MaintenanceType
 
-The allowed maintenance type for the asset type. [Required] [Filter(multi eq)]
+The allowed maintenance type for the asset type. `Required` `Filter(multi eq)`
 
 _Type_: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAssetType
 
-The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner]
+The asset type for which the allowed maintenance type is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Indexed_: **True**  

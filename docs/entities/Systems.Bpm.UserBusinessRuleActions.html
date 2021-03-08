@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#actionno">ActionNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the action, unique within the business rule. [Required]</td>
+<td>Consecutive number of the action, unique within the business rule. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a></td>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a></td>
-<td>Specifies the type of action to perform. [Required]</td>
+<td>Specifies the type of action to perform. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#id">Id</a></td>
@@ -162,13 +162,13 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#userbusinessrule">UserBusinessRule</a></td>
 <td><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></td>
-<td>The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The business rule, for which the action is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actionno">ActionNo</h3>
-<p>Consecutive number of the action, unique within the business rule. [Required]</p>
+<p>Consecutive number of the action, unique within the business rule. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -177,9 +177,9 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="actiontype">ActionType</h3>
-<p>Specifies the type of action to perform. [Required]</p>
+<p>Specifies the type of action to perform. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a></strong><br>
-Allowed values for the <a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a> data attribute<br>
+Allowed values for the <code>ActionType</code>(Systems.Bpm.UserBusinessRuleActions.md#actiontype) data attribute<br>
 <em>Allowed Values (Systems.Bpm.UserBusinessRuleActionsRepository.ActionType Enum Members)</em></p>
 <table>
 <thead>
@@ -346,7 +346,7 @@ Generic enum type for ActionParameterType properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="userbusinessrule">UserBusinessRule</h3>
-<p>The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The business rule, for which the action is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

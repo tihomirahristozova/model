@@ -110,12 +110,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtype">EventType</a></td>
 <td><a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtype">EventType</a></td>
-<td>The event for which to register the business rule. [Required]</td>
+<td>The event for which to register the business rule. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleEvents.html#executionpriority">ExecutionPriority</a></td>
 <td><a href="Systems.Bpm.UserBusinessRuleEvents.html#executionpriority">RuleExecutionPriority</a></td>
-<td>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)]</td>
+<td>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. <code>Required</code> <code>Default(50)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleEvents.html#id">Id</a></td>
@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleEvents.html#layer">Layer</a></td>
 <td><a href="Systems.Bpm.UserBusinessRuleEvents.html#layer">Layer</a></td>
-<td>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default(&quot;BKE&quot;)]</td>
+<td>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. <code>Required</code> <code>Default(&quot;BKE&quot;)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleEvents.html#userbusinessrule">UserBusinessRule</a></td>
 <td><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></td>
-<td>The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The rule, which will be registered for the event. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,9 +153,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="eventtype">EventType</h3>
-<p>The event for which to register the business rule. [Required]</p>
+<p>The event for which to register the business rule. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtype">EventType</a></strong><br>
-Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtype">EventType</a> data attribute<br>
+Allowed values for the <code>EventType</code>(Systems.Bpm.UserBusinessRuleEvents.md#eventtype) data attribute<br>
 <em>Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.EventType Enum Members)</em></p>
 <table>
 <thead>
@@ -202,7 +202,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtyp
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="executionpriority">ExecutionPriority</h3>
-<p>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)]</p>
+<p>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. <code>Required</code> <code>Default(50)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#executionpriority">RuleExecutionPriority</a></strong><br>
 <em>Allowed Values (Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority Enum Members)</em></p>
 <table>
@@ -244,9 +244,9 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtyp
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="layer">Layer</h3>
-<p>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default(&quot;BKE&quot;)]</p>
+<p>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. <code>Required</code> <code>Default(&quot;BKE&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#layer">Layer</a></strong><br>
-Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#layer">Layer</a> data attribute<br>
+Allowed values for the <code>Layer</code>(Systems.Bpm.UserBusinessRuleEvents.md#layer) data attribute<br>
 <em>Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.Layer Enum Members)</em></p>
 <table>
 <thead>
@@ -271,7 +271,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#layer">L
 <em>Default Value</em>: <strong>BackEnd</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="userbusinessrule">UserBusinessRule</h3>
-<p>The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The rule, which will be registered for the event. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -26,14 +26,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Communities.SocialGroupMembers.md#id) | guid |  
-| [JoinTimeUtc](Communities.SocialGroupMembers.md#jointimeutc) | datetime | The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)] 
+| [JoinTimeUtc](Communities.SocialGroupMembers.md#jointimeutc) | datetime | The exact server time (in UTC), when the user joined the group. `Required` `Default(NowUtc)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SocialGroup](Communities.SocialGroupMembers.md#socialgroup) | [SocialGroups](Communities.SocialGroups.md) | The group in which the user participates. [Required] [Filter(multi eq)] [Owner] |
-| [User](Communities.SocialGroupMembers.md#user) | [Users](Systems.Security.Users.md) | The user, who is a member of the group. [Required] [Filter(multi eq)] |
+| [SocialGroup](Communities.SocialGroupMembers.md#socialgroup) | [SocialGroups](Communities.SocialGroups.md) | The group in which the user participates. `Required` `Filter(multi eq)` `Owner` |
+| [User](Communities.SocialGroupMembers.md#user) | [Users](Systems.Security.Users.md) | The user, who is a member of the group. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### JoinTimeUtc
 
-The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)]
+The exact server time (in UTC), when the user joined the group. `Required` `Default(NowUtc)`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -59,14 +59,14 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### SocialGroup
 
-The group in which the user participates. [Required] [Filter(multi eq)] [Owner]
+The group in which the user participates. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[SocialGroups](Communities.SocialGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-The user, who is a member of the group. [Required] [Filter(multi eq)]
+The user, who is a member of the group. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

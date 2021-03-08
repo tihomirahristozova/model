@@ -110,17 +110,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Pos.Sequences.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)]</td>
+<td>Indicates whether this sequence is active. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sequences.html#maxno">MaxNo</a></td>
 <td>string (nullable)</td>
-<td>Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)]</td>
+<td>Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sequences.html#nextno">NextNo</a></td>
 <td>string</td>
-<td>The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)]</td>
+<td>The next consecutive number which will be assigned on the next request. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,7 +137,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Pos.Sequences.html#posdevice">PosDevice</a></td>
 <td><a href="Crm.Pos.Devices.html">Devices</a></td>
-<td>The POS device, for which the sequence is defined. [Required] [Filter(multi eq)]</td>
+<td>The POS device, for which the sequence is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,24 +148,24 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)]</p>
+<p>Indicates whether this sequence is active. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="maxno">MaxNo</h3>
-<p>Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)]</p>
+<p>Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="nextno">NextNo</h3>
-<p>The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)]</p>
+<p>The next consecutive number which will be assigned on the next request. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="posdevice">PosDevice</h3>
-<p>The POS device, for which the sequence is defined. [Required] [Filter(multi eq)]</p>
+<p>The POS device, for which the sequence is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html">Devices</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

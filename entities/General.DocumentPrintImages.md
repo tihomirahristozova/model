@@ -26,14 +26,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.DocumentPrintImages.md#id) | guid |  
-| [PrintImage](General.DocumentPrintImages.md#printimage) | byte[] | The data of the printout, stored in the format, specified in Print Image Format. [Required] 
-| [PrintImageFormat](General.DocumentPrintImages.md#printimageformat) | string | The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. [Required] [Default("CDS")] 
+| [PrintImage](General.DocumentPrintImages.md#printimage) | byte[] | The data of the printout, stored in the format, specified in Print Image Format. `Required` 
+| [PrintImageFormat](General.DocumentPrintImages.md#printimageformat) | string | The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. `Required` `Default("CDS")` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) | [PrintoutLayouts](General.PrintoutLayouts.md) | The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner] |
+| [PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) | [PrintoutLayouts](General.PrintoutLayouts.md) | The print layout, which was used for the current printout. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### PrintImage
 
-The data of the printout, stored in the format, specified in Print Image Format. [Required]
+The data of the printout, stored in the format, specified in Print Image Format. `Required`
 
 _Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### PrintImageFormat
 
-The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. [Required] [Default("CDS")]
+The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. `Required` `Default("CDS")`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Default Value_: **CDS**
 
 ### PrintoutLayout
 
-The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner]
+The print layout, which was used for the current printout. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PrintoutLayouts](General.PrintoutLayouts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

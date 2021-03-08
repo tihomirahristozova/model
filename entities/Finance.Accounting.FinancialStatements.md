@@ -25,22 +25,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Accounting.FinancialStatements.md#code) | string | Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD] 
+| [Code](Finance.Accounting.FinancialStatements.md#code) | string | Unique identifying code of the financial statement. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Finance.Accounting.FinancialStatements.md#id) | guid |  
-| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement. [Required] [Filter(eq;like)] 
+| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement. `Required` `Filter(eq;like)` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Nodes | [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | List of [FinancialStatementNode](Finance.Accounting.FinancialStatementNodes.md) child objects, based on the [Finance.Accounting.FinancialStatementNode.FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) back reference 
+| Nodes | [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | List of `FinancialStatementNode`(Finance.Accounting.FinancialStatementNodes.md) child objects, based on the `Finance.Accounting.FinancialStatementNode.FinancialStatement`(Finance.Accounting.FinancialStatementNodes.md#financialstatement) back reference 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD]
+Unique identifying code of the financial statement. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Name of the financial statement. [Required] [Filter(eq;like)]
+Name of the financial statement. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  

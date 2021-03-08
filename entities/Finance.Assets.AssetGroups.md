@@ -23,23 +23,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Assets.AssetGroups.md#code) | string | The unique code of the AssetGroup. [Required] [Filter(eq)] [ORD] 
+| [Code](Finance.Assets.AssetGroups.md#code) | string | The unique code of the AssetGroup. `Required` `Filter(eq)` `ORD` 
 | [Id](Finance.Assets.AssetGroups.md#id) | guid |  
-| [Name](Finance.Assets.AssetGroups.md#name) | string | The name of this AssetGroup. [Required] [Filter(like)] 
+| [Name](Finance.Assets.AssetGroups.md#name) | string | The name of this AssetGroup. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultValuationModel](Finance.Assets.AssetGroups.md#defaultvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) (nullable) | Default valuation model when creating new assets from this group. [Filter(multi eq)] |
-| [Parent](Finance.Assets.AssetGroups.md#parent) | [AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | Parent asset group in the hierarchy. [Filter(multi eq)] |
+| [DefaultValuationModel](Finance.Assets.AssetGroups.md#defaultvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) (nullable) | Default valuation model when creating new assets from this group. `Filter(multi eq)` |
+| [Parent](Finance.Assets.AssetGroups.md#parent) | [AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | Parent asset group in the hierarchy. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Code
 
-The unique code of the AssetGroup. [Required] [Filter(eq)] [ORD]
+The unique code of the AssetGroup. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -55,7 +55,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this AssetGroup. [Required] [Filter(like)]
+The name of this AssetGroup. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -66,14 +66,14 @@ _Supports Order By_: **False**
 
 ### DefaultValuationModel
 
-Default valuation model when creating new assets from this group. [Filter(multi eq)]
+Default valuation model when creating new assets from this group. `Filter(multi eq)`
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-Parent asset group in the hierarchy. [Filter(multi eq)]
+Parent asset group in the hierarchy. `Filter(multi eq)`
 
 _Type_: **[AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

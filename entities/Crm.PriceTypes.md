@@ -23,18 +23,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.PriceTypes.md#code) | string | Short identification code of the price type. [Required] [Filter(eq)] [ORD] 
+| [Code](Crm.PriceTypes.md#code) | string | Short identification code of the price type. `Required` `Filter(eq)` `ORD` 
 | [Id](Crm.PriceTypes.md#id) | guid |  
-| [Name](Crm.PriceTypes.md#name) | string | Full name of the price type. [Required] [Filter(eq;like)] 
+| [Name](Crm.PriceTypes.md#name) | string | Full name of the price type. `Required` `Filter(eq;like)` 
 | [Notes](Crm.PriceTypes.md#notes) | string (nullable) | Notes for this PriceType. 
-| [OrdinalPos](Crm.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types. [Required] [ORD] 
+| [OrdinalPos](Crm.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types. `Required` `ORD` 
 
 
 ## Attribute Details
 
 ### Code
 
-Short identification code of the price type. [Required] [Filter(eq)] [ORD]
+Short identification code of the price type. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Full name of the price type. [Required] [Filter(eq;like)]
+Full name of the price type. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### OrdinalPos
 
-Priority position of the price type, with respect to the other price types. [Required] [ORD]
+Priority position of the price type, with respect to the other price types. `Required` `ORD`
 
 _Type_: **int32**  
 _Indexed_: **True**  

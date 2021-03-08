@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#efficiencyfactorpercent">EfficiencyFactorPercent</a></td>
 <td>decimal</td>
-<td>Efficiency factor of the routing steps for this shift, expressed as percentage. [Required] [Default(1)]</td>
+<td>Efficiency factor of the routing steps for this shift, expressed as percentage. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#establishmentdate">EstablishmentDate</a></td>
 <td>datetime</td>
-<td>When the workgroup shift was established. Used as minimum date when generating calendar. [Required] [Default(Today)] [Filter(ge;le)]</td>
+<td>When the workgroup shift was established. Used as minimum date when generating calendar. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#shiftname">ShiftName</a></td>
 <td>string</td>
-<td>The name of the workgroup shift. [Required] [Filter(like)]</td>
+<td>The name of the workgroup shift. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,24 +137,24 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Workgroups</a></td>
-<td>The <a href="Production.Resources.WorkgroupShifts.html#workgroup">Workgroup</a> to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Workgroup</code>(Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#workschedule">WorkSchedule</a></td>
 <td><a href="General.Resources.WorkSchedules.html">WorkSchedules</a></td>
-<td>The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)]</td>
+<td>The work schedule used to calculate the working time for the shift. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="efficiencyfactorpercent">EfficiencyFactorPercent</h3>
-<p>Efficiency factor of the routing steps for this shift, expressed as percentage. [Required] [Default(1)]</p>
+<p>Efficiency factor of the routing steps for this shift, expressed as percentage. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="establishmentdate">EstablishmentDate</h3>
-<p>When the workgroup shift was established. Used as minimum date when generating calendar. [Required] [Default(Today)] [Filter(ge;le)]</p>
+<p>When the workgroup shift was established. Used as minimum date when generating calendar. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -165,17 +165,17 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="shiftname">ShiftName</h3>
-<p>The name of the workgroup shift. [Required] [Filter(like)]</p>
+<p>The name of the workgroup shift. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="workgroup">Workgroup</h3>
-<p>The <a href="Production.Resources.WorkgroupShifts.html#workgroup">Workgroup</a> to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Workgroup</code>(Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workschedule">WorkSchedule</h3>
-<p>The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)]</p>
+<p>The work schedule used to calculate the working time for the shift. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.WorkSchedules.html">WorkSchedules</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

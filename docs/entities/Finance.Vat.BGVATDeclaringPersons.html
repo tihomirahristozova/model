@@ -105,17 +105,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declarertype">DeclarerType</a></td>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declarertype">DeclarerType</a></td>
-<td>Type of the declaring person. A=Attorney, R=Representative. [Required] [Filter(eq)]</td>
+<td>Type of the declaring person. A=Attorney, R=Representative. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declaringpersonaddress">DeclaringPersonAddress</a></td>
 <td>string</td>
-<td>Address for correspondation of the declaring person. [Required]</td>
+<td>Address for correspondation of the declaring person. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declaringpersoncity">DeclaringPersonCity</a></td>
 <td>string</td>
-<td>City from the address for correspondation of the declaring person. [Required]</td>
+<td>City from the address for correspondation of the declaring person. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declaringpersonposition">DeclaringPersonPosition</a></td>
@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declaringpersonpostcode">DeclaringPersonPostcode</a></td>
 <td>string</td>
-<td>Postcode from the address for correspondation of the declaring person. [Required]</td>
+<td>Postcode from the address for correspondation of the declaring person. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#id">Id</a></td>
@@ -135,7 +135,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>True if this is the default person, which issues VAT declarations for this Enterprise Company. [Required] [Default(true)]</td>
+<td>True if this is the default person, which issues VAT declarations for this Enterprise Company. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 </tbody>
 </table>
@@ -152,20 +152,20 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The enterprise company for which the person is presenting the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>The person that is presenting the declaration. [Required] [Filter(multi eq)]</td>
+<td>The person that is presenting the declaration. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="declarertype">DeclarerType</h3>
-<p>Type of the declaring person. A=Attorney, R=Representative. [Required] [Filter(eq)]</p>
+<p>Type of the declaring person. A=Attorney, R=Representative. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Vat.BGVATDeclaringPersons.html#declarertype">DeclarerType</a></strong><br>
-Allowed values for the <a href="Finance.Vat.BGVATDeclaringPersons.html#declarertype">DeclarerType</a> data attribute<br>
+Allowed values for the <code>DeclarerType</code>(Finance.Vat.BGVATDeclaringPersons.md#declarertype) data attribute<br>
 <em>Allowed Values (Finance.Vat.BGVATDeclaringPersonsRepository.DeclarerType Enum Members)</em></p>
 <table>
 <thead>
@@ -188,14 +188,14 @@ Allowed values for the <a href="Finance.Vat.BGVATDeclaringPersons.html#declarert
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="declaringpersonaddress">DeclaringPersonAddress</h3>
-<p>Address for correspondation of the declaring person. [Required]</p>
+<p>Address for correspondation of the declaring person. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Person.GetValidAddress( ).Name</code></p>
 <h3 id="declaringpersoncity">DeclaringPersonCity</h3>
-<p>City from the address for correspondation of the declaring person. [Required]</p>
+<p>City from the address for correspondation of the declaring person. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -205,7 +205,7 @@ Allowed values for the <a href="Finance.Vat.BGVATDeclaringPersons.html#declarert
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="declaringpersonpostcode">DeclaringPersonPostcode</h3>
-<p>Postcode from the address for correspondation of the declaring person. [Required]</p>
+<p>Postcode from the address for correspondation of the declaring person. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -215,19 +215,19 @@ Allowed values for the <a href="Finance.Vat.BGVATDeclaringPersons.html#declarert
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>True if this is the default person, which issues VAT declarations for this Enterprise Company. [Required] [Default(true)]</p>
+<p>True if this is the default person, which issues VAT declarations for this Enterprise Company. <code>Required</code> <code>Default(true)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The enterprise company for which the person is presenting the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
-<p>The person that is presenting the declaration. [Required] [Filter(multi eq)]</p>
+<p>The person that is presenting the declaration. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

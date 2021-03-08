@@ -115,7 +115,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.MessageAttachments.html#contentdownloaded">ContentDownloaded</a></td>
 <td>boolean</td>
-<td>True when the content is included, false when this is only an empty container. Content should be included when sending mail. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True when the content is included, false when this is only an empty container. Content should be included when sending mail. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.MessageAttachments.html#id">Id</a></td>
@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.MessageAttachments.html#name">Name</a></td>
 <td>string (nullable)</td>
-<td>The name of this MessageAttachment. [Filter(eq;like)]</td>
+<td>The name of this MessageAttachment. <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.MessageAttachments.html#mailmessage">MailMessage</a></td>
 <td><a href="Applications.Mail.Messages.html">Messages</a></td>
-<td>The <a href="Applications.Mail.Messages.html">Message</a> to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Message</code>(Applications.Mail.Messages.md) to which this MessageAttachment belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,7 +158,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="contentdownloaded">ContentDownloaded</h3>
-<p>True when the content is included, false when this is only an empty container. Content should be included when sending mail. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True when the content is included, false when this is only an empty container. Content should be included when sending mail. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -169,13 +169,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this MessageAttachment. [Filter(eq;like)]</p>
+<p>The name of this MessageAttachment. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="mailmessage">MailMessage</h3>
-<p>The <a href="Applications.Mail.Messages.html">Message</a> to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Message</code>(Applications.Mail.Messages.md) to which this MessageAttachment belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.Messages.html">Messages</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

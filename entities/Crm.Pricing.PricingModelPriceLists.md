@@ -26,15 +26,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.Pricing.PricingModelPriceLists.md#id) | guid |  
-| [LineNo](Crm.Pricing.PricingModelPriceLists.md#lineno) | int32 | The consecutive number of this price list within the pricing model. [Required] 
+| [LineNo](Crm.Pricing.PricingModelPriceLists.md#lineno) | int32 | The consecutive number of this price list within the pricing model. `Required` 
 | [MarginPercent](Crm.Pricing.PricingModelPriceLists.md#marginpercent) | decimal (nullable) | Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PriceList](Crm.Pricing.PricingModelPriceLists.md#pricelist) | [PriceLists](Crm.PriceLists.md) | The price list, which is included in the pricing model. [Required] [Filter(multi eq)] |
-| [PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner] |
+| [PriceList](Crm.Pricing.PricingModelPriceLists.md#pricelist) | [PriceLists](Crm.PriceLists.md) | The price list, which is included in the pricing model. `Required` `Filter(multi eq)` |
+| [PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | The pricing model, for which the price list is listed. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-The consecutive number of this price list within the pricing model. [Required]
+The consecutive number of this price list within the pricing model. `Required`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -72,14 +72,14 @@ _Supports Order By_: **False**
 
 ### PriceList
 
-The price list, which is included in the pricing model. [Required] [Filter(multi eq)]
+The price list, which is included in the pricing model. `Required` `Filter(multi eq)`
 
 _Type_: **[PriceLists](Crm.PriceLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PricingModel
 
-The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner]
+The pricing model, for which the price list is listed. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PricingModels](Crm.Pricing.PricingModels.md)**  
 _Indexed_: **True**  

@@ -1,8 +1,7 @@
----
+﻿---
 uid: General.Contacts
 ---
 # General.Contacts Namespace
-
 
 ## Entities
 - [Activities](General.Contacts.Activities.md)  
@@ -25,4 +24,6 @@ uid: General.Contacts
 - [PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md)  
 - [Persons](General.Contacts.Persons.md)  
 - [Reminders](General.Contacts.Reminders.md)  
+
+ntacts.Reminders.md)  
 

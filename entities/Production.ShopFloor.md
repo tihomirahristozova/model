@@ -1,8 +1,7 @@
----
+﻿---
 uid: Production.ShopFloor
 ---
 # Production.ShopFloor Namespace
-
 
 ## Entities
 - [ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)  
@@ -15,4 +14,6 @@ uid: Production.ShopFloor
 - [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)  
 - [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)  
 - [WorkOrders](Production.ShopFloor.WorkOrders.md)  
+
+ShopFloor.WorkOrders.md)  
 

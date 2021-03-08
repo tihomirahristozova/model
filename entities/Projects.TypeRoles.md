@@ -27,13 +27,13 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Description](Projects.TypeRoles.md#description) | string (nullable) | Description of the participant role. 
 | [Id](Projects.TypeRoles.md#id) | guid |  
-| [RoleName](Projects.TypeRoles.md#rolename) | string | The name of the participant role. [Required] [Filter(multi eq;like)] 
+| [RoleName](Projects.TypeRoles.md#rolename) | string | The name of the participant role. `Required` `Filter(multi eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TypeRoles.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | Project type. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectType](Projects.TypeRoles.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | Project type. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -55,7 +55,7 @@ _Default Value_: **NewGuid**
 
 ### RoleName
 
-The name of the participant role. [Required] [Filter(multi eq;like)]
+The name of the participant role. `Required` `Filter(multi eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### ProjectType
 
-Project type. [Required] [Filter(multi eq)] [Owner]
+Project type. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -110,7 +110,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.ProfitCenters.html#name">Name</a></td>
 <td>string</td>
-<td>The name of this ProfitCenter. [Required] [Filter(like)]</td>
+<td>The name of this ProfitCenter. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.ProfitCenters.html#notes">Notes</a></td>
@@ -120,7 +120,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.ProfitCenters.html#relativeweight">RelativeWeight</a></td>
 <td>decimal</td>
-<td>The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)]</td>
+<td>The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,7 +137,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.ProfitCenters.html#parent">Parent</a></td>
 <td><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</td>
-<td>Parent profit center, null if this is root profit center. [Filter(multi eq)]</td>
+<td>Parent profit center, null if this is root profit center. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this ProfitCenter. [Required] [Filter(like)]</p>
+<p>The name of this ProfitCenter. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -158,14 +158,14 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="relativeweight">RelativeWeight</h3>
-<p>The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)]</p>
+<p>The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
-<p>Parent profit center, null if this is root profit center. [Filter(multi eq)]</p>
+<p>Parent profit center, null if this is root profit center. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

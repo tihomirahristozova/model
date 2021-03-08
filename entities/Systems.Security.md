@@ -1,8 +1,7 @@
----
+﻿---
 uid: Systems.Security
 ---
 # Systems.Security Namespace
-
 
 ## Entities
 - [AccessKeys](Systems.Security.AccessKeys.md)  
@@ -19,4 +18,6 @@ uid: Systems.Security
 - [UserProviderTokens](Systems.Security.UserProviderTokens.md)  
 - [Users](Systems.Security.Users.md)  
 - [VisualPermissions](Systems.Security.VisualPermissions.md)  
+
+isualPermissions.md)  
 

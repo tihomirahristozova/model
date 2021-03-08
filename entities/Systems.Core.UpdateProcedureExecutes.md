@@ -23,18 +23,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExecuteTime](Systems.Core.UpdateProcedureExecutes.md#executetime) | datetime | The time, when the update procedure was executed. [Required] [Default(Now)] 
+| [ExecuteTime](Systems.Core.UpdateProcedureExecutes.md#executetime) | datetime | The time, when the update procedure was executed. `Required` `Default(Now)` 
 | [Id](Systems.Core.UpdateProcedureExecutes.md#id) | guid |  
 | [ResultMessage](Systems.Core.UpdateProcedureExecutes.md#resultmessage) | string (nullable) | Error or success message. 
-| [Successful](Systems.Core.UpdateProcedureExecutes.md#successful) | boolean | True when the execution was successfull. [Required] [Default(true)] 
-| [UpdateProcedure](Systems.Core.UpdateProcedureExecutes.md#updateprocedure) | string | The system name of the executed update procedure. [Required] 
+| [Successful](Systems.Core.UpdateProcedureExecutes.md#successful) | boolean | True when the execution was successfull. `Required` `Default(true)` 
+| [UpdateProcedure](Systems.Core.UpdateProcedureExecutes.md#updateprocedure) | string | The system name of the executed update procedure. `Required` 
 
 
 ## Attribute Details
 
 ### ExecuteTime
 
-The time, when the update procedure was executed. [Required] [Default(Now)]
+The time, when the update procedure was executed. `Required` `Default(Now)`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Successful
 
-True when the execution was successfull. [Required] [Default(true)]
+True when the execution was successfull. `Required` `Default(true)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Default Value_: **True**
 
 ### UpdateProcedure
 
-The system name of the executed update procedure. [Required]
+The system name of the executed update procedure. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

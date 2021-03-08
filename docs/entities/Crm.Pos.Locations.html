@@ -110,12 +110,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Pos.Locations.html#isactive">IsActive</a></td>
 <td>boolean (nullable)</td>
-<td>Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. [Default(true)] [Filter(eq)]</td>
+<td>Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Locations.html#poslocationcode">PosLocationCode</a></td>
 <td>string</td>
-<td>Unique (with the enterprise company) code of this POS location. [Required] [Filter(multi eq;like)]</td>
+<td>Unique (with the enterprise company) code of this POS location. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,12 +132,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Pos.Locations.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company of the POS location. [Required] [Filter(multi eq)]</td>
+<td>The enterprise company of the POS location. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Locations.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></td>
-<td>The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)]</td>
+<td>The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,24 +148,24 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. [Default(true)] [Filter(eq)]</p>
+<p>Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="poslocationcode">PosLocationCode</h3>
-<p>Unique (with the enterprise company) code of this POS location. [Required] [Filter(multi eq;like)]</p>
+<p>Unique (with the enterprise company) code of this POS location. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company of the POS location. [Required] [Filter(multi eq)]</p>
+<p>The enterprise company of the POS location. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)]</p>
+<p>The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

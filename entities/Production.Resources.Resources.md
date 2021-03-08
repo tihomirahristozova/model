@@ -26,27 +26,27 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Resources.Resources.md#id) | guid |  
-| [Name](Production.Resources.Resources.md#name) | string | Name of the resource. [Required] [Filter(like)] 
+| [Name](Production.Resources.Resources.md#name) | string | Name of the resource. `Required` `Filter(like)` 
 | [Notes](Production.Resources.Resources.md#notes) | string (nullable) | User notes for the resource. 
-| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal | The usual duration of setup when changing production. [Required] [Default(0)] 
-| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)] 
-| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount](../data-types.md#amount) (nullable) | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
-| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount](../data-types.md#amount) (nullable) | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
+| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal | The usual duration of setup when changing production. `Required` `Default(0)` 
+| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. . `Unit: SetupScrapUnit` `Required` `Default(0)` 
+| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount](../data-types.md#amount) (nullable) | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
+| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount](../data-types.md#amount) (nullable) | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrimaryUnit](Production.Resources.Resources.md#primaryunit) | [MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for quantities of the resource. [Required] [Filter(multi eq)] |
-| [ResourceCurrency](Production.Resources.Resources.md#resourcecurrency) | [Currencies](General.Currencies.md) (nullable) | Currency for this resource. This currency applies for the standard price and cost per hour. [Filter(multi eq)] |
-| [ResourceGroup](Production.Resources.Resources.md#resourcegroup) | [ResourceGroups](Production.Resources.ResourceGroups.md) | The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner] |
-| [SetupScrapUnit](Production.Resources.Resources.md#setupscrapunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement units of Setup_Scrap_Quantity. [Required] [Filter(multi eq)] |
+| [PrimaryUnit](Production.Resources.Resources.md#primaryunit) | [MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for quantities of the resource. `Required` `Filter(multi eq)` |
+| [ResourceCurrency](Production.Resources.Resources.md#resourcecurrency) | [Currencies](General.Currencies.md) (nullable) | Currency for this resource. This currency applies for the standard price and cost per hour. `Filter(multi eq)` |
+| [ResourceGroup](Production.Resources.Resources.md#resourcegroup) | [ResourceGroups](Production.Resources.ResourceGroups.md) | The Id of the containing resource group. `Required` `Filter(multi eq)` `Owner` |
+| [SetupScrapUnit](Production.Resources.Resources.md#setupscrapunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement units of Setup_Scrap_Quantity. `Required` `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Functions | [ResourceFunctions](Production.Resources.ResourceFunctions.md) | List of [ResourceFunction](Production.Resources.ResourceFunctions.md) child objects, based on the [Production.Resources.ResourceFunction.Resource](Production.Resources.ResourceFunctions.md#resource) back reference 
+| Functions | [ResourceFunctions](Production.Resources.ResourceFunctions.md) | List of `ResourceFunction`(Production.Resources.ResourceFunctions.md) child objects, based on the `Production.Resources.ResourceFunction.Resource`(Production.Resources.ResourceFunctions.md#resource) back reference 
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Name of the resource. [Required] [Filter(like)]
+Name of the resource. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### SetupDurationHours
 
-The usual duration of setup when changing production. [Required] [Default(0)]
+The usual duration of setup when changing production. `Required` `Default(0)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -85,7 +85,7 @@ _Default Value_: **0**
 
 ### SetupScrapQuantity
 
-The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)]
+The usual quantity of fixed scrap occurring when changing production. . `Unit: SetupScrapUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -94,7 +94,7 @@ _Default Value_: **Constant**
 
 ### StandardCostPerHour
 
-Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency]
+Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. `Currency: ResourceCurrency`
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -102,7 +102,7 @@ _Supports Order By_: **False**
 
 ### StandardPricePerHour
 
-Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency]
+Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. `Currency: ResourceCurrency`
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -113,21 +113,21 @@ _Supports Order By_: **False**
 
 ### PrimaryUnit
 
-Primary measurement unit for quantities of the resource. [Required] [Filter(multi eq)]
+Primary measurement unit for quantities of the resource. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceCurrency
 
-Currency for this resource. This currency applies for the standard price and cost per hour. [Filter(multi eq)]
+Currency for this resource. This currency applies for the standard price and cost per hour. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceGroup
 
-The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner]
+The Id of the containing resource group. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ResourceGroups](Production.Resources.ResourceGroups.md)**  
 _Indexed_: **True**  
@@ -135,7 +135,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### SetupScrapUnit
 
-The measurement units of Setup_Scrap_Quantity. [Required] [Filter(multi eq)]
+The measurement units of Setup_Scrap_Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

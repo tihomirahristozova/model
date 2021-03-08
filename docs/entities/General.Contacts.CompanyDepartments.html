@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.CompanyDepartments.html#departmentname">DepartmentName</a></td>
 <td>string</td>
-<td>The name of the department. [Required] [Filter(like)]</td>
+<td>The name of the department. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyDepartments.html#id">Id</a></td>
@@ -132,18 +132,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.CompanyDepartments.html#company">Company</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a></td>
-<td>The <a href="General.Contacts.CompanyDepartments.html#company">Company</a> to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Company</code>(General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyDepartments.html#parent">Parent</a></td>
 <td><a href="General.Contacts.CompanyDepartments.html">CompanyDepartments</a> (nullable)</td>
-<td>The parent department. null if this is root department in the company. [Filter(multi eq)]</td>
+<td>The parent department. null if this is root department in the company. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="departmentname">DepartmentName</h3>
-<p>The name of the department. [Required] [Filter(like)]</p>
+<p>The name of the department. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -159,11 +159,11 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="company">Company</h3>
-<p>The <a href="General.Contacts.CompanyDepartments.html#company">Company</a> to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Company</code>(General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
-<p>The parent department. null if this is root department in the company. [Filter(multi eq)]</p>
+<p>The parent department. null if this is root department in the company. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyDepartments.html">CompanyDepartments</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

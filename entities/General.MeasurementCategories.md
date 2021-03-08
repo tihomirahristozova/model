@@ -25,14 +25,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.MeasurementCategories.md#id) | guid |  
-| [IsDefault](General.MeasurementCategories.md#isdefault) | boolean | True=This category is the default category; false=otherwise. [Required] [Default(false)] [Filter(eq)] 
-| [Name](General.MeasurementCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD] 
+| [IsDefault](General.MeasurementCategories.md#isdefault) | boolean | True=This category is the default category; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
+| [Name](General.MeasurementCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this MeasurementCategory. `Required` `Filter(eq;like)` `ORD` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| MeasurementUnits | [MeasurementUnits](General.MeasurementUnits.md) | List of [MeasurementUnit](General.MeasurementUnits.md) child objects, based on the [General.MeasurementUnit.MeasurementCategory](General.MeasurementUnits.md#measurementcategory) back reference 
+| MeasurementUnits | [MeasurementUnits](General.MeasurementUnits.md) | List of `MeasurementUnit`(General.MeasurementUnits.md) child objects, based on the `General.MeasurementUnit.MeasurementCategory`(General.MeasurementUnits.md#measurementcategory) back reference 
 
 
 ## Attribute Details
@@ -46,7 +46,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-True=This category is the default category; false=otherwise. [Required] [Default(false)] [Filter(eq)]
+True=This category is the default category; false=otherwise. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -55,7 +55,7 @@ _Default Value_: **False**
 
 ### Name
 
-The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD]
+The name of this MeasurementCategory. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  

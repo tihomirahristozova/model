@@ -23,32 +23,32 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlcoholDegree](Finance.Excise.MeasuringTransactions.md#alcoholdegree) | int32 (nullable) | For alcoholic products, contains the percentage of pure alcohol. null when the transaction is not for alcoholic products. [Filter(multi eq;ge;le)] 
-| [AlcoholDensity](Finance.Excise.MeasuringTransactions.md#alcoholdensity) | int32 (nullable) | For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. null for non-alcoholic products. [Filter(multi eq;ge;le)] 
-| [AlcoholTemperature](Finance.Excise.MeasuringTransactions.md#alcoholtemperature) | int32 (nullable) | For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). null for non-alcoholic products. [Filter(multi eq;ge;le)] 
-| [Direction](Finance.Excise.MeasuringTransactions.md#direction) | [Direction](Finance.Excise.MeasuringTransactions.md#direction) | The direction of the transaction - IN/OUT. [Required] 
-| [EndTimeUtc](Finance.Excise.MeasuringTransactions.md#endtimeutc) | datetime | Ending time of the transaction (in UTC time). [Required] [Filter(eq;ge;le)] 
+| [AlcoholDegree](Finance.Excise.MeasuringTransactions.md#alcoholdegree) | int32 (nullable) | For alcoholic products, contains the percentage of pure alcohol. null when the transaction is not for alcoholic products. `Filter(multi eq;ge;le)` 
+| [AlcoholDensity](Finance.Excise.MeasuringTransactions.md#alcoholdensity) | int32 (nullable) | For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. null for non-alcoholic products. `Filter(multi eq;ge;le)` 
+| [AlcoholTemperature](Finance.Excise.MeasuringTransactions.md#alcoholtemperature) | int32 (nullable) | For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). null for non-alcoholic products. `Filter(multi eq;ge;le)` 
+| [Direction](Finance.Excise.MeasuringTransactions.md#direction) | [Direction](Finance.Excise.MeasuringTransactions.md#direction) | The direction of the transaction - IN/OUT. `Required` 
+| [EndTimeUtc](Finance.Excise.MeasuringTransactions.md#endtimeutc) | datetime | Ending time of the transaction (in UTC time). `Required` `Filter(eq;ge;le)` 
 | [Id](Finance.Excise.MeasuringTransactions.md#id) | guid |  
-| [MeasuringDeviceCode](Finance.Excise.MeasuringTransactions.md#measuringdevicecode) | string | The code of the measuring device, used to measure the transaction. [Required] [Filter(multi eq;like)] [ORD] 
+| [MeasuringDeviceCode](Finance.Excise.MeasuringTransactions.md#measuringdevicecode) | string | The code of the measuring device, used to measure the transaction. `Required` `Filter(multi eq;like)` `ORD` 
 | [Notes](Finance.Excise.MeasuringTransactions.md#notes) | string (nullable) | Notes for this MeasuringTransaction. 
-| [Quantity](Finance.Excise.MeasuringTransactions.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product, measured with this transaction. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] 
-| [StartTimeUtc](Finance.Excise.MeasuringTransactions.md#starttimeutc) | datetime | Starting time of the transaction (in UTC time). [Required] [Filter(eq;ge;le)] 
-| [TransactionNumber](Finance.Excise.MeasuringTransactions.md#transactionnumber) | string | Transaction number, unique for the measuring device. [Required] [Filter(multi eq;like)] 
+| [Quantity](Finance.Excise.MeasuringTransactions.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product, measured with this transaction. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
+| [StartTimeUtc](Finance.Excise.MeasuringTransactions.md#starttimeutc) | datetime | Starting time of the transaction (in UTC time). `Required` `Filter(eq;ge;le)` 
+| [TransactionNumber](Finance.Excise.MeasuringTransactions.md#transactionnumber) | string | Transaction number, unique for the measuring device. `Required` `Filter(multi eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Finance.Excise.MeasuringTransactions.md#product) | [Products](General.Products.Products.md) | The product, which was being measured. [Required] [Filter(multi eq)] |
-| [QuantityUnit](Finance.Excise.MeasuringTransactions.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
-| [TaxWarehouse](Finance.Excise.MeasuringTransactions.md#taxwarehouse) | [TaxWarehouses](Finance.Excise.TaxWarehouses.md) | The tax warehouse, where the transaction occurred. [Required] [Filter(multi eq)] |
+| [Product](Finance.Excise.MeasuringTransactions.md#product) | [Products](General.Products.Products.md) | The product, which was being measured. `Required` `Filter(multi eq)` |
+| [QuantityUnit](Finance.Excise.MeasuringTransactions.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
+| [TaxWarehouse](Finance.Excise.MeasuringTransactions.md#taxwarehouse) | [TaxWarehouses](Finance.Excise.TaxWarehouses.md) | The tax warehouse, where the transaction occurred. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### AlcoholDegree
 
-For alcoholic products, contains the percentage of pure alcohol. null when the transaction is not for alcoholic products. [Filter(multi eq;ge;le)]
+For alcoholic products, contains the percentage of pure alcohol. null when the transaction is not for alcoholic products. `Filter(multi eq;ge;le)`
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### AlcoholDensity
 
-For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. null for non-alcoholic products. [Filter(multi eq;ge;le)]
+For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. null for non-alcoholic products. `Filter(multi eq;ge;le)`
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### AlcoholTemperature
 
-For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). null for non-alcoholic products. [Filter(multi eq;ge;le)]
+For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). null for non-alcoholic products. `Filter(multi eq;ge;le)`
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -72,10 +72,10 @@ _Supports Order By_: **False**
 
 ### Direction
 
-The direction of the transaction - IN/OUT. [Required]
+The direction of the transaction - IN/OUT. `Required`
 
 _Type_: **[Direction](Finance.Excise.MeasuringTransactions.md#direction)**  
-Allowed values for the [Direction](Finance.Excise.MeasuringTransactions.md#direction) data attribute  
+Allowed values for the `Direction`(Finance.Excise.MeasuringTransactions.md#direction) data attribute  
 _Allowed Values (Finance.Excise.MeasuringTransactionsRepository.Direction Enum Members)_  
 
 | Value | Description |
@@ -88,7 +88,7 @@ _Supports Order By_: **False**
 
 ### EndTimeUtc
 
-Ending time of the transaction (in UTC time). [Required] [Filter(eq;ge;le)]
+Ending time of the transaction (in UTC time). `Required` `Filter(eq;ge;le)`
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -103,7 +103,7 @@ _Default Value_: **NewGuid**
 
 ### MeasuringDeviceCode
 
-The code of the measuring device, used to measure the transaction. [Required] [Filter(multi eq;like)] [ORD]
+The code of the measuring device, used to measure the transaction. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -120,7 +120,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-The quantity of the product, measured with this transaction. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)]
+The quantity of the product, measured with this transaction. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -128,7 +128,7 @@ _Supports Order By_: **False**
 
 ### StartTimeUtc
 
-Starting time of the transaction (in UTC time). [Required] [Filter(eq;ge;le)]
+Starting time of the transaction (in UTC time). `Required` `Filter(eq;ge;le)`
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -136,7 +136,7 @@ _Supports Order By_: **False**
 
 ### TransactionNumber
 
-Transaction number, unique for the measuring device. [Required] [Filter(multi eq;like)]
+Transaction number, unique for the measuring device. `Required` `Filter(multi eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -147,7 +147,7 @@ _Supports Order By_: **False**
 
 ### Product
 
-The product, which was being measured. [Required] [Filter(multi eq)]
+The product, which was being measured. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
@@ -155,14 +155,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### QuantityUnit
 
-The measurement unit of Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TaxWarehouse
 
-The tax warehouse, where the transaction occurred. [Required] [Filter(multi eq)]
+The tax warehouse, where the transaction occurred. `Required` `Filter(multi eq)`
 
 _Type_: **[TaxWarehouses](Finance.Excise.TaxWarehouses.md)**  
 _Indexed_: **True**  

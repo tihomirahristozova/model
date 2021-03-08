@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#enddate">EndDate</a></td>
 <td>date</td>
-<td>Ending date of lease of this asset. [Required] [Filter(multi eq;ge;le)]</td>
+<td>Ending date of lease of this asset. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#guaranteeamount">GuaranteeAmount</a></td>
 <td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
-<td>Deposit amount in the currency of the document which is given for this asset during its period of lease. [Currency: LeaseContract.Currency]</td>
+<td>Deposit amount in the currency of the document which is given for this asset during its period of lease. <code>Currency: LeaseContract.Currency</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the lease contract. [Required] [Filter(eq;ge;le)]</td>
+<td>Consecutive number of the line within the lease contract. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#linenotes">LineNotes</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#startdate">StartDate</a></td>
 <td>date</td>
-<td>Starting date of lease for this asset. [Required] [Filter(multi eq;ge;le)]</td>
+<td>Starting date of lease for this asset. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,12 +147,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#leasecontract">LeaseContract</a></td>
 <td><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a></td>
-<td>The <a href="Applications.Rental.LeaseContractLines.html#leasecontract">LeaseContract</a> to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>LeaseContract</code>(Applications.Rental.LeaseContractLines.md#leasecontract) to which this LeaseContractLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#rentalasset">RentalAsset</a></td>
 <td><a href="Applications.Rental.Assets.html">Assets</a></td>
-<td>The asset which is rented with the current contract. [Required] [Filter(multi eq)]</td>
+<td>The asset which is rented with the current contract. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -169,13 +169,13 @@ Aggregate Root:<br>
 <tr>
 <td>Consumables</td>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html">LeaseContractLineConsumables</a></td>
-<td>List of [LeaseContract<br>LineConsumable](Applications.Rental.LeaseContractLine<br>Consumables.md) child objects, based on the [Applications.Rental.LeaseContractLine<br>Consumable.LeaseLine](Applications.Rental.LeaseContractLine<br>Consumables.md#leaseline) back reference</td>
+<td>List of <code>LeaseContract&lt;br /&gt;LineConsumable</code>(Applications.Rental.LeaseContractLine<br>Consumables.md) child objects, based on the <code>Applications.Rental.LeaseContractLine&lt;br /&gt;Consumable.LeaseLine</code>(Applications.Rental.LeaseContractLine<br>Consumables.md#leaseline) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
-<p>Ending date of lease of this asset. [Required] [Filter(multi eq;ge;le)]</p>
+<p>Ending date of lease of this asset. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -184,7 +184,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.LeaseContract.EndDate</code></p>
 <h3 id="guaranteeamount">GuaranteeAmount</h3>
-<p>Deposit amount in the currency of the document which is given for this asset during its period of lease. [Currency: LeaseContract.Currency]</p>
+<p>Deposit amount in the currency of the document which is given for this asset during its period of lease. <code>Currency: LeaseContract.Currency</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -194,7 +194,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the lease contract. [Required] [Filter(eq;ge;le)]</p>
+<p>Consecutive number of the line within the lease contract. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -208,7 +208,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startdate">StartDate</h3>
-<p>Starting date of lease for this asset. [Required] [Filter(multi eq;ge;le)]</p>
+<p>Starting date of lease for this asset. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -218,12 +218,12 @@ Aggregate Root:<br>
 <code>obj.LeaseContract.StartDate</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="leasecontract">LeaseContract</h3>
-<p>The <a href="Applications.Rental.LeaseContractLines.html#leasecontract">LeaseContract</a> to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>LeaseContract</code>(Applications.Rental.LeaseContractLines.md#leasecontract) to which this LeaseContractLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalasset">RentalAsset</h3>
-<p>The asset which is rented with the current contract. [Required] [Filter(multi eq)]</p>
+<p>The asset which is rented with the current contract. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.Assets.html">Assets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

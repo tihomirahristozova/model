@@ -1,8 +1,7 @@
----
+﻿---
 uid: General.Resources
 ---
 # General.Resources Namespace
-
 
 ## Entities
 - [ResourceAvailability](General.Resources.ResourceAvailability.md)  
@@ -12,4 +11,6 @@ uid: General.Resources
 - [Resources](General.Resources.Resources.md)  
 - [WorkSchedules](General.Resources.WorkSchedules.md)  
 - [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md)  
+
+heduleWorkingTime.md)  
 

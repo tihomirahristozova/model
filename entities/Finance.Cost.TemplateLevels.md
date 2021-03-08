@@ -25,22 +25,22 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [HierarchyLevel](Finance.Cost.TemplateLevels.md#hierarchylevel) | int32 | The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). [Required] [Default(0)] [Filter(ge;le)] 
+| [HierarchyLevel](Finance.Cost.TemplateLevels.md#hierarchylevel) | int32 | The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](Finance.Cost.TemplateLevels.md#id) | guid |  
-| [LevelName](Finance.Cost.TemplateLevels.md#levelname) | string | The name of the hierarchy level. [Required] [Filter(like)] 
+| [LevelName](Finance.Cost.TemplateLevels.md#levelname) | string | The name of the hierarchy level. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplate](Finance.Cost.TemplateLevels.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The [Template](Finance.Cost.Templates.md) to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostTemplate](Finance.Cost.TemplateLevels.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The `Template`(Finance.Cost.Templates.md) to which this TemplateLevel belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### HierarchyLevel
 
-The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). [Required] [Default(0)] [Filter(ge;le)]
+The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### LevelName
 
-The name of the hierarchy level. [Required] [Filter(like)]
+The name of the hierarchy level. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### CostTemplate
 
-The [Template](Finance.Cost.Templates.md) to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner]
+The `Template`(Finance.Cost.Templates.md) to which this TemplateLevel belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Finance.Cost.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

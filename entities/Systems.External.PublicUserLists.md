@@ -24,14 +24,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.External.PublicUserLists.md#id) | guid |  
-| [Name](Systems.External.PublicUserLists.md#name) | string | The name of this PublicUserList. [Required] [Filter(like)] 
+| [Name](Systems.External.PublicUserLists.md#name) | string | The name of this PublicUserList. `Required` `Filter(like)` 
 | [Notes](Systems.External.PublicUserLists.md#notes) | string (nullable) | Notes for this PublicUserList. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Systems.External.PublicUserLists.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)] |
+| [EnterpriseCompany](Systems.External.PublicUserLists.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -45,7 +45,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this PublicUserList. [Required] [Filter(like)]
+The name of this PublicUserList. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)]
+The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

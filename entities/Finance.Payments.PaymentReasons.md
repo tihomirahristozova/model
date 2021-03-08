@@ -24,9 +24,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Payments.PaymentReasons.md#id) | guid |  
-| [IsActive](Finance.Payments.PaymentReasons.md#isactive) | boolean | Specifies whether the payment reason is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] 
-| [IsSystem](Finance.Payments.PaymentReasons.md#issystem) | boolean | Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [Name](Finance.Payments.PaymentReasons.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD] 
+| [IsActive](Finance.Payments.PaymentReasons.md#isactive) | boolean | Specifies whether the payment reason is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
+| [IsSystem](Finance.Payments.PaymentReasons.md#issystem) | boolean | Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [Name](Finance.Payments.PaymentReasons.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentReason. `Required` `Filter(eq;like)` `ORD` 
 
 
 ## Attribute Details
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the payment reason is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the payment reason is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -49,7 +49,7 @@ _Default Value_: **True**
 
 ### IsSystem
 
-Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -58,7 +58,7 @@ _Default Value_: **False**
 
 ### Name
 
-The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD]
+The name of this PaymentReason. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  

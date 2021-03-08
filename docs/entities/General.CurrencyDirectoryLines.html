@@ -110,12 +110,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.CurrencyDirectoryLines.html#ratedivisor">RateDivisor</a></td>
 <td>decimal</td>
-<td>The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</td>
+<td>The divisor for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="General.CurrencyDirectoryLines.html#ratemultiplier">RateMultiplier</a></td>
 <td>decimal</td>
-<td>The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</td>
+<td>The multiplier for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a></td>
 <td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></td>
-<td>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>CurrencyDirectory</code>(General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.CurrencyDirectoryLines.html#fromcurrency">FromCurrency</a></td>
 <td><a href="General.Currencies.html">Currencies</a></td>
-<td>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</td>
+<td>The currency for which the exchange rate is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ratedivisor">RateDivisor</h3>
-<p>The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</p>
+<p>The divisor for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -156,7 +156,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency)) OrElse ( obj.RateDivisor == 0)), 1, obj.RateDivisor)</code></p>
 <h3 id="ratemultiplier">RateMultiplier</h3>
-<p>The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</p>
+<p>The multiplier for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -165,12 +165,12 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency)) OrElse ( obj.RateMultiplier == 0)), 1, obj.RateMultiplier)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
-<p>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>CurrencyDirectory</code>(General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromcurrency">FromCurrency</h3>
-<p>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</p>
+<p>The currency for which the exchange rate is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

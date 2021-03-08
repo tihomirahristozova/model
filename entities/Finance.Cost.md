@@ -1,8 +1,7 @@
----
+﻿---
 uid: Finance.Cost
 ---
 # Finance.Cost Namespace
-
 
 ## Entities
 - [AllocationModels](Finance.Cost.AllocationModels.md)  
@@ -18,4 +17,6 @@ uid: Finance.Cost
 - [TemplateCostTypes](Finance.Cost.TemplateCostTypes.md)  
 - [TemplateLevels](Finance.Cost.TemplateLevels.md)  
 - [Templates](Finance.Cost.Templates.md)  
+
+st.Templates.md)  
 

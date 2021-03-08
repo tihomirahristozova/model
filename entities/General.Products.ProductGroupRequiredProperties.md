@@ -27,17 +27,17 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DefaultPropertyValue](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvalue) | string (nullable) | When not null, specifies the default value of the property, for new products in the group. 
 | [DefaultProperty<br />ValueDescription](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvaluedescription) | string (nullable) | When not null, specifies the default description value of the property, for new products in the group. 
-| [DefaultValueId](General.Products.ProductGroupRequiredProperties.md#defaultvalueid) | guid (nullable) | When not null, specifies the default internal Id value of the property, for new products in the group. [Filter(multi eq)] 
+| [DefaultValueId](General.Products.ProductGroupRequiredProperties.md#defaultvalueid) | guid (nullable) | When not null, specifies the default internal Id value of the property, for new products in the group. `Filter(multi eq)` 
 | [Id](General.Products.ProductGroupRequiredProperties.md#id) | guid |  
-| [PropertyNo](General.Products.ProductGroupRequiredProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. [Required] [Default(0)] 
-| [Required](General.Products.ProductGroupRequiredProperties.md#required) | boolean | Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. [Required] [Default(false)] 
+| [PropertyNo](General.Products.ProductGroupRequiredProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. `Required` `Default(0)` 
+| [Required](General.Products.ProductGroupRequiredProperties.md#required) | boolean | Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. `Required` `Default(false)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The [ProductGroup](General.Products.ProductGroupRequired<br />Properties.md#productgroup) to which this ProductGroupRequired<br />Property belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Property](General.Products.ProductGroupRequiredProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. [Required] [Filter(multi eq)] |
+| [ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The `ProductGroup`(General.Products.ProductGroupRequired<br />Properties.md#productgroup) to which this ProductGroupRequired<br />Property belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Property](General.Products.ProductGroupRequiredProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### DefaultValueId
 
-When not null, specifies the default internal Id value of the property, for new products in the group. [Filter(multi eq)]
+When not null, specifies the default internal Id value of the property, for new products in the group. `Filter(multi eq)`
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -74,7 +74,7 @@ _Default Value_: **NewGuid**
 
 ### PropertyNo
 
-The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. [Required] [Default(0)]
+The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. `Required` `Default(0)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -88,7 +88,7 @@ _Front-End Recalc Expressions:_
 `( obj.ProductGroup.RequiredProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Required
 
-Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. [Required] [Default(false)]
+Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. `Required` `Default(false)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -100,14 +100,14 @@ _Default Value_: **False**
 
 ### ProductGroup
 
-The [ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) to which this ProductGroupRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner]
+The `ProductGroup`(General.Products.ProductGroupRequiredProperties.md#productgroup) to which this ProductGroupRequiredProperty belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
-The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. [Required] [Filter(multi eq)]
+The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. `Required` `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

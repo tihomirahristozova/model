@@ -23,28 +23,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](General.DocumentFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. [Required] [Default(NowUtc)] [Filter(multi eq;ge;le)] 
-| [DocumentLineId](General.DocumentFulfillments.md#documentlineid) | guid | The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. [Required] [Filter(multi eq)] 
-| [FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype) | [FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype) | Type of fulfillment: P=Planned; C=Completed. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26] 
+| [CreationTimeUtc](General.DocumentFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)` 
+| [DocumentLineId](General.DocumentFulfillments.md#documentlineid) | guid | The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. `Required` `Filter(multi eq)` 
+| [FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype) | [FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype) | Type of fulfillment: P=Planned; C=Completed. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
 | [Id](General.DocumentFulfillments.md#id) | guid |  
-| [IsFinal](General.DocumentFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. [Required] [Filter(eq)] 
-| [LineNo](General.DocumentFulfillments.md#lineno) | int32 (nullable) | Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.26] 
-| [LineType](General.DocumentFulfillments.md#linetype) | string | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. [Required] [Default("L")] [Filter(multi eq)] [Introduced in version 21.1.1.26] 
-| [QuantityBase](General.DocumentFulfillments.md#quantitybase) | decimal | Fulfilled quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33] 
+| [IsFinal](General.DocumentFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. `Required` `Filter(eq)` 
+| [LineNo](General.DocumentFulfillments.md#lineno) | int32 (nullable) | Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26` 
+| [LineType](General.DocumentFulfillments.md#linetype) | string | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
+| [QuantityBase](General.DocumentFulfillments.md#quantitybase) | decimal | Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](General.DocumentFulfillments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. [Required] [Filter(multi eq)] |
-| [Document](General.DocumentFulfillments.md#document) | [Documents](General.Documents.md) | The Document, which is fulfilled. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26] |
+| [CreationUser](General.DocumentFulfillments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. `Required` `Filter(multi eq)` |
+| [Document](General.DocumentFulfillments.md#document) | [Documents](General.Documents.md) | The Document, which is fulfilled. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26` |
 
 
 ## Attribute Details
 
 ### CreationTimeUtc
 
-The exact time in UTC, when the fulfillment was created in the system. [Required] [Default(NowUtc)] [Filter(multi eq;ge;le)]
+The exact time in UTC, when the fulfillment was created in the system. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)`
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -53,7 +53,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### DocumentLineId
 
-The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. [Required] [Filter(multi eq)]
+The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Indexed_: **True**  
@@ -61,10 +61,10 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### FulfillmentType
 
-Type of fulfillment: P=Planned; C=Completed. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]
+Type of fulfillment: P=Planned; C=Completed. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26`
 
 _Type_: **[FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype)**  
-Allowed values for the [FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype) data attribute  
+Allowed values for the `FulfillmentType`(General.DocumentFulfillments.md#fulfillmenttype) data attribute  
 _Allowed Values (General.DocumentFulfillmentsRepository.FulfillmentType Enum Members)_  
 
 | Value | Description |
@@ -84,7 +84,7 @@ _Default Value_: **NewGuid**
 
 ### IsFinal
 
-Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. [Required] [Filter(eq)]
+Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. `Required` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -92,7 +92,7 @@ _Supports Order By_: **False**
 
 ### LineNo
 
-Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.26]
+Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26`
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -100,7 +100,7 @@ _Supports Order By_: **False**
 
 ### LineType
 
-Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. [Required] [Default("L")] [Filter(multi eq)] [Introduced in version 21.1.1.26]
+Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -109,7 +109,7 @@ _Default Value_: **L**
 
 ### QuantityBase
 
-Fulfilled quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]
+Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -120,14 +120,14 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-The user, who created the record. [Required] [Filter(multi eq)]
+The user, who created the record. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Document
 
-The Document, which is fulfilled. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]
+The Document, which is fulfilled. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  

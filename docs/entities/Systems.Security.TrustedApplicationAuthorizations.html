@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#granttimeutc">GrantTimeUtc</a></td>
 <td>datetime</td>
-<td>The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)]</td>
+<td>The time (in UTC) when the authorization was granted. <code>Required</code> <code>Default(NowUtc)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#id">Id</a></td>
@@ -115,7 +115,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#isrevoked">IsRevoked</a></td>
 <td>boolean</td>
-<td>Specifies whether the grant is explicitly revoked. [Required] [Default(false)]</td>
+<td>Specifies whether the grant is explicitly revoked. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#notes">Notes</a></td>
@@ -147,23 +147,23 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#contextuser">ContextUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]</td>
+<td>The user, whose permissions are granted to the application. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#grantinguser">GrantingUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who authorized the application. [Required] [Filter(multi eq)]</td>
+<td>The user, who authorized the application. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#trustedapplication">TrustedApplication</a></td>
 <td><a href="Systems.Security.TrustedApplications.html">TrustedApplications</a></td>
-<td>The application, which is authorized. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The application, which is authorized. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="granttimeutc">GrantTimeUtc</h3>
-<p>The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)]</p>
+<p>The time (in UTC) when the authorization was granted. <code>Required</code> <code>Default(NowUtc)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -174,7 +174,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isrevoked">IsRevoked</h3>
-<p>Specifies whether the grant is explicitly revoked. [Required] [Default(false)]</p>
+<p>Specifies whether the grant is explicitly revoked. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -196,15 +196,15 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="contextuser">ContextUser</h3>
-<p>The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]</p>
+<p>The user, whose permissions are granted to the application. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="grantinguser">GrantingUser</h3>
-<p>The user, who authorized the application. [Required] [Filter(multi eq)]</p>
+<p>The user, who authorized the application. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trustedapplication">TrustedApplication</h3>
-<p>The application, which is authorized. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The application, which is authorized. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html">TrustedApplications</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

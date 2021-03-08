@@ -29,8 +29,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletingOutput<br />OrderDocumentType](Production.WorkOrderDocumentTypesOptions.md#completingoutputorderdocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | User-defined Completing Output Order document type. [Filter(multi eq)] |
-| [DocumentType](Production.WorkOrderDocumentTypesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | User-defined Work Order document type. [Required] [Filter(multi eq)] |
+| [CompletingOutput<br />OrderDocumentType](Production.WorkOrderDocumentTypesOptions.md#completingoutputorderdocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | User-defined Completing Output Order document type. `Filter(multi eq)` |
+| [DocumentType](Production.WorkOrderDocumentTypesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | User-defined Work Order document type. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -47,14 +47,14 @@ _Default Value_: **NewGuid**
 
 ### CompletingOutputOrderDocumentType
 
-User-defined Completing Output Order document type. [Filter(multi eq)]
+User-defined Completing Output Order document type. `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-User-defined Work Order document type. [Required] [Filter(multi eq)]
+User-defined Work Order document type. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  

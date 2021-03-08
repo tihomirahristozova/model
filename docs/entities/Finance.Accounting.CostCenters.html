@@ -110,7 +110,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.CostCenters.html#name">Name</a></td>
 <td>string</td>
-<td>The name of this CostCenter. [Required] [Filter(like)]</td>
+<td>The name of this CostCenter. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.CostCenters.html#notes">Notes</a></td>
@@ -120,7 +120,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.CostCenters.html#relativeweight">RelativeWeight</a></td>
 <td>decimal</td>
-<td>The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)]</td>
+<td>The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,12 +137,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.CostCenters.html#parent">Parent</a></td>
 <td><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</td>
-<td>Parent cost center, null if this is root cost center. [Filter(multi eq)]</td>
+<td>Parent cost center, null if this is root cost center. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.CostCenters.html#transfercosttoprofitcenter">TransferCostToProfitCenter</a></td>
 <td><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</td>
-<td>Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)]</td>
+<td>Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this CostCenter. [Required] [Filter(like)]</p>
+<p>The name of this CostCenter. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -163,18 +163,18 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="relativeweight">RelativeWeight</h3>
-<p>The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)]</p>
+<p>The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
-<p>Parent cost center, null if this is root cost center. [Filter(multi eq)]</p>
+<p>Parent cost center, null if this is root cost center. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transfercosttoprofitcenter">TransferCostToProfitCenter</h3>
-<p>Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)]</p>
+<p>Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -110,7 +110,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Projects.TaskTypes.html#displayorder">DisplayOrder</a></td>
 <td>int32</td>
-<td>Display order position of the task. Lowest numbers are shown first (on top). [Required] [Default(1)]</td>
+<td>Display order position of the task. Lowest numbers are shown first (on top). <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.TaskTypes.html#icon">Icon</a></td>
@@ -125,7 +125,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Projects.TaskTypes.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The multilanguage task type name. [Required] [Filter(multi eq;like)]</td>
+<td>The multilanguage task type name. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Projects.TaskTypes.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.ProjectTypes.html">ProjectTypes</a> (nullable)</td>
-<td>When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)]</td>
+<td>When not null, specifies that this task type can be used only for projects of the specified type. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="displayorder">DisplayOrder</h3>
-<p>Display order position of the task. Lowest numbers are shown first (on top). [Required] [Default(1)]</p>
+<p>Display order position of the task. Lowest numbers are shown first (on top). <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -169,13 +169,13 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The multilanguage task type name. [Required] [Filter(multi eq;like)]</p>
+<p>The multilanguage task type name. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="projecttype">ProjectType</h3>
-<p>When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)]</p>
+<p>When not null, specifies that this task type can be used only for projects of the specified type. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTypes.html">ProjectTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -25,28 +25,28 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Fleet.Crews.md#active) | boolean | Is the crew active? true-active for choosing; false-otherwise. [Required] [Default(true)] [Filter(eq)] 
+| [Active](Applications.Fleet.Crews.md#active) | boolean | Is the crew active? true-active for choosing; false-otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [Id](Applications.Fleet.Crews.md#id) | guid |  
-| [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the crew (multilanguage). [Required] [Filter(eq;like)] 
+| [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the crew (multilanguage). `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Fleet.Crews.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the crew. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Applications.Fleet.Crews.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the crew. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Members | [CrewMembers](Applications.Fleet.CrewMembers.md) | List of [CrewMember](Applications.Fleet.CrewMembers.md) child objects, based on the [Applications.Fleet.CrewMember.Crew](Applications.Fleet.CrewMembers.md#crew) back reference 
+| Members | [CrewMembers](Applications.Fleet.CrewMembers.md) | List of `CrewMember`(Applications.Fleet.CrewMembers.md) child objects, based on the `Applications.Fleet.CrewMember.Crew`(Applications.Fleet.CrewMembers.md#crew) back reference 
 
 
 ## Attribute Details
 
 ### Active
 
-Is the crew active? true-active for choosing; false-otherwise. [Required] [Default(true)] [Filter(eq)]
+Is the crew active? true-active for choosing; false-otherwise. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -62,7 +62,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of the crew (multilanguage). [Required] [Filter(eq;like)]
+The name of the crew (multilanguage). `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-The enterprise company operating the crew. [Required] [Filter(multi eq)] [Owner]
+The enterprise company operating the crew. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

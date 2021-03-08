@@ -110,42 +110,42 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#address">Address</a></td>
 <td>string (nullable)</td>
-<td>The primary address of the user. Can be specified with latin or local characters. [Filter(like)]</td>
+<td>The primary address of the user. Can be specified with latin or local characters. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#alternateemail">AlternateEmail</a></td>
 <td>string (nullable)</td>
-<td>Alternate email of the user. Can be used for backup email for password restore. [Filter(like)]</td>
+<td>Alternate email of the user. Can be used for backup email for password restore. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#city">City</a></td>
 <td>string (nullable)</td>
-<td>The state of residence of the user. Can be specified with latin or local letters. [Filter(like)]</td>
+<td>The state of residence of the user. Can be specified with latin or local letters. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#companyname">CompanyName</a></td>
 <td>string (nullable)</td>
-<td>The name of the company, for which the user works, as specified by the user. [Filter(like)]</td>
+<td>The name of the company, for which the user works, as specified by the user. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#country">Country</a></td>
 <td>string (nullable)</td>
-<td>The country of residence of the user, with latin letters. [Filter(like)]</td>
+<td>The country of residence of the user, with latin letters. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#createdon">CreatedOn</a></td>
 <td>datetime (nullable)</td>
-<td>The date and time when the user was created. [Default(Now)]</td>
+<td>The date and time when the user was created. <code>Default(Now)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#email">Email</a></td>
 <td>string</td>
-<td>The primary email of the user. Used for notifications and password restore. [Required] [Filter(like)]</td>
+<td>The primary email of the user. Used for notifications and password restore. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#firstname">FirstName</a></td>
 <td>string</td>
-<td>First name of the user. [Required] [Filter(like)]</td>
+<td>First name of the user. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#id">Id</a></td>
@@ -155,12 +155,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the user account is active and access should be allowed. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the user account is active and access should be allowed. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#lastname">LastName</a></td>
 <td>string</td>
-<td>Last name of the user. [Required] [Filter(like)]</td>
+<td>Last name of the user. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#notes">Notes</a></td>
@@ -170,32 +170,32 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#passwordalgorithm">PasswordAlgorithm</a></td>
 <td>string</td>
-<td>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. [Required] [Filter(like)]</td>
+<td>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#passwordhash">PasswordHash</a></td>
 <td>string</td>
-<td>Actual password storage. The format of the contents is determined by Password Algorithm. [Required] [Filter(like)]</td>
+<td>Actual password storage. The format of the contents is determined by Password Algorithm. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#passwordrecoverycode">PasswordRecoveryCode</a></td>
 <td>guid (nullable)</td>
-<td>Automatically generated unique code for the last password recovery attempt. [Filter(multi eq)] [ReadOnly]</td>
+<td>Automatically generated unique code for the last password recovery attempt. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#passwordrecoverycreationtime">PasswordRecovery<br>CreationTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the last password recovery code was created. [ReadOnly]</td>
+<td>Date and time when the last password recovery code was created. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#phonenumber">PhoneNumber</a></td>
 <td>string (nullable)</td>
-<td>The primary phone number of the user. [Filter(like)]</td>
+<td>The primary phone number of the user. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#postalcode">PostalCode</a></td>
 <td>string (nullable)</td>
-<td>The postal code of the default address of the user. [Filter(like)]</td>
+<td>The postal code of the default address of the user. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#profilepicture">ProfilePicture</a></td>
@@ -205,7 +205,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#state">State</a></td>
 <td>string (nullable)</td>
-<td>The state of residence of the user within the country. Can be specified with latin or local characters. [Filter(like)]</td>
+<td>The state of residence of the user within the country. Can be specified with latin or local characters. <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -222,17 +222,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#company">Company</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a> (nullable)</td>
-<td>Link to an internal company record, specified by internal employee. [Filter(multi eq)]</td>
+<td>Link to an internal company record, specified by internal employee. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)]</td>
+<td>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#publicuserlist">PublicUserList</a></td>
 <td><a href="Systems.External.PublicUserLists.html">PublicUserLists</a></td>
-<td>The list in which the user account is saved. [Required] [Filter(multi eq)]</td>
+<td>The list in which the user account is saved. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -243,43 +243,43 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="address">Address</h3>
-<p>The primary address of the user. Can be specified with latin or local characters. [Filter(like)]</p>
+<p>The primary address of the user. Can be specified with latin or local characters. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="alternateemail">AlternateEmail</h3>
-<p>Alternate email of the user. Can be used for backup email for password restore. [Filter(like)]</p>
+<p>Alternate email of the user. Can be used for backup email for password restore. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="city">City</h3>
-<p>The state of residence of the user. Can be specified with latin or local letters. [Filter(like)]</p>
+<p>The state of residence of the user. Can be specified with latin or local letters. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="companyname">CompanyName</h3>
-<p>The name of the company, for which the user works, as specified by the user. [Filter(like)]</p>
+<p>The name of the company, for which the user works, as specified by the user. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="country">Country</h3>
-<p>The country of residence of the user, with latin letters. [Filter(like)]</p>
+<p>The country of residence of the user, with latin letters. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="createdon">CreatedOn</h3>
-<p>The date and time when the user was created. [Default(Now)]</p>
+<p>The date and time when the user was created. <code>Default(Now)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="email">Email</h3>
-<p>The primary email of the user. Used for notifications and password restore. [Required] [Filter(like)]</p>
+<p>The primary email of the user. Used for notifications and password restore. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="firstname">FirstName</h3>
-<p>First name of the user. [Required] [Filter(like)]</p>
+<p>First name of the user. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -289,13 +289,13 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the user account is active and access should be allowed. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the user account is active and access should be allowed. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="lastname">LastName</h3>
-<p>Last name of the user. [Required] [Filter(like)]</p>
+<p>Last name of the user. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -305,31 +305,31 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="passwordalgorithm">PasswordAlgorithm</h3>
-<p>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. [Required] [Filter(like)]</p>
+<p>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="passwordhash">PasswordHash</h3>
-<p>Actual password storage. The format of the contents is determined by Password Algorithm. [Required] [Filter(like)]</p>
+<p>Actual password storage. The format of the contents is determined by Password Algorithm. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="passwordrecoverycode">PasswordRecoveryCode</h3>
-<p>Automatically generated unique code for the last password recovery attempt. [Filter(multi eq)] [ReadOnly]</p>
+<p>Automatically generated unique code for the last password recovery attempt. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="passwordrecoverycreationtime">PasswordRecoveryCreationTime</h3>
-<p>Date and time when the last password recovery code was created. [ReadOnly]</p>
+<p>Date and time when the last password recovery code was created. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="phonenumber">PhoneNumber</h3>
-<p>The primary phone number of the user. [Filter(like)]</p>
+<p>The primary phone number of the user. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="postalcode">PostalCode</h3>
-<p>The postal code of the default address of the user. [Filter(like)]</p>
+<p>The postal code of the default address of the user. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -339,21 +339,21 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>
-<p>The state of residence of the user within the country. Can be specified with latin or local characters. [Filter(like)]</p>
+<p>The state of residence of the user within the country. Can be specified with latin or local characters. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="company">Company</h3>
-<p>Link to an internal company record, specified by internal employee. [Filter(multi eq)]</p>
+<p>Link to an internal company record, specified by internal employee. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
-<p>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)]</p>
+<p>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="publicuserlist">PublicUserList</h3>
-<p>The list in which the user account is saved. [Required] [Filter(multi eq)]</p>
+<p>The list in which the user account is saved. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.External.PublicUserLists.html">PublicUserLists</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

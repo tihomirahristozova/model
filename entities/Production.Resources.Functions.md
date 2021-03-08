@@ -26,15 +26,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Resources.Functions.md#id) | guid |  
-| [Name](Production.Resources.Functions.md#name) | string | The name of this Function. [Required] [Filter(like)] 
+| [Name](Production.Resources.Functions.md#name) | string | The name of this Function. `Required` `Filter(like)` 
 | [Notes](Production.Resources.Functions.md#notes) | string (nullable) | User comments on the function. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FunctionGroup](Production.Resources.Functions.md#functiongroup) | [FunctionGroups](Production.Resources.FunctionGroups.md) | The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner] |
-| [PrimaryUnit](Production.Resources.Functions.md#primaryunit) | [MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)] |
+| [FunctionGroup](Production.Resources.Functions.md#functiongroup) | [FunctionGroups](Production.Resources.FunctionGroups.md) | The `FunctionGroup`(Production.Resources.Functions.md#functiongroup) to which this Function belongs. `Required` `Filter(multi eq)` `Owner` |
+| [PrimaryUnit](Production.Resources.Functions.md#primaryunit) | [MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Function. [Required] [Filter(like)]
+The name of this Function. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### FunctionGroup
 
-The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner]
+The `FunctionGroup`(Production.Resources.Functions.md#functiongroup) to which this Function belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[FunctionGroups](Production.Resources.FunctionGroups.md)**  
 _Indexed_: **True**  
@@ -75,7 +75,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PrimaryUnit
 
-Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)]
+Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

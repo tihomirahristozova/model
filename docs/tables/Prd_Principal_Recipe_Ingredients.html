@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Table Prd_Principal_Recipe_Ingredients | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Table Prd_Principal_Recipe_Ingredients | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="table-prd_principal_recipe_ingredients">Table Prd_Principal_Recipe_Ingredients</h1>
+
+<p>Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_Ingredients</p>
+<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<ul>
+<li><a href="Prd_Principal_Recipes.html">Prd_Principal_Recipes</a></li>
+<li><a href="Gen_Product_Groups.html">Gen_Product_Groups</a></li>
+</ul>
+<h1 id="columns">Columns</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td><code>PK</code>, Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td>Conditional_Property_Description</td>
+<td><code>MultilanguageString</code></td>
+<td></td>
+<td>The desired description of Conditional Property in order for the template line to match.</td>
+</tr>
+<tr>
+<td>Conditional_Property_Value</td>
+<td><code>String</code></td>
+<td></td>
+<td>The desired value of Conditional Property in order for the template line to match.</td>
+</tr>
+<tr>
+<td>Ingredient_Name</td>
+<td><code>String</code></td>
+<td></td>
+<td>The principal name of the ingredient. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td>Line_Ord</td>
+<td><code>Int32</code></td>
+<td></td>
+<td>The position of the line in the recipe model. <code>Required</code></td>
+</tr>
+<tr>
+<td>Scrap_Rate</td>
+<td><code>Decimal</code></td>
+<td></td>
+<td>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td>Usage_Quantity_Formula</td>
+<td><code>String</code></td>
+<td></td>
+<td>Specifies formula for the usage quantity. The formula can reference properties in <code>&lt;Prop_Name&gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Prd_Principal_Recipe_Ingredients.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

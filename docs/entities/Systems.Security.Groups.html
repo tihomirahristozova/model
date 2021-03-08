@@ -114,7 +114,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.Groups.html#grouptype">GroupType</a></td>
 <td><a href="Systems.Security.Groups.html#grouptype">GroupType</a></td>
-<td>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default(&quot;G&quot;)] [ReadOnly]</td>
+<td>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. <code>Required</code> <code>Default(&quot;G&quot;)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Groups.html#id">Id</a></td>
@@ -124,7 +124,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.Groups.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The name of this Group. [Required] [Filter(like)] [ORD]</td>
+<td>The name of this Group. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Groups.html#notes">Notes</a></td>
@@ -146,7 +146,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.Groups.html#groupforuser">GroupForUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]</td>
+<td>When Group_Type=U, contains the user for which the group is defined, null otherwise. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Default Search Member:<br>
 <tr>
 <td>AccessKeys</td>
 <td><a href="Systems.Security.GroupAccessKeys.html">GroupAccessKeys</a></td>
-<td>List of <a href="Systems.Security.GroupAccessKeys.html">GroupAccessKey</a> child objects, based on the <a href="Systems.Security.GroupAccessKeys.html#group">Systems.Security.GroupAccessKey.Group</a> back reference</td>
+<td>List of <code>GroupAccessKey</code>(Systems.Security.GroupAccessKeys.md) child objects, based on the <code>Systems.Security.GroupAccessKey.Group</code>(Systems.Security.GroupAccessKeys.md#group) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -174,9 +174,9 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="grouptype">GroupType</h3>
-<p>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default(&quot;G&quot;)] [ReadOnly]</p>
+<p>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. <code>Required</code> <code>Default(&quot;G&quot;)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Groups.html#grouptype">GroupType</a></strong><br>
-Allowed values for the <a href="Systems.Security.Groups.html#grouptype">GroupType</a> data attribute<br>
+Allowed values for the <code>GroupType</code>(Systems.Security.Groups.md#grouptype) data attribute<br>
 <em>Allowed Values (Systems.Security.GroupsRepository.GroupType Enum Members)</em></p>
 <table>
 <thead>
@@ -213,7 +213,7 @@ Allowed values for the <a href="Systems.Security.Groups.html#grouptype">GroupTyp
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this Group. [Required] [Filter(like)] [ORD]</p>
+<p>The name of this Group. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
@@ -224,7 +224,7 @@ Allowed values for the <a href="Systems.Security.Groups.html#grouptype">GroupTyp
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="groupforuser">GroupForUser</h3>
-<p>When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]</p>
+<p>When Group_Type=U, contains the user for which the group is defined, null otherwise. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

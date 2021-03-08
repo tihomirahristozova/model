@@ -25,10 +25,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Description](Crm.Marketing.Campaigns.md#description) | string (nullable) | Campaign description. 
 | [EndDate](Crm.Marketing.Campaigns.md#enddate) | datetime (nullable) | End date of the campaign. null means that the end date is still unknown. 
-| [ForecastedCost](Crm.Marketing.Campaigns.md#forecastedcost) | decimal | Forecasted total cost of the campaign. [Required] [Default(0)] 
+| [ForecastedCost](Crm.Marketing.Campaigns.md#forecastedcost) | decimal | Forecasted total cost of the campaign. `Required` `Default(0)` 
 | [Id](Crm.Marketing.Campaigns.md#id) | guid |  
-| [Name](Crm.Marketing.Campaigns.md#name) | string | Short name of the campaign. [Required] [Filter(like)] [ORD] 
-| [StartDate](Crm.Marketing.Campaigns.md#startdate) | datetime | Starting date of the campaign. [Required] [Default(Today)] 
+| [Name](Crm.Marketing.Campaigns.md#name) | string | Short name of the campaign. `Required` `Filter(like)` `ORD` 
+| [StartDate](Crm.Marketing.Campaigns.md#startdate) | datetime | Starting date of the campaign. `Required` `Default(Today)` 
 
 
 ## Attribute Details
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 ### ForecastedCost
 
-Forecasted total cost of the campaign. [Required] [Default(0)]
+Forecasted total cost of the campaign. `Required` `Default(0)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Short name of the campaign. [Required] [Filter(like)] [ORD]
+Short name of the campaign. `Required` `Filter(like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -76,7 +76,7 @@ _Supports Order By_: **True**
 
 ### StartDate
 
-Starting date of the campaign. [Required] [Default(Today)]
+Starting date of the campaign. `Required` `Default(Today)`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  

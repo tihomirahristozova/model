@@ -25,26 +25,26 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](General.DocumentTypeUserStatuses.md#active) | boolean | Is the user status active for applying to documents. [Required] [Default(true)] [Filter(eq)] 
-| [DisplayOrder](General.DocumentTypeUserStatuses.md#displayorder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type. [Required] [Filter(ge;le)] 
+| [Active](General.DocumentTypeUserStatuses.md#active) | boolean | Is the user status active for applying to documents. `Required` `Default(true)` `Filter(eq)` 
+| [DisplayOrder](General.DocumentTypeUserStatuses.md#displayorder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type. `Required` `Filter(ge;le)` 
 | [Id](General.DocumentTypeUserStatuses.md#id) | guid |  
 | [Instructions](General.DocumentTypeUserStatuses.md#instructions) | string (nullable) | Instructions what should be done when this user status is active (Rich Text). 
-| [IsExitStatus](General.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. [Required] [Default(true)] [Filter(eq)] 
-| [State](General.DocumentTypeUserStatuses.md#state) | [DocumentState](General.DocumentTypeUserStatuses.md#state) | The system state to which this user status is bound. [Required] [Filter(eq)] 
-| [UserStatusName](General.DocumentTypeUserStatuses.md#userstatusname) | string | Multi-language name of the user status. [Required] [Filter(eq;like)] 
+| [IsExitStatus](General.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. `Required` `Default(true)` `Filter(eq)` 
+| [State](General.DocumentTypeUserStatuses.md#state) | [DocumentState](General.DocumentTypeUserStatuses.md#state) | The system state to which this user status is bound. `Required` `Filter(eq)` 
+| [UserStatusName](General.DocumentTypeUserStatuses.md#userstatusname) | string | Multi-language name of the user status. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentTypeUserStatuses.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentType](General.DocumentTypeUserStatuses.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, to which this user status is bound. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### Active
 
-Is the user status active for applying to documents. [Required] [Default(true)] [Filter(eq)]
+Is the user status active for applying to documents. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -53,7 +53,7 @@ _Default Value_: **True**
 
 ### DisplayOrder
 
-Consecutive display order of the status, with regard to other statuses within the same document type. [Required] [Filter(ge;le)]
+Consecutive display order of the status, with regard to other statuses within the same document type. `Required` `Filter(ge;le)`
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### IsExitStatus
 
-True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. [Required] [Default(true)] [Filter(eq)]
+True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -90,7 +90,7 @@ _Default Value_: **True**
 
 ### State
 
-The system state to which this user status is bound. [Required] [Filter(eq)]
+The system state to which this user status is bound. `Required` `Filter(eq)`
 
 _Type_: **[DocumentState](General.DocumentTypeUserStatuses.md#state)**  
 Enumeration of document system states  
@@ -111,7 +111,7 @@ _Supports Order By_: **False**
 
 ### UserStatusName
 
-Multi-language name of the user status. [Required] [Filter(eq;like)]
+Multi-language name of the user status. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -122,7 +122,7 @@ _Supports Order By_: **False**
 
 ### DocumentType
 
-The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner]
+The document type, to which this user status is bound. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  

@@ -24,24 +24,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowLocalAccounts](Systems.Security.Domains.md#allowlocalaccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). [Required] [Default(true)] 
+| [AllowLocalAccounts](Systems.Security.Domains.md#allowlocalaccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). `Required` `Default(true)` 
 | [Description](Systems.Security.Domains.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Multi-language description of the domain. 
 | [Id](Systems.Security.Domains.md#id) | guid |  
-| [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Systems.Security.Domains.md#name) | string | The name of the domain (restricted for URL usage). [Required] [Filter(eq;like)] [ORD] 
+| [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Systems.Security.Domains.md#name) | string | The name of the domain (restricted for URL usage). `Required` `Filter(eq;like)` `ORD` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Providers | [DomainProviders](Systems.Security.DomainProviders.md) | List of [DomainProvider](Systems.Security.DomainProviders.md) child objects, based on the [Systems.Security.DomainProvider.Domain](Systems.Security.DomainProviders.md#domain) back reference 
+| Providers | [DomainProviders](Systems.Security.DomainProviders.md) | List of `DomainProvider`(Systems.Security.DomainProviders.md) child objects, based on the `Systems.Security.DomainProvider.Domain`(Systems.Security.DomainProviders.md#domain) back reference 
 
 
 ## Attribute Details
 
 ### AllowLocalAccounts
 
-Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). [Required] [Default(true)]
+Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). `Required` `Default(true)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-Specifies whether this is the default domain for the database. [Required] [Default(true)] [Filter(eq)]
+Specifies whether this is the default domain for the database. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -74,7 +74,7 @@ _Default Value_: **True**
 
 ### Name
 
-The name of the domain (restricted for URL usage). [Required] [Filter(eq;like)] [ORD]
+The name of the domain (restricted for URL usage). `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  

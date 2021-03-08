@@ -24,13 +24,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.CustomerTypes.md#id) | guid |  
-| [Name](Crm.CustomerTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CustomerType. [Required] [Filter(eq;like)] 
+| [Name](Crm.CustomerTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CustomerType. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Crm.CustomerTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)] |
+| [AccessKey](Crm.CustomerTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this CustomerType. [Required] [Filter(eq;like)]
+The name of this CustomerType. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)]
+The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

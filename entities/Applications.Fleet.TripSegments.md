@@ -29,15 +29,15 @@ Aggregate Root:
 | [Id](Applications.Fleet.TripSegments.md#id) | guid |  
 | [Mileage](Applications.Fleet.TripSegments.md#mileage) | decimal (nullable) | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage. 
 | [Notes](Applications.Fleet.TripSegments.md#notes) | string (nullable) | Notes for the segment. 
-| [StartingTimestamp](Applications.Fleet.TripSegments.md#startingtimestamp) | datetime | The starting date and time of the travel on the segment. [Required] 
+| [StartingTimestamp](Applications.Fleet.TripSegments.md#startingtimestamp) | datetime | The starting date and time of the travel on the segment. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndingMapPoint](Applications.Fleet.TripSegments.md#endingmappoint) | [MapPoints](General.Geography.MapPoints.md) | The ending geographical point of the route segment. [Required] [Filter(multi eq)] |
-| [StartingMapPoint](Applications.Fleet.TripSegments.md#startingmappoint) | [MapPoints](General.Geography.MapPoints.md) | The starting geographical point of the route segment. [Required] [Filter(multi eq)] |
-| [Trip](Applications.Fleet.TripSegments.md#trip) | [Trips](Applications.Fleet.Trips.md) | The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner] |
+| [EndingMapPoint](Applications.Fleet.TripSegments.md#endingmappoint) | [MapPoints](General.Geography.MapPoints.md) | The ending geographical point of the route segment. `Required` `Filter(multi eq)` |
+| [StartingMapPoint](Applications.Fleet.TripSegments.md#startingmappoint) | [MapPoints](General.Geography.MapPoints.md) | The starting geographical point of the route segment. `Required` `Filter(multi eq)` |
+| [Trip](Applications.Fleet.TripSegments.md#trip) | [Trips](Applications.Fleet.Trips.md) | The trip for which the segment is defined. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 ### StartingTimestamp
 
-The starting date and time of the travel on the segment. [Required]
+The starting date and time of the travel on the segment. `Required`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -86,21 +86,21 @@ _Supports Order By_: **False**
 
 ### EndingMapPoint
 
-The ending geographical point of the route segment. [Required] [Filter(multi eq)]
+The ending geographical point of the route segment. `Required` `Filter(multi eq)`
 
 _Type_: **[MapPoints](General.Geography.MapPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StartingMapPoint
 
-The starting geographical point of the route segment. [Required] [Filter(multi eq)]
+The starting geographical point of the route segment. `Required` `Filter(multi eq)`
 
 _Type_: **[MapPoints](General.Geography.MapPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Trip
 
-The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner]
+The trip for which the segment is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Trips](Applications.Fleet.Trips.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

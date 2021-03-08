@@ -31,8 +31,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnDocument<br />AmountType](General.DocumentAmountTypeDependencies.md#dependsondocumentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The base amount type on which the current amount depends. [Required] [Filter(multi eq)] |
-| [DocumentAmountType](General.DocumentAmountTypeDependencies.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner] |
+| [DependsOnDocument<br />AmountType](General.DocumentAmountTypeDependencies.md#dependsondocumentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The base amount type on which the current amount depends. `Required` `Filter(multi eq)` |
+| [DocumentAmountType](General.DocumentAmountTypeDependencies.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount for which the base amount is specified. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -49,14 +49,14 @@ _Default Value_: **NewGuid**
 
 ### DependsOnDocumentAmountType
 
-The base amount type on which the current amount depends. [Required] [Filter(multi eq)]
+The base amount type on which the current amount depends. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
 
-The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner]
+The amount for which the base amount is specified. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Indexed_: **True**  

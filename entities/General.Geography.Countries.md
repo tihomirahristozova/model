@@ -23,17 +23,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Geography.Countries.md#code) | string | Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD] 
+| [Code](General.Geography.Countries.md#code) | string | Internet suffix code of the country. `Required` `Filter(eq;like)` `ORD` 
 | [Id](General.Geography.Countries.md#id) | guid |  
-| [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (nullable) | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. [Introduced in version 20.1] 
-| [Name](General.Geography.Countries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the country. [Required] [Filter(like)] 
+| [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (nullable) | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1` 
+| [Name](General.Geography.Countries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the country. `Required` `Filter(like)` 
 
 
 ## Attribute Details
 
 ### Code
 
-Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD]
+Internet suffix code of the country. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### IntrastatCode
 
-This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. [Introduced in version 20.1]
+This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-Name of the country. [Required] [Filter(like)]
+Name of the country. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  

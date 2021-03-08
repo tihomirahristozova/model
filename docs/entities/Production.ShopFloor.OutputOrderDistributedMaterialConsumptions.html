@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#consumedcost">ConsumedCost</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Cost of the actually issued Consumed_Quantity. [Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly]</td>
+<td>Cost of the actually issued Consumed_Quantity. <code>Currency: ConsumptionOrderLine.GetIssueCurrency()</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#consumedquantity">ConsumedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>Part of the quantity in the consumption order line which was used for the product in the output order line. [Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly]</td>
+<td>Part of the quantity in the consumption order line which was used for the product in the output order line. <code>Unit: ConsumptionOrderLine.ConsumedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#id">Id</a></td>
@@ -132,24 +132,24 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#consumptionorderline">ConsumptionOrderLine</a></td>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html">ConsumptionOrderLines</a></td>
-<td>Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]</td>
+<td>Consumption order line which requested the Consumed_Quantity. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#outputorderline">OutputOrderLine</a></td>
 <td><a href="Production.ShopFloor.OutputOrderLines.html">OutputOrderLines</a></td>
-<td>The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
+<td>The output order line for which the distribution is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="consumedcost">ConsumedCost</h3>
-<p>Cost of the actually issued Consumed_Quantity. [Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly]</p>
+<p>Cost of the actually issued Consumed_Quantity. <code>Currency: ConsumptionOrderLine.GetIssueCurrency()</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="consumedquantity">ConsumedQuantity</h3>
-<p>Part of the quantity in the consumption order line which was used for the product in the output order line. [Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly]</p>
+<p>Part of the quantity in the consumption order line which was used for the product in the output order line. <code>Unit: ConsumptionOrderLine.ConsumedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -161,12 +161,12 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="consumptionorderline">ConsumptionOrderLine</h3>
-<p>Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]</p>
+<p>Consumption order line which requested the Consumed_Quantity. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.ConsumptionOrderLines.html">ConsumptionOrderLines</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="outputorderline">OutputOrderLine</h3>
-<p>The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
+<p>The output order line for which the distribution is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrderLines.html">OutputOrderLines</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

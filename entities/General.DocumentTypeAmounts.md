@@ -27,16 +27,16 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DefaultPercent](General.DocumentTypeAmounts.md#defaultpercent) | decimal (nullable) | Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type. 
 | [Id](General.DocumentTypeAmounts.md#id) | guid |  
-| [RequiredFromDate](General.DocumentTypeAmounts.md#requiredfromdate) | date (nullable) | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. [Filter(ge;le)] 
-| [RequiredThruDate](General.DocumentTypeAmounts.md#requiredthrudate) | date (nullable) | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. [Filter(ge;le)] 
-| [UserCanChangeInput](General.DocumentTypeAmounts.md#usercanchangeinput) | boolean | True if the user, entering the document is allowed to change the default input percent. [Required] [Default(true)] 
+| [RequiredFromDate](General.DocumentTypeAmounts.md#requiredfromdate) | date (nullable) | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
+| [RequiredThruDate](General.DocumentTypeAmounts.md#requiredthrudate) | date (nullable) | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
+| [UserCanChangeInput](General.DocumentTypeAmounts.md#usercanchangeinput) | boolean | True if the user, entering the document is allowed to change the default input percent. `Required` `Default(true)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](General.DocumentTypeAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)] |
-| [DocumentType](General.DocumentTypeAmounts.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.DocumentTypeAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type that should be automatically added to the documents of the specified type. `Required` `Filter(multi eq)` |
+| [DocumentType](General.DocumentTypeAmounts.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the amount type is specified. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 ### RequiredFromDate
 
-When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. [Filter(ge;le)]
+When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)`
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### RequiredThruDate
 
-When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. [Filter(ge;le)]
+When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. `Filter(ge;le)`
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -74,7 +74,7 @@ _Supports Order By_: **False**
 
 ### UserCanChangeInput
 
-True if the user, entering the document is allowed to change the default input percent. [Required] [Default(true)]
+True if the user, entering the document is allowed to change the default input percent. `Required` `Default(true)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -86,14 +86,14 @@ _Default Value_: **True**
 
 ### DocumentAmountType
 
-The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)]
+The amount type that should be automatically added to the documents of the specified type. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner]
+The document type for which the amount type is specified. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  

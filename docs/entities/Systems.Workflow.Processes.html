@@ -105,12 +105,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#creationtime">CreationTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the Process was created. [ReadOnly]</td>
+<td>Date and time when the Process was created. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#creationuser">CreationUser</a></td>
 <td>string (nullable)</td>
-<td>Login name of the user, who created the Process. [ReadOnly]</td>
+<td>Login name of the user, who created the Process. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#id">Id</a></td>
@@ -120,12 +120,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#islandscape">IsLandscape</a></td>
 <td>boolean</td>
-<td>Specifies whether the process diagram is intended to be viewed in landscape mode. [Required] [Default(true)]</td>
+<td>Specifies whether the process diagram is intended to be viewed in landscape mode. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The name of this Process. [Required] [Filter(eq;like)]</td>
+<td>The name of this Process. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#notes">Notes</a></td>
@@ -135,12 +135,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#schemaformat">SchemaFormat</a></td>
 <td>string</td>
-<td>Application specific format of the Schema Layout. [Required] [Default(&quot;D&quot;)]</td>
+<td>Application specific format of the Schema Layout. <code>Required</code> <code>Default(&quot;D&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#schemalayout">SchemaLayout</a></td>
 <td>string</td>
-<td>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. [Required]</td>
+<td>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#startevent">StartEvent</a></td>
@@ -150,7 +150,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#startroleid">StartRoleId</a></td>
 <td>guid (nullable)</td>
-<td>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. [Filter(multi eq)]</td>
+<td>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#thumbnail">Thumbnail</a></td>
@@ -160,23 +160,23 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#updatetime">UpdateTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the Process was last updated. [ReadOnly]</td>
+<td>Date and time when the Process was last updated. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#updateuser">UpdateUser</a></td>
 <td>string (nullable)</td>
-<td>Login name of the user, who last updated the Process. [ReadOnly]</td>
+<td>Login name of the user, who last updated the Process. <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtime">CreationTime</h3>
-<p>Date and time when the Process was created. [ReadOnly]</p>
+<p>Date and time when the Process was created. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<p>Login name of the user, who created the Process. [ReadOnly]</p>
+<p>Login name of the user, who created the Process. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -186,13 +186,13 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="islandscape">IsLandscape</h3>
-<p>Specifies whether the process diagram is intended to be viewed in landscape mode. [Required] [Default(true)]</p>
+<p>Specifies whether the process diagram is intended to be viewed in landscape mode. <code>Required</code> <code>Default(true)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this Process. [Required] [Filter(eq;like)]</p>
+<p>The name of this Process. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -202,13 +202,13 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="schemaformat">SchemaFormat</h3>
-<p>Application specific format of the Schema Layout. [Required] [Default(&quot;D&quot;)]</p>
+<p>Application specific format of the Schema Layout. <code>Required</code> <code>Default(&quot;D&quot;)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>D</strong></p>
 <h3 id="schemalayout">SchemaLayout</h3>
-<p>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. [Required]</p>
+<p>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -218,7 +218,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startroleid">StartRoleId</h3>
-<p>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. [Filter(multi eq)]</p>
+<p>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="thumbnail">Thumbnail</h3>
@@ -227,12 +227,12 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<p>Date and time when the Process was last updated. [ReadOnly]</p>
+<p>Date and time when the Process was last updated. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<p>Login name of the user, who last updated the Process. [ReadOnly]</p>
+<p>Login name of the user, who last updated the Process. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>

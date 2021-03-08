@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string | The name of the department. [Required] [Filter(like)] 
+| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string | The name of the department. `Required` `Filter(like)` 
 | [Id](General.Contacts.CompanyDepartments.md#id) | guid |  
 | [Notes](General.Contacts.CompanyDepartments.md#notes) | string (nullable) | Notes for this CompanyDepartment. 
 
@@ -33,15 +33,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Company](General.Contacts.CompanyDepartments.md#company) | [Companies](General.Contacts.Companies.md) | The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Parent](General.Contacts.CompanyDepartments.md#parent) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The parent department. null if this is root department in the company. [Filter(multi eq)] |
+| [Company](General.Contacts.CompanyDepartments.md#company) | [Companies](General.Contacts.Companies.md) | The `Company`(General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Parent](General.Contacts.CompanyDepartments.md#parent) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The parent department. null if this is root department in the company. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### DepartmentName
 
-The name of the department. [Required] [Filter(like)]
+The name of the department. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -67,14 +67,14 @@ _Supports Order By_: **False**
 
 ### Company
 
-The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]
+The `Company`(General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-The parent department. null if this is root department in the company. [Filter(multi eq)]
+The parent department. null if this is root department in the company. `Filter(multi eq)`
 
 _Type_: **[CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.TemplateCostTypes.html#hierarchylevel">HierarchyLevel</a></td>
 <td>int32</td>
-<td>The level in the hierarchy on which this cost is incurred (0..9). [Required] [Filter(ge;le)]</td>
+<td>The level in the hierarchy on which this cost is incurred (0..9). <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.TemplateCostTypes.html#id">Id</a></td>
@@ -127,18 +127,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.TemplateCostTypes.html#costtemplate">CostTemplate</a></td>
 <td><a href="Finance.Cost.Templates.html">Templates</a></td>
-<td>The <a href="Finance.Cost.Templates.html">Template</a> to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Template</code>(Finance.Cost.Templates.md) to which this TemplateCostType belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.TemplateCostTypes.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">CostTypes</a></td>
-<td>The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)]</td>
+<td>The Cost Type for which the hierarchy is specified. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="hierarchylevel">HierarchyLevel</h3>
-<p>The level in the hierarchy on which this cost is incurred (0..9). [Required] [Filter(ge;le)]</p>
+<p>The level in the hierarchy on which this cost is incurred (0..9). <code>Required</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -149,11 +149,11 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costtemplate">CostTemplate</h3>
-<p>The <a href="Finance.Cost.Templates.html">Template</a> to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Template</code>(Finance.Cost.Templates.md) to which this TemplateCostType belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Templates.html">Templates</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
-<p>The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)]</p>
+<p>The Cost Type for which the hierarchy is specified. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime</td>
-<td>Transaction Timestamp. [Required] [Filter(multi eq;ge;le)]</td>
+<td>Transaction Timestamp. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#transactiontype">TransactionType</a></td>
 <td><a href="Applications.Rental.TransactionLines.html#transactiontype">TransactionType</a></td>
-<td>Transaction Type. [Required] [Filter(eq;like)]</td>
+<td>Transaction Type. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,22 +137,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#leasecontract">LeaseContract</a></td>
 <td><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a></td>
-<td>Lease Contract. [Required] [Filter(multi eq)]</td>
+<td>Lease Contract. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#lesseecustomer">LesseeCustomer</a></td>
 <td><a href="Crm.Customers.html">Customers</a></td>
-<td>Lessee Customer. [Required] [Filter(multi eq)]</td>
+<td>Lessee Customer. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#rentalasset">RentalAsset</a></td>
 <td><a href="Applications.Rental.Assets.html">Assets</a></td>
-<td>Rental asset. [Required] [Filter(multi eq)]</td>
+<td>Rental asset. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#renttransaction">RentTransaction</a></td>
 <td><a href="Applications.Rental.Transactions.html">Transactions</a></td>
-<td>The <a href="Applications.Rental.Transactions.html">Transaction</a> to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Transaction</code>(Applications.Rental.Transactions.md) to which this TransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,14 +168,14 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Transaction Timestamp. [Required] [Filter(multi eq;ge;le)]</p>
+<p>Transaction Timestamp. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="transactiontype">TransactionType</h3>
-<p>Transaction Type. [Required] [Filter(eq;like)]</p>
+<p>Transaction Type. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.TransactionLines.html#transactiontype">TransactionType</a></strong><br>
-Allowed values for the <a href="Applications.Rental.TransactionLines.html#transactiontype">TransactionType</a> data attribute<br>
+Allowed values for the <code>TransactionType</code>(Applications.Rental.TransactionLines.md#transactiontype) data attribute<br>
 <em>Allowed Values (Applications.Rental.TransactionLinesRepository.TransactionType Enum Members)</em></p>
 <table>
 <thead>
@@ -207,19 +207,19 @@ Allowed values for the <a href="Applications.Rental.TransactionLines.html#transa
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="leasecontract">LeaseContract</h3>
-<p>Lease Contract. [Required] [Filter(multi eq)]</p>
+<p>Lease Contract. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lesseecustomer">LesseeCustomer</h3>
-<p>Lessee Customer. [Required] [Filter(multi eq)]</p>
+<p>Lessee Customer. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalasset">RentalAsset</h3>
-<p>Rental asset. [Required] [Filter(multi eq)]</p>
+<p>Rental asset. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.Assets.html">Assets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="renttransaction">RentTransaction</h3>
-<p>The <a href="Applications.Rental.Transactions.html">Transaction</a> to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Transaction</code>(Applications.Rental.Transactions.md) to which this TransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.Transactions.html">Transactions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

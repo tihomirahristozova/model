@@ -32,8 +32,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.PropertyEnterpriseCompanyFilters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)] |
-| [Property](General.PropertyEnterpriseCompanyFilters.md#property) | [CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this PropertyEnterprise<br />CompanyFilter belongs. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.PropertyEnterpriseCompanyFilters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current filter is specifed. `Required` `Filter(multi eq)` |
+| [Property](General.PropertyEnterpriseCompanyFilters.md#property) | [CustomProperties](General.CustomProperties.md) | The `CustomProperty`(General.CustomProperties.md) to which this PropertyEnterprise<br />CompanyFilter belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 ### EnterpriseCompany
 
-The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)]
+The enterprise company for which the current filter is specifed. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Indexed_: **True**  
@@ -66,7 +66,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Property
 
-The [CustomProperty](General.CustomProperties.md) to which this PropertyEnterpriseCompanyFilter belongs. [Required] [Filter(multi eq)] [Owner]
+The `CustomProperty`(General.CustomProperties.md) to which this PropertyEnterpriseCompanyFilter belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

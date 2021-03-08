@@ -23,21 +23,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string | Multilanguage allocation model name. [Required] 
+| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string | Multilanguage allocation model name. `Required` 
 | [Id](Finance.Cost.AllocationModels.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Cost.AllocationModels.md#currency) | [Currencies](General.Currencies.md) | The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)] |
+| [Currency](Finance.Cost.AllocationModels.md#currency) | [Currencies](General.Currencies.md) | The currency in which the calculation is done. This is applied to the production and the results. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### CostAllocationModelName
 
-Multilanguage allocation model name. [Required]
+Multilanguage allocation model name. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Default Value_: **NewGuid**
 
 ### Currency
 
-The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)]
+The currency in which the calculation is done. This is applied to the production and the results. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

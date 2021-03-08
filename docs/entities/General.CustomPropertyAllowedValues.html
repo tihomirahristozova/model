@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.CustomPropertyAllowedValues.html#active">Active</a></td>
 <td>boolean</td>
-<td>Specifies whether the allowed value is active and can be used when selecting property values. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the allowed value is active and can be used when selecting property values. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.CustomPropertyAllowedValues.html#description">Description</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
-<td>The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)]</td>
+<td>The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.CustomPropertyAllowedValues.html#id">Id</a></td>
@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.CustomPropertyAllowedValues.html#parentallowedvalueid">ParentAllowedValueId</a></td>
 <td>guid (nullable)</td>
-<td>The value of the parent property, for which this allowed value is valid. [Filter(multi eq)]</td>
+<td>The value of the parent property, for which this allowed value is valid. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.CustomPropertyAllowedValues.html#picture">Picture</a></td>
@@ -135,7 +135,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.CustomPropertyAllowedValues.html#propertyallowedvaluefield">PropertyAllowedValueField</a></td>
 <td>string</td>
-<td>The actual allowed value. [Required] [Filter(eq;like)]</td>
+<td>The actual allowed value. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -152,24 +152,24 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.CustomPropertyAllowedValues.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
+<td>The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.CustomPropertyAllowedValues.html#property">Property</a></td>
 <td><a href="General.CustomProperties.html">CustomProperties</a></td>
-<td>The <a href="General.CustomProperties.html">CustomProperty</a> to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>CustomProperty</code>(General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>Specifies whether the allowed value is active and can be used when selecting property values. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the allowed value is active and can be used when selecting property values. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="description">Description</h3>
-<p>The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)]</p>
+<p>The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -184,7 +184,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentallowedvalueid">ParentAllowedValueId</h3>
-<p>The value of the parent property, for which this allowed value is valid. [Filter(multi eq)]</p>
+<p>The value of the parent property, for which this allowed value is valid. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="picture">Picture</h3>
@@ -193,17 +193,17 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyallowedvaluefield">PropertyAllowedValueField</h3>
-<p>The actual allowed value. [Required] [Filter(eq;like)]</p>
+<p>The actual allowed value. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
+<p>The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
-<p>The <a href="General.CustomProperties.html">CustomProperty</a> to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>CustomProperty</code>(General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

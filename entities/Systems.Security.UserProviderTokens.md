@@ -26,15 +26,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Security.UserProviderTokens.md#id) | guid |  
-| [LoginProviderName](Systems.Security.UserProviderTokens.md#loginprovidername) | string | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)] 
-| [TokenName](Systems.Security.UserProviderTokens.md#tokenname) | string | What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)] 
+| [LoginProviderName](Systems.Security.UserProviderTokens.md#loginprovidername) | string | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. `Required` `Filter(eq)` 
+| [TokenName](Systems.Security.UserProviderTokens.md#tokenname) | string | What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). `Required` `Filter(eq)` 
 | [TokenValue](Systems.Security.UserProviderTokens.md#tokenvalue) | string (nullable) | Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Security.UserProviderTokens.md#user) | [Users](Systems.Security.Users.md) | User for which we store tokens. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Security.UserProviderTokens.md#user) | [Users](Systems.Security.Users.md) | User for which we store tokens. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### LoginProviderName
 
-Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)]
+Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### TokenName
 
-What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)]
+What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 ### User
 
-User for which we store tokens. [Required] [Filter(multi eq)] [Owner]
+User for which we store tokens. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -23,23 +23,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Geography.Areas.md#code) | string | The unique code of the Area. [Required] [Filter(eq;like)] [ORD] 
-| [FullPath](General.Geography.Areas.md#fullpath) | string (nullable) | Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'. [Filter(eq;like)] [ReadOnly] 
+| [Code](General.Geography.Areas.md#code) | string | The unique code of the Area. `Required` `Filter(eq;like)` `ORD` 
+| [FullPath](General.Geography.Areas.md#fullpath) | string (nullable) | Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'. `Filter(eq;like)` `ReadOnly` 
 | [Id](General.Geography.Areas.md#id) | guid |  
-| [Name](General.Geography.Areas.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Area. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.Geography.Areas.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Area. `Required` `Filter(eq;like)` `ORD` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](General.Geography.Areas.md#parent) | [Areas](General.Geography.Areas.md) (nullable) | Parent area in the hierarchy. [Filter(multi eq)] |
+| [Parent](General.Geography.Areas.md#parent) | [Areas](General.Geography.Areas.md) (nullable) | Parent area in the hierarchy. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Code
 
-The unique code of the Area. [Required] [Filter(eq;like)] [ORD]
+The unique code of the Area. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -48,7 +48,7 @@ _Supports Order By_: **True**
 
 ### FullPath
 
-Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'. [Filter(eq;like)] [ReadOnly]
+Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'. `Filter(eq;like)` `ReadOnly`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -63,7 +63,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Area. [Required] [Filter(eq;like)] [ORD]
+The name of this Area. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  
@@ -75,7 +75,7 @@ _Supports Order By_: **True**
 
 ### Parent
 
-Parent area in the hierarchy. [Filter(multi eq)]
+Parent area in the hierarchy. `Filter(multi eq)`
 
 _Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

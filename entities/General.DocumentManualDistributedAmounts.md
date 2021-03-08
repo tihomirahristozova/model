@@ -23,33 +23,33 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountTypeId](General.DocumentManualDistributedAmounts.md#documentamounttypeid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
-| [DocumentId](General.DocumentManualDistributedAmounts.md#documentid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
-| [DocumentLineId](General.DocumentManualDistributedAmounts.md#documentlineid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
+| [DocumentAmountTypeId](General.DocumentManualDistributedAmounts.md#documentamounttypeid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
+| [DocumentId](General.DocumentManualDistributedAmounts.md#documentid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
+| [DocumentLineId](General.DocumentManualDistributedAmounts.md#documentlineid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 | [Id](General.DocumentManualDistributedAmounts.md#id) | guid |  
-| [LinePercent](General.DocumentManualDistributedAmounts.md#linepercent) | decimal | Obsolete. Not used. [Required] 
-| [ProductId](General.DocumentManualDistributedAmounts.md#productid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
+| [LinePercent](General.DocumentManualDistributedAmounts.md#linepercent) | decimal | Obsolete. Not used. `Required` 
+| [ProductId](General.DocumentManualDistributedAmounts.md#productid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 
 
 ## Attribute Details
 
 ### DocumentAmountTypeId
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentId
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentLineId
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -62,7 +62,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### LinePercent
 
-Obsolete. Not used. [Required]
+Obsolete. Not used. `Required`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 ### ProductId
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  

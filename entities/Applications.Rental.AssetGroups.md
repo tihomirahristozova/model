@@ -25,25 +25,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Applications.Rental.AssetGroups.md#fullpath) | string (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [ORD] [ReadOnly] 
+| [FullPath](Applications.Rental.AssetGroups.md#fullpath) | string (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `ORD` `ReadOnly` 
 | [Id](Applications.Rental.AssetGroups.md#id) | guid |  
 | [Notes](Applications.Rental.AssetGroups.md#notes) | string (nullable) | Notes for this AssetGroup. 
-| [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (nullable) | The full path of the parent node. [Filter(eq)] 
-| [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string | Asset group code, unique within the parent node. [Required] [Filter(eq;like)] 
-| [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string | Asset group name, unique within the parent node. [Required] [Filter(eq;like)] 
+| [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (nullable) | The full path of the parent node. `Filter(eq)` 
+| [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string | Asset group code, unique within the parent node. `Required` `Filter(eq;like)` 
+| [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string | Asset group name, unique within the parent node. `Required` `Filter(eq;like)` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Assets | [Assets](Applications.Rental.Assets.md) | List of [Asset](Applications.Rental.Assets.md) child objects, based on the [Applications.Rental.Asset.RentalAssetGroup](Applications.Rental.Assets.md#rentalassetgroup) back reference 
+| Assets | [Assets](Applications.Rental.Assets.md) | List of `Asset`(Applications.Rental.Assets.md) child objects, based on the `Applications.Rental.Asset.RentalAssetGroup`(Applications.Rental.Assets.md#rentalassetgroup) back reference 
 
 
 ## Attribute Details
 
 ### FullPath
 
-The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [ORD] [ReadOnly]
+The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `ORD` `ReadOnly`
 
 _Type_: **string (nullable)**  
 _Indexed_: **True**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### ParentFullPath
 
-The full path of the parent node. [Filter(eq)]
+The full path of the parent node. `Filter(eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 ### RentalAssetGroupCode
 
-Asset group code, unique within the parent node. [Required] [Filter(eq;like)]
+Asset group code, unique within the parent node. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -83,7 +83,7 @@ _Supports Order By_: **False**
 
 ### RentalAssetGroupName
 
-Asset group name, unique within the parent node. [Required] [Filter(eq;like)]
+Asset group name, unique within the parent node. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  

@@ -23,17 +23,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrencySign](General.Currencies.md#currencysign) | string | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD] 
+| [CurrencySign](General.Currencies.md#currencysign) | string | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. `Required` `Filter(eq;like)` `ORD` 
 | [Id](General.Currencies.md#id) | guid |  
-| [Name](General.Currencies.md#name) | string | The name of this Currency. [Required] [Filter(like)] 
-| [ShowOrder](General.Currencies.md#showorder) | int32 | The order in which to show the currency in combo boxes, etc. [Required] [Default(0)] 
+| [Name](General.Currencies.md#name) | string | The name of this Currency. `Required` `Filter(like)` 
+| [ShowOrder](General.Currencies.md#showorder) | int32 | The order in which to show the currency in combo boxes, etc. `Required` `Default(0)` 
 
 
 ## Attribute Details
 
 ### CurrencySign
 
-The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD]
+The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Currency. [Required] [Filter(like)]
+The name of this Currency. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### ShowOrder
 
-The order in which to show the currency in combo boxes, etc. [Required] [Default(0)]
+The order in which to show the currency in combo boxes, etc. `Required` `Default(0)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

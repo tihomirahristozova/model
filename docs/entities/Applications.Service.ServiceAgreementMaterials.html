@@ -115,22 +115,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>Quantity of the agreed material. [Unit: QuantityUnit] [Required]</td>
+<td>Quantity of the agreed material. <code>Unit: QuantityUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
+<td>The equivalence of Quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#startdate">StartDate</a></td>
@@ -152,22 +152,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#document">Document</a></td>
 <td><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></td>
-<td>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)]</td>
+<td>The <code>ServiceAgreement</code>(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>Paid or agreed in advance material that won't be invoiced after service activities. [Required] [Filter(multi eq)]</td>
+<td>Paid or agreed in advance material that won't be invoiced after service activities. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a></td>
 <td><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></td>
-<td>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>ServiceAgreement</code>(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -183,7 +183,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -192,12 +192,12 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ServiceAgreement.Materials.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the agreed material. [Unit: QuantityUnit] [Required]</p>
+<p>Quantity of the agreed material. <code>Unit: QuantityUnit</code> <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
+<p>The equivalence of Quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -206,7 +206,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -221,22 +221,22 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)]</p>
+<p>The <code>ServiceAgreement</code>(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>Paid or agreed in advance material that won't be invoiced after service activities. [Required] [Filter(multi eq)]</p>
+<p>Paid or agreed in advance material that won't be invoiced after service activities. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit)</code></p>
 <h3 id="serviceagreement">ServiceAgreement</h3>
-<p>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>ServiceAgreement</code>(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -24,16 +24,16 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.TaskTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Multilanguage description of the task type. 
-| [DisplayOrder](Projects.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). [Required] [Default(1)] 
+| [DisplayOrder](Projects.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). `Required` `Default(1)` 
 | [Icon](Projects.TaskTypes.md#icon) | byte[] (nullable) | Icon representing the task type. Preferrably 32x32 pixels. 
 | [Id](Projects.TaskTypes.md#id) | guid |  
-| [Name](Projects.TaskTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The multilanguage task type name. [Required] [Filter(multi eq;like)] 
+| [Name](Projects.TaskTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The multilanguage task type name. `Required` `Filter(multi eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TaskTypes.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) (nullable) | When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)] |
+| [ProjectType](Projects.TaskTypes.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) (nullable) | When not null, specifies that this task type can be used only for projects of the specified type. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### DisplayOrder
 
-Display order position of the task. Lowest numbers are shown first (on top). [Required] [Default(1)]
+Display order position of the task. Lowest numbers are shown first (on top). `Required` `Default(1)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -72,7 +72,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The multilanguage task type name. [Required] [Filter(multi eq;like)]
+The multilanguage task type name. `Required` `Filter(multi eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -83,7 +83,7 @@ _Supports Order By_: **False**
 
 ### ProjectType
 
-When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)]
+When not null, specifies that this task type can be used only for projects of the specified type. `Filter(multi eq)`
 
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -23,22 +23,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreateExpensePayments](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#createexpensepayments) | boolean | True if the generation creates payment transactions for Payment Slip Amounts with direction Expense. [Required] [Filter(eq)] 
-| [CreateIncomePayments](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#createincomepayments) | boolean | True if the generation creates payment transactions for Payment Slip Amounts with direction Income. [Required] [Filter(eq)] 
+| [CreateExpensePayments](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#createexpensepayments) | boolean | True if the generation creates payment transactions for Payment Slip Amounts with direction Expense. `Required` `Filter(eq)` 
+| [CreateIncomePayments](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#createincomepayments) | boolean | True if the generation creates payment transactions for Payment Slip Amounts with direction Income. `Required` `Filter(eq)` 
 | [Id](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route to which the current option set is assigned. [Required] [Filter(multi eq)] |
+| [Route](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route to which the current option set is assigned. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### CreateExpensePayments
 
-True if the generation creates payment transactions for Payment Slip Amounts with direction Expense. [Required] [Filter(eq)]
+True if the generation creates payment transactions for Payment Slip Amounts with direction Expense. `Required` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -46,7 +46,7 @@ _Supports Order By_: **False**
 
 ### CreateIncomePayments
 
-True if the generation creates payment transactions for Payment Slip Amounts with direction Income. [Required] [Filter(eq)]
+True if the generation creates payment transactions for Payment Slip Amounts with direction Income. `Required` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -63,7 +63,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Route
 
-The route to which the current option set is assigned. [Required] [Filter(multi eq)]
+The route to which the current option set is assigned. `Required` `Filter(multi eq)`
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -1,3 +1,4 @@
 - name: Entities
   href: entities/
-  
+- name: Tables
+  href: tables/

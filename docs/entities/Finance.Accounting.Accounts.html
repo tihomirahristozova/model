@@ -109,12 +109,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#accountfullnumber">AccountFullNumber</a></td>
 <td>string</td>
-<td>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. [Required] [Filter(like)] [ReadOnly]</td>
+<td>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></td>
 <td><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></td>
-<td>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br>Directory, BRD=Balance_Reference_<br>Document. [Required] [Default(&quot;ACB&quot;)]</td>
+<td>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br>Directory, BRD=Balance_Reference_<br>Document. <code>Required</code> <code>Default(&quot;ACB&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#description">Description</a></td>
@@ -124,7 +124,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#discontinued">Discontinued</a></td>
 <td>boolean</td>
-<td>True means that the account won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True means that the account won't be used any more and should not appear in combo boxes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#id">Id</a></td>
@@ -134,12 +134,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The account name. [Required] [Filter(like)]</td>
+<td>The account name. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#number">Number</a></td>
 <td>string</td>
-<td>The number of the account, unique within the account group. [Required] [Filter(like)]</td>
+<td>The number of the account, unique within the account group. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -156,17 +156,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#accountgroup">AccountGroup</a></td>
 <td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
-<td>The account group to which this account belongs. [Required] [Filter(multi eq)]</td>
+<td>The account group to which this account belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#currency">Currency</a></td>
 <td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
-<td>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)]</td>
+<td>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
+<td>The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -183,20 +183,20 @@ Default Search Member:<br>
 <tr>
 <td>RequiredProperties</td>
 <td><a href="Finance.Accounting.AccountRequiredProperties.html">AccountRequiredProperties</a></td>
-<td>List of <a href="Finance.Accounting.AccountRequiredProperties.html">AccountRequiredProperty</a> child objects, based on the <a href="Finance.Accounting.AccountRequiredProperties.html#account">Finance.Accounting.AccountRequiredProperty.Account</a> back reference</td>
+<td>List of <code>AccountRequiredProperty</code>(Finance.Accounting.AccountRequiredProperties.md) child objects, based on the <code>Finance.Accounting.AccountRequiredProperty.Account</code>(Finance.Accounting.AccountRequiredProperties.md#account) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="accountfullnumber">AccountFullNumber</h3>
-<p>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. [Required] [Filter(like)] [ReadOnly]</p>
+<p>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="currencyvaluationmethod">CurrencyValuationMethod</h3>
-<p>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. [Required] [Default(&quot;ACB&quot;)]</p>
+<p>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. <code>Required</code> <code>Default(&quot;ACB&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></strong><br>
-Allowed values for the <a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a> data attribute<br>
+Allowed values for the <code>CurrencyValuationMethod</code>(Finance.Accounting.Accounts.md#currencyvaluationmethod) data attribute<br>
 <em>Allowed Values (Finance.Accounting.AccountsRepository.CurrencyValuationMethod Enum Members)</em></p>
 <table>
 <thead>
@@ -229,7 +229,7 @@ Allowed values for the <a href="Finance.Accounting.Accounts.html#currencyvaluati
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="discontinued">Discontinued</h3>
-<p>True means that the account won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True means that the account won't be used any more and should not appear in combo boxes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -240,26 +240,26 @@ Allowed values for the <a href="Finance.Accounting.Accounts.html#currencyvaluati
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The account name. [Required] [Filter(like)]</p>
+<p>The account name. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="number">Number</h3>
-<p>The number of the account, unique within the account group. [Required] [Filter(like)]</p>
+<p>The number of the account, unique within the account group. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accountgroup">AccountGroup</h3>
-<p>The account group to which this account belongs. [Required] [Filter(multi eq)]</p>
+<p>The account group to which this account belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="currency">Currency</h3>
-<p>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)]</p>
+<p>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
+<p>The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

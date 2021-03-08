@@ -120,7 +120,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Resources.ResourceGroups.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Resource group name. Unique within its parent. [Required] [Filter(eq;like)]</td>
+<td>Resource group name. Unique within its parent. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,12 +137,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Resources.ResourceGroups.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)]</td>
+<td>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceGroups.html#parent">Parent</a></td>
 <td><a href="General.Resources.ResourceGroups.html">ResourceGroups</a> (nullable)</td>
-<td>The parent resource group or null if this is root group. [Filter(multi eq)]</td>
+<td>The parent resource group or null if this is root group. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ Default Search Member:<br>
 <tr>
 <td>Resources</td>
 <td><a href="General.Resources.Resources.html">Resources</a></td>
-<td>List of <a href="General.Resources.Resources.html">Resource</a> child objects, based on the <a href="General.Resources.Resources.html#resourcegroup">General.Resources.Resource.ResourceGroup</a> back reference</td>
+<td>List of <code>Resource</code>(General.Resources.Resources.md) child objects, based on the <code>General.Resources.Resource.ResourceGroup</code>(General.Resources.Resources.md#resourcegroup) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -170,17 +170,17 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Resource group name. Unique within its parent. [Required] [Filter(eq;like)]</p>
+<p>Resource group name. Unique within its parent. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)]</p>
+<p>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
-<p>The parent resource group or null if this is root group. [Filter(multi eq)]</p>
+<p>The parent resource group or null if this is root group. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.ResourceGroups.html">ResourceGroups</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -23,24 +23,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionFilterXml](General.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. [Required] 
-| [Description](General.DocumentTypeSecurityConditions.md#description) | string | The description of this DocumentTypeSecurity<br />Condition. [Required] [Filter(eq;like)] 
+| [ConditionFilterXml](General.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. `Required` 
+| [Description](General.DocumentTypeSecurityConditions.md#description) | string | The description of this DocumentTypeSecurity<br />Condition. `Required` `Filter(eq;like)` 
 | [Id](General.DocumentTypeSecurityConditions.md#id) | guid |  
-| [Priority](General.DocumentTypeSecurityConditions.md#priority) | [Priority](General.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. [Required] [Default(3)] [Filter(ge;le)] 
+| [Priority](General.DocumentTypeSecurityConditions.md#priority) | [Priority](General.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. `Required` `Default(3)` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAccessKey](General.DocumentTypeSecurityConditions.md#documentaccesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, which will be used to secure new documents, when this rule is selected. [Required] [Filter(multi eq)] |
-| [DocumentType](General.DocumentTypeSecurityConditions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. [Required] [Filter(multi eq)] |
+| [DocumentAccessKey](General.DocumentTypeSecurityConditions.md#documentaccesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, which will be used to secure new documents, when this rule is selected. `Required` `Filter(multi eq)` |
+| [DocumentType](General.DocumentTypeSecurityConditions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### ConditionFilterXml
 
-Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. [Required]
+Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. `Required`
 
 _Type_: **dataaccessfilter**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### Description
 
-The description of this DocumentTypeSecurityCondition. [Required] [Filter(eq;like)]
+The description of this DocumentTypeSecurityCondition. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -63,7 +63,7 @@ _Default Value_: **NewGuid**
 
 ### Priority
 
-Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. [Required] [Default(3)] [Filter(ge;le)]
+Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. `Required` `Default(3)` `Filter(ge;le)`
 
 _Type_: **[Priority](General.DocumentTypeSecurityConditions.md#priority)**  
 Generic enum type for Priority properties  
@@ -86,14 +86,14 @@ _Default Value_: **3**
 
 ### DocumentAccessKey
 
-The access key, which will be used to secure new documents, when this rule is selected. [Required] [Filter(multi eq)]
+The access key, which will be used to secure new documents, when this rule is selected. `Required` `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-The document type, whose documents will be secured by the current rule. [Required] [Filter(multi eq)]
+The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

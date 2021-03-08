@@ -105,12 +105,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#code">Code</a></td>
 <td>string</td>
-<td>The unique code of the StoreGroup. [Required] [Filter(eq;like)]</td>
+<td>The unique code of the StoreGroup. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#fullpath">FullPath</a></td>
 <td>string (nullable)</td>
-<td>The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. [Filter(eq;like)] [ORD] [ReadOnly]</td>
+<td>The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#id">Id</a></td>
@@ -120,12 +120,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The name of this StoreGroup. [Required] [Filter(like)]</td>
+<td>The name of this StoreGroup. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#parentfullpath">ParentFullPath</a></td>
 <td>string (nullable)</td>
-<td>The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. [Filter(eq;like)]</td>
+<td>The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,23 +142,23 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The Enterprise Company to which this StoreGroup applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
+<td>The Enterprise Company to which this StoreGroup applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The Enterprise Company Location to which this StoreGroup applies, or null if it is for all enterprise company locations. [Filter(multi eq)]</td>
+<td>The Enterprise Company Location to which this StoreGroup applies, or null if it is for all enterprise company locations. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The unique code of the StoreGroup. [Required] [Filter(eq;like)]</p>
+<p>The unique code of the StoreGroup. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="fullpath">FullPath</h3>
-<p>The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. [Filter(eq;like)] [ORD] [ReadOnly]</p>
+<p>The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -169,22 +169,22 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this StoreGroup. [Required] [Filter(like)]</p>
+<p>The name of this StoreGroup. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentfullpath">ParentFullPath</h3>
-<p>The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. [Filter(eq;like)]</p>
+<p>The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this StoreGroup applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
+<p>The Enterprise Company to which this StoreGroup applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The Enterprise Company Location to which this StoreGroup applies, or null if it is for all enterprise company locations. [Filter(multi eq)]</p>
+<p>The Enterprise Company Location to which this StoreGroup applies, or null if it is for all enterprise company locations. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

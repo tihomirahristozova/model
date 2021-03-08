@@ -32,8 +32,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PersonalDataProcess](Applications.PersonalData.PersonalDataProcessRecipients.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner] |
-| [RecipientParty](Applications.PersonalData.PersonalDataProcessRecipients.md#recipientparty) | [Parties](General.Contacts.Parties.md) | The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)] |
+| [PersonalDataProcess](Applications.PersonalData.PersonalDataProcessRecipients.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, whose data is disclosed to the recipient. `Required` `Filter(multi eq)` `Owner` |
+| [RecipientParty](Applications.PersonalData.PersonalDataProcessRecipients.md#recipientparty) | [Parties](General.Contacts.Parties.md) | The recipient, to whom the data is disclosed. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -58,14 +58,14 @@ _Supports Order By_: **False**
 
 ### PersonalDataProcess
 
-The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner]
+The process, whose data is disclosed to the recipient. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RecipientParty
 
-The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)]
+The recipient, to whom the data is disclosed. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

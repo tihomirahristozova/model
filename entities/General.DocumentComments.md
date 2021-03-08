@@ -25,24 +25,24 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comment](General.DocumentComments.md#comment) | string | The user comment. [Required] 
-| [CommentTimestamp](General.DocumentComments.md#commenttimestamp) | datetime | The exact timestamp of the comment. [Required] [Default(Now)] 
+| [Comment](General.DocumentComments.md#comment) | string | The user comment. `Required` 
+| [CommentTimestamp](General.DocumentComments.md#commenttimestamp) | datetime | The exact timestamp of the comment. `Required` `Default(Now)` 
 | [Id](General.DocumentComments.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignToUser](General.DocumentComments.md#assigntouser) | [Users](Systems.Security.Users.md) (nullable) | When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. [Filter(multi eq)] |
-| [Document](General.DocumentComments.md#document) | [Documents](General.Documents.md) | The document to which to attach the comment. [Required] [Filter(multi eq)] [Owner] |
-| [User](General.DocumentComments.md#user) | [Users](Systems.Security.Users.md) | The user, who created the comment. [Required] [Filter(multi eq)] |
+| [AssignToUser](General.DocumentComments.md#assigntouser) | [Users](Systems.Security.Users.md) (nullable) | When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. `Filter(multi eq)` |
+| [Document](General.DocumentComments.md#document) | [Documents](General.Documents.md) | The document to which to attach the comment. `Required` `Filter(multi eq)` `Owner` |
+| [User](General.DocumentComments.md#user) | [Users](Systems.Security.Users.md) | The user, who created the comment. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Comment
 
-The user comment. [Required]
+The user comment. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### CommentTimestamp
 
-The exact timestamp of the comment. [Required] [Default(Now)]
+The exact timestamp of the comment. `Required` `Default(Now)`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -69,14 +69,14 @@ _Default Value_: **NewGuid**
 
 ### AssignToUser
 
-When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. [Filter(multi eq)]
+When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Document
 
-The document to which to attach the comment. [Required] [Filter(multi eq)] [Owner]
+The document to which to attach the comment. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
@@ -84,7 +84,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### User
 
-The user, who created the comment. [Required] [Filter(multi eq)]
+The user, who created the comment. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

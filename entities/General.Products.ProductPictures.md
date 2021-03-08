@@ -27,17 +27,17 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Comments](General.Products.ProductPictures.md#comments) | string (nullable) | Comments for this ProductPicture. 
 | [Id](General.Products.ProductPictures.md#id) | guid |  
-| [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | True=This is the default picture for the product and the size class; false=otherwise. [Required] [Default(false)] [Filter(eq)] 
-| [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime (nullable) | The exact server time, when the picture was last updated. Set automatically. [Filter(ge;le)] [ReadOnly] 
+| [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | True=This is the default picture for the product and the size class; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
+| [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime (nullable) | The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly` 
 | [Picture](General.Products.ProductPictures.md#picture) | byte[] (nullable) | The actual product picture. Can be null if we insert only some comments. 
-| [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting. [Required] [Filter(eq;like)] 
+| [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting. `Required` `Filter(eq;like)` 
 | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) (nullable) | Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](General.Products.ProductPictures.md#product) | [Products](General.Products.Products.md) | The [Product](General.Products.ProductPictures.md#product) to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Product](General.Products.ProductPictures.md#product) | [Products](General.Products.Products.md) | The `Product`(General.Products.ProductPictures.md#product) to which this ProductPicture belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-True=This is the default picture for the product and the size class; false=otherwise. [Required] [Default(false)] [Filter(eq)]
+True=This is the default picture for the product and the size class; false=otherwise. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -70,7 +70,7 @@ _Front-End Recalc Expressions:_
 `( obj.Product.Pictures.Take( 1).Count( ) == 0)`
 ### LastUpdateTime
 
-The exact server time, when the picture was last updated. Set automatically. [Filter(ge;le)] [ReadOnly]
+The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### PictureNo
 
-Unique picture number within the product. Also used for sorting. [Required] [Filter(eq;like)]
+Unique picture number within the product. Also used for sorting. `Required` `Filter(eq;like)`
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, Like**  
@@ -102,7 +102,7 @@ _Front-End Recalc Expressions:_
 Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.
 
 _Type_: **[PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) (nullable)**  
-Allowed values for the [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) data attribute  
+Allowed values for the `PictureSizeClass`(General.Products.ProductPictures.md#picturesizeclass) data attribute  
 _Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enum Members)_  
 
 | Value | Description |
@@ -118,7 +118,7 @@ _Supports Order By_: **False**
 
 ### Product
 
-The [Product](General.Products.ProductPictures.md#product) to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]
+The `Product`(General.Products.ProductPictures.md#product) to which this ProductPicture belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -115,17 +115,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Geography.MapPoints.html#latitude">Latitude</a></td>
 <td>decimal</td>
-<td>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90]. [Required] [Default(0)]</td>
+<td>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range <code>-90, 90</code>. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.MapPoints.html#longitude">Longitude</a></td>
 <td>decimal</td>
-<td>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180]. [Required] [Default(0)]</td>
+<td>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range <code>-180, 180</code>. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.MapPoints.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Map point short name (Multilanguage). [Required] [Filter(eq;like)]</td>
+<td>Map point short name (Multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Geography.MapPoints.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company for within the name of the map point has meaning. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The enterprise company for within the name of the map point has meaning. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,25 +158,25 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="latitude">Latitude</h3>
-<p>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90]. [Required] [Default(0)]</p>
+<p>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range <code>-90, 90</code>. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="longitude">Longitude</h3>
-<p>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180]. [Required] [Default(0)]</p>
+<p>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range <code>-180, 180</code>. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="name">Name</h3>
-<p>Map point short name (Multilanguage). [Required] [Filter(eq;like)]</p>
+<p>Map point short name (Multilanguage). <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for within the name of the map point has meaning. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The enterprise company for within the name of the map point has meaning. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

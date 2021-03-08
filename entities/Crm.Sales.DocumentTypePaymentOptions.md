@@ -23,23 +23,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPayment<br />MinimalAmmount<br />Currency] [Required] 
+| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. `Currency: DeferredPayment<br />MinimalAmmount<br />Currency` `Required` 
 | [Id](Crm.Sales.DocumentTypePaymentOptions.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeferredPayment<br />MinimalAmmount<br />Currency](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammountcurrency) | [Currencies](General.Currencies.md) | The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)] |
-| [DocumentType](Crm.Sales.DocumentTypePaymentOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the payment option applies. [Required] [Filter(multi eq)] |
-| [EnterpriseCompany](Crm.Sales.DocumentTypePaymentOptions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)] |
+| [DeferredPayment<br />MinimalAmmount<br />Currency](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammountcurrency) | [Currencies](General.Currencies.md) | The currency of Deferred Payment Minimal Amount. `Required` `Filter(multi eq)` |
+| [DocumentType](Crm.Sales.DocumentTypePaymentOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the payment option applies. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Sales.DocumentTypePaymentOptions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the payment options are specified. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### DeferredPaymentMinimalAmmount
 
-The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required]
+The minimal order total amount, which an order must have in order to use deferred payment. `Currency: DeferredPaymentMinimalAmmountCurrency` `Required`
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -57,14 +57,14 @@ _Default Value_: **NewGuid**
 
 ### DeferredPaymentMinimalAmmountCurrency
 
-The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)]
+The currency of Deferred Payment Minimal Amount. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-The document type for which the payment option applies. [Required] [Filter(multi eq)]
+The document type for which the payment option applies. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
@@ -72,7 +72,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### EnterpriseCompany
 
-The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)]
+The enterprise company for which the payment options are specified. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

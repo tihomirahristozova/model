@@ -26,27 +26,27 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Finance.Payments.PaymentSlipAmounts.md#description) | string (nullable) | Description of the payed amount. The numbers of the documents which are payed for example. 
-| [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | 'I' for Payment issue, 'R' for payment receipt. [Required] [Filter(eq)] 
+| [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | 'I' for Payment issue, 'R' for payment receipt. `Required` `Filter(eq)` 
 | [Id](Finance.Payments.PaymentSlipAmounts.md#id) | guid |  
-| [IsPartyPayment](Finance.Payments.PaymentSlipAmounts.md#ispartypayment) | boolean | Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). [Required] [Default(true)] 
-| [LineNo](Finance.Payments.PaymentSlipAmounts.md#lineno) | int32 | The number of the line within the payment. [Required] 
+| [IsPartyPayment](Finance.Payments.PaymentSlipAmounts.md#ispartypayment) | boolean | Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). `Required` `Default(true)` 
+| [LineNo](Finance.Payments.PaymentSlipAmounts.md#lineno) | int32 | The number of the line within the payment. `Required` 
 | [PartyName](Finance.Payments.PaymentSlipAmounts.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee). 
-| [PaymentDate](Finance.Payments.PaymentSlipAmounts.md#paymentdate) | datetime | The date on which the payment is done. [Required] [Filter(ge;le)] 
-| [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#totalamount) | [Amount](../data-types.md#amount) (nullable) | The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency] 
+| [PaymentDate](Finance.Payments.PaymentSlipAmounts.md#paymentdate) | datetime | The date on which the payment is done. `Required` `Filter(ge;le)` 
+| [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#totalamount) | [Amount](../data-types.md#amount) (nullable) | The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Finance.Payments.PaymentSlipAmounts.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. [Filter(multi eq)] |
-| [PaymentReason](Finance.Payments.PaymentSlipAmounts.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The reason for the payment, as defined in Payment Reasons. [Filter(multi eq)] |
-| [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) | [PaymentSlips](Finance.Payments.PaymentSlips.md) | The [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Party](Finance.Payments.PaymentSlipAmounts.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. `Filter(multi eq)` |
+| [PaymentReason](Finance.Payments.PaymentSlipAmounts.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The reason for the payment, as defined in Payment Reasons. `Filter(multi eq)` |
+| [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) | [PaymentSlips](Finance.Payments.PaymentSlips.md) | The `PaymentSlip`(Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| PaymentSlipLines | [PaymentSlipLines](Finance.Payments.PaymentSlipLines.md) | List of [PaymentSlipLine](Finance.Payments.PaymentSlipLines.md) child objects, based on the [Finance.Payments.PaymentSlipLine.PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) back reference 
+| PaymentSlipLines | [PaymentSlipLines](Finance.Payments.PaymentSlipLines.md) | List of `PaymentSlipLine`(Finance.Payments.PaymentSlipLines.md) child objects, based on the `Finance.Payments.PaymentSlipLine.PaymentSlipAmount`(Finance.Payments.PaymentSlipLines.md#paymentslipamount) back reference 
 
 
 ## Attribute Details
@@ -61,10 +61,10 @@ _Supports Order By_: **False**
 
 ### Direction
 
-'I' for Payment issue, 'R' for payment receipt. [Required] [Filter(eq)]
+'I' for Payment issue, 'R' for payment receipt. `Required` `Filter(eq)`
 
 _Type_: **[Direction](Finance.Payments.PaymentSlipAmounts.md#direction)**  
-Allowed values for the [Direction](Finance.Payments.PaymentOrders.md#direction) data attribute  
+Allowed values for the `Direction`(Finance.Payments.PaymentOrders.md#direction) data attribute  
 _Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)_  
 
 | Value | Description |
@@ -84,7 +84,7 @@ _Default Value_: **NewGuid**
 
 ### IsPartyPayment
 
-Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). [Required] [Default(true)]
+Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). `Required` `Default(true)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -93,7 +93,7 @@ _Default Value_: **True**
 
 ### LineNo
 
-The number of the line within the payment. [Required]
+The number of the line within the payment. `Required`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -116,7 +116,7 @@ _Front-End Recalc Expressions:_
 `obj.Party.ObtainPartyName( )`
 ### PaymentDate
 
-The date on which the payment is done. [Required] [Filter(ge;le)]
+The date on which the payment is done. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -126,7 +126,7 @@ _Front-End Recalc Expressions:_
 `obj.PaymentSlip.DocumentDate`
 ### TotalAmount
 
-The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency]
+The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency`
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -137,21 +137,21 @@ _Supports Order By_: **False**
 
 ### Party
 
-The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. [Filter(multi eq)]
+The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentReason
 
-The reason for the payment, as defined in Payment Reasons. [Filter(multi eq)]
+The reason for the payment, as defined in Payment Reasons. `Filter(multi eq)`
 
 _Type_: **[PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentSlip
 
-The [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner]
+The `PaymentSlip`(Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PaymentSlips](Finance.Payments.PaymentSlips.md)**  
 _Indexed_: **True**  

@@ -122,52 +122,52 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#adjustmentnumber">AdjustmentNumber</a></td>
 <td>int32</td>
-<td>Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Consecutive number of the correction that this document is applying to the adjusted document. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#adjustmenttime">AdjustmentTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date/time when the document last has been adjusted by corrective document. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Date/time when the document last has been adjusted by corrective document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#adjustmentuser">AdjustmentUser</a></td>
 <td>string (nullable)</td>
-<td>The user who adjusted the document. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The user who adjusted the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#completetime">CompleteTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
-<td>Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Date/Time when the document was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#creationuser">CreationUser</a></td>
 <td>string</td>
-<td>The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#declarationfunction">DeclarationFunction</a></td>
 <td><a href="Finance.Intrastat.Declarations.html#declarationfunction">DeclarationFunction</a></td>
-<td>Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. [Required] [Default(&quot;R&quot;)] [Filter(eq)]</td>
+<td>Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#declarestatisticalvalues">DeclareStatisticalValues</a></td>
 <td>boolean</td>
-<td>Does the declaration contain statistical values? true=Yes; false=No. [Required] [Default(false)] [Filter(multi eq)]</td>
+<td>Does the declaration contain statistical values? true=Yes; false=No. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#documentdate">DocumentDate</a></td>
 <td>date</td>
-<td>The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#documentno">DocumentNo</a></td>
 <td>string</td>
-<td>Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#documentnotes">DocumentNotes</a></td>
@@ -177,17 +177,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#documentversion">DocumentVersion</a></td>
 <td>int32</td>
-<td>Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#entityname">EntityName</a></td>
 <td>string</td>
-<td>The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#goodsflowdirection">GoodsFlowDirection</a></td>
 <td><a href="Finance.Intrastat.Declarations.html#goodsflowdirection">GoodsFlowDirection</a></td>
-<td>The flow direction of the goods. A=Arrival, D=Dispatch. [Required] [Filter(eq)]</td>
+<td>The flow direction of the goods. A=Arrival, D=Dispatch. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#id">Id</a></td>
@@ -197,82 +197,82 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#isreleased">IsReleased</a></td>
 <td>boolean</td>
-<td>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+<td>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
 <td><a href="Finance.Intrastat.Declarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</td>
-<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#planningonly">PlanningOnly</a></td>
 <td>boolean</td>
-<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#postalcode">PostalCode</a></td>
 <td>string</td>
-<td>This field contains the postal code part of the submitter’s address. [Required]</td>
+<td>This field contains the postal code part of the submitter’s address. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#readonly">ReadOnly</a></td>
 <td>boolean</td>
-<td>True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>True - the document is read only; false - the document is not read only. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#referencedate">ReferenceDate</a></td>
 <td>datetime (nullable)</td>
-<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. <code>Default(Today)</code> <code>Filter(ge;le)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#referencedocumentno">ReferenceDocumentNo</a></td>
 <td>string (nullable)</td>
-<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#referencemonth">ReferenceMonth</a></td>
 <td><a href="Finance.Intrastat.Declarations.html#referencemonth">ReferenceMonth</a></td>
-<td>Month, for which the declaration is prepared. [Required] [Filter(eq)]</td>
+<td>Month, for which the declaration is prepared. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#referenceyear">ReferenceYear</a></td>
 <td>int16</td>
-<td>Year, for which the declaration is prepared. [Required] [Filter(eq)]</td>
+<td>Year, for which the declaration is prepared. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#releasetime">ReleaseTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#state">State</a></td>
 <td><a href="Finance.Intrastat.Declarations.html#state">DocumentState</a></td>
-<td>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#void">Void</a></td>
 <td>boolean</td>
-<td>True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#voidreason">VoidReason</a></td>
 <td>string (nullable)</td>
-<td>Reason for voiding the document, entered by the user. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Reason for voiding the document, entered by the user. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#voidtime">VoidTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date/time when the document has become void. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>Date/time when the document has become void. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#voiduser">VoidUser</a></td>
 <td>string (nullable)</td>
-<td>The user who voided the document. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The user who voided the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -289,102 +289,102 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</td>
-<td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#adjusteddocument">AdjustedDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The primary document, which the current document adjusts. null when this is not an adjustment document. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#assignedtouser">AssignedToUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#authorizedperson">AuthorizedPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The authorized person who submits the intrastat declaration. [Filter(multi eq)] [Introduced in version 18.2]</td>
+<td>The authorized person who submits the intrastat declaration. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#currencydirectory">CurrencyDirectory</a></td>
 <td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</td>
-<td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
-<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#fromcompanydivision">FromCompanyDivision</a></td>
 <td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
-<td>The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The division of the company, issuing the document. null when the document is not issued by any specific division. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#fromparty">FromParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party which issued the document. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The party which issued the document. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#masterdocument">MasterDocument</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#parent">Parent</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>In a multi-document tree, this is the direct parent document. If this is the root it is null. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#primecausedocument">PrimeCauseDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The document that is the prime cause for creation of the current document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#responsibleperson">ResponsiblePerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#reverseofdocument">ReverseOfDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The document which the current document is reverse of. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#sequence">Sequence</a></td>
 <td><a href="General.Sequences.html">Sequences</a> (nullable)</td>
-<td>The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The sequence that will be used to give new numbers to the documents of this type. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#thirddeclaringparty">ThirdDeclaringParty</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a></td>
-<td>Third declaring party, which holds the electronic signature. This is the company which submits the declaration. [Required] [Filter(multi eq)] [Introduced in version 18.2]</td>
+<td>Third declaring party, which holds the electronic signature. This is the company which submits the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#tocompanydivision">ToCompanyDivision</a></td>
 <td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
-<td>The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The division of the company, receiving the document. null when the document is not received by any specific division. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#toparty">ToParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party which should receive the document. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The party which should receive the document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.Declarations.html#userstatus">UserStatus</a></td>
 <td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>The user status of this document if applicable for this document type. null means unknown or not yet set. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -401,87 +401,87 @@ Default Search Member:<br>
 <tr>
 <td>Comments</td>
 <td><a href="General.DocumentComments.html">DocumentComments</a></td>
-<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#document">General.DocumentComment.Document</a> back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>List of <code>DocumentComment</code>(General.DocumentComments.md) child objects, based on the <code>General.DocumentComment.Document</code>(General.DocumentComments.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>DistributedAmounts</td>
 <td><a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmounts</a></td>
-<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributed<br>Amount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#document">General.DocumentDistributedAmount.Document</a> back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>List of <code>DocumentDistributed&lt;br /&gt;Amount</code>(General.DocumentDistributedAmounts.md) child objects, based on the <code>General.DocumentDistributedAmount.Document</code>(General.DocumentDistributedAmounts.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>DocumentAmounts</td>
 <td><a href="General.DocumentAmounts.html">DocumentAmounts</a></td>
-<td>List of <a href="General.DocumentAmounts.html">DocumentAmount</a> child objects, based on the <a href="General.DocumentAmounts.html#document">General.DocumentAmount.Document</a> back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>List of <code>DocumentAmount</code>(General.DocumentAmounts.md) child objects, based on the <code>General.DocumentAmount.Document</code>(General.DocumentAmounts.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>FileAttachments</td>
 <td><a href="General.DocumentFileAttachments.html">DocumentFileAttachments</a></td>
-<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#document">General.DocumentFileAttachment.Document</a> back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>List of <code>DocumentFileAttachment</code>(General.DocumentFileAttachments.md) child objects, based on the <code>General.DocumentFileAttachment.Document</code>(General.DocumentFileAttachments.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>LineAmounts</td>
 <td><a href="General.DocumentLineAmounts.html">DocumentLineAmounts</a></td>
-<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#document">General.DocumentLineAmount.Document</a> back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>List of <code>DocumentLineAmount</code>(General.DocumentLineAmounts.md) child objects, based on the <code>General.DocumentLineAmount.Document</code>(General.DocumentLineAmounts.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>Lines</td>
 <td><a href="Finance.Intrastat.DeclarationLines.html">DeclarationLines</a></td>
-<td>List of <a href="Finance.Intrastat.DeclarationLines.html">DeclarationLine</a> child objects, based on the <a href="Finance.Intrastat.DeclarationLines.html#intrastatdeclaration">Finance.Intrastat.DeclarationLine.IntrastatDeclaration</a> back reference</td>
+<td>List of <code>DeclarationLine</code>(Finance.Intrastat.DeclarationLines.md) child objects, based on the <code>Finance.Intrastat.DeclarationLine.IntrastatDeclaration</code>(Finance.Intrastat.DeclarationLines.md#intrastatdeclaration) back reference</td>
 </tr>
 <tr>
 <td>Prints</td>
 <td><a href="General.DocumentPrints.html">DocumentPrints</a></td>
-<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#document">General.DocumentPrint.Document</a> back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>List of <code>DocumentPrint</code>(General.DocumentPrints.md) child objects, based on the <code>General.DocumentPrint.Document</code>(General.DocumentPrints.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>StateChanges</td>
 <td><a href="General.DocumentStateChanges.html">DocumentStateChanges</a></td>
-<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#document">General.DocumentStateChange.Document</a> back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>List of <code>DocumentStateChange</code>(General.DocumentStateChanges.md) child objects, based on the <code>General.DocumentStateChange.Document</code>(General.DocumentStateChanges.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>Versions</td>
 <td><a href="General.DocumentVersions.html">DocumentVersions</a></td>
-<td>List of <a href="General.DocumentVersions.html">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#document">General.DocumentVersion.Document</a> back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+<td>List of <code>DocumentVersion</code>(General.DocumentVersions.md) child objects, based on the <code>General.DocumentVersion.Document</code>(General.DocumentVersions.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="adjustmentnumber">AdjustmentNumber</h3>
-<p>Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Consecutive number of the correction that this document is applying to the adjusted document. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="adjustmenttime">AdjustmentTime</h3>
-<p>Date/time when the document last has been adjusted by corrective document. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Date/time when the document last has been adjusted by corrective document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="adjustmentuser">AdjustmentUser</h3>
-<p>The user who adjusted the document. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The user who adjusted the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="completetime">CompleteTime</h3>
-<p>Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<p>Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Date/Time when the document was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<p>The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="declarationfunction">DeclarationFunction</h3>
-<p>Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. [Required] [Default(&quot;R&quot;)] [Filter(eq)]</p>
+<p>Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html#declarationfunction">DeclarationFunction</a></strong><br>
-Allowed values for the <a href="Finance.Intrastat.Declarations.html#declarationfunction">DeclarationFunction</a> data attribute<br>
+Allowed values for the <code>DeclarationFunction</code>(Finance.Intrastat.Declarations.md#declarationfunction) data attribute<br>
 <em>Allowed Values (Finance.Intrastat.DeclarationsRepository.DeclarationFunction Enum Members)</em></p>
 <table>
 <thead>
@@ -505,20 +505,20 @@ Allowed values for the <a href="Finance.Intrastat.Declarations.html#declarationf
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Regular</strong></p>
 <h3 id="declarestatisticalvalues">DeclareStatisticalValues</h3>
-<p>Does the declaration contain statistical values? true=Yes; false=No. [Required] [Default(false)] [Filter(multi eq)]</p>
+<p>Does the declaration contain statistical values? true=Yes; false=No. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="documentdate">DocumentDate</h3>
-<p>The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="documentno">DocumentNo</h3>
-<p>Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -529,21 +529,21 @@ Allowed values for the <a href="Finance.Intrastat.Declarations.html#declarationf
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
-<p>Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="entityname">EntityName</h3>
-<p>The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="goodsflowdirection">GoodsFlowDirection</h3>
-<p>The flow direction of the goods. A=Arrival, D=Dispatch. [Required] [Filter(eq)]</p>
+<p>The flow direction of the goods. A=Arrival, D=Dispatch. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html#goodsflowdirection">GoodsFlowDirection</a></strong><br>
-Allowed values for the <a href="Finance.Intrastat.Declarations.html#goodsflowdirection">GoodsFlowDirection</a> data attribute<br>
+Allowed values for the <code>GoodsFlowDirection</code>(Finance.Intrastat.Declarations.md#goodsflowdirection) data attribute<br>
 <em>Allowed Values (Finance.Intrastat.DeclarationsRepository.GoodsFlowDirection Enum Members)</em></p>
 <table>
 <thead>
@@ -571,19 +571,19 @@ Allowed values for the <a href="Finance.Intrastat.Declarations.html#goodsflowdir
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+<p>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
-<p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</strong><br>
 Relationship between parent and child documents<br>
 <em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
@@ -608,37 +608,37 @@ Relationship between parent and child documents<br>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningonly">PlanningOnly</h3>
-<p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="postalcode">PostalCode</h3>
-<p>This field contains the postal code part of the submitter’s address. [Required]</p>
+<p>This field contains the postal code part of the submitter’s address. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="readonly">ReadOnly</h3>
-<p>True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>True - the document is read only; false - the document is not read only. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="referencedate">ReferenceDate</h3>
-<p>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. <code>Default(Today)</code> <code>Filter(ge;le)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="referencedocumentno">ReferenceDocumentNo</h3>
-<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="referencemonth">ReferenceMonth</h3>
-<p>Month, for which the declaration is prepared. [Required] [Filter(eq)]</p>
+<p>Month, for which the declaration is prepared. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html#referencemonth">ReferenceMonth</a></strong><br>
-Allowed values for the <a href="Finance.Intrastat.Declarations.html#referencemonth">ReferenceMonth</a> data attribute<br>
+Allowed values for the <code>ReferenceMonth</code>(Finance.Intrastat.Declarations.md#referencemonth) data attribute<br>
 <em>Allowed Values (Finance.Intrastat.DeclarationsRepository.ReferenceMonth Enum Members)</em></p>
 <table>
 <thead>
@@ -701,17 +701,17 @@ Allowed values for the <a href="Finance.Intrastat.Declarations.html#referencemon
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="referenceyear">ReferenceYear</h3>
-<p>Year, for which the declaration is prepared. [Required] [Filter(eq)]</p>
+<p>Year, for which the declaration is prepared. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int16</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="releasetime">ReleaseTime</h3>
-<p>Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>
-<p>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html#state">DocumentState</a></strong><br>
 Enumeration of document system states<br>
 <em>Allowed Values (General.DocumentState Enum Members)</em></p>
@@ -757,114 +757,114 @@ Enumeration of document system states<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="void">Void</h3>
-<p>True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="voidreason">VoidReason</h3>
-<p>Reason for voiding the document, entered by the user. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Reason for voiding the document, entered by the user. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="voidtime">VoidTime</h3>
-<p>Date/time when the document has become void. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>Date/time when the document has become void. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="voiduser">VoidUser</h3>
-<p>The user who voided the document. [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The user who voided the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
-<p>The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The primary document, which the current document adjusts. null when this is not an adjustment document. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
-<p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="authorizedperson">AuthorizedPerson</h3>
-<p>The authorized person who submits the intrastat declaration. [Filter(multi eq)] [Introduced in version 18.2]</p>
+<p>The authorized person who submits the intrastat declaration. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
-<p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromcompanydivision">FromCompanyDivision</h3>
-<p>The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The division of the company, issuing the document. null when the document is not issued by any specific division. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromparty">FromParty</h3>
-<p>The party which issued the document. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The party which issued the document. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="masterdocument">MasterDocument</h3>
-<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
-<p>In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>In a multi-document tree, this is the direct parent document. If this is the root it is null. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
-<p>The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The document that is the prime cause for creation of the current document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="reverseofdocument">ReverseOfDocument</h3>
-<p>The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The document which the current document is reverse of. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sequence">Sequence</h3>
-<p>The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The sequence that will be used to give new numbers to the documents of this type. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Sequences.html">Sequences</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="thirddeclaringparty">ThirdDeclaringParty</h3>
-<p>Third declaring party, which holds the electronic signature. This is the company which submits the declaration. [Required] [Filter(multi eq)] [Introduced in version 18.2]</p>
+<p>Third declaring party, which holds the electronic signature. This is the company which submits the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.EnterpriseCompany.Company</code></p>
 <h3 id="tocompanydivision">ToCompanyDivision</h3>
-<p>The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The division of the company, receiving the document. null when the document is not received by any specific division. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="toparty">ToParty</h3>
-<p>The party which should receive the document. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The party which should receive the document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
-<p>The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
+<p>The user status of this document if applicable for this document type. null means unknown or not yet set. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>
@@ -938,7 +938,7 @@ The desired new user status of the document. Can be null.<br>
 <li><p><strong>completion</strong><br>
 How the sub-documents will be completed, if at all<br>
 <em>Type</em>: General.DocumentCompletion<br>
-Determines how <a href="General.Documents.html">Document</a> will be completed<br>
+Determines how <code>Document</code>(General.Documents.md) will be completed<br>
 <em>Allowed Values (General.DocumentCompletion Enum Members)</em></p>
 <table>
 <thead>
@@ -1034,7 +1034,7 @@ The printout defined for the document type of the document. If null the default 
 <em>Domain API Request</em>: <strong>POST</strong></p>
 <p>In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.</p>
 <h3 id="getallparentdocuments">GetAllParentDocuments</h3>
-<p>Gets all parent documents, traversing the parent document chain by using the <a href="General.Documents.html#parent">Parent</a> property.              (Inherited from <a href="General.Documents.html">Documents</a>)<br>
+<p>Gets all parent documents, traversing the parent document chain by using the <code>Parent</code>(General.Documents.md#parent) property.              (Inherited from <a href="General.Documents.html">Documents</a>)<br>
 <em>Return Type</em>: <strong>Collection Of <a href="General.Documents.html">Documents</a></strong><br>
 <em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Domain API Request</em>: <strong>GET</strong></p>

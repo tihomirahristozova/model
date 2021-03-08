@@ -24,19 +24,19 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Core.EntitySettings.md#id) | guid |  
-| [LogCreate](Systems.Core.EntitySettings.md#logcreate) | boolean | Specifies whether to log every insert for this entity. [Required] [Default(false)] [Introduced in version 18.2] 
-| [LogDelete](Systems.Core.EntitySettings.md#logdelete) | boolean | Specifies whether to log every delete for this entity. [Required] [Default(false)] [Introduced in version 18.2] 
-| [LogReadById](Systems.Core.EntitySettings.md#logreadbyid) | boolean | Specifies whether to log every load by Id for this entity. [Required] [Default(false)] [Introduced in version 18.2] 
-| [LogReadMany](Systems.Core.EntitySettings.md#logreadmany) | boolean | Specifies whether to log every load of many records for this entity. [Required] [Default(false)] [Introduced in version 18.2] 
-| [LogUpdate](Systems.Core.EntitySettings.md#logupdate) | boolean | Specifies whether to log every update for this entity. [Required] [Default(false)] [Introduced in version 18.2] 
-| [Name](Systems.Core.EntitySettings.md#name) | string | The system name of the entity, which is being secured. [Required] [Filter(eq;like)] [ORD] 
-| [TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel) | [TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel) | The track changes level for the entity. [Required] [Default(0)] [Filter(multi eq)] [Introduced in version 19.1] 
+| [LogCreate](Systems.Core.EntitySettings.md#logcreate) | boolean | Specifies whether to log every insert for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [LogDelete](Systems.Core.EntitySettings.md#logdelete) | boolean | Specifies whether to log every delete for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [LogReadById](Systems.Core.EntitySettings.md#logreadbyid) | boolean | Specifies whether to log every load by Id for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [LogReadMany](Systems.Core.EntitySettings.md#logreadmany) | boolean | Specifies whether to log every load of many records for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [LogUpdate](Systems.Core.EntitySettings.md#logupdate) | boolean | Specifies whether to log every update for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [Name](Systems.Core.EntitySettings.md#name) | string | The system name of the entity, which is being secured. `Required` `Filter(eq;like)` `ORD` 
+| [TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel) | [TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel) | The track changes level for the entity. `Required` `Default(0)` `Filter(multi eq)` `Introduced in version 19.1` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Core.EntitySettings.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to access the secured entity. [Filter(multi eq)] |
+| [AccessKey](Systems.Core.EntitySettings.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to access the secured entity. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 ### LogCreate
 
-Specifies whether to log every insert for this entity. [Required] [Default(false)] [Introduced in version 18.2]
+Specifies whether to log every insert for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Default Value_: **False**
 
 ### LogDelete
 
-Specifies whether to log every delete for this entity. [Required] [Default(false)] [Introduced in version 18.2]
+Specifies whether to log every delete for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -68,7 +68,7 @@ _Default Value_: **False**
 
 ### LogReadById
 
-Specifies whether to log every load by Id for this entity. [Required] [Default(false)] [Introduced in version 18.2]
+Specifies whether to log every load by Id for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -77,7 +77,7 @@ _Default Value_: **False**
 
 ### LogReadMany
 
-Specifies whether to log every load of many records for this entity. [Required] [Default(false)] [Introduced in version 18.2]
+Specifies whether to log every load of many records for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Default Value_: **False**
 
 ### LogUpdate
 
-Specifies whether to log every update for this entity. [Required] [Default(false)] [Introduced in version 18.2]
+Specifies whether to log every update for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -95,7 +95,7 @@ _Default Value_: **False**
 
 ### Name
 
-The system name of the entity, which is being secured. [Required] [Filter(eq;like)] [ORD]
+The system name of the entity, which is being secured. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -104,7 +104,7 @@ _Supports Order By_: **True**
 
 ### TrackChangesLevel
 
-The track changes level for the entity. [Required] [Default(0)] [Filter(multi eq)] [Introduced in version 19.1]
+The track changes level for the entity. `Required` `Default(0)` `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel)**  
 Represents the different levels of tracking changes for a specific entity.  
@@ -127,7 +127,7 @@ _Default Value_: **0**
 
 ### AccessKey
 
-The access key, required to access the secured entity. [Filter(multi eq)]
+The access key, required to access the secured entity. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

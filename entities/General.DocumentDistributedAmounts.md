@@ -25,24 +25,24 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](General.DocumentDistributedAmounts.md#amount) | [Amount](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)] 
-| [DocumentLineId](General.DocumentDistributedAmounts.md#documentlineid) | guid (nullable) | The Id of the line over which the amount is distributed. [Filter(multi eq)] 
+| [Amount](General.DocumentDistributedAmounts.md#amount) | [Amount](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. `Currency: GetDocumentCurrency()` `Required` `Filter(ge;le)` 
+| [DocumentLineId](General.DocumentDistributedAmounts.md#documentlineid) | guid (nullable) | The Id of the line over which the amount is distributed. `Filter(multi eq)` 
 | [Id](General.DocumentDistributedAmounts.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentDistributedAmounts.md#document) | [Documents](General.Documents.md) | The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner] |
-| [DocumentAmountType](General.DocumentDistributedAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount which is distributed. [Required] [Filter(multi eq)] |
-| [ReferencedDocument](General.DocumentDistributedAmounts.md#referenceddocument) | [Documents](General.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)] |
+| [Document](General.DocumentDistributedAmounts.md#document) | [Documents](General.Documents.md) | The `Document`(General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. `Required` `Filter(multi eq)` `Owner` |
+| [DocumentAmountType](General.DocumentDistributedAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount which is distributed. `Required` `Filter(multi eq)` |
+| [ReferencedDocument](General.DocumentDistributedAmounts.md#referenceddocument) | [Documents](General.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Amount
 
-The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]
+The amount which has beed distributed over the current line. The amount is in the currency of the document. `Currency: GetDocumentCurrency()` `Required` `Filter(ge;le)`
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### DocumentLineId
 
-The Id of the line over which the amount is distributed. [Filter(multi eq)]
+The Id of the line over which the amount is distributed. `Filter(multi eq)`
 
 _Type_: **guid (nullable)**  
 _Indexed_: **True**  
@@ -68,7 +68,7 @@ _Default Value_: **NewGuid**
 
 ### Document
 
-The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]
+The `Document`(General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
@@ -76,14 +76,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DocumentAmountType
 
-The type of amount which is distributed. [Required] [Filter(multi eq)]
+The type of amount which is distributed. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
 
-In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]
+In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. `Filter(multi eq)`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  

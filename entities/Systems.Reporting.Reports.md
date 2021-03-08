@@ -24,11 +24,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Reporting.Reports.md#id) | guid |  
-| [LayoutFormat](Systems.Reporting.Reports.md#layoutformat) | string (nullable) | Format specifier of the layout. Recognized by the application. [Filter(multi eq)] 
-| [Name](Systems.Reporting.Reports.md#name) | string | Multi-language report name. [Required] [Filter(eq;like)] 
+| [LayoutFormat](Systems.Reporting.Reports.md#layoutformat) | string (nullable) | Format specifier of the layout. Recognized by the application. `Filter(multi eq)` 
+| [Name](Systems.Reporting.Reports.md#name) | string | Multi-language report name. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Reporting.Reports.md#notes) | string (nullable) | Notes for this Report. 
-| [OneRow](Systems.Reporting.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only. [Required] [Default(false)] 
-| [QueryName](Systems.Reporting.Reports.md#queryname) | string | The query on which the report is based. [Required] [Filter(eq)] 
+| [OneRow](Systems.Reporting.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only. `Required` `Default(false)` 
+| [QueryName](Systems.Reporting.Reports.md#queryname) | string | The query on which the report is based. `Required` `Filter(eq)` 
 | [ReportBinaryLayout](Systems.Reporting.Reports.md#reportbinarylayout) | byte[] (nullable) | The printout layout, when the format requires binary storage. Alternative to Report_Layout. 
 | [ReportLayout](Systems.Reporting.Reports.md#reportlayout) | string (nullable) | The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout. 
 | [TemplateFilterXml](Systems.Reporting.Reports.md#templatefilterxml) | string (nullable) | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report. 
@@ -38,7 +38,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataSource](Systems.Reporting.Reports.md#datasource) | [DataSources](Systems.Reporting.DataSources.md) (nullable) | Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)] |
+| [DataSource](Systems.Reporting.Reports.md#datasource) | [DataSources](Systems.Reporting.DataSources.md) (nullable) | Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 ### LayoutFormat
 
-Format specifier of the layout. Recognized by the application. [Filter(multi eq)]
+Format specifier of the layout. Recognized by the application. `Filter(multi eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-Multi-language report name. [Required] [Filter(eq;like)]
+Multi-language report name. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### OneRow
 
-True means that report can be used for one-row forms only. False means that the report can be used for navigators only. [Required] [Default(false)]
+True means that report can be used for one-row forms only. False means that the report can be used for navigators only. `Required` `Default(false)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -85,7 +85,7 @@ _Default Value_: **False**
 
 ### QueryName
 
-The query on which the report is based. [Required] [Filter(eq)]
+The query on which the report is based. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -128,7 +128,7 @@ _Supports Order By_: **False**
 
 ### DataSource
 
-Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)]
+Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. `Filter(multi eq)`
 
 _Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

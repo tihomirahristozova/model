@@ -23,26 +23,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreementEndDate](Logistics.Shipment.Carriers.md#agreementenddate) | date (nullable) | The ending date of the agreement with this carrier. null for agreements which are still active. [Filter(eq;ge;le)] 
-| [AgreementStartDate](Logistics.Shipment.Carriers.md#agreementstartdate) | date | The start date of the agreement with this carrier. [Required] [Default(Today)] [Filter(eq;ge;le)] 
-| [Code](Logistics.Shipment.Carriers.md#code) | string | Unique carrier code (or call sign). The code is unique within all enterprise companies. [Required] [Filter(eq;like)] [ORD] 
+| [AgreementEndDate](Logistics.Shipment.Carriers.md#agreementenddate) | date (nullable) | The ending date of the agreement with this carrier. null for agreements which are still active. `Filter(eq;ge;le)` 
+| [AgreementStartDate](Logistics.Shipment.Carriers.md#agreementstartdate) | date | The start date of the agreement with this carrier. `Required` `Default(Today)` `Filter(eq;ge;le)` 
+| [Code](Logistics.Shipment.Carriers.md#code) | string | Unique carrier code (or call sign). The code is unique within all enterprise companies. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Logistics.Shipment.Carriers.md#id) | guid |  
-| [IsActive](Logistics.Shipment.Carriers.md#isactive) | boolean | Specifies whether the carrier agreement is active. [Required] [Default(true)] [Filter(eq)] 
+| [IsActive](Logistics.Shipment.Carriers.md#isactive) | boolean | Specifies whether the carrier agreement is active. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Logistics.Shipment.Carriers.md#notes) | string (nullable) | Notes for this Carrier. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Shipment.Carriers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)] |
-| [Supplier](Logistics.Shipment.Carriers.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier contract with the carrier. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Shipment.Carriers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which signed the carrier agreement. `Required` `Filter(multi eq)` |
+| [Supplier](Logistics.Shipment.Carriers.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier contract with the carrier. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### AgreementEndDate
 
-The ending date of the agreement with this carrier. null for agreements which are still active. [Filter(eq;ge;le)]
+The ending date of the agreement with this carrier. null for agreements which are still active. `Filter(eq;ge;le)`
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### AgreementStartDate
 
-The start date of the agreement with this carrier. [Required] [Default(Today)] [Filter(eq;ge;le)]
+The start date of the agreement with this carrier. `Required` `Default(Today)` `Filter(eq;ge;le)`
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -59,7 +59,7 @@ _Default Value_: **CurrentDate**
 
 ### Code
 
-Unique carrier code (or call sign). The code is unique within all enterprise companies. [Required] [Filter(eq;like)] [ORD]
+Unique carrier code (or call sign). The code is unique within all enterprise companies. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the carrier agreement is active. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the carrier agreement is active. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -95,14 +95,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)]
+The enterprise company which signed the carrier agreement. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Supplier
 
-The supplier contract with the carrier. [Required] [Filter(multi eq)]
+The supplier contract with the carrier. `Required` `Filter(multi eq)`
 
 _Type_: **[Suppliers](Logistics.Procurement.Suppliers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

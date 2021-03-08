@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#allowoverexecution">AllowOverExecution</a></td>
 <td>boolean</td>
-<td>When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. [Required] [Default(false)]</td>
+<td>When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#finished">Finished</a></td>
 <td>boolean (nullable)</td>
-<td>True if this transaction entry completes the operation. false if there might be more entries. [Default(false)] [Filter(eq)]</td>
+<td>True if this transaction entry completes the operation. false if there might be more entries. <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
@@ -125,32 +125,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linebasecost">LineBaseCost</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</td>
+<td>The cost of the transaction in the currency of the enterprise company. <code>Currency: TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linecost">LineCost</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
+<td>Total cost for the line. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linedocumentcost">LineDocumentCost</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]</td>
+<td>The cost of the transaction in the currency of the document. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique within the store transaction. [Required]</td>
+<td>Line number, unique within the store transaction. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lineproductcost">LineProductCost</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]</td>
+<td>The cost of the transaction in the currency of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linestorecost">LineStoreCost</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]</td>
+<td>The cost of the transaction in the currency of the warehouse. <code>Currency: TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#notes">Notes</a></td>
@@ -160,7 +160,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#parentlineid">ParentLineId</a></td>
 <td>guid (nullable)</td>
-<td>Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. [Filter(multi eq)]</td>
+<td>Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#parentlineno">ParentLineNo</a></td>
@@ -170,32 +170,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)]</td>
+<td>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]</td>
+<td>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#temporderno">TempOrderNo</a></td>
 <td>string (nullable)</td>
-<td>Obsolete. Not used. [Filter(eq)]</td>
+<td>Obsolete. Not used. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime (nullable)</td>
-<td>Exact time when the transaction changes the cost of the product. [Filter(ge;le)] [ORD]</td>
+<td>Exact time when the transaction changes the cost of the product. <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#unitcost">UnitCost</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
+<td>Cost for 1 of the specified quantity. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -212,74 +212,74 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#document">Document</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></td>
-<td>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)]</td>
+<td>The transaction to which the transaction line belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]</td>
+<td>If non-null, contains the specific lot to use for the movement. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#originalproduct">OriginalProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. [Filter(multi eq)]</td>
+<td>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#parentstoreorderline">ParentStoreOrderLine</a></td>
 <td><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</td>
-<td>The line, containing the ordered quantity, which this execution line executes. [Filter(multi eq)]</td>
+<td>The line, containing the ordered quantity, which this execution line executes. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The item that was received/issued. [Required] [Filter(multi eq)]</td>
+<td>The item that was received/issued. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#productcode">ProductCode</a></td>
 <td><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</td>
-<td>Used to set the Product_Id thru the coding systems. [Filter(multi eq)]</td>
+<td>Used to set the Product_Id thru the coding systems. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#productvariant">ProductVariant</a></td>
 <td><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]</td>
+<td>If specified determines which product variant of the current product in this line is used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. null means that the quantity is specified only in base measurement unit. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Quantity. null means that the quantity is specified only in base measurement unit. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)]</td>
+<td>Item serial number for serialized items. null for non-serialized items. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>Store bin, from/to which the transaction was performed. [Filter(multi eq)]</td>
+<td>Store bin, from/to which the transaction was performed. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#transactionobj">TransactionObj</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></td>
-<td>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The transaction to which the transaction line belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowoverexecution">AllowOverExecution</h3>
-<p>When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. [Required] [Default(false)]</p>
+<p>When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="finished">Finished</h3>
-<p>True if this transaction entry completes the operation. false if there might be more entries. [Default(false)] [Filter(eq)]</p>
+<p>True if this transaction entry completes the operation. false if there might be more entries. <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -297,25 +297,25 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="linebasecost">LineBaseCost</h3>
-<p>The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
+<p>The cost of the transaction in the currency of the enterprise company. <code>Currency: TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="linecost">LineCost</h3>
-<p>Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
+<p>Total cost for the line. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="linedocumentcost">LineDocumentCost</h3>
-<p>The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]</p>
+<p>The cost of the transaction in the currency of the document. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique within the store transaction. [Required]</p>
+<p>Line number, unique within the store transaction. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -324,13 +324,13 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.TransactionObj.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="lineproductcost">LineProductCost</h3>
-<p>The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]</p>
+<p>The cost of the transaction in the currency of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="linestorecost">LineStoreCost</h3>
-<p>The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]</p>
+<p>The cost of the transaction in the currency of the warehouse. <code>Currency: TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -341,7 +341,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentlineid">ParentLineId</h3>
-<p>Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. [Filter(multi eq)]</p>
+<p>Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -351,13 +351,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)]</p>
+<p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
+<p>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -367,7 +367,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -376,79 +376,79 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="temporderno">TempOrderNo</h3>
-<p>Obsolete. Not used. [Filter(eq)]</p>
+<p>Obsolete. Not used. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Exact time when the transaction changes the cost of the product. [Filter(ge;le)] [ORD]</p>
+<p>Exact time when the transaction changes the cost of the product. <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="unitcost">UnitCost</h3>
-<p>Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
+<p>Cost for 1 of the specified quantity. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)]</p>
+<p>The transaction to which the transaction line belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
-<p>If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]</p>
+<p>If non-null, contains the specific lot to use for the movement. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="originalproduct">OriginalProduct</h3>
-<p>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. [Filter(multi eq)]</p>
+<p>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product</code></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentstoreorderline">ParentStoreOrderLine</h3>
-<p>The line, containing the ordered quantity, which this execution line executes. [Filter(multi eq)]</p>
+<p>The line, containing the ordered quantity, which this execution line executes. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>The item that was received/issued. [Required] [Filter(multi eq)]</p>
+<p>The item that was received/issued. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.OriginalProduct</code></p>
 <h3 id="productcode">ProductCode</h3>
-<p>Used to set the Product_Id thru the coding systems. [Filter(multi eq)]</p>
+<p>Used to set the Product_Id thru the coding systems. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<p>If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]</p>
+<p>If specified determines which product variant of the current product in this line is used. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. null means that the quantity is specified only in base measurement unit. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Quantity. null means that the quantity is specified only in base measurement unit. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)]</p>
+<p>Item serial number for serialized items. null for non-serialized items. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storebin">StoreBin</h3>
-<p>Store bin, from/to which the transaction was performed. [Filter(multi eq)]</p>
+<p>Store bin, from/to which the transaction was performed. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionobj">TransactionObj</h3>
-<p>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The transaction to which the transaction line belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

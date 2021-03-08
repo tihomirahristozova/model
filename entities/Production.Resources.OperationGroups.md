@@ -24,23 +24,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.OperationGroups.md#fullpath) | string | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. [Required] [Default("")] [Filter(like)] 
+| [FullPath](Production.Resources.OperationGroups.md#fullpath) | string | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)` 
 | [Id](Production.Resources.OperationGroups.md#id) | guid |  
-| [Name](Production.Resources.OperationGroups.md#name) | string | The name of this OperationGroup. [Required] [Filter(like)] 
-| [Parent](Production.Resources.OperationGroups.md#parent) | string | Path of parent group. [Required] [Default("/")] [Filter(like)] [ORD] 
+| [Name](Production.Resources.OperationGroups.md#name) | string | The name of this OperationGroup. `Required` `Filter(like)` 
+| [Parent](Production.Resources.OperationGroups.md#parent) | string | Path of parent group. `Required` `Default("/")` `Filter(like)` `ORD` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Operations | [Operations](Production.Resources.Operations.md) | List of [Operation](Production.Resources.Operations.md) child objects, based on the [Production.Resources.Operation.OperationGroup](Production.Resources.Operations.md#operationgroup) back reference 
+| Operations | [Operations](Production.Resources.Operations.md) | List of `Operation`(Production.Resources.Operations.md) child objects, based on the `Production.Resources.Operation.OperationGroup`(Production.Resources.Operations.md#operationgroup) back reference 
 
 
 ## Attribute Details
 
 ### FullPath
 
-The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. [Required] [Default("")] [Filter(like)]
+The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this OperationGroup. [Required] [Filter(like)]
+The name of this OperationGroup. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-Path of parent group. [Required] [Default("/")] [Filter(like)] [ORD]
+Path of parent group. `Required` `Default("/")` `Filter(like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  

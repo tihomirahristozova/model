@@ -25,25 +25,25 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#attributename) | string | The attribute, which will be tested. [Required] 
-| [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default("Equals")] 
-| [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. [Required] 
+| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#attributename) | string | The attribute, which will be tested. `Required` 
+| [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. `Required` `Default("Equals")` 
+| [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. `Required` 
 | [Id](Systems.Bpm.UserBusinessRuleConditions.md#id) | guid |  
-| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (nullable) | Notes for this UserBusinessRuleCondition. [Introduced in version 20.1] 
+| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (nullable) | Notes for this UserBusinessRuleCondition. `Introduced in version 20.1` 
 | [Value](Systems.Bpm.UserBusinessRuleConditions.md#value) | string (nullable) | The value against which the data attribute will be tested. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner] |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### AttributeName
 
-The attribute, which will be tested. [Required]
+The attribute, which will be tested. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -51,10 +51,10 @@ _Supports Order By_: **False**
 
 ### ComparisonType
 
-How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default("Equals")]
+How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. `Required` `Default("Equals")`
 
 _Type_: **[ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype)**  
-Allowed values for the [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) data attribute  
+Allowed values for the `ComparisonType`(Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) data attribute  
 _Allowed Values (Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType Enum Members)_  
 
 | Value | Description |
@@ -72,7 +72,7 @@ _Default Value_: **Equals**
 
 ### ConditionNo
 
-Unique consecutive number of the condition within the business rule. [Required]
+Unique consecutive number of the condition within the business rule. `Required`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -92,7 +92,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-Notes for this UserBusinessRuleCondition. [Introduced in version 20.1]
+Notes for this UserBusinessRuleCondition. `Introduced in version 20.1`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -111,7 +111,7 @@ _Supports Order By_: **False**
 
 ### UserBusinessRule
 
-The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner]
+The business rule, for which the condition is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

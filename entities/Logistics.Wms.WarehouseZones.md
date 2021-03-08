@@ -25,24 +25,24 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Wms.WarehouseZones.md#code) | string | Zone code, unique within the warehouse. [Required] [Filter(multi eq)] 
+| [Code](Logistics.Wms.WarehouseZones.md#code) | string | Zone code, unique within the warehouse. `Required` `Filter(multi eq)` 
 | [Id](Logistics.Wms.WarehouseZones.md#id) | guid |  
-| [Name](Logistics.Wms.WarehouseZones.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the zone. [Required] [Filter(eq;like)] 
+| [Name](Logistics.Wms.WarehouseZones.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the zone. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.WarehouseZones.md#notes) | string (nullable) | Notes for this WarehouseZone. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Logistics.Wms.WarehouseZones.md#parent) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | The parent Warehouse Zone of the current Warehouse Zone. [Filter(multi eq)] |
-| [Warehouse](Logistics.Wms.WarehouseZones.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the zone is located. [Required] [Filter(multi eq)] [Owner] |
+| [Parent](Logistics.Wms.WarehouseZones.md#parent) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | The parent Warehouse Zone of the current Warehouse Zone. `Filter(multi eq)` |
+| [Warehouse](Logistics.Wms.WarehouseZones.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the zone is located. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### Code
 
-Zone code, unique within the warehouse. [Required] [Filter(multi eq)]
+Zone code, unique within the warehouse. `Required` `Filter(multi eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -62,7 +62,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multi-language name of the zone. [Required] [Filter(eq;like)]
+Multi-language name of the zone. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -81,14 +81,14 @@ _Supports Order By_: **False**
 
 ### Parent
 
-The parent Warehouse Zone of the current Warehouse Zone. [Filter(multi eq)]
+The parent Warehouse Zone of the current Warehouse Zone. `Filter(multi eq)`
 
 _Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
 
-The warehouse in which the zone is located. [Required] [Filter(multi eq)] [Owner]
+The warehouse in which the zone is located. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

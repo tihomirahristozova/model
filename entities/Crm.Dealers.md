@@ -25,24 +25,24 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Dealers.md#fromdate) | datetime (nullable) | Start of the dealer relationship. [Default(Today)] [Filter(ge;le)] 
+| [FromDate](Crm.Dealers.md#fromdate) | datetime (nullable) | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
 | [Id](Crm.Dealers.md#id) | guid |  
 | [Notes](Crm.Dealers.md#notes) | string (nullable) | Notes for this Dealer. 
-| [ThruDate](Crm.Dealers.md#thrudate) | datetime (nullable) | Termination date of the dealership. null for active dealers. [Filter(ge;le)] 
+| [ThruDate](Crm.Dealers.md#thrudate) | datetime (nullable) | Termination date of the dealership. null for active dealers. `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Dealers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. [Filter(multi eq)] |
-| [Party](Crm.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Crm.Dealers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. `Filter(multi eq)` |
+| [Party](Crm.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### FromDate
 
-Start of the dealer relationship. [Default(Today)] [Filter(ge;le)]
+Start of the dealer relationship. `Default(Today)` `Filter(ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### ThruDate
 
-Termination date of the dealership. null for active dealers. [Filter(ge;le)]
+Termination date of the dealership. null for active dealers. `Filter(ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -77,14 +77,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-The enterprise company for which this dealer is recorded. [Filter(multi eq)]
+The enterprise company for which this dealer is recorded. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-The base party record of the dealer. [Required] [Filter(multi eq)] [Owner]
+The base party record of the dealer. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  

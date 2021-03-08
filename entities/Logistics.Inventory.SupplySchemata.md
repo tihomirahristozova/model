@@ -25,13 +25,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.SupplySchemata.md#id) | guid |  
-| [Name](Logistics.Inventory.SupplySchemata.md#name) | string | The name of this SupplySchema. [Required] 
+| [Name](Logistics.Inventory.SupplySchemata.md#name) | string | The name of this SupplySchema. `Required` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Routes | [SupplySchemaRoutes](Logistics.Inventory.SupplySchemaRoutes.md) | List of [SupplySchemaRoute](Logistics.Inventory.SupplySchemaRoutes.md) child objects, based on the [Logistics.Inventory.SupplySchemaRoute.SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) back reference 
+| Routes | [SupplySchemaRoutes](Logistics.Inventory.SupplySchemaRoutes.md) | List of `SupplySchemaRoute`(Logistics.Inventory.SupplySchemaRoutes.md) child objects, based on the `Logistics.Inventory.SupplySchemaRoute.SupplySchema`(Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) back reference 
 
 
 ## Attribute Details
@@ -45,7 +45,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this SupplySchema. [Required]
+The name of this SupplySchema. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

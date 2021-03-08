@@ -27,18 +27,18 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Cms.NewsWebModules.md#id) | guid |  
-| [IsPublished](Applications.Cms.NewsWebModules.md#ispublished) | boolean | Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)] (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
-| [LocalUrl](Applications.Cms.NewsWebModules.md#localurl) | string (nullable) | The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)] (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
+| [IsPublished](Applications.Cms.NewsWebModules.md#ispublished) | boolean | Specifies whether the module is published and will be showed in the web site. `Required` `Default(false)` `Filter(eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
+| [LocalUrl](Applications.Cms.NewsWebModules.md#localurl) | string (nullable) | The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 | [ModulePicture](Applications.Cms.NewsWebModules.md#modulepicture) | byte[] (nullable) | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
-| [ModuleType](Applications.Cms.NewsWebModules.md#moduletype) | [ModuleType](Applications.Cms.NewsWebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)] (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
-| [Name](Applications.Cms.NewsWebModules.md#name) | string | Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)] (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
+| [ModuleType](Applications.Cms.NewsWebModules.md#moduletype) | [ModuleType](Applications.Cms.NewsWebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
+| [Name](Applications.Cms.NewsWebModules.md#name) | string | Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.Cms.NewsWebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
-| [WebSite](Applications.Cms.NewsWebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
+| [Parent](Applications.Cms.NewsWebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Filter(multi eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
+| [WebSite](Applications.Cms.NewsWebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. `Required` `Filter(multi eq)` `Owner` (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
 
 
 ## Attribute Details
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 ### IsPublished
 
-Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)] (Inherited from [WebModules](Applications.Cms.WebModules.md))
+Specifies whether the module is published and will be showed in the web site. `Required` `Default(false)` `Filter(eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -61,7 +61,7 @@ _Default Value_: **False**
 
 ### LocalUrl
 
-The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)] (Inherited from [WebModules](Applications.Cms.WebModules.md))
+The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -77,10 +77,10 @@ _Supports Order By_: **False**
 
 ### ModuleType
 
-Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)] (Inherited from [WebModules](Applications.Cms.WebModules.md))
+Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **[ModuleType](Applications.Cms.NewsWebModules.md#moduletype)**  
-Allowed values for the [ModuleType](Applications.Cms.WebModules.md#moduletype) data attribute  
+Allowed values for the `ModuleType`(Applications.Cms.WebModules.md#moduletype) data attribute  
 _Allowed Values (Applications.Cms.WebModulesRepository.ModuleType Enum Members)_  
 
 | Value | Description |
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)] (Inherited from [WebModules](Applications.Cms.WebModules.md))
+Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -105,14 +105,14 @@ _Supports Order By_: **False**
 
 ### Parent
 
-The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] (Inherited from [WebModules](Applications.Cms.WebModules.md))
+The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Filter(multi eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **[WebModules](Applications.Cms.WebModules.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebSite
 
-The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] (Inherited from [WebModules](Applications.Cms.WebModules.md))
+The web site to which the module belongs. `Required` `Filter(multi eq)` `Owner` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

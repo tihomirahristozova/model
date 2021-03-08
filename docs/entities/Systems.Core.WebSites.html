@@ -110,7 +110,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Core.WebSites.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Indicates whether the web site is active and will be instantiated upon next web server restart. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebSites.html#notes">Notes</a></td>
@@ -125,7 +125,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Core.WebSites.html#websitetype">WebSiteType</a></td>
 <td><a href="Systems.Core.WebSites.html#websitetype">WebSiteType</a></td>
-<td>The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]</td>
+<td>The type of web site - Api, Client Center, Id, etc. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,17 +142,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Core.WebSites.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]</td>
+<td>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebSites.html#trustedapplication">TrustedApplication</a></td>
 <td><a href="Systems.Security.TrustedApplications.html">TrustedApplications</a> (nullable)</td>
-<td>The trusted application related to this web site. [Filter(multi eq)] [Introduced in version 20.1]</td>
+<td>The trusted application related to this web site. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebSites.html#webhost">WebHost</a></td>
 <td><a href="Systems.Core.WebHosts.html">WebHosts</a> (nullable)</td>
-<td>The web host in which to host the site. [Filter(multi eq)]</td>
+<td>The web host in which to host the site. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Indicates whether the web site is active and will be instantiated upon next web server restart. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -179,9 +179,9 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="websitetype">WebSiteType</h3>
-<p>The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]</p>
+<p>The type of web site - Api, Client Center, Id, etc. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.WebSites.html#websitetype">WebSiteType</a></strong><br>
-Allowed values for the <a href="Systems.Core.WebSites.html#websitetype">WebSiteType</a> data attribute<br>
+Allowed values for the <code>WebSiteType</code>(Systems.Core.WebSites.md#websitetype) data attribute<br>
 <em>Allowed Values (Systems.Core.WebSitesRepository.WebSiteType Enum Members)</em></p>
 <table>
 <thead>
@@ -245,15 +245,15 @@ Allowed values for the <a href="Systems.Core.WebSites.html#websitetype">WebSiteT
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]</p>
+<p>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trustedapplication">TrustedApplication</h3>
-<p>The trusted application related to this web site. [Filter(multi eq)] [Introduced in version 20.1]</p>
+<p>The trusted application related to this web site. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html">TrustedApplications</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="webhost">WebHost</h3>
-<p>The web host in which to host the site. [Filter(multi eq)]</p>
+<p>The web host in which to host the site. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.WebHosts.html">WebHosts</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

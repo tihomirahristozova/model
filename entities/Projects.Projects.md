@@ -27,38 +27,38 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Projects.Projects.md#code) | string | Short code for identification of projects. [Required] [Filter(eq;like)] [ORD] 
-| [FinishDate](Projects.Projects.md#finishdate) | date (nullable) | The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. [Filter(eq)] 
+| [Code](Projects.Projects.md#code) | string | Short code for identification of projects. `Required` `Filter(eq;like)` `ORD` 
+| [FinishDate](Projects.Projects.md#finishdate) | date (nullable) | The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. `Filter(eq)` 
 | [Id](Projects.Projects.md#id) | guid |  
-| [Name](Projects.Projects.md#name) | string | The name of this Project. [Required] [Filter(eq;like)] 
+| [Name](Projects.Projects.md#name) | string | The name of this Project. `Required` `Filter(eq;like)` 
 | [Notes](Projects.Projects.md#notes) | string (nullable) | Notes for this Project. 
-| [ProjectStatus](Projects.Projects.md#projectstatus) | [ProjectStatus](Projects.Projects.md#projectstatus) | Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). [Required] [Default(0)] [Filter(multi eq)] 
-| [StartDate](Projects.Projects.md#startdate) | date (nullable) | Expected date, when the execution of the tasks will start. null means that the start date is still unknown. [Filter(eq)] 
+| [ProjectStatus](Projects.Projects.md#projectstatus) | [ProjectStatus](Projects.Projects.md#projectstatus) | Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). `Required` `Default(0)` `Filter(multi eq)` 
+| [StartDate](Projects.Projects.md#startdate) | date (nullable) | Expected date, when the execution of the tasks will start. null means that the start date is still unknown. `Filter(eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetingCurrency](Projects.Projects.md#budgetingcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency in which the project budget is calculated. [Filter(multi eq)] |
-| [ClientParty](Projects.Projects.md#clientparty) | [Parties](General.Contacts.Parties.md) (nullable) | The external or internal client of the project. [Filter(multi eq)] |
-| [EnterpriseCompany](Projects.Projects.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [ProjectManagerPerson](Projects.Projects.md#projectmanagerperson) | [Persons](General.Contacts.Persons.md) (nullable) | The project manager. [Filter(multi eq)] |
-| [ProjectType](Projects.Projects.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)] |
+| [BudgetingCurrency](Projects.Projects.md#budgetingcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency in which the project budget is calculated. `Filter(multi eq)` |
+| [ClientParty](Projects.Projects.md#clientparty) | [Parties](General.Contacts.Parties.md) (nullable) | The external or internal client of the project. `Filter(multi eq)` |
+| [EnterpriseCompany](Projects.Projects.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
+| [ProjectManagerPerson](Projects.Projects.md#projectmanagerperson) | [Persons](General.Contacts.Persons.md) (nullable) | The project manager. `Filter(multi eq)` |
+| [ProjectType](Projects.Projects.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. `Required` `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Participants | [ProjectParticipants](Projects.ProjectParticipants.md) | List of [ProjectParticipant](Projects.ProjectParticipants.md) child objects, based on the [Projects.ProjectParticipant.Project](Projects.ProjectParticipants.md#project) back reference 
-| Risks | [ProjectRisks](Projects.ProjectRisks.md) | List of [ProjectRisk](Projects.ProjectRisks.md) child objects, based on the [Projects.ProjectRisk.Project](Projects.ProjectRisks.md#project) back reference 
-| WorkElements | [ProjectWorkElements](Projects.ProjectWorkElements.md) | List of [ProjectWorkElement](Projects.ProjectWorkElements.md) child objects, based on the [Projects.ProjectWorkElement.Project](Projects.ProjectWorkElements.md#project) back reference 
+| Participants | [ProjectParticipants](Projects.ProjectParticipants.md) | List of `ProjectParticipant`(Projects.ProjectParticipants.md) child objects, based on the `Projects.ProjectParticipant.Project`(Projects.ProjectParticipants.md#project) back reference 
+| Risks | [ProjectRisks](Projects.ProjectRisks.md) | List of `ProjectRisk`(Projects.ProjectRisks.md) child objects, based on the `Projects.ProjectRisk.Project`(Projects.ProjectRisks.md#project) back reference 
+| WorkElements | [ProjectWorkElements](Projects.ProjectWorkElements.md) | List of `ProjectWorkElement`(Projects.ProjectWorkElements.md) child objects, based on the `Projects.ProjectWorkElement.Project`(Projects.ProjectWorkElements.md#project) back reference 
 
 
 ## Attribute Details
 
 ### Code
 
-Short code for identification of projects. [Required] [Filter(eq;like)] [ORD]
+Short code for identification of projects. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -67,7 +67,7 @@ _Supports Order By_: **True**
 
 ### FinishDate
 
-The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. [Filter(eq)]
+The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. `Filter(eq)`
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals**  
@@ -82,7 +82,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Project. [Required] [Filter(eq;like)]
+The name of this Project. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -98,10 +98,10 @@ _Supports Order By_: **False**
 
 ### ProjectStatus
 
-Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). [Required] [Default(0)] [Filter(multi eq)]
+Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). `Required` `Default(0)` `Filter(multi eq)`
 
 _Type_: **[ProjectStatus](Projects.Projects.md#projectstatus)**  
-Allowed values for the [ProjectStatus](Projects.Projects.md#projectstatus) data attribute  
+Allowed values for the `ProjectStatus`(Projects.Projects.md#projectstatus) data attribute  
 _Allowed Values (Projects.ProjectsRepository.ProjectStatus Enum Members)_  
 
 | Value | Description |
@@ -121,7 +121,7 @@ _Default Value_: **0**
 
 ### StartDate
 
-Expected date, when the execution of the tasks will start. null means that the start date is still unknown. [Filter(eq)]
+Expected date, when the execution of the tasks will start. null means that the start date is still unknown. `Filter(eq)`
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals**  
@@ -132,35 +132,35 @@ _Supports Order By_: **False**
 
 ### BudgetingCurrency
 
-The currency in which the project budget is calculated. [Filter(multi eq)]
+The currency in which the project budget is calculated. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ClientParty
 
-The external or internal client of the project. [Filter(multi eq)]
+The external or internal client of the project. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectManagerPerson
 
-The project manager. [Filter(multi eq)]
+The project manager. `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectType
 
-The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)]
+The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. `Required` `Filter(multi eq)`
 
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

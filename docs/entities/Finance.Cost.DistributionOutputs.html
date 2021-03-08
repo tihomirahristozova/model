@@ -110,12 +110,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.DistributionOutputs.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Unique (within the document), consecutive line number of the output. [Required]</td>
+<td>Unique (within the document), consecutive line number of the output. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.DistributionOutputs.html#weightcoefficient">WeightCoefficient</a></td>
 <td>decimal</td>
-<td>The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)]</td>
+<td>The weight coefficient for prorate distribution of cost over the current line. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.DistributionOutputs.html#costdistribution">CostDistribution</a></td>
 <td><a href="Finance.Cost.Distributions.html">Distributions</a></td>
-<td>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Distribution</code>(Finance.Cost.Distributions.md) to which this DistributionOutput belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.DistributionOutputs.html#storetransactionline">StoreTransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></td>
-<td>The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]</td>
+<td>The store transaction line, for which costs will be distributed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Unique (within the document), consecutive line number of the output. [Required]</p>
+<p>Unique (within the document), consecutive line number of the output. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -157,18 +157,18 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.CostDistribution.Outputs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="weightcoefficient">WeightCoefficient</h3>
-<p>The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)]</p>
+<p>The weight coefficient for prorate distribution of cost over the current line. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costdistribution">CostDistribution</h3>
-<p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Distribution</code>(Finance.Cost.Distributions.md) to which this DistributionOutput belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Distributions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storetransactionline">StoreTransactionLine</h3>
-<p>The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]</p>
+<p>The store transaction line, for which costs will be distributed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

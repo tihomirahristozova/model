@@ -23,27 +23,27 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string | Unique code of the maintenance type. [Required] [Filter(eq;like)] [ORD] 
+| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string | Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD` 
 | [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 (nullable) | Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change. 
 | [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 (nullable) | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days. 
 | [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 (nullable) | Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months. 
 | [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Detailed description of the maintenance (multilanguage). 
 | [Id](Applications.AssetManagement.MaintenanceTypes.md#id) | guid |  
-| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. [Required] [Filter(eq;like)] 
+| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceTypeGroup](Applications.AssetManagement.MaintenanceTypes.md#maintenancetypegroup) | [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) | The group, to which this maintenance type belongs. [Required] [Filter(multi eq)] |
-| [TrackedParameter](Applications.AssetManagement.MaintenanceTypes.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable) | Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)] |
+| [MaintenanceTypeGroup](Applications.AssetManagement.MaintenanceTypes.md#maintenancetypegroup) | [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) | The group, to which this maintenance type belongs. `Required` `Filter(multi eq)` |
+| [TrackedParameter](Applications.AssetManagement.MaintenanceTypes.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable) | Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Code
 
-Unique code of the maintenance type. [Required] [Filter(eq;like)] [ORD]
+Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -91,7 +91,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multilanguage name of the maintenance type. [Required] [Filter(eq;like)]
+Multilanguage name of the maintenance type. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -102,7 +102,7 @@ _Supports Order By_: **False**
 
 ### MaintenanceTypeGroup
 
-The group, to which this maintenance type belongs. [Required] [Filter(multi eq)]
+The group, to which this maintenance type belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)**  
 _Indexed_: **True**  
@@ -110,7 +110,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### TrackedParameter
 
-Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)]
+Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. `Filter(multi eq)`
 
 _Type_: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

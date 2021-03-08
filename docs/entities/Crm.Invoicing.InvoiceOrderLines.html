@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#businessreason">BusinessReason</a></td>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#businessreason">InvoicingBusinessReason</a></td>
-<td>Business reason for invoicing of this product or service. S=Shipment, P=Payment. [Required] [Default(&quot;S&quot;)]</td>
+<td>Business reason for invoicing of this product or service. S=Shipment, P=Payment. <code>Required</code> <code>Default(&quot;S&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#id">Id</a></td>
@@ -115,47 +115,47 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#lineamount">LineAmount</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]</td>
+<td>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. <code>Currency: InvoiceOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#linecustomdiscountpercent">LineCustomDiscountPercent</a></td>
 <td>decimal</td>
-<td>User-defined discount for the line. [Required] [Default(0)]</td>
+<td>User-defined discount for the line. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique within the InvoiceOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the InvoiceOrder (in order to allow insertions with adjustment documents). [Required]</td>
+<td>Line number, unique within the InvoiceOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the InvoiceOrder (in order to allow insertions with adjustment documents). <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#linestandarddiscountpercent">LineStandardDiscount<br>Percent</a></td>
 <td>decimal</td>
-<td>Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)]</td>
+<td>Standard discount for the line. This is automatically computed according to discount conditions. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#productdescription">ProductDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The description of Product. Initially copied from the name of the Product or from the generating document. [Required]</td>
+<td>The description of Product. Initially copied from the name of the Product or from the generating document. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The quantity of the product to invoice. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
+<td>The quantity of the product to invoice. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
+<td>The equivalent of Quantity in the base measurement unit of the Product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#unitprice">UnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Unit selling price in the unit of measure, specified in Quantity Unit. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]</td>
+<td>Unit selling price in the unit of measure, specified in Quantity Unit. <code>Currency: InvoiceOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -172,63 +172,63 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#document">Document</a></td>
 <td><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a></td>
-<td>The <a href="Crm.Invoicing.InvoiceOrderLines.html#invoiceorder">InvoiceOrder</a> to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)]</td>
+<td>The <code>InvoiceOrder</code>(Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#invoiceorder">InvoiceOrder</a></td>
 <td><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a></td>
-<td>The <a href="Crm.Invoicing.InvoiceOrderLines.html#invoiceorder">InvoiceOrder</a> to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>InvoiceOrder</code>(Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#linedealtype">LineDealType</a></td>
 <td><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
-<td>Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. [Filter(multi eq)]</td>
+<td>Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#linediscount">LineDiscount</a></td>
 <td><a href="Crm.LineDiscounts.html">LineDiscounts</a> (nullable)</td>
-<td>The line discount type used to form the Line_Standard_<br>Discount_Percent. [Filter(multi eq)]</td>
+<td>The line discount type used to form the Line_Standard_<br>Discount_Percent. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#paymenttransaction">PaymentTransaction</a></td>
 <td><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a> (nullable)</td>
-<td>The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]</td>
+<td>The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The product, which is ordered for invoicing. [Filter(multi eq)]</td>
+<td>The product, which is ordered for invoicing. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</td>
-<td>When not null specifies the Sales Order that is ordered to be invoiced by this line. [Filter(multi eq)]</td>
+<td>When not null specifies the Sales Order that is ordered to be invoiced by this line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#salesorderline">SalesOrderLine</a></td>
 <td><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</td>
-<td>When not null specifies the Sales Order line that is ordered to be invoiced by this line. [Filter(multi eq)]</td>
+<td>When not null specifies the Sales Order line that is ordered to be invoiced by this line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</td>
+<td>Which serial number to receive/issue. null means that serial number is unknown or not applicable. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#transactionline">TransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</td>
-<td>The store transaction line that is to be invoiced by this line, for Business Reason = S. [Filter(multi eq)]</td>
+<td>The store transaction line that is to be invoiced by this line, for Business Reason = S. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="businessreason">BusinessReason</h3>
-<p>Business reason for invoicing of this product or service. S=Shipment, P=Payment. [Required] [Default(&quot;S&quot;)]</p>
+<p>Business reason for invoicing of this product or service. S=Shipment, P=Payment. <code>Required</code> <code>Default(&quot;S&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrderLines.html#businessreason">InvoicingBusinessReason</a></strong><br>
 Generic enum type for InvoicingBusinessReason properties<br>
 <em>Allowed Values (Crm.Invoicing.InvoicingBusinessReason Enum Members)</em></p>
@@ -259,7 +259,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineamount">LineAmount</h3>
-<p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]</p>
+<p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. <code>Currency: InvoiceOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -267,13 +267,13 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.CalculateLineAmount( obj.Quantity, obj.UnitPrice, Convert( obj.LineCustomDiscountPercent, Nullable</code>1), Convert( obj.LineStandardDiscountPercent, Nullable<code>1), obj.InvoiceOrder.DocumentCurrency)</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
-<p>User-defined discount for the line. [Required] [Default(0)]</p>
+<p>User-defined discount for the line. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique within the InvoiceOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the InvoiceOrder (in order to allow insertions with adjustment documents). [Required]</p>
+<p>Line number, unique within the InvoiceOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the InvoiceOrder (in order to allow insertions with adjustment documents). <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -282,7 +282,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.InvoiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
-<p>Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)]</p>
+<p>Standard discount for the line. This is automatically computed according to discount conditions. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -290,20 +290,20 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.LineDiscount != null), obj.LineDiscount.DiscountPercent, 0)</code></p>
 <h3 id="productdescription">ProductDescription</h3>
-<p>The description of Product. Initially copied from the name of the Product or from the generating document. [Required]</p>
+<p>The description of Product. Initially copied from the name of the Product or from the generating document. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.Name</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity of the product to invoice. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
+<p>The quantity of the product to invoice. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
+<p>The equivalent of Quantity in the base measurement unit of the Product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -312,7 +312,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -321,7 +321,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="unitprice">UnitPrice</h3>
-<p>Unit selling price in the unit of measure, specified in Quantity Unit. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]</p>
+<p>Unit selling price in the unit of measure, specified in Quantity Unit. <code>Currency: InvoiceOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -330,17 +330,17 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <code>obj.CalculateUnitPrice( obj.InvoiceOrder, obj.Product)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <a href="Crm.Invoicing.InvoiceOrderLines.html#invoiceorder">InvoiceOrder</a> to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p>The <code>InvoiceOrder</code>(Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="invoiceorder">InvoiceOrder</h3>
-<p>The <a href="Crm.Invoicing.InvoiceOrderLines.html#invoiceorder">InvoiceOrder</a> to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>InvoiceOrder</code>(Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linedealtype">LineDealType</h3>
-<p>Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. [Filter(multi eq)]</p>
+<p>Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -348,28 +348,28 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.InvoiceOrder.DealType</code></p>
 <h3 id="linediscount">LineDiscount</h3>
-<p>The line discount type used to form the Line_Standard_Discount_Percent. [Filter(multi eq)]</p>
+<p>The line discount type used to form the Line_Standard_Discount_Percent. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.LineDiscounts.html">LineDiscounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.DetermineLineDiscount( Convert( ( obj.InvoiceOrder.DeliveryDate ?? obj.InvoiceOrder.DocumentDate), Nullable</code>1), obj.InvoiceOrder.Customer, obj.Product, obj.Quantity, obj.InvoiceOrder.EnterpriseCompany, obj.InvoiceOrder.EnterpriseCompanyLocation, IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.DistributionChannel), IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.PriceList))`</p>
 <h3 id="paymenttransaction">PaymentTransaction</h3>
-<p>The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]</p>
+<p>The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>The product, which is ordered for invoicing. [Filter(multi eq)]</p>
+<p>The product, which is ordered for invoicing. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="salesorder">SalesOrder</h3>
-<p>When not null specifies the Sales Order that is ordered to be invoiced by this line. [Filter(multi eq)]</p>
+<p>When not null specifies the Sales Order that is ordered to be invoiced by this line. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -378,16 +378,16 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.InvoiceOrder.SalesOrder</code></p>
 <h3 id="salesorderline">SalesOrderLine</h3>
-<p>When not null specifies the Sales Order line that is ordered to be invoiced by this line. [Filter(multi eq)]</p>
+<p>When not null specifies the Sales Order line that is ordered to be invoiced by this line. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>
+<p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
-<p>The store transaction line that is to be invoiced by this line, for Business Reason = S. [Filter(multi eq)]</p>
+<p>The store transaction line that is to be invoiced by this line, for Business Reason = S. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -23,23 +23,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#code) | string | Unique code of the group. [Required] [Filter(eq;like)] [ORD] 
+| [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#code) | string | Unique code of the group. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Applications.AssetManagement.MaintenanceTypeGroups.md#id) | guid |  
-| [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the group. [Required] [Filter(eq;like)] 
+| [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the group. `Required` `Filter(eq;like)` 
 | [Notes](Applications.AssetManagement.MaintenanceTypeGroups.md#notes) | string (nullable) | Notes for this MaintenanceTypeGroup. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.AssetManagement.MaintenanceTypeGroups.md#parent) | [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable) | Parent group. null denotes a root group. [Filter(multi eq)] |
+| [Parent](Applications.AssetManagement.MaintenanceTypeGroups.md#parent) | [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable) | Parent group. null denotes a root group. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Code
 
-Unique code of the group. [Required] [Filter(eq;like)] [ORD]
+Unique code of the group. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -55,7 +55,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multilanguage name of the group. [Required] [Filter(eq;like)]
+Multilanguage name of the group. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -74,7 +74,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-Parent group. null denotes a root group. [Filter(multi eq)]
+Parent group. null denotes a root group. `Filter(multi eq)`
 
 _Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable)**  
 _Indexed_: **True**  

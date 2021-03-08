@@ -1,8 +1,7 @@
----
+﻿---
 uid: Systems.Bpm
 ---
 # Systems.Bpm Namespace
-
 
 ## Entities
 - [CalculatedAttributeExpressions](Systems.Bpm.CalculatedAttributeExpressions.md)  
@@ -21,4 +20,6 @@ uid: Systems.Bpm
 - [UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md)  
 - [UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md)  
 - [UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
+
+sinessRules.md)  
 

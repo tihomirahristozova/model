@@ -24,23 +24,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Communities.SocialGroups.md#code) | string | Unique code of the group. Also used as group slug for Internet URL purposes. [Required] [ORD] 
+| [Code](Communities.SocialGroups.md#code) | string | Unique code of the group. Also used as group slug for Internet URL purposes. `Required` `ORD` 
 | [Id](Communities.SocialGroups.md#id) | guid |  
-| [Name](Communities.SocialGroups.md#name) | string | Multilanguage name of the group. [Required] 
+| [Name](Communities.SocialGroups.md#name) | string | Multilanguage name of the group. `Required` 
 | [Notes](Communities.SocialGroups.md#notes) | string (nullable) | Notes for this SocialGroup. 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Members | [SocialGroupMembers](Communities.SocialGroupMembers.md) | List of [SocialGroupMember](Communities.SocialGroupMembers.md) child objects, based on the [Communities.SocialGroupMember.SocialGroup](Communities.SocialGroupMembers.md#socialgroup) back reference 
+| Members | [SocialGroupMembers](Communities.SocialGroupMembers.md) | List of `SocialGroupMember`(Communities.SocialGroupMembers.md) child objects, based on the `Communities.SocialGroupMember.SocialGroup`(Communities.SocialGroupMembers.md#socialgroup) back reference 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique code of the group. Also used as group slug for Internet URL purposes. [Required] [ORD]
+Unique code of the group. Also used as group slug for Internet URL purposes. `Required` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multilanguage name of the group. [Required]
+Multilanguage name of the group. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

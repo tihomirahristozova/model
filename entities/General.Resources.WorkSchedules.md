@@ -25,15 +25,15 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Resources.WorkSchedules.md#id) | guid |  
-| [Name](General.Resources.WorkSchedules.md#name) | string | The name of this WorkSchedule. [Required] [Filter(like)] 
+| [Name](General.Resources.WorkSchedules.md#name) | string | The name of this WorkSchedule. `Required` `Filter(like)` 
 | [NumberOfDays](General.Resources.WorkSchedules.md#numberofdays) | int16 (nullable) | Number of days in a recurring period. Valid only when Recurrence_Type=D. 
-| [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month. [Required] [Filter(multi eq)] 
+| [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month. `Required` `Filter(multi eq)` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| WorkingTime | [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) | List of [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) child objects, based on the [General.Resources.WorkScheduleWorkingTime.WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) back reference 
+| WorkingTime | [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) | List of `WorkScheduleWorkingTime`(General.Resources.WorkScheduleWorkingTime.md) child objects, based on the `General.Resources.WorkScheduleWorkingTime.WorkSchedule`(General.Resources.WorkScheduleWorkingTime.md#workschedule) back reference 
 
 
 ## Attribute Details
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this WorkSchedule. [Required] [Filter(like)]
+The name of this WorkSchedule. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -63,10 +63,10 @@ _Supports Order By_: **False**
 
 ### RecurrenceType
 
-D=recurring each X days; W=recurring each week; M=recurring each month. [Required] [Filter(multi eq)]
+D=recurring each X days; W=recurring each week; M=recurring each month. `Required` `Filter(multi eq)`
 
 _Type_: **[RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype)**  
-Allowed values for the [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) data attribute  
+Allowed values for the `RecurrenceType`(General.Resources.WorkSchedules.md#recurrencetype) data attribute  
 _Allowed Values (General.Resources.WorkSchedulesRepository.RecurrenceType Enum Members)_  
 
 | Value | Description |

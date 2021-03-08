@@ -24,7 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Bpm.ProcessNodeTimerEvents.md#id) | guid |  
-| [ProcessNodeEventId](Systems.Bpm.ProcessNodeTimerEvents.md#processnodeeventid) | guid | The process node event, which this timer defines. [Required] [Filter(multi eq)] 
+| [ProcessNodeEventId](Systems.Bpm.ProcessNodeTimerEvents.md#processnodeeventid) | guid | The process node event, which this timer defines. `Required` `Filter(multi eq)` 
 | [TimeCycle](Systems.Bpm.ProcessNodeTimerEvents.md#timecycle) | string (nullable) | Non-null when the timer is recurring. The value conforms to the ISO-8601 format for recurring time intervals. Mutually exclusive with the other Time fields. 
 | [TimeDate](Systems.Bpm.ProcessNodeTimerEvents.md#timedate) | datetime (nullable) | Non-null when the timer is for specific single date and time. Mutually exclusive with the other Time fields. 
 | [TimeDuration](Systems.Bpm.ProcessNodeTimerEvents.md#timeduration) | string (nullable) | Non-null when the timer event is for time duration. The value conforms to the ISO-8601 format for time interval representations. Mutually exclusive with the other Time fields. 
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### ProcessNodeEventId
 
-The process node event, which this timer defines. [Required] [Filter(multi eq)]
+The process node event, which this timer defines. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  

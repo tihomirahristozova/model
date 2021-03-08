@@ -25,26 +25,26 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)] 
+| [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable. `Required` `Filter(multi eq)` 
 | [Id](Crm.Pos.ProductTypeTaxGroups.md#id) | guid |  
-| [Notes](Crm.Pos.ProductTypeTaxGroups.md#notes) | string (nullable) | Notes for this ProductTypeTaxGroup. [Filter(eq;like)] 
-| [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)] 
+| [Notes](Crm.Pos.ProductTypeTaxGroups.md#notes) | string (nullable) | Notes for this ProductTypeTaxGroup. `Filter(eq;like)` 
+| [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | The tax group of the product type within the specified applicable legislation. `Required` `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner] |
+| [ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The product type for which the tax group is specified. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### ApplicableLegislation
 
-The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)]
+The legislation, for which the tax group is applicable. `Required` `Filter(multi eq)`
 
 _Type_: **[ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation)**  
-Allowed values for the [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) data attribute  
+Allowed values for the `ApplicableLegislation`(General.PartyApplicableLegislations.md#applicablelegislation) data attribute  
 _Allowed Values (General.PartyApplicableLegislationsRepository.ApplicableLegislation Enum Members)_  
 
 | Value | Description |
@@ -87,7 +87,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-Notes for this ProductTypeTaxGroup. [Filter(eq;like)]
+Notes for this ProductTypeTaxGroup. `Filter(eq;like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -95,10 +95,10 @@ _Supports Order By_: **False**
 
 ### TaxGroup
 
-The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)]
+The tax group of the product type within the specified applicable legislation. `Required` `Filter(multi eq)`
 
 _Type_: **[TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup)**  
-Allowed values for the [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) data attribute  
+Allowed values for the `TaxGroup`(Crm.Pos.ProductTypeTaxGroups.md#taxgroup) data attribute  
 _Allowed Values (Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup Enum Members)_  
 
 | Value | Description |
@@ -120,7 +120,7 @@ _Supports Order By_: **False**
 
 ### ProductType
 
-The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]
+The product type for which the tax group is specified. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Indexed_: **True**  

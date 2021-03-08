@@ -26,14 +26,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Products.ProductDocumentAmounts.md#id) | guid |  
-| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal | The custom percent for the current product and amount type. [Required] [Default(0)] 
+| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal | The custom percent for the current product and amount type. `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](General.Products.ProductDocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type for which the custom percent is defined. [Required] [Filter(multi eq)] |
-| [Product](General.Products.ProductDocumentAmounts.md#product) | [Products](General.Products.Products.md) | The [Product](General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.Products.ProductDocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type for which the custom percent is defined. `Required` `Filter(multi eq)` |
+| [Product](General.Products.ProductDocumentAmounts.md#product) | [Products](General.Products.Products.md) | The `Product`(General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### LinePercent
 
-The custom percent for the current product and amount type. [Required] [Default(0)]
+The custom percent for the current product and amount type. `Required` `Default(0)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -59,14 +59,14 @@ _Default Value_: **0**
 
 ### DocumentAmountType
 
-The amount type for which the custom percent is defined. [Required] [Filter(multi eq)]
+The amount type for which the custom percent is defined. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-The [Product](General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]
+The `Product`(General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  

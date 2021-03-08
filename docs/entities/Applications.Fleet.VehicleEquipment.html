@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#enddate">EndDate</a></td>
 <td>date (nullable)</td>
-<td>The date when the equipment was removed. null when the equipment is still installed on the vehicle. [Filter(ge;le)]</td>
+<td>The date when the equipment was removed. null when the equipment is still installed on the vehicle. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#id">Id</a></td>
@@ -120,12 +120,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#quantity">Quantity</a></td>
 <td>int32</td>
-<td>Quantity of the equipment. [Required] [Default(1)] [Filter(ge;le)]</td>
+<td>Quantity of the equipment. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#startdate">StartDate</a></td>
 <td>date</td>
-<td>The installation date of the equipment. [Required] [Filter(ge;le)]</td>
+<td>The installation date of the equipment. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,18 +142,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#equipmenttype">EquipmentType</a></td>
 <td><a href="Applications.Fleet.EquipmentTypes.html">EquipmentTypes</a></td>
-<td>The type of equipment installed on the vehicle. [Required] [Filter(multi eq)]</td>
+<td>The type of equipment installed on the vehicle. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Vehicles</a></td>
-<td>The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The vehicle that is holding the equipment. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
-<p>The date when the equipment was removed. null when the equipment is still installed on the vehicle. [Filter(ge;le)]</p>
+<p>The date when the equipment was removed. null when the equipment is still installed on the vehicle. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -168,23 +168,23 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the equipment. [Required] [Default(1)] [Filter(ge;le)]</p>
+<p>Quantity of the equipment. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="startdate">StartDate</h3>
-<p>The installation date of the equipment. [Required] [Filter(ge;le)]</p>
+<p>The installation date of the equipment. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="equipmenttype">EquipmentType</h3>
-<p>The type of equipment installed on the vehicle. [Required] [Filter(multi eq)]</p>
+<p>The type of equipment installed on the vehicle. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.EquipmentTypes.html">EquipmentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vehicle">Vehicle</h3>
-<p>The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The vehicle that is holding the equipment. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -25,25 +25,25 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date (nullable) | The date when the equipment was removed. null when the equipment is still installed on the vehicle. [Filter(ge;le)] 
+| [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date (nullable) | The date when the equipment was removed. null when the equipment is still installed on the vehicle. `Filter(ge;le)` 
 | [Id](Applications.Fleet.VehicleEquipment.md#id) | guid |  
 | [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string (nullable) | Notes for the installed equipment. 
-| [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment. [Required] [Default(1)] [Filter(ge;le)] 
-| [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment. [Required] [Filter(ge;le)] 
+| [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment. `Required` `Default(1)` `Filter(ge;le)` 
+| [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment. `Required` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EquipmentType](Applications.Fleet.VehicleEquipment.md#equipmenttype) | [EquipmentTypes](Applications.Fleet.EquipmentTypes.md) | The type of equipment installed on the vehicle. [Required] [Filter(multi eq)] |
-| [Vehicle](Applications.Fleet.VehicleEquipment.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner] |
+| [EquipmentType](Applications.Fleet.VehicleEquipment.md#equipmenttype) | [EquipmentTypes](Applications.Fleet.EquipmentTypes.md) | The type of equipment installed on the vehicle. `Required` `Filter(multi eq)` |
+| [Vehicle](Applications.Fleet.VehicleEquipment.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The vehicle that is holding the equipment. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### EndDate
 
-The date when the equipment was removed. null when the equipment is still installed on the vehicle. [Filter(ge;le)]
+The date when the equipment was removed. null when the equipment is still installed on the vehicle. `Filter(ge;le)`
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-Quantity of the equipment. [Required] [Default(1)] [Filter(ge;le)]
+Quantity of the equipment. `Required` `Default(1)` `Filter(ge;le)`
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -75,7 +75,7 @@ _Default Value_: **1**
 
 ### StartDate
 
-The installation date of the equipment. [Required] [Filter(ge;le)]
+The installation date of the equipment. `Required` `Filter(ge;le)`
 
 _Type_: **date**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -86,14 +86,14 @@ _Supports Order By_: **False**
 
 ### EquipmentType
 
-The type of equipment installed on the vehicle. [Required] [Filter(multi eq)]
+The type of equipment installed on the vehicle. `Required` `Filter(multi eq)`
 
 _Type_: **[EquipmentTypes](Applications.Fleet.EquipmentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Vehicle
 
-The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner]
+The vehicle that is holding the equipment. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -25,22 +25,22 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EditPeriodDays](Systems.Security.Groups.md#editperioddays) | int32 (nullable) | The number of days before which the documents can not be corrected, released or voided. 
-| [GroupType](Systems.Security.Groups.md#grouptype) | [GroupType](Systems.Security.Groups.md#grouptype) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default("G")] [ReadOnly] 
+| [GroupType](Systems.Security.Groups.md#grouptype) | [GroupType](Systems.Security.Groups.md#grouptype) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. `Required` `Default("G")` `ReadOnly` 
 | [Id](Systems.Security.Groups.md#id) | guid |  
-| [Name](Systems.Security.Groups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Group. [Required] [Filter(like)] [ORD] 
+| [Name](Systems.Security.Groups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Group. `Required` `Filter(like)` `ORD` 
 | [Notes](Systems.Security.Groups.md#notes) | string (nullable) | Notes for this Group. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GroupForUser](Systems.Security.Groups.md#groupforuser) | [Users](Systems.Security.Users.md) (nullable) | When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly] |
+| [GroupForUser](Systems.Security.Groups.md#groupforuser) | [Users](Systems.Security.Users.md) (nullable) | When Group_Type=U, contains the user for which the group is defined, null otherwise. `Filter(multi eq)` `ReadOnly` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| AccessKeys | [GroupAccessKeys](Systems.Security.GroupAccessKeys.md) | List of [GroupAccessKey](Systems.Security.GroupAccessKeys.md) child objects, based on the [Systems.Security.GroupAccessKey.Group](Systems.Security.GroupAccessKeys.md#group) back reference 
+| AccessKeys | [GroupAccessKeys](Systems.Security.GroupAccessKeys.md) | List of `GroupAccessKey`(Systems.Security.GroupAccessKeys.md) child objects, based on the `Systems.Security.GroupAccessKey.Group`(Systems.Security.GroupAccessKeys.md#group) back reference 
 
 
 ## Attribute Details
@@ -55,10 +55,10 @@ _Supports Order By_: **False**
 
 ### GroupType
 
-Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default("G")] [ReadOnly]
+Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. `Required` `Default("G")` `ReadOnly`
 
 _Type_: **[GroupType](Systems.Security.Groups.md#grouptype)**  
-Allowed values for the [GroupType](Systems.Security.Groups.md#grouptype) data attribute  
+Allowed values for the `GroupType`(Systems.Security.Groups.md#grouptype) data attribute  
 _Allowed Values (Systems.Security.GroupsRepository.GroupType Enum Members)_  
 
 | Value | Description |
@@ -81,7 +81,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Group. [Required] [Filter(like)] [ORD]
+The name of this Group. `Required` `Filter(like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -100,7 +100,7 @@ _Supports Order By_: **False**
 
 ### GroupForUser
 
-When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]
+When Group_Type=U, contains the user for which the group is defined, null otherwise. `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Indexed_: **True**  

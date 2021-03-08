@@ -23,18 +23,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Contacts.ContactMechanismPurposes.md#code) | string | The unique code of the ContactMechanismPurpos. [Required] [Filter(eq;like)] [ORD] 
-| [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) (nullable) | When specified, allows the purpose to be specified only for contact mechanisms of the specified type. [Filter(multi eq)] 
-| [Description](General.Contacts.ContactMechanismPurposes.md#description) | string (nullable) | The description of this ContactMechanismPurpos. [Filter(like)] 
+| [Code](General.Contacts.ContactMechanismPurposes.md#code) | string | The unique code of the ContactMechanismPurpos. `Required` `Filter(eq;like)` `ORD` 
+| [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) (nullable) | When specified, allows the purpose to be specified only for contact mechanisms of the specified type. `Filter(multi eq)` 
+| [Description](General.Contacts.ContactMechanismPurposes.md#description) | string (nullable) | The description of this ContactMechanismPurpos. `Filter(like)` 
 | [Id](General.Contacts.ContactMechanismPurposes.md#id) | guid |  
-| [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)] 
+| [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)` 
 
 
 ## Attribute Details
 
 ### Code
 
-The unique code of the ContactMechanismPurpos. [Required] [Filter(eq;like)] [ORD]
+The unique code of the ContactMechanismPurpos. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -43,10 +43,10 @@ _Supports Order By_: **True**
 
 ### ContactMechanismType
 
-When specified, allows the purpose to be specified only for contact mechanisms of the specified type. [Filter(multi eq)]
+When specified, allows the purpose to be specified only for contact mechanisms of the specified type. `Filter(multi eq)`
 
 _Type_: **[ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) (nullable)**  
-Allowed values for the [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) data attribute  
+Allowed values for the `ContactMechanismType`(General.Contacts.ContactMechanisms.md#contactmechanismtype) data attribute  
 _Allowed Values (General.Contacts.ContactMechanismsRepository.ContactMechanismType Enum Members)_  
 
 | Value | Description |
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### Description
 
-The description of this ContactMechanismPurpos. [Filter(like)]
+The description of this ContactMechanismPurpos. `Filter(like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -79,7 +79,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)]
+Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  

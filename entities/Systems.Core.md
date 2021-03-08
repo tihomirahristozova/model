@@ -1,8 +1,7 @@
----
+﻿---
 uid: Systems.Core
 ---
 # Systems.Core Namespace
-
 
 ## Entities
 - [AttributeChanges](Systems.Core.AttributeChanges.md)  
@@ -24,4 +23,6 @@ uid: Systems.Core
 - [UpdateProcedureExecutes](Systems.Core.UpdateProcedureExecutes.md)  
 - [WebHosts](Systems.Core.WebHosts.md)  
 - [WebSites](Systems.Core.WebSites.md)  
+
+ore.WebSites.md)  
 

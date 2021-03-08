@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActionNo](Systems.Bpm.UserBusinessRuleActions.md#actionno) | int32 | Consecutive number of the action, unique within the business rule. [Required] 
-| [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | Specifies the type of action to perform. [Required] 
+| [ActionNo](Systems.Bpm.UserBusinessRuleActions.md#actionno) | int32 | Consecutive number of the action, unique within the business rule. `Required` 
+| [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | Specifies the type of action to perform. `Required` 
 | [Id](Systems.Bpm.UserBusinessRuleActions.md#id) | guid |  
 | [Parameter1Type](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
 | [Parameter1Value](Systems.Bpm.UserBusinessRuleActions.md#parameter1value) | string (nullable) | The actual value of the parameter. 
@@ -39,14 +39,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner] |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the action is defined. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### ActionNo
 
-Consecutive number of the action, unique within the business rule. [Required]
+Consecutive number of the action, unique within the business rule. `Required`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -59,10 +59,10 @@ _Front-End Recalc Expressions:_
 `( obj.UserBusinessRule.Actions.Select( c => c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### ActionType
 
-Specifies the type of action to perform. [Required]
+Specifies the type of action to perform. `Required`
 
 _Type_: **[ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype)**  
-Allowed values for the [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) data attribute  
+Allowed values for the `ActionType`(Systems.Bpm.UserBusinessRuleActions.md#actiontype) data attribute  
 _Allowed Values (Systems.Bpm.UserBusinessRuleActionsRepository.ActionType Enum Members)_  
 
 | Value | Description |
@@ -169,7 +169,7 @@ _Supports Order By_: **False**
 
 ### UserBusinessRule
 
-The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]
+The business rule, for which the action is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

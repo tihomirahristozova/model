@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#foldername">FolderName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Multi-language folder name. [Required] [Filter(eq;like)]</td>
+<td>Multi-language folder name. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#id">Id</a></td>
@@ -115,7 +115,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#serverfolderid">ServerFolderID</a></td>
 <td>string (nullable)</td>
-<td>ID of the folder on the mail server in the format of the mail server. [Filter(eq)]</td>
+<td>ID of the folder on the mail server in the format of the mail server. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#syncstate">SyncState</a></td>
@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a></td>
 <td><a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a> (nullable)</td>
-<td>When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly]</td>
+<td>When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,12 +142,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#mailbox">MailBox</a></td>
 <td><a href="Applications.Mail.Boxes.html">Boxes</a></td>
-<td>The <a href="Applications.Mail.Boxes.html">Box</a> to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
+<td>The <code>Box</code>(Applications.Mail.Boxes.md) to which this BoxFolder belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#parentfolder">ParentFolder</a></td>
 <td><a href="Applications.Mail.BoxFolders.html">BoxFolders</a> (nullable)</td>
-<td>The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]</td>
+<td>The parent folder in the folder hierarchy. Null when the folder is a root folder. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -164,13 +164,13 @@ Aggregate Root:<br>
 <tr>
 <td>Messages</td>
 <td><a href="Applications.Mail.Messages.html">Messages</a></td>
-<td>List of <a href="Applications.Mail.Messages.html">Message</a> child objects, based on the <a href="Applications.Mail.Messages.html#mailboxfolder">Applications.Mail.Message.MailBoxFolder</a> back reference</td>
+<td>List of <code>Message</code>(Applications.Mail.Messages.md) child objects, based on the <code>Applications.Mail.Message.MailBoxFolder</code>(Applications.Mail.Messages.md#mailboxfolder) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="foldername">FolderName</h3>
-<p>Multi-language folder name. [Required] [Filter(eq;like)]</p>
+<p>Multi-language folder name. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -180,7 +180,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="serverfolderid">ServerFolderID</h3>
-<p>ID of the folder on the mail server in the format of the mail server. [Filter(eq)]</p>
+<p>ID of the folder on the mail server in the format of the mail server. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -190,9 +190,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="systempurpose">SystemPurpose</h3>
-<p>When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly]</p>
+<p>When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a> (nullable)</strong><br>
-Allowed values for the <a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a> data attribute<br>
+Allowed values for the <code>SystemPurpose</code>(Applications.Mail.BoxFolders.md#systempurpose) data attribute<br>
 <em>Allowed Values (Applications.Mail.BoxFoldersRepository.SystemPurpose Enum Members)</em></p>
 <table>
 <thead>
@@ -232,12 +232,12 @@ Allowed values for the <a href="Applications.Mail.BoxFolders.html#systempurpose"
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="mailbox">MailBox</h3>
-<p>The <a href="Applications.Mail.Boxes.html">Box</a> to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
+<p>The <code>Box</code>(Applications.Mail.Boxes.md) to which this BoxFolder belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html">Boxes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentfolder">ParentFolder</h3>
-<p>The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]</p>
+<p>The parent folder in the folder hierarchy. Null when the folder is a root folder. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

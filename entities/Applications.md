@@ -1,8 +1,7 @@
----
+﻿---
 uid: Applications
 ---
 # Applications Namespace
-
 ## Namespaces
 - [AssetManagement](Applications.AssetManagement.md)  
 - [Cms](Applications.Cms.md)  
@@ -13,4 +12,6 @@ uid: Applications
 - [Rental](Applications.Rental.md)  
 - [Service](Applications.Service.md)  
 - [Telephony](Applications.Telephony.md)  
+
+ns.Telephony.md)  
 

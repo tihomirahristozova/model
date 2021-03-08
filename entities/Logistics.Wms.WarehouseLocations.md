@@ -26,15 +26,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Wms.WarehouseLocations.md#id) | guid |  
-| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string | The address of the location. Should be unique within the warehouse. [Required] [Filter(eq;like)] 
+| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string | The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (nullable) | Notes for this WarehouseLocation. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. [Required] [Filter(multi eq)] [Owner] |
-| [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. [Required] [Filter(multi eq)] |
+| [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. `Required` `Filter(multi eq)` `Owner` |
+| [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### LocationAddress
 
-The address of the location. Should be unique within the warehouse. [Required] [Filter(eq;like)]
+The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -67,14 +67,14 @@ _Supports Order By_: **False**
 
 ### Warehouse
 
-The warehouse containing the location. [Required] [Filter(multi eq)] [Owner]
+The warehouse containing the location. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseZone
 
-The zone, which contains the location. [Required] [Filter(multi eq)]
+The zone, which contains the location. `Required` `Filter(multi eq)`
 
 _Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

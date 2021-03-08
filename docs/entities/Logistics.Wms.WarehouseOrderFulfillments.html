@@ -105,7 +105,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact time in UTC, when the fulfillment was created in the system. [Required]</td>
+<td>The exact time in UTC, when the fulfillment was created in the system. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#id">Id</a></td>
@@ -115,12 +115,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#isfinal">IsFinal</a></td>
 <td>boolean</td>
-<td>Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. [Required]</td>
+<td>Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#quantity">Quantity</a></td>
 <td>decimal</td>
-<td>Fulfilled quantity in the measurement unit of the warehouse order line. [Required]</td>
+<td>Fulfilled quantity in the measurement unit of the warehouse order line. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,23 +137,23 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#creationuser">CreationUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who created the record. [Required] [Filter(multi eq)]</td>
+<td>The user, who created the record. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#warehouseorder">WarehouseOrder</a></td>
 <td><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></td>
-<td>The warehouse order, which is fulfilled. [Required] [Filter(multi eq)]</td>
+<td>The warehouse order, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#warehouseorderline">WarehouseOrderLine</a></td>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a></td>
-<td>The line for which we record fulfillment. [Required] [Filter(multi eq)]</td>
+<td>The line for which we record fulfillment. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact time in UTC, when the fulfillment was created in the system. [Required]</p>
+<p>The exact time in UTC, when the fulfillment was created in the system. <code>Required</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -163,27 +163,27 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isfinal">IsFinal</h3>
-<p>Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. [Required]</p>
+<p>Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. <code>Required</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Fulfilled quantity in the measurement unit of the warehouse order line. [Required]</p>
+<p>Fulfilled quantity in the measurement unit of the warehouse order line. <code>Required</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
-<p>The user, who created the record. [Required] [Filter(multi eq)]</p>
+<p>The user, who created the record. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseorder">WarehouseOrder</h3>
-<p>The warehouse order, which is fulfilled. [Required] [Filter(multi eq)]</p>
+<p>The warehouse order, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseorderline">WarehouseOrderLine</h3>
-<p>The line for which we record fulfillment. [Required] [Filter(multi eq)]</p>
+<p>The line for which we record fulfillment. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

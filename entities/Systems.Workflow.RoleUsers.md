@@ -31,8 +31,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Role](Systems.Workflow.RoleUsers.md#role) | [Roles](Systems.Workflow.Roles.md) | The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner] |
-| [User](Systems.Workflow.RoleUsers.md#user) | [Users](Systems.Security.Users.md) | The user, which plays the role. [Required] [Filter(multi eq)] |
+| [Role](Systems.Workflow.RoleUsers.md#role) | [Roles](Systems.Workflow.Roles.md) | The `Role`(Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. `Required` `Filter(multi eq)` `Owner` |
+| [User](Systems.Workflow.RoleUsers.md#user) | [Users](Systems.Security.Users.md) | The user, which plays the role. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### Role
 
-The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner]
+The `Role`(Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Roles](Systems.Workflow.Roles.md)**  
 _Indexed_: **True**  
@@ -57,7 +57,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### User
 
-The user, which plays the role. [Required] [Filter(multi eq)]
+The user, which plays the role. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

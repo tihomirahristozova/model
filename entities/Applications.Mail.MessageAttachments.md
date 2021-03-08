@@ -27,15 +27,15 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AttachmentContent](Applications.Mail.MessageAttachments.md#attachmentcontent) | byte[] (nullable) | The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason. 
 | [ContentDescriptors](Applications.Mail.MessageAttachments.md#contentdescriptors) | string (nullable) | Content flags, like "Content-Type: text/plain; charset=utf-8". 
-| [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | True when the content is included, false when this is only an empty container. Content should be included when sending mail. [Required] [Default(false)] [Filter(eq)] 
+| [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | True when the content is included, false when this is only an empty container. Content should be included when sending mail. `Required` `Default(false)` `Filter(eq)` 
 | [Id](Applications.Mail.MessageAttachments.md#id) | guid |  
-| [Name](Applications.Mail.MessageAttachments.md#name) | string (nullable) | The name of this MessageAttachment. [Filter(eq;like)] 
+| [Name](Applications.Mail.MessageAttachments.md#name) | string (nullable) | The name of this MessageAttachment. `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) | [Messages](Applications.Mail.Messages.md) | The [Message](Applications.Mail.Messages.md) to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner] |
+| [MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) | [Messages](Applications.Mail.Messages.md) | The `Message`(Applications.Mail.Messages.md) to which this MessageAttachment belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### ContentDownloaded
 
-True when the content is included, false when this is only an empty container. Content should be included when sending mail. [Required] [Default(false)] [Filter(eq)]
+True when the content is included, false when this is only an empty container. Content should be included when sending mail. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -74,7 +74,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this MessageAttachment. [Filter(eq;like)]
+The name of this MessageAttachment. `Filter(eq;like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 ### MailMessage
 
-The [Message](Applications.Mail.Messages.md) to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner]
+The `Message`(Applications.Mail.Messages.md) to which this MessageAttachment belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Messages](Applications.Mail.Messages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

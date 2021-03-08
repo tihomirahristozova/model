@@ -27,22 +27,22 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.ProjectTypes.md#id) | guid |  
-| [Name](Projects.ProjectTypes.md#name) | string | The name of the project type. [Required] [Filter(eq;like)] 
+| [Name](Projects.ProjectTypes.md#name) | string | The name of the project type. `Required` `Filter(eq;like)` 
 | [Notes](Projects.ProjectTypes.md#notes) | string (nullable) | Notes. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Projects.ProjectTypes.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null means that the project type is specific to the enterprise company. [Filter(multi eq)] |
+| [EnterpriseCompany](Projects.ProjectTypes.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null means that the project type is specific to the enterprise company. `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Roles | [TypeRoles](Projects.TypeRoles.md) | List of [TypeRole](Projects.TypeRoles.md) child objects, based on the [Projects.TypeRole.ProjectType](Projects.TypeRoles.md#projecttype) back reference 
-| WorkElements | [TypeWorkElements](Projects.TypeWorkElements.md) | List of [TypeWorkElement](Projects.TypeWorkElements.md) child objects, based on the [Projects.TypeWorkElement.ProjectType](Projects.TypeWorkElements.md#projecttype) back reference 
-| WorkTypes | [TypeWorkTypes](Projects.TypeWorkTypes.md) | List of [TypeWorkType](Projects.TypeWorkTypes.md) child objects, based on the [Projects.TypeWorkType.ProjectType](Projects.TypeWorkTypes.md#projecttype) back reference 
+| Roles | [TypeRoles](Projects.TypeRoles.md) | List of `TypeRole`(Projects.TypeRoles.md) child objects, based on the `Projects.TypeRole.ProjectType`(Projects.TypeRoles.md#projecttype) back reference 
+| WorkElements | [TypeWorkElements](Projects.TypeWorkElements.md) | List of `TypeWorkElement`(Projects.TypeWorkElements.md) child objects, based on the `Projects.TypeWorkElement.ProjectType`(Projects.TypeWorkElements.md#projecttype) back reference 
+| WorkTypes | [TypeWorkTypes](Projects.TypeWorkTypes.md) | List of `TypeWorkType`(Projects.TypeWorkTypes.md) child objects, based on the `Projects.TypeWorkType.ProjectType`(Projects.TypeWorkTypes.md#projecttype) back reference 
 
 
 ## Attribute Details
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of the project type. [Required] [Filter(eq;like)]
+The name of the project type. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-When not null means that the project type is specific to the enterprise company. [Filter(multi eq)]
+When not null means that the project type is specific to the enterprise company. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

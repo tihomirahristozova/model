@@ -31,8 +31,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Asset](Finance.Assets.DepreciationAssets.md#asset) | [Assets](Finance.Assets.Assets.md) | Specifies the asset, whose depreciation should be calculated with the current document. [Required] [Filter(multi eq)] |
-| [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) | [Depreciations](Finance.Assets.Depreciations.md) | The [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Asset](Finance.Assets.DepreciationAssets.md#asset) | [Assets](Finance.Assets.Assets.md) | Specifies the asset, whose depreciation should be calculated with the current document. `Required` `Filter(multi eq)` |
+| [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) | [Depreciations](Finance.Assets.Depreciations.md) | The `Depreciation`(Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -49,14 +49,14 @@ _Default Value_: **NewGuid**
 
 ### Asset
 
-Specifies the asset, whose depreciation should be calculated with the current document. [Required] [Filter(multi eq)]
+Specifies the asset, whose depreciation should be calculated with the current document. `Required` `Filter(multi eq)`
 
 _Type_: **[Assets](Finance.Assets.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Depreciation
 
-The [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner]
+The `Depreciation`(Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Depreciations](Finance.Assets.Depreciations.md)**  
 _Indexed_: **True**  

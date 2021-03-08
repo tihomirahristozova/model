@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>True=This is the default picture for the party; false=otherwise. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True=This is the default picture for the party; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#islogo">IsLogo</a></td>
 <td>boolean</td>
-<td>If checked specifies that this picture is used to visualize the logo of this party in the system. [Required] [Default(false)] [Filter(eq)]</td>
+<td>If checked specifies that this picture is used to visualize the logo of this party in the system. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#picture">Picture</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#pictureno">PictureNo</a></td>
 <td>int32</td>
-<td>Unique picture number within the party. Also used for sorting. [Required] [Filter(eq)]</td>
+<td>Unique picture number within the party. Also used for sorting. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,7 +147,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The <a href="General.Contacts.PartyPictures.html#party">Party</a> to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Party</code>(General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>True=This is the default picture for the party; false=otherwise. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True=This is the default picture for the party; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -171,7 +171,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Party.Pictures.Take( 1).Count( ) == 0)</code></p>
 <h3 id="islogo">IsLogo</h3>
-<p>If checked specifies that this picture is used to visualize the logo of this party in the system. [Required] [Default(false)] [Filter(eq)]</p>
+<p>If checked specifies that this picture is used to visualize the logo of this party in the system. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -182,7 +182,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="pictureno">PictureNo</h3>
-<p>Unique picture number within the party. Also used for sorting. [Required] [Filter(eq)]</p>
+<p>Unique picture number within the party. Also used for sorting. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -192,7 +192,7 @@ Aggregate Root:<br>
 <code>( obj.Party.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
-<p>The <a href="General.Contacts.PartyPictures.html#party">Party</a> to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Party</code>(General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

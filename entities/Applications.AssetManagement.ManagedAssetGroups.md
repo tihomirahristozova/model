@@ -23,23 +23,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.ManagedAssetGroups.md#code) | string | Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD] 
+| [Code](Applications.AssetManagement.ManagedAssetGroups.md#code) | string | Unique (within all groups) code of the asset group. `Required` `Filter(multi eq;like)` `ORD` 
 | [Id](Applications.AssetManagement.ManagedAssetGroups.md#id) | guid |  
-| [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the asset group (multi-language). [Required] [Filter(eq;like)] 
+| [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the asset group (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Applications.AssetManagement.ManagedAssetGroups.md#notes) | string (nullable) | Notes for this ManagedAssetGroup. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.AssetManagement.ManagedAssetGroups.md#parent) | [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable) | The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)] |
+| [Parent](Applications.AssetManagement.ManagedAssetGroups.md#parent) | [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable) | The parent asset group in the hierarchy. null means this is a root group. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Code
 
-Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD]
+Unique (within all groups) code of the asset group. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -55,7 +55,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Name of the asset group (multi-language). [Required] [Filter(eq;like)]
+Name of the asset group (multi-language). `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -74,7 +74,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)]
+The parent asset group in the hierarchy. null means this is a root group. `Filter(multi eq)`
 
 _Type_: **[ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable)**  
 _Indexed_: **True**  

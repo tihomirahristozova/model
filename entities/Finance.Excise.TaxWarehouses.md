@@ -29,7 +29,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Store](Finance.Excise.TaxWarehouses.md#store) | [Stores](Logistics.Inventory.Stores.md) | The base warehouse (store), which is declared as tax warehouse. [Required] [Filter(multi eq)] |
+| [Store](Finance.Excise.TaxWarehouses.md#store) | [Stores](Logistics.Inventory.Stores.md) | The base warehouse (store), which is declared as tax warehouse. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -46,7 +46,7 @@ _Default Value_: **NewGuid**
 
 ### Store
 
-The base warehouse (store), which is declared as tax warehouse. [Required] [Filter(multi eq)]
+The base warehouse (store), which is declared as tax warehouse. `Required` `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Indexed_: **True**  

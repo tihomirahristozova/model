@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.Templates.md#id) | guid |  
-| [Name](Finance.Accounting.Templates.md#name) | string | The name of this Template. [Required] [Filter(like)] 
+| [Name](Finance.Accounting.Templates.md#name) | string | The name of this Template. `Required` `Filter(like)` 
 | [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (nullable) | Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual. 
 | [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (nullable) | Template voucher description. Can use field substitutes, surrounded with square brackets. 
 
@@ -34,13 +34,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Accounting.Templates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route which activates the template. [Required] [Filter(multi eq)] [Owner] |
+| [Route](Finance.Accounting.Templates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route which activates the template. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [TemplateLines](Finance.Accounting.TemplateLines.md) | List of [TemplateLine](Finance.Accounting.TemplateLines.md) child objects, based on the [Finance.Accounting.TemplateLine.Template](Finance.Accounting.TemplateLines.md#template) back reference 
+| Lines | [TemplateLines](Finance.Accounting.TemplateLines.md) | List of `TemplateLine`(Finance.Accounting.TemplateLines.md) child objects, based on the `Finance.Accounting.TemplateLine.Template`(Finance.Accounting.TemplateLines.md#template) back reference 
 
 
 ## Attribute Details
@@ -54,7 +54,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Template. [Required] [Filter(like)]
+The name of this Template. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### Route
 
-The route which activates the template. [Required] [Filter(multi eq)] [Owner]
+The route which activates the template. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Indexed_: **True**  

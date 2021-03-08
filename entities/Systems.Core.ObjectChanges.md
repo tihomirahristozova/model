@@ -25,27 +25,27 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ChangeType](Systems.Core.ObjectChanges.md#changetype) | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | Type of change - Create, Update or Delete. [Required] 
-| [EntityItemId](Systems.Core.ObjectChanges.md#entityitemid) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)] 
+| [ChangeType](Systems.Core.ObjectChanges.md#changetype) | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | Type of change - Create, Update or Delete. `Required` 
+| [EntityItemId](Systems.Core.ObjectChanges.md#entityitemid) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq)` 
 | [Id](Systems.Core.ObjectChanges.md#id) | guid |  
-| [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)] 
+| [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectChangeset](Systems.Core.ObjectChanges.md#objectchangeset) | [ObjectChangesets](Systems.Core.ObjectChangesets.md) | The changeset containing this change. [Required] [Filter(multi eq)] [Owner] |
-| [RootObject](Systems.Core.ObjectChanges.md#rootobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)] |
+| [ObjectChangeset](Systems.Core.ObjectChanges.md#objectchangeset) | [ObjectChangesets](Systems.Core.ObjectChangesets.md) | The changeset containing this change. `Required` `Filter(multi eq)` `Owner` |
+| [RootObject](Systems.Core.ObjectChanges.md#rootobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### ChangeType
 
-Type of change - Create, Update or Delete. [Required]
+Type of change - Create, Update or Delete. `Required`
 
 _Type_: **[ChangeType](Systems.Core.ObjectChanges.md#changetype)**  
-Allowed values for the [ChangeType](Systems.Core.ObjectChanges.md#changetype) data attribute  
+Allowed values for the `ChangeType`(Systems.Core.ObjectChanges.md#changetype) data attribute  
 _Allowed Values (Systems.Core.ObjectChangesRepository.ChangeType Enum Members)_  
 
 | Value | Description |
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### EntityItemId
 
-The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)]
+The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Indexed_: **True**  
@@ -74,7 +74,7 @@ _Default Value_: **NewGuid**
 
 ### RepositoryName
 
-The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]
+The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 ### ObjectChangeset
 
-The changeset containing this change. [Required] [Filter(multi eq)] [Owner]
+The changeset containing this change. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ObjectChangesets](Systems.Core.ObjectChangesets.md)**  
 _Indexed_: **True**  
@@ -93,7 +93,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### RootObject
 
-The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)]
+The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. `Required` `Filter(multi eq)`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Indexed_: **True**  

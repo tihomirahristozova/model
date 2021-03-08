@@ -1,8 +1,7 @@
----
+﻿---
 uid: Finance.Assets
 ---
 # Finance.Assets Namespace
-
 
 ## Entities
 - [AssetCategories](Finance.Assets.AssetCategories.md)  
@@ -20,4 +19,6 @@ uid: Finance.Assets
 - [DepreciationPlanTemplates](Finance.Assets.DepreciationPlanTemplates.md)  
 - [Depreciations](Finance.Assets.Depreciations.md)  
 - [ValuationModels](Finance.Assets.ValuationModels.md)  
+
+aluationModels.md)  
 

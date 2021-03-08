@@ -113,7 +113,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Cms.WebSites.html#baseurl">BaseUrl</a></td>
 <td>string (nullable)</td>
-<td>The base url (address) of the web site. [Filter(like)]</td>
+<td>The base url (address) of the web site. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.WebSites.html#id">Id</a></td>
@@ -123,12 +123,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Cms.WebSites.html#ispublished">IsPublished</a></td>
 <td>boolean</td>
-<td>Specifies whether the site is published for public Internet access. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Specifies whether the site is published for public Internet access. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.WebSites.html#name">Name</a></td>
 <td>string</td>
-<td>Multilanguage web site name. [Required] [Filter(like)]</td>
+<td>Multilanguage web site name. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -145,12 +145,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Cms.WebSites.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company to which this web site belongs. [Required] [Filter(multi eq)]</td>
+<td>The enterprise company to which this web site belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.WebSites.html#publicuserlist">PublicUserList</a></td>
 <td><a href="Systems.External.PublicUserLists.html">PublicUserLists</a> (nullable)</td>
-<td>The list of users used to authorize the users on the site. [Filter(multi eq)]</td>
+<td>The list of users used to authorize the users on the site. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -167,18 +167,18 @@ Default Search Member:<br>
 <tr>
 <td>Languages</td>
 <td><a href="Applications.Cms.WebSiteLanguages.html">WebSiteLanguages</a></td>
-<td>List of <a href="Applications.Cms.WebSiteLanguages.html">WebSiteLanguage</a> child objects, based on the <a href="Applications.Cms.WebSiteLanguages.html#website">Applications.Cms.WebSiteLanguage.WebSite</a> back reference</td>
+<td>List of <code>WebSiteLanguage</code>(Applications.Cms.WebSiteLanguages.md) child objects, based on the <code>Applications.Cms.WebSiteLanguage.WebSite</code>(Applications.Cms.WebSiteLanguages.md#website) back reference</td>
 </tr>
 <tr>
 <td>WebModules</td>
 <td><a href="Applications.Cms.WebModules.html">WebModules</a></td>
-<td>List of <a href="Applications.Cms.WebModules.html">WebModule</a> child objects, based on the <a href="Applications.Cms.WebModules.html#website">Applications.Cms.WebModule.WebSite</a> back reference</td>
+<td>List of <code>WebModule</code>(Applications.Cms.WebModules.md) child objects, based on the <code>Applications.Cms.WebModule.WebSite</code>(Applications.Cms.WebModules.md#website) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="baseurl">BaseUrl</h3>
-<p>The base url (address) of the web site. [Filter(like)]</p>
+<p>The base url (address) of the web site. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -188,23 +188,23 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ispublished">IsPublished</h3>
-<p>Specifies whether the site is published for public Internet access. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Specifies whether the site is published for public Internet access. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<p>Multilanguage web site name. [Required] [Filter(like)]</p>
+<p>Multilanguage web site name. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company to which this web site belongs. [Required] [Filter(multi eq)]</p>
+<p>The enterprise company to which this web site belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="publicuserlist">PublicUserList</h3>
-<p>The list of users used to authorize the users on the site. [Filter(multi eq)]</p>
+<p>The list of users used to authorize the users on the site. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.External.PublicUserLists.html">PublicUserLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

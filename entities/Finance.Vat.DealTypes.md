@@ -23,26 +23,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EntryType](Finance.Vat.DealTypes.md#entrytype) | [EntryType](Finance.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. [Required] [Filter(eq)] 
+| [EntryType](Finance.Vat.DealTypes.md#entrytype) | [EntryType](Finance.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. `Required` `Filter(eq)` 
 | [Id](Finance.Vat.DealTypes.md#id) | guid |  
-| [IsSystem](Finance.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [Name](Finance.Vat.DealTypes.md#name) | string | Description of the deal type. [Required] [Filter(eq;like)] 
+| [IsSystem](Finance.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [Name](Finance.Vat.DealTypes.md#name) | string | Description of the deal type. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Country](Finance.Vat.DealTypes.md#country) | [Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)] |
+| [Country](Finance.Vat.DealTypes.md#country) | [Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### EntryType
 
-Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. [Required] [Filter(eq)]
+Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. `Required` `Filter(eq)`
 
 _Type_: **[EntryType](Finance.Vat.DealTypes.md#entrytype)**  
-Allowed values for the [EntryType](Finance.Vat.DealTypes.md#entrytype) data attribute  
+Allowed values for the `EntryType`(Finance.Vat.DealTypes.md#entrytype) data attribute  
 _Allowed Values (Finance.Vat.DealTypesRepository.EntryType Enum Members)_  
 
 | Value | Description |
@@ -62,7 +62,7 @@ _Default Value_: **NewGuid**
 
 ### IsSystem
 
-Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -71,7 +71,7 @@ _Default Value_: **False**
 
 ### Name
 
-Description of the deal type. [Required] [Filter(eq;like)]
+Description of the deal type. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### Country
 
-The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)]
+The country for which this deal type applies. The country is matched against the country of the enterprise company. `Required` `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

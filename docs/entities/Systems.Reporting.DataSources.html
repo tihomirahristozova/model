@@ -109,12 +109,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Reporting.DataSources.html#basequeryname">BaseQueryName</a></td>
 <td>string</td>
-<td>The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]</td>
+<td>The name of the query or table that is used for root reference point of the loaded data. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Reporting.DataSources.html#datasourcetype">DataSourceType</a></td>
 <td><a href="Systems.Reporting.DataSources.html#datasourcetype">DataSourceType</a></td>
-<td>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default(&quot;M&quot;)] [Filter(eq)]</td>
+<td>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . <code>Required</code> <code>Default(&quot;M&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Reporting.DataSources.html#id">Id</a></td>
@@ -124,12 +124,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Reporting.DataSources.html#name">Name</a></td>
 <td>string</td>
-<td>The name of the data source. [Required] [Filter(eq;like)]</td>
+<td>The name of the data source. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Reporting.DataSources.html#showparenttables">ShowParentTables</a></td>
 <td>boolean</td>
-<td>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_<br>Queries_Table are automaticaly included in the report or not. [Required] [Default(false)]</td>
+<td>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_<br>Queries_Table are automaticaly included in the report or not. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 </tbody>
 </table>
@@ -146,20 +146,20 @@ Default Search Member:<br>
 <tr>
 <td>Queries</td>
 <td><a href="Systems.Reporting.DataSourceQueries.html">DataSourceQueries</a></td>
-<td>List of <a href="Systems.Reporting.DataSourceQueries.html">DataSourceQuery</a> child objects, based on the <a href="Systems.Reporting.DataSourceQueries.html#datasource">Systems.Reporting.DataSourceQuery.DataSource</a> back reference</td>
+<td>List of <code>DataSourceQuery</code>(Systems.Reporting.DataSourceQueries.md) child objects, based on the <code>Systems.Reporting.DataSourceQuery.DataSource</code>(Systems.Reporting.DataSourceQueries.md#datasource) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basequeryname">BaseQueryName</h3>
-<p>The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]</p>
+<p>The name of the query or table that is used for root reference point of the loaded data. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="datasourcetype">DataSourceType</h3>
-<p>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default(&quot;M&quot;)] [Filter(eq)]</p>
+<p>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . <code>Required</code> <code>Default(&quot;M&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Reporting.DataSources.html#datasourcetype">DataSourceType</a></strong><br>
-Allowed values for the <a href="Systems.Reporting.DataSources.html#datasourcetype">DataSourceType</a> data attribute<br>
+Allowed values for the <code>DataSourceType</code>(Systems.Reporting.DataSources.md#datasourcetype) data attribute<br>
 <em>Allowed Values (Systems.Reporting.DataSourcesRepository.DataSourceType Enum Members)</em></p>
 <table>
 <thead>
@@ -192,12 +192,12 @@ Allowed values for the <a href="Systems.Reporting.DataSources.html#datasourcetyp
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the data source. [Required] [Filter(eq;like)]</p>
+<p>The name of the data source. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="showparenttables">ShowParentTables</h3>
-<p>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)]</p>
+<p>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>

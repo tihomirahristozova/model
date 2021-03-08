@@ -110,7 +110,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Functions.html#name">Name</a></td>
 <td>string</td>
-<td>The name of this Function. [Required] [Filter(like)]</td>
+<td>The name of this Function. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Functions.html#notes">Notes</a></td>
@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Functions.html#functiongroup">FunctionGroup</a></td>
 <td><a href="Production.Resources.FunctionGroups.html">FunctionGroups</a></td>
-<td>The <a href="Production.Resources.Functions.html#functiongroup">FunctionGroup</a> to which this Function belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>FunctionGroup</code>(Production.Resources.Functions.md#functiongroup) to which this Function belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Functions.html#primaryunit">PrimaryUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)]</td>
+<td>Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this Function. [Required] [Filter(like)]</p>
+<p>The name of this Function. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -159,12 +159,12 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="functiongroup">FunctionGroup</h3>
-<p>The <a href="Production.Resources.Functions.html#functiongroup">FunctionGroup</a> to which this Function belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>FunctionGroup</code>(Production.Resources.Functions.md#functiongroup) to which this Function belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.FunctionGroups.html">FunctionGroups</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="primaryunit">PrimaryUnit</h3>
-<p>Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)]</p>
+<p>Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

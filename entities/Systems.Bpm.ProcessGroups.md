@@ -23,23 +23,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.ProcessGroups.md#code) | string | Group code, unique within the parent group. [Required] [Filter(eq;like)] 
+| [Code](Systems.Bpm.ProcessGroups.md#code) | string | Group code, unique within the parent group. `Required` `Filter(eq;like)` 
 | [Id](Systems.Bpm.ProcessGroups.md#id) | guid |  
-| [Name](Systems.Bpm.ProcessGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process group name. [Required] [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process group name. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Bpm.ProcessGroups.md#notes) | string (nullable) | Notes for this ProcessGroup. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Systems.Bpm.ProcessGroups.md#parent) | [ProcessGroups](Systems.Bpm.ProcessGroups.md) (nullable) | Parent process group in the hierarchy. null means this is a root group. [Filter(multi eq)] |
+| [Parent](Systems.Bpm.ProcessGroups.md#parent) | [ProcessGroups](Systems.Bpm.ProcessGroups.md) (nullable) | Parent process group in the hierarchy. null means this is a root group. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Code
 
-Group code, unique within the parent group. [Required] [Filter(eq;like)]
+Group code, unique within the parent group. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -54,7 +54,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multilanguage process group name. [Required] [Filter(eq;like)]
+Multilanguage process group name. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-Parent process group in the hierarchy. null means this is a root group. [Filter(multi eq)]
+Parent process group in the hierarchy. null means this is a root group. `Filter(multi eq)`
 
 _Type_: **[ProcessGroups](Systems.Bpm.ProcessGroups.md) (nullable)**  
 _Indexed_: **True**  

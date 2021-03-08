@@ -1,8 +1,7 @@
----
+﻿---
 uid: Applications.Rental
 ---
 # Applications.Rental Namespace
-
 
 ## Entities
 - [AssetConsumables](Applications.Rental.AssetConsumables.md)  
@@ -17,4 +16,6 @@ uid: Applications.Rental
 - [TransactionLines](Applications.Rental.TransactionLines.md)  
 - [Transactions](Applications.Rental.Transactions.md)  
 - [TransactionTemplates](Applications.Rental.TransactionTemplates.md)  
+
+ransactionTemplates.md)  
 

@@ -23,22 +23,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Core.Translations.md#active) | boolean | True when the translation is verified and activated. [Required] [Default(true)] [Filter(eq)] 
-| [ApplicationName](Systems.Core.Translations.md#applicationname) | string (nullable) | The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD] 
-| [CreationTime](Systems.Core.Translations.md#creationtime) | datetime | Timestamp when the translation was first created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] 
+| [Active](Systems.Core.Translations.md#active) | boolean | True when the translation is verified and activated. `Required` `Default(true)` `Filter(eq)` 
+| [ApplicationName](Systems.Core.Translations.md#applicationname) | string (nullable) | The application, containing the resource. For base resource types (T,C,H), this is null. `Filter(eq)` `ORD` 
+| [CreationTime](Systems.Core.Translations.md#creationtime) | datetime | Timestamp when the translation was first created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
 | [Id](Systems.Core.Translations.md#id) | guid |  
-| [Language](Systems.Core.Translations.md#language) | string | The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". [Required] [Default("en")] [Filter(eq)] 
-| [ResourceId](Systems.Core.Translations.md#resourceid) | string | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. [Required] [Filter(eq;like)] 
-| [ResourceType](Systems.Core.Translations.md#resourcetype) | [ResourceType](Systems.Core.Translations.md#resourcetype) | T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. [Required] [Default("S")] [Filter(eq)] 
-| [TranslationField](Systems.Core.Translations.md#translationfield) | string | The translated text. [Required] 
-| [UpdateTime](Systems.Core.Translations.md#updatetime) | datetime | When the translation was last updated. [Required] [Default(Now)] [ReadOnly] 
+| [Language](Systems.Core.Translations.md#language) | string | The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". `Required` `Default("en")` `Filter(eq)` 
+| [ResourceId](Systems.Core.Translations.md#resourceid) | string | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)` 
+| [ResourceType](Systems.Core.Translations.md#resourcetype) | [ResourceType](Systems.Core.Translations.md#resourcetype) | T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. `Required` `Default("S")` `Filter(eq)` 
+| [TranslationField](Systems.Core.Translations.md#translationfield) | string | The translated text. `Required` 
+| [UpdateTime](Systems.Core.Translations.md#updatetime) | datetime | When the translation was last updated. `Required` `Default(Now)` `ReadOnly` 
 
 
 ## Attribute Details
 
 ### Active
 
-True when the translation is verified and activated. [Required] [Default(true)] [Filter(eq)]
+True when the translation is verified and activated. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -49,7 +49,7 @@ _Front-End Recalc Expressions:_
 `IIF( Not( IsNullOrEmpty( obj.TranslationField)), True, obj.Active)`
 ### ApplicationName
 
-The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]
+The application, containing the resource. For base resource types (T,C,H), this is null. `Filter(eq)` `ORD`
 
 _Type_: **string (nullable)**  
 _Indexed_: **True**  
@@ -58,7 +58,7 @@ _Supports Order By_: **True**
 
 ### CreationTime
 
-Timestamp when the translation was first created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]
+Timestamp when the translation was first created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -74,7 +74,7 @@ _Default Value_: **NewGuid**
 
 ### Language
 
-The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". [Required] [Default("en")] [Filter(eq)]
+The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". `Required` `Default("en")` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -83,7 +83,7 @@ _Default Value_: **en**
 
 ### ResourceId
 
-The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. [Required] [Filter(eq;like)]
+The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -91,10 +91,10 @@ _Supports Order By_: **False**
 
 ### ResourceType
 
-T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. [Required] [Default("S")] [Filter(eq)]
+T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. `Required` `Default("S")` `Filter(eq)`
 
 _Type_: **[ResourceType](Systems.Core.Translations.md#resourcetype)**  
-Allowed values for the [ResourceType](Systems.Core.Translations.md#resourcetype) data attribute  
+Allowed values for the `ResourceType`(Systems.Core.Translations.md#resourcetype) data attribute  
 _Allowed Values (Systems.Core.TranslationsRepository.ResourceType Enum Members)_  
 
 | Value | Description |
@@ -113,7 +113,7 @@ _Default Value_: **OtherApplicationSpecific**
 
 ### TranslationField
 
-The translated text. [Required]
+The translated text. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -121,7 +121,7 @@ _Supports Order By_: **False**
 
 ### UpdateTime
 
-When the translation was last updated. [Required] [Default(Now)] [ReadOnly]
+When the translation was last updated. `Required` `Default(Now)` `ReadOnly`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  

@@ -110,7 +110,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#createdonutc">CreatedOnUtc</a></td>
 <td>datetime</td>
-<td>The date and time (in UTC), when the request was created. [Required] [Default(Now)]</td>
+<td>The date and time (in UTC), when the request was created. <code>Required</code> <code>Default(Now)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#id">Id</a></td>
@@ -125,12 +125,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></td>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></td>
-<td>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)]</td>
+<td>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></td>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></td>
-<td>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required]</td>
+<td>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,22 +147,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#completedbyuser">CompletedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]</td>
+<td>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#createdbyuser">CreatedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]</td>
+<td>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company, to which the request was made. [Required] [Filter(multi eq)]</td>
+<td>The enterprise company, to which the request was made. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]</td>
+<td>The person, whose data will be corrected with the request. . <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="createdonutc">CreatedOnUtc</h3>
-<p>The date and time (in UTC), when the request was created. [Required] [Default(Now)]</p>
+<p>The date and time (in UTC), when the request was created. <code>Required</code> <code>Default(Now)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -189,9 +189,9 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="requestedright">RequestedRight</h3>
-<p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)]</p>
+<p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></strong><br>
-Allowed values for the <a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a> data attribute<br>
+Allowed values for the <code>RequestedRight</code>(Applications.PersonalData.DataSubjectRightRequests.md#requestedright) data attribute<br>
 <em>Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight Enum Members)</em></p>
 <table>
 <thead>
@@ -230,9 +230,9 @@ Allowed values for the <a href="Applications.PersonalData.DataSubjectRightReques
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="status">Status</h3>
-<p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required]</p>
+<p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></strong><br>
-Allowed values for the <a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a> data attribute<br>
+Allowed values for the <code>Status</code>(Applications.PersonalData.DataSubjectRightRequests.md#status) data attribute<br>
 <em>Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.Status Enum Members)</em></p>
 <table>
 <thead>
@@ -268,19 +268,19 @@ Allowed values for the <a href="Applications.PersonalData.DataSubjectRightReques
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="completedbyuser">CompletedByUser</h3>
-<p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]</p>
+<p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="createdbyuser">CreatedByUser</h3>
-<p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]</p>
+<p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company, to which the request was made. [Required] [Filter(multi eq)]</p>
+<p>The enterprise company, to which the request was made. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
-<p>The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]</p>
+<p>The person, whose data will be corrected with the request. . <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -23,24 +23,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommentText](Communities.SocialComments.md#commenttext) | string | The comment contents in clear text. [Required] 
-| [CreationTimeUtc](Communities.SocialComments.md#creationtimeutc) | datetime | The exact server time (in UTC), when the comment was created. [Required] [ORD] 
+| [CommentText](Communities.SocialComments.md#commenttext) | string | The comment contents in clear text. `Required` 
+| [CreationTimeUtc](Communities.SocialComments.md#creationtimeutc) | datetime | The exact server time (in UTC), when the comment was created. `Required` `ORD` 
 | [Id](Communities.SocialComments.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.SocialComments.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root data object (post, marketplace product, document, etc), for which the comment is made. [Required] [Filter(multi eq)] |
-| [ReplyToComment](Communities.SocialComments.md#replytocomment) | [SocialComments](Communities.SocialComments.md) (nullable) | When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. [Filter(multi eq)] |
-| [User](Communities.SocialComments.md#user) | [Users](Systems.Security.Users.md) | The user, who made the comment. [Required] [Filter(multi eq)] |
+| [DataObject](Communities.SocialComments.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root data object (post, marketplace product, document, etc), for which the comment is made. `Required` `Filter(multi eq)` |
+| [ReplyToComment](Communities.SocialComments.md#replytocomment) | [SocialComments](Communities.SocialComments.md) (nullable) | When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. `Filter(multi eq)` |
+| [User](Communities.SocialComments.md#user) | [Users](Systems.Security.Users.md) | The user, who made the comment. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### CommentText
 
-The comment contents in clear text. [Required]
+The comment contents in clear text. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the comment was created. [Required] [ORD]
+The exact server time (in UTC), when the comment was created. `Required` `ORD`
 
 _Type_: **datetime**  
 _Indexed_: **True**  
@@ -67,21 +67,21 @@ _Default Value_: **NewGuid**
 
 ### DataObject
 
-The root data object (post, marketplace product, document, etc), for which the comment is made. [Required] [Filter(multi eq)]
+The root data object (post, marketplace product, document, etc), for which the comment is made. `Required` `Filter(multi eq)`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReplyToComment
 
-When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. [Filter(multi eq)]
+When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. `Filter(multi eq)`
 
 _Type_: **[SocialComments](Communities.SocialComments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-The user, who made the comment. [Required] [Filter(multi eq)]
+The user, who made the comment. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

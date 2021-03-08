@@ -28,15 +28,15 @@ Aggregate Root:
 | [FromPropertyValue](General.Products.ProductGroupRangeProperties.md#frompropertyvalue) | string (nullable) | Starting value of the range of alternative values. Used only when Rage Type = R (range). 
 | [Id](General.Products.ProductGroupRangeProperties.md#id) | guid |  
 | [PropertyValuesList](General.Products.ProductGroupRangeProperties.md#propertyvalueslist) | string (nullable) | Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio). 
-| [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. [Required] [Default("R")] 
+| [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. `Required` `Default("R")` 
 | [ToPropertyValue](General.Products.ProductGroupRangeProperties.md#topropertyvalue) | string (nullable) | Ending value of the range of alternative values. Used only when Rage Type = R (range). 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The [ProductGroup](General.Products.ProductGroupRange<br />Properties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Property](General.Products.ProductGroupRangeProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property whose values will be altered. [Required] [Filter(multi eq)] |
+| [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The `ProductGroup`(General.Products.ProductGroupRange<br />Properties.md#productgroup) to which this ProductGroupRangeProperty belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Property](General.Products.ProductGroupRangeProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property whose values will be altered. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -66,10 +66,10 @@ _Supports Order By_: **False**
 
 ### RangeType
 
-Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. [Required] [Default("R")]
+Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. `Required` `Default("R")`
 
 _Type_: **[RangeType](General.Products.ProductGroupRangeProperties.md#rangetype)**  
-Allowed values for the [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) data attribute  
+Allowed values for the `RangeType`(General.Products.ProductGroupRangeProperties.md#rangetype) data attribute  
 _Allowed Values (General.Products.ProductGroupRangePropertiesRepository.RangeType Enum Members)_  
 
 | Value | Description |
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 ### ProductGroup
 
-The [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]
+The `ProductGroup`(General.Products.ProductGroupRangeProperties.md#productgroup) to which this ProductGroupRangeProperty belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Indexed_: **True**  
@@ -102,7 +102,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Property
 
-The property whose values will be altered. [Required] [Filter(multi eq)]
+The property whose values will be altered. `Required` `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

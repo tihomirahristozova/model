@@ -1,8 +1,7 @@
----
+﻿---
 uid: Crm.Sales
 ---
 # Crm.Sales Namespace
-
 
 ## Entities
 - [DefaultSalesOrderDocumentProperties](Crm.Sales.DefaultSalesOrderDocumentProperties.md)  
@@ -14,4 +13,6 @@ uid: Crm.Sales
 - [SalesOrderPromotionalPackages](Crm.Sales.SalesOrderPromotionalPackages.md)  
 - [SalesOrders](Crm.Sales.SalesOrders.md)  
 - [SalesOrdersOptions](Crm.Sales.SalesOrdersOptions.md)  
+
+rsOptions.md)  
 

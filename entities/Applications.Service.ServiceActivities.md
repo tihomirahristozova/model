@@ -40,103 +40,103 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdjustmentNumber](Applications.Service.ServiceActivities.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentTime](Applications.Service.ServiceActivities.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentUser](Applications.Service.ServiceActivities.md#adjustmentuser) | string (nullable) | The user who adjusted the document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [CompleteTime](Applications.Service.ServiceActivities.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [CreationTime](Applications.Service.ServiceActivities.md#creationtime) | datetime | Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [CreationUser](Applications.Service.ServiceActivities.md#creationuser) | string | The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [CreditLimitOverride](Applications.Service.ServiceActivities.md#creditlimitoverride) | boolean | Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. [Required] [Default(false)] [Filter(eq)] 
-| [DeadlineTime](Applications.Service.ServiceActivities.md#deadlinetime) | datetime (nullable) | The deadline for the task. null if there is no deadline. [Filter(ge;le)] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [DocumentDate](Applications.Service.ServiceActivities.md#documentdate) | date | The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNo](Applications.Service.ServiceActivities.md#documentno) | string | Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentNumber](Applications.Service.ServiceActivities.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentTime](Applications.Service.ServiceActivities.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentUser](Applications.Service.ServiceActivities.md#adjustmentuser) | string (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CompleteTime](Applications.Service.ServiceActivities.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CreationTime](Applications.Service.ServiceActivities.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CreationUser](Applications.Service.ServiceActivities.md#creationuser) | string | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CreditLimitOverride](Applications.Service.ServiceActivities.md#creditlimitoverride) | boolean | Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. `Required` `Default(false)` `Filter(eq)` 
+| [DeadlineTime](Applications.Service.ServiceActivities.md#deadlinetime) | datetime (nullable) | The deadline for the task. null if there is no deadline. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [DocumentDate](Applications.Service.ServiceActivities.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNo](Applications.Service.ServiceActivities.md#documentno) | string | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Applications.Service.ServiceActivities.md#documentnotes) | string (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
-| [DocumentVersion](Applications.Service.ServiceActivities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [EndTime](Applications.Service.ServiceActivities.md#endtime) | datetime (nullable) | Currently planned ending time of the task. [Filter(ge;le)] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [EntityName](Applications.Service.ServiceActivities.md#entityname) | string | The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [DocumentVersion](Applications.Service.ServiceActivities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [EndTime](Applications.Service.ServiceActivities.md#endtime) | datetime (nullable) | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [EntityName](Applications.Service.ServiceActivities.md#entityname) | string | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Applications.Service.ServiceActivities.md#id) | guid |  
-| [IsReleased](Applications.Service.ServiceActivities.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [IsSingleExecution](Applications.Service.ServiceActivities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [IsReleased](Applications.Service.ServiceActivities.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [IsSingleExecution](Applications.Service.ServiceActivities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [Notes](Applications.Service.ServiceActivities.md#notes) | string (nullable) | Notes for this Activity. (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [ParentDocument<br />RelationshipType](Applications.Service.ServiceActivities.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Applications.Service.ServiceActivities.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [PlannedDurationMinutes](Applications.Service.ServiceActivities.md#planneddurationminutes) | int32 (nullable) | Total planned duration of the activity, regardless of the current execution status. [Filter(ge;le)] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [PlanningOnly](Applications.Service.ServiceActivities.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [Priority](Applications.Service.ServiceActivities.md#priority) | [Priority](Applications.Service.ServiceActivities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important). [Required] [Default(3)] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [Private](Applications.Service.ServiceActivities.md#private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. [Required] [Default(false)] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [ReadOnly](Applications.Service.ServiceActivities.md#readonly) | boolean | True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [ReceiverPersonName](Applications.Service.ServiceActivities.md#receiverpersonname) | string (nullable) | Copy of the name of the receiver at the time the activity was signed. [Filter(like)] 
-| [ReferenceDate](Applications.Service.ServiceActivities.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] (Inherited from [Documents](General.Documents.md)) 
-| [ReferenceDocumentNo](Applications.Service.ServiceActivities.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] (Inherited from [Documents](General.Documents.md)) 
-| [ReleaseTime](Applications.Service.ServiceActivities.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [ParentDocument<br />RelationshipType](Applications.Service.ServiceActivities.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Applications.Service.ServiceActivities.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [PlannedDurationMinutes](Applications.Service.ServiceActivities.md#planneddurationminutes) | int32 (nullable) | Total planned duration of the activity, regardless of the current execution status. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [PlanningOnly](Applications.Service.ServiceActivities.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [Priority](Applications.Service.ServiceActivities.md#priority) | [Priority](Applications.Service.ServiceActivities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important). `Required` `Default(3)` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [Private](Applications.Service.ServiceActivities.md#private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. `Required` `Default(false)` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [ReadOnly](Applications.Service.ServiceActivities.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [ReceiverPersonName](Applications.Service.ServiceActivities.md#receiverpersonname) | string (nullable) | Copy of the name of the receiver at the time the activity was signed. `Filter(like)` 
+| [ReferenceDate](Applications.Service.ServiceActivities.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDocumentNo](Applications.Service.ServiceActivities.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
+| [ReleaseTime](Applications.Service.ServiceActivities.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReminderTime](Applications.Service.ServiceActivities.md#remindertime) | datetime (nullable) | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [StartTime](Applications.Service.ServiceActivities.md#starttime) | datetime | Currently planned starting time of the task. [Required] [Default(Now)] [Filter(ge;le)] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [State](Applications.Service.ServiceActivities.md#state) | [DocumentState](Applications.Service.ServiceActivities.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [Subject](Applications.Service.ServiceActivities.md#subject) | string | Task primary subject (required). [Required] [Filter(eq;like)] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [SystemType](Applications.Service.ServiceActivities.md#systemtype) | [SystemType](Applications.Service.ServiceActivities.md#systemtype) | T=Task; C=Communication; M=Meeting. [Required] (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [Void](Applications.Service.ServiceActivities.md#void) | boolean | True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [VoidReason](Applications.Service.ServiceActivities.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [VoidTime](Applications.Service.ServiceActivities.md#voidtime) | datetime (nullable) | Date/time when the document has become void. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
-| [VoidUser](Applications.Service.ServiceActivities.md#voiduser) | string (nullable) | The user who voided the document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [StartTime](Applications.Service.ServiceActivities.md#starttime) | datetime | Currently planned starting time of the task. `Required` `Default(Now)` `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [State](Applications.Service.ServiceActivities.md#state) | [DocumentState](Applications.Service.ServiceActivities.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [Subject](Applications.Service.ServiceActivities.md#subject) | string | Task primary subject (required). `Required` `Filter(eq;like)` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [SystemType](Applications.Service.ServiceActivities.md#systemtype) | [SystemType](Applications.Service.ServiceActivities.md#systemtype) | T=Task; C=Communication; M=Meeting. `Required` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [Void](Applications.Service.ServiceActivities.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidReason](Applications.Service.ServiceActivities.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidTime](Applications.Service.ServiceActivities.md#voidtime) | datetime (nullable) | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidUser](Applications.Service.ServiceActivities.md#voiduser) | string (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Applications.Service.ServiceActivities.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [AdjustedDocument](Applications.Service.ServiceActivities.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
-| [AssignedToUser](Applications.Service.ServiceActivities.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [ContactPerson](Applications.Service.ServiceActivities.md#contactperson) | [Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md)) |
-| [CurrencyDirectory](Applications.Service.ServiceActivities.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [Customer](Applications.Service.ServiceActivities.md#customer) | [Customers](Crm.Customers.md) | The receiver of the work. [Required] [Filter(multi eq)] |
-| [DefaultServiceObject](Applications.Service.ServiceActivities.md#defaultserviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | Default service object for materials and services lines. [Filter(multi eq)] |
-| [DocumentType](Applications.Service.ServiceActivities.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [EnterpriseCompany](Applications.Service.ServiceActivities.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [EnterpriseCompanyLocation](Applications.Service.ServiceActivities.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [FromCompanyDivision](Applications.Service.ServiceActivities.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [FromParty](Applications.Service.ServiceActivities.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [LocationPartyContact<br />Mechanism](Applications.Service.ServiceActivities.md#locationpartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable) | The location where or the communication line used to conduct the work. [Filter(multi eq)] |
-| [MasterDocument](Applications.Service.ServiceActivities.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [OwnerParty](Applications.Service.ServiceActivities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. [Required] [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md)) |
-| [Parent](Applications.Service.ServiceActivities.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [PrimeCauseDocument](Applications.Service.ServiceActivities.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [ProjectTask](Applications.Service.ServiceActivities.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md)) |
-| [ReceiverPerson](Applications.Service.ServiceActivities.md#receiverperson) | [Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the customers company, that received and signed for the service. [Filter(multi eq)] |
-| [ResponsibleParty](Applications.Service.ServiceActivities.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task. [Required] [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md)) |
-| [ResponsiblePerson](Applications.Service.ServiceActivities.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [ReverseOfDocument](Applications.Service.ServiceActivities.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
-| [Sequence](Applications.Service.ServiceActivities.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
-| [ServiceAgreement](Applications.Service.ServiceActivities.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | The service agreement under which the work was done. [Filter(multi eq)] |
-| [ShipToCustomer](Applications.Service.ServiceActivities.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | Specific customer location of the main customer that receives the work. [Filter(multi eq)] |
-| [Store](Applications.Service.ServiceActivities.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which materials are taken. [Filter(multi eq)] |
-| [TargetParty](Applications.Service.ServiceActivities.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md)) |
-| [ToCompanyDivision](Applications.Service.ServiceActivities.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [ToParty](Applications.Service.ServiceActivities.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
-| [UserStatus](Applications.Service.ServiceActivities.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
+| [AccessKey](Applications.Service.ServiceActivities.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [AdjustedDocument](Applications.Service.ServiceActivities.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
+| [AssignedToUser](Applications.Service.ServiceActivities.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [ContactPerson](Applications.Service.ServiceActivities.md#contactperson) | [Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md)) |
+| [CurrencyDirectory](Applications.Service.ServiceActivities.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [Customer](Applications.Service.ServiceActivities.md#customer) | [Customers](Crm.Customers.md) | The receiver of the work. `Required` `Filter(multi eq)` |
+| [DefaultServiceObject](Applications.Service.ServiceActivities.md#defaultserviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | Default service object for materials and services lines. `Filter(multi eq)` |
+| [DocumentType](Applications.Service.ServiceActivities.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [EnterpriseCompany](Applications.Service.ServiceActivities.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [EnterpriseCompanyLocation](Applications.Service.ServiceActivities.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [FromCompanyDivision](Applications.Service.ServiceActivities.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [FromParty](Applications.Service.ServiceActivities.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [LocationPartyContact<br />Mechanism](Applications.Service.ServiceActivities.md#locationpartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable) | The location where or the communication line used to conduct the work. `Filter(multi eq)` |
+| [MasterDocument](Applications.Service.ServiceActivities.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [OwnerParty](Applications.Service.ServiceActivities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md)) |
+| [Parent](Applications.Service.ServiceActivities.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [PrimeCauseDocument](Applications.Service.ServiceActivities.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [ProjectTask](Applications.Service.ServiceActivities.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md)) |
+| [ReceiverPerson](Applications.Service.ServiceActivities.md#receiverperson) | [Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the customers company, that received and signed for the service. `Filter(multi eq)` |
+| [ResponsibleParty](Applications.Service.ServiceActivities.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md)) |
+| [ResponsiblePerson](Applications.Service.ServiceActivities.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [ReverseOfDocument](Applications.Service.ServiceActivities.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
+| [Sequence](Applications.Service.ServiceActivities.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
+| [ServiceAgreement](Applications.Service.ServiceActivities.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | The service agreement under which the work was done. `Filter(multi eq)` |
+| [ShipToCustomer](Applications.Service.ServiceActivities.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | Specific customer location of the main customer that receives the work. `Filter(multi eq)` |
+| [Store](Applications.Service.ServiceActivities.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which materials are taken. `Filter(multi eq)` |
+| [TargetParty](Applications.Service.ServiceActivities.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md)) |
+| [ToCompanyDivision](Applications.Service.ServiceActivities.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [ToParty](Applications.Service.ServiceActivities.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [UserStatus](Applications.Service.ServiceActivities.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [General.DocumentComment.Document](General.DocumentComments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
-| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [General.DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
-| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [General.DocumentAmount.Document](General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
-| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [General.DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
-| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [General.DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
-| Materials | [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | List of [ServiceActivityMaterial](Applications.Service.ServiceActivityMaterials.md) child objects, based on the [Applications.Service.ServiceActivityMaterial.ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) back reference 
-| Participants | [ActivityParticipants](General.Contacts.ActivityParticipants.md) | List of [ActivityParticipant](General.Contacts.ActivityParticipants.md) child objects, based on the [General.Contacts.ActivityParticipant.Activity](General.Contacts.ActivityParticipants.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
-| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [General.DocumentPrint.Document](General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
-| Reminders | [Reminders](General.Contacts.Reminders.md) | List of [Reminder](General.Contacts.Reminders.md) child objects, based on the [General.Contacts.Reminder.Activity](General.Contacts.Reminders.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
-| Resources | [ActivityResources](General.Contacts.ActivityResources.md) | List of [ActivityResource](General.Contacts.ActivityResources.md) child objects, based on the [General.Contacts.ActivityResource.Activity](General.Contacts.ActivityResources.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
-| Services | [ServiceActivityServices](Applications.Service.ServiceActivityServices.md) | List of [ServiceActivityService](Applications.Service.ServiceActivityServices.md) child objects, based on the [Applications.Service.ServiceActivityService.ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) back reference 
-| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [General.DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
-| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.DocumentVersions.md) child objects, based on the [General.DocumentVersion.Document](General.DocumentVersions.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of `DocumentComment`(General.DocumentComments.md) child objects, based on the `General.DocumentComment.Document`(General.DocumentComments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of `DocumentDistributed<br />Amount`(General.DocumentDistributedAmounts.md) child objects, based on the `General.DocumentDistributedAmount.Document`(General.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of `DocumentAmount`(General.DocumentAmounts.md) child objects, based on the `General.DocumentAmount.Document`(General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Materials | [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | List of `ServiceActivityMaterial`(Applications.Service.ServiceActivityMaterials.md) child objects, based on the `Applications.Service.ServiceActivityMaterial.ServiceActivity`(Applications.Service.ServiceActivityMaterials.md#serviceactivity) back reference 
+| Participants | [ActivityParticipants](General.Contacts.ActivityParticipants.md) | List of `ActivityParticipant`(General.Contacts.ActivityParticipants.md) child objects, based on the `General.Contacts.ActivityParticipant.Activity`(General.Contacts.ActivityParticipants.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Reminders | [Reminders](General.Contacts.Reminders.md) | List of `Reminder`(General.Contacts.Reminders.md) child objects, based on the `General.Contacts.Reminder.Activity`(General.Contacts.Reminders.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
+| Resources | [ActivityResources](General.Contacts.ActivityResources.md) | List of `ActivityResource`(General.Contacts.ActivityResources.md) child objects, based on the `General.Contacts.ActivityResource.Activity`(General.Contacts.ActivityResources.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
+| Services | [ServiceActivityServices](Applications.Service.ServiceActivityServices.md) | List of `ServiceActivityService`(Applications.Service.ServiceActivityServices.md) child objects, based on the `Applications.Service.ServiceActivityService.ServiceActivity`(Applications.Service.ServiceActivityServices.md#serviceactivity) back reference 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of `DocumentStateChange`(General.DocumentStateChanges.md) child objects, based on the `General.DocumentStateChange.Document`(General.DocumentStateChanges.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of `DocumentVersion`(General.DocumentVersions.md) child objects, based on the `General.DocumentVersion.Document`(General.DocumentVersions.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 
 
 ## Attribute Details
 
 ### AdjustmentNumber
 
-Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -145,7 +145,7 @@ _Default Value_: **0**
 
 ### AdjustmentTime
 
-Date/time when the document last has been adjusted by corrective document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -153,7 +153,7 @@ _Supports Order By_: **False**
 
 ### AdjustmentUser
 
-The user who adjusted the document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -161,7 +161,7 @@ _Supports Order By_: **False**
 
 ### CompleteTime
 
-Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -169,7 +169,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -178,7 +178,7 @@ _Default Value_: **CurrentDateTime**
 
 ### CreationUser
 
-The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -186,7 +186,7 @@ _Supports Order By_: **False**
 
 ### CreditLimitOverride
 
-Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. [Required] [Default(false)] [Filter(eq)]
+Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -195,7 +195,7 @@ _Default Value_: **False**
 
 ### DeadlineTime
 
-The deadline for the task. null if there is no deadline. [Filter(ge;le)] (Inherited from [Activities](General.Contacts.Activities.md))
+The deadline for the task. null if there is no deadline. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -203,7 +203,7 @@ _Supports Order By_: **False**
 
 ### DocumentDate
 
-The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from [Documents](General.Documents.md))
+The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **date**  
 _Indexed_: **True**  
@@ -213,7 +213,7 @@ _Default Value_: **CurrentDate**
 
 ### DocumentNo
 
-Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from [Documents](General.Documents.md))
+Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -230,7 +230,7 @@ _Supports Order By_: **False**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -239,7 +239,7 @@ _Default Value_: **1**
 
 ### EndTime
 
-Currently planned ending time of the task. [Filter(ge;le)] (Inherited from [Activities](General.Contacts.Activities.md))
+Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -247,7 +247,7 @@ _Supports Order By_: **False**
 
 ### EntityName
 
-The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -263,7 +263,7 @@ _Default Value_: **NewGuid**
 
 ### IsReleased
 
-True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Activities](General.Contacts.Activities.md))
+True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -272,7 +272,7 @@ _Default Value_: **False**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Activities](General.Contacts.Activities.md))
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -289,7 +289,7 @@ _Supports Order By_: **False**
 
 ### ParentDocumentRelationshipType
 
-Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[ParentDocument<br />RelationshipType](Applications.Service.ServiceActivities.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
@@ -305,7 +305,7 @@ _Supports Order By_: **False**
 
 ### PlannedDurationMinutes
 
-Total planned duration of the activity, regardless of the current execution status. [Filter(ge;le)] (Inherited from [Activities](General.Contacts.Activities.md))
+Total planned duration of the activity, regardless of the current execution status. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -313,7 +313,7 @@ _Supports Order By_: **False**
 
 ### PlanningOnly
 
-Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -322,7 +322,7 @@ _Default Value_: **False**
 
 ### Priority
 
-Priority on the scale from 1 (least important) to 5 (very important). [Required] [Default(3)] (Inherited from [Activities](General.Contacts.Activities.md))
+Priority on the scale from 1 (least important) to 5 (very important). `Required` `Default(3)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **[Priority](Applications.Service.ServiceActivities.md#priority)**  
 Generic enum type for Priority properties  
@@ -342,7 +342,7 @@ _Default Value_: **3**
 
 ### Private
 
-True if the task is visible only to its owner; false if this is publicly visible task. [Required] [Default(false)] (Inherited from [Activities](General.Contacts.Activities.md))
+True if the task is visible only to its owner; false if this is publicly visible task. `Required` `Default(false)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -351,7 +351,7 @@ _Default Value_: **False**
 
 ### ReadOnly
 
-True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -360,7 +360,7 @@ _Default Value_: **False**
 
 ### ReceiverPersonName
 
-Copy of the name of the receiver at the time the activity was signed. [Filter(like)]
+Copy of the name of the receiver at the time the activity was signed. `Filter(like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -370,7 +370,7 @@ _Front-End Recalc Expressions:_
 `obj.ReceiverPerson.PartyName`
 ### ReferenceDate
 
-The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] (Inherited from [Documents](General.Documents.md))
+The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -379,7 +379,7 @@ _Default Value_: **CurrentDate**
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] (Inherited from [Documents](General.Documents.md))
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -387,7 +387,7 @@ _Supports Order By_: **False**
 
 ### ReleaseTime
 
-Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -403,7 +403,7 @@ _Supports Order By_: **False**
 
 ### StartTime
 
-Currently planned starting time of the task. [Required] [Default(Now)] [Filter(ge;le)] (Inherited from [Activities](General.Contacts.Activities.md))
+Currently planned starting time of the task. `Required` `Default(Now)` `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -412,7 +412,7 @@ _Default Value_: **CurrentDateTime**
 
 ### State
 
-The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentState](Applications.Service.ServiceActivities.md#state)**  
 Enumeration of document system states  
@@ -434,7 +434,7 @@ _Default Value_: **0**
 
 ### Subject
 
-Task primary subject (required). [Required] [Filter(eq;like)] (Inherited from [Activities](General.Contacts.Activities.md))
+Task primary subject (required). `Required` `Filter(eq;like)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -445,10 +445,10 @@ _Back-End Default Expression:_
 
 ### SystemType
 
-T=Task; C=Communication; M=Meeting. [Required] (Inherited from [Activities](General.Contacts.Activities.md))
+T=Task; C=Communication; M=Meeting. `Required` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **[SystemType](Applications.Service.ServiceActivities.md#systemtype)**  
-Allowed values for the [SystemType](General.Contacts.Activities.md#systemtype) data attribute  
+Allowed values for the `SystemType`(General.Contacts.Activities.md#systemtype) data attribute  
 _Allowed Values (General.Contacts.ActivitiesRepository.SystemType Enum Members)_  
 
 | Value | Description |
@@ -462,7 +462,7 @@ _Supports Order By_: **False**
 
 ### Void
 
-True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
 _Indexed_: **True**  
@@ -472,7 +472,7 @@ _Default Value_: **False**
 
 ### VoidReason
 
-Reason for voiding the document, entered by the user. [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -480,7 +480,7 @@ _Supports Order By_: **False**
 
 ### VoidTime
 
-Date/time when the document has become void. [ReadOnly] (Inherited from [Documents](General.Documents.md))
+Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -488,7 +488,7 @@ _Supports Order By_: **False**
 
 ### VoidUser
 
-The user who voided the document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -499,14 +499,14 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
-The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
@@ -514,28 +514,28 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### AssignedToUser
 
-The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ContactPerson
 
-The contact person, from the side of the Target Party. [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md))
+The contact person, from the side of the Target Party. `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
-The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 
-The receiver of the work. [Required] [Filter(multi eq)]
+The receiver of the work. `Required` `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -544,7 +544,7 @@ _Front-End Recalc Expressions:_
 `obj.ShipToCustomer.DetermineCustomerFromShipToCustomer( obj.EnterpriseCompany, obj.Customer)`
 ### DefaultServiceObject
 
-Default service object for materials and services lines. [Filter(multi eq)]
+Default service object for materials and services lines. `Filter(multi eq)`
 
 _Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -553,7 +553,7 @@ _Front-End Recalc Expressions:_
 `obj.Materials.Select( c => c.ServiceObject).Distinct( ).OnlyIfSingle( )`
 ### DocumentType
 
-The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
@@ -561,7 +561,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### EnterpriseCompany
 
-The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Indexed_: **True**  
@@ -569,28 +569,28 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
-The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
-The party which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LocationPartyContactMechanism
 
-The location where or the communication line used to conduct the work. [Filter(multi eq)]
+The location where or the communication line used to conduct the work. `Filter(multi eq)`
 
 _Type_: **[PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -599,7 +599,7 @@ _Front-End Recalc Expressions:_
 `obj.Customer.Party.DefaultContactMechanism`
 ### MasterDocument
 
-In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
@@ -607,14 +607,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### OwnerParty
 
-The party that owns the task. Initially this is the party that has created the task. [Required] [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md))
+The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
@@ -622,7 +622,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PrimeCauseDocument
 
-The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
@@ -630,21 +630,21 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ProjectTask
 
-The project task for which the work is performed. null when the activity is not related to a project task. [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md))
+The project task for which the work is performed. null when the activity is not related to a project task. `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReceiverPerson
 
-The id of the person from the customers company, that received and signed for the service. [Filter(multi eq)]
+The id of the person from the customers company, that received and signed for the service. `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsibleParty
 
-Who is responsible for executing the task. Initially this is the owner of the task. [Required] [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md))
+Who is responsible for executing the task. Initially this is the owner of the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
@@ -652,35 +652,35 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ResponsiblePerson
 
-The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReverseOfDocument
 
-The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Sequence
 
-The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceAgreement
 
-The service agreement under which the work was done. [Filter(multi eq)]
+The service agreement under which the work was done. `Filter(multi eq)`
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ShipToCustomer
 
-Specific customer location of the main customer that receives the work. [Filter(multi eq)]
+Specific customer location of the main customer that receives the work. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -689,7 +689,7 @@ _Front-End Recalc Expressions:_
 `obj.Customer.DetermineShipToCustomer( obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.ShipToCustomer)`
 ### Store
 
-The default store from which materials are taken. [Filter(multi eq)]
+The default store from which materials are taken. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -698,28 +698,28 @@ _Front-End Recalc Expressions:_
 `obj.Materials.Select( c => c.LineStore).Distinct( ).OnlyIfSingle( )`
 ### TargetParty
 
-External participant or target of the task. [Filter(multi eq)] (Inherited from [Activities](General.Contacts.Activities.md))
+External participant or target of the task. `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToCompanyDivision
 
-The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
 
-The party which should receive the document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
+The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
-The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -774,7 +774,7 @@ _Domain API Request_: **POST**
   * **completion**  
     How the sub-documents will be completed, if at all  
     _Type_: General.DocumentCompletion  
-    Determines how [Document](General.Documents.md) will be completed  
+    Determines how `Document`(General.Documents.md) will be completed  
     _Allowed Values (General.DocumentCompletion Enum Members)_  
 
     | Value | Description |
@@ -847,7 +847,7 @@ In some cases the objects in child collection of the document depend on values f
 
 ### GetAllParentDocuments
 
-Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.              (Inherited from [Documents](General.Documents.md))  
+Gets all parent documents, traversing the parent document chain by using the `Parent`(General.Documents.md#parent) property.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **Collection Of [Documents](General.Documents.md)**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **GET**  

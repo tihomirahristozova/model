@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#coveredbyguarantee">CoveredByGuarantee</a></td>
 <td>boolean</td>
-<td>True when the used material is covered by the guarantee. [Required] [Default(false)]</td>
+<td>True when the used material is covered by the guarantee. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#id">Id</a></td>
@@ -115,22 +115,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>Quantity of the product, that was used. [Unit: QuantityUnit] [Required]</td>
+<td>Quantity of the product, that was used. <code>Unit: QuantityUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
+<td>The equivalence of Quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,32 +147,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#document">Document</a></td>
 <td><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></td>
-<td>The <a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)]</td>
+<td>The <code>ServiceActivity</code>(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#linestore">LineStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]</td>
+<td>The store from which the product was taken. null = use the store from the header. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product, which was used as material. [Required] [Filter(multi eq)]</td>
+<td>The product, which was used as material. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Quantity. Initially is set to the default unit for the product. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a></td>
 <td><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></td>
-<td>The <a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>ServiceActivity</code>(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#serviceobject">ServiceObject</a></td>
 <td><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a> (nullable)</td>
-<td>The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]</td>
+<td>The service object for which the material is used. null means unkown object or N/A. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -189,13 +189,13 @@ Aggregate Root:<br>
 <tr>
 <td>ServiceActivity<br>AgreedMaterials</td>
 <td><a href="Applications.Service.ServiceActivityAgreedMaterials.html">ServiceActivityAgreedMaterials</a></td>
-<td>List of [ServiceActivity<br>AgreedMaterial](Applications.Service.ServiceActivity<br>AgreedMaterials.md) child objects, based on the [Applications.Service.ServiceActivity<br>AgreedMaterial.ServiceActivityMaterial](Applications.Service.ServiceActivity<br>AgreedMaterials.md#serviceactivitymaterial) back reference</td>
+<td>List of <code>ServiceActivity&lt;br /&gt;AgreedMaterial</code>(Applications.Service.ServiceActivity<br>AgreedMaterials.md) child objects, based on the <code>Applications.Service.ServiceActivity&lt;br /&gt;AgreedMaterial.ServiceActivityMaterial</code>(Applications.Service.ServiceActivity<br>AgreedMaterials.md#serviceactivitymaterial) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="coveredbyguarantee">CoveredByGuarantee</h3>
-<p>True when the used material is covered by the guarantee. [Required] [Default(false)]</p>
+<p>True when the used material is covered by the guarantee. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -206,7 +206,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -215,12 +215,12 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ServiceActivity.Materials.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the product, that was used. [Unit: QuantityUnit] [Required]</p>
+<p>Quantity of the product, that was used. <code>Unit: QuantityUnit</code> <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
+<p>The equivalence of Quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -229,7 +229,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -239,12 +239,12 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)]</p>
+<p>The <code>ServiceActivity</code>(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linestore">LineStore</h3>
-<p>The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]</p>
+<p>The store from which the product was taken. null = use the store from the header. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -252,22 +252,22 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ServiceActivity.Store</code></p>
 <h3 id="product">Product</h3>
-<p>The product, which was used as material. [Required] [Filter(multi eq)]</p>
+<p>The product, which was used as material. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Quantity. Initially is set to the default unit for the product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="serviceactivity">ServiceActivity</h3>
-<p>The <a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>ServiceActivity</code>(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
-<p>The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]</p>
+<p>The service object for which the material is used. null means unkown object or N/A. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>

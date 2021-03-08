@@ -114,17 +114,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. [Required] [Default(true)] [Filter(multi eq)]</td>
+<td>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#posterminalcode">PosTerminalCode</a></td>
 <td>string</td>
-<td>Unique (within the location) code of the POS terminal. [Required] [Filter(eq;like)]</td>
+<td>Unique (within the location) code of the POS terminal. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#posterminalname">PosTerminalName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. [Required] [Filter(multi eq;like)]</td>
+<td>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -141,12 +141,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#defaultfiscalprinterposdevice">DefaultFiscalPrinter<br>PosDevice</a></td>
 <td><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</td>
-<td>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] [Introduced in version 20.1]</td>
+<td>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#poslocation">PosLocation</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a></td>
-<td>The POS location, where the terminal is located. [Required] [Filter(multi eq)]</td>
+<td>The POS location, where the terminal is located. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Default Search Member:<br>
 <tr>
 <td>Devices</td>
 <td><a href="Crm.Pos.Devices.html">Devices</a></td>
-<td>List of <a href="Crm.Pos.Devices.html">Device</a> child objects, based on the <a href="Crm.Pos.Devices.html#posterminal">Crm.Pos.Device.PosTerminal</a> back reference</td>
+<td>List of <code>Device</code>(Crm.Pos.Devices.md) child objects, based on the <code>Crm.Pos.Device.PosTerminal</code>(Crm.Pos.Devices.md#posterminal) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -174,28 +174,28 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. [Required] [Default(true)] [Filter(multi eq)]</p>
+<p>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="posterminalcode">PosTerminalCode</h3>
-<p>Unique (within the location) code of the POS terminal. [Required] [Filter(eq;like)]</p>
+<p>Unique (within the location) code of the POS terminal. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="posterminalname">PosTerminalName</h3>
-<p>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. [Required] [Filter(multi eq;like)]</p>
+<p>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultfiscalprinterposdevice">DefaultFiscalPrinterPosDevice</h3>
-<p>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] [Introduced in version 20.1]</p>
+<p>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="poslocation">PosLocation</h3>
-<p>The POS location, where the terminal is located. [Required] [Filter(multi eq)]</p>
+<p>The POS location, where the terminal is located. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

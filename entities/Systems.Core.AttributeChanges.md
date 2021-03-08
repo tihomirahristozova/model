@@ -25,21 +25,21 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string | The attribute name. [Required] [Filter(eq)] [Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name] 
-| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (nullable) | The new value. [Filter(eq;like)] [Inherited from Sys_Attribute_<br />Changes_Table.New_Value] 
+| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string | The attribute name. `Required` `Filter(eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name` 
+| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (nullable) | The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [ObjectChanges](Systems.Core.ObjectChanges.md) | The object change. [Required] [Filter(multi eq)] [Inherited from Sys_Attribute_<br />Changes_Table.Object_Change_Id] [Owner] |
+| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [ObjectChanges](Systems.Core.ObjectChanges.md) | The object change. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Object_Change_Id` `Owner` |
 
 
 ## Attribute Details
 
 ### AttributeName
 
-The attribute name. [Required] [Filter(eq)] [Inherited from Sys_Attribute_Changes_Table.Attribute_Name]
+The attribute name. `Required` `Filter(eq)` `Inherited from Sys_Attribute_Changes_Table.Attribute_Name`
 
 _Type_: **string**  
 _Inherited From_: **Sys_Attribute_Changes_Table.Attribute_Name**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### NewValue
 
-The new value. [Filter(eq;like)] [Inherited from Sys_Attribute_Changes_Table.New_Value]
+The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_Changes_Table.New_Value`
 
 _Type_: **string (nullable)**  
 _Inherited From_: **Sys_Attribute_Changes_Table.New_Value**  
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### ObjectChange
 
-The object change. [Required] [Filter(multi eq)] [Inherited from Sys_Attribute_Changes_Table.Object_Change_Id] [Owner]
+The object change. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_Changes_Table.Object_Change_Id` `Owner`
 
 _Type_: **[ObjectChanges](Systems.Core.ObjectChanges.md)**  
 _Inherited From_: **Sys_Attribute_Changes_Table.Object_Change_Id**  

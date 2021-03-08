@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Table Gen_Product_Supply | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Table Gen_Product_Supply | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="table-gen_product_supply">Table Gen_Product_Supply</h1>
+
+<p>Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply</p>
+<h1 id="columns">Columns</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product_Supply_Id</td>
+<td><code>Guid</code></td>
+<td><code>PK</code>, Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td>Buyer_Name</td>
+<td><code>String</code></td>
+<td></td>
+<td>The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.</td>
+</tr>
+<tr>
+<td>Is_Active</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>True if this product supply is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td>Is_Default</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td>Manufacturing_Policy</td>
+<td><code>ManufacturingPolicy</code></td>
+<td>Allowed: <code>ATO</code>, <code>MTO</code>, <code>MTS</code>, <code>ETO</code></td>
+<td>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. <code>Required</code> <code>Default(&quot;MTS&quot;)</code></td>
+</tr>
+<tr>
+<td>Order_Lot_Sizing_Method</td>
+<td><code>OrderLotSizingMethod</code></td>
+<td>Allowed: <code>EOQ</code>, <code>FOQ</code>, <code>LFL</code>, <code>LFP</code>, <code>ROP</code>, <code>ROT</code></td>
+<td>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. <code>Required</code> <code>Default(&quot;ROP&quot;)</code></td>
+</tr>
+<tr>
+<td>Order_Multiple</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>True if the order qty should be multiple of lot size when buying or making. <code>Required</code> <code>Default(false)</code></td>
+</tr>
+<tr>
+<td>Order_Period_Planning_Days</td>
+<td><code>Int32?</code></td>
+<td></td>
+<td>For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.</td>
+</tr>
+<tr>
+<td>Order_Period_Start_Date</td>
+<td><code>DateTime?</code></td>
+<td></td>
+<td>Start date of the first period under fixed period replenishment system. null - not yet specified.</td>
+</tr>
+<tr>
+<td>Order_Policy</td>
+<td><code>OrderPolicy</code></td>
+<td>Allowed: <code>MRP</code>, <code>OPS</code>, <code>OPT</code>, <code>PRS</code></td>
+<td>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. <code>Required</code> <code>Default(&quot;OPS&quot;)</code></td>
+</tr>
+<tr>
+<td>Planning_Annual_Carrying_Cost_Percent</td>
+<td><code>Decimal?</code></td>
+<td></td>
+<td>The expected carrying cost as percentage of inventory cost. null means unknown.</td>
+</tr>
+<tr>
+<td>Planning_Horizon_Days</td>
+<td><code>Int32</code></td>
+<td></td>
+<td>Number of days in the future for which to plan the demand and supply. <code>Required</code> <code>Default(0)</code></td>
+</tr>
+<tr>
+<td>Planning_Lead_Time_Days</td>
+<td><code>Int32</code></td>
+<td></td>
+<td>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. <code>Required</code> <code>Default(0)</code></td>
+</tr>
+<tr>
+<td>Planning_Order_Cycle_Days</td>
+<td><code>Int32?</code></td>
+<td></td>
+<td>Number of days in one period under fixed period replenishment system. null - not yet specified.</td>
+</tr>
+<tr>
+<td>Planning_Time_Fence_Days</td>
+<td><code>Int32</code></td>
+<td></td>
+<td>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. <code>Required</code> <code>Default(1)</code></td>
+</tr>
+<tr>
+<td>Procurement_Type</td>
+<td><code>ProcurementType</code></td>
+<td>Allowed: <code>B</code>, <code>M</code>, <code>T</code></td>
+<td>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. <code>Required</code> <code>Default(&quot;B&quot;)</code></td>
+</tr>
+<tr>
+<td>Supply_Schema_Id</td>
+<td><code>Guid?</code></td>
+<td></td>
+<td>The supply schema to use for the distribution of the product among warehouses. <code>Filter(multi eq)</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Gen_Product_Supply.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

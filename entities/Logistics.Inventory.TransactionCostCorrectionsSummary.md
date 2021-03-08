@@ -25,24 +25,24 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#basecostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)] 
-| [CostCorrectionAmount](Logistics.Inventory.TransactionCostCorrectionsSummary.md#costcorrectionamount) | [Amount](../data-types.md#amount) | The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)] 
-| [ProductCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#productcostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)] 
-| [StoreCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#storecostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)] 
+| [BaseCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#basecostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Base currency. `Currency: TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)` 
+| [CostCorrectionAmount](Logistics.Inventory.TransactionCostCorrectionsSummary.md#costcorrectionamount) | [Amount](../data-types.md#amount) | The cost correction in the original currency of the store transaction. `Currency: TransactionObj.DocumentCurrency` `Required` `Filter(eq;ge;le)` 
+| [ProductCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#productcostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Products currency. `Currency: TransactionLine.Product.CostingCurrency` `Required` `Filter(eq;ge;le)` 
+| [StoreCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#storecostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Stores currency. `Currency: TransactionObj.Store.Currency` `Required` `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Inv_Transaction_<br />Lines_Table.Transaction_Line_Id] |
-| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_<br />Lines_Table.Transaction_Id] [Owner] |
+| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Transaction_Line_Id` |
+| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. `Required` `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Transaction_Id` `Owner` |
 
 
 ## Attribute Details
 
 ### BaseCostAdjustment
 
-The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]
+The cost correction in Base currency. `Currency: TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)`
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### CostCorrectionAmount
 
-The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)]
+The cost correction in the original currency of the store transaction. `Currency: TransactionObj.DocumentCurrency` `Required` `Filter(eq;ge;le)`
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### ProductCostAdjustment
 
-The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)]
+The cost correction in Products currency. `Currency: TransactionLine.Product.CostingCurrency` `Required` `Filter(eq;ge;le)`
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### StoreCostAdjustment
 
-The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)]
+The cost correction in Stores currency. `Currency: TransactionObj.Store.Currency` `Required` `Filter(eq;ge;le)`
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -77,7 +77,7 @@ _Supports Order By_: **False**
 
 ### TransactionLine
 
-Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Inv_Transaction_Lines_Table.Transaction_Line_Id]
+Unique transaction line id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Transaction_Line_Id`
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Inherited From_: **Inv_Transaction_Lines_Table.Transaction_Line_Id**  
@@ -86,7 +86,7 @@ _Default Value_: **NewGuid**
 
 ### TransactionObj
 
-The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_Lines_Table.Transaction_Id] [Owner]
+The transaction to which the transaction line belongs. `Required` `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Transaction_Id` `Owner`
 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
 _Inherited From_: **Inv_Transaction_Lines_Table.Transaction_Id**  

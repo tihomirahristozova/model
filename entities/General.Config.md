@@ -25,11 +25,11 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Description](General.Config.md#description) | string (nullable) | The description of this Config. 
 | [Id](General.Config.md#id) | guid |  
-| [IsActive](General.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] [Introduced in version 19.1] 
-| [KeyPath](General.Config.md#keypath) | string | Full path of the configuration option. [Required] [Filter(eq)] [ORD] 
+| [IsActive](General.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
+| [KeyPath](General.Config.md#keypath) | string | Full path of the configuration option. `Required` `Filter(eq)` `ORD` 
 | [KeyValue](General.Config.md#keyvalue) | string (nullable) | The value of the configuration option. 
-| [UserLogin](General.Config.md#userlogin) | string (nullable) | If not null, the configuration option is specific to the user. [Filter(eq)] 
-| [UserMachine](General.Config.md#usermachine) | string (nullable) | If not null, the configuration option is specific to the machine. [Filter(eq)] 
+| [UserLogin](General.Config.md#userlogin) | string (nullable) | If not null, the configuration option is specific to the user. `Filter(eq)` 
+| [UserMachine](General.Config.md#usermachine) | string (nullable) | If not null, the configuration option is specific to the machine. `Filter(eq)` 
 
 
 ## Attribute Details
@@ -51,7 +51,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] [Introduced in version 19.1]
+Indicates whether this config entry is active. Inactive config entries are not taken into account. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -60,7 +60,7 @@ _Default Value_: **True**
 
 ### KeyPath
 
-Full path of the configuration option. [Required] [Filter(eq)] [ORD]
+Full path of the configuration option. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -77,7 +77,7 @@ _Supports Order By_: **False**
 
 ### UserLogin
 
-If not null, the configuration option is specific to the user. [Filter(eq)]
+If not null, the configuration option is specific to the user. `Filter(eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 ### UserMachine
 
-If not null, the configuration option is specific to the machine. [Filter(eq)]
+If not null, the configuration option is specific to the machine. `Filter(eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  

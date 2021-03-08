@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ObjectChanges.html#changetype">ChangeType</a></td>
 <td><a href="Systems.Core.ObjectChanges.html#changetype">ChangeType</a></td>
-<td>Type of change - Create, Update or Delete. [Required]</td>
+<td>Type of change - Create, Update or Delete. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectChanges.html#entityitemid">EntityItemId</a></td>
 <td>guid</td>
-<td>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)]</td>
+<td>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectChanges.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ObjectChanges.html#repositoryname">RepositoryName</a></td>
 <td>string</td>
-<td>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]</td>
+<td>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,20 +137,20 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ObjectChanges.html#objectchangeset">ObjectChangeset</a></td>
 <td><a href="Systems.Core.ObjectChangesets.html">ObjectChangesets</a></td>
-<td>The changeset containing this change. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The changeset containing this change. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectChanges.html#rootobject">RootObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)]</td>
+<td>The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="changetype">ChangeType</h3>
-<p>Type of change - Create, Update or Delete. [Required]</p>
+<p>Type of change - Create, Update or Delete. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectChanges.html#changetype">ChangeType</a></strong><br>
-Allowed values for the <a href="Systems.Core.ObjectChanges.html#changetype">ChangeType</a> data attribute<br>
+Allowed values for the <code>ChangeType</code>(Systems.Core.ObjectChanges.md#changetype) data attribute<br>
 <em>Allowed Values (Systems.Core.ObjectChangesRepository.ChangeType Enum Members)</em></p>
 <table>
 <thead>
@@ -177,7 +177,7 @@ Allowed values for the <a href="Systems.Core.ObjectChanges.html#changetype">Chan
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
-<p>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)]</p>
+<p>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -187,18 +187,18 @@ Allowed values for the <a href="Systems.Core.ObjectChanges.html#changetype">Chan
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="repositoryname">RepositoryName</h3>
-<p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]</p>
+<p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="objectchangeset">ObjectChangeset</h3>
-<p>The changeset containing this change. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The changeset containing this change. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectChangesets.html">ObjectChangesets</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rootobject">RootObject</h3>
-<p>The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)]</p>
+<p>The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

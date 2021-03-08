@@ -25,28 +25,28 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](General.Contacts.ActivityTimeIntervals.md#date) | date | The date on which the work was performed. [Required] [Filter(eq;ge;le)] 
-| [EndTime](General.Contacts.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'. [Required] [Filter(ge;le)] 
-| [ExecutionCompletePercent](General.Contacts.ActivityTimeIntervals.md#executioncompletepercent) | decimal | Percent of task completed. [Required] [Default(0)] [Filter(ge;le)] 
+| [Date](General.Contacts.ActivityTimeIntervals.md#date) | date | The date on which the work was performed. `Required` `Filter(eq;ge;le)` 
+| [EndTime](General.Contacts.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
+| [ExecutionCompletePercent](General.Contacts.ActivityTimeIntervals.md#executioncompletepercent) | decimal | Percent of task completed. `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](General.Contacts.ActivityTimeIntervals.md#id) | guid |  
 | [Notes](General.Contacts.ActivityTimeIntervals.md#notes) | string (nullable) | Notes for the time interval. 
-| [StartTime](General.Contacts.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'. [Required] [Filter(ge;le)] 
+| [StartTime](General.Contacts.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
 | [State](General.Contacts.ActivityTimeIntervals.md#state) | [DocumentState](General.Contacts.ActivityTimeIntervals.md#state) (nullable) | The state of the primary activity in the moment the time interval was created. null when the state is unknown. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityTimeIntervals.md#activity) | [Activities](General.Contacts.Activities.md) | The activity for which the time interval is recorded. [Required] [Filter(multi eq)] |
-| [Party](General.Contacts.ActivityTimeIntervals.md#party) | [Parties](General.Contacts.Parties.md) | The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner] |
-| [UserStatus](General.Contacts.ActivityTimeIntervals.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)] |
+| [Activity](General.Contacts.ActivityTimeIntervals.md#activity) | [Activities](General.Contacts.Activities.md) | The activity for which the time interval is recorded. `Required` `Filter(multi eq)` |
+| [Party](General.Contacts.ActivityTimeIntervals.md#party) | [Parties](General.Contacts.Parties.md) | The party for which the time interval is recorded. `Required` `Filter(multi eq)` `Owner` |
+| [UserStatus](General.Contacts.ActivityTimeIntervals.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Date
 
-The date on which the work was performed. [Required] [Filter(eq;ge;le)]
+The date on which the work was performed. `Required` `Filter(eq;ge;le)`
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -54,7 +54,7 @@ _Supports Order By_: **False**
 
 ### EndTime
 
-The ending time of the time interval within 'Date'. [Required] [Filter(ge;le)]
+The ending time of the time interval within 'Date'. `Required` `Filter(ge;le)`
 
 _Type_: **time**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -62,7 +62,7 @@ _Supports Order By_: **False**
 
 ### ExecutionCompletePercent
 
-Percent of task completed. [Required] [Default(0)] [Filter(ge;le)]
+Percent of task completed. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **decimal**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### StartTime
 
-The starting time of the time interval within 'Date'. [Required] [Filter(ge;le)]
+The starting time of the time interval within 'Date'. `Required` `Filter(ge;le)`
 
 _Type_: **time**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -118,21 +118,21 @@ _Supports Order By_: **False**
 
 ### Activity
 
-The activity for which the time interval is recorded. [Required] [Filter(multi eq)]
+The activity for which the time interval is recorded. `Required` `Filter(multi eq)`
 
 _Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner]
+The party for which the time interval is recorded. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
-The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)]
+The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. `Filter(multi eq)`
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

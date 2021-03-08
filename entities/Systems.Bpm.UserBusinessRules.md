@@ -26,32 +26,32 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.UserBusinessRules.md#code) | string | The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD] 
+| [Code](Systems.Bpm.UserBusinessRules.md#code) | string | The unique code of the UserBusinessRule. `Required` `Filter(eq;like)` `ORD` 
 | [Icon](Systems.Bpm.UserBusinessRules.md#icon) | byte[] (nullable) | Visual icon of the rule in .PNG format. 
 | [Id](Systems.Bpm.UserBusinessRules.md#id) | guid |  
-| [IsActive](Systems.Bpm.UserBusinessRules.md#isactive) | boolean | Specifies whether the rule is activated. [Required] [Default(false)] [Filter(eq)] 
-| [Layer](Systems.Bpm.UserBusinessRules.md#layer) | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). [Required] [Default("BKE")] [Filter(multi eq)] 
-| [Name](Systems.Bpm.UserBusinessRules.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this UserBusinessRule. [Required] [Filter(like)] 
+| [IsActive](Systems.Bpm.UserBusinessRules.md#isactive) | boolean | Specifies whether the rule is activated. `Required` `Default(false)` `Filter(eq)` 
+| [Layer](Systems.Bpm.UserBusinessRules.md#layer) | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). `Required` `Default("BKE")` `Filter(multi eq)` 
+| [Name](Systems.Bpm.UserBusinessRules.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this UserBusinessRule. `Required` `Filter(like)` 
 | [Notes](Systems.Bpm.UserBusinessRules.md#notes) | string (nullable) | Notes for this UserBusinessRule. 
-| [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string | The name of the repository, for which this business rule is defined. [Required] [Filter(eq;like)] 
-| [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | The programming language used to define the rule actions. [Required] [Default("Integrated")] 
+| [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string | The name of the repository, for which this business rule is defined. `Required` `Filter(eq;like)` 
+| [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | The programming language used to define the rule actions. `Required` `Default("Integrated")` 
 | [ScriptText](Systems.Bpm.UserBusinessRules.md#scripttext) | string (nullable) | The program code used to define the rule actions. 
-| [UserStartable](Systems.Bpm.UserBusinessRules.md#userstartable) | boolean (nullable) | Specifies, that the rule can be manually started by the user. [Default(false)] [Filter(eq)] 
+| [UserStartable](Systems.Bpm.UserBusinessRules.md#userstartable) | boolean (nullable) | Specifies, that the rule can be manually started by the user. `Default(false)` `Filter(eq)` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Actions | [UserBusinessRuleActions](Systems.Bpm.UserBusinessRuleActions.md) | List of [UserBusinessRuleAction](Systems.Bpm.UserBusinessRuleActions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleAction.UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) back reference 
-| Conditions | [UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md) | List of [UserBusinessRule<br />Condition](Systems.Bpm.UserBusinessRuleConditions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleCondition.UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) back reference 
-| Events | [UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md) | List of [UserBusinessRuleEvent](Systems.Bpm.UserBusinessRuleEvents.md) child objects, based on the [Systems.Bpm.UserBusinessRuleEvent.UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) back reference 
+| Actions | [UserBusinessRuleActions](Systems.Bpm.UserBusinessRuleActions.md) | List of `UserBusinessRuleAction`(Systems.Bpm.UserBusinessRuleActions.md) child objects, based on the `Systems.Bpm.UserBusinessRuleAction.UserBusinessRule`(Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) back reference 
+| Conditions | [UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md) | List of `UserBusinessRule<br />Condition`(Systems.Bpm.UserBusinessRuleConditions.md) child objects, based on the `Systems.Bpm.UserBusinessRuleCondition.UserBusinessRule`(Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) back reference 
+| Events | [UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md) | List of `UserBusinessRuleEvent`(Systems.Bpm.UserBusinessRuleEvents.md) child objects, based on the `Systems.Bpm.UserBusinessRuleEvent.UserBusinessRule`(Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) back reference 
 
 
 ## Attribute Details
 
 ### Code
 
-The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD]
+The unique code of the UserBusinessRule. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the rule is activated. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the rule is activated. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -84,10 +84,10 @@ _Default Value_: **False**
 
 ### Layer
 
-Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). [Required] [Default("BKE")] [Filter(multi eq)]
+Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). `Required` `Default("BKE")` `Filter(multi eq)`
 
 _Type_: **[Layer](Systems.Bpm.UserBusinessRules.md#layer)**  
-Allowed values for the [Layer](Systems.Bpm.UserBusinessRules.md#layer) data attribute  
+Allowed values for the `Layer`(Systems.Bpm.UserBusinessRules.md#layer) data attribute  
 _Allowed Values (Systems.Bpm.UserBusinessRulesRepository.Layer Enum Members)_  
 
 | Value | Description |
@@ -102,7 +102,7 @@ _Default Value_: **BackEnd**
 
 ### Name
 
-The name of this UserBusinessRule. [Required] [Filter(like)]
+The name of this UserBusinessRule. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -118,7 +118,7 @@ _Supports Order By_: **False**
 
 ### RepositoryName
 
-The name of the repository, for which this business rule is defined. [Required] [Filter(eq;like)]
+The name of the repository, for which this business rule is defined. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -126,10 +126,10 @@ _Supports Order By_: **False**
 
 ### ScriptLanguage
 
-The programming language used to define the rule actions. [Required] [Default("Integrated")]
+The programming language used to define the rule actions. `Required` `Default("Integrated")`
 
 _Type_: **[ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage)**  
-Allowed values for the [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) data attribute  
+Allowed values for the `ScriptLanguage`(Systems.Bpm.UserBusinessRules.md#scriptlanguage) data attribute  
 _Allowed Values (Systems.Bpm.UserBusinessRulesRepository.ScriptLanguage Enum Members)_  
 
 | Value | Description |
@@ -151,7 +151,7 @@ _Supports Order By_: **False**
 
 ### UserStartable
 
-Specifies, that the rule can be manually started by the user. [Default(false)] [Filter(eq)]
+Specifies, that the rule can be manually started by the user. `Default(false)` `Filter(eq)`
 
 _Type_: **boolean (nullable)**  
 _Supported Filters_: **Equals**  

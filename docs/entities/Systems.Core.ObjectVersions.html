@@ -110,7 +110,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#objectcontents">ObjectContents</a></td>
 <td>byte[]</td>
-<td>The compressed contents of the object. [Required]</td>
+<td>The compressed contents of the object. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#serverversion">ServerVersion</a></td>
@@ -120,17 +120,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#version">Version</a></td>
 <td>int32</td>
-<td>The version number of the version, stored in the current row, starting from 1. [Required] [Filter(multi eq;ge;le)]</td>
+<td>The version number of the version, stored in the current row, starting from 1. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#versiontime">VersionTime</a></td>
 <td>datetime</td>
-<td>The timestamp when the version was saved. [Required] [Filter(ge;le)]</td>
+<td>The timestamp when the version was saved. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a></td>
 <td><a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a></td>
-<td>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. [Required]</td>
+<td>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,12 +147,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#object">Object</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The object, for which a version is stored. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, which saved the version. [Required] [Filter(multi eq)]</td>
+<td>The user, which saved the version. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="objectcontents">ObjectContents</h3>
-<p>The compressed contents of the object. [Required]</p>
+<p>The compressed contents of the object. <code>Required</code></p>
 <p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -173,19 +173,19 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="version">Version</h3>
-<p>The version number of the version, stored in the current row, starting from 1. [Required] [Filter(multi eq;ge;le)]</p>
+<p>The version number of the version, stored in the current row, starting from 1. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="versiontime">VersionTime</h3>
-<p>The timestamp when the version was saved. [Required] [Filter(ge;le)]</p>
+<p>The timestamp when the version was saved. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="versiontype">VersionType</h3>
-<p>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. [Required]</p>
+<p>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a></strong><br>
-Allowed values for the <a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a> data attribute<br>
+Allowed values for the <code>VersionType</code>(Systems.Core.ObjectVersions.md#versiontype) data attribute<br>
 <em>Allowed Values (Systems.Core.ObjectVersionsRepository.VersionType Enum Members)</em></p>
 <table>
 <thead>
@@ -209,12 +209,12 @@ Allowed values for the <a href="Systems.Core.ObjectVersions.html#versiontype">Ve
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="object">Object</h3>
-<p>The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The object, for which a version is stored. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<p>The user, which saved the version. [Required] [Filter(multi eq)]</p>
+<p>The user, which saved the version. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

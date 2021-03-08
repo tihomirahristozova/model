@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectTaskParticipants.html#notifyonstatuschange">NotifyOnStatusChange</a></td>
 <td>boolean</td>
-<td>Specifies whether the participant should be notified on task status changes. [Required] [Default(true)]</td>
+<td>Specifies whether the participant should be notified on task status changes. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskParticipants.html#workloadpercent">WorkLoadPercent</a></td>
 <td>decimal</td>
-<td>The planned work load (in percents) of the participant for this task. [Required] [Default(1)] [Filter(eq)]</td>
+<td>The planned work load (in percents) of the participant for this task. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,12 +137,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectTaskParticipants.html#participantperson">ParticipantPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>The person, who is planned to participate in the project task. [Required] [Filter(multi eq)]</td>
+<td>The person, who is planned to participate in the project task. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskParticipants.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.ProjectTasks.html">ProjectTasks</a></td>
-<td>The project task for which the participant is planned. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The project task for which the participant is planned. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,24 +158,24 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notifyonstatuschange">NotifyOnStatusChange</h3>
-<p>Specifies whether the participant should be notified on task status changes. [Required] [Default(true)]</p>
+<p>Specifies whether the participant should be notified on task status changes. <code>Required</code> <code>Default(true)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="workloadpercent">WorkLoadPercent</h3>
-<p>The planned work load (in percents) of the participant for this task. [Required] [Default(1)] [Filter(eq)]</p>
+<p>The planned work load (in percents) of the participant for this task. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="participantperson">ParticipantPerson</h3>
-<p>The person, who is planned to participate in the project task. [Required] [Filter(multi eq)]</p>
+<p>The person, who is planned to participate in the project task. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The project task for which the participant is planned. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The project task for which the participant is planned. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -26,23 +26,23 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Wms.WarehouseRequisitionLines.md#id) | guid |  
-| [LineNo](Logistics.Wms.WarehouseRequisitionLines.md#lineno) | int32 | The unique, consecutive line number within the requisition. [Required] 
+| [LineNo](Logistics.Wms.WarehouseRequisitionLines.md#lineno) | int32 | The unique, consecutive line number within the requisition. `Required` 
 | [Notes](Logistics.Wms.WarehouseRequisitionLines.md#notes) | string (nullable) | Notes for this WarehouseRequisitionLine. 
 | [ParentLineNo](Logistics.Wms.WarehouseRequisitionLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
-| [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] 
-| [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | decimal | Quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33] 
+| [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
+| [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | decimal | Quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Wms.WarehouseRequisitionLines.md#document) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] |
-| [Lot](Logistics.Wms.WarehouseRequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The requested lot. null means that any lot can be used or the product does not use lots at all. [Filter(multi eq)] |
-| [ParentDocument](Logistics.Wms.WarehouseRequisitionLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
-| [Product](Logistics.Wms.WarehouseRequisitionLines.md#product) | [Products](General.Products.Products.md) | The requested product. [Required] [Filter(multi eq)] |
-| [QuantityUnit](Logistics.Wms.WarehouseRequisitionLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
-| [SerialNumber](Logistics.Wms.WarehouseRequisitionLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. [Filter(multi eq)] |
-| [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Document](Logistics.Wms.WarehouseRequisitionLines.md#document) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The `WarehouseRequisition`(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` |
+| [Lot](Logistics.Wms.WarehouseRequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The requested lot. null means that any lot can be used or the product does not use lots at all. `Filter(multi eq)` |
+| [ParentDocument](Logistics.Wms.WarehouseRequisitionLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
+| [Product](Logistics.Wms.WarehouseRequisitionLines.md#product) | [Products](General.Products.Products.md) | The requested product. `Required` `Filter(multi eq)` |
+| [QuantityUnit](Logistics.Wms.WarehouseRequisitionLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
+| [SerialNumber](Logistics.Wms.WarehouseRequisitionLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. `Filter(multi eq)` |
+| [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The `WarehouseRequisition`(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-The unique, consecutive line number within the requisition. [Required]
+The unique, consecutive line number within the requisition. `Required`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)]
+The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 
 ### QuantityBase
 
-Quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]
+Quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -104,7 +104,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)]
+The `WarehouseRequisition`(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
 _Indexed_: **True**  
@@ -112,42 +112,42 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Lot
 
-The requested lot. null means that any lot can be used or the product does not use lots at all. [Filter(multi eq)]
+The requested lot. null means that any lot can be used or the product does not use lots at all. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
 
-The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
+The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-The requested product. [Required] [Filter(multi eq)]
+The requested product. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-The measurement unit of Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
-The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. [Filter(multi eq)]
+The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseRequisition
 
-The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
+The `WarehouseRequisition`(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
 _Indexed_: **True**  

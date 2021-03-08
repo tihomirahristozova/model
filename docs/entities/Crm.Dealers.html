@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Dealers.html#fromdate">FromDate</a></td>
 <td>datetime (nullable)</td>
-<td>Start of the dealer relationship. [Default(Today)] [Filter(ge;le)]</td>
+<td>Start of the dealer relationship. <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Dealers.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Dealers.html#thrudate">ThruDate</a></td>
 <td>datetime (nullable)</td>
-<td>Termination date of the dealership. null for active dealers. [Filter(ge;le)]</td>
+<td>Termination date of the dealership. null for active dealers. <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,18 +137,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Dealers.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company for which this dealer is recorded. [Filter(multi eq)]</td>
+<td>The enterprise company for which this dealer is recorded. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Dealers.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The base party record of the dealer. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The base party record of the dealer. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>Start of the dealer relationship. [Default(Today)] [Filter(ge;le)]</p>
+<p>Start of the dealer relationship. <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -164,17 +164,17 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>Termination date of the dealership. null for active dealers. [Filter(ge;le)]</p>
+<p>Termination date of the dealership. null for active dealers. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which this dealer is recorded. [Filter(multi eq)]</p>
+<p>The enterprise company for which this dealer is recorded. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
-<p>The base party record of the dealer. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The base party record of the dealer. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

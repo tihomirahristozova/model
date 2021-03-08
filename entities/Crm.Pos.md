@@ -1,8 +1,7 @@
----
+﻿---
 uid: Crm.Pos
 ---
 # Crm.Pos Namespace
-
 
 ## Entities
 - [Devices](Crm.Pos.Devices.md)  
@@ -12,4 +11,6 @@ uid: Crm.Pos
 - [Roles](Crm.Pos.Roles.md)  
 - [Sequences](Crm.Pos.Sequences.md)  
 - [Terminals](Crm.Pos.Terminals.md)  
+
+rminals.md)  
 

@@ -32,8 +32,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [JointControllerParty](Applications.PersonalData.JointControllers.md#jointcontrollerparty) | [Parties](General.Contacts.Parties.md) | The party, controlling the process. [Required] [Filter(multi eq)] |
-| [PersonalDataProcess](Applications.PersonalData.JointControllers.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner] |
+| [JointControllerParty](Applications.PersonalData.JointControllers.md#jointcontrollerparty) | [Parties](General.Contacts.Parties.md) | The party, controlling the process. `Required` `Filter(multi eq)` |
+| [PersonalDataProcess](Applications.PersonalData.JointControllers.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, which is managed jointly. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -58,14 +58,14 @@ _Supports Order By_: **False**
 
 ### JointControllerParty
 
-The party, controlling the process. [Required] [Filter(multi eq)]
+The party, controlling the process. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PersonalDataProcess
 
-The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner]
+The process, which is managed jointly. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

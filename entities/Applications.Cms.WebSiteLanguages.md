@@ -26,15 +26,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Cms.WebSiteLanguages.md#id) | guid |  
-| [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. [Required] [Default(false)] 
-| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string | Two letter ISO language code. Sub-tags are currently not supported. [Required] 
+| [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. `Required` `Default(false)` 
+| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string | Two letter ISO language code. Sub-tags are currently not supported. `Required` 
 | [Notes](Applications.Cms.WebSiteLanguages.md#notes) | string (nullable) | Notes for this WebSiteLanguage. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WebSite](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner] |
+| [WebSite](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site, for which the language is specified. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the support for the language is activated and should be published on the web. [Required] [Default(false)]
+Specifies whether the support for the language is activated and should be published on the web. `Required` `Default(false)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -57,7 +57,7 @@ _Default Value_: **False**
 
 ### LanguageCode
 
-Two letter ISO language code. Sub-tags are currently not supported. [Required]
+Two letter ISO language code. Sub-tags are currently not supported. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### WebSite
 
-The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner]
+The web site, for which the language is specified. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

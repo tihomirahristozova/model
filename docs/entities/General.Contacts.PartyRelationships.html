@@ -105,7 +105,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Contacts.PartyRelationships.html#fromdate">FromDate</a></td>
 <td>datetime (nullable)</td>
-<td>The starting date of the relationship. null means the date is the begining of the time. [Filter(ge;le)]</td>
+<td>The starting date of the relationship. null means the date is the begining of the time. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyRelationships.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Contacts.PartyRelationships.html#todate">ToDate</a></td>
 <td>datetime (nullable)</td>
-<td>The ending date of the relationship. null means the relationship is still active. [Filter(ge;le)]</td>
+<td>The ending date of the relationship. null means the relationship is still active. <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,23 +137,23 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Contacts.PartyRelationships.html#fromparty">FromParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The first party in the relationship. [Required] [Filter(multi eq)]</td>
+<td>The first party in the relationship. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyRelationships.html#relationshiptype">RelationshipType</a></td>
 <td><a href="General.Contacts.PartyRelationshipTypes.html">PartyRelationshipTypes</a></td>
-<td>The type of the relationship. [Required] [Filter(multi eq)]</td>
+<td>The type of the relationship. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyRelationships.html#toparty">ToParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The second party in the relationship. [Required] [Filter(multi eq)]</td>
+<td>The second party in the relationship. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>The starting date of the relationship. null means the date is the begining of the time. [Filter(ge;le)]</p>
+<p>The starting date of the relationship. null means the date is the begining of the time. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -168,21 +168,21 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>The ending date of the relationship. null means the relationship is still active. [Filter(ge;le)]</p>
+<p>The ending date of the relationship. null means the relationship is still active. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="fromparty">FromParty</h3>
-<p>The first party in the relationship. [Required] [Filter(multi eq)]</p>
+<p>The first party in the relationship. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="relationshiptype">RelationshipType</h3>
-<p>The type of the relationship. [Required] [Filter(multi eq)]</p>
+<p>The type of the relationship. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.PartyRelationshipTypes.html">PartyRelationshipTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="toparty">ToParty</h3>
-<p>The second party in the relationship. [Required] [Filter(multi eq)]</p>
+<p>The second party in the relationship. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

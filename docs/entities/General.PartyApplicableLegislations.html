@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a></td>
 <td><a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a></td>
-<td>A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD]</td>
+<td>A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.PartyApplicableLegislations.html#id">Id</a></td>
@@ -115,7 +115,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.PartyApplicableLegislations.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this PartyApplicableLegislation. [Filter(like)]</td>
+<td>Notes for this PartyApplicableLegislation. <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,15 +132,15 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.PartyApplicableLegislations.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The <a href="General.Contacts.Parties.html">Party</a> to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Party</code>(General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicablelegislation">ApplicableLegislation</h3>
-<p>A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD]</p>
+<p>A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong><a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a></strong><br>
-Allowed values for the <a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a> data attribute<br>
+Allowed values for the <code>ApplicableLegislation</code>(General.PartyApplicableLegislations.md#applicablelegislation) data attribute<br>
 <em>Allowed Values (General.PartyApplicableLegislationsRepository.ApplicableLegislation Enum Members)</em></p>
 <table>
 <thead>
@@ -260,13 +260,13 @@ Allowed values for the <a href="General.PartyApplicableLegislations.html#applica
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for this PartyApplicableLegislation. [Filter(like)]</p>
+<p>Notes for this PartyApplicableLegislation. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
-<p>The <a href="General.Contacts.Parties.html">Party</a> to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Party</code>(General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

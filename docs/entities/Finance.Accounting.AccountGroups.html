@@ -110,12 +110,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountGroups.html#discontinued">Discontinued</a></td>
 <td>boolean</td>
-<td>True means that the account group won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True means that the account group won't be used any more and should not appear in combo boxes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountGroups.html#fullpath">FullPath</a></td>
 <td>string (nullable)</td>
-<td>Full path to the group. Contains delimited list of group numbers of parent groups. [Filter(like)]</td>
+<td>Full path to the group. Contains delimited list of group numbers of parent groups. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountGroups.html#id">Id</a></td>
@@ -125,12 +125,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountGroups.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]</td>
+<td>Account group name, required. Must be unique within the parent group. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountGroups.html#number">Number</a></td>
 <td>string</td>
-<td>Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]</td>
+<td>Unique account group number. May contain characters, if required. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,7 +147,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountGroups.html#parent">Parent</a></td>
 <td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a> (nullable)</td>
-<td>Parent account group. null if this is root group. [Filter(multi eq)]</td>
+<td>Parent account group. null if this is root group. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,13 +158,13 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="discontinued">Discontinued</h3>
-<p>True means that the account group won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True means that the account group won't be used any more and should not appear in combo boxes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="fullpath">FullPath</h3>
-<p>Full path to the group. Contains delimited list of group numbers of parent groups. [Filter(like)]</p>
+<p>Full path to the group. Contains delimited list of group numbers of parent groups. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -174,19 +174,19 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]</p>
+<p>Account group name, required. Must be unique within the parent group. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="number">Number</h3>
-<p>Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]</p>
+<p>Unique account group number. May contain characters, if required. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
-<p>Parent account group. null if this is root group. [Filter(multi eq)]</p>
+<p>Parent account group. null if this is root group. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

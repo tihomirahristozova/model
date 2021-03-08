@@ -33,8 +33,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Crew](Applications.Fleet.CrewMembers.md#crew) | [Crews](Applications.Fleet.Crews.md) | The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Person](Applications.Fleet.CrewMembers.md#person) | [Persons](General.Contacts.Persons.md) | The crew member person. [Required] [Filter(multi eq)] |
+| [Crew](Applications.Fleet.CrewMembers.md#crew) | [Crews](Applications.Fleet.Crews.md) | The crew to which this member belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Person](Applications.Fleet.CrewMembers.md#person) | [Persons](General.Contacts.Persons.md) | The crew member person. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -67,14 +67,14 @@ _Supports Order By_: **False**
 
 ### Crew
 
-The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner]
+The crew to which this member belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Crews](Applications.Fleet.Crews.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
-The crew member person. [Required] [Filter(multi eq)]
+The crew member person. `Required` `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

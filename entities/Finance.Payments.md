@@ -1,8 +1,7 @@
----
+﻿---
 uid: Finance.Payments
 ---
 # Finance.Payments Namespace
-
 
 ## Entities
 - [BulkPaymentOrderLines](Finance.Payments.BulkPaymentOrderLines.md)  
@@ -19,4 +18,6 @@ uid: Finance.Payments
 - [PaymentTransactions](Finance.Payments.PaymentTransactions.md)  
 - [PaymentTypes](Finance.Payments.PaymentTypes.md)  
 - [Transfers](Finance.Payments.Transfers.md)  
+
+yments.Transfers.md)  
 

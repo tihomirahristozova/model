@@ -105,22 +105,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#address">Address</a></td>
 <td>string</td>
-<td>The address (path) to the application. The address is platform-dependant. [Required]</td>
+<td>The address (path) to the application. The address is platform-dependant. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a></td>
 <td><a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a></td>
-<td>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. [Required] [Default(&quot;SINGLE&quot;)] [Filter(eq)]</td>
+<td>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. <code>Required</code> <code>Default(&quot;SINGLE&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#entityname">EntityName</a></td>
 <td>string</td>
-<td>The entity, for which the application is defined. [Required] [Filter(eq)] [ORD]</td>
+<td>The entity, for which the application is defined. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#executeforallobjects">ExecuteForAllObjects</a></td>
 <td>boolean</td>
-<td>Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#id">Id</a></td>
@@ -130,12 +130,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#isactive">IsActive</a></td>
 <td>boolean (nullable)</td>
-<td>Specifies whether the external application is currently used. [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the external application is currently used. <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The name of the external application. [Required] [Filter(eq;like)]</td>
+<td>The name of the external application. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#notes">Notes</a></td>
@@ -145,17 +145,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#platform">Platform</a></td>
 <td><a href="Systems.Core.ExternalApplications.html#platform">Platform</a></td>
-<td>The execution platform of the application. [Required] [Filter(eq)]</td>
+<td>The execution platform of the application. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#refreshafterfinish">RefreshAfterFinish</a></td>
 <td>boolean</td>
-<td>Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#savebeforestart">SaveBeforeStart</a></td>
 <td>boolean</td>
-<td>Whether to save the form data to the server before starting the application. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Whether to save the form data to the server before starting the application. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -172,20 +172,20 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</td>
-<td>The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)]</td>
+<td>The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="address">Address</h3>
-<p>The address (path) to the application. The address is platform-dependant. [Required]</p>
+<p>The address (path) to the application. The address is platform-dependant. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="availableinmode">AvailableInMode</h3>
-<p>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. [Required] [Default(&quot;SINGLE&quot;)] [Filter(eq)]</p>
+<p>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. <code>Required</code> <code>Default(&quot;SINGLE&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a></strong><br>
-Allowed values for the <a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a> data attribute<br>
+Allowed values for the <code>AvailableInMode</code>(Systems.Core.ExternalApplications.md#availableinmode) data attribute<br>
 <em>Allowed Values (Systems.Core.ExternalApplicationsRepository.AvailableInMode Enum Members)</em></p>
 <table>
 <thead>
@@ -213,13 +213,13 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#available
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>SINGLE</strong></p>
 <h3 id="entityname">EntityName</h3>
-<p>The entity, for which the application is defined. [Required] [Filter(eq)] [ORD]</p>
+<p>The entity, for which the application is defined. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="executeforallobjects">ExecuteForAllObjects</h3>
-<p>Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -230,13 +230,13 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#available
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the external application is currently used. [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the external application is currently used. <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the external application. [Required] [Filter(eq;like)]</p>
+<p>The name of the external application. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -246,9 +246,9 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#available
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="platform">Platform</h3>
-<p>The execution platform of the application. [Required] [Filter(eq)]</p>
+<p>The execution platform of the application. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExternalApplications.html#platform">Platform</a></strong><br>
-Allowed values for the <a href="Systems.Core.ExternalApplications.html#platform">Platform</a> data attribute<br>
+Allowed values for the <code>Platform</code>(Systems.Core.ExternalApplications.md#platform) data attribute<br>
 <em>Allowed Values (Systems.Core.ExternalApplicationsRepository.Platform Enum Members)</em></p>
 <table>
 <thead>
@@ -283,20 +283,20 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#platform"
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="refreshafterfinish">RefreshAfterFinish</h3>
-<p>Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="savebeforestart">SaveBeforeStart</h3>
-<p>Whether to save the form data to the server before starting the application. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Whether to save the form data to the server before starting the application. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<p>The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)]</p>
+<p>The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

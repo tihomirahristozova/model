@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentDistributedAmounts.html#amount">Amount</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]</td>
+<td>The amount which has beed distributed over the current line. The amount is in the currency of the document. <code>Currency: GetDocumentCurrency()</code> <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentDistributedAmounts.html#documentlineid">DocumentLineId</a></td>
 <td>guid (nullable)</td>
-<td>The Id of the line over which the amount is distributed. [Filter(multi eq)]</td>
+<td>The Id of the line over which the amount is distributed. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentDistributedAmounts.html#id">Id</a></td>
@@ -132,28 +132,28 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentDistributedAmounts.html#document">Document</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>The <a href="General.DocumentDistributedAmounts.html#document">Document</a> to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Document</code>(General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentDistributedAmounts.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a></td>
-<td>The type of amount which is distributed. [Required] [Filter(multi eq)]</td>
+<td>The type of amount which is distributed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentDistributedAmounts.html#referenceddocument">ReferencedDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]</td>
+<td>In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<p>The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]</p>
+<p>The amount which has beed distributed over the current line. The amount is in the currency of the document. <code>Currency: GetDocumentCurrency()</code> <code>Required</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentlineid">DocumentLineId</h3>
-<p>The Id of the line over which the amount is distributed. [Filter(multi eq)]</p>
+<p>The Id of the line over which the amount is distributed. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -164,16 +164,16 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <a href="General.DocumentDistributedAmounts.html#document">Document</a> to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Document</code>(General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<p>The type of amount which is distributed. [Required] [Filter(multi eq)]</p>
+<p>The type of amount which is distributed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="referenceddocument">ReferencedDocument</h3>
-<p>In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]</p>
+<p>In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#consumablequantity) | [Quantity](../data-types.md#quantity) | Specifies what quantity of the consumable should be offered for each rented asset. [Unit: ConsumableQuantityUnit] [Required] 
+| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#consumablequantity) | [Quantity](../data-types.md#quantity) | Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required` 
 | [Id](Applications.Rental.AssetConsumables.md#id) | guid |  
 | [Notes](Applications.Rental.AssetConsumables.md#notes) | string (nullable) | Notes for this AssetConsumable. 
 
@@ -33,17 +33,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantityUnit](Applications.Rental.AssetConsumables.md#consumablequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)] |
-| [Product](Applications.Rental.AssetConsumables.md#product) | [Products](General.Products.Products.md) | The consumable which is offered accompanying the asset rental. [Required] [Filter(multi eq)] |
-| [RentalAsset](Applications.Rental.AssetConsumables.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | The rental asset for which the consumable would be offered. [Required] [Filter(multi eq)] [Owner] |
-| [Store](Applications.Rental.AssetConsumables.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store which contains the consumable. [Required] [Filter(multi eq)] |
+| [ConsumableQuantityUnit](Applications.Rental.AssetConsumables.md#consumablequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Consumable Quantity. `Required` `Filter(multi eq)` |
+| [Product](Applications.Rental.AssetConsumables.md#product) | [Products](General.Products.Products.md) | The consumable which is offered accompanying the asset rental. `Required` `Filter(multi eq)` |
+| [RentalAsset](Applications.Rental.AssetConsumables.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | The rental asset for which the consumable would be offered. `Required` `Filter(multi eq)` `Owner` |
+| [Store](Applications.Rental.AssetConsumables.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store which contains the consumable. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### ConsumableQuantity
 
-Specifies what quantity of the consumable should be offered for each rented asset. [Unit: ConsumableQuantityUnit] [Required]
+Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required`
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -69,28 +69,28 @@ _Supports Order By_: **False**
 
 ### ConsumableQuantityUnit
 
-The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Consumable Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-The consumable which is offered accompanying the asset rental. [Required] [Filter(multi eq)]
+The consumable which is offered accompanying the asset rental. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAsset
 
-The rental asset for which the consumable would be offered. [Required] [Filter(multi eq)] [Owner]
+The rental asset for which the consumable would be offered. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Assets](Applications.Rental.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-The store which contains the consumable. [Required] [Filter(multi eq)]
+The store which contains the consumable. `Required` `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.SequenceGenerators.html#allowexplicitnumbering">AllowExplicitNumbering</a></td>
 <td>boolean</td>
-<td>Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). [Required] [Default(false)]</td>
+<td>Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="General.SequenceGenerators.html#id">Id</a></td>
@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.SequenceGenerators.html#nextvalue">NextValue</a></td>
 <td>string</td>
-<td>The next number that will be issued by the sequence. [Required] [Default(&quot;0000000001&quot;)]</td>
+<td>The next number that will be issued by the sequence. <code>Required</code> <code>Default(&quot;0000000001&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="General.SequenceGenerators.html#sequencepriority">SequencePriority</a></td>
 <td>int32</td>
-<td>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. [Required] [Default(1)]</td>
+<td>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,28 +137,28 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.SequenceGenerators.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The Enterprise Company to which this SequenceGenerator applies. [Required] [Filter(multi eq)]</td>
+<td>The Enterprise Company to which this SequenceGenerator applies. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.SequenceGenerators.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. [Filter(multi eq)]</td>
+<td>The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.SequenceGenerators.html#responsibleperson">ResponsiblePerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>If specified then the generator is designated for use only in documents with that Responsible_Person_Id. [Filter(multi eq)]</td>
+<td>If specified then the generator is designated for use only in documents with that Responsible_Person_Id. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.SequenceGenerators.html#sequence">Sequence</a></td>
 <td><a href="General.Sequences.html">Sequences</a></td>
-<td>The <a href="General.SequenceGenerators.html#sequence">Sequence</a> to which this SequenceGenerator belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Sequence</code>(General.SequenceGenerators.md#sequence) to which this SequenceGenerator belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowexplicitnumbering">AllowExplicitNumbering</h3>
-<p>Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). [Required] [Default(false)]</p>
+<p>Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -169,32 +169,32 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="nextvalue">NextValue</h3>
-<p>The next number that will be issued by the sequence. [Required] [Default(&quot;0000000001&quot;)]</p>
+<p>The next number that will be issued by the sequence. <code>Required</code> <code>Default(&quot;0000000001&quot;)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0000000001</strong></p>
 <h3 id="sequencepriority">SequencePriority</h3>
-<p>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. [Required] [Default(1)]</p>
+<p>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this SequenceGenerator applies. [Required] [Filter(multi eq)]</p>
+<p>The Enterprise Company to which this SequenceGenerator applies. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. [Filter(multi eq)]</p>
+<p>The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<p>If specified then the generator is designated for use only in documents with that Responsible_Person_Id. [Filter(multi eq)]</p>
+<p>If specified then the generator is designated for use only in documents with that Responsible_Person_Id. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sequence">Sequence</h3>
-<p>The <a href="General.SequenceGenerators.html#sequence">Sequence</a> to which this SequenceGenerator belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Sequence</code>(General.SequenceGenerators.md#sequence) to which this SequenceGenerator belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Sequences.html">Sequences</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

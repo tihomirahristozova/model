@@ -23,16 +23,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Logistics.Inventory.ScrapTypes.md#description) | string (nullable) | The description of this ScrapType. [Filter(like)] 
+| [Description](Logistics.Inventory.ScrapTypes.md#description) | string (nullable) | The description of this ScrapType. `Filter(like)` 
 | [Id](Logistics.Inventory.ScrapTypes.md#id) | guid |  
-| [IsPlanned](Logistics.Inventory.ScrapTypes.md#isplanned) | boolean | True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. [Required] [Default(true)] [Filter(eq)] 
+| [IsPlanned](Logistics.Inventory.ScrapTypes.md#isplanned) | boolean | True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. `Required` `Default(true)` `Filter(eq)` 
 
 
 ## Attribute Details
 
 ### Description
 
-The description of this ScrapType. [Filter(like)]
+The description of this ScrapType. `Filter(like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### IsPlanned
 
-True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. [Required] [Default(true)] [Filter(eq)]
+True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  

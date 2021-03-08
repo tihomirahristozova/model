@@ -110,12 +110,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#symptomdescription">SymptomDescription</a></td>
 <td>string (nullable)</td>
-<td>Description or synopsis of the symptoms of the failed object. [Filter(like)]</td>
+<td>Description or synopsis of the symptoms of the failed object. <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#serviceobject">ServiceObject</a></td>
 <td><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></td>
-<td>The service object, which is experiencing the symptoms and needs repair. [Required] [Filter(multi eq)]</td>
+<td>The service object, which is experiencing the symptoms and needs repair. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#serviceorder">ServiceOrder</a></td>
 <td><a href="Applications.Service.ServiceOrders.html">ServiceOrders</a></td>
-<td>The <a href="Applications.Service.ServiceOrderLines.html#serviceorder">ServiceOrder</a> to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>ServiceOrder</code>(Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]</p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -157,17 +157,17 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ServiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="symptomdescription">SymptomDescription</h3>
-<p>Description or synopsis of the symptoms of the failed object. [Filter(like)]</p>
+<p>Description or synopsis of the symptoms of the failed object. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceobject">ServiceObject</h3>
-<p>The service object, which is experiencing the symptoms and needs repair. [Required] [Filter(multi eq)]</p>
+<p>The service object, which is experiencing the symptoms and needs repair. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceorder">ServiceOrder</h3>
-<p>The <a href="Applications.Service.ServiceOrderLines.html#serviceorder">ServiceOrder</a> to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>ServiceOrder</code>(Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceOrders.html">ServiceOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -110,7 +110,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentFileAttachments.html#filename">FileName</a></td>
 <td>string</td>
-<td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. [Required]</td>
+<td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFileAttachments.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentFileAttachments.html#islinked">IsLinked</a></td>
 <td>boolean</td>
-<td>True when the document is linked (ony file name is kept). false when the document is embedded. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True when the document is linked (ony file name is kept). false when the document is embedded. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFileAttachments.html#linkedfilepath">LinkedFilePath</a></td>
@@ -147,7 +147,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentFileAttachments.html#document">Document</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>The <a href="General.DocumentFileAttachments.html#document">Document</a> to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Document</code>(General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,7 +158,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="filename">FileName</h3>
-<p>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. [Required]</p>
+<p>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -168,7 +168,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="islinked">IsLinked</h3>
-<p>True when the document is linked (ony file name is kept). false when the document is embedded. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True when the document is linked (ony file name is kept). false when the document is embedded. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -185,7 +185,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <a href="General.DocumentFileAttachments.html#document">Document</a> to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Document</code>(General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

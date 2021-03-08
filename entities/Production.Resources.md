@@ -1,8 +1,7 @@
----
+﻿---
 uid: Production.Resources
 ---
 # Production.Resources Namespace
-
 
 ## Entities
 - [Capacity](Production.Resources.Capacity.md)  
@@ -18,4 +17,6 @@ uid: Production.Resources
 - [WorkgroupResources](Production.Resources.WorkgroupResources.md)  
 - [Workgroups](Production.Resources.Workgroups.md)  
 - [WorkgroupShifts](Production.Resources.WorkgroupShifts.md)  
+
+rces.WorkgroupShifts.md)  
 

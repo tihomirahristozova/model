@@ -23,35 +23,35 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Crm.LineDiscounts.md#description) | string (nullable) | The description of the discount that is shown to the operator when he/she should choose between different discounts. [Filter(like)] 
-| [DiscountPercent](Crm.LineDiscounts.md#discountpercent) | decimal | The discount percent that should be applied if all the matching criteria are met. [Required] [Default(0)] [Filter(ge;le)] 
-| [FromDate](Crm.LineDiscounts.md#fromdate) | datetime (nullable) | Starting date of validity of the discount. null means no from date restriction. [Filter(eq;ge;le)] 
+| [Description](Crm.LineDiscounts.md#description) | string (nullable) | The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)` 
+| [DiscountPercent](Crm.LineDiscounts.md#discountpercent) | decimal | The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)` 
+| [FromDate](Crm.LineDiscounts.md#fromdate) | datetime (nullable) | Starting date of validity of the discount. null means no from date restriction. `Filter(eq;ge;le)` 
 | [Id](Crm.LineDiscounts.md#id) | guid |  
-| [MaxQuantity](Crm.LineDiscounts.md#maxquantity) | [Quantity](../data-types.md#quantity) (nullable) | Apply the discount only if the quantity sold is equal to or less than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
-| [MinQuantity](Crm.LineDiscounts.md#minquantity) | [Quantity](../data-types.md#quantity) (nullable) | Apply the discount only if the quantity sold is equal to or more than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
-| [Priority](Crm.LineDiscounts.md#priority) | [Priority](Crm.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. [Required] [Default(3)] 
-| [ThruDate](Crm.LineDiscounts.md#thrudate) | datetime (nullable) | Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. [Filter(eq;ge;le)] 
+| [MaxQuantity](Crm.LineDiscounts.md#maxquantity) | [Quantity](../data-types.md#quantity) (nullable) | Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [MinQuantity](Crm.LineDiscounts.md#minquantity) | [Quantity](../data-types.md#quantity) (nullable) | Apply the discount only if the quantity sold is equal to or more than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [Priority](Crm.LineDiscounts.md#priority) | [Priority](Crm.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. `Required` `Default(3)` 
+| [ThruDate](Crm.LineDiscounts.md#thrudate) | datetime (nullable) | Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Customer](Crm.LineDiscounts.md#customer) | [Customers](Crm.Customers.md) (nullable) | Apply the discount only if this is the customer. [Filter(multi eq)] |
-| [CustomerType](Crm.LineDiscounts.md#customertype) | [CustomerTypes](Crm.CustomerTypes.md) (nullable) | Apply the discount only if the customer is of this customer type. [Filter(multi eq)] |
-| [DistributionChannel](Crm.LineDiscounts.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Apply the discount only when the sales document is on the specified channel. [Filter(multi eq)] |
-| [EnterpriseCompany](Crm.LineDiscounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, the policy is applied only for documents of the specified enterprise company . [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](Crm.LineDiscounts.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | When set, the policy is applied only for documents of the specified enterprise company location. [Filter(multi eq)] |
-| [PriceList](Crm.LineDiscounts.md#pricelist) | [PriceLists](Crm.PriceLists.md) (nullable) | Apply the discount only if this price list is used. [Filter(multi eq)] |
-| [Product](Crm.LineDiscounts.md#product) | [Products](General.Products.Products.md) (nullable) | Apply the discount only when this specific product is sold. [Filter(multi eq)] |
-| [ProductGroup](Crm.LineDiscounts.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Apply the discount only if the product sold is contained in this product group or any of its sub-groups. [Filter(multi eq)] |
-| [TargetGroup](Crm.LineDiscounts.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | Apply the discount only if the customer is included in this target group. [Filter(multi eq)] |
+| [Customer](Crm.LineDiscounts.md#customer) | [Customers](Crm.Customers.md) (nullable) | Apply the discount only if this is the customer. `Filter(multi eq)` |
+| [CustomerType](Crm.LineDiscounts.md#customertype) | [CustomerTypes](Crm.CustomerTypes.md) (nullable) | Apply the discount only if the customer is of this customer type. `Filter(multi eq)` |
+| [DistributionChannel](Crm.LineDiscounts.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Apply the discount only when the sales document is on the specified channel. `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.LineDiscounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, the policy is applied only for documents of the specified enterprise company . `Filter(multi eq)` |
+| [EnterpriseCompanyLocation](Crm.LineDiscounts.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | When set, the policy is applied only for documents of the specified enterprise company location. `Filter(multi eq)` |
+| [PriceList](Crm.LineDiscounts.md#pricelist) | [PriceLists](Crm.PriceLists.md) (nullable) | Apply the discount only if this price list is used. `Filter(multi eq)` |
+| [Product](Crm.LineDiscounts.md#product) | [Products](General.Products.Products.md) (nullable) | Apply the discount only when this specific product is sold. `Filter(multi eq)` |
+| [ProductGroup](Crm.LineDiscounts.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Apply the discount only if the product sold is contained in this product group or any of its sub-groups. `Filter(multi eq)` |
+| [TargetGroup](Crm.LineDiscounts.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | Apply the discount only if the customer is included in this target group. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Description
 
-The description of the discount that is shown to the operator when he/she should choose between different discounts. [Filter(like)]
+The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### DiscountPercent
 
-The discount percent that should be applied if all the matching criteria are met. [Required] [Default(0)] [Filter(ge;le)]
+The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **decimal**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -68,7 +68,7 @@ _Default Value_: **0**
 
 ### FromDate
 
-Starting date of validity of the discount. null means no from date restriction. [Filter(eq;ge;le)]
+Starting date of validity of the discount. null means no from date restriction. `Filter(eq;ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -83,7 +83,7 @@ _Default Value_: **NewGuid**
 
 ### MaxQuantity
 
-Apply the discount only if the quantity sold is equal to or less than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
+Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -91,7 +91,7 @@ _Supports Order By_: **False**
 
 ### MinQuantity
 
-Apply the discount only if the quantity sold is equal to or more than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
+Apply the discount only if the quantity sold is equal to or more than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -99,7 +99,7 @@ _Supports Order By_: **False**
 
 ### Priority
 
-The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. [Required] [Default(3)]
+The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. `Required` `Default(3)`
 
 _Type_: **[Priority](Crm.LineDiscounts.md#priority)**  
 Generic enum type for Priority properties  
@@ -119,7 +119,7 @@ _Default Value_: **3**
 
 ### ThruDate
 
-Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. [Filter(eq;ge;le)]
+Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. `Filter(eq;ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -130,7 +130,7 @@ _Supports Order By_: **False**
 
 ### Customer
 
-Apply the discount only if this is the customer. [Filter(multi eq)]
+Apply the discount only if this is the customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Indexed_: **True**  
@@ -138,14 +138,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### CustomerType
 
-Apply the discount only if the customer is of this customer type. [Filter(multi eq)]
+Apply the discount only if the customer is of this customer type. `Filter(multi eq)`
 
 _Type_: **[CustomerTypes](Crm.CustomerTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DistributionChannel
 
-Apply the discount only when the sales document is on the specified channel. [Filter(multi eq)]
+Apply the discount only when the sales document is on the specified channel. `Filter(multi eq)`
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 _Indexed_: **True**  
@@ -153,14 +153,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### EnterpriseCompany
 
-When not null, the policy is applied only for documents of the specified enterprise company . [Filter(multi eq)]
+When not null, the policy is applied only for documents of the specified enterprise company . `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-When set, the policy is applied only for documents of the specified enterprise company location. [Filter(multi eq)]
+When set, the policy is applied only for documents of the specified enterprise company location. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -169,14 +169,14 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( obj.EnterpriseCompanyLocation != null) AndAlso ( obj.EnterpriseCompanyLocation.Company != obj.EnterpriseCompany)), null, obj.EnterpriseCompanyLocation.Company)`
 ### PriceList
 
-Apply the discount only if this price list is used. [Filter(multi eq)]
+Apply the discount only if this price list is used. `Filter(multi eq)`
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-Apply the discount only when this specific product is sold. [Filter(multi eq)]
+Apply the discount only when this specific product is sold. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Indexed_: **True**  
@@ -184,14 +184,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ProductGroup
 
-Apply the discount only if the product sold is contained in this product group or any of its sub-groups. [Filter(multi eq)]
+Apply the discount only if the product sold is contained in this product group or any of its sub-groups. `Filter(multi eq)`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TargetGroup
 
-Apply the discount only if the customer is included in this target group. [Filter(multi eq)]
+Apply the discount only if the customer is included in this target group. `Filter(multi eq)`
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

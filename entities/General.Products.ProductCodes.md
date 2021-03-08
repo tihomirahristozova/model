@@ -25,23 +25,23 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents. [Required] [Default(true)] [Filter(eq)] 
+| [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [Id](General.Products.ProductCodes.md#id) | guid |  
-| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string | The code of the product in the specified coding system. [Required] [Filter(eq;like)] 
+| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string | The code of the product in the specified coding system. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CodingSystem](General.Products.ProductCodes.md#codingsystem) | [CodingSystems](General.Products.CodingSystems.md) | The coding system in which the product code is specified. [Required] [Filter(multi eq)] |
-| [Product](General.Products.ProductCodes.md#product) | [Products](General.Products.Products.md) | The product for which the code is specified. [Required] [Filter(multi eq)] [Owner] |
+| [CodingSystem](General.Products.ProductCodes.md#codingsystem) | [CodingSystems](General.Products.CodingSystems.md) | The coding system in which the product code is specified. `Required` `Filter(multi eq)` |
+| [Product](General.Products.ProductCodes.md#product) | [Products](General.Products.Products.md) | The product for which the code is specified. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### Active
 
-True when the code is active and can be selected in new documents. [Required] [Default(true)] [Filter(eq)]
+True when the code is active and can be selected in new documents. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -57,7 +57,7 @@ _Default Value_: **NewGuid**
 
 ### ProductCodeField
 
-The code of the product in the specified coding system. [Required] [Filter(eq;like)]
+The code of the product in the specified coding system. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -68,7 +68,7 @@ _Supports Order By_: **False**
 
 ### CodingSystem
 
-The coding system in which the product code is specified. [Required] [Filter(multi eq)]
+The coding system in which the product code is specified. `Required` `Filter(multi eq)`
 
 _Type_: **[CodingSystems](General.Products.CodingSystems.md)**  
 _Indexed_: **True**  
@@ -76,7 +76,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Product
 
-The product for which the code is specified. [Required] [Filter(multi eq)] [Owner]
+The product for which the code is specified. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  

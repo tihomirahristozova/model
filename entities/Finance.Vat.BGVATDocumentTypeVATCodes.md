@@ -31,7 +31,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Finance.Vat.BGVATDocumentTypeVATCodes.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | Document type that generates VAT entries. [Required] [Filter(multi eq)] |
+| [DocumentType](Finance.Vat.BGVATDocumentTypeVATCodes.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | Document type that generates VAT entries. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -41,7 +41,7 @@ Aggregate Tree
 VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.
 
 _Type_: **[CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) (nullable)**  
-Allowed values for the [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) data attribute  
+Allowed values for the `CashReportingVATCode`(Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) data attribute  
 _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVATCode Enum Members)_  
 
 | Value | Description |
@@ -78,7 +78,7 @@ _Default Value_: **NewGuid**
 VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.
 
 _Type_: **[VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) (nullable)**  
-Allowed values for the [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) data attribute  
+Allowed values for the `VATCode`(Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) data attribute  
 _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode Enum Members)_  
 
 | Value | Description |
@@ -108,7 +108,7 @@ _Supports Order By_: **False**
 
 ### DocumentType
 
-Document type that generates VAT entries. [Required] [Filter(multi eq)]
+Document type that generates VAT entries. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  

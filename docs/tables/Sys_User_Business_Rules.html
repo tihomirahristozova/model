@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Table Sys_User_Business_Rules | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Table Sys_User_Business_Rules | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="table-sys_user_business_rules">Table Sys_User_Business_Rules</h1>
+
+<p>Represents user-defined business rule. Entity: Sys_User_Business_Rules</p>
+<h1 id="columns">Columns</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User_Business_Rule_Id</td>
+<td><code>Guid</code></td>
+<td><code>PK</code>, Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td>User_Business_Rule_Code</td>
+<td><code>String</code></td>
+<td></td>
+<td>The unique code of the UserBusinessRule. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td>Icon</td>
+<td><code>Byte[]</code></td>
+<td><code>BLOB</code></td>
+<td>Visual icon of the rule in .PNG format.</td>
+</tr>
+<tr>
+<td>Is_Active</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Specifies whether the rule is activated. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td>Layer</td>
+<td><code>Layer</code></td>
+<td>Allowed: <code>FTE</code>, <code>BKE</code>, <code>COM</code></td>
+<td>Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). <code>Required</code> <code>Default(&quot;BKE&quot;)</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td>User_Business_Rule_Name</td>
+<td><code>MultilanguageString</code></td>
+<td></td>
+<td>The name of this UserBusinessRule. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td><code>String</code></td>
+<td></td>
+<td>Notes for this UserBusinessRule.</td>
+</tr>
+<tr>
+<td>Repository_Name</td>
+<td><code>String</code></td>
+<td></td>
+<td>The name of the repository, for which this business rule is defined. <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
+<td>Script_Language</td>
+<td><code>ScriptLanguage</code></td>
+<td>Allowed: <code>Integrated</code>, <code>CSharp</code></td>
+<td>The programming language used to define the rule actions. <code>Required</code> <code>Default(&quot;Integrated&quot;)</code></td>
+</tr>
+<tr>
+<td>Script_Text</td>
+<td><code>String</code></td>
+<td></td>
+<td>The program code used to define the rule actions.</td>
+</tr>
+<tr>
+<td>User_Startable</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Specifies, that the rule can be manually started by the user. <code>Default(false)</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Sys_User_Business_Rules.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

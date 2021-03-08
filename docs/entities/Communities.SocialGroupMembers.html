@@ -110,7 +110,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Communities.SocialGroupMembers.html#jointimeutc">JoinTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)]</td>
+<td>The exact server time (in UTC), when the user joined the group. <code>Required</code> <code>Default(NowUtc)</code></td>
 </tr>
 </tbody>
 </table>
@@ -127,12 +127,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Communities.SocialGroupMembers.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.SocialGroups.html">SocialGroups</a></td>
-<td>The group in which the user participates. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The group in which the user participates. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Communities.SocialGroupMembers.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who is a member of the group. [Required] [Filter(multi eq)]</td>
+<td>The user, who is a member of the group. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -143,18 +143,18 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="jointimeutc">JoinTimeUtc</h3>
-<p>The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)]</p>
+<p>The exact server time (in UTC), when the user joined the group. <code>Required</code> <code>Default(NowUtc)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="socialgroup">SocialGroup</h3>
-<p>The group in which the user participates. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The group in which the user participates. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Communities.SocialGroups.html">SocialGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<p>The user, who is a member of the group. [Required] [Filter(multi eq)]</p>
+<p>The user, who is a member of the group. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

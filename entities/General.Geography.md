@@ -1,8 +1,7 @@
----
+﻿---
 uid: General.Geography
 ---
 # General.Geography Namespace
-
 
 ## Entities
 - [AdministrativeRegions](General.Geography.AdministrativeRegions.md)  
@@ -10,4 +9,6 @@ uid: General.Geography
 - [Countries](General.Geography.Countries.md)  
 - [GeoPoints](General.Geography.GeoPoints.md)  
 - [MapPoints](General.Geography.MapPoints.md)  
+
+ography.MapPoints.md)  
 

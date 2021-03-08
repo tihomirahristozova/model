@@ -25,40 +25,40 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountColumnName](Finance.Accounting.TemplateLines.md#amountcolumnname) | string | The name of the column within the amount rowset where the amount is located. [Required] 
+| [AmountColumnName](Finance.Accounting.TemplateLines.md#amountcolumnname) | string | The name of the column within the amount rowset where the amount is located. `Required` 
 | [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) | [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) (nullable) | Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier. 
-| [AmountRowId](Finance.Accounting.TemplateLines.md#amountrowid) | guid (nullable) | The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. [Filter(multi eq)] 
+| [AmountRowId](Finance.Accounting.TemplateLines.md#amountrowid) | guid (nullable) | The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)` 
 | [AmountRowName](Finance.Accounting.TemplateLines.md#amountrowname) | string (nullable) | The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name. 
 | [AmountSourceFilter](Finance.Accounting.TemplateLines.md#amountsourcefilter) | dataaccessfilter (nullable) | Filter that further specifies which rows from the amount rowset determine the amount. 
-| [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. [Required] 
+| [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required` 
 | [FilterXML](Finance.Accounting.TemplateLines.md#filterxml) | dataaccessfilter (nullable) | The line is accounted only when the filter is satisfied compared with the source document header. 
 | [Id](Finance.Accounting.TemplateLines.md#id) | guid |  
-| [LineNo](Finance.Accounting.TemplateLines.md#lineno) | int32 | Consecutive number of the line within the template. Determines the order of execution of the template lines. [Required] 
-| [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal | Factor by which the amount from the source will be multiplied. [Required] [Default(1)] 
+| [LineNo](Finance.Accounting.TemplateLines.md#lineno) | int32 | Consecutive number of the line within the template. Determines the order of execution of the template lines. `Required` 
+| [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal | Factor by which the amount from the source will be multiplied. `Required` `Default(1)` 
 | [Notes](Finance.Accounting.TemplateLines.md#notes) | string (nullable) | Notes for this TemplateLine. 
-| [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime (nullable) | Start date from which the accounting template line is valid. [Filter(multi eq;ge;le)] 
-| [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime (nullable) | End date to which the accounting template line is valid. [Filter(multi eq;ge;le)] 
+| [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime (nullable) | Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)` 
+| [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime (nullable) | End date to which the accounting template line is valid. `Filter(multi eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreditAccount](Finance.Accounting.TemplateLines.md#creditaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be credited. [Required] [Filter(multi eq)] |
-| [DebitAccount](Finance.Accounting.TemplateLines.md#debitaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be debited. [Required] [Filter(multi eq)] |
-| [Template](Finance.Accounting.TemplateLines.md#template) | [Templates](Finance.Accounting.Templates.md) | The [Template](Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CreditAccount](Finance.Accounting.TemplateLines.md#creditaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be credited. `Required` `Filter(multi eq)` |
+| [DebitAccount](Finance.Accounting.TemplateLines.md#debitaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be debited. `Required` `Filter(multi eq)` |
+| [Template](Finance.Accounting.TemplateLines.md#template) | [Templates](Finance.Accounting.Templates.md) | The `Template`(Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| TemplateLineProperties | [TemplateLineProperties](Finance.Accounting.TemplateLineProperties.md) | List of [TemplateLineProperty](Finance.Accounting.TemplateLineProperties.md) child objects, based on the [Finance.Accounting.TemplateLineProperty.TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) back reference 
+| TemplateLineProperties | [TemplateLineProperties](Finance.Accounting.TemplateLineProperties.md) | List of `TemplateLineProperty`(Finance.Accounting.TemplateLineProperties.md) child objects, based on the `Finance.Accounting.TemplateLineProperty.TemplateLine`(Finance.Accounting.TemplateLineProperties.md#templateline) back reference 
 
 
 ## Attribute Details
 
 ### AmountColumnName
 
-The name of the column within the amount rowset where the amount is located. [Required]
+The name of the column within the amount rowset where the amount is located. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.
 
 _Type_: **[AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) (nullable)**  
-Allowed values for the [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) data attribute  
+Allowed values for the `AmountCondition`(Finance.Accounting.TemplateLines.md#amountcondition) data attribute  
 _Allowed Values (Finance.Accounting.TemplateLinesRepository.AmountCondition Enum Members)_  
 
 | Value | Description |
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### AmountRowId
 
-The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. [Filter(multi eq)]
+The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)`
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### AmountSourceName
 
-The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. [Required]
+The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -128,7 +128,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-Consecutive number of the line within the template. Determines the order of execution of the template lines. [Required]
+Consecutive number of the line within the template. Determines the order of execution of the template lines. `Required`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -141,7 +141,7 @@ _Front-End Recalc Expressions:_
 `( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Multiplier
 
-Factor by which the amount from the source will be multiplied. [Required] [Default(1)]
+Factor by which the amount from the source will be multiplied. `Required` `Default(1)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -158,7 +158,7 @@ _Supports Order By_: **False**
 
 ### ValidFromDate
 
-Start date from which the accounting template line is valid. [Filter(multi eq;ge;le)]
+Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -166,7 +166,7 @@ _Supports Order By_: **False**
 
 ### ValidToDate
 
-End date to which the accounting template line is valid. [Filter(multi eq;ge;le)]
+End date to which the accounting template line is valid. `Filter(multi eq;ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -177,21 +177,21 @@ _Supports Order By_: **False**
 
 ### CreditAccount
 
-The account which should be credited. [Required] [Filter(multi eq)]
+The account which should be credited. `Required` `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DebitAccount
 
-The account which should be debited. [Required] [Filter(multi eq)]
+The account which should be debited. `Required` `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Template
 
-The [Template](Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]
+The `Template`(Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Indexed_: **True**  

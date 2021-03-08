@@ -1,8 +1,7 @@
----
+﻿---
 uid: Applications.AssetManagement
 ---
 # Applications.AssetManagement Namespace
-
 
 ## Entities
 - [MaintenanceOrderLines](Applications.AssetManagement.MaintenanceOrderLines.md)  
@@ -20,4 +19,6 @@ uid: Applications.AssetManagement
 - [ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md)  
 - [ServiceCenters](Applications.AssetManagement.ServiceCenters.md)  
 - [TrackedParameters](Applications.AssetManagement.TrackedParameters.md)  
+
+Management.TrackedParameters.md)  
 

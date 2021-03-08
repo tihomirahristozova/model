@@ -112,32 +112,32 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.Users.html#accessfailedcount">AccessFailedCount</a></td>
 <td>int32</td>
-<td>Indicates how many times the user has failed to login. May be used for locking out the user. [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 18.2]</td>
+<td>Indicates how many times the user has failed to login. May be used for locking out the user. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#active">Active</a></td>
 <td>boolean</td>
-<td>True when the login is currently active and the user can log in. [Required] [Default(true)] [Filter(eq)]</td>
+<td>True when the login is currently active and the user can log in. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The date and time (in UTC), when the user was created. [Required] [Default(Now)] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The date and time (in UTC), when the user was created. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#defaultculture">DefaultCulture</a></td>
 <td>string (nullable)</td>
-<td>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. [Introduced in version 20.1]</td>
+<td>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#email">Email</a></td>
 <td>string (nullable)</td>
-<td>Unique email of the user. Can be null because there may be login providers that don't use emails. [Filter(multi eq;like)] [ORD] [Introduced in version 18.2]</td>
+<td>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Filter(multi eq;like)</code> <code>ORD</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#emailconfirmed">EmailConfirmed</a></td>
 <td>boolean</td>
-<td>Indicates whether the email address for the specified user has been verified. [Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2]</td>
+<td>Indicates whether the email address for the specified user has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#id">Id</a></td>
@@ -147,22 +147,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.Users.html#isadmin">IsAdmin</a></td>
 <td>boolean</td>
-<td>True if the user is administrator, otherwise false. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True if the user is administrator, otherwise false. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#lockoutendutc">LockoutEndUtc</a></td>
 <td>datetime (nullable)</td>
-<td>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. [Filter(eq;ge;le;like)] [Introduced in version 18.2]</td>
+<td>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. <code>Filter(eq;ge;le;like)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#login">Login</a></td>
 <td>string</td>
-<td>The login name of the user, which is usually the email. [Required] [Filter(multi eq;like)] [ORD]</td>
+<td>The login name of the user, which is usually the email. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The full name of the user. [Required] [Filter(like)]</td>
+<td>The full name of the user. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#notes">Notes</a></td>
@@ -177,27 +177,27 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.Users.html#passwordformat">PasswordFormat</a></td>
 <td><a href="Systems.Security.Users.html#passwordformat">PasswordFormat</a></td>
-<td>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. [Required] [Default(&quot;MD5&quot;)] [Filter(eq)] [Introduced in version 18.2]</td>
+<td>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. <code>Required</code> <code>Default(&quot;MD5&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#phonenumber">PhoneNumber</a></td>
 <td>string (nullable)</td>
-<td>Used only for two-factor authentication. null when phone-based two-factor is not used. [Filter(eq;like)] [Introduced in version 18.2]</td>
+<td>Used only for two-factor authentication. null when phone-based two-factor is not used. <code>Filter(eq;like)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#phonenumberconfirmed">PhoneNumberConfirmed</a></td>
 <td>boolean</td>
-<td>Indicates whether the Phone Number has been verified. [Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2]</td>
+<td>Indicates whether the Phone Number has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#twofactorenabled">TwoFactorEnabled</a></td>
 <td>boolean</td>
-<td>Indicates whether two-factor authentication has been enabled. [Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2]</td>
+<td>Indicates whether two-factor authentication has been enabled. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#usertype">UserType</a></td>
 <td><a href="Systems.Security.Users.html#usertype">UserType</a></td>
-<td>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. [Required] [Default(&quot;INT&quot;)] [Filter(multi eq)] [Introduced in version 18.2]</td>
+<td>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. <code>Required</code> <code>Default(&quot;INT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#voiceextensionnumbers">VoiceExtensionNumbers</a></td>
@@ -224,12 +224,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.Users.html#domain">Domain</a></td>
 <td><a href="Systems.Security.Domains.html">Domains</a> (nullable)</td>
-<td>The domain, to which the user belongs. [Filter(multi eq)] [Introduced in version 20.1]</td>
+<td>The domain, to which the user belongs. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. [Filter(multi eq)]</td>
+<td>The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -246,57 +246,57 @@ Default Search Member:<br>
 <tr>
 <td>AccessKeys</td>
 <td><a href="Systems.Security.UserAccessKeys.html">UserAccessKeys</a></td>
-<td>List of <a href="Systems.Security.UserAccessKeys.html">UserAccessKey</a> child objects, based on the <a href="Systems.Security.UserAccessKeys.html#user">Systems.Security.UserAccessKey.User</a> back reference</td>
+<td>List of <code>UserAccessKey</code>(Systems.Security.UserAccessKeys.md) child objects, based on the <code>Systems.Security.UserAccessKey.User</code>(Systems.Security.UserAccessKeys.md#user) back reference</td>
 </tr>
 <tr>
 <td>Groups</td>
 <td><a href="Systems.Security.UserGroups.html">UserGroups</a></td>
-<td>List of <a href="Systems.Security.UserGroups.html">UserGroup</a> child objects, based on the <a href="Systems.Security.UserGroups.html#user">Systems.Security.UserGroup.User</a> back reference</td>
+<td>List of <code>UserGroup</code>(Systems.Security.UserGroups.md) child objects, based on the <code>Systems.Security.UserGroup.User</code>(Systems.Security.UserGroups.md#user) back reference</td>
 </tr>
 <tr>
 <td>ProviderLogins</td>
 <td><a href="Systems.Security.UserProviderLogins.html">UserProviderLogins</a></td>
-<td>List of <a href="Systems.Security.UserProviderLogins.html">UserProviderLogin</a> child objects, based on the <a href="Systems.Security.UserProviderLogins.html#user">Systems.Security.UserProviderLogin.User</a> back reference</td>
+<td>List of <code>UserProviderLogin</code>(Systems.Security.UserProviderLogins.md) child objects, based on the <code>Systems.Security.UserProviderLogin.User</code>(Systems.Security.UserProviderLogins.md#user) back reference</td>
 </tr>
 <tr>
 <td>ProviderTokens</td>
 <td><a href="Systems.Security.UserProviderTokens.html">UserProviderTokens</a></td>
-<td>List of <a href="Systems.Security.UserProviderTokens.html">UserProviderToken</a> child objects, based on the <a href="Systems.Security.UserProviderTokens.html#user">Systems.Security.UserProviderToken.User</a> back reference</td>
+<td>List of <code>UserProviderToken</code>(Systems.Security.UserProviderTokens.md) child objects, based on the <code>Systems.Security.UserProviderToken.User</code>(Systems.Security.UserProviderTokens.md#user) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="accessfailedcount">AccessFailedCount</h3>
-<p>Indicates how many times the user has failed to login. May be used for locking out the user. [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 18.2]</p>
+<p>Indicates how many times the user has failed to login. May be used for locking out the user. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="active">Active</h3>
-<p>True when the login is currently active and the user can log in. [Required] [Default(true)] [Filter(eq)]</p>
+<p>True when the login is currently active and the user can log in. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The date and time (in UTC), when the user was created. [Required] [Default(Now)] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The date and time (in UTC), when the user was created. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="defaultculture">DefaultCulture</h3>
-<p>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. [Introduced in version 20.1]</p>
+<p>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="email">Email</h3>
-<p>Unique email of the user. Can be null because there may be login providers that don't use emails. [Filter(multi eq;like)] [ORD] [Introduced in version 18.2]</p>
+<p>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Filter(multi eq;like)</code> <code>ORD</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="emailconfirmed">EmailConfirmed</h3>
-<p>Indicates whether the email address for the specified user has been verified. [Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2]</p>
+<p>Indicates whether the email address for the specified user has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -307,24 +307,24 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isadmin">IsAdmin</h3>
-<p>True if the user is administrator, otherwise false. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True if the user is administrator, otherwise false. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="lockoutendutc">LockoutEndUtc</h3>
-<p>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. [Filter(eq;ge;le;like)] [Introduced in version 18.2]</p>
+<p>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. <code>Filter(eq;ge;le;like)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="login">Login</h3>
-<p>The login name of the user, which is usually the email. [Required] [Filter(multi eq;like)] [ORD]</p>
+<p>The login name of the user, which is usually the email. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
-<p>The full name of the user. [Required] [Filter(like)]</p>
+<p>The full name of the user. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -339,9 +339,9 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="passwordformat">PasswordFormat</h3>
-<p>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. [Required] [Default(&quot;MD5&quot;)] [Filter(eq)] [Introduced in version 18.2]</p>
+<p>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. <code>Required</code> <code>Default(&quot;MD5&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html#passwordformat">PasswordFormat</a></strong><br>
-Allowed values for the <a href="Systems.Security.Users.html#passwordformat">PasswordFormat</a> data attribute<br>
+Allowed values for the <code>PasswordFormat</code>(Systems.Security.Users.md#passwordformat) data attribute<br>
 <em>Allowed Values (Systems.Security.UsersRepository.PasswordFormat Enum Members)</em></p>
 <table>
 <thead>
@@ -365,26 +365,26 @@ Allowed values for the <a href="Systems.Security.Users.html#passwordformat">Pass
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>MD5</strong></p>
 <h3 id="phonenumber">PhoneNumber</h3>
-<p>Used only for two-factor authentication. null when phone-based two-factor is not used. [Filter(eq;like)] [Introduced in version 18.2]</p>
+<p>Used only for two-factor authentication. null when phone-based two-factor is not used. <code>Filter(eq;like)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="phonenumberconfirmed">PhoneNumberConfirmed</h3>
-<p>Indicates whether the Phone Number has been verified. [Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2]</p>
+<p>Indicates whether the Phone Number has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="twofactorenabled">TwoFactorEnabled</h3>
-<p>Indicates whether two-factor authentication has been enabled. [Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2]</p>
+<p>Indicates whether two-factor authentication has been enabled. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="usertype">UserType</h3>
-<p>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. [Required] [Default(&quot;INT&quot;)] [Filter(multi eq)] [Introduced in version 18.2]</p>
+<p>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. <code>Required</code> <code>Default(&quot;INT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html#usertype">UserType</a></strong><br>
-Allowed values for the <a href="Systems.Security.Users.html#usertype">UserType</a> data attribute<br>
+Allowed values for the <code>UserType</code>(Systems.Security.Users.md#usertype) data attribute<br>
 <em>Allowed Values (Systems.Security.UsersRepository.UserType Enum Members)</em></p>
 <table>
 <thead>
@@ -431,11 +431,11 @@ Allowed values for the <a href="Systems.Security.Users.html#usertype">UserType</
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="domain">Domain</h3>
-<p>The domain, to which the user belongs. [Filter(multi eq)] [Introduced in version 20.1]</p>
+<p>The domain, to which the user belongs. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Domains.html">Domains</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
-<p>The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. [Filter(multi eq)]</p>
+<p>The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

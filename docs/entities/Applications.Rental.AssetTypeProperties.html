@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.AssetTypeProperties.html#defaultvalue">DefaultValue</a></td>
 <td>string (nullable)</td>
-<td>The default value of the property. [Filter(like)]</td>
+<td>The default value of the property. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.AssetTypeProperties.html#defaultvalueid">DefaultValueId</a></td>
 <td>guid (nullable)</td>
-<td>The value id of the default value of the property. [Filter(multi eq)]</td>
+<td>The value id of the default value of the property. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.AssetTypeProperties.html#id">Id</a></td>
@@ -132,23 +132,23 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.AssetTypeProperties.html#property">Property</a></td>
 <td><a href="General.CustomProperties.html">CustomProperties</a></td>
-<td>The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)]</td>
+<td>The user-defined property, which is required for assets of the specified type. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.AssetTypeProperties.html#rentalassettype">RentalAssetType</a></td>
 <td><a href="Applications.Rental.AssetTypes.html">AssetTypes</a></td>
-<td>The <a href="Applications.Rental.AssetTypes.html">AssetType</a> to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>AssetType</code>(Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="defaultvalue">DefaultValue</h3>
-<p>The default value of the property. [Filter(like)]</p>
+<p>The default value of the property. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultvalueid">DefaultValueId</h3>
-<p>The value id of the default value of the property. [Filter(multi eq)]</p>
+<p>The value id of the default value of the property. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -158,11 +158,11 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
-<p>The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)]</p>
+<p>The user-defined property, which is required for assets of the specified type. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalassettype">RentalAssetType</h3>
-<p>The <a href="Applications.Rental.AssetTypes.html">AssetType</a> to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>AssetType</code>(Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.AssetTypes.html">AssetTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

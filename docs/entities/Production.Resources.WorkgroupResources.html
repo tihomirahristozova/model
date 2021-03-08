@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#availablequantity">AvailableQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)]</td>
+<td>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. <code>Unit: Resource.PrimaryUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#id">Id</a></td>
@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#resource">Resource</a></td>
 <td><a href="Production.Resources.Resources.html">Resources</a></td>
-<td>The contained resource type. [Required] [Filter(multi eq)]</td>
+<td>The contained resource type. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Workgroups</a></td>
-<td>Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner]</td>
+<td>Id of the workgroup, containing the resource. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -154,13 +154,13 @@ Aggregate Root:<br>
 <tr>
 <td>Capacity</td>
 <td><a href="Production.Resources.Capacity.html">Capacity</a></td>
-<td>List of <a href="Production.Resources.Capacity.html">Capacity</a> child objects, based on the <a href="Production.Resources.Capacity.html#workgroupresource">Production.Resources.Capacity.WorkgroupResource</a> back reference</td>
+<td>List of <code>Capacity</code>(Production.Resources.Capacity.md) child objects, based on the <code>Production.Resources.Capacity.WorkgroupResource</code>(Production.Resources.Capacity.md#workgroupresource) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="availablequantity">AvailableQuantity</h3>
-<p>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)]</p>
+<p>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. <code>Unit: Resource.PrimaryUnit</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -177,11 +177,11 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="resource">Resource</h3>
-<p>The contained resource type. [Required] [Filter(multi eq)]</p>
+<p>The contained resource type. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.Resources.html">Resources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroup">Workgroup</h3>
-<p>Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner]</p>
+<p>Id of the workgroup, containing the resource. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

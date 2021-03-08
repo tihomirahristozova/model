@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectRisks.html#createdate">CreateDate</a></td>
 <td>date</td>
-<td>The creation date of the project risk. [Required] [Default(Now)] [Filter(eq)]</td>
+<td>The creation date of the project risk. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRisks.html#description">Description</a></td>
 <td>string (nullable)</td>
-<td>The description of this ProjectRisk. [Filter(like)]</td>
+<td>The description of this ProjectRisk. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRisks.html#id">Id</a></td>
@@ -120,32 +120,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectRisks.html#impactpercent">ImpactPercent</a></td>
 <td>decimal</td>
-<td>The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)]</td>
+<td>The impact of the risk to the project, expressed as percentage of the total project value. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRisks.html#probabilitypercent">ProbabilityPercent</a></td>
 <td>decimal</td>
-<td>The probability of the risk occurring. [Required] [Default(0)]</td>
+<td>The probability of the risk occurring. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRisks.html#resolutionstrategy">ResolutionStrategy</a></td>
 <td>string (nullable)</td>
-<td>The strategy chosen to handle the risk. [Filter(eq)]</td>
+<td>The strategy chosen to handle the risk. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRisks.html#resolved">Resolved</a></td>
 <td>boolean</td>
-<td>True if the risk is resolved. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True if the risk is resolved. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRisks.html#resolvedate">ResolveDate</a></td>
 <td>date (nullable)</td>
-<td>The date on which the risk is resolved. [Filter(eq)]</td>
+<td>The date on which the risk is resolved. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRisks.html#riskname">RiskName</a></td>
 <td>string</td>
-<td>The short name of the risk. [Required] [Filter(multi eq)]</td>
+<td>The short name of the risk. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -162,12 +162,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectRisks.html#project">Project</a></td>
 <td><a href="Projects.Projects.html">Projects</a></td>
-<td>The project for which this risk applies. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The project for which this risk applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRisks.html#responsibleperson">ResponsiblePerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person who is responsible for handling the risk. [Filter(multi eq)]</td>
+<td>The person who is responsible for handling the risk. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -184,19 +184,19 @@ Aggregate Root:<br>
 <tr>
 <td>Discussion</td>
 <td><a href="Projects.ProjectRiskDiscussion.html">ProjectRiskDiscussion</a></td>
-<td>List of <a href="Projects.ProjectRiskDiscussion.html">ProjectRiskDiscussion</a> child objects, based on the <a href="Projects.ProjectRiskDiscussion.html#projectrisk">Projects.ProjectRiskDiscussion.ProjectRisk</a> back reference</td>
+<td>List of <code>ProjectRiskDiscussion</code>(Projects.ProjectRiskDiscussion.md) child objects, based on the <code>Projects.ProjectRiskDiscussion.ProjectRisk</code>(Projects.ProjectRiskDiscussion.md#projectrisk) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createdate">CreateDate</h3>
-<p>The creation date of the project risk. [Required] [Default(Now)] [Filter(eq)]</p>
+<p>The creation date of the project risk. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="description">Description</h3>
-<p>The description of this ProjectRisk. [Filter(like)]</p>
+<p>The description of this ProjectRisk. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -206,45 +206,45 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="impactpercent">ImpactPercent</h3>
-<p>The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)]</p>
+<p>The impact of the risk to the project, expressed as percentage of the total project value. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="probabilitypercent">ProbabilityPercent</h3>
-<p>The probability of the risk occurring. [Required] [Default(0)]</p>
+<p>The probability of the risk occurring. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="resolutionstrategy">ResolutionStrategy</h3>
-<p>The strategy chosen to handle the risk. [Filter(eq)]</p>
+<p>The strategy chosen to handle the risk. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="resolved">Resolved</h3>
-<p>True if the risk is resolved. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True if the risk is resolved. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="resolvedate">ResolveDate</h3>
-<p>The date on which the risk is resolved. [Filter(eq)]</p>
+<p>The date on which the risk is resolved. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="riskname">RiskName</h3>
-<p>The short name of the risk. [Required] [Filter(multi eq)]</p>
+<p>The short name of the risk. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="project">Project</h3>
-<p>The project for which this risk applies. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The project for which this risk applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Projects.html">Projects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<p>The person who is responsible for handling the risk. [Filter(multi eq)]</p>
+<p>The person who is responsible for handling the risk. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -23,18 +23,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.TrackedParameters.md#code) | string | Unique code of the asset parameter. [Required] [Filter(multi eq;like)] [ORD] 
+| [Code](Applications.AssetManagement.TrackedParameters.md#code) | string | Unique code of the asset parameter. `Required` `Filter(multi eq;like)` `ORD` 
 | [Id](Applications.AssetManagement.TrackedParameters.md#id) | guid |  
-| [IsActive](Applications.AssetManagement.TrackedParameters.md#isactive) | boolean | Specifies whether the parameter is active for choosing in drop downs. [Required] [Default(true)] [Filter(multi eq)] 
-| [Name](Applications.AssetManagement.TrackedParameters.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset parameter. [Required] [Filter(multi eq;like)] 
-| [Notes](Applications.AssetManagement.TrackedParameters.md#notes) | string (nullable) | Notes for this TrackedParameter. [Filter(like)] 
+| [IsActive](Applications.AssetManagement.TrackedParameters.md#isactive) | boolean | Specifies whether the parameter is active for choosing in drop downs. `Required` `Default(true)` `Filter(multi eq)` 
+| [Name](Applications.AssetManagement.TrackedParameters.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset parameter. `Required` `Filter(multi eq;like)` 
+| [Notes](Applications.AssetManagement.TrackedParameters.md#notes) | string (nullable) | Notes for this TrackedParameter. `Filter(like)` 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique code of the asset parameter. [Required] [Filter(multi eq;like)] [ORD]
+Unique code of the asset parameter. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the parameter is active for choosing in drop downs. [Required] [Default(true)] [Filter(multi eq)]
+Specifies whether the parameter is active for choosing in drop downs. `Required` `Default(true)` `Filter(multi eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -59,7 +59,7 @@ _Default Value_: **True**
 
 ### Name
 
-Multilanguage name of the asset parameter. [Required] [Filter(multi eq;like)]
+Multilanguage name of the asset parameter. `Required` `Filter(multi eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-Notes for this TrackedParameter. [Filter(like)]
+Notes for this TrackedParameter. `Filter(like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  

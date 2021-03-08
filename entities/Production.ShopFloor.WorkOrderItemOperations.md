@@ -28,33 +28,33 @@ Aggregate Root:
 | [ActualEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualenddatetime) | datetime (nullable) | The date/time when the operation has completed. null means that the operation is not completed. 
 | [ActualStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualstartdatetime) | datetime (nullable) | The date/time when the operation has started. null means that the has not started yet. 
 | [Id](Production.ShopFloor.WorkOrderItemOperations.md#id) | guid |  
-| [LineOrd](Production.ShopFloor.WorkOrderItemOperations.md#lineord) | int32 | Order of the line within the work order routing. [Required] [Filter(eq;like)] 
+| [LineOrd](Production.ShopFloor.WorkOrderItemOperations.md#lineord) | int32 | Order of the line within the work order routing. `Required` `Filter(eq;like)` 
 | [MinimumConcurrent<br />StartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
-| [MoveTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. [Required] [Default(0)] 
+| [MoveTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` 
 | [Notes](Production.ShopFloor.WorkOrderItemOperations.md#notes) | string (nullable) | Notes for this WorkOrderItemOperation. 
 | [OperationDescription](Production.ShopFloor.WorkOrderItemOperations.md#operationdescription) | string (nullable) | The short description of the operation. 
-| [RunTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#runtimeminutes) | int32 | Time for production of one lot of the produced item in minutes. [Required] [Default(0)] 
+| [RunTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#runtimeminutes) | int32 | Time for production of one lot of the produced item in minutes. `Required` `Default(0)` 
 | [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledenddatetime) | datetime (nullable) | The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only). 
 | [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledstartdatetime) | datetime (nullable) | The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders). 
-| [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#scraprate) | decimal | Projected scrap rate of the operation. [Required] [Default(0)] 
-| [SetupTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment in minutes. [Required] [Default(0)] 
+| [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#scraprate) | decimal | Projected scrap rate of the operation. `Required` `Default(0)` 
+| [SetupTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment in minutes. `Required` `Default(0)` 
 | [Tooling](Production.ShopFloor.WorkOrderItemOperations.md#tooling) | string (nullable) | The tools needed for the routing step. 
-| [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] 
-| [WaitTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] 
+| [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the resource, that should be allocated for the operation. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
+| [WaitTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Operation](Production.ShopFloor.WorkOrderItemOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The performed operation. [Filter(multi eq)] |
-| [WorkgroupResource](Production.ShopFloor.WorkOrderItemOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)] |
-| [WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, containing the line. [Required] [Filter(multi eq)] [Owner] |
+| [Operation](Production.ShopFloor.WorkOrderItemOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The performed operation. `Filter(multi eq)` |
+| [WorkgroupResource](Production.ShopFloor.WorkOrderItemOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The resource that will be used for the operation. null means that no resource will be locked for the operation. `Required` `Filter(multi eq)` |
+| [WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, containing the line. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Load | [Load](Production.Resources.Load.md) | List of [Load](Production.Resources.Load.md) child objects, based on the [Production.Resources.Load.WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) back reference 
+| Load | [Load](Production.Resources.Load.md) | List of `Load`(Production.Resources.Load.md) child objects, based on the `Production.Resources.Load.WorkOrderItemOperation`(Production.Resources.Load.md#workorderitemoperation) back reference 
 
 
 ## Attribute Details
@@ -84,7 +84,7 @@ _Default Value_: **NewGuid**
 
 ### LineOrd
 
-Order of the line within the work order routing. [Required] [Filter(eq;like)]
+Order of the line within the work order routing. `Required` `Filter(eq;like)`
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, Like**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### MoveTimeMinutes
 
-Time to move the lot to the next operation in minutes. [Required] [Default(0)]
+Time to move the lot to the next operation in minutes. `Required` `Default(0)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -132,7 +132,7 @@ _Front-End Recalc Expressions:_
 `obj.Operation.Name`
 ### RunTimeMinutes
 
-Time for production of one lot of the produced item in minutes. [Required] [Default(0)]
+Time for production of one lot of the produced item in minutes. `Required` `Default(0)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -157,7 +157,7 @@ _Supports Order By_: **False**
 
 ### ScrapRate
 
-Projected scrap rate of the operation. [Required] [Default(0)]
+Projected scrap rate of the operation. `Required` `Default(0)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -166,7 +166,7 @@ _Default Value_: **0**
 
 ### SetupTimeMinutes
 
-Time needed to setup the equipment in minutes. [Required] [Default(0)]
+Time needed to setup the equipment in minutes. `Required` `Default(0)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -183,7 +183,7 @@ _Supports Order By_: **False**
 
 ### UseQuantity
 
-Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]
+Quantity of the resource, that should be allocated for the operation. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -192,7 +192,7 @@ _Default Value_: **Constant**
 
 ### WaitTimeMinutes
 
-Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)]
+Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -204,21 +204,21 @@ _Default Value_: **0**
 
 ### Operation
 
-The performed operation. [Filter(multi eq)]
+The performed operation. `Filter(multi eq)`
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
 
-The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)]
+The resource that will be used for the operation. null means that no resource will be locked for the operation. `Required` `Filter(multi eq)`
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItem
 
-The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]
+The work order item, containing the line. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
 _Indexed_: **True**  

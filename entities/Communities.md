@@ -1,8 +1,7 @@
----
+﻿---
 uid: Communities
 ---
 # Communities Namespace
-
 
 ## Entities
 - [Notifications](Communities.Notifications.md)  
@@ -13,4 +12,6 @@ uid: Communities
 - [SocialPosts](Communities.SocialPosts.md)  
 - [SocialReactions](Communities.SocialReactions.md)  
 - [SocialReactionsSummary](Communities.SocialReactionsSummary.md)  
+
+ionsSummary.md)  
 

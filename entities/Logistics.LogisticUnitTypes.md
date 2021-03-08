@@ -23,17 +23,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.LogisticUnitTypes.md#code) | string | Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. [Required] [Filter(multi eq;like)] 
+| [Code](Logistics.LogisticUnitTypes.md#code) | string | Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. `Required` `Filter(multi eq;like)` 
 | [Id](Logistics.LogisticUnitTypes.md#id) | guid |  
-| [Name](Logistics.LogisticUnitTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the logistic unit type. [Required] [Filter(eq;like)] 
-| [Notes](Logistics.LogisticUnitTypes.md#notes) | string (nullable) | Notes for this LogisticUnitType. [Filter(like)] 
+| [Name](Logistics.LogisticUnitTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the logistic unit type. `Required` `Filter(eq;like)` 
+| [Notes](Logistics.LogisticUnitTypes.md#notes) | string (nullable) | Notes for this LogisticUnitType. `Filter(like)` 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. [Required] [Filter(multi eq;like)]
+Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. `Required` `Filter(multi eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multi-language name of the logistic unit type. [Required] [Filter(eq;like)]
+Multi-language name of the logistic unit type. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-Notes for this LogisticUnitType. [Filter(like)]
+Notes for this LogisticUnitType. `Filter(like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  

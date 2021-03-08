@@ -110,12 +110,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.Reminders.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Reminders.html#isdismissed">IsDismissed</a></td>
 <td>boolean</td>
-<td>When true the reminder was dismissed by the user; the initial value is false. [Required] [Default(false)] [Filter(eq)]</td>
+<td>When true the reminder was dismissed by the user; the initial value is false. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Reminders.html#notes">Notes</a></td>
@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.Reminders.html#remindertime">ReminderTime</a></td>
 <td>datetime</td>
-<td>The time when the alarm should snooze to the user. [Required] [Filter(ge;le)]</td>
+<td>The time when the alarm should snooze to the user. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.Reminders.html#activity">Activity</a></td>
 <td><a href="General.Contacts.Activities.html">Activities</a></td>
-<td>The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The activity to which this reminder is attached. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,13 +153,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isdismissed">IsDismissed</h3>
-<p>When true the reminder was dismissed by the user; the initial value is false. [Required] [Default(false)] [Filter(eq)]</p>
+<p>When true the reminder was dismissed by the user; the initial value is false. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -170,13 +170,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="remindertime">ReminderTime</h3>
-<p>The time when the alarm should snooze to the user. [Required] [Filter(ge;le)]</p>
+<p>The time when the alarm should snooze to the user. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="activity">Activity</h3>
-<p>The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The activity to which this reminder is attached. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Activities.html">Activities</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

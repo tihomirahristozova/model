@@ -1,8 +1,7 @@
----
+﻿---
 uid: Crm.Invoicing
 ---
 # Crm.Invoicing Namespace
-
 
 ## Entities
 - [InvoiceLines](Crm.Invoicing.InvoiceLines.md)  
@@ -10,4 +9,6 @@ uid: Crm.Invoicing
 - [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)  
 - [Invoices](Crm.Invoicing.Invoices.md)  
 - [InvoicesOptions](Crm.Invoicing.InvoicesOptions.md)  
+
+voicesOptions.md)  
 

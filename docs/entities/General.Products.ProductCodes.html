@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductCodes.html#active">Active</a></td>
 <td>boolean</td>
-<td>True when the code is active and can be selected in new documents. [Required] [Default(true)] [Filter(eq)]</td>
+<td>True when the code is active and can be selected in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCodes.html#id">Id</a></td>
@@ -115,7 +115,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductCodes.html#productcodefield">ProductCodeField</a></td>
 <td>string</td>
-<td>The code of the product in the specified coding system. [Required] [Filter(eq;like)]</td>
+<td>The code of the product in the specified coding system. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,18 +132,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductCodes.html#codingsystem">CodingSystem</a></td>
 <td><a href="General.Products.CodingSystems.html">CodingSystems</a></td>
-<td>The coding system in which the product code is specified. [Required] [Filter(multi eq)]</td>
+<td>The coding system in which the product code is specified. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCodes.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product for which the code is specified. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The product for which the code is specified. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>True when the code is active and can be selected in new documents. [Required] [Default(true)] [Filter(eq)]</p>
+<p>True when the code is active and can be selected in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -154,18 +154,18 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="productcodefield">ProductCodeField</h3>
-<p>The code of the product in the specified coding system. [Required] [Filter(eq;like)]</p>
+<p>The code of the product in the specified coding system. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="codingsystem">CodingSystem</h3>
-<p>The coding system in which the product code is specified. [Required] [Filter(multi eq)]</p>
+<p>The coding system in which the product code is specified. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.CodingSystems.html">CodingSystems</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>The product for which the code is specified. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The product for which the code is specified. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

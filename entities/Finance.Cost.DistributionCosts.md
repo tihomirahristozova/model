@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountBase](Finance.Cost.DistributionCosts.md#amountbase) | [Amount](../data-types.md#amount) | The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)] 
+| [AmountBase](Finance.Cost.DistributionCosts.md#amountbase) | [Amount](../data-types.md#amount) | The cost (in base currency) which should be distributed. `Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
 | [Id](Finance.Cost.DistributionCosts.md#id) | guid |  
 | [Notes](Finance.Cost.DistributionCosts.md#notes) | string (nullable) | Notes for this DistributionCost. 
 
@@ -33,15 +33,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionCosts.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner] |
-| [CostType](Finance.Cost.DistributionCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The type of the cost, which will be distributed. [Required] [Filter(multi eq)] |
+| [CostDistribution](Finance.Cost.DistributionCosts.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionCost belongs. `Required` `Filter(multi eq)` `Owner` |
+| [CostType](Finance.Cost.DistributionCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The type of the cost, which will be distributed. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### AmountBase
 
-The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]
+The cost (in base currency) which should be distributed. `Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)`
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals**  
@@ -67,14 +67,14 @@ _Supports Order By_: **False**
 
 ### CostDistribution
 
-The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]
+The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionCost belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
-The type of the cost, which will be distributed. [Required] [Filter(multi eq)]
+The type of the cost, which will be distributed. `Required` `Filter(multi eq)`
 
 _Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

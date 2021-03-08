@@ -25,28 +25,28 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | True if the vehicle set is active for choosing; false - otherwise. [Required] [Default(true)] [Filter(eq)] 
+| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | True if the vehicle set is active for choosing; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [Id](Applications.Fleet.VehicleSets.md#id) | guid |  
-| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)] 
+| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the vehicle set (Multilanguage). `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Fleet.VehicleSets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Applications.Fleet.VehicleSets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the vehicle set. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Vehicles | [VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md) | List of [VehicleSetVehicle](Applications.Fleet.VehicleSetVehicles.md) child objects, based on the [Applications.Fleet.VehicleSetVehicle.VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) back reference 
+| Vehicles | [VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md) | List of `VehicleSetVehicle`(Applications.Fleet.VehicleSetVehicles.md) child objects, based on the `Applications.Fleet.VehicleSetVehicle.VehicleSet`(Applications.Fleet.VehicleSetVehicles.md#vehicleset) back reference 
 
 
 ## Attribute Details
 
 ### Active
 
-True if the vehicle set is active for choosing; false - otherwise. [Required] [Default(true)] [Filter(eq)]
+True if the vehicle set is active for choosing; false - otherwise. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -62,7 +62,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)]
+Name of the vehicle set (Multilanguage). `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner]
+The enterprise company operating the vehicle set. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

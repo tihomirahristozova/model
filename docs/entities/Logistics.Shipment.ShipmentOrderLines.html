@@ -110,7 +110,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#finished">Finished</a></td>
 <td>boolean</td>
-<td>True if this shipment should prohibit further shipments for the sales order line. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True if this shipment should prohibit further shipments for the sales order line. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#grossweightkg">GrossWeightkg</a></td>
@@ -140,7 +140,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique for the shipment. [Required]</td>
+<td>Line number, unique for the shipment. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#netweightkg">NetWeightkg</a></td>
@@ -165,22 +165,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#persistlot">PersistLot</a></td>
 <td>boolean</td>
-<td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)]</td>
+<td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The quantity to be shipped. [Unit: QuantityUnit] [Required] [Default(1)]</td>
+<td>The quantity to be shipped. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The equivalence of Quantity in the base measurement category of the product. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
+<td>The equivalence of Quantity in the base measurement category of the product. <code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#volumel">Volumel</a></td>
@@ -207,42 +207,42 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#document">Document</a></td>
 <td><a href="Logistics.Shipment.ShipmentOrders.html">ShipmentOrders</a></td>
-<td>The <a href="Logistics.Shipment.ShipmentOrderLines.html#shipmentorder">ShipmentOrder</a> to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)]</td>
+<td>The <code>ShipmentOrder</code>(Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The store lot from which to take the goods. [Filter(multi eq)]</td>
+<td>The store lot from which to take the goods. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#parentsalesorderline">ParentSalesOrderLine</a></td>
 <td><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a></td>
-<td>Sales order line which is shipped. [Required] [Filter(multi eq)]</td>
+<td>Sales order line which is shipped. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>The serial number of the shipped product. null means that serial number is unknown or not applicable. [Filter(multi eq)]</td>
+<td>The serial number of the shipped product. null means that serial number is unknown or not applicable. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#shipmentorder">ShipmentOrder</a></td>
 <td><a href="Logistics.Shipment.ShipmentOrders.html">ShipmentOrders</a></td>
-<td>The <a href="Logistics.Shipment.ShipmentOrderLines.html#shipmentorder">ShipmentOrder</a> to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>ShipmentOrder</code>(Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>The store bin from which to take the goods. [Filter(multi eq)]</td>
+<td>The store bin from which to take the goods. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -253,7 +253,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="finished">Finished</h3>
-<p>True if this shipment should prohibit further shipments for the sales order line. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True if this shipment should prohibit further shipments for the sales order line. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -286,7 +286,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique for the shipment. [Required]</p>
+<p>Line number, unique for the shipment. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -315,13 +315,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="persistlot">PersistLot</h3>
-<p>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)]</p>
+<p>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity to be shipped. [Unit: QuantityUnit] [Required] [Default(1)]</p>
+<p>The quantity to be shipped. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -329,7 +329,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>new Quantity( obj.ParentSalesOrderLine.Quantity.Value, obj.QuantityUnit)</code></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement category of the product. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
+<p>The equivalence of Quantity in the base measurement category of the product. <code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -338,7 +338,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -358,43 +358,43 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <a href="Logistics.Shipment.ShipmentOrderLines.html#shipmentorder">ShipmentOrder</a> to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p>The <code>ShipmentOrder</code>(Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.ShipmentOrders.html">ShipmentOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
-<p>The store lot from which to take the goods. [Filter(multi eq)]</p>
+<p>The store lot from which to take the goods. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ParentSalesOrderLine.Lot</code></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentsalesorderline">ParentSalesOrderLine</h3>
-<p>Sales order line which is shipped. [Required] [Filter(multi eq)]</p>
+<p>Sales order line which is shipped. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ParentSalesOrderLine.QuantityUnit</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>The serial number of the shipped product. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>
+<p>The serial number of the shipped product. null means that serial number is unknown or not applicable. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="shipmentorder">ShipmentOrder</h3>
-<p>The <a href="Logistics.Shipment.ShipmentOrderLines.html#shipmentorder">ShipmentOrder</a> to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>ShipmentOrder</code>(Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.ShipmentOrders.html">ShipmentOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storebin">StoreBin</h3>
-<p>The store bin from which to take the goods. [Filter(multi eq)]</p>
+<p>The store bin from which to take the goods. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -24,29 +24,29 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.Service.Services.md#code) | string | Unique code of the service. [Required] [Filter(eq;like)] 
+| [Code](Applications.Service.Services.md#code) | string | Unique code of the service. `Required` `Filter(eq;like)` 
 | [Id](Applications.Service.Services.md#id) | guid |  
-| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates wheather this service is currently used. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Applications.Service.Services.md#name) | string | The name of the service. [Required] [Filter(eq;like)] 
+| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates wheather this service is currently used. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Applications.Service.Services.md#name) | string | The name of the service. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MeasurementUnit](Applications.Service.Services.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)] |
+| [MeasurementUnit](Applications.Service.Services.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified. `Required` `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Invoicing | [ServiceInvoicing](Applications.Service.ServiceInvoicing.md) | List of [ServiceInvoicing](Applications.Service.ServiceInvoicing.md) child objects, based on the [Applications.Service.ServiceInvoicing.Service](Applications.Service.ServiceInvoicing.md#service) back reference 
+| Invoicing | [ServiceInvoicing](Applications.Service.ServiceInvoicing.md) | List of `ServiceInvoicing`(Applications.Service.ServiceInvoicing.md) child objects, based on the `Applications.Service.ServiceInvoicing.Service`(Applications.Service.ServiceInvoicing.md#service) back reference 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique code of the service. [Required] [Filter(eq;like)]
+Unique code of the service. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -61,7 +61,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Indicates wheather this service is currently used. [Required] [Default(true)] [Filter(eq)]
+Indicates wheather this service is currently used. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -70,7 +70,7 @@ _Default Value_: **True**
 
 ### Name
 
-The name of the service. [Required] [Filter(eq;like)]
+The name of the service. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### MeasurementUnit
 
-The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)]
+The measurement unit in which the service rendered to the customer is quantified. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

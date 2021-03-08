@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.WorkReportResources.html#actualendtime">ActualEndTime</a></td>
 <td>datetime (nullable)</td>
-<td>Optionally, specifies the actual date and time when the resource usage ended. [Filter(eq;like)]</td>
+<td>Optionally, specifies the actual date and time when the resource usage ended. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportResources.html#actualstarttime">ActualStartTime</a></td>
 <td>datetime (nullable)</td>
-<td>Optionally, specifies the actual date and time when the resource usage began. [Filter(eq;like)]</td>
+<td>Optionally, specifies the actual date and time when the resource usage began. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportResources.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.WorkReportResources.html#totalresourceusagehours">TotalResourceUsageHours</a></td>
 <td>decimal</td>
-<td>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. [Required] [Default(0)] [Filter(eq;like)]</td>
+<td>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,33 +137,33 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.WorkReportResources.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.ProjectTasks.html">ProjectTasks</a></td>
-<td>The project task for which the work is reported. [Required] [Filter(multi eq)]</td>
+<td>The project task for which the work is reported. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportResources.html#resource">Resource</a></td>
 <td><a href="General.Resources.Resources.html">Resources</a></td>
-<td>The resource, for which usage is reported. [Required] [Filter(multi eq)]</td>
+<td>The resource, for which usage is reported. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportResources.html#resourceinstance">ResourceInstance</a></td>
 <td><a href="General.Resources.ResourceInstances.html">ResourceInstances</a> (nullable)</td>
-<td>The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)]</td>
+<td>The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportResources.html#workreport">WorkReport</a></td>
 <td><a href="Projects.WorkReports.html">WorkReports</a></td>
-<td>The <a href="Projects.WorkReportResources.html#workreport">WorkReport</a> to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>WorkReport</code>(Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actualendtime">ActualEndTime</h3>
-<p>Optionally, specifies the actual date and time when the resource usage ended. [Filter(eq;like)]</p>
+<p>Optionally, specifies the actual date and time when the resource usage ended. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="actualstarttime">ActualStartTime</h3>
-<p>Optionally, specifies the actual date and time when the resource usage began. [Filter(eq;like)]</p>
+<p>Optionally, specifies the actual date and time when the resource usage began. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -173,14 +173,14 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="totalresourceusagehours">TotalResourceUsageHours</h3>
-<p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. [Required] [Default(0)] [Filter(eq;like)]</p>
+<p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The project task for which the work is reported. [Required] [Filter(multi eq)]</p>
+<p>The project task for which the work is reported. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -188,17 +188,17 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.WorkReport.ProjectTask</code></p>
 <h3 id="resource">Resource</h3>
-<p>The resource, for which usage is reported. [Required] [Filter(multi eq)]</p>
+<p>The resource, for which usage is reported. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resourceinstance">ResourceInstance</h3>
-<p>The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)]</p>
+<p>The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.ResourceInstances.html">ResourceInstances</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.ResourceInstance != null) AndAlso ( obj.ResourceInstance.Resource != obj.Resource)), null, obj.ResourceInstance)</code></p>
 <h3 id="workreport">WorkReport</h3>
-<p>The <a href="Projects.WorkReportResources.html#workreport">WorkReport</a> to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>WorkReport</code>(Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.WorkReports.html">WorkReports</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

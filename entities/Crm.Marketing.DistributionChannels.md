@@ -23,18 +23,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Marketing.DistributionChannels.md#code) | string | Unique distribution channel code. [Required] [Filter(eq;like)] 
+| [Code](Crm.Marketing.DistributionChannels.md#code) | string | Unique distribution channel code. `Required` `Filter(eq;like)` 
 | [Description](Crm.Marketing.DistributionChannels.md#description) | string (nullable) | Full description of the distribution channel. 
 | [Id](Crm.Marketing.DistributionChannels.md#id) | guid |  
-| [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel. [Required] [Filter(eq;like)] 
+| [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel. `Required` `Filter(eq;like)` 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique distribution channel code. [Required] [Filter(eq;like)]
+Unique distribution channel code. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -57,7 +57,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Is the channel active for new sales? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)]
+Is the channel active for new sales? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -66,7 +66,7 @@ _Default Value_: **True**
 
 ### Name
 
-Multi-language name of the distribution channel. [Required] [Filter(eq;like)]
+Multi-language name of the distribution channel. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  

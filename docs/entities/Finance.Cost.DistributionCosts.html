@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.DistributionCosts.html#amountbase">AmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]</td>
+<td>The cost (in base currency) which should be distributed. <code>Currency: CostDistribution.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.DistributionCosts.html#id">Id</a></td>
@@ -132,18 +132,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.DistributionCosts.html#costdistribution">CostDistribution</a></td>
 <td><a href="Finance.Cost.Distributions.html">Distributions</a></td>
-<td>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Distribution</code>(Finance.Cost.Distributions.md) to which this DistributionCost belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.DistributionCosts.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">CostTypes</a></td>
-<td>The type of the cost, which will be distributed. [Required] [Filter(multi eq)]</td>
+<td>The type of the cost, which will be distributed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amountbase">AmountBase</h3>
-<p>The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]</p>
+<p>The cost (in base currency) which should be distributed. <code>Currency: CostDistribution.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -159,11 +159,11 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costdistribution">CostDistribution</h3>
-<p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Distribution</code>(Finance.Cost.Distributions.md) to which this DistributionCost belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Distributions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
-<p>The type of the cost, which will be distributed. [Required] [Filter(multi eq)]</p>
+<p>The type of the cost, which will be distributed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

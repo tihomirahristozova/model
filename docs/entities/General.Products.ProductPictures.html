@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductPictures.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>True=This is the default picture for the product and the size class; false=otherwise. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True=This is the default picture for the product and the size class; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#lastupdatetime">LastUpdateTime</a></td>
 <td>datetime (nullable)</td>
-<td>The exact server time, when the picture was last updated. Set automatically. [Filter(ge;le)] [ReadOnly]</td>
+<td>The exact server time, when the picture was last updated. Set automatically. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#picture">Picture</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductPictures.html#pictureno">PictureNo</a></td>
 <td>int32</td>
-<td>Unique picture number within the product. Also used for sorting. [Required] [Filter(eq;like)]</td>
+<td>Unique picture number within the product. Also used for sorting. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a></td>
@@ -152,7 +152,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductPictures.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The <a href="General.Products.ProductPictures.html#product">Product</a> to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>Product</code>(General.Products.ProductPictures.md#product) to which this ProductPicture belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>True=This is the default picture for the product and the size class; false=otherwise. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True=This is the default picture for the product and the size class; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -176,7 +176,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Product.Pictures.Take( 1).Count( ) == 0)</code></p>
 <h3 id="lastupdatetime">LastUpdateTime</h3>
-<p>The exact server time, when the picture was last updated. Set automatically. [Filter(ge;le)] [ReadOnly]</p>
+<p>The exact server time, when the picture was last updated. Set automatically. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -186,7 +186,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="pictureno">PictureNo</h3>
-<p>Unique picture number within the product. Also used for sorting. [Required] [Filter(eq;like)]</p>
+<p>Unique picture number within the product. Also used for sorting. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -197,7 +197,7 @@ Aggregate Root:<br>
 <h3 id="picturesizeclass">PictureSizeClass</h3>
 <p>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> (nullable)</strong><br>
-Allowed values for the <a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> data attribute<br>
+Allowed values for the <code>PictureSizeClass</code>(General.Products.ProductPictures.md#picturesizeclass) data attribute<br>
 <em>Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enum Members)</em></p>
 <table>
 <thead>
@@ -221,7 +221,7 @@ Allowed values for the <a href="General.Products.ProductPictures.html#picturesiz
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
-<p>The <a href="General.Products.ProductPictures.html#product">Product</a> to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>Product</code>(General.Products.ProductPictures.md#product) to which this ProductPicture belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

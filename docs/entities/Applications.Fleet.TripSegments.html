@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#startingtimestamp">StartingTimestamp</a></td>
 <td>datetime</td>
-<td>The starting date and time of the travel on the segment. [Required]</td>
+<td>The starting date and time of the travel on the segment. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,17 +142,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#endingmappoint">EndingMapPoint</a></td>
 <td><a href="General.Geography.MapPoints.html">MapPoints</a></td>
-<td>The ending geographical point of the route segment. [Required] [Filter(multi eq)]</td>
+<td>The ending geographical point of the route segment. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#startingmappoint">StartingMapPoint</a></td>
 <td><a href="General.Geography.MapPoints.html">MapPoints</a></td>
-<td>The starting geographical point of the route segment. [Required] [Filter(multi eq)]</td>
+<td>The starting geographical point of the route segment. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#trip">Trip</a></td>
 <td><a href="Applications.Fleet.Trips.html">Trips</a></td>
-<td>The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The trip for which the segment is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -178,21 +178,21 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startingtimestamp">StartingTimestamp</h3>
-<p>The starting date and time of the travel on the segment. [Required]</p>
+<p>The starting date and time of the travel on the segment. <code>Required</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="endingmappoint">EndingMapPoint</h3>
-<p>The ending geographical point of the route segment. [Required] [Filter(multi eq)]</p>
+<p>The ending geographical point of the route segment. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.MapPoints.html">MapPoints</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="startingmappoint">StartingMapPoint</h3>
-<p>The starting geographical point of the route segment. [Required] [Filter(multi eq)]</p>
+<p>The starting geographical point of the route segment. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.MapPoints.html">MapPoints</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trip">Trip</h3>
-<p>The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The trip for which the segment is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.Trips.html">Trips</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

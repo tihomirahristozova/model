@@ -110,27 +110,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentStateChanges.html#newstate">NewState</a></td>
 <td><a href="General.DocumentStateChanges.html#newstate">NewState</a></td>
-<td>The new state after the change. [Required] [Filter(eq)]</td>
+<td>The new state after the change. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentStateChanges.html#systeminitiated">SystemInitiated</a></td>
 <td>boolean</td>
-<td>Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly]</td>
+<td>Specifies whether the state change was caused by system process or from user action. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentStateChanges.html#updatetime">UpdateTime</a></td>
 <td>datetime</td>
-<td>The time when the change took effect. [Required] [Filter(ge;le)] [ORD]</td>
+<td>The time when the change took effect. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentStateChanges.html#updateuser">UpdateUser</a></td>
 <td>string</td>
-<td>The login name of the user, who made the status change. [Required] [Filter(eq)]</td>
+<td>The login name of the user, who made the status change. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentStateChanges.html#void">Void</a></td>
 <td>boolean</td>
-<td>True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1]</td>
+<td>True if the document is voided with this change. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,12 +147,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentStateChanges.html#document">Document</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>The document which has changed state. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The document which has changed state. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentStateChanges.html#userstatus">UserStatus</a></td>
 <td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The new user status after the change. [Filter(multi eq)]</td>
+<td>The new user status after the change. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,9 +163,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="newstate">NewState</h3>
-<p>The new state after the change. [Required] [Filter(eq)]</p>
+<p>The new state after the change. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentStateChanges.html#newstate">NewState</a></strong><br>
-Allowed values for the <a href="General.DocumentStateChanges.html#newstate">NewState</a> data attribute<br>
+Allowed values for the <code>NewState</code>(General.DocumentStateChanges.md#newstate) data attribute<br>
 <em>Allowed Values (General.DocumentStateChangesRepository.NewState Enum Members)</em></p>
 <table>
 <thead>
@@ -208,35 +208,35 @@ Allowed values for the <a href="General.DocumentStateChanges.html#newstate">NewS
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="systeminitiated">SystemInitiated</h3>
-<p>Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly]</p>
+<p>Specifies whether the state change was caused by system process or from user action. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<p>The time when the change took effect. [Required] [Filter(ge;le)] [ORD]</p>
+<p>The time when the change took effect. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<p>The login name of the user, who made the status change. [Required] [Filter(eq)]</p>
+<p>The login name of the user, who made the status change. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="void">Void</h3>
-<p>True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1]</p>
+<p>True if the document is voided with this change. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The document which has changed state. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The document which has changed state. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
-<p>The new user status after the change. [Filter(multi eq)]</p>
+<p>The new user status after the change. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

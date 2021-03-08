@@ -24,17 +24,17 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AttributeName](Systems.Core.AttributeChangesHistory.md#attributename) | string |  
-| [EntityItemId](Systems.Core.AttributeChangesHistory.md#entityitemid) | guid | The id of the actual changed object, described by this change. [Required] [Filter(multi eq)] [Inherited from Sys_Object_Changes_Table.Entity_Item_Id] 
-| [NewValue](Systems.Core.AttributeChangesHistory.md#newvalue) | string (nullable) | The new value. [Filter(eq;like)] [Inherited from Sys_Attribute_<br />Changes_Table.New_Value] 
-| [PreviousValue](Systems.Core.AttributeChangesHistory.md#previousvalue) | string | The previous value. [Required] [Filter(eq)] 
-| [RepositoryName](Systems.Core.AttributeChangesHistory.md#repositoryname) | string | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)] [Inherited from Sys_Object_Changes_Table.Repository_Name] 
-| [TimeUtc](Systems.Core.AttributeChangesHistory.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD] [Inherited from Sys_Object_Changesets_<br />Table.Time_Utc] 
+| [EntityItemId](Systems.Core.AttributeChangesHistory.md#entityitemid) | guid | The id of the actual changed object, described by this change. `Required` `Filter(multi eq)` `Inherited from Sys_Object_Changes_Table.Entity_Item_Id` 
+| [NewValue](Systems.Core.AttributeChangesHistory.md#newvalue) | string (nullable) | The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` 
+| [PreviousValue](Systems.Core.AttributeChangesHistory.md#previousvalue) | string | The previous value. `Required` `Filter(eq)` 
+| [RepositoryName](Systems.Core.AttributeChangesHistory.md#repositoryname) | string | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` `Inherited from Sys_Object_Changes_Table.Repository_Name` 
+| [TimeUtc](Systems.Core.AttributeChangesHistory.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `Inherited from Sys_Object_Changesets_<br />Table.Time_Utc` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Core.AttributeChangesHistory.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user which initiated the change. null when it is unknown. [Filter(multi eq)] [Inherited from Sys_Object_Changesets_<br />Table.User_Id] |
+| [User](Systems.Core.AttributeChangesHistory.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user which initiated the change. null when it is unknown. `Filter(multi eq)` `Inherited from Sys_Object_Changesets_<br />Table.User_Id` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### EntityItemId
 
-The id of the actual changed object, described by this change. [Required] [Filter(multi eq)] [Inherited from Sys_Object_Changes_Table.Entity_Item_Id]
+The id of the actual changed object, described by this change. `Required` `Filter(multi eq)` `Inherited from Sys_Object_Changes_Table.Entity_Item_Id`
 
 _Type_: **guid**  
 _Inherited From_: **Sys_Object_Changes_Table.Entity_Item_Id**  
@@ -56,7 +56,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### NewValue
 
-The new value. [Filter(eq;like)] [Inherited from Sys_Attribute_Changes_Table.New_Value]
+The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_Changes_Table.New_Value`
 
 _Type_: **string (nullable)**  
 _Inherited From_: **Sys_Attribute_Changes_Table.New_Value**  
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 ### PreviousValue
 
-The previous value. [Required] [Filter(eq)]
+The previous value. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### RepositoryName
 
-The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)] [Inherited from Sys_Object_Changes_Table.Repository_Name]
+The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` `Inherited from Sys_Object_Changes_Table.Repository_Name`
 
 _Type_: **string**  
 _Inherited From_: **Sys_Object_Changes_Table.Repository_Name**  
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### TimeUtc
 
-Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD] [Inherited from Sys_Object_Changesets_Table.Time_Utc]
+Date and time (in Utc) when the changeset was processed by the server. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `Inherited from Sys_Object_Changesets_Table.Time_Utc`
 
 _Type_: **datetime**  
 _Inherited From_: **Sys_Object_Changesets_Table.Time_Utc**  
@@ -95,7 +95,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### User
 
-The user which initiated the change. null when it is unknown. [Filter(multi eq)] [Inherited from Sys_Object_Changesets_Table.User_Id]
+The user which initiated the change. null when it is unknown. `Filter(multi eq)` `Inherited from Sys_Object_Changesets_Table.User_Id`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Inherited From_: **Sys_Object_Changesets_Table.User_Id**  

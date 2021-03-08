@@ -31,8 +31,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Accounting.TemplateRouteLinks.md#route) | [Routes](Systems.Workflow.Routes.md) | Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner] |
-| [Template](Finance.Accounting.TemplateRouteLinks.md#template) | [Templates](Finance.Accounting.Templates.md) | Template that will be activated for the specified route. [Required] [Filter(multi eq)] |
+| [Route](Finance.Accounting.TemplateRouteLinks.md#route) | [Routes](Systems.Workflow.Routes.md) | Route for which the specified template will be activated. `Required` `Filter(multi eq)` `Owner` |
+| [Template](Finance.Accounting.TemplateRouteLinks.md#template) | [Templates](Finance.Accounting.Templates.md) | Template that will be activated for the specified route. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### Route
 
-Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner]
+Route for which the specified template will be activated. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Indexed_: **True**  
@@ -57,7 +57,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Template
 
-Template that will be activated for the specified route. [Required] [Filter(multi eq)]
+Template that will be activated for the specified route. `Required` `Filter(multi eq)`
 
 _Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

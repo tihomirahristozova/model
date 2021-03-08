@@ -1,8 +1,7 @@
----
+﻿---
 uid: Applications.Cms
 ---
 # Applications.Cms Namespace
-
 
 ## Entities
 - [NewsWebModuleArticles](Applications.Cms.NewsWebModuleArticles.md)  
@@ -12,4 +11,6 @@ uid: Applications.Cms
 - [WebModules](Applications.Cms.WebModules.md)  
 - [WebSiteLanguages](Applications.Cms.WebSiteLanguages.md)  
 - [WebSites](Applications.Cms.WebSites.md)  
+
+ons.Cms.WebSites.md)  
 

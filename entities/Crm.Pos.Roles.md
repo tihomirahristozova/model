@@ -23,18 +23,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CanProcessMinusSales](Crm.Pos.Roles.md#canprocessminussales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)] 
-| [CanVoidSales](Crm.Pos.Roles.md#canvoidsales) | boolean | Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)] 
+| [CanProcessMinusSales](Crm.Pos.Roles.md#canprocessminussales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. `Required` `Default(false)` `Filter(multi eq)` 
+| [CanVoidSales](Crm.Pos.Roles.md#canvoidsales) | boolean | Indicates whether this role can void sales orders. `Required` `Default(false)` `Filter(multi eq)` 
 | [Id](Crm.Pos.Roles.md#id) | guid |  
-| [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string | Unique role code. [Required] [Filter(multi eq;like)] [ORD] 
-| [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the POS role. [Required] [Filter(multi eq;like)] 
+| [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string | Unique role code. `Required` `Filter(multi eq;like)` `ORD` 
+| [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the POS role. `Required` `Filter(multi eq;like)` 
 
 
 ## Attribute Details
 
 ### CanProcessMinusSales
 
-Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)]
+Indicates whether the role is allowed to process minus (qty and/or value) sales. `Required` `Default(false)` `Filter(multi eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -43,7 +43,7 @@ _Default Value_: **False**
 
 ### CanVoidSales
 
-Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)]
+Indicates whether this role can void sales orders. `Required` `Default(false)` `Filter(multi eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### PosRoleCode
 
-Unique role code. [Required] [Filter(multi eq;like)] [ORD]
+Unique role code. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -68,7 +68,7 @@ _Supports Order By_: **True**
 
 ### PosRoleName
 
-Multi-language name of the POS role. [Required] [Filter(multi eq;like)]
+Multi-language name of the POS role. `Required` `Filter(multi eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  

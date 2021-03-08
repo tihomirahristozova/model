@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#assetvalue">AssetValue</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Value of the acquired or retired asset. [Currency: AssetValueCurrency] [Required] [Default(0)]</td>
+<td>Value of the acquired or retired asset. <code>Currency: AssetValueCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#id">Id</a></td>
@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 (nullable)</td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Introduced in version 18.2]</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#quantity">Quantity</a></td>
 <td>int32</td>
-<td>Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. [Required] [Default(0)]</td>
+<td>Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,33 +137,33 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#asset">Asset</a></td>
 <td><a href="Finance.Assets.Assets.html">Assets</a></td>
-<td>The asset that is acquired or retired. [Required] [Filter(multi eq)]</td>
+<td>The asset that is acquired or retired. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#assetorder">AssetOrder</a></td>
 <td><a href="Finance.Assets.AssetOrders.html">AssetOrders</a></td>
-<td>The <a href="Finance.Assets.AssetOrderLines.html#assetorder">AssetOrder</a> to which this AssetOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>AssetOrder</code>(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#assetvaluecurrency">AssetValueCurrency</a></td>
 <td><a href="General.Currencies.html">Currencies</a></td>
-<td>Currency of Asset Value. [Required] [Filter(multi eq)]</td>
+<td>Currency of Asset Value. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#document">Document</a></td>
 <td><a href="Finance.Assets.AssetOrders.html">AssetOrders</a></td>
-<td>The <a href="Finance.Assets.AssetOrderLines.html#assetorder">AssetOrder</a> to which this AssetOrderLine belongs. [Required] [Filter(multi eq)]</td>
+<td>The <code>AssetOrder</code>(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2]</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="assetvalue">AssetValue</h3>
-<p>Value of the acquired or retired asset. [Currency: AssetValueCurrency] [Required] [Default(0)]</p>
+<p>Value of the acquired or retired asset. <code>Currency: AssetValueCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -174,37 +174,37 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Introduced in version 18.2]</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. [Required] [Default(0)]</p>
+<p>Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
-<p>The asset that is acquired or retired. [Required] [Filter(multi eq)]</p>
+<p>The asset that is acquired or retired. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assetorder">AssetOrder</h3>
-<p>The <a href="Finance.Assets.AssetOrderLines.html#assetorder">AssetOrder</a> to which this AssetOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>AssetOrder</code>(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetOrders.html">AssetOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assetvaluecurrency">AssetValueCurrency</h3>
-<p>Currency of Asset Value. [Required] [Filter(multi eq)]</p>
+<p>Currency of Asset Value. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
-<p>The <a href="Finance.Assets.AssetOrderLines.html#assetorder">AssetOrder</a> to which this AssetOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p>The <code>AssetOrder</code>(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetOrders.html">AssetOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2]</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

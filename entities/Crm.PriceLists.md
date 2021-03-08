@@ -24,16 +24,16 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Crm.PriceLists.md#description) | string (nullable) | The description of this PriceList. 
-| [FromDate](Crm.PriceLists.md#fromdate) | datetime (nullable) | Starting validity of the price list. [Filter(eq;ge;le)] 
+| [FromDate](Crm.PriceLists.md#fromdate) | datetime (nullable) | Starting validity of the price list. `Filter(eq;ge;le)` 
 | [Id](Crm.PriceLists.md#id) | guid |  
-| [Name](Crm.PriceLists.md#name) | string | The name of this PriceList. [Required] [Filter(eq;like)] [ORD] 
-| [ThruDate](Crm.PriceLists.md#thrudate) | datetime (nullable) | Ending validity of the price list. [Filter(eq;ge;le)] 
+| [Name](Crm.PriceLists.md#name) | string | The name of this PriceList. `Required` `Filter(eq;like)` `ORD` 
+| [ThruDate](Crm.PriceLists.md#thrudate) | datetime (nullable) | Ending validity of the price list. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.PriceLists.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PriceList applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [EnterpriseCompany](Crm.PriceLists.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PriceList applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### FromDate
 
-Starting validity of the price list. [Filter(eq;ge;le)]
+Starting validity of the price list. `Filter(eq;ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -63,7 +63,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this PriceList. [Required] [Filter(eq;like)] [ORD]
+The name of this PriceList. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -72,7 +72,7 @@ _Supports Order By_: **True**
 
 ### ThruDate
 
-Ending validity of the price list. [Filter(eq;ge;le)]
+Ending validity of the price list. `Filter(eq;ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -83,7 +83,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-The Enterprise Company to which this PriceList applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this PriceList applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

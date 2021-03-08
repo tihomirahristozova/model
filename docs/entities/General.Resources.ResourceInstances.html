@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#code">Code</a></td>
 <td>string</td>
-<td>Code of the instance, unique within the resource. [Required] [Filter(eq;like)]</td>
+<td>Code of the instance, unique within the resource. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#id">Id</a></td>
@@ -115,7 +115,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#name">Name</a></td>
 <td>string</td>
-<td>Multilanguage resource instance name. [Required] [Filter(eq;like)]</td>
+<td>Multilanguage resource instance name. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#notes">Notes</a></td>
@@ -137,23 +137,23 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#asset">Asset</a></td>
 <td><a href="Finance.Assets.Assets.html">Assets</a> (nullable)</td>
-<td>The asset, which is represented by this resource instance. null, when the resource instance is not an asset. [Filter(multi eq)]</td>
+<td>The asset, which is represented by this resource instance. null, when the resource instance is not an asset. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party, which is represented by this resource instance. null, when the resource instance is not a party. [Filter(multi eq)]</td>
+<td>The party, which is represented by this resource instance. null, when the resource instance is not a party. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#resource">Resource</a></td>
 <td><a href="General.Resources.Resources.html">Resources</a></td>
-<td>The resource of which this is instance. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The resource of which this is instance. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Code of the instance, unique within the resource. [Required] [Filter(eq;like)]</p>
+<p>Code of the instance, unique within the resource. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -163,7 +163,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Multilanguage resource instance name. [Required] [Filter(eq;like)]</p>
+<p>Multilanguage resource instance name. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -174,15 +174,15 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
-<p>The asset, which is represented by this resource instance. null, when the resource instance is not an asset. [Filter(multi eq)]</p>
+<p>The asset, which is represented by this resource instance. null, when the resource instance is not an asset. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
-<p>The party, which is represented by this resource instance. null, when the resource instance is not a party. [Filter(multi eq)]</p>
+<p>The party, which is represented by this resource instance. null, when the resource instance is not a party. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resource">Resource</h3>
-<p>The resource of which this is instance. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The resource of which this is instance. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

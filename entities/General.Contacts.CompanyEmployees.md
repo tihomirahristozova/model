@@ -25,9 +25,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string (nullable) | Contract number or code, unique within the company. One employee can have more than one contract. [Filter(eq)] 
-| [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime (nullable) | End date of the employee contract, null if the contract is still valid. [Filter(ge;le)] 
-| [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime (nullable) | Start date of the employee contract. Null if it is unkown. [Filter(ge;le)] 
+| [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string (nullable) | Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq)` 
+| [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime (nullable) | End date of the employee contract, null if the contract is still valid. `Filter(ge;le)` 
+| [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime (nullable) | Start date of the employee contract. Null if it is unkown. `Filter(ge;le)` 
 | [Id](General.Contacts.CompanyEmployees.md#id) | guid |  
 | [Notes](General.Contacts.CompanyEmployees.md#notes) | string (nullable) | Notes for this CompanyEmployee. 
 
@@ -35,16 +35,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Company](General.Contacts.CompanyEmployees.md#company) | [Companies](General.Contacts.Companies.md) | The company for which this employee works. [Required] [Filter(multi eq)] |
-| [CompanyDepartment](General.Contacts.CompanyEmployees.md#companydepartment) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The department in which this employee is working. null means this information is unknown. [Filter(multi eq)] |
-| [Person](General.Contacts.CompanyEmployees.md#person) | [Persons](General.Contacts.Persons.md) | The personal data of the employee. [Required] [Filter(multi eq)] [Owner] |
+| [Company](General.Contacts.CompanyEmployees.md#company) | [Companies](General.Contacts.Companies.md) | The company for which this employee works. `Required` `Filter(multi eq)` |
+| [CompanyDepartment](General.Contacts.CompanyEmployees.md#companydepartment) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The department in which this employee is working. null means this information is unknown. `Filter(multi eq)` |
+| [Person](General.Contacts.CompanyEmployees.md#person) | [Persons](General.Contacts.Persons.md) | The personal data of the employee. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### ContractCode
 
-Contract number or code, unique within the company. One employee can have more than one contract. [Filter(eq)]
+Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 ### ContractEndDate
 
-End date of the employee contract, null if the contract is still valid. [Filter(ge;le)]
+End date of the employee contract, null if the contract is still valid. `Filter(ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### ContractStartDate
 
-Start date of the employee contract. Null if it is unkown. [Filter(ge;le)]
+Start date of the employee contract. Null if it is unkown. `Filter(ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -86,21 +86,21 @@ _Supports Order By_: **False**
 
 ### Company
 
-The company for which this employee works. [Required] [Filter(multi eq)]
+The company for which this employee works. `Required` `Filter(multi eq)`
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CompanyDepartment
 
-The department in which this employee is working. null means this information is unknown. [Filter(multi eq)]
+The department in which this employee is working. null means this information is unknown. `Filter(multi eq)`
 
 _Type_: **[CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
-The personal data of the employee. [Required] [Filter(multi eq)] [Owner]
+The personal data of the employee. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

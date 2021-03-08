@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.ProductVariants.html#barcode">BarCode</a></td>
 <td>string (nullable)</td>
-<td>When specified, it contains a bar code which uniquely identifies the product variant. [Filter(eq;like)] [ORD]</td>
+<td>When specified, it contains a bar code which uniquely identifies the product variant. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.ProductVariants.html#code">Code</a></td>
 <td>string</td>
-<td>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. [Required] [Filter(eq;like)] [ReadOnly]</td>
+<td>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.ProductVariants.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.ProductVariants.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
-<td>Product variant name. It is the concatenation of the names of the color, size and style. [ReadOnly]</td>
+<td>Product variant name. It is the concatenation of the names of the color, size and style. <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,34 +137,34 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.ProductVariants.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The product for which this variant is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.ProductVariants.html#variantcolor">VariantColor</a></td>
 <td><a href="General.Products.VariantColors.html">VariantColors</a> (nullable)</td>
-<td>The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)]</td>
+<td>The color of the variant. null means that the variant does not have a specific color. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.ProductVariants.html#variantsize">VariantSize</a></td>
 <td><a href="General.Products.VariantSizes.html">VariantSizes</a> (nullable)</td>
-<td>The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)]</td>
+<td>The size of the variant. null means that the variant does not have a specific size. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.ProductVariants.html#variantstyle">VariantStyle</a></td>
 <td><a href="General.Products.VariantStyles.html">VariantStyles</a> (nullable)</td>
-<td>The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)]</td>
+<td>The style of the variant. null means that the variant does not have a specific style. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="barcode">BarCode</h3>
-<p>When specified, it contains a bar code which uniquely identifies the product variant. [Filter(eq;like)] [ORD]</p>
+<p>When specified, it contains a bar code which uniquely identifies the product variant. <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="code">Code</h3>
-<p>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. [Required] [Filter(eq;like)] [ReadOnly]</p>
+<p>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -174,7 +174,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Product variant name. It is the concatenation of the names of the color, size and style. [ReadOnly]</p>
+<p>Product variant name. It is the concatenation of the names of the color, size and style. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -184,20 +184,20 @@ Aggregate Root:<br>
 <code>Join( &quot; &quot;, new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
-<p>The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The product for which this variant is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="variantcolor">VariantColor</h3>
-<p>The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)]</p>
+<p>The color of the variant. null means that the variant does not have a specific color. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.VariantColors.html">VariantColors</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="variantsize">VariantSize</h3>
-<p>The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)]</p>
+<p>The size of the variant. null means that the variant does not have a specific size. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.VariantSizes.html">VariantSizes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="variantstyle">VariantStyle</h3>
-<p>The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)]</p>
+<p>The style of the variant. null means that the variant does not have a specific style. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.VariantStyles.html">VariantStyles</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -1,8 +1,7 @@
----
+﻿---
 uid: Finance.Accounting
 ---
 # Finance.Accounting Namespace
-
 
 ## Entities
 - [AccountGroups](Finance.Accounting.AccountGroups.md)  
@@ -21,4 +20,6 @@ uid: Finance.Accounting
 - [TemplateRouteLinks](Finance.Accounting.TemplateRouteLinks.md)  
 - [Templates](Finance.Accounting.Templates.md)  
 - [VoucherCorrespondances](Finance.Accounting.VoucherCorrespondances.md)  
+
+herCorrespondances.md)  
 

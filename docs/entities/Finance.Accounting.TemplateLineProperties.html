@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#constantvalueid">ConstantValueId</a></td>
 <td>guid (nullable)</td>
-<td>The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. [Filter(multi eq)]</td>
+<td>The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#id">Id</a></td>
@@ -115,7 +115,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#isdebit">IsDebit</a></td>
 <td>boolean</td>
-<td>If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. [Required] [Default(true)] [Filter(eq)]</td>
+<td>If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertydescription">PropertyDescription</a></td>
@@ -125,17 +125,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertyno">PropertyNo</a></td>
 <td>int32</td>
-<td>The ordinal position of the property value in the item key of the account. [Required] [Filter(eq)]</td>
+<td>The ordinal position of the property value in the item key of the account. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertyvaluesource">PropertyValueSource</a></td>
 <td>string</td>
-<td>Source for the property value according to the chosen source type. [Required]</td>
+<td>Source for the property value according to the chosen source type. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertyvaluesourcetype">PropertyValueSourceType</a></td>
 <td>string</td>
-<td>Type of source for the property value. For example: System properties, User properties for document, Constant, ... [Required]</td>
+<td>Type of source for the property value. For example: System properties, User properties for document, Constant, ... <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -152,18 +152,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#property">Property</a></td>
 <td><a href="General.CustomProperties.html">CustomProperties</a></td>
-<td>The property which value will be included in the item key of the account. [Required] [Filter(multi eq)]</td>
+<td>The property which value will be included in the item key of the account. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#templateline">TemplateLine</a></td>
 <td><a href="Finance.Accounting.TemplateLines.html">TemplateLines</a></td>
-<td>The <a href="Finance.Accounting.TemplateLineProperties.html#templateline">TemplateLine</a> to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>TemplateLine</code>(Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="constantvalueid">ConstantValueId</h3>
-<p>The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. [Filter(multi eq)]</p>
+<p>The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -172,7 +172,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdebit">IsDebit</h3>
-<p>If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. [Required] [Default(true)] [Filter(eq)]</p>
+<p>If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -183,27 +183,27 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyno">PropertyNo</h3>
-<p>The ordinal position of the property value in the item key of the account. [Required] [Filter(eq)]</p>
+<p>The ordinal position of the property value in the item key of the account. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyvaluesource">PropertyValueSource</h3>
-<p>Source for the property value according to the chosen source type. [Required]</p>
+<p>Source for the property value according to the chosen source type. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyvaluesourcetype">PropertyValueSourceType</h3>
-<p>Type of source for the property value. For example: System properties, User properties for document, Constant, ... [Required]</p>
+<p>Type of source for the property value. For example: System properties, User properties for document, Constant, ... <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
-<p>The property which value will be included in the item key of the account. [Required] [Filter(multi eq)]</p>
+<p>The property which value will be included in the item key of the account. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="templateline">TemplateLine</h3>
-<p>The <a href="Finance.Accounting.TemplateLineProperties.html#templateline">TemplateLine</a> to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>TemplateLine</code>(Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.TemplateLines.html">TemplateLines</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

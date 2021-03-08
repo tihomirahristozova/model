@@ -25,30 +25,30 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.ProductTypes.md#code) | string | The unique code of the ProductType. [Required] [Filter(eq)] 
+| [Code](General.Products.ProductTypes.md#code) | string | The unique code of the ProductType. `Required` `Filter(eq)` 
 | [Id](General.Products.ProductTypes.md#id) | guid |  
-| [IsDefault](General.Products.ProductTypes.md#isdefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups. [Required] [Default(false)] [Filter(eq)] 
-| [IsFixedAsset](General.Products.ProductTypes.md#isfixedasset) | boolean | True when assets are acquired or retired when products from this type are purchased or sold. [Required] [Default(false)] [Filter(eq)] 
-| [IsServiceActivityService](General.Products.ProductTypes.md#isserviceactivityservice) | boolean | True when the product corresponds to service used in service documents (like service activities). [Required] [Default(false)] [Filter(eq)] 
-| [IsServiced](General.Products.ProductTypes.md#isserviced) | boolean | True when the products of this type create service agreements and can be serviced. [Required] [Default(false)] [Filter(eq)] 
-| [IsShipped](General.Products.ProductTypes.md#isshipped) | boolean | True when the products from this type are being shipped after sales. [Required] [Default(false)] [Filter(eq)] 
-| [IsStocked](General.Products.ProductTypes.md#isstocked) | boolean | True=The products of this type are stocked in a warehouse; false=otherwise (services). [Required] [Default(true)] [Filter(eq)] 
-| [LotAutoCreation](General.Products.ProductTypes.md#lotautocreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received. [Required] [Default(false)] 
-| [Name](General.Products.ProductTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ProductType. [Required] [Filter(eq;like)] [ORD] 
+| [IsDefault](General.Products.ProductTypes.md#isdefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups. `Required` `Default(false)` `Filter(eq)` 
+| [IsFixedAsset](General.Products.ProductTypes.md#isfixedasset) | boolean | True when assets are acquired or retired when products from this type are purchased or sold. `Required` `Default(false)` `Filter(eq)` 
+| [IsServiceActivityService](General.Products.ProductTypes.md#isserviceactivityservice) | boolean | True when the product corresponds to service used in service documents (like service activities). `Required` `Default(false)` `Filter(eq)` 
+| [IsServiced](General.Products.ProductTypes.md#isserviced) | boolean | True when the products of this type create service agreements and can be serviced. `Required` `Default(false)` `Filter(eq)` 
+| [IsShipped](General.Products.ProductTypes.md#isshipped) | boolean | True when the products from this type are being shipped after sales. `Required` `Default(false)` `Filter(eq)` 
+| [IsStocked](General.Products.ProductTypes.md#isstocked) | boolean | True=The products of this type are stocked in a warehouse; false=otherwise (services). `Required` `Default(true)` `Filter(eq)` 
+| [LotAutoCreation](General.Products.ProductTypes.md#lotautocreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received. `Required` `Default(false)` 
+| [Name](General.Products.ProductTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ProductType. `Required` `Filter(eq;like)` `ORD` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| PurchaseInvoice<br />LineProperties | [ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md) | List of [ProductTypePurchase<br />InvoiceLineProperty](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md) child objects, based on the [General.Products.ProductTypePurchase<br />InvoiceLineProperty.ProductType](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) back reference 
-| TaxGroups | [ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md) | List of [ProductTypeTaxGroup](Crm.Pos.ProductTypeTaxGroups.md) child objects, based on the [Crm.Pos.ProductTypeTaxGroup.ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) back reference 
+| PurchaseInvoice<br />LineProperties | [ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md) | List of `ProductTypePurchase<br />InvoiceLineProperty`(General.Products.ProductTypePurchase<br />InvoiceLineProperties.md) child objects, based on the `General.Products.ProductTypePurchase<br />InvoiceLineProperty.ProductType`(General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) back reference 
+| TaxGroups | [ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md) | List of `ProductTypeTaxGroup`(Crm.Pos.ProductTypeTaxGroups.md) child objects, based on the `Crm.Pos.ProductTypeTaxGroup.ProductType`(Crm.Pos.ProductTypeTaxGroups.md#producttype) back reference 
 
 
 ## Attribute Details
 
 ### Code
 
-The unique code of the ProductType. [Required] [Filter(eq)]
+The unique code of the ProductType. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -63,7 +63,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-When checked specifies that this type is set by default for new products unless another type is specified in the product groups. [Required] [Default(false)] [Filter(eq)]
+When checked specifies that this type is set by default for new products unless another type is specified in the product groups. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -72,7 +72,7 @@ _Default Value_: **False**
 
 ### IsFixedAsset
 
-True when assets are acquired or retired when products from this type are purchased or sold. [Required] [Default(false)] [Filter(eq)]
+True when assets are acquired or retired when products from this type are purchased or sold. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -81,7 +81,7 @@ _Default Value_: **False**
 
 ### IsServiceActivityService
 
-True when the product corresponds to service used in service documents (like service activities). [Required] [Default(false)] [Filter(eq)]
+True when the product corresponds to service used in service documents (like service activities). `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -90,7 +90,7 @@ _Default Value_: **False**
 
 ### IsServiced
 
-True when the products of this type create service agreements and can be serviced. [Required] [Default(false)] [Filter(eq)]
+True when the products of this type create service agreements and can be serviced. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -99,7 +99,7 @@ _Default Value_: **False**
 
 ### IsShipped
 
-True when the products from this type are being shipped after sales. [Required] [Default(false)] [Filter(eq)]
+True when the products from this type are being shipped after sales. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -108,7 +108,7 @@ _Default Value_: **False**
 
 ### IsStocked
 
-True=The products of this type are stocked in a warehouse; false=otherwise (services). [Required] [Default(true)] [Filter(eq)]
+True=The products of this type are stocked in a warehouse; false=otherwise (services). `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -117,7 +117,7 @@ _Default Value_: **True**
 
 ### LotAutoCreation
 
-If checked specifies that lots are automatically created by the receiving orders with which the products are received. [Required] [Default(false)]
+If checked specifies that lots are automatically created by the receiving orders with which the products are received. `Required` `Default(false)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -126,7 +126,7 @@ _Default Value_: **False**
 
 ### Name
 
-The name of this ProductType. [Required] [Filter(eq;like)] [ORD]
+The name of this ProductType. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  

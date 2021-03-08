@@ -1,8 +1,7 @@
----
+﻿---
 uid: Logistics.Shipment
 ---
 # Logistics.Shipment Namespace
-
 
 ## Entities
 - [CargoTypes](Logistics.Shipment.CargoTypes.md)  
@@ -19,4 +18,6 @@ uid: Logistics.Shipment
 - [TransportationRequisitionLines](Logistics.Shipment.TransportationRequisitionLines.md)  
 - [TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)  
 - [TransportationVehicles](Logistics.Shipment.TransportationVehicles.md)  
+
+sportationVehicles.md)  
 

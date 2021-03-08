@@ -25,33 +25,33 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExpectedWeight](Logistics.LogisticUnits.md#expectedweight) | decimal (nullable) | Expected weight in KG. Used for planning purposes. null means unknown. [Filter(eq;ge;le)] 
+| [ExpectedWeight](Logistics.LogisticUnits.md#expectedweight) | decimal (nullable) | Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)` 
 | [Id](Logistics.LogisticUnits.md#id) | guid |  
-| [MeasuredWeight](Logistics.LogisticUnits.md#measuredweight) | decimal (nullable) | Actual measured weight of the unit in KG. null means unknown. [Filter(eq;ge;le)] 
-| [Notes](Logistics.LogisticUnits.md#notes) | string (nullable) | Notes for this LogisticUnit. [Filter(like)] 
-| [SerialCode](Logistics.LogisticUnits.md#serialcode) | string | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. [Required] [Filter(multi eq;like)] [ORD] 
+| [MeasuredWeight](Logistics.LogisticUnits.md#measuredweight) | decimal (nullable) | Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)` 
+| [Notes](Logistics.LogisticUnits.md#notes) | string (nullable) | Notes for this LogisticUnit. `Filter(like)` 
+| [SerialCode](Logistics.LogisticUnits.md#serialcode) | string | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. `Required` `Filter(multi eq;like)` `ORD` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CargoType](Logistics.LogisticUnits.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | General type of the cargo of the logistic unit. null means unknown or N/A. [Filter(multi eq)] |
-| [LogisticUnitType](Logistics.LogisticUnits.md#logisticunittype) | [LogisticUnitTypes](Logistics.LogisticUnitTypes.md) (nullable) | The type of the logistic unit. null means the type is currently unknown. [Filter(multi eq)] |
-| [RepresentedAsProduct](Logistics.LogisticUnits.md#representedasproduct) | [Products](General.Products.Products.md) (nullable) | When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. [Filter(multi eq)] |
+| [CargoType](Logistics.LogisticUnits.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | General type of the cargo of the logistic unit. null means unknown or N/A. `Filter(multi eq)` |
+| [LogisticUnitType](Logistics.LogisticUnits.md#logisticunittype) | [LogisticUnitTypes](Logistics.LogisticUnitTypes.md) (nullable) | The type of the logistic unit. null means the type is currently unknown. `Filter(multi eq)` |
+| [RepresentedAsProduct](Logistics.LogisticUnits.md#representedasproduct) | [Products](General.Products.Products.md) (nullable) | When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Contents | [LogisticUnitContents](Logistics.LogisticUnitContents.md) | List of [LogisticUnitContent](Logistics.LogisticUnitContents.md) child objects, based on the [Logistics.LogisticUnitContent.LogisticUnit](Logistics.LogisticUnitContents.md#logisticunit) back reference 
-| Specifications | [LogisticUnitSpecifications](Logistics.LogisticUnitSpecifications.md) | List of [LogisticUnitSpecification<br />](Logistics.LogisticUnitSpecifications.md) child objects, based on the [Logistics.LogisticUnitSpecification.LogisticUnit](Logistics.LogisticUnitSpecifications.md#logisticunit) back reference 
+| Contents | [LogisticUnitContents](Logistics.LogisticUnitContents.md) | List of `LogisticUnitContent`(Logistics.LogisticUnitContents.md) child objects, based on the `Logistics.LogisticUnitContent.LogisticUnit`(Logistics.LogisticUnitContents.md#logisticunit) back reference 
+| Specifications | [LogisticUnitSpecifications](Logistics.LogisticUnitSpecifications.md) | List of `LogisticUnitSpecification<br />`(Logistics.LogisticUnitSpecifications.md) child objects, based on the `Logistics.LogisticUnitSpecification.LogisticUnit`(Logistics.LogisticUnitSpecifications.md#logisticunit) back reference 
 
 
 ## Attribute Details
 
 ### ExpectedWeight
 
-Expected weight in KG. Used for planning purposes. null means unknown. [Filter(eq;ge;le)]
+Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)`
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -66,7 +66,7 @@ _Default Value_: **NewGuid**
 
 ### MeasuredWeight
 
-Actual measured weight of the unit in KG. null means unknown. [Filter(eq;ge;le)]
+Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)`
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -74,7 +74,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-Notes for this LogisticUnit. [Filter(like)]
+Notes for this LogisticUnit. `Filter(like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### SerialCode
 
-Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. [Required] [Filter(multi eq;like)] [ORD]
+Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -94,21 +94,21 @@ _Supports Order By_: **True**
 
 ### CargoType
 
-General type of the cargo of the logistic unit. null means unknown or N/A. [Filter(multi eq)]
+General type of the cargo of the logistic unit. null means unknown or N/A. `Filter(multi eq)`
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LogisticUnitType
 
-The type of the logistic unit. null means the type is currently unknown. [Filter(multi eq)]
+The type of the logistic unit. null means the type is currently unknown. `Filter(multi eq)`
 
 _Type_: **[LogisticUnitTypes](Logistics.LogisticUnitTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RepresentedAsProduct
 
-When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. [Filter(multi eq)]
+When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Indexed_: **True**  

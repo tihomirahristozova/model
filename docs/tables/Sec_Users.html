@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Table Sec_Users | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Table Sec_Users | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="table-sec_users">Table Sec_Users</h1>
+
+<p>User logins. Entity: Sec_Users</p>
+<h1 id="columns">Columns</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User_Id</td>
+<td><code>Guid</code></td>
+<td><code>PK</code>, Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td>Access_Failed_Count</td>
+<td><code>Int32</code></td>
+<td></td>
+<td>Indicates how many times the user has failed to login. May be used for locking out the user. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Active</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>True when the login is currently active and the user can log in. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td>Creation_Time_Utc</td>
+<td><code>DateTime</code></td>
+<td>Readonly</td>
+<td>The date and time (in UTC), when the user was created. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Default_Culture</td>
+<td><code>String</code></td>
+<td></td>
+<td>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. <code>Introduced in version 20.1</code></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><code>String</code></td>
+<td></td>
+<td>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Filter(multi eq;like)</code> <code>ORD</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Email_Confirmed</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Indicates whether the email address for the specified user has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Is_Admin</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>True if the user is administrator, otherwise false. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td>Lockout_End_Utc</td>
+<td><code>DateTime?</code></td>
+<td></td>
+<td>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. <code>Filter(eq;ge;le;like)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Login</td>
+<td><code>String</code></td>
+<td></td>
+<td>The login name of the user, which is usually the email. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td>User_Name</td>
+<td><code>MultilanguageString</code></td>
+<td></td>
+<td>The full name of the user. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td><code>String</code></td>
+<td></td>
+<td>Notes for this User.</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>String</code></td>
+<td></td>
+<td>The password hash of the user, stored in the format, specified in Password Format.</td>
+</tr>
+<tr>
+<td>Password_Format</td>
+<td><code>PasswordFormat</code></td>
+<td>Allowed: <code>MD5</code>, <code>AN3</code></td>
+<td>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. <code>Required</code> <code>Default(&quot;MD5&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Phone_Number</td>
+<td><code>String</code></td>
+<td></td>
+<td>Used only for two-factor authentication. null when phone-based two-factor is not used. <code>Filter(eq;like)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Phone_Number_Confirmed</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Indicates whether the Phone Number has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Two_Factor_Enabled</td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Indicates whether two-factor authentication has been enabled. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>User_Type</td>
+<td><code>UserType</code></td>
+<td>Allowed: <code>INT</code>, <code>EXT</code>, <code>VIR</code>, <code>SYS</code>, <code>APP</code></td>
+<td>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. <code>Required</code> <code>Default(&quot;INT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td>Voice_Extension_Numbers</td>
+<td><code>String</code></td>
+<td></td>
+<td>Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.</td>
+</tr>
+<tr>
+<td>Windows_User_Name</td>
+<td><code>String</code></td>
+<td></td>
+<td>The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Sec_Users.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -24,15 +24,15 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Folders.md#id) | guid |  
-| [Name](General.Folders.md#name) | string | Name of the folder. Unique within its parent folder. [Required] [Filter(multi eq;like)] 
+| [Name](General.Folders.md#name) | string | Name of the folder. Unique within its parent folder. `Required` `Filter(multi eq;like)` 
 | [Notes](General.Folders.md#notes) | string (nullable) | Notes for this Folder. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](General.Folders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. [Filter(multi eq)] |
-| [Parent](General.Folders.md#parent) | [Folders](General.Folders.md) (nullable) | Parent folder. null if this is root folder. [Filter(multi eq)] |
+| [AccessKey](General.Folders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. `Filter(multi eq)` |
+| [Parent](General.Folders.md#parent) | [Folders](General.Folders.md) (nullable) | Parent folder. null if this is root folder. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -46,7 +46,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Name of the folder. Unique within its parent folder. [Required] [Filter(multi eq;like)]
+Name of the folder. Unique within its parent folder. `Required` `Filter(multi eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -65,14 +65,14 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. [Filter(multi eq)]
+The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-Parent folder. null if this is root folder. [Filter(multi eq)]
+Parent folder. null if this is root folder. `Filter(multi eq)`
 
 _Type_: **[Folders](General.Folders.md) (nullable)**  
 _Indexed_: **True**  

@@ -25,21 +25,21 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. [Required] [Default(0)] 
+| [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. `Required` `Default(0)` 
 | [Id](Crm.Distributors.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Crm.Distributors.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id. [Required] [Filter(multi eq)] [Owner] |
+| [Party](Crm.Distributors.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### FlatCommisionPercentage
 
-Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. [Required] [Default(0)]
+Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. `Required` `Default(0)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 ### Party
 
-Base party Id. [Required] [Filter(multi eq)] [Owner]
+Base party Id. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

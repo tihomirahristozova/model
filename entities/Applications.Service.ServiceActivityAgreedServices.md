@@ -25,22 +25,22 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreedQuantity](Applications.Service.ServiceActivityAgreedServices.md#agreedquantity) | [Quantity](../data-types.md#quantity) | Quantity from the service agreement service line that is accounted for this service activity service line. [Unit: ServiceAgreementService.QuantityUnit] [Required] [Default(0)] [ReadOnly] 
+| [AgreedQuantity](Applications.Service.ServiceActivityAgreedServices.md#agreedquantity) | [Quantity](../data-types.md#quantity) | Quantity from the service agreement service line that is accounted for this service activity service line. `Unit: ServiceAgreementService.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
 | [Id](Applications.Service.ServiceActivityAgreedServices.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) | [ServiceActivityServices](Applications.Service.ServiceActivityServices.md) | The [ServiceActivityService](Applications.Service.ServiceActivity<br />AgreedServices.md#serviceactivityservice) to which this ServiceActivity<br />AgreedService belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
-| [ServiceAgreementService](Applications.Service.ServiceActivityAgreedServices.md#serviceagreementservice) | [ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md) | Service agreement service line that records the paid or agreed in advance service or product. [Required] [Filter(multi eq)] [ReadOnly] |
+| [ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) | [ServiceActivityServices](Applications.Service.ServiceActivityServices.md) | The `ServiceActivityService`(Applications.Service.ServiceActivity<br />AgreedServices.md#serviceactivityservice) to which this ServiceActivity<br />AgreedService belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [ServiceAgreementService](Applications.Service.ServiceActivityAgreedServices.md#serviceagreementservice) | [ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md) | Service agreement service line that records the paid or agreed in advance service or product. `Required` `Filter(multi eq)` `ReadOnly` |
 
 
 ## Attribute Details
 
 ### AgreedQuantity
 
-Quantity from the service agreement service line that is accounted for this service activity service line. [Unit: ServiceAgreementService.QuantityUnit] [Required] [Default(0)] [ReadOnly]
+Quantity from the service agreement service line that is accounted for this service activity service line. `Unit: ServiceAgreementService.QuantityUnit` `Required` `Default(0)` `ReadOnly`
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### ServiceActivityService
 
-The [ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) to which this ServiceActivityAgreedService belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
+The `ServiceActivityService`(Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) to which this ServiceActivityAgreedService belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 _Type_: **[ServiceActivityServices](Applications.Service.ServiceActivityServices.md)**  
 _Indexed_: **True**  
@@ -67,7 +67,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ServiceAgreementService
 
-Service agreement service line that records the paid or agreed in advance service or product. [Required] [Filter(multi eq)] [ReadOnly]
+Service agreement service line that records the paid or agreed in advance service or product. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

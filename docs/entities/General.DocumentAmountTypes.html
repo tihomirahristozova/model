@@ -110,37 +110,37 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#addtocustomer">AddToCustomer</a></td>
 <td>boolean</td>
-<td>True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)]</td>
+<td>True means that the amount will be charged to the primary customer of the document. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#addtoline">AddToLine</a></td>
 <td>boolean</td>
-<td>True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)]</td>
+<td>True means that the resulting amount will be added to the amount of each respective line. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a></td>
 <td><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> (nullable)</td>
-<td>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]</td>
+<td>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#amountinputallowed">AmountInputAllowed</a></td>
 <td>boolean</td>
-<td>True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True when the user is allowed to input fixed amount for distribution. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#amounttypecode">AmountTypeCode</a></td>
 <td>string</td>
-<td>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]</td>
+<td>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#amounttypename">AmountTypeName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The name of the amount type. [Required] [Filter(like)] [ORD]</td>
+<td>The name of the amount type. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#baseonlines">BaseOnLines</a></td>
 <td>boolean</td>
-<td>True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)]</td>
+<td>True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#defaultpercent">DefaultPercent</a></td>
@@ -155,7 +155,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a></td>
 <td><a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a></td>
-<td>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]</td>
+<td>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). <code>Required</code> <code>Default(&quot;AMOUNT&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#id">Id</a></td>
@@ -165,12 +165,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)]</td>
+<td>True when the amount type is active for new records; false - otherwise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#percentinputallowed">PercentInputAllowed</a></td>
 <td>boolean</td>
-<td>True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)]</td>
+<td>True when the user is allowed to input percent of total for distribution. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#roundscale">RoundScale</a></td>
@@ -180,7 +180,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#unitamountinputallowed">UnitAmountInputAllowed</a></td>
 <td>boolean</td>
-<td>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +197,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#distributebymeasurementcategory">DistributeByMeasurement<br>Category</a></td>
 <td><a href="General.MeasurementCategories.html">MeasurementCategories</a> (nullable)</td>
-<td>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]</td>
+<td>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -214,32 +214,32 @@ Default Search Member:<br>
 <tr>
 <td>Dependencies</td>
 <td><a href="General.DocumentAmountTypeDependencies.html">DocumentAmountTypeDependencies</a></td>
-<td>List of [DocumentAmount<br>TypeDependency](General.DocumentAmount<br>TypeDependencies.md) child objects, based on the [General.DocumentAmount<br>TypeDependency.DocumentAmountType](General.DocumentAmount<br>TypeDependencies.md#documentamounttype) back reference</td>
+<td>List of <code>DocumentAmount&lt;br /&gt;TypeDependency</code>(General.DocumentAmount<br>TypeDependencies.md) child objects, based on the <code>General.DocumentAmount&lt;br /&gt;TypeDependency.DocumentAmountType</code>(General.DocumentAmount<br>TypeDependencies.md#documentamounttype) back reference</td>
 </tr>
 <tr>
 <td>Settings</td>
 <td><a href="Finance.Intrastat.DocumentAmountTypeSettings.html">DocumentAmountTypeSettings</a></td>
-<td>List of <a href="Finance.Intrastat.DocumentAmountTypeSettings.html">DocumentAmount<br>TypeSetting</a> child objects, based on the <a href="Finance.Intrastat.DocumentAmountTypeSettings.html#documentamounttype">Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType</a> back reference</td>
+<td>List of <code>DocumentAmount&lt;br /&gt;TypeSetting</code>(Finance.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the <code>Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType</code>(Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="addtocustomer">AddToCustomer</h3>
-<p>True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)]</p>
+<p>True means that the amount will be charged to the primary customer of the document. <code>Required</code> <code>Default(true)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="addtoline">AddToLine</h3>
-<p>True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)]</p>
+<p>True means that the resulting amount will be added to the amount of each respective line. <code>Required</code> <code>Default(true)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="alloweddirections">AllowedDirections</h3>
-<p>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]</p>
+<p>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> (nullable)</strong><br>
-Allowed values for the <a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> data attribute<br>
+Allowed values for the <code>AllowedDirections</code>(General.DocumentAmountTypes.md#alloweddirections) data attribute<br>
 <em>Allowed Values (General.DocumentAmountTypesRepository.AllowedDirections Enum Members)</em></p>
 <table>
 <thead>
@@ -267,25 +267,25 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#alloweddirectio
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="amountinputallowed">AmountInputAllowed</h3>
-<p>True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True when the user is allowed to input fixed amount for distribution. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="amounttypecode">AmountTypeCode</h3>
-<p>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]</p>
+<p>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="amounttypename">AmountTypeName</h3>
-<p>The name of the amount type. [Required] [Filter(like)] [ORD]</p>
+<p>The name of the amount type. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="baseonlines">BaseOnLines</h3>
-<p>True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)]</p>
+<p>True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. <code>Required</code> <code>Default(true)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -303,9 +303,9 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#alloweddirectio
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="distributeby">DistributeBy</h3>
-<p>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]</p>
+<p>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). <code>Required</code> <code>Default(&quot;AMOUNT&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a></strong><br>
-Allowed values for the <a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a> data attribute<br>
+Allowed values for the <code>DistributeBy</code>(General.DocumentAmountTypes.md#distributeby) data attribute<br>
 <em>Allowed Values (General.DocumentAmountTypesRepository.DistributeBy Enum Members)</em></p>
 <table>
 <thead>
@@ -338,13 +338,13 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#distributeby">D
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)]</p>
+<p>True when the amount type is active for new records; false - otherwise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="percentinputallowed">PercentInputAllowed</h3>
-<p>True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)]</p>
+<p>True when the user is allowed to input percent of total for distribution. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -355,14 +355,14 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#distributeby">D
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="unitamountinputallowed">UnitAmountInputAllowed</h3>
-<p>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="distributebymeasurementcategory">DistributeByMeasurementCategory</h3>
-<p>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]</p>
+<p>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementCategories.html">MeasurementCategories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>

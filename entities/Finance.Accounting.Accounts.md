@@ -24,34 +24,34 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. [Required] [Filter(like)] [ReadOnly] 
-| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br />Directory, BRD=Balance_Reference_<br />Document. [Required] [Default("ACB")] 
+| [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. `Required` `Filter(like)` `ReadOnly` 
+| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br />Directory, BRD=Balance_Reference_<br />Document. `Required` `Default("ACB")` 
 | [Description](Finance.Accounting.Accounts.md#description) | string (nullable) | The description of this Account. 
-| [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | True means that the account won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)] 
+| [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | True means that the account won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)` 
 | [Id](Finance.Accounting.Accounts.md#id) | guid |  
-| [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The account name. [Required] [Filter(like)] 
-| [Number](Finance.Accounting.Accounts.md#number) | string | The number of the account, unique within the account group. [Required] [Filter(like)] 
+| [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The account name. `Required` `Filter(like)` 
+| [Number](Finance.Accounting.Accounts.md#number) | string | The number of the account, unique within the account group. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountGroup](Finance.Accounting.Accounts.md#accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | The account group to which this account belongs. [Required] [Filter(multi eq)] |
-| [Currency](Finance.Accounting.Accounts.md#currency) | [Currencies](General.Currencies.md) (nullable) | The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)] |
-| [EnterpriseCompany](Finance.Accounting.Accounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [AccountGroup](Finance.Accounting.Accounts.md#accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | The account group to which this account belongs. `Required` `Filter(multi eq)` |
+| [Currency](Finance.Accounting.Accounts.md#currency) | [Currencies](General.Currencies.md) (nullable) | The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. `Filter(multi eq)` |
+| [EnterpriseCompany](Finance.Accounting.Accounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| RequiredProperties | [AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md) | List of [AccountRequiredProperty](Finance.Accounting.AccountRequiredProperties.md) child objects, based on the [Finance.Accounting.AccountRequiredProperty.Account](Finance.Accounting.AccountRequiredProperties.md#account) back reference 
+| RequiredProperties | [AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md) | List of `AccountRequiredProperty`(Finance.Accounting.AccountRequiredProperties.md) child objects, based on the `Finance.Accounting.AccountRequiredProperty.Account`(Finance.Accounting.AccountRequiredProperties.md#account) back reference 
 
 
 ## Attribute Details
 
 ### AccountFullNumber
 
-The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. [Required] [Filter(like)] [ReadOnly]
+The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. `Required` `Filter(like)` `ReadOnly`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -59,10 +59,10 @@ _Supports Order By_: **False**
 
 ### CurrencyValuationMethod
 
-Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. [Required] [Default("ACB")]
+Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. `Required` `Default("ACB")`
 
 _Type_: **[CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod)**  
-Allowed values for the [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) data attribute  
+Allowed values for the `CurrencyValuationMethod`(Finance.Accounting.Accounts.md#currencyvaluationmethod) data attribute  
 _Allowed Values (Finance.Accounting.AccountsRepository.CurrencyValuationMethod Enum Members)_  
 
 | Value | Description |
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 ### Discontinued
 
-True means that the account won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]
+True means that the account won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -101,7 +101,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The account name. [Required] [Filter(like)]
+The account name. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -109,7 +109,7 @@ _Supports Order By_: **False**
 
 ### Number
 
-The number of the account, unique within the account group. [Required] [Filter(like)]
+The number of the account, unique within the account group. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -120,21 +120,21 @@ _Supports Order By_: **False**
 
 ### AccountGroup
 
-The account group to which this account belongs. [Required] [Filter(multi eq)]
+The account group to which this account belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Currency
 
-The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)]
+The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

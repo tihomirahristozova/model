@@ -24,14 +24,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Procurement.PurchaseInvoicesOptions.md#id) | guid |  
-| [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) | [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) | This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. [Required] [Default(0)] 
-| [TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) | [TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) | This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. [Required] [Default(0)] 
+| [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) | [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) | This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. `Required` `Default(0)` 
+| [TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) | [TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) | This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Procurement.PurchaseInvoicesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, for which the options are specified. [Required] [Filter(multi eq)] |
+| [DocumentType](Logistics.Procurement.PurchaseInvoicesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, for which the options are specified. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -45,10 +45,10 @@ _Default Value_: **NewGuid**
 
 ### SignRestriction
 
-This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. [Required] [Default(0)]
+This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. `Required` `Default(0)`
 
 _Type_: **[SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction)**  
-Allowed values for the [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) data attribute  
+Allowed values for the `SignRestriction`(Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) data attribute  
 _Allowed Values (Logistics.Procurement.PurchaseInvoicesOptionsRepository.SignRestriction Enum Members)_  
 
 | Value | Description |
@@ -63,10 +63,10 @@ _Default Value_: **0**
 
 ### TotalAmountSignRestriction
 
-This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. [Required] [Default(0)]
+This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. `Required` `Default(0)`
 
 _Type_: **[TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction)**  
-Allowed values for the [TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) data attribute  
+Allowed values for the `TotalAmountSignRestriction`(Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) data attribute  
 _Allowed Values (Logistics.Procurement.PurchaseInvoicesOptionsRepository.TotalAmountSignRestriction Enum Members)_  
 
 | Value | Description |
@@ -84,7 +84,7 @@ _Default Value_: **0**
 
 ### DocumentType
 
-The document type, for which the options are specified. [Required] [Filter(multi eq)]
+The document type, for which the options are specified. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceAvailability.html#availableresources">AvailableResources</a></td>
 <td>decimal</td>
-<td>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. [Required] [Default(1)]</td>
+<td>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceAvailability.html#fromdate">FromDate</a></td>
 <td>date</td>
-<td>The date from which availability starts. [Required]</td>
+<td>The date from which availability starts. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceAvailability.html#id">Id</a></td>
@@ -137,19 +137,19 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceAvailability.html#resource">Resource</a></td>
 <td><a href="General.Resources.Resources.html">Resources</a></td>
-<td>The resource, for which we provide availability. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The resource, for which we provide availability. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="availableresources">AvailableResources</h3>
-<p>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. [Required] [Default(1)]</p>
+<p>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>The date from which availability starts. [Required]</p>
+<p>The date from which availability starts. <code>Required</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -165,7 +165,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="resource">Resource</h3>
-<p>The resource, for which we provide availability. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The resource, for which we provide availability. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

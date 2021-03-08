@@ -1,8 +1,7 @@
----
+﻿---
 uid: Logistics.Procurement
 ---
 # Logistics.Procurement Namespace
-
 
 ## Entities
 - [PurchaseControlDocumentLines](Logistics.Procurement.PurchaseControlDocumentLines.md)  
@@ -21,4 +20,6 @@ uid: Logistics.Procurement
 - [Requisitions](Logistics.Procurement.Requisitions.md)  
 - [Suppliers](Logistics.Procurement.Suppliers.md)  
 - [SupplierTypes](Logistics.Procurement.SupplierTypes.md)  
+
+urement.SupplierTypes.md)  
 

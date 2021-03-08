@@ -110,7 +110,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.PropertyValues.html#entityitemid">EntityItemId</a></td>
 <td>guid</td>
-<td>The Id of the actual entity for which the value is specified. [Required] [Filter(multi eq)]</td>
+<td>The Id of the actual entity for which the value is specified. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.PropertyValues.html#id">Id</a></td>
@@ -130,7 +130,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.PropertyValues.html#valueid">ValueId</a></td>
 <td>guid (nullable)</td>
-<td>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. [Filter(multi eq)]</td>
+<td>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,7 +147,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.PropertyValues.html#property">Property</a></td>
 <td><a href="General.CustomProperties.html">CustomProperties</a></td>
-<td>The property, whose value is stored here. [Required] [Filter(multi eq)]</td>
+<td>The property, whose value is stored here. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,7 +158,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
-<p>The Id of the actual entity for which the value is specified. [Required] [Filter(multi eq)]</p>
+<p>The Id of the actual entity for which the value is specified. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -177,12 +177,12 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="valueid">ValueId</h3>
-<p>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. [Filter(multi eq)]</p>
+<p>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
-<p>The property, whose value is stored here. [Required] [Filter(multi eq)]</p>
+<p>The property, whose value is stored here. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -27,13 +27,13 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Description](Projects.Resources.md#description) | string (nullable) | The description of this Resource. 
 | [Id](Projects.Resources.md#id) | guid |  
-| [Name](Projects.Resources.md#name) | string | The name of this Resource. [Required] 
+| [Name](Projects.Resources.md#name) | string | The name of this Resource. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Projects.Resources.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company owning the resource. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Projects.Resources.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company owning the resource. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -55,7 +55,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Resource. [Required]
+The name of this Resource. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-The enterprise company owning the resource. [Required] [Filter(multi eq)] [Owner]
+The enterprise company owning the resource. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#endtime">EndTime</a></td>
 <td>datetime</td>
-<td>Date and time when the operation has ended. [Required] [Default(Now)] [Filter(ge;le)]</td>
+<td>Date and time when the operation has ended. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#finished">Finished</a></td>
 <td>boolean</td>
-<td>True if this output entry completes the operation. false if there might be more entries. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True if this output entry completes the operation. false if there might be more entries. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Line number within the order. [Required]</td>
+<td>Line number within the order. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#notes">Notes</a></td>
@@ -130,27 +130,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantity">ProducedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The processed quantity of the end product. [Unit: ProducedQuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</td>
+<td>The processed quantity of the end product. <code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantitybase">ProducedQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The equivalence of Produced Quantity in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</td>
+<td>The equivalence of Produced Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedstandardquantitybase">ProducedStandard<br>QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#starttime">StartTime</a></td>
 <td>datetime</td>
-<td>Date and time when the operation has began. [Required] [Default(Now)] [Filter(ge;le)]</td>
+<td>Date and time when the operation has began. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime (nullable)</td>
-<td>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. [ReadOnly]</td>
+<td>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -167,72 +167,72 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#document">Document</a></td>
 <td><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></td>
-<td>The <a href="Production.ShopFloor.OutputOrderLines.html#outputorder">OutputOrder</a> to which this OutputOrderLine belongs. [Required] [Filter(multi eq)]</td>
+<td>The <code>OutputOrder</code>(Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#lineworkorder">LineWorkOrder</a></td>
 <td><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></td>
-<td>The work order for which work is being accounted. [Required] [Filter(multi eq)]</td>
+<td>The work order for which work is being accounted. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The lot of the produced product. [Filter(multi eq)]</td>
+<td>The lot of the produced product. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#outputorder">OutputOrder</a></td>
 <td><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></td>
-<td>The <a href="Production.ShopFloor.OutputOrderLines.html#outputorder">OutputOrder</a> to which this OutputOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>OutputOrder</code>(Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantityunit">ProducedQuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Produced Quantity. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Produced Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The actually produced product. [Required] [Filter(multi eq)]</td>
+<td>The actually produced product. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#productcode">ProductCode</a></td>
 <td><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</td>
-<td>Selects the product thru some of the product codes. [Filter(multi eq)]</td>
+<td>Selects the product thru some of the product codes. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>If not null, specifies that the product was (has to be) stored with specific serial number. [Filter(multi eq)]</td>
+<td>If not null, specifies that the product was (has to be) stored with specific serial number. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>Where to output the produced quantity. Can be null only if Produced_Quantity = 0. [Filter(multi eq)]</td>
+<td>Where to output the produced quantity. Can be null only if Produced_Quantity = 0. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>If not null, specifies that the product was (has to be) stored to specific store bin. [Filter(multi eq)]</td>
+<td>If not null, specifies that the product was (has to be) stored to specific store bin. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#workdonebyparty">WorkDoneByParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party (usually employee worker) who has accomplished the work. null if unknown or N/A. [Filter(multi eq)]</td>
+<td>The party (usually employee worker) who has accomplished the work. null if unknown or N/A. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#workgroupresource">WorkgroupResource</a></td>
 <td><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a> (nullable)</td>
-<td>The resource, which was used to perform the operation. [Filter(multi eq)]</td>
+<td>The resource, which was used to perform the operation. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#workorderitem">WorkOrderItem</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></td>
-<td>The work order item for which this output is recorded. [Required] [Filter(multi eq)]</td>
+<td>The work order item for which this output is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#workorderitemoperation">WorkOrderItemOperation</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperations</a> (nullable)</td>
-<td>The operation for which this output is recorded. [Filter(multi eq)]</td>
+<td>The operation for which this output is recorded. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -249,19 +249,19 @@ Aggregate Root:<br>
 <tr>
 <td>OutputOrderDistributed<br>MaterialConsumptions</td>
 <td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html">OutputOrderDistributedMaterialConsumptions</a></td>
-<td>List of [OutputOrderDistributed<br>MaterialConsumption](Production.ShopFloor.OutputOrderDistributed<br>MaterialConsumptions.md) child objects, based on the [Production.ShopFloor.OutputOrderDistributed<br>MaterialConsumption.OutputOrderLine](Production.ShopFloor.OutputOrderDistributed<br>MaterialConsumptions.md#outputorderline) back reference</td>
+<td>List of <code>OutputOrderDistributed&lt;br /&gt;MaterialConsumption</code>(Production.ShopFloor.OutputOrderDistributed<br>MaterialConsumptions.md) child objects, based on the <code>Production.ShopFloor.OutputOrderDistributed&lt;br /&gt;MaterialConsumption.OutputOrderLine</code>(Production.ShopFloor.OutputOrderDistributed<br>MaterialConsumptions.md#outputorderline) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="endtime">EndTime</h3>
-<p>Date and time when the operation has ended. [Required] [Default(Now)] [Filter(ge;le)]</p>
+<p>Date and time when the operation has ended. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="finished">Finished</h3>
-<p>True if this output entry completes the operation. false if there might be more entries. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True if this output entry completes the operation. false if there might be more entries. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -272,7 +272,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Line number within the order. [Required]</p>
+<p>Line number within the order. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -286,13 +286,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="producedquantity">ProducedQuantity</h3>
-<p>The processed quantity of the end product. [Unit: ProducedQuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
+<p>The processed quantity of the end product. <code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="producedquantitybase">ProducedQuantityBase</h3>
-<p>The equivalence of Produced Quantity in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</p>
+<p>The equivalence of Produced Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -302,7 +302,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="producedstandardquantitybase">ProducedStandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -311,24 +311,24 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedStandardQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="starttime">StartTime</h3>
-<p>Date and time when the operation has began. [Required] [Default(Now)] [Filter(ge;le)]</p>
+<p>Date and time when the operation has began. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. [ReadOnly]</p>
+<p>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <a href="Production.ShopFloor.OutputOrderLines.html#outputorder">OutputOrder</a> to which this OutputOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p>The <code>OutputOrder</code>(Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lineworkorder">LineWorkOrder</h3>
-<p>The work order for which work is being accounted. [Required] [Filter(multi eq)]</p>
+<p>The work order for which work is being accounted. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -336,61 +336,61 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.OutputOrder.WorkOrder</code></p>
 <h3 id="lot">Lot</h3>
-<p>The lot of the produced product. [Filter(multi eq)]</p>
+<p>The lot of the produced product. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="outputorder">OutputOrder</h3>
-<p>The <a href="Production.ShopFloor.OutputOrderLines.html#outputorder">OutputOrder</a> to which this OutputOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>OutputOrder</code>(Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="producedquantityunit">ProducedQuantityUnit</h3>
-<p>The measurement unit of Produced Quantity. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Produced Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.ProductCode != null) AndAlso ( obj.ProductCode.CodingSystem.DefaultMeasurementUnit != null)), obj.ProductCode.CodingSystem.DefaultMeasurementUnit, obj.Product.MeasurementUnit)</code></p>
 <h3 id="product">Product</h3>
-<p>The actually produced product. [Required] [Filter(multi eq)]</p>
+<p>The actually produced product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductCode.Product</code></p>
 <h3 id="productcode">ProductCode</h3>
-<p>Selects the product thru some of the product codes. [Filter(multi eq)]</p>
+<p>Selects the product thru some of the product codes. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ProductCode.Product != obj.Product), null, obj.ProductCode)</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>If not null, specifies that the product was (has to be) stored with specific serial number. [Filter(multi eq)]</p>
+<p>If not null, specifies that the product was (has to be) stored with specific serial number. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
-<p>Where to output the produced quantity. Can be null only if Produced_Quantity = 0. [Filter(multi eq)]</p>
+<p>Where to output the produced quantity. Can be null only if Produced_Quantity = 0. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storebin">StoreBin</h3>
-<p>If not null, specifies that the product was (has to be) stored to specific store bin. [Filter(multi eq)]</p>
+<p>If not null, specifies that the product was (has to be) stored to specific store bin. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workdonebyparty">WorkDoneByParty</h3>
-<p>The party (usually employee worker) who has accomplished the work. null if unknown or N/A. [Filter(multi eq)]</p>
+<p>The party (usually employee worker) who has accomplished the work. null if unknown or N/A. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroupresource">WorkgroupResource</h3>
-<p>The resource, which was used to perform the operation. [Filter(multi eq)]</p>
+<p>The resource, which was used to perform the operation. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.WorkOrderItemOperation.WorkgroupResource</code></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
-<p>The work order item for which this output is recorded. [Required] [Filter(multi eq)]</p>
+<p>The work order item for which this output is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorderitemoperation">WorkOrderItemOperation</h3>
-<p>The operation for which this output is recorded. [Filter(multi eq)]</p>
+<p>The operation for which this output is recorded. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

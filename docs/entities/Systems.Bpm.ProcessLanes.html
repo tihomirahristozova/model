@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#assignbyusercondition">AssignByUserCondition</a></td>
 <td><a href="Systems.Bpm.ProcessLanes.html#assignbyusercondition">AssignByUserCondition</a></td>
-<td>Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned. [Required] [Filter(eq;like)]</td>
+<td>Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#id">Id</a></td>
@@ -115,17 +115,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#issystemexecuted">IsSystemExecuted</a></td>
 <td>boolean</td>
-<td>When set, specifies that the lane allows only system executed tasks and will never have human user as executor. [Required] [Default(false)] [Filter(eq)]</td>
+<td>When set, specifies that the lane allows only system executed tasks and will never have human user as executor. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#locality">Locality</a></td>
 <td><a href="Systems.Bpm.ProcessLanes.html#locality">Locality</a></td>
-<td>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Filter(eq;like)]</td>
+<td>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Multilanguage lane name. [Required] [Filter(eq;like)]</td>
+<td>Multilanguage lane name. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#notes">Notes</a></td>
@@ -135,12 +135,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#restricttosingleuser">RestrictToSingleUser</a></td>
 <td>boolean</td>
-<td>Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#userconditionfilterxml">UserConditionFilterXml</a></td>
 <td>dataaccessfilter (nullable)</td>
-<td>User defined filter, used to select possible executors of tasks in the lane. [Filter(eq;like)]</td>
+<td>User defined filter, used to select possible executors of tasks in the lane. <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -157,30 +157,30 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#assignbyinstanceproperty">AssignByInstanceProperty</a></td>
 <td><a href="General.CustomProperties.html">CustomProperties</a> (nullable)</td>
-<td>When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. [Filter(multi eq)]</td>
+<td>When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#assigntouser">AssignToUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>When set, specifies that tasks from the lane are always assigned to specific user. [Filter(multi eq)]</td>
+<td>When set, specifies that tasks from the lane are always assigned to specific user. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#offertorole">OfferToRole</a></td>
 <td><a href="Systems.Workflow.Roles.html">Roles</a> (nullable)</td>
-<td>When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. [Filter(multi eq)]</td>
+<td>When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessLanes.html#process">Process</a></td>
 <td><a href="Systems.Bpm.Processes.html">Processes</a></td>
-<td>The process to which this lane belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The process to which this lane belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="assignbyusercondition">AssignByUserCondition</h3>
-<p>Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned. [Required] [Filter(eq;like)]</p>
+<p>Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessLanes.html#assignbyusercondition">AssignByUserCondition</a></strong><br>
-Allowed values for the <a href="Systems.Bpm.ProcessLanes.html#assignbyusercondition">AssignByUserCondition</a> data attribute<br>
+Allowed values for the <code>AssignByUserCondition</code>(Systems.Bpm.ProcessLanes.md#assignbyusercondition) data attribute<br>
 <em>Allowed Values (Systems.Bpm.ProcessLanesRepository.AssignByUserCondition Enum Members)</em></p>
 <table>
 <thead>
@@ -212,13 +212,13 @@ Allowed values for the <a href="Systems.Bpm.ProcessLanes.html#assignbyusercondit
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="issystemexecuted">IsSystemExecuted</h3>
-<p>When set, specifies that the lane allows only system executed tasks and will never have human user as executor. [Required] [Default(false)] [Filter(eq)]</p>
+<p>When set, specifies that the lane allows only system executed tasks and will never have human user as executor. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="locality">Locality</h3>
-<p>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Filter(eq;like)]</p>
+<p>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessLanes.html#locality">Locality</a></strong><br>
 Generic enum type for Locality properties<br>
 <em>Allowed Values (Systems.Bpm.Locality Enum Members)</em></p>
@@ -251,7 +251,7 @@ Generic enum type for Locality properties<br>
 <p><em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<p>Multilanguage lane name. [Required] [Filter(eq;like)]</p>
+<p>Multilanguage lane name. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -261,31 +261,31 @@ Generic enum type for Locality properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="restricttosingleuser">RestrictToSingleUser</h3>
-<p>Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="userconditionfilterxml">UserConditionFilterXml</h3>
-<p>User defined filter, used to select possible executors of tasks in the lane. [Filter(eq;like)]</p>
+<p>User defined filter, used to select possible executors of tasks in the lane. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assignbyinstanceproperty">AssignByInstanceProperty</h3>
-<p>When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. [Filter(multi eq)]</p>
+<p>When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assigntouser">AssignToUser</h3>
-<p>When set, specifies that tasks from the lane are always assigned to specific user. [Filter(multi eq)]</p>
+<p>When set, specifies that tasks from the lane are always assigned to specific user. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="offertorole">OfferToRole</h3>
-<p>When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. [Filter(multi eq)]</p>
+<p>When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Roles.html">Roles</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="process">Process</h3>
-<p>The process to which this lane belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The process to which this lane belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.Processes.html">Processes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

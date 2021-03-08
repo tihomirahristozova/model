@@ -25,26 +25,26 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.ProcessElements.md#code) | string | Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)] 
-| [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) | [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) | Subtype of the element. Each type allows only certain types of sub-types. [Required] [Filter(eq;like)] 
-| [ElementType](Systems.Bpm.ProcessElements.md#elementtype) | [ElementType](Systems.Bpm.ProcessElements.md#elementtype) | Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. [Required] [Filter(eq;like)] 
+| [Code](Systems.Bpm.ProcessElements.md#code) | string | Element code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)` 
+| [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) | [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) | Subtype of the element. Each type allows only certain types of sub-types. `Required` `Filter(eq;like)` 
+| [ElementType](Systems.Bpm.ProcessElements.md#elementtype) | [ElementType](Systems.Bpm.ProcessElements.md#elementtype) | Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. `Required` `Filter(eq;like)` 
 | [Id](Systems.Bpm.ProcessElements.md#id) | guid |  
-| [InstructionsHtml](Systems.Bpm.ProcessElements.md#instructionshtml) | string (nullable) | Detailed instructions to the executor in HTML format. [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessElements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process name. [Required] [Filter(eq;like)] 
+| [InstructionsHtml](Systems.Bpm.ProcessElements.md#instructionshtml) | string (nullable) | Detailed instructions to the executor in HTML format. `Filter(eq;like)` 
+| [Name](Systems.Bpm.ProcessElements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process name. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessElements.md#process) | [Processes](Systems.Bpm.Processes.md) | The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ProcessLane](Systems.Bpm.ProcessElements.md#processlane) | [ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this element belongs. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessElements.md#process) | [Processes](Systems.Bpm.Processes.md) | The process, to which this element belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProcessLane](Systems.Bpm.ProcessElements.md#processlane) | [ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this element belongs. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Code
 
-Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]
+Element code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -52,10 +52,10 @@ _Supports Order By_: **False**
 
 ### ElementSubtype
 
-Subtype of the element. Each type allows only certain types of sub-types. [Required] [Filter(eq;like)]
+Subtype of the element. Each type allows only certain types of sub-types. `Required` `Filter(eq;like)`
 
 _Type_: **[ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype)**  
-Allowed values for the [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) data attribute  
+Allowed values for the `ElementSubtype`(Systems.Bpm.ProcessElements.md#elementsubtype) data attribute  
 _Allowed Values (Systems.Bpm.ProcessElementsRepository.ElementSubtype Enum Members)_  
 
 | Value | Description |
@@ -88,10 +88,10 @@ _Supports Order By_: **False**
 
 ### ElementType
 
-Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. [Required] [Filter(eq;like)]
+Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. `Required` `Filter(eq;like)`
 
 _Type_: **[ElementType](Systems.Bpm.ProcessElements.md#elementtype)**  
-Allowed values for the [ElementType](Systems.Bpm.ProcessElements.md#elementtype) data attribute  
+Allowed values for the `ElementType`(Systems.Bpm.ProcessElements.md#elementtype) data attribute  
 _Allowed Values (Systems.Bpm.ProcessElementsRepository.ElementType Enum Members)_  
 
 | Value | Description |
@@ -113,7 +113,7 @@ _Default Value_: **NewGuid**
 
 ### InstructionsHtml
 
-Detailed instructions to the executor in HTML format. [Filter(eq;like)]
+Detailed instructions to the executor in HTML format. `Filter(eq;like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -121,7 +121,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-Multilanguage process name. [Required] [Filter(eq;like)]
+Multilanguage process name. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -132,7 +132,7 @@ _Supports Order By_: **False**
 
 ### Process
 
-The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner]
+The process, to which this element belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Indexed_: **True**  
@@ -140,7 +140,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ProcessLane
 
-The process lane to which this element belongs. [Required] [Filter(multi eq)]
+The process lane to which this element belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

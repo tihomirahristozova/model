@@ -1,8 +1,7 @@
----
+﻿---
 uid: Production.Technologies
 ---
 # Production.Technologies Namespace
-
 
 ## Entities
 - [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md)  
@@ -11,4 +10,6 @@ uid: Production.Technologies
 - [RecipeIngredients](Production.Technologies.RecipeIngredients.md)  
 - [RecipeOperations](Production.Technologies.RecipeOperations.md)  
 - [Recipes](Production.Technologies.Recipes.md)  
+
+on.Technologies.Recipes.md)  
 

@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Order of the line within the work order routing. [Required] [Filter(eq;like)]</td>
+<td>Order of the line within the work order routing. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#movetimeminutes">MoveTimeMinutes</a></td>
 <td>int32</td>
-<td>Time to move the lot to the next operation in minutes. [Required] [Default(0)]</td>
+<td>Time to move the lot to the next operation in minutes. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#notes">Notes</a></td>
@@ -145,7 +145,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
-<td>Time for production of one lot of the produced item in minutes. [Required] [Default(0)]</td>
+<td>Time for production of one lot of the produced item in minutes. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scheduledenddatetime">ScheduledEndDateTime</a></td>
@@ -160,12 +160,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scraprate">ScrapRate</a></td>
 <td>decimal</td>
-<td>Projected scrap rate of the operation. [Required] [Default(0)]</td>
+<td>Projected scrap rate of the operation. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#setuptimeminutes">SetupTimeMinutes</a></td>
 <td>int32</td>
-<td>Time needed to setup the equipment in minutes. [Required] [Default(0)]</td>
+<td>Time needed to setup the equipment in minutes. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#tooling">Tooling</a></td>
@@ -175,12 +175,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#usequantity">UseQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]</td>
+<td>Quantity of the resource, that should be allocated for the operation. <code>Unit: WorkgroupResource.Resource.PrimaryUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#waittimeminutes">WaitTimeMinutes</a></td>
 <td>int32</td>
-<td>Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)]</td>
+<td>Wait time (drying, cooling, etc.) after the operation in minutes. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -197,17 +197,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#operation">Operation</a></td>
 <td><a href="Production.Resources.Operations.html">Operations</a> (nullable)</td>
-<td>The performed operation. [Filter(multi eq)]</td>
+<td>The performed operation. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#workgroupresource">WorkgroupResource</a></td>
 <td><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></td>
-<td>The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)]</td>
+<td>The resource that will be used for the operation. null means that no resource will be locked for the operation. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#workorderitem">WorkOrderItem</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></td>
-<td>The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The work order item, containing the line. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -224,7 +224,7 @@ Aggregate Root:<br>
 <tr>
 <td>Load</td>
 <td><a href="Production.Resources.Load.html">Load</a></td>
-<td>List of <a href="Production.Resources.Load.html">Load</a> child objects, based on the <a href="Production.Resources.Load.html#workorderitemoperation">Production.Resources.Load.WorkOrderItemOperation</a> back reference</td>
+<td>List of <code>Load</code>(Production.Resources.Load.md) child objects, based on the <code>Production.Resources.Load.WorkOrderItemOperation</code>(Production.Resources.Load.md#workorderitemoperation) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -245,7 +245,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Order of the line within the work order routing. [Required] [Filter(eq;like)]</p>
+<p>Order of the line within the work order routing. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -259,7 +259,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
-<p>Time to move the lot to the next operation in minutes. [Required] [Default(0)]</p>
+<p>Time to move the lot to the next operation in minutes. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -277,7 +277,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Operation.Name</code></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
-<p>Time for production of one lot of the produced item in minutes. [Required] [Default(0)]</p>
+<p>Time for production of one lot of the produced item in minutes. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -293,13 +293,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
-<p>Projected scrap rate of the operation. [Required] [Default(0)]</p>
+<p>Projected scrap rate of the operation. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="setuptimeminutes">SetupTimeMinutes</h3>
-<p>Time needed to setup the equipment in minutes. [Required] [Default(0)]</p>
+<p>Time needed to setup the equipment in minutes. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -310,28 +310,28 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="usequantity">UseQuantity</h3>
-<p>Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]</p>
+<p>Quantity of the resource, that should be allocated for the operation. <code>Unit: WorkgroupResource.Resource.PrimaryUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="waittimeminutes">WaitTimeMinutes</h3>
-<p>Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)]</p>
+<p>Wait time (drying, cooling, etc.) after the operation in minutes. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="operation">Operation</h3>
-<p>The performed operation. [Filter(multi eq)]</p>
+<p>The performed operation. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Operations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroupresource">WorkgroupResource</h3>
-<p>The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)]</p>
+<p>The resource that will be used for the operation. null means that no resource will be locked for the operation. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
-<p>The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The work order item, containing the line. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

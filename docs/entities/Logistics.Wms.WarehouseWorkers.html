@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#activefrom">ActiveFrom</a></td>
 <td>date</td>
-<td>The date, from which the worker record has become active in the warehouse. [Required] [Default(Today)] [Filter(eq;ge;le)]</td>
+<td>The date, from which the worker record has become active in the warehouse. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#activeto">ActiveTo</a></td>
 <td>date (nullable)</td>
-<td>The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. [Filter(eq;ge;le)]</td>
+<td>The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#id">Id</a></td>
@@ -120,12 +120,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the worker is active and can execute new warehouse tasks. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the worker is active and can execute new warehouse tasks. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Name of the worker (multi-language). [Required] [Filter(multi eq;like)]</td>
+<td>Name of the worker (multi-language). <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#notes">Notes</a></td>
@@ -147,24 +147,24 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)]</td>
+<td>The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
-<td>The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The warehouse, where the worker works. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activefrom">ActiveFrom</h3>
-<p>The date, from which the worker record has become active in the warehouse. [Required] [Default(Today)] [Filter(eq;ge;le)]</p>
+<p>The date, from which the worker record has become active in the warehouse. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="activeto">ActiveTo</h3>
-<p>The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. [Filter(eq;ge;le)]</p>
+<p>The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -174,13 +174,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the worker is active and can execute new warehouse tasks. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the worker is active and can execute new warehouse tasks. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the worker (multi-language). [Required] [Filter(multi eq;like)]</p>
+<p>Name of the worker (multi-language). <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -191,11 +191,11 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="person">Person</h3>
-<p>The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)]</p>
+<p>The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<p>The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The warehouse, where the worker works. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

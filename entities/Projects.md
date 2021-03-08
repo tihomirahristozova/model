@@ -1,8 +1,7 @@
----
+﻿---
 uid: Projects
 ---
 # Projects Namespace
-
 
 ## Entities
 - [ProjectParticipants](Projects.ProjectParticipants.md)  
@@ -27,4 +26,6 @@ uid: Projects
 - [WorkReportMaterials](Projects.WorkReportMaterials.md)  
 - [WorkReportResources](Projects.WorkReportResources.md)  
 - [WorkReports](Projects.WorkReports.md)  
+
+kReports.md)  
 

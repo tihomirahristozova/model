@@ -105,12 +105,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#alerttype">AlertType</a></td>
 <td>string</td>
-<td>The type of the alert. The type is specfic to the Source. [Required]</td>
+<td>The type of the alert. The type is specfic to the Source. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#description">Description</a></td>
 <td>string</td>
-<td>Description of the alert (Multilanguage). [Required]</td>
+<td>Description of the alert (Multilanguage). <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#id">Id</a></td>
@@ -120,17 +120,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#ishidden">IsHidden</a></td>
 <td>boolean</td>
-<td>Specifies, whether the alert is hidden (e.g. managed by the responsible person). [Required] [Default(false)]</td>
+<td>Specifies, whether the alert is hidden (e.g. managed by the responsible person). <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#source">Source</a></td>
 <td>string</td>
-<td>The source of the alert. G=GPS, O=OBD, M=Maintenance. [Required]</td>
+<td>The source of the alert. G=GPS, O=OBD, M=Maintenance. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#time">Time</a></td>
 <td>datetime</td>
-<td>The time of the alert. [Required] [ORD]</td>
+<td>The time of the alert. <code>Required</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,18 +147,18 @@ Default Search Member:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Vehicles</a></td>
-<td>The vehicle, for which is the alert. [Required] [Filter(multi eq)]</td>
+<td>The vehicle, for which is the alert. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="alerttype">AlertType</h3>
-<p>The type of the alert. The type is specfic to the Source. [Required]</p>
+<p>The type of the alert. The type is specfic to the Source. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="description">Description</h3>
-<p>Description of the alert (Multilanguage). [Required]</p>
+<p>Description of the alert (Multilanguage). <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -168,25 +168,25 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ishidden">IsHidden</h3>
-<p>Specifies, whether the alert is hidden (e.g. managed by the responsible person). [Required] [Default(false)]</p>
+<p>Specifies, whether the alert is hidden (e.g. managed by the responsible person). <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="source">Source</h3>
-<p>The source of the alert. G=GPS, O=OBD, M=Maintenance. [Required]</p>
+<p>The source of the alert. G=GPS, O=OBD, M=Maintenance. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="time">Time</h3>
-<p>The time of the alert. [Required] [ORD]</p>
+<p>The time of the alert. <code>Required</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="vehicle">Vehicle</h3>
-<p>The vehicle, for which is the alert. [Required] [Filter(multi eq)]</p>
+<p>The vehicle, for which is the alert. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

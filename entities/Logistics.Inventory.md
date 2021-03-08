@@ -1,8 +1,7 @@
----
+﻿---
 uid: Logistics.Inventory
 ---
 # Logistics.Inventory Namespace
-
 ## Namespaces
 - [DemandManagement](Logistics.Inventory.DemandManagement.md)  
 
@@ -35,4 +34,6 @@ uid: Logistics.Inventory
 - [TransferOrderLines](Logistics.Inventory.TransferOrderLines.md)  
 - [TransferOrders](Logistics.Inventory.TransferOrders.md)  
 - [TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md)  
+
+ansferOrdersOptions.md)  
 

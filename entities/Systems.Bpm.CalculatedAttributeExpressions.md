@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExpressionNo](Systems.Bpm.CalculatedAttributeExpressions.md#expressionno) | int32 | Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. [Required] 
+| [ExpressionNo](Systems.Bpm.CalculatedAttributeExpressions.md#expressionno) | int32 | Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. `Required` 
 | [Id](Systems.Bpm.CalculatedAttributeExpressions.md#id) | guid |  
 | [Notes](Systems.Bpm.CalculatedAttributeExpressions.md#notes) | string (nullable) | Notes for this CalculatedAttribute<br />Expression. 
-| [Operator](Systems.Bpm.CalculatedAttributeExpressions.md#operator) | [ExpressionOperator](Systems.Bpm.CalculatedAttributeExpressions.md#operator) | The exprssion operator. Available operators are limited to a pre-selected list of operators. [Required] 
+| [Operator](Systems.Bpm.CalculatedAttributeExpressions.md#operator) | [ExpressionOperator](Systems.Bpm.CalculatedAttributeExpressions.md#operator) | The exprssion operator. Available operators are limited to a pre-selected list of operators. `Required` 
 | [Parameter1Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
 | [Parameter1Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1value) | string (nullable) | The actual value of parameter 1. 
 | [Parameter2Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
@@ -40,14 +40,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) | [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) | The [CalculatedAttribute](Systems.Bpm.CalculatedAttribute<br />Expressions.md#calculatedattribute) to which this CalculatedAttribute<br />Expression belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) | [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) | The `CalculatedAttribute`(Systems.Bpm.CalculatedAttribute<br />Expressions.md#calculatedattribute) to which this CalculatedAttribute<br />Expression belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### ExpressionNo
 
-Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. [Required]
+Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. `Required`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 ### Operator
 
-The exprssion operator. Available operators are limited to a pre-selected list of operators. [Required]
+The exprssion operator. Available operators are limited to a pre-selected list of operators. `Required`
 
 _Type_: **[ExpressionOperator](Systems.Bpm.CalculatedAttributeExpressions.md#operator)**  
 Generic enum type for ExpressionOperator properties  
@@ -227,7 +227,7 @@ _Supports Order By_: **False**
 
 ### CalculatedAttribute
 
-The [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner]
+The `CalculatedAttribute`(Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)**  
 _Indexed_: **True**  

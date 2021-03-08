@@ -23,17 +23,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Logistics.Procurement.PurchasePriceLists.md#fromdate) | datetime (nullable) | Starting validity of the price list. [Filter(eq;ge;le)] 
+| [FromDate](Logistics.Procurement.PurchasePriceLists.md#fromdate) | datetime (nullable) | Starting validity of the price list. `Filter(eq;ge;le)` 
 | [Id](Logistics.Procurement.PurchasePriceLists.md#id) | guid |  
-| [Name](Logistics.Procurement.PurchasePriceLists.md#name) | string | The name of this PurchasePriceList. [Required] [Filter(eq;like)] [ORD] 
-| [ThruDate](Logistics.Procurement.PurchasePriceLists.md#thrudate) | datetime (nullable) | Ending validity of the price list. [Filter(eq;ge;le)] 
+| [Name](Logistics.Procurement.PurchasePriceLists.md#name) | string | The name of this PurchasePriceList. `Required` `Filter(eq;like)` `ORD` 
+| [ThruDate](Logistics.Procurement.PurchasePriceLists.md#thrudate) | datetime (nullable) | Ending validity of the price list. `Filter(eq;ge;le)` 
 
 
 ## Attribute Details
 
 ### FromDate
 
-Starting validity of the price list. [Filter(eq;ge;le)]
+Starting validity of the price list. `Filter(eq;ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this PurchasePriceList. [Required] [Filter(eq;like)] [ORD]
+The name of this PurchasePriceList. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -57,7 +57,7 @@ _Supports Order By_: **True**
 
 ### ThruDate
 
-Ending validity of the price list. [Filter(eq;ge;le)]
+Ending validity of the price list. `Filter(eq;ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  

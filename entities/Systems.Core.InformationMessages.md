@@ -24,13 +24,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Core.InformationMessages.md#id) | guid |  
-| [InformationMessageTime](Systems.Core.InformationMessages.md#informationmessagetime) | datetime | Date and time when thet message occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly] 
-| [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) | [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) | Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. [Required] [Default("INF")] [Filter(multi eq)] [ReadOnly] 
-| [MachineName](Systems.Core.InformationMessages.md#machinename) | string | Machine name of the computer from which the process which creates the message has been initiated. [Required] [ReadOnly] 
-| [Message](Systems.Core.InformationMessages.md#message) | string | The actual content of the information message. [Required] [Filter(like)] [ReadOnly] 
-| [ProcessDescription](Systems.Core.InformationMessages.md#processdescription) | string | Name or description of the process that creates the message. [Required] [Filter(eq;like)] [ReadOnly] 
-| [URL](Systems.Core.InformationMessages.md#url) | string (nullable) | URL of the record that has posted the information message. [Filter(eq)] 
-| [UserName](Systems.Core.InformationMessages.md#username) | string | Login name of the user that has initiated the process which creates the message. [Required] [Filter(eq)] [ReadOnly] 
+| [InformationMessageTime](Systems.Core.InformationMessages.md#informationmessagetime) | datetime | Date and time when thet message occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly` 
+| [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) | [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) | Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. `Required` `Default("INF")` `Filter(multi eq)` `ReadOnly` 
+| [MachineName](Systems.Core.InformationMessages.md#machinename) | string | Machine name of the computer from which the process which creates the message has been initiated. `Required` `ReadOnly` 
+| [Message](Systems.Core.InformationMessages.md#message) | string | The actual content of the information message. `Required` `Filter(like)` `ReadOnly` 
+| [ProcessDescription](Systems.Core.InformationMessages.md#processdescription) | string | Name or description of the process that creates the message. `Required` `Filter(eq;like)` `ReadOnly` 
+| [URL](Systems.Core.InformationMessages.md#url) | string (nullable) | URL of the record that has posted the information message. `Filter(eq)` 
+| [UserName](Systems.Core.InformationMessages.md#username) | string | Login name of the user that has initiated the process which creates the message. `Required` `Filter(eq)` `ReadOnly` 
 
 
 ## Attribute Details
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### InformationMessageTime
 
-Date and time when thet message occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]
+Date and time when thet message occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly`
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -53,10 +53,10 @@ _Default Value_: **CurrentDateTime**
 
 ### InformationMessageType
 
-Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. [Required] [Default("INF")] [Filter(multi eq)] [ReadOnly]
+Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. `Required` `Default("INF")` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype)**  
-Allowed values for the [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) data attribute  
+Allowed values for the `InformationMessageType`(Systems.Core.InformationMessages.md#informationmessagetype) data attribute  
 _Allowed Values (Systems.Core.InformationMessagesRepository.InformationMessageType Enum Members)_  
 
 | Value | Description |
@@ -71,7 +71,7 @@ _Default Value_: **Information**
 
 ### MachineName
 
-Machine name of the computer from which the process which creates the message has been initiated. [Required] [ReadOnly]
+Machine name of the computer from which the process which creates the message has been initiated. `Required` `ReadOnly`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -79,7 +79,7 @@ _Supports Order By_: **False**
 
 ### Message
 
-The actual content of the information message. [Required] [Filter(like)] [ReadOnly]
+The actual content of the information message. `Required` `Filter(like)` `ReadOnly`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 ### ProcessDescription
 
-Name or description of the process that creates the message. [Required] [Filter(eq;like)] [ReadOnly]
+Name or description of the process that creates the message. `Required` `Filter(eq;like)` `ReadOnly`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -95,7 +95,7 @@ _Supports Order By_: **False**
 
 ### URL
 
-URL of the record that has posted the information message. [Filter(eq)]
+URL of the record that has posted the information message. `Filter(eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -103,7 +103,7 @@ _Supports Order By_: **False**
 
 ### UserName
 
-Login name of the user that has initiated the process which creates the message. [Required] [Filter(eq)] [ReadOnly]
+Login name of the user that has initiated the process which creates the message. `Required` `Filter(eq)` `ReadOnly`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  

@@ -24,11 +24,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Core.Jobs.md#id) | guid |  
-| [IsActive](Systems.Core.Jobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] 
-| [JobType](Systems.Core.Jobs.md#jobtype) | [JobType](Systems.Core.Jobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] 
-| [Name](Systems.Core.Jobs.md#name) | string | The name of the job. [Required] [Filter(eq;like)] [ORD] 
+| [IsActive](Systems.Core.Jobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` 
+| [JobType](Systems.Core.Jobs.md#jobtype) | [JobType](Systems.Core.Jobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)` 
+| [Name](Systems.Core.Jobs.md#name) | string | The name of the job. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](Systems.Core.Jobs.md#notes) | string (nullable) | Notes for this Job. 
-| [RunOnIdle](Systems.Core.Jobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] 
+| [RunOnIdle](Systems.Core.Jobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` 
 
 
 ## Attribute Details
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -51,10 +51,10 @@ _Default Value_: **True**
 
 ### JobType
 
-The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]
+The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)`
 
 _Type_: **[JobType](Systems.Core.Jobs.md#jobtype)**  
-Allowed values for the [JobType](Systems.Core.Jobs.md#jobtype) data attribute  
+Allowed values for the `JobType`(Systems.Core.Jobs.md#jobtype) data attribute  
 _Allowed Values (Systems.Core.JobsRepository.JobType Enum Members)_  
 
 | Value | Description |
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-The name of the job. [Required] [Filter(eq;like)] [ORD]
+The name of the job. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### RunOnIdle
 
-Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)]
+Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  

@@ -110,7 +110,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Folders.html#name">Name</a></td>
 <td>string</td>
-<td>Name of the folder. Unique within its parent folder. [Required] [Filter(multi eq;like)]</td>
+<td>Name of the folder. Unique within its parent folder. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Folders.html#notes">Notes</a></td>
@@ -132,12 +132,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Folders.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</td>
-<td>The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. [Filter(multi eq)]</td>
+<td>The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Folders.html#parent">Parent</a></td>
 <td><a href="General.Folders.html">Folders</a> (nullable)</td>
-<td>Parent folder. null if this is root folder. [Filter(multi eq)]</td>
+<td>Parent folder. null if this is root folder. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the folder. Unique within its parent folder. [Required] [Filter(multi eq;like)]</p>
+<p>Name of the folder. Unique within its parent folder. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -159,11 +159,11 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<p>The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. [Filter(multi eq)]</p>
+<p>The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
-<p>Parent folder. null if this is root folder. [Filter(multi eq)]</p>
+<p>Parent folder. null if this is root folder. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Folders.html">Folders</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#depreciationenddate">DepreciationEndDate</a></td>
 <td>datetime</td>
-<td>End date of the depreciation plan for this asset. [Required]</td>
+<td>End date of the depreciation plan for this asset. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#depreciationstartdate">DepreciationStartDate</a></td>
 <td>datetime</td>
-<td>Start date of the depreciation plan for this asset. [Required]</td>
+<td>Start date of the depreciation plan for this asset. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#id">Id</a></td>
@@ -120,12 +120,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the depreciation plan. [Required] [Filter(eq)]</td>
+<td>Consecutive number of the line within the depreciation plan. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#plandepreciationvalue">PlanDepreciationValue</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)]</td>
+<td>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,27 +142,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#asset">Asset</a></td>
 <td><a href="Finance.Assets.Assets.html">Assets</a></td>
-<td>The asset that is planned for depreciation. [Required] [Filter(multi eq)]</td>
+<td>The asset that is planned for depreciation. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#depreciationmethod">DepreciationMethod</a></td>
 <td><a href="Finance.Assets.DepreciationMethods.html">DepreciationMethods</a></td>
-<td>Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)]</td>
+<td>Depreciation method by which the asset will be depreciated. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#depreciationplan">DepreciationPlan</a></td>
 <td><a href="Finance.Assets.DepreciationPlans.html">DepreciationPlans</a></td>
-<td>The <a href="Finance.Assets.DepreciationPlanLines.html#depreciationplan">DepreciationPlan</a> to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>DepreciationPlan</code>(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#document">Document</a></td>
 <td><a href="Finance.Assets.DepreciationPlans.html">DepreciationPlans</a></td>
-<td>The <a href="Finance.Assets.DepreciationPlanLines.html#depreciationplan">DepreciationPlan</a> to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)]</td>
+<td>The <code>DepreciationPlan</code>(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#valuationmodel">ValuationModel</a></td>
 <td><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></td>
-<td>Valuation model in which the asset is accounted. [Required] [Filter(multi eq)]</td>
+<td>Valuation model in which the asset is accounted. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -179,18 +179,18 @@ Aggregate Root:<br>
 <tr>
 <td>FixedValues</td>
 <td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html">DepreciationPlanLineFixedValues</a></td>
-<td>List of [DepreciationPlan<br>LineFixedValue](Finance.Assets.DepreciationPlan<br>LineFixedValues.md) child objects, based on the [Finance.Assets.DepreciationPlan<br>LineFixedValue.DepreciationPlanLine](Finance.Assets.DepreciationPlan<br>LineFixedValues.md#depreciationplanline) back reference</td>
+<td>List of <code>DepreciationPlan&lt;br /&gt;LineFixedValue</code>(Finance.Assets.DepreciationPlan<br>LineFixedValues.md) child objects, based on the <code>Finance.Assets.DepreciationPlan&lt;br /&gt;LineFixedValue.DepreciationPlanLine</code>(Finance.Assets.DepreciationPlan<br>LineFixedValues.md#depreciationplanline) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="depreciationenddate">DepreciationEndDate</h3>
-<p>End date of the depreciation plan for this asset. [Required]</p>
+<p>End date of the depreciation plan for this asset. <code>Required</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="depreciationstartdate">DepreciationStartDate</h3>
-<p>Start date of the depreciation plan for this asset. [Required]</p>
+<p>Start date of the depreciation plan for this asset. <code>Required</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -200,7 +200,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the depreciation plan. [Required] [Filter(eq)]</p>
+<p>Consecutive number of the line within the depreciation plan. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -209,33 +209,33 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.DepreciationPlan.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="plandepreciationvalue">PlanDepreciationValue</h3>
-<p>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)]</p>
+<p>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
-<p>The asset that is planned for depreciation. [Required] [Filter(multi eq)]</p>
+<p>The asset that is planned for depreciation. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="depreciationmethod">DepreciationMethod</h3>
-<p>Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)]</p>
+<p>Depreciation method by which the asset will be depreciated. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationMethods.html">DepreciationMethods</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="depreciationplan">DepreciationPlan</h3>
-<p>The <a href="Finance.Assets.DepreciationPlanLines.html#depreciationplan">DepreciationPlan</a> to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>DepreciationPlan</code>(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationPlans.html">DepreciationPlans</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
-<p>The <a href="Finance.Assets.DepreciationPlanLines.html#depreciationplan">DepreciationPlan</a> to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)]</p>
+<p>The <code>DepreciationPlan</code>(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationPlans.html">DepreciationPlans</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="valuationmodel">ValuationModel</h3>
-<p>Valuation model in which the asset is accounted. [Required] [Filter(multi eq)]</p>
+<p>Valuation model in which the asset is accounted. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -23,26 +23,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Logistics.Wms.WarehouseRequisitionFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. [Required] 
-| [FulfillmentType](Logistics.Wms.WarehouseRequisitionFulfillments.md#fulfillmenttype) | string | Type of fulfillment: P=Plan created; C=Requisition completed. [Required] 
+| [CreationTimeUtc](Logistics.Wms.WarehouseRequisitionFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` 
+| [FulfillmentType](Logistics.Wms.WarehouseRequisitionFulfillments.md#fulfillmenttype) | string | Type of fulfillment: P=Plan created; C=Requisition completed. `Required` 
 | [Id](Logistics.Wms.WarehouseRequisitionFulfillments.md#id) | guid |  
-| [IsFinal](Logistics.Wms.WarehouseRequisitionFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. [Required] 
-| [Quantity](Logistics.Wms.WarehouseRequisitionFulfillments.md#quantity) | decimal | Quantity fulfilled (in the measurement unit of the requisition line). [Required] 
+| [IsFinal](Logistics.Wms.WarehouseRequisitionFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. `Required` 
+| [Quantity](Logistics.Wms.WarehouseRequisitionFulfillments.md#quantity) | decimal | Quantity fulfilled (in the measurement unit of the requisition line). `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](Logistics.Wms.WarehouseRequisitionFulfillments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. [Required] [Filter(multi eq)] |
-| [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionFulfillments.md#warehouserequisition) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The warehouse requisiton, which is fulfilled. [Required] [Filter(multi eq)] |
-| [WarehouseRequisitionLine](Logistics.Wms.WarehouseRequisitionFulfillments.md#warehouserequisitionline) | [WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md) | The requisition line, which is fulfilled. [Required] [Filter(multi eq)] |
+| [CreationUser](Logistics.Wms.WarehouseRequisitionFulfillments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. `Required` `Filter(multi eq)` |
+| [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionFulfillments.md#warehouserequisition) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The warehouse requisiton, which is fulfilled. `Required` `Filter(multi eq)` |
+| [WarehouseRequisitionLine](Logistics.Wms.WarehouseRequisitionFulfillments.md#warehouserequisitionline) | [WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md) | The requisition line, which is fulfilled. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### CreationTimeUtc
 
-The exact time in UTC, when the fulfillment was created in the system. [Required]
+The exact time in UTC, when the fulfillment was created in the system. `Required`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### FulfillmentType
 
-Type of fulfillment: P=Plan created; C=Requisition completed. [Required]
+Type of fulfillment: P=Plan created; C=Requisition completed. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 ### IsFinal
 
-Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. [Required]
+Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. `Required`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-Quantity fulfilled (in the measurement unit of the requisition line). [Required]
+Quantity fulfilled (in the measurement unit of the requisition line). `Required`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -84,14 +84,14 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-The user, who created the record. [Required] [Filter(multi eq)]
+The user, who created the record. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseRequisition
 
-The warehouse requisiton, which is fulfilled. [Required] [Filter(multi eq)]
+The warehouse requisiton, which is fulfilled. `Required` `Filter(multi eq)`
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
 _Indexed_: **True**  
@@ -99,7 +99,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### WarehouseRequisitionLine
 
-The requisition line, which is fulfilled. [Required] [Filter(multi eq)]
+The requisition line, which is fulfilled. `Required` `Filter(multi eq)`
 
 _Type_: **[WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)**  
 _Indexed_: **True**  

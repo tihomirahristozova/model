@@ -110,12 +110,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#linenumber">LineNumber</a></td>
 <td>int32</td>
-<td>Consecutive line number of the package, unique within the document. [Required] [Filter(eq)]</td>
+<td>Consecutive line number of the package, unique within the document. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#numberofpackages">NumberOfPackages</a></td>
 <td>int32</td>
-<td>Number of packages sold. [Required] [Default(0)]</td>
+<td>Number of packages sold. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#promotionalpackage">PromotionalPackage</a></td>
 <td><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></td>
-<td>The type of promotional package sold. [Required] [Filter(multi eq)]</td>
+<td>The type of promotional package sold. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></td>
-<td>The [SalesOrder](Crm.Sales.SalesOrderPromotional<br>Packages.md#salesorder) to which this SalesOrderPromotional<br>Package belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>SalesOrder</code>(Crm.Sales.SalesOrderPromotional<br>Packages.md#salesorder) to which this SalesOrderPromotional<br>Package belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="linenumber">LineNumber</h3>
-<p>Consecutive line number of the package, unique within the document. [Required] [Filter(eq)]</p>
+<p>Consecutive line number of the package, unique within the document. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -157,18 +157,18 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="numberofpackages">NumberOfPackages</h3>
-<p>Number of packages sold. [Required] [Default(0)]</p>
+<p>Number of packages sold. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="promotionalpackage">PromotionalPackage</h3>
-<p>The type of promotional package sold. [Required] [Filter(multi eq)]</p>
+<p>The type of promotional package sold. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
-<p>The <a href="Crm.Sales.SalesOrderPromotionalPackages.html#salesorder">SalesOrder</a> to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>SalesOrder</code>(Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

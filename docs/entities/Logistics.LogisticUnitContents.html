@@ -105,17 +105,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#basequantity">BaseQuantity</a></td>
 <td>decimal</td>
-<td>The quantity, expressed in the base measurement category of the product. [Required] [Filter(eq;ge;le)]</td>
+<td>The quantity, expressed in the base measurement category of the product. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#expirationdate">ExpirationDate</a></td>
 <td>date (nullable)</td>
-<td>Expiration date of the goods. null means unknown or N/A. [Filter(multi eq;ge;le)]</td>
+<td>Expiration date of the goods. null means unknown or N/A. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#grossweight">GrossWeight</a></td>
 <td>decimal (nullable)</td>
-<td>Gross weight in kilograms (kg). null means unknown. [Filter(eq;ge;le)]</td>
+<td>Gross weight in kilograms (kg). null means unknown. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#id">Id</a></td>
@@ -125,12 +125,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive position within the logistic unit. [Required] [Filter(multi eq)]</td>
+<td>Consecutive position within the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#lotnumber">LotNumber</a></td>
 <td>string (nullable)</td>
-<td>The production lot number. null means unknown. [Filter(multi eq;like)]</td>
+<td>The production lot number. null means unknown. <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#notes">Notes</a></td>
@@ -140,12 +140,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#quantity">Quantity</a></td>
 <td>decimal</td>
-<td>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. [Required] [Filter(multi eq;ge;le)]</td>
+<td>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#standardquantity">StandardQuantity</a></td>
 <td>decimal</td>
-<td>The quantity, expessed in the standard measurement unit of the product. [Required] [Filter(eq;ge;le)]</td>
+<td>The quantity, expessed in the standard measurement unit of the product. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -162,33 +162,33 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#logisticunit">LogisticUnit</a></td>
 <td><a href="Logistics.LogisticUnits.html">LogisticUnits</a></td>
-<td>The containing logistic unit. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The containing logistic unit. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product, which is contained in the logistic unit. [Required] [Filter(multi eq)]</td>
+<td>The product, which is contained in the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of the quantity. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of the quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basequantity">BaseQuantity</h3>
-<p>The quantity, expressed in the base measurement category of the product. [Required] [Filter(eq;ge;le)]</p>
+<p>The quantity, expressed in the base measurement category of the product. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="expirationdate">ExpirationDate</h3>
-<p>Expiration date of the goods. null means unknown or N/A. [Filter(multi eq;ge;le)]</p>
+<p>Expiration date of the goods. null means unknown or N/A. <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="grossweight">GrossWeight</h3>
-<p>Gross weight in kilograms (kg). null means unknown. [Filter(eq;ge;le)]</p>
+<p>Gross weight in kilograms (kg). null means unknown. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -198,7 +198,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive position within the logistic unit. [Required] [Filter(multi eq)]</p>
+<p>Consecutive position within the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -207,7 +207,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.LogisticUnit.Contents.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="lotnumber">LotNumber</h3>
-<p>The production lot number. null means unknown. [Filter(multi eq;like)]</p>
+<p>The production lot number. null means unknown. <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -217,27 +217,27 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. [Required] [Filter(multi eq;ge;le)]</p>
+<p>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantity">StandardQuantity</h3>
-<p>The quantity, expessed in the standard measurement unit of the product. [Required] [Filter(eq;ge;le)]</p>
+<p>The quantity, expessed in the standard measurement unit of the product. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="logisticunit">LogisticUnit</h3>
-<p>The containing logistic unit. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The containing logistic unit. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.LogisticUnits.html">LogisticUnits</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>The product, which is contained in the logistic unit. [Required] [Filter(multi eq)]</p>
+<p>The product, which is contained in the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of the quantity. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of the quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

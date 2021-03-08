@@ -26,15 +26,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.Sales.SalesOrderPromotionalPackages.md#id) | guid |  
-| [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. [Required] [Filter(eq)] 
-| [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold. [Required] [Default(0)] 
+| [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. `Required` `Filter(eq)` 
+| [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold. `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) | The type of promotional package sold. [Required] [Filter(multi eq)] |
-| [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPromotional<br />Packages.md#salesorder) to which this SalesOrderPromotional<br />Package belongs. [Required] [Filter(multi eq)] [Owner] |
+| [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) | The type of promotional package sold. `Required` `Filter(multi eq)` |
+| [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The `SalesOrder`(Crm.Sales.SalesOrderPromotional<br />Packages.md#salesorder) to which this SalesOrderPromotional<br />Package belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### LineNumber
 
-Consecutive line number of the package, unique within the document. [Required] [Filter(eq)]
+Consecutive line number of the package, unique within the document. `Required` `Filter(eq)`
 
 _Type_: **int32**  
 _Supported Filters_: **Equals**  
@@ -61,7 +61,7 @@ _Front-End Recalc Expressions:_
 `( obj.SalesOrder.PromotionalPackages.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NumberOfPackages
 
-Number of packages sold. [Required] [Default(0)]
+Number of packages sold. `Required` `Default(0)`
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -73,14 +73,14 @@ _Default Value_: **0**
 
 ### PromotionalPackage
 
-The type of promotional package sold. [Required] [Filter(multi eq)]
+The type of promotional package sold. `Required` `Filter(multi eq)`
 
 _Type_: **[PromotionalPackages](Crm.PromotionalPackages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
 
-The [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]
+The `SalesOrder`(Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Indexed_: **True**  

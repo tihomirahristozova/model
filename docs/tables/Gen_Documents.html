@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Table Gen_Documents | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Table Gen_Documents | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="table-gen_documents">Table Gen_Documents</h1>
+
+<p>Contains all documents issued by and to the enterprise. Entity: Gen_Documents</p>
+<h1 id="columns">Columns</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td><code>PK</code>, Readonly</td>
+<td>Gets the Id of the document row, related to the domain object</td>
+</tr>
+<tr>
+<td>Adjustment_Number</td>
+<td><code>Int32</code></td>
+<td>Readonly</td>
+<td>Consecutive number of the correction that this document is applying to the adjusted document. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Adjustment_Time</td>
+<td><code>DateTime?</code></td>
+<td>Readonly</td>
+<td>Date/time when the document last has been adjusted by corrective document. <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Adjustment_User</td>
+<td><code>String</code></td>
+<td>Readonly</td>
+<td>The user who adjusted the document. <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Complete_Time</td>
+<td><code>DateTime?</code></td>
+<td>Readonly</td>
+<td>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Creation_Time</td>
+<td><code>DateTime</code></td>
+<td>Readonly</td>
+<td>Date/Time when the document was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Creation_User</td>
+<td><code>String</code></td>
+<td>Readonly</td>
+<td>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Document_Date</td>
+<td><code>DateTime</code></td>
+<td></td>
+<td>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td>Document_No</td>
+<td><code>String</code></td>
+<td></td>
+<td>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td><code>String</code></td>
+<td></td>
+<td>Notes for this Document.</td>
+</tr>
+<tr>
+<td>Document_Version</td>
+<td><code>Int32</code></td>
+<td>Readonly</td>
+<td>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Entity_Name</td>
+<td><code>String</code></td>
+<td>Readonly</td>
+<td>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Parent_Document_Relationship_Type</td>
+<td><code>ParentDocumentRelationshipType?</code></td>
+<td>Allowed: <code>S</code>, <code>N</code>, Readonly</td>
+<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Planning_Only</td>
+<td><code>Boolean</code></td>
+<td>Readonly</td>
+<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Read_Only</td>
+<td><code>Boolean</code></td>
+<td>Readonly</td>
+<td>True - the document is read only; false - the document is not read only. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Reference_Date</td>
+<td><code>DateTime?</code></td>
+<td></td>
+<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td>Reference_Document_No</td>
+<td><code>String</code></td>
+<td></td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
+<td>Release_Time</td>
+<td><code>DateTime?</code></td>
+<td>Readonly</td>
+<td>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>State</td>
+<td><code>DocumentState</code></td>
+<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
+<td>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Void</td>
+<td><code>Boolean</code></td>
+<td>Readonly</td>
+<td>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Void_Reason</td>
+<td><code>String</code></td>
+<td>Readonly</td>
+<td>Reason for voiding the document, entered by the user. <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Void_Time</td>
+<td><code>DateTime?</code></td>
+<td>Readonly</td>
+<td>Date/time when the document has become void. <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>Void_User</td>
+<td><code>String</code></td>
+<td>Readonly</td>
+<td>The user who voided the document. <code>ReadOnly</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Gen_Documents.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

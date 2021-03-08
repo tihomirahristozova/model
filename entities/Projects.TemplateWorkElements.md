@@ -31,8 +31,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTemplate](Projects.TemplateWorkElements.md#projecttemplate) | [Templates](Projects.Templates.md) | The [Template](Projects.Templates.md) to which this TemplateWorkElement belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ProjectTypeWorkElement](Projects.TemplateWorkElements.md#projecttypeworkelement) | [TypeWorkElements](Projects.TypeWorkElements.md) | The work element from the project type, which shall be copied as work element in new projects, based on this template. [Required] [Filter(multi eq)] |
+| [ProjectTemplate](Projects.TemplateWorkElements.md#projecttemplate) | [Templates](Projects.Templates.md) | The `Template`(Projects.Templates.md) to which this TemplateWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProjectTypeWorkElement](Projects.TemplateWorkElements.md#projecttypeworkelement) | [TypeWorkElements](Projects.TypeWorkElements.md) | The work element from the project type, which shall be copied as work element in new projects, based on this template. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -49,14 +49,14 @@ _Default Value_: **NewGuid**
 
 ### ProjectTemplate
 
-The [Template](Projects.Templates.md) to which this TemplateWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
+The `Template`(Projects.Templates.md) to which this TemplateWorkElement belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Projects.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTypeWorkElement
 
-The work element from the project type, which shall be copied as work element in new projects, based on this template. [Required] [Filter(multi eq)]
+The work element from the project type, which shall be copied as work element in new projects, based on this template. `Required` `Filter(multi eq)`
 
 _Type_: **[TypeWorkElements](Projects.TypeWorkElements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

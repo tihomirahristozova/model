@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required]</td>
+<td>Quantity of the agreed servcice or product. <code>Unit: QuantityUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#startdate">StartDate</a></td>
@@ -142,22 +142,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#service">Service</a></td>
 <td><a href="Applications.Service.Services.html">Services</a> (nullable)</td>
-<td>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). [Filter(multi eq)]</td>
+<td>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a></td>
 <td><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></td>
-<td>The <a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>ServiceAgreement</code>(Applications.Service.ServiceAgreementServices.md#serviceagreement) to which this ServiceAgreementService belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#serviceproduct">ServiceProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). [Filter(multi eq)]</td>
+<td>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -182,7 +182,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ServiceAgreement.Services.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required]</p>
+<p>Quantity of the agreed servcice or product. <code>Unit: QuantityUnit</code> <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -193,24 +193,24 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Service.MeasurementUnit.IfNullThen( obj.ServiceProduct.MeasurementUnit).IfNullThen( obj.QuantityUnit)</code></p>
 <h3 id="service">Service</h3>
-<p>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). [Filter(multi eq)]</p>
+<p>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.Services.html">Services</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ServiceProduct != null), null, obj.Service)</code></p>
 <h3 id="serviceagreement">ServiceAgreement</h3>
-<p>The <a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>ServiceAgreement</code>(Applications.Service.ServiceAgreementServices.md#serviceagreement) to which this ServiceAgreementService belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceproduct">ServiceProduct</h3>
-<p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). [Filter(multi eq)]</p>
+<p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>

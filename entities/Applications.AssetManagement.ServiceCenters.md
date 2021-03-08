@@ -30,8 +30,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.AssetManagement.ServiceCenters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)] |
-| [Party](Applications.AssetManagement.ServiceCenters.md#party) | [Parties](General.Contacts.Parties.md) | The person or company, actually performing the maintenance. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.AssetManagement.ServiceCenters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. `Filter(multi eq)` |
+| [Party](Applications.AssetManagement.ServiceCenters.md#party) | [Parties](General.Contacts.Parties.md) | The person or company, actually performing the maintenance. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -56,14 +56,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)]
+The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-The person or company, actually performing the maintenance. [Required] [Filter(multi eq)]
+The person or company, actually performing the maintenance. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

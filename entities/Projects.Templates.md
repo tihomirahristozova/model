@@ -27,14 +27,14 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Projects.Templates.md#id) | guid |  
 | [Notes](Projects.Templates.md#notes) | string (nullable) | Notes for this Template. 
-| [ProjectTemplateName](Projects.Templates.md#projecttemplatename) | string | The name of the project template. [Required] 
+| [ProjectTemplateName](Projects.Templates.md#projecttemplatename) | string | The name of the project template. `Required` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Risks | [TemplateRisks](Projects.TemplateRisks.md) | List of [TemplateRisk](Projects.TemplateRisks.md) child objects, based on the [Projects.TemplateRisk.ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) back reference 
-| WorkElements | [TemplateWorkElements](Projects.TemplateWorkElements.md) | List of [TemplateWorkElement](Projects.TemplateWorkElements.md) child objects, based on the [Projects.TemplateWorkElement.ProjectTemplate](Projects.TemplateWorkElements.md#projecttemplate) back reference 
+| Risks | [TemplateRisks](Projects.TemplateRisks.md) | List of `TemplateRisk`(Projects.TemplateRisks.md) child objects, based on the `Projects.TemplateRisk.ProjectTemplate`(Projects.TemplateRisks.md#projecttemplate) back reference 
+| WorkElements | [TemplateWorkElements](Projects.TemplateWorkElements.md) | List of `TemplateWorkElement`(Projects.TemplateWorkElements.md) child objects, based on the `Projects.TemplateWorkElement.ProjectTemplate`(Projects.TemplateWorkElements.md#projecttemplate) back reference 
 
 
 ## Attribute Details
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### ProjectTemplateName
 
-The name of the project template. [Required]
+The name of the project template. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

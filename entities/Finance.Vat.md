@@ -1,8 +1,7 @@
----
+﻿---
 uid: Finance.Vat
 ---
 # Finance.Vat Namespace
-
 
 ## Entities
 - [BGVATDeclarations](Finance.Vat.BGVATDeclarations.md)  
@@ -10,4 +9,6 @@ uid: Finance.Vat
 - [BGVATDocumentTypeVATCodes](Finance.Vat.BGVATDocumentTypeVATCodes.md)  
 - [DealTypes](Finance.Vat.DealTypes.md)  
 - [Entries](Finance.Vat.Entries.md)  
+
+Vat.Entries.md)  
 

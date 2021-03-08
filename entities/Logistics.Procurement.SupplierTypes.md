@@ -24,13 +24,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Procurement.SupplierTypes.md#id) | guid |  
-| [Name](Logistics.Procurement.SupplierTypes.md#name) | string | The name of this SupplierType. [Required] [Filter(eq;like)] 
+| [Name](Logistics.Procurement.SupplierTypes.md#name) | string | The name of this SupplierType. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Logistics.Procurement.SupplierTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)] |
+| [AccessKey](Logistics.Procurement.SupplierTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key required for accessing all suppliers of this supplier type. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this SupplierType. [Required] [Filter(eq;like)]
+The name of this SupplierType. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)]
+The access key required for accessing all suppliers of this supplier type. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

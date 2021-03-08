@@ -27,14 +27,14 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](General.Contacts.ActivityResources.md#id) | guid |  
 | [Notes](General.Contacts.ActivityResources.md#notes) | string (nullable) | Notes for this ActivityResource. 
-| [ResourceUsagePercent](General.Contacts.ActivityResources.md#resourceusagepercent) | decimal | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] 
+| [ResourceUsagePercent](General.Contacts.ActivityResources.md#resourceusagepercent) | decimal | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityResources.md#activity) | [Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Resource](General.Contacts.ActivityResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, which is required by the activity. [Required] [Filter(multi eq)] |
+| [Activity](General.Contacts.ActivityResources.md#activity) | [Activities](General.Contacts.Activities.md) | The `Activity`(General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Resource](General.Contacts.ActivityResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, which is required by the activity. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### ResourceUsagePercent
 
-The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)]
+The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -68,14 +68,14 @@ _Default Value_: **1**
 
 ### Activity
 
-The [Activity](General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner]
+The `Activity`(General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
-The resource, which is required by the activity. [Required] [Filter(multi eq)]
+The resource, which is required by the activity. `Required` `Filter(multi eq)`
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

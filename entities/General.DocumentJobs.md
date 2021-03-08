@@ -24,28 +24,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FilterXml](General.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed. [Required] 
+| [FilterXml](General.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed. `Required` 
 | [Id](General.DocumentJobs.md#id) | guid |  
-| [IsActive](General.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] (Inherited from [Jobs](Systems.Core.Jobs.md)) 
-| [JobType](General.DocumentJobs.md#jobtype) | [JobType](General.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] (Inherited from [Jobs](Systems.Core.Jobs.md)) 
-| [Name](General.DocumentJobs.md#name) | string | The name of the job. [Required] [Filter(eq;like)] [ORD] (Inherited from [Jobs](Systems.Core.Jobs.md)) 
-| [NewState](General.DocumentJobs.md#newstate) | [DocumentState](General.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter. [Required] 
+| [IsActive](General.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [JobType](General.DocumentJobs.md#jobtype) | [JobType](General.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [Name](General.DocumentJobs.md#name) | string | The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [NewState](General.DocumentJobs.md#newstate) | [DocumentState](General.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter. `Required` 
 | [Notes](General.DocumentJobs.md#notes) | string (nullable) | Notes for this Job. (Inherited from [Jobs](Systems.Core.Jobs.md)) 
-| [RunOnIdle](General.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [RunOnIdle](General.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentJobs.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The type of the document, whose state will be changed. [Required] [Filter(multi eq)] |
-| [NewUserStatus](General.DocumentJobs.md#newuserstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)] |
+| [DocumentType](General.DocumentJobs.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The type of the document, whose state will be changed. `Required` `Filter(multi eq)` |
+| [NewUserStatus](General.DocumentJobs.md#newuserstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### FilterXml
 
-Specifies the documents, whose state will be changed. [Required]
+Specifies the documents, whose state will be changed. `Required`
 
 _Type_: **dataaccessfilter**  
 _Supported Filters_: **NotFilterable**  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] (Inherited from [Jobs](Systems.Core.Jobs.md))
+Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -69,10 +69,10 @@ _Default Value_: **True**
 
 ### JobType
 
-The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] (Inherited from [Jobs](Systems.Core.Jobs.md))
+The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **[JobType](General.DocumentJobs.md#jobtype)**  
-Allowed values for the [JobType](Systems.Core.Jobs.md#jobtype) data attribute  
+Allowed values for the `JobType`(Systems.Core.Jobs.md#jobtype) data attribute  
 _Allowed Values (Systems.Core.JobsRepository.JobType Enum Members)_  
 
 | Value | Description |
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-The name of the job. [Required] [Filter(eq;like)] [ORD] (Inherited from [Jobs](Systems.Core.Jobs.md))
+The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -96,7 +96,7 @@ _Supports Order By_: **True**
 
 ### NewState
 
-Specifies the state, which should be set to the documents, matching the filter. [Required]
+Specifies the state, which should be set to the documents, matching the filter. `Required`
 
 _Type_: **[DocumentState](General.DocumentJobs.md#newstate)**  
 Enumeration of document system states  
@@ -125,7 +125,7 @@ _Supports Order By_: **False**
 
 ### RunOnIdle
 
-Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] (Inherited from [Jobs](Systems.Core.Jobs.md))
+Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -137,14 +137,14 @@ _Default Value_: **True**
 
 ### DocumentType
 
-The type of the document, whose state will be changed. [Required] [Filter(multi eq)]
+The type of the document, whose state will be changed. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### NewUserStatus
 
-Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)]
+Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. `Filter(multi eq)`
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

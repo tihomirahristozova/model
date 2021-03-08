@@ -111,12 +111,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Cms.NewsWebModules.html#ispublished">IsPublished</a></td>
 <td>boolean</td>
-<td>Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
+<td>Specifies whether the module is published and will be showed in the web site. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.NewsWebModules.html#localurl">LocalUrl</a></td>
 <td>string (nullable)</td>
-<td>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
+<td>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. <code>Filter(like)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.NewsWebModules.html#modulepicture">ModulePicture</a></td>
@@ -126,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Cms.NewsWebModules.html#moduletype">ModuleType</a></td>
 <td><a href="Applications.Cms.NewsWebModules.html#moduletype">ModuleType</a></td>
-<td>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
+<td>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. <code>Required</code> <code>Filter(like)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.NewsWebModules.html#name">Name</a></td>
 <td>string</td>
-<td>Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
+<td>Multilanguage Module name. This is used as a title when displaying the web Module. <code>Required</code> <code>Filter(like)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -148,12 +148,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Cms.NewsWebModules.html#parent">Parent</a></td>
 <td><a href="Applications.Cms.WebModules.html">WebModules</a> (nullable)</td>
-<td>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
+<td>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. <code>Filter(multi eq)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.NewsWebModules.html#website">WebSite</a></td>
 <td><a href="Applications.Cms.WebSites.html">WebSites</a></td>
-<td>The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
+<td>The web site to which the module belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -164,13 +164,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ispublished">IsPublished</h3>
-<p>Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
+<p>Specifies whether the module is published and will be showed in the web site. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="localurl">LocalUrl</h3>
-<p>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
+<p>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. <code>Filter(like)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -180,9 +180,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="moduletype">ModuleType</h3>
-<p>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
+<p>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. <code>Required</code> <code>Filter(like)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
 <p><em>Type</em>: <strong><a href="Applications.Cms.NewsWebModules.html#moduletype">ModuleType</a></strong><br>
-Allowed values for the <a href="Applications.Cms.WebModules.html#moduletype">ModuleType</a> data attribute<br>
+Allowed values for the <code>ModuleType</code>(Applications.Cms.WebModules.md#moduletype) data attribute<br>
 <em>Allowed Values (Applications.Cms.WebModulesRepository.ModuleType Enum Members)</em></p>
 <table>
 <thead>
@@ -209,17 +209,17 @@ Allowed values for the <a href="Applications.Cms.WebModules.html#moduletype">Mod
 <p><em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<p>Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
+<p>Multilanguage Module name. This is used as a title when displaying the web Module. <code>Required</code> <code>Filter(like)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
-<p>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
+<p>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. <code>Filter(multi eq)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
 <p><em>Type</em>: <strong><a href="Applications.Cms.WebModules.html">WebModules</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="website">WebSite</h3>
-<p>The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
+<p>The web site to which the module belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
 <p><em>Type</em>: <strong><a href="Applications.Cms.WebSites.html">WebSites</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

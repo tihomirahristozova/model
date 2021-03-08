@@ -1,8 +1,7 @@
----
+﻿---
 uid: General.Products
 ---
 # General.Products Namespace
-
 
 ## Entities
 - [CodingSystems](General.Products.CodingSystems.md)  
@@ -20,4 +19,6 @@ uid: General.Products
 - [VariantColors](General.Products.VariantColors.md)  
 - [VariantSizes](General.Products.VariantSizes.md)  
 - [VariantStyles](General.Products.VariantStyles.md)  
+
+ts.VariantStyles.md)  
 

@@ -25,24 +25,24 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BinaryLayout](General.PrintoutLayouts.md#binarylayout) | byte[] (nullable) | The printout layout, when the format requires binary storage. Alternative to Layout. 
-| [DocumentEntityName](General.PrintoutLayouts.md#documententityname) | string | The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. [Required] [Filter(eq)] 
+| [DocumentEntityName](General.PrintoutLayouts.md#documententityname) | string | The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)` 
 | [Id](General.PrintoutLayouts.md#id) | guid |  
 | [Layout](General.PrintoutLayouts.md#layout) | string (nullable) | The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout. 
-| [LayoutFormat](General.PrintoutLayouts.md#layoutformat) | string | Format specifier of the layout. Recognized by the application. [Required] [Filter(multi eq)] 
-| [Name](General.PrintoutLayouts.md#name) | string | The name of this PrintoutLayout. [Required] [Filter(eq;like)] [ORD] 
+| [LayoutFormat](General.PrintoutLayouts.md#layoutformat) | string | Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)` 
+| [Name](General.PrintoutLayouts.md#name) | string | The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](General.PrintoutLayouts.md#notes) | string (nullable) | Notes for this PrintoutLayout. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataSource](General.PrintoutLayouts.md#datasource) | [DataSources](Systems.Reporting.DataSources.md) (nullable) | The data source for the printout. [Filter(multi eq)] |
+| [DataSource](General.PrintoutLayouts.md#datasource) | [DataSources](Systems.Reporting.DataSources.md) (nullable) | The data source for the printout. `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| DocumentPrintImages | [DocumentPrintImages](General.DocumentPrintImages.md) | List of [DocumentPrintImage](General.DocumentPrintImages.md) child objects, based on the [General.DocumentPrintImage.PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) back reference 
+| DocumentPrintImages | [DocumentPrintImages](General.DocumentPrintImages.md) | List of `DocumentPrintImage`(General.DocumentPrintImages.md) child objects, based on the `General.DocumentPrintImage.PrintoutLayout`(General.DocumentPrintImages.md#printoutlayout) back reference 
 
 
 ## Attribute Details
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### DocumentEntityName
 
-The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. [Required] [Filter(eq)]
+The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -80,7 +80,7 @@ _Supports Order By_: **False**
 
 ### LayoutFormat
 
-Format specifier of the layout. Recognized by the application. [Required] [Filter(multi eq)]
+Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -88,7 +88,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-The name of this PrintoutLayout. [Required] [Filter(eq;like)] [ORD]
+The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -108,7 +108,7 @@ _Supports Order By_: **False**
 
 ### DataSource
 
-The data source for the printout. [Filter(multi eq)]
+The data source for the printout. `Filter(multi eq)`
 
 _Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -1,8 +1,7 @@
----
+﻿---
 uid: Logistics.Wms
 ---
 # Logistics.Wms Namespace
-
 
 ## Entities
 - [WarehouseAvailabilityView](Logistics.Wms.WarehouseAvailabilityView.md)  
@@ -17,4 +16,6 @@ uid: Logistics.Wms
 - [WarehouseTransactions](Logistics.Wms.WarehouseTransactions.md)  
 - [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)  
 - [WarehouseZones](Logistics.Wms.WarehouseZones.md)  
+
+arehouseZones.md)  
 

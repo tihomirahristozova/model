@@ -112,12 +112,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#code">Code</a></td>
 <td>string</td>
-<td>Unique process code. [Required] [Filter(multi eq)] [ORD]</td>
+<td>Unique process code. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#description">Description</a></td>
 <td>string (nullable)</td>
-<td>The description of this Process. [Filter(eq;like)]</td>
+<td>The description of this Process. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#id">Id</a></td>
@@ -127,22 +127,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#isexecutable">IsExecutable</a></td>
 <td>boolean</td>
-<td>Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#ispublished">IsPublished</a></td>
 <td>boolean</td>
-<td>Specifies whether the process is currently published for new instances. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Specifies whether the process is currently published for new instances. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#locality">Locality</a></td>
 <td><a href="Systems.Bpm.Processes.html#locality">Locality</a></td>
-<td>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Default(&quot;L&quot;)] [Filter(like)]</td>
+<td>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. <code>Required</code> <code>Default(&quot;L&quot;)</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#name">Name</a></td>
 <td>string</td>
-<td>The name of this Process. [Required] [Filter(eq;like)]</td>
+<td>The name of this Process. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#processgroup">ProcessGroup</a></td>
 <td><a href="Systems.Bpm.ProcessGroups.html">ProcessGroups</a></td>
-<td>The process group, to which this process belongs. [Required] [Filter(multi eq)]</td>
+<td>The process group, to which this process belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -176,34 +176,34 @@ Default Search Member:<br>
 <tr>
 <td>Connections</td>
 <td><a href="Systems.Bpm.ProcessConnections.html">ProcessConnections</a></td>
-<td>List of <a href="Systems.Bpm.ProcessConnections.html">ProcessConnection</a> child objects, based on the <a href="Systems.Bpm.ProcessConnections.html#process">Systems.Bpm.ProcessConnection.Process</a> back reference</td>
+<td>List of <code>ProcessConnection</code>(Systems.Bpm.ProcessConnections.md) child objects, based on the <code>Systems.Bpm.ProcessConnection.Process</code>(Systems.Bpm.ProcessConnections.md#process) back reference</td>
 </tr>
 <tr>
 <td>Elements</td>
 <td><a href="Systems.Bpm.ProcessElements.html">ProcessElements</a></td>
-<td>List of <a href="Systems.Bpm.ProcessElements.html">ProcessElement</a> child objects, based on the <a href="Systems.Bpm.ProcessElements.html#process">Systems.Bpm.ProcessElement.Process</a> back reference</td>
+<td>List of <code>ProcessElement</code>(Systems.Bpm.ProcessElements.md) child objects, based on the <code>Systems.Bpm.ProcessElement.Process</code>(Systems.Bpm.ProcessElements.md#process) back reference</td>
 </tr>
 <tr>
 <td>Lanes</td>
 <td><a href="Systems.Bpm.ProcessLanes.html">ProcessLanes</a></td>
-<td>List of <a href="Systems.Bpm.ProcessLanes.html">ProcessLane</a> child objects, based on the <a href="Systems.Bpm.ProcessLanes.html#process">Systems.Bpm.ProcessLane.Process</a> back reference</td>
+<td>List of <code>ProcessLane</code>(Systems.Bpm.ProcessLanes.md) child objects, based on the <code>Systems.Bpm.ProcessLane.Process</code>(Systems.Bpm.ProcessLanes.md#process) back reference</td>
 </tr>
 <tr>
 <td>Nodes</td>
 <td><a href="Systems.Bpm.ProcessNodes.html">ProcessNodes</a></td>
-<td>List of <a href="Systems.Bpm.ProcessNodes.html">ProcessNode</a> child objects, based on the <a href="Systems.Bpm.ProcessNodes.html#process">Systems.Bpm.ProcessNode.Process</a> back reference</td>
+<td>List of <code>ProcessNode</code>(Systems.Bpm.ProcessNodes.md) child objects, based on the <code>Systems.Bpm.ProcessNode.Process</code>(Systems.Bpm.ProcessNodes.md#process) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique process code. [Required] [Filter(multi eq)] [ORD]</p>
+<p>Unique process code. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="description">Description</h3>
-<p>The description of this Process. [Filter(eq;like)]</p>
+<p>The description of this Process. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -213,19 +213,19 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isexecutable">IsExecutable</h3>
-<p>Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="ispublished">IsPublished</h3>
-<p>Specifies whether the process is currently published for new instances. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Specifies whether the process is currently published for new instances. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="locality">Locality</h3>
-<p>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Default(&quot;L&quot;)] [Filter(like)]</p>
+<p>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. <code>Required</code> <code>Default(&quot;L&quot;)</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.Processes.html#locality">Locality</a></strong><br>
 Generic enum type for Locality properties<br>
 <em>Allowed Values (Systems.Bpm.Locality Enum Members)</em></p>
@@ -259,13 +259,13 @@ Generic enum type for Locality properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Location</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this Process. [Required] [Filter(eq;like)]</p>
+<p>The name of this Process. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="processgroup">ProcessGroup</h3>
-<p>The process group, to which this process belongs. [Required] [Filter(multi eq)]</p>
+<p>The process group, to which this process belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessGroups.html">ProcessGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

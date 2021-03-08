@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#amount">Amount</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]</td>
+<td>The part of the total amount in the payment slip amount, that is distributed to the specified payment order. <code>Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#coveredorderamount">CoveredOrderAmount</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</td>
+<td>The part of the original payment order amount, that is covered by this payment slip line. <code>Currency: PaymentOrder.TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#id">Id</a></td>
@@ -132,18 +132,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#paymentorder">PaymentOrder</a></td>
 <td><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></td>
-<td>The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]</td>
+<td>The payment order, that is covered by this payment slip line. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a></td>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html">PaymentSlipAmounts</a></td>
-<td>The <a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
+<td>The <code>PaymentSlipAmount</code>(Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<p>The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]</p>
+<p>The part of the total amount in the payment slip amount, that is distributed to the specified payment order. <code>Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -151,7 +151,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.CoveredOrderAmount.ConvertTo( obj.PaymentSlipAmount.PaymentSlip.DocumentCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)</code></p>
 <h3 id="coveredorderamount">CoveredOrderAmount</h3>
-<p>The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</p>
+<p>The part of the original payment order amount, that is covered by this payment slip line. <code>Currency: PaymentOrder.TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -165,12 +165,12 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="paymentorder">PaymentOrder</h3>
-<p>The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]</p>
+<p>The payment order, that is covered by this payment slip line. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentslipamount">PaymentSlipAmount</h3>
-<p>The <a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
+<p>The <code>PaymentSlipAmount</code>(Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlipAmounts.html">PaymentSlipAmounts</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

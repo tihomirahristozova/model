@@ -110,7 +110,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.Resources.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Resource name. Unique within the resource group. [Required] [Filter(eq;like)]</td>
+<td>Resource name. Unique within the resource group. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.Resources.html#notes">Notes</a></td>
@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.Resources.html#costingcurrency">CostingCurrency</a></td>
 <td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
-<td>The currency in which resource costs are specified. Required only if resource costs will be specified. [Filter(multi eq)]</td>
+<td>The currency in which resource costs are specified. Required only if resource costs will be specified. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.Resources.html#resourcegroup">ResourceGroup</a></td>
 <td><a href="General.Resources.ResourceGroups.html">ResourceGroups</a></td>
-<td>The <a href="General.Resources.Resources.html#resourcegroup">ResourceGroup</a> to which this Resource belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>ResourceGroup</code>(General.Resources.Resources.md#resourcegroup) to which this Resource belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -154,17 +154,17 @@ Aggregate Root:<br>
 <tr>
 <td>Availability</td>
 <td><a href="General.Resources.ResourceAvailability.html">ResourceAvailability</a></td>
-<td>List of <a href="General.Resources.ResourceAvailability.html">ResourceAvailability</a> child objects, based on the <a href="General.Resources.ResourceAvailability.html#resource">General.Resources.ResourceAvailability.Resource</a> back reference</td>
+<td>List of <code>ResourceAvailability</code>(General.Resources.ResourceAvailability.md) child objects, based on the <code>General.Resources.ResourceAvailability.Resource</code>(General.Resources.ResourceAvailability.md#resource) back reference</td>
 </tr>
 <tr>
 <td>CostRates</td>
 <td><a href="General.Resources.ResourceCostRates.html">ResourceCostRates</a></td>
-<td>List of <a href="General.Resources.ResourceCostRates.html">ResourceCostRate</a> child objects, based on the <a href="General.Resources.ResourceCostRates.html#resource">General.Resources.ResourceCostRate.Resource</a> back reference</td>
+<td>List of <code>ResourceCostRate</code>(General.Resources.ResourceCostRates.md) child objects, based on the <code>General.Resources.ResourceCostRate.Resource</code>(General.Resources.ResourceCostRates.md#resource) back reference</td>
 </tr>
 <tr>
 <td>Instances</td>
 <td><a href="General.Resources.ResourceInstances.html">ResourceInstances</a></td>
-<td>List of <a href="General.Resources.ResourceInstances.html">ResourceInstance</a> child objects, based on the <a href="General.Resources.ResourceInstances.html#resource">General.Resources.ResourceInstance.Resource</a> back reference</td>
+<td>List of <code>ResourceInstance</code>(General.Resources.ResourceInstances.md) child objects, based on the <code>General.Resources.ResourceInstance.Resource</code>(General.Resources.ResourceInstances.md#resource) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -175,7 +175,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Resource name. Unique within the resource group. [Required] [Filter(eq;like)]</p>
+<p>Resource name. Unique within the resource group. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -186,11 +186,11 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costingcurrency">CostingCurrency</h3>
-<p>The currency in which resource costs are specified. Required only if resource costs will be specified. [Filter(multi eq)]</p>
+<p>The currency in which resource costs are specified. Required only if resource costs will be specified. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resourcegroup">ResourceGroup</h3>
-<p>The <a href="General.Resources.Resources.html#resourcegroup">ResourceGroup</a> to which this Resource belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>ResourceGroup</code>(General.Resources.Resources.md#resourcegroup) to which this Resource belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.ResourceGroups.html">ResourceGroups</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

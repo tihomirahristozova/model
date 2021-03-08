@@ -23,24 +23,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Communities.SocialPosts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. [Required] 
+| [CreationTimeUtc](Communities.SocialPosts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. `Required` 
 | [Id](Communities.SocialPosts.md#id) | guid |  
-| [LastInteractionTimeUtc](Communities.SocialPosts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required] 
-| [PostText](Communities.SocialPosts.md#posttext) | string | The post contents in clear text. [Required] 
+| [LastInteractionTimeUtc](Communities.SocialPosts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required` 
+| [PostText](Communities.SocialPosts.md#posttext) | string | The post contents in clear text. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SocialGroup](Communities.SocialPosts.md#socialgroup) | [SocialGroups](Communities.SocialGroups.md) | The group in which the post is made. [Required] [Filter(multi eq)] |
-| [User](Communities.SocialPosts.md#user) | [Users](Systems.Security.Users.md) | The user, who made the post. [Required] [Filter(multi eq)] |
+| [SocialGroup](Communities.SocialPosts.md#socialgroup) | [SocialGroups](Communities.SocialGroups.md) | The group in which the post is made. `Required` `Filter(multi eq)` |
+| [User](Communities.SocialPosts.md#user) | [Users](Systems.Security.Users.md) | The user, who made the post. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the post was created. [Required]
+The exact server time (in UTC), when the post was created. `Required`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Default Value_: **NewGuid**
 
 ### LastInteractionTimeUtc
 
-The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required]
+The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### PostText
 
-The post contents in clear text. [Required]
+The post contents in clear text. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -74,14 +74,14 @@ _Supports Order By_: **False**
 
 ### SocialGroup
 
-The group in which the post is made. [Required] [Filter(multi eq)]
+The group in which the post is made. `Required` `Filter(multi eq)`
 
 _Type_: **[SocialGroups](Communities.SocialGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-The user, who made the post. [Required] [Filter(multi eq)]
+The user, who made the post. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

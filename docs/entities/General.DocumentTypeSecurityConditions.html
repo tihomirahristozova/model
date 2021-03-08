@@ -105,12 +105,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentTypeSecurityConditions.html#conditionfilterxml">ConditionFilterXml</a></td>
 <td>dataaccessfilter</td>
-<td>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. [Required]</td>
+<td>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeSecurityConditions.html#description">Description</a></td>
 <td>string</td>
-<td>The description of this DocumentTypeSecurity<br>Condition. [Required] [Filter(eq;like)]</td>
+<td>The description of this DocumentTypeSecurity<br>Condition. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeSecurityConditions.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentTypeSecurityConditions.html#priority">Priority</a></td>
 <td><a href="General.DocumentTypeSecurityConditions.html#priority">Priority</a></td>
-<td>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. [Required] [Default(3)] [Filter(ge;le)]</td>
+<td>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,23 +137,23 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentTypeSecurityConditions.html#documentaccesskey">DocumentAccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">AccessKeys</a></td>
-<td>The access key, which will be used to secure new documents, when this rule is selected. [Required] [Filter(multi eq)]</td>
+<td>The access key, which will be used to secure new documents, when this rule is selected. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeSecurityConditions.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type, whose documents will be secured by the current rule. [Required] [Filter(multi eq)]</td>
+<td>The document type, whose documents will be secured by the current rule. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="conditionfilterxml">ConditionFilterXml</h3>
-<p>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. [Required]</p>
+<p>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. <code>Required</code></p>
 <p><em>Type</em>: <strong>dataaccessfilter</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="description">Description</h3>
-<p>The description of this DocumentTypeSecurityCondition. [Required] [Filter(eq;like)]</p>
+<p>The description of this DocumentTypeSecurityCondition. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -163,7 +163,7 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. [Required] [Default(3)] [Filter(ge;le)]</p>
+<p>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeSecurityConditions.html#priority">Priority</a></strong><br>
 Generic enum type for Priority properties<br>
 <em>Allowed Values (General.Priority Enum Members)</em></p>
@@ -202,11 +202,11 @@ Generic enum type for Priority properties<br>
 <em>Default Value</em>: <strong>3</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documentaccesskey">DocumentAccessKey</h3>
-<p>The access key, which will be used to secure new documents, when this rule is selected. [Required] [Filter(multi eq)]</p>
+<p>The access key, which will be used to secure new documents, when this rule is selected. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type, whose documents will be secured by the current rule. [Required] [Filter(multi eq)]</p>
+<p>The document type, whose documents will be secured by the current rule. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -23,19 +23,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ColumnName](Systems.Core.TextTranslations.md#columnname) | string | Obsolete. Not used. [Required] [Filter(eq)] 
+| [ColumnName](Systems.Core.TextTranslations.md#columnname) | string | Obsolete. Not used. `Required` `Filter(eq)` 
 | [Id](Systems.Core.TextTranslations.md#id) | guid |  
-| [Language](Systems.Core.TextTranslations.md#language) | string | Obsolete. Not used. [Required] [Filter(eq)] 
-| [RowId](Systems.Core.TextTranslations.md#rowid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
-| [TableName](Systems.Core.TextTranslations.md#tablename) | string | Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly] 
-| [TranslatedText](Systems.Core.TextTranslations.md#translatedtext) | string (nullable) | Obsolete. Not used. [Filter(eq)] 
+| [Language](Systems.Core.TextTranslations.md#language) | string | Obsolete. Not used. `Required` `Filter(eq)` 
+| [RowId](Systems.Core.TextTranslations.md#rowid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
+| [TableName](Systems.Core.TextTranslations.md#tablename) | string | Obsolete. Not used. `Required` `Filter(eq)` `ORD` `ReadOnly` 
+| [TranslatedText](Systems.Core.TextTranslations.md#translatedtext) | string (nullable) | Obsolete. Not used. `Filter(eq)` 
 
 
 ## Attribute Details
 
 ### ColumnName
 
-Obsolete. Not used. [Required] [Filter(eq)]
+Obsolete. Not used. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 ### Language
 
-Obsolete. Not used. [Required] [Filter(eq)]
+Obsolete. Not used. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -58,14 +58,14 @@ _Supports Order By_: **False**
 
 ### RowId
 
-Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TableName
 
-Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly]
+Obsolete. Not used. `Required` `Filter(eq)` `ORD` `ReadOnly`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -74,7 +74,7 @@ _Supports Order By_: **True**
 
 ### TranslatedText
 
-Obsolete. Not used. [Filter(eq)]
+Obsolete. Not used. `Filter(eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  

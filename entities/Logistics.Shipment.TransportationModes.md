@@ -23,17 +23,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Shipment.TransportationModes.md#code) | string | Unique transportation mode code. [Required] [Filter(eq;like)] [ORD] 
+| [Code](Logistics.Shipment.TransportationModes.md#code) | string | Unique transportation mode code. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Logistics.Shipment.TransportationModes.md#id) | guid |  
-| [Name](Logistics.Shipment.TransportationModes.md#name) | string | Multilanguage name of the mode of transportation. [Required] [Filter(eq;like)] 
-| [SystemIcon](Logistics.Shipment.TransportationModes.md#systemicon) | string | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. [Required] [Default("O")] 
+| [Name](Logistics.Shipment.TransportationModes.md#name) | string | Multilanguage name of the mode of transportation. `Required` `Filter(eq;like)` 
+| [SystemIcon](Logistics.Shipment.TransportationModes.md#systemicon) | string | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. `Required` `Default("O")` 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique transportation mode code. [Required] [Filter(eq;like)] [ORD]
+Unique transportation mode code. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multilanguage name of the mode of transportation. [Required] [Filter(eq;like)]
+Multilanguage name of the mode of transportation. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### SystemIcon
 
-Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. [Required] [Default("O")]
+Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. `Required` `Default("O")`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

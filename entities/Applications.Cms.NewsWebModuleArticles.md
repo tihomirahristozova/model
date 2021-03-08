@@ -25,16 +25,16 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ArticleTextHtml](Applications.Cms.NewsWebModuleArticles.md#articletexthtml) | string (nullable) | The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code. 
 | [Id](Applications.Cms.NewsWebModuleArticles.md#id) | guid |  
-| [IsPublished](Applications.Cms.NewsWebModuleArticles.md#ispublished) | boolean | Specifies whether the article is published for display on web. [Required] [Default(false)] 
-| [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string | The language code of the article text. [Required] 
-| [PublishDate](Applications.Cms.NewsWebModuleArticles.md#publishdate) | datetime | The date and time when the news article should appear to be published. [Required] [Default(Now)] 
+| [IsPublished](Applications.Cms.NewsWebModuleArticles.md#ispublished) | boolean | Specifies whether the article is published for display on web. `Required` `Default(false)` 
+| [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string | The language code of the article text. `Required` 
+| [PublishDate](Applications.Cms.NewsWebModuleArticles.md#publishdate) | datetime | The date and time when the news article should appear to be published. `Required` `Default(Now)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AuthorPublicUser](Applications.Cms.NewsWebModuleArticles.md#authorpublicuser) | [PublicUsers](Systems.External.PublicUsers.md) | The author of the news article. [Required] [Filter(multi eq)] |
-| [NewsWebModule](Applications.Cms.NewsWebModuleArticles.md#newswebmodule) | [NewsWebModules](Applications.Cms.NewsWebModules.md) | The News Web Module, to which the current article is added. [Required] [Filter(multi eq)] |
+| [AuthorPublicUser](Applications.Cms.NewsWebModuleArticles.md#authorpublicuser) | [PublicUsers](Systems.External.PublicUsers.md) | The author of the news article. `Required` `Filter(multi eq)` |
+| [NewsWebModule](Applications.Cms.NewsWebModuleArticles.md#newswebmodule) | [NewsWebModules](Applications.Cms.NewsWebModules.md) | The News Web Module, to which the current article is added. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### IsPublished
 
-Specifies whether the article is published for display on web. [Required] [Default(false)]
+Specifies whether the article is published for display on web. `Required` `Default(false)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -65,7 +65,7 @@ _Default Value_: **False**
 
 ### LanguageCode
 
-The language code of the article text. [Required]
+The language code of the article text. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### PublishDate
 
-The date and time when the news article should appear to be published. [Required] [Default(Now)]
+The date and time when the news article should appear to be published. `Required` `Default(Now)`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -85,14 +85,14 @@ _Default Value_: **CurrentDateTime**
 
 ### AuthorPublicUser
 
-The author of the news article. [Required] [Filter(multi eq)]
+The author of the news article. `Required` `Filter(multi eq)`
 
 _Type_: **[PublicUsers](Systems.External.PublicUsers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### NewsWebModule
 
-The News Web Module, to which the current article is added. [Required] [Filter(multi eq)]
+The News Web Module, to which the current article is added. `Required` `Filter(multi eq)`
 
 _Type_: **[NewsWebModules](Applications.Cms.NewsWebModules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

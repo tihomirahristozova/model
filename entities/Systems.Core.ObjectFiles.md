@@ -25,37 +25,37 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Filter(multi eq)] [Introduced in version 20.1] 
-| [CreationTimeUtc](Systems.Core.ObjectFiles.md#creationtimeutc) | datetime | Time (in UTC), when the file was created. [Required] [Default(NowUtc)] [Introduced in version 20.1] 
+| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. `Required` `Default("EMB")` `Filter(multi eq)` `Introduced in version 20.1` 
+| [CreationTimeUtc](Systems.Core.ObjectFiles.md#creationtimeutc) | datetime | Time (in UTC), when the file was created. `Required` `Default(NowUtc)` `Introduced in version 20.1` 
 | [EmbeddedFileContents](Systems.Core.ObjectFiles.md#embeddedfilecontents) | byte[] (nullable) | Contains the contents of the file, when it is embedded in the database. null for linked files. 
-| [FileName](Systems.Core.ObjectFiles.md#filename) | string | The file name of the linked or embedded file. [Required] [Filter(eq;like)] 
+| [FileName](Systems.Core.ObjectFiles.md#filename) | string | The file name of the linked or embedded file. `Required` `Filter(eq;like)` 
 | [Id](Systems.Core.ObjectFiles.md#id) | guid |  
-| [LastUpdateTimeUtc](Systems.Core.ObjectFiles.md#lastupdatetimeutc) | datetime | Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] [Introduced in version 20.1] 
-| [LinkedFilePath](Systems.Core.ObjectFiles.md#linkedfilepath) | string (nullable) | When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. [Filter(eq;like)] 
-| [MediaHeight](Systems.Core.ObjectFiles.md#mediaheight) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. [Introduced in version 20.1] 
-| [MediaType](Systems.Core.ObjectFiles.md#mediatype) | string (nullable) | For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. [Introduced in version 20.1] 
-| [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. [Introduced in version 20.1] 
+| [LastUpdateTimeUtc](Systems.Core.ObjectFiles.md#lastupdatetimeutc) | datetime | Time (in UTC), when the file was last updated. `Required` `Default(NowUtc)` `Introduced in version 20.1` 
+| [LinkedFilePath](Systems.Core.ObjectFiles.md#linkedfilepath) | string (nullable) | When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. `Filter(eq;like)` 
+| [MediaHeight](Systems.Core.ObjectFiles.md#mediaheight) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1` 
+| [MediaType](Systems.Core.ObjectFiles.md#mediatype) | string (nullable) | For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. `Introduced in version 20.1` 
+| [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1` 
 | [Notes](Systems.Core.ObjectFiles.md#notes) | string (nullable) | User notes for the file attachment. 
-| [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string (nullable) | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)] 
-| [Section](Systems.Core.ObjectFiles.md#section) | string (nullable) | A section name used to group files. [Introduced in version 21.1.1.84] 
+| [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string (nullable) | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. `Filter(eq)` 
+| [Section](Systems.Core.ObjectFiles.md#section) | string (nullable) | A section name used to group files. `Introduced in version 21.1.1.84` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](Systems.Core.ObjectFiles.md#creationuser) | [Users](Systems.Security.Users.md) (nullable) | The user, who created the file record. null if it is unknown. [Filter(multi eq)] [Introduced in version 20.1] |
-| [LastUpdateUser](Systems.Core.ObjectFiles.md#lastupdateuser) | [Users](Systems.Security.Users.md) (nullable) | The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] [Introduced in version 20.1] |
-| [Object](Systems.Core.ObjectFiles.md#object) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object to which the file is attached. [Required] [Filter(multi eq)] [Owner] |
+| [CreationUser](Systems.Core.ObjectFiles.md#creationuser) | [Users](Systems.Security.Users.md) (nullable) | The user, who created the file record. null if it is unknown. `Filter(multi eq)` `Introduced in version 20.1` |
+| [LastUpdateUser](Systems.Core.ObjectFiles.md#lastupdateuser) | [Users](Systems.Security.Users.md) (nullable) | The user, who performed the last update to the file record. null if it is unknown. `Filter(multi eq)` `Introduced in version 20.1` |
+| [Object](Systems.Core.ObjectFiles.md#object) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object to which the file is attached. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### ContentLocation
 
-The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Filter(multi eq)] [Introduced in version 20.1]
+The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. `Required` `Default("EMB")` `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[ContentLocation](Systems.Core.ObjectFiles.md#contentlocation)**  
-Allowed values for the [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) data attribute  
+Allowed values for the `ContentLocation`(Systems.Core.ObjectFiles.md#contentlocation) data attribute  
 _Allowed Values (Systems.Core.ObjectFilesRepository.ContentLocation Enum Members)_  
 
 | Value | Description |
@@ -70,7 +70,7 @@ _Default Value_: **Embedded**
 
 ### CreationTimeUtc
 
-Time (in UTC), when the file was created. [Required] [Default(NowUtc)] [Introduced in version 20.1]
+Time (in UTC), when the file was created. `Required` `Default(NowUtc)` `Introduced in version 20.1`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 ### FileName
 
-The file name of the linked or embedded file. [Required] [Filter(eq;like)]
+The file name of the linked or embedded file. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -102,7 +102,7 @@ _Default Value_: **NewGuid**
 
 ### LastUpdateTimeUtc
 
-Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] [Introduced in version 20.1]
+Time (in UTC), when the file was last updated. `Required` `Default(NowUtc)` `Introduced in version 20.1`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -111,7 +111,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### LinkedFilePath
 
-When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. [Filter(eq;like)]
+When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. `Filter(eq;like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -119,7 +119,7 @@ _Supports Order By_: **False**
 
 ### MediaHeight
 
-Used (non-null) only for media files. Specifies the width for displaying the media. [Introduced in version 20.1]
+Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1`
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -127,7 +127,7 @@ _Supports Order By_: **False**
 
 ### MediaType
 
-For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. [Introduced in version 20.1]
+For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. `Introduced in version 20.1`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -135,7 +135,7 @@ _Supports Order By_: **False**
 
 ### MediaWidth
 
-Used (non-null) only for media files. Specifies the width for displaying the media. [Introduced in version 20.1]
+Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1`
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -151,7 +151,7 @@ _Supports Order By_: **False**
 
 ### PurposeCode
 
-Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)]
+Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. `Filter(eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -159,7 +159,7 @@ _Supports Order By_: **False**
 
 ### Section
 
-A section name used to group files. [Introduced in version 21.1.1.84]
+A section name used to group files. `Introduced in version 21.1.1.84`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -170,21 +170,21 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-The user, who created the file record. null if it is unknown. [Filter(multi eq)] [Introduced in version 20.1]
+The user, who created the file record. null if it is unknown. `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LastUpdateUser
 
-The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] [Introduced in version 20.1]
+The user, who performed the last update to the file record. null if it is unknown. `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Object
 
-The object to which the file is attached. [Required] [Filter(multi eq)] [Owner]
+The object to which the file is attached. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Indexed_: **True**  

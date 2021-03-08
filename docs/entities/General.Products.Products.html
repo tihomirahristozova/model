@@ -115,17 +115,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Products.Products.html#abcclass">ABCClass</a></td>
 <td><a href="General.Products.Products.html#abcclass">ABCClass</a></td>
-<td>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. [Required] [Default(&quot;B &quot;)] [Filter(eq)]</td>
+<td>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. <code>Required</code> <code>Default(&quot;B &quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#active">Active</a></td>
 <td>boolean</td>
-<td>True if the product is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)]</td>
+<td>True if the product is active, false - not to list in combo boxes for choosing in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#allowvariablemeasurementratios">AllowVariableMeasurement<br>Ratios</a></td>
 <td>boolean</td>
-<td>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#catalogdescriptionhtml">CatalogDescriptionHtml</a></td>
@@ -140,12 +140,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Products.Products.html#creationtime">CreationTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the Product was created. [Filter(ge;le)] [ReadOnly]</td>
+<td>Date and time when the Product was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#creationuser">CreationUser</a></td>
 <td>string (nullable)</td>
-<td>Login name of the user, who created the Product. [Filter(like)] [ReadOnly]</td>
+<td>Login name of the user, who created the Product. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#description">Description</a></td>
@@ -160,7 +160,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></td>
 <td><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></td>
-<td>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). [Required] [Default(&quot;M&quot;)]</td>
+<td>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). <code>Required</code> <code>Default(&quot;M&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
@@ -175,12 +175,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Products.Products.html#isfeatured">IsFeatured</a></td>
 <td>boolean</td>
-<td>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#isserialized">IsSerialized</a></td>
 <td>boolean</td>
-<td>True if the parts use/require serial numbers. [Required] [Default(false)] [Filter(eq)]</td>
+<td>True if the parts use/require serial numbers. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#lotsissue">LotsIssue</a></td>
@@ -190,12 +190,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Products.Products.html#manufacturingpolicy">ManufacturingPolicy</a></td>
 <td>string</td>
-<td>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. [Required] [Default(&quot;MTS&quot;)]</td>
+<td>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. <code>Required</code> <code>Default(&quot;MTS&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#minimalsalespriceperlot">MinimalSalesPricePerLot</a></td>
 <td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
-<td>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency]</td>
+<td>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. <code>Currency: CostingCurrency</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#minimalsalesquantitybase">MinimalSalesQuantityBase</a></td>
@@ -205,12 +205,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Products.Products.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Name of the item. [Required] [Filter(eq;like)]</td>
+<td>Name of the item. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#partnumber">PartNumber</a></td>
 <td>string</td>
-<td>Unique part number of the product. [Required] [Filter(multi eq;like)] [ORD]</td>
+<td>Unique part number of the product. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#planningdemandtimefencedays">PlanningDemand<br>TimeFenceDays</a></td>
@@ -230,52 +230,52 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Products.Products.html#scraprate">ScrapRate</a></td>
 <td>decimal</td>
-<td>Default scrap rate for the recipe, when this product is used as ingredient. [Required] [Default(0)]</td>
+<td>Default scrap rate for the recipe, when this product is used as ingredient. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#shortname">ShortName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
-<td>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)]</td>
+<td>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#showincatalog">ShowInCatalog</a></td>
 <td>boolean</td>
-<td>Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. [Required] [Default(false)] [Filter(multi eq)]</td>
+<td>Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardcostperlot">StandardCostPerLot</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]</td>
+<td>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. <code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardlotsizebase">StandardLotSizeBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</td>
+<td>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. <code>Unit: BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardpriceperlot">StandardPricePerLot</a></td>
 <td><a href="../data-types.html#amount">Amount</a></td>
-<td>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]</td>
+<td>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. <code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#supplyschemaid">SupplySchemaId</a></td>
 <td>guid (nullable)</td>
-<td>The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)]</td>
+<td>The supply schema to use for the distribution of the product among warehouses. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#updatetime">UpdateTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the Product was last updated. [Filter(ge;le)] [ReadOnly]</td>
+<td>Date and time when the Product was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#updateuser">UpdateUser</a></td>
 <td>string (nullable)</td>
-<td>Login name of the user, who last updated the Product. [Filter(like)] [ReadOnly]</td>
+<td>Login name of the user, who last updated the Product. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#uselots">UseLots</a></td>
 <td><a href="General.Products.Products.html#uselots">UseLots</a></td>
-<td>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. [Required] [Default(&quot;A&quot;)]</td>
+<td>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. <code>Required</code> <code>Default(&quot;A&quot;)</code></td>
 </tr>
 </tbody>
 </table>
@@ -292,62 +292,62 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Products.Products.html#basemeasurementcategory">BaseMeasurementCategory</a></td>
 <td><a href="General.MeasurementCategories.html">MeasurementCategories</a></td>
-<td>The base measurement category for quantities of this product. [Required] [Filter(multi eq)]</td>
+<td>The base measurement category for quantities of this product. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#cargotype">CargoType</a></td>
 <td><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a> (nullable)</td>
-<td>Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. [Filter(multi eq)]</td>
+<td>Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#costingcurrency">CostingCurrency</a></td>
 <td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
-<td>Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. [Filter(multi eq)]</td>
+<td>Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]</td>
+<td>When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#intrastatcommoditycode">IntrastatCommodityCode</a></td>
 <td><a href="Finance.Intrastat.CommodityCodes.html">CommodityCodes</a> (nullable)</td>
-<td>Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]</td>
+<td>Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#intrastatsupplementaryunit">IntrastatSupplementaryUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]</td>
+<td>Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#measurementunit">MeasurementUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>Default measurement unit, when creating new documents with this product. [Required] [Filter(multi eq)]</td>
+<td>Default measurement unit, when creating new documents with this product. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#origincountry">OriginCountry</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
-<td>Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. [Filter(multi eq)]</td>
+<td>Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#productgroup">ProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a></td>
-<td>The product group, under which the product is categorized. [Required] [Filter(multi eq)]</td>
+<td>The product group, under which the product is categorized. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#producttype">ProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">ProductTypes</a></td>
-<td>The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)]</td>
+<td>The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#purchasemeasurementunit">PurchaseMeasurementUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>Default measurement unit to use, when creating new purchase documents with this product. [Filter(multi eq)]</td>
+<td>Default measurement unit to use, when creating new purchase documents with this product. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#valuationgroup">ValuationGroup</a></td>
 <td><a href="Logistics.Inventory.ProductValuationGroups.html">ProductValuationGroups</a> (nullable)</td>
-<td>Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. [Filter(multi eq)]</td>
+<td>Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -364,70 +364,70 @@ Default Search Member:<br>
 <tr>
 <td>Codes</td>
 <td><a href="General.Products.ProductCodes.html">ProductCodes</a></td>
-<td>List of <a href="General.Products.ProductCodes.html">ProductCode</a> child objects, based on the <a href="General.Products.ProductCodes.html#product">General.Products.ProductCode.Product</a> back reference</td>
+<td>List of <code>ProductCode</code>(General.Products.ProductCodes.md) child objects, based on the <code>General.Products.ProductCode.Product</code>(General.Products.ProductCodes.md#product) back reference</td>
 </tr>
 <tr>
 <td>DefaultStoreBins</td>
 <td><a href="Logistics.Inventory.ProductDefaultStoreBins.html">ProductDefaultStoreBins</a></td>
-<td>List of <a href="Logistics.Inventory.ProductDefaultStoreBins.html">ProductDefaultStoreBin</a> child objects, based on the <a href="Logistics.Inventory.ProductDefaultStoreBins.html#product">Logistics.Inventory.ProductDefaultStoreBin.Product</a> back reference</td>
+<td>List of <code>ProductDefaultStoreBin</code>(Logistics.Inventory.ProductDefaultStoreBins.md) child objects, based on the <code>Logistics.Inventory.ProductDefaultStoreBin.Product</code>(Logistics.Inventory.ProductDefaultStoreBins.md#product) back reference</td>
 </tr>
 <tr>
 <td>Dimensions</td>
 <td><a href="General.Products.ProductDimensions.html">ProductDimensions</a></td>
-<td>List of <a href="General.Products.ProductDimensions.html">ProductDimension</a> child objects, based on the <a href="General.Products.ProductDimensions.html#product">General.Products.ProductDimension.Product</a> back reference</td>
+<td>List of <code>ProductDimension</code>(General.Products.ProductDimensions.md) child objects, based on the <code>General.Products.ProductDimension.Product</code>(General.Products.ProductDimensions.md#product) back reference</td>
 </tr>
 <tr>
 <td>DistributionChannels</td>
 <td><a href="Crm.Marketing.ProductDistributionChannels.html">ProductDistributionChannels</a></td>
-<td>List of [ProductDistribution<br>Channel](Crm.Marketing.ProductDistribution<br>Channels.md) child objects, based on the [Crm.Marketing.ProductDistributionChannel.Product](Crm.Marketing.ProductDistribution<br>Channels.md#product) back reference</td>
+<td>List of <code>ProductDistribution&lt;br /&gt;Channel</code>(Crm.Marketing.ProductDistribution<br>Channels.md) child objects, based on the <code>Crm.Marketing.ProductDistributionChannel.Product</code>(Crm.Marketing.ProductDistribution<br>Channels.md#product) back reference</td>
 </tr>
 <tr>
 <td>DocumentAmounts</td>
 <td><a href="General.Products.ProductDocumentAmounts.html">ProductDocumentAmounts</a></td>
-<td>List of <a href="General.Products.ProductDocumentAmounts.html">ProductDocumentAmount</a> child objects, based on the <a href="General.Products.ProductDocumentAmounts.html#product">General.Products.ProductDocumentAmount.Product</a> back reference</td>
+<td>List of <code>ProductDocumentAmount</code>(General.Products.ProductDocumentAmounts.md) child objects, based on the <code>General.Products.ProductDocumentAmount.Product</code>(General.Products.ProductDocumentAmounts.md#product) back reference</td>
 </tr>
 <tr>
 <td>LineDiscounts</td>
 <td><a href="Crm.LineDiscounts.html">LineDiscounts</a></td>
-<td>List of <a href="Crm.LineDiscounts.html">LineDiscount</a> child objects, based on the <a href="Crm.LineDiscounts.html#product">Crm.LineDiscount.Product</a> back reference</td>
+<td>List of <code>LineDiscount</code>(Crm.LineDiscounts.md) child objects, based on the <code>Crm.LineDiscount.Product</code>(Crm.LineDiscounts.md#product) back reference</td>
 </tr>
 <tr>
 <td>Lots</td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a></td>
-<td>List of <a href="Logistics.Inventory.Lots.html">Lot</a> child objects, based on the <a href="Logistics.Inventory.Lots.html#product">Logistics.Inventory.Lot.Product</a> back reference</td>
+<td>List of <code>Lot</code>(Logistics.Inventory.Lots.md) child objects, based on the <code>Logistics.Inventory.Lot.Product</code>(Logistics.Inventory.Lots.md#product) back reference</td>
 </tr>
 <tr>
 <td>Pictures</td>
 <td><a href="General.Products.ProductPictures.html">ProductPictures</a></td>
-<td>List of <a href="General.Products.ProductPictures.html">ProductPicture</a> child objects, based on the <a href="General.Products.ProductPictures.html#product">General.Products.ProductPicture.Product</a> back reference</td>
+<td>List of <code>ProductPicture</code>(General.Products.ProductPictures.md) child objects, based on the <code>General.Products.ProductPicture.Product</code>(General.Products.ProductPictures.md#product) back reference</td>
 </tr>
 <tr>
 <td>Prices</td>
 <td><a href="Crm.ProductPrices.html">ProductPrices</a></td>
-<td>List of <a href="Crm.ProductPrices.html">ProductPrice</a> child objects, based on the <a href="Crm.ProductPrices.html#product">Crm.ProductPrice.Product</a> back reference</td>
+<td>List of <code>ProductPrice</code>(Crm.ProductPrices.md) child objects, based on the <code>Crm.ProductPrice.Product</code>(Crm.ProductPrices.md#product) back reference</td>
 </tr>
 <tr>
 <td>PurchaseProductPrices</td>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html">PurchaseProductPrices</a></td>
-<td>List of <a href="Logistics.Procurement.PurchaseProductPrices.html">PurchaseProductPrice</a> child objects, based on the <a href="Logistics.Procurement.PurchaseProductPrices.html#product">Logistics.Procurement.PurchaseProductPrice.Product</a> back reference</td>
+<td>List of <code>PurchaseProductPrice</code>(Logistics.Procurement.PurchaseProductPrices.md) child objects, based on the <code>Logistics.Procurement.PurchaseProductPrice.Product</code>(Logistics.Procurement.PurchaseProductPrices.md#product) back reference</td>
 </tr>
 <tr>
 <td>SerialNumbers</td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a></td>
-<td>List of <a href="Logistics.Inventory.SerialNumbers.html">SerialNumber</a> child objects, based on the <a href="Logistics.Inventory.SerialNumbers.html#product">Logistics.Inventory.SerialNumber.Product</a> back reference</td>
+<td>List of <code>SerialNumber</code>(Logistics.Inventory.SerialNumbers.md) child objects, based on the <code>Logistics.Inventory.SerialNumber.Product</code>(Logistics.Inventory.SerialNumbers.md#product) back reference</td>
 </tr>
 <tr>
 <td>Variants</td>
 <td><a href="General.ProductVariants.html">ProductVariants</a></td>
-<td>List of <a href="General.ProductVariants.html">ProductVariant</a> child objects, based on the <a href="General.ProductVariants.html#product">General.ProductVariant.Product</a> back reference</td>
+<td>List of <code>ProductVariant</code>(General.ProductVariants.md) child objects, based on the <code>General.ProductVariant.Product</code>(General.ProductVariants.md#product) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="abcclass">ABCClass</h3>
-<p>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. [Required] [Default(&quot;B &quot;)] [Filter(eq)]</p>
+<p>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. <code>Required</code> <code>Default(&quot;B &quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html#abcclass">ABCClass</a></strong><br>
-Allowed values for the <a href="General.Products.Products.html#abcclass">ABCClass</a> data attribute<br>
+Allowed values for the <code>ABCClass</code>(General.Products.Products.md#abcclass) data attribute<br>
 <em>Allowed Values (General.Products.ProductsRepository.ABCClass Enum Members)</em></p>
 <table>
 <thead>
@@ -455,13 +455,13 @@ Allowed values for the <a href="General.Products.Products.html#abcclass">ABCClas
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>B</strong></p>
 <h3 id="active">Active</h3>
-<p>True if the product is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)]</p>
+<p>True if the product is active, false - not to list in combo boxes for choosing in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="allowvariablemeasurementratios">AllowVariableMeasurementRatios</h3>
-<p>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -474,7 +474,7 @@ Allowed values for the <a href="General.Products.Products.html#abcclass">ABCClas
 <h3 id="costingmethod">CostingMethod</h3>
 <p>Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost.</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html#costingmethod">CostingMethod</a> (nullable)</strong><br>
-Allowed values for the <a href="General.Products.Products.html#costingmethod">CostingMethod</a> data attribute<br>
+Allowed values for the <code>CostingMethod</code>(General.Products.Products.md#costingmethod) data attribute<br>
 <em>Allowed Values (General.Products.ProductsRepository.CostingMethod Enum Members)</em></p>
 <table>
 <thead>
@@ -501,12 +501,12 @@ Allowed values for the <a href="General.Products.Products.html#costingmethod">Co
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<p>Date and time when the Product was created. [Filter(ge;le)] [ReadOnly]</p>
+<p>Date and time when the Product was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<p>Login name of the user, who created the Product. [Filter(like)] [ReadOnly]</p>
+<p>Login name of the user, who created the Product. <code>Filter(like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -521,9 +521,9 @@ Allowed values for the <a href="General.Products.Products.html#costingmethod">Co
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="flushingmethod">FlushingMethod</h3>
-<p>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). [Required] [Default(&quot;M&quot;)]</p>
+<p>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). <code>Required</code> <code>Default(&quot;M&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></strong><br>
-Allowed values for the <a href="General.Products.Products.html#flushingmethod">FlushingMethod</a> data attribute<br>
+Allowed values for the <code>FlushingMethod</code>(General.Products.Products.md#flushingmethod) data attribute<br>
 <em>Allowed Values (General.Products.ProductsRepository.FlushingMethod Enum Members)</em></p>
 <table>
 <thead>
@@ -561,13 +561,13 @@ Allowed values for the <a href="General.Products.Products.html#flushingmethod">F
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isfeatured">IsFeatured</h3>
-<p>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isserialized">IsSerialized</h3>
-<p>True if the parts use/require serial numbers. [Required] [Default(false)] [Filter(eq)]</p>
+<p>True if the parts use/require serial numbers. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -575,7 +575,7 @@ Allowed values for the <a href="General.Products.Products.html#flushingmethod">F
 <h3 id="lotsissue">LotsIssue</h3>
 <p>Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html#lotsissue">LotsIssue</a> (nullable)</strong><br>
-Allowed values for the <a href="General.Products.Products.html#lotsissue">LotsIssue</a> data attribute<br>
+Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsissue) data attribute<br>
 <em>Allowed Values (General.Products.ProductsRepository.LotsIssue Enum Members)</em></p>
 <table>
 <thead>
@@ -602,13 +602,13 @@ Allowed values for the <a href="General.Products.Products.html#lotsissue">LotsIs
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="manufacturingpolicy">ManufacturingPolicy</h3>
-<p>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. [Required] [Default(&quot;MTS&quot;)]</p>
+<p>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. <code>Required</code> <code>Default(&quot;MTS&quot;)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>MTS</strong></p>
 <h3 id="minimalsalespriceperlot">MinimalSalesPricePerLot</h3>
-<p>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency]</p>
+<p>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. <code>Currency: CostingCurrency</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -618,12 +618,12 @@ Allowed values for the <a href="General.Products.Products.html#lotsissue">LotsIs
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the item. [Required] [Filter(eq;like)]</p>
+<p>Name of the item. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partnumber">PartNumber</h3>
-<p>Unique part number of the product. [Required] [Filter(multi eq;like)] [ORD]</p>
+<p>Unique part number of the product. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
@@ -644,58 +644,58 @@ Allowed values for the <a href="General.Products.Products.html#lotsissue">LotsIs
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
-<p>Default scrap rate for the recipe, when this product is used as ingredient. [Required] [Default(0)]</p>
+<p>Default scrap rate for the recipe, when this product is used as ingredient. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="shortname">ShortName</h3>
-<p>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)]</p>
+<p>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="showincatalog">ShowInCatalog</h3>
-<p>Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. [Required] [Default(false)] [Filter(multi eq)]</p>
+<p>Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="standardcostperlot">StandardCostPerLot</h3>
-<p>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]</p>
+<p>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. <code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="standardlotsizebase">StandardLotSizeBase</h3>
-<p>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</p>
+<p>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. <code>Unit: BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="standardpriceperlot">StandardPricePerLot</h3>
-<p>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]</p>
+<p>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. <code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="supplyschemaid">SupplySchemaId</h3>
-<p>The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)]</p>
+<p>The supply schema to use for the distribution of the product among warehouses. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<p>Date and time when the Product was last updated. [Filter(ge;le)] [ReadOnly]</p>
+<p>Date and time when the Product was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<p>Login name of the user, who last updated the Product. [Filter(like)] [ReadOnly]</p>
+<p>Login name of the user, who last updated the Product. <code>Filter(like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="uselots">UseLots</h3>
-<p>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. [Required] [Default(&quot;A&quot;)]</p>
+<p>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. <code>Required</code> <code>Default(&quot;A&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html#uselots">UseLots</a></strong><br>
-Allowed values for the <a href="General.Products.Products.html#uselots">UseLots</a> data attribute<br>
+Allowed values for the <code>UseLots</code>(General.Products.Products.md#uselots) data attribute<br>
 <em>Allowed Values (General.Products.ProductsRepository.UseLots Enum Members)</em></p>
 <table>
 <thead>
@@ -724,61 +724,61 @@ Allowed values for the <a href="General.Products.Products.html#uselots">UseLots<
 <em>Default Value</em>: <strong>Allowed</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="basemeasurementcategory">BaseMeasurementCategory</h3>
-<p>The base measurement category for quantities of this product. [Required] [Filter(multi eq)]</p>
+<p>The base measurement category for quantities of this product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementCategories.html">MeasurementCategories</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductGroup.DefaultMeasurementUnit.MeasurementCategory</code></p>
 <h3 id="cargotype">CargoType</h3>
-<p>Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. [Filter(multi eq)]</p>
+<p>Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costingcurrency">CostingCurrency</h3>
-<p>Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. [Filter(multi eq)]</p>
+<p>Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]</p>
+<p>When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductGroup.EnterpriseCompany</code></p>
 <h3 id="intrastatcommoditycode">IntrastatCommodityCode</h3>
-<p>Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]</p>
+<p>Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Intrastat.CommodityCodes.html">CommodityCodes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastatsupplementaryunit">IntrastatSupplementaryUnit</h3>
-<p>Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]</p>
+<p>Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="measurementunit">MeasurementUnit</h3>
-<p>Default measurement unit, when creating new documents with this product. [Required] [Filter(multi eq)]</p>
+<p>Default measurement unit, when creating new documents with this product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductGroup.DefaultMeasurementUnit</code></p>
 <h3 id="origincountry">OriginCountry</h3>
-<p>Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. [Filter(multi eq)]</p>
+<p>Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
-<p>The product group, under which the product is categorized. [Required] [Filter(multi eq)]</p>
+<p>The product group, under which the product is categorized. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="producttype">ProductType</h3>
-<p>The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)]</p>
+<p>The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductGroup.GetDefaultProductTypeForNewProduct( )</code></p>
 <h3 id="purchasemeasurementunit">PurchaseMeasurementUnit</h3>
-<p>Default measurement unit to use, when creating new purchase documents with this product. [Filter(multi eq)]</p>
+<p>Default measurement unit to use, when creating new purchase documents with this product. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="valuationgroup">ValuationGroup</h3>
-<p>Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. [Filter(multi eq)]</p>
+<p>Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.ProductValuationGroups.html">ProductValuationGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

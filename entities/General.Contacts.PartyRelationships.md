@@ -23,25 +23,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](General.Contacts.PartyRelationships.md#fromdate) | datetime (nullable) | The starting date of the relationship. null means the date is the begining of the time. [Filter(ge;le)] 
+| [FromDate](General.Contacts.PartyRelationships.md#fromdate) | datetime (nullable) | The starting date of the relationship. null means the date is the begining of the time. `Filter(ge;le)` 
 | [Id](General.Contacts.PartyRelationships.md#id) | guid |  
 | [Notes](General.Contacts.PartyRelationships.md#notes) | string (nullable) | Notes for this PartyRelationship. 
-| [ToDate](General.Contacts.PartyRelationships.md#todate) | datetime (nullable) | The ending date of the relationship. null means the relationship is still active. [Filter(ge;le)] 
+| [ToDate](General.Contacts.PartyRelationships.md#todate) | datetime (nullable) | The ending date of the relationship. null means the relationship is still active. `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromParty](General.Contacts.PartyRelationships.md#fromparty) | [Parties](General.Contacts.Parties.md) | The first party in the relationship. [Required] [Filter(multi eq)] |
-| [RelationshipType](General.Contacts.PartyRelationships.md#relationshiptype) | [PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md) | The type of the relationship. [Required] [Filter(multi eq)] |
-| [ToParty](General.Contacts.PartyRelationships.md#toparty) | [Parties](General.Contacts.Parties.md) | The second party in the relationship. [Required] [Filter(multi eq)] |
+| [FromParty](General.Contacts.PartyRelationships.md#fromparty) | [Parties](General.Contacts.Parties.md) | The first party in the relationship. `Required` `Filter(multi eq)` |
+| [RelationshipType](General.Contacts.PartyRelationships.md#relationshiptype) | [PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md) | The type of the relationship. `Required` `Filter(multi eq)` |
+| [ToParty](General.Contacts.PartyRelationships.md#toparty) | [Parties](General.Contacts.Parties.md) | The second party in the relationship. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### FromDate
 
-The starting date of the relationship. null means the date is the begining of the time. [Filter(ge;le)]
+The starting date of the relationship. null means the date is the begining of the time. `Filter(ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### ToDate
 
-The ending date of the relationship. null means the relationship is still active. [Filter(ge;le)]
+The ending date of the relationship. null means the relationship is still active. `Filter(ge;le)`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -75,21 +75,21 @@ _Supports Order By_: **False**
 
 ### FromParty
 
-The first party in the relationship. [Required] [Filter(multi eq)]
+The first party in the relationship. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RelationshipType
 
-The type of the relationship. [Required] [Filter(multi eq)]
+The type of the relationship. `Required` `Filter(multi eq)`
 
 _Type_: **[PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
 
-The second party in the relationship. [Required] [Filter(multi eq)]
+The second party in the relationship. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -25,30 +25,30 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultMarginPercent](Crm.Pricing.PricingModels.md#defaultmarginpercent) | decimal | Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. [Required] [Default(0)] 
+| [DefaultMarginPercent](Crm.Pricing.PricingModels.md#defaultmarginpercent) | decimal | Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. `Required` `Default(0)` 
 | [Id](Crm.Pricing.PricingModels.md#id) | guid |  
-| [Name](Crm.Pricing.PricingModels.md#name) | string | The name of the pricing model. [Required] [Filter(eq;like)] 
+| [Name](Crm.Pricing.PricingModels.md#name) | string | The name of the pricing model. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Crm.Pricing.PricingModels.md#currency) | [Currencies](General.Currencies.md) | The currency in which the prices will be calculated. [Required] [Filter(multi eq)] |
-| [PurchasePriceList](Crm.Pricing.PricingModels.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) | Purchase price list Id, which will be used to get the purchase price of the products. [Required] [Filter(multi eq)] |
+| [Currency](Crm.Pricing.PricingModels.md#currency) | [Currencies](General.Currencies.md) | The currency in which the prices will be calculated. `Required` `Filter(multi eq)` |
+| [PurchasePriceList](Crm.Pricing.PricingModels.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) | Purchase price list Id, which will be used to get the purchase price of the products. `Required` `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Costs | [PricingModelCosts](Crm.Pricing.PricingModelCosts.md) | List of [PricingModelCost](Crm.Pricing.PricingModelCosts.md) child objects, based on the [Crm.Pricing.PricingModelCost.PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) back reference 
-| PriceLists | [PricingModelPriceLists](Crm.Pricing.PricingModelPriceLists.md) | List of [PricingModelPriceList](Crm.Pricing.PricingModelPriceLists.md) child objects, based on the [Crm.Pricing.PricingModelPriceList.PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) back reference 
+| Costs | [PricingModelCosts](Crm.Pricing.PricingModelCosts.md) | List of `PricingModelCost`(Crm.Pricing.PricingModelCosts.md) child objects, based on the `Crm.Pricing.PricingModelCost.PricingModel`(Crm.Pricing.PricingModelCosts.md#pricingmodel) back reference 
+| PriceLists | [PricingModelPriceLists](Crm.Pricing.PricingModelPriceLists.md) | List of `PricingModelPriceList`(Crm.Pricing.PricingModelPriceLists.md) child objects, based on the `Crm.Pricing.PricingModelPriceList.PricingModel`(Crm.Pricing.PricingModelPriceLists.md#pricingmodel) back reference 
 
 
 ## Attribute Details
 
 ### DefaultMarginPercent
 
-Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. [Required] [Default(0)]
+Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. `Required` `Default(0)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of the pricing model. [Required] [Filter(eq;like)]
+The name of the pricing model. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -75,14 +75,14 @@ _Supports Order By_: **False**
 
 ### Currency
 
-The currency in which the prices will be calculated. [Required] [Filter(multi eq)]
+The currency in which the prices will be calculated. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchasePriceList
 
-Purchase price list Id, which will be used to get the purchase price of the products. [Required] [Filter(multi eq)]
+Purchase price list Id, which will be used to get the purchase price of the products. `Required` `Filter(multi eq)`
 
 _Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

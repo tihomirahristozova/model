@@ -25,7 +25,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Workflow.Roles.md#id) | guid |  
-| [Name](Systems.Workflow.Roles.md#name) | string | The name of this Role. [Required] [Filter(eq;like)] [ORD] 
+| [Name](Systems.Workflow.Roles.md#name) | string | The name of this Role. `Required` `Filter(eq;like)` `ORD` 
 | [RoleDescription](Systems.Workflow.Roles.md#roledescription) | string (nullable) | Description of the role. 
 | [VisualStyle](Systems.Workflow.Roles.md#visualstyle) | string (nullable) | The default visual style for the user interface. 
 
@@ -33,7 +33,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Users | [RoleUsers](Systems.Workflow.RoleUsers.md) | List of [RoleUser](Systems.Workflow.RoleUsers.md) child objects, based on the [Systems.Workflow.RoleUser.Role](Systems.Workflow.RoleUsers.md#role) back reference 
+| Users | [RoleUsers](Systems.Workflow.RoleUsers.md) | List of `RoleUser`(Systems.Workflow.RoleUsers.md) child objects, based on the `Systems.Workflow.RoleUser.Role`(Systems.Workflow.RoleUsers.md#role) back reference 
 
 
 ## Attribute Details
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Role. [Required] [Filter(eq;like)] [ORD]
+The name of this Role. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  

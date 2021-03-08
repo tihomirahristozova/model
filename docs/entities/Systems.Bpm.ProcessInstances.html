@@ -105,12 +105,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Bpm.ProcessInstances.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
-<td>The date and time, when the process instance was created. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</td>
+<td>The date and time, when the process instance was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessInstances.html#finishtime">FinishTime</a></td>
 <td>datetime (nullable)</td>
-<td>The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. [Filter(eq)] [ReadOnly]</td>
+<td>The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessInstances.html#id">Id</a></td>
@@ -120,17 +120,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Bpm.ProcessInstances.html#starttime">StartTime</a></td>
 <td>datetime</td>
-<td>The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</td>
+<td>The date and time, when the process instance was started. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessInstances.html#state">State</a></td>
 <td><a href="Systems.Bpm.ProcessInstances.html#state">State</a></td>
-<td>Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly]</td>
+<td>Instance state. 0=Created; 60=Completed. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessInstances.html#subject">Subject</a></td>
 <td>string</td>
-<td>The multilanguage subject (or title) of this process instance. [Required] [Filter(eq;like)]</td>
+<td>The multilanguage subject (or title) of this process instance. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,19 +147,19 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Bpm.ProcessInstances.html#process">Process</a></td>
 <td><a href="Systems.Bpm.Processes.html">Processes</a></td>
-<td>The process on which this instance is based. [Required] [Filter(multi eq)]</td>
+<td>The process on which this instance is based. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtime">CreationTime</h3>
-<p>The date and time, when the process instance was created. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</p>
+<p>The date and time, when the process instance was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="finishtime">FinishTime</h3>
-<p>The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. [Filter(eq)] [ReadOnly]</p>
+<p>The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -169,15 +169,15 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</p>
+<p>The date and time, when the process instance was started. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="state">State</h3>
-<p>Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly]</p>
+<p>Instance state. 0=Created; 60=Completed. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessInstances.html#state">State</a></strong><br>
-Allowed values for the <a href="Systems.Bpm.ProcessInstances.html#state">State</a> data attribute<br>
+Allowed values for the <code>State</code>(Systems.Bpm.ProcessInstances.md#state) data attribute<br>
 <em>Allowed Values (Systems.Bpm.ProcessInstancesRepository.State Enum Members)</em></p>
 <table>
 <thead>
@@ -209,13 +209,13 @@ Allowed values for the <a href="Systems.Bpm.ProcessInstances.html#state">State</
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="subject">Subject</h3>
-<p>The multilanguage subject (or title) of this process instance. [Required] [Filter(eq;like)]</p>
+<p>The multilanguage subject (or title) of this process instance. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="process">Process</h3>
-<p>The process on which this instance is based. [Required] [Filter(multi eq)]</p>
+<p>The process on which this instance is based. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.Processes.html">Processes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -105,17 +105,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentFulfillments.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact time in UTC, when the fulfillment was created in the system. [Required] [Default(NowUtc)] [Filter(multi eq;ge;le)]</td>
+<td>The exact time in UTC, when the fulfillment was created in the system. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#documentlineid">DocumentLineId</a></td>
 <td>guid</td>
-<td>The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. [Required] [Filter(multi eq)]</td>
+<td>The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#fulfillmenttype">FulfillmentType</a></td>
 <td><a href="General.DocumentFulfillments.html#fulfillmenttype">FulfillmentType</a></td>
-<td>Type of fulfillment: P=Planned; C=Completed. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]</td>
+<td>Type of fulfillment: P=Planned; C=Completed. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#id">Id</a></td>
@@ -125,22 +125,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentFulfillments.html#isfinal">IsFinal</a></td>
 <td>boolean</td>
-<td>Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. [Required] [Filter(eq)]</td>
+<td>Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#lineno">LineNo</a></td>
 <td>int32 (nullable)</td>
-<td>Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.26]</td>
+<td>Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#linetype">LineType</a></td>
 <td>string</td>
-<td>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. [Required] [Default(&quot;L&quot;)] [Filter(multi eq)] [Introduced in version 21.1.1.26]</td>
+<td>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. <code>Required</code> <code>Default(&quot;L&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#quantitybase">QuantityBase</a></td>
 <td>decimal</td>
-<td>Fulfilled quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]</td>
+<td>Fulfilled quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></td>
 </tr>
 </tbody>
 </table>
@@ -157,31 +157,31 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.DocumentFulfillments.html#creationuser">CreationUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who created the record. [Required] [Filter(multi eq)]</td>
+<td>The user, who created the record. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#document">Document</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>The Document, which is fulfilled. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]</td>
+<td>The Document, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact time in UTC, when the fulfillment was created in the system. [Required] [Default(NowUtc)] [Filter(multi eq;ge;le)]</p>
+<p>The exact time in UTC, when the fulfillment was created in the system. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
 <h3 id="documentlineid">DocumentLineId</h3>
-<p>The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. [Required] [Filter(multi eq)]</p>
+<p>The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fulfillmenttype">FulfillmentType</h3>
-<p>Type of fulfillment: P=Planned; C=Completed. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]</p>
+<p>Type of fulfillment: P=Planned; C=Completed. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentFulfillments.html#fulfillmenttype">FulfillmentType</a></strong><br>
-Allowed values for the <a href="General.DocumentFulfillments.html#fulfillmenttype">FulfillmentType</a> data attribute<br>
+Allowed values for the <code>FulfillmentType</code>(General.DocumentFulfillments.md#fulfillmenttype) data attribute<br>
 <em>Allowed Values (General.DocumentFulfillmentsRepository.FulfillmentType Enum Members)</em></p>
 <table>
 <thead>
@@ -209,33 +209,33 @@ Allowed values for the <a href="General.DocumentFulfillments.html#fulfillmenttyp
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isfinal">IsFinal</h3>
-<p>Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. [Required] [Filter(eq)]</p>
+<p>Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.26]</p>
+<p>Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.26</code></p>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="linetype">LineType</h3>
-<p>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. [Required] [Default(&quot;L&quot;)] [Filter(multi eq)] [Introduced in version 21.1.1.26]</p>
+<p>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. <code>Required</code> <code>Default(&quot;L&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>L</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Fulfilled quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]</p>
+<p>Fulfilled quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
-<p>The user, who created the record. [Required] [Filter(multi eq)]</p>
+<p>The user, who created the record. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
-<p>The Document, which is fulfilled. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]</p>
+<p>The Document, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -26,32 +26,32 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Rental.Assets.md#id) | guid |  
-| [IsActive](Applications.Rental.Assets.md#isactive) | boolean | True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports. [Required] [Default(true)] [Filter(eq)] 
+| [IsActive](Applications.Rental.Assets.md#isactive) | boolean | True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Applications.Rental.Assets.md#notes) | string (nullable) | Notes for this Asset. 
-| [RentalAssetCode](Applications.Rental.Assets.md#rentalassetcode) | string | Unique rental asset code. [Required] [Filter(eq;like)] [ORD] 
-| [RentalAssetName](Applications.Rental.Assets.md#rentalassetname) | string | The name of the rental asset. [Required] [Filter(like)] 
-| [StandardGuaranteeAmount](Applications.Rental.Assets.md#standardguaranteeamount) | [Amount](../data-types.md#amount) (nullable) | Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuarantee<br />AmountCurrency] [Filter(multi eq)] 
-| [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) (nullable) | Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. [Filter(multi eq)] 
+| [RentalAssetCode](Applications.Rental.Assets.md#rentalassetcode) | string | Unique rental asset code. `Required` `Filter(eq;like)` `ORD` 
+| [RentalAssetName](Applications.Rental.Assets.md#rentalassetname) | string | The name of the rental asset. `Required` `Filter(like)` 
+| [StandardGuaranteeAmount](Applications.Rental.Assets.md#standardguaranteeamount) | [Amount](../data-types.md#amount) (nullable) | Standard default amount of the guarantee that is set for this asset when leased. `Currency: StandardGuarantee<br />AmountCurrency` `Filter(multi eq)` 
+| [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) (nullable) | Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountingAsset](Applications.Rental.Assets.md#accountingasset) | [Assets](Finance.Assets.Assets.md) (nullable) | When not null identifies the corresponding accounting asset. [Filter(multi eq)] |
-| [EnterpriseCompany](Applications.Rental.Assets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the asset is specific to a given enterprise company and may be used only in documents from this enterprise company. If null, the asset can be used in all enterprise companies. [Filter(multi eq)] |
-| [Product](Applications.Rental.Assets.md#product) | [Products](General.Products.Products.md) (nullable) | Product which is used in the store transactions for this asset. [Filter(multi eq)] |
-| [RentalAssetGroup](Applications.Rental.Assets.md#rentalassetgroup) | [AssetGroups](Applications.Rental.AssetGroups.md) | The logical group of the rental asset. [Required] [Filter(multi eq)] [Owner] |
-| [RentalAssetType](Applications.Rental.Assets.md#rentalassettype) | [AssetTypes](Applications.Rental.AssetTypes.md) | The type of the asset. [Required] [Filter(multi eq)] |
-| [SalesProduct](Applications.Rental.Assets.md#salesproduct) | [Products](General.Products.Products.md) (nullable) | Product which is used in the creation of Sales Orders to form the price of the service of renting this asset. [Filter(multi eq)] |
-| [SerialNumber](Applications.Rental.Assets.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number which in conjunction with the product for store operations allows for more accurate identification of the asset. [Filter(multi eq)] |
-| [StandardGuarantee<br />AmountCurrency](Applications.Rental.Assets.md#standardguaranteeamountcurrency) | [Currencies](General.Currencies.md) (nullable) | Currency of the standard guarantee amount. [Filter(multi eq)] |
-| [WorkSchedule](Applications.Rental.Assets.md#workschedule) | [WorkSchedules](General.Resources.WorkSchedules.md) (nullable) | Work schedule, which is used to calculate how many days this assets has been rented for (used only when the asset's lease by mode is by days). [Filter(multi eq)] |
+| [AccountingAsset](Applications.Rental.Assets.md#accountingasset) | [Assets](Finance.Assets.Assets.md) (nullable) | When not null identifies the corresponding accounting asset. `Filter(multi eq)` |
+| [EnterpriseCompany](Applications.Rental.Assets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the asset is specific to a given enterprise company and may be used only in documents from this enterprise company. If null, the asset can be used in all enterprise companies. `Filter(multi eq)` |
+| [Product](Applications.Rental.Assets.md#product) | [Products](General.Products.Products.md) (nullable) | Product which is used in the store transactions for this asset. `Filter(multi eq)` |
+| [RentalAssetGroup](Applications.Rental.Assets.md#rentalassetgroup) | [AssetGroups](Applications.Rental.AssetGroups.md) | The logical group of the rental asset. `Required` `Filter(multi eq)` `Owner` |
+| [RentalAssetType](Applications.Rental.Assets.md#rentalassettype) | [AssetTypes](Applications.Rental.AssetTypes.md) | The type of the asset. `Required` `Filter(multi eq)` |
+| [SalesProduct](Applications.Rental.Assets.md#salesproduct) | [Products](General.Products.Products.md) (nullable) | Product which is used in the creation of Sales Orders to form the price of the service of renting this asset. `Filter(multi eq)` |
+| [SerialNumber](Applications.Rental.Assets.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number which in conjunction with the product for store operations allows for more accurate identification of the asset. `Filter(multi eq)` |
+| [StandardGuarantee<br />AmountCurrency](Applications.Rental.Assets.md#standardguaranteeamountcurrency) | [Currencies](General.Currencies.md) (nullable) | Currency of the standard guarantee amount. `Filter(multi eq)` |
+| [WorkSchedule](Applications.Rental.Assets.md#workschedule) | [WorkSchedules](General.Resources.WorkSchedules.md) (nullable) | Work schedule, which is used to calculate how many days this assets has been rented for (used only when the asset's lease by mode is by days). `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Consumables | [AssetConsumables](Applications.Rental.AssetConsumables.md) | List of [AssetConsumable](Applications.Rental.AssetConsumables.md) child objects, based on the [Applications.Rental.AssetConsumable.RentalAsset](Applications.Rental.AssetConsumables.md#rentalasset) back reference 
+| Consumables | [AssetConsumables](Applications.Rental.AssetConsumables.md) | List of `AssetConsumable`(Applications.Rental.AssetConsumables.md) child objects, based on the `Applications.Rental.AssetConsumable.RentalAsset`(Applications.Rental.AssetConsumables.md#rentalasset) back reference 
 
 
 ## Attribute Details
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports. [Required] [Default(true)] [Filter(eq)]
+True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### RentalAssetCode
 
-Unique rental asset code. [Required] [Filter(eq;like)] [ORD]
+Unique rental asset code. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -91,7 +91,7 @@ _Supports Order By_: **True**
 
 ### RentalAssetName
 
-The name of the rental asset. [Required] [Filter(like)]
+The name of the rental asset. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -99,7 +99,7 @@ _Supports Order By_: **False**
 
 ### StandardGuaranteeAmount
 
-Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuaranteeAmountCurrency] [Filter(multi eq)]
+Standard default amount of the guarantee that is set for this asset when leased. `Currency: StandardGuaranteeAmountCurrency` `Filter(multi eq)`
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -107,10 +107,10 @@ _Supports Order By_: **False**
 
 ### TimePeriodType
 
-Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. [Filter(multi eq)]
+Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. `Filter(multi eq)`
 
 _Type_: **[TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) (nullable)**  
-Allowed values for the [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) data attribute  
+Allowed values for the `TimePeriodType`(Applications.Rental.Assets.md#timeperiodtype) data attribute  
 _Allowed Values (Applications.Rental.AssetsRepository.TimePeriodType Enum Members)_  
 
 | Value | Description |
@@ -126,21 +126,21 @@ _Supports Order By_: **False**
 
 ### AccountingAsset
 
-When not null identifies the corresponding accounting asset. [Filter(multi eq)]
+When not null identifies the corresponding accounting asset. `Filter(multi eq)`
 
 _Type_: **[Assets](Finance.Assets.Assets.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-When not null, specifies that the asset is specific to a given enterprise company and may be used only in documents from this enterprise company. If null, the asset can be used in all enterprise companies. [Filter(multi eq)]
+When not null, specifies that the asset is specific to a given enterprise company and may be used only in documents from this enterprise company. If null, the asset can be used in all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-Product which is used in the store transactions for this asset. [Filter(multi eq)]
+Product which is used in the store transactions for this asset. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -149,28 +149,28 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( obj.SerialNumber != null) AndAlso ( obj.SerialNumber.Product != obj.Product)), obj.SerialNumber.Product, obj.Product)`
 ### RentalAssetGroup
 
-The logical group of the rental asset. [Required] [Filter(multi eq)] [Owner]
+The logical group of the rental asset. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[AssetGroups](Applications.Rental.AssetGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAssetType
 
-The type of the asset. [Required] [Filter(multi eq)]
+The type of the asset. `Required` `Filter(multi eq)`
 
 _Type_: **[AssetTypes](Applications.Rental.AssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesProduct
 
-Product which is used in the creation of Sales Orders to form the price of the service of renting this asset. [Filter(multi eq)]
+Product which is used in the creation of Sales Orders to form the price of the service of renting this asset. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
-Serial number which in conjunction with the product for store operations allows for more accurate identification of the asset. [Filter(multi eq)]
+Serial number which in conjunction with the product for store operations allows for more accurate identification of the asset. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -179,14 +179,14 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( obj.SerialNumber != null) AndAlso ( obj.Product != obj.SerialNumber.Product)), null, obj.SerialNumber)`
 ### StandardGuaranteeAmountCurrency
 
-Currency of the standard guarantee amount. [Filter(multi eq)]
+Currency of the standard guarantee amount. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkSchedule
 
-Work schedule, which is used to calculate how many days this assets has been rented for (used only when the asset's lease by mode is by days). [Filter(multi eq)]
+Work schedule, which is used to calculate how many days this assets has been rented for (used only when the asset's lease by mode is by days). `Filter(multi eq)`
 
 _Type_: **[WorkSchedules](General.Resources.WorkSchedules.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

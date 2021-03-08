@@ -109,7 +109,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Assets.AssetCategories.html#code">Code</a></td>
 <td>string</td>
-<td>The unique code of the AssetCategory. [Required] [Filter(eq)] [ORD]</td>
+<td>The unique code of the AssetCategory. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetCategories.html#id">Id</a></td>
@@ -119,7 +119,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Assets.AssetCategories.html#name">Name</a></td>
 <td>string</td>
-<td>The name of this AssetCategory. [Required] [Filter(like)]</td>
+<td>The name of this AssetCategory. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -136,7 +136,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Assets.AssetCategories.html#producttype">ProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">ProductTypes</a></td>
-<td>Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)]</td>
+<td>Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,13 +153,13 @@ Default Search Member:<br>
 <tr>
 <td>DepreciationPlanTemplates</td>
 <td><a href="Finance.Assets.DepreciationPlanTemplates.html">DepreciationPlanTemplates</a></td>
-<td>List of <a href="Finance.Assets.DepreciationPlanTemplates.html">DepreciationPlanTemplate</a> child objects, based on the <a href="Finance.Assets.DepreciationPlanTemplates.html#assetcategory">Finance.Assets.DepreciationPlanTemplate.AssetCategory</a> back reference</td>
+<td>List of <code>DepreciationPlanTemplate</code>(Finance.Assets.DepreciationPlanTemplates.md) child objects, based on the <code>Finance.Assets.DepreciationPlanTemplate.AssetCategory</code>(Finance.Assets.DepreciationPlanTemplates.md#assetcategory) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The unique code of the AssetCategory. [Required] [Filter(eq)] [ORD]</p>
+<p>The unique code of the AssetCategory. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -170,13 +170,13 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this AssetCategory. [Required] [Filter(like)]</p>
+<p>The name of this AssetCategory. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="producttype">ProductType</h3>
-<p>Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)]</p>
+<p>Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

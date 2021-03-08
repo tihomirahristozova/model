@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Shipment.CargoTypes.md#code) | string | The unique code of the CargoType. [Required] [Filter(eq;like)] [ORD] 
+| [Code](Logistics.Shipment.CargoTypes.md#code) | string | The unique code of the CargoType. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Logistics.Shipment.CargoTypes.md#id) | guid |  
-| [Name](Logistics.Shipment.CargoTypes.md#name) | string | The name of this CargoType. [Required] [Filter(eq;like)] 
+| [Name](Logistics.Shipment.CargoTypes.md#name) | string | The name of this CargoType. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Shipment.CargoTypes.md#notes) | string (nullable) | Notes for this CargoType. 
 
 
@@ -33,7 +33,7 @@ Aggregate Tree
 
 ### Code
 
-The unique code of the CargoType. [Required] [Filter(eq;like)] [ORD]
+The unique code of the CargoType. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this CargoType. [Required] [Filter(eq;like)]
+The name of this CargoType. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  

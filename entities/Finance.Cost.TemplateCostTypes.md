@@ -25,22 +25,22 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9). [Required] [Filter(ge;le)] 
+| [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9). `Required` `Filter(ge;le)` 
 | [Id](Finance.Cost.TemplateCostTypes.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The [Template](Finance.Cost.Templates.md) to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner] |
-| [CostType](Finance.Cost.TemplateCostTypes.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)] |
+| [CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The `Template`(Finance.Cost.Templates.md) to which this TemplateCostType belongs. `Required` `Filter(multi eq)` `Owner` |
+| [CostType](Finance.Cost.TemplateCostTypes.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type for which the hierarchy is specified. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### HierarchyLevel
 
-The level in the hierarchy on which this cost is incurred (0..9). [Required] [Filter(ge;le)]
+The level in the hierarchy on which this cost is incurred (0..9). `Required` `Filter(ge;le)`
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -58,14 +58,14 @@ _Default Value_: **NewGuid**
 
 ### CostTemplate
 
-The [Template](Finance.Cost.Templates.md) to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner]
+The `Template`(Finance.Cost.Templates.md) to which this TemplateCostType belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Finance.Cost.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
-The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)]
+The Cost Type for which the hierarchy is specified. `Required` `Filter(multi eq)`
 
 _Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

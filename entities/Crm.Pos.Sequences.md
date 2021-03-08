@@ -24,15 +24,15 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.Pos.Sequences.md#id) | guid |  
-| [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)] 
-| [MaxNo](Crm.Pos.Sequences.md#maxno) | string (nullable) | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)] 
-| [NextNo](Crm.Pos.Sequences.md#nextno) | string | The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)] 
+| [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. `Required` `Default(true)` `Filter(multi eq)` 
+| [MaxNo](Crm.Pos.Sequences.md#maxno) | string (nullable) | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)` 
+| [NextNo](Crm.Pos.Sequences.md#nextno) | string | The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Devices](Crm.Pos.Devices.md) | The POS device, for which the sequence is defined. [Required] [Filter(multi eq)] |
+| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Devices](Crm.Pos.Devices.md) | The POS device, for which the sequence is defined. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -46,7 +46,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)]
+Indicates whether this sequence is active. `Required` `Default(true)` `Filter(multi eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -55,7 +55,7 @@ _Default Value_: **True**
 
 ### MaxNo
 
-Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)]
+Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### NextNo
 
-The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)]
+The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -74,7 +74,7 @@ _Supports Order By_: **False**
 
 ### PosDevice
 
-The POS device, for which the sequence is defined. [Required] [Filter(multi eq)]
+The POS device, for which the sequence is defined. `Required` `Filter(multi eq)`
 
 _Type_: **[Devices](Crm.Pos.Devices.md)**  
 _Indexed_: **True**  

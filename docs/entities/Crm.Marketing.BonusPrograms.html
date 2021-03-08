@@ -109,12 +109,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#active">Active</a></td>
 <td>boolean (nullable)</td>
-<td>General condition if the bonus is active. The other conditions are verified only for active bonus programs. [Default(true)] [Filter(eq)]</td>
+<td>General condition if the bonus is active. The other conditions are verified only for active bonus programs. <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusaction">BonusAction</a></td>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusaction">BonusAction</a></td>
-<td>Bonus action: P-Add product to the order, A-Add amount, D-Give discount. [Required] [Default(&quot;D&quot;)] [Filter(multi eq)]</td>
+<td>Bonus action: P-Add product to the order, A-Add amount, D-Give discount. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusdocumentamountpercent">BonusDocumentAmountPercent</a></td>
@@ -124,17 +124,17 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonuslinediscountpercent">BonusLineDiscountPercent</a></td>
 <td>decimal</td>
-<td>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). [Required] [Default(0)]</td>
+<td>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusproductquantity">BonusProductQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
-<td>The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. [Unit: BonusProductQuantityUnit]</td>
+<td>The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. <code>Unit: BonusProductQuantityUnit</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusproductquantitymultiplierforeachlotsize">BonusProductQuantity<br>MultiplierForEach<br>LotSize</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
-<td>When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit]</td>
+<td>When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditioncustomerfilterxml">ConditionCustomerFilterXML</a></td>
@@ -149,27 +149,27 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionfromdate">ConditionFromDate</a></td>
 <td>datetime (nullable)</td>
-<td>Starting date of the bonus. null means that there is no starting date restriction. [Filter(eq;ge;le)]</td>
+<td>Starting date of the bonus. null means that there is no starting date restriction. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionmaxamount">ConditionMaxAmount</a></td>
 <td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
-<td>If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]</td>
+<td>If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionmaxquantity">ConditionMaxQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
-<td>When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</td>
+<td>When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionminamount">ConditionMinAmount</a></td>
 <td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
-<td>If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]</td>
+<td>If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionminquantity">ConditionMinQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
-<td>When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</td>
+<td>When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionshiptocustomerfilterxml">ConditionShipTo<br>CustomerFilter<br>XML</a></td>
@@ -179,7 +179,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditiontodate">ConditionToDate</a></td>
 <td>datetime (nullable)</td>
-<td>Ending date (inclusive) of the bonus. null means that there is no ending date restriction. [Filter(eq;ge;le)]</td>
+<td>Ending date (inclusive) of the bonus. null means that there is no ending date restriction. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#id">Id</a></td>
@@ -189,12 +189,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The name of the bonus program. [Required] [Filter(eq;like)]</td>
+<td>The name of the bonus program. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#priority">Priority</a></td>
 <td><a href="Crm.Marketing.BonusPrograms.html#priority">Priority</a></td>
-<td>Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. [Required] [Default(2)] [Filter(multi eq)]</td>
+<td>Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -211,67 +211,67 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusdocumentamounttype">BonusDocumentAmountType</a></td>
 <td><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</td>
-<td>When not null specifies that a document amount should be added to the order when the bonus conditions are met. null means that the bonus reward is not a document amount. [Filter(multi eq)]</td>
+<td>When not null specifies that a document amount should be added to the order when the bonus conditions are met. null means that the bonus reward is not a document amount. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusproduct">BonusProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The product that is rewarded if the bonus conditions are met. null means that the bonus reward is not product. [Filter(multi eq)]</td>
+<td>The product that is rewarded if the bonus conditions are met. null means that the bonus reward is not product. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusproductquantityunit">BonusProductQuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. [Filter(multi eq)]</td>
+<td>The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#companylocation">CompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>When set, specifies that the sales document must be of the specified enterprise company location. [Filter(multi eq)]</td>
+<td>When set, specifies that the sales document must be of the specified enterprise company location. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditioncustomer">ConditionCustomer</a></td>
 <td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
-<td>When not null, specifies that the bonus should be applied only to the specified customer. [Filter(multi eq)]</td>
+<td>When not null, specifies that the bonus should be applied only to the specified customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditiondistributionchannel">ConditionDistribution<br>Channel</a></td>
 <td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</td>
-<td>When not null, specifies that the bonus should be applied only when the specified channel is used. [Filter(multi eq)]</td>
+<td>When not null, specifies that the bonus should be applied only when the specified channel is used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditiondocumentcurrency">ConditionDocumentCurrency</a></td>
 <td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
-<td>Condition for the document amount. Should be not null if any of the amount conditions are not null. [Filter(multi eq)]</td>
+<td>Condition for the document amount. Should be not null if any of the amount conditions are not null. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionpricelist">ConditionPriceList</a></td>
 <td><a href="Crm.PriceLists.html">PriceLists</a> (nullable)</td>
-<td>When not null, specifies that the bonus should be applied only when the sales order is based on the speicfied price list. [Filter(multi eq)]</td>
+<td>When not null, specifies that the bonus should be applied only when the sales order is based on the speicfied price list. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionproduct">ConditionProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>When not null, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If null the other conditions should be evaluated against the whole order. [Filter(multi eq)]</td>
+<td>When not null, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If null the other conditions should be evaluated against the whole order. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionproductgroup">ConditionProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
-<td>When not null, specifies that the bonus should be applied only to products from the specified product group or its subgroups. [Filter(multi eq)]</td>
+<td>When not null, specifies that the bonus should be applied only to products from the specified product group or its subgroups. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionshiptocustomer">ConditionShipToCustomer</a></td>
 <td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
-<td>When not null, specifies that the bonus should be applied only when shipping to the specified customer. [Filter(multi eq)]</td>
+<td>When not null, specifies that the bonus should be applied only when shipping to the specified customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditiontargetgroup">ConditionTargetGroup</a></td>
 <td><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</td>
-<td>When not null, specifies that the bonus should be applied only to the specified target customer group. [Filter(multi eq)]</td>
+<td>When not null, specifies that the bonus should be applied only to the specified target customer group. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>When set, specifies that the sales document must be of the specified enterprise company. [Filter(multi eq)]</td>
+<td>When set, specifies that the sales document must be of the specified enterprise company. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -288,21 +288,21 @@ Default Search Member:<br>
 <tr>
 <td>Products</td>
 <td><a href="Crm.Marketing.BonusProgramProducts.html">BonusProgramProducts</a></td>
-<td>List of <a href="Crm.Marketing.BonusProgramProducts.html">BonusProgramProduct</a> child objects, based on the <a href="Crm.Marketing.BonusProgramProducts.html#bonusprogram">Crm.Marketing.BonusProgramProduct.BonusProgram</a> back reference</td>
+<td>List of <code>BonusProgramProduct</code>(Crm.Marketing.BonusProgramProducts.md) child objects, based on the <code>Crm.Marketing.BonusProgramProduct.BonusProgram</code>(Crm.Marketing.BonusProgramProducts.md#bonusprogram) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>General condition if the bonus is active. The other conditions are verified only for active bonus programs. [Default(true)] [Filter(eq)]</p>
+<p>General condition if the bonus is active. The other conditions are verified only for active bonus programs. <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="bonusaction">BonusAction</h3>
-<p>Bonus action: P-Add product to the order, A-Add amount, D-Give discount. [Required] [Default(&quot;D&quot;)] [Filter(multi eq)]</p>
+<p>Bonus action: P-Add product to the order, A-Add amount, D-Give discount. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.BonusPrograms.html#bonusaction">BonusAction</a></strong><br>
-Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#bonusaction">BonusAction</a> data attribute<br>
+Allowed values for the <code>BonusAction</code>(Crm.Marketing.BonusPrograms.md#bonusaction) data attribute<br>
 <em>Allowed Values (Crm.Marketing.BonusProgramsRepository.BonusAction Enum Members)</em></p>
 <table>
 <thead>
@@ -331,18 +331,18 @@ Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#bonusaction">Bo
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="bonuslinediscountpercent">BonusLineDiscountPercent</h3>
-<p>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). [Required] [Default(0)]</p>
+<p>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="bonusproductquantity">BonusProductQuantity</h3>
-<p>The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. [Unit: BonusProductQuantityUnit]</p>
+<p>The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. <code>Unit: BonusProductQuantityUnit</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="bonusproductquantitymultiplierforeachlotsize">BonusProductQuantityMultiplierForEachLotSize</h3>
-<p>When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit]</p>
+<p>When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -357,27 +357,27 @@ Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#bonusaction">Bo
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionfromdate">ConditionFromDate</h3>
-<p>Starting date of the bonus. null means that there is no starting date restriction. [Filter(eq;ge;le)]</p>
+<p>Starting date of the bonus. null means that there is no starting date restriction. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionmaxamount">ConditionMaxAmount</h3>
-<p>If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]</p>
+<p>If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionmaxquantity">ConditionMaxQuantity</h3>
-<p>When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
+<p>When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionminamount">ConditionMinAmount</h3>
-<p>If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]</p>
+<p>If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionminquantity">ConditionMinQuantity</h3>
-<p>When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
+<p>When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -387,7 +387,7 @@ Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#bonusaction">Bo
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditiontodate">ConditionToDate</h3>
-<p>Ending date (inclusive) of the bonus. null means that there is no ending date restriction. [Filter(eq;ge;le)]</p>
+<p>Ending date (inclusive) of the bonus. null means that there is no ending date restriction. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -397,14 +397,14 @@ Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#bonusaction">Bo
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the bonus program. [Required] [Filter(eq;like)]</p>
+<p>The name of the bonus program. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. [Required] [Default(2)] [Filter(multi eq)]</p>
+<p>Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.BonusPrograms.html#priority">Priority</a></strong><br>
-Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#priority">Priority</a> data attribute<br>
+Allowed values for the <code>Priority</code>(Crm.Marketing.BonusPrograms.md#priority) data attribute<br>
 <em>Allowed Values (Crm.Marketing.BonusProgramsRepository.Priority Enum Members)</em></p>
 <table>
 <thead>
@@ -441,56 +441,56 @@ Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#priority">Prior
 <em>Default Value</em>: <strong>2</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="bonusdocumentamounttype">BonusDocumentAmountType</h3>
-<p>When not null specifies that a document amount should be added to the order when the bonus conditions are met. null means that the bonus reward is not a document amount. [Filter(multi eq)]</p>
+<p>When not null specifies that a document amount should be added to the order when the bonus conditions are met. null means that the bonus reward is not a document amount. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="bonusproduct">BonusProduct</h3>
-<p>The product that is rewarded if the bonus conditions are met. null means that the bonus reward is not product. [Filter(multi eq)]</p>
+<p>The product that is rewarded if the bonus conditions are met. null means that the bonus reward is not product. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="bonusproductquantityunit">BonusProductQuantityUnit</h3>
-<p>The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. [Filter(multi eq)]</p>
+<p>The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="companylocation">CompanyLocation</h3>
-<p>When set, specifies that the sales document must be of the specified enterprise company location. [Filter(multi eq)]</p>
+<p>When set, specifies that the sales document must be of the specified enterprise company location. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditioncustomer">ConditionCustomer</h3>
-<p>When not null, specifies that the bonus should be applied only to the specified customer. [Filter(multi eq)]</p>
+<p>When not null, specifies that the bonus should be applied only to the specified customer. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditiondistributionchannel">ConditionDistributionChannel</h3>
-<p>When not null, specifies that the bonus should be applied only when the specified channel is used. [Filter(multi eq)]</p>
+<p>When not null, specifies that the bonus should be applied only when the specified channel is used. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditiondocumentcurrency">ConditionDocumentCurrency</h3>
-<p>Condition for the document amount. Should be not null if any of the amount conditions are not null. [Filter(multi eq)]</p>
+<p>Condition for the document amount. Should be not null if any of the amount conditions are not null. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditionpricelist">ConditionPriceList</h3>
-<p>When not null, specifies that the bonus should be applied only when the sales order is based on the speicfied price list. [Filter(multi eq)]</p>
+<p>When not null, specifies that the bonus should be applied only when the sales order is based on the speicfied price list. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditionproduct">ConditionProduct</h3>
-<p>When not null, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If null the other conditions should be evaluated against the whole order. [Filter(multi eq)]</p>
+<p>When not null, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If null the other conditions should be evaluated against the whole order. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditionproductgroup">ConditionProductGroup</h3>
-<p>When not null, specifies that the bonus should be applied only to products from the specified product group or its subgroups. [Filter(multi eq)]</p>
+<p>When not null, specifies that the bonus should be applied only to products from the specified product group or its subgroups. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditionshiptocustomer">ConditionShipToCustomer</h3>
-<p>When not null, specifies that the bonus should be applied only when shipping to the specified customer. [Filter(multi eq)]</p>
+<p>When not null, specifies that the bonus should be applied only when shipping to the specified customer. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditiontargetgroup">ConditionTargetGroup</h3>
-<p>When not null, specifies that the bonus should be applied only to the specified target customer group. [Filter(multi eq)]</p>
+<p>When not null, specifies that the bonus should be applied only to the specified target customer group. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>When set, specifies that the sales document must be of the specified enterprise company. [Filter(multi eq)]</p>
+<p>When set, specifies that the sales document must be of the specified enterprise company. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

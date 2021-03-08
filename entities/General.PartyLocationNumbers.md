@@ -26,17 +26,17 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.PartyLocationNumbers.md#id) | guid |  
-| [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) | [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) | The coding system for which we are defining the location number. [Required] [Default("GLN")] [Filter(multi eq)] 
-| [LocationNumber](General.PartyLocationNumbers.md#locationnumber) | string | The location number of Party. [Required] [Filter(multi eq;like)] [ORD] 
-| [PartnerLocationNumber](General.PartyLocationNumbers.md#partnerlocationnumber) | string (nullable) | The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. [Filter(multi eq)] 
-| [Significance](General.PartyLocationNumbers.md#significance) | int32 | Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. [Required] [Default(0)] [Filter(multi eq;ge;le)] 
+| [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) | [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) | The coding system for which we are defining the location number. `Required` `Default("GLN")` `Filter(multi eq)` 
+| [LocationNumber](General.PartyLocationNumbers.md#locationnumber) | string | The location number of Party. `Required` `Filter(multi eq;like)` `ORD` 
+| [PartnerLocationNumber](General.PartyLocationNumbers.md#partnerlocationnumber) | string (nullable) | The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. `Filter(multi eq)` 
+| [Significance](General.PartyLocationNumbers.md#significance) | int32 | Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PartnerParty](General.PartyLocationNumbers.md#partnerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. [Filter(multi eq)] |
-| [Party](General.PartyLocationNumbers.md#party) | [Parties](General.Contacts.Parties.md) | The party for which we are defining the location number. [Required] [Filter(multi eq)] [Owner] |
+| [PartnerParty](General.PartyLocationNumbers.md#partnerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. `Filter(multi eq)` |
+| [Party](General.PartyLocationNumbers.md#party) | [Parties](General.Contacts.Parties.md) | The party for which we are defining the location number. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -50,10 +50,10 @@ _Default Value_: **NewGuid**
 
 ### LocationCodingSystem
 
-The coding system for which we are defining the location number. [Required] [Default("GLN")] [Filter(multi eq)]
+The coding system for which we are defining the location number. `Required` `Default("GLN")` `Filter(multi eq)`
 
 _Type_: **[LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem)**  
-Allowed values for the [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) data attribute  
+Allowed values for the `LocationCodingSystem`(General.PartyLocationNumbers.md#locationcodingsystem) data attribute  
 _Allowed Values (General.PartyLocationNumbersRepository.LocationCodingSystem Enum Members)_  
 
 | Value | Description |
@@ -67,7 +67,7 @@ _Default Value_: **GLN**
 
 ### LocationNumber
 
-The location number of Party. [Required] [Filter(multi eq;like)] [ORD]
+The location number of Party. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -76,7 +76,7 @@ _Supports Order By_: **True**
 
 ### PartnerLocationNumber
 
-The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. [Filter(multi eq)]
+The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. `Filter(multi eq)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -84,7 +84,7 @@ _Supports Order By_: **False**
 
 ### Significance
 
-Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. [Required] [Default(0)] [Filter(multi eq;ge;le)]
+Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. `Required` `Default(0)` `Filter(multi eq;ge;le)`
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -96,14 +96,14 @@ _Default Value_: **0**
 
 ### PartnerParty
 
-The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. [Filter(multi eq)]
+The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-The party for which we are defining the location number. [Required] [Filter(multi eq)] [Owner]
+The party for which we are defining the location number. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  

@@ -25,34 +25,34 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepreciationEndDate](Finance.Assets.DepreciationPlanLines.md#depreciationenddate) | datetime | End date of the depreciation plan for this asset. [Required] 
-| [DepreciationStartDate](Finance.Assets.DepreciationPlanLines.md#depreciationstartdate) | datetime | Start date of the depreciation plan for this asset. [Required] 
+| [DepreciationEndDate](Finance.Assets.DepreciationPlanLines.md#depreciationenddate) | datetime | End date of the depreciation plan for this asset. `Required` 
+| [DepreciationStartDate](Finance.Assets.DepreciationPlanLines.md#depreciationstartdate) | datetime | Start date of the depreciation plan for this asset. `Required` 
 | [Id](Finance.Assets.DepreciationPlanLines.md#id) | guid |  
-| [LineNo](Finance.Assets.DepreciationPlanLines.md#lineno) | int32 | Consecutive number of the line within the depreciation plan. [Required] [Filter(eq)] 
-| [PlanDepreciationValue](Finance.Assets.DepreciationPlanLines.md#plandepreciationvalue) | [Amount](../data-types.md#amount) | The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
+| [LineNo](Finance.Assets.DepreciationPlanLines.md#lineno) | int32 | Consecutive number of the line within the depreciation plan. `Required` `Filter(eq)` 
+| [PlanDepreciationValue](Finance.Assets.DepreciationPlanLines.md#plandepreciationvalue) | [Amount](../data-types.md#amount) | The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Asset](Finance.Assets.DepreciationPlanLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is planned for depreciation. [Required] [Filter(multi eq)] |
-| [DepreciationMethod](Finance.Assets.DepreciationPlanLines.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)] |
-| [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Document](Finance.Assets.DepreciationPlanLines.md#document) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] |
-| [ValuationModel](Finance.Assets.DepreciationPlanLines.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the asset is accounted. [Required] [Filter(multi eq)] |
+| [Asset](Finance.Assets.DepreciationPlanLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is planned for depreciation. `Required` `Filter(multi eq)` |
+| [DepreciationMethod](Finance.Assets.DepreciationPlanLines.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by which the asset will be depreciated. `Required` `Filter(multi eq)` |
+| [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The `DepreciationPlan`(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](Finance.Assets.DepreciationPlanLines.md#document) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The `DepreciationPlan`(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` |
+| [ValuationModel](Finance.Assets.DepreciationPlanLines.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the asset is accounted. `Required` `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| FixedValues | [DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md) | List of [DepreciationPlan<br />LineFixedValue](Finance.Assets.DepreciationPlan<br />LineFixedValues.md) child objects, based on the [Finance.Assets.DepreciationPlan<br />LineFixedValue.DepreciationPlanLine](Finance.Assets.DepreciationPlan<br />LineFixedValues.md#depreciationplanline) back reference 
+| FixedValues | [DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md) | List of `DepreciationPlan<br />LineFixedValue`(Finance.Assets.DepreciationPlan<br />LineFixedValues.md) child objects, based on the `Finance.Assets.DepreciationPlan<br />LineFixedValue.DepreciationPlanLine`(Finance.Assets.DepreciationPlan<br />LineFixedValues.md#depreciationplanline) back reference 
 
 
 ## Attribute Details
 
 ### DepreciationEndDate
 
-End date of the depreciation plan for this asset. [Required]
+End date of the depreciation plan for this asset. `Required`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### DepreciationStartDate
 
-Start date of the depreciation plan for this asset. [Required]
+Start date of the depreciation plan for this asset. `Required`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-Consecutive number of the line within the depreciation plan. [Required] [Filter(eq)]
+Consecutive number of the line within the depreciation plan. `Required` `Filter(eq)`
 
 _Type_: **int32**  
 _Supported Filters_: **Equals**  
@@ -88,7 +88,7 @@ _Front-End Recalc Expressions:_
 `( obj.DepreciationPlan.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PlanDepreciationValue
 
-The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)]
+The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. `Currency: Asset.ValuationCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -100,7 +100,7 @@ _Default Value_: **Constant**
 
 ### Asset
 
-The asset that is planned for depreciation. [Required] [Filter(multi eq)]
+The asset that is planned for depreciation. `Required` `Filter(multi eq)`
 
 _Type_: **[Assets](Finance.Assets.Assets.md)**  
 _Indexed_: **True**  
@@ -108,14 +108,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DepreciationMethod
 
-Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)]
+Depreciation method by which the asset will be depreciated. `Required` `Filter(multi eq)`
 
 _Type_: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DepreciationPlan
 
-The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner]
+The `DepreciationPlan`(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
 _Indexed_: **True**  
@@ -123,7 +123,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Document
 
-The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)]
+The `DepreciationPlan`(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
 _Indexed_: **True**  
@@ -131,7 +131,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ValuationModel
 
-Valuation model in which the asset is accounted. [Required] [Filter(multi eq)]
+Valuation model in which the asset is accounted. `Required` `Filter(multi eq)`
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

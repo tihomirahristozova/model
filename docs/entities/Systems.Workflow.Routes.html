@@ -105,22 +105,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#activationdate">ActivationDate</a></td>
 <td>date</td>
-<td>The date from which (including) the route is active. The date is matched against the document date of the generating document. [Required] [Default(Today)] [Filter(ge;le)]</td>
+<td>The date from which (including) the route is active. The date is matched against the document date of the generating document. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#active">Active</a></td>
 <td>boolean</td>
-<td>True if the route is active, otherwise false. [Required] [Default(true)] [Filter(eq)]</td>
+<td>True if the route is active, otherwise false. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a></td>
 <td><a href="Systems.Workflow.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a></td>
-<td>Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). [Required] [Default(&quot;B&quot;)] [Filter(multi eq)]</td>
+<td>Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). <code>Required</code> <code>Default(&quot;B&quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#allowobsoletegeneration">AllowObsoleteGeneration</a></td>
 <td>boolean</td>
-<td>Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. [Required] [Default(false)]</td>
+<td>Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#conditionfilterxml">ConditionFilterXML</a></td>
@@ -130,22 +130,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#conditionstatesbitmask">ConditionStatesBitMask</a></td>
 <td><a href="Systems.Workflow.Routes.html#conditionstatesbitmask">DocumentStateFlags</a></td>
-<td>The system states for which to execute the specified route. [Required] [Default(0)]</td>
+<td>The system states for which to execute the specified route. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#connectedpartycondition">ConnectedPartyCondition</a></td>
 <td><a href="Systems.Workflow.Routes.html#connectedpartycondition">ConnectedPartyCondition</a></td>
-<td>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. [Required] [Default(&quot;A&quot;)]</td>
+<td>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. <code>Required</code> <code>Default(&quot;A&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#deactivationdate">DeactivationDate</a></td>
 <td>date (nullable)</td>
-<td>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. [Filter(ge;le)]</td>
+<td>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#destinationstate">DestinationState</a></td>
 <td><a href="Systems.Workflow.Routes.html#destinationstate">DocumentState</a></td>
-<td>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required]</td>
+<td>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#id">Id</a></td>
@@ -165,22 +165,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
 <td><a href="Systems.Workflow.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
-<td>Determines the default relationship type between the generated document and the parent document. [Required] [Default(&quot;S&quot;)]</td>
+<td>Determines the default relationship type between the generated document and the parent document. <code>Required</code> <code>Default(&quot;S&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#procedurename">ProcedureName</a></td>
 <td>string</td>
-<td>The system name of the generation procedure, which must be executed by the route. [Required]</td>
+<td>The system name of the generation procedure, which must be executed by the route. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#processevent">ProcessEvent</a></td>
 <td>string</td>
-<td>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. [Required]</td>
+<td>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#readonly">ReadOnly</a></td>
 <td>boolean</td>
-<td>Indicates wheather the destination document shoul be read only. true - the destination document is read only. [Required] [Default(false)]</td>
+<td>Indicates wheather the destination document shoul be read only. true - the destination document is read only. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 </tbody>
 </table>
@@ -197,37 +197,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#conditionenterprisecompany">ConditionEnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company for which this route is activated. [Filter(multi eq)]</td>
+<td>The enterprise company for which this route is activated. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#conditionuserstatus">ConditionUserStatus</a></td>
 <td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user-defined status, for which the document route is activated. [Filter(multi eq)]</td>
+<td>The user-defined status, for which the document route is activated. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#destinationdocumenttype">DestinationDocumentType</a></td>
 <td><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>The type of the document, that will be generated by executing the route. [Filter(multi eq)]</td>
+<td>The type of the document, that will be generated by executing the route. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#destinationenterprisecompany">DestinationEnterprise<br>Company</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company in which to generate the target document. [Filter(multi eq)]</td>
+<td>The enterprise company in which to generate the target document. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#destinationenterprisecompanylocation">DestinationEnterprise<br>CompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location in which to generate the target document. [Filter(multi eq)]</td>
+<td>The enterprise company location in which to generate the target document. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#destinationuserstatus">DestinationUserStatus</a></td>
 <td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user defined status to set to the generated document. [Filter(multi eq)]</td>
+<td>The user defined status to set to the generated document. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type from which this route originates. Documents from this type generate sub-documents using this route. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The document type from which this route originates. Documents from this type generate sub-documents using this route. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -244,37 +244,37 @@ Aggregate Root:<br>
 <tr>
 <td>SalesOrderPayment<br>OrdersTemplates</td>
 <td><a href="Crm.Sales.SalesOrderPaymentOrdersTemplates.html">SalesOrderPaymentOrdersTemplates</a></td>
-<td>List of [SalesOrderPayment<br>OrdersTemplate](Crm.Sales.SalesOrderPayment<br>OrdersTemplates.md) child objects, based on the [Crm.Sales.SalesOrderPayment<br>OrdersTemplate.Route](Crm.Sales.SalesOrderPayment<br>OrdersTemplates.md#route) back reference</td>
+<td>List of <code>SalesOrderPayment&lt;br /&gt;OrdersTemplate</code>(Crm.Sales.SalesOrderPayment<br>OrdersTemplates.md) child objects, based on the <code>Crm.Sales.SalesOrderPayment&lt;br /&gt;OrdersTemplate.Route</code>(Crm.Sales.SalesOrderPayment<br>OrdersTemplates.md#route) back reference</td>
 </tr>
 <tr>
 <td>TemplateRouteLinks</td>
 <td><a href="Finance.Accounting.TemplateRouteLinks.html">TemplateRouteLinks</a></td>
-<td>List of <a href="Finance.Accounting.TemplateRouteLinks.html">TemplateRouteLink</a> child objects, based on the <a href="Finance.Accounting.TemplateRouteLinks.html#route">Finance.Accounting.TemplateRouteLink.Route</a> back reference</td>
+<td>List of <code>TemplateRouteLink</code>(Finance.Accounting.TemplateRouteLinks.md) child objects, based on the <code>Finance.Accounting.TemplateRouteLink.Route</code>(Finance.Accounting.TemplateRouteLinks.md#route) back reference</td>
 </tr>
 <tr>
 <td>Templates</td>
 <td><a href="Finance.Accounting.Templates.html">Templates</a></td>
-<td>List of <a href="Finance.Accounting.Templates.html">Template</a> child objects, based on the <a href="Finance.Accounting.Templates.html#route">Finance.Accounting.Template.Route</a> back reference</td>
+<td>List of <code>Template</code>(Finance.Accounting.Templates.md) child objects, based on the <code>Finance.Accounting.Template.Route</code>(Finance.Accounting.Templates.md#route) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activationdate">ActivationDate</h3>
-<p>The date from which (including) the route is active. The date is matched against the document date of the generating document. [Required] [Default(Today)] [Filter(ge;le)]</p>
+<p>The date from which (including) the route is active. The date is matched against the document date of the generating document. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="active">Active</h3>
-<p>True if the route is active, otherwise false. [Required] [Default(true)] [Filter(eq)]</p>
+<p>True if the route is active, otherwise false. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="allowedgenerationtypes">AllowedGenerationTypes</h3>
-<p>Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). [Required] [Default(&quot;B&quot;)] [Filter(multi eq)]</p>
+<p>Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). <code>Required</code> <code>Default(&quot;B&quot;)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a></strong><br>
-Allowed values for the <a href="Systems.Workflow.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a> data attribute<br>
+Allowed values for the <code>AllowedGenerationTypes</code>(Systems.Workflow.Routes.md#allowedgenerationtypes) data attribute<br>
 <em>Allowed Values (Systems.Workflow.RoutesRepository.AllowedGenerationTypes Enum Members)</em></p>
 <table>
 <thead>
@@ -302,7 +302,7 @@ Allowed values for the <a href="Systems.Workflow.Routes.html#allowedgenerationty
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>BothAutoAndManually</strong></p>
 <h3 id="allowobsoletegeneration">AllowObsoleteGeneration</h3>
-<p>Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. [Required] [Default(false)]</p>
+<p>Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -313,7 +313,7 @@ Allowed values for the <a href="Systems.Workflow.Routes.html#allowedgenerationty
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionstatesbitmask">ConditionStatesBitMask</h3>
-<p>The system states for which to execute the specified route. [Required] [Default(0)]</p>
+<p>The system states for which to execute the specified route. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#conditionstatesbitmask">DocumentStateFlags</a></strong><br>
 Enumeration of document system states that can be combined in bit mask<br>
 <em>Allowed Values (General.DocumentStateFlags Enum Members)</em></p>
@@ -359,9 +359,9 @@ Enumeration of document system states that can be combined in bit mask<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="connectedpartycondition">ConnectedPartyCondition</h3>
-<p>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. [Required] [Default(&quot;A&quot;)]</p>
+<p>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. <code>Required</code> <code>Default(&quot;A&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#connectedpartycondition">ConnectedPartyCondition</a></strong><br>
-Allowed values for the <a href="Systems.Workflow.Routes.html#connectedpartycondition">ConnectedPartyCondition</a> data attribute<br>
+Allowed values for the <code>ConnectedPartyCondition</code>(Systems.Workflow.Routes.md#connectedpartycondition) data attribute<br>
 <em>Allowed Values (Systems.Workflow.RoutesRepository.ConnectedPartyCondition Enum Members)</em></p>
 <table>
 <thead>
@@ -389,12 +389,12 @@ Allowed values for the <a href="Systems.Workflow.Routes.html#connectedpartycondi
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>AnyParty</strong></p>
 <h3 id="deactivationdate">DeactivationDate</h3>
-<p>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. [Filter(ge;le)]</p>
+<p>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="destinationstate">DestinationState</h3>
-<p>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required]</p>
+<p>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#destinationstate">DocumentState</a></strong><br>
 Enumeration of document system states<br>
 <em>Allowed Values (General.DocumentState Enum Members)</em></p>
@@ -454,7 +454,7 @@ Enumeration of document system states<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
-<p>Determines the default relationship type between the generated document and the parent document. [Required] [Default(&quot;S&quot;)]</p>
+<p>Determines the default relationship type between the generated document and the parent document. <code>Required</code> <code>Default(&quot;S&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></strong><br>
 Relationship between parent and child documents<br>
 <em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
@@ -480,48 +480,48 @@ Relationship between parent and child documents<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Subtask</strong></p>
 <h3 id="procedurename">ProcedureName</h3>
-<p>The system name of the generation procedure, which must be executed by the route. [Required]</p>
+<p>The system name of the generation procedure, which must be executed by the route. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="processevent">ProcessEvent</h3>
-<p>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. [Required]</p>
+<p>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="readonly">ReadOnly</h3>
-<p>Indicates wheather the destination document shoul be read only. true - the destination document is read only. [Required] [Default(false)]</p>
+<p>Indicates wheather the destination document shoul be read only. true - the destination document is read only. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="conditionenterprisecompany">ConditionEnterpriseCompany</h3>
-<p>The enterprise company for which this route is activated. [Filter(multi eq)]</p>
+<p>The enterprise company for which this route is activated. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditionuserstatus">ConditionUserStatus</h3>
-<p>The user-defined status, for which the document route is activated. [Filter(multi eq)]</p>
+<p>The user-defined status, for which the document route is activated. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="destinationdocumenttype">DestinationDocumentType</h3>
-<p>The type of the document, that will be generated by executing the route. [Filter(multi eq)]</p>
+<p>The type of the document, that will be generated by executing the route. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="destinationenterprisecompany">DestinationEnterpriseCompany</h3>
-<p>The enterprise company in which to generate the target document. [Filter(multi eq)]</p>
+<p>The enterprise company in which to generate the target document. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="destinationenterprisecompanylocation">DestinationEnterpriseCompanyLocation</h3>
-<p>The enterprise company location in which to generate the target document. [Filter(multi eq)]</p>
+<p>The enterprise company location in which to generate the target document. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="destinationuserstatus">DestinationUserStatus</h3>
-<p>The user defined status to set to the generated document. [Filter(multi eq)]</p>
+<p>The user defined status to set to the generated document. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type from which this route originates. Documents from this type generate sub-documents using this route. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The document type from which this route originates. Documents from this type generate sub-documents using this route. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

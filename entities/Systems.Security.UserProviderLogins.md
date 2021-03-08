@@ -26,14 +26,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Security.UserProviderLogins.md#id) | guid |  
-| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string | The key, which the provider provided for logging the user. [Required] [Filter(multi eq)] 
-| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] [Introduced in version 20.1] 
+| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string | The key, which the provider provided for logging the user. `Required` `Filter(multi eq)` 
+| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. `Required` `Filter(eq)` `Introduced in version 20.1` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Security.UserProviderLogins.md#user) | [Users](Systems.Security.Users.md) | The user for which the login is defined. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Security.UserProviderLogins.md#user) | [Users](Systems.Security.Users.md) | The user for which the login is defined. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### ProviderKey
 
-The key, which the provider provided for logging the user. [Required] [Filter(multi eq)]
+The key, which the provider provided for logging the user. `Required` `Filter(multi eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -55,10 +55,10 @@ _Supports Order By_: **False**
 
 ### ProviderName
 
-The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] [Introduced in version 20.1]
+The system name of the authentication provider. It should be already registered for the domain. `Required` `Filter(eq)` `Introduced in version 20.1`
 
 _Type_: **[ProviderName](Systems.Security.UserProviderLogins.md#providername)**  
-Allowed values for the [ProviderName](Systems.Security.DomainProviders.md#providername) data attribute  
+Allowed values for the `ProviderName`(Systems.Security.DomainProviders.md#providername) data attribute  
 _Allowed Values (Systems.Security.DomainProvidersRepository.ProviderName Enum Members)_  
 
 | Value | Description |
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### User
 
-The user for which the login is defined. [Required] [Filter(multi eq)] [Owner]
+The user for which the login is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Indexed_: **True**  

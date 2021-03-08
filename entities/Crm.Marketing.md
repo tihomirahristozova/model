@@ -1,8 +1,7 @@
----
+﻿---
 uid: Crm.Marketing
 ---
 # Crm.Marketing Namespace
-
 
 ## Entities
 - [BonusProgramProducts](Crm.Marketing.BonusProgramProducts.md)  
@@ -14,4 +13,6 @@ uid: Crm.Marketing
 - [ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md)  
 - [TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md)  
 - [TargetGroups](Crm.Marketing.TargetGroups.md)  
+
+.TargetGroups.md)  
 

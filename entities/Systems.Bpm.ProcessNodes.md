@@ -25,25 +25,25 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.ProcessNodes.md#code) | string | Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)] 
+| [Code](Systems.Bpm.ProcessNodes.md#code) | string | Node code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)` 
 | [Id](Systems.Bpm.ProcessNodes.md#id) | guid |  
-| [InstructionsHtml](Systems.Bpm.ProcessNodes.md#instructionshtml) | string (nullable) | Detailed instructions to the executor in HTML format. [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessNodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process name. [Required] [Filter(eq;like)] 
-| [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) | [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) | Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)] 
+| [InstructionsHtml](Systems.Bpm.ProcessNodes.md#instructionshtml) | string (nullable) | Detailed instructions to the executor in HTML format. `Filter(eq;like)` 
+| [Name](Systems.Bpm.ProcessNodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process name. `Required` `Filter(eq;like)` 
+| [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) | [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) | Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessNodes.md#process) | [Processes](Systems.Bpm.Processes.md) | The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ProcessLane](Systems.Bpm.ProcessNodes.md#processlane) | [ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this Node belongs. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessNodes.md#process) | [Processes](Systems.Bpm.Processes.md) | The process, to which this Node belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProcessLane](Systems.Bpm.ProcessNodes.md#processlane) | [ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this Node belongs. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### Code
 
-Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]
+Node code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 ### InstructionsHtml
 
-Detailed instructions to the executor in HTML format. [Filter(eq;like)]
+Detailed instructions to the executor in HTML format. `Filter(eq;like)`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-Multilanguage process name. [Required] [Filter(eq;like)]
+Multilanguage process name. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -74,10 +74,10 @@ _Supports Order By_: **False**
 
 ### NodeType
 
-Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)]
+Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. `Required` `Filter(eq;like)`
 
 _Type_: **[NodeType](Systems.Bpm.ProcessNodes.md#nodetype)**  
-Allowed values for the [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) data attribute  
+Allowed values for the `NodeType`(Systems.Bpm.ProcessNodes.md#nodetype) data attribute  
 _Allowed Values (Systems.Bpm.ProcessNodesRepository.NodeType Enum Members)_  
 
 | Value | Description |
@@ -95,7 +95,7 @@ _Supports Order By_: **False**
 
 ### Process
 
-The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner]
+The process, to which this Node belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Indexed_: **True**  
@@ -103,7 +103,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ProcessLane
 
-The process lane to which this Node belongs. [Required] [Filter(multi eq)]
+The process lane to which this Node belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

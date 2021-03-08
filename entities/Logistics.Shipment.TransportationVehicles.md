@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Shipment.TransportationVehicles.md#code) | string | The unique code (or call sign) of this transportation vehicle. [Required] [Filter(eq;like)] [ORD] 
+| [Code](Logistics.Shipment.TransportationVehicles.md#code) | string | The unique code (or call sign) of this transportation vehicle. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Logistics.Shipment.TransportationVehicles.md#id) | guid |  
 | [MaxCargoWeightKg](Logistics.Shipment.TransportationVehicles.md#maxcargoweightkg) | int32 (nullable) | The maximum weight of the cargo (in kg), which can be transported. null when this is unknown and no limit should be enforced. 
 | [MaxPalletsCount](Logistics.Shipment.TransportationVehicles.md#maxpalletscount) | int32 (nullable) | The maximum number of pallets, which can be transported by the vehicle. null when this is unknown and no limit should be enforced. 
@@ -35,17 +35,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CargoType](Logistics.Shipment.TransportationVehicles.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The cargo type supported by this transportation vehicle. [Required] [Filter(multi eq)] |
-| [EnterpriseCompany](Logistics.Shipment.TransportationVehicles.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the transportation vehicle will be bound. [Required] [Filter(multi eq)] |
-| [TransportationMode](Logistics.Shipment.TransportationVehicles.md#transportationmode) | [TransportationModes](Logistics.Shipment.TransportationModes.md) | The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. [Required] [Filter(multi eq)] |
-| [Vehicle](Logistics.Shipment.TransportationVehicles.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The definition of the base vehicle. [Required] [Filter(multi eq)] [Owner] |
+| [CargoType](Logistics.Shipment.TransportationVehicles.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The cargo type supported by this transportation vehicle. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Logistics.Shipment.TransportationVehicles.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the transportation vehicle will be bound. `Required` `Filter(multi eq)` |
+| [TransportationMode](Logistics.Shipment.TransportationVehicles.md#transportationmode) | [TransportationModes](Logistics.Shipment.TransportationModes.md) | The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. `Required` `Filter(multi eq)` |
+| [Vehicle](Logistics.Shipment.TransportationVehicles.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The definition of the base vehicle. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### Code
 
-The unique code (or call sign) of this transportation vehicle. [Required] [Filter(eq;like)] [ORD]
+The unique code (or call sign) of this transportation vehicle. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -88,28 +88,28 @@ _Supports Order By_: **False**
 
 ### CargoType
 
-The cargo type supported by this transportation vehicle. [Required] [Filter(multi eq)]
+The cargo type supported by this transportation vehicle. `Required` `Filter(multi eq)`
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-The enterprise company to which the transportation vehicle will be bound. [Required] [Filter(multi eq)]
+The enterprise company to which the transportation vehicle will be bound. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportationMode
 
-The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. [Required] [Filter(multi eq)]
+The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. `Required` `Filter(multi eq)`
 
 _Type_: **[TransportationModes](Logistics.Shipment.TransportationModes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Vehicle
 
-The definition of the base vehicle. [Required] [Filter(multi eq)] [Owner]
+The definition of the base vehicle. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

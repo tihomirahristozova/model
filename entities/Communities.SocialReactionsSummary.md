@@ -24,13 +24,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Cnt](Communities.SocialReactionsSummary.md#cnt) | int64 |  
-| [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) | [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required] 
+| [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) | [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.SocialReactionsSummary.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | . [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Sys_Objects_Table.Object_Id] |
+| [DataObject](Communities.SocialReactionsSummary.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | . `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Object_Id` |
 | [SocialComment](Communities.SocialReactionsSummary.md#socialcomment) | [SocialComments](Communities.SocialComments.md) |  |
 
 
@@ -44,10 +44,10 @@ _Supports Order By_: **False**
 
 ### ReactionType
 
-The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required]
+The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required`
 
 _Type_: **[ReactionType](Communities.SocialReactionsSummary.md#reactiontype)**  
-Allowed values for the [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) data attribute  
+Allowed values for the `ReactionType`(Communities.SocialReactionsSummary.md#reactiontype) data attribute  
 _Allowed Values (Communities.SocialReactionsSummaryRepository.ReactionType Enum Members)_  
 
 | Value | Description |
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### DataObject
 
-. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Sys_Objects_Table.Object_Id]
+. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Object_Id`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Inherited From_: **Sys_Objects_Table.Object_Id**  

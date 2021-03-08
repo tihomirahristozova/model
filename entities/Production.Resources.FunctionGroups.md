@@ -24,23 +24,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string | The full path of the item. [Required] [Default("")] [Filter(eq;like)] 
+| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string | The full path of the item. `Required` `Default("")` `Filter(eq;like)` 
 | [Id](Production.Resources.FunctionGroups.md#id) | guid |  
-| [Name](Production.Resources.FunctionGroups.md#name) | string | The name of this FunctionGroup. [Required] [Filter(like)] 
-| [Parent](Production.Resources.FunctionGroups.md#parent) | string | The path of the parent item. [Required] [Default("/")] [Filter(eq;like)] [ORD] 
+| [Name](Production.Resources.FunctionGroups.md#name) | string | The name of this FunctionGroup. `Required` `Filter(like)` 
+| [Parent](Production.Resources.FunctionGroups.md#parent) | string | The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Functions | [Functions](Production.Resources.Functions.md) | List of [Function](Production.Resources.Functions.md) child objects, based on the [Production.Resources.Function.FunctionGroup](Production.Resources.Functions.md#functiongroup) back reference 
+| Functions | [Functions](Production.Resources.Functions.md) | List of `Function`(Production.Resources.Functions.md) child objects, based on the `Production.Resources.Function.FunctionGroup`(Production.Resources.Functions.md#functiongroup) back reference 
 
 
 ## Attribute Details
 
 ### FullPath
 
-The full path of the item. [Required] [Default("")] [Filter(eq;like)]
+The full path of the item. `Required` `Default("")` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this FunctionGroup. [Required] [Filter(like)]
+The name of this FunctionGroup. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-The path of the parent item. [Required] [Default("/")] [Filter(eq;like)] [ORD]
+The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  

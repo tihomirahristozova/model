@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityAgreedMaterials.html#agreedquantity">AgreedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly]</td>
+<td>Quantity from the service agreement material line that is accounted for this service activity material line. <code>Unit: ServiceAgreementMaterial.QuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityAgreedMaterials.html#id">Id</a></td>
@@ -127,18 +127,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityAgreedMaterials.html#serviceactivitymaterial">ServiceActivityMaterial</a></td>
 <td><a href="Applications.Service.ServiceActivityMaterials.html">ServiceActivityMaterials</a></td>
-<td>The [ServiceActivityMaterial](Applications.Service.ServiceActivity<br>AgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivity<br>AgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
+<td>The <code>ServiceActivityMaterial</code>(Applications.Service.ServiceActivity<br>AgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivity<br>AgreedMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityAgreedMaterials.html#serviceagreementmaterial">ServiceAgreementMaterial</a></td>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html">ServiceAgreementMaterials</a></td>
-<td>Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly]</td>
+<td>Service agreement material line that records the paid or agreed in advance material. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="agreedquantity">AgreedQuantity</h3>
-<p>Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly]</p>
+<p>Quantity from the service agreement material line that is accounted for this service activity material line. <code>Unit: ServiceAgreementMaterial.QuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -150,12 +150,12 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceactivitymaterial">ServiceActivityMaterial</h3>
-<p>The <a href="Applications.Service.ServiceActivityAgreedMaterials.html#serviceactivitymaterial">ServiceActivityMaterial</a> to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
+<p>The <code>ServiceActivityMaterial</code>(Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivityMaterials.html">ServiceActivityMaterials</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceagreementmaterial">ServiceAgreementMaterial</h3>
-<p>Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly]</p>
+<p>Service agreement material line that records the paid or agreed in advance material. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreementMaterials.html">ServiceAgreementMaterials</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

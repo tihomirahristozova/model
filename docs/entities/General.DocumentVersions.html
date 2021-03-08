@@ -105,17 +105,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentVersions.html#documentdata">DocumentData</a></td>
 <td>byte[] (nullable)</td>
-<td>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). [ReadOnly]</td>
+<td>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#documentdataformat">DocumentDataFormat</a></td>
 <td>string</td>
-<td>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. [Required] [Default(&quot;U&quot;)] [ReadOnly]</td>
+<td>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. <code>Required</code> <code>Default(&quot;U&quot;)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#documentdataxml">DocumentDataXML</a></td>
 <td>string (nullable)</td>
-<td>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). [ReadOnly]</td>
+<td>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#id">Id</a></td>
@@ -125,22 +125,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentVersions.html#state">State</a></td>
 <td><a href="General.DocumentVersions.html#state">State</a></td>
-<td>The state of the document by the time it was saved. [Required] [Default(0)] [Filter(multi eq)] [ReadOnly]</td>
+<td>The state of the document by the time it was saved. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#updatetime">UpdateTime</a></td>
 <td>datetime</td>
-<td>The date and time when this version was saved. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]</td>
+<td>The date and time when this version was saved. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#updateuser">UpdateUser</a></td>
 <td>string</td>
-<td>The login name of the user that saved this version. [Required] [Filter(eq;like)] [ReadOnly]</td>
+<td>The login name of the user that saved this version. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#version">Version</a></td>
 <td>int32</td>
-<td>The version number that is stored in this row. [Required] [Filter(eq;ge;le)] [ReadOnly]</td>
+<td>The version number that is stored in this row. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -157,24 +157,24 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentVersions.html#document">Document</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
+<td>The document whoose version is stored in this row. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdata">DocumentData</h3>
-<p>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). [ReadOnly]</p>
+<p>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentdataformat">DocumentDataFormat</h3>
-<p>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. [Required] [Default(&quot;U&quot;)] [ReadOnly]</p>
+<p>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. <code>Required</code> <code>Default(&quot;U&quot;)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>U</strong></p>
 <h3 id="documentdataxml">DocumentDataXML</h3>
-<p>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). [ReadOnly]</p>
+<p>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -184,9 +184,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="state">State</h3>
-<p>The state of the document by the time it was saved. [Required] [Default(0)] [Filter(multi eq)] [ReadOnly]</p>
+<p>The state of the document by the time it was saved. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentVersions.html#state">State</a></strong><br>
-Allowed values for the <a href="General.DocumentVersions.html#state">State</a> data attribute<br>
+Allowed values for the <code>State</code>(General.DocumentVersions.md#state) data attribute<br>
 <em>Allowed Values (General.DocumentVersionsRepository.State Enum Members)</em></p>
 <table>
 <thead>
@@ -230,25 +230,25 @@ Allowed values for the <a href="General.DocumentVersions.html#state">State</a> d
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<p>The date and time when this version was saved. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]</p>
+<p>The date and time when this version was saved. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<p>The login name of the user that saved this version. [Required] [Filter(eq;like)] [ReadOnly]</p>
+<p>The login name of the user that saved this version. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="version">Version</h3>
-<p>The version number that is stored in this row. [Required] [Filter(eq;ge;le)] [ReadOnly]</p>
+<p>The version number that is stored in this row. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
+<p>The document whoose version is stored in this row. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

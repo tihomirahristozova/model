@@ -1,8 +1,7 @@
----
+﻿---
 uid: Logistics
 ---
 # Logistics Namespace
-
 ## Namespaces
 - [Inventory](Logistics.Inventory.md)  
 - [Procurement](Logistics.Procurement.md)  
@@ -14,4 +13,6 @@ uid: Logistics
 - [LogisticUnits](Logistics.LogisticUnits.md)  
 - [LogisticUnitSpecifications](Logistics.LogisticUnitSpecifications.md)  
 - [LogisticUnitTypes](Logistics.LogisticUnitTypes.md)  
+
+UnitTypes.md)  
 

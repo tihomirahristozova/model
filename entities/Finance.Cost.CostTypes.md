@@ -23,16 +23,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Cost.CostTypes.md#code) | string | Unique cost type code. Used for charting. [Required] [Filter(eq)] [ORD] 
+| [Code](Finance.Cost.CostTypes.md#code) | string | Unique cost type code. Used for charting. `Required` `Filter(eq)` `ORD` 
 | [Id](Finance.Cost.CostTypes.md#id) | guid |  
-| [Name](Finance.Cost.CostTypes.md#name) | string | Multilanguage cost type name. [Required] [Filter(like)] 
+| [Name](Finance.Cost.CostTypes.md#name) | string | Multilanguage cost type name. `Required` `Filter(like)` 
 
 
 ## Attribute Details
 
 ### Code
 
-Unique cost type code. Used for charting. [Required] [Filter(eq)] [ORD]
+Unique cost type code. Used for charting. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multilanguage cost type name. [Required] [Filter(like)]
+Multilanguage cost type name. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  

@@ -32,8 +32,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The asset type for which the tracked parameter is defined. [Required] [Filter(multi eq)] [Owner] |
-| [TrackedParameter](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) | The parameter, which will be tracked for assets of the specified type. [Required] [Filter(multi eq)] |
+| [ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The asset type for which the tracked parameter is defined. `Required` `Filter(multi eq)` `Owner` |
+| [TrackedParameter](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) | The parameter, which will be tracked for assets of the specified type. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### ManagedAssetType
 
-The asset type for which the tracked parameter is defined. [Required] [Filter(multi eq)] [Owner]
+The asset type for which the tracked parameter is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Indexed_: **True**  
@@ -66,7 +66,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### TrackedParameter
 
-The parameter, which will be tracked for assets of the specified type. [Required] [Filter(multi eq)]
+The parameter, which will be tracked for assets of the specified type. `Required` `Filter(multi eq)`
 
 _Type_: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

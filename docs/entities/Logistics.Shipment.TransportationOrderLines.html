@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#contentsdescription">ContentsDescription</a></td>
 <td>string</td>
-<td>Textual description of the cargo contents. [Required]</td>
+<td>Textual description of the cargo contents. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#id">Id</a></td>
@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). [Required] [Filter(eq)]</td>
+<td>Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this TransportationOrderLine. [Introduced in version 18.2]</td>
+<td>Notes for this TransportationOrderLine. <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#palletscount">PalletsCount</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 (nullable)</td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. [Filter(eq)]</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#volumecbm">VolumeCbm</a></td>
@@ -157,28 +157,28 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#cargotype">CargoType</a></td>
 <td><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></td>
-<td>The type of the transported cargo. [Required] [Filter(multi eq)]</td>
+<td>The type of the transported cargo. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#document">Document</a></td>
 <td><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></td>
-<td>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)]</td>
+<td>The <code>TransportationOrder</code>(Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a></td>
 <td><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></td>
-<td>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>TransportationOrder</code>(Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contentsdescription">ContentsDescription</h3>
-<p>Textual description of the cargo contents. [Required]</p>
+<p>Textual description of the cargo contents. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -188,7 +188,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). [Required] [Filter(eq)]</p>
+<p>Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -197,7 +197,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.TransportationOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for this TransportationOrderLine. [Introduced in version 18.2]</p>
+<p>Notes for this TransportationOrderLine. <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -207,7 +207,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. [Filter(eq)]</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -223,20 +223,20 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="cargotype">CargoType</h3>
-<p>The type of the transported cargo. [Required] [Filter(multi eq)]</p>
+<p>The type of the transported cargo. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
-<p>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p>The <code>TransportationOrder</code>(Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transportationorder">TransportationOrder</h3>
-<p>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>TransportationOrder</code>(Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

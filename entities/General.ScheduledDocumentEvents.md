@@ -23,28 +23,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Cancelled](General.ScheduledDocumentEvents.md#cancelled) | boolean | When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. [Required] [Default(false)] [Filter(eq)] 
-| [CreationTime](General.ScheduledDocumentEvents.md#creationtime) | datetime | Date and time when the ScheduledDocumentEvent was created. [Required] [Default(Now)] [ReadOnly] 
-| [DocumentEvent](General.ScheduledDocumentEvents.md#documentevent) | string | The type of the document event that is scheduled to be processed. [Required] [ReadOnly] 
+| [Cancelled](General.ScheduledDocumentEvents.md#cancelled) | boolean | When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. `Required` `Default(false)` `Filter(eq)` 
+| [CreationTime](General.ScheduledDocumentEvents.md#creationtime) | datetime | Date and time when the ScheduledDocumentEvent was created. `Required` `Default(Now)` `ReadOnly` 
+| [DocumentEvent](General.ScheduledDocumentEvents.md#documentevent) | string | The type of the document event that is scheduled to be processed. `Required` `ReadOnly` 
 | [Id](General.ScheduledDocumentEvents.md#id) | guid |  
-| [LastProcessStatus](General.ScheduledDocumentEvents.md#lastprocessstatus) | string (nullable) | Status/information of the last attemp to process the event. Usually shows the cause in case of failure. [ReadOnly] 
-| [LastProcessTime](General.ScheduledDocumentEvents.md#lastprocesstime) | datetime (nullable) | The time of the last attempt to process the event. [ReadOnly] 
-| [Processed](General.ScheduledDocumentEvents.md#processed) | boolean | Indicates wheather the event is already processed or not. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [State](General.ScheduledDocumentEvents.md#state) | [State](General.ScheduledDocumentEvents.md#state) | The state of the document for which the event will be processed. [Required] [ReadOnly] 
+| [LastProcessStatus](General.ScheduledDocumentEvents.md#lastprocessstatus) | string (nullable) | Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly` 
+| [LastProcessTime](General.ScheduledDocumentEvents.md#lastprocesstime) | datetime (nullable) | The time of the last attempt to process the event. `ReadOnly` 
+| [Processed](General.ScheduledDocumentEvents.md#processed) | boolean | Indicates wheather the event is already processed or not. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [State](General.ScheduledDocumentEvents.md#state) | [State](General.ScheduledDocumentEvents.md#state) | The state of the document for which the event will be processed. `Required` `ReadOnly` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.ScheduledDocumentEvents.md#document) | [Documents](General.Documents.md) | The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly] |
-| [SourceDocument](General.ScheduledDocumentEvents.md#sourcedocument) | [Documents](General.Documents.md) | The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly] |
+| [Document](General.ScheduledDocumentEvents.md#document) | [Documents](General.Documents.md) | The document for which the event will be processed. `Required` `Filter(multi eq)` `ReadOnly` |
+| [SourceDocument](General.ScheduledDocumentEvents.md#sourcedocument) | [Documents](General.Documents.md) | The document that has caused this event to be scheduled. `Required` `Filter(multi eq)` `ReadOnly` |
 
 
 ## Attribute Details
 
 ### Cancelled
 
-When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. [Required] [Default(false)] [Filter(eq)]
+When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -53,7 +53,7 @@ _Default Value_: **False**
 
 ### CreationTime
 
-Date and time when the ScheduledDocumentEvent was created. [Required] [Default(Now)] [ReadOnly]
+Date and time when the ScheduledDocumentEvent was created. `Required` `Default(Now)` `ReadOnly`
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -62,7 +62,7 @@ _Default Value_: **CurrentDateTime**
 
 ### DocumentEvent
 
-The type of the document event that is scheduled to be processed. [Required] [ReadOnly]
+The type of the document event that is scheduled to be processed. `Required` `ReadOnly`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -77,7 +77,7 @@ _Default Value_: **NewGuid**
 
 ### LastProcessStatus
 
-Status/information of the last attemp to process the event. Usually shows the cause in case of failure. [ReadOnly]
+Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly`
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 ### LastProcessTime
 
-The time of the last attempt to process the event. [ReadOnly]
+The time of the last attempt to process the event. `ReadOnly`
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 
 ### Processed
 
-Indicates wheather the event is already processed or not. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Indicates wheather the event is already processed or not. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -102,10 +102,10 @@ _Default Value_: **False**
 
 ### State
 
-The state of the document for which the event will be processed. [Required] [ReadOnly]
+The state of the document for which the event will be processed. `Required` `ReadOnly`
 
 _Type_: **[State](General.ScheduledDocumentEvents.md#state)**  
-Allowed values for the [State](General.ScheduledDocumentEvents.md#state) data attribute  
+Allowed values for the `State`(General.ScheduledDocumentEvents.md#state) data attribute  
 _Allowed Values (General.ScheduledDocumentEventsRepository.State Enum Members)_  
 
 | Value | Description |
@@ -126,14 +126,14 @@ _Supports Order By_: **False**
 
 ### Document
 
-The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly]
+The document for which the event will be processed. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceDocument
 
-The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly]
+The document that has caused this event to be scheduled. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

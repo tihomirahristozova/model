@@ -24,28 +24,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Assets.AssetCategories.md#code) | string | The unique code of the AssetCategory. [Required] [Filter(eq)] [ORD] 
+| [Code](Finance.Assets.AssetCategories.md#code) | string | The unique code of the AssetCategory. `Required` `Filter(eq)` `ORD` 
 | [Id](Finance.Assets.AssetCategories.md#id) | guid |  
-| [Name](Finance.Assets.AssetCategories.md#name) | string | The name of this AssetCategory. [Required] [Filter(like)] 
+| [Name](Finance.Assets.AssetCategories.md#name) | string | The name of this AssetCategory. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](Finance.Assets.AssetCategories.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)] |
+| [ProductType](Finance.Assets.AssetCategories.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. `Required` `Filter(multi eq)` |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| DepreciationPlanTemplates | [DepreciationPlanTemplates](Finance.Assets.DepreciationPlanTemplates.md) | List of [DepreciationPlanTemplate](Finance.Assets.DepreciationPlanTemplates.md) child objects, based on the [Finance.Assets.DepreciationPlanTemplate.AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#assetcategory) back reference 
+| DepreciationPlanTemplates | [DepreciationPlanTemplates](Finance.Assets.DepreciationPlanTemplates.md) | List of `DepreciationPlanTemplate`(Finance.Assets.DepreciationPlanTemplates.md) child objects, based on the `Finance.Assets.DepreciationPlanTemplate.AssetCategory`(Finance.Assets.DepreciationPlanTemplates.md#assetcategory) back reference 
 
 
 ## Attribute Details
 
 ### Code
 
-The unique code of the AssetCategory. [Required] [Filter(eq)] [ORD]
+The unique code of the AssetCategory. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -61,7 +61,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this AssetCategory. [Required] [Filter(like)]
+The name of this AssetCategory. `Required` `Filter(like)`
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### ProductType
 
-Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)]
+Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. `Required` `Filter(multi eq)`
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Indexed_: **True**  

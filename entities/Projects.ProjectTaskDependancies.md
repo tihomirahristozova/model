@@ -25,25 +25,25 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default("FS")] 
+| [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). `Required` `Default("FS")` 
 | [Id](Projects.ProjectTaskDependancies.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnTask](Projects.ProjectTaskDependancies.md#dependsontask) | [ProjectTasks](Projects.ProjectTasks.md) | The task on which Project_Task depends. [Required] [Filter(multi eq)] |
-| [ProjectTask](Projects.ProjectTaskDependancies.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The task which depends on another task. [Required] [Filter(multi eq)] [Owner] |
+| [DependsOnTask](Projects.ProjectTaskDependancies.md#dependsontask) | [ProjectTasks](Projects.ProjectTasks.md) | The task on which Project_Task depends. `Required` `Filter(multi eq)` |
+| [ProjectTask](Projects.ProjectTaskDependancies.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The task which depends on another task. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### DependancyType
 
-FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default("FS")]
+FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). `Required` `Default("FS")`
 
 _Type_: **[DependancyType](Projects.ProjectTaskDependancies.md#dependancytype)**  
-Allowed values for the [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) data attribute  
+Allowed values for the `DependancyType`(Projects.ProjectTaskDependancies.md#dependancytype) data attribute  
 _Allowed Values (Projects.ProjectTaskDependanciesRepository.DependancyType Enum Members)_  
 
 | Value | Description |
@@ -70,14 +70,14 @@ _Default Value_: **NewGuid**
 
 ### DependsOnTask
 
-The task on which Project_Task depends. [Required] [Filter(multi eq)]
+The task on which Project_Task depends. `Required` `Filter(multi eq)`
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
 
-The task which depends on another task. [Required] [Filter(multi eq)] [Owner]
+The task which depends on another task. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

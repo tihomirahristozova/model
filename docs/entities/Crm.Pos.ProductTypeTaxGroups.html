@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.ProductTypeTaxGroups.html#applicablelegislation">ApplicableLegislation</a></td>
 <td><a href="Crm.Pos.ProductTypeTaxGroups.html#applicablelegislation">ApplicableLegislation</a></td>
-<td>The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)]</td>
+<td>The legislation, for which the tax group is applicable. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ProductTypeTaxGroups.html#id">Id</a></td>
@@ -115,12 +115,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.ProductTypeTaxGroups.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this ProductTypeTaxGroup. [Filter(eq;like)]</td>
+<td>Notes for this ProductTypeTaxGroup. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ProductTypeTaxGroups.html#taxgroup">TaxGroup</a></td>
 <td><a href="Crm.Pos.ProductTypeTaxGroups.html#taxgroup">TaxGroup</a></td>
-<td>The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)]</td>
+<td>The tax group of the product type within the specified applicable legislation. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,15 +137,15 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.ProductTypeTaxGroups.html#producttype">ProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">ProductTypes</a></td>
-<td>The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The product type for which the tax group is specified. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicablelegislation">ApplicableLegislation</h3>
-<p>The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)]</p>
+<p>The legislation, for which the tax group is applicable. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.ProductTypeTaxGroups.html#applicablelegislation">ApplicableLegislation</a></strong><br>
-Allowed values for the <a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a> data attribute<br>
+Allowed values for the <code>ApplicableLegislation</code>(General.PartyApplicableLegislations.md#applicablelegislation) data attribute<br>
 <em>Allowed Values (General.PartyApplicableLegislationsRepository.ApplicableLegislation Enum Members)</em></p>
 <table>
 <thead>
@@ -265,14 +265,14 @@ Allowed values for the <a href="General.PartyApplicableLegislations.html#applica
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for this ProductTypeTaxGroup. [Filter(eq;like)]</p>
+<p>Notes for this ProductTypeTaxGroup. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="taxgroup">TaxGroup</h3>
-<p>The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)]</p>
+<p>The tax group of the product type within the specified applicable legislation. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.ProductTypeTaxGroups.html#taxgroup">TaxGroup</a></strong><br>
-Allowed values for the <a href="Crm.Pos.ProductTypeTaxGroups.html#taxgroup">TaxGroup</a> data attribute<br>
+Allowed values for the <code>TaxGroup</code>(Crm.Pos.ProductTypeTaxGroups.md#taxgroup) data attribute<br>
 <em>Allowed Values (Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup Enum Members)</em></p>
 <table>
 <thead>
@@ -320,7 +320,7 @@ Allowed values for the <a href="Crm.Pos.ProductTypeTaxGroups.html#taxgroup">TaxG
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="producttype">ProductType</h3>
-<p>The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The product type for which the tax group is specified. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

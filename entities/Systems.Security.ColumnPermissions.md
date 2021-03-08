@@ -23,22 +23,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string | The name of the secured column. [Required] [Filter(eq)] 
+| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string | The name of the secured column. `Required` `Filter(eq)` 
 | [Id](Systems.Security.ColumnPermissions.md#id) | guid |  
-| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string | The table in which is the secured column. [Required] [Filter(eq)] [ORD] 
+| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string | The table in which is the secured column. `Required` `Filter(eq)` `ORD` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.ColumnPermissions.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The required access key for accessing the column. [Filter(multi eq)] [ReadOnly] |
+| [AccessKey](Systems.Security.ColumnPermissions.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The required access key for accessing the column. `Filter(multi eq)` `ReadOnly` |
 
 
 ## Attribute Details
 
 ### ColumnName
 
-The name of the secured column. [Required] [Filter(eq)]
+The name of the secured column. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -53,7 +53,7 @@ _Default Value_: **NewGuid**
 
 ### TableName
 
-The table in which is the secured column. [Required] [Filter(eq)] [ORD]
+The table in which is the secured column. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string**  
 _Indexed_: **True**  
@@ -65,7 +65,7 @@ _Supports Order By_: **True**
 
 ### AccessKey
 
-The required access key for accessing the column. [Filter(multi eq)] [ReadOnly]
+The required access key for accessing the column. `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

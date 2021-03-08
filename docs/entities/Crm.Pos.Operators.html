@@ -110,22 +110,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Pos.Operators.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this operator is active and can be chosen for new records. [Required] [Default(true)] [Filter(multi eq)]</td>
+<td>Indicates whether this operator is active and can be chosen for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#posoperatorcode">PosOperatorCode</a></td>
 <td>string</td>
-<td>Operator code. Unique within the Pos Location. [Required] [Filter(multi eq;like)] [ORD]</td>
+<td>Operator code. Unique within the Pos Location. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#startingdate">StartingDate</a></td>
 <td>date</td>
-<td>The first date, when the operator has started working for this POS location. [Required] [Filter(multi eq;ge;le)]</td>
+<td>The first date, when the operator has started working for this POS location. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#terminationdate">TerminationDate</a></td>
 <td>date (nullable)</td>
-<td>The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. [Filter(multi eq;ge;le)]</td>
+<td>The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,22 +142,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Pos.Operators.html#defaultposterminal">DefaultPosTerminal</a></td>
 <td><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</td>
-<td>The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)]</td>
+<td>The default POS terminal for this opertor. null when there is no default. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#poslocation">PosLocation</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a></td>
-<td>The POS location where this operator works. [Required] [Filter(multi eq)]</td>
+<td>The POS location where this operator works. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#posrole">PosRole</a></td>
 <td><a href="Crm.Pos.Roles.html">Roles</a></td>
-<td>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)]</td>
+<td>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The login user for this POS operator. [Required] [Filter(multi eq)]</td>
+<td>The login user for this POS operator. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,42 +168,42 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this operator is active and can be chosen for new records. [Required] [Default(true)] [Filter(multi eq)]</p>
+<p>Indicates whether this operator is active and can be chosen for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="posoperatorcode">PosOperatorCode</h3>
-<p>Operator code. Unique within the Pos Location. [Required] [Filter(multi eq;like)] [ORD]</p>
+<p>Operator code. Unique within the Pos Location. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="startingdate">StartingDate</h3>
-<p>The first date, when the operator has started working for this POS location. [Required] [Filter(multi eq;ge;le)]</p>
+<p>The first date, when the operator has started working for this POS location. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="terminationdate">TerminationDate</h3>
-<p>The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. [Filter(multi eq;ge;le)]</p>
+<p>The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultposterminal">DefaultPosTerminal</h3>
-<p>The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)]</p>
+<p>The default POS terminal for this opertor. null when there is no default. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="poslocation">PosLocation</h3>
-<p>The POS location where this operator works. [Required] [Filter(multi eq)]</p>
+<p>The POS location where this operator works. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="posrole">PosRole</h3>
-<p>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)]</p>
+<p>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Roles.html">Roles</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<p>The login user for this POS operator. [Required] [Filter(multi eq)]</p>
+<p>The login user for this POS operator. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -31,8 +31,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | The responsible party (usually employee) of the store. [Required] [Filter(multi eq)] |
-| [Store](Logistics.Inventory.StoreResponsibleParties.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store for which we specify the responsible party. [Required] [Filter(multi eq)] [Owner] |
+| [ResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | The responsible party (usually employee) of the store. `Required` `Filter(multi eq)` |
+| [Store](Logistics.Inventory.StoreResponsibleParties.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store for which we specify the responsible party. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -49,14 +49,14 @@ _Default Value_: **NewGuid**
 
 ### ResponsibleParty
 
-The responsible party (usually employee) of the store. [Required] [Filter(multi eq)]
+The responsible party (usually employee) of the store. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-The store for which we specify the responsible party. [Required] [Filter(multi eq)] [Owner]
+The store for which we specify the responsible party. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

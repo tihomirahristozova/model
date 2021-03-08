@@ -105,12 +105,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#dayno">DayNo</a></td>
 <td>int32</td>
-<td>Consequtive day in the work schedule recurrence, starting at 1. [Required]</td>
+<td>Consequtive day in the work schedule recurrence, starting at 1. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#endtime">EndTime</a></td>
 <td>time</td>
-<td>End of working time period. [Required]</td>
+<td>End of working time period. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#starttime">StartTime</a></td>
 <td>time</td>
-<td>Start of working time period on the day, specified by Day_No. [Required]</td>
+<td>Start of working time period on the day, specified by Day_No. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,18 +137,18 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#workschedule">WorkSchedule</a></td>
 <td><a href="General.Resources.WorkSchedules.html">WorkSchedules</a></td>
-<td>The <a href="General.Resources.WorkScheduleWorkingTime.html#workschedule">WorkSchedule</a> to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>WorkSchedule</code>(General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="dayno">DayNo</h3>
-<p>Consequtive day in the work schedule recurrence, starting at 1. [Required]</p>
+<p>Consequtive day in the work schedule recurrence, starting at 1. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="endtime">EndTime</h3>
-<p>End of working time period. [Required]</p>
+<p>End of working time period. <code>Required</code></p>
 <p><em>Type</em>: <strong>time</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -158,13 +158,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>Start of working time period on the day, specified by Day_No. [Required]</p>
+<p>Start of working time period on the day, specified by Day_No. <code>Required</code></p>
 <p><em>Type</em>: <strong>time</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="workschedule">WorkSchedule</h3>
-<p>The <a href="General.Resources.WorkScheduleWorkingTime.html#workschedule">WorkSchedule</a> to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>WorkSchedule</code>(General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.WorkSchedules.html">WorkSchedules</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

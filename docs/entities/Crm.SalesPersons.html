@@ -110,17 +110,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.SalesPersons.html#commissionpolicyid">CommissionPolicyId</a></td>
 <td>guid (nullable)</td>
-<td>Current commission policy for the sales person. null means there is no commission policy. [Filter(multi eq)]</td>
+<td>Current commission policy for the sales person. null means there is no commission policy. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#contractenddate">ContractEndDate</a></td>
 <td>datetime (nullable)</td>
-<td>The ending date of the contract with the sales person. null when the sales person is still active. [Filter(ge;le)]</td>
+<td>The ending date of the contract with the sales person. null when the sales person is still active. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#contractstartdate">ContractStartDate</a></td>
 <td>datetime (nullable)</td>
-<td>The starting date of the contract with the sales person. null when it is unknown. [Filter(ge;le)]</td>
+<td>The starting date of the contract with the sales person. null when it is unknown. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#id">Id</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.SalesPersons.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -147,22 +147,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.SalesPersons.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
+<td>The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. [Filter(multi eq)]</td>
+<td>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>Base personal record. [Required] [Filter(multi eq)] [Owner]</td>
+<td>Base personal record. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#salespersongroup">SalesPersonGroup</a></td>
 <td><a href="Crm.Distribution.SalesPersonGroups.html">SalesPersonGroups</a></td>
-<td>The sales person group to which this sales person is assigned. [Required] [Filter(multi eq)]</td>
+<td>The sales person group to which this sales person is assigned. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,16 +173,16 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="commissionpolicyid">CommissionPolicyId</h3>
-<p>Current commission policy for the sales person. null means there is no commission policy. [Filter(multi eq)]</p>
+<p>Current commission policy for the sales person. null means there is no commission policy. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="contractenddate">ContractEndDate</h3>
-<p>The ending date of the contract with the sales person. null when the sales person is still active. [Filter(ge;le)]</p>
+<p>The ending date of the contract with the sales person. null when the sales person is still active. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="contractstartdate">ContractStartDate</h3>
-<p>The starting date of the contract with the sales person. null when it is unknown. [Filter(ge;le)]</p>
+<p>The starting date of the contract with the sales person. null when it is unknown. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -192,27 +192,27 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
+<p>The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. [Filter(multi eq)]</p>
+<p>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
-<p>Base personal record. [Required] [Filter(multi eq)] [Owner]</p>
+<p>Base personal record. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salespersongroup">SalesPersonGroup</h3>
-<p>The sales person group to which this sales person is assigned. [Required] [Filter(multi eq)]</p>
+<p>The sales person group to which this sales person is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Distribution.SalesPersonGroups.html">SalesPersonGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

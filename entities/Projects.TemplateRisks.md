@@ -27,15 +27,15 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Description](Projects.TemplateRisks.md#description) | string (nullable) | The description of this TemplateRisk. 
 | [Id](Projects.TemplateRisks.md#id) | guid |  
-| [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal | The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)] 
-| [ProbabilityPercent](Projects.TemplateRisks.md#probabilitypercent) | decimal | The probability of the risk occurring. [Required] [Default(0)] 
-| [RiskName](Projects.TemplateRisks.md#riskname) | string | The name of the risk. [Required] 
+| [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
+| [ProbabilityPercent](Projects.TemplateRisks.md#probabilitypercent) | decimal | The probability of the risk occurring. `Required` `Default(0)` 
+| [RiskName](Projects.TemplateRisks.md#riskname) | string | The name of the risk. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) | [Templates](Projects.Templates.md) | The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) | [Templates](Projects.Templates.md) | The `Template`(Projects.Templates.md) to which this TemplateRisk belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -57,7 +57,7 @@ _Default Value_: **NewGuid**
 
 ### ImpactPercent
 
-The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)]
+The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -66,7 +66,7 @@ _Default Value_: **0**
 
 ### ProbabilityPercent
 
-The probability of the risk occurring. [Required] [Default(0)]
+The probability of the risk occurring. `Required` `Default(0)`
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Default Value_: **0**
 
 ### RiskName
 
-The name of the risk. [Required]
+The name of the risk. `Required`
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### ProjectTemplate
 
-The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner]
+The `Template`(Projects.Templates.md) to which this TemplateRisk belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Projects.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

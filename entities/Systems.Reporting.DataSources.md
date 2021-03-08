@@ -24,24 +24,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseQueryName](Systems.Reporting.DataSources.md#basequeryname) | string | The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)] 
-| [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default("M")] [Filter(eq)] 
+| [BaseQueryName](Systems.Reporting.DataSources.md#basequeryname) | string | The name of the query or table that is used for root reference point of the loaded data. `Required` `Filter(eq;like)` 
+| [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . `Required` `Default("M")` `Filter(eq)` 
 | [Id](Systems.Reporting.DataSources.md#id) | guid |  
-| [Name](Systems.Reporting.DataSources.md#name) | string | The name of the data source. [Required] [Filter(eq;like)] 
-| [ShowParentTables](Systems.Reporting.DataSources.md#showparenttables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_<br />Queries_Table are automaticaly included in the report or not. [Required] [Default(false)] 
+| [Name](Systems.Reporting.DataSources.md#name) | string | The name of the data source. `Required` `Filter(eq;like)` 
+| [ShowParentTables](Systems.Reporting.DataSources.md#showparenttables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_<br />Queries_Table are automaticaly included in the report or not. `Required` `Default(false)` 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Queries | [DataSourceQueries](Systems.Reporting.DataSourceQueries.md) | List of [DataSourceQuery](Systems.Reporting.DataSourceQueries.md) child objects, based on the [Systems.Reporting.DataSourceQuery.DataSource](Systems.Reporting.DataSourceQueries.md#datasource) back reference 
+| Queries | [DataSourceQueries](Systems.Reporting.DataSourceQueries.md) | List of `DataSourceQuery`(Systems.Reporting.DataSourceQueries.md) child objects, based on the `Systems.Reporting.DataSourceQuery.DataSource`(Systems.Reporting.DataSourceQueries.md#datasource) back reference 
 
 
 ## Attribute Details
 
 ### BaseQueryName
 
-The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]
+The name of the query or table that is used for root reference point of the loaded data. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -49,10 +49,10 @@ _Supports Order By_: **False**
 
 ### DataSourceType
 
-'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default("M")] [Filter(eq)]
+'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . `Required` `Default("M")` `Filter(eq)`
 
 _Type_: **[DataSourceType](Systems.Reporting.DataSources.md#datasourcetype)**  
-Allowed values for the [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) data attribute  
+Allowed values for the `DataSourceType`(Systems.Reporting.DataSources.md#datasourcetype) data attribute  
 _Allowed Values (Systems.Reporting.DataSourcesRepository.DataSourceType Enum Members)_  
 
 | Value | Description |
@@ -74,7 +74,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of the data source. [Required] [Filter(eq;like)]
+The name of the data source. `Required` `Filter(eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### ShowParentTables
 
-Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)]
+Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. `Required` `Default(false)`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  

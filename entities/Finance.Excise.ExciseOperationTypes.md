@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Excise.ExciseOperationTypes.md#code) | string | The unique code of the ExciseOperationType. [Required] [Filter(multi eq;like)] 
+| [Code](Finance.Excise.ExciseOperationTypes.md#code) | string | The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)` 
 | [Id](Finance.Excise.ExciseOperationTypes.md#id) | guid |  
-| [Name](Finance.Excise.ExciseOperationTypes.md#name) | string | The name of this ExciseOperationType. [Required] [Filter(multi eq;like)] 
+| [Name](Finance.Excise.ExciseOperationTypes.md#name) | string | The name of this ExciseOperationType. `Required` `Filter(multi eq;like)` 
 | [Notes](Finance.Excise.ExciseOperationTypes.md#notes) | string (nullable) | Notes for this ExciseOperationType. 
 
 
@@ -33,7 +33,7 @@ Aggregate Tree
 
 ### Code
 
-The unique code of the ExciseOperationType. [Required] [Filter(multi eq;like)]
+The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this ExciseOperationType. [Required] [Filter(multi eq;like)]
+The name of this ExciseOperationType. `Required` `Filter(multi eq;like)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  

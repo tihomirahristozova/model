@@ -1,8 +1,7 @@
----
+﻿---
 uid: General
 ---
 # General Namespace
-
 ## Namespaces
 - [Contacts](General.Contacts.md)  
 - [Geography](General.Geography.md)  
@@ -59,4 +58,6 @@ uid: General
 - [ScheduledDocumentEvents](General.ScheduledDocumentEvents.md)  
 - [SequenceGenerators](General.SequenceGenerators.md)  
 - [Sequences](General.Sequences.md)  
+
+quences.md)  
 

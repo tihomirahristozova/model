@@ -31,8 +31,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Crm.Marketing.TargetGroupMembers.md#party) | [Parties](General.Contacts.Parties.md) | The member party. [Required] [Filter(multi eq)] |
-| [TargetGroup](Crm.Marketing.TargetGroupMembers.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) | The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner] |
+| [Party](Crm.Marketing.TargetGroupMembers.md#party) | [Parties](General.Contacts.Parties.md) | The member party. `Required` `Filter(multi eq)` |
+| [TargetGroup](Crm.Marketing.TargetGroupMembers.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) | The target group, which includes the member party. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### Party
 
-The member party. [Required] [Filter(multi eq)]
+The member party. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
@@ -57,7 +57,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### TargetGroup
 
-The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner]
+The target group, which includes the member party. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md)**  
 _Indexed_: **True**  

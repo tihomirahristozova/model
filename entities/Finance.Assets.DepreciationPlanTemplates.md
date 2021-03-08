@@ -32,9 +32,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#assetcategory) | [AssetCategories](Finance.Assets.AssetCategories.md) | Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner] |
-| [DepreciationMethod](Finance.Assets.DepreciationPlanTemplates.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by default for the depreciation plans created by this template. [Required] [Filter(multi eq)] |
-| [ValuationModel](Finance.Assets.DepreciationPlanTemplates.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model for which this template is defined. [Required] [Filter(multi eq)] |
+| [AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#assetcategory) | [AssetCategories](Finance.Assets.AssetCategories.md) | Asset category for which this template is defined. `Required` `Filter(multi eq)` `Owner` |
+| [DepreciationMethod](Finance.Assets.DepreciationPlanTemplates.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by default for the depreciation plans created by this template. `Required` `Filter(multi eq)` |
+| [ValuationModel](Finance.Assets.DepreciationPlanTemplates.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model for which this template is defined. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### AssetCategory
 
-Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner]
+Asset category for which this template is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
 _Indexed_: **True**  
@@ -67,14 +67,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DepreciationMethod
 
-Depreciation method by default for the depreciation plans created by this template. [Required] [Filter(multi eq)]
+Depreciation method by default for the depreciation plans created by this template. `Required` `Filter(multi eq)`
 
 _Type_: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationModel
 
-Valuation model for which this template is defined. [Required] [Filter(multi eq)]
+Valuation model for which this template is defined. `Required` `Filter(multi eq)`
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

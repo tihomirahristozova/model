@@ -110,12 +110,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.WorkReportMaterials.html#quantity">Quantity</a></td>
 <td>decimal</td>
-<td>The consumed quantity of the material. [Required] [Default(0)] [Filter(eq;like)]</td>
+<td>The consumed quantity of the material. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportMaterials.html#quantitybase">QuantityBase</a></td>
 <td>decimal</td>
-<td>The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [Filter(eq;like)] [ReadOnly]</td>
+<td>The equivalence of Quantity in the base measurement unit of the Material. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,22 +132,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.WorkReportMaterials.html#materialproduct">MaterialProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The consumed material. [Required] [Filter(multi eq)]</td>
+<td>The consumed material. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportMaterials.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.ProjectTasks.html">ProjectTasks</a></td>
-<td>The project task for which the materials are reported. [Required] [Filter(multi eq)]</td>
+<td>The project task for which the materials are reported. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportMaterials.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportMaterials.html#workreport">WorkReport</a></td>
 <td><a href="Projects.WorkReports.html">WorkReports</a></td>
-<td>The <a href="Projects.WorkReportMaterials.html#workreport">WorkReport</a> to which this WorkReportMaterial belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <code>WorkReport</code>(Projects.WorkReportMaterials.md#workreport) to which this WorkReportMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,13 +158,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The consumed quantity of the material. [Required] [Default(0)] [Filter(eq;like)]</p>
+<p>The consumed quantity of the material. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [Filter(eq;like)] [ReadOnly]</p>
+<p>The equivalence of Quantity in the base measurement unit of the Material. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -173,11 +173,11 @@ Aggregate Root:<br>
 <code>IIF( ( ( obj.QuantityUnit != null) AndAlso ( obj.MaterialProduct != null)), new Quantity( obj.Quantity, obj.QuantityUnit).ConvertTo( obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="materialproduct">MaterialProduct</h3>
-<p>The consumed material. [Required] [Filter(multi eq)]</p>
+<p>The consumed material. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The project task for which the materials are reported. [Required] [Filter(multi eq)]</p>
+<p>The project task for which the materials are reported. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -185,11 +185,11 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.WorkReport.ProjectTask</code></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workreport">WorkReport</h3>
-<p>The <a href="Projects.WorkReportMaterials.html#workreport">WorkReport</a> to which this WorkReportMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <code>WorkReport</code>(Projects.WorkReportMaterials.md#workreport) to which this WorkReportMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.WorkReports.html">WorkReports</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -105,12 +105,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonGroups.html#code">Code</a></td>
 <td>string</td>
-<td>The unique code of the SalesPersonGroup. [Required] [Filter(eq;like)] [ORD]</td>
+<td>The unique code of the SalesPersonGroup. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonGroups.html#fullpath">FullPath</a></td>
 <td>string (nullable)</td>
-<td>Full path to this item in the form /root/child1/../leaf/. [Filter(eq;like)] [ReadOnly]</td>
+<td>Full path to this item in the form /root/child1/../leaf/. <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonGroups.html#id">Id</a></td>
@@ -120,7 +120,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonGroups.html#name">Name</a></td>
 <td>string</td>
-<td>The name of this SalesPersonGroup. [Required] [Filter(eq;like)]</td>
+<td>The name of this SalesPersonGroup. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,24 +137,24 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonGroups.html#managerperson">ManagerPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The manager of the group. null when there is no manager. [Filter(multi eq)]</td>
+<td>The manager of the group. null when there is no manager. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonGroups.html#parent">Parent</a></td>
 <td><a href="Crm.Distribution.SalesPersonGroups.html">SalesPersonGroups</a> (nullable)</td>
-<td>The parent sales person group in the hierarchy. [Filter(multi eq)]</td>
+<td>The parent sales person group in the hierarchy. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The unique code of the SalesPersonGroup. [Required] [Filter(eq;like)] [ORD]</p>
+<p>The unique code of the SalesPersonGroup. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="fullpath">FullPath</h3>
-<p>Full path to this item in the form /root/child1/../leaf/. [Filter(eq;like)] [ReadOnly]</p>
+<p>Full path to this item in the form /root/child1/../leaf/. <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -164,17 +164,17 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this SalesPersonGroup. [Required] [Filter(eq;like)]</p>
+<p>The name of this SalesPersonGroup. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="managerperson">ManagerPerson</h3>
-<p>The manager of the group. null when there is no manager. [Filter(multi eq)]</p>
+<p>The manager of the group. null when there is no manager. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
-<p>The parent sales person group in the hierarchy. [Filter(multi eq)]</p>
+<p>The parent sales person group in the hierarchy. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Distribution.SalesPersonGroups.html">SalesPersonGroups</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

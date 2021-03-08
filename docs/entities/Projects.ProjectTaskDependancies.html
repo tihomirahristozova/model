@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectTaskDependancies.html#dependancytype">DependancyType</a></td>
 <td><a href="Projects.ProjectTaskDependancies.html#dependancytype">DependancyType</a></td>
-<td>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default(&quot;FS&quot;)]</td>
+<td>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). <code>Required</code> <code>Default(&quot;FS&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskDependancies.html#id">Id</a></td>
@@ -127,20 +127,20 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.ProjectTaskDependancies.html#dependsontask">DependsOnTask</a></td>
 <td><a href="Projects.ProjectTasks.html">ProjectTasks</a></td>
-<td>The task on which Project_Task depends. [Required] [Filter(multi eq)]</td>
+<td>The task on which Project_Task depends. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskDependancies.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.ProjectTasks.html">ProjectTasks</a></td>
-<td>The task which depends on another task. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The task which depends on another task. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="dependancytype">DependancyType</h3>
-<p>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default(&quot;FS&quot;)]</p>
+<p>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). <code>Required</code> <code>Default(&quot;FS&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTaskDependancies.html#dependancytype">DependancyType</a></strong><br>
-Allowed values for the <a href="Projects.ProjectTaskDependancies.html#dependancytype">DependancyType</a> data attribute<br>
+Allowed values for the <code>DependancyType</code>(Projects.ProjectTaskDependancies.md#dependancytype) data attribute<br>
 <em>Allowed Values (Projects.ProjectTaskDependanciesRepository.DependancyType Enum Members)</em></p>
 <table>
 <thead>
@@ -182,11 +182,11 @@ Allowed values for the <a href="Projects.ProjectTaskDependancies.html#dependancy
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dependsontask">DependsOnTask</h3>
-<p>The task on which Project_Task depends. [Required] [Filter(multi eq)]</p>
+<p>The task on which Project_Task depends. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The task which depends on another task. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The task which depends on another task. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -109,27 +109,27 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationsecrethash">ApplicationSecretHash</a></td>
 <td>string (nullable)</td>
-<td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. [Introduced in version 20.1]</td>
+<td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationuri">ApplicationUri</a></td>
 <td>string</td>
-<td>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. [Required] [Filter(eq)]</td>
+<td>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#basicauthenticationallowed">BasicAuthenticationAllowed</a></td>
 <td>boolean</td>
-<td>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></td>
 <td><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></td>
-<td>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default(&quot;C&quot;)] [Introduced in version 20.1]</td>
+<td>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>Date and time (in UTC) when the application was registered. [Required] [Default(NowUtc)] [Filter(eq;ge;le)]</td>
+<td>Date and time (in UTC) when the application was registered. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#id">Id</a></td>
@@ -139,12 +139,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonateascommunityuserallowed">ImpersonateAsCommunity<br>UserAllowed</a></td>
 <td>boolean</td>
-<td>Allows the application to request login from external users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Allows the application to request login from external users and operate on their behalf. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonateasinternaluserallowed">ImpersonateAsInternal<br>UserAllowed</a></td>
 <td>boolean</td>
-<td>Allows the application to request login from internal users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Allows the application to request login from internal users and operate on their behalf. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonateloginurl">ImpersonateLoginUrl</a></td>
@@ -159,12 +159,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#isenabled">IsEnabled</a></td>
 <td>boolean</td>
-<td>Specifies whether the application is enabled for login. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the application is enabled for login. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#name">Name</a></td>
 <td>string</td>
-<td>The multi-language name of the application. [Required] [Filter(eq;like)]</td>
+<td>The multi-language name of the application. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#notes">Notes</a></td>
@@ -174,12 +174,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#scope">Scope</a></td>
 <td>string (nullable)</td>
-<td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). [Introduced in version 20.1]</td>
+<td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#systemuserallowed">SystemUserAllowed</a></td>
 <td>boolean</td>
-<td>Allows this application to logon as a service. [Required] [Default(false)] [Filter(eq)]</td>
+<td>Allows this application to logon as a service. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#systemuserloginurl">SystemUserLoginUrl</a></td>
@@ -201,7 +201,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#systemuser">SystemUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user, which will be used when the application logins as a service. [Filter(multi eq)]</td>
+<td>The user, which will be used when the application logins as a service. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -218,31 +218,31 @@ Default Search Member:<br>
 <tr>
 <td>Authorizations</td>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html">TrustedApplicationAuthorizations</a></td>
-<td>List of [TrustedApplication<br>Authorization](Systems.Security.TrustedApplication<br>Authorizations.md) child objects, based on the [Systems.Security.TrustedApplication<br>Authorization.TrustedApplication](Systems.Security.TrustedApplication<br>Authorizations.md#trustedapplication) back reference</td>
+<td>List of <code>TrustedApplication&lt;br /&gt;Authorization</code>(Systems.Security.TrustedApplication<br>Authorizations.md) child objects, based on the <code>Systems.Security.TrustedApplication&lt;br /&gt;Authorization.TrustedApplication</code>(Systems.Security.TrustedApplication<br>Authorizations.md#trustedapplication) back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationsecrethash">ApplicationSecretHash</h3>
-<p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. [Introduced in version 20.1]</p>
+<p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="applicationuri">ApplicationUri</h3>
-<p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. [Required] [Filter(eq)]</p>
+<p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="basicauthenticationallowed">BasicAuthenticationAllowed</h3>
-<p>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="clienttype">ClientType</h3>
-<p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default(&quot;C&quot;)] [Introduced in version 20.1]</p>
+<p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></strong><br>
-Allowed values for the <a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a> data attribute<br>
+Allowed values for the <code>ClientType</code>(Systems.Security.TrustedApplications.md#clienttype) data attribute<br>
 <em>Allowed Values (Systems.Security.TrustedApplicationsRepository.ClientType Enum Members)</em></p>
 <table>
 <thead>
@@ -266,7 +266,7 @@ Allowed values for the <a href="Systems.Security.TrustedApplications.html#client
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Confidential</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>Date and time (in UTC) when the application was registered. [Required] [Default(NowUtc)] [Filter(eq;ge;le)]</p>
+<p>Date and time (in UTC) when the application was registered. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -277,13 +277,13 @@ Allowed values for the <a href="Systems.Security.TrustedApplications.html#client
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="impersonateascommunityuserallowed">ImpersonateAsCommunityUserAllowed</h3>
-<p>Allows the application to request login from external users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Allows the application to request login from external users and operate on their behalf. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="impersonateasinternaluserallowed">ImpersonateAsInternalUserAllowed</h3>
-<p>Allows the application to request login from internal users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Allows the application to request login from internal users and operate on their behalf. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -299,13 +299,13 @@ Allowed values for the <a href="Systems.Security.TrustedApplications.html#client
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isenabled">IsEnabled</h3>
-<p>Specifies whether the application is enabled for login. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the application is enabled for login. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
-<p>The multi-language name of the application. [Required] [Filter(eq;like)]</p>
+<p>The multi-language name of the application. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -315,12 +315,12 @@ Allowed values for the <a href="Systems.Security.TrustedApplications.html#client
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scope">Scope</h3>
-<p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). [Introduced in version 20.1]</p>
+<p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="systemuserallowed">SystemUserAllowed</h3>
-<p>Allows this application to logon as a service. [Required] [Default(false)] [Filter(eq)]</p>
+<p>Allows this application to logon as a service. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -332,7 +332,7 @@ Allowed values for the <a href="Systems.Security.TrustedApplications.html#client
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="systemuser">SystemUser</h3>
-<p>The user, which will be used when the application logins as a service. [Filter(multi eq)]</p>
+<p>The user, which will be used when the application logins as a service. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

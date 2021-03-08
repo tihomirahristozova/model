@@ -26,18 +26,18 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.DocumentStateChanges.md#id) | guid |  
-| [NewState](General.DocumentStateChanges.md#newstate) | [NewState](General.DocumentStateChanges.md#newstate) | The new state after the change. [Required] [Filter(eq)] 
-| [SystemInitiated](General.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly] 
-| [UpdateTime](General.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect. [Required] [Filter(ge;le)] [ORD] 
-| [UpdateUser](General.DocumentStateChanges.md#updateuser) | string | The login name of the user, who made the status change. [Required] [Filter(eq)] 
-| [Void](General.DocumentStateChanges.md#void) | boolean | True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1] 
+| [NewState](General.DocumentStateChanges.md#newstate) | [NewState](General.DocumentStateChanges.md#newstate) | The new state after the change. `Required` `Filter(eq)` 
+| [SystemInitiated](General.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action. `Required` `Default(false)` `ReadOnly` 
+| [UpdateTime](General.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect. `Required` `Filter(ge;le)` `ORD` 
+| [UpdateUser](General.DocumentStateChanges.md#updateuser) | string | The login name of the user, who made the status change. `Required` `Filter(eq)` 
+| [Void](General.DocumentStateChanges.md#void) | boolean | True if the document is voided with this change. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentStateChanges.md#document) | [Documents](General.Documents.md) | The document which has changed state. [Required] [Filter(multi eq)] [Owner] |
-| [UserStatus](General.DocumentStateChanges.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The new user status after the change. [Filter(multi eq)] |
+| [Document](General.DocumentStateChanges.md#document) | [Documents](General.Documents.md) | The document which has changed state. `Required` `Filter(multi eq)` `Owner` |
+| [UserStatus](General.DocumentStateChanges.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The new user status after the change. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -51,10 +51,10 @@ _Default Value_: **NewGuid**
 
 ### NewState
 
-The new state after the change. [Required] [Filter(eq)]
+The new state after the change. `Required` `Filter(eq)`
 
 _Type_: **[NewState](General.DocumentStateChanges.md#newstate)**  
-Allowed values for the [NewState](General.DocumentStateChanges.md#newstate) data attribute  
+Allowed values for the `NewState`(General.DocumentStateChanges.md#newstate) data attribute  
 _Allowed Values (General.DocumentStateChangesRepository.NewState Enum Members)_  
 
 | Value | Description |
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### SystemInitiated
 
-Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly]
+Specifies whether the state change was caused by system process or from user action. `Required` `Default(false)` `ReadOnly`
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -81,7 +81,7 @@ _Default Value_: **False**
 
 ### UpdateTime
 
-The time when the change took effect. [Required] [Filter(ge;le)] [ORD]
+The time when the change took effect. `Required` `Filter(ge;le)` `ORD`
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -89,7 +89,7 @@ _Supports Order By_: **True**
 
 ### UpdateUser
 
-The login name of the user, who made the status change. [Required] [Filter(eq)]
+The login name of the user, who made the status change. `Required` `Filter(eq)`
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 ### Void
 
-True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1]
+True if the document is voided with this change. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1`
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -109,7 +109,7 @@ _Default Value_: **False**
 
 ### Document
 
-The document which has changed state. [Required] [Filter(multi eq)] [Owner]
+The document which has changed state. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
@@ -117,7 +117,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### UserStatus
 
-The new user status after the change. [Filter(multi eq)]
+The new user status after the change. `Filter(multi eq)`
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

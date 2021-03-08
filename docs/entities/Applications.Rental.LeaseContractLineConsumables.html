@@ -105,7 +105,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#consumablequantity">ConsumableQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The quantity sold of the consumable. [Unit: ConsumableQuantityUnit] [Required] [Default(0)]</td>
+<td>The quantity sold of the consumable. <code>Unit: ConsumableQuantityUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#id">Id</a></td>
@@ -115,7 +115,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the consumable within the lease contract line. [Required] [Filter(eq;ge;le)]</td>
+<td>Consecutive number of the consumable within the lease contract line. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -132,28 +132,28 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#consumablequantityunit">ConsumableQuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]</td>
+<td>The measurement unit of Consumable Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#leaseline">LeaseLine</a></td>
 <td><a href="Applications.Rental.LeaseContractLines.html">LeaseContractLines</a></td>
-<td>Lease line with which the current consumable is given. [Required] [Filter(multi eq)] [Owner]</td>
+<td>Lease line with which the current consumable is given. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The consumable to be sold accompanying the asset. [Required] [Filter(multi eq)]</td>
+<td>The consumable to be sold accompanying the asset. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>Store from which the consumable is issued. [Required] [Filter(multi eq)]</td>
+<td>Store from which the consumable is issued. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="consumablequantity">ConsumableQuantity</h3>
-<p>The quantity sold of the consumable. [Unit: ConsumableQuantityUnit] [Required] [Default(0)]</p>
+<p>The quantity sold of the consumable. <code>Unit: ConsumableQuantityUnit</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -164,7 +164,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the consumable within the lease contract line. [Required] [Filter(eq;ge;le)]</p>
+<p>Consecutive number of the consumable within the lease contract line. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -174,20 +174,20 @@ Aggregate Root:<br>
 <code>( obj.LeaseLine.Consumables.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="consumablequantityunit">ConsumableQuantityUnit</h3>
-<p>The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]</p>
+<p>The measurement unit of Consumable Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="leaseline">LeaseLine</h3>
-<p>Lease line with which the current consumable is given. [Required] [Filter(multi eq)] [Owner]</p>
+<p>Lease line with which the current consumable is given. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContractLines.html">LeaseContractLines</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>The consumable to be sold accompanying the asset. [Required] [Filter(multi eq)]</p>
+<p>The consumable to be sold accompanying the asset. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
-<p>Store from which the consumable is issued. [Required] [Filter(multi eq)]</p>
+<p>Store from which the consumable is issued. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

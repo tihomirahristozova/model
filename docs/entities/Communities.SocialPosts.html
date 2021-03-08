@@ -105,7 +105,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Communities.SocialPosts.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC), when the post was created. [Required]</td>
+<td>The exact server time (in UTC), when the post was created. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Communities.SocialPosts.html#id">Id</a></td>
@@ -115,12 +115,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Communities.SocialPosts.html#lastinteractiontimeutc">LastInteractionTimeUtc</a></td>
 <td>datetime</td>
-<td>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required]</td>
+<td>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Communities.SocialPosts.html#posttext">PostText</a></td>
 <td>string</td>
-<td>The post contents in clear text. [Required]</td>
+<td>The post contents in clear text. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -137,18 +137,18 @@ Default Search Member:<br>
 <tr>
 <td><a href="Communities.SocialPosts.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.SocialGroups.html">SocialGroups</a></td>
-<td>The group in which the post is made. [Required] [Filter(multi eq)]</td>
+<td>The group in which the post is made. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Communities.SocialPosts.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who made the post. [Required] [Filter(multi eq)]</td>
+<td>The user, who made the post. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact server time (in UTC), when the post was created. [Required]</p>
+<p>The exact server time (in UTC), when the post was created. <code>Required</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -158,22 +158,22 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastinteractiontimeutc">LastInteractionTimeUtc</h3>
-<p>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required]</p>
+<p>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. <code>Required</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="posttext">PostText</h3>
-<p>The post contents in clear text. [Required]</p>
+<p>The post contents in clear text. <code>Required</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="socialgroup">SocialGroup</h3>
-<p>The group in which the post is made. [Required] [Filter(multi eq)]</p>
+<p>The group in which the post is made. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Communities.SocialGroups.html">SocialGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<p>The user, who made the post. [Required] [Filter(multi eq)]</p>
+<p>The user, who made the post. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

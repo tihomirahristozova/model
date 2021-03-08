@@ -25,22 +25,22 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#agreedquantity) | [Quantity](../data-types.md#quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly] 
+| [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#agreedquantity) | [Quantity](../data-types.md#quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. `Unit: ServiceAgreementMaterial.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
 | [Id](Applications.Service.ServiceActivityAgreedMaterials.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) | [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | The [ServiceActivityMaterial](Applications.Service.ServiceActivity<br />AgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivity<br />AgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
-| [ServiceAgreementMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceagreementmaterial) | [ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md) | Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly] |
+| [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) | [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | The `ServiceActivityMaterial`(Applications.Service.ServiceActivity<br />AgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivity<br />AgreedMaterial belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [ServiceAgreementMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceagreementmaterial) | [ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md) | Service agreement material line that records the paid or agreed in advance material. `Required` `Filter(multi eq)` `ReadOnly` |
 
 
 ## Attribute Details
 
 ### AgreedQuantity
 
-Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly]
+Quantity from the service agreement material line that is accounted for this service activity material line. `Unit: ServiceAgreementMaterial.QuantityUnit` `Required` `Default(0)` `ReadOnly`
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### ServiceActivityMaterial
 
-The [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
+The `ServiceActivityMaterial`(Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 _Type_: **[ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)**  
 _Indexed_: **True**  
@@ -67,7 +67,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ServiceAgreementMaterial
 
-Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly]
+Service agreement material line that records the paid or agreed in advance material. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

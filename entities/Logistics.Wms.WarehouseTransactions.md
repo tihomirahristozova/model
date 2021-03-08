@@ -23,35 +23,35 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CatchQuantity](Logistics.Wms.WarehouseTransactions.md#catchquantity) | decimal (nullable) | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. [Filter(eq;ge;le)] 
+| [CatchQuantity](Logistics.Wms.WarehouseTransactions.md#catchquantity) | decimal (nullable) | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)` 
 | [CreationTimeUtc](Logistics.Wms.WarehouseTransactions.md#creationtimeutc) | datetime |  
-| [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT. [Required] [Default("I")] [Filter(eq)] 
+| [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)` 
 | [Id](Logistics.Wms.WarehouseTransactions.md#id) | guid |  
-| [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. [Required] [Default(0)] [Filter(multi eq;ge;le)] 
+| [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CatchQuantityUnit](Logistics.Wms.WarehouseTransactions.md#catchquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of the catch quantity. null when catch measurement is not configured for the product. [Filter(multi eq)] |
+| [CatchQuantityUnit](Logistics.Wms.WarehouseTransactions.md#catchquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of the catch quantity. null when catch measurement is not configured for the product. `Filter(multi eq)` |
 | [CreationUser](Logistics.Wms.WarehouseTransactions.md#creationuser) | [Users](Systems.Security.Users.md) |  |
-| [LogisticUnit](Logistics.Wms.WarehouseTransactions.md#logisticunit) | [LogisticUnits](Logistics.LogisticUnits.md) (nullable) | Logistic unit, which was transacted. null when the transaction was not for a logistic unit. [Filter(multi eq)] |
-| [Lot](Logistics.Wms.WarehouseTransactions.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot which was transacted. null when the transaction was not for a specific lot. [Filter(multi eq)] |
-| [Product](Logistics.Wms.WarehouseTransactions.md#product) | [Products](General.Products.Products.md) | The product, which was transacted. [Required] [Filter(multi eq)] |
-| [ProductVariant](Logistics.Wms.WarehouseTransactions.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | The product variant, which was transacted. null when the transaction was not for a product variant. [Filter(multi eq)] |
-| [QuantityUnit](Logistics.Wms.WarehouseTransactions.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of quantity. [Required] [Filter(multi eq)] |
-| [SerialNumber](Logistics.Wms.WarehouseTransactions.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number which was transacted. null when the transaction was not for a specific serial number. [Filter(multi eq)] |
-| [Warehouse](Logistics.Wms.WarehouseTransactions.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the transaction occurred. [Required] [Filter(multi eq)] |
-| [WarehouseLocation](Logistics.Wms.WarehouseTransactions.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location, where the transaction occurred. [Required] [Filter(multi eq)] |
-| [WarehouseOrder](Logistics.Wms.WarehouseTransactions.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) (nullable) | The order which created this transaction. null when this transaction was not based on order. [Filter(multi eq)] |
-| [WarehouseOrderLine](Logistics.Wms.WarehouseTransactions.md#warehouseorderline) | [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable) | The order line which created this transaction. null when this transaction was not based on order line. [Filter(multi eq)] |
+| [LogisticUnit](Logistics.Wms.WarehouseTransactions.md#logisticunit) | [LogisticUnits](Logistics.LogisticUnits.md) (nullable) | Logistic unit, which was transacted. null when the transaction was not for a logistic unit. `Filter(multi eq)` |
+| [Lot](Logistics.Wms.WarehouseTransactions.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot which was transacted. null when the transaction was not for a specific lot. `Filter(multi eq)` |
+| [Product](Logistics.Wms.WarehouseTransactions.md#product) | [Products](General.Products.Products.md) | The product, which was transacted. `Required` `Filter(multi eq)` |
+| [ProductVariant](Logistics.Wms.WarehouseTransactions.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | The product variant, which was transacted. null when the transaction was not for a product variant. `Filter(multi eq)` |
+| [QuantityUnit](Logistics.Wms.WarehouseTransactions.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of quantity. `Required` `Filter(multi eq)` |
+| [SerialNumber](Logistics.Wms.WarehouseTransactions.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number which was transacted. null when the transaction was not for a specific serial number. `Filter(multi eq)` |
+| [Warehouse](Logistics.Wms.WarehouseTransactions.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the transaction occurred. `Required` `Filter(multi eq)` |
+| [WarehouseLocation](Logistics.Wms.WarehouseTransactions.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location, where the transaction occurred. `Required` `Filter(multi eq)` |
+| [WarehouseOrder](Logistics.Wms.WarehouseTransactions.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) (nullable) | The order which created this transaction. null when this transaction was not based on order. `Filter(multi eq)` |
+| [WarehouseOrderLine](Logistics.Wms.WarehouseTransactions.md#warehouseorderline) | [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable) | The order line which created this transaction. null when this transaction was not based on order line. `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### CatchQuantity
 
-Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. [Filter(eq;ge;le)]
+Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)`
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -66,10 +66,10 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### Direction
 
-Direction of the transaction - I=IN, O=OUT. [Required] [Default("I")] [Filter(eq)]
+Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)`
 
 _Type_: **[Direction](Logistics.Wms.WarehouseTransactions.md#direction)**  
-Allowed values for the [Direction](Logistics.Wms.WarehouseTransactions.md#direction) data attribute  
+Allowed values for the `Direction`(Logistics.Wms.WarehouseTransactions.md#direction) data attribute  
 _Allowed Values (Logistics.Wms.WarehouseTransactionsRepository.Direction Enum Members)_  
 
 | Value | Description |
@@ -90,7 +90,7 @@ _Default Value_: **NewGuid**
 
 ### Quantity
 
-The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. [Required] [Default(0)] [Filter(multi eq;ge;le)]
+The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)`
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -102,7 +102,7 @@ _Default Value_: **0**
 
 ### CatchQuantityUnit
 
-The measurement unit of the catch quantity. null when catch measurement is not configured for the product. [Filter(multi eq)]
+The measurement unit of the catch quantity. null when catch measurement is not configured for the product. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -114,7 +114,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### LogisticUnit
 
-Logistic unit, which was transacted. null when the transaction was not for a logistic unit. [Filter(multi eq)]
+Logistic unit, which was transacted. null when the transaction was not for a logistic unit. `Filter(multi eq)`
 
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md) (nullable)**  
 _Indexed_: **True**  
@@ -122,7 +122,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Lot
 
-The lot which was transacted. null when the transaction was not for a specific lot. [Filter(multi eq)]
+The lot which was transacted. null when the transaction was not for a specific lot. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Indexed_: **True**  
@@ -130,7 +130,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Product
 
-The product, which was transacted. [Required] [Filter(multi eq)]
+The product, which was transacted. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
@@ -138,7 +138,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ProductVariant
 
-The product variant, which was transacted. null when the transaction was not for a product variant. [Filter(multi eq)]
+The product variant, which was transacted. null when the transaction was not for a product variant. `Filter(multi eq)`
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Indexed_: **True**  
@@ -146,14 +146,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### QuantityUnit
 
-The measurement unit of quantity. [Required] [Filter(multi eq)]
+The measurement unit of quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
-The serial number which was transacted. null when the transaction was not for a specific serial number. [Filter(multi eq)]
+The serial number which was transacted. null when the transaction was not for a specific serial number. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Indexed_: **True**  
@@ -161,14 +161,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Warehouse
 
-The warehouse in which the transaction occurred. [Required] [Filter(multi eq)]
+The warehouse in which the transaction occurred. `Required` `Filter(multi eq)`
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseLocation
 
-The warehouse location, where the transaction occurred. [Required] [Filter(multi eq)]
+The warehouse location, where the transaction occurred. `Required` `Filter(multi eq)`
 
 _Type_: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
 _Indexed_: **True**  
@@ -176,14 +176,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### WarehouseOrder
 
-The order which created this transaction. null when this transaction was not based on order. [Filter(multi eq)]
+The order which created this transaction. null when this transaction was not based on order. `Filter(multi eq)`
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseOrderLine
 
-The order line which created this transaction. null when this transaction was not based on order line. [Filter(multi eq)]
+The order line which created this transaction. null when this transaction was not based on order line. `Filter(multi eq)`
 
 _Type_: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable)**  
 _Indexed_: **True**  

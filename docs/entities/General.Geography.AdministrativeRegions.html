@@ -105,12 +105,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#code">Code</a></td>
 <td>string</td>
-<td>Administrative code of country territorial subdivision. [Required] [Filter(eq;like)]</td>
+<td>Administrative code of country territorial subdivision. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#fullpath">FullPath</a></td>
 <td>string (nullable)</td>
-<td>Full identification path of the current country territorial subdivision. [Filter(eq;like)]</td>
+<td>Full identification path of the current country territorial subdivision. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#id">Id</a></td>
@@ -120,22 +120,22 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Name of country territorial subdivision. [Required] [Filter(like)]</td>
+<td>Name of country territorial subdivision. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#parentfullpath">ParentFullPath</a></td>
 <td>string (nullable)</td>
-<td>Parent region of the current territorial subdivision. [Filter(eq;like)]</td>
+<td>Parent region of the current territorial subdivision. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#validfrom">ValidFrom</a></td>
 <td>date (nullable)</td>
-<td>Start date of validity of this administrative division. null when the starting date is unknown in the past. [Filter(ge;le)]</td>
+<td>Start date of validity of this administrative division. null when the starting date is unknown in the past. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#validto">ValidTo</a></td>
 <td>date (nullable)</td>
-<td>End date of validity of this administative division. null when the division is still active or ending date is unknown. [Filter(ge;le)]</td>
+<td>End date of validity of this administative division. null when the division is still active or ending date is unknown. <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -152,18 +152,18 @@ Default Search Member:<br>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#country">Country</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a></td>
-<td>Country of the territorial subdivision. [Required] [Filter(multi eq)]</td>
+<td>Country of the territorial subdivision. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Administrative code of country territorial subdivision. [Required] [Filter(eq;like)]</p>
+<p>Administrative code of country territorial subdivision. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="fullpath">FullPath</h3>
-<p>Full identification path of the current country territorial subdivision. [Filter(eq;like)]</p>
+<p>Full identification path of the current country territorial subdivision. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -173,28 +173,28 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of country territorial subdivision. [Required] [Filter(like)]</p>
+<p>Name of country territorial subdivision. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentfullpath">ParentFullPath</h3>
-<p>Parent region of the current territorial subdivision. [Filter(eq;like)]</p>
+<p>Parent region of the current territorial subdivision. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validfrom">ValidFrom</h3>
-<p>Start date of validity of this administrative division. null when the starting date is unknown in the past. [Filter(ge;le)]</p>
+<p>Start date of validity of this administrative division. null when the starting date is unknown in the past. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validto">ValidTo</h3>
-<p>End date of validity of this administative division. null when the division is still active or ending date is unknown. [Filter(ge;le)]</p>
+<p>End date of validity of this administative division. null when the division is still active or ending date is unknown. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="country">Country</h3>
-<p>Country of the territorial subdivision. [Required] [Filter(multi eq)]</p>
+<p>Country of the territorial subdivision. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
