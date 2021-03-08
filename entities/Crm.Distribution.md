@@ -8,5 +8,3 @@ uid: Crm.Distribution
 - [SalesPersonTargetLines](Crm.Distribution.SalesPersonTargetLines.md)  
 - [SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
 
-lesPersonTargets.md)  
-

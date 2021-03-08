@@ -35,5 +35,3 @@ uid: Logistics.Inventory
 - [TransferOrders](Logistics.Inventory.TransferOrders.md)  
 - [TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md)  
 
-ansferOrdersOptions.md)  
-

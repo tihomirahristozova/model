@@ -21,5 +21,3 @@ uid: Logistics.Procurement
 - [Suppliers](Logistics.Procurement.Suppliers.md)  
 - [SupplierTypes](Logistics.Procurement.SupplierTypes.md)  
 
-urement.SupplierTypes.md)  
-

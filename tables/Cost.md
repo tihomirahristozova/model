@@ -14,5 +14,3 @@
 * [Cost_Templates](Cost_Templates.md)
 * [Cost_Types](Cost_Types.md)
 
-
-

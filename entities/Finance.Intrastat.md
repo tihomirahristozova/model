@@ -9,5 +9,3 @@ uid: Finance.Intrastat
 - [Declarations](Finance.Intrastat.Declarations.md)  
 - [DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md)  
 
-mountTypeSettings.md)  
-

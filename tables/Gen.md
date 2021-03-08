@@ -82,5 +82,3 @@
 * [Gen_Work_Schedule_Working_Time](Gen_Work_Schedule_Working_Time.md)
 * [Gen_Work_Schedules](Gen_Work_Schedules.md)
 
-
-

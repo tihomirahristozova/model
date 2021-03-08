@@ -21,5 +21,3 @@ uid: Applications.Service
 - [Services](Applications.Service.Services.md)  
 - [ServiceTypes](Applications.Service.ServiceTypes.md)  
 
-Service.ServiceTypes.md)  
-

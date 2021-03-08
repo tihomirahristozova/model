@@ -15,5 +15,3 @@ uid: Production.ShopFloor
 - [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)  
 - [WorkOrders](Production.ShopFloor.WorkOrders.md)  
 
-ShopFloor.WorkOrders.md)  
-

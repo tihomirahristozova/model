@@ -8,5 +8,3 @@ uid: Systems.Reporting
 - [DataSources](Systems.Reporting.DataSources.md)  
 - [Reports](Systems.Reporting.Reports.md)  
 
-Reporting.Reports.md)  
-

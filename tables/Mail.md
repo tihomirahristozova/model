@@ -5,5 +5,3 @@
 * [Mail_Message_Attachments](Mail_Message_Attachments.md)
 * [Mail_Messages](Mail_Messages.md)
 
-
-

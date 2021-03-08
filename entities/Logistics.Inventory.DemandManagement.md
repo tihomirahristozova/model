@@ -7,5 +7,3 @@ uid: Logistics.Inventory.DemandManagement
 - [AvailableToPromise](Logistics.Inventory.DemandManagement.AvailableToPromise.md)  
 - [AvailableToPromiseByLots](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md)  
 
-dManagement.AvailableToPromiseByLots.md)  
-

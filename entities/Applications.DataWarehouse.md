@@ -8,5 +8,3 @@ uid: Applications.DataWarehouse
 - [DataMeasures](Applications.DataWarehouse.DataMeasures.md)  
 - [DataValues](Applications.DataWarehouse.DataValues.md)  
 
-s.DataWarehouse.DataValues.md)  
-

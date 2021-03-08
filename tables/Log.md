@@ -19,5 +19,3 @@
 * [Log_Transportation_Requisitions](Log_Transportation_Requisitions.md)
 * [Log_Transportation_Vehicles](Log_Transportation_Vehicles.md)
 
-
-

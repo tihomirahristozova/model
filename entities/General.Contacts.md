@@ -25,5 +25,3 @@ uid: General.Contacts
 - [Persons](General.Contacts.Persons.md)  
 - [Reminders](General.Contacts.Reminders.md)  
 
-ntacts.Reminders.md)  
-

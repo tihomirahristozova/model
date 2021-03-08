@@ -17,5 +17,3 @@ uid: Applications.Rental
 - [Transactions](Applications.Rental.Transactions.md)  
 - [TransactionTemplates](Applications.Rental.TransactionTemplates.md)  
 
-ransactionTemplates.md)  
-

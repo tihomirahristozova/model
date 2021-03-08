@@ -21,5 +21,3 @@ uid: Applications.Fleet
 - [VehicleSets](Applications.Fleet.VehicleSets.md)  
 - [VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md)  
 
-VehicleSetVehicles.md)  
-

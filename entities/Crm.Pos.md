@@ -12,5 +12,3 @@ uid: Crm.Pos
 - [Sequences](Crm.Pos.Sequences.md)  
 - [Terminals](Crm.Pos.Terminals.md)  
 
-rminals.md)  
-

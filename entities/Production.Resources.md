@@ -18,5 +18,3 @@ uid: Production.Resources
 - [Workgroups](Production.Resources.Workgroups.md)  
 - [WorkgroupShifts](Production.Resources.WorkgroupShifts.md)  
 
-rces.WorkgroupShifts.md)  
-

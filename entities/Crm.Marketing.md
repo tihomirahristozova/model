@@ -14,5 +14,3 @@ uid: Crm.Marketing
 - [TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md)  
 - [TargetGroups](Crm.Marketing.TargetGroups.md)  
 
-.TargetGroups.md)  
-

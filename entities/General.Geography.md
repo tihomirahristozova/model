@@ -10,5 +10,3 @@ uid: General.Geography
 - [GeoPoints](General.Geography.GeoPoints.md)  
 - [MapPoints](General.Geography.MapPoints.md)  
 
-ography.MapPoints.md)  
-

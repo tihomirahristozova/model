@@ -19,5 +19,3 @@ uid: Finance.Payments
 - [PaymentTypes](Finance.Payments.PaymentTypes.md)  
 - [Transfers](Finance.Payments.Transfers.md)  
 
-yments.Transfers.md)  
-

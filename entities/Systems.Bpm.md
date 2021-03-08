@@ -21,5 +21,3 @@ uid: Systems.Bpm
 - [UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md)  
 - [UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
 
-sinessRules.md)  
-

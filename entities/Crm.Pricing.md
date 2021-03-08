@@ -8,5 +8,3 @@ uid: Crm.Pricing
 - [PricingModelPriceLists](Crm.Pricing.PricingModelPriceLists.md)  
 - [PricingModels](Crm.Pricing.PricingModels.md)  
 
-icingModels.md)  
-

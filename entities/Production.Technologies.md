@@ -11,5 +11,3 @@ uid: Production.Technologies
 - [RecipeOperations](Production.Technologies.RecipeOperations.md)  
 - [Recipes](Production.Technologies.Recipes.md)  
 
-on.Technologies.Recipes.md)  
-

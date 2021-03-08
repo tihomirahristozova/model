@@ -14,5 +14,3 @@ uid: Logistics
 - [LogisticUnitSpecifications](Logistics.LogisticUnitSpecifications.md)  
 - [LogisticUnitTypes](Logistics.LogisticUnitTypes.md)  
 
-UnitTypes.md)  
-

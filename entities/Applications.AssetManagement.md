@@ -20,5 +20,3 @@ uid: Applications.AssetManagement
 - [ServiceCenters](Applications.AssetManagement.ServiceCenters.md)  
 - [TrackedParameters](Applications.AssetManagement.TrackedParameters.md)  
 
-Management.TrackedParameters.md)  
-

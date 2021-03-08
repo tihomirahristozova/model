@@ -14,5 +14,3 @@ uid: Crm.Sales
 - [SalesOrders](Crm.Sales.SalesOrders.md)  
 - [SalesOrdersOptions](Crm.Sales.SalesOrdersOptions.md)  
 
-rsOptions.md)  
-

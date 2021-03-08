@@ -7,5 +7,3 @@ uid: Systems.External
 - [PublicUserLists](Systems.External.PublicUserLists.md)  
 - [PublicUsers](Systems.External.PublicUsers.md)  
 
-rnal.PublicUsers.md)  
-

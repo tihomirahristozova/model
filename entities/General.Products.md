@@ -20,5 +20,3 @@ uid: General.Products
 - [VariantSizes](General.Products.VariantSizes.md)  
 - [VariantStyles](General.Products.VariantStyles.md)  
 
-ts.VariantStyles.md)  
-

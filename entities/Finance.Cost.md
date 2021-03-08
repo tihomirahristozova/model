@@ -18,5 +18,3 @@ uid: Finance.Cost
 - [TemplateLevels](Finance.Cost.TemplateLevels.md)  
 - [Templates](Finance.Cost.Templates.md)  
 
-st.Templates.md)  
-

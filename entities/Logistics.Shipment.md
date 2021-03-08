@@ -19,5 +19,3 @@ uid: Logistics.Shipment
 - [TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)  
 - [TransportationVehicles](Logistics.Shipment.TransportationVehicles.md)  
 
-sportationVehicles.md)  
-

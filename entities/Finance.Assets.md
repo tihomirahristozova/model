@@ -20,5 +20,3 @@ uid: Finance.Assets
 - [Depreciations](Finance.Assets.Depreciations.md)  
 - [ValuationModels](Finance.Assets.ValuationModels.md)  
 
-aluationModels.md)  
-

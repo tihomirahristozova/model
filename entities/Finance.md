@@ -11,5 +11,3 @@ uid: Finance
 - [Payments](Finance.Payments.md)  
 - [Vat](Finance.Vat.md)  
 
-nce.Vat.md)  
-

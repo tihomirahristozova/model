@@ -31,5 +31,3 @@
 * [Prd_Workgroup_Shifts](Prd_Workgroup_Shifts.md)
 * [Prd_Workgroups](Prd_Workgroups.md)
 
-
-

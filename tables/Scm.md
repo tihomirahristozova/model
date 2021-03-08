@@ -17,5 +17,3 @@
 * [Scm_Supplier_Types](Scm_Supplier_Types.md)
 * [Scm_Suppliers](Scm_Suppliers.md)
 
-
-

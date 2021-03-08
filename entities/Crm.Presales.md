@@ -9,5 +9,3 @@ uid: Crm.Presales
 - [Offers](Crm.Presales.Offers.md)  
 - [OffersOptions](Crm.Presales.OffersOptions.md)  
 
-ffersOptions.md)  
-

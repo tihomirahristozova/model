@@ -27,5 +27,3 @@ uid: Projects
 - [WorkReportResources](Projects.WorkReportResources.md)  
 - [WorkReports](Projects.WorkReports.md)  
 
-kReports.md)  
-

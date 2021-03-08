@@ -5,5 +5,3 @@
 * [Its_Declarations](Its_Declarations.md)
 * [Its_Document_Amount_Type_Settings](Its_Document_Amount_Type_Settings.md)
 
-
-

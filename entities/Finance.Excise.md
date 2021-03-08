@@ -8,5 +8,3 @@ uid: Finance.Excise
 - [MeasuringTransactions](Finance.Excise.MeasuringTransactions.md)  
 - [TaxWarehouses](Finance.Excise.TaxWarehouses.md)  
 
-.TaxWarehouses.md)  
-

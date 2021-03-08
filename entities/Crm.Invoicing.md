@@ -10,5 +10,3 @@ uid: Crm.Invoicing
 - [Invoices](Crm.Invoicing.Invoices.md)  
 - [InvoicesOptions](Crm.Invoicing.InvoicesOptions.md)  
 
-voicesOptions.md)  
-

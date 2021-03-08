@@ -9,5 +9,3 @@
 * [Cmm_Social_Reactions](Cmm_Social_Reactions.md)
 * [Cmm_Social_Reactions_Summary_Indexed_View](Cmm_Social_Reactions_Summary_Indexed_View.md)
 
-
-

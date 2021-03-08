@@ -21,5 +21,3 @@ uid: Finance.Accounting
 - [Templates](Finance.Accounting.Templates.md)  
 - [VoucherCorrespondances](Finance.Accounting.VoucherCorrespondances.md)  
 
-herCorrespondances.md)  
-

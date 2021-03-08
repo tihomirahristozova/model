@@ -10,5 +10,3 @@ uid: Finance.Vat
 - [DealTypes](Finance.Vat.DealTypes.md)  
 - [Entries](Finance.Vat.Entries.md)  
 
-Vat.Entries.md)  
-

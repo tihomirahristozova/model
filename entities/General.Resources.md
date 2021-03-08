@@ -12,5 +12,3 @@ uid: General.Resources
 - [WorkSchedules](General.Resources.WorkSchedules.md)  
 - [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md)  
 
-heduleWorkingTime.md)  
-

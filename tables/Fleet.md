@@ -17,5 +17,3 @@
 * [Fleet_Vehicle_Sets](Fleet_Vehicle_Sets.md)
 * [Fleet_Vehicles](Fleet_Vehicles.md)
 
-]
-

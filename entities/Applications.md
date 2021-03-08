@@ -13,5 +13,3 @@ uid: Applications
 - [Service](Applications.Service.md)  
 - [Telephony](Applications.Telephony.md)  
 
-ns.Telephony.md)  
-

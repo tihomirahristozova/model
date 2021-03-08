@@ -15,5 +15,3 @@
 * [Sec_Users](Sec_Users.md)
 * [Sec_Visual_Permissions](Sec_Visual_Permissions.md)
 
-
-

@@ -13,5 +13,3 @@
 * [Rent_Transaction_Templates](Rent_Transaction_Templates.md)
 * [Rent_Transactions](Rent_Transactions.md)
 
-
-

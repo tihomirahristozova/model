@@ -4,5 +4,3 @@
 * [Exc_Measuring_Transactions](Exc_Measuring_Transactions.md)
 * [Exc_Tax_Warehouses](Exc_Tax_Warehouses.md)
 
-
-

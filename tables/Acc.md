@@ -17,5 +17,3 @@
 * [Acc_Voucher_Lines](Acc_Voucher_Lines.md)
 * [Acc_Vouchers](Acc_Vouchers.md)
 
-
-

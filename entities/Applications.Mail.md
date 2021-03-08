@@ -9,5 +9,3 @@ uid: Applications.Mail
 - [MessageAttachments](Applications.Mail.MessageAttachments.md)  
 - [Messages](Applications.Mail.Messages.md)  
 
-ons.Mail.Messages.md)  
-

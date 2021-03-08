@@ -10,5 +10,3 @@ uid: Applications.PersonalData
 - [PersonalDataProcessRecipients](Applications.PersonalData.PersonalDataProcessRecipients.md)  
 - [ProcessingConsents](Applications.PersonalData.ProcessingConsents.md)  
 
-alData.ProcessingConsents.md)  
-

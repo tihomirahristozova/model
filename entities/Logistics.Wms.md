@@ -17,5 +17,3 @@ uid: Logistics.Wms
 - [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)  
 - [WarehouseZones](Logistics.Wms.WarehouseZones.md)  
 
-arehouseZones.md)  
-

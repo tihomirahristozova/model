@@ -13,5 +13,3 @@ uid: Communities
 - [SocialReactions](Communities.SocialReactions.md)  
 - [SocialReactionsSummary](Communities.SocialReactionsSummary.md)  
 
-ionsSummary.md)  
-

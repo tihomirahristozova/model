@@ -12,5 +12,3 @@ uid: Applications.Cms
 - [WebSiteLanguages](Applications.Cms.WebSiteLanguages.md)  
 - [WebSites](Applications.Cms.WebSites.md)  
 
-ons.Cms.WebSites.md)  
-

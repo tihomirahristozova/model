@@ -6,5 +6,3 @@ uid: Applications.Telephony
 ## Entities
 - [CallDetails](Applications.Telephony.CallDetails.md)  
 
-.Telephony.CallDetails.md)  
-

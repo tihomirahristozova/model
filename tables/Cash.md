@@ -15,5 +15,3 @@
 * [Cash_Payment_Types](Cash_Payment_Types.md)
 * [Cash_Transfers](Cash_Transfers.md)
 
-
-

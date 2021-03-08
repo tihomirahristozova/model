@@ -47,5 +47,3 @@
 * [Crm_Target_Group_Members](Crm_Target_Group_Members.md)
 * [Crm_Target_Groups](Crm_Target_Groups.md)
 
-
-
