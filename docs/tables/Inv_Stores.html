@@ -8,7 +8,7 @@
     <title>Table Inv_Stores | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Inv_Stores | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,152 +80,480 @@
 <h1 id="table-inv_stores">Table Inv_Stores</h1>
 
 <p>Represents the physical warehouses. Entity: Inv_Stores</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Parties.html">Gen_Parties</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique store Id</td>
+</tr>
+<tr>
+<td><a href="#party_id">Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party of the store. Each store is a party and is stored based on a party definition.</td>
+</tr>
+<tr>
+<td><a href="#parent_store_id">Parent_Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity).</td>
+</tr>
+<tr>
+<td><a href="#store_code">Store_Code</a></td>
+<td><code>nvarchar(16)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Store_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>The unique code of the Store. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#store_name">Store_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Name of the store</td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td>Date and time when the Store was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>Login name of the user, who created the Store. <code>Filter(like)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>Default_Supply_Store_Id</td>
-<td><code>Guid?</code></td>
-<td></td>
-<td>The store from which goods are usually supplied to this store. <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td>GLN</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#access_key_id">Access_Key_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td></td>
+<td><a href="#responsible_party_id">Responsible_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Primary responsible party (usually employee) for the stock in the store.</td>
 </tr>
 <tr>
-<td>Store_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Name of the store. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="#number_of_dimensions">Number_Of_Dimensions</a></td>
+<td><code>int</code></td>
+<td>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.</td>
 </tr>
 <tr>
-<td>Number_Of_Dimensions</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td><a href="#default_store_bin_id">Default_Store_Bin_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>To be used when store bin is unknown</td>
 </tr>
 <tr>
-<td>Party_Code</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#default_supply_store_id">Default_Supply_Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store from which goods are usually supplied to this store</td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#unmanaged">Unmanaged</a></td>
+<td><code>bit</code></td>
+<td>If 0 the system will expect the user to process the store transactions. If 1 the system will auto-generate them</td>
 </tr>
 <tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Party_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Party_Type</td>
-<td><code>PartyType</code></td>
-<td>Allowed: <code>C</code>, <code>L</code>, <code>P</code>, <code>S</code>, <code>V</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Party_Unique_Number</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Update_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Update_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Schema_XML</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#schema_xml">Schema_XML</a></td>
+<td><code>nvarchar(1073741823)</code></td>
 <td>Obsolete. Not used.</td>
 </tr>
 <tr>
-<td>Unmanaged</td>
-<td><code>Boolean</code></td>
+<td><a href="#currency_id">Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency for the warehouse cost calculations. When NULL, the base currency for the enterprise company will be used</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>If false the system will expect the user to process the store transactions. If true the system will auto-generate them. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
-<td>Update_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td>Date and time when the Store was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+<td><a href="#creation_time">Creation_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td></td>
 </tr>
 <tr>
-<td>Update_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>Login name of the user, who last updated the Store. <code>Filter(like)</code> <code>ReadOnly</code></td>
+<td><a href="#creation_user">Creation_User</a></td>
+<td><code>nvarchar(64)</code> Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#update_time">Update_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#update_user">Update_User</a></td>
+<td><code>nvarchar(64)</code> Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#store_group_id">Store_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store group, to which this store belongs.</td>
+</tr>
+<tr>
+<td><a href="#active">Active</a></td>
+<td><code>bit</code></td>
+<td>Obsolete - Use Gen_Parties.Is_Active</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#warehouse_id">Warehouse_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies, the warehouse, which manages the warehouse operations for the store. NULL for stores, which do not have managed operations.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="id">Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="party_id">Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_store_id">Parent_Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_code">Store_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_name">Store_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access_key_id">Access_Key_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responsible_party_id">Responsible_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="number_of_dimensions">Number_Of_Dimensions</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_store_bin_id">Default_Store_Bin_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_supply_store_id">Default_Supply_Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unmanaged">Unmanaged</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="schema_xml">Schema_XML</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1073741823)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency_id">Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time">Creation_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_user">Creation_User</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_time">Update_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_user">Update_User</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_group_id">Store_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active">Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warehouse_id">Warehouse_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 </tbody>
 </table>

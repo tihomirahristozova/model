@@ -2,12 +2,137 @@
 
 Represents increase or decrease in the quantity available in a warehouse location. Entity: Wms_Warehouse_Transactions (Introduced in version 21.1.1.26)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Warehouse_Transaction_Id|`Guid`|`PK`, Readonly||
-|Catch_Quantity|`Decimal?`||Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)` |
-|Creation_Time_Utc|`DateTime`|||
-|Direction|`Direction`|Allowed: `I`, `O`|Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)` |
-|Quantity|`Decimal`||The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` |
+| Name | Type | Description |
+| - | - | --- |
+|[Warehouse_Transaction_Id](#warehouse_transaction_id)|`uniqueidentifier` `PK`||
+|[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` |The order which created this transaction. NULL when this transaction was not based on order.|
+|[Warehouse_Order_Line_Id](#warehouse_order_line_id)|`uniqueidentifier` |The order line which created this transaction. NULL when this transaction was not based on order line.|
+|[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse in which the transaction occurred.|
+|[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` |The warehouse location, where the transaction occurred.|
+|[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.|
+|[Product_Id](#product_id)|`uniqueidentifier` |The product, which was transacted.|
+|[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |The product variant, which was transacted. NULL when the transaction was not for a product variant.|
+|[Lot_Id](#lot_id)|`uniqueidentifier` |The lot which was transacted. NULL when the transaction was not for a specific lot.|
+|[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number which was transacted. NULL when the transaction was not for a specific serial number.|
+|[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `O`|Direction of the transaction - I=IN, O=OUT.|
+|[Quantity](#quantity)|`decimal(12, 3)` |The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.|
+|[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit of quantity.|
+|[Catch_Quantity](#catch_quantity)|`decimal(12, 3)` |Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.|
+|[Catch_Quantity_Unit_Id](#catch_quantity_unit_id)|`uniqueidentifier` |The measurement unit of the catch quantity. NULL when catch measurement is not configured for the product.|
+|[Creation_User_Id](#creation_user_id)|`uniqueidentifier` ||
+|[Creation_Time_Utc](#creation_time_utc)|`datetime` ||
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Warehouse_Transaction_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Warehouse_Order_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Warehouse_Order_Line_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Warehouse_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Warehouse_Location_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Logistic_Unit_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Product_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Product_Variant_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Lot_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Serial_Number_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Direction
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(1)|
+
+### Quantity
+
+| Property | Value |
+| - | - |
+|Type|decimal(12, 3)|
+
+### Quantity_Unit_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Catch_Quantity
+
+| Property | Value |
+| - | - |
+|Type|decimal(12, 3)|
+
+### Catch_Quantity_Unit_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Creation_User_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Creation_Time_Utc
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

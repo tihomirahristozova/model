@@ -8,7 +8,7 @@
     <title>Table Acc_Account_Required_Properties | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Acc_Account_Required_Properties | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,140 @@
 <h1 id="table-acc_account_required_properties">Table Acc_Account_Required_Properties</h1>
 
 <p>Defines the required properties for new vouchers, for each account. Entity: Acc_Account_Required_Properties</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Acc_Accounts.html">Acc_Accounts</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Account_Required_Property_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#account_required_property_id">Account_Required_Property_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Key_Order</td>
-<td><code>Int32</code></td>
+<td><a href="#account_id">Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description. <code>Required</code></td>
 </tr>
 <tr>
-<td>Key_Property</td>
-<td><code>Boolean</code></td>
+<td><a href="#property_id">Property_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers</td>
+</tr>
+<tr>
+<td><a href="#key_property">Key_Property</a></td>
+<td><code>bit</code></td>
+<td>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes</td>
+</tr>
+<tr>
+<td><a href="#key_order">Key_Order</a></td>
+<td><code>int</code></td>
+<td>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="account_required_property_id">Account_Required_Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="account_id">Account_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property_id">Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key_property">Key_Property</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key_order">Key_Order</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -2,37 +2,85 @@
 
 Represents shipments of sales orders to customers. Entity: Log_Shipments
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Shipment_Id|`Guid`|`PK`, Readonly||
-|Adjustment_Number|`Int32`|Readonly||
-|Adjustment_Time|`DateTime?`|Readonly||
-|Adjustment_User|`String`|Readonly||
-|Complete_Time|`DateTime?`|Readonly||
-|Creation_Time|`DateTime`|Readonly||
-|Creation_User|`String`|Readonly||
-|Document_Date|`DateTime`|||
-|Document_No|`String`|||
-|Notes|`String`|||
-|Document_Version|`Int32`|Readonly||
-|Entity_Name|`String`|Readonly||
-|Is_Released|`Boolean`|Readonly|True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Is_Single_Execution|`Boolean`|Readonly|Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Parent_Document_Relationship_Type|`ParentDocumentRelationshipType?`|Allowed: `S`, `N`, Readonly||
-|Planning_Only|`Boolean`|Readonly||
-|Read_Only|`Boolean`|Readonly||
-|Reference_Date|`DateTime?`|||
-|Reference_Document_No|`String`|||
-|Release_Time|`DateTime?`|Readonly||
-|Required_Delivery_Date|`DateTime?`||Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When null means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines). `Filter(ge;le)` |
-|State|`DocumentState`|Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly||
-|Void|`Boolean`|Readonly||
-|Void_Reason|`String`|Readonly||
-|Void_Time|`DateTime?`|Readonly||
-|Void_User|`String`|Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Shipment_Id](#shipment_id)|`uniqueidentifier` `PK`||
+|[Document_Id](#document_id)|`uniqueidentifier` ||
+|[Ship_To_Party_Contact_Mechanism_Id](#ship_to_party_contact_mechanism_id)|`uniqueidentifier` |Destination address where the goods should be shipped|
+|[Required_Delivery_Date](#required_delivery_date)|`datetime` |Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When NULL means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines)|
+|[Ship_From_Store_Id](#ship_from_store_id)|`uniqueidentifier` |The store from which the shipment should be effected|
+|[Issued_By_Person_Id](#issued_by_person_id)|`uniqueidentifier` |The person who signed for the shipment|
+|[Received_By_Person_Id](#received_by_person_id)|`uniqueidentifier` |The person who received the goods for/from the shipment |
+|[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Shipment_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Ship_To_Party_Contact_Mechanism_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Required_Delivery_Date
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Ship_From_Store_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Issued_By_Person_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Received_By_Person_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Is_Single_Execution
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Released
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

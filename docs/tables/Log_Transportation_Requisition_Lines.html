@@ -8,7 +8,7 @@
     <title>Table Log_Transportation_Requisition_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Log_Transportation_Requisition_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,62 +80,241 @@
 <h1 id="table-log_transportation_requisition_lines">Table Log_Transportation_Requisition_Lines</h1>
 
 <p>One line in a client requisition for transportation. Different lines usually represent requisitions for different cargo types. Entity: Log_Transportation_Requisition_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Log_Transportation_Requisitions.html">Log_Transportation_Requisitions</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Transportation_Requisition_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#transportation_requisition_line_id">Transportation_Requisition_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Contents_Description</td>
-<td><code>String</code></td>
+<td><a href="#transportation_requisition_id">Transportation_Requisition_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Textual description of the cargo contents. <code>Required</code></td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
 <td></td>
-<td>Line number, unique within the TransportationRequisition. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationRequisition (in order to allow insertions with adjustment documents). <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
-<td>Pallets_Count</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Number of palettes comprising the cargo. null when it is unknown.</td>
+<td><a href="#cargo_type_id">Cargo_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of the transported cargo.</td>
 </tr>
 <tr>
-<td>Parent_Line_No</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(eq)</code></td>
+<td><a href="#contents_description">Contents_Description</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>Textual description of the cargo contents.</td>
 </tr>
 <tr>
-<td>Volume_Cbm</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>The volume of the cargo, in CBM (cubic meters). null when it is unknown.</td>
+<td><a href="#weight_kg">Weight_Kg</a></td>
+<td><code>int</code></td>
+<td>The weight of the cargo, in KG (kilogramms). NULL when it is unknown.</td>
 </tr>
 <tr>
-<td>Weight_Kg</td>
-<td><code>Int32?</code></td>
+<td><a href="#volume_cbm">Volume_Cbm</a></td>
+<td><code>int</code></td>
+<td>The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.</td>
+</tr>
+<tr>
+<td><a href="#pallets_count">Pallets_Count</a></td>
+<td><code>int</code></td>
+<td>Number of palettes comprising the cargo. NULL when it is unknown.</td>
+</tr>
+<tr>
+<td><a href="#parent_document_id">Parent_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document, which the current line executes. NULL when the current line does not execute another line.</td>
+</tr>
+<tr>
+<td><a href="#parent_line_no">Parent_Line_No</a></td>
+<td><code>int</code></td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The weight of the cargo, in KG (kilogramms). null when it is unknown.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="transportation_requisition_line_id">Transportation_Requisition_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transportation_requisition_id">Transportation_Requisition_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cargo_type_id">Cargo_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contents_description">Contents_Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="weight_kg">Weight_Kg</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume_cbm">Volume_Cbm</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pallets_count">Pallets_Count</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_document_id">Parent_Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_line_no">Parent_Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

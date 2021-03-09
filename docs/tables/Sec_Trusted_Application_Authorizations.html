@@ -8,7 +8,7 @@
     <title>Table Sec_Trusted_Application_Authorizations | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sec_Trusted_Application_Authorizations | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,56 +80,220 @@
 <h1 id="table-sec_trusted_application_authorizations">Table Sec_Trusted_Application_Authorizations</h1>
 
 <p>Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1)</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trusted_Application_Authorization_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#trusted_application_authorization_id">Trusted_Application_Authorization_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Grant_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The time (in UTC) when the authorization was granted. <code>Required</code> <code>Default(NowUtc)</code></td>
+<td><a href="#trusted_application_id">Trusted_Application_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The application, which is authorized.</td>
 </tr>
 <tr>
-<td>Is_Revoked</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether the grant is explicitly revoked. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#granting_user_id">Granting_User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user, who authorized the application.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this TrustedApplicationAuthorization.</td>
+<td><a href="#context_user_id">Context_User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user, whose permissions are granted to the application.</td>
 </tr>
 <tr>
-<td>Valid_From_Utc</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The start of the validitiy of the authorization. null means that there is no restriction.</td>
+<td><a href="#grant_time_utc">Grant_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The time (in UTC) when the authorization was granted.</td>
 </tr>
 <tr>
-<td>Valid_Until_Utc</td>
-<td><code>DateTime?</code></td>
+<td><a href="#valid_from_utc">Valid_From_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The start of the validitiy of the authorization. NULL means that there is no restriction.</td>
+</tr>
+<tr>
+<td><a href="#valid_until_utc">Valid_Until_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The time (in UTC) when the grant expires. NULL means that there is no time restriction.</td>
+</tr>
+<tr>
+<td><a href="#is_revoked">Is_Revoked</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the grant is explicitly revoked.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>The time (in UTC) when the grant expires. null means that there is no time restriction.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="trusted_application_authorization_id">Trusted_Application_Authorization_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trusted_application_id">Trusted_Application_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="granting_user_id">Granting_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="context_user_id">Context_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grant_time_utc">Grant_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valid_from_utc">Valid_From_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valid_until_utc">Valid_Until_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_revoked">Is_Revoked</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

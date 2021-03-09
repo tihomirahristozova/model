@@ -8,7 +8,7 @@
     <title>Table Cash_Payment_Orders | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cash_Payment_Orders | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,248 +80,640 @@
 <h1 id="table-cash_payment_orders">Table Cash_Payment_Orders</h1>
 
 <p>Each payment order contains a receivable or payable amount. Entity: Cash_Payment_Orders</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Payment_Order_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#ref_document_id">Ref_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document.</td>
+</tr>
+<tr>
+<td><a href="#ref_document_type_id">Ref_Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of the document which has created the payment order and is the basis for the payment</td>
+</tr>
+<tr>
+<td><a href="#ref_document_no">Ref_Document_No</a></td>
+<td><code>nvarchar(20)</code></td>
+<td>The number of the document which has created the payment order and is the basis for the payment</td>
+</tr>
+<tr>
+<td><a href="#ref_document_date">Ref_Document_Date</a></td>
+<td><code>datetime</code></td>
+<td>The date of the original document. NULL means that it is unknown</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_document_id">Ref_Invoice_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The invoice document which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document.</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_document_type_id">Ref_Invoice_Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_document_no">Ref_Invoice_Document_No</a></td>
+<td><code>nvarchar(20)</code></td>
+<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_document_date">Ref_Invoice_Document_Date</a></td>
+<td><code>datetime</code></td>
+<td>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.</td>
+</tr>
+<tr>
+<td><a href="#party_id">Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party which is to pay or receive the amount</td>
+</tr>
+<tr>
+<td><a href="#due_date">Due_Date</a></td>
+<td><code>datetime</code></td>
+<td>The due date of the payment. NULL means there is no due date</td>
+</tr>
+<tr>
+<td><a href="#direction">Direction</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>I</code>, <code>R</code></td>
+<td>I for Payment issue, R for payment receipt</td>
+</tr>
+<tr>
+<td><a href="#total_amount">Total_Amount</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>Total amount that should be payed</td>
+</tr>
+<tr>
+<td><a href="#total_amount_currency_id">Total_Amount_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of Total Amount.</td>
+</tr>
+<tr>
+<td><a href="#invoice_amount">Invoice_Amount</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)</td>
+</tr>
+<tr>
+<td><a href="#invoice_amount_currency_id">Invoice_Amount_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of Invoice Amount</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Number</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
+<td><a href="#due_start_date">Due_Start_Date</a></td>
+<td><code>date</code></td>
+<td>The date at which the payment becomes executable. NULL means the payment is executable at all times.</td>
+</tr>
+<tr>
+<td><a href="#allow_close_not_paid">Allow_Close_Not_Paid</a></td>
+<td><code>bit</code></td>
+<td>1 to allow closing of payment orders, that are not fully paid</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_apply_date">Ref_Invoice_Apply_Date</a></td>
+<td><code>datetime</code></td>
+<td>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.</td>
+</tr>
+<tr>
+<td><a href="#is_released">Is_Released</a></td>
+<td><code>bit</code> Readonly</td>
+<td>True if the document is not void and its state is released or greater</td>
+</tr>
+<tr>
+<td><a href="#is_single_execution">Is_Single_Execution</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Specifies whether the document is a single execution of its order document.</td>
+</tr>
+<tr>
+<td><a href="#payment_type_id">Payment_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Expected payment type. Null when there is no expectation. Can also specify default payment account.</td>
+</tr>
+<tr>
+<td><a href="#payment_order_id">Payment_Order_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
+<td><a href="#location_party_id">Location_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Location or sub-party of the Party_Id in the order</td>
+</tr>
+<tr>
+<td><a href="#is_amount_with_vat">Is_Amount_With_VAT</a></td>
+<td><code>bit</code></td>
+<td>Is_Amount_With_VAT=1 if the requested amount includes VAT</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#installment_number">Installment_Number</a></td>
+<td><code>int</code></td>
+<td>Consequtive installment number. Used for identifying the payment when using payment plans. NULL means that the payment is not part of a payment plan</td>
 </tr>
 <tr>
-<td>Allow_Close_Not_Paid</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True to allow closing of payment orders, that are not fully paid. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#payment_account_id">Payment_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies the payment account that is expected or will be used by the payment transaction</td>
 </tr>
 <tr>
-<td>Bill_To</td>
-<td><code>BillTo?</code></td>
-<td>Allowed: <code>C</code>, <code>L</code></td>
-<td>If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified. <code>Filter(eq)</code></td>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document data of the payment order itself</td>
 </tr>
 <tr>
-<td>Complete_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#bill_to">Bill_To</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>C</code>, <code>L</code></td>
+<td>If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), NULL = unidentified</td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, contains suggested fiscal printer for printing fiscal notes upon payment.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="ref_document_id">Ref_Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Direction</td>
-<td><code>Direction</code></td>
-<td>Allowed: <code>I</code>, <code>R</code></td>
-<td>I for Payment issue, R for payment receipt. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ref_document_type_id">Ref_Document_Type_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Document_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ref_document_no">Ref_Document_No</h3>
+<table>
+<thead>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Document_Version</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>nvarchar(20)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ref_document_date">Ref_Document_Date</h3>
+<table>
+<thead>
 <tr>
-<td>Due_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The due date of the payment. null means there is no due date. <code>Filter(eq;ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Due_Start_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The date at which the payment becomes executable. null means the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+<td>Type</td>
+<td>datetime</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_document_id">Ref_Invoice_Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Entity_Name</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Installment_Number</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. <code>Filter(eq)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_document_type_id">Ref_Invoice_Document_Type_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Is_Amount_With_VAT</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Is_Amount_With_VAT=true if the requested amount includes VAT. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Is_Released</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_document_no">Ref_Invoice_Document_No</h3>
+<table>
+<thead>
 <tr>
-<td>Is_Single_Execution</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this PaymentOrder.</td>
+<td>Type</td>
+<td>nvarchar(20)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_document_date">Ref_Invoice_Document_Date</h3>
+<table>
+<thead>
 <tr>
-<td>Parent_Document_Relationship_Type</td>
-<td><code>ParentDocumentRelationshipType?</code></td>
-<td>Allowed: <code>S</code>, <code>N</code>, Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Planning_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>datetime</td>
 </tr>
+</tbody>
+</table>
+<h3 id="party_id">Party_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Read_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Ref_Document_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The date of the original document. null means that it is unknown. <code>Filter(eq)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="due_date">Due_Date</h3>
+<table>
+<thead>
 <tr>
-<td>Ref_Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td>The number of the document which has created the payment order and is the basis for the payment. <code>Required</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Reference_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>datetime</td>
 </tr>
+</tbody>
+</table>
+<h3 id="direction">Direction</h3>
+<table>
+<thead>
 <tr>
-<td>Reference_Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Ref_Invoice_Apply_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. <code>Filter(eq;ge;le)</code></td>
+<td>Type</td>
+<td>nvarchar(1)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="total_amount">Total_Amount</h3>
+<table>
+<thead>
 <tr>
-<td>Ref_Invoice_Document_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. <code>Filter(eq;ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Ref_Invoice_Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code></td>
+<td>Type</td>
+<td>decimal(18, 2)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="total_amount_currency_id">Total_Amount_Currency_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Release_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>State</td>
-<td><code>DocumentState</code></td>
-<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="invoice_amount">Invoice_Amount</h3>
+<table>
+<thead>
 <tr>
-<td>Void</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void_Reason</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>decimal(18, 2)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="invoice_amount_currency_id">Invoice_Amount_Currency_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Void_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="due_start_date">Due_Start_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_close_not_paid">Allow_Close_Not_Paid</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_apply_date">Ref_Invoice_Apply_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_released">Is_Released</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_single_execution">Is_Single_Execution</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_type_id">Payment_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_order_id">Payment_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="location_party_id">Location_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_amount_with_vat">Is_Amount_With_VAT</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="installment_number">Installment_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_account_id">Payment_Account_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bill_to">Bill_To</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 </tbody>
 </table>

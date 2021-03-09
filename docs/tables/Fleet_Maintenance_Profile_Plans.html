@@ -8,7 +8,7 @@
     <title>Table Fleet_Maintenance_Profile_Plans | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Fleet_Maintenance_Profile_Plans | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,120 @@
 <h1 id="table-fleet_maintenance_profile_plans">Table Fleet_Maintenance_Profile_Plans</h1>
 
 <p>Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenance_Profile_Plans</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Fleet_Maintenance_Profiles.html">Fleet_Maintenance_Profiles</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Maintenance_Profile_Plan_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#maintenance_profile_plan_id">Maintenance_Profile_Plan_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 18.2</code></td>
+<td><a href="#maintenance_profile_id">Maintenance_Profile_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The maintenance profile, which includes the plan.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#maintenance_plan_id">Maintenance_Plan_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The maintenance plan, which is included in the profile.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this MaintenanceProfilePlan.</td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="maintenance_profile_plan_id">Maintenance_Profile_Plan_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_profile_id">Maintenance_Profile_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_plan_id">Maintenance_Plan_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 </tbody>
 </table>

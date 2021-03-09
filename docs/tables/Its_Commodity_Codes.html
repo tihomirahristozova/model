@@ -8,7 +8,7 @@
     <title>Table Its_Commodity_Codes | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Its_Commodity_Codes | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,52 +80,156 @@
 <h1 id="table-its_commodity_codes">Table Its_Commodity_Codes</h1>
 
 <p>Contains the approved Intrastat commodity codes for each period. Entity: Its_Commodity_Codes</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Intrastat_Commodity_Code_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#intrastat_commodity_code_id">Intrastat_Commodity_Code_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Commodity_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Product code from the Intrastat Combined nomenclature. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#commodity_code">Commodity_Code</a></td>
+<td><code>nvarchar(8)</code></td>
+<td>Product code from the Intrastat Combined nomenclature</td>
 </tr>
 <tr>
-<td>Description</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Description of the product code from the Intrastat Combined nomenclature. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(4000)</code> <code>ML</code></td>
+<td>Description of the product code from the Intrastat Combined nomenclature</td>
 </tr>
 <tr>
-<td>Supplementary_Unit</td>
-<td><code>String</code></td>
-<td></td>
-<td>If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. <code>Required</code></td>
+<td><a href="#supplementary_unit">Supplementary_Unit</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations</td>
 </tr>
 <tr>
-<td>Valid_From</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The starting date of validity of this code. <code>Filter(ge;le)</code></td>
+<td><a href="#valid_from">Valid_From</a></td>
+<td><code>date</code></td>
+<td>The starting date of validity of this code.</td>
 </tr>
 <tr>
-<td>Valid_To</td>
-<td><code>DateTime?</code></td>
+<td><a href="#valid_to">Valid_To</a></td>
+<td><code>date</code></td>
+<td>The ending date of validity of this code.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The ending date of validity of this code. <code>Filter(ge;le)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="intrastat_commodity_code_id">Intrastat_Commodity_Code_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="commodity_code">Commodity_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(8)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(4000)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supplementary_unit">Supplementary_Unit</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valid_from">Valid_From</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valid_to">Valid_To</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

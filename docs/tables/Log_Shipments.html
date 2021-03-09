@@ -8,7 +8,7 @@
     <title>Table Log_Shipments | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Log_Shipments | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,176 +80,220 @@
 <h1 id="table-log_shipments">Table Log_Shipments</h1>
 
 <p>Represents shipments of sales orders to customers. Entity: Log_Shipments</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Shipment_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#shipment_id">Shipment_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Number</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#ship_to_party_contact_mechanism_id">Ship_To_Party_Contact_Mechanism_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Destination address where the goods should be shipped</td>
 </tr>
 <tr>
-<td>Adjustment_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#required_delivery_date">Required_Delivery_Date</a></td>
+<td><code>datetime</code></td>
+<td>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When NULL means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines)</td>
 </tr>
 <tr>
-<td>Complete_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#ship_from_store_id">Ship_From_Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store from which the shipment should be effected</td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#issued_by_person_id">Issued_By_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The person who signed for the shipment</td>
 </tr>
 <tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#received_by_person_id">Received_By_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The person who received the goods for/from the shipment</td>
 </tr>
 <tr>
-<td>Document_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td></td>
+<td><a href="#is_single_execution">Is_Single_Execution</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
-<td>Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td><a href="#is_released">Is_Released</a></td>
+<td><code>bit</code> Readonly</td>
+<td>True if the document is not void and its state is released or greater</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Document_Version</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="shipment_id">Shipment_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Entity_Name</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Is_Released</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Is_Single_Execution</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Parent_Document_Relationship_Type</td>
-<td><code>ParentDocumentRelationshipType?</code></td>
-<td>Allowed: <code>S</code>, <code>N</code>, Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ship_to_party_contact_mechanism_id">Ship_To_Party_Contact_Mechanism_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Planning_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Read_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="required_delivery_date">Required_Delivery_Date</h3>
+<table>
+<thead>
 <tr>
-<td>Reference_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Reference_Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>datetime</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ship_from_store_id">Ship_From_Store_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Release_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Required_Delivery_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When null means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines). <code>Filter(ge;le)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="issued_by_person_id">Issued_By_Person_Id</h3>
+<table>
+<thead>
 <tr>
-<td>State</td>
-<td><code>DocumentState</code></td>
-<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="received_by_person_id">Received_By_Person_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Void_Reason</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="is_single_execution">Is_Single_Execution</h3>
+<table>
+<thead>
 <tr>
-<td>Void_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_released">Is_Released</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

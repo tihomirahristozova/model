@@ -2,48 +2,65 @@
 
 Marketing activity, part of a marketing campaign. Entity: Crm_Activities
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Cm_Activities](Cm_Activities.md)
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Crm_Activity_Id|`Guid`|`PK`, Readonly||
-|Activities_Created|`Boolean`||True if the related activites are already created. Related activity can be created for each member of the target group. `Required` `Default(false)` |
-|Adjustment_Number|`Int32`|Readonly||
-|Adjustment_Time|`DateTime?`|Readonly||
-|Adjustment_User|`String`|Readonly||
-|Complete_Time|`DateTime?`|Readonly||
-|Creation_Time|`DateTime`|Readonly||
-|Creation_User|`String`|Readonly||
-|Deadline_Time|`DateTime?`|||
-|Document_Date|`DateTime`|||
-|Document_No|`String`|||
-|Notes|`String`|||
-|Document_Version|`Int32`|Readonly||
-|End_Time|`DateTime?`|||
-|Entity_Name|`String`|Readonly||
-|Is_Released|`Boolean`|Readonly||
-|Is_Single_Execution|`Boolean`|Readonly||
-|Notes|`String`|||
-|Parent_Document_Relationship_Type|`ParentDocumentRelationshipType?`|Allowed: `S`, `N`, Readonly||
-|Planned_Duration_Minutes|`Int32?`|||
-|Planning_Only|`Boolean`|Readonly||
-|Priority|`Priority`|Allowed: `1`, `2`, `3`, `4`, `5`||
-|Private|`Boolean`|||
-|Read_Only|`Boolean`|Readonly||
-|Reference_Date|`DateTime?`|||
-|Reference_Document_No|`String`|||
-|Release_Time|`DateTime?`|Readonly||
-|Reminder_Time|`DateTime?`|||
-|Start_Time|`DateTime`|||
-|State|`DocumentState`|Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly||
-|Subject|`String`|||
-|System_Type|`SystemType`|Allowed: `C`, `M`, `T`||
-|Void|`Boolean`|Readonly||
-|Void_Reason|`String`|Readonly||
-|Void_Time|`DateTime?`|Readonly||
-|Void_User|`String`|Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Crm_Activity_Id](#crm_activity_id)|`uniqueidentifier` `PK`||
+|[Activity_Id](#activity_id)|`uniqueidentifier` |The Activity, on which the current marketing activity is based|
+|[Campaign_Id](#campaign_id)|`uniqueidentifier` |The marketing campaing, to which this activity belongs|
+|[Target_Group_Id](#target_group_id)|`uniqueidentifier` |The target group of parties to be treated by this activity|
+|[Forecasted_Cost](#forecasted_cost)|`decimal(18, 0)` |Forecasted cost of the activity in base currency|
+|[Activities_Created](#activities_created)|`bit` |1 if the related activites are already created. Related activity can be created for each member of the target group.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Crm_Activity_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Activity_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Campaign_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Target_Group_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Forecasted_Cost
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 0)|
+
+### Activities_Created
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

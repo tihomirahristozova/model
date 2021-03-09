@@ -2,37 +2,78 @@
 
 Represents mass payment document (payment slip). Entity: Cash_Payment_Slips
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Payment_Slip_Id|`Guid`|`PK`, Readonly||
-|Adjustment_Number|`Int32`|Readonly||
-|Adjustment_Time|`DateTime?`|Readonly||
-|Adjustment_User|`String`|Readonly||
-|Complete_Time|`DateTime?`|Readonly||
-|Creation_Time|`DateTime`|Readonly||
-|Creation_User|`String`|Readonly||
-|Document_Date|`DateTime`|||
-|Document_No|`String`|||
-|Notes|`String`|||
-|Document_Version|`Int32`|Readonly||
-|Entity_Name|`String`|Readonly||
-|Is_Released|`Boolean`|Readonly|True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Is_Single_Execution|`Boolean`|Readonly|Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Parent_Document_Relationship_Type|`ParentDocumentRelationshipType?`|Allowed: `S`, `N`, Readonly||
-|Payment_Slip_No|`String`||When not null, contains the number of the slip, as issued by the banking institution. |
-|Planning_Only|`Boolean`|Readonly||
-|Read_Only|`Boolean`|Readonly||
-|Reference_Date|`DateTime?`|||
-|Reference_Document_No|`String`|||
-|Release_Time|`DateTime?`|Readonly||
-|State|`DocumentState`|Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly||
-|Void|`Boolean`|Readonly||
-|Void_Reason|`String`|Readonly||
-|Void_Time|`DateTime?`|Readonly||
-|Void_User|`String`|Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` |The account towards which the payments was effected|
+|[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency of the amounts in this document|
+|[Payment_Slip_No](#payment_slip_no)|`nvarchar(20)` |When not null, contains the number of the slip, as issued by the banking institution.|
+|[Payment_Slip_Id](#payment_slip_id)|`uniqueidentifier` `PK`||
+|[Document_Id](#document_id)|`uniqueidentifier` ||
+|[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Row_Version](#row_version)|`timestamp` ||
+|[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |When not NULL specifies the payment type for the sales order|
+
+## Columns
+
+### Payment_Account_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Currency_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Payment_Slip_No
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(20)|
+
+### Payment_Slip_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Is_Single_Execution
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Released
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+### Payment_Type_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+

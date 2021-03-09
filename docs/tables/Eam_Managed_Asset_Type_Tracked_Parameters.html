@@ -8,7 +8,7 @@
     <title>Table Eam_Managed_Asset_Type_Tracked_Parameters | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Eam_Managed_Asset_Type_Tracked_Parameters | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,32 +80,120 @@
 <h1 id="table-eam_managed_asset_type_tracked_parameters">Table Eam_Managed_Asset_Type_Tracked_Parameters</h1>
 
 <p>Defines the parameters, which are tracked for the assets of the different types. Entity: Eam_Managed_Asset_Type_Tracked_Parameters (Introduced in version 19.1)</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Eam_Managed_Asset_Types.html">Eam_Managed_Asset_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Managed_Asset_Type_Tracked_Parameter_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#managed_asset_type_tracked_parameter_id">Managed_Asset_Type_Tracked_Parameter_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Defines the parameters, which are tracked for the assets of the different types.</td>
+</tr>
+<tr>
+<td><a href="#managed_asset_type_id">Managed_Asset_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The asset type for which the tracked parameter is defined.</td>
+</tr>
+<tr>
+<td><a href="#tracked_parameter_id">Tracked_Parameter_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The parameter, which will be tracked for assets of the specified type.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Notes for this ManagedAssetTypeTrackedParameter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="managed_asset_type_tracked_parameter_id">Managed_Asset_Type_Tracked_Parameter_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managed_asset_type_id">Managed_Asset_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tracked_parameter_id">Tracked_Parameter_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

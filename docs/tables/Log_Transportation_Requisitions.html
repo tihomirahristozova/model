@@ -8,7 +8,7 @@
     <title>Table Log_Transportation_Requisitions | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Log_Transportation_Requisitions | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,182 +80,280 @@
 <h1 id="table-log_transportation_requisitions">Table Log_Transportation_Requisitions</h1>
 
 <p>Client requisition for transportation. Entity: Log_Transportation_Requisitions</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Transportation_Requisition_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#transportation_requisition_id">Transportation_Requisition_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Number</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#requested_departure_date">Requested_Departure_Date</a></td>
+<td><code>date</code></td>
+<td>Requested date of departure. NULL when no specific date is requested.</td>
 </tr>
 <tr>
-<td>Adjustment_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#requested_departure_time">Requested_Departure_Time</a></td>
+<td><code>time</code></td>
+<td>Requested time of departure. NULL when no specific time is requested.</td>
 </tr>
 <tr>
-<td>Complete_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#requested_arrival_date">Requested_Arrival_Date</a></td>
+<td><code>date</code></td>
+<td>Requested arrival date. NULL when no specific date is requested.</td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#requested_arrival_time">Requested_Arrival_Time</a></td>
+<td><code>time</code></td>
+<td>Requested arrival time. NULL when no specific time is requested.</td>
 </tr>
 <tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#transport_from_party_id">Transport_From_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Shipping party.</td>
 </tr>
 <tr>
-<td>Document_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td></td>
+<td><a href="#transport_from_party_contact_mechanism_id">Transport_From_Party_Contact_Mechanism_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Loading address.</td>
 </tr>
 <tr>
-<td>Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td><a href="#transport_from_geo_point_id">Transport_From_Geo_Point_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Geographical location of the loading, if available.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td><a href="#transport_to_party_id">Transport_To_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Receiving party.</td>
 </tr>
 <tr>
-<td>Document_Version</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#transport_to_party_contact_mechanism_id">Transport_To_Party_Contact_Mechanism_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Unload address.</td>
 </tr>
 <tr>
-<td>Entity_Name</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#transport_to_geo_point_id">Transport_To_Geo_Point_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Geographical location of the unloading, if available.</td>
 </tr>
 <tr>
-<td>Parent_Document_Relationship_Type</td>
-<td><code>ParentDocumentRelationshipType?</code></td>
-<td>Allowed: <code>S</code>, <code>N</code>, Readonly</td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="transportation_requisition_id">Transportation_Requisition_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Planning_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Read_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Reference_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Reference_Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="requested_departure_date">Requested_Departure_Date</h3>
+<table>
+<thead>
 <tr>
-<td>Release_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Requested_Arrival_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Requested arrival date. null when no specific date is requested. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Type</td>
+<td>date</td>
 </tr>
+</tbody>
+</table>
+<h3 id="requested_departure_time">Requested_Departure_Time</h3>
+<table>
+<thead>
 <tr>
-<td>Requested_Arrival_Time</td>
-<td><code>TimeSpan?</code></td>
-<td></td>
-<td>Requested arrival time. null when no specific time is requested. <code>Filter(ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Requested_Departure_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Requested date of departure. null when no specific date is requested. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Type</td>
+<td>time</td>
 </tr>
+</tbody>
+</table>
+<h3 id="requested_arrival_date">Requested_Arrival_Date</h3>
+<table>
+<thead>
 <tr>
-<td>Requested_Departure_Time</td>
-<td><code>TimeSpan?</code></td>
-<td></td>
-<td>Requested time of departure. null when no specific time is requested. <code>Filter(ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>State</td>
-<td><code>DocumentState</code></td>
-<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
-<td></td>
+<td>Type</td>
+<td>date</td>
 </tr>
+</tbody>
+</table>
+<h3 id="requested_arrival_time">Requested_Arrival_Time</h3>
+<table>
+<thead>
 <tr>
-<td>Void</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void_Reason</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>time</td>
 </tr>
+</tbody>
+</table>
+<h3 id="transport_from_party_id">Transport_From_Party_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Void_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transport_from_party_contact_mechanism_id">Transport_From_Party_Contact_Mechanism_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transport_from_geo_point_id">Transport_From_Geo_Point_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transport_to_party_id">Transport_To_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transport_to_party_contact_mechanism_id">Transport_To_Party_Contact_Mechanism_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transport_to_geo_point_id">Transport_To_Geo_Point_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

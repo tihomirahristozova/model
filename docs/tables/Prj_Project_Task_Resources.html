@@ -8,7 +8,7 @@
     <title>Table Prj_Project_Task_Resources | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prj_Project_Task_Resources | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,68 +80,280 @@
 <h1 id="table-prj_project_task_resources">Table Prj_Project_Task_Resources</h1>
 
 <p>Contains the resources, required by the project tasks. Entity: Prj_Project_Task_Resources</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Project_Task_Resource_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#project_task_resource_id">Project_Task_Resource_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Billing_Price_Per_Hour</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. <code>Filter(eq)</code></td>
+<td><a href="#project_task_id">Project_Task_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The task for which the resource is planned.</td>
 </tr>
 <tr>
-<td>Billing_Total_Amount</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. <code>Filter(eq)</code></td>
+<td><a href="#resource_id">Resource_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The planned resource.</td>
 </tr>
 <tr>
-<td>Cost_Per_Hour</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Cost per hour for the resource usage for this task (in the currency of the project). <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td><a href="#resource_usage_percent">Resource_Usage_Percent</a></td>
+<td><code>decimal(18, 4)</code></td>
+<td>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>Notes for this ProjectTaskResource.</td>
 </tr>
 <tr>
-<td>Resource_Usage_Hours</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td><a href="#resource_usage_hours">Resource_Usage_Hours</a></td>
+<td><code>decimal(10, 2)</code></td>
+<td>The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage.</td>
 </tr>
 <tr>
-<td>Resource_Usage_Percent</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></td>
+<td><a href="#cost_per_hour">Cost_Per_Hour</a></td>
+<td><code>decimal(12, 5)</code></td>
+<td>Cost per hour for the resource usage for this task (in the currency of the project).</td>
 </tr>
 <tr>
-<td>Task_Total_Cost</td>
-<td><code>Decimal</code></td>
+<td><a href="#task_total_cost">Task_Total_Cost</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Total cost for this task (in the currency of the project).</td>
+</tr>
+<tr>
+<td><a href="#billing_price_per_hour">Billing_Price_Per_Hour</a></td>
+<td><code>decimal(12, 5)</code></td>
+<td>When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. NULL means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price</td>
+</tr>
+<tr>
+<td><a href="#billing_total_amount">Billing_Total_Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>When not NULL, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). NULL means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour.</td>
+</tr>
+<tr>
+<td><a href="#per_use_cost">Per_Use_Cost</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>One time cost for each resource usage, specified in the projects currency.</td>
+</tr>
+<tr>
+<td><a href="#resource_instance_id">Resource_Instance_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The concrete resource instance, which should be used. NULL when no specific resource instance is required.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Total cost for this task (in the currency of the project). <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="project_task_resource_id">Project_Task_Resource_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_task_id">Project_Task_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource_id">Resource_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource_usage_percent">Resource_Usage_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource_usage_hours">Resource_Usage_Hours</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(10, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cost_per_hour">Cost_Per_Hour</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="task_total_cost">Task_Total_Cost</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="billing_price_per_hour">Billing_Price_Per_Hour</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="billing_total_amount">Billing_Total_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="per_use_cost">Per_Use_Cost</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource_instance_id">Resource_Instance_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

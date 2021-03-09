@@ -8,7 +8,7 @@
     <title>Table Cost_Template_Levels | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cost_Template_Levels | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,120 @@
 <h1 id="table-cost_template_levels">Table Cost_Template_Levels</h1>
 
 <p>Represents named hierarchy levels within a cost calculation. The hierarchy levels are used to specify cost allocation mechanisms. Entity: Cost_Template_Levels</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Cost_Templates.html">Cost_Templates</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Cost_Template_Level_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#cost_template_level_id">Cost_Template_Level_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Hierarchy_Level</td>
-<td><code>Int32</code></td>
+<td><a href="#cost_template_id">Cost_Template_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
-<td>Level_Name</td>
-<td><code>String</code></td>
+<td><a href="#hierarchy_level">Hierarchy_Level</a></td>
+<td><code>int</code></td>
+<td>The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9)</td>
+</tr>
+<tr>
+<td><a href="#level_name">Level_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The name of the hierarchy level.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The name of the hierarchy level. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="cost_template_level_id">Cost_Template_Level_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cost_template_id">Cost_Template_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hierarchy_level">Hierarchy_Level</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="level_name">Level_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

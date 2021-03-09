@@ -8,7 +8,7 @@
     <title>Table Gen_Properties | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Properties | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,88 +80,336 @@
 <h1 id="table-gen_properties">Table Gen_Properties</h1>
 
 <p>User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Property_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#property_id">Property_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Allowed_Values_Entity_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>When not null, specifies that the allowed values are retrieved from the specified entity. <code>Filter(eq)</code></td>
+<td><a href="#property_code">Property_Code</a></td>
+<td><code>nvarchar(40)</code></td>
+<td>Unique property code.</td>
 </tr>
 <tr>
-<td>Allowed_Values_Filter_XML</td>
-<td><code>String</code></td>
+<td><a href="#property_name">Property_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
 <td></td>
-<td>When not null specifies the filter to apply when extracting allowed values from entity.</td>
 </tr>
 <tr>
-<td>Property_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique property code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
+<td><a href="#entity_name">Entity_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The entity for which the property is applicable.</td>
 </tr>
 <tr>
-<td>Entity_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The entity for which the property is applicable. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
+<td><a href="#allowed_values_entity_name">Allowed_Values_Entity_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>When not NULL, specifies that the allowed values are retrieved from the specified entity</td>
 </tr>
 <tr>
-<td>Hint</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>The hint, which is displayed alongside the property. <code>Filter(multi eq;like)</code> <code>Introduced in version 20.1</code></td>
+<td><a href="#allowed_values_filter_xml">Allowed_Values_Filter_XML</a></td>
+<td><code>nvarchar(1073741823)</code></td>
+<td>When not NULL specifies the filter to apply when extracting allowed values from entity</td>
 </tr>
 <tr>
-<td>Key_Order</td>
-<td><code>Byte?</code></td>
-<td></td>
-<td>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis.</td>
+<td><a href="#limit_to_allowed_values">Limit_To_Allowed_Values</a></td>
+<td><code>bit</code></td>
+<td>When true, allows the property to be set only to allowed value. When false, the property can have any value.</td>
 </tr>
 <tr>
-<td>Limit_To_Allowed_Values</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, allows the property to be set only to allowed value. When false, the property can have any value. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#mask_length">Mask_Length</a></td>
+<td><code>smallint</code></td>
+<td>Limits te length of the property value to the specified number of characters. Null means no limitation</td>
 </tr>
 <tr>
-<td>Mask_Length</td>
-<td><code>Int16?</code></td>
-<td></td>
-<td>Limits te length of the property value to the specified number of characters. Null means no limitation.</td>
+<td><a href="#allowed_values_property_id">Allowed_Values_Property_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.</td>
 </tr>
 <tr>
-<td>Property_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>The name of this CustomProperty. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
+<td><a href="#properties_category_id">Properties_Category_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not null, categorizes the property under a category.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this CustomProperty. <code>Introduced in version 20.1</code></td>
+<td><a href="#property_type">Property_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>T</code>, <code>N</code>, <code>P</code>, <code>D</code></td>
+<td>Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.</td>
 </tr>
 <tr>
-<td>Property_Type</td>
-<td><code>PropertyType</code></td>
-<td>Allowed: <code>T</code>, <code>N</code>, <code>P</code>, <code>D</code></td>
-<td>Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. <code>Required</code> <code>Default(&quot;T&quot;)</code></td>
+<td><a href="#key_order">Key_Order</a></td>
+<td><code>tinyint</code></td>
+<td>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis</td>
+</tr>
+<tr>
+<td><a href="#allowed_values_parent_property_id">Allowed_Values_Parent_Property_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#hint">Hint</a></td>
+<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td>The hint, which is displayed alongside the property.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="property_id">Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property_code">Property_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(40)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property_name">Property_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entity_name">Entity_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allowed_values_entity_name">Allowed_Values_Entity_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allowed_values_filter_xml">Allowed_Values_Filter_XML</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1073741823)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limit_to_allowed_values">Limit_To_Allowed_Values</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask_length">Mask_Length</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>smallint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allowed_values_property_id">Allowed_Values_Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties_category_id">Properties_Category_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property_type">Property_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key_order">Key_Order</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>tinyint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allowed_values_parent_property_id">Allowed_Values_Parent_Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hint">Hint</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
 </tr>
 </tbody>
 </table>

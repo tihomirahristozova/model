@@ -8,7 +8,7 @@
     <title>Table Prd_Load | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prd_Load | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,64 +80,243 @@
 <h1 id="table-prd_load">Table Prd_Load</h1>
 
 <p>Contains scheduled operations usage of the resources. Entity: Prd_Load</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a></li>
 <li><a href="Prd_Work_Order_Items.html">Prd_Work_Order_Items</a></li>
 <li><a href="Prd_Work_Orders.html">Prd_Work_Orders</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Calendar_Date</td>
-<td><code>DateTime</code></td>
+<td><a href="#work_order_item_operation_id">Work_Order_Item_Operation_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
-<td>Priority</td>
-<td><code>Priority</code></td>
-<td>Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></td>
-<td>Priority of the allocation. 1=Lowest ... 5=Highest. <code>Required</code> <code>Default(3)</code></td>
+<td><a href="#calendar_date">Calendar_Date</a></td>
+<td><code>datetime</code></td>
+<td>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day</td>
 </tr>
 <tr>
-<td>Time_Type</td>
-<td><code>TimeType</code></td>
-<td>Allowed: <code>M</code>, <code>R</code>, <code>S</code>, <code>W</code></td>
-<td>S=Setup; R=Run; W=Wait; M=Move. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
+<td><a href="#workgroup_resource_id">Workgroup_Resource_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The exact resource being utilised</td>
 </tr>
 <tr>
-<td>Usage_End_Time</td>
-<td><code>DateTime</code></td>
+<td><a href="#usage_start_time">Usage_Start_Time</a></td>
+<td><code>datetime</code></td>
+<td>The starting time of the planned usage.</td>
+</tr>
+<tr>
+<td><a href="#usage_end_time">Usage_End_Time</a></td>
+<td><code>datetime</code></td>
+<td>The ending time of the planned usage.</td>
+</tr>
+<tr>
+<td><a href="#usage_quantity">Usage_Quantity</a></td>
+<td><code>decimal(9, 0)</code></td>
+<td>Quantity of the resource, which will be used for production</td>
+</tr>
+<tr>
+<td><a href="#usage_time_minutes">Usage_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>Time allocated for the operation in minutes</td>
+</tr>
+<tr>
+<td><a href="#time_type">Time_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>M</code>, <code>R</code>, <code>S</code>, <code>W</code></td>
+<td>S=Setup; R=Run; W=Wait; M=Move</td>
+</tr>
+<tr>
+<td><a href="#priority">Priority</a></td>
+<td><code>smallint</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></td>
+<td>Priority of the allocation. 1=Lowest ... 5=Highest</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The ending time of the planned usage. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="id">Id</h3>
+<table>
+<thead>
 <tr>
-<td>Usage_Start_Time</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The starting time of the planned usage. <code>Required</code> <code>Filter(ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Usage_Time_Minutes</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Time allocated for the operation in minutes. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work_order_item_operation_id">Work_Order_Item_Operation_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calendar_date">Calendar_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workgroup_resource_id">Workgroup_Resource_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage_start_time">Usage_Start_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage_end_time">Usage_End_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage_quantity">Usage_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(9, 0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage_time_minutes">Usage_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time_type">Time_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="priority">Priority</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>smallint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

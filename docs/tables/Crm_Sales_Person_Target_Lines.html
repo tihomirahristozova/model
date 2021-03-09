@@ -8,7 +8,7 @@
     <title>Table Crm_Sales_Person_Target_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Sales_Person_Target_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,62 +80,321 @@
 <h1 id="table-crm_sales_person_target_lines">Table Crm_Sales_Person_Target_Lines</h1>
 
 <p>Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Target_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Crm_Sales_Person_Targets.html">Crm_Sales_Person_Targets</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sales_Person_Target_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#sales_person_target_line_id">Sales_Person_Target_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Period_Date</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). <code>Required</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>Period_Month</td>
-<td><code>Byte</code></td>
+<td><a href="#sales_person_target_id">Sales_Person_Target_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
-<td>Period_Year</td>
-<td><code>Int16</code></td>
+<td><a href="#sales_person_id">Sales_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Sales person to whom the target is assigned</td>
+</tr>
+<tr>
+<td><a href="#product_group_id">Product_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Product group for which the target is defined</td>
+</tr>
+<tr>
+<td><a href="#period_month">Period_Month</a></td>
+<td><code>tinyint</code></td>
+<td>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</td>
+</tr>
+<tr>
+<td><a href="#period_year">Period_Year</a></td>
+<td><code>smallint</code></td>
+<td>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</td>
+</tr>
+<tr>
+<td><a href="#target_amount">Target_Amount</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value</td>
+</tr>
+<tr>
+<td><a href="#target_amount_currency_id">Target_Amount_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Deprecated - use currency in document header</td>
+</tr>
+<tr>
+<td><a href="#period_date">Period_Date</a></td>
+<td><code>datetime</code> Readonly</td>
+<td>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)</td>
+</tr>
+<tr>
+<td><a href="#target_type">Target_Type</a></td>
+<td><code>nvarchar(5)</code> Allowed: <code>SALES</code>, <code>BONUS</code>, <code>PROMO</code>, <code>LOCNT</code></td>
+<td>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs</td>
+</tr>
+<tr>
+<td><a href="#target_value">Target_Value</a></td>
+<td><code>decimal(9, 2)</code></td>
+<td>Value of target. Meaning depends on target type</td>
+</tr>
+<tr>
+<td><a href="#target_weight">Target_Weight</a></td>
+<td><code>decimal(5, 2)</code></td>
+<td>Relative weight of target, comparatively to other targets</td>
+</tr>
+<tr>
+<td><a href="#bonus_program_id">Bonus_Program_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Bonus program Id when the target type is BONUS, NULL otherwise</td>
+</tr>
+<tr>
+<td><a href="#promotional_package_id">Promotional_Package_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Promotional Package Id when the target type is PROMO, NULL otherwise</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="sales_person_target_line_id">Sales_Person_Target_Line_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Target_Type</td>
-<td><code>TargetType</code></td>
-<td>Allowed: <code>SALES</code>, <code>BONUS</code>, <code>PROMO</code>, <code>LOCNT</code></td>
-<td>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. <code>Required</code> <code>Default(&quot;SALES&quot;)</code> <code>Filter(multi eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Target_Value</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Value of target. Meaning depends on target type. <code>Required</code> <code>Default(0)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="sales_person_target_id">Sales_Person_Target_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Target_Weight</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Relative weight of target, comparatively to other targets. <code>Required</code> <code>Default(1)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sales_person_id">Sales_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_group_id">Product_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="period_month">Period_Month</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>tinyint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="period_year">Period_Year</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>smallint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target_amount">Target_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target_amount_currency_id">Target_Amount_Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="period_date">Period_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target_type">Target_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target_value">Target_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(9, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target_weight">Target_Weight</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(5, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bonus_program_id">Bonus_Program_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promotional_package_id">Promotional_Package_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

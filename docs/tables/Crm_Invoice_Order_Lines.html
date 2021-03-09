@@ -8,7 +8,7 @@
     <title>Table Crm_Invoice_Order_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Invoice_Order_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,56 +80,461 @@
 <h1 id="table-crm_invoice_order_lines">Table Crm_Invoice_Order_Lines</h1>
 
 <p>Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Crm_Invoice_Orders.html">Crm_Invoice_Orders</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Invoice_Order_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#invoice_order_line_id">Invoice_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Business_Reason</td>
-<td><code>InvoicingBusinessReason</code></td>
-<td>Allowed: <code>P</code>, <code>S</code></td>
-<td>Business reason for invoicing of this product or service. S=Shipment, P=Payment. <code>Required</code> <code>Default(&quot;S&quot;)</code></td>
+<td><a href="#invoice_order_id">Invoice_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
 </tr>
 <tr>
-<td>Line_Custom_Discount_Percent</td>
-<td><code>Decimal</code></td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
 <td></td>
-<td>User-defined discount for the line. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Line number, unique within the InvoiceOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the InvoiceOrder (in order to allow insertions with adjustment documents). <code>Required</code></td>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product, which is ordered for invoicing</td>
 </tr>
 <tr>
-<td>Line_Standard_Discount_Percent</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Standard discount for the line. This is automatically computed according to discount conditions. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#product_description">Product_Description</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>The description of Product. Initially copied from the name of the Product or from the generating document.</td>
 </tr>
 <tr>
-<td>Product_Description</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The quantity of the product to invoice</td>
+</tr>
+<tr>
+<td><a href="#quantity_unit_id">Quantity_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of Quantity</td>
+</tr>
+<tr>
+<td><a href="#unit_price">Unit_Price</a></td>
+<td><code>decimal(14, 5)</code></td>
+<td>Unit selling price in the unit of measure, specified in Quantity Unit</td>
+</tr>
+<tr>
+<td><a href="#line_amount">Line_Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.</td>
+</tr>
+<tr>
+<td><a href="#serial_number_id">Serial_Number_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</td>
+</tr>
+<tr>
+<td><a href="#line_custom_discount_percent">Line_Custom_Discount_Percent</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>User-defined discount for the line</td>
+</tr>
+<tr>
+<td><a href="#line_discount_id">Line_Discount_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The line discount type used to form the Line_Standard_Discount_Percent</td>
+</tr>
+<tr>
+<td><a href="#line_standard_discount_percent">Line_Standard_Discount_Percent</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>Standard discount for the line. This is automatically computed according to discount conditions</td>
+</tr>
+<tr>
+<td><a href="#transaction_line_id">Transaction_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store transaction line that is to be invoiced by this line, for Business Reason = S</td>
+</tr>
+<tr>
+<td><a href="#payment_transaction_id">Payment_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment.</td>
+</tr>
+<tr>
+<td><a href="#quantity_base">Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The equivalent of Quantity in the base measurement unit of the Product</td>
+</tr>
+<tr>
+<td><a href="#line_deal_type_id">Line_Deal_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice.</td>
+</tr>
+<tr>
+<td><a href="#sales_order_line_id">Sales_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL specifies the Sales Order line that is ordered to be invoiced by this line</td>
+</tr>
+<tr>
+<td><a href="#sales_order_id">Sales_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL specifies the Sales Order that is ordered to be invoiced by this line</td>
+</tr>
+<tr>
+<td><a href="#business_reason">Business_Reason</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>P</code>, <code>S</code></td>
+<td>Business reason for invoicing of this product or service. S=Shipment, P=Payment</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The description of Product. Initially copied from the name of the Product or from the generating document. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="#standard_quantity_base">Standard_Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code> Readonly</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="invoice_order_line_id">Invoice_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="invoice_order_id">Invoice_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_description">Product_Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit_price">Unit_Price</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_amount">Line_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="serial_number_id">Serial_Number_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_custom_discount_percent">Line_Custom_Discount_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_discount_id">Line_Discount_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_standard_discount_percent">Line_Standard_Discount_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transaction_line_id">Transaction_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_transaction_id">Payment_Transaction_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_base">Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_deal_type_id">Line_Deal_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sales_order_line_id">Sales_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sales_order_id">Sales_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="business_reason">Business_Reason</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_quantity_base">Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
 </tr>
 </tbody>
 </table>

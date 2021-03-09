@@ -8,7 +8,7 @@
     <title>Table Gen_Text_Translations | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Text_Translations | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,52 +80,156 @@
 <h1 id="table-gen_text_translations">Table Gen_Text_Translations</h1>
 
 <p>Obsolete. Not used. Entity: Gen_Text_Translations</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Text_Translation_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#text_translation_id">Text_Translation_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Column_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Obsolete. Not used. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#table_name">Table_Name</a></td>
+<td><code>nvarchar(128)</code> Readonly</td>
+<td>Obsolete. Not used.</td>
 </tr>
 <tr>
-<td>Language</td>
-<td><code>String</code></td>
-<td></td>
-<td>Obsolete. Not used. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#row_id">Row_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Obsolete. Not used.</td>
 </tr>
 <tr>
-<td>Row_Id</td>
-<td><code>Guid</code></td>
-<td></td>
-<td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#column_name">Column_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>Obsolete. Not used.</td>
 </tr>
 <tr>
-<td>Table_Name</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>Obsolete. Not used. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code></td>
+<td><a href="#language">Language</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>Obsolete. Not used.</td>
 </tr>
 <tr>
-<td>Translated_Text</td>
-<td><code>String</code></td>
+<td><a href="#translated_text">Translated_Text</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Obsolete. Not used.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Obsolete. Not used. <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="text_translation_id">Text_Translation_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table_name">Table_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_id">Row_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="column_name">Column_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="language">Language</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="translated_text">Translated_Text</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

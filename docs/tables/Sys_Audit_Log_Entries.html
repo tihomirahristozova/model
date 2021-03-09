@@ -8,7 +8,7 @@
     <title>Table Sys_Audit_Log_Entries | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Audit_Log_Entries | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,70 +80,256 @@
 <h1 id="table-sys_audit_log_entries">Table Sys_Audit_Log_Entries</h1>
 
 <p>Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Audit_Log_Entry_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#audit_log_entry_id">Audit_Log_Entry_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Application_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The client application that triggered the event. Null when unknown or N/A. <code>Filter(eq;like)</code></td>
+<td><a href="#event_time_utc">Event_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The exact date and time (in Utc) when the event occurred.</td>
 </tr>
 <tr>
-<td>Details</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#event_class">Event_Class</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>E</code>, <code>A</code>, <code>S</code></td>
+<td>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events.</td>
+</tr>
+<tr>
+<td><a href="#event_type">Event_Type</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>EID</code>, <code>ELD</code>, <code>ECR</code>, <code>EUP</code>, <code>EDE</code>, <code>EMT</code>, <code>ETH</code>, <code>AIN</code>, <code>AOU</code>, <code>AUP</code>, <code>AFL</code>, <code>APW</code>, <code>ATH</code>, <code>STH</code></td>
+<td>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event.</td>
+</tr>
+<tr>
+<td><a href="#event_name">Event_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>Specific event or method name. Contents depend on the Event Type. Null when N/A.</td>
+</tr>
+<tr>
+<td><a href="#entity_name">Entity_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The entity, which is being referenced by the event. Null when unknown or N/A.</td>
+</tr>
+<tr>
+<td><a href="#entity_item_id">Entity_Item_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Id of the record, which is referenced by the event. Null when unknown or N/A.</td>
+</tr>
+<tr>
+<td><a href="#user_id">User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user account under which the event has occurred. Null only for events which are not user-specific.</td>
+</tr>
+<tr>
+<td><a href="#details">Details</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td>Detailed contents of the event. Contents depend on the Event Type and Event Name.</td>
 </tr>
 <tr>
-<td>Entity_Item_Id</td>
-<td><code>Guid?</code></td>
+<td><a href="#personal_data_process_id">Personal_Data_Process_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A.</td>
+</tr>
+<tr>
+<td><a href="#application_name">Application_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The client application that triggered the event. Null when unknown or N/A.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The Id of the record, which is referenced by the event. Null when unknown or N/A. <code>Filter(multi eq)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="audit_log_entry_id">Audit_Log_Entry_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Entity_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The entity, which is being referenced by the event. Null when unknown or N/A. <code>Filter(eq;like)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Event_Class</td>
-<td><code>EventClass</code></td>
-<td>Allowed: <code>E</code>, <code>A</code>, <code>S</code></td>
-<td>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="event_time_utc">Event_Time_Utc</h3>
+<table>
+<thead>
 <tr>
-<td>Event_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Specific event or method name. Contents depend on the Event Type. Null when N/A. <code>Filter(eq;like)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Event_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The exact date and time (in Utc) when the event occurred. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+<td>Type</td>
+<td>datetime</td>
 </tr>
+</tbody>
+</table>
+<h3 id="event_class">Event_Class</h3>
+<table>
+<thead>
 <tr>
-<td>Event_Type</td>
-<td><code>EventType</code></td>
-<td>Allowed: <code>EID</code>, <code>ELD</code>, <code>ECR</code>, <code>EUP</code>, <code>EDE</code>, <code>EMT</code>, <code>ETH</code>, <code>AIN</code>, <code>AOU</code>, <code>AUP</code>, <code>AFL</code>, <code>APW</code>, <code>ATH</code>, <code>STH</code></td>
-<td>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. <code>Required</code> <code>Filter(multi eq)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="event_type">Event_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="event_name">Event_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entity_name">Entity_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entity_item_id">Entity_Item_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_id">User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="details">Details</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="personal_data_process_id">Personal_Data_Process_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application_name">Application_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

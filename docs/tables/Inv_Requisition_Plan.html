@@ -8,7 +8,7 @@
     <title>Table Inv_Requisition_Plan | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Inv_Requisition_Plan | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,58 +80,456 @@
 <h1 id="table-inv_requisition_plan">Table Inv_Requisition_Plan</h1>
 
 <p>The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Requisition_Plan_Item_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#store_id">Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store, which is planned.</td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product, for which we are planning.</td>
+</tr>
+<tr>
+<td><a href="#calendar_date">Calendar_Date</a></td>
+<td><code>datetime</code></td>
+<td>The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning.</td>
+</tr>
+<tr>
+<td><a href="#gross_requirements">Gross_Requirements</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date.</td>
+</tr>
+<tr>
+<td><a href="#scheduled_receipts">Scheduled_Receipts</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.</td>
+</tr>
+<tr>
+<td><a href="#firm_planned_order_receipts">Firm_Planned_Order_Receipts</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date.</td>
+</tr>
+<tr>
+<td><a href="#firm_planned_order_releases">Firm_Planned_Order_Releases</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The order releases which were manually confirmed for release on the specified calendar date.</td>
+</tr>
+<tr>
+<td><a href="#planned_order_receipts">Planned_Order_Receipts</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date.</td>
+</tr>
+<tr>
+<td><a href="#planned_order_releases">Planned_Order_Releases</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date.</td>
+</tr>
+<tr>
+<td><a href="#projected_available_balance">Projected_Available_Balance</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions.</td>
+</tr>
+<tr>
+<td><a href="#net_requirements">Net_Requirements</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The net requirements for the date, which are in shortage for the calendar date.</td>
+</tr>
+<tr>
+<td><a href="#explanation_message">Explanation_Message</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>A message that explains why the program has generated the planned orders for this row</td>
+</tr>
+<tr>
+<td><a href="#confirm_action">Confirm_Action</a></td>
+<td><code>bit</code></td>
+<td>1 - generate firm planned orders for the current row; 0- do not generate;</td>
+</tr>
+<tr>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;</td>
+</tr>
+<tr>
+<td><a href="#supplier_id">Supplier_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The default supplier in the default product supply for current store, if any</td>
+</tr>
+<tr>
+<td><a href="#release_date">Release_Date</a></td>
+<td><code>datetime</code></td>
+<td>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated</td>
+</tr>
+<tr>
+<td><a href="#completion_date">Completion_Date</a></td>
+<td><code>datetime</code></td>
+<td>The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated</td>
+</tr>
+<tr>
+<td><a href="#from_store_id">From_Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When the order is for transfer, this is the store from which we shall transfer the product.</td>
+</tr>
+<tr>
+<td><a href="#generation_date">Generation_Date</a></td>
+<td><code>datetime</code></td>
+<td>Indicates the date on which the plan is generated</td>
+</tr>
+<tr>
+<td><a href="#requisition_plan_item_id">Requisition_Plan_Item_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Calendar_Date</td>
-<td><code>DateTime</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
-<td>Completion_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="store_id">Store_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Confirm_Action</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True - generate firm planned orders for the current row; false- do not generate;. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Explanation_Message</td>
-<td><code>String</code></td>
-<td></td>
-<td>A message that explains why the program has generated the planned orders for this row.</td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Generation_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Indicates the date on which the plan is generated. <code>Required</code> <code>Default(Now)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Release_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated.</td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calendar_date">Calendar_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gross_requirements">Gross_Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scheduled_receipts">Scheduled_Receipts</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="firm_planned_order_receipts">Firm_Planned_Order_Receipts</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="firm_planned_order_releases">Firm_Planned_Order_Releases</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planned_order_receipts">Planned_Order_Receipts</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planned_order_releases">Planned_Order_Releases</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="projected_available_balance">Projected_Available_Balance</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="net_requirements">Net_Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explanation_message">Explanation_Message</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confirm_action">Confirm_Action</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supplier_id">Supplier_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="release_date">Release_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="completion_date">Completion_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_store_id">From_Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="generation_date">Generation_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="requisition_plan_item_id">Requisition_Plan_Item_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

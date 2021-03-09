@@ -8,7 +8,7 @@
     <title>Table Gen_Document_Type_Notifications | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Document_Type_Notifications | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,56 +80,200 @@
 <h1 id="table-gen_document_type_notifications">Table Gen_Document_Type_Notifications</h1>
 
 <p>Provides notification addresses to be notified upon occurrence of different document events. Entity: Gen_Document_Type_Notifications</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Document_Types.html">Gen_Document_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Document_Type_Notification_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#document_type_notification_id">Document_Type_Notification_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>.</td>
 </tr>
 <tr>
-<td>Document_Event</td>
-<td><code>String</code></td>
-<td></td>
-<td>The event which will trigger the notification. <code>Required</code> <code>Default(&quot;StateChanging&quot;)</code> <code>Filter(eq)</code></td>
+<td><a href="#document_type_id">Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document type for which this notification is set.</td>
 </tr>
 <tr>
-<td>Filter_XML</td>
-<td><code>String</code></td>
-<td></td>
-<td>Filtering condition for the document. Only documents which match the filter will trigger the event.</td>
+<td><a href="#document_event">Document_Event</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The event which will trigger the notification</td>
 </tr>
 <tr>
-<td>State_Bit_Mask</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>The document states that will trigger the event. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#state_bit_mask">State_Bit_Mask</a></td>
+<td><code>int</code></td>
+<td>The document states that will trigger the event</td>
 </tr>
 <tr>
-<td>Status_Change_Direction</td>
-<td><code>StatusChangeDirection</code></td>
-<td>Allowed: <code>*</code>, <code>0</code>, <code>+</code>, <code>-</code></td>
-<td>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. <code>Required</code> <code>Default(&quot;*&quot;)</code></td>
+<td><a href="#user_status_id">User_Status_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies that the event will be triggered only on this user status</td>
 </tr>
 <tr>
-<td>To_Email_Address_List</td>
-<td><code>String</code></td>
+<td><a href="#status_change_direction">Status_Change_Direction</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>*</code>, <code>0</code>, <code>+</code>, <code>-</code></td>
+<td>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'</td>
+</tr>
+<tr>
+<td><a href="#filter_xml">Filter_XML</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>Filtering condition for the document. Only documents which match the filter will trigger the event</td>
+</tr>
+<tr>
+<td><a href="#to_email_address_list">To_Email_Address_List</a></td>
+<td><code>nvarchar(2048)</code></td>
+<td>List of email addressess to be notified</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>List of email addressess to be notified. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="document_type_notification_id">Document_Type_Notification_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_type_id">Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_event">Document_Event</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="state_bit_mask">State_Bit_Mask</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_status_id">User_Status_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="status_change_direction">Status_Change_Direction</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filter_xml">Filter_XML</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="to_email_address_list">To_Email_Address_List</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2048)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

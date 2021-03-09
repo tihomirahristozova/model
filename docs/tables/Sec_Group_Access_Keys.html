@@ -8,7 +8,7 @@
     <title>Table Sec_Group_Access_Keys | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sec_Group_Access_Keys | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,104 +80,360 @@
 <h1 id="table-sec_group_access_keys">Table Sec_Group_Access_Keys</h1>
 
 <p>Specifies the access keys for which the user groups have permissions. The existance of a record grants read permission. Additional permissions are granted through specialized fields. Entity: Sec_Group_Access_Keys</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Sec_Groups.html">Sec_Groups</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Group_Access_Key_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#group_access_key_id">Group_Access_Key_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Can_Administer</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#access_key_id">Access_Key_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>This access key, to which we are granting access permissions.</td>
 </tr>
 <tr>
-<td>Can_Delete</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with delete permission for the entity, protected by the access key. <code>Required</code></td>
+<td><a href="#group_id">Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The group, which is granted with access permission.</td>
 </tr>
 <tr>
-<td>Can_Update</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with update permission for the entity, protected by the access key. <code>Required</code></td>
+<td><a href="#can_update">Can_Update</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with update permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission1</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#can_delete">Can_Delete</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with delete permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission10</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#permission1">Permission1</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission2</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#permission2">Permission2</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission3</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#permission3">Permission3</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission4</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#permission4">Permission4</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission5</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#permission5">Permission5</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission6</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#permission6">Permission6</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission7</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#permission7">Permission7</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission8</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#permission8">Permission8</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
 </tr>
 <tr>
-<td>Permission9</td>
-<td><code>Boolean</code></td>
+<td><a href="#permission9">Permission9</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
+</tr>
+<tr>
+<td><a href="#permission10">Permission10</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key.</td>
+</tr>
+<tr>
+<td><a href="#can_administer">Can_Administer</a></td>
+<td><code>bit</code></td>
+<td>When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>When true, the group is granted with entity-specific permission for the entity, protected by the access key. <code>Required</code> <code>Default(false)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="group_access_key_id">Group_Access_Key_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access_key_id">Access_Key_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group_id">Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can_update">Can_Update</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can_delete">Can_Delete</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission1">Permission1</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission2">Permission2</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission3">Permission3</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission4">Permission4</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission5">Permission5</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission6">Permission6</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission7">Permission7</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission8">Permission8</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission9">Permission9</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission10">Permission10</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can_administer">Can_Administer</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

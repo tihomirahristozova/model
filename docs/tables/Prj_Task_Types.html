@@ -8,7 +8,7 @@
     <title>Table Prj_Task_Types | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prj_Task_Types | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,156 @@
 <h1 id="table-prj_task_types">Table Prj_Task_Types</h1>
 
 <p>Represents the different types of tasks, which can be included in the projects. Entity: Prj_Task_Types</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Task_Type_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#task_type_id">Task_Type_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Description</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Multilanguage description of the task type.</td>
+<td><a href="#project_type_id">Project_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies that this task type can be used only for projects of the specified type.</td>
 </tr>
 <tr>
-<td>Display_Order</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Display order position of the task. Lowest numbers are shown first (on top). <code>Required</code> <code>Default(1)</code></td>
+<td><a href="#task_type_name">Task_Type_Name</a></td>
+<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td>The multilanguage task type name.</td>
 </tr>
 <tr>
-<td>Icon</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
+<td><a href="#icon">Icon</a></td>
+<td><code>varbinary</code></td>
 <td>Icon representing the task type. Preferrably 32x32 pixels.</td>
 </tr>
 <tr>
-<td>Task_Type_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td>Multilanguage description of the task type.</td>
+</tr>
+<tr>
+<td><a href="#display_order">Display_Order</a></td>
+<td><code>int</code></td>
+<td>Display order position of the task. Lowest numbers are shown first (on top).</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The multilanguage task type name. <code>Required</code> <code>Filter(multi eq;like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="task_type_id">Task_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_type_id">Project_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="task_type_name">Task_Type_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="icon">Icon</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="display_order">Display_Order</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

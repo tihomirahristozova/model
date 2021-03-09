@@ -8,7 +8,7 @@
     <title>Table Scm_Purchase_Price_Lists | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Scm_Purchase_Price_Lists | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,116 @@
 <h1 id="table-scm_purchase_price_lists">Table Scm_Purchase_Price_Lists</h1>
 
 <p>Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Purchase_Price_List_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#purchase_price_list_id">Purchase_Price_List_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>From_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#purchase_price_list_name">Purchase_Price_List_Name</a></td>
+<td><code>nvarchar(50)</code></td>
 <td></td>
-<td>Starting validity of the price list. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
-<td>Purchase_Price_List_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of this PurchasePriceList. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#from_date">From_Date</a></td>
+<td><code>datetime</code></td>
+<td>Starting validity of the price list</td>
 </tr>
 <tr>
-<td>Thru_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#thru_date">Thru_Date</a></td>
+<td><code>datetime</code></td>
+<td>Ending validity of the price list</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Ending validity of the price list. <code>Filter(eq;ge;le)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="purchase_price_list_id">Purchase_Price_List_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_price_list_name">Purchase_Price_List_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_date">From_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="thru_date">Thru_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

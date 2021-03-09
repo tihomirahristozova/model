@@ -8,7 +8,7 @@
     <title>Table Scm_Receiving_Order_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Scm_Receiving_Order_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,521 @@
 <h1 id="table-scm_receiving_order_lines">Table Scm_Receiving_Order_Lines</h1>
 
 <p>Contains detail records of Receiving Orders. Each line contains the receiving of a quantity of a product. Entity: Scm_Receiving_Order_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Scm_Receiving_Orders.html">Scm_Receiving_Orders</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Receiving_Order_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Finished</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The received product.</td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). <code>Required</code></td>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The received quantity.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this ReceivingOrderLine.</td>
+<td><a href="#quantity_unit_id">Quantity_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product.</td>
 </tr>
 <tr>
-<td>Product_Description</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The lot of the received goods.</td>
+</tr>
+<tr>
+<td><a href="#serial_number_id">Serial_Number_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="#store_bin_id">Store_Bin_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store bin in which to receive the goods.</td>
+</tr>
+<tr>
+<td><a href="#confirmed_quantity_base">Confirmed_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.</td>
+</tr>
+<tr>
+<td><a href="#quantity_base">Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The equivalence of Quantity, in the base measurement category of the product.</td>
+</tr>
+<tr>
+<td><a href="#confirmed_quantity">Confirmed_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.</td>
+</tr>
+<tr>
+<td><a href="#receiving_order_line_id">Receiving_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#finished">Finished</a></td>
+<td><code>bit</code></td>
+<td>When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected.</td>
+</tr>
+<tr>
+<td><a href="#product_code_id">Product_Code_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies that the product was selected using the specified product code record.</td>
+</tr>
+<tr>
+<td><a href="#product_description">Product_Description</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user.</td>
+</tr>
+<tr>
+<td><a href="#receiving_order_id">Receiving_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#purchase_order_line_id">Purchase_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase order line for which we are receiving quantity.</td>
+</tr>
+<tr>
+<td><a href="#price_per_unit">Price_Per_Unit</a></td>
+<td><code>decimal(14, 5)</code></td>
+<td>The unit price of the received products, in the documents currency.</td>
+</tr>
+<tr>
+<td><a href="#purchase_product_price_id">Purchase_Product_Price_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies that the purchase unit price is loaded automatically from the specified purchase price record.</td>
+</tr>
+<tr>
+<td><a href="#line_store_id">Line_Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store in which the goods are received.</td>
+</tr>
+<tr>
+<td><a href="#line_amount">Line_Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>The total amount for the line. Equals to Quantity * Price_Per_Unit</td>
+</tr>
+<tr>
+<td><a href="#standard_quantity_base">Standard_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code> Readonly</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+</tr>
+<tr>
+<td><a href="#product_variant_id">Product_Variant_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If specified determines which product variant of the current product in this line is used.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#confirmed_standard_quantity_base">Confirmed_Standard_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code> Readonly</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="serial_number_id">Serial_Number_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_bin_id">Store_Bin_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confirmed_quantity_base">Confirmed_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_base">Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confirmed_quantity">Confirmed_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiving_order_line_id">Receiving_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="finished">Finished</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_code_id">Product_Code_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_description">Product_Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiving_order_id">Receiving_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_order_line_id">Purchase_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="price_per_unit">Price_Per_Unit</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_product_price_id">Purchase_Product_Price_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_store_id">Line_Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_amount">Line_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_quantity_base">Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_variant_id">Product_Variant_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confirmed_standard_quantity_base">Confirmed_Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
 </tr>
 </tbody>
 </table>

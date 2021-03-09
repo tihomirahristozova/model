@@ -8,7 +8,7 @@
     <title>Table Crm_Sales_Persons | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Sales_Persons | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,56 +80,241 @@
 <h1 id="table-crm_sales_persons">Table Crm_Sales_Persons</h1>
 
 <p>Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Cm_Persons.html">Cm_Persons</a></li>
+<li><a href="Gen_Parties.html">Gen_Parties</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sales_Person_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#sales_person_id">Sales_Person_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique sales person Id</td>
+</tr>
+<tr>
+<td><a href="#person_id">Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Base personal record</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Commission_Percent</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>The percentage (0..1) of commission percent. null means that there is no commission percent.</td>
+<td><a href="#commission_policy_id">Commission_Policy_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Current commission policy for the sales person. NULL means there is no commission policy</td>
 </tr>
 <tr>
-<td>Commission_Policy_Id</td>
-<td><code>Guid?</code></td>
-<td></td>
-<td>Current commission policy for the sales person. null means there is no commission policy. <code>Filter(multi eq)</code></td>
+<td><a href="#commission_percent">Commission_Percent</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>The percentage (0..1) of commission percent. NULL means that there is no commission percent.</td>
 </tr>
 <tr>
-<td>Contract_End_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The ending date of the contract with the sales person. null when the sales person is still active. <code>Filter(ge;le)</code></td>
+<td><a href="#sales_person_group_id">Sales_Person_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The sales person group to which this sales person is assigned.</td>
 </tr>
 <tr>
-<td>Contract_Start_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The starting date of the contract with the sales person. null when it is unknown. <code>Filter(ge;le)</code></td>
+<td><a href="#contract_start_date">Contract_Start_Date</a></td>
+<td><code>datetime</code></td>
+<td>The starting date of the contract with the sales person. NULL when it is unknown.</td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
+<td><a href="#contract_end_date">Contract_End_Date</a></td>
+<td><code>datetime</code></td>
+<td>The ending date of the contract with the sales person. NULL when the sales person is still active.</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location.</td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="sales_person_id">Sales_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="person_id">Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="commission_policy_id">Commission_Policy_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="commission_percent">Commission_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sales_person_group_id">Sales_Person_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contract_start_date">Contract_Start_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contract_end_date">Contract_End_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

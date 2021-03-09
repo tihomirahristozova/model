@@ -8,7 +8,7 @@
     <title>Table Crm_Sales_Orders_Options | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Sales_Orders_Options | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,220 @@
 <h1 id="table-crm_sales_orders_options">Table Crm_Sales_Orders_Options</h1>
 
 <p>Options for sales orders of specific user defined document type. Entity: Crm_Sales_Orders_Options</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Document_Types.html">Gen_Document_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sales_Order_Option_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#sales_order_option_id">Sales_Order_Option_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Allowed_Directions</td>
-<td><code>AllowedDirections</code></td>
-<td>Allowed: <code>S</code>, <code>R</code>, <code>*</code>, <code>A</code></td>
-<td>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). <code>Required</code> <code>Default(&quot;A&quot;)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#document_type_id">Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document type for which the sales order option applies.</td>
 </tr>
 <tr>
-<td>Available_Quantity_Only</td>
-<td><code>Boolean</code></td>
+<td><a href="#available_quantity_only">Available_Quantity_Only</a></td>
+<td><code>bit</code></td>
+<td>When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)</td>
+</tr>
+<tr>
+<td><a href="#allowed_directions">Allowed_Directions</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>S</code>, <code>R</code>, <code>*</code>, <code>A</code></td>
+<td>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)</td>
+</tr>
+<tr>
+<td><a href="#minimum_amount">Minimum_Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.</td>
+</tr>
+<tr>
+<td><a href="#minimum_amount_currency_id">Minimum_Amount_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of Minimal Amount</td>
+</tr>
+<tr>
+<td><a href="#vat_deviation_document_amount_type_id">VAT_Deviation_Document_Amount_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT</td>
+</tr>
+<tr>
+<td><a href="#deal_document_type_id">Deal_Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities.</td>
+</tr>
+<tr>
+<td><a href="#shipment_allowance">Shipment_Allowance</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>A</code>, <code>P</code>, <code>W</code></td>
+<td>Terms on which the shipment of the products in the sales order is allowed.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="sales_order_option_id">Sales_Order_Option_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Shipment_Allowance</td>
-<td><code>ShipmentAllowance</code></td>
-<td>Allowed: <code>A</code>, <code>P</code>, <code>W</code></td>
-<td>Terms on which the shipment of the products in the sales order is allowed. <code>Required</code> <code>Default(&quot;A&quot;)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_type_id">Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="available_quantity_only">Available_Quantity_Only</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allowed_directions">Allowed_Directions</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimum_amount">Minimum_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimum_amount_currency_id">Minimum_Amount_Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vat_deviation_document_amount_type_id">VAT_Deviation_Document_Amount_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deal_document_type_id">Deal_Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shipment_allowance">Shipment_Allowance</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Gen_Document_Amounts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Document_Amounts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,260 @@
 <h1 id="table-gen_document_amounts">Table Gen_Document_Amounts</h1>
 
 <p>Contains a specific instance of an additional amount for a specific document. Entity: Gen_Document_Amounts</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Document_Amount_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#document_amount_id">Document_Amount_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Input_Percent</td>
-<td><code>Decimal?</code></td>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
-<td>User_Can_Change_Input</td>
-<td><code>Boolean</code></td>
+<td><a href="#document_amount_type_id">Document_Amount_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of the amount.</td>
+</tr>
+<tr>
+<td><a href="#input_percent">Input_Percent</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type).</td>
+</tr>
+<tr>
+<td><a href="#input_amount">Input_Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>When not null, specifies directly the amount of the additional amount.</td>
+</tr>
+<tr>
+<td><a href="#input_amount_currency_id">Input_Amount_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null.</td>
+</tr>
+<tr>
+<td><a href="#user_can_change_input">User_Can_Change_Input</a></td>
+<td><code>bit</code></td>
+<td>1 if the user, entering the document is allowed to change the default input percent</td>
+</tr>
+<tr>
+<td><a href="#input_unit_amount">Input_Unit_Amount</a></td>
+<td><code>decimal(14, 5)</code></td>
+<td>Input unit amount for the calculation of the current amount.</td>
+</tr>
+<tr>
+<td><a href="#input_unit_id">Input_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Measurement unit of the input unit amount.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>True if the user, entering the document is allowed to change the default input percent. <code>Required</code> <code>Default(true)</code></td>
+</tr>
+<tr>
+<td><a href="#base_amount">Base_Amount</a></td>
+<td><code>decimal(14, 2)</code> Readonly</td>
+<td>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.</td>
+</tr>
+<tr>
+<td><a href="#total_distributed_amount">Total_Distributed_Amount</a></td>
+<td><code>decimal(14, 2)</code> Readonly</td>
+<td>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="document_amount_id">Document_Amount_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_amount_type_id">Document_Amount_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input_percent">Input_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input_amount">Input_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input_amount_currency_id">Input_Amount_Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_can_change_input">User_Can_Change_Input</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input_unit_amount">Input_Unit_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input_unit_id">Input_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="base_amount">Base_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="total_distributed_amount">Total_Distributed_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
 </tr>
 </tbody>
 </table>

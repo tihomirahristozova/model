@@ -8,7 +8,7 @@
     <title>Table Scm_Purchase_Control_Documents | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Scm_Purchase_Control_Documents | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,158 +80,140 @@
 <h1 id="table-scm_purchase_control_documents">Table Scm_Purchase_Control_Documents</h1>
 
 <p>The main document for purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Documents (Introduced in version 18.2)</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Purchase_Control_Document_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#purchase_control_document_id">Purchase_Control_Document_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Number</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#purchase_requisition_id">Purchase_Requisition_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase requisition, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.</td>
 </tr>
 <tr>
-<td>Adjustment_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#purchase_order_id">Purchase_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase order, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.</td>
 </tr>
 <tr>
-<td>Complete_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#receiving_order_id">Receiving_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The receiving order, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.</td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#purchase_invoice_id">Purchase_Invoice_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase invoice, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="purchase_control_document_id">Purchase_Control_Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Document_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="purchase_requisition_id">Purchase_Requisition_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Document_Version</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Entity_Name</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="purchase_order_id">Purchase_Order_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Parent_Document_Relationship_Type</td>
-<td><code>ParentDocumentRelationshipType?</code></td>
-<td>Allowed: <code>S</code>, <code>N</code>, Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Planning_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="receiving_order_id">Receiving_Order_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Read_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Reference_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="purchase_invoice_id">Purchase_Invoice_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Reference_Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Release_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>State</td>
-<td><code>DocumentState</code></td>
-<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Void</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Void_Reason</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Void_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Void_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 </tbody>
 </table>

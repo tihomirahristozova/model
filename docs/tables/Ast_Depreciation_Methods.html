@@ -8,7 +8,7 @@
     <title>Table Ast_Depreciation_Methods | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Ast_Depreciation_Methods | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,64 +80,196 @@
 <h1 id="table-ast_depreciation_methods">Table Ast_Depreciation_Methods</h1>
 
 <p>Depreciation methods. Contains both system-defined and user-defined methods. Entity: Ast_Depreciation_Methods</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Depreciation_Method_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#depreciation_method_id">Depreciation_Method_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Depreciation_Function</td>
-<td><code>DepreciationFunction</code></td>
-<td>Allowed: <code>FAC</code>, <code>STL</code>, <code>SYD</code>, <code>TAB</code></td>
-<td>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table. <code>Required</code> <code>Default(&quot;STL&quot;)</code></td>
-</tr>
-<tr>
-<td>Factor</td>
-<td><code>Decimal</code></td>
+<td><a href="#depreciation_method_name">Depreciation_Method_Name</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
-<td>Is_System</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td><a href="#depreciation_function">Depreciation_Function</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>FAC</code>, <code>STL</code>, <code>SYD</code>, <code>TAB</code></td>
+<td>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table</td>
 </tr>
 <tr>
-<td>Months_In_A_Period</td>
-<td><code>Int32</code></td>
+<td><a href="#factor">Factor</a></td>
+<td><code>decimal(5, 3)</code></td>
+<td>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor</td>
+</tr>
+<tr>
+<td><a href="#months_in_a_period">Months_In_A_Period</a></td>
+<td><code>int</code></td>
+<td>Number of equal valued months calculated with single application of the function</td>
+</tr>
+<tr>
+<td><a href="#start_from_next_month">Start_From_Next_Month</a></td>
+<td><code>bit</code></td>
+<td>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.</td>
+</tr>
+<tr>
+<td><a href="#is_system">Is_System</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.</td>
+</tr>
+<tr>
+<td><a href="#period_determination_method">Period_Determination_Method</a></td>
+<td><code>nvarchar(2)</code> Allowed: <code>NM</code>, <code>CM</code>, <code>BD</code></td>
+<td>Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Number of equal valued months calculated with single application of the function. <code>Required</code> <code>Default(12)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="depreciation_method_id">Depreciation_Method_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Depreciation_Method_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of this DepreciationMethod. <code>Required</code> <code>Filter(like)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Period_Determination_Method</td>
-<td><code>PeriodDeterminationMethod</code></td>
-<td>Allowed: <code>NM</code>, <code>CM</code>, <code>BD</code></td>
-<td>Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. <code>Required</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="depreciation_method_name">Depreciation_Method_Name</h3>
+<table>
+<thead>
 <tr>
-<td>Start_From_Next_Month</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month. <code>Required</code> <code>Default(true)</code> <code>ReadOnly</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depreciation_function">Depreciation_Function</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="factor">Factor</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(5, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="months_in_a_period">Months_In_A_Period</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="start_from_next_month">Start_From_Next_Month</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_system">Is_System</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="period_determination_method">Period_Determination_Method</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Crm_Product_Prices | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Product_Prices | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,436 @@
 <h1 id="table-crm_product_prices">Table Crm_Product_Prices</h1>
 
 <p>Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Product_Price_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#price_list_id">Price_List_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies that the sales document must have the specified price list.</td>
+</tr>
+<tr>
+<td><a href="#price">Price</a></td>
+<td><code>decimal(13, 5)</code></td>
+<td>Price in the specified currency and for the specified quantity</td>
+</tr>
+<tr>
+<td><a href="#currency_id">Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of the price</td>
+</tr>
+<tr>
+<td><a href="#price_quantity_measurement_unit_id">Price_Quantity_Measurement_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of Price_Quantity</td>
+</tr>
+<tr>
+<td><a href="#customer_id">Customer_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies that the customer of the sales document must be the specified customer.</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies that the sales document must be in the specified enterprise company.</td>
+</tr>
+<tr>
+<td><a href="#priority">Priority</a></td>
+<td><code>tinyint</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></td>
+<td>Priority of the price comparative to other prices. Only the highest priority price is applied.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>From_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Starting date of validity of the price. <code>Filter(eq;ge;le)</code></td>
+<td><a href="#min_quantity">Min_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this ProductPrice.</td>
+<td><a href="#max_quantity">Max_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit</td>
 </tr>
 <tr>
-<td>Priority</td>
-<td><code>Priority</code></td>
-<td>Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></td>
-<td>Priority of the price comparative to other prices. Only the highest priority price is applied. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#from_date">From_Date</a></td>
+<td><code>date</code></td>
+<td>Starting date of validity of the price</td>
 </tr>
 <tr>
-<td>Thru_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#thru_date">Thru_Date</a></td>
+<td><code>date</code></td>
+<td>Ending date (inclusive) of the validity of the price</td>
+</tr>
+<tr>
+<td><a href="#target_group_id">Target_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies a criteria, which is matched only when the customer of the sales document is included in the group.</td>
+</tr>
+<tr>
+<td><a href="#price_type_id">Price_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Price type of the current product price. The price types are used to set additional priority condition for the prices.</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When set, specifies that the sales document must be of the specified enterprise company location.</td>
+</tr>
+<tr>
+<td><a href="#distribution_channel_id">Distribution_Channel_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Use the price only when selling through the specified channel</td>
+</tr>
+<tr>
+<td><a href="#product_price_id">Product_Price_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
-<td>Ending date (inclusive) of the validity of the price. <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="#price_quantity">Price_Quantity</a></td>
+<td><code>decimal(10, 3)</code></td>
+<td>The quantity of the product for which the price is specified</td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product for which a price will be defined</td>
+</tr>
+<tr>
+<td><a href="#ship_to_customer_id">Ship_To_Customer_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="price_list_id">Price_List_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="price">Price</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(13, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency_id">Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="price_quantity_measurement_unit_id">Price_Quantity_Measurement_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="customer_id">Customer_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="priority">Priority</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>tinyint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="min_quantity">Min_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max_quantity">Max_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_date">From_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="thru_date">Thru_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target_group_id">Target_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="price_type_id">Price_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distribution_channel_id">Distribution_Channel_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_price_id">Product_Price_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="price_quantity">Price_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(10, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ship_to_customer_id">Ship_To_Customer_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

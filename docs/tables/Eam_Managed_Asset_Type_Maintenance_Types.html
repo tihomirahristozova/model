@@ -8,7 +8,7 @@
     <title>Table Eam_Managed_Asset_Type_Maintenance_Types | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Eam_Managed_Asset_Type_Maintenance_Types | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,180 @@
 <h1 id="table-eam_managed_asset_type_maintenance_types">Table Eam_Managed_Asset_Type_Maintenance_Types</h1>
 
 <p>Defines the types of maintenances, which are allowed for assets of the different types. Entity: Eam_Managed_Asset_Type_Maintenance_Types (Introduced in version 19.1)</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Eam_Managed_Asset_Types.html">Eam_Managed_Asset_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Managed_Asset_Type_Maintenance_Type_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#managed_asset_type_maintenance_type_id">Managed_Asset_Type_Maintenance_Type_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Defines the types of maintenances, which are allowed for assets of the different types.</td>
+</tr>
+<tr>
+<td><a href="#managed_asset_type_id">Managed_Asset_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The asset type for which the allowed maintenance type is defined.</td>
+</tr>
+<tr>
+<td><a href="#maintenance_type_id">Maintenance_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The allowed maintenance type for the asset type.</td>
+</tr>
+<tr>
+<td><a href="#default_schedule_months">Default_Schedule_Months</a></td>
+<td><code>int</code></td>
+<td>Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in months.</td>
+</tr>
+<tr>
+<td><a href="#default_schedule_days">Default_Schedule_Days</a></td>
+<td><code>int</code></td>
+<td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in days.</td>
+</tr>
+<tr>
+<td><a href="#default_parameter_change">Default_Parameter_Change</a></td>
+<td><code>int</code></td>
+<td>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means, that maintenances are not scheduled based on parameter change.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Default_Parameter_Change</td>
-<td><code>Int32?</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="managed_asset_type_maintenance_type_id">Managed_Asset_Type_Maintenance_Type_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Default_Schedule_Days</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in days.</td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Default_Schedule_Months</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months.</td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="managed_asset_type_id">Managed_Asset_Type_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this ManagedAssetTypeMaintenanceType.</td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_type_id">Maintenance_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_schedule_months">Default_Schedule_Months</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_schedule_days">Default_Schedule_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_parameter_change">Default_Parameter_Change</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

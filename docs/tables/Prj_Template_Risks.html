@@ -8,7 +8,7 @@
     <title>Table Prj_Template_Risks | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prj_Template_Risks | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,160 @@
 <h1 id="table-prj_template_risks">Table Prj_Template_Risks</h1>
 
 <p>Contains project risks, which will be copied to projects, based on the template. Entity: Prj_Template_Risks</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prj_Templates.html">Prj_Templates</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Project_Template_Risk_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#project_template_risk_id">Project_Template_Risk_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Description</td>
-<td><code>String</code></td>
+<td><a href="#project_template_id">Project_Template_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The description of this TemplateRisk.</td>
 </tr>
 <tr>
-<td>Impact_Percent</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The impact of the risk to the project, expressed as percentage of the total project value. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#risk_name">Risk_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The name of the risk.</td>
 </tr>
 <tr>
-<td>Probability_Percent</td>
-<td><code>Decimal</code></td>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>The probability of the risk occurring. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
-<td>Risk_Name</td>
-<td><code>String</code></td>
+<td><a href="#probability_percent">Probability_Percent</a></td>
+<td><code>decimal(3, 2)</code></td>
+<td>The probability of the risk occurring.</td>
+</tr>
+<tr>
+<td><a href="#impact_percent">Impact_Percent</a></td>
+<td><code>decimal(3, 2)</code></td>
+<td>The impact of the risk to the project, expressed as percentage of the total project value.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The name of the risk. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="project_template_risk_id">Project_Template_Risk_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_template_id">Project_Template_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="risk_name">Risk_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probability_percent">Probability_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(3, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="impact_percent">Impact_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(3, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

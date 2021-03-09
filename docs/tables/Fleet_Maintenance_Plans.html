@@ -8,7 +8,7 @@
     <title>Table Fleet_Maintenance_Plans | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Fleet_Maintenance_Plans | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,70 +80,196 @@
 <h1 id="table-fleet_maintenance_plans">Table Fleet_Maintenance_Plans</h1>
 
 <p>Defines the periodic maintenance plans and the conditions for performing the next maintenance. Entity: Fleet_Maintenance_Plans</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Maintenance_Plan_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#maintenance_plan_id">Maintenance_Plan_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Check_Days</td>
-<td><code>Int32?</code></td>
+<td><a href="#maintenance_plan_code">Maintenance_Plan_Code</a></td>
+<td><code>nvarchar(16)</code></td>
 <td></td>
-<td>When not null, specifies the number of days between maintenances.</td>
 </tr>
 <tr>
-<td>Check_Months</td>
-<td><code>Int32?</code></td>
-<td></td>
+<td><a href="#maintenance_plan_name">Maintenance_Plan_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Maintenance plan name (Multilanguage).</td>
+</tr>
+<tr>
+<td><a href="#check_months">Check_Months</a></td>
+<td><code>int</code></td>
 <td>When not null, specifies the number of months between maintenances.</td>
 </tr>
 <tr>
-<td>Maintenance_Plan_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>The unique code of the MaintenancePlan. <code>Required</code></td>
+<td><a href="#check_days">Check_Days</a></td>
+<td><code>int</code></td>
+<td>When not null, specifies the number of days between maintenances.</td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if the plan is active and can be selected from drop-downs. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 18.2</code></td>
-</tr>
-<tr>
-<td>Mileage_Km</td>
-<td><code>Int32?</code></td>
-<td></td>
+<td><a href="#mileage_km">Mileage_Km</a></td>
+<td><code>int</code></td>
 <td>When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.</td>
 </tr>
 <tr>
-<td>Maintenance_Plan_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Maintenance plan name (Multilanguage). <code>Required</code></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this MaintenancePlan.</td>
-</tr>
-<tr>
-<td>Trip_Count</td>
-<td><code>Int32?</code></td>
-<td></td>
+<td><a href="#trip_count">Trip_Count</a></td>
+<td><code>int</code></td>
 <td>When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>True if the plan is active and can be selected from drop-downs.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="maintenance_plan_id">Maintenance_Plan_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_plan_code">Maintenance_Plan_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_plan_name">Maintenance_Plan_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="check_months">Check_Months</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="check_days">Check_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mileage_km">Mileage_Km</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trip_count">Trip_Count</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Prd_Consumption_Order_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prd_Consumption_Order_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,361 @@
 <h1 id="table-prd_consumption_order_lines">Table Prd_Consumption_Order_Lines</h1>
 
 <p>Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prd_Consumption_Orders.html">Prd_Consumption_Orders</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#line_ord">Line_Ord</a></td>
+<td><code>int</code></td>
+<td>Non-unique line number within the order</td>
+</tr>
+<tr>
+<td><a href="#work_order_item_ingredient_id">Work_Order_Item_Ingredient_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Work Order Item Ingredient for which we are ordering materials.</td>
+</tr>
+<tr>
+<td><a href="#scheduled_date_time">Scheduled_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The scheduled date, when the material is needed.</td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The requested material.</td>
+</tr>
+<tr>
+<td><a href="#consumed_quantity">Consumed_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>Requested quantity of the material.</td>
+</tr>
+<tr>
+<td><a href="#consumed_quantity_unit_id">Consumed_Quantity_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Measurement unit of the requested quantity.</td>
+</tr>
+<tr>
+<td><a href="#store_id">Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store, from which the material is requested.</td>
+</tr>
+<tr>
+<td><a href="#store_bin_id">Store_Bin_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If not NULL, specifies that the material has to be consumed from specific store bin</td>
+</tr>
+<tr>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If not NULL, specifies that the material has to be consumed from specific lot</td>
+</tr>
+<tr>
+<td><a href="#serial_number_id">Serial_Number_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If not NULL, specifies that the material has to be consumed with specific serial number</td>
+</tr>
+<tr>
+<td><a href="#consumption_type">Consumption_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>S</code>, <code>A</code>, Readonly</td>
+<td>Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).</td>
+</tr>
+<tr>
+<td><a href="#consumed_quantity_base">Consumed_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code> Readonly</td>
+<td>The requested quantity equivalence in the base measurement category of the requested material.</td>
+</tr>
+<tr>
+<td><a href="#consumption_order_id">Consumption_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Consumption_Type</td>
-<td><code>ConsumptionType</code></td>
-<td>Allowed: <code>S</code>, <code>A</code>, Readonly</td>
-<td>Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). <code>Required</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique order lline Id</td>
 </tr>
 <tr>
-<td>Line_Ord</td>
-<td><code>Int32</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Non-unique line number within the order. <code>Required</code></td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Notes for this ConsumptionOrderLine.</td>
 </tr>
 <tr>
-<td>Scheduled_Date_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The scheduled date, when the material is needed. <code>Filter(ge;le)</code></td>
+<td><a href="#consumed_standard_quantity_base">Consumed_Standard_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code> Readonly</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_ord">Line_Ord</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work_order_item_ingredient_id">Work_Order_Item_Ingredient_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scheduled_date_time">Scheduled_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consumed_quantity">Consumed_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consumed_quantity_unit_id">Consumed_Quantity_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_id">Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_bin_id">Store_Bin_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="serial_number_id">Serial_Number_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consumption_type">Consumption_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consumed_quantity_base">Consumed_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consumption_order_id">Consumption_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="id">Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consumed_standard_quantity_base">Consumed_Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
 </tr>
 </tbody>
 </table>

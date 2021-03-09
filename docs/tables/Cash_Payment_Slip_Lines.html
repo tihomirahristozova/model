@@ -8,7 +8,7 @@
     <title>Table Cash_Payment_Slip_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cash_Payment_Slip_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,27 +80,142 @@
 <h1 id="table-cash_payment_slip_lines">Table Cash_Payment_Slip_Lines</h1>
 
 <p>Mass payment line, which is distribution of an amount among payment orders. Each record generates one payment transaction line. Entity: Cash_Payment_Slip_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a></li>
 <li><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Payment_Slip_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#amount">Amount</a></td>
+<td><code>decimal(10, 2)</code></td>
+<td>The part of the total amount in the payment slip amount, that is distributed to the specified payment order</td>
+</tr>
+<tr>
+<td><a href="#covered_order_amount">Covered_Order_Amount</a></td>
+<td><code>decimal(10, 2)</code></td>
+<td>The part of the original payment order amount, that is covered by this payment slip line</td>
+</tr>
+<tr>
+<td><a href="#payment_order_id">Payment_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The payment order, that is covered by this payment slip line</td>
+</tr>
+<tr>
+<td><a href="#payment_slip_line_id">Payment_Slip_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#payment_slip_amount_id">Payment_Slip_Amount_Id</a></td>
+<td><code>uniqueidentifier</code> Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="amount">Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(10, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="covered_order_amount">Covered_Order_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(10, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_order_id">Payment_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_slip_line_id">Payment_Slip_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_slip_amount_id">Payment_Slip_Amount_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

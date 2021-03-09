@@ -2,9 +2,39 @@
 
 Specifies additional options for document routes, generating Rental Transactions. Entity: Rent_Transaction_Templates
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Rent_Transaction_Template_Id|`Guid`|`PK`, Readonly||
-|Transaction_Type|`TransactionType`|Allowed: `D`, `R`, `W`, `S`|Transaction type for the rent transaction that is to be created. `Required` |
+| Name | Type | Description |
+| - | - | --- |
+|[Rent_Transaction_Template_Id](#rent_transaction_template_id)|`uniqueidentifier` `PK`||
+|[Route_Id](#route_id)|`uniqueidentifier` |The route for which the transaction template is defined.|
+|[Transaction_Type](#transaction_type)|`nvarchar(1)` Allowed: `D`, `R`, `W`, `S`||
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Rent_Transaction_Template_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Route_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Transaction_Type
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(1)|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

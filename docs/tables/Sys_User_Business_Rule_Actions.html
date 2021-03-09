@@ -8,7 +8,7 @@
     <title>Table Sys_User_Business_Rule_Actions | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_User_Business_Rule_Actions | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,74 +80,240 @@
 <h1 id="table-sys_user_business_rule_actions">Table Sys_User_Business_Rule_Actions</h1>
 
 <p>Represents an action within a business rule. Entity: Sys_User_Business_Rule_Actions</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>User_Business_Rule_Action_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#action_no">Action_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive number of the action, unique within the business rule.</td>
 </tr>
 <tr>
-<td>Action_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consecutive number of the action, unique within the business rule. <code>Required</code></td>
+<td><a href="#action_type">Action_Type</a></td>
+<td><code>nvarchar(32)</code> Allowed: <code>SETVALUE</code>, <code>FAIL</code>, <code>SENDMAIL</code>, <code>WARNING</code>, <code>NOTIFYUSER</code></td>
+<td>Specifies the type of action to perform.</td>
 </tr>
 <tr>
-<td>Action_Type</td>
-<td><code>ActionType</code></td>
-<td>Allowed: <code>SETVALUE</code>, <code>FAIL</code>, <code>SENDMAIL</code>, <code>WARNING</code>, <code>NOTIFYUSER</code></td>
-<td>Specifies the type of action to perform. <code>Required</code></td>
-</tr>
-<tr>
-<td>Parameter1_Type</td>
-<td><code>ActionParameterType?</code></td>
-<td>Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>FMTSTR</code></td>
+<td><a href="#parameter1_type">Parameter1_Type</a></td>
+<td><code>nvarchar(16)</code> Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>FMTSTR</code></td>
 <td>The type of the parameter specifies how to obtain the parameter value.</td>
 </tr>
 <tr>
-<td>Parameter1_Value</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#parameter1_value">Parameter1_Value</a></td>
+<td><code>nvarchar(256)</code></td>
 <td>The actual value of the parameter.</td>
 </tr>
 <tr>
-<td>Parameter2_Type</td>
-<td><code>ActionParameterType?</code></td>
-<td>Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>FMTSTR</code></td>
+<td><a href="#parameter2_type">Parameter2_Type</a></td>
+<td><code>nvarchar(16)</code> Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>FMTSTR</code></td>
 <td>The type of the parameter specifies how to obtain the parameter value.</td>
 </tr>
 <tr>
-<td>Parameter2_Value</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#parameter2_value">Parameter2_Value</a></td>
+<td><code>nvarchar(256)</code></td>
 <td>The actual value of the parameter.</td>
 </tr>
 <tr>
-<td>Parameter3_Type</td>
-<td><code>ActionParameterType?</code></td>
-<td>Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>FMTSTR</code></td>
+<td><a href="#parameter3_type">Parameter3_Type</a></td>
+<td><code>nvarchar(16)</code> Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>FMTSTR</code></td>
 <td>The type of the parameter specifies how to obtain the parameter value.</td>
 </tr>
 <tr>
-<td>Parameter3_Value</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#parameter3_value">Parameter3_Value</a></td>
+<td><code>nvarchar(256)</code></td>
 <td>The actual value of the parameter.</td>
+</tr>
+<tr>
+<td><a href="#user_business_rule_action_id">User_Business_Rule_Action_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#user_business_rule_id">User_Business_Rule_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The business rule, for which the action is defined.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="action_no">Action_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="action_type">Action_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter1_type">Parameter1_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter1_value">Parameter1_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter2_type">Parameter2_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter2_value">Parameter2_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter3_type">Parameter3_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter3_value">Parameter3_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_business_rule_action_id">User_Business_Rule_Action_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_business_rule_id">User_Business_Rule_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

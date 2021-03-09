@@ -2,17 +2,88 @@
 
 Categorization of the products by their nature. Entity: Gen_Product_Types
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Product_Type_Id|`Guid`|`PK`, Readonly||
-|Product_Type_Code|`String`||The unique code of the ProductType. `Required` `Filter(eq)` |
-|Is_Default|`Boolean`||When checked specifies that this type is set by default for new products unless another type is specified in the product groups. `Required` `Default(false)` `Filter(eq)` |
-|Is_Fixed_Asset|`Boolean`||True when assets are acquired or retired when products from this type are purchased or sold. `Required` `Default(false)` `Filter(eq)` |
-|Is_Service_Activity_Service|`Boolean`||True when the product corresponds to service used in service documents (like service activities). `Required` `Default(false)` `Filter(eq)` |
-|Is_Serviced|`Boolean`||True when the products of this type create service agreements and can be serviced. `Required` `Default(false)` `Filter(eq)` |
-|Is_Shipped|`Boolean`||True when the products from this type are being shipped after sales. `Required` `Default(false)` `Filter(eq)` |
-|Is_Stocked|`Boolean`||True=The products of this type are stocked in a warehouse; false=otherwise (services). `Required` `Default(true)` `Filter(eq)` |
-|Lot_Auto_Creation|`Boolean`||If checked specifies that lots are automatically created by the receiving orders with which the products are received. `Required` `Default(false)` |
-|Product_Type_Name|`MultilanguageString`||The name of this ProductType. `Required` `Filter(eq;like)` `ORD` |
+| Name | Type | Description |
+| - | - | --- |
+|[Product_Type_Id](#product_type_id)|`uniqueidentifier` `PK`||
+|[Product_Type_Code](#product_type_code)|`nvarchar(16)` ||
+|[Product_Type_Name](#product_type_name)|`nvarchar(254)` `ML`||
+|[Is_Stocked](#is_stocked)|`bit` |1=The products of this type are stocked in a warehouse; 0=otherwise (services)|
+|[Is_Serviced](#is_serviced)|`bit` |1 when the products of this type create service agreements and can be serviced|
+|[Is_Fixed_Asset](#is_fixed_asset)|`bit` |1 when assets are acquired or retired when products from this type are purchased or sold|
+|[Is_Shipped](#is_shipped)|`bit` |1 when the products from this type are being shipped after sales.|
+|[Is_Service_Activity_Service](#is_service_activity_service)|`bit` |1 when the product corresponds to service used in service documents (like service activities)|
+|[Is_Default](#is_default)|`bit` |When checked specifies that this type is set by default for new products unless another type is specified in the product groups.|
+|[Lot_Auto_Creation](#lot_auto_creation)|`bit` |If checked specifies that lots are automatically created by the receiving orders with which the products are received.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Product_Type_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Product_Type_Code
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(16)|
+
+### Product_Type_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(254)|
+
+### Is_Stocked
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Serviced
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Fixed_Asset
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Shipped
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Service_Activity_Service
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Default
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Lot_Auto_Creation
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

@@ -8,7 +8,7 @@
     <title>Table Cm_Party_Relationships | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cm_Party_Relationships | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,176 @@
 <h1 id="table-cm_party_relationships">Table Cm_Party_Relationships</h1>
 
 <p>Defines the relationships between the parties. The data is preserved over time. Entity: Cm_Party_Relationships</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Relationship_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#relationship_id">Relationship_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>From_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The starting date of the relationship. null means the date is the begining of the time. <code>Filter(ge;le)</code></td>
+<td><a href="#from_party_id">From_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The first party in the relationship</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this PartyRelationship.</td>
+<td><a href="#relationship_type_id">Relationship_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of the relationship</td>
 </tr>
 <tr>
-<td>To_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#to_party_id">To_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The second party in the relationship</td>
+</tr>
+<tr>
+<td><a href="#from_date">From_Date</a></td>
+<td><code>datetime</code></td>
+<td>The starting date of the relationship. NULL means the date is the begining of the time</td>
+</tr>
+<tr>
+<td><a href="#to_date">To_Date</a></td>
+<td><code>datetime</code></td>
+<td>The ending date of the relationship. NULL means the relationship is still active</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>The ending date of the relationship. null means the relationship is still active. <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="relationship_id">Relationship_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_party_id">From_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationship_type_id">Relationship_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="to_party_id">To_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_date">From_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="to_date">To_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

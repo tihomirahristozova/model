@@ -8,7 +8,7 @@
     <title>Table Gen_Document_File_Attachments | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Document_File_Attachments | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,56 +80,180 @@
 <h1 id="table-gen_document_file_attachments">Table Gen_Document_File_Attachments</h1>
 
 <p>Contains files, attached to the documents. Entity: Gen_Document_File_Attachments</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Document_File_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#file_name">File_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file</td>
+</tr>
+<tr>
+<td><a href="#is_linked">Is_Linked</a></td>
+<td><code>bit</code></td>
+<td>1 when the document is linked (ony file name is kept). 0 when the document is embedded</td>
+</tr>
+<tr>
+<td><a href="#linked_file_path">Linked_File_Path</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Path to the linked file. NULL when the file is embedded</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Embedded_File_Contents</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
-<td>The contents of the embedded file. null when the file is linked.</td>
+<td><a href="#document_file_id">Document_File_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
 </tr>
 <tr>
-<td>File_Name</td>
-<td><code>String</code></td>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. <code>Required</code></td>
 </tr>
 <tr>
-<td>Is_Linked</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True when the document is linked (ony file name is kept). false when the document is embedded. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#embedded_file_contents">Embedded_File_Contents</a></td>
+<td><code>varbinary</code></td>
+<td>The contents of the embedded file. NULL when the file is linked</td>
 </tr>
 <tr>
-<td>Linked_File_Path</td>
-<td><code>String</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Path to the linked file. null when the file is embedded.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="file_name">File_Name</h3>
+<table>
+<thead>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this DocumentFileAttachment.</td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_linked">Is_Linked</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="linked_file_path">Linked_File_Path</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_file_id">Document_File_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="embedded_file_contents">Embedded_File_Contents</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

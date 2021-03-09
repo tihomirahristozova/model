@@ -8,7 +8,7 @@
     <title>Table Fleet_Vehicle_Set_Vehicles | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Fleet_Vehicle_Set_Vehicles | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,39 +80,141 @@
 <h1 id="table-fleet_vehicle_set_vehicles">Table Fleet_Vehicle_Set_Vehicles</h1>
 
 <p>Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicles</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Fleet_Vehicle_Sets.html">Fleet_Vehicle_Sets</a></li>
 <li><a href="Gen_Enterprise_Companies.html">Gen_Enterprise_Companies</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Vehicle_Set_Vehicle_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#vehicle_set_vehicle_id">Vehicle_Set_Vehicle_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#vehicle_set_id">Vehicle_Set_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Notes for this VehicleSetVehicle. <code>Filter(like)</code></td>
 </tr>
 <tr>
-<td>Ordinal_Pos</td>
-<td><code>Int32?</code></td>
+<td><a href="#vehicle_id">Vehicle_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Vehicle which is part of the vehicle set</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="#ordinal_pos">Ordinal_Pos</a></td>
+<td><code>int</code></td>
+<td>Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="vehicle_set_vehicle_id">Vehicle_Set_Vehicle_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_set_id">Vehicle_Set_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_id">Vehicle_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ordinal_pos">Ordinal_Pos</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

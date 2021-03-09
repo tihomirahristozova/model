@@ -8,7 +8,7 @@
     <title>Table Prj_Projects | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prj_Projects | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,58 +80,276 @@
 <h1 id="table-prj_projects">Table Prj_Projects</h1>
 
 <p>Contains the planned, running and completed projects of the enterprises. Entity: Prj_Projects</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Project_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#project_id">Project_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Project_Code</td>
-<td><code>String</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Short code for identification of projects. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
-<td>Finish_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#project_name">Project_Name</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. <code>Filter(eq)</code></td>
 </tr>
 <tr>
-<td>Project_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of this Project. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#project_type_id">Project_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this Project.</td>
 </tr>
 <tr>
-<td>Project_Status</td>
-<td><code>ProjectStatus</code></td>
-<td>Allowed: <code>0</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>45</code>, <code>50</code>, <code>55</code></td>
-<td>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#start_date">Start_Date</a></td>
+<td><code>date</code></td>
+<td>Expected date, when the execution of the tasks will start. NULL means that the start date is still unknown</td>
 </tr>
 <tr>
-<td>Start_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#finish_date">Finish_Date</a></td>
+<td><code>date</code></td>
+<td>The drop dead date of the project, e.g. the date when the project should be finished. NULL means that the finish date is unknown.</td>
+</tr>
+<tr>
+<td><a href="#project_manager_person_id">Project_Manager_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The project manager</td>
+</tr>
+<tr>
+<td><a href="#client_party_id">Client_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The external or internal client of the project</td>
+</tr>
+<tr>
+<td><a href="#project_status">Project_Status</a></td>
+<td><code>tinyint</code> Allowed: <code>0</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>45</code>, <code>50</code>, <code>55</code></td>
+<td>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled)</td>
+</tr>
+<tr>
+<td><a href="#budgeting_currency_id">Budgeting_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency in which the project budget is calculated</td>
+</tr>
+<tr>
+<td><a href="#project_code">Project_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Short code for identification of projects.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Expected date, when the execution of the tasks will start. null means that the start date is still unknown. <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="project_id">Project_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_name">Project_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_type_id">Project_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="start_date">Start_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="finish_date">Finish_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_manager_person_id">Project_Manager_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="client_party_id">Client_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_status">Project_Status</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>tinyint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="budgeting_currency_id">Budgeting_Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_code">Project_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

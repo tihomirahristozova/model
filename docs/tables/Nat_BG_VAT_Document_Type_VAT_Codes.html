@@ -8,7 +8,7 @@
     <title>Table Nat_BG_VAT_Document_Type_VAT_Codes | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Nat_BG_VAT_Document_Type_VAT_Codes | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,34 +80,116 @@
 <h1 id="table-nat_bg_vat_document_type_vat_codes">Table Nat_BG_VAT_Document_Type_VAT_Codes</h1>
 
 <p>Contains the VAT codes, which should be used, when reporting VAT for the different document types. Entity: Nat_BG_VAT_Document_Type_VAT_Codes</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Document_Type_VAT_Code_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#document_type_vat_code_id">Document_Type_VAT_Code_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique identification of the record.</td>
 </tr>
 <tr>
-<td>Cash_Reporting_VAT_Code</td>
-<td><code>CashReportingVATCode?</code></td>
-<td>Allowed: <code>01</code>, <code>02</code>, <code>03</code>, <code>04</code>, <code>05</code>, <code>07</code>, <code>09</code>, <code>11</code>, <code>12</code>, <code>13</code>, <code>81</code>, <code>82</code>, <code>91</code>, <code>92</code>, <code>93</code>, <code>94</code></td>
+<td><a href="#document_type_id">Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Document type that generates VAT entries.</td>
+</tr>
+<tr>
+<td><a href="#vat_code">VAT_Code</a></td>
+<td><code>nvarchar(2)</code> Allowed: <code>01</code>, <code>02</code>, <code>03</code>, <code>04</code>, <code>05</code>, <code>07</code>, <code>09</code>, <code>11</code>, <code>12</code>, <code>13</code>, <code>81</code>, <code>82</code>, <code>91</code>, <code>92</code>, <code>93</code>, <code>94</code></td>
+<td>VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.</td>
+</tr>
+<tr>
+<td><a href="#cash_reporting_vat_code">Cash_Reporting_VAT_Code</a></td>
+<td><code>nvarchar(2)</code> Allowed: <code>01</code>, <code>02</code>, <code>03</code>, <code>04</code>, <code>05</code>, <code>07</code>, <code>09</code>, <code>11</code>, <code>12</code>, <code>13</code>, <code>81</code>, <code>82</code>, <code>91</code>, <code>92</code>, <code>93</code>, <code>94</code></td>
 <td>VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.</td>
 </tr>
 <tr>
-<td>VAT_Code</td>
-<td><code>VATCode?</code></td>
-<td>Allowed: <code>01</code>, <code>02</code>, <code>03</code>, <code>04</code>, <code>05</code>, <code>07</code>, <code>09</code>, <code>11</code>, <code>12</code>, <code>13</code>, <code>81</code>, <code>82</code>, <code>91</code>, <code>92</code>, <code>93</code>, <code>94</code></td>
-<td>VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.</td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="document_type_vat_code_id">Document_Type_VAT_Code_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_type_id">Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vat_code">VAT_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cash_reporting_vat_code">Cash_Reporting_VAT_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

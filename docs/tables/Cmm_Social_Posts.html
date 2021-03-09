@@ -8,7 +8,7 @@
     <title>Table Cmm_Social_Posts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cmm_Social_Posts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,156 @@
 <h1 id="table-cmm_social_posts">Table Cmm_Social_Posts</h1>
 
 <p>User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Social_Post_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#social_post_id">Social_Post_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Creation_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The exact server time (in UTC), when the post was created. <code>Required</code></td>
+<td><a href="#social_group_id">Social_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The group in which the post is made.</td>
 </tr>
 <tr>
-<td>Last_Interaction_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. <code>Required</code></td>
+<td><a href="#user_id">User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user, who made the post.</td>
 </tr>
 <tr>
-<td>Post_Text</td>
-<td><code>String</code></td>
+<td><a href="#post_text">Post_Text</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The post contents in clear text.</td>
+</tr>
+<tr>
+<td><a href="#creation_time_utc">Creation_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The exact server time (in UTC), when the post was created.</td>
+</tr>
+<tr>
+<td><a href="#last_interaction_time_utc">Last_Interaction_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The post contents in clear text. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="social_post_id">Social_Post_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="social_group_id">Social_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_id">User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post_text">Post_Text</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time_utc">Creation_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_interaction_time_utc">Last_Interaction_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

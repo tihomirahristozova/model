@@ -8,7 +8,7 @@
     <title>Table Pdm_Personal_Data_Processes | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Pdm_Personal_Data_Processes | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,130 +80,456 @@
 <h1 id="table-pdm_personal_data_processes">Table Pdm_Personal_Data_Processes</h1>
 
 <p>Represents processes, which process personal data, regulated by GDPR and other applicable laws. Entity: Pdm_Personal_Data_Processes (Introduced in version 18.2)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Personal_Data_Process_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#personal_data_process_id">Personal_Data_Process_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Personal Data Management Process</td>
 </tr>
 <tr>
-<td>Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique process code. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#code">Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Unique process code.</td>
 </tr>
 <tr>
-<td>Contains_Sensitive_Data</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if sensitive personal data is processed (racial, political, criminal, biometric, etc). <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#name">Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Name of the process (Multilanguage).</td>
 </tr>
 <tr>
-<td>Data_Subject_Category</td>
-<td><code>DataSubjectCategory</code></td>
-<td>Allowed: <code>EMP</code>, <code>JOB</code>, <code>CON</code>, <code>CUS</code>, <code>SUP</code>, <code>PAR</code>, <code>OTH</code></td>
-<td>The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. <code>Required</code></td>
-</tr>
-<tr>
-<td>Description</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td>Description of the process.</td>
 </tr>
 <tr>
-<td>Discontinuation_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company, which owns the process.</td>
+</tr>
+<tr>
+<td><a href="#processing_role">Processing_Role</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>C</code>, <code>P</code></td>
+<td>The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor.</td>
+</tr>
+<tr>
+<td><a href="#retention_period_months">Retention_Period_Months</a></td>
+<td><code>int</code></td>
+<td>The period in months, for which the data is kept. Null when the period is unknown or N/A.</td>
+</tr>
+<tr>
+<td><a href="#list_of_used_software">List_Of_Used_Software</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Comma-separated list of the names of the software products used to process the data.</td>
+</tr>
+<tr>
+<td><a href="#process_owner_person_id">Process_Owner_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The owner and responsible person for the process.</td>
+</tr>
+<tr>
+<td><a href="#list_of_technical_measures">List_Of_Technical_Measures</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc.</td>
+</tr>
+<tr>
+<td><a href="#data_subject_category">Data_Subject_Category</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>EMP</code>, <code>JOB</code>, <code>CON</code>, <code>CUS</code>, <code>SUP</code>, <code>PAR</code>, <code>OTH</code></td>
+<td>The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other.</td>
+</tr>
+<tr>
+<td><a href="#contains_sensitive_data">Contains_Sensitive_Data</a></td>
+<td><code>bit</code></td>
+<td>True if sensitive personal data is processed (racial, political, criminal, biometric, etc).</td>
+</tr>
+<tr>
+<td><a href="#list_of_data_categories">List_Of_Data_Categories</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc.</td>
+</tr>
+<tr>
+<td><a href="#legal_basis_for_processing">Legal_Basis_For_Processing</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>INT</code>, <code>CST</code>, <code>CTR</code>, <code>LEG</code>, <code>VIT</code>, <code>PUB</code></td>
+<td>The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;</td>
+</tr>
+<tr>
+<td><a href="#list_of_data_recipient_categories">List_Of_Data_Recipient_Categories</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc.</td>
+</tr>
+<tr>
+<td><a href="#list_of_processing_purposes">List_Of_Processing_Purposes</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc.</td>
+</tr>
+<tr>
+<td><a href="#list_of_transfers_to_third_countries">List_Of_Transfers_To_Third_Countries</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Comma-separated list of third countries, to which data is sent.</td>
+</tr>
+<tr>
+<td><a href="#third_country_transfers_safeguards">Third_Country_Transfers_Safeguards</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Description of safeguards, taken to protect personal data in case of third country transfers.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>The date on which the process was discontinued. Null if the process is still active. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
-<td>Establish_Date</td>
-<td><code>DateTime</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The data on which the process was established and started functioning. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
-<td>Legal_Basis_For_Processing</td>
-<td><code>LegalBasisForProcessing</code></td>
-<td>Allowed: <code>INT</code>, <code>CST</code>, <code>CTR</code>, <code>LEG</code>, <code>VIT</code>, <code>PUB</code></td>
-<td>The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#establish_date">Establish_Date</a></td>
+<td><code>date</code></td>
+<td>The data on which the process was established and started functioning.</td>
 </tr>
 <tr>
-<td>List_Of_Data_Categories</td>
-<td><code>String</code></td>
-<td></td>
-<td>Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#discontinuation_date">Discontinuation_Date</a></td>
+<td><code>date</code></td>
+<td>The date on which the process was discontinued. Null if the process is still active.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="personal_data_process_id">Personal_Data_Process_Id</h3>
+<table>
+<thead>
 <tr>
-<td>List_Of_Data_Recipient_Categories</td>
-<td><code>String</code></td>
-<td></td>
-<td>Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. <code>Filter(eq;like)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>List_Of_Processing_Purposes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. <code>Filter(eq;like)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="code">Code</h3>
+<table>
+<thead>
 <tr>
-<td>List_Of_Technical_Measures</td>
-<td><code>String</code></td>
-<td></td>
-<td>Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>List_Of_Transfers_To_Third_Countries</td>
-<td><code>String</code></td>
-<td></td>
-<td>Comma-separated list of third countries, to which data is sent. <code>Filter(eq;like)</code></td>
+<td>Type</td>
+<td>nvarchar(16)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="name">Name</h3>
+<table>
+<thead>
 <tr>
-<td>List_Of_Used_Software</td>
-<td><code>String</code></td>
-<td></td>
-<td>Comma-separated list of the names of the software products used to process the data. <code>Filter(eq;like)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Name of the process (Multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Type</td>
+<td>nvarchar(254)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this PersonalDataProcess.</td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Processing_Role</td>
-<td><code>ProcessingRole</code></td>
-<td>Allowed: <code>C</code>, <code>P</code></td>
-<td>The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Filter(eq)</code></td>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Retention_Period_Months</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>The period in months, for which the data is kept. Null when the period is unknown or N/A. <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Third_Country_Transfers_Safeguards</td>
-<td><code>String</code></td>
-<td></td>
-<td>Description of safeguards, taken to protect personal data in case of third country transfers. <code>Filter(eq;like)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="processing_role">Processing_Role</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retention_period_months">Retention_Period_Months</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list_of_used_software">List_Of_Used_Software</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process_owner_person_id">Process_Owner_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list_of_technical_measures">List_Of_Technical_Measures</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_subject_category">Data_Subject_Category</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contains_sensitive_data">Contains_Sensitive_Data</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list_of_data_categories">List_Of_Data_Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="legal_basis_for_processing">Legal_Basis_For_Processing</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list_of_data_recipient_categories">List_Of_Data_Recipient_Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list_of_processing_purposes">List_Of_Processing_Purposes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list_of_transfers_to_third_countries">List_Of_Transfers_To_Third_Countries</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="third_country_transfers_safeguards">Third_Country_Transfers_Safeguards</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="establish_date">Establish_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="discontinuation_date">Discontinuation_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
 </tr>
 </tbody>
 </table>

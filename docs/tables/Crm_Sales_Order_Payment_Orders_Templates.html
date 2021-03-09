@@ -8,7 +8,7 @@
     <title>Table Crm_Sales_Order_Payment_Orders_Templates | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Sales_Order_Payment_Orders_Templates | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,51 +80,161 @@
 <h1 id="table-crm_sales_order_payment_orders_templates">Table Crm_Sales_Order_Payment_Orders_Templates</h1>
 
 <p>Contains options for generation of payment orders. Each option set is assigned to specific generation route. Entity: Crm_Sales_Order_Payment_Orders_Templates</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Wf_Routes.html">Wf_Routes</a></li>
 <li><a href="Gen_Document_Types.html">Gen_Document_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Create_For_Invoiced_Amounts</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True to add to the payment order, the part of the amount of the sales order, which is invoiced. <code>Required</code></td>
+<td><a href="#route_id">Route_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The route to which the current option set is assigned.</td>
 </tr>
 <tr>
-<td>Create_For_Not_Invoiced_Amounts</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. <code>Required</code></td>
+<td><a href="#is_amount_with_vat">Is_Amount_With_VAT</a></td>
+<td><code>bit</code></td>
+<td>1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order.</td>
 </tr>
 <tr>
-<td>Is_Amount_With_VAT</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = true. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. <code>Required</code></td>
+<td><a href="#update_for_invoices">Update_For_Invoices</a></td>
+<td><code>bit</code></td>
+<td>Update the payment order when invoices are issued for any of the sales orders lines.</td>
 </tr>
 <tr>
-<td>Update_For_Invoices</td>
-<td><code>Boolean</code></td>
+<td><a href="#create_for_not_invoiced_amounts">Create_For_Not_Invoiced_Amounts</a></td>
+<td><code>bit</code></td>
+<td>1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.</td>
+</tr>
+<tr>
+<td><a href="#create_for_invoiced_amounts">Create_For_Invoiced_Amounts</a></td>
+<td><code>bit</code></td>
+<td>1 to add to the payment order, the part of the amount of the sales order, which is invoiced.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Update the payment order when invoices are issued for any of the sales orders lines. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="id">Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="route_id">Route_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_amount_with_vat">Is_Amount_With_VAT</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_for_invoices">Update_For_Invoices</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create_for_not_invoiced_amounts">Create_For_Not_Invoiced_Amounts</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create_for_invoiced_amounts">Create_For_Invoiced_Amounts</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

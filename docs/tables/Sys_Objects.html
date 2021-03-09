@@ -8,7 +8,7 @@
     <title>Table Sys_Objects | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Objects | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,58 +80,216 @@
 <h1 id="table-sys_objects">Table Sys_Objects</h1>
 
 <p>Extends data in other tables with attached files, custom properties, etc. Each row is an object, bound to exactly one row in the primary table. Each object can be bound to a row in a different primary table, specified in Entity_Type. Entity: Sys_Objects</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Object_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#object_id">Object_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>.</td>
+</tr>
+<tr>
+<td><a href="#entity_type">Entity_Type</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The entity type of the row to which the object is bound</td>
+</tr>
+<tr>
+<td><a href="#entity_item_id">Entity_Item_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Id of the primary row to which the object is bound</td>
+</tr>
+<tr>
+<td><a href="#latest_version">Latest_Version</a></td>
+<td><code>int</code></td>
+<td>The latest saved version of the object. Starts from 1 and increments with 1 for each new version.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Creation_Time_Utc</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. <code>Filter(ge;le)</code> <code>Introduced in version 19.1</code></td>
+<td><a href="#creation_time_utc">Creation_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.</td>
 </tr>
 <tr>
-<td>Entity_Item_Id</td>
-<td><code>Guid</code></td>
-<td></td>
-<td>The Id of the primary row to which the object is bound. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#creation_user_id">Creation_User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user, who created the object represented by this system object . NULL means that it is unknown.</td>
 </tr>
 <tr>
-<td>Entity_Type</td>
-<td><code>String</code></td>
-<td></td>
-<td>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(eq)</code> <code>ORD</code></td>
+<td><a href="#last_update_time_utc">Last_Update_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. NULL means that it is unknown.</td>
 </tr>
 <tr>
-<td>Is_Deleted</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></td>
+<td><a href="#last_update_user_id">Last_Update_User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user, who made the last modification of the object represented by this system object . NULL means that it is unknown.</td>
 </tr>
 <tr>
-<td>Last_Update_Time_Utc</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. <code>Filter(ge;le)</code> <code>Introduced in version 19.1</code></td>
+<td><a href="#is_deleted">Is_Deleted</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="object_id">Object_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Latest_Version</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>The latest saved version of the object. Starts from 1 and increments with 1 for each new version. <code>Required</code> <code>Default(1)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entity_type">Entity_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entity_item_id">Entity_Item_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="latest_version">Latest_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time_utc">Creation_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_user_id">Creation_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_update_time_utc">Last_Update_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_update_user_id">Last_Update_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_deleted">Is_Deleted</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 </tbody>
 </table>

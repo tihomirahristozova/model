@@ -8,7 +8,7 @@
     <title>Table Gen_Currencies | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Currencies | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,116 @@
 <h1 id="table-gen_currencies">Table Gen_Currencies</h1>
 
 <p>List of user-defined currencies. Entity: Gen_Currencies</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Currency_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#currency_id">Currency_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Currency_Sign</td>
-<td><code>String</code></td>
-<td></td>
-<td>The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#currency_sign">Currency_Sign</a></td>
+<td><code>nvarchar(4)</code></td>
+<td>The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.</td>
 </tr>
 <tr>
-<td>Currency_Name</td>
-<td><code>String</code></td>
+<td><a href="#currency_name">Currency_Name</a></td>
+<td><code>nvarchar(50)</code></td>
 <td></td>
-<td>The name of this Currency. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
-<td>Show_Order</td>
-<td><code>Int32</code></td>
+<td><a href="#show_order">Show_Order</a></td>
+<td><code>int</code></td>
+<td>The order in which to show the currency in combo boxes, etc.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The order in which to show the currency in combo boxes, etc. <code>Required</code> <code>Default(0)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="currency_id">Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency_sign">Currency_Sign</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency_name">Currency_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show_order">Show_Order</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

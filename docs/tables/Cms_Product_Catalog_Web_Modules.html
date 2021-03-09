@@ -8,7 +8,7 @@
     <title>Table Cms_Product_Catalog_Web_Modules | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cms_Product_Catalog_Web_Modules | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,60 +80,101 @@
 <h1 id="table-cms_product_catalog_web_modules">Table Cms_Product_Catalog_Web_Modules</h1>
 
 <p>A web module, which presents a whole product catalog. Entity: Cms_Product_Catalog_Web_Modules</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Cms_Web_Modules.html">Cms_Web_Modules</a></li>
-</ul>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
-<ul>
 <li><a href="Cms_Web_Sites.html">Cms_Web_Sites</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Product_Catalog_Web_Module_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#product_catalog_web_module_id">Product_Catalog_Web_Module_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Is_Published</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td></td>
+<td><a href="#web_module_id">Web_Module_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The base web module, which this module inherits.</td>
 </tr>
 <tr>
-<td>Local_Url</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td><a href="#product_catalog_id">Product_Catalog_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product catalog, which is represented by this web module.</td>
 </tr>
 <tr>
-<td>Module_Picture</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="product_catalog_web_module_id">Product_Catalog_Web_Module_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Module_Type</td>
-<td><code>ModuleType</code></td>
-<td>Allowed: <code>CAT</code>, <code>STA</code>, <code>NEW</code></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Web_Module_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web_module_id">Web_Module_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_catalog_id">Product_Catalog_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

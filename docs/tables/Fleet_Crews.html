@@ -8,7 +8,7 @@
     <title>Table Fleet_Crews | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Fleet_Crews | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,120 @@
 <h1 id="table-fleet_crews">Table Fleet_Crews</h1>
 
 <p>Represents the crews, which can operate vehicles. Entity: Fleet_Crews</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Enterprise_Companies.html">Gen_Enterprise_Companies</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Crew_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#crew_id">Crew_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Id of the crew</td>
 </tr>
 <tr>
-<td>Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Is the crew active? true-active for choosing; false-otherwise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#crew_name">Crew_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>The name of the crew (multilanguage)</td>
 </tr>
 <tr>
-<td>Crew_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company operating the crew</td>
+</tr>
+<tr>
+<td><a href="#active">Active</a></td>
+<td><code>bit</code></td>
+<td>Is the crew active? 1-active for choosing; 0-otherwise</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The name of the crew (multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="crew_id">Crew_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crew_name">Crew_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active">Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

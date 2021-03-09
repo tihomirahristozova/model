@@ -8,7 +8,7 @@
     <title>Table Cash_Payment_Transactions | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cash_Payment_Transactions | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,200 +80,460 @@
 <h1 id="table-cash_payment_transactions">Table Cash_Payment_Transactions</h1>
 
 <p>Represents actual payments, which increase or decrease the balance of a payment account. Entity: Cash_Payment_Transactions</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Payment_Transaction_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#party_id">Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party that is paying or receiving the money</td>
+</tr>
+<tr>
+<td><a href="#payment_account_id">Payment_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The account towards which the payment was effected</td>
+</tr>
+<tr>
+<td><a href="#direction">Direction</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>I</code>, <code>R</code></td>
+<td>I for Payment issue, R for payment receipt</td>
+</tr>
+<tr>
+<td><a href="#total_amount">Total_Amount</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines</td>
+</tr>
+<tr>
+<td><a href="#total_amount_currency_id">Total_Amount_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of the total amount</td>
+</tr>
+<tr>
+<td><a href="#requires_allocation">Requires_Allocation</a></td>
+<td><code>bit</code></td>
+<td>1=The total amount should be allocated to payment orders; 0=Payment orders are not required</td>
+</tr>
+<tr>
+<td><a href="#payment_slip_no">Payment_Slip_No</a></td>
+<td><code>nvarchar(20)</code></td>
+<td>The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips</td>
+</tr>
+<tr>
+<td><a href="#payment_slip_id">Payment_Slip_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL specifies that this payment was part of a payment slip</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Number</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
+<td><a href="#payment_transaction_id">Payment_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document data of the payment transaction</td>
+</tr>
+<tr>
+<td><a href="#original_payment_transaction_id">Original_Payment_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Original Payment Transaction</td>
+</tr>
+<tr>
+<td><a href="#payment_reason_id">Payment_Reason_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The payment reason, as defined in Payment Reasons.</td>
+</tr>
+<tr>
+<td><a href="#is_single_execution">Is_Single_Execution</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Specifies whether the document is a single execution of its order document.</td>
+</tr>
+<tr>
+<td><a href="#is_released">Is_Released</a></td>
+<td><code>bit</code> Readonly</td>
+<td>True if the document is not void and its state is released or greater</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#payment_type_id">Payment_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.</td>
 </tr>
 <tr>
-<td>Complete_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.</td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#parent_payment_slip_amount_id">Parent_Payment_Slip_Amount_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Payment Slip Amount, which the current payment transaction fulfills . NULL when the current document does not execute any Payment Slip Amount.</td>
 </tr>
 <tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#pos_location_id">Pos_Location_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order.</td>
 </tr>
 <tr>
-<td>Direction</td>
-<td><code>Direction</code></td>
-<td>Allowed: <code>I</code>, <code>R</code></td>
-<td>I for Payment issue, R for payment receipt. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(eq)</code></td>
+<td><a href="#pos_operator_id">Pos_Operator_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order.</td>
 </tr>
 <tr>
-<td>Document_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td></td>
+<td><a href="#reversal_reason">Reversal_Reason</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>OPE</code>, <code>TBR</code>, <code>REF</code></td>
+<td>The reason for the reversal of the payment.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="party_id">Party_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="payment_account_id">Payment_Account_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Document_Version</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Entity_Name</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="direction">Direction</h3>
+<table>
+<thead>
 <tr>
-<td>Is_Released</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Is_Single_Execution</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Type</td>
+<td>nvarchar(1)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="total_amount">Total_Amount</h3>
+<table>
+<thead>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this PaymentTransaction.</td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Parent_Document_Relationship_Type</td>
-<td><code>ParentDocumentRelationshipType?</code></td>
-<td>Allowed: <code>S</code>, <code>N</code>, Readonly</td>
-<td></td>
+<td>Type</td>
+<td>decimal(18, 2)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="total_amount_currency_id">Total_Amount_Currency_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Payment_Slip_No</td>
-<td><code>String</code></td>
-<td></td>
-<td>The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips. <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Planning_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="requires_allocation">Requires_Allocation</h3>
+<table>
+<thead>
 <tr>
-<td>Read_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Reference_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>bit</td>
 </tr>
+</tbody>
+</table>
+<h3 id="payment_slip_no">Payment_Slip_No</h3>
+<table>
+<thead>
 <tr>
-<td>Reference_Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Release_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>nvarchar(20)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="payment_slip_id">Payment_Slip_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Requires_Allocation</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True=The total amount should be allocated to payment orders; false=Payment orders are not required. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Reversal_Reason</td>
-<td><code>ReversalReason?</code></td>
-<td>Allowed: <code>OPE</code>, <code>TBR</code>, <code>REF</code></td>
-<td>The reason for the reversal of the payment. <code>Introduced in version 20.1</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
 <tr>
-<td>State</td>
-<td><code>DocumentState</code></td>
-<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>nvarchar(254)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="payment_transaction_id">Payment_Transaction_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Void_Reason</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Void_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="original_payment_transaction_id">Original_Payment_Transaction_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_reason_id">Payment_Reason_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_single_execution">Is_Single_Execution</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_released">Is_Released</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_type_id">Payment_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_payment_slip_amount_id">Parent_Payment_Slip_Amount_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pos_location_id">Pos_Location_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pos_operator_id">Pos_Operator_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reversal_reason">Reversal_Reason</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
 </tr>
 </tbody>
 </table>

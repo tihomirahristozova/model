@@ -2,10 +2,39 @@
 
 Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Types
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Rental_Asset_Type_Id|`Guid`|`PK`, Readonly||
-|Notes|`String`||Notes for this AssetType. `Filter(like)` |
-|Rental_Asset_Type_Name|`String`||The name of the rental asset type. `Required` `Filter(like)` |
+| Name | Type | Description |
+| - | - | --- |
+|[Rental_Asset_Type_Id](#rental_asset_type_id)|`uniqueidentifier` `PK`||
+|[Rental_Asset_Type_Name](#rental_asset_type_name)|`nvarchar(254)` |The name of the rental asset type.|
+|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Rental_Asset_Type_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Rental_Asset_Type_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(254)|
+
+### Notes
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(2147483647)|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

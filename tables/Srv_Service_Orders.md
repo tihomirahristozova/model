@@ -2,36 +2,78 @@
 
 Service Orders are issued when a new servicing is required. Entity: Srv_Service_Orders
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Service_Order_Id|`Guid`|`PK`, Readonly||
-|Adjustment_Number|`Int32`|Readonly||
-|Adjustment_Time|`DateTime?`|Readonly||
-|Adjustment_User|`String`|Readonly||
-|Complete_Time|`DateTime?`|Readonly||
-|Creation_Time|`DateTime`|Readonly||
-|Creation_User|`String`|Readonly||
-|Document_Date|`DateTime`|||
-|Document_No|`String`|||
-|Notes|`String`|||
-|Document_Version|`Int32`|Readonly||
-|Entity_Name|`String`|Readonly||
-|Is_Released|`Boolean`|Readonly|True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Is_Single_Execution|`Boolean`|Readonly|Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Parent_Document_Relationship_Type|`ParentDocumentRelationshipType?`|Allowed: `S`, `N`, Readonly||
-|Planning_Only|`Boolean`|Readonly||
-|Read_Only|`Boolean`|Readonly||
-|Reference_Date|`DateTime?`|||
-|Reference_Document_No|`String`|||
-|Release_Time|`DateTime?`|Readonly||
-|State|`DocumentState`|Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly||
-|Void|`Boolean`|Readonly||
-|Void_Reason|`String`|Readonly||
-|Void_Time|`DateTime?`|Readonly||
-|Void_User|`String`|Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Service_Order_Id](#service_order_id)|`uniqueidentifier` `PK`||
+|[Document_Id](#document_id)|`uniqueidentifier` ||
+|[Customer_Id](#customer_id)|`uniqueidentifier` |The client, requesting servicing.|
+|[Service_Agreement_Id](#service_agreement_id)|`uniqueidentifier` |When not NULL denotes that the order will be bound to the terms in the specified agreement.|
+|[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Store_Id](#store_id)|`uniqueidentifier` |The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null.|
+|[Ship_To_Customer_Id](#ship_to_customer_id)|`uniqueidentifier` |Customer location of the main customer from which the service object is taken.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Service_Order_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Customer_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Service_Agreement_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Is_Single_Execution
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Released
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Store_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Ship_To_Customer_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

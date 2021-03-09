@@ -8,7 +8,7 @@
     <title>Table Crm_Default_Sales_Order_Payment_Plans | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Default_Sales_Order_Payment_Plans | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,56 +80,260 @@
 <h1 id="table-crm_default_sales_order_payment_plans">Table Crm_Default_Sales_Order_Payment_Plans</h1>
 
 <p>Default payment plan for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Payment_Plans</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Document_Types.html">Gen_Document_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Default_Sales_Order_Payment_Plan_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#default_sales_order_payment_plan_id">Default_Sales_Order_Payment_Plan_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Amount_Percent</td>
-<td><code>Decimal?</code></td>
+<td><a href="#document_type_id">Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#installment_number">Installment_Number</a></td>
+<td><code>int</code></td>
+<td>Consequtive installment number. Used for identifying different payments generated according this payment plan.</td>
+</tr>
+<tr>
+<td><a href="#due_date_form_method">Due_Date_Form_Method</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>EXP</code>, <code>INV</code>, <code>SLS</code>, <code>SDD</code>, <code>IDD</code></td>
+<td>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date</td>
+</tr>
+<tr>
+<td><a href="#payment_term_days">Payment_Term_Days</a></td>
+<td><code>int</code></td>
+<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.</td>
+</tr>
+<tr>
+<td><a href="#amount_percent">Amount_Percent</a></td>
+<td><code>decimal(7, 6)</code></td>
 <td>Percent of the sales order amount to be payed.</td>
 </tr>
 <tr>
-<td>Due_Date_Form_Method</td>
-<td><code>PaymentPlanDueDateSource</code></td>
-<td>Allowed: <code>EXP</code>, <code>INV</code>, <code>SLS</code>, <code>SDD</code>, <code>IDD</code></td>
-<td>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. <code>Required</code></td>
+<td><a href="#remainder">Remainder</a></td>
+<td><code>bit</code></td>
+<td>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent).</td>
 </tr>
 <tr>
-<td>Installment_Number</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consequtive installment number. Used for identifying different payments generated according this payment plan. <code>Required</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies.</td>
 </tr>
 <tr>
-<td>Payment_Term_Days</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations.</td>
 </tr>
 <tr>
-<td>Remainder</td>
-<td><code>Boolean</code></td>
+<td><a href="#payment_account_id">Payment_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Default payment account for the current installment. NULL means that there is no default account.</td>
+</tr>
+<tr>
+<td><a href="#payment_type_id">Payment_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Default payment type for the current installment. NULL means that there is no default payment type.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent). <code>Required</code> <code>Default(false)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="default_sales_order_payment_plan_id">Default_Sales_Order_Payment_Plan_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_type_id">Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="installment_number">Installment_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="due_date_form_method">Due_Date_Form_Method</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_term_days">Payment_Term_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount_percent">Amount_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="remainder">Remainder</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_account_id">Payment_Account_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_type_id">Payment_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

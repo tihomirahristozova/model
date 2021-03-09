@@ -8,7 +8,7 @@
     <title>Table Cm_Persons | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cm_Persons | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,182 +80,400 @@
 <h1 id="table-cm_persons">Table Cm_Persons</h1>
 
 <p>Personal records. Requires related party record. Entity: Cm_Persons</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Parties.html">Gen_Parties</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Person_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#person_id">Person_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique person Id</td>
 </tr>
 <tr>
-<td>Birth_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Birth date. null means unknown. <code>Filter(ge;le)</code></td>
+<td><a href="#first_name">First_Name</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>First name of the person.</td>
 </tr>
 <tr>
-<td>City</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>City from the legal registration address for the person. <code>Filter(like)</code></td>
+<td><a href="#middle_name">Middle_Name</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>Middle name of the person.</td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td>Date and time when the Person was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+<td><a href="#last_name">Last_Name</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>Last name of the person.</td>
 </tr>
 <tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>Login name of the user, who created the Person. <code>Filter(like)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>First_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>First name of the person. <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td>Gender</td>
-<td><code>Gender?</code></td>
-<td>Allowed: <code>F</code>, <code>M</code></td>
-<td>Person gender. M=Male;F=Female;null=not known/not provided. <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td>GLN</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Last_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Last name of the person. <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td>Middle_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Middle name of the person. <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td>National_Number</td>
-<td><code>String</code></td>
-<td></td>
-<td>Government assigned unique personal number. null means unknown. <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Internal notes for the person.</td>
-</tr>
-<tr>
-<td>Party_Code</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Creation_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Party_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Party_Type</td>
-<td><code>PartyType</code></td>
-<td>Allowed: <code>C</code>, <code>L</code>, <code>P</code>, <code>S</code>, <code>V</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Party_Unique_Number</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Update_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Update_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
-</tr>
-<tr>
-<td>Passport_Issuing_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Date of issuing the passport. null means unknown. <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td>Passport_Number</td>
-<td><code>String</code></td>
-<td></td>
-<td>Current passport number. null means unknown. <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td>Title</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
+<td><a href="#title">Title</a></td>
+<td><code>nvarchar(32)</code> <code>ML</code></td>
 <td>The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.</td>
 </tr>
 <tr>
-<td>Update_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td>Date and time when the Person was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+<td><a href="#gender">Gender</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>F</code>, <code>M</code></td>
+<td>Person gender. M=Male;F=Female;NULL=not known/not provided</td>
 </tr>
 <tr>
-<td>Update_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>Login name of the user, who last updated the Person. <code>Filter(like)</code> <code>ReadOnly</code></td>
+<td><a href="#birth_date">Birth_Date</a></td>
+<td><code>datetime</code></td>
+<td>Birth date. NULL means unknown</td>
+</tr>
+<tr>
+<td><a href="#nationality">Nationality</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Person's nationality. NULL means the default (same as enterprise) nationality</td>
+</tr>
+<tr>
+<td><a href="#national_number">National_Number</a></td>
+<td><code>nvarchar(14)</code></td>
+<td>Government assigned unique personal number. NULL means unknown</td>
+</tr>
+<tr>
+<td><a href="#passport_number">Passport_Number</a></td>
+<td><code>nvarchar(14)</code></td>
+<td>Current passport number. NULL means unknown</td>
+</tr>
+<tr>
+<td><a href="#passport_issuing_date">Passport_Issuing_Date</a></td>
+<td><code>datetime</code></td>
+<td>Date of issuing the passport. NULL means unknown</td>
+</tr>
+<tr>
+<td><a href="#city">City</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>City from the legal registration address for the person</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Internal notes for the person</td>
+</tr>
+<tr>
+<td><a href="#update_user">Update_User</a></td>
+<td><code>nvarchar(64)</code> Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#creation_time">Creation_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#creation_user">Creation_User</a></td>
+<td><code>nvarchar(64)</code> Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#update_time">Update_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#party_id">Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Id of the party record for this person. The party stores the person's full name</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="person_id">Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="first_name">First_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="middle_name">Middle_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_name">Last_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="title">Title</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gender">Gender</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="birth_date">Birth_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nationality">Nationality</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="national_number">National_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(14)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="passport_number">Passport_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(14)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="passport_issuing_date">Passport_Issuing_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="city">City</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_user">Update_User</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time">Creation_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_user">Creation_User</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_time">Update_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="party_id">Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

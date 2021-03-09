@@ -8,7 +8,7 @@
     <title>Table Cms_Web_Sites | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cms_Web_Sites | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,156 @@
 <h1 id="table-cms_web_sites">Table Cms_Web_Sites</h1>
 
 <p>Contains the public web sites. Entity: Cms_Web_Sites</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Web_Site_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#web_site_id">Web_Site_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Base_Url</td>
-<td><code>String</code></td>
-<td></td>
-<td>The base url (address) of the web site. <code>Filter(like)</code></td>
+<td><a href="#web_site_name">Web_Site_Name</a></td>
+<td><code>nvarchar(256)</code></td>
+<td>Multilanguage web site name</td>
 </tr>
 <tr>
-<td>Is_Published</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether the site is published for public Internet access. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company to which this web site belongs.</td>
 </tr>
 <tr>
-<td>Web_Site_Name</td>
-<td><code>String</code></td>
+<td><a href="#base_url">Base_Url</a></td>
+<td><code>nvarchar(256)</code></td>
+<td>The base url (address) of the web site.</td>
+</tr>
+<tr>
+<td><a href="#public_user_list_id">Public_User_List_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The list of users used to authorize the users on the site.</td>
+</tr>
+<tr>
+<td><a href="#is_published">Is_Published</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the site is published for public Internet access.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Multilanguage web site name. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="web_site_id">Web_Site_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web_site_name">Web_Site_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="base_url">Base_Url</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="public_user_list_id">Public_User_List_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_published">Is_Published</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

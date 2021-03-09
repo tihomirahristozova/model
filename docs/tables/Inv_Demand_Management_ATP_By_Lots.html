@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Table Inv_Demand_Management_ATP_By_Lots | ERP.net Domain Model </title>
+    <title>View Inv_Demand_Management_ATP_By_Lots | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Table Inv_Demand_Management_ATP_By_Lots | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="title" content="View Inv_Demand_Management_ATP_By_Lots | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,25 +77,219 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="table-inv_demand_management_atp_by_lots">Table Inv_Demand_Management_ATP_By_Lots</h1>
+<h1 id="view-inv_demand_management_atp_by_lots">View Inv_Demand_Management_ATP_By_Lots</h1>
 
 <p>Quantities available to promise for the different date periods. Also contains the current and projected availability. The algorithm accounts for the quantities for each lot and separately for the quantities without lot. Entity: Inv_Demand_Management_ATP_By_Lots</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>From_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Тhe date from which the available to promise quantity is valid. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Product, for which the quantities are calculated.</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Тhe Enterprise Company, for which the quantities are calculated.</td>
+</tr>
+<tr>
+<td><a href="#store_id">Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Store, for which the quantities are calculated.</td>
+</tr>
+<tr>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Lot, for which the quantities are calculated.</td>
+</tr>
+<tr>
+<td><a href="#from_date">From_Date</a></td>
+<td><code>datetime</code></td>
+<td>Тhe date from which the available to promise quantity is valid.</td>
+</tr>
+<tr>
+<td><a href="#movements_base">Movements_Base</a></td>
+<td><code>decimal(38, 3)</code></td>
+<td>The sum of the quantity of all planned stock movements on this date in а base measurement unit.</td>
+</tr>
+<tr>
+<td><a href="#movements_to_date_base">Movements_To_Date_Base</a></td>
+<td><code>decimal(38, 3)</code></td>
+<td>The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative.</td>
+</tr>
+<tr>
+<td><a href="#current_availability_base">Current_Availability_Base</a></td>
+<td><code>decimal(38, 3)</code></td>
+<td>The current availability in а base measurement unit.</td>
+</tr>
+<tr>
+<td><a href="#projected_availability_base">Projected_Availability_Base</a></td>
+<td><code>decimal(38, 3)</code></td>
+<td>Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability.</td>
+</tr>
+<tr>
+<td><a href="#atp_base">ATP_Base</a></td>
+<td><code>decimal(38, 3)</code></td>
+<td>Indicates the quantity available to promise (in a base unit). It is valid from this date on.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_id">Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_date">From_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="movements_base">Movements_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(38, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="movements_to_date_base">Movements_To_Date_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(38, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="current_availability_base">Current_Availability_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(38, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="projected_availability_base">Projected_Availability_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(38, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="atp_base">ATP_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(38, 3)</td>
 </tr>
 </tbody>
 </table>

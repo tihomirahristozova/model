@@ -8,7 +8,7 @@
     <title>Table Crm_Discount_Types | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Discount_Types | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,64 +80,196 @@
 <h1 id="table-crm_discount_types">Table Crm_Discount_Types</h1>
 
 <p>Contains the different types of discounts, which can be applied to sales lines. Different types of discounts can be combined for a single sales line. Entity: Crm_Discount_Types</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Discount_Type_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#discount_type_id">Discount_Type_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Action_Type</td>
-<td><code>ActionType</code></td>
-<td>Allowed: <code>A</code>, <code>R</code>, <code>M</code></td>
-<td>Specifies the way the discount is applied over the previous discounts. <code>Required</code> <code>Default(&quot;A&quot;)</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td>Calculation_Method</td>
-<td><code>CalculationMethod</code></td>
-<td>Allowed: <code>S</code>, <code>P</code>, <code>B</code></td>
-<td>Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td>Discount_Type_Code</td>
-<td><code>String</code></td>
+<td><a href="#discount_type_code">Discount_Type_Code</a></td>
+<td><code>nvarchar(32)</code></td>
 <td></td>
-<td>The unique code of the DiscountType. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
-<td>Is_System</td>
-<td><code>Boolean</code></td>
+<td><a href="#discount_type_name">Discount_Type_Name</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>Specifies whether this discount type is created and managed by the system. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
-<td>Discount_Type_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of this DiscountType. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="#calculation_method">Calculation_Method</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>S</code>, <code>P</code>, <code>B</code></td>
+<td>Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this DiscountType.</td>
+<td><a href="#ord">Ord</a></td>
+<td><code>int</code></td>
+<td>Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.</td>
 </tr>
 <tr>
-<td>Ord</td>
-<td><code>Int32</code></td>
+<td><a href="#action_type">Action_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>A</code>, <code>R</code>, <code>M</code></td>
+<td>Specifies the way the discount is applied over the previous discounts.</td>
+</tr>
+<tr>
+<td><a href="#is_system">Is_System</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether this discount type is created and managed by the system.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="discount_type_id">Discount_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="discount_type_code">Discount_Type_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="discount_type_name">Discount_Type_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculation_method">Calculation_Method</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ord">Ord</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="action_type">Action_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_system">Is_System</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

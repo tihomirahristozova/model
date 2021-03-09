@@ -8,7 +8,7 @@
     <title>Table Geo_Map_Points | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Geo_Map_Points | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,160 @@
 <h1 id="table-geo_map_points">Table Geo_Map_Points</h1>
 
 <p>Geographical map points are used as points of interest on the map. They are used for routing and other purposes. The points of interest for the different enterprise companies are different. Entity: Geo_Map_Points</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Enterprise_Companies.html">Gen_Enterprise_Companies</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Map_Point_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#map_point_id">Map_Point_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Address</td>
-<td><code>String</code></td>
+<td><a href="#map_point_name">Map_Point_Name</a></td>
+<td><code>nvarchar(128)</code> <code>ML</code></td>
+<td>Map point short name (Multilanguage)</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company for within the name of the map point has meaning</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#latitude">Latitude</a></td>
+<td><code>decimal(10, 7)</code></td>
+<td>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].</td>
+</tr>
+<tr>
+<td><a href="#longitude">Longitude</a></td>
+<td><code>decimal(10, 7)</code></td>
+<td>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].</td>
+</tr>
+<tr>
+<td><a href="#address">Address</a></td>
+<td><code>nvarchar(128)</code></td>
 <td>The descriptive physical address, related to this map point.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="map_point_id">Map_Point_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Latitude</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range <code>-90, 90</code>. <code>Required</code> <code>Default(0)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Longitude</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range <code>-180, 180</code>. <code>Required</code> <code>Default(0)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="map_point_name">Map_Point_Name</h3>
+<table>
+<thead>
 <tr>
-<td>Map_Point_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Map point short name (Multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="latitude">Latitude</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(10, 7)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="longitude">Longitude</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(10, 7)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="address">Address</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Pos_Devices | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Pos_Devices | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,62 +80,200 @@
 <h1 id="table-pos_devices">Table Pos_Devices</h1>
 
 <p>Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1)</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Pos_Terminals.html">Pos_Terminals</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Pos_Device_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#pos_device_id">Pos_Device_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Device_Registration_No</td>
-<td><code>String</code></td>
+<td><a href="#pos_terminal_id">Pos_Terminal_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The POS terminal, to which this device is attached.</td>
+</tr>
+<tr>
+<td><a href="#device_type">Device_Type</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>PAY</code>, <code>CSH</code>, <code>FIP</code>, <code>OTH</code></td>
+<td>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.</td>
+</tr>
+<tr>
+<td><a href="#device_registration_no">Device_Registration_No</a></td>
+<td><code>nvarchar(32)</code></td>
+<td>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.</td>
+</tr>
+<tr>
+<td><a href="#protocol_name">Protocol_Name</a></td>
+<td><code>nvarchar(32)</code> Allowed: <code>ERPNET_FP</code></td>
+<td>The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.</td>
+</tr>
+<tr>
+<td><a href="#electronic_address">Electronic_Address</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.</addr></td>
+</tr>
+<tr>
+<td><a href="#settings_json">Settings_Json</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.</td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether the device is currently active and can be choosen from drop-downs in new records.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. <code>Filter(multi eq;like)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="pos_device_id">Pos_Device_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Device_Type</td>
-<td><code>DeviceType</code></td>
-<td>Allowed: <code>PAY</code>, <code>CSH</code>, <code>FIP</code>, <code>OTH</code></td>
-<td>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. <code>Required</code> <code>Default(&quot;OTH&quot;)</code> <code>Filter(multi eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Electronic_Address</td>
-<td><code>String</code></td>
-<td></td>
-<td>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc. <code>Filter(multi eq;like)</code></addr></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="pos_terminal_id">Pos_Terminal_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether the device is currently active and can be choosen from drop-downs in new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Protocol_Name</td>
-<td><code>ProtocolName?</code></td>
-<td>Allowed: <code>ERPNET_FP</code></td>
-<td>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="device_type">Device_Type</h3>
+<table>
+<thead>
 <tr>
-<td>Settings_Json</td>
-<td><code>String</code></td>
-<td></td>
-<td>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.</td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="device_registration_no">Device_Registration_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="protocol_name">Protocol_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="electronic_address">Electronic_Address</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="settings_json">Settings_Json</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

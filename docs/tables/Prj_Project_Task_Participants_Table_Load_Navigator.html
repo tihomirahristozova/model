@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Query Prj_Project_Task_Participants_Table_Load_Navigator | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Query Prj_Project_Task_Participants_Table_Load_Navigator | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="query-prj_project_task_participants_table_load_navigator">Query Prj_Project_Task_Participants_Table_Load_Navigator</h1>
+
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#project_task_participant_id">Project_Task_Participant_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#project_task_id">Project_Task_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The project task for which the participant is planned.</td>
+</tr>
+<tr>
+<td><a href="#participant_person_id">Participant_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#work_load_percent">Work_Load_Percent</a></td>
+<td><code>decimal(0, 0)</code></td>
+<td>The planned work load (in percents) of the participant for this task.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#notify_on_status_change">Notify_On_Status_Change</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the participant should be notified on task status changes.</td>
+</tr>
+<tr>
+<td><a href="#project_id">Project_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The project, to which this task belongs.</td>
+</tr>
+<tr>
+<td><a href="#project_work_element_id">Project_Work_Element_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The work element under which the task is filed.</td>
+</tr>
+<tr>
+<td><a href="#task_name">Task_Name</a></td>
+<td><code>nvarchar</code></td>
+<td>The short name of the task. It is best practice to contain the target of the task.</td>
+</tr>
+<tr>
+<td><a href="#start_date_time">Start_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The date and time when the task is planned to start.</td>
+</tr>
+<tr>
+<td><a href="#finish_date_time">Finish_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The date and time when the task is planned to finish.</td>
+</tr>
+<tr>
+<td><a href="#work_type_id">Work_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Type of work to be done. NULL means that type of work is undetermined yet.</td>
+</tr>
+<tr>
+<td><a href="#planned_duration_hours">Planned_Duration_Hours</a></td>
+<td><code>decimal(0, 0)</code></td>
+<td>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.</td>
+</tr>
+<tr>
+<td><a href="#budget_labor_amount">Budget_Labor_Amount</a></td>
+<td><code>decimal(0, 0)</code></td>
+<td>Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated</td>
+</tr>
+<tr>
+<td><a href="#responsible_party_id">Responsible_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined</td>
+</tr>
+<tr>
+<td><a href="#activity_id">Activity_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Id of the Cm_Activity created for this task. NULL means that activity is still not created</td>
+</tr>
+<tr>
+<td><a href="#project_task_no">Project_Task_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive task number, unique within the project.</td>
+</tr>
+<tr>
+<td><a href="#task_type_id">Task_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of the task. Determines the work type of the tasks, default billing rules, etc.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="project_task_participant_id">Project_Task_Participant_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_task_id">Project_Task_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="participant_person_id">Participant_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work_load_percent">Work_Load_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(0, 0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notify_on_status_change">Notify_On_Status_Change</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_id">Project_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_work_element_id">Project_Work_Element_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="task_name">Task_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="start_date_time">Start_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="finish_date_time">Finish_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work_type_id">Work_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planned_duration_hours">Planned_Duration_Hours</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(0, 0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="budget_labor_amount">Budget_Labor_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(0, 0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responsible_party_id">Responsible_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="activity_id">Activity_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_task_no">Project_Task_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="task_type_id">Task_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Prj_Project_Task_Participants_Table_Load_Navigator.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

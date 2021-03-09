@@ -8,7 +8,7 @@
     <title>Table Prd_Operations | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prd_Operations | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,86 +80,340 @@
 <h1 id="table-prd_operations">Table Prd_Operations</h1>
 
 <p>The different steps performed to create products. Entity: Prd_Operations</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prd_Operation_Groups.html">Prd_Operation_Groups</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Description</td>
-<td><code>String</code></td>
+<td><a href="#operation_group_id">Operation_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The description of this Operation.</td>
 </tr>
 <tr>
-<td>Minimum_Concurrent_Start_Time_Minutes</td>
-<td><code>Int32?</code></td>
+<td><a href="#operation_name">Operation_Name</a></td>
+<td><code>nvarchar(50)</code></td>
 <td></td>
-<td>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</td>
 </tr>
 <tr>
-<td>Move_Time_Minutes</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>The time required for the product to move to the next operation. During this time no resource is allocated. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#workgroup_resource_id">Workgroup_Resource_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies the Workgroup Resource, which is required by the operation.</td>
 </tr>
 <tr>
-<td>Operation_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of this Operation. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="#use_quantity_base">Use_Quantity_Base</a></td>
+<td><code>decimal(9, 3)</code></td>
+<td>Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource</td>
 </tr>
 <tr>
-<td>Run_Time_Minutes</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>The time required to process one product lot. The run time is calculated for each produced lot. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting</td>
 </tr>
 <tr>
-<td>Scrap_Rate</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated.</td>
+<td><a href="#setup_time_minutes">Setup_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.</td>
 </tr>
 <tr>
-<td>Setup_Time_Minutes</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#run_time_minutes">Run_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>The time required to process one product lot. The run time is calculated for each produced lot.</td>
 </tr>
 <tr>
-<td>Standard_Price_Per_Hour</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Standard price for 1 hour work for this operation. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#wait_time_minutes">Wait_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.</td>
 </tr>
 <tr>
-<td>Tooling</td>
-<td><code>String</code></td>
+<td><a href="#move_time_minutes">Move_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>The time required for the product to move to the next operation. During this time no resource is allocated.</td>
+</tr>
+<tr>
+<td><a href="#scrap_rate">Scrap_Rate</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>The percentage (0..1) of scrap usually occurring during the production operation. NULL means that the scrap rate cannot be generally calculated.</td>
+</tr>
+<tr>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#tooling">Tooling</a></td>
+<td><code>nvarchar(254)</code></td>
 <td>Short description of the needed instruments for the operation.</td>
 </tr>
 <tr>
-<td>Wait_Time_Minutes</td>
-<td><code>Int32</code></td>
+<td><a href="#operation_instructions_id">Operation_Instructions_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Full instructions for the operation.</td>
+</tr>
+<tr>
+<td><a href="#standard_price_per_hour">Standard_Price_Per_Hour</a></td>
+<td><code>decimal(18, 6)</code></td>
+<td>Standard price for 1 hour work for this operation.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. <code>Required</code> <code>Default(0)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="id">Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operation_group_id">Operation_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operation_name">Operation_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workgroup_resource_id">Workgroup_Resource_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use_quantity_base">Use_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(9, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="setup_time_minutes">Setup_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="run_time_minutes">Run_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wait_time_minutes">Wait_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move_time_minutes">Move_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scrap_rate">Scrap_Rate</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tooling">Tooling</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operation_instructions_id">Operation_Instructions_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_price_per_hour">Standard_Price_Per_Hour</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

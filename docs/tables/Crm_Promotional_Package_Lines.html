@@ -8,7 +8,7 @@
     <title>Table Crm_Promotional_Package_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Promotional_Package_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,240 @@
 <h1 id="table-crm_promotional_package_lines">Table Crm_Promotional_Package_Lines</h1>
 
 <p>Detail records (lines) of promotional package definition. Entity: Crm_Promotional_Package_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Promotional_Package_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#promotional_package_line_id">Promotional_Package_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Line_Number</td>
-<td><code>Int32</code></td>
+<td><a href="#promotional_package_id">Promotional_Package_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Consecutive line number. <code>Required</code></td>
 </tr>
 <tr>
-<td>Standard_Discount_Adjust_Or_Replace</td>
-<td><code>StandardDiscountAdjustOrReplace</code></td>
-<td>Allowed: <code>A</code>, <code>R</code>, <code>M</code></td>
-<td>Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
+<td><a href="#line_number">Line_Number</a></td>
+<td><code>int</code></td>
+<td>Consecutive line number</td>
 </tr>
 <tr>
-<td>Standard_Discount_Percent_Adjust</td>
-<td><code>Decimal</code></td>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product, which is included in the promotional package</td>
+</tr>
+<tr>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(9, 3)</code></td>
+<td>The quantity of the product in the package in the base measurement unit of the Product.</td>
+</tr>
+<tr>
+<td><a href="#standard_discount_percent_adjust">Standard_Discount_Percent_Adjust</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>The value of change (in percents) for the standard discount</td>
+</tr>
+<tr>
+<td><a href="#standard_discount_adjust_or_replace">Standard_Discount_Adjust_Or_Replace</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>A</code>, <code>R</code>, <code>M</code></td>
+<td>Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount</td>
+</tr>
+<tr>
+<td><a href="#unit_price">Unit_Price</a></td>
+<td><code>decimal(13, 5)</code></td>
+<td>When not null specifies directly unit price for the product. When NULL, the package specifies only discount</td>
+</tr>
+<tr>
+<td><a href="#unit_price_currency_id">Unit_Price_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Currency of the unit price. NULL if the package specifies only discount</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The value of change (in percents) for the standard discount. <code>Required</code> <code>Default(0)</code></td>
+</tr>
+<tr>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Product lot number in the promotional package.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="promotional_package_line_id">Promotional_Package_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promotional_package_id">Promotional_Package_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_number">Line_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(9, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_discount_percent_adjust">Standard_Discount_Percent_Adjust</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_discount_adjust_or_replace">Standard_Discount_Adjust_Or_Replace</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit_price">Unit_Price</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(13, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit_price_currency_id">Unit_Price_Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 </tbody>
 </table>

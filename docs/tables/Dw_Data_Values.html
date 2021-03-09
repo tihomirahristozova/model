@@ -8,7 +8,7 @@
     <title>Table Dw_Data_Values | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Dw_Data_Values | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,136 @@
 <h1 id="table-dw_data_values">Table Dw_Data_Values</h1>
 
 <p>The actual values in the general data warehouse. Entity: Dw_Data_Values (Introduced in version 18.2)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Data_Value_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#data_value_id">Data_Value_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Actual_Value</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Accumulates actual value for the measure. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td><a href="#data_measure_id">Data_Measure_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measure for which the data is recorded.</td>
 </tr>
 <tr>
-<td>Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The date for which the measure is recorded. All records with dates within each period are summed. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Enterprise Company for which the data is recorded.</td>
 </tr>
 <tr>
-<td>Target_Value</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Accumulates target value for the measure. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td><a href="#date">Date</a></td>
+<td><code>date</code></td>
+<td>The date for which the measure is recorded. All records with dates within each period are summed.</td>
+</tr>
+<tr>
+<td><a href="#target_value">Target_Value</a></td>
+<td><code>decimal(17, 5)</code></td>
+<td>Accumulates target value for the measure.</td>
+</tr>
+<tr>
+<td><a href="#actual_value">Actual_Value</a></td>
+<td><code>decimal(17, 5)</code></td>
+<td>Accumulates actual value for the measure.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="data_value_id">Data_Value_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_measure_id">Data_Measure_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="date">Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target_value">Target_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(17, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actual_value">Actual_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(17, 5)</td>
 </tr>
 </tbody>
 </table>

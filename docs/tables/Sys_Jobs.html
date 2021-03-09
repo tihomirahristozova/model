@@ -8,7 +8,7 @@
     <title>Table Sys_Jobs | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Jobs | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,52 +80,156 @@
 <h1 id="table-sys_jobs">Table Sys_Jobs</h1>
 
 <p>The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in version 20.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Job_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#job_id">Job_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether the job is active and ready for running. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#job_type">Job_Type</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>DOC</code>, <code>POS</code>, <code>DNT</code>, <code>DPI</code></td>
+<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications.</td>
 </tr>
 <tr>
-<td>Job_Type</td>
-<td><code>JobType</code></td>
-<td>Allowed: <code>DOC</code>, <code>POS</code>, <code>DNT</code>, <code>DPI</code></td>
-<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#job_name">Job_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The name of the job.</td>
 </tr>
 <tr>
-<td>Job_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of the job. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the job is active and ready for running.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this Job.</td>
 </tr>
 <tr>
-<td>Run_On_Idle</td>
-<td><code>Boolean</code></td>
+<td><a href="#run_on_idle">Run_On_Idle</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether to automatically run the job when the server is idle.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Specifies whether to automatically run the job when the server is idle. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="job_id">Job_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="job_type">Job_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="job_name">Job_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="run_on_idle">Run_On_Idle</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

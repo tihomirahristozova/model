@@ -8,7 +8,7 @@
     <title>Table Log_Logistic_Unit_Contents | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Log_Logistic_Unit_Contents | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,74 +80,280 @@
 <h1 id="table-log_logistic_unit_contents">Table Log_Logistic_Unit_Contents</h1>
 
 <p>Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Contents (Introduced in version 21.1.0.77)</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Log_Logistic_Units.html">Log_Logistic_Units</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Logistic_Unit_Content_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#logistic_unit_content_id">Logistic_Unit_Content_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Base_Quantity</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The quantity, expressed in the base measurement category of the product. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td><a href="#logistic_unit_id">Logistic_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The containing logistic unit.</td>
 </tr>
 <tr>
-<td>Expiration_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Expiration date of the goods. null means unknown or N/A. <code>Filter(multi eq;ge;le)</code></td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive position within the logistic unit.</td>
 </tr>
 <tr>
-<td>Gross_Weight</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>Gross weight in kilograms (kg). null means unknown. <code>Filter(eq;ge;le)</code></td>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product, which is contained in the logistic unit.</td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consecutive position within the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>Quantity of the product in the logistic unit. Expressed in the specified measurement unit.</td>
 </tr>
 <tr>
-<td>Lot_Number</td>
-<td><code>String</code></td>
-<td></td>
-<td>The production lot number. null means unknown. <code>Filter(multi eq;like)</code></td>
+<td><a href="#quantity_unit_id">Quantity_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of the quantity.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this LogisticUnitContent.</td>
+<td><a href="#standard_quantity">Standard_Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The quantity, expessed in the standard measurement unit of the product.</td>
 </tr>
 <tr>
-<td>Quantity</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
+<td><a href="#base_quantity">Base_Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The quantity, expressed in the base measurement category of the product.</td>
 </tr>
 <tr>
-<td>Standard_Quantity</td>
-<td><code>Decimal</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>The quantity, expessed in the standard measurement unit of the product. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="#gross_weight">Gross_Weight</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>Gross weight in kilograms (kg). NULL means unknown.</td>
+</tr>
+<tr>
+<td><a href="#lot_number">Lot_Number</a></td>
+<td><code>nvarchar(32)</code></td>
+<td>The production lot number. NULL means unknown.</td>
+</tr>
+<tr>
+<td><a href="#expiration_date">Expiration_Date</a></td>
+<td><code>date</code></td>
+<td>Expiration date of the goods. NULL means unknown or N/A.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="logistic_unit_content_id">Logistic_Unit_Content_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logistic_unit_id">Logistic_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_quantity">Standard_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="base_quantity">Base_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gross_weight">Gross_Weight</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_number">Lot_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="expiration_date">Expiration_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

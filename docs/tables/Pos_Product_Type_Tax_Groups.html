@@ -8,7 +8,7 @@
     <title>Table Pos_Product_Type_Tax_Groups | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Pos_Product_Type_Tax_Groups | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,140 @@
 <h1 id="table-pos_product_type_tax_groups">Table Pos_Product_Type_Tax_Groups</h1>
 
 <p>Contains the tax group codes for the product types. The tax group codes are used when sales documents are printed to fiscal printers or exported to fiscal authorities. Entity: Pos_Product_Type_Tax_Groups (Introduced in version 19.1)</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Product_Types.html">Gen_Product_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Product_Type_Tax_Group_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#product_type_tax_group_id">Product_Type_Tax_Group_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Applicable_Legislation</td>
-<td><code>ApplicableLegislation</code></td>
-<td>Allowed: <code>AE</code>, <code>AU</code>, <code>BG</code>, <code>CA</code>, <code>CN</code>, <code>CZ</code>, <code>DE</code>, <code>ES</code>, <code>EU</code>, <code>FR</code>, <code>GR</code>, <code>HU</code>, <code>IN</code>, <code>IT</code>, <code>JP</code>, <code>MK</code>, <code>PL</code>, <code>PT</code>, <code>RO</code>, <code>RS</code>, <code>RU</code>, <code>TR</code>, <code>UK</code>, <code>US</code>, <code>ZA</code></td>
-<td>The legislation, for which the tax group is applicable. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#product_type_id">Product_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product type for which the tax group is specified.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#applicable_legislation">Applicable_Legislation</a></td>
+<td><code>nvarchar(8)</code> Allowed: <code>AE</code>, <code>AU</code>, <code>BG</code>, <code>CA</code>, <code>CN</code>, <code>CZ</code>, <code>DE</code>, <code>ES</code>, <code>EU</code>, <code>FR</code>, <code>GR</code>, <code>HU</code>, <code>IN</code>, <code>IT</code>, <code>JP</code>, <code>MK</code>, <code>PL</code>, <code>PT</code>, <code>RO</code>, <code>RS</code>, <code>RU</code>, <code>TR</code>, <code>UK</code>, <code>US</code>, <code>ZA</code></td>
+<td>The legislation, for which the tax group is applicable.</td>
+</tr>
+<tr>
+<td><a href="#tax_group">Tax_Group</a></td>
+<td><code>int</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code></td>
+<td>The tax group of the product type within the specified applicable legislation.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this ProductTypeTaxGroup. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
-<td>Tax_Group</td>
-<td><code>TaxGroup</code></td>
-<td>Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code></td>
-<td>The tax group of the product type within the specified applicable legislation. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="product_type_tax_group_id">Product_Type_Tax_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_type_id">Product_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="applicable_legislation">Applicable_Legislation</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(8)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tax_group">Tax_Group</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

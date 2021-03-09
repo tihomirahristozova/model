@@ -8,7 +8,7 @@
     <title>Table Ast_Depreciation_Plan_Templates | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Ast_Depreciation_Plan_Templates | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,32 +80,140 @@
 <h1 id="table-ast_depreciation_plan_templates">Table Ast_Depreciation_Plan_Templates</h1>
 
 <p>Specifies the default depreciation methods for the asset categories. Different methods can be specified for each valuation model. Entity: Ast_Depreciation_Plan_Templates</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Ast_Asset_Categories.html">Ast_Asset_Categories</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Depreciation_Plan_Template_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#depreciation_plan_template_id">Depreciation_Plan_Template_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Asset_Life</td>
-<td><code>Int32?</code></td>
+<td><a href="#asset_category_id">Asset_Category_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Asset category for which this template is defined</td>
+</tr>
+<tr>
+<td><a href="#valuation_model_id">Valuation_Model_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Valuation model for which this template is defined</td>
+</tr>
+<tr>
+<td><a href="#depreciation_method_id">Depreciation_Method_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Depreciation method by default for the depreciation plans created by this template</td>
+</tr>
+<tr>
+<td><a href="#asset_life">Asset_Life</a></td>
+<td><code>int</code></td>
+<td>Asset life in months by default for the depreciation plans created by this template. NULL means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="depreciation_plan_template_id">Depreciation_Plan_Template_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_category_id">Asset_Category_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valuation_model_id">Valuation_Model_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depreciation_method_id">Depreciation_Method_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_life">Asset_Life</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

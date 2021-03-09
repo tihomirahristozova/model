@@ -8,7 +8,7 @@
     <title>Table Sys_Web_Sites | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Web_Sites | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,196 @@
 <h1 id="table-sys_web_sites">Table Sys_Web_Sites</h1>
 
 <p>Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Web_Site_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#web_site_id">Web_Site_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether the web site is active and will be instantiated upon next web server restart. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company, for which is the site. NULL means, that the web site should not be enterprise company specific.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this WebSite.</td>
+<td><a href="#web_site_type">Web_Site_Type</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>API</code>, <code>CC</code>, <code>ID</code>, <code>EC</code>, <code>LEG</code>, <code>SI</code>, <code>DM</code>, <code>PFL</code>, <code>APP</code>, <code>TAP</code>, <code>DAP</code>, <code>WMS</code></td>
+<td>The type of web site - Api, Client Center, Id, etc.</td>
 </tr>
 <tr>
-<td>Relative_Url</td>
-<td><code>String</code></td>
-<td></td>
-<td>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.</td>
+<td><a href="#web_host_id">Web_Host_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The web host in which to host the site.</td>
 </tr>
 <tr>
-<td>Web_Site_Type</td>
-<td><code>WebSiteType</code></td>
-<td>Allowed: <code>API</code>, <code>CC</code>, <code>ID</code>, <code>EC</code>, <code>LEG</code>, <code>SI</code>, <code>DM</code>, <code>PFL</code>, <code>APP</code>, <code>TAP</code>, <code>DAP</code>, <code>WMS</code></td>
-<td>The type of web site - Api, Client Center, Id, etc. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#relative_url">Relative_Url</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether the web site is active and will be instantiated upon next web server restart.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#trusted_application_id">Trusted_Application_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The trusted application related to this web site</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="web_site_id">Web_Site_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web_site_type">Web_Site_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web_host_id">Web_Host_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relative_url">Relative_Url</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trusted_application_id">Trusted_Application_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 </tbody>
 </table>

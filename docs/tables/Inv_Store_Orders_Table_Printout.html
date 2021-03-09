@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Procedure Inv_Store_Orders_Table_Printout | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Procedure Inv_Store_Orders_Table_Printout | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="procedure-inv_store_orders_table_printout">Procedure Inv_Store_Orders_Table_Printout</h1>
+
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#store_order_id">Store_Order_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Id of the store order document entry</td>
+</tr>
+<tr>
+<td><a href="#store_id">Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The designated warehouse for the operation</td>
+</tr>
+<tr>
+<td><a href="#store_name">Store_Name</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#due_date">Due_Date</a></td>
+<td><code>datetime</code></td>
+<td>The final date, when the store transaction should occur.</td>
+</tr>
+<tr>
+<td><a href="#movement_type">Movement_Type</a></td>
+<td><code>nvarchar</code> Allowed: <code>I</code>, <code>R</code></td>
+<td>Store order movement type. R=RECEIPT, I=ISSUE</td>
+</tr>
+<tr>
+<td><a href="#status">Status</a></td>
+<td><code>nvarchar</code></td>
+<td>P=Planned; F=Firm planned; R=Released; C=Completed</td>
+</tr>
+<tr>
+<td><a href="#planned_release_date">Planned_Release_Date</a></td>
+<td><code>datetime</code></td>
+<td>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.</td>
+</tr>
+<tr>
+<td><a href="#planned_completion_date">Planned_Completion_Date</a></td>
+<td><code>datetime</code></td>
+<td>Date, when the quantities are expected to be completely issued/received</td>
+</tr>
+<tr>
+<td><a href="#responsible_party_name">Responsible_Party_Name</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#driver_name">Driver_Name</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#temp_transport_company_name">Temp_Transport_Company_Name</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#vehicle_reg_number">Vehicle_Reg_Number</a></td>
+<td><code>nvarchar</code></td>
+<td>Obsolete. Not used.</td>
+</tr>
+<tr>
+<td><a href="#ordering_person_id">Ordering_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The person, which ordered the operation.</td>
+</tr>
+<tr>
+<td><a href="#ordering_person_name">Ordering_Person_Name</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#issued_by_party_id">Issued_By_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party, which issued the goods.</td>
+</tr>
+<tr>
+<td><a href="#issued_by_party_name">Issued_By_Party_Name</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#received_by_party_id">Received_By_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party, which received the goods.</td>
+</tr>
+<tr>
+<td><a href="#received_by_party_name">Received_By_Party_Name</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="store_order_id">Store_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_id">Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_name">Store_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="due_date">Due_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="movement_type">Movement_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="status">Status</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planned_release_date">Planned_Release_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planned_completion_date">Planned_Completion_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responsible_party_name">Responsible_Party_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="driver_name">Driver_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="temp_transport_company_name">Temp_Transport_Company_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_reg_number">Vehicle_Reg_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ordering_person_id">Ordering_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ordering_person_name">Ordering_Person_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="issued_by_party_id">Issued_By_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="issued_by_party_name">Issued_By_Party_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="received_by_party_id">Received_By_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="received_by_party_name">Received_By_Party_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Inv_Store_Orders_Table_Printout.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

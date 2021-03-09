@@ -8,7 +8,7 @@
     <title>Table Mail_Box_Folders | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Mail_Box_Folders | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,180 @@
 <h1 id="table-mail_box_folders">Table Mail_Box_Folders</h1>
 
 <p>Contains the folders inside the mailboxes. Entity: Mail_Box_Folders</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Mail_Boxes.html">Mail_Boxes</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Mail_Box_Folder_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#mail_box_id">Mail_Box_Id</a></td>
+<td><code>uniqueidentifier</code> Readonly</td>
 <td></td>
 </tr>
 <tr>
-<td>Folder_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Multi-language folder name. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#folder_name">Folder_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Multi-language folder name</td>
 </tr>
 <tr>
-<td>Server_Folder_ID</td>
-<td><code>String</code></td>
-<td></td>
-<td>ID of the folder on the mail server in the format of the mail server. <code>Filter(eq)</code></td>
+<td><a href="#parent_folder_id">Parent_Folder_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The parent folder in the folder hierarchy. Null when the folder is a root folder.</td>
 </tr>
 <tr>
-<td>Sync_State</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#system_purpose">System_Purpose</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>M</code>, <code>I</code>, <code>D</code>, <code>O</code>, <code>S</code>, <code>T</code>, Readonly</td>
+<td>When not NULL means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash.</td>
+</tr>
+<tr>
+<td><a href="#sync_state">Sync_State</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td>The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.</td>
 </tr>
 <tr>
-<td>System_Purpose</td>
-<td><code>SystemPurpose?</code></td>
-<td>Allowed: <code>M</code>, <code>I</code>, <code>D</code>, <code>O</code>, <code>S</code>, <code>T</code>, Readonly</td>
-<td>When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td><a href="#mail_box_folder_id">Mail_Box_Folder_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#server_folder_id">Server_Folder_ID</a></td>
+<td><code>nvarchar(256)</code></td>
+<td>ID of the folder on the mail server in the format of the mail server</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="mail_box_id">Mail_Box_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="folder_name">Folder_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_folder_id">Parent_Folder_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="system_purpose">System_Purpose</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sync_state">Sync_State</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mail_box_folder_id">Mail_Box_Folder_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="server_folder_id">Server_Folder_ID</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

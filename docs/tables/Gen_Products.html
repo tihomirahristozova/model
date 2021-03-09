@@ -8,7 +8,7 @@
     <title>Table Gen_Products | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Products | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,190 +80,936 @@
 <h1 id="table-gen_products">Table Gen_Products</h1>
 
 <p>Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique id of the item</td>
+</tr>
+<tr>
+<td><a href="#part_number">Part_Number</a></td>
+<td><code>nvarchar(32)</code></td>
+<td>Unique part number of the product</td>
+</tr>
+<tr>
+<td><a href="#product_group_id">Product_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product group, under which the product is categorized.</td>
+</tr>
+<tr>
+<td><a href="#product_name">Product_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Name of the item</td>
+</tr>
+<tr>
+<td><a href="#short_name">Short_Name</a></td>
+<td><code>nvarchar(128)</code> <code>ML</code></td>
+<td>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.</td>
+</tr>
+<tr>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td>The description of the product</td>
+</tr>
+<tr>
+<td><a href="#base_measurement_category_id">Base_Measurement_Category_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The base measurement category for quantities of this product.</td>
+</tr>
+<tr>
+<td><a href="#measurement_unit_id">Measurement_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Default measurement unit, when creating new documents with this product.</td>
+</tr>
+<tr>
+<td><a href="#product_type_id">Product_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of the product. This also defines whether the product is stocked. NULL=no specific product type and the product is stocked</td>
+</tr>
+<tr>
+<td><a href="#is_serialized">Is_Serialized</a></td>
+<td><code>bit</code></td>
+<td>1 if the parts use/require serial numbers</td>
+</tr>
+<tr>
+<td><a href="#is_featured">Is_Featured</a></td>
+<td><code>bit</code></td>
 <td></td>
 </tr>
 <tr>
-<td>ABC_Class</td>
-<td><code>ABCClass</code></td>
-<td>Allowed: <code>A </code>, <code>B </code>, <code>C </code></td>
-<td>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. <code>Required</code> <code>Default(&quot;B &quot;)</code> <code>Filter(eq)</code></td>
+<td><a href="#standard_price_per_lot">Standard_Price_Per_Lot</a></td>
+<td><code>decimal(18, 4)</code></td>
+<td>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id</td>
 </tr>
 <tr>
-<td>Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if the product is active, false - not to list in combo boxes for choosing in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#standard_cost_per_lot">Standard_Cost_Per_Lot</a></td>
+<td><code>decimal(18, 4)</code></td>
+<td>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id</td>
 </tr>
 <tr>
-<td>Allow_Variable_Measurement_Ratios</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#standard_lot_size_base">Standard_Lot_Size_Base</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price</td>
 </tr>
 <tr>
-<td>Catalog_Description_Html</td>
-<td><code>String</code></td>
-<td></td>
-<td>Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.</td>
+<td><a href="#minimal_sales_price_per_lot">Minimal_Sales_Price_Per_Lot</a></td>
+<td><code>decimal(18, 4)</code></td>
+<td>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.</td>
 </tr>
 <tr>
-<td>Costing_Method</td>
-<td><code>CostingMethod?</code></td>
-<td>Allowed: <code>AVG</code>, <code>EXP</code>, <code>BLD</code></td>
-<td>Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost.</td>
-</tr>
-<tr>
-<td>Creation_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td>Date and time when the Product was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>Login name of the user, who created the Product. <code>Filter(like)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>Description</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>The description of the product.</td>
-</tr>
-<tr>
-<td>Expiry_Period_Days</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Total default expiry period for the product (in days) from the date of production to the date of expiry.</td>
-</tr>
-<tr>
-<td>Flushing_Method</td>
-<td><code>FlushingMethod</code></td>
-<td>Allowed: <code>B</code>, <code>F</code>, <code>M</code></td>
-<td>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). <code>Required</code> <code>Default(&quot;M&quot;)</code></td>
-</tr>
-<tr>
-<td>Guarantee_Period_Days</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others.</td>
-</tr>
-<tr>
-<td>Is_Featured</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td>Is_Serialized</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if the parts use/require serial numbers. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td>Lots_Issue</td>
-<td><code>LotsIssue?</code></td>
-<td>Allowed: <code>FIFO</code>, <code>FEFO</code>, <code>LIFO</code></td>
-<td>Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).</td>
-</tr>
-<tr>
-<td>Manufacturing_Policy</td>
-<td><code>String</code></td>
-<td></td>
-<td>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. <code>Required</code> <code>Default(&quot;MTS&quot;)</code></td>
-</tr>
-<tr>
-<td>Minimal_Sales_Quantity_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
+<td><a href="#minimal_sales_quantity_base">Minimal_Sales_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code></td>
 <td>Minimal base quantity of this product that has to be specified in any sale.</td>
 </tr>
 <tr>
-<td>Product_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#show_in_catalog">Show_In_Catalog</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.</td>
+</tr>
+<tr>
+<td><a href="#catalog_description_html">Catalog_Description_Html</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.</td>
+</tr>
+<tr>
+<td><a href="#planning_demand_time_fence_days">Planning_Demand_Time_Fence_Days</a></td>
+<td><code>int</code></td>
+<td>Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days)</td>
+</tr>
+<tr>
+<td><a href="#planning_time_fence_days">Planning_Time_Fence_Days</a></td>
+<td><code>int</code></td>
+<td>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days)</td>
+</tr>
+<tr>
+<td><a href="#planning_horizon_days">Planning_Horizon_Days</a></td>
+<td><code>int</code></td>
+<td>Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days)</td>
+</tr>
+<tr>
+<td><a href="#flushing_method">Flushing_Method</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>B</code>, <code>F</code>, <code>M</code></td>
+<td>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)</td>
+</tr>
+<tr>
+<td><a href="#manufacturing_policy">Manufacturing_Policy</a></td>
+<td><code>nvarchar(3)</code></td>
+<td>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order</td>
+</tr>
+<tr>
+<td><a href="#abc_class">ABC_Class</a></td>
+<td><code>nvarchar(2)</code> Allowed: <code>A </code>, <code>B </code>, <code>C </code></td>
+<td>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.</td>
+</tr>
+<tr>
+<td><a href="#supply_schema_id">Supply_Schema_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The supply schema to use for the distribution of the product among warehouses</td>
+</tr>
+<tr>
+<td><a href="#scrap_rate">Scrap_Rate</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>Default scrap rate for the recipe, when this product is used as ingredient</td>
+</tr>
+<tr>
+<td><a href="#costing_method">Costing_Method</a></td>
+<td><code>nvarchar(4)</code> Allowed: <code>AVG</code>, <code>EXP</code>, <code>BLD</code></td>
+<td>Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost</td>
+</tr>
+<tr>
+<td><a href="#costing_currency_id">Costing_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies the currency to use for cost calculations for the product. When NULL, the base currency for the enterprise company should be used</td>
+</tr>
+<tr>
+<td><a href="#active">Active</a></td>
+<td><code>bit</code></td>
+<td>1 if the product is active, 0 - not to list in combo boxes for choosing in new documents</td>
+</tr>
+<tr>
+<td><a href="#guarantee_period_days">Guarantee_Period_Days</a></td>
+<td><code>int</code></td>
+<td>Default guarantee period length in days. 0 means no guarantee. Should be non-NULL for serviced products and NULL for the others</td>
+</tr>
+<tr>
+<td><a href="#creation_time">Creation_Time</a></td>
+<td><code>datetime</code> Readonly</td>
 <td></td>
-<td>Name of the item. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
-<td>Part_Number</td>
-<td><code>String</code></td>
+<td><a href="#creation_user">Creation_User</a></td>
+<td><code>nvarchar(64)</code> Readonly</td>
 <td></td>
-<td>Unique part number of the product. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
-<td>Planning_Demand_Time_Fence_Days</td>
-<td><code>Int32?</code></td>
+<td><a href="#update_time">Update_Time</a></td>
+<td><code>datetime</code> Readonly</td>
 <td></td>
-<td>Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days).</td>
 </tr>
 <tr>
-<td>Planning_Horizon_Days</td>
-<td><code>Int32?</code></td>
+<td><a href="#update_user">Update_User</a></td>
+<td><code>nvarchar(64)</code> Readonly</td>
 <td></td>
-<td>Number of days in the future for which to plan the demand and supply (null = Default of 180 days).</td>
 </tr>
 <tr>
-<td>Planning_Time_Fence_Days</td>
-<td><code>Int32?</code></td>
+<td><a href="#purchase_measurement_unit_id">Purchase_Measurement_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Default measurement unit to use, when creating new purchase documents with this product.</td>
+</tr>
+<tr>
+<td><a href="#valuation_group_id">Valuation_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect.</td>
+</tr>
+<tr>
+<td><a href="#origin_country_id">Origin_Country_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting.</td>
+</tr>
+<tr>
+<td><a href="#intrastat_commodity_code_id">Intrastat_Commodity_Code_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days).</td>
 </tr>
 <tr>
-<td>Scrap_Rate</td>
-<td><code>Decimal</code></td>
+<td><a href="#intrastat_supplementary_unit_id">Intrastat_Supplementary_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Default scrap rate for the recipe, when this product is used as ingredient. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
-<td>Short_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#use_lots">Use_Lots</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>A</code>, <code>N</code>, <code>R</code></td>
+<td>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.</td>
+</tr>
+<tr>
+<td><a href="#lots_issue">Lots_Issue</a></td>
+<td><code>nvarchar(4)</code> Allowed: <code>FIFO</code>, <code>FEFO</code>, <code>LIFO</code></td>
+<td>Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).</td>
+</tr>
+<tr>
+<td><a href="#expiry_period_days">Expiry_Period_Days</a></td>
+<td><code>int</code></td>
+<td>Total default expiry period for the product (in days) from the date of production to the date of expiry</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company.</td>
+</tr>
+<tr>
+<td><a href="#allow_variable_measurement_ratios">Allow_Variable_Measurement_Ratios</a></td>
+<td><code>bit</code></td>
+<td>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
-<td>Show_In_Catalog</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#cargo_type_id">Cargo_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies what type of cargo this product is. Required when generating transportation requisitions. NULL means unspecified.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="id">Id</h3>
+<table>
+<thead>
 <tr>
-<td>Supply_Schema_Id</td>
-<td><code>Guid?</code></td>
-<td></td>
-<td>The supply schema to use for the distribution of the product among warehouses. <code>Filter(multi eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Update_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td>Date and time when the Product was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="part_number">Part_Number</h3>
+<table>
+<thead>
 <tr>
-<td>Update_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>Login name of the user, who last updated the Product. <code>Filter(like)</code> <code>ReadOnly</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Use_Lots</td>
-<td><code>UseLots</code></td>
-<td>Allowed: <code>A</code>, <code>N</code>, <code>R</code></td>
-<td>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. <code>Required</code> <code>Default(&quot;A&quot;)</code></td>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_group_id">Product_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_name">Product_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="short_name">Short_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="base_measurement_category_id">Base_Measurement_Category_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="measurement_unit_id">Measurement_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_type_id">Product_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_serialized">Is_Serialized</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_featured">Is_Featured</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_price_per_lot">Standard_Price_Per_Lot</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_cost_per_lot">Standard_Cost_Per_Lot</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_lot_size_base">Standard_Lot_Size_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimal_sales_price_per_lot">Minimal_Sales_Price_Per_Lot</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimal_sales_quantity_base">Minimal_Sales_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show_in_catalog">Show_In_Catalog</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="catalog_description_html">Catalog_Description_Html</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planning_demand_time_fence_days">Planning_Demand_Time_Fence_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planning_time_fence_days">Planning_Time_Fence_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planning_horizon_days">Planning_Horizon_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flushing_method">Flushing_Method</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="manufacturing_policy">Manufacturing_Policy</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="abc_class">ABC_Class</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supply_schema_id">Supply_Schema_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scrap_rate">Scrap_Rate</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="costing_method">Costing_Method</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="costing_currency_id">Costing_Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active">Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="guarantee_period_days">Guarantee_Period_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time">Creation_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_user">Creation_User</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_time">Update_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_user">Update_User</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_measurement_unit_id">Purchase_Measurement_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valuation_group_id">Valuation_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="origin_country_id">Origin_Country_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_commodity_code_id">Intrastat_Commodity_Code_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_supplementary_unit_id">Intrastat_Supplementary_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use_lots">Use_Lots</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lots_issue">Lots_Issue</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="expiry_period_days">Expiry_Period_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_variable_measurement_ratios">Allow_Variable_Measurement_Ratios</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cargo_type_id">Cargo_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 </tbody>
 </table>

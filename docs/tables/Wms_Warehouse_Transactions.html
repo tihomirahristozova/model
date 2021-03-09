@@ -8,7 +8,7 @@
     <title>Table Wms_Warehouse_Transactions | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Wms_Warehouse_Transactions | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,376 @@
 <h1 id="table-wms_warehouse_transactions">Table Wms_Warehouse_Transactions</h1>
 
 <p>Represents increase or decrease in the quantity available in a warehouse location. Entity: Wms_Warehouse_Transactions (Introduced in version 21.1.1.26)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Warehouse_Transaction_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#warehouse_transaction_id">Warehouse_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Catch_Quantity</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. <code>Filter(eq;ge;le)</code></td>
+<td><a href="#warehouse_order_id">Warehouse_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The order which created this transaction. NULL when this transaction was not based on order.</td>
 </tr>
 <tr>
-<td>Creation_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
+<td><a href="#warehouse_order_line_id">Warehouse_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The order line which created this transaction. NULL when this transaction was not based on order line.</td>
+</tr>
+<tr>
+<td><a href="#warehouse_id">Warehouse_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The warehouse in which the transaction occurred.</td>
+</tr>
+<tr>
+<td><a href="#warehouse_location_id">Warehouse_Location_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The warehouse location, where the transaction occurred.</td>
+</tr>
+<tr>
+<td><a href="#logistic_unit_id">Logistic_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.</td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product, which was transacted.</td>
+</tr>
+<tr>
+<td><a href="#product_variant_id">Product_Variant_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product variant, which was transacted. NULL when the transaction was not for a product variant.</td>
+</tr>
+<tr>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The lot which was transacted. NULL when the transaction was not for a specific lot.</td>
+</tr>
+<tr>
+<td><a href="#serial_number_id">Serial_Number_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The serial number which was transacted. NULL when the transaction was not for a specific serial number.</td>
+</tr>
+<tr>
+<td><a href="#direction">Direction</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>I</code>, <code>O</code></td>
+<td>Direction of the transaction - I=IN, O=OUT.</td>
+</tr>
+<tr>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.</td>
+</tr>
+<tr>
+<td><a href="#quantity_unit_id">Quantity_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of quantity.</td>
+</tr>
+<tr>
+<td><a href="#catch_quantity">Catch_Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.</td>
+</tr>
+<tr>
+<td><a href="#catch_quantity_unit_id">Catch_Quantity_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of the catch quantity. NULL when catch measurement is not configured for the product.</td>
+</tr>
+<tr>
+<td><a href="#creation_user_id">Creation_User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Direction</td>
-<td><code>Direction</code></td>
-<td>Allowed: <code>I</code>, <code>O</code></td>
-<td>Direction of the transaction - I=IN, O=OUT. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code></td>
+<td><a href="#creation_time_utc">Creation_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td></td>
 </tr>
 <tr>
-<td>Quantity</td>
-<td><code>Decimal</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="warehouse_transaction_id">Warehouse_Transaction_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warehouse_order_id">Warehouse_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warehouse_order_line_id">Warehouse_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warehouse_id">Warehouse_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warehouse_location_id">Warehouse_Location_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logistic_unit_id">Logistic_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_variant_id">Product_Variant_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="serial_number_id">Serial_Number_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direction">Direction</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="catch_quantity">Catch_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="catch_quantity_unit_id">Catch_Quantity_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_user_id">Creation_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time_utc">Creation_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

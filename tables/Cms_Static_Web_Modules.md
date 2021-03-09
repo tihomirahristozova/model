@@ -2,23 +2,51 @@
 
 A web module, which contains one web page with static text. Entity: Cms_Static_Web_Modules
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Cms_Web_Modules](Cms_Web_Modules.md)
-
-# Aggregate Hierarchy
-
 * [Cms_Web_Sites](Cms_Web_Sites.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Static_Web_Module_Id|`Guid`|`PK`, Readonly||
-|Content_Html|`String`||The actual html content of the pade. Only the <BODY> of the html is stored. |
-|Is_Published|`Boolean`|||
-|Language_Code|`String`||The language code of the content. `Required` `Default("EN")` |
-|Local_Url|`String`|||
-|Module_Picture|`Byte[]`|`BLOB`||
-|Module_Type|`ModuleType`|Allowed: `CAT`, `STA`, `NEW`||
-|Web_Module_Name|`String`|||
+| Name | Type | Description |
+| - | - | --- |
+|[Static_Web_Module_Id](#static_web_module_id)|`uniqueidentifier` `PK`||
+|[Web_Module_Id](#web_module_id)|`uniqueidentifier` |The web module, which is inherited by this static module.|
+|[Language_Code](#language_code)|`nvarchar(7)` |The language code of the content.|
+|[Content_Html](#content_html)|`nvarchar(2147483647)` |The actual html content of the pade. Only the <BODY> of the html is stored.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Static_Web_Module_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Web_Module_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Language_Code
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(7)|
+
+### Content_Html
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(2147483647)|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

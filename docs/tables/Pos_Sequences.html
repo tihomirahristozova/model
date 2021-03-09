@@ -8,7 +8,7 @@
     <title>Table Pos_Sequences | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Pos_Sequences | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,136 @@
 <h1 id="table-pos_sequences">Table Pos_Sequences</h1>
 
 <p>Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequences (Introduced in version 19.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Pos_Sequence_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#pos_sequence_id">Pos_Sequence_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether this sequence is active. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#pos_device_id">Pos_Device_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The POS device, for which the sequence is defined.</td>
 </tr>
 <tr>
-<td>Max_No</td>
-<td><code>String</code></td>
-<td></td>
-<td>Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. <code>Filter(multi eq;ge;le)</code></td>
+<td><a href="#next_no">Next_No</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>The next consecutive number which will be assigned on the next request.</td>
 </tr>
 <tr>
-<td>Next_No</td>
-<td><code>String</code></td>
+<td><a href="#max_no">Max_No</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Specifies the maximum number allowed in the sequence. NULL means that the sequence will grow unlimited.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The next consecutive number which will be assigned on the next request. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether this sequence is active.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="pos_sequence_id">Pos_Sequence_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pos_device_id">Pos_Device_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="next_no">Next_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max_no">Max_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 </tbody>
 </table>

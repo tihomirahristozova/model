@@ -8,7 +8,7 @@
     <title>Table Gen_Product_Catalogs | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Product_Catalogs | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,88 +80,316 @@
 <h1 id="table-gen_product_catalogs">Table Gen_Product_Catalogs</h1>
 
 <p>Product catalogs serve to organize the products for display primarily in web pages. Entity: Gen_Product_Catalogs</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Product_Catalog_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#product_catalog_id">Product_Catalog_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique catalog id.</td>
+</tr>
+<tr>
+<td><a href="#product_catalog_code">Product_Catalog_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Unique catalog code.</td>
+</tr>
+<tr>
+<td><a href="#product_catalog_name">Product_Catalog_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Product catalog name (multilanguage).</td>
+</tr>
+<tr>
+<td><a href="#root_product_group_id">Root_Product_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Background_Color</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</td>
-</tr>
-<tr>
-<td>Background_Image</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
-<td>The background image to be used for web visualization of the catalog. null means that background image won't be displayed.</td>
-</tr>
-<tr>
-<td>Background_Position_Horizontal</td>
-<td><code>BackgroundPositionHorizontal</code></td>
-<td>Allowed: <code>L</code>, <code>C</code>, <code>R</code></td>
-<td>Horizontal position of the Background Image. L=Left, C=Center, R=Right. <code>Required</code> <code>Default(&quot;L&quot;)</code></td>
-</tr>
-<tr>
-<td>Background_Position_Vertical</td>
-<td><code>BackgroundPositionVertical</code></td>
-<td>Allowed: <code>T</code>, <code>C</code>, <code>B</code></td>
-<td>Vertical position of the Background Image. T=Top, C=Center, B=Bottom. <code>Required</code> <code>Default(&quot;T&quot;)</code></td>
-</tr>
-<tr>
-<td>Background_Repeat</td>
-<td><code>BackgroundRepeat</code></td>
-<td>Allowed: <code>R</code>, <code>X</code>, <code>Y</code>, <code>N</code></td>
-<td>Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
-</tr>
-<tr>
-<td>Product_Catalog_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique catalog code. <code>Required</code></td>
-</tr>
-<tr>
-<td>Footer_Html</td>
-<td><code>String</code></td>
-<td></td>
-<td>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.</td>
-</tr>
-<tr>
-<td>Header_Html</td>
-<td><code>String</code></td>
-<td></td>
-<td>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.</td>
-</tr>
-<tr>
-<td>Logo</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
+<td><a href="#logo">Logo</a></td>
+<td><code>varbinary</code></td>
 <td>The logo of the product catalog. Used for web and other visualization of the catalog.</td>
 </tr>
 <tr>
-<td>Product_Catalog_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Product catalog name (multilanguage). <code>Required</code></td>
+<td><a href="#header_html">Header_Html</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#footer_html">Footer_Html</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.</td>
+</tr>
+<tr>
+<td><a href="#background_image">Background_Image</a></td>
+<td><code>varbinary</code></td>
+<td>The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.</td>
+</tr>
+<tr>
+<td><a href="#background_position_horizontal">Background_Position_Horizontal</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>L</code>, <code>C</code>, <code>R</code></td>
+<td>Horizontal position of the Background Image. L=Left, C=Center, R=Right.</td>
+</tr>
+<tr>
+<td><a href="#background_position_vertical">Background_Position_Vertical</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>T</code>, <code>C</code>, <code>B</code></td>
+<td>Vertical position of the Background Image. T=Top, C=Center, B=Bottom.</td>
+</tr>
+<tr>
+<td><a href="#background_repeat">Background_Repeat</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>R</code>, <code>X</code>, <code>Y</code>, <code>N</code></td>
+<td>Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.</td>
+</tr>
+<tr>
+<td><a href="#background_color">Background_Color</a></td>
+<td><code>int</code></td>
+<td>When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Notes for this ProductCatalog.</td>
+</tr>
+<tr>
+<td><a href="#web_site_id">Web_Site_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="product_catalog_id">Product_Catalog_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_catalog_code">Product_Catalog_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_catalog_name">Product_Catalog_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="root_product_group_id">Root_Product_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logo">Logo</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="header_html">Header_Html</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="footer_html">Footer_Html</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="background_image">Background_Image</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="background_position_horizontal">Background_Position_Horizontal</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="background_position_vertical">Background_Position_Vertical</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="background_repeat">Background_Repeat</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="background_color">Background_Color</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web_site_id">Web_Site_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 </tbody>
 </table>

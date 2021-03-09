@@ -8,7 +8,7 @@
     <title>Table Dw_Data_Measure_Groups | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Dw_Data_Measure_Groups | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,116 @@
 <h1 id="table-dw_data_measure_groups">Table Dw_Data_Measure_Groups</h1>
 
 <p>Contains the groups of measures in the general data warehouse. Entity: Dw_Data_Measure_Groups (Introduced in version 18.2)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Data_Measure_Group_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#data_measure_group_id">Data_Measure_Group_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Data_Measure_Group_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique group code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#parent_data_measure_group_id">Parent_Data_Measure_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Parent data measure group in the hierarchy. Null when this is root node.</td>
 </tr>
 <tr>
-<td>Data_Measure_Group_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Group name (multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#data_measure_group_code">Data_Measure_Group_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Unique group code.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#data_measure_group_name">Data_Measure_Group_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Group name (multilanguage).</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this DataMeasureGroup.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="data_measure_group_id">Data_Measure_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_data_measure_group_id">Parent_Data_Measure_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_measure_group_code">Data_Measure_Group_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_measure_group_name">Data_Measure_Group_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
 </tr>
 </tbody>
 </table>

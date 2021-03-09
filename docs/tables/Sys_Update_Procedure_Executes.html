@@ -8,7 +8,7 @@
     <title>Table Sys_Update_Procedure_Executes | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Update_Procedure_Executes | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,136 @@
 <h1 id="table-sys_update_procedure_executes">Table Sys_Update_Procedure_Executes</h1>
 
 <p>Contains data about the execution of Upgrade Procedures. Contains status messages and ensures that each procedure is executed only once. Entity: Sys_Update_Procedure_Executes</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Update_Procedure_Execute_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#update_procedure_execute_id">Update_Procedure_Execute_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Execute_Time</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The time, when the update procedure was executed. <code>Required</code> <code>Default(Now)</code></td>
+<td><a href="#update_procedure">Update_Procedure</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>The system name of the executed update procedure.</td>
 </tr>
 <tr>
-<td>Result_Message</td>
-<td><code>String</code></td>
-<td></td>
-<td>Error or success message.</td>
+<td><a href="#execute_time">Execute_Time</a></td>
+<td><code>datetime</code></td>
+<td>The time, when the update procedure was executed.</td>
 </tr>
 <tr>
-<td>Successful</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True when the execution was successfull. <code>Required</code> <code>Default(true)</code></td>
+<td><a href="#successful">Successful</a></td>
+<td><code>bit</code></td>
+<td>True when the execution was successfull.</td>
 </tr>
 <tr>
-<td>Update_Procedure</td>
-<td><code>String</code></td>
+<td><a href="#result_message">Result_Message</a></td>
+<td><code>nvarchar(1024)</code></td>
+<td>Error or success message</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The system name of the executed update procedure. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="update_procedure_execute_id">Update_Procedure_Execute_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_procedure">Update_Procedure</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="execute_time">Execute_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="successful">Successful</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_message">Result_Message</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1024)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

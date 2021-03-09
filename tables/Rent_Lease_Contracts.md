@@ -2,39 +2,92 @@
 
 Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Lease_Contract_Id|`Guid`|`PK`, Readonly||
-|Adjustment_Number|`Int32`|Readonly||
-|Adjustment_Time|`DateTime?`|Readonly||
-|Adjustment_User|`String`|Readonly||
-|Complete_Time|`DateTime?`|Readonly||
-|Creation_Time|`DateTime`|Readonly||
-|Creation_User|`String`|Readonly||
-|Credit_Limit_Override|`Boolean`||Specifies whether the sales orders for rent and consumables that are created by this contract are allowed to be released even in the case of violations of credit limit or presence of overdue receivables. `Required` `Default(false)` |
-|Document_Date|`DateTime`|||
-|Document_No|`String`|||
-|Notes|`String`|||
-|Document_Version|`Int32`|Readonly||
-|End_Date|`DateTime?`||Ending date (inclusive) of the lease contract. `Filter(multi eq;ge;le)` |
-|Entity_Name|`String`|Readonly||
-|Is_Released|`Boolean`|Readonly|True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Is_Single_Execution|`Boolean`|Readonly|Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Parent_Document_Relationship_Type|`ParentDocumentRelationshipType?`|Allowed: `S`, `N`, Readonly||
-|Planning_Only|`Boolean`|Readonly||
-|Read_Only|`Boolean`|Readonly||
-|Reference_Date|`DateTime?`|||
-|Reference_Document_No|`String`|||
-|Release_Time|`DateTime?`|Readonly||
-|Start_Date|`DateTime?`||Starting date of the lease contract. `Filter(multi eq;ge;le)` |
-|State|`DocumentState`|Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly||
-|Void|`Boolean`|Readonly||
-|Void_Reason|`String`|Readonly||
-|Void_Time|`DateTime?`|Readonly||
-|Void_User|`String`|Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Lease_Contract_Id](#lease_contract_id)|`uniqueidentifier` `PK`||
+|[Document_Id](#document_id)|`uniqueidentifier` ||
+|[Lessee_Customer_Id](#lessee_customer_id)|`uniqueidentifier` |The customer record of the lessee|
+|[Currency_Id](#currency_id)|`uniqueidentifier` |The currency of the lease contract amounts|
+|[Start_Date](#start_date)|`date` |Starting date of the lease contract|
+|[End_Date](#end_date)|`date` |Ending date (inclusive) of the lease contract|
+|[Credit_Limit_Override](#credit_limit_override)|`bit` ||
+|[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` ||
+|[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Lease_Contract_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Lessee_Customer_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Currency_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Start_Date
+
+| Property | Value |
+| - | - |
+|Type|date|
+
+### End_Date
+
+| Property | Value |
+| - | - |
+|Type|date|
+
+### Credit_Limit_Override
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Payment_Account_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Is_Single_Execution
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Released
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

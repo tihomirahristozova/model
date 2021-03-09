@@ -8,7 +8,7 @@
     <title>Table Log_Transportation_Vehicles | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Log_Transportation_Vehicles | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,220 @@
 <h1 id="table-log_transportation_vehicles">Table Log_Transportation_Vehicles</h1>
 
 <p>A vehicle, which is used for transportation. One actual vehicle might be defined multiple times as transportation vehicle - for different modes of transportation or cargo types. Entity: Log_Transportation_Vehicles</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Fleet_Vehicles.html">Fleet_Vehicles</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Transportation_Vehicle_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#transportation_vehicle_id">Transportation_Vehicle_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>The unique code (or call sign) of this transportation vehicle. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company to which the transportation vehicle will be bound.</td>
 </tr>
 <tr>
-<td>Max_Cargo_Weight_Kg</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>The maximum weight of the cargo (in kg), which can be transported. null when this is unknown and no limit should be enforced.</td>
+<td><a href="#code">Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>The unique code (or call sign) of this transportation vehicle.</td>
 </tr>
 <tr>
-<td>Max_Pallets_Count</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>The maximum number of pallets, which can be transported by the vehicle. null when this is unknown and no limit should be enforced.</td>
+<td><a href="#vehicle_id">Vehicle_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The definition of the base vehicle.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#transportation_mode_id">Transportation_Mode_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode.</td>
+</tr>
+<tr>
+<td><a href="#cargo_type_id">Cargo_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The cargo type supported by this transportation vehicle.</td>
+</tr>
+<tr>
+<td><a href="#max_cargo_weight_kg">Max_Cargo_Weight_Kg</a></td>
+<td><code>int</code></td>
+<td>The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.</td>
+</tr>
+<tr>
+<td><a href="#max_pallets_count">Max_Pallets_Count</a></td>
+<td><code>int</code></td>
+<td>The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this TransportationVehicle.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="transportation_vehicle_id">Transportation_Vehicle_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="code">Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_id">Vehicle_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transportation_mode_id">Transportation_Mode_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cargo_type_id">Cargo_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max_cargo_weight_kg">Max_Cargo_Weight_Kg</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max_pallets_count">Max_Pallets_Count</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

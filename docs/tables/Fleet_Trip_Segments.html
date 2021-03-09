@@ -8,7 +8,7 @@
     <title>Table Fleet_Trip_Segments | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Fleet_Trip_Segments | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,201 @@
 <h1 id="table-fleet_trip_segments">Table Fleet_Trip_Segments</h1>
 
 <p>Represents the segments which comprise the route of the trips. Entity: Fleet_Trip_Segments</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Fleet_Trips.html">Fleet_Trips</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trip_Segment_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#trip_segment_id">Trip_Segment_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique trip segment id</td>
 </tr>
 <tr>
-<td>Ending_Timestamp</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The ending date and time of the travel on the segment.</td>
+<td><a href="#trip_id">Trip_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The trip for which the segment is defined</td>
 </tr>
 <tr>
-<td>Mileage</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.</td>
+<td><a href="#starting_map_point_id">Starting_Map_Point_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The starting geographical point of the route segment</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for the segment.</td>
+<td><a href="#starting_timestamp">Starting_Timestamp</a></td>
+<td><code>datetime</code></td>
+<td>The starting date and time of the travel on the segment</td>
 </tr>
 <tr>
-<td>Starting_Timestamp</td>
-<td><code>DateTime</code></td>
+<td><a href="#ending_map_point_id">Ending_Map_Point_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The ending geographical point of the route segment</td>
+</tr>
+<tr>
+<td><a href="#ending_timestamp">Ending_Timestamp</a></td>
+<td><code>datetime</code></td>
+<td>The ending date and time of the travel on the segment</td>
+</tr>
+<tr>
+<td><a href="#mileage">Mileage</a></td>
+<td><code>decimal(9, 0)</code></td>
+<td>Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. NULL means unknown mileage</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Notes for the segment</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The starting date and time of the travel on the segment. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="trip_segment_id">Trip_Segment_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trip_id">Trip_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="starting_map_point_id">Starting_Map_Point_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="starting_timestamp">Starting_Timestamp</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ending_map_point_id">Ending_Map_Point_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ending_timestamp">Ending_Timestamp</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mileage">Mileage</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(9, 0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

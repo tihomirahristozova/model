@@ -8,7 +8,7 @@
     <title>Table Nat_BG_VAT_Declaring_Persons | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Nat_BG_VAT_Declaring_Persons | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,62 +80,220 @@
 <h1 id="table-nat_bg_vat_declaring_persons">Table Nat_BG_VAT_Declaring_Persons</h1>
 
 <p>National data: Contains the persons, which are authorized to issue and sign VAT declarations. Entity: Nat_BG_VAT_Declaring_Persons</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Enterprise_Companies.html">Gen_Enterprise_Companies</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Declaring_Person_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#declaring_person_id">Declaring_Person_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique identification of the declaring person.</td>
 </tr>
 <tr>
-<td>Declarer_Type</td>
-<td><code>DeclarerType</code></td>
-<td>Allowed: <code>A</code>, <code>R</code></td>
-<td>Type of the declaring person. A=Attorney, R=Representative. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company for which the person is presenting the declaration.</td>
 </tr>
 <tr>
-<td>Declaring_Person_Address</td>
-<td><code>String</code></td>
-<td></td>
-<td>Address for correspondation of the declaring person. <code>Required</code></td>
+<td><a href="#person_id">Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The person that is presenting the declaration.</td>
 </tr>
 <tr>
-<td>Declaring_Person_City</td>
-<td><code>String</code></td>
-<td></td>
-<td>City from the address for correspondation of the declaring person. <code>Required</code></td>
+<td><a href="#declarer_type">Declarer_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>A</code>, <code>R</code></td>
+<td>Type of the declaring person. A=Attorney, R=Representative.</td>
 </tr>
 <tr>
-<td>Declaring_Person_Position</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#declaring_person_city">Declaring_Person_City</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>City from the address for correspondation of the declaring person.</td>
+</tr>
+<tr>
+<td><a href="#declaring_person_postcode">Declaring_Person_Postcode</a></td>
+<td><code>nvarchar(4)</code></td>
+<td>Postcode from the address for correspondation of the declaring person.</td>
+</tr>
+<tr>
+<td><a href="#declaring_person_address">Declaring_Person_Address</a></td>
+<td><code>nvarchar(150)</code></td>
+<td>Address for correspondation of the declaring person.</td>
+</tr>
+<tr>
+<td><a href="#declaring_person_position">Declaring_Person_Position</a></td>
+<td><code>nvarchar(50)</code></td>
 <td>Position of the declaring person in the enterprise company.</td>
 </tr>
 <tr>
-<td>Declaring_Person_Postcode</td>
-<td><code>String</code></td>
-<td></td>
-<td>Postcode from the address for correspondation of the declaring person. <code>Required</code></td>
+<td><a href="#is_default">Is_Default</a></td>
+<td><code>bit</code></td>
+<td>True if this is the default person, which issues VAT declarations for this Enterprise Company.</td>
 </tr>
 <tr>
-<td>Is_Default</td>
-<td><code>Boolean</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>True if this is the default person, which issues VAT declarations for this Enterprise Company. <code>Required</code> <code>Default(true)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="declaring_person_id">Declaring_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="person_id">Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="declarer_type">Declarer_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="declaring_person_city">Declaring_Person_City</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="declaring_person_postcode">Declaring_Person_Postcode</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="declaring_person_address">Declaring_Person_Address</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(150)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="declaring_person_position">Declaring_Person_Position</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_default">Is_Default</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

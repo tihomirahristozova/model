@@ -8,7 +8,7 @@
     <title>Table Crm_Product_Distribution_Channels | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Product_Distribution_Channels | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,200 @@
 <h1 id="table-crm_product_distribution_channels">Table Crm_Product_Distribution_Channels</h1>
 
 <p>Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Channels</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Products.html">Gen_Products</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Product_Distribution_Channel_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The listed product</td>
 </tr>
 <tr>
-<td>From_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
+<td><a href="#product_distribution_channel_id">Product_Distribution_Channel_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Product, listed at distribution channel</td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Is this product listing active? true=Yes, false=No. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#distribution_channel_id">Distribution_Channel_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The distribution channel in which the product is listed</td>
 </tr>
 <tr>
-<td>Minimal_Sales_Quantity_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
+<td><a href="#from_date">From_Date</a></td>
+<td><code>date</code></td>
+<td>When the product was listed. NULL-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)</td>
+</tr>
+<tr>
+<td><a href="#to_date">To_Date</a></td>
+<td><code>date</code></td>
+<td>When the product was de-listed. NULL=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)</td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Is this product listing active? 1=Yes, 0=No</td>
+</tr>
+<tr>
+<td><a href="#minimal_sales_price_per_lot">Minimal_Sales_Price_Per_Lot</a></td>
+<td><code>decimal(18, 4)</code></td>
+<td>Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.</td>
+</tr>
+<tr>
+<td><a href="#minimal_sales_quantity_base">Minimal_Sales_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code></td>
 <td>Minimal base quantity of the current product that has to be specified in any sale for this distribution channel.</td>
 </tr>
 <tr>
-<td>To_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). <code>Filter(ge;le)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_distribution_channel_id">Product_Distribution_Channel_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distribution_channel_id">Distribution_Channel_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_date">From_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="to_date">To_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimal_sales_price_per_lot">Minimal_Sales_Price_Per_Lot</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimal_sales_quantity_base">Minimal_Sales_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Cm_Activity_Templates | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cm_Activity_Templates | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,52 +80,196 @@
 <h1 id="table-cm_activity_templates">Table Cm_Activity_Templates</h1>
 
 <p>Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Activity_Template_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#activity_template_id">Activity_Template_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Activity_Subject_Mask</td>
-<td><code>String</code></td>
+<td><a href="#route_id">Route_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#responsible_party_id">Responsible_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If Null the user that starts the generation route is responsible party of the activity.</td>
+</tr>
+<tr>
+<td><a href="#activity_subject_mask">Activity_Subject_Mask</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td>A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.</td>
 </tr>
 <tr>
-<td>Additional_Days</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#source_date_field">Source_Date_Field</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.</td>
 </tr>
 <tr>
-<td>Reminder_Time</td>
-<td><code>TimeSpan?</code></td>
-<td></td>
-<td>Time of the day for the reminder.</td>
+<td><a href="#additional_days">Additional_Days</a></td>
+<td><code>int</code></td>
+<td>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.</td>
 </tr>
 <tr>
-<td>Source_Date_Field</td>
-<td><code>String</code></td>
-<td></td>
-<td>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. <code>Required</code></td>
+<td><a href="#start_time">Start_Time</a></td>
+<td><code>time</code></td>
+<td>The time of the day when the activity starts</td>
 </tr>
 <tr>
-<td>Start_Time</td>
-<td><code>TimeSpan</code></td>
+<td><a href="#reminder_time">Reminder_Time</a></td>
+<td><code>time</code></td>
 <td></td>
-<td>The time of the day when the activity starts. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="activity_template_id">Activity_Template_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="route_id">Route_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responsible_party_id">Responsible_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="activity_subject_mask">Activity_Subject_Mask</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="source_date_field">Source_Date_Field</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="additional_days">Additional_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="start_time">Start_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>time</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reminder_time">Reminder_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>time</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

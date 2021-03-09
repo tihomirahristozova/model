@@ -8,7 +8,7 @@
     <title>Table Gen_Report_Queries | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Report_Queries | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,74 +80,240 @@
 <h1 id="table-gen_report_queries">Table Gen_Report_Queries</h1>
 
 <p>Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Reports.html">Gen_Reports</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Report_Query_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#report_query_id">Report_Query_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Depends_On_Child_Rows</td>
-<td><code>Boolean</code></td>
+<td><a href="#report_id">Report_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>If True the data in the current report table contains only the rows that have child rows in sub-tables. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
-<td>Extensions_List</td>
-<td><code>String</code></td>
-<td></td>
-<td>A comma separated list of report extension names. An extension is set of additional fields that participate in the query.</td>
+<td><a href="#reference_path">Reference_Path</a></td>
+<td><code>nvarchar(512)</code></td>
+<td>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document.</td>
 </tr>
 <tr>
-<td>Filter_Xml</td>
-<td><code>DataAccessFilter</code></td>
-<td></td>
-<td>Filter for the loaded table.</td>
+<td><a href="#unique_name">Unique_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The name of the data table in the printout datasource. If NULL the Reference_Path is used.</td>
 </tr>
 <tr>
-<td>Reference_Path</td>
-<td><code>String</code></td>
-<td></td>
-<td>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. <code>Required</code></td>
+<td><a href="#show_text_columns">Show_Text_Columns</a></td>
+<td><code>bit</code></td>
+<td>True to include text descriptions for certain columns.</td>
 </tr>
 <tr>
-<td>Show_Custom_Properties</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True to include the custom properties. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#show_custom_properties">Show_Custom_Properties</a></td>
+<td><code>bit</code></td>
+<td>True to include the custom properties.</td>
 </tr>
 <tr>
-<td>Show_Text_Columns</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True to include text descriptions for certain columns. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#filter_xml">Filter_Xml</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>Filter for the loaded table</td>
 </tr>
 <tr>
-<td>Table_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.</td>
+<td><a href="#table_name">Table_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.</td>
 </tr>
 <tr>
-<td>Unique_Name</td>
-<td><code>String</code></td>
+<td><a href="#depends_on_child_rows">Depends_On_Child_Rows</a></td>
+<td><code>bit</code></td>
+<td>If True the data in the current report table contains only the rows that have child rows in sub-tables.</td>
+</tr>
+<tr>
+<td><a href="#extensions_list">Extensions_List</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>A comma separated list of report extension names. An extension is set of additional fields that participate in the query</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The name of the data table in the printout datasource. If null the Reference_Path is used.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="report_query_id">Report_Query_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="report_id">Report_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reference_path">Reference_Path</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(512)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unique_name">Unique_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show_text_columns">Show_Text_Columns</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="show_custom_properties">Show_Custom_Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filter_xml">Filter_Xml</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table_name">Table_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depends_on_child_rows">Depends_On_Child_Rows</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extensions_list">Extensions_List</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

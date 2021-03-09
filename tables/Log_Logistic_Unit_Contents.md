@@ -2,20 +2,106 @@
 
 Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Contents (Introduced in version 21.1.0.77)
 
-# Aggregate Hierarchy
+## Owner Tables Hierarchy
 
 * [Log_Logistic_Units](Log_Logistic_Units.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Logistic_Unit_Content_Id|`Guid`|`PK`, Readonly||
-|Base_Quantity|`Decimal`||The quantity, expressed in the base measurement category of the product. `Required` `Filter(eq;ge;le)` |
-|Expiration_Date|`DateTime?`||Expiration date of the goods. null means unknown or N/A. `Filter(multi eq;ge;le)` |
-|Gross_Weight|`Decimal?`||Gross weight in kilograms (kg). null means unknown. `Filter(eq;ge;le)` |
-|Line_No|`Int32`||Consecutive position within the logistic unit. `Required` `Filter(multi eq)` |
-|Lot_Number|`String`||The production lot number. null means unknown. `Filter(multi eq;like)` |
-|Notes|`String`||Notes for this LogisticUnitContent. |
-|Quantity|`Decimal`||Quantity of the product in the logistic unit. Expressed in the specified measurement unit. `Required` `Filter(multi eq;ge;le)` |
-|Standard_Quantity|`Decimal`||The quantity, expessed in the standard measurement unit of the product. `Required` `Filter(eq;ge;le)` |
+| Name | Type | Description |
+| - | - | --- |
+|[Logistic_Unit_Content_Id](#logistic_unit_content_id)|`uniqueidentifier` `PK`||
+|[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |The containing logistic unit.|
+|[Line_No](#line_no)|`int` |Consecutive position within the logistic unit.|
+|[Product_Id](#product_id)|`uniqueidentifier` |The product, which is contained in the logistic unit.|
+|[Quantity](#quantity)|`decimal(12, 3)` |Quantity of the product in the logistic unit. Expressed in the specified measurement unit.|
+|[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit of the quantity.|
+|[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The quantity, expessed in the standard measurement unit of the product.|
+|[Base_Quantity](#base_quantity)|`decimal(12, 3)` |The quantity, expressed in the base measurement category of the product.|
+|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Gross_Weight](#gross_weight)|`decimal(12, 3)` |Gross weight in kilograms (kg). NULL means unknown.|
+|[Lot_Number](#lot_number)|`nvarchar(32)` |The production lot number. NULL means unknown.|
+|[Expiration_Date](#expiration_date)|`date` |Expiration date of the goods. NULL means unknown or N/A.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Logistic_Unit_Content_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Logistic_Unit_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Line_No
+
+| Property | Value |
+| - | - |
+|Type|int|
+
+### Product_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Quantity
+
+| Property | Value |
+| - | - |
+|Type|decimal(12, 3)|
+
+### Quantity_Unit_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Standard_Quantity
+
+| Property | Value |
+| - | - |
+|Type|decimal(12, 3)|
+
+### Base_Quantity
+
+| Property | Value |
+| - | - |
+|Type|decimal(12, 3)|
+
+### Notes
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(2147483647)|
+
+### Gross_Weight
+
+| Property | Value |
+| - | - |
+|Type|decimal(12, 3)|
+
+### Lot_Number
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(32)|
+
+### Expiration_Date
+
+| Property | Value |
+| - | - |
+|Type|date|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

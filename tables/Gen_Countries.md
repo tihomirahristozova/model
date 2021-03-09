@@ -2,11 +2,46 @@
 
 List of countries, listed by their internet suffix code. Entity: Gen_Countries
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Country_Id|`Guid`|`PK`, Readonly||
-|Code|`String`||Internet suffix code of the country. `Required` `Filter(eq;like)` `ORD` |
-|Intrastat_Code|`String`||This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1` |
-|Country_Name|`MultilanguageString`||Name of the country. `Required` `Filter(like)` |
+| Name | Type | Description |
+| - | - | --- |
+|[Country_Id](#country_id)|`uniqueidentifier` `PK`|Unique country Id|
+|[Code](#code)|`nvarchar(2)` |Internet suffix code of the country|
+|[Country_Name](#country_name)|`nvarchar(254)` `ML`|Name of the country|
+|[Row_Version](#row_version)|`timestamp` ||
+|[Intrastat_Code](#intrastat_code)|`nvarchar(2)` |This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used.|
+
+## Columns
+
+### Country_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Code
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(2)|
+
+### Country_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(254)|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+### Intrastat_Code
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(2)|
+
+

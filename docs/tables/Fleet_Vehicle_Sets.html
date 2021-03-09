@@ -8,7 +8,7 @@
     <title>Table Fleet_Vehicle_Sets | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Fleet_Vehicle_Sets | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,120 @@
 <h1 id="table-fleet_vehicle_sets">Table Fleet_Vehicle_Sets</h1>
 
 <p>Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Sets</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Enterprise_Companies.html">Gen_Enterprise_Companies</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Vehicle_Set_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#vehicle_set_id">Vehicle_Set_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Id of the vehicle set (composition of vehicles, used together)</td>
 </tr>
 <tr>
-<td>Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if the vehicle set is active for choosing; false - otherwise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#vehicle_set_name">Vehicle_Set_Name</a></td>
+<td><code>nvarchar(128)</code> <code>ML</code></td>
+<td>Name of the vehicle set (Multilanguage)</td>
 </tr>
 <tr>
-<td>Vehicle_Set_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company operating the vehicle set</td>
+</tr>
+<tr>
+<td><a href="#active">Active</a></td>
+<td><code>bit</code></td>
+<td>1 if the vehicle set is active for choosing; 0 - otherwise</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Name of the vehicle set (Multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="vehicle_set_id">Vehicle_Set_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_set_name">Vehicle_Set_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active">Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

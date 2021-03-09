@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Table Inv_Store_Order_Lines_Unfulfilled_View | ERP.net Domain Model </title>
+    <title>View Inv_Store_Order_Lines_Unfulfilled_View | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Table Inv_Store_Order_Lines_Unfulfilled_View | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="title" content="View Inv_Store_Order_Lines_Unfulfilled_View | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,43 +77,259 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="table-inv_store_order_lines_unfulfilled_view">Table Inv_Store_Order_Lines_Unfulfilled_View</h1>
+<h1 id="view-inv_store_order_lines_unfulfilled_view">View Inv_Store_Order_Lines_Unfulfilled_View</h1>
 
 <p>Returns the remaining (unfulfilled) quantity and cost for each Store Order Line in Store Orders, which are Planned, FirmPlanned or Released. Is_Fulfilled and Is_QuantityFulfilled can be used to filter out lines which appear fulfilled. For best performance, the store orders should be finished after fulfilling. Entity: Inv_Store_Order_Lines_Unfulfilled_View (Introduced in version 21.1.1.16)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Is_Fulfilled</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#serial_number_id">Serial_Number_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</td>
 </tr>
 <tr>
-<td>Is_QuantityFulfilled</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If non-null, contains the specific lot to use for the movement</td>
 </tr>
 <tr>
-<td>Order_Remaining_Line_Cost</td>
-<td><code>Decimal</code></td>
+<td><a href="#store_order_line_id">Store_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The remaining (unfulfilled) line cost of the order line. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
-<td>Order_Remaining_Quantity_Base</td>
-<td><code>Decimal</code></td>
+<td><a href="#document_date">Document_Date</a></td>
+<td><code>datetime</code></td>
 <td></td>
-<td>The remaining (unfulfilled) quantity of the order line in base measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#store_id">Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#product_variant_id">Product_Variant_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If specified determines which product variant of the current product in this line is used.</td>
+</tr>
+<tr>
+<td><a href="#order_remaining_quantity_base">Order_Remaining_Quantity_Base</a></td>
+<td><code>decimal(38, 3)</code></td>
+<td>The remaining (unfulfilled) quantity of the order line in base measurement unit.</td>
+</tr>
+<tr>
+<td><a href="#order_remaining_line_cost">Order_Remaining_Line_Cost</a></td>
+<td><code>decimal(38, 2)</code></td>
+<td>The remaining (unfulfilled) line cost of the order line.</td>
+</tr>
+<tr>
+<td><a href="#is_fulfilled">Is_Fulfilled</a></td>
+<td><code>int</code></td>
+<td>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</td>
+</tr>
+<tr>
+<td><a href="#is_quantityfulfilled">Is_QuantityFulfilled</a></td>
+<td><code>int</code></td>
+<td>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="serial_number_id">Serial_Number_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_order_line_id">Store_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_date">Document_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_id">Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_variant_id">Product_Variant_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="order_remaining_quantity_base">Order_Remaining_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(38, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="order_remaining_line_cost">Order_Remaining_Line_Cost</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(38, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_fulfilled">Is_Fulfilled</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_quantityfulfilled">Is_QuantityFulfilled</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
 </tr>
 </tbody>
 </table>

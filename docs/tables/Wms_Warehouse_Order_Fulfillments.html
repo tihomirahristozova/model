@@ -8,7 +8,7 @@
     <title>Table Wms_Warehouse_Order_Fulfillments | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Wms_Warehouse_Order_Fulfillments | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,176 @@
 <h1 id="table-wms_warehouse_order_fulfillments">Table Wms_Warehouse_Order_Fulfillments</h1>
 
 <p>Fulfillment of a warehouse order line. Entity: Wms_Warehouse_Order_Fulfillments (Introduced in version 20.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Warehouse_Order_Fulfillment_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#warehouse_order_fulfillment_id">Warehouse_Order_Fulfillment_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Creation_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The exact time in UTC, when the fulfillment was created in the system. <code>Required</code></td>
+<td><a href="#warehouse_order_id">Warehouse_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The warehouse order, which is fulfilled.</td>
 </tr>
 <tr>
-<td>Is_Final</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. <code>Required</code></td>
+<td><a href="#warehouse_order_line_id">Warehouse_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The line for which we record fulfillment.</td>
 </tr>
 <tr>
-<td>Quantity</td>
-<td><code>Decimal</code></td>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>Fulfilled quantity in the measurement unit of the warehouse order line.</td>
+</tr>
+<tr>
+<td><a href="#is_final">Is_Final</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities.</td>
+</tr>
+<tr>
+<td><a href="#creation_user_id">Creation_User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user, who created the record.</td>
+</tr>
+<tr>
+<td><a href="#creation_time_utc">Creation_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The exact time in UTC, when the fulfillment was created in the system.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Fulfilled quantity in the measurement unit of the warehouse order line. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="warehouse_order_fulfillment_id">Warehouse_Order_Fulfillment_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warehouse_order_id">Warehouse_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warehouse_order_line_id">Warehouse_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_final">Is_Final</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_user_id">Creation_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time_utc">Creation_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

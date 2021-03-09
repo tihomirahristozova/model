@@ -8,7 +8,7 @@
     <title>Table Prd_Principal_Recipes | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prd_Principal_Recipes | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,62 +80,260 @@
 <h1 id="table-prd_principal_recipes">Table Prd_Principal_Recipes</h1>
 
 <p>List of base recipe models. Recipe models are used by the Product Configurator to create specific recipes. Entity: Prd_Principal_Recipes</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Product_Groups.html">Gen_Product_Groups</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>The principal recipe unique id</td>
 </tr>
 <tr>
-<td>Duration_Hour</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#product_group_id">Product_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The production group, whose production is defined by the principal recipe</td>
 </tr>
 <tr>
-<td>Expiry_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The last date, when the recipe should be used. null means that there is no expiry date yet and the recipe model is still active. <code>Filter(ge;le)</code></td>
+<td><a href="#principal_recipe_name">Principal_Recipe_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>Name of the principal recipe</td>
 </tr>
 <tr>
-<td>Principal_Recipe_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Name of the principal recipe. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="#release_date">Release_Date</a></td>
+<td><code>datetime</code></td>
+<td>The date, when the recipe model is released for use</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#expiry_date">Expiry_Date</a></td>
+<td><code>datetime</code></td>
+<td>The last date, when the recipe should be used. NULL means that there is no expiry date yet and the recipe model is still active.</td>
+</tr>
+<tr>
+<td><a href="#duration_hour">Duration_Hour</a></td>
+<td><code>decimal(10, 0)</code></td>
+<td>The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time.</td>
+</tr>
+<tr>
+<td><a href="#produce_quantity">Produce_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>Suggested quantity to produce. Usually it is equal to 1</td>
+</tr>
+<tr>
+<td><a href="#produce_unit_id">Produce_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of Produce_Quantity. The selected item must support the specified unit</td>
+</tr>
+<tr>
+<td><a href="#routing_id">Routing_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The routing to be used for the recipes. NULL means that the workorders will not use routing</td>
+</tr>
+<tr>
+<td><a href="#scrap_rate">Scrap_Rate</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td>User comments for the principal recipe.</td>
 </tr>
 <tr>
-<td>Release_Date</td>
-<td><code>DateTime</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The date, when the recipe model is released for use. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="id">Id</h3>
+<table>
+<thead>
 <tr>
-<td>Scrap_Rate</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. <code>Required</code> <code>Default(0)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_group_id">Product_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="principal_recipe_name">Principal_Recipe_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="release_date">Release_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="expiry_date">Expiry_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="duration_hour">Duration_Hour</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(10, 0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="produce_quantity">Produce_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="produce_unit_id">Produce_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="routing_id">Routing_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scrap_rate">Scrap_Rate</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Prj_Project_Risk_Discussion | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prj_Project_Risk_Discussion | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,45 +80,161 @@
 <h1 id="table-prj_project_risk_discussion">Table Prj_Project_Risk_Discussion</h1>
 
 <p>Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prj_Project_Risks.html">Prj_Project_Risks</a></li>
 <li><a href="Prj_Projects.html">Prj_Projects</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Project_Risk_Message_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#project_risk_message_id">Project_Risk_Message_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Contribution_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td>The time, when the message was contributed. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>Last_Edit_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td>Contains the last edit time of the message. null if the message was never edited. <code>Filter(eq)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>Message</td>
-<td><code>String</code></td>
+<td><a href="#project_risk_id">Project_Risk_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The contents of the message. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="#contributed_by_user_id">Contributed_By_User_Id</a></td>
+<td><code>uniqueidentifier</code> Readonly</td>
+<td>The user, who contributed (wrote) the message.</td>
+</tr>
+<tr>
+<td><a href="#contribution_time">Contribution_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td>The time, when the message was contributed.</td>
+</tr>
+<tr>
+<td><a href="#message">Message</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The contents of the message.</td>
+</tr>
+<tr>
+<td><a href="#last_edit_time">Last_Edit_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td>Contains the last edit time of the message. NULL if the message was never edited</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="project_risk_message_id">Project_Risk_Message_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_risk_id">Project_Risk_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contributed_by_user_id">Contributed_By_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contribution_time">Contribution_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="message">Message</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_edit_time">Last_Edit_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

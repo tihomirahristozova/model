@@ -8,7 +8,7 @@
     <title>Table Gen_Document_Type_User_Statuses | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Document_Type_User_Statuses | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,62 +80,200 @@
 <h1 id="table-gen_document_type_user_statuses">Table Gen_Document_Type_User_Statuses</h1>
 
 <p>User-defined document statuses. Entity: Gen_Document_Type_User_Statuses</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Document_Types.html">Gen_Document_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>User_Status_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#user_status_id">User_Status_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Is the user status active for applying to documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#document_type_id">Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document type, to which this user status is bound</td>
 </tr>
 <tr>
-<td>Display_Order</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consecutive display order of the status, with regard to other statuses within the same document type. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td><a href="#state">State</a></td>
+<td><code>smallint</code> Allowed: <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code></td>
+<td>The system state to which this user status is bound</td>
 </tr>
 <tr>
-<td>Instructions</td>
-<td><code>String</code></td>
-<td></td>
-<td>Instructions what should be done when this user status is active (Rich Text).</td>
+<td><a href="#user_status_name">User_Status_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>Multi-language name of the user status</td>
 </tr>
 <tr>
-<td>Is_Exit_Status</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#display_order">Display_Order</a></td>
+<td><code>int</code></td>
+<td>Consecutive display order of the status, with regard to other statuses within the same document type</td>
 </tr>
 <tr>
-<td>State</td>
-<td><code>DocumentState</code></td>
-<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code></td>
-<td>The system state to which this user status is bound. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#active">Active</a></td>
+<td><code>bit</code></td>
+<td>Is the user status active for applying to documents</td>
 </tr>
 <tr>
-<td>User_Status_Name</td>
-<td><code>String</code></td>
+<td><a href="#instructions">Instructions</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>Instructions what should be done when this user status is active (Rich Text)</td>
+</tr>
+<tr>
+<td><a href="#is_exit_status">Is_Exit_Status</a></td>
+<td><code>bit</code></td>
+<td>1 when the status allows going to the next system status, 0 otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Multi-language name of the user status. <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="user_status_id">User_Status_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_type_id">Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="state">State</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>smallint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_status_name">User_Status_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="display_order">Display_Order</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active">Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instructions">Instructions</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_exit_status">Is_Exit_Status</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

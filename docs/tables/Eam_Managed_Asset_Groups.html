@@ -8,7 +8,7 @@
     <title>Table Eam_Managed_Asset_Groups | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Eam_Managed_Asset_Groups | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,136 @@
 <h1 id="table-eam_managed_asset_groups">Table Eam_Managed_Asset_Groups</h1>
 
 <p>Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Introduced in version 19.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Managed_Asset_Group_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#managed_asset_group_id">Managed_Asset_Group_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Managed_Asset_Group_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique (within all groups) code of the asset group. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
+<td><a href="#parent_managed_asset_group_id">Parent_Managed_Asset_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The parent asset group in the hierarchy. NULL means this is a root group.</td>
 </tr>
 <tr>
-<td>Managed_Asset_Group_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Name of the asset group (multi-language). <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#managed_asset_group_code">Managed_Asset_Group_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Unique (within all groups) code of the asset group.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#managed_asset_group_name">Managed_Asset_Group_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Name of the asset group (multi-language).</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this ManagedAssetGroup.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="managed_asset_group_id">Managed_Asset_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_managed_asset_group_id">Parent_Managed_Asset_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managed_asset_group_code">Managed_Asset_Group_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managed_asset_group_name">Managed_Asset_Group_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

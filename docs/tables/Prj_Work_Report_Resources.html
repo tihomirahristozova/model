@@ -8,7 +8,7 @@
     <title>Table Prj_Work_Report_Resources | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prj_Work_Report_Resources | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,201 @@
 <h1 id="table-prj_work_report_resources">Table Prj_Work_Report_Resources</h1>
 
 <p>Each record contains usage of resource, reported by the related Work Report. Entity: Prj_Work_Report_Resources</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prj_Work_Reports.html">Prj_Work_Reports</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Work_Report_Resource_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#work_report_resource_id">Work_Report_Resource_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Actual_End_Time</td>
-<td><code>DateTime?</code></td>
+<td><a href="#work_report_id">Work_Report_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Optionally, specifies the actual date and time when the resource usage ended. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
-<td>Actual_Start_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Optionally, specifies the actual date and time when the resource usage began. <code>Filter(eq;like)</code></td>
+<td><a href="#project_task_id">Project_Task_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The project task for which the work is reported.</td>
 </tr>
 <tr>
-<td>Total_Resource_Usage_Hours</td>
-<td><code>Decimal</code></td>
+<td><a href="#resource_id">Resource_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The resource, for which usage is reported.</td>
+</tr>
+<tr>
+<td><a href="#resource_instance_id">Resource_Instance_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used.</td>
+</tr>
+<tr>
+<td><a href="#total_resource_usage_hours">Total_Resource_Usage_Hours</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.</td>
+</tr>
+<tr>
+<td><a href="#actual_start_time">Actual_Start_Time</a></td>
+<td><code>datetime</code></td>
+<td>Optionally, specifies the actual date and time when the resource usage began.</td>
+</tr>
+<tr>
+<td><a href="#actual_end_time">Actual_End_Time</a></td>
+<td><code>datetime</code></td>
+<td>Optionally, specifies the actual date and time when the resource usage ended.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="work_report_resource_id">Work_Report_Resource_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work_report_id">Work_Report_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_task_id">Project_Task_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource_id">Resource_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource_instance_id">Resource_Instance_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="total_resource_usage_hours">Total_Resource_Usage_Hours</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actual_start_time">Actual_Start_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actual_end_time">Actual_End_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

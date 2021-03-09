@@ -8,7 +8,7 @@
     <title>Table Ast_Asset_Transaction_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Ast_Asset_Transaction_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,32 +80,341 @@
 <h1 id="table-ast_asset_transaction_lines">Table Ast_Asset_Transaction_Lines</h1>
 
 <p>Asset value transaction lines. Each line changes the values of one asset in one valuation model. Entity: Ast_Asset_Transaction_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Ast_Asset_Transactions.html">Ast_Asset_Transactions</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Asset_Transaction_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#asset_id">Asset_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Asset for which changes in values have occurred.</td>
+</tr>
+<tr>
+<td><a href="#valuation_model_id">Valuation_Model_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Valuation model in which the changes of the asset values have occurred (Taxation model or Accounting model or other).</td>
+</tr>
+<tr>
+<td><a href="#purchase_value">Purchase_Value</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the purchase value of the asset (in the currency of the asset).</td>
+</tr>
+<tr>
+<td><a href="#purchase_value_base">Purchase_Value_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the purchase value of the asset (in the currency of the enterprise company).</td>
+</tr>
+<tr>
+<td><a href="#depreciation_value">Depreciation_Value</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the depreciation value of the asset (in the currency of the asset).</td>
+</tr>
+<tr>
+<td><a href="#depreciation_value_base">Depreciation_Value_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the depreciation value of the asset (in the currency of the enterprise company).</td>
+</tr>
+<tr>
+<td><a href="#salvage_value">Salvage_Value</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the salvage value of the asset (in the currency of the asset).</td>
+</tr>
+<tr>
+<td><a href="#salvage_value_base">Salvage_Value_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the salvage value of the asset (in the currency of the enterprise company).</td>
+</tr>
+<tr>
+<td><a href="#positive_reserve_value">Positive_Reserve_Value</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the value of the positive reserve after asset valuations (in the currency of the asset).</td>
+</tr>
+<tr>
+<td><a href="#positive_reserve_value_base">Positive_Reserve_Value_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company).</td>
+</tr>
+<tr>
+<td><a href="#negative_reserve_value">Negative_Reserve_Value</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the value of the negative reserve after asset valuations (in the currency of the asset).</td>
+</tr>
+<tr>
+<td><a href="#negative_reserve_value_base">Negative_Reserve_Value_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company).</td>
+</tr>
+<tr>
+<td><a href="#asset_transaction_line_id">Asset_Transaction_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique identification of the asset transaction line.</td>
+</tr>
+<tr>
+<td><a href="#asset_transaction_id">Asset_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Operation_Type</td>
-<td><code>OperationType</code></td>
-<td>Allowed: <code>ADJ</code>, <code>DEP</code>, <code>PUR</code>, <code>SLS</code>, <code>REV</code></td>
-<td>Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation. <code>Required</code> <code>Default(&quot;ADJ&quot;)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#operation_type">Operation_Type</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>ADJ</code>, <code>DEP</code>, <code>PUR</code>, <code>SLS</code>, <code>REV</code></td>
+<td>Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="asset_id">Asset_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valuation_model_id">Valuation_Model_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_value">Purchase_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_value_base">Purchase_Value_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depreciation_value">Depreciation_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depreciation_value_base">Depreciation_Value_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="salvage_value">Salvage_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="salvage_value_base">Salvage_Value_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="positive_reserve_value">Positive_Reserve_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="positive_reserve_value_base">Positive_Reserve_Value_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="negative_reserve_value">Negative_Reserve_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="negative_reserve_value_base">Negative_Reserve_Value_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_transaction_line_id">Asset_Transaction_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_transaction_id">Asset_Transaction_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operation_type">Operation_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

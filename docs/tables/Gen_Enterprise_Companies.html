@@ -8,7 +8,7 @@
     <title>Table Gen_Enterprise_Companies | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Enterprise_Companies | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,64 +80,356 @@
 <h1 id="table-gen_enterprise_companies">Table Gen_Enterprise_Companies</h1>
 
 <p>The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Companies</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Enterprise_Company_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>BI_Start_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#company_id">Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Contains the base company data on which this enterprise company is based.</td>
+</tr>
+<tr>
+<td><a href="#base_currency_id">Base_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The base currency for summary reporting for this company.</td>
+</tr>
+<tr>
+<td><a href="#default_language">Default_Language</a></td>
+<td><code>nvarchar(10)</code> Allowed: <code>bg</code>, <code>en</code></td>
+<td>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).</td>
+</tr>
+<tr>
+<td><a href="#default_costing_method">Default_Costing_Method</a></td>
+<td><code>nvarchar(4)</code> Allowed: <code>AVG</code>, <code>EXP</code>, <code>BLD</code></td>
+<td>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost</td>
+</tr>
+<tr>
+<td><a href="#exchange_difference_debit_account_id">Exchange_Difference_Debit_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Account for balancing accounting vouchers with debit difference due to currency exchanges</td>
+</tr>
+<tr>
+<td><a href="#exchange_difference_credit_account_id">Exchange_Difference_Credit_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Account for balancing accounting vouchers with credit difference due to currency exchanges</td>
+</tr>
+<tr>
+<td><a href="#advance_product_id">Advance_Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Product that is used for handling advances in trade documents.</td>
+</tr>
+<tr>
+<td><a href="#vat_document_amount_type_id">VAT_Document_Amount_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document amount that is used to determine the amount of the VAT entries when they are generated.</td>
+</tr>
+<tr>
+<td><a href="#ui_base_color">UI_Base_Color</a></td>
+<td><code>int</code></td>
+<td>When not NULL, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format.</td>
+</tr>
+<tr>
+<td><a href="#bi_start_date">BI_Start_Date</a></td>
+<td><code>datetime</code></td>
+<td>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;. <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
-<td>Default_Costing_Method</td>
-<td><code>DefaultCostingMethod</code></td>
-<td>Allowed: <code>AVG</code>, <code>EXP</code>, <code>BLD</code></td>
-<td>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. <code>Required</code> <code>Default(&quot;AVG&quot;)</code></td>
-</tr>
-<tr>
-<td>Default_Language</td>
-<td><code>DefaultLanguage?</code></td>
-<td>Allowed: <code>bg</code>, <code>en</code></td>
-<td>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). <code>Default(&quot;en&quot;)</code></td>
-</tr>
-<tr>
-<td>Edit_Period_Start_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#access_key_id">Access_Key_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Start date of the priod when the documents can be edited.</td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether the current Enterprise company  is active. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
+<td><a href="#edit_period_start_date">Edit_Period_Start_Date</a></td>
+<td><code>datetime</code></td>
+<td>Start date of the priod when the documents can be edited</td>
 </tr>
 <tr>
-<td>Print_Images_Retention_Months</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>A period of months for which the printed images of the documents will be kept. <code>Required</code> <code>Default(60)</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 20.1</code></td>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether the current Enterprise company  is active.</td>
 </tr>
 <tr>
-<td>UI_Base_Color</td>
-<td><code>Int32?</code></td>
+<td><a href="#default_customer_credit_limit_base">Default_Customer_Credit_Limit_Base</a></td>
+<td><code>decimal(18, 2)</code></td>
 <td></td>
-<td>When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td><a href="#print_images_retention_months">Print_Images_Retention_Months</a></td>
+<td><code>int</code></td>
+<td>A period of months for which the printed images of the documents will be kept.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="company_id">Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="base_currency_id">Base_Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_language">Default_Language</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(10)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_costing_method">Default_Costing_Method</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exchange_difference_debit_account_id">Exchange_Difference_Debit_Account_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exchange_difference_credit_account_id">Exchange_Difference_Credit_Account_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advance_product_id">Advance_Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vat_document_amount_type_id">VAT_Document_Amount_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ui_base_color">UI_Base_Color</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bi_start_date">BI_Start_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access_key_id">Access_Key_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edit_period_start_date">Edit_Period_Start_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_customer_credit_limit_base">Default_Customer_Credit_Limit_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="print_images_retention_months">Print_Images_Retention_Months</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
 </tr>
 </tbody>
 </table>

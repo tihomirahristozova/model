@@ -8,7 +8,7 @@
     <title>Table Gen_Product_Type_Purchase_Invoice_Line_Properties | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Product_Type_Purchase_Invoice_Line_Properties | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,140 @@
 <h1 id="table-gen_product_type_purchase_invoice_line_properties">Table Gen_Product_Type_Purchase_Invoice_Line_Properties</h1>
 
 <p>When specified for a product type, contains the suggested user-defined properties, which can be specified when creating new purchase invoice lines with products of this type. Entity: Gen_Product_Type_Purchase_Invoice_Line_Properties</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Product_Types.html">Gen_Product_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Product_Type_Purchase_Invoice_Line_Property_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#property_no">Property_No</a></td>
+<td><code>int</code></td>
+<td>The consecutive number (position) of the property within the current product type.</td>
+</tr>
+<tr>
+<td><a href="#property_id">Property_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'.</td>
+</tr>
+<tr>
+<td><a href="#required">Required</a></td>
+<td><code>bit</code></td>
+<td>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.</td>
+</tr>
+<tr>
+<td><a href="#product_type_purchase_invoice_line_property_id">Product_Type_Purchase_Invoice_Line_Property_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Property_No</td>
-<td><code>Int32</code></td>
+<td><a href="#product_type_id">Product_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The consecutive number (position) of the property within the current product type. <code>Required</code></td>
 </tr>
 <tr>
-<td>Required</td>
-<td><code>Boolean</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. <code>Required</code> <code>Default(false)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="property_no">Property_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property_id">Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required">Required</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_type_purchase_invoice_line_property_id">Product_Type_Purchase_Invoice_Line_Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_type_id">Product_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

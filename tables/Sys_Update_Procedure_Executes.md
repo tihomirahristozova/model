@@ -2,12 +2,53 @@
 
 Contains data about the execution of Upgrade Procedures. Contains status messages and ensures that each procedure is executed only once. Entity: Sys_Update_Procedure_Executes
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Update_Procedure_Execute_Id|`Guid`|`PK`, Readonly||
-|Execute_Time|`DateTime`||The time, when the update procedure was executed. `Required` `Default(Now)` |
-|Result_Message|`String`||Error or success message. |
-|Successful|`Boolean`||True when the execution was successfull. `Required` `Default(true)` |
-|Update_Procedure|`String`||The system name of the executed update procedure. `Required` |
+| Name | Type | Description |
+| - | - | --- |
+|[Update_Procedure_Execute_Id](#update_procedure_execute_id)|`uniqueidentifier` `PK`||
+|[Update_Procedure](#update_procedure)|`nvarchar(128)` |The system name of the executed update procedure.|
+|[Execute_Time](#execute_time)|`datetime` |The time, when the update procedure was executed.|
+|[Successful](#successful)|`bit` |True when the execution was successfull.|
+|[Result_Message](#result_message)|`nvarchar(1024)` |Error or success message|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Update_Procedure_Execute_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Update_Procedure
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(128)|
+
+### Execute_Time
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Successful
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Result_Message
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(1024)|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

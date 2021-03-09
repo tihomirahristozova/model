@@ -8,7 +8,7 @@
     <title>Table Gen_Variant_Styles | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Variant_Styles | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,34 +80,96 @@
 <h1 id="table-gen_variant_styles">Table Gen_Variant_Styles</h1>
 
 <p>Contains the different styles, which can be assigned to product variants. Entity: Gen_Variant_Styles</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Variant_Style_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#variant_style_id">Variant_Style_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Variant_Style_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique code of the style. Used to generate parts of bar-codes and in other coding schemes. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#variant_style_code">Variant_Style_Code</a></td>
+<td><code>nvarchar(8)</code></td>
+<td>Unique code of the style. Used to generate parts of bar-codes and in other coding schemes.</td>
 </tr>
 <tr>
-<td>Variant_Style_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#variant_style_name">Variant_Style_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
 <td></td>
-<td>The name of this VariantStyle. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="variant_style_id">Variant_Style_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant_style_code">Variant_Style_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(8)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant_style_name">Variant_Style_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

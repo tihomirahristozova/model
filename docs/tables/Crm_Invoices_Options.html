@@ -8,7 +8,7 @@
     <title>Table Crm_Invoices_Options | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Invoices_Options | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,180 @@
 <h1 id="table-crm_invoices_options">Table Crm_Invoices_Options</h1>
 
 <p>Default options for user document types for Invoices. Entity: Crm_Invoices_Options</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Document_Types.html">Gen_Document_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Invoices_Option_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#invoices_option_id">Invoices_Option_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Creates_VAT_Entries</td>
-<td><code>Boolean</code></td>
+<td><a href="#document_type_id">Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document type for which the invoice option applies.</td>
+</tr>
+<tr>
+<td><a href="#default_deal_type_id">Default_Deal_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies default VAT deal type.</td>
+</tr>
+<tr>
+<td><a href="#sign_restriction">Sign_Restriction</a></td>
+<td><code>int</code> Allowed: <code>-1</code>, <code>0</code>, <code>1</code></td>
+<td>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts</td>
+</tr>
+<tr>
+<td><a href="#total_amount_sign_restriction">Total_Amount_Sign_Restriction</a></td>
+<td><code>int</code> Allowed: <code>-1</code>, <code>0</code>, <code>1</code></td>
+<td>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts</td>
+</tr>
+<tr>
+<td><a href="#vat_deviation_document_amount_type_id">VAT_Deviation_Document_Amount_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT</td>
+</tr>
+<tr>
+<td><a href="#creates_vat_entries">Creates_VAT_Entries</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided. <code>Required</code> <code>Default(true)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="invoices_option_id">Invoices_Option_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Sign_Restriction</td>
-<td><code>SignRestriction</code></td>
-<td>Allowed: <code>0</code>, <code>1</code>, <code>-1</code></td>
-<td>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. <code>Required</code> <code>Default(0)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Total_Amount_Sign_Restriction</td>
-<td><code>SignRestriction</code></td>
-<td>Allowed: <code>0</code>, <code>1</code>, <code>-1</code></td>
-<td>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. <code>Required</code> <code>Default(0)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_type_id">Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_deal_type_id">Default_Deal_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sign_restriction">Sign_Restriction</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="total_amount_sign_restriction">Total_Amount_Sign_Restriction</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vat_deviation_document_amount_type_id">VAT_Deviation_Document_Amount_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creates_vat_entries">Creates_VAT_Entries</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Srv_Service_Activity_Services | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Srv_Service_Activity_Services | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,242 @@
 <h1 id="table-srv_service_activity_services">Table Srv_Service_Activity_Services</h1>
 
 <p>Contains the services, which were actually performed during the service activity (repair). Entity: Srv_Service_Activity_Services</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Srv_Service_Activities.html">Srv_Service_Activities</a></li>
+<li><a href="Cm_Activities.html">Cm_Activities</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Service_Activity_Service_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</td>
+</tr>
+<tr>
+<td><a href="#service_id">Service_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of service that is conducted</td>
+</tr>
+<tr>
+<td><a href="#service_name">Service_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Description of the conducted service. The description may vary (contain additional information) from the standart name of the service.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Short notes for the service</td>
+</tr>
+<tr>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(9, 2)</code></td>
+<td>The quantity of the service in the measurement unit of the service</td>
+</tr>
+<tr>
+<td><a href="#performed_by_person_id">Performed_By_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The id of the person from the enterprise company that actually performed the work</td>
+</tr>
+<tr>
+<td><a href="#service_activity_service_id">Service_Activity_Service_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Covered_By_Guarantee</td>
-<td><code>Boolean</code></td>
+<td><a href="#service_activity_id">Service_Activity_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>True when the performed service is covered by the guarantee. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></td>
+<td><a href="#service_object_id">Service_Object_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The service object that was serviced. NULL means that it is unknown or N/A</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Short notes for the service.</td>
+<td><a href="#covered_by_guarantee">Covered_By_Guarantee</a></td>
+<td><code>bit</code></td>
+<td>True when the performed service is covered by the guarantee.</td>
 </tr>
 <tr>
-<td>Service_Name</td>
-<td><code>String</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_id">Service_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_name">Service_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(9, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="performed_by_person_id">Performed_By_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_activity_service_id">Service_Activity_Service_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_activity_id">Service_Activity_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_object_id">Service_Object_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="covered_by_guarantee">Covered_By_Guarantee</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

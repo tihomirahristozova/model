@@ -8,7 +8,7 @@
     <title>Table Sec_Visual_Permissions | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sec_Visual_Permissions | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,52 +80,176 @@
 <h1 id="table-sec_visual_permissions">Table Sec_Visual_Permissions</h1>
 
 <p>Contains permissions, which are honored only by client applications and are used to provide access to (primarily show/hide) different elements of the user interface. Entity: Sec_Visual_Permissions</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Visual_Permission_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#visual_permission_id">Visual_Permission_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Application_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The application for which the permission is specified. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#application_name">Application_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The application for which the permission is specified</td>
 </tr>
 <tr>
-<td>Element_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Optionally, the element from the panel which will be secured. <code>Filter(eq)</code></td>
+<td><a href="#form_name">Form_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>Optionally, the form which will be secured</td>
 </tr>
 <tr>
-<td>Form_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Optionally, the form which will be secured. <code>Filter(eq)</code></td>
+<td><a href="#panel_name">Panel_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>Optionally, the panel from the form which will be secured</td>
 </tr>
 <tr>
-<td>Operation_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Optionally, the operation on the element which will be secured. <code>Filter(eq)</code></td>
+<td><a href="#element_name">Element_Name</a></td>
+<td><code>nvarchar(4000)</code></td>
+<td>Optionally, the element from the panel which will be secured</td>
 </tr>
 <tr>
-<td>Panel_Name</td>
-<td><code>String</code></td>
+<td><a href="#operation_name">Operation_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>Optionally, the operation on the element which will be secured</td>
+</tr>
+<tr>
+<td><a href="#access_key_id">Access_Key_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The security access key which controls the access to the visual permission</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Optionally, the panel from the form which will be secured. <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="visual_permission_id">Visual_Permission_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application_name">Application_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="form_name">Form_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="panel_name">Panel_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="element_name">Element_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(4000)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operation_name">Operation_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access_key_id">Access_Key_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

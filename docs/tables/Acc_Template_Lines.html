@@ -8,7 +8,7 @@
     <title>Table Acc_Template_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Acc_Template_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,100 +80,362 @@
 <h1 id="table-acc_template_lines">Table Acc_Template_Lines</h1>
 
 <p>Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Acc_Templates.html">Acc_Templates</a></li>
 <li><a href="Wf_Routes.html">Wf_Routes</a></li>
 <li><a href="Gen_Document_Types.html">Gen_Document_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Template_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive number of the line within the template. Determines the order of execution of the template lines.</td>
+</tr>
+<tr>
+<td><a href="#filter_xml">Filter_XML</a></td>
+<td><code>nvarchar(1073741823)</code></td>
+<td>The line is accounted only when the filter is satisfied compared with the source document header</td>
+</tr>
+<tr>
+<td><a href="#debit_account_id">Debit_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The account which should be debited</td>
+</tr>
+<tr>
+<td><a href="#credit_account_id">Credit_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The account which should be credited</td>
+</tr>
+<tr>
+<td><a href="#amount_source_name">Amount_Source_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.</td>
+</tr>
+<tr>
+<td><a href="#amount_row_id">Amount_Row_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The id of the row from the amount rowset where the amount is located. NULL means to account one by one for all rows within the rowset</td>
+</tr>
+<tr>
+<td><a href="#amount_row_name">Amount_Row_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Row_Id is specified or there is no name</td>
+</tr>
+<tr>
+<td><a href="#amount_source_filter">Amount_Source_Filter</a></td>
+<td><code>nvarchar(1073741823)</code></td>
+<td>Filter that further specifies which rows from the amount rowset determine the amount</td>
+</tr>
+<tr>
+<td><a href="#amount_column_name">Amount_Column_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The name of the column within the amount rowset where the amount is located</td>
+</tr>
+<tr>
+<td><a href="#multiplier">Multiplier</a></td>
+<td><code>decimal(18, 6)</code></td>
+<td>Factor by which the amount from the source will be multiplied</td>
+</tr>
+<tr>
+<td><a href="#valid_from_date">Valid_From_Date</a></td>
+<td><code>datetime</code></td>
+<td>Start date from which the accounting template line is valid</td>
+</tr>
+<tr>
+<td><a href="#amount_condition">Amount_Condition</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>+</code>, <code>-</code></td>
+<td>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</td>
+</tr>
+<tr>
+<td><a href="#template_line_id">Template_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Amount_Column_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of the column within the amount rowset where the amount is located. <code>Required</code></td>
+<td><a href="#valid_to_date">Valid_To_Date</a></td>
+<td><code>datetime</code></td>
+<td>End date to which the accounting template line is valid</td>
 </tr>
 <tr>
-<td>Amount_Condition</td>
-<td><code>AmountCondition?</code></td>
-<td>Allowed: <code>+</code>, <code>-</code></td>
-<td>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</td>
+<td><a href="#template_id">Template_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
 </tr>
 <tr>
-<td>Amount_Row_Id</td>
-<td><code>Guid?</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
-<td>Amount_Row_Name</td>
-<td><code>String</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
 <tr>
-<td>Amount_Source_Filter</td>
-<td><code>DataAccessFilter</code></td>
-<td></td>
-<td>Filter that further specifies which rows from the amount rowset determine the amount.</td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Amount_Source_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. <code>Required</code></td>
+<td>Type</td>
+<td>int</td>
 </tr>
+</tbody>
+</table>
+<h3 id="filter_xml">Filter_XML</h3>
+<table>
+<thead>
 <tr>
-<td>Filter_XML</td>
-<td><code>DataAccessFilter</code></td>
-<td></td>
-<td>The line is accounted only when the filter is satisfied compared with the source document header.</td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consecutive number of the line within the template. Determines the order of execution of the template lines. <code>Required</code></td>
+<td>Type</td>
+<td>nvarchar(1073741823)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="debit_account_id">Debit_Account_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Multiplier</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Factor by which the amount from the source will be multiplied. <code>Required</code> <code>Default(1)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this TemplateLine.</td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="credit_account_id">Credit_Account_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Valid_From_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Start date from which the accounting template line is valid. <code>Filter(multi eq;ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Valid_To_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>End date to which the accounting template line is valid. <code>Filter(multi eq;ge;le)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount_source_name">Amount_Source_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount_row_id">Amount_Row_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount_row_name">Amount_Row_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount_source_filter">Amount_Source_Filter</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1073741823)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount_column_name">Amount_Column_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="multiplier">Multiplier</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valid_from_date">Valid_From_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount_condition">Amount_Condition</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="template_line_id">Template_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valid_to_date">Valid_To_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="template_id">Template_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -2,38 +2,106 @@
 
 Client requisition for transportation. Entity: Log_Transportation_Requisitions
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Transportation_Requisition_Id|`Guid`|`PK`, Readonly||
-|Adjustment_Number|`Int32`|Readonly||
-|Adjustment_Time|`DateTime?`|Readonly||
-|Adjustment_User|`String`|Readonly||
-|Complete_Time|`DateTime?`|Readonly||
-|Creation_Time|`DateTime`|Readonly||
-|Creation_User|`String`|Readonly||
-|Document_Date|`DateTime`|||
-|Document_No|`String`|||
-|Notes|`String`|||
-|Document_Version|`Int32`|Readonly||
-|Entity_Name|`String`|Readonly||
-|Parent_Document_Relationship_Type|`ParentDocumentRelationshipType?`|Allowed: `S`, `N`, Readonly||
-|Planning_Only|`Boolean`|Readonly||
-|Read_Only|`Boolean`|Readonly||
-|Reference_Date|`DateTime?`|||
-|Reference_Document_No|`String`|||
-|Release_Time|`DateTime?`|Readonly||
-|Requested_Arrival_Date|`DateTime`||Requested arrival date. null when no specific date is requested. `Required` `Filter(ge;le)` |
-|Requested_Arrival_Time|`TimeSpan?`||Requested arrival time. null when no specific time is requested. `Filter(ge;le)` |
-|Requested_Departure_Date|`DateTime`||Requested date of departure. null when no specific date is requested. `Required` `Filter(ge;le)` |
-|Requested_Departure_Time|`TimeSpan?`||Requested time of departure. null when no specific time is requested. `Filter(ge;le)` |
-|State|`DocumentState`|Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly||
-|Void|`Boolean`|Readonly||
-|Void_Reason|`String`|Readonly||
-|Void_Time|`DateTime?`|Readonly||
-|Void_User|`String`|Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Transportation_Requisition_Id](#transportation_requisition_id)|`uniqueidentifier` `PK`||
+|[Document_Id](#document_id)|`uniqueidentifier` ||
+|[Requested_Departure_Date](#requested_departure_date)|`date` |Requested date of departure. NULL when no specific date is requested.|
+|[Requested_Departure_Time](#requested_departure_time)|`time` |Requested time of departure. NULL when no specific time is requested.|
+|[Requested_Arrival_Date](#requested_arrival_date)|`date` |Requested arrival date. NULL when no specific date is requested.|
+|[Requested_Arrival_Time](#requested_arrival_time)|`time` |Requested arrival time. NULL when no specific time is requested.|
+|[Transport_From_Party_Id](#transport_from_party_id)|`uniqueidentifier` |Shipping party.|
+|[Transport_From_Party_Contact_Mechanism_Id](#transport_from_party_contact_mechanism_id)|`uniqueidentifier` |Loading address.|
+|[Transport_From_Geo_Point_Id](#transport_from_geo_point_id)|`uniqueidentifier` |Geographical location of the loading, if available.|
+|[Transport_To_Party_Id](#transport_to_party_id)|`uniqueidentifier` |Receiving party.|
+|[Transport_To_Party_Contact_Mechanism_Id](#transport_to_party_contact_mechanism_id)|`uniqueidentifier` |Unload address.|
+|[Transport_To_Geo_Point_Id](#transport_to_geo_point_id)|`uniqueidentifier` |Geographical location of the unloading, if available.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Transportation_Requisition_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Requested_Departure_Date
+
+| Property | Value |
+| - | - |
+|Type|date|
+
+### Requested_Departure_Time
+
+| Property | Value |
+| - | - |
+|Type|time|
+
+### Requested_Arrival_Date
+
+| Property | Value |
+| - | - |
+|Type|date|
+
+### Requested_Arrival_Time
+
+| Property | Value |
+| - | - |
+|Type|time|
+
+### Transport_From_Party_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Transport_From_Party_Contact_Mechanism_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Transport_From_Geo_Point_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Transport_To_Party_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Transport_To_Party_Contact_Mechanism_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Transport_To_Geo_Point_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

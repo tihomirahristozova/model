@@ -8,7 +8,7 @@
     <title>Table Pdm_Processing_Consents | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Pdm_Processing_Consents | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,118 +80,436 @@
 <h1 id="table-pdm_processing_consents">Table Pdm_Processing_Consents</h1>
 
 <p>Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Processing_Consent_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#processing_consent_id">Processing_Consent_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Allow_Address</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Allows the processing of the physical address. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#person_id">Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record.</td>
 </tr>
 <tr>
-<td>Allow_Basic_Data</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#user_id">User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user.</td>
 </tr>
 <tr>
-<td>Allow_Email</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Allows the processing of the email address. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#personal_data_process_id">Personal_Data_Process_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes.</td>
 </tr>
 <tr>
-<td>Allow_Other_Data</td>
-<td><code>String</code></td>
-<td></td>
-<td>Comma-separated list of other types of data, which was allowed for processing with this consent. <code>Filter(eq)</code></td>
+<td><a href="#given_on_utc">Given_On_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The date and time (in Utc), when the consent was given.</td>
 </tr>
 <tr>
-<td>Allow_Phone</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Allows the processing of the telephone number. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#retracted_on_utc">Retracted_On_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted.</td>
 </tr>
 <tr>
-<td>Consent_Image</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given.</td>
+</tr>
+<tr>
+<td><a href="#is_child">Is_Child</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child.</td>
+</tr>
+<tr>
+<td><a href="#parent_name">Parent_Name</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>When a parental rights holder gives a consent for a child, contains the name of the parent.</td>
+</tr>
+<tr>
+<td><a href="#parent_email">Parent_Email</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>When a parental rights holder gives a consent for a child, contains the email of the parent.</td>
+</tr>
+<tr>
+<td><a href="#parent_phone">Parent_Phone</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>When a parental rights holder gives a consent for a child, contains the phone number of the parent.</td>
+</tr>
+<tr>
+<td><a href="#consent_type">Consent_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>O</code>, <code>I</code>, <code>V</code>, <code>W</code>, <code>E</code>, <code>T</code></td>
+<td>The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).</td>
+</tr>
+<tr>
+<td><a href="#consent_text">Consent_Text</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The actual text of the consent.</td>
+</tr>
+<tr>
+<td><a href="#consent_image">Consent_Image</a></td>
+<td><code>varbinary</code></td>
 <td>If not null, it is a graphical image, containing additional information for the consent.</td>
 </tr>
 <tr>
-<td>Consent_Text</td>
-<td><code>String</code></td>
-<td></td>
-<td>The actual text of the consent. <code>Filter(like)</code></td>
+<td><a href="#allow_basic_data">Allow_Basic_Data</a></td>
+<td><code>bit</code></td>
+<td>Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc.</td>
 </tr>
 <tr>
-<td>Consent_Type</td>
-<td><code>ConsentType</code></td>
-<td>Allowed: <code>O</code>, <code>I</code>, <code>V</code>, <code>W</code>, <code>E</code>, <code>T</code></td>
-<td>The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#allow_email">Allow_Email</a></td>
+<td><code>bit</code></td>
+<td>Allows the processing of the email address.</td>
 </tr>
 <tr>
-<td>Given_On_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The date and time (in Utc), when the consent was given. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td><a href="#allow_address">Allow_Address</a></td>
+<td><code>bit</code></td>
+<td>Allows the processing of the physical address.</td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#allow_phone">Allow_Phone</a></td>
+<td><code>bit</code></td>
+<td>Allows the processing of the telephone number.</td>
 </tr>
 <tr>
-<td>Is_Child</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#allow_other_data">Allow_Other_Data</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>Comma-separated list of other types of data, which was allowed for processing with this consent.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this ProcessingConsent.</td>
 </tr>
 <tr>
-<td>Parent_Email</td>
-<td><code>String</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>When a parental rights holder gives a consent for a child, contains the email of the parent. <code>Filter(like)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="processing_consent_id">Processing_Consent_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Parent_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>When a parental rights holder gives a consent for a child, contains the name of the parent. <code>Filter(eq;like)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Parent_Phone</td>
-<td><code>String</code></td>
-<td></td>
-<td>When a parental rights holder gives a consent for a child, contains the phone number of the parent. <code>Filter(like)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="person_id">Person_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Retracted_On_Utc</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. <code>Filter(ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_id">User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="personal_data_process_id">Personal_Data_Process_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="given_on_utc">Given_On_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retracted_on_utc">Retracted_On_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_child">Is_Child</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_name">Parent_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_email">Parent_Email</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_phone">Parent_Phone</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consent_type">Consent_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consent_text">Consent_Text</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consent_image">Consent_Image</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_basic_data">Allow_Basic_Data</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_email">Allow_Email</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_address">Allow_Address</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_phone">Allow_Phone</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_other_data">Allow_Other_Data</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

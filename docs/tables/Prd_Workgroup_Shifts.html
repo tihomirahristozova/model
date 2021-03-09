@@ -8,7 +8,7 @@
     <title>Table Prd_Workgroup_Shifts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prd_Workgroup_Shifts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,160 @@
 <h1 id="table-prd_workgroup_shifts">Table Prd_Workgroup_Shifts</h1>
 
 <p>Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prd_Workgroups.html">Prd_Workgroups</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique workgroup shift Id</td>
+</tr>
+<tr>
+<td><a href="#workgroup_id">Workgroup_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Efficiency_Factor_Percent</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Efficiency factor of the routing steps for this shift, expressed as percentage. <code>Required</code> <code>Default(1)</code></td>
+<td><a href="#shift_name">Shift_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The name of the workgroup shift.</td>
 </tr>
 <tr>
-<td>Establishment_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>When the workgroup shift was established. Used as minimum date when generating calendar. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
+<td><a href="#establishment_date">Establishment_Date</a></td>
+<td><code>datetime</code></td>
+<td>When the workgroup shift was established. Used as minimum date when generating calendar</td>
 </tr>
 <tr>
-<td>Shift_Name</td>
-<td><code>String</code></td>
+<td><a href="#work_schedule_id">Work_Schedule_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The work schedule used to calculate the working time for the shift.</td>
+</tr>
+<tr>
+<td><a href="#efficiency_factor_percent">Efficiency_Factor_Percent</a></td>
+<td><code>decimal(3, 2)</code></td>
+<td>Efficiency factor of the routing steps for this shift, expressed as percentage</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The name of the workgroup shift. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="id">Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workgroup_id">Workgroup_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shift_name">Shift_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="establishment_date">Establishment_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work_schedule_id">Work_Schedule_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="efficiency_factor_percent">Efficiency_Factor_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(3, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

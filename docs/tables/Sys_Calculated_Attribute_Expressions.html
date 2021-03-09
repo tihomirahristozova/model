@@ -8,7 +8,7 @@
     <title>Table Sys_Calculated_Attribute_Expressions | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Calculated_Attribute_Expressions | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,80 +80,260 @@
 <h1 id="table-sys_calculated_attribute_expressions">Table Sys_Calculated_Attribute_Expressions</h1>
 
 <p>Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Sys_Calculated_Attributes.html">Sys_Calculated_Attributes</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Calculated_Attribute_Expression_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#expression_no">Expression_No</a></td>
+<td><code>int</code></td>
+<td>Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute.</td>
 </tr>
 <tr>
-<td>Expression_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. <code>Required</code></td>
+<td><a href="#operator">Operator</a></td>
+<td><code>nvarchar(16)</code> Allowed: <code>ADD</code>, <code>ADDDAYS</code>, <code>AND</code>, <code>CAST</code>, <code>CEILING</code>, <code>CONCAT</code>, <code>CONVERT</code>, <code>COUNT</code>, <code>DIVIDE</code>, <code>IN</code>, <code>IIF</code>, <code>INCNUM</code>, <code>EQUAL</code>, <code>FILTER</code>, <code>FIRST</code>, <code>FLOOR</code>, <code>FORMATSTRING</code>, <code>GETVALUE</code>, <code>GETOBJVALUE</code>, <code>GT</code>, <code>GTE</code>, <code>LIKE</code>, <code>LIST</code>, <code>LEFT</code>, <code>LEN</code>, <code>LT</code>, <code>LTE</code>, <code>MULTIPLY</code>, <code>NOT</code>, <code>OR</code>, <code>ORDERBY</code>, <code>POS</code>, <code>REGEX</code>, <code>REPLACE</code>, <code>RIGHT</code>, <code>ROUND</code>, <code>SELECT</code>, <code>SORT</code>, <code>SUBSTRING</code>, <code>SUM</code>, <code>TODAY</code>, <code>TOLOWER</code>, <code>TOP</code>, <code>TOUPPER</code>, <code>WHERE</code></td>
+<td>The exprssion operator. Available operators are limited to a pre-selected list of operators.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this CalculatedAttributeExpression.</td>
-</tr>
-<tr>
-<td>Operator</td>
-<td><code>ExpressionOperator</code></td>
-<td>Allowed: <code>ADD</code>, <code>ADDDAYS</code>, <code>AND</code>, <code>CAST</code>, <code>CEILING</code>, <code>CONCAT</code>, <code>CONVERT</code>, <code>COUNT</code>, <code>DIVIDE</code>, <code>IN</code>, <code>IIF</code>, <code>INCNUM</code>, <code>EQUAL</code>, <code>FILTER</code>, <code>FIRST</code>, <code>FLOOR</code>, <code>FORMATSTRING</code>, <code>GETVALUE</code>, <code>GETOBJVALUE</code>, <code>GT</code>, <code>GTE</code>, <code>LIKE</code>, <code>LIST</code>, <code>LEFT</code>, <code>LEN</code>, <code>LT</code>, <code>LTE</code>, <code>MULTIPLY</code>, <code>NOT</code>, <code>OR</code>, <code>ORDERBY</code>, <code>POS</code>, <code>REGEX</code>, <code>REPLACE</code>, <code>RIGHT</code>, <code>ROUND</code>, <code>SELECT</code>, <code>SORT</code>, <code>SUBSTRING</code>, <code>SUM</code>, <code>TODAY</code>, <code>TOLOWER</code>, <code>TOP</code>, <code>TOUPPER</code>, <code>WHERE</code></td>
-<td>The exprssion operator. Available operators are limited to a pre-selected list of operators. <code>Required</code></td>
-</tr>
-<tr>
-<td>Parameter1_Type</td>
-<td><code>ExpressionParameterType?</code></td>
-<td>Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>EXP</code>, <code>INPUT</code>, <code>REPO</code>, <code>SYS</code></td>
+<td><a href="#parameter1_type">Parameter1_Type</a></td>
+<td><code>nvarchar(16)</code> Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>EXP</code>, <code>INPUT</code>, <code>REPO</code>, <code>SYS</code></td>
 <td>The type of the parameter specifies how to obtain the parameter value.</td>
 </tr>
 <tr>
-<td>Parameter1_Value</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#parameter1_value">Parameter1_Value</a></td>
+<td><code>nvarchar(256)</code></td>
 <td>The actual value of parameter 1.</td>
 </tr>
 <tr>
-<td>Parameter2_Type</td>
-<td><code>ExpressionParameterType?</code></td>
-<td>Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>EXP</code>, <code>INPUT</code>, <code>REPO</code>, <code>SYS</code></td>
+<td><a href="#parameter2_type">Parameter2_Type</a></td>
+<td><code>nvarchar(16)</code> Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>EXP</code>, <code>INPUT</code>, <code>REPO</code>, <code>SYS</code></td>
 <td>The type of the parameter specifies how to obtain the parameter value.</td>
 </tr>
 <tr>
-<td>Parameter2_Value</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#parameter2_value">Parameter2_Value</a></td>
+<td><code>nvarchar(256)</code></td>
 <td>The actual value of the parameter.</td>
 </tr>
 <tr>
-<td>Parameter3_Type</td>
-<td><code>ExpressionParameterType?</code></td>
-<td>Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>EXP</code>, <code>INPUT</code>, <code>REPO</code>, <code>SYS</code></td>
+<td><a href="#parameter3_type">Parameter3_Type</a></td>
+<td><code>nvarchar(16)</code> Allowed: <code>CONST</code>, <code>ATTRIB</code>, <code>REF</code>, <code>CHILD</code>, <code>EXP</code>, <code>INPUT</code>, <code>REPO</code>, <code>SYS</code></td>
 <td>The type of the parameter specifies how to obtain the parameter value.</td>
 </tr>
 <tr>
-<td>Parameter3_Value</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#parameter3_value">Parameter3_Value</a></td>
+<td><code>nvarchar(256)</code></td>
 <td>The actual value of the parameter.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#calculated_attribute_expression_id">Calculated_Attribute_Expression_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#calculated_attribute_id">Calculated_Attribute_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="expression_no">Expression_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operator">Operator</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter1_type">Parameter1_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter1_value">Parameter1_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter2_type">Parameter2_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter2_value">Parameter2_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter3_type">Parameter3_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter3_value">Parameter3_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculated_attribute_expression_id">Calculated_Attribute_Expression_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculated_attribute_id">Calculated_Attribute_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

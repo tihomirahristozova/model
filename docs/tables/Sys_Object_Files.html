@@ -8,7 +8,7 @@
     <title>Table Sys_Object_Files | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Object_Files | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,98 +80,360 @@
 <h1 id="table-sys_object_files">Table Sys_Object_Files</h1>
 
 <p>Contains files attached to objects. Entity: Sys_Object_Files</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Sys_Objects.html">Sys_Objects</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Object_File_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#object_file_id">Object_File_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>.</td>
+</tr>
+<tr>
+<td><a href="#object_id">Object_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The object to which the file is attached</td>
+</tr>
+<tr>
+<td><a href="#purpose_code">Purpose_Code</a></td>
+<td><code>nvarchar(32)</code></td>
+<td>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.</td>
+</tr>
+<tr>
+<td><a href="#embedded_file_contents">Embedded_File_Contents</a></td>
+<td><code>varbinary</code></td>
+<td>Contains the contents of the file, when it is embedded in the database. NULL for linked files</td>
+</tr>
+<tr>
+<td><a href="#linked_file_path">Linked_File_Path</a></td>
+<td><code>nvarchar(1024)</code></td>
+<td>When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files</td>
+</tr>
+<tr>
+<td><a href="#file_name">File_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The file name of the linked or embedded file</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>User notes for the file attachment</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Content_Location</td>
-<td><code>ContentLocation</code></td>
-<td>Allowed: <code>EMB</code>, <code>URL</code>, <code>FSL</code></td>
-<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. <code>Required</code> <code>Default(&quot;EMB&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
+<td><a href="#content_location">Content_Location</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>EMB</code>, <code>URL</code>, <code>FSL</code></td>
+<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.</td>
 </tr>
 <tr>
-<td>Creation_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Time (in UTC), when the file was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Introduced in version 20.1</code></td>
+<td><a href="#media_type">Media_Type</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.</td>
 </tr>
 <tr>
-<td>Embedded_File_Contents</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
-<td>Contains the contents of the file, when it is embedded in the database. null for linked files.</td>
+<td><a href="#media_width">Media_Width</a></td>
+<td><code>int</code></td>
+<td>Used (non-null) only for media files. Specifies the width for displaying the media.</td>
 </tr>
 <tr>
-<td>File_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The file name of the linked or embedded file. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#media_height">Media_Height</a></td>
+<td><code>int</code></td>
+<td>Used (non-null) only for media files. Specifies the width for displaying the media.</td>
 </tr>
 <tr>
-<td>Last_Update_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Time (in UTC), when the file was last updated. <code>Required</code> <code>Default(NowUtc)</code> <code>Introduced in version 20.1</code></td>
+<td><a href="#creation_time_utc">Creation_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>Time (in UTC), when the file was created.</td>
 </tr>
 <tr>
-<td>Linked_File_Path</td>
-<td><code>String</code></td>
-<td></td>
-<td>When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. <code>Filter(eq;like)</code></td>
+<td><a href="#last_update_time_utc">Last_Update_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>Time (in UTC), when the file was last updated.</td>
 </tr>
 <tr>
-<td>Media_Height</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Used (non-null) only for media files. Specifies the width for displaying the media. <code>Introduced in version 20.1</code></td>
+<td><a href="#creation_user_id">Creation_User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user, who created the file record. NULL if it is unknown.</td>
 </tr>
 <tr>
-<td>Media_Type</td>
-<td><code>String</code></td>
-<td></td>
-<td>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. <code>Introduced in version 20.1</code></td>
+<td><a href="#last_update_user_id">Last_Update_User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user, who performed the last update to the file record. NULL if it is unknown.</td>
 </tr>
 <tr>
-<td>Media_Width</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Used (non-null) only for media files. Specifies the width for displaying the media. <code>Introduced in version 20.1</code></td>
+<td><a href="#section">Section</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>A section name used to group files</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="object_file_id">Object_File_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>User notes for the file attachment.</td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Purpose_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. <code>Filter(eq)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="object_id">Object_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Section</td>
-<td><code>String</code></td>
-<td></td>
-<td>A section name used to group files. <code>Introduced in version 21.1.1.84</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purpose_code">Purpose_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="embedded_file_contents">Embedded_File_Contents</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="linked_file_path">Linked_File_Path</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1024)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file_name">File_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="content_location">Content_Location</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="media_type">Media_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="media_width">Media_Width</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="media_height">Media_Height</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time_utc">Creation_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_update_time_utc">Last_Update_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_user_id">Creation_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_update_user_id">Last_Update_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section">Section</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
 </tr>
 </tbody>
 </table>

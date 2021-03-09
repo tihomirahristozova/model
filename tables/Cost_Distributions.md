@@ -2,36 +2,50 @@
 
 Used for cost distribution. Contains the period and the store of the cost distribution. Entity: Cost_Distributions
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Cost_Distribution_Id|`Guid`|`PK`, Readonly||
-|Adjustment_Number|`Int32`|Readonly||
-|Adjustment_Time|`DateTime?`|Readonly||
-|Adjustment_User|`String`|Readonly||
-|Complete_Time|`DateTime?`|Readonly||
-|Creation_Time|`DateTime`|Readonly||
-|Creation_User|`String`|Readonly||
-|Document_Date|`DateTime`|||
-|Document_No|`String`|||
-|Notes|`String`|||
-|Document_Version|`Int32`|Readonly||
-|End_Date|`DateTime`||The ending date of the covered period. `Required` `Filter(ge;le)` |
-|Entity_Name|`String`|Readonly||
-|Parent_Document_Relationship_Type|`ParentDocumentRelationshipType?`|Allowed: `S`, `N`, Readonly||
-|Planning_Only|`Boolean`|Readonly||
-|Read_Only|`Boolean`|Readonly||
-|Reference_Date|`DateTime?`|||
-|Reference_Document_No|`String`|||
-|Release_Time|`DateTime?`|Readonly||
-|Start_Date|`DateTime`||The starting date of the covered period. `Required` `Filter(ge;le)` |
-|State|`DocumentState`|Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly||
-|Void|`Boolean`|Readonly||
-|Void_Reason|`String`|Readonly||
-|Void_Time|`DateTime?`|Readonly||
-|Void_User|`String`|Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Cost_Distribution_Id](#cost_distribution_id)|`uniqueidentifier` `PK`||
+|[Document_Id](#document_id)|`uniqueidentifier` ||
+|[Start_Date](#start_date)|`date` |The starting date of the covered period.|
+|[End_Date](#end_date)|`date` |The ending date of the covered period.|
+|[Store_Id](#store_id)|`uniqueidentifier` |The store (warehouse) for which the distribution is made. NULL means that the distribution covers multiple warehouses.|
+
+## Columns
+
+### Cost_Distribution_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Start_Date
+
+| Property | Value |
+| - | - |
+|Type|date|
+
+### End_Date
+
+| Property | Value |
+| - | - |
+|Type|date|
+
+### Store_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+

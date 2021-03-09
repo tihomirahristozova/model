@@ -2,11 +2,46 @@
 
 List of user-defined currencies. Entity: Gen_Currencies
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Currency_Id|`Guid`|`PK`, Readonly||
-|Currency_Sign|`String`||The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. `Required` `Filter(eq;like)` `ORD` |
-|Currency_Name|`String`||The name of this Currency. `Required` `Filter(like)` |
-|Show_Order|`Int32`||The order in which to show the currency in combo boxes, etc. `Required` `Default(0)` |
+| Name | Type | Description |
+| - | - | --- |
+|[Currency_Id](#currency_id)|`uniqueidentifier` `PK`||
+|[Currency_Sign](#currency_sign)|`nvarchar(4)` |The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.|
+|[Currency_Name](#currency_name)|`nvarchar(50)` ||
+|[Show_Order](#show_order)|`int` |The order in which to show the currency in combo boxes, etc.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Currency_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Currency_Sign
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(4)|
+
+### Currency_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(50)|
+
+### Show_Order
+
+| Property | Value |
+| - | - |
+|Type|int|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

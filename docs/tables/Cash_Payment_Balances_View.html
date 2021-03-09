@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Table Cash_Payment_Balances_View | ERP.net Domain Model </title>
+    <title>View Cash_Payment_Balances_View | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Table Cash_Payment_Balances_View | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="title" content="View Cash_Payment_Balances_View | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,25 +77,399 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="table-cash_payment_balances_view">Table Cash_Payment_Balances_View</h1>
+<h1 id="view-cash_payment_balances_view">View Cash_Payment_Balances_View</h1>
 
 <p>Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Is_Invoiced</td>
-<td><code>Boolean</code></td>
+<td><a href="#ref_document_id">Ref_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document.</td>
+</tr>
+<tr>
+<td><a href="#ref_document_type_id">Ref_Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of the document which has created the payment order and is the basis for the payment</td>
+</tr>
+<tr>
+<td><a href="#ref_document_no">Ref_Document_No</a></td>
+<td><code>nvarchar(20)</code></td>
+<td>The number of the document which has created the payment order and is the basis for the payment</td>
+</tr>
+<tr>
+<td><a href="#ref_document_date">Ref_Document_Date</a></td>
+<td><code>datetime</code></td>
+<td>The date of the original document. NULL means that it is unknown</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_document_id">Ref_Invoice_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The invoice document which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document.</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_document_type_id">Ref_Invoice_Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_document_no">Ref_Invoice_Document_No</a></td>
+<td><code>nvarchar(20)</code></td>
+<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.</td>
+</tr>
+<tr>
+<td><a href="#ref_invoice_document_date">Ref_Invoice_Document_Date</a></td>
+<td><code>datetime</code></td>
+<td>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.</td>
+</tr>
+<tr>
+<td><a href="#party_id">Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party which is to pay or receive the amount</td>
+</tr>
+<tr>
+<td><a href="#due_date">Due_Date</a></td>
+<td><code>datetime</code></td>
+<td>The due date of the payment. NULL means there is no due date</td>
+</tr>
+<tr>
+<td><a href="#direction">Direction</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>I</code>, <code>R</code></td>
+<td>I for Payment issue, R for payment receipt</td>
+</tr>
+<tr>
+<td><a href="#payment_order_id">Payment_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The payment order.</td>
+</tr>
+<tr>
+<td><a href="#currency_id">Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of amounts.</td>
+</tr>
+<tr>
+<td><a href="#paid_amount">Paid_Amount</a></td>
+<td><code>decimal(38, 2)</code></td>
+<td>The paid amount. Taken from released payment transactions.</td>
+</tr>
+<tr>
+<td><a href="#order_amount">Order_Amount</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>The total amount of the payment order.</td>
+</tr>
+<tr>
+<td><a href="#due_start_date">Due_Start_Date</a></td>
+<td><code>date</code></td>
+<td>The date at which the payment becomes executable. NULL means the payment is executable at all times.</td>
+</tr>
+<tr>
+<td><a href="#location_party_id">Location_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Location or sub-party of the Party_Id in the order</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="#is_invoiced">Is_Invoiced</a></td>
+<td><code>bit</code></td>
+<td>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="ref_document_id">Ref_Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ref_document_type_id">Ref_Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ref_document_no">Ref_Document_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(20)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ref_document_date">Ref_Document_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_document_id">Ref_Invoice_Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_document_type_id">Ref_Invoice_Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_document_no">Ref_Invoice_Document_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(20)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ref_invoice_document_date">Ref_Invoice_Document_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="party_id">Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="due_date">Due_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direction">Direction</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_order_id">Payment_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency_id">Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="paid_amount">Paid_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(38, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="order_amount">Order_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="due_start_date">Due_Start_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="location_party_id">Location_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_invoiced">Is_Invoiced</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 </tbody>
 </table>

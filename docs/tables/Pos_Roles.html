@@ -8,7 +8,7 @@
     <title>Table Pos_Roles | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Pos_Roles | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,136 @@
 <h1 id="table-pos_roles">Table Pos_Roles</h1>
 
 <p>Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Pos_Role_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#pos_role_id">Pos_Role_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Can_Process_Minus_Sales</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether the role is allowed to process minus (qty and/or value) sales. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#pos_role_code">Pos_Role_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Unique role code.</td>
 </tr>
 <tr>
-<td>Can_Void_Sales</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether this role can void sales orders. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#pos_role_name">Pos_Role_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Multi-language name of the POS role.</td>
 </tr>
 <tr>
-<td>Pos_Role_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique role code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
+<td><a href="#can_void_sales">Can_Void_Sales</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether this role can void sales orders.</td>
 </tr>
 <tr>
-<td>Pos_Role_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#can_process_minus_sales">Can_Process_Minus_Sales</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether the role is allowed to process minus (qty and/or value) sales.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Multi-language name of the POS role. <code>Required</code> <code>Filter(multi eq;like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="pos_role_id">Pos_Role_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pos_role_code">Pos_Role_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pos_role_name">Pos_Role_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can_void_sales">Can_Void_Sales</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can_process_minus_sales">Can_Process_Minus_Sales</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

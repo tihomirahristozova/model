@@ -8,7 +8,7 @@
     <title>Table Gen_Scheduled_Document_Events | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Scheduled_Document_Events | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,64 +80,236 @@
 <h1 id="table-gen_scheduled_document_events">Table Gen_Scheduled_Document_Events</h1>
 
 <p>Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Scheduled_Document_Event_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#scheduled_document_event_id">Scheduled_Document_Event_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Cancelled</td>
-<td><code>Boolean</code></td>
+<td><a href="#source_document_id">Source_Document_Id</a></td>
+<td><code>uniqueidentifier</code> Readonly</td>
+<td>The document that has caused this event to be scheduled</td>
+</tr>
+<tr>
+<td><a href="#document_event">Document_Event</a></td>
+<td><code>nvarchar(254)</code> Readonly</td>
+<td>The type of the document event that is scheduled to be processed</td>
+</tr>
+<tr>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code> Readonly</td>
+<td>The document for which the event will be processed</td>
+</tr>
+<tr>
+<td><a href="#state">State</a></td>
+<td><code>smallint</code> Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
+<td>The state of the document for which the event will be processed</td>
+</tr>
+<tr>
+<td><a href="#processed">Processed</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Indicates wheather the event is already processed or not</td>
+</tr>
+<tr>
+<td><a href="#last_process_time">Last_Process_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td>The time of the last attempt to process the event</td>
+</tr>
+<tr>
+<td><a href="#last_process_status">Last_Process_Status</a></td>
+<td><code>nvarchar(2147483647)</code> Readonly</td>
+<td>Status/information of the last attemp to process the event. Usually shows the cause in case of failure.</td>
+</tr>
+<tr>
+<td><a href="#creation_time">Creation_Time</a></td>
+<td><code>datetime</code> Readonly</td>
 <td></td>
-<td>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td>Date and time when the ScheduledDocumentEvent was created. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code></td>
+<td><a href="#cancelled">Cancelled</a></td>
+<td><code>bit</code></td>
+<td>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.</td>
 </tr>
 <tr>
-<td>Document_Event</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>The type of the document event that is scheduled to be processed. <code>Required</code> <code>ReadOnly</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="scheduled_document_event_id">Scheduled_Document_Event_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Last_Process_Status</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>Status/information of the last attemp to process the event. Usually shows the cause in case of failure. <code>ReadOnly</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Last_Process_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td>The time of the last attempt to process the event. <code>ReadOnly</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="source_document_id">Source_Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Processed</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>Indicates wheather the event is already processed or not. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>State</td>
-<td><code>State</code></td>
-<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
-<td>The state of the document for which the event will be processed. <code>Required</code> <code>ReadOnly</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_event">Document_Event</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="state">State</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>smallint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="processed">Processed</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_process_time">Last_Process_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_process_status">Last_Process_Status</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time">Creation_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cancelled">Cancelled</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Sec_Groups | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sec_Groups | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,156 @@
 <h1 id="table-sec_groups">Table Sec_Groups</h1>
 
 <p>Groups of users. Used for providing group access to secured data. Entity: Sec_Groups</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Group_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#group_id">Group_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Edit_Period_Days</td>
-<td><code>Int32?</code></td>
+<td><a href="#group_name">Group_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
 <td></td>
-<td>The number of days before which the documents can not be corrected, released or voided.</td>
 </tr>
 <tr>
-<td>Group_Type</td>
-<td><code>GroupType</code></td>
-<td>Allowed: <code>G</code>, <code>U</code>, <code>A</code>, <code>E</code>, Readonly</td>
-<td>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. <code>Required</code> <code>Default(&quot;G&quot;)</code> <code>ReadOnly</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
+<td></td>
 </tr>
 <tr>
-<td>Group_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>The name of this Group. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
+<td><a href="#edit_period_days">Edit_Period_Days</a></td>
+<td><code>int</code></td>
+<td>The number of days before which the documents can not be corrected, released or voided</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#group_type">Group_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>G</code>, <code>U</code>, <code>A</code>, <code>E</code>, Readonly</td>
+<td>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody</td>
+</tr>
+<tr>
+<td><a href="#group_for_user_id">Group_For_User_Id</a></td>
+<td><code>uniqueidentifier</code> Readonly</td>
+<td>When Group_Type=U, contains the user for which the group is defined, NULL otherwise</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Notes for this Group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="group_id">Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group_name">Group_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edit_period_days">Edit_Period_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group_type">Group_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group_for_user_id">Group_For_User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Srv_Service_Types | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Srv_Service_Types | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,176 @@
 <h1 id="table-srv_service_types">Table Srv_Service_Types</h1>
 
 <p>Service levels. Entity: Srv_Service_Types</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Service_Type_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#service_type_id">Service_Type_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Description</td>
-<td><code>String</code></td>
-<td></td>
-<td>The description of this ServiceType.</td>
+<td><a href="#service_object_type_id">Service_Object_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The service object type to which this service type is applicable</td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
+<td><a href="#service_type_name">Service_Type_Name</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>True when the service type is currently active and selectable in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
-<td>Is_Default</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True when this is the default service type for the service object type. false otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#is_default">Is_Default</a></td>
+<td><code>bit</code></td>
+<td>1 when this is the default service type for the service object type. 0 otherwise</td>
 </tr>
 <tr>
-<td>Service_Type_Name</td>
-<td><code>String</code></td>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>The name of this ServiceType. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td><a href="#price_list_id">Price_List_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies the price list that should be applied when invoicing service activities</td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>True when the service type is currently active and selectable in new documents.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="service_type_id">Service_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_object_type_id">Service_Object_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_type_name">Service_Type_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_default">Is_Default</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="price_list_id">Price_List_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

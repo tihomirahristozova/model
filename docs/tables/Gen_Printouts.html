@@ -8,7 +8,7 @@
     <title>Table Gen_Printouts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Printouts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,98 +80,380 @@
 <h1 id="table-gen_printouts">Table Gen_Printouts</h1>
 
 <p>Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Document_Types.html">Gen_Document_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Printout_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#printout_id">Printout_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Allow_Printing_On_State</td>
-<td><code>AllowPrintingOnState</code></td>
-<td>Allowed: <code>0</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code></td>
-<td>The user can print documents only with state equal or greater than Allow_Printing_On_State. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#application_name">Application_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The application which stored and uses the printout</td>
 </tr>
 <tr>
-<td>Application_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The application which stored and uses the printout. <code>Required</code></td>
+<td><a href="#printout_name">Printout_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The name of the printout. Unique within the application form</td>
 </tr>
 <tr>
-<td>Backward_Compatibility</td>
-<td><code>Boolean</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Obsolete. Not used. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
-<td>Copies</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Number of copies that should be printed when using direct printing. <code>Required</code> <code>Default(1)</code></td>
+<td><a href="#document_type_id">Document_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document type to which this printout layout is bound.</td>
 </tr>
 <tr>
-<td>Definition</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#printout_layout_id">Printout_Layout_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The printout layout, that is bound to the document type.</td>
+</tr>
+<tr>
+<td><a href="#definition_format">Definition_Format</a></td>
+<td><code>nvarchar(16)</code></td>
 <td>Obsolete. Not used.</td>
 </tr>
 <tr>
-<td>Definition_Format</td>
-<td><code>String</code></td>
-<td></td>
-<td>Obsolete. Not used. <code>Default(&quot;default&quot;)</code></td>
+<td><a href="#definition">Definition</a></td>
+<td><code>nvarchar(1073741823)</code></td>
+<td>Obsolete. Not used.</td>
 </tr>
 <tr>
-<td>Is_Default</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if this is the default printout for the application form. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#is_default">Is_Default</a></td>
+<td><code>bit</code></td>
+<td>1 if this is the default printout for the application form</td>
 </tr>
 <tr>
-<td>Printout_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of the printout. Unique within the application form. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="#ord">Ord</a></td>
+<td><code>int</code></td>
+<td>Order in the list of printouts when using direct printing</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this Printout.</td>
+<td><a href="#copies">Copies</a></td>
+<td><code>int</code></td>
+<td>Number of copies that should be printed when using direct printing</td>
 </tr>
 <tr>
-<td>Ord</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Order in the list of printouts when using direct printing. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#report_id">Report_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If not NULL points to a custom report that indicates which data will be loaded in the printout.</td>
 </tr>
 <tr>
-<td>Ord_Filter_Xml</td>
-<td><code>DataAccessFilter</code></td>
-<td></td>
+<td><a href="#backward_compatibility">Backward_Compatibility</a></td>
+<td><code>bit</code></td>
+<td>Obsolete. Not used.</td>
+</tr>
+<tr>
+<td><a href="#allow_printing_on_state">Allow_Printing_On_State</a></td>
+<td><code>smallint</code> Allowed: <code>0</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code></td>
+<td>The user can print documents only with state equal or greater than Allow_Printing_On_State</td>
+</tr>
+<tr>
+<td><a href="#ord_priority">Ord_Priority</a></td>
+<td><code>int</code></td>
+<td>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command.</td>
+</tr>
+<tr>
+<td><a href="#ord_filter_xml">Ord_Filter_Xml</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td>The condition, required to be matched in order for the printout to be executed upon &quot;Print All&quot; command.</td>
 </tr>
 <tr>
-<td>Ord_Priority</td>
-<td><code>Int32?</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(512)</code></td>
 <td></td>
-<td>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command. <code>Default(0)</code></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="printout_id">Printout_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application_name">Application_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="printout_name">Printout_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_type_id">Document_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="printout_layout_id">Printout_Layout_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="definition_format">Definition_Format</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="definition">Definition</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1073741823)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_default">Is_Default</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ord">Ord</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="copies">Copies</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="report_id">Report_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backward_compatibility">Backward_Compatibility</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_printing_on_state">Allow_Printing_On_State</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>smallint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ord_priority">Ord_Priority</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ord_filter_xml">Ord_Filter_Xml</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(512)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

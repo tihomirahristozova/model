@@ -2,40 +2,113 @@
 
 Potential deals (Opportunities). Entity: Crm_Deals
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Deal_Id|`Guid`|`PK`, Readonly||
-|Adjustment_Number|`Int32`|Readonly||
-|Adjustment_Time|`DateTime?`|Readonly||
-|Adjustment_User|`String`|Readonly||
-|Complete_Time|`DateTime?`|Readonly||
-|Creation_Time|`DateTime`|Readonly||
-|Creation_User|`String`|Readonly||
-|Deal_Status|`DealStatus`|Allowed: `INP`, `SUC`, `UNS`|Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress. `Required` `Default("INP")` `Filter(multi eq)` |
-|Document_Date|`DateTime`|||
-|Document_No|`String`|||
-|Notes|`String`|||
-|Document_Version|`Int32`|Readonly||
-|Entity_Name|`String`|Readonly||
-|Is_Released|`Boolean`|Readonly|True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Is_Single_Execution|`Boolean`|Readonly|Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` |
-|Parent_Document_Relationship_Type|`ParentDocumentRelationshipType?`|Allowed: `S`, `N`, Readonly||
-|Planning_Only|`Boolean`|Readonly||
-|Read_Only|`Boolean`|Readonly||
-|Reference_Date|`DateTime?`|||
-|Reference_Document_No|`String`|||
-|Release_Time|`DateTime?`|Readonly||
-|Revenue_End_Date|`DateTime`||Expected date on which the last revenue from this deal will occur. `Required` `Default(Today)` `Filter(ge;le)` |
-|Revenue_Start_Date|`DateTime`||Expected date on which revenue from this deal will start. `Required` `Default(Today)` `Filter(ge;le)` |
-|State|`DocumentState`|Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly||
-|Success_Probability|`Decimal`||Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15). `Required` `Default(0)` |
-|Void|`Boolean`|Readonly||
-|Void_Reason|`String`|Readonly||
-|Void_Time|`DateTime?`|Readonly||
-|Void_User|`String`|Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Deal_Id](#deal_id)|`uniqueidentifier` `PK`||
+|[Document_Id](#document_id)|`uniqueidentifier` ||
+|[Leading_Sales_Person_Id](#leading_sales_person_id)|`uniqueidentifier` |The sales person, responsible for the opportunity|
+|[Party_Id](#party_id)|`uniqueidentifier` |The prospect customers party. The party might not yet have a customer record.|
+|[Expected_Revenue](#expected_revenue)|`decimal(18, 2)` |Expected total revenue. For automatically renewed contracts it's the amount until the first renewal.|
+|[Expected_Revenue_Currency_Id](#expected_revenue_currency_id)|`uniqueidentifier` |The currency of Expected Revenue|
+|[Revenue_Start_Date](#revenue_start_date)|`datetime` |Expected date on which revenue from this deal will start.|
+|[Revenue_End_Date](#revenue_end_date)|`datetime` |Expected date on which the last revenue from this deal will occur.|
+|[Success_Probability](#success_probability)|`decimal(3, 2)` |Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15).|
+|[Deal_Status](#deal_status)|`nvarchar(3)` Allowed: `INP`, `SUC`, `UNS`|Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress|
+|[Dealer_Id](#dealer_id)|`uniqueidentifier` |The external dealer, which provided the opportunity|
+|[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Deal_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Leading_Sales_Person_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Party_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Expected_Revenue
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 2)|
+
+### Expected_Revenue_Currency_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Revenue_Start_Date
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Revenue_End_Date
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Success_Probability
+
+| Property | Value |
+| - | - |
+|Type|decimal(3, 2)|
+
+### Deal_Status
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(3)|
+
+### Dealer_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Is_Single_Execution
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Released
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

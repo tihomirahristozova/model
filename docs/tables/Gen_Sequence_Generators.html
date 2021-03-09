@@ -8,7 +8,7 @@
     <title>Table Gen_Sequence_Generators | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Sequence_Generators | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,200 @@
 <h1 id="table-gen_sequence_generators">Table Gen_Sequence_Generators</h1>
 
 <p>Contains one or more sequence generators for each sequence. Many sequence generators for one sequence are used when the generators must be selected conditionally or when more generators are needed for parallel numbering. Entity: Gen_Sequence_Generators</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Sequences.html">Gen_Sequences</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sequence_Generator_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#sequence_generator_id">Sequence_Generator_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Allow_Explicit_Numbering</td>
-<td><code>Boolean</code></td>
+<td><a href="#sequence_id">Sequence_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
-<td>Next_Value</td>
-<td><code>String</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The next number that will be issued by the sequence. <code>Required</code> <code>Default(&quot;0000000001&quot;)</code></td>
 </tr>
 <tr>
-<td>Sequence_Priority</td>
-<td><code>Int32</code></td>
+<td><a href="#responsible_person_id">Responsible_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If specified then the generator is designated for use only in documents with that Responsible_Person_Id</td>
+</tr>
+<tr>
+<td><a href="#next_value">Next_Value</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>The next number that will be issued by the sequence</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. <code>Required</code> <code>Default(1)</code></td>
+</tr>
+<tr>
+<td><a href="#allow_explicit_numbering">Allow_Explicit_Numbering</a></td>
+<td><code>bit</code></td>
+<td>Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed)</td>
+</tr>
+<tr>
+<td><a href="#sequence_priority">Sequence_Priority</a></td>
+<td><code>int</code></td>
+<td>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="sequence_generator_id">Sequence_Generator_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sequence_id">Sequence_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responsible_person_id">Responsible_Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="next_value">Next_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allow_explicit_numbering">Allow_Explicit_Numbering</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sequence_priority">Sequence_Priority</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

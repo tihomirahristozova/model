@@ -8,7 +8,7 @@
     <title>Table Sys_User_Business_Rules | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_User_Business_Rules | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,82 +80,256 @@
 <h1 id="table-sys_user_business_rules">Table Sys_User_Business_Rules</h1>
 
 <p>Represents user-defined business rule. Entity: Sys_User_Business_Rules</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>User_Business_Rule_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#user_business_rule_id">User_Business_Rule_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>User_Business_Rule_Code</td>
-<td><code>String</code></td>
+<td><a href="#user_business_rule_code">User_Business_Rule_Code</a></td>
+<td><code>nvarchar(16)</code></td>
 <td></td>
-<td>The unique code of the UserBusinessRule. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
-<td>Icon</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
+<td><a href="#user_business_rule_name">User_Business_Rule_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#repository_name">Repository_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>The name of the repository, for which this business rule is defined.</td>
+</tr>
+<tr>
+<td><a href="#layer">Layer</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>FTE</code>, <code>BKE</code>, <code>COM</code></td>
+<td>Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the rule is activated.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#user_startable">User_Startable</a></td>
+<td><code>bit</code></td>
+<td>Specifies, that the rule can be manually started by the user.</td>
+</tr>
+<tr>
+<td><a href="#icon">Icon</a></td>
+<td><code>varbinary</code></td>
 <td>Visual icon of the rule in .PNG format.</td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether the rule is activated. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#script_language">Script_Language</a></td>
+<td><code>nvarchar(16)</code> Allowed: <code>Integrated</code>, <code>CSharp</code></td>
+<td>The programming language used to define the rule actions.</td>
 </tr>
 <tr>
-<td>Layer</td>
-<td><code>Layer</code></td>
-<td>Allowed: <code>FTE</code>, <code>BKE</code>, <code>COM</code></td>
-<td>Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). <code>Required</code> <code>Default(&quot;BKE&quot;)</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td>User_Business_Rule_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>The name of this UserBusinessRule. <code>Required</code> <code>Filter(like)</code></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this UserBusinessRule.</td>
-</tr>
-<tr>
-<td>Repository_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of the repository, for which this business rule is defined. <code>Required</code> <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td>Script_Language</td>
-<td><code>ScriptLanguage</code></td>
-<td>Allowed: <code>Integrated</code>, <code>CSharp</code></td>
-<td>The programming language used to define the rule actions. <code>Required</code> <code>Default(&quot;Integrated&quot;)</code></td>
-</tr>
-<tr>
-<td>Script_Text</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#script_text">Script_Text</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td>The program code used to define the rule actions.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="user_business_rule_id">User_Business_Rule_Id</h3>
+<table>
+<thead>
 <tr>
-<td>User_Startable</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies, that the rule can be manually started by the user. <code>Default(false)</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_business_rule_code">User_Business_Rule_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_business_rule_name">User_Business_Rule_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="repository_name">Repository_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layer">Layer</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_startable">User_Startable</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="icon">Icon</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="script_language">Script_Language</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="script_text">Script_Text</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
 </tr>
 </tbody>
 </table>

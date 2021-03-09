@@ -8,7 +8,7 @@
     <title>Table Prd_Work_Order_Item_Operations | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prd_Work_Order_Item_Operations | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,111 +80,422 @@
 <h1 id="table-prd_work_order_item_operations">Table Prd_Work_Order_Item_Operations</h1>
 
 <p>The operations that are performed to produce the product. Entity: Prd_Work_Order_Item_Operations</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prd_Work_Order_Items.html">Prd_Work_Order_Items</a></li>
 <li><a href="Prd_Work_Orders.html">Prd_Work_Orders</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#line_ord">Line_Ord</a></td>
+<td><code>int</code></td>
+<td>Order of the line within the work order routing</td>
 </tr>
 <tr>
-<td>Actual_End_Date_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The date/time when the operation has completed. null means that the operation is not completed.</td>
+<td><a href="#operation_id">Operation_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The performed operation.</td>
 </tr>
 <tr>
-<td>Actual_Start_Date_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The date/time when the operation has started. null means that the has not started yet.</td>
-</tr>
-<tr>
-<td>Line_Ord</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Order of the line within the work order routing. <code>Required</code> <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td>Minimum_Concurrent_Start_Time_Minutes</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</td>
-</tr>
-<tr>
-<td>Move_Time_Minutes</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Time to move the lot to the next operation in minutes. <code>Required</code> <code>Default(0)</code></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this WorkOrderItemOperation.</td>
-</tr>
-<tr>
-<td>Operation_Description</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#operation_description">Operation_Description</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td>The short description of the operation.</td>
 </tr>
 <tr>
-<td>Run_Time_Minutes</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Time for production of one lot of the produced item in minutes. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#workgroup_resource_id">Workgroup_Resource_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The resource that will be used for the operation. NULL means that no resource will be locked for the operation</td>
 </tr>
 <tr>
-<td>Scheduled_End_Date_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only).</td>
+<td><a href="#use_quantity">Use_Quantity</a></td>
+<td><code>decimal(9, 3)</code></td>
+<td>Quantity of the resource, that should be allocated for the operation</td>
 </tr>
 <tr>
-<td>Scheduled_Start_Date_Time</td>
-<td><code>DateTime?</code></td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
-<td>The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders).</td>
 </tr>
 <tr>
-<td>Scrap_Rate</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>Projected scrap rate of the operation. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#tooling">Tooling</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The tools needed for the routing step</td>
 </tr>
 <tr>
-<td>Setup_Time_Minutes</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Time needed to setup the equipment in minutes. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#actual_end_date_time">Actual_End_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The date/time when the operation has completed. NULL means that the operation is not completed.</td>
 </tr>
 <tr>
-<td>Tooling</td>
-<td><code>String</code></td>
-<td></td>
-<td>The tools needed for the routing step.</td>
+<td><a href="#actual_start_date_time">Actual_Start_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The date/time when the operation has started. NULL means that the has not started yet</td>
 </tr>
 <tr>
-<td>Wait_Time_Minutes</td>
-<td><code>Int32</code></td>
+<td><a href="#scrap_rate">Scrap_Rate</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>Projected scrap rate of the operation</td>
+</tr>
+<tr>
+<td><a href="#move_time_minutes">Move_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>Time to move the lot to the next operation in minutes</td>
+</tr>
+<tr>
+<td><a href="#setup_time_minutes">Setup_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>Time needed to setup the equipment in minutes</td>
+</tr>
+<tr>
+<td><a href="#run_time_minutes">Run_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>Time for production of one lot of the produced item in minutes</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>Wait time (drying, cooling, etc.) after the operation in minutes. <code>Required</code> <code>Default(0)</code></td>
+</tr>
+<tr>
+<td><a href="#minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting</td>
+</tr>
+<tr>
+<td><a href="#scheduled_end_date_time">Scheduled_End_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)</td>
+</tr>
+<tr>
+<td><a href="#scheduled_start_date_time">Scheduled_Start_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)</td>
+</tr>
+<tr>
+<td><a href="#work_order_item_id">Work_Order_Item_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The work order item, containing the line.</td>
+</tr>
+<tr>
+<td><a href="#wait_time_minutes">Wait_Time_Minutes</a></td>
+<td><code>int</code></td>
+<td>Wait time (drying, cooling, etc.) after the operation in minutes</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_ord">Line_Ord</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operation_id">Operation_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operation_description">Operation_Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workgroup_resource_id">Workgroup_Resource_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use_quantity">Use_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(9, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="id">Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tooling">Tooling</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actual_end_date_time">Actual_End_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actual_start_date_time">Actual_Start_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scrap_rate">Scrap_Rate</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move_time_minutes">Move_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="setup_time_minutes">Setup_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="run_time_minutes">Run_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scheduled_end_date_time">Scheduled_End_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scheduled_start_date_time">Scheduled_Start_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work_order_item_id">Work_Order_Item_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wait_time_minutes">Wait_Time_Minutes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

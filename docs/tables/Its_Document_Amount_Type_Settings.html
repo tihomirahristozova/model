@@ -8,7 +8,7 @@
     <title>Table Its_Document_Amount_Type_Settings | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Its_Document_Amount_Type_Settings | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,140 @@
 <h1 id="table-its_document_amount_type_settings">Table Its_Document_Amount_Type_Settings</h1>
 
 <p>Specifies the additional amounts, which are added to the invoiced and statistical values. Entity: Its_Document_Amount_Type_Settings</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Document_Amount_Types.html">Gen_Document_Amount_Types</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Document_Amount_Type_Setting_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#document_amount_type_setting_id">Document_Amount_Type_Setting_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Add_To_Invoiced_Value</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True= to add the amount to the invoiced value, false=otherwise. <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company for which the setting is valid</td>
 </tr>
 <tr>
-<td>Add_To_Statistical_Value</td>
-<td><code>Boolean</code></td>
+<td><a href="#document_amount_type_id">Document_Amount_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The amount type which will be added to the invoiced or the statistical value</td>
+</tr>
+<tr>
+<td><a href="#add_to_invoiced_value">Add_To_Invoiced_Value</a></td>
+<td><code>bit</code></td>
+<td>1= to add the amount to the invoiced value, 0=otherwise</td>
+</tr>
+<tr>
+<td><a href="#add_to_statistical_value">Add_To_Statistical_Value</a></td>
+<td><code>bit</code></td>
+<td>1= to add the amount to the statistical value, 0=otherwise</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>True= to add the amount to the statistical value, false=otherwise. <code>Required</code> <code>Default(false)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="document_amount_type_setting_id">Document_Amount_Type_Setting_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_amount_type_id">Document_Amount_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add_to_invoiced_value">Add_To_Invoiced_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add_to_statistical_value">Add_To_Statistical_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

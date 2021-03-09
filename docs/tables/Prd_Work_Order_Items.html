@@ -8,7 +8,7 @@
     <title>Table Prd_Work_Order_Items | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prd_Work_Order_Items | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,80 +80,521 @@
 <h1 id="table-prd_work_order_items">Table Prd_Work_Order_Items</h1>
 
 <p>The different items that are produced with a work order. Entity: Prd_Work_Order_Items</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prd_Work_Orders.html">Prd_Work_Orders</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#line_ord">Line_Ord</a></td>
+<td><code>int</code></td>
+<td>The order of the line within the work order.</td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Id of the produced product.</td>
+</tr>
+<tr>
+<td><a href="#recipe_id">Recipe_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The base recipe. NULL means that the item is produced without recipe.</td>
+</tr>
+<tr>
+<td><a href="#produced_quantity">Produced_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The quantity produced in the operation</td>
+</tr>
+<tr>
+<td><a href="#produced_quantity_unit_id">Produced_Quantity_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of the quantity produced in the operation</td>
+</tr>
+<tr>
+<td><a href="#release_date">Release_Date</a></td>
+<td><code>datetime</code></td>
+<td>The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production</td>
+</tr>
+<tr>
+<td><a href="#completion_date">Completion_Date</a></td>
+<td><code>datetime</code></td>
+<td>The date, when the item should be completed. NULL means that there is no constraint for completion date</td>
+</tr>
+<tr>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Completion_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The date, when the item should be completed. null means that there is no constraint for completion date.</td>
 </tr>
 <tr>
-<td>Line_Ord</td>
-<td><code>Int32</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>The order of the line within the work order. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this WorkOrderItem.</td>
+<td><a href="#parent_line_no">Parent_Line_No</a></td>
+<td><code>int</code></td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.</td>
 </tr>
 <tr>
-<td>Parent_Line_Id</td>
-<td><code>Guid?</code></td>
-<td></td>
-<td>If not null contains the Id of the line of the parent document, that created the current row. <code>Filter(multi eq)</code></td>
+<td><a href="#parent_document_id">Parent_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document, which the current line executes. NULL when the current line does not execute another line.</td>
 </tr>
 <tr>
-<td>Parent_Line_No</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(eq)</code></td>
+<td><a href="#product_code_id">Product_Code_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Selects the product thru some of the product codes.</td>
 </tr>
 <tr>
-<td>Priority</td>
-<td><code>Priority</code></td>
-<td>Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></td>
-<td>Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. <code>Required</code> <code>Default(3)</code></td>
+<td><a href="#serial_number_id">Serial_Number_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If not NULL, specifies that the product was (has to be) produced with specific serial number</td>
 </tr>
 <tr>
-<td>Release_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The date, when the item is released to production. null means that still there is no plan when the item will be released to production.</td>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The lot of the produced product.</td>
 </tr>
 <tr>
-<td>Scheduled_End_Date_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Date and time when the production of this item is scheduled to end.</td>
+<td><a href="#scheduled_start_date_time">Scheduled_Start_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>Date and time when the production of this item is scheduled to begin</td>
 </tr>
 <tr>
-<td>Scheduled_Start_Date_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Date and time when the production of this item is scheduled to begin.</td>
+<td><a href="#scheduled_end_date_time">Scheduled_End_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>Date and time when the production of this item is scheduled to end</td>
+</tr>
+<tr>
+<td><a href="#store_bin_id">Store_Bin_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store bin in which to store the products</td>
+</tr>
+<tr>
+<td><a href="#priority">Priority</a></td>
+<td><code>smallint</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></td>
+<td>Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest</td>
+</tr>
+<tr>
+<td><a href="#output_store_id">Output_Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Output store for the production</td>
+</tr>
+<tr>
+<td><a href="#lot_size">Lot_Size</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>Quantity produced in one production run</td>
+</tr>
+<tr>
+<td><a href="#parent_line_id">Parent_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If not NULL contains the Id of the line of the parent document, that created the current row</td>
+</tr>
+<tr>
+<td><a href="#work_order_id">Work_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The Id of the work order, containing the item</td>
+</tr>
+<tr>
+<td><a href="#produced_quantity_base">Produced_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code> Readonly</td>
+<td>The equivalence of Produced Quantity in the base measurement category of the product.</td>
+</tr>
+<tr>
+<td><a href="#produced_standard_quantity_base">Produced_Standard_Quantity_Base</a></td>
+<td><code>decimal(18, 3)</code> Readonly</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_ord">Line_Ord</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recipe_id">Recipe_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="produced_quantity">Produced_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="produced_quantity_unit_id">Produced_Quantity_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="release_date">Release_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="completion_date">Completion_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="id">Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_line_no">Parent_Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_document_id">Parent_Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_code_id">Product_Code_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="serial_number_id">Serial_Number_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scheduled_start_date_time">Scheduled_Start_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scheduled_end_date_time">Scheduled_End_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_bin_id">Store_Bin_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="priority">Priority</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>smallint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output_store_id">Output_Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_size">Lot_Size</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_line_id">Parent_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="work_order_id">Work_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="produced_quantity_base">Produced_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="produced_standard_quantity_base">Produced_Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
 </tr>
 </tbody>
 </table>

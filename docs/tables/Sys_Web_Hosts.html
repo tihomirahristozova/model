@@ -8,7 +8,7 @@
     <title>Table Sys_Web_Hosts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Web_Hosts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,64 +80,196 @@
 <h1 id="table-sys_web_hosts">Table Sys_Web_Hosts</h1>
 
 <p>Contains the names and https certificates of the different host names used to host sites. Entity: Sys_Web_Hosts (Introduced in version 19.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Web_Host_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#web_host_id">Web_Host_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Certificate_Contents</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
-<td>The contents of the web host certificate. null means to use the server system certificate.</td>
+<td><a href="#web_host_name">Web_Host_Name</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.</td>
 </tr>
 <tr>
-<td>Certificate_Expiry_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When null, the expiry date was not provided by the user, when uploading the certificate. <code>Filter(multi eq)</code></td>
+<td><a href="#certificate_type">Certificate_Type</a></td>
+<td><code>nvarchar(3)</code></td>
+<td>The type of certificate uploaded. Currently, only PFX is supported.</td>
 </tr>
 <tr>
-<td>Certificate_Original_Filename</td>
-<td><code>String</code></td>
-<td></td>
-<td>The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. <code>Filter(eq;like)</code></td>
+<td><a href="#certificate_original_filename">Certificate_Original_Filename</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.</td>
 </tr>
 <tr>
-<td>Certificate_Password</td>
-<td><code>String</code></td>
-<td></td>
-<td>The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used.</td>
+<td><a href="#certificate_contents">Certificate_Contents</a></td>
+<td><code>varbinary</code></td>
+<td>The contents of the web host certificate. NULL means to use the server system certificate.</td>
 </tr>
 <tr>
-<td>Certificate_Type</td>
-<td><code>String</code></td>
-<td></td>
-<td>The type of certificate uploaded. Currently, only PFX is supported. <code>Required</code> <code>Default(&quot;PFX&quot;)</code> <code>Filter(multi eq)</code></td>
+<td><a href="#certificate_password">Certificate_Password</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.</td>
 </tr>
 <tr>
-<td>Web_Host_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. <code>Required</code> <code>Filter(multi eq;like)</code></td>
+<td><a href="#certificate_expiry_date">Certificate_Expiry_Date</a></td>
+<td><code>date</code></td>
+<td>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Notes for this WebHost.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="web_host_id">Web_Host_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web_host_name">Web_Host_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_type">Certificate_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_original_filename">Certificate_Original_Filename</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_contents">Certificate_Contents</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_password">Certificate_Password</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_expiry_date">Certificate_Expiry_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

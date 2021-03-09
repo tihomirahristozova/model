@@ -8,7 +8,7 @@
     <title>Table Gen_Document_Print_Images | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Document_Print_Images | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,38 +80,120 @@
 <h1 id="table-gen_document_print_images">Table Gen_Document_Print_Images</h1>
 
 <p>Contains the data of a printout of a document as it was obtained from the data source in the moment of printing. Entity: Gen_Document_Print_Images</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Document_Print_Image_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#document_print_image_id">Document_Print_Image_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Print_Image</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
-<td>The data of the printout, stored in the format, specified in Print Image Format. <code>Required</code></td>
+<td><a href="#printout_layout_id">Printout_Layout_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The print layout, which was used for the current printout.</td>
 </tr>
 <tr>
-<td>Print_Image_Format</td>
-<td><code>String</code></td>
+<td><a href="#print_image_format">Print_Image_Format</a></td>
+<td><code>nvarchar(3)</code></td>
+<td>The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported.</td>
+</tr>
+<tr>
+<td><a href="#print_image">Print_Image</a></td>
+<td><code>varbinary</code></td>
+<td>The data of the printout, stored in the format, specified in Print Image Format.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. <code>Required</code> <code>Default(&quot;CDS&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="document_print_image_id">Document_Print_Image_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="printout_layout_id">Printout_Layout_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="print_image_format">Print_Image_Format</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="print_image">Print_Image</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

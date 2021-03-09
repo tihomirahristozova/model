@@ -8,7 +8,7 @@
     <title>Table Ast_Depreciation_Plan_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Ast_Depreciation_Plan_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,221 @@
 <h1 id="table-ast_depreciation_plan_lines">Table Ast_Depreciation_Plan_Lines</h1>
 
 <p>Each record contains one depreciation plan for one valuation model of one asset. Entity: Ast_Depreciation_Plan_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Ast_Depreciation_Plans.html">Ast_Depreciation_Plans</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Depreciation_Plan_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#depreciation_plan_line_id">Depreciation_Plan_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Depreciation_End_Date</td>
-<td><code>DateTime</code></td>
+<td><a href="#depreciation_plan_id">Depreciation_Plan_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>End date of the depreciation plan for this asset. <code>Required</code></td>
 </tr>
 <tr>
-<td>Depreciation_Start_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Start date of the depreciation plan for this asset. <code>Required</code></td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive number of the line within the depreciation plan</td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
+<td><a href="#valuation_model_id">Valuation_Model_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Valuation model in which the asset is accounted</td>
+</tr>
+<tr>
+<td><a href="#asset_id">Asset_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The asset that is planned for depreciation</td>
+</tr>
+<tr>
+<td><a href="#plan_depreciation_value">Plan_Depreciation_Value</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation.</td>
+</tr>
+<tr>
+<td><a href="#depreciation_start_date">Depreciation_Start_Date</a></td>
+<td><code>datetime</code></td>
+<td>Start date of the depreciation plan for this asset</td>
+</tr>
+<tr>
+<td><a href="#depreciation_end_date">Depreciation_End_Date</a></td>
+<td><code>datetime</code></td>
+<td>End date of the depreciation plan for this asset</td>
+</tr>
+<tr>
+<td><a href="#depreciation_method_id">Depreciation_Method_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Depreciation method by which the asset will be depreciated</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Consecutive number of the line within the depreciation plan. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="depreciation_plan_line_id">Depreciation_Plan_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depreciation_plan_id">Depreciation_Plan_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valuation_model_id">Valuation_Model_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_id">Asset_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="plan_depreciation_value">Plan_Depreciation_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depreciation_start_date">Depreciation_Start_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depreciation_end_date">Depreciation_End_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depreciation_method_id">Depreciation_Method_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

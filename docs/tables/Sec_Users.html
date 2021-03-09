@@ -8,7 +8,7 @@
     <title>Table Sec_Users | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sec_Users | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,136 +80,476 @@
 <h1 id="table-sec_users">Table Sec_Users</h1>
 
 <p>User logins. Entity: Sec_Users</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>User_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#user_id">User_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Access_Failed_Count</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Indicates how many times the user has failed to login. May be used for locking out the user. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 18.2</code></td>
+<td><a href="#login">Login</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The login name of the user, which is usually the email</td>
 </tr>
 <tr>
-<td>Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True when the login is currently active and the user can log in. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#user_name">User_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>The full name of the user</td>
 </tr>
 <tr>
-<td>Creation_Time_Utc</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td>The date and time (in UTC), when the user was created. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
-</tr>
-<tr>
-<td>Default_Culture</td>
-<td><code>String</code></td>
-<td></td>
-<td>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. <code>Introduced in version 20.1</code></td>
-</tr>
-<tr>
-<td>Email</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Filter(multi eq;like)</code> <code>ORD</code> <code>Introduced in version 18.2</code></td>
-</tr>
-<tr>
-<td>Email_Confirmed</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether the email address for the specified user has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
-</tr>
-<tr>
-<td>Is_Admin</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if the user is administrator, otherwise false. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td>Lockout_End_Utc</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. <code>Filter(eq;ge;le;like)</code> <code>Introduced in version 18.2</code></td>
-</tr>
-<tr>
-<td>Login</td>
-<td><code>String</code></td>
-<td></td>
-<td>The login name of the user, which is usually the email. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td>User_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>The full name of the user. <code>Required</code> <code>Filter(like)</code></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this User.</td>
-</tr>
-<tr>
-<td>Password</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#password">Password</a></td>
+<td><code>nvarchar(64)</code></td>
 <td>The password hash of the user, stored in the format, specified in Password Format.</td>
 </tr>
 <tr>
-<td>Password_Format</td>
-<td><code>PasswordFormat</code></td>
-<td>Allowed: <code>MD5</code>, <code>AN3</code></td>
-<td>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. <code>Required</code> <code>Default(&quot;MD5&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+<td><a href="#is_admin">Is_Admin</a></td>
+<td><code>bit</code></td>
+<td>1 if the user is administrator, otherwise 0.</td>
 </tr>
 <tr>
-<td>Phone_Number</td>
-<td><code>String</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>Used only for two-factor authentication. null when phone-based two-factor is not used. <code>Filter(eq;like)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
-<td>Phone_Number_Confirmed</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether the Phone Number has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+<td><a href="#person_id">Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.</td>
 </tr>
 <tr>
-<td>Two_Factor_Enabled</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates whether two-factor authentication has been enabled. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+<td><a href="#active">Active</a></td>
+<td><code>bit</code></td>
+<td>True when the login is currently active and the user can log in.</td>
 </tr>
 <tr>
-<td>User_Type</td>
-<td><code>UserType</code></td>
-<td>Allowed: <code>INT</code>, <code>EXT</code>, <code>VIR</code>, <code>SYS</code>, <code>APP</code></td>
-<td>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. <code>Required</code> <code>Default(&quot;INT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
-</tr>
-<tr>
-<td>Voice_Extension_Numbers</td>
-<td><code>String</code></td>
-<td></td>
-<td>Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.</td>
-</tr>
-<tr>
-<td>Windows_User_Name</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#windows_user_name">Windows_User_Name</a></td>
+<td><code>nvarchar(128)</code></td>
 <td>The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.</td>
+</tr>
+<tr>
+<td><a href="#voice_extension_numbers">Voice_Extension_Numbers</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#access_failed_count">Access_Failed_Count</a></td>
+<td><code>int</code></td>
+<td>Indicates how many times the user has failed to login. May be used for locking out the user.</td>
+</tr>
+<tr>
+<td><a href="#email">Email</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Unique email of the user. Can be NULL because there may be login providers that don't use emails.</td>
+</tr>
+<tr>
+<td><a href="#email_confirmed">Email_Confirmed</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether the email address for the specified user has been verified.</td>
+</tr>
+<tr>
+<td><a href="#lockout_end_utc">Lockout_End_Utc</a></td>
+<td><code>datetime</code></td>
+<td>Contains the date and time (in UTC) until the user is locked. NULL when the user is not locked.</td>
+</tr>
+<tr>
+<td><a href="#password_format">Password_Format</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>MD5</code>, <code>AN3</code></td>
+<td>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3.</td>
+</tr>
+<tr>
+<td><a href="#phone_number">Phone_Number</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>Used only for two-factor authentication. NULL when phone-based two-factor is not used.</td>
+</tr>
+<tr>
+<td><a href="#phone_number_confirmed">Phone_Number_Confirmed</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether the Phone Number has been verified.</td>
+</tr>
+<tr>
+<td><a href="#two_factor_enabled">Two_Factor_Enabled</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether two-factor authentication has been enabled.</td>
+</tr>
+<tr>
+<td><a href="#user_type">User_Type</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>INT</code>, <code>EXT</code>, <code>VIR</code>, <code>SYS</code>, <code>APP</code></td>
+<td>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application.</td>
+</tr>
+<tr>
+<td><a href="#creation_time_utc">Creation_Time_Utc</a></td>
+<td><code>datetime</code> Readonly</td>
+<td>The date and time (in UTC), when the user was created.</td>
+</tr>
+<tr>
+<td><a href="#domain_id">Domain_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The domain, to which the user belongs.</td>
+</tr>
+<tr>
+<td><a href="#default_culture">Default_Culture</a></td>
+<td><code>nvarchar(15)</code></td>
+<td>The preferred default culture of the user for UI, notifications, etc. NULL means &quot;en-US&quot;.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="user_id">User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="login">Login</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_name">User_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="password">Password</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_admin">Is_Admin</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="person_id">Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active">Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="windows_user_name">Windows_User_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="voice_extension_numbers">Voice_Extension_Numbers</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access_failed_count">Access_Failed_Count</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="email">Email</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="email_confirmed">Email_Confirmed</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lockout_end_utc">Lockout_End_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="password_format">Password_Format</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phone_number">Phone_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phone_number_confirmed">Phone_Number_Confirmed</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="two_factor_enabled">Two_Factor_Enabled</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_type">User_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time_utc">Creation_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="domain_id">Domain_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_culture">Default_Culture</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(15)</td>
 </tr>
 </tbody>
 </table>

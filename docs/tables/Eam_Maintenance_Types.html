@@ -8,7 +8,7 @@
     <title>Table Eam_Maintenance_Types | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Eam_Maintenance_Types | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,58 +80,216 @@
 <h1 id="table-eam_maintenance_types">Table Eam_Maintenance_Types</h1>
 
 <p>Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Maintenance_Type_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#maintenance_type_id">Maintenance_Type_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Maintenance_Type_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique code of the maintenance type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#maintenance_type_code">Maintenance_Type_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Unique code of the maintenance type.</td>
 </tr>
 <tr>
-<td>Default_Parameter_Change</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.</td>
+<td><a href="#maintenance_type_group_id">Maintenance_Type_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The group, to which this maintenance type belongs.</td>
 </tr>
 <tr>
-<td>Default_Schedule_Days</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.</td>
+<td><a href="#maintenance_type_name">Maintenance_Type_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Multilanguage name of the maintenance type.</td>
 </tr>
 <tr>
-<td>Default_Schedule_Months</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.</td>
-</tr>
-<tr>
-<td>Description</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
 <td>Detailed description of the maintenance (multilanguage).</td>
 </tr>
 <tr>
-<td>Maintenance_Type_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#default_schedule_months">Default_Schedule_Months</a></td>
+<td><code>int</code></td>
+<td>Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.</td>
+</tr>
+<tr>
+<td><a href="#default_schedule_days">Default_Schedule_Days</a></td>
+<td><code>int</code></td>
+<td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.</td>
+</tr>
+<tr>
+<td><a href="#tracked_parameter_id">Tracked_Parameter_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.</td>
+</tr>
+<tr>
+<td><a href="#default_parameter_change">Default_Parameter_Change</a></td>
+<td><code>int</code></td>
+<td>Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Multilanguage name of the maintenance type. <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="maintenance_type_id">Maintenance_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_type_code">Maintenance_Type_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_type_group_id">Maintenance_Type_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_type_name">Maintenance_Type_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_schedule_months">Default_Schedule_Months</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_schedule_days">Default_Schedule_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tracked_parameter_id">Tracked_Parameter_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_parameter_change">Default_Parameter_Change</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

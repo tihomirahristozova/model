@@ -8,7 +8,7 @@
     <title>Table Log_Transportation_Modes | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Log_Transportation_Modes | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,116 @@
 <h1 id="table-log_transportation_modes">Table Log_Transportation_Modes</h1>
 
 <p>Represents a mode of transportation, like water, air, road, etc. Entity: Log_Transportation_Modes</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Transportation_Mode_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#transportation_mode_id">Transportation_Mode_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Transportation_Mode_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique transportation mode code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#transportation_mode_code">Transportation_Mode_Code</a></td>
+<td><code>nvarchar(8)</code></td>
+<td>Unique transportation mode code.</td>
 </tr>
 <tr>
-<td>Transportation_Mode_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Multilanguage name of the mode of transportation. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#transportation_mode_name">Transportation_Mode_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Multilanguage name of the mode of transportation.</td>
 </tr>
 <tr>
-<td>System_Icon</td>
-<td><code>String</code></td>
+<td><a href="#system_icon">System_Icon</a></td>
+<td><code>nvarchar(1)</code></td>
+<td>Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. <code>Required</code> <code>Default(&quot;O&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="transportation_mode_id">Transportation_Mode_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transportation_mode_code">Transportation_Mode_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(8)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transportation_mode_name">Transportation_Mode_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="system_icon">System_Icon</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Srv_Service_Agreement_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Srv_Service_Agreement_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,56 +80,221 @@
 <h1 id="table-srv_service_agreement_lines">Table Srv_Service_Agreement_Lines</h1>
 
 <p>Service agreement lines represent the individual serviced objects that are covered by the service agreement. Entity: Srv_Service_Agreement_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Srv_Service_Agreements.html">Srv_Service_Agreements</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Service_Agreement_Object_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#service_agreement_object_id">Service_Agreement_Object_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Line_End_Date_Time</td>
-<td><code>DateTime</code></td>
+<td><a href="#service_agreement_id">Service_Agreement_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The ending date and time of the agreement coverage for the current line. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</td>
 </tr>
 <tr>
-<td>Line_Start_Date_Time</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The starting date and time of the agreement coverage for the current line. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td><a href="#service_object_id">Service_Object_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The service object, which is covered by the current agreement.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this ServiceAgreementLine.</td>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(14, 3)</code></td>
+<td>The quantity of the service object that is included in the agreement</td>
 </tr>
 <tr>
-<td>Quantity</td>
-<td><code>Decimal</code></td>
+<td><a href="#service_type_id">Service_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type (level) of service that is agreed</td>
+</tr>
+<tr>
+<td><a href="#line_start_date_time">Line_Start_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The starting date and time of the agreement coverage for the current line.</td>
+</tr>
+<tr>
+<td><a href="#line_end_date_time">Line_End_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>The ending date and time of the agreement coverage for the current line.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>The quantity of the service object that is included in the agreement. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="service_agreement_object_id">Service_Agreement_Object_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_agreement_id">Service_Agreement_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_object_id">Service_Object_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service_type_id">Service_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_start_date_time">Line_Start_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_end_date_time">Line_End_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

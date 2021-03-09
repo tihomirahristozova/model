@@ -2,17 +2,71 @@
 
 Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 
-# Aggregate Hierarchy
+## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Document_File_Id|`Guid`|`PK`, Readonly||
-|Embedded_File_Contents|`Byte[]`|`BLOB`|The contents of the embedded file. null when the file is linked. |
-|File_Name|`String`||The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. `Required` |
-|Is_Linked|`Boolean`||True when the document is linked (ony file name is kept). false when the document is embedded. `Required` `Default(false)` `Filter(eq)` |
-|Linked_File_Path|`String`||Path to the linked file. null when the file is embedded. |
-|Notes|`String`||Notes for this DocumentFileAttachment. |
+| Name | Type | Description |
+| - | - | --- |
+|[File_Name](#file_name)|`nvarchar(128)` |The display name of the file. Initially set to the file name (without path) of the linked or the embedded file|
+|[Is_Linked](#is_linked)|`bit` |1 when the document is linked (ony file name is kept). 0 when the document is embedded|
+|[Linked_File_Path](#linked_file_path)|`nvarchar(254)` |Path to the linked file. NULL when the file is embedded|
+|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Document_File_Id](#document_file_id)|`uniqueidentifier` `PK`||
+|[Document_Id](#document_id)|`uniqueidentifier` ||
+|[Embedded_File_Contents](#embedded_file_contents)|`varbinary` |The contents of the embedded file. NULL when the file is linked|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### File_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(128)|
+
+### Is_Linked
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Linked_File_Path
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(254)|
+
+### Notes
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(2147483647)|
+
+### Document_File_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Document_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Embedded_File_Contents
+
+| Property | Value |
+| - | - |
+|Type|varbinary|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

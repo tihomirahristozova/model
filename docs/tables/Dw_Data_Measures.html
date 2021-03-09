@@ -8,7 +8,7 @@
     <title>Table Dw_Data_Measures | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Dw_Data_Measures | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,58 +80,176 @@
 <h1 id="table-dw_data_measures">Table Dw_Data_Measures</h1>
 
 <p>Contains the data measures of the General data warehouse. Entity: Dw_Data_Measures (Introduced in version 18.2)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Data_Measure_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#data_measure_id">Data_Measure_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Data_Measure_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique measure code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td><a href="#data_measure_code">Data_Measure_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Unique measure code.</td>
 </tr>
 <tr>
-<td>Green_Zone_Spread_Percent</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The plus or minus percent, by which the goal can be missed, but still considered achieved. <code>Required</code> <code>Default(0.2)</code> <code>Filter(eq)</code></td>
+<td><a href="#data_measure_group_id">Data_Measure_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The group to which this measure belongs.</td>
 </tr>
 <tr>
-<td>Horizontal_Trend_Spread_Percent</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. <code>Required</code> <code>Default(0.01)</code> <code>Filter(eq)</code></td>
+<td><a href="#data_measure_name">Data_Measure_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The name of the measure (multilanguage).</td>
 </tr>
 <tr>
-<td>Data_Measure_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of the measure (multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#period">Period</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>D</code>, <code>M</code>, <code>Q</code>, <code>Y</code></td>
+<td>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this DataMeasure.</td>
+<td><a href="#green_zone_spread_percent">Green_Zone_Spread_Percent</a></td>
+<td><code>decimal(3, 2)</code></td>
+<td>The plus or minus percent, by which the goal can be missed, but still considered achieved.</td>
 </tr>
 <tr>
-<td>Period</td>
-<td><code>Period</code></td>
-<td>Allowed: <code>D</code>, <code>M</code>, <code>Q</code>, <code>Y</code></td>
-<td>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. <code>Required</code> <code>Default(&quot;Q&quot;)</code> <code>Filter(eq)</code></td>
+<td><a href="#horizontal_trend_spread_percent">Horizontal_Trend_Spread_Percent</a></td>
+<td><code>decimal(3, 2)</code></td>
+<td>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="data_measure_id">Data_Measure_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_measure_code">Data_Measure_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_measure_group_id">Data_Measure_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_measure_name">Data_Measure_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="period">Period</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="green_zone_spread_percent">Green_Zone_Spread_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(3, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="horizontal_trend_spread_percent">Horizontal_Trend_Spread_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(3, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
 </tr>
 </tbody>
 </table>

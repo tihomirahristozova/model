@@ -8,7 +8,7 @@
     <title>Table Prj_Project_Task_Dependancies | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Prj_Project_Task_Dependancies | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,32 +80,120 @@
 <h1 id="table-prj_project_task_dependancies">Table Prj_Project_Task_Dependancies</h1>
 
 <p>Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependancies</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Project_Task_Dependancy_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#project_task_dependancy_id">Project_Task_Dependancy_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Dependancy_Type</td>
-<td><code>DependancyType</code></td>
-<td>Allowed: <code>FS</code>, <code>SS</code>, <code>FF</code>, <code>SF</code>, <code>SY</code></td>
-<td>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). <code>Required</code> <code>Default(&quot;FS&quot;)</code></td>
+<td><a href="#project_task_id">Project_Task_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The task which depends on another task</td>
+</tr>
+<tr>
+<td><a href="#depends_on_task_id">Depends_On_Task_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The task on which Project_Task depends</td>
+</tr>
+<tr>
+<td><a href="#dependancy_type">Dependancy_Type</a></td>
+<td><code>nvarchar(2)</code> Allowed: <code>FS</code>, <code>SS</code>, <code>FF</code>, <code>SF</code>, <code>SY</code></td>
+<td>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="project_task_dependancy_id">Project_Task_Dependancy_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project_task_id">Project_Task_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="depends_on_task_id">Depends_On_Task_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dependancy_type">Dependancy_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

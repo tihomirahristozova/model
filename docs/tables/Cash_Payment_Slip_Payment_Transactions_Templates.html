@@ -8,7 +8,7 @@
     <title>Table Cash_Payment_Slip_Payment_Transactions_Templates | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cash_Payment_Slip_Payment_Transactions_Templates | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,34 +80,116 @@
 <h1 id="table-cash_payment_slip_payment_transactions_templates">Table Cash_Payment_Slip_Payment_Transactions_Templates</h1>
 
 <p>Contains options for generation of payment transactions. Each option set is assigned to specific generation route. Entity: Cash_Payment_Slip_Payment_Transactions_Templates (Introduced in version 19.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#id">Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>CreateExpensePayments</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True if the generation creates payment transactions for Payment Slip Amounts with direction Expense. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#route_id">Route_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The route to which the current option set is assigned.</td>
 </tr>
 <tr>
-<td>CreateIncomePayments</td>
-<td><code>Boolean</code></td>
+<td><a href="#createincomepayments">CreateIncomePayments</a></td>
+<td><code>bit</code></td>
+<td>True if the generation creates payment transactions for Payment Slip Amounts with direction Income.</td>
+</tr>
+<tr>
+<td><a href="#createexpensepayments">CreateExpensePayments</a></td>
+<td><code>bit</code></td>
+<td>True if the generation creates payment transactions for Payment Slip Amounts with direction Expense.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>True if the generation creates payment transactions for Payment Slip Amounts with direction Income. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="id">Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="route_id">Route_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="createincomepayments">CreateIncomePayments</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="createexpensepayments">CreateExpensePayments</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

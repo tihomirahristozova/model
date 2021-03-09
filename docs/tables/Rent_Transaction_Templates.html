@@ -8,7 +8,7 @@
     <title>Table Rent_Transaction_Templates | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Rent_Transaction_Templates | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,28 +80,96 @@
 <h1 id="table-rent_transaction_templates">Table Rent_Transaction_Templates</h1>
 
 <p>Specifies additional options for document routes, generating Rental Transactions. Entity: Rent_Transaction_Templates</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Rent_Transaction_Template_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#rent_transaction_template_id">Rent_Transaction_Template_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Transaction_Type</td>
-<td><code>TransactionType</code></td>
-<td>Allowed: <code>D</code>, <code>R</code>, <code>W</code>, <code>S</code></td>
-<td>Transaction type for the rent transaction that is to be created. <code>Required</code></td>
+<td><a href="#route_id">Route_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The route for which the transaction template is defined.</td>
+</tr>
+<tr>
+<td><a href="#transaction_type">Transaction_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>D</code>, <code>R</code>, <code>W</code>, <code>S</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="rent_transaction_template_id">Rent_Transaction_Template_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="route_id">Route_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transaction_type">Transaction_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

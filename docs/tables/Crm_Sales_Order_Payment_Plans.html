@@ -8,7 +8,7 @@
     <title>Table Crm_Sales_Order_Payment_Plans | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Sales_Order_Payment_Plans | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,80 +80,321 @@
 <h1 id="table-crm_sales_order_payment_plans">Table Crm_Sales_Order_Payment_Plans</h1>
 
 <p>Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sales_Order_Payment_Plan_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#sales_order_payment_plan_id">Sales_Order_Payment_Plan_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique identification of the payment plan</td>
+</tr>
+<tr>
+<td><a href="#sales_order_id">Sales_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Amount_Percent</td>
-<td><code>Decimal?</code></td>
-<td></td>
+<td><a href="#installment_number">Installment_Number</a></td>
+<td><code>int</code></td>
+<td>Consequtive installment number. Used for identifying different payments generated according this payment plan.</td>
+</tr>
+<tr>
+<td><a href="#due_date_form_method">Due_Date_Form_Method</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>EXP</code>, <code>INV</code>, <code>SLS</code>, <code>SDD</code>, <code>IDD</code></td>
+<td>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date</td>
+</tr>
+<tr>
+<td><a href="#explicit_payment_due_date">Explicit_Payment_Due_Date</a></td>
+<td><code>datetime</code></td>
+<td>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'</td>
+</tr>
+<tr>
+<td><a href="#payment_term_days">Payment_Term_Days</a></td>
+<td><code>int</code></td>
+<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.</td>
+</tr>
+<tr>
+<td><a href="#amount_percent">Amount_Percent</a></td>
+<td><code>decimal(7, 6)</code></td>
 <td>Percent of the sales order amount to be payed.</td>
 </tr>
 <tr>
-<td>Due_Date_Form_Method</td>
-<td><code>PaymentPlanDueDateSource</code></td>
-<td>Allowed: <code>EXP</code>, <code>INV</code>, <code>SLS</code>, <code>SDD</code>, <code>IDD</code></td>
-<td>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. <code>Required</code></td>
+<td><a href="#remainder">Remainder</a></td>
+<td><code>bit</code></td>
+<td>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount).</td>
 </tr>
 <tr>
-<td>Explicit_Payment_Due_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.</td>
+<td><a href="#amount">Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Amount to be payed.</td>
 </tr>
 <tr>
-<td>Explicit_Payment_Due_Start_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#explicit_payment_due_start_date">Explicit_Payment_Due_Start_Date</a></td>
+<td><code>date</code></td>
 <td>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</td>
 </tr>
 <tr>
-<td>Installment_Number</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consequtive installment number. Used for identifying different payments generated according this payment plan. <code>Required</code></td>
+<td><a href="#payment_start_days">Payment_Start_Days</a></td>
+<td><code>int</code></td>
+<td>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this SalesOrderPaymentPlan.</td>
+<td><a href="#payment_type_id">Payment_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies the expected payment type. NULL means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred.</td>
 </tr>
 <tr>
-<td>Payment_Start_Days</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#payment_account_id">Payment_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred.</td>
 </tr>
 <tr>
-<td>Payment_Term_Days</td>
-<td><code>Int32</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. <code>Required</code> <code>Default(0)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="sales_order_payment_plan_id">Sales_Order_Payment_Plan_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Remainder</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). <code>Required</code> <code>Default(false)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sales_order_id">Sales_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="installment_number">Installment_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="due_date_form_method">Due_Date_Form_Method</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explicit_payment_due_date">Explicit_Payment_Due_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_term_days">Payment_Term_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount_percent">Amount_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="remainder">Remainder</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount">Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explicit_payment_due_start_date">Explicit_Payment_Due_Start_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_start_days">Payment_Start_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_type_id">Payment_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_account_id">Payment_Account_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

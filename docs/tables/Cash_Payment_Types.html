@@ -8,7 +8,7 @@
     <title>Table Cash_Payment_Types | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Cash_Payment_Types | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,176 @@
 <h1 id="table-cash_payment_types">Table Cash_Payment_Types</h1>
 
 <p>Describes the way of payment. For example: in cash, by bank transfer, with credit card, etc. Entity: Cash_Payment_Types</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Payment_Type_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#payment_type_id">Payment_Type_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Payment_Type_Code</td>
-<td><code>String</code></td>
+<td><a href="#payment_type_name">Payment_Type_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
 <td></td>
-<td>The payment type unique code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Indicates wheather the payment type is active and usable for choosing in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></td>
+<td><a href="#default_payment_account_id">Default_Payment_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL specifies the default payment account to use associated with this payment type</td>
 </tr>
 <tr>
-<td>Payment_Type_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The name of this PaymentType. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
 </tr>
 <tr>
-<td>System_Type</td>
-<td><code>SystemType?</code></td>
-<td>Allowed: <code>CH</code>, <code>CD</code>, <code>BT</code>, <code>TK</code>, <code>CK</code>, <code>U1</code>, <code>U2</code>, <code>U3</code>, <code>PK</code>, <code>IU</code>, <code>DG</code>, <code>OT</code></td>
-<td>Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer.</td>
+<td><a href="#system_type">System_Type</a></td>
+<td><code>nvarchar(2)</code> Allowed: <code>CH</code>, <code>CD</code>, <code>BT</code>, <code>TK</code>, <code>CK</code>, <code>U1</code>, <code>U2</code>, <code>U3</code>, <code>PK</code>, <code>IU</code>, <code>DG</code>, <code>OT</code></td>
+<td>Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer</td>
+</tr>
+<tr>
+<td><a href="#payment_type_code">Payment_Type_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>The payment type unique code</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Indicates wheather the payment type is active and usable for choosing in new documents.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="payment_type_id">Payment_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_type_name">Payment_Type_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_payment_account_id">Default_Payment_Account_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="system_type">System_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_type_code">Payment_Type_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@
     <title>Table Crm_Line_Discounts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Line_Discounts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,52 +80,376 @@
 <h1 id="table-crm_line_discounts">Table Crm_Line_Discounts</h1>
 
 <p>Discount policies for sales documents. Entity: Crm_Line_Discounts</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Line_Discount_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#line_discount_id">Line_Discount_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Description</td>
-<td><code>String</code></td>
-<td></td>
-<td>The description of the discount that is shown to the operator when he/she should choose between different discounts. <code>Filter(like)</code></td>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>The description of the discount that is shown to the operator when he/she should choose between different discounts</td>
 </tr>
 <tr>
-<td>Discount_Percent</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The discount percent that should be applied if all the matching criteria are met. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
+<td><a href="#from_date">From_Date</a></td>
+<td><code>datetime</code></td>
+<td>Starting date of validity of the discount. NULL means no from date restriction</td>
 </tr>
 <tr>
-<td>From_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Starting date of validity of the discount. null means no from date restriction. <code>Filter(eq;ge;le)</code></td>
+<td><a href="#thru_date">Thru_Date</a></td>
+<td><code>datetime</code></td>
+<td>Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever</td>
 </tr>
 <tr>
-<td>Priority</td>
-<td><code>Priority</code></td>
-<td>Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></td>
-<td>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. <code>Required</code> <code>Default(3)</code></td>
+<td><a href="#target_group_id">Target_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Apply the discount only if the customer is included in this target group</td>
 </tr>
 <tr>
-<td>Thru_Date</td>
-<td><code>DateTime?</code></td>
+<td><a href="#customer_id">Customer_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Apply the discount only if this is the customer</td>
+</tr>
+<tr>
+<td><a href="#price_list_id">Price_List_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Apply the discount only if this price list is used</td>
+</tr>
+<tr>
+<td><a href="#product_group_id">Product_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Apply the discount only if the product sold is contained in this product group or any of its sub-groups</td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Apply the discount only when this specific product is sold</td>
+</tr>
+<tr>
+<td><a href="#min_quantity">Min_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>Apply the discount only if the quantity sold is equal to or more than the specified here.</td>
+</tr>
+<tr>
+<td><a href="#max_quantity">Max_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>Apply the discount only if the quantity sold is equal to or less than the specified here.</td>
+</tr>
+<tr>
+<td><a href="#discount_percent">Discount_Percent</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>The discount percent that should be applied if all the matching criteria are met.</td>
+</tr>
+<tr>
+<td><a href="#priority">Priority</a></td>
+<td><code>tinyint</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></td>
+<td>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, the policy is applied only for documents of the specified enterprise company</td>
+</tr>
+<tr>
+<td><a href="#customer_type_id">Customer_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Apply the discount only if the customer is of this customer type</td>
+</tr>
+<tr>
+<td><a href="#distribution_channel_id">Distribution_Channel_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Apply the discount only when the sales document is on the specified channel</td>
+</tr>
+<tr>
+<td><a href="#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When set, the policy is applied only for documents of the specified enterprise company location.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. <code>Filter(eq;ge;le)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_discount_id">Line_Discount_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(50)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_date">From_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="thru_date">Thru_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target_group_id">Target_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="customer_id">Customer_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="price_list_id">Price_List_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_group_id">Product_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="min_quantity">Min_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max_quantity">Max_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="discount_percent">Discount_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="priority">Priority</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>tinyint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="customer_type_id">Customer_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distribution_channel_id">Distribution_Channel_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

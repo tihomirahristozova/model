@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Query Sec_Users_Table_Load_Navigator | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Query Sec_Users_Table_Load_Navigator | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="query-sec_users_table_load_navigator">Query Sec_Users_Table_Load_Navigator</h1>
+
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#user_id">User_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#login">Login</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#user_name">User_Name</a></td>
+<td><code>nvarchar</code> <code>ML</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#is_admin">Is_Admin</a></td>
+<td><code>bit</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#person_id">Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#active">Active</a></td>
+<td><code>bit</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#windows_user_name">Windows_User_Name</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#voice_extension_numbers">Voice_Extension_Numbers</a></td>
+<td><code>nvarchar</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#access_failed_count">Access_Failed_Count</a></td>
+<td><code>int</code></td>
+<td>Indicates how many times the user has failed to login with valid credentials. May be used for locking out the user.</td>
+</tr>
+<tr>
+<td><a href="#email">Email</a></td>
+<td><code>nvarchar</code></td>
+<td>Unique email of the user. Can be NULL because there may be login providers that don't use emails.</td>
+</tr>
+<tr>
+<td><a href="#email_confirmed">Email_Confirmed</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether the email address for the specified user has been verified.</td>
+</tr>
+<tr>
+<td><a href="#lockout_end_utc">Lockout_End_Utc</a></td>
+<td><code>datetime</code></td>
+<td>Contains the date and time (in UTC) until the user is locked. NULL when the user is not locked.</td>
+</tr>
+<tr>
+<td><a href="#password_format">Password_Format</a></td>
+<td><code>nvarchar</code> Allowed: <code>MD5</code>, <code>AN3</code></td>
+<td>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3.</td>
+</tr>
+<tr>
+<td><a href="#phone_number">Phone_Number</a></td>
+<td><code>nvarchar</code></td>
+<td>Used only for two-factor authentication. NULL when phone-based two-factor is not used.</td>
+</tr>
+<tr>
+<td><a href="#phone_number_confirmed">Phone_Number_Confirmed</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether the Phone Number has been verified.</td>
+</tr>
+<tr>
+<td><a href="#two_factor_enabled">Two_Factor_Enabled</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether two-factor authentication has been enabled.</td>
+</tr>
+<tr>
+<td><a href="#user_type">User_Type</a></td>
+<td><code>nvarchar</code> Allowed: <code>INT</code>, <code>EXT</code>, <code>VIR</code>, <code>SYS</code>, <code>APP</code></td>
+<td>Specifies the user type. Internal users have access to internal and external content. External users can access only external (community) content. Virtual users cannot login, but can be used for task assignments, etc. I=Internal; E=External; V=Virtual.</td>
+</tr>
+<tr>
+<td><a href="#creation_time_utc">Creation_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The date and time (in UTC) when the user was created.</td>
+</tr>
+<tr>
+<td><a href="#domain_id">Domain_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The domain, to which the user belongs.</td>
+</tr>
+<tr>
+<td><a href="#default_culture">Default_Culture</a></td>
+<td><code>nvarchar</code></td>
+<td>The preferred default culture of the user for UI, notifications, etc. NULL means &quot;en-US&quot;.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="user_id">User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="login">Login</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_name">User_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_admin">Is_Admin</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="person_id">Person_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active">Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="windows_user_name">Windows_User_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="voice_extension_numbers">Voice_Extension_Numbers</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access_failed_count">Access_Failed_Count</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="email">Email</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="email_confirmed">Email_Confirmed</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lockout_end_utc">Lockout_End_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="password_format">Password_Format</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phone_number">Phone_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phone_number_confirmed">Phone_Number_Confirmed</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="two_factor_enabled">Two_Factor_Enabled</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_type">User_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time_utc">Creation_Time_Utc</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="domain_id">Domain_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_culture">Default_Culture</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Sec_Users_Table_Load_Navigator.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

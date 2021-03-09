@@ -8,7 +8,7 @@
     <title>Table Log_Transportation_Orders | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Log_Transportation_Orders | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,182 +80,280 @@
 <h1 id="table-log_transportation_orders">Table Log_Transportation_Orders</h1>
 
 <p>Transportation ordered to specific carrier or vehicle. Entity: Log_Transportation_Orders</p>
-<h1 id="inheritance">Inheritance</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Transportation_Order_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#transportation_order_id">Transportation_Order_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Number</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
+<td><a href="#departure_date">Departure_Date</a></td>
+<td><code>date</code></td>
+<td>Planned departure date.</td>
+</tr>
+<tr>
+<td><a href="#departure_time">Departure_Time</a></td>
+<td><code>time</code></td>
+<td>Planned departure time.</td>
+</tr>
+<tr>
+<td><a href="#arrival_date">Arrival_Date</a></td>
+<td><code>date</code></td>
+<td>Planned arrival date.</td>
+</tr>
+<tr>
+<td><a href="#arrival_time">Arrival_Time</a></td>
+<td><code>time</code></td>
+<td>Planned arrival time.</td>
+</tr>
+<tr>
+<td><a href="#transportation_mode_id">Transportation_Mode_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The mode of transportation which should be used for this order. NULL when it is unknown or doesn't matter.</td>
+</tr>
+<tr>
+<td><a href="#carrier_id">Carrier_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The carrier chosen for this transportation. NULL when the transportation is done with own transport.</td>
+</tr>
+<tr>
+<td><a href="#transportation_vehicle_id">Transportation_Vehicle_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The own transportation vehicle, which will be used for the transportation.</td>
+</tr>
+<tr>
+<td><a href="#from_geo_point_id">From_Geo_Point_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The geographic point from which the route begins.</td>
+</tr>
+<tr>
+<td><a href="#to_geo_point_id">To_Geo_Point_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The geographic point at which the route ends.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Adjustment_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td><a href="#crew_id">Crew_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="transportation_order_id">Transportation_Order_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Arrival_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Planned arrival date. <code>Required</code> <code>Filter(ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Arrival_Time</td>
-<td><code>TimeSpan</code></td>
-<td></td>
-<td>Planned arrival time. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Complete_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="departure_date">Departure_Date</h3>
+<table>
+<thead>
 <tr>
-<td>Creation_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Departure_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Planned departure date. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Type</td>
+<td>date</td>
 </tr>
+</tbody>
+</table>
+<h3 id="departure_time">Departure_Time</h3>
+<table>
+<thead>
 <tr>
-<td>Departure_Time</td>
-<td><code>TimeSpan</code></td>
-<td></td>
-<td>Planned departure time. <code>Required</code> <code>Filter(ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Document_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>time</td>
 </tr>
+</tbody>
+</table>
+<h3 id="arrival_date">Arrival_Date</h3>
+<table>
+<thead>
 <tr>
-<td>Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>date</td>
 </tr>
+</tbody>
+</table>
+<h3 id="arrival_time">Arrival_Time</h3>
+<table>
+<thead>
 <tr>
-<td>Document_Version</td>
-<td><code>Int32</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Entity_Name</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>time</td>
 </tr>
+</tbody>
+</table>
+<h3 id="transportation_mode_id">Transportation_Mode_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Parent_Document_Relationship_Type</td>
-<td><code>ParentDocumentRelationshipType?</code></td>
-<td>Allowed: <code>S</code>, <code>N</code>, Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Planning_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="carrier_id">Carrier_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Read_Only</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Reference_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="transportation_vehicle_id">Transportation_Vehicle_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Reference_Document_No</td>
-<td><code>String</code></td>
-<td></td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Release_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="from_geo_point_id">From_Geo_Point_Id</h3>
+<table>
+<thead>
 <tr>
-<td>State</td>
-<td><code>DocumentState</code></td>
-<td>Allowed: <code>0</code>, <code>5</code>, <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code>, Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="to_geo_point_id">To_Geo_Point_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Void_Reason</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Void_Time</td>
-<td><code>DateTime?</code></td>
-<td>Readonly</td>
-<td></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
 <tr>
-<td>Void_User</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crew_id">Crew_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 </tbody>
 </table>

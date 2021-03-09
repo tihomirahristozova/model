@@ -8,7 +8,7 @@
     <title>Table Sys_Form_Layouts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Form_Layouts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,64 +80,276 @@
 <h1 id="table-sys_form_layouts">Table Sys_Form_Layouts</h1>
 
 <p>Contains user layouts of the screen forms. Entity: Sys_Form_Layouts</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Form_Layout_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#form_layout_id">Form_Layout_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Application_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The application, which consumes the layout. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
+<td><a href="#application_name">Application_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The application, which consumes the layout.</td>
 </tr>
 <tr>
-<td>Form_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The form, for which the layout is applied. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#form_name">Form_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The form, for which the layout is applied.</td>
 </tr>
 <tr>
-<td>Layout</td>
-<td><code>Byte[]</code></td>
-<td><code>BLOB</code></td>
+<td><a href="#layout_name">Layout_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The name of a named layout. Standard layouts have empty string names.</td>
+</tr>
+<tr>
+<td><a href="#user_name">User_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The user for which the layout is applied. NULL means that the layout is applied for all users.</td>
+</tr>
+<tr>
+<td><a href="#machine_name">Machine_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#panel_name">Panel_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The visual panel, for which the layout is applied.</td>
+</tr>
+<tr>
+<td><a href="#layout_xml">Layout_Xml</a></td>
+<td><code>nvarchar(1073741823)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#access_key_id">Access_Key_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The security access key which controls the access to the layout view</td>
+</tr>
+<tr>
+<td><a href="#layout">Layout</a></td>
+<td><code>varbinary</code></td>
 <td>The byte storage of the layout.</td>
 </tr>
 <tr>
-<td>Layout_Format</td>
-<td><code>LayoutFormat</code></td>
-<td>Allowed: <code>D</code>, <code>L</code>, <code>U</code></td>
-<td>The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. <code>Required</code> <code>Default(&quot;U&quot;)</code></td>
+<td><a href="#layout_format">Layout_Format</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>D</code>, <code>L</code>, <code>U</code></td>
+<td>The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.</td>
 </tr>
 <tr>
-<td>Layout_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The name of a named layout. Standard layouts have empty string names. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#role_id">Role_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The role, for which the layout is applied.</td>
 </tr>
 <tr>
-<td>Panel_Name</td>
-<td><code>String</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The visual panel, for which the layout is applied. <code>Required</code> <code>Default(&quot;Form&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="form_layout_id">Form_Layout_Id</h3>
+<table>
+<thead>
 <tr>
-<td>User_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The user for which the layout is applied. null means that the layout is applied for all users. <code>Filter(eq;like)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application_name">Application_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="form_name">Form_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout_name">Layout_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_name">User_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="machine_name">Machine_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(128)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="panel_name">Panel_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout_xml">Layout_Xml</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1073741823)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access_key_id">Access_Key_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout">Layout</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>varbinary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout_format">Layout_Format</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="role_id">Role_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

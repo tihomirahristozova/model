@@ -8,7 +8,7 @@
     <title>Table Ast_Assets | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Ast_Assets | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,68 +80,300 @@
 <h1 id="table-ast_assets">Table Ast_Assets</h1>
 
 <p>The fixed assets. Entity: Ast_Assets</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Enterprise_Companies.html">Gen_Enterprise_Companies</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Asset_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#asset_id">Asset_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Asset_Code</td>
-<td><code>String</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The unique code of the Asset. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
-<td>Deployment_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Date, when the asset is first deployed. Null if the asset is not deployed yet.</td>
+<td><a href="#asset_group_id">Asset_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The asset group to which this asset belongs.</td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td><a href="#asset_category_id">Asset_Category_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset.</td>
 </tr>
 <tr>
-<td>Asset_Name</td>
-<td><code>MultilanguageString</code></td>
+<td><a href="#asset_code">Asset_Code</a></td>
+<td><code>nvarchar(20)</code></td>
 <td></td>
-<td>The name of this Asset. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
+<td><a href="#asset_name">Asset_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
 <td></td>
-<td>Notes for this Asset.</td>
 </tr>
 <tr>
-<td>Purchase_Date</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Original purchase date of the asset. <code>Required</code></td>
+<td><a href="#serial_number">Serial_Number</a></td>
+<td><code>nvarchar(30)</code></td>
+<td>Serial number of the asset.</td>
 </tr>
 <tr>
-<td>Serial_Number</td>
-<td><code>String</code></td>
+<td><a href="#primary_valuation_model_id">Primary_Valuation_Model_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Obsolete. Not used.</td>
+</tr>
+<tr>
+<td><a href="#valuation_currency_id">Valuation_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored.</td>
+</tr>
+<tr>
+<td><a href="#purchase_date">Purchase_Date</a></td>
+<td><code>datetime</code></td>
+<td>Original purchase date of the asset.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>Serial number of the asset. <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="#deployment_date">Deployment_Date</a></td>
+<td><code>datetime</code></td>
+<td>Date, when the asset is first deployed. Null if the asset is not deployed yet</td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="asset_id">Asset_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_group_id">Asset_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_category_id">Asset_Category_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_code">Asset_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(20)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asset_name">Asset_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="serial_number">Serial_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(30)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="primary_valuation_model_id">Primary_Valuation_Model_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valuation_currency_id">Valuation_Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_date">Purchase_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deployment_date">Deployment_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

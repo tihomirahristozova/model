@@ -8,7 +8,7 @@
     <title>Table Sec_User_Provider_Tokens | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sec_User_Provider_Tokens | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,44 +80,120 @@
 <h1 id="table-sec_user_provider_tokens">Table Sec_User_Provider_Tokens</h1>
 
 <p>Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication. Entity: Sec_User_Provider_Tokens (Introduced in version 18.2)</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Sec_Users.html">Sec_Users</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>User_Provider_Token_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#user_provider_token_id">User_Provider_Token_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Primary key - not used</td>
 </tr>
 <tr>
-<td>Login_Provider_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#user_id">User_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>User for which we store tokens</td>
 </tr>
 <tr>
-<td>Token_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). <code>Required</code> <code>Filter(eq)</code></td>
+<td><a href="#login_provider_name">Login_Provider_Name</a></td>
+<td><code>nvarchar(450)</code></td>
+<td>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc</td>
 </tr>
 <tr>
-<td>Token_Value</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#token_name">Token_Name</a></td>
+<td><code>nvarchar(450)</code></td>
+<td>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery)</td>
+</tr>
+<tr>
+<td><a href="#token_value">Token_Value</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td>Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="user_provider_token_id">User_Provider_Token_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user_id">User_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="login_provider_name">Login_Provider_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(450)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="token_name">Token_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(450)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="token_value">Token_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
 </tr>
 </tbody>
 </table>

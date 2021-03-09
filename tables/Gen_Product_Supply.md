@@ -2,24 +2,263 @@
 
 Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Product_Supply_Id|`Guid`|`PK`, Readonly||
-|Buyer_Name|`String`||The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy. |
-|Is_Active|`Boolean`||True if this product supply is active. `Required` `Default(true)` `Filter(eq)` |
-|Is_Default|`Boolean`||Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information. `Required` `Default(true)` `Filter(eq)` |
-|Manufacturing_Policy|`ManufacturingPolicy`|Allowed: `ATO`, `MTO`, `MTS`, `ETO`|MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. `Required` `Default("MTS")` |
-|Order_Lot_Sizing_Method|`OrderLotSizingMethod`|Allowed: `EOQ`, `FOQ`, `LFL`, `LFP`, `ROP`, `ROT`|LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. `Required` `Default("ROP")` |
-|Order_Multiple|`Boolean`||True if the order qty should be multiple of lot size when buying or making. `Required` `Default(false)` |
-|Order_Period_Planning_Days|`Int32?`||For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified. |
-|Order_Period_Start_Date|`DateTime?`||Start date of the first period under fixed period replenishment system. null - not yet specified. |
-|Order_Policy|`OrderPolicy`|Allowed: `MRP`, `OPS`, `OPT`, `PRS`|Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. `Required` `Default("OPS")` |
-|Planning_Annual_Carrying_Cost_Percent|`Decimal?`||The expected carrying cost as percentage of inventory cost. null means unknown. |
-|Planning_Horizon_Days|`Int32`||Number of days in the future for which to plan the demand and supply. `Required` `Default(0)` |
-|Planning_Lead_Time_Days|`Int32`||The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. `Required` `Default(0)` |
-|Planning_Order_Cycle_Days|`Int32?`||Number of days in one period under fixed period replenishment system. null - not yet specified. |
-|Planning_Time_Fence_Days|`Int32`||Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. `Required` `Default(1)` |
-|Procurement_Type|`ProcurementType`|Allowed: `B`, `M`, `T`|M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. `Required` `Default("B")` |
-|Supply_Schema_Id|`Guid?`||The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)` |
+| Name | Type | Description |
+| - | - | --- |
+|[Store_Id](#store_id)|`uniqueidentifier` |The store for which this rule is defined. When null, the rule is valid for all stores.|
+|[Preferred_Supplier_Id](#preferred_supplier_id)|`uniqueidentifier` |Preferred supplier for the product. NULL if there is no preferred supplier|
+|[Planning_Lead_Time_Days](#planning_lead_time_days)|`int` |The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components|
+|[Order_Point_Quantity_Base](#order_point_quantity_base)|`decimal(18, 3)` |Order point quantity under the OP replenishment system|
+|[Planning_Maximum_Inventory_Quantity_Base](#planning_maximum_inventory_quantity_base)|`decimal(18, 3)` |Maximum inventory. NULL if N/A|
+|[Order_Multiple](#order_multiple)|`bit` |1 if the order qty should be multiple of lot size when buying or making|
+|[Order_Lot_Size_Quantity_Base](#order_lot_size_quantity_base)|`decimal(18, 3)` |The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit|
+|[Order_Period_Start_Date](#order_period_start_date)|`datetime` |Start date of the first period under fixed period replenishment system. NULL - not yet specified|
+|[Order_Period_Planning_Days](#order_period_planning_days)|`int` |For how many days in the future should be planned - for fixed period replenishment system. NULL - not yet specified|
+|[Manufacturing_Policy](#manufacturing_policy)|`nvarchar(3)` Allowed: `ATO`, `MTO`, `MTS`, `ETO`|MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order|
+|[Product_Supply_Id](#product_supply_id)|`uniqueidentifier` `PK`||
+|[Default_Store_Bin_Id](#default_store_bin_id)|`uniqueidentifier` |Default store bin for new deliveries using this supply scheme|
+|[From_Store_Id](#from_store_id)|`uniqueidentifier` |Used when the Procurement_Type is Transfer|
+|[Is_Default](#is_default)|`bit` |Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information.|
+|[Is_Active](#is_active)|`bit` |1 if this product supply is active|
+|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
+|[Product_Group_Id](#product_group_id)|`uniqueidentifier` |Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings|
+|[Buyer_Name](#buyer_name)|`nvarchar(64)` |The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy|
+|[Order_Lot_Sizing_Method](#order_lot_sizing_method)|`nvarchar(3)` Allowed: `EOQ`, `FOQ`, `LFL`, `LFP`, `ROP`, `ROT`|LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;|
+|[Order_Minimum](#order_minimum)|`decimal(18, 3)` |Minimum order quantity both for buying and making|
+|[Generate_Document_Type_Id](#generate_document_type_id)|`uniqueidentifier` |Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule.|
+|[Fixed_Order_Quantity_Base](#fixed_order_quantity_base)|`decimal(18, 3)` |Fixed order quantity under the FOQ & EOQ replenishment system|
+|[Order_Policy](#order_policy)|`nvarchar(3)` Allowed: `MRP`, `OPS`, `OPT`, `PRS`|Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning|
+|[Planning_Order_Cost_Base_Currency](#planning_order_cost_base_currency)|`decimal(18, 3)` |Projected cost to place an order and set-up equipment|
+|[Planning_Order_Cycle_Days](#planning_order_cycle_days)|`int` |Number of days in one period under fixed period replenishment system. NULL - not yet specified|
+|[Planning_Annual_Carrying_Cost_Percent](#planning_annual_carrying_cost_percent)|`decimal(5, 4)` |The expected carrying cost as percentage of inventory cost. NULL means unknown|
+|[Planning_Annual_Usage_Quantity_Base](#planning_annual_usage_quantity_base)|`decimal(18, 3)` |Average usage of the product for 1 year. NUL means unknown|
+|[Planning_Horizon_Days](#planning_horizon_days)|`int` |Number of days in the future for which to plan the demand and supply|
+|[Planning_Safety_Stock_Quantity_Base](#planning_safety_stock_quantity_base)|`decimal(18, 3)` |Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product|
+|[Planning_Time_Fence_Days](#planning_time_fence_days)|`int` |Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF|
+|[Standard_Cost_Per_Lot](#standard_cost_per_lot)|`decimal(18, 4)` |Standard cost for one lot of the product|
+|[Procurement_Type](#procurement_type)|`nvarchar(1)` Allowed: `B`, `M`, `T`|M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought|
+|[Supply_Schema_Id](#supply_schema_id)|`uniqueidentifier` |The supply schema to use for the distribution of the product among warehouses|
+|[Product_Id](#product_id)|`uniqueidentifier` ||
+|[Order_Maximum](#order_maximum)|`decimal(18, 3)` |Order maximum when buying or making. NULL means no maximum|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Store_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Preferred_Supplier_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Planning_Lead_Time_Days
+
+| Property | Value |
+| - | - |
+|Type|int|
+
+### Order_Point_Quantity_Base
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Planning_Maximum_Inventory_Quantity_Base
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Order_Multiple
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Order_Lot_Size_Quantity_Base
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Order_Period_Start_Date
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Order_Period_Planning_Days
+
+| Property | Value |
+| - | - |
+|Type|int|
+
+### Manufacturing_Policy
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(3)|
+
+### Product_Supply_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Default_Store_Bin_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### From_Store_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Is_Default
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Is_Active
+
+| Property | Value |
+| - | - |
+|Type|bit|
+
+### Enterprise_Company_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Product_Group_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Buyer_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(64)|
+
+### Order_Lot_Sizing_Method
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(3)|
+
+### Order_Minimum
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Generate_Document_Type_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Fixed_Order_Quantity_Base
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Order_Policy
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(3)|
+
+### Planning_Order_Cost_Base_Currency
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Planning_Order_Cycle_Days
+
+| Property | Value |
+| - | - |
+|Type|int|
+
+### Planning_Annual_Carrying_Cost_Percent
+
+| Property | Value |
+| - | - |
+|Type|decimal(5, 4)|
+
+### Planning_Annual_Usage_Quantity_Base
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Planning_Horizon_Days
+
+| Property | Value |
+| - | - |
+|Type|int|
+
+### Planning_Safety_Stock_Quantity_Base
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Planning_Time_Fence_Days
+
+| Property | Value |
+| - | - |
+|Type|int|
+
+### Standard_Cost_Per_Lot
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 4)|
+
+### Procurement_Type
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(1)|
+
+### Supply_Schema_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Product_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Order_Maximum
+
+| Property | Value |
+| - | - |
+|Type|decimal(18, 3)|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

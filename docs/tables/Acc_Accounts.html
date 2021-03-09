@@ -8,7 +8,7 @@
     <title>Table Acc_Accounts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Acc_Accounts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,58 +80,236 @@
 <h1 id="table-acc_accounts">Table Acc_Accounts</h1>
 
 <p>Contains the leaf level of the chart of accounts. Entity: Acc_Accounts</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Account_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#account_id">Account_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Account_Full_Number</td>
-<td><code>String</code></td>
-<td>Readonly</td>
-<td>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></td>
+<td><a href="#account_group_id">Account_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The account group to which this account belongs</td>
 </tr>
 <tr>
-<td>Currency_Valuation_Method</td>
-<td><code>CurrencyValuationMethod</code></td>
-<td>Allowed: <code>ACB</code>, <code>DCD</code>, <code>BRD</code></td>
-<td>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. <code>Required</code> <code>Default(&quot;ACB&quot;)</code></td>
+<td><a href="#account_number">Account_Number</a></td>
+<td><code>nvarchar(30)</code></td>
+<td>The number of the account, unique within the account group</td>
 </tr>
 <tr>
-<td>Description</td>
-<td><code>String</code></td>
+<td><a href="#account_full_number">Account_Full_Number</a></td>
+<td><code>nvarchar(30)</code> Readonly</td>
+<td>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number</td>
+</tr>
+<tr>
+<td><a href="#account_name">Account_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>The account name</td>
+</tr>
+<tr>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(254)</code></td>
 <td></td>
-<td>The description of this Account.</td>
 </tr>
 <tr>
-<td>Discontinued</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True means that the account won't be used any more and should not appear in combo boxes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#currency_id">Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed</td>
 </tr>
 <tr>
-<td>Account_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>The account name. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="#discontinued">Discontinued</a></td>
+<td><code>bit</code></td>
+<td>1 means that the account won't be used any more and should not appear in combo boxes</td>
 </tr>
 <tr>
-<td>Account_Number</td>
-<td><code>String</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The number of the account, unique within the account group. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td><a href="#currency_valuation_method">Currency_Valuation_Method</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>ACB</code>, <code>DCD</code>, <code>BRD</code></td>
+<td>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="account_id">Account_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="account_group_id">Account_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="account_number">Account_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(30)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="account_full_number">Account_Full_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(30)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="account_name">Account_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency_id">Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="discontinued">Discontinued</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency_valuation_method">Currency_Valuation_Method</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

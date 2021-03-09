@@ -8,7 +8,7 @@
     <title>Table Mail_Messages | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Mail_Messages | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,93 +80,321 @@
 <h1 id="table-mail_messages">Table Mail_Messages</h1>
 
 <p>Represents email messages. Entity: Mail_Messages</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Mail_Box_Folders.html">Mail_Box_Folders</a></li>
 <li><a href="Mail_Boxes.html">Mail_Boxes</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Mail_Message_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#mail_message_id">Mail_Message_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Body</td>
-<td><code>String</code></td>
+<td><a href="#mail_box_folder_id">Mail_Box_Folder_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The body of the message.</td>
 </tr>
 <tr>
-<td>Cc_Email_Address_List</td>
-<td><code>String</code></td>
-<td></td>
-<td>Semicolon-separated list of Cc email addresses. <code>Filter(like)</code></td>
+<td><a href="#from_email_address">From_Email_Address</a></td>
+<td><code>nvarchar(512)</code></td>
+<td>Sending email address</td>
 </tr>
 <tr>
-<td>Creation_Date_Time</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>Date and time when the message was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
+<td><a href="#to_email_address_list">To_Email_Address_List</a></td>
+<td><code>nvarchar(2048)</code></td>
+<td>Semicolon-separated list of receiving email addresses</td>
 </tr>
 <tr>
-<td>From_Email_Address</td>
-<td><code>String</code></td>
-<td></td>
-<td>Sending email address. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="#cc_email_address_list">Cc_Email_Address_List</a></td>
+<td><code>nvarchar(2048)</code></td>
+<td>Semicolon-separated list of Cc email addresses</td>
 </tr>
 <tr>
-<td>Is_Encrypted</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True when the message is stored in encrypted format. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#subject">Subject</a></td>
+<td><code>nvarchar(1024)</code></td>
+<td>The message subject</td>
 </tr>
 <tr>
-<td>Is_Read</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>True when the message was read by the user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td><a href="#body">Body</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The body of the message</td>
 </tr>
 <tr>
-<td>Received_Date_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Date and time when the message was received. <code>Filter(ge;le)</code></td>
+<td><a href="#is_read">Is_Read</a></td>
+<td><code>bit</code></td>
+<td>1 when the message was read by the user</td>
 </tr>
 <tr>
-<td>Sent_Date_Time</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>Date and time when the message was sent. <code>Filter(ge;le)</code></td>
+<td><a href="#server_message_id">Server_Message_ID</a></td>
+<td><code>nvarchar(256)</code></td>
+<td>Message ID as it appears on the mail server</td>
 </tr>
 <tr>
-<td>Server_Message_ID</td>
-<td><code>String</code></td>
-<td></td>
-<td>Message ID as it appears on the mail server. <code>Filter(eq)</code></td>
+<td><a href="#creation_date_time">Creation_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>Date and time when the message was created</td>
 </tr>
 <tr>
-<td>Subject</td>
-<td><code>String</code></td>
-<td></td>
-<td>The message subject. <code>Filter(like)</code></td>
+<td><a href="#sent_date_time">Sent_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>Date and time when the message was sent</td>
 </tr>
 <tr>
-<td>To_Email_Address_List</td>
-<td><code>String</code></td>
+<td><a href="#received_date_time">Received_Date_Time</a></td>
+<td><code>datetime</code></td>
+<td>Date and time when the message was received</td>
+</tr>
+<tr>
+<td><a href="#related_to_party_id">Related_To_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. NULL means that the email is still not related to any specific party</td>
+</tr>
+<tr>
+<td><a href="#is_encrypted">Is_Encrypted</a></td>
+<td><code>bit</code></td>
+<td>1 when the message is stored in encrypted format</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Semicolon-separated list of receiving email addresses. <code>Filter(like)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="mail_message_id">Mail_Message_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mail_box_folder_id">Mail_Box_Folder_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from_email_address">From_Email_Address</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(512)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="to_email_address_list">To_Email_Address_List</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2048)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cc_email_address_list">Cc_Email_Address_List</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2048)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subject">Subject</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1024)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="body">Body</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_read">Is_Read</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="server_message_id">Server_Message_ID</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_date_time">Creation_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sent_date_time">Sent_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="received_date_time">Received_Date_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="related_to_party_id">Related_To_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_encrypted">Is_Encrypted</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

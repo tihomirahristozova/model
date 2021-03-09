@@ -8,7 +8,7 @@
     <title>Table Sys_Translations | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Sys_Translations | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,70 +80,216 @@
 <h1 id="table-sys_translations">Table Sys_Translations</h1>
 
 <p>Contains user-defined translations for non-english languages of the user interface and program messages. Entity: Sys_Translations</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Translation_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#translation_id">Translation_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Active</td>
-<td><code>Boolean</code></td>
+<td><a href="#application_name">Application_Name</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>The application, containing the resource. For base resource types (T,C,H), this is NULL</td>
+</tr>
+<tr>
+<td><a href="#language">Language</a></td>
+<td><code>nvarchar(8)</code></td>
+<td>The code of the language or language-culture pair. Standard Windows codes are used. English=&quot;en&quot;; US English = &quot;en-us&quot;</td>
+</tr>
+<tr>
+<td><a href="#resource_type">Resource_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>T</code>, <code>C</code>, <code>H</code>, <code>R</code>, <code>E</code>, <code>M</code>, <code>S</code></td>
+<td>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String</td>
+</tr>
+<tr>
+<td><a href="#resource_id">Resource_Id</a></td>
+<td><code>nvarchar(800)</code></td>
+<td>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code</td>
+</tr>
+<tr>
+<td><a href="#translation">Translation</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>The translated text</td>
+</tr>
+<tr>
+<td><a href="#creation_time">Creation_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td>Timestamp when the translation was first created</td>
+</tr>
+<tr>
+<td><a href="#update_time">Update_Time</a></td>
+<td><code>datetime</code> Readonly</td>
+<td>When the translation was last updated</td>
+</tr>
+<tr>
+<td><a href="#active">Active</a></td>
+<td><code>bit</code></td>
+<td>True when the translation is verified and activated.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>True when the translation is verified and activated. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="translation_id">Translation_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Application_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>The application, containing the resource. For base resource types (T,C,H), this is null. <code>Filter(eq)</code> <code>ORD</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Creation_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td>Timestamp when the translation was first created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="application_name">Application_Name</h3>
+<table>
+<thead>
 <tr>
-<td>Language</td>
-<td><code>String</code></td>
-<td></td>
-<td>The code of the language or language-culture pair. Standard Windows codes are used. English=&quot;en&quot;; US English = &quot;en-us&quot;. <code>Required</code> <code>Default(&quot;en&quot;)</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Resource_Id</td>
-<td><code>String</code></td>
-<td></td>
-<td>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Type</td>
+<td>nvarchar(50)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="language">Language</h3>
+<table>
+<thead>
 <tr>
-<td>Resource_Type</td>
-<td><code>ResourceType</code></td>
-<td>Allowed: <code>T</code>, <code>C</code>, <code>H</code>, <code>R</code>, <code>E</code>, <code>M</code>, <code>S</code></td>
-<td>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Translation</td>
-<td><code>String</code></td>
-<td></td>
-<td>The translated text. <code>Required</code></td>
+<td>Type</td>
+<td>nvarchar(8)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="resource_type">Resource_Type</h3>
+<table>
+<thead>
 <tr>
-<td>Update_Time</td>
-<td><code>DateTime</code></td>
-<td>Readonly</td>
-<td>When the translation was last updated. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource_id">Resource_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(800)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="translation">Translation</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation_time">Creation_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update_time">Update_Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active">Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

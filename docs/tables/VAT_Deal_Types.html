@@ -8,7 +8,7 @@
     <title>Table VAT_Deal_Types | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table VAT_Deal_Types | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,40 +80,136 @@
 <h1 id="table-vat_deal_types">Table VAT_Deal_Types</h1>
 
 <p>Contains deal types supported by the system as well as user-defined types. Entity: VAT_Deal_Types</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Deal_Type_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#deal_type_id">Deal_Type_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique Id for the deal type. Deal_Type_Id should be used for identifyind and updating system deal types.</td>
+</tr>
+<tr>
+<td><a href="#deal_type_name">Deal_Type_Name</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Description of the deal type.</td>
+</tr>
+<tr>
+<td><a href="#entry_type">Entry_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>P</code>, <code>S</code></td>
+<td>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.</td>
+</tr>
+<tr>
+<td><a href="#country_id">Country_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The country for which this deal type applies. The country is matched against the country of the enterprise company.</td>
+</tr>
+<tr>
+<td><a href="#is_system">Is_System</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="deal_type_id">Deal_Type_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Entry_Type</td>
-<td><code>EntryType</code></td>
-<td>Allowed: <code>P</code>, <code>S</code></td>
-<td>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. <code>Required</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Is_System</td>
-<td><code>Boolean</code></td>
-<td>Readonly</td>
-<td>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
+</tbody>
+</table>
+<h3 id="deal_type_name">Deal_Type_Name</h3>
+<table>
+<thead>
 <tr>
-<td>Deal_Type_Name</td>
-<td><code>String</code></td>
-<td></td>
-<td>Description of the deal type. <code>Required</code> <code>Filter(eq;like)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entry_type">Entry_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="country_id">Country_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_system">Is_System</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

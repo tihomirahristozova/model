@@ -8,7 +8,7 @@
     <title>Table Gen_Product_Group_Required_Properties | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Gen_Product_Group_Required_Properties | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,56 +80,200 @@
 <h1 id="table-gen_product_group_required_properties">Table Gen_Product_Group_Required_Properties</h1>
 
 <p>Contains the properties, that are required to be set, when creating new products in the category and its sub-categories. Entity: Gen_Product_Group_Required_Properties</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Product_Groups.html">Gen_Product_Groups</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Required_Property_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
-<td></td>
+<td><a href="#property_no">Property_No</a></td>
+<td><code>int</code></td>
+<td>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers.</td>
 </tr>
 <tr>
-<td>Default_Property_Value</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#property_id">Property_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'.</td>
+</tr>
+<tr>
+<td><a href="#default_property_value">Default_Property_Value</a></td>
+<td><code>nvarchar(254)</code></td>
 <td>When not null, specifies the default value of the property, for new products in the group.</td>
 </tr>
 <tr>
-<td>Default_Property_Value_Description</td>
-<td><code>String</code></td>
-<td></td>
+<td><a href="#default_property_value_description">Default_Property_Value_Description</a></td>
+<td><code>nvarchar(254)</code></td>
 <td>When not null, specifies the default description value of the property, for new products in the group.</td>
 </tr>
 <tr>
-<td>Default_Value_Id</td>
-<td><code>Guid?</code></td>
+<td><a href="#required_property_id">Required_Property_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
-<td>When not null, specifies the default internal Id value of the property, for new products in the group. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
-<td>Property_No</td>
-<td><code>Int32</code></td>
+<td><a href="#product_group_id">Product_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
-<td>Required</td>
-<td><code>Boolean</code></td>
+<td><a href="#default_value_id">Default_Value_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not null, specifies the default internal Id value of the property, for new products in the group.</td>
+</tr>
+<tr>
+<td><a href="#required">Required</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. <code>Required</code> <code>Default(false)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="property_no">Property_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="property_id">Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_property_value">Default_Property_Value</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_property_value_description">Default_Property_Value_Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required_property_id">Required_Property_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_group_id">Product_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_value_id">Default_Value_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required">Required</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

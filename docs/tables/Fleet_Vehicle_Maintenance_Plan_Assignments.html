@@ -8,7 +8,7 @@
     <title>Table Fleet_Vehicle_Maintenance_Plan_Assignments | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Fleet_Vehicle_Maintenance_Plan_Assignments | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,52 +80,176 @@
 <h1 id="table-fleet_vehicle_maintenance_plan_assignments">Table Fleet_Vehicle_Maintenance_Plan_Assignments</h1>
 
 <p>Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_Maintenance_Plan_Assignments</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Vehicle_Maintenance_Plan_Assignment_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#vehicle_maintenance_plan_assignment_id">Vehicle_Maintenance_Plan_Assignment_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Is_Active</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies whether the plan is active. <code>Required</code> <code>Default(true)</code></td>
+<td><a href="#vehicle_id">Vehicle_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The vehicle, to which a periodic maintenance plan is assigned.</td>
 </tr>
 <tr>
-<td>Last_Maintenance_Mileage_Km</td>
-<td><code>Int32?</code></td>
-<td></td>
+<td><a href="#maintenance_plan_id">Maintenance_Plan_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The assigned periodic maintenance type.</td>
+</tr>
+<tr>
+<td><a href="#starting_date">Starting_Date</a></td>
+<td><code>date</code></td>
+<td>The date on which the periodic maintenance should start.</td>
+</tr>
+<tr>
+<td><a href="#last_maintenance_mileage_km">Last_Maintenance_Mileage_Km</a></td>
+<td><code>int</code></td>
 <td>The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check.</td>
 </tr>
 <tr>
-<td>Last_Maintenance_Trip_Count</td>
-<td><code>Int32?</code></td>
-<td></td>
+<td><a href="#last_maintenance_trip_count">Last_Maintenance_Trip_Count</a></td>
+<td><code>int</code></td>
 <td>The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this VehicleMaintenancePlanAssignment.</td>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>Specifies whether the plan is active.</td>
 </tr>
 <tr>
-<td>Starting_Date</td>
-<td><code>DateTime</code></td>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>The date on which the periodic maintenance should start. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="vehicle_maintenance_plan_assignment_id">Vehicle_Maintenance_Plan_Assignment_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_id">Vehicle_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_plan_id">Maintenance_Plan_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="starting_date">Starting_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_maintenance_mileage_km">Last_Maintenance_Mileage_Km</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="last_maintenance_trip_count">Last_Maintenance_Trip_Count</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
 </tr>
 </tbody>
 </table>

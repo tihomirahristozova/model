@@ -2,21 +2,37 @@
 
 Represents a web module, containing news. Entity: Cms_News_Web_Modules
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Cms_Web_Modules](Cms_Web_Modules.md)
-
-# Aggregate Hierarchy
-
 * [Cms_Web_Sites](Cms_Web_Sites.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|News_Web_Module_Id|`Guid`|`PK`, Readonly||
-|Is_Published|`Boolean`|||
-|Local_Url|`String`|||
-|Module_Picture|`Byte[]`|`BLOB`||
-|Module_Type|`ModuleType`|Allowed: `CAT`, `STA`, `NEW`||
-|Web_Module_Name|`String`|||
+| Name | Type | Description |
+| - | - | --- |
+|[News_Web_Module_Id](#news_web_module_id)|`uniqueidentifier` `PK`||
+|[Web_Module_Id](#web_module_id)|`uniqueidentifier` |The web module, which this News Module inherits.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### News_Web_Module_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Web_Module_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

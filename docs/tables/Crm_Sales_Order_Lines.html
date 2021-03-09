@@ -8,7 +8,7 @@
     <title>Table Crm_Sales_Order_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Crm_Sales_Order_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,116 +80,901 @@
 <h1 id="table-crm_sales_order_lines">Table Crm_Sales_Order_Lines</h1>
 
 <p>Sales Orders detail records. Entity: Crm_Sales_Order_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sales_Order_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive number of the line within the sales order</td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product sold</td>
+</tr>
+<tr>
+<td><a href="#product_description">Product_Description</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>The name of the sold product at the time the sale was made</td>
+</tr>
+<tr>
+<td><a href="#requested_quantity">Requested_Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>Quantity requested by customer</td>
+</tr>
+<tr>
+<td><a href="#quantity">Quantity</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The quantity sold</td>
+</tr>
+<tr>
+<td><a href="#quantity_unit_id">Quantity_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit of Quantity</td>
+</tr>
+<tr>
+<td><a href="#quantity_base">Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The equivalent of Quantity in the base measurement category of the product</td>
+</tr>
+<tr>
+<td><a href="#unit_price">Unit_Price</a></td>
+<td><code>decimal(14, 5)</code></td>
+<td>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId</td>
+</tr>
+<tr>
+<td><a href="#standard_unit_price">Standard_Unit_Price</a></td>
+<td><code>decimal(14, 5)</code> Readonly</td>
+<td>Standard unit price of the product during the creation of the sales order line</td>
+</tr>
+<tr>
+<td><a href="#line_amount">Line_Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>The total amount for the line. Equals to Quantity * Unit_Price, less the discounts</td>
+</tr>
+<tr>
+<td><a href="#line_custom_discount_percent">Line_Custom_Discount_Percent</a></td>
+<td><code>decimal(7, 6)</code></td>
+<td>User-defined discount for the line</td>
+</tr>
+<tr>
+<td><a href="#line_discount_id">Line_Discount_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The line discount type used to form the Line_Standard_Discount_Percent</td>
+</tr>
+<tr>
+<td><a href="#line_standard_discount_percent">Line_Standard_Discount_Percent</a></td>
+<td><code>decimal(7, 6)</code> Readonly</td>
+<td>Standard discount for the line. This is automatically computed according to discount conditions</td>
+</tr>
+<tr>
+<td><a href="#product_price_id">Product_Price_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Not NULL when the price has been selected from the list of valid standard prices</td>
+</tr>
+<tr>
+<td><a href="#required_delivery_date">Required_Delivery_Date</a></td>
+<td><code>date</code></td>
+<td>The required (contracted) delivery date for the line</td>
+</tr>
+<tr>
+<td><a href="#guarantee_period_days">Guarantee_Period_Days</a></td>
+<td><code>int</code></td>
+<td>Guarantee period in days for the offered product. NULL for non-serviced products</td>
+</tr>
+<tr>
+<td><a href="#bonus_program_id">Bonus_Program_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The bonus program, based on which the line was automatically added. NULL when the line was not added for bonus program.</td>
+</tr>
+<tr>
+<td><a href="#product_code_id">Product_Code_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Used to set the Product_Id thru the coding systems</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Delivery_Terms_Code</td>
-<td><code>DeliveryTerms?</code></td>
-<td>Allowed: <code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
-<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</td>
+<td><a href="#historical_unit_cost">Historical_Unit_Cost</a></td>
+<td><code>decimal(14, 5)</code></td>
+<td>Used for returning of goods that are sold before the exploitation of the system</td>
 </tr>
 <tr>
-<td>Guarantee_Period_Days</td>
-<td><code>Int32?</code></td>
+<td><a href="#return_for_sales_order_line_id">Return_For_Sales_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When specified indicates that the goods sold in Return_For_Sales_Order_Line_Id are returned with the current line</td>
+</tr>
+<tr>
+<td><a href="#line_store_id">Line_Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store which should be used to issue the goods for the line. NULL means to use the store from the header</td>
+</tr>
+<tr>
+<td><a href="#sales_order_line_id">Sales_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
-<td>Guarantee period in days for the offered product. null for non-serviced products.</td>
 </tr>
 <tr>
-<td>Historical_Data_Json</td>
-<td><code>String</code></td>
+<td><a href="#sales_order_id">Sales_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. <code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
-<td>Intrastat_Transaction_Nature_Code</td>
-<td><code>TransactionNature?</code></td>
-<td>Allowed: <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
-<td>Transaction nature; used for Intrastat reporting.</td>
+<td><a href="#line_deal_type_id">Line_Deal_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Deal type to be passed to the invoice line. If deal type in entered then the invoice creates VAT entry for this deal type.</td>
 </tr>
 <tr>
-<td>Intrastat_Transport_Mode_Code</td>
-<td><code>TransportMode?</code></td>
-<td>Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code></td>
-<td>Transport mode; used for Intrastat reporting.</td>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Specifies the lot from which the goods should be issued. NULL means that the lot will be specified at a later stage (store order, etc.)</td>
 </tr>
 <tr>
-<td>Line_Custom_Discount_Percent</td>
-<td><code>Decimal</code></td>
+<td><a href="#serial_number_id">Serial_Number_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</td>
+</tr>
+<tr>
+<td><a href="#store_bin_id">Store_Bin_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The bin from which the goods should be withdrawn. NULL means that the bin will be specified at a later stage (store order, etc.)</td>
+</tr>
+<tr>
+<td><a href="#promotional_package_id">Promotional_Package_Id</a></td>
+<td><code>uniqueidentifier</code> Readonly</td>
+<td>The promotional package, based on which the line was added. NULL when the line was not added as part of a promotional package</td>
+</tr>
+<tr>
+<td><a href="#intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code></td>
+<td>Transport mode; used for Intrastat reporting</td>
+</tr>
+<tr>
+<td><a href="#intrastat_transport_country_id">Intrastat_Transport_Country_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Country of origin of the transport company; used for Intrastat reporting</td>
+</tr>
+<tr>
+<td><a href="#delivery_terms_code">Delivery_Terms_Code</a></td>
+<td><code>nvarchar(3)</code> Allowed: <code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
+<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</td>
+</tr>
+<tr>
+<td><a href="#intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</a></td>
+<td><code>nvarchar(2)</code> Allowed: <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
+<td>Transaction nature; used for Intrastat reporting</td>
+</tr>
+<tr>
+<td><a href="#persist_lot">Persist_Lot</a></td>
+<td><code>bit</code></td>
+<td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.</td>
+</tr>
+<tr>
+<td><a href="#line_end_customer_party_id">Line_End_Customer_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party.</td>
+</tr>
+<tr>
+<td><a href="#historical_data_json">Historical_Data_Json</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale.</td>
+</tr>
+<tr>
+<td><a href="#standard_quantity_base">Standard_Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code> Readonly</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>User-defined discount for the line. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
-<td>Line_From_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. <code>Introduced in version 20.1</code></td>
+<td><a href="#parent_line_no">Parent_Line_No</a></td>
+<td><code>int</code></td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.</td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consecutive number of the line within the sales order. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
+<td><a href="#parent_document_id">Parent_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document, which the current line executes. NULL when the current line does not execute another line.</td>
 </tr>
 <tr>
-<td>Line_Standard_Discount_Percent</td>
-<td><code>Decimal</code></td>
-<td>Readonly</td>
-<td>Standard discount for the line. This is automatically computed according to discount conditions. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
+<td><a href="#product_variant_id">Product_Variant_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If specified determines which product variant of the current product in this line is used.</td>
 </tr>
 <tr>
-<td>Line_To_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. <code>Introduced in version 20.1</code></td>
+<td><a href="#line_from_date">Line_From_Date</a></td>
+<td><code>date</code></td>
+<td>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this SalesOrderLine.</td>
+<td><a href="#return_for_invoice_line_id">Return_For_Invoice_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When specified, indicates that the current line is a return for products, invoiced with the specified invoice line.</td>
 </tr>
 <tr>
-<td>Parent_Line_No</td>
-<td><code>Int32?</code></td>
-<td></td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(eq)</code></td>
+<td><a href="#line_to_date">Line_To_Date</a></td>
+<td><code>date</code></td>
+<td>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.</td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
 <tr>
-<td>Persist_Lot</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Product_Description</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>The name of the sold product at the time the sale was made. <code>Required</code> <code>Filter(like)</code></td>
+<td>Type</td>
+<td>int</td>
 </tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Required_Delivery_Date</td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td>The required (contracted) delivery date for the line. <code>Filter(ge;le)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_description">Product_Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="requested_quantity">Requested_Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity">Quantity</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_base">Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit_price">Unit_Price</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_unit_price">Standard_Unit_Price</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_amount">Line_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_custom_discount_percent">Line_Custom_Discount_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_discount_id">Line_Discount_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_standard_discount_percent">Line_Standard_Discount_Percent</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(7, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_price_id">Product_Price_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required_delivery_date">Required_Delivery_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="guarantee_period_days">Guarantee_Period_Days</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bonus_program_id">Bonus_Program_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_code_id">Product_Code_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="historical_unit_cost">Historical_Unit_Cost</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return_for_sales_order_line_id">Return_For_Sales_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_store_id">Line_Store_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sales_order_line_id">Sales_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sales_order_id">Sales_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_deal_type_id">Line_Deal_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="serial_number_id">Serial_Number_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_bin_id">Store_Bin_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promotional_package_id">Promotional_Package_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_transport_country_id">Intrastat_Transport_Country_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delivery_terms_code">Delivery_Terms_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="persist_lot">Persist_Lot</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_end_customer_party_id">Line_End_Customer_Party_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="historical_data_json">Historical_Data_Json</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard_quantity_base">Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_line_no">Parent_Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parent_document_id">Parent_Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_variant_id">Product_Variant_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_from_date">Line_From_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return_for_invoice_line_id">Return_For_Invoice_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_to_date">Line_To_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>date</td>
 </tr>
 </tbody>
 </table>

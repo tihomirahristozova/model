@@ -2,38 +2,148 @@
 
 Personal records. Requires related party record. Entity: Cm_Persons
 
-# Inheritance
+## Owner Tables Hierarchy
 
 * [Gen_Parties](Gen_Parties.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Person_Id|`Guid`|`PK`, Readonly||
-|Birth_Date|`DateTime?`||Birth date. null means unknown. `Filter(ge;le)` |
-|City|`MultilanguageString`||City from the legal registration address for the person. `Filter(like)` |
-|Creation_Time|`DateTime?`|Readonly|Date and time when the Person was created. `Filter(ge;le)` `ReadOnly` |
-|Creation_User|`String`|Readonly|Login name of the user, who created the Person. `Filter(like)` `ReadOnly` |
-|First_Name|`MultilanguageString`||First name of the person. `Filter(eq;like)` |
-|Gender|`Gender?`|Allowed: `F`, `M`|Person gender. M=Male;F=Female;null=not known/not provided. `Filter(eq)` |
-|GLN|`String`|||
-|Is_Active|`Boolean`|||
-|Last_Name|`MultilanguageString`||Last name of the person. `Filter(eq;like)` |
-|Middle_Name|`MultilanguageString`||Middle name of the person. `Filter(eq;like)` |
-|National_Number|`String`||Government assigned unique personal number. null means unknown. `Filter(eq;like)` |
-|Notes|`String`||Internal notes for the person. |
-|Party_Code|`String`|Readonly||
-|Creation_Time|`DateTime?`|Readonly||
-|Creation_User|`String`|Readonly||
-|Party_Name|`MultilanguageString`|||
-|Notes|`String`|||
-|Party_Type|`PartyType`|Allowed: `C`, `L`, `P`, `S`, `V`||
-|Party_Unique_Number|`String`|Readonly||
-|Update_Time|`DateTime?`|Readonly||
-|Update_User|`String`|Readonly||
-|Passport_Issuing_Date|`DateTime?`||Date of issuing the passport. null means unknown. `Filter(ge;le)` |
-|Passport_Number|`String`||Current passport number. null means unknown. `Filter(eq)` |
-|Title|`MultilanguageString`||The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification. |
-|Update_Time|`DateTime?`|Readonly|Date and time when the Person was last updated. `Filter(ge;le)` `ReadOnly` |
-|Update_User|`String`|Readonly|Login name of the user, who last updated the Person. `Filter(like)` `ReadOnly` |
+| Name | Type | Description |
+| - | - | --- |
+|[Person_Id](#person_id)|`uniqueidentifier` `PK`|Unique person Id|
+|[First_Name](#first_name)|`nvarchar(64)` `ML`|First name of the person.|
+|[Middle_Name](#middle_name)|`nvarchar(64)` `ML`|Middle name of the person.|
+|[Last_Name](#last_name)|`nvarchar(64)` `ML`|Last name of the person.|
+|[Title](#title)|`nvarchar(32)` `ML`|The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.|
+|[Gender](#gender)|`nvarchar(1)` Allowed: `F`, `M`|Person gender. M=Male;F=Female;NULL=not known/not provided|
+|[Birth_Date](#birth_date)|`datetime` |Birth date. NULL means unknown|
+|[Nationality](#nationality)|`uniqueidentifier` |Person's nationality. NULL means the default (same as enterprise) nationality|
+|[National_Number](#national_number)|`nvarchar(14)` |Government assigned unique personal number. NULL means unknown|
+|[Passport_Number](#passport_number)|`nvarchar(14)` |Current passport number. NULL means unknown|
+|[Passport_Issuing_Date](#passport_issuing_date)|`datetime` |Date of issuing the passport. NULL means unknown|
+|[City](#city)|`nvarchar(64)` `ML`|City from the legal registration address for the person|
+|[Notes](#notes)|`nvarchar(254)` |Internal notes for the person|
+|[Update_User](#update_user)|`nvarchar(64)` Readonly||
+|[Creation_Time](#creation_time)|`datetime` Readonly||
+|[Creation_User](#creation_user)|`nvarchar(64)` Readonly||
+|[Update_Time](#update_time)|`datetime` Readonly||
+|[Party_Id](#party_id)|`uniqueidentifier` |The Id of the party record for this person. The party stores the person's full name|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Person_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### First_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(64)|
+
+### Middle_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(64)|
+
+### Last_Name
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(64)|
+
+### Title
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(32)|
+
+### Gender
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(1)|
+
+### Birth_Date
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Nationality
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### National_Number
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(14)|
+
+### Passport_Number
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(14)|
+
+### Passport_Issuing_Date
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### City
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(64)|
+
+### Notes
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(254)|
+
+### Update_User
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(64)|
+
+### Creation_Time
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Creation_User
+
+| Property | Value |
+| - | - |
+|Type|nvarchar(64)|
+
+### Update_Time
+
+| Property | Value |
+| - | - |
+|Type|datetime|
+
+### Party_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

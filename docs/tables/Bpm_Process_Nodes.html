@@ -8,7 +8,7 @@
     <title>Table Bpm_Process_Nodes | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Bpm_Process_Nodes | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,50 +80,180 @@
 <h1 id="table-bpm_process_nodes">Table Bpm_Process_Nodes</h1>
 
 <p>Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Bpm_Processes.html">Bpm_Processes</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Process_Node_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#process_node_id">Process_Node_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Process_Node_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Node code, unique within the process. Used as ID for XML serialization purposes. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#process_id">Process_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The process, to which this Node belongs.</td>
 </tr>
 <tr>
-<td>Instructions_Html</td>
-<td><code>String</code></td>
-<td></td>
-<td>Detailed instructions to the executor in HTML format. <code>Filter(eq;like)</code></td>
+<td><a href="#process_lane_id">Process_Lane_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The process lane to which this Node belongs.</td>
 </tr>
 <tr>
-<td>Process_Node_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Multilanguage process name. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#process_node_code">Process_Node_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Node code, unique within the process. Used as ID for XML serialization purposes.</td>
 </tr>
 <tr>
-<td>Node_Type</td>
-<td><code>NodeType</code></td>
-<td>Allowed: <code>A</code>, <code>E</code>, <code>G</code>, <code>C</code></td>
-<td>Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#process_node_name">Process_Node_Name</a></td>
+<td><code>nvarchar(512)</code> <code>ML</code></td>
+<td>Multilanguage process name.</td>
+</tr>
+<tr>
+<td><a href="#node_type">Node_Type</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>A</code>, <code>E</code>, <code>G</code>, <code>C</code></td>
+<td>Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process.</td>
+</tr>
+<tr>
+<td><a href="#instructions_html">Instructions_Html</a></td>
+<td><code>nvarchar(2147483647)</code></td>
+<td>Detailed instructions to the executor in HTML format.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="process_node_id">Process_Node_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process_id">Process_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process_lane_id">Process_Lane_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process_node_code">Process_Node_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process_node_name">Process_Node_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(512)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="node_type">Node_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instructions_html">Instructions_Html</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

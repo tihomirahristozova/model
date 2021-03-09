@@ -8,7 +8,7 @@
     <title>Table Fleet_Vehicle_Alerts | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Fleet_Vehicle_Alerts | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,52 +80,156 @@
 <h1 id="table-fleet_vehicle_alerts">Table Fleet_Vehicle_Alerts</h1>
 
 <p>Contains alerts, specific to one vehicle. Alerts are created based on many sources and stay active, until excplicitly hidden. Entity: Fleet_Vehicle_Alerts</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Vehicle_Alert_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#vehicle_alert_id">Vehicle_Alert_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Alert_Type</td>
-<td><code>String</code></td>
-<td></td>
-<td>The type of the alert. The type is specfic to the Source. <code>Required</code></td>
+<td><a href="#vehicle_id">Vehicle_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The vehicle, for which is the alert.</td>
 </tr>
 <tr>
-<td>Description</td>
-<td><code>String</code></td>
-<td></td>
-<td>Description of the alert (Multilanguage). <code>Required</code></td>
+<td><a href="#time">Time</a></td>
+<td><code>datetime</code></td>
+<td>The time of the alert.</td>
 </tr>
 <tr>
-<td>Is_Hidden</td>
-<td><code>Boolean</code></td>
-<td></td>
-<td>Specifies, whether the alert is hidden (e.g. managed by the responsible person). <code>Required</code> <code>Default(false)</code></td>
+<td><a href="#source">Source</a></td>
+<td><code>nvarchar(1)</code></td>
+<td>The source of the alert. G=GPS, O=OBD, M=Maintenance.</td>
 </tr>
 <tr>
-<td>Source</td>
-<td><code>String</code></td>
-<td></td>
-<td>The source of the alert. G=GPS, O=OBD, M=Maintenance. <code>Required</code></td>
+<td><a href="#alert_type">Alert_Type</a></td>
+<td><code>nvarchar(3)</code></td>
+<td>The type of the alert. The type is specfic to the Source.</td>
 </tr>
 <tr>
-<td>Time</td>
-<td><code>DateTime</code></td>
-<td></td>
-<td>The time of the alert. <code>Required</code> <code>ORD</code></td>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Description of the alert (Multilanguage).</td>
+</tr>
+<tr>
+<td><a href="#is_hidden">Is_Hidden</a></td>
+<td><code>bit</code></td>
+<td>Specifies, whether the alert is hidden (e.g. managed by the responsible person).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="vehicle_alert_id">Vehicle_Alert_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_id">Vehicle_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time">Time</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="source">Source</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert_type">Alert_Type</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_hidden">Is_Hidden</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 </tbody>
 </table>

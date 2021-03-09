@@ -8,7 +8,7 @@
     <title>Table Scm_Purchase_Control_Document_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Scm_Purchase_Control_Document_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,98 +80,481 @@
 <h1 id="table-scm_purchase_control_document_lines">Table Scm_Purchase_Control_Document_Lines</h1>
 
 <p>The detail line of purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Document_Lines (Introduced in version 18.2)</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Scm_Purchase_Control_Documents.html">Scm_Purchase_Control_Documents</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Purchase_Control_Document_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#purchase_control_document_line_id">Purchase_Control_Document_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Confirmed_Amount_Base</td>
-<td><code>Decimal?</code></td>
+<td><a href="#purchase_control_document_id">Purchase_Control_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
 <td></td>
-<td>The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.</td>
 </tr>
 <tr>
-<td>Confirmed_Standard_Quantity_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.</td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>The consecutive line number within the control document.</td>
 </tr>
 <tr>
-<td>Invoiced_Amount_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.</td>
+<td><a href="#purchase_operation_type_id">Purchase_Operation_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. NULL when the operation type was not specified by the user.</td>
 </tr>
 <tr>
-<td>Invoiced_Standard_Quantity_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.</td>
+<td><a href="#requested_standard_quantity_base">Requested_Standard_Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.</td>
 </tr>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>The consecutive line number within the control document. <code>Required</code></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this PurchaseControlDocumentLine.</td>
-</tr>
-<tr>
-<td>Ordered_Amount_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.</td>
-</tr>
-<tr>
-<td>Ordered_Standard_Quantity_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
+<td><a href="#ordered_standard_quantity_base">Ordered_Standard_Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code></td>
 <td>The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items.</td>
 </tr>
 <tr>
-<td>Received_Amount_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
-<td>The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.</td>
+<td><a href="#confirmed_standard_quantity_base">Confirmed_Standard_Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.</td>
 </tr>
 <tr>
-<td>Received_Standard_Quantity_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
+<td><a href="#received_standard_quantity_base">Received_Standard_Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code></td>
 <td>The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items.</td>
 </tr>
 <tr>
-<td>Requested_Amount_Base</td>
-<td><code>Decimal?</code></td>
-<td></td>
+<td><a href="#invoiced_standard_quantity_base">Invoiced_Standard_Quantity_Base</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.</td>
+</tr>
+<tr>
+<td><a href="#requested_amount_base">Requested_Amount_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
 <td>The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items.</td>
 </tr>
 <tr>
-<td>Requested_Standard_Quantity_Base</td>
-<td><code>Decimal?</code></td>
+<td><a href="#ordered_amount_base">Ordered_Amount_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.</td>
+</tr>
+<tr>
+<td><a href="#confirmed_amount_base">Confirmed_Amount_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.</td>
+</tr>
+<tr>
+<td><a href="#received_amount_base">Received_Amount_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.</td>
+</tr>
+<tr>
+<td><a href="#invoiced_amount_base">Invoiced_Amount_Base</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.</td>
+</tr>
+<tr>
+<td><a href="#purchase_requisition_id">Purchase_Requisition_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase requisition which is to be or was executed. Null when the data is unknown.</td>
+</tr>
+<tr>
+<td><a href="#purchase_requisition_line_id">Purchase_Requisition_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase requisition line which is to be or was executed. Null when the data is unknown.</td>
+</tr>
+<tr>
+<td><a href="#purchase_order_id">Purchase_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase order which is to be or was executed. Null when the data is unknown.</td>
+</tr>
+<tr>
+<td><a href="#purchase_order_line_id">Purchase_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase order line which is to be or was executed. Null when the data is unknown.</td>
+</tr>
+<tr>
+<td><a href="#receiving_order_id">Receiving_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The receiving order which is to be or was executed. Null when the data is unknown.</td>
+</tr>
+<tr>
+<td><a href="#receiving_order_line_id">Receiving_Order_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The receiving order line which is to be or was executed. Null when the data is unknown.</td>
+</tr>
+<tr>
+<td><a href="#purchase_invoice_id">Purchase_Invoice_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase invoice which is to be or was executed. Null when the data is unknown.</td>
+</tr>
+<tr>
+<td><a href="#purchase_invoice_line_id">Purchase_Invoice_Line_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase invoice line which is to be or was executed. Null when the data is unknown.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="purchase_control_document_line_id">Purchase_Control_Document_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_control_document_id">Purchase_Control_Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_operation_type_id">Purchase_Operation_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="requested_standard_quantity_base">Requested_Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ordered_standard_quantity_base">Ordered_Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confirmed_standard_quantity_base">Confirmed_Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="received_standard_quantity_base">Received_Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="invoiced_standard_quantity_base">Invoiced_Standard_Quantity_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="requested_amount_base">Requested_Amount_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ordered_amount_base">Ordered_Amount_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confirmed_amount_base">Confirmed_Amount_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="received_amount_base">Received_Amount_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="invoiced_amount_base">Invoiced_Amount_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_requisition_id">Purchase_Requisition_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_requisition_line_id">Purchase_Requisition_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_order_id">Purchase_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_order_line_id">Purchase_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiving_order_id">Receiving_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiving_order_line_id">Receiving_Order_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_invoice_id">Purchase_Invoice_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_invoice_line_id">Purchase_Invoice_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
 </tr>
 </tbody>
 </table>

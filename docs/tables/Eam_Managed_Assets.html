@@ -8,7 +8,7 @@
     <title>Table Eam_Managed_Assets | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Eam_Managed_Assets | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,46 +80,196 @@
 <h1 id="table-eam_managed_assets">Table Eam_Managed_Assets</h1>
 
 <p>Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1)</p>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Managed_Asset_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#managed_asset_id">Managed_Asset_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Managed_Asset_Code</td>
-<td><code>String</code></td>
-<td></td>
-<td>Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The enterprise company to which the managed asset belongs.</td>
 </tr>
 <tr>
-<td>Managed_Asset_Name</td>
-<td><code>MultilanguageString</code></td>
-<td></td>
-<td>Name of the managed asset (multi-language). <code>Required</code> <code>Filter(eq;like)</code></td>
+<td><a href="#managed_asset_code">Managed_Asset_Code</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td><code>String</code></td>
-<td></td>
-<td>Notes for this ManagedAsset.</td>
+<td><a href="#managed_asset_name">Managed_Asset_Name</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Name of the managed asset (multi-language).</td>
 </tr>
 <tr>
-<td>Registration_Number</td>
-<td><code>String</code></td>
+<td><a href="#managed_asset_type_id">Managed_Asset_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc.</td>
+</tr>
+<tr>
+<td><a href="#managed_asset_group_id">Managed_Asset_Group_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The organizational group of the asset. Used for organizational purposes only.</td>
+</tr>
+<tr>
+<td><a href="#registration_number">Registration_Number</a></td>
+<td><code>nvarchar(32)</code></td>
+<td>Registration number of the asset with the national registration authorities. NULL means the registation number is unknown or N/A.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(2147483647)</code></td>
 <td></td>
-<td>Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="managed_asset_id">Managed_Asset_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managed_asset_code">Managed_Asset_Code</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managed_asset_name">Managed_Asset_Name</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managed_asset_type_id">Managed_Asset_Type_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managed_asset_group_id">Managed_Asset_Group_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="registration_number">Registration_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(32)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(2147483647)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>

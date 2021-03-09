@@ -2,12 +2,50 @@
 
 The default store bins in which products should be placed. Entity: Inv_Product_Default_Store_Bins
 
-# Aggregate Hierarchy
+## Owner Tables Hierarchy
 
 * [Gen_Products](Gen_Products.md)
 
-# Columns
+## Summary
 
-| Name | Type | Value | Description |
-| - | - | - | --- |
-|Product_Default_Store_Bin_Id|`Guid`|`PK`, Readonly||
+| Name | Type | Description |
+| - | - | --- |
+|[Product_Default_Store_Bin_Id](#product_default_store_bin_id)|`uniqueidentifier` `PK`||
+|[Product_Id](#product_id)|`uniqueidentifier` ||
+|[Store_Id](#store_id)|`uniqueidentifier` |The store, for which the default bin is specified.|
+|[Default_Bin_Id](#default_bin_id)|`uniqueidentifier` |The default bin, which should be used for this product.|
+|[Row_Version](#row_version)|`timestamp` ||
+
+## Columns
+
+### Product_Default_Store_Bin_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Product_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Store_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Default_Bin_Id
+
+| Property | Value |
+| - | - |
+|Type|uniqueidentifier|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Type|timestamp|
+
+

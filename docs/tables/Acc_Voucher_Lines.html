@@ -8,7 +8,7 @@
     <title>Table Acc_Voucher_Lines | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Table Acc_Voucher_Lines | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,62 +80,381 @@
 <h1 id="table-acc_voucher_lines">Table Acc_Voucher_Lines</h1>
 
 <p>Contains one debit or credit posting within an accounting voucher. Entity: Acc_Voucher_Lines</p>
-<h1 id="aggregate-hierarchy">Aggregate Hierarchy</h1>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Acc_Vouchers.html">Acc_Vouchers</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
 </ul>
-<h1 id="columns">Columns</h1>
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Voucher_Line_Id</td>
-<td><code>Guid</code></td>
-<td><code>PK</code>, Readonly</td>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>Consecutive number of the line within the voucher</td>
+</tr>
+<tr>
+<td><a href="#account_id">Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The account being debited or credited</td>
+</tr>
+<tr>
+<td><a href="#item_key">Item_Key</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.</td>
+</tr>
+<tr>
+<td><a href="#currency_id">Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field.</td>
+</tr>
+<tr>
+<td><a href="#debit">Debit</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>The amount of the debit in the currency of the account. 0 means that the account is not debited</td>
+</tr>
+<tr>
+<td><a href="#debit_base">Debit_Base</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>The amount of debit in base currency</td>
+</tr>
+<tr>
+<td><a href="#credit">Credit</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>The amount of the credit in the currency of the account. 0 means that the account is not credited</td>
+</tr>
+<tr>
+<td><a href="#credit_base">Credit_Base</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>The amount of credit in base currency</td>
+</tr>
+<tr>
+<td><a href="#referenced_document_id">Referenced_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The document which is referenced by the line. By default, this is the document of the voucher</td>
+</tr>
+<tr>
+<td><a href="#rate_multiplier">Rate_Multiplier</a></td>
+<td><code>decimal(18, 6)</code></td>
+<td>The multiplier for conversion from Debit/Credit to base currency</td>
+</tr>
+<tr>
+<td><a href="#rate_divisor">Rate_Divisor</a></td>
+<td><code>decimal(18, 6)</code></td>
+<td>The divisor for conversion from Debit/Credit to base currency</td>
+</tr>
+<tr>
+<td><a href="#cost_center_id">Cost_Center_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The cost center to which this cost is related</td>
+</tr>
+<tr>
+<td><a href="#profit_center_id">Profit_Center_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The profit center to which this revenue is related</td>
+</tr>
+<tr>
+<td><a href="#correspondance_no">Correspondance_No</a></td>
+<td><code>int</code></td>
+<td>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits</td>
+</tr>
+<tr>
+<td><a href="#correspondant_amount">Correspondant_Amount</a></td>
+<td><code>decimal(18, 2)</code> Readonly</td>
+<td>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).</td>
+</tr>
+<tr>
+<td><a href="#voucher_line_id">Voucher_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
 <tr>
-<td>Correspondance_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="#voucher_id">Voucher_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The voucher to which this line is attached</td>
 </tr>
 <tr>
-<td>Correspondant_Amount</td>
-<td><code>Decimal?</code></td>
-<td>Readonly</td>
-<td>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td>Item_Key</td>
-<td><code>String</code></td>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
 <td></td>
-<td>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. <code>Filter(eq;like)</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="line_no">Line_No</h3>
+<table>
+<thead>
 <tr>
-<td>Line_No</td>
-<td><code>Int32</code></td>
-<td></td>
-<td>Consecutive number of the line within the voucher. <code>Required</code></td>
+<th>Property</th>
+<th>Value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>Rate_Divisor</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The divisor for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></td>
+<td>Type</td>
+<td>int</td>
 </tr>
+</tbody>
+</table>
+<h3 id="account_id">Account_Id</h3>
+<table>
+<thead>
 <tr>
-<td>Rate_Multiplier</td>
-<td><code>Decimal</code></td>
-<td></td>
-<td>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></td>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="item_key">Item_Key</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency_id">Currency_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debit">Debit</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debit_base">Debit_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="credit">Credit</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="credit_base">Credit_Base</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="referenced_document_id">Referenced_Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rate_multiplier">Rate_Multiplier</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rate_divisor">Rate_Divisor</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cost_center_id">Cost_Center_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="profit_center_id">Profit_Center_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="correspondance_no">Correspondance_No</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="correspondant_amount">Correspondant_Amount</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="voucher_line_id">Voucher_Line_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="voucher_id">Voucher_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 </tbody>
 </table>
