@@ -143,6 +143,9 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="trip_id">Trip_Id</h3>
+<p>Trip_Id</p>
+<p>Trip unique id</p>
+<p>Trip unique id</p>
 <table>
 <thead>
 <tr>
@@ -154,10 +157,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Order in Primary Key</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#trip_id">Trip_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
+<p>Document_Id</p>
+<p>Trip document data</p>
+<p>Trip document data</p>
 <table>
 <thead>
 <tr>
@@ -169,10 +298,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#document_id">Document_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-1">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="vehicle_set_id">Vehicle_Set_Id</h3>
+<p>Vehicle_Set_Id</p>
+<p>The vehicle set for which the trip is reported</p>
+<p>The vehicle set for which the trip is reported</p>
 <table>
 <thead>
 <tr>
@@ -184,10 +439,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Fleet_Vehicle_Sets.html">Fleet_Vehicle_Sets</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#vehicle_set_id">Vehicle_Set_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-2">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="crew_id">Crew_Id</h3>
+<p>Crew_Id</p>
+<p>The crew, which operated the vehicle set</p>
+<p>The crew, which operated the vehicle set</p>
 <table>
 <thead>
 <tr>
@@ -200,9 +581,135 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Fleet_Crews.html">Fleet_Crews</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#crew_id">Crew_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-3">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="primary_vehicle_starting_mileage">Primary_Vehicle_Starting_Mileage</h3>
+<p>Primary_Vehicle_Starting_Mileage</p>
+<p>Mileage of the primary vehicle in the vehicle set at the begining of the trip. NULL means unknown</p>
+<p>Mileage of the primary vehicle in the vehicle set at the begining of the trip. NULL means unknown</p>
 <table>
 <thead>
 <tr>
@@ -214,10 +721,113 @@
 <tr>
 <td>Type</td>
 <td>decimal(9, 0)</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#primary_vehicle_starting_mileage">Primary_Vehicle_Starting_Mileage</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="primary_vehicle_ending_mileage">Primary_Vehicle_Ending_Mileage</h3>
+<p>Primary_Vehicle_Ending_Mileage</p>
+<p>Mileage of the primary vehicle in the vehicle set at the ending of the trip. NULL means unknown</p>
+<p>Mileage of the primary vehicle in the vehicle set at the ending of the trip. NULL means unknown</p>
 <table>
 <thead>
 <tr>
@@ -230,9 +840,112 @@
 <td>Type</td>
 <td>decimal(9, 0)</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#primary_vehicle_ending_mileage">Primary_Vehicle_Ending_Mileage</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
+<p>Is_Single_Execution</p>
+<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
 <tr>
@@ -244,10 +957,132 @@
 <tr>
 <td>Type</td>
 <td>bit</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#is_single_execution">Is_Single_Execution</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-4">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
+<p>Is_Released</p>
+<p>True if the document is not void and its state is released or greater</p>
+<p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
 <tr>
@@ -260,9 +1095,129 @@
 <td>Type</td>
 <td>bit</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#is_released">Is_Released</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-5">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
+<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -274,6 +1229,106 @@
 <tr>
 <td>Type</td>
 <td>timestamp</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Fleet_Trips.html">Fleet_Trips</a>.<a href="Fleet_Trips.html#row_version">Row_Version</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>

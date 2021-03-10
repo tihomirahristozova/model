@@ -103,6 +103,9 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="price_per_unit">Price_Per_Unit</h3>
+<p>Price_Per_Unit</p>
+<p>The unit price of the received products, in the documents currency.</p>
+<p>The unit price of the received products, in the documents currency.</p>
 <table>
 <thead>
 <tr>
@@ -115,9 +118,112 @@
 <td>Type</td>
 <td>decimal(14, 5)</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Scm_Receiving_Order_Lines.html">Scm_Receiving_Order_Lines</a>.<a href="Scm_Receiving_Order_Lines.html#price_per_unit">Price_Per_Unit</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="document_currency_id">Document_Currency_Id</h3>
+<p>Document_Currency_Id</p>
+<p>The currency of the unit prices and amounts in the document.</p>
+<p>The currency of the unit prices and amounts in the document.</p>
 <table>
 <thead>
 <tr>
@@ -129,6 +235,129 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Currencies.html">Gen_Currencies</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Scm_Receiving_Orders.html">Scm_Receiving_Orders</a>.<a href="Scm_Receiving_Orders.html#document_currency_id">Document_Currency_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>

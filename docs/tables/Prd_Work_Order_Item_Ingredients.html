@@ -204,6 +204,9 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_ord">Line_Ord</h3>
+<p>Line_Ord</p>
+<p>The order of the line within the item.</p>
+<p>The order of the line within the item.</p>
 <table>
 <thead>
 <tr>
@@ -216,9 +219,141 @@
 <td>Type</td>
 <td>int</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Autoincrement</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#line_ord">Line_Ord</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>yes</td>
+</tr>
 </tbody>
 </table>
 <h3 id="work_order_item_id">Work_Order_Item_Id</h3>
+<p>Work_Order_Item_Id</p>
+<p>The work order item for which the materials in this line are used. If NULL means that the materials are distributed amongst all work order items in the document.</p>
+<p>The work order item for which the materials in this line are used. If NULL means that the materials are distributed amongst all work order items in the document.</p>
 <table>
 <thead>
 <tr>
@@ -230,10 +365,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Prd_Work_Order_Items.html">Prd_Work_Order_Items</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#work_order_item_id">Work_Order_Item_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-1">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="material_id">Material_Id</h3>
+<p>Material_Id</p>
+<p>The Id of the consumed material (Gen_Products_Table)</p>
+<p>The Id of the consumed material (Gen_Products_Table)</p>
 <table>
 <thead>
 <tr>
@@ -246,9 +507,135 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Products.html">Gen_Products</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#material_id">Material_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-2">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
 </tbody>
 </table>
 <h3 id="used_quantity">Used_Quantity</h3>
+<p>Used_Quantity</p>
+<p>The quantity of the material consumed in the operation</p>
+<p>The quantity of the material consumed in the operation</p>
 <table>
 <thead>
 <tr>
@@ -261,9 +648,112 @@
 <td>Type</td>
 <td>decimal(18, 3)</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#used_quantity">Used_Quantity</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="used_quantity_unit_id">Used_Quantity_Unit_Id</h3>
+<p>Used_Quantity_Unit_Id</p>
+<p>The measurement unit of the quantity of the material consumed in the operation</p>
+<p>The measurement unit of the quantity of the material consumed in the operation</p>
 <table>
 <thead>
 <tr>
@@ -275,10 +765,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#used_quantity_unit_id">Used_Quantity_Unit_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-3">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
+<p>Store_Id</p>
+<p>The store from which to retrieve the material.</p>
+<p>The store from which to retrieve the material.</p>
 <table>
 <thead>
 <tr>
@@ -291,9 +907,133 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Inv_Stores.html">Inv_Stores</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#store_id">Store_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-4">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
+<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -306,9 +1046,116 @@
 <td>Type</td>
 <td>nvarchar(254)</td>
 </tr>
+<tr>
+<td>Is Mulitlanguage</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None, IsLongString</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#notes">Notes</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>254</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="id">Id</h3>
+<p>Id</p>
+<p>The Id of the production order operation</p>
+<p>The Id of the production order operation</p>
 <table>
 <thead>
 <tr>
@@ -321,9 +1168,133 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Order in Primary Key</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#id">Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-5">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
+<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -336,9 +1307,112 @@
 <td>Type</td>
 <td>timestamp</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#row_version">Row_Version</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
+<p>Serial_Number_Id</p>
+<p>If not NULL, specifies the serial number of the ingredient</p>
+<p>If not NULL, specifies the serial number of the ingredient</p>
 <table>
 <thead>
 <tr>
@@ -350,10 +1424,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Inv_Serial_Numbers.html">Inv_Serial_Numbers</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#serial_number_id">Serial_Number_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-6">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_code_id">Product_Code_Id</h3>
+<p>Product_Code_Id</p>
+<p>Selects the product thru some of the product codes.</p>
+<p>Selects the product thru some of the product codes.</p>
 <table>
 <thead>
 <tr>
@@ -365,10 +1565,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Product_Codes.html">Gen_Product_Codes</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#product_code_id">Product_Code_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-7">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lot_id">Lot_Id</h3>
+<p>Lot_Id</p>
+<p>Lot from which to get the material. When NULL, any lot can be used.</p>
+<p>Lot from which to get the material. When NULL, any lot can be used.</p>
 <table>
 <thead>
 <tr>
@@ -381,9 +1707,135 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Inv_Lots.html">Inv_Lots</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#lot_id">Lot_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-8">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="used_quantity_base">Used_Quantity_Base</h3>
+<p>Used_Quantity_Base</p>
+<p>The equivalence of Used Quantity in the base measurement category of the material.</p>
+<p>The equivalence of Used Quantity in the base measurement category of the material.</p>
 <table>
 <thead>
 <tr>
@@ -396,9 +1848,112 @@
 <td>Type</td>
 <td>decimal(18, 3)</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#used_quantity_base">Used_Quantity_Base</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="operation_id">Operation_Id</h3>
+<p>Operation_Id</p>
+<p>Specifies for which operation this ingredient is used</p>
+<p>Specifies for which operation this ingredient is used</p>
 <table>
 <thead>
 <tr>
@@ -411,9 +1966,135 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Prd_Operations.html">Prd_Operations</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#operation_id">Operation_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-9">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="distribute_by">Distribute_By</h3>
+<p>Distribute_By</p>
+<p>Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT NULL iif Work_Order_Item_Id is NULL. MC=Measurement, SP=Standard_Price</p>
+<p>Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT NULL iif Work_Order_Item_Id is NULL. MC=Measurement, SP=Standard_Price</p>
 <table>
 <thead>
 <tr>
@@ -426,9 +2107,120 @@
 <td>Type</td>
 <td>nvarchar(2)</td>
 </tr>
+<tr>
+<td>Is Mulitlanguage</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Allowed Values</td>
+<td><code>SP</code>, <code>MC</code>, <code>SC</code></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#distribute_by">Distribute_By</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="principal_recipe_ingredient_id">Principal_Recipe_Ingredient_Id</h3>
+<p>Principal_Recipe_Ingredient_Id</p>
+<p>The principal recipe ingredient on which this record is based.</p>
+<p>The principal recipe ingredient on which this record is based.</p>
 <table>
 <thead>
 <tr>
@@ -440,10 +2232,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#principal_recipe_ingredient_id">Principal_Recipe_Ingredient_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-10">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_bin_id">Store_Bin_Id</h3>
+<p>Store_Bin_Id</p>
+<p>The store bin from which to take the ingredients</p>
+<p>The store bin from which to take the ingredients</p>
 <table>
 <thead>
 <tr>
@@ -455,10 +2373,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Inv_Store_Bins.html">Inv_Store_Bins</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#store_bin_id">Store_Bin_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-11">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="fixed_scrap_quantity">Fixed_Scrap_Quantity</h3>
+<p>Fixed_Scrap_Quantity</p>
+<p>The quantity of the material, which will be used for setup.</p>
+<p>The quantity of the material, which will be used for setup.</p>
 <table>
 <thead>
 <tr>
@@ -470,10 +2514,111 @@
 <tr>
 <td>Type</td>
 <td>decimal(18, 3)</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#fixed_scrap_quantity">Fixed_Scrap_Quantity</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="work_order_id">Work_Order_Id</h3>
+<p>Work_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -485,10 +2630,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#work_order_id">Work_Order_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-12">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="distribute_by_measurement_category_id">Distribute_By_Measurement_Category_Id</h3>
+<p>Distribute_By_Measurement_Category_Id</p>
+<p>Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT NULL iif Distribute_By = MC.</p>
+<p>Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT NULL iif Distribute_By = MC.</p>
 <table>
 <thead>
 <tr>
@@ -501,9 +2772,135 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Measurement_Categories.html">Gen_Measurement_Categories</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#distribute_by_measurement_category_id">Distribute_By_Measurement_Category_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-13">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="used_standard_quantity_base">Used_Standard_Quantity_Base</h3>
+<p>Used_Standard_Quantity_Base</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.</p>
 <table>
 <thead>
 <tr>
@@ -515,6 +2912,106 @@
 <tr>
 <td>Type</td>
 <td>decimal(18, 3)</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Work_Order_Item_Ingredients.html">Prd_Work_Order_Item_Ingredients</a>.<a href="Prd_Work_Order_Item_Ingredients.html#used_standard_quantity_base">Used_Standard_Quantity_Base</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>

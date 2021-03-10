@@ -38,170 +38,1289 @@
 
 ### Enterprise_Company_Id
 
+
+Enterprise_Company_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|yes|
+|Order in Primary Key|1|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|NewGuid|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Enterprise_Company_Id](Gen_Enterprise_Companies.md#enterprise_company_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
 
 ### Company_Id
 
+
+Company_Id
+
+
+Contains the base company data on which this enterprise company is based.
+
+
+Contains the base company data on which this enterprise company is based.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Cm_Companies](Cm_Companies.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Company_Id](Gen_Enterprise_Companies.md#company_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Company_Name
 
+
+Company_Name
+
+
+The name of the party
+
+
+The name of the party
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Parties](Gen_Parties.md).[Party_Name](Gen_Parties.md#party_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
+|Like|None|no|no|
 
 ### Party_Id
 
+
+Party_Id
+
+
+Base party Id
+
+
+Base party Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Parties](Gen_Parties.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[Party_Id](Cm_Companies.md#party_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
 
 ### Registration_Type
 
+
+Registration_Type
+
+
+Legal registration type - like LTD., PLC, etc. NULL means unknown
+
+
+Legal registration type - like LTD., PLC, etc. NULL means unknown
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[Registration_Type](Cm_Companies.md#registration_type)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|yes|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|yes|
 
 ### Registration_Number
 
+
+Registration_Number
+
+
+Unique, government-assigned registration number. NULL means unknown
+
+
+Unique, government-assigned registration number. NULL means unknown
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[Registration_Number](Cm_Companies.md#registration_number)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
+|Like|None|no|no|
 
 ### Registration_VAT_Number
 
+
+Registration_VAT_Number
+
+
+VAT registration number where applicable. NULL means that VAT number is not applicable or unknown
+
+
+VAT registration number where applicable. NULL means that VAT number is not applicable or unknown
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[Registration_VAT_Number](Cm_Companies.md#registration_vat_number)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|yes|
 
 ### Responsible_Person_Name
 
+
+Responsible_Person_Name
+
+
+Primary responsible person of the company. NULL means unknown.
+
+
+Primary responsible person of the company. NULL means unknown.
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[Responsible_Person_Name](Cm_Companies.md#responsible_person_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Registration_Responsible_Person_Id
 
+
+Registration_Responsible_Person_Id
+
+
+The personal record of the primary responsible person as per registration. NULL means unknown
+
+
+The personal record of the primary responsible person as per registration. NULL means unknown
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Cm_Persons](Cm_Persons.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[Registration_Responsible_Person_Id](Cm_Companies.md#registration_responsible_person_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Registration_Responsible_Person_Name
 
+
+Registration_Responsible_Person_Name
+
+
+The name of the party
+
+
+The name of the party
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Parties](Gen_Parties.md).[Party_Name](Gen_Parties.md#party_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
+|Like|None|no|no|
 
 ### Registration_Primary_Address
 
+
+Registration_Primary_Address
+
+
+The primary registration address of the company.
+
+
+The primary registration address of the company.
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[Registration_Primary_Address](Cm_Companies.md#registration_primary_address)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|200|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|yes|
 
 ### Country_Id
 
+
+Country_Id
+
+
+The country, where the company is registered.
+
+
+The country, where the company is registered.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Countries](Gen_Countries.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[Country_Id](Cm_Companies.md#country_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|yes|
 
 ### Country_Name
 
+
+Country_Name
+
+
+Name of the country
+
+
+Name of the country
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Countries](Gen_Countries.md).[Country_Name](Gen_Countries.md#country_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### City
 
+
+City
+
+
+The city in which the company is registered.
+
+
+The city in which the company is registered.
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Cm_Companies](Cm_Companies.md).[City](Cm_Companies.md#city)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Base_Currency_Id
 
+
+Base_Currency_Id
+
+
+The base currency for summary reporting for this company.
+
+
+The base currency for summary reporting for this company.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Base_Currency_Id](Gen_Enterprise_Companies.md#base_currency_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
 
 ### Base_Currency_Name
 
+
+Base_Currency_Name
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Currencies](Gen_Currencies.md).[Currency_Name](Gen_Currencies.md#currency_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Base_Currency_Sign
 
+
+Base_Currency_Sign
+
+
+The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.
+
+
+The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Currencies](Gen_Currencies.md).[Currency_Sign](Gen_Currencies.md#currency_sign)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
+|Like|None|no|no|
 
 ### Default_Costing_Method
 
+
+Default_Costing_Method
+
+
+Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost
+
+
+Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Allowed Values|`AVG`, `EXP`, `BLD`|
+|Default Value|AVG|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Default_Costing_Method](Gen_Enterprise_Companies.md#default_costing_method)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Default_Language
 
+
+Default_Language
+
+
+The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).
+
+
+The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Allowed Values|`bg`, `en`|
+|Default Value|en|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Default_Language](Gen_Enterprise_Companies.md#default_language)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Exchange_Difference_Debit_Account_Id
 
+
+Exchange_Difference_Debit_Account_Id
+
+
+Account for balancing accounting vouchers with debit difference due to currency exchanges
+
+
+Account for balancing accounting vouchers with debit difference due to currency exchanges
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Exchange_Difference_Debit_Account_Id](Gen_Enterprise_Companies.md#exchange_difference_debit_account_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Exchange_Difference_Credit_Account_Id
 
+
+Exchange_Difference_Credit_Account_Id
+
+
+Account for balancing accounting vouchers with credit difference due to currency exchanges
+
+
+Account for balancing accounting vouchers with credit difference due to currency exchanges
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Exchange_Difference_Credit_Account_Id](Gen_Enterprise_Companies.md#exchange_difference_credit_account_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Advance_Product_Id
 
+
+Advance_Product_Id
+
+
+Product that is used for handling advances in trade documents.
+
+
+Product that is used for handling advances in trade documents.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Products](Gen_Products.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Advance_Product_Id](Gen_Enterprise_Companies.md#advance_product_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### VAT_Document_Amount_Type_Id
 
+
+VAT_Document_Amount_Type_Id
+
+
+The document amount that is used to determine the amount of the VAT entries when they are generated.
+
+
+The document amount that is used to determine the amount of the VAT entries when they are generated.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[VAT_Document_Amount_Type_Id](Gen_Enterprise_Companies.md#vat_document_amount_type_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Bank_Code
 
+
+Bank_Code
+
+
+The code of the bank, usually the BIC code
+
+
+The code of the bank, usually the BIC code
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Code](Gen_Party_Bank_Accounts.md#bank_code)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Bank_Name
 
+
+Bank_Name
+
+
+The full name of the bank
+
+
+The full name of the bank
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Name](Gen_Party_Bank_Accounts.md#bank_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|150|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Bank_Branch_Name
 
+
+Bank_Branch_Name
+
+
+The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments
+
+
+The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Branch_Name](Gen_Party_Bank_Accounts.md#bank_branch_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
 
 ### Bank_Address
 
+
+Bank_Address
+
+
+The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments
+
+
+The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|yes|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Address](Gen_Party_Bank_Accounts.md#bank_address)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
 
 ### Bank_Account_Code
 
+
+Bank_Account_Code
+
+
+The code of the account, usually the IBAN code
+
+
+The code of the account, usually the IBAN code
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Account_Code](Gen_Party_Bank_Accounts.md#bank_account_code)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|200|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
+|Like|None|no|no|
 
 

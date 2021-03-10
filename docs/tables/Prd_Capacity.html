@@ -134,6 +134,7 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="capacity_id">Capacity_Id</h3>
+<p>Capacity_Id</p>
 <table>
 <thead>
 <tr>
@@ -145,10 +146,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Order in Primary Key</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Capacity.html">Prd_Capacity</a>.<a href="Prd_Capacity.html#capacity_id">Capacity_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="workgroup_resource_id">Workgroup_Resource_Id</h3>
+<p>Workgroup_Resource_Id</p>
+<p>The capacity-constrained resource</p>
+<p>The capacity-constrained resource</p>
 <table>
 <thead>
 <tr>
@@ -161,9 +288,135 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Prd_Workgroup_Resources.html">Prd_Workgroup_Resources</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Capacity.html">Prd_Capacity</a>.<a href="Prd_Capacity.html#workgroup_resource_id">Workgroup_Resource_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-1">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="calendar_date">Calendar_Date</h3>
+<p>Calendar_Date</p>
+<p>Date of the availability period</p>
+<p>Date of the availability period</p>
 <table>
 <thead>
 <tr>
@@ -175,10 +428,136 @@
 <tr>
 <td>Type</td>
 <td>datetime</td>
+</tr>
+<tr>
+<td>DateTime Format</td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Capacity.html">Prd_Capacity</a>.<a href="Prd_Capacity.html#calendar_date">Calendar_Date</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-2">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="available_start_time">Available_Start_Time</h3>
+<p>Available_Start_Time</p>
+<p>Start of availability period during Calendar_Date</p>
+<p>Start of availability period during Calendar_Date</p>
 <table>
 <thead>
 <tr>
@@ -190,10 +569,117 @@
 <tr>
 <td>Type</td>
 <td>datetime</td>
+</tr>
+<tr>
+<td>DateTime Format</td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Capacity.html">Prd_Capacity</a>.<a href="Prd_Capacity.html#available_start_time">Available_Start_Time</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="available_end_time">Available_End_Time</h3>
+<p>Available_End_Time</p>
+<p>End of availability period during Calendar_Date</p>
+<p>End of availability period during Calendar_Date</p>
 <table>
 <thead>
 <tr>
@@ -206,9 +692,116 @@
 <td>Type</td>
 <td>datetime</td>
 </tr>
+<tr>
+<td>DateTime Format</td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Capacity.html">Prd_Capacity</a>.<a href="Prd_Capacity.html#available_end_time">Available_End_Time</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="available_quantity">Available_Quantity</h3>
+<p>Available_Quantity</p>
+<p>Quantity of the resource, available to production</p>
+<p>Quantity of the resource, available to production</p>
 <table>
 <thead>
 <tr>
@@ -221,9 +814,110 @@
 <td>Type</td>
 <td>decimal(9, 0)</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Capacity.html">Prd_Capacity</a>.<a href="Prd_Capacity.html#available_quantity">Available_Quantity</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
+<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -235,6 +929,106 @@
 <tr>
 <td>Type</td>
 <td>timestamp</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Prd_Capacity.html">Prd_Capacity</a>.<a href="Prd_Capacity.html#row_version">Row_Version</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>

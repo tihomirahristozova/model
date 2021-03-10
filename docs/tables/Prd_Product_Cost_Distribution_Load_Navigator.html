@@ -208,6 +208,7 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="type">Type</h3>
+<p>Type</p>
 <table>
 <thead>
 <tr>
@@ -219,10 +220,111 @@
 <tr>
 <td>Type</td>
 <td>nvarchar</td>
+</tr>
+<tr>
+<td>Is Mulitlanguage</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_document_type_id">Transaction_Document_Type_Id</h3>
+<p>Transaction_Document_Type_Id</p>
 <table>
 <thead>
 <tr>
@@ -234,10 +336,134 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Document_Types.html">Gen_Document_Types</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#document_type_id">Document_Type_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_document_date">Transaction_Document_Date</h3>
+<p>Transaction_Document_Date</p>
 <table>
 <thead>
 <tr>
@@ -249,10 +475,140 @@
 <tr>
 <td>Type</td>
 <td>date</td>
+</tr>
+<tr>
+<td>DateTime Format</td>
+<td>Date</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>CurrentDate</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#document_date">Document_Date</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-1">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_document_no">Transaction_Document_No</h3>
+<p>Transaction_Document_No</p>
 <table>
 <thead>
 <tr>
@@ -264,10 +620,140 @@
 <tr>
 <td>Type</td>
 <td>nvarchar</td>
+</tr>
+<tr>
+<td>Is Mulitlanguage</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#document_no">Document_No</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-2">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_store_id">Transaction_Store_Id</h3>
+<p>Transaction_Store_Id</p>
 <table>
 <thead>
 <tr>
@@ -279,10 +765,134 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Inv_Stores.html">Inv_Stores</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#store_id">Store_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-3">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_enterprise_company_id">Transaction_Enterprise_Company_Id</h3>
+<p>Transaction_Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -294,10 +904,134 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Enterprise_Companies.html">Gen_Enterprise_Companies</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#enterprise_company_id">Enterprise_Company_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-4">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_transaction_line_id">Store_Transaction_Line_Id</h3>
+<p>Store_Transaction_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -309,10 +1043,134 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Order in Primary Key</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#transaction_line_id">Transaction_Line_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-5">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_line_no">Transaction_Line_No</h3>
+<p>Transaction_Line_No</p>
 <table>
 <thead>
 <tr>
@@ -324,10 +1182,117 @@
 <tr>
 <td>Type</td>
 <td>int</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Autoincrement</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#line_no">Line_No</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
+<p>Product_Id</p>
+<p>The item that was received/issued</p>
+<p>The item that was received/issued</p>
 <table>
 <thead>
 <tr>
@@ -340,9 +1305,133 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Products.html">Gen_Products</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#product_id">Product_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-6">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
 </tbody>
 </table>
 <h3 id="product_name">Product_Name</h3>
+<p>Product_Name</p>
 <table>
 <thead>
 <tr>
@@ -355,9 +1444,141 @@
 <td>Type</td>
 <td>nvarchar</td>
 </tr>
+<tr>
+<td>Is Mulitlanguage</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Products.html">Gen_Products</a>.<a href="Gen_Products.html#product_name">Product_Name</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-7">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="quantity_base">Quantity_Base</h3>
+<p>Quantity_Base</p>
+<p>The quantity of the stock received/issued in base measurement unit</p>
+<p>The quantity of the stock received/issued in base measurement unit</p>
 <table>
 <thead>
 <tr>
@@ -369,10 +1590,130 @@
 <tr>
 <td>Type</td>
 <td>decimal(0, 0)</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#quantity_base">Quantity_Base</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td>N3</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-8">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="adjusted_base_cost">Adjusted_Base_Cost</h3>
+<p>Adjusted_Base_Cost</p>
 <table>
 <thead>
 <tr>
@@ -385,9 +1726,110 @@
 <td>Type</td>
 <td>decimal(0, 0)</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#line_base_cost">Line_Base_Cost</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="cost_type_id">Cost_Type_Id</h3>
+<p>Cost_Type_Id</p>
 <table>
 <thead>
 <tr>
@@ -400,9 +1842,135 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Cost_Types.html">Cost_Types</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Cost_Distribution_Results.html">Cost_Distribution_Results</a>.<a href="Cost_Distribution_Results.html#cost_type_id">Cost_Type_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-9">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="distributed_amount_base">Distributed_Amount_Base</h3>
+<p>Distributed_Amount_Base</p>
+<p>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.</p>
+<p>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.</p>
 <table>
 <thead>
 <tr>
@@ -415,9 +1983,110 @@
 <td>Type</td>
 <td>decimal(0, 0)</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Cost_Distribution_Results.html">Cost_Distribution_Results</a>.<a href="Cost_Distribution_Results.html#distributed_amount_base">Distributed_Amount_Base</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="result_line_no">Result_Line_No</h3>
+<p>Result_Line_No</p>
 <table>
 <thead>
 <tr>
@@ -430,9 +2099,114 @@
 <td>Type</td>
 <td>int</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Autoincrement</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Cost_Distribution_Results.html">Cost_Distribution_Results</a>.<a href="Cost_Distribution_Results.html#line_no">Line_No</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="cost_distribution_id">Cost_Distribution_Id</h3>
+<p>Cost_Distribution_Id</p>
 <table>
 <thead>
 <tr>
@@ -444,10 +2218,134 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Order in Primary Key</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Cost_Distributions.html">Cost_Distributions</a>.<a href="Cost_Distributions.html#cost_distribution_id">Cost_Distribution_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-10">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="start_date">Start_Date</h3>
+<p>Start_Date</p>
 <table>
 <thead>
 <tr>
@@ -459,10 +2357,136 @@
 <tr>
 <td>Type</td>
 <td>date</td>
+</tr>
+<tr>
+<td>DateTime Format</td>
+<td>Date</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Cost_Distributions.html">Cost_Distributions</a>.<a href="Cost_Distributions.html#start_date">Start_Date</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-11">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="end_date">End_Date</h3>
+<p>End_Date</p>
+<p>The ending date of the covered period.</p>
+<p>The ending date of the covered period.</p>
 <table>
 <thead>
 <tr>
@@ -475,9 +2499,135 @@
 <td>Type</td>
 <td>date</td>
 </tr>
+<tr>
+<td>DateTime Format</td>
+<td>Date</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Cost_Distributions.html">Cost_Distributions</a>.<a href="Cost_Distributions.html#end_date">End_Date</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-12">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
+<p>Store_Id</p>
+<p>The store (warehouse) for which the distribution is made. NULL means that the distribution covers multiple warehouses.</p>
+<p>The store (warehouse) for which the distribution is made. NULL means that the distribution covers multiple warehouses.</p>
 <table>
 <thead>
 <tr>
@@ -490,9 +2640,135 @@
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
+<tr>
+<td><code>NULL</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Inv_Stores.html">Inv_Stores</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Cost_Distributions.html">Cost_Distributions</a>.<a href="Cost_Distributions.html#store_id">Store_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-13">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>yes</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="document_no">Document_No</h3>
+<p>Document_No</p>
+<p>Document number, unique within Document_Type_Id</p>
+<p>Document number, unique within Document_Type_Id</p>
 <table>
 <thead>
 <tr>
@@ -505,9 +2781,141 @@
 <td>Type</td>
 <td>nvarchar</td>
 </tr>
+<tr>
+<td>Is Mulitlanguage</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#document_no">Document_No</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-14">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="document_date">Document_Date</h3>
+<p>Document_Date</p>
+<p>The date on which the document was issued</p>
+<p>The date on which the document was issued</p>
 <table>
 <thead>
 <tr>
@@ -520,9 +2928,141 @@
 <td>Type</td>
 <td>date</td>
 </tr>
+<tr>
+<td>DateTime Format</td>
+<td>Date</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>CurrentDate</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#document_date">Document_Date</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-15">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>yes</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h3 id="document_type_id">Document_Type_Id</h3>
+<p>Document_Type_Id</p>
+<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.</p>
+<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.</p>
 <table>
 <thead>
 <tr>
@@ -534,10 +3074,136 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Document_Types.html">Gen_Document_Types</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#document_type_id">Document_Type_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-16">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<p>Enterprise_Company_Id</p>
+<p>The enterprise company which issued the document</p>
+<p>The enterprise company which issued the document</p>
 <table>
 <thead>
 <tr>
@@ -549,6 +3215,129 @@
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Enterprise_Companies.html">Gen_Enterprise_Companies</a></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Derived From</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#enterprise_company_id">Enterprise_Company_Id</a></td>
+</tr>
+<tr>
+<td>Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-filters-17">Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>NULL</td>
+<td>no</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>

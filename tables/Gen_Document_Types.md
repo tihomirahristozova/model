@@ -25,86 +25,590 @@ List of user-defined document types. Each type has associated system entity (obj
 
 ### Id
 
+
+Id
+
+
+The unique Id of the document type
+
+
+The unique Id of the document type
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|yes|
+|Order in Primary Key|1|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|NewGuid|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Id](Gen_Document_Types.md#id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Access_Key_Id
 
+
+Access_Key_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Access_Key_Id](Gen_Document_Types.md#access_key_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Code
+
+
+Code
+
+
+Unique descriptive code of the document type
+
+
+Unique descriptive code of the document type
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(16)|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|yes|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Code](Gen_Document_Types.md#code)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|16|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
+|Like|None|no|no|
 
 ### Type_Name
+
+
+Type_Name
+
+
+Description of the document type
+
+
+Description of the document type
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
+|Is Mulitlanguage|yes|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|yes|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Type_Name](Gen_Document_Types.md#type_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|254|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Entity_Name
+
+
+Entity_Name
+
+
+System entity, which contains the documents
+
+
+System entity, which contains the documents
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|yes|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Entity_Name](Gen_Document_Types.md#entity_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|64|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Schema_XML
+
+
+Schema_XML
+
+
+Obsolete. Not used.
+
+
+Obsolete. Not used.
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(1073741823)|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Schema_XML](Gen_Document_Types.md#schema_xml)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|1073741823|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Create_Manully
+
+
+Create_Manully
+
+
+0 if documents with this document type only can be generated; 1 - the user can create documents with this type
+
+
+0 if documents with this document type only can be generated; 1 - the user can create documents with this type
 
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|True|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Create_Manully](Gen_Document_Types.md#create_manully)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Short|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Sequence_Id
+
+
+Sequence_Id
+
+
+The sequence that will be used to give new numbers to the documents of this type
+
+
+The sequence that will be used to give new numbers to the documents of this type
 
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Sequences](Gen_Sequences.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Sequence_Id](Gen_Document_Types.md#sequence_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Notes
+
+
+Notes
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None, IsLongString|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Notes](Gen_Document_Types.md#notes)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|254|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Description
+
+
+Description
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(2147483647)|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None, IsLongString|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Description](Gen_Document_Types.md#description)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|2147483647|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|no|
 
 ### Generate_Single_Document
 
+
+Generate_Single_Document
+
+
+Create maximum one document when documents from this type are generated by parent documents (usually from another document type)
+
+
+Create maximum one document when documents from this type are generated by parent documents (usually from another document type)
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|False|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Generate_Single_Document](Gen_Document_Types.md#generate_single_document)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Short|
+|Supports EQUALS_IN|no|
 
 ### Disallow_Opposite_Values_Generation
 
+
+Disallow_Opposite_Values_Generation
+
+
+Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type
+
+
+Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|False|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Disallow_Opposite_Values_Generation](Gen_Document_Types.md#disallow_opposite_values_generation)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Short|
+|Supports EQUALS_IN|no|
 
 ### Transitional_Document
 
+
+Transitional_Document
+
+
+If checked determines that the documents from this type are automatically managed by the system and don't require management from the users
+
+
+If checked determines that the documents from this type are automatically managed by the system and don't require management from the users
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|False|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Transitional_Document](Gen_Document_Types.md#transitional_document)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Short|
+|Supports EQUALS_IN|no|
 
 ### Row_Version
+
+
+Row_Version
 
 | Property | Value |
 | - | - |
 |Type|timestamp|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Document_Types](Gen_Document_Types.md).[Row_Version](Gen_Document_Types.md#row_version)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 

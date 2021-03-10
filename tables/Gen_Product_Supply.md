@@ -47,218 +47,1509 @@ Contains supply rules, which are used by the procurement planning system. Entity
 
 ### Store_Id
 
+
+Store_Id
+
+
+The store for which this rule is defined. When null, the rule is valid for all stores.
+
+
+The store for which this rule is defined. When null, the rule is valid for all stores.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Inv_Stores](Inv_Stores.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Store_Id](Gen_Product_Supply.md#store_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|1|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Preferred_Supplier_Id
 
+
+Preferred_Supplier_Id
+
+
+Preferred supplier for the product. NULL if there is no preferred supplier
+
+
+Preferred supplier for the product. NULL if there is no preferred supplier
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Scm_Suppliers](Scm_Suppliers.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Preferred_Supplier_Id](Gen_Product_Supply.md#preferred_supplier_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Planning_Lead_Time_Days
+
+
+Planning_Lead_Time_Days
+
+
+The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components
+
+
+The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components
 
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|0|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Lead_Time_Days](Gen_Product_Supply.md#planning_lead_time_days)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|3|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Order_Point_Quantity_Base
 
+
+Order_Point_Quantity_Base
+
+
+Order point quantity under the OP replenishment system
+
+
+Order point quantity under the OP replenishment system
+
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|0|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Point_Quantity_Base](Gen_Product_Supply.md#order_point_quantity_base)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|4|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Planning_Maximum_Inventory_Quantity_Base
 
+
+Planning_Maximum_Inventory_Quantity_Base
+
+
+Maximum inventory. NULL if N/A
+
+
+Maximum inventory. NULL if N/A
+
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Maximum_Inventory_Quantity_Base](Gen_Product_Supply.md#planning_maximum_inventory_quantity_base)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|5|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Order_Multiple
+
+
+Order_Multiple
+
+
+1 if the order qty should be multiple of lot size when buying or making
+
+
+1 if the order qty should be multiple of lot size when buying or making
 
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|False|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Multiple](Gen_Product_Supply.md#order_multiple)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|6|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Order_Lot_Size_Quantity_Base
+
+
+Order_Lot_Size_Quantity_Base
+
+
+The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit
+
+
+The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit
 
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|1|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Lot_Size_Quantity_Base](Gen_Product_Supply.md#order_lot_size_quantity_base)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|7|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Order_Period_Start_Date
+
+
+Order_Period_Start_Date
+
+
+Start date of the first period under fixed period replenishment system. NULL - not yet specified
+
+
+Start date of the first period under fixed period replenishment system. NULL - not yet specified
 
 | Property | Value |
 | - | - |
 |Type|datetime|
+|DateTime Format|DateTime|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Period_Start_Date](Gen_Product_Supply.md#order_period_start_date)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Order_Period_Planning_Days
+
+
+Order_Period_Planning_Days
+
+
+For how many days in the future should be planned - for fixed period replenishment system. NULL - not yet specified
+
+
+For how many days in the future should be planned - for fixed period replenishment system. NULL - not yet specified
 
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Period_Planning_Days](Gen_Product_Supply.md#order_period_planning_days)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Manufacturing_Policy
+
+
+Manufacturing_Policy
+
+
+MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order
+
+
+MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(3)|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Allowed Values|`ATO`, `MTO`, `MTS`, `ETO`|
+|Default Value|MTS|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Manufacturing_Policy](Gen_Product_Supply.md#manufacturing_policy)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|3|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Product_Supply_Id
 
+
+Product_Supply_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|yes|
+|Order in Primary Key|1|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|NewGuid|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Product_Supply_Id](Gen_Product_Supply.md#product_supply_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Default_Store_Bin_Id
 
+
+Default_Store_Bin_Id
+
+
+Default store bin for new deliveries using this supply scheme
+
+
+Default store bin for new deliveries using this supply scheme
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Default_Store_Bin_Id](Gen_Product_Supply.md#default_store_bin_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### From_Store_Id
 
+
+From_Store_Id
+
+
+Used when the Procurement_Type is Transfer
+
+
+Used when the Procurement_Type is Transfer
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Inv_Stores](Inv_Stores.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[From_Store_Id](Gen_Product_Supply.md#from_store_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Is_Default
 
+
+Is_Default
+
+
+Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information.
+
+
+Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information.
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|True|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Is_Default](Gen_Product_Supply.md#is_default)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Is_Active
 
+
+Is_Active
+
+
+1 if this product supply is active
+
+
+1 if this product supply is active
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|True|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Is_Active](Gen_Product_Supply.md#is_active)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Enterprise_Company_Id
 
+
+Enterprise_Company_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Enterprise_Company_Id](Gen_Product_Supply.md#enterprise_company_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Product_Group_Id
 
+
+Product_Group_Id
+
+
+Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings
+
+
+Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Product_Groups](Gen_Product_Groups.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Product_Group_Id](Gen_Product_Supply.md#product_group_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Buyer_Name
+
+
+Buyer_Name
+
+
+The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy
+
+
+The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Buyer_Name](Gen_Product_Supply.md#buyer_name)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|64|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Order_Lot_Sizing_Method
+
+
+Order_Lot_Sizing_Method
+
+
+LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;
+
+
+LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(3)|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Allowed Values|`EOQ`, `FOQ`, `LFL`, `LFP`, `ROP`, `ROT`|
+|Default Value|ROP|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Lot_Sizing_Method](Gen_Product_Supply.md#order_lot_sizing_method)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|3|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Order_Minimum
+
+
+Order_Minimum
+
+
+Minimum order quantity both for buying and making
+
+
+Minimum order quantity both for buying and making
 
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|0|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Minimum](Gen_Product_Supply.md#order_minimum)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Generate_Document_Type_Id
+
+
+Generate_Document_Type_Id
+
+
+Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule.
+
+
+Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule.
 
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Generate_Document_Type_Id](Gen_Product_Supply.md#generate_document_type_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Fixed_Order_Quantity_Base
+
+
+Fixed_Order_Quantity_Base
+
+
+Fixed order quantity under the FOQ & EOQ replenishment system
+
+
+Fixed order quantity under the FOQ & EOQ replenishment system
 
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|0|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Fixed_Order_Quantity_Base](Gen_Product_Supply.md#fixed_order_quantity_base)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Order_Policy
+
+
+Order_Policy
+
+
+Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning
+
+
+Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(3)|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Allowed Values|`MRP`, `OPS`, `OPT`, `PRS`|
+|Default Value|OPS|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Policy](Gen_Product_Supply.md#order_policy)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|3|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Planning_Order_Cost_Base_Currency
+
+
+Planning_Order_Cost_Base_Currency
+
+
+Projected cost to place an order and set-up equipment
+
+
+Projected cost to place an order and set-up equipment
 
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Order_Cost_Base_Currency](Gen_Product_Supply.md#planning_order_cost_base_currency)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Planning_Order_Cycle_Days
+
+
+Planning_Order_Cycle_Days
+
+
+Number of days in one period under fixed period replenishment system. NULL - not yet specified
+
+
+Number of days in one period under fixed period replenishment system. NULL - not yet specified
 
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Order_Cycle_Days](Gen_Product_Supply.md#planning_order_cycle_days)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Planning_Annual_Carrying_Cost_Percent
+
+
+Planning_Annual_Carrying_Cost_Percent
+
+
+The expected carrying cost as percentage of inventory cost. NULL means unknown
+
+
+The expected carrying cost as percentage of inventory cost. NULL means unknown
 
 | Property | Value |
 | - | - |
 |Type|decimal(5, 4)|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None, IsPercent|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Annual_Carrying_Cost_Percent](Gen_Product_Supply.md#planning_annual_carrying_cost_percent)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Planning_Annual_Usage_Quantity_Base
 
+
+Planning_Annual_Usage_Quantity_Base
+
+
+Average usage of the product for 1 year. NUL means unknown
+
+
+Average usage of the product for 1 year. NUL means unknown
+
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Annual_Usage_Quantity_Base](Gen_Product_Supply.md#planning_annual_usage_quantity_base)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Planning_Horizon_Days
 
+
+Planning_Horizon_Days
+
+
+Number of days in the future for which to plan the demand and supply
+
+
+Number of days in the future for which to plan the demand and supply
+
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|0|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Horizon_Days](Gen_Product_Supply.md#planning_horizon_days)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Planning_Safety_Stock_Quantity_Base
+
+
+Planning_Safety_Stock_Quantity_Base
+
+
+Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product
+
+
+Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product
 
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|0|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Safety_Stock_Quantity_Base](Gen_Product_Supply.md#planning_safety_stock_quantity_base)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Planning_Time_Fence_Days
+
+
+Planning_Time_Fence_Days
+
+
+Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF
+
+
+Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF
 
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|1|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Time_Fence_Days](Gen_Product_Supply.md#planning_time_fence_days)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Standard_Cost_Per_Lot
+
+
+Standard_Cost_Per_Lot
+
+
+Standard cost for one lot of the product
+
+
+Standard cost for one lot of the product
 
 | Property | Value |
 | - | - |
 |Type|decimal(18, 4)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|0|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Standard_Cost_Per_Lot](Gen_Product_Supply.md#standard_cost_per_lot)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Procurement_Type
+
+
+Procurement_Type
+
+
+M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought
+
+
+M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(1)|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Allowed Values|`B`, `M`, `T`|
+|Default Value|B|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Procurement_Type](Gen_Product_Supply.md#procurement_type)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Supply_Schema_Id
 
+
+Supply_Schema_Id
+
+
+The supply schema to use for the distribution of the product among warehouses
+
+
+The supply schema to use for the distribution of the product among warehouses
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Supply_Schema_Id](Gen_Product_Supply.md#supply_schema_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Product_Id
 
+
+Product_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Products](Gen_Products.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Product_Id](Gen_Product_Supply.md#product_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Long|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Order_Maximum
+
+
+Order_Maximum
+
+
+Order maximum when buying or making. NULL means no maximum
+
+
+Order maximum when buying or making. NULL means no maximum
 
 | Property | Value |
 | - | - |
 |Type|decimal(18, 3)|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Maximum](Gen_Product_Supply.md#order_maximum)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Row_Version
+
+
+Row_Version
 
 | Property | Value |
 | - | - |
 |Type|timestamp|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Row_Version](Gen_Product_Supply.md#row_version)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 

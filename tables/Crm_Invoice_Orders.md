@@ -35,122 +35,867 @@ Invoice Orders can be created by different modules and order the creation of Inv
 
 ### Invoice_Order_Id
 
+
+Invoice_Order_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|yes|
+|Order in Primary Key|1|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|NewGuid|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Invoice_Order_Id](Crm_Invoice_Orders.md#invoice_order_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|0|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
 
 ### Document_Id
 
+
+Document_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|yes|
+|Referenced Table|[Gen_Documents](Gen_Documents.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Document_Id](Crm_Invoice_Orders.md#document_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|1|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
 
 ### Customer_Id
 
+
+Customer_Id
+
+
+The primary customer to whom to invoice
+
+
+The primary customer to whom to invoice
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Crm_Customers](Crm_Customers.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Customer_Id](Crm_Invoice_Orders.md#customer_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Document_Currency_Id
 
+
+Document_Currency_Id
+
+
+The currency in which the document is issued. All amounts are in this currency
+
+
+The currency in which the document is issued. All amounts are in this currency
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Document_Currency_Id](Crm_Invoice_Orders.md#document_currency_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|3|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Short|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
 
 ### Payment_Type_Id
 
+
+Payment_Type_Id
+
+
+When not NULL specifies the payment type for the invoice
+
+
+When not NULL specifies the payment type for the invoice
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Payment_Type_Id](Crm_Invoice_Orders.md#payment_type_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|4|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Payment_Type_Description
+
+
+Payment_Type_Description
+
+
+Description of the payment type. Initially copied from the name of the Payment Type
+
+
+Description of the payment type. Initially copied from the name of the Payment Type
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(20)|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Payment_Type_Description](Crm_Invoice_Orders.md#payment_type_description)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|20|
+|Order|5|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Delivery_Date
 
+
+Delivery_Date
+
+
+Date, when the delivery was effected. When NULL = document date
+
+
+Date, when the delivery was effected. When NULL = document date
+
 | Property | Value |
 | - | - |
 |Type|datetime|
+|DateTime Format|DateTime|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Delivery_Date](Crm_Invoice_Orders.md#delivery_date)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|6|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Notes
 
+
+Notes
+
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None, IsLongString|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Notes](Crm_Invoice_Orders.md#notes)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|254|
+|Order|7|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Credit_Note_Original_Invoice_Id
 
+
+Credit_Note_Original_Invoice_Id
+
+
+When the order is for credit note, may contain the original Invoice. NULL for normal orders or when the original document is unknown.
+
+
+When the order is for credit note, may contain the original Invoice. NULL for normal orders or when the original document is unknown.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Crm_Invoices](Crm_Invoices.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Credit_Note_Original_Invoice_Id](Crm_Invoice_Orders.md#credit_note_original_invoice_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|8|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Credit_Note_Description
+
+
+Credit_Note_Description
+
+
+Descriptions/reason for the credit note.
+
+
+Descriptions/reason for the credit note.
 
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
+|Is Mulitlanguage|no|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None, IsLongString|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Credit_Note_Description](Crm_Invoice_Orders.md#credit_note_description)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|254|
+|Order|9|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|no|
 
 ### Is_Single_Execution
 
+
+Is_Single_Execution
+
+
+Specifies whether the document is a single execution of its order document.
+
+
+Specifies whether the document is a single execution of its order document.
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|yes|
+|Sortable|no|
+|Attributes|None|
+|Default Value|False|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Is_Single_Execution](Crm_Invoice_Orders.md#is_single_execution)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
 
 ### Payment_Due_Start_Date
 
+
+Payment_Due_Start_Date
+
+
+The date when the payment becomes due for documents with one installment.
+
+
+The date when the payment becomes due for documents with one installment.
+
 | Property | Value |
 | - | - |
 |Type|datetime|
+|DateTime Format|DateTime|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Payment_Due_Start_Date](Crm_Invoice_Orders.md#payment_due_start_date)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Sales_Order_Id
 
+
+Sales_Order_Id
+
+
+Default value and filter for the lines. Used to differenciate the invoice order for each sales order.
+
+
+Default value and filter for the lines. Used to differenciate the invoice order for each sales order.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Crm_Sales_Orders](Crm_Sales_Orders.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Sales_Order_Id](Crm_Invoice_Orders.md#sales_order_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|100|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Credit_Note_Original_Invoice_Order_Id
 
+
+Credit_Note_Original_Invoice_Order_Id
+
+
+When the invoice is a credit note, can specify the original Invoice Order, on which this is based. NULL for normal invoice orders or when the original document is unknown.
+
+
+When the invoice is a credit note, can specify the original Invoice Order, on which this is based. NULL for normal invoice orders or when the original document is unknown.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Crm_Invoice_Orders](Crm_Invoice_Orders.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Credit_Note_Original_Invoice_Order_Id](Crm_Invoice_Orders.md#credit_note_original_invoice_order_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Deal_Type_Id
 
+
+Deal_Type_Id
+
+
+VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries.
+
+
+VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries.
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Deal_Type_Id](Crm_Invoice_Orders.md#deal_type_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Is_Released
+
+
+Is_Released
+
+
+True if the document is not void and its state is released or greater
+
+
+True if the document is not void and its state is released or greater
 
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|yes|
+|Sortable|no|
+|Attributes|None|
+|Default Value|False|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Is_Released](Crm_Invoice_Orders.md#is_released)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|yes|
 
 ### Payment_Due_Date
+
+
+Payment_Due_Date
+
+
+When not NULL specifies due date for the payment
+
+
+When not NULL specifies due date for the payment
 
 | Property | Value |
 | - | - |
 |Type|datetime|
+|DateTime Format|DateTime|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Payment_Due_Date](Crm_Invoice_Orders.md#payment_due_date)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Payment_Account_Id
+
+
+Payment_Account_Id
+
+
+When not NULL, specifies the default payment account for the payment order
+
+
+When not NULL, specifies the default payment account for the payment order
 
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Payment_Account_Id](Crm_Invoice_Orders.md#payment_account_id)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|yes|no|
 
 ### Apply_Date
+
+
+Apply_Date
+
+
+Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.
+
+
+Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.
 
 | Property | Value |
 | - | - |
 |Type|datetime|
+|DateTime Format|DateTime|
+|`NULL`|yes|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Apply_Date](Crm_Invoice_Orders.md#apply_date)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|no|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Row_Version
+
+
+Row_Version
 
 | Property | Value |
 | - | - |
 |Type|timestamp|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Derived From|[Crm_Invoice_Orders](Crm_Invoice_Orders.md).[Row_Version](Crm_Invoice_Orders.md#row_version)|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 

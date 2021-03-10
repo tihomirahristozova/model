@@ -56,278 +56,1619 @@
 
 ### Id
 
+
+Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Part_Number
 
+
+Part_Number
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Product_Group_Id
 
+
+Product_Group_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Product_Name
 
+
+Product_Name
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Base_Measurement_Category_Id
 
+
+Base_Measurement_Category_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Measurement_Unit_Id
 
+
+Measurement_Unit_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Product_Type_Id
 
+
+Product_Type_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Is_Serialized
 
+
+Is_Serialized
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Standard_Price_Per_Lot
 
+
+Standard_Price_Per_Lot
+
 | Property | Value |
 | - | - |
 |Type|decimal(0, 0)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Standard_Cost_Per_Lot
 
+
+Standard_Cost_Per_Lot
+
 | Property | Value |
 | - | - |
 |Type|decimal(0, 0)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Standard_Lot_Size_Base
 
+
+Standard_Lot_Size_Base
+
 | Property | Value |
 | - | - |
 |Type|decimal(0, 0)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Planning_Demand_Time_Fence_Days
 
+
+Planning_Demand_Time_Fence_Days
+
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Planning_Time_Fence_Days
 
+
+Planning_Time_Fence_Days
+
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Planning_Horizon_Days
 
+
+Planning_Horizon_Days
+
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Flushing_Method
 
+
+Flushing_Method
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Manufacturing_Policy
 
+
+Manufacturing_Policy
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### ABC_Class
 
+
+ABC_Class
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Supply_Schema_Id
 
+
+Supply_Schema_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Scrap_Rate
 
+
+Scrap_Rate
+
 | Property | Value |
 | - | - |
 |Type|decimal(0, 0)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Description
 
+
+Description
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Costing_Method
 
+
+Costing_Method
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Costing_Currency_Id
 
+
+Costing_Currency_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Active
 
+
+Active
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Guarantee_Period_Days
 
+
+Guarantee_Period_Days
+
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Creation_Time
 
+
+Creation_Time
+
 | Property | Value |
 | - | - |
 |Type|datetime|
+|DateTime Format|None|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Creation_User
 
+
+Creation_User
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Update_Time
+
+
+Update_Time
 
 | Property | Value |
 | - | - |
 |Type|datetime|
+|DateTime Format|None|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Update_User
 
+
+Update_User
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Purchase_Measurement_Unit_Id
 
+
+Purchase_Measurement_Unit_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Valuation_Group_Id
 
+
+Valuation_Group_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Origin_Country_Id
 
+
+Origin_Country_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Intrastat_Commodity_Code_Id
 
+
+Intrastat_Commodity_Code_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Intrastat_Supplementary_Unit_Id
 
+
+Intrastat_Supplementary_Unit_Id
+
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Use_Lots
 
+
+Use_Lots
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Lots_Issue
 
+
+Lots_Issue
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Expiry_Period_Days
+
+
+Expiry_Period_Days
 
 | Property | Value |
 | - | - |
 |Type|int|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Enterprise_Company_Id
+
+
+Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 ### Show_In_Catalog
 
+
+Show_In_Catalog
+
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Catalog_Description_Html
 
+
+Catalog_Description_Html
+
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Minimal_Sales_Price_Per_Lot
 
+
+Minimal_Sales_Price_Per_Lot
+
 | Property | Value |
 | - | - |
 |Type|decimal(0, 0)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Is_Featured
+
+
+Is_Featured
 
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Minimal_Sales_Quantity_Base
+
+
+Minimal_Sales_Quantity_Base
 
 | Property | Value |
 | - | - |
 |Type|decimal(0, 0)|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Short_Name
+
+
+Short_Name
 
 | Property | Value |
 | - | - |
 |Type|nvarchar|
+|Is Mulitlanguage|no|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Allow_Variable_Measurement_Ratios
+
+
+Allow_Variable_Measurement_Ratios
 
 | Property | Value |
 | - | - |
 |Type|bit|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Row_Version
+
+
+Row_Version
 
 | Property | Value |
 | - | - |
 |Type|timestamp|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|no|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|no|
 
 ### Cargo_Type_Id
+
+
+Cargo_Type_Id
 
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
+|`NULL`|no|
+|Primary Key|no|
+|Ownership Reference|no|
+|Readonly|no|
+|Sortable|no|
+|Attributes|None|
+|Default Value|None|
+|Format||
+|Ignore for Insert Order|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Enter Stop|yes|
+|Is Entity Name|no|
+|Password|no|
+|Is Picture|no|
+|Is RTF|no|
+|Is User Login|no|
+|Visible|yes|
+|Max Length|-1|
+|Order|2147483647|
+|Summary Type|None|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|Supports EQUALS_IN|yes|
+
+#### Supported Filters
+
+| Filter Type | Default |Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|NULL|no|no|
 
 
