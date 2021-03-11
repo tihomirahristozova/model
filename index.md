@@ -13,5 +13,5 @@ It is accessible through the [Domain API](https://docs.erp.net/dev/topics/domain
 
 * The database-oriented base [**Table Model**](tables/).
 
-This table model includes the full documentation of the tables in the database.
+The Table model includes the full documentation of the tables in the database.
 It is accessible through the [Table API](https://docs.erp.net/dev/topics/table-api/index.html).
