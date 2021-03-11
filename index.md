@@ -1,8 +1,6 @@
-# Welcome to the ERP.net Data Model Reference Documentation
+# Welcome to the ERP.net Data Model Reference
 
-The data model is targeted towards advanced implementation consultants and developers.
-
-
+This documentation is targeted towards advanced implementation consultants and developers.
 
 ERP.net includes two data models:
 
