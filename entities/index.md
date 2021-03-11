@@ -1,4 +1,4 @@
-﻿# ERP.net Domain Model
+﻿# ERP.net Entities
 
 [!include[Summary](../entities-overview.md)]
 
