@@ -1,5 +1,10 @@
 # Table Prj_Project_Work_Elements
 
+
+## Entity
+
+Entity: [Projects.ProjectWorkElements](~/entities/Projects.ProjectWorkElements.md)
+
 Contains the work elements from the work breakdown structure, which are included in the projects. Entity: Prj_Project_Work_Elements
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ Contains the work elements from the work breakdown structure, which are included
 
 ### Project_Work_Element_Id
 
-
-Project_Work_Element_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Project_Work_Element_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Project_Work_Elements](Prj_Project_Work_Elements.md).[Project_Work_Element_Id](Prj_Project_Work_Elements.md#project_work_element_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,12 +57,9 @@ Project_Work_Element_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Project_Id
-
-
-Project_Id
 
 | Property | Value |
 | - | - |
@@ -72,9 +70,8 @@ Project_Id
 |Referenced Table|[Prj_Projects](Prj_Projects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Work_Elements](Prj_Project_Work_Elements.md).[Project_Id](Prj_Project_Work_Elements.md#project_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -97,15 +94,9 @@ Project_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Type_Work_Element_Id
-
-
-Project_Type_Work_Element_Id
-
-
-The work element from the project type on which the current work element is based.
 
 
 The work element from the project type on which the current work element is based.
@@ -119,9 +110,8 @@ The work element from the project type on which the current work element is base
 |Referenced Table|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Work_Elements](Prj_Project_Work_Elements.md).[Project_Type_Work_Element_Id](Prj_Project_Work_Elements.md#project_type_work_element_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,12 +134,9 @@ The work element from the project type on which the current work element is base
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -159,9 +146,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Work_Elements](Prj_Project_Work_Elements.md).[Row_Version](Prj_Project_Work_Elements.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

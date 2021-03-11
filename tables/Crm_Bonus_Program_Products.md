@@ -1,5 +1,10 @@
 # Table Crm_Bonus_Program_Products
 
+
+## Entity
+
+Entity: [Crm.Marketing.BonusProgramProducts](~/entities/Crm.Marketing.BonusProgramProducts.md)
+
 Provides a way to specify additional (to the one specified in Bonus Program.Conditional Product) products, which will be used to evaluate bonus program conditions. When any of the products exists in the sales document, the conditions are satisfied and the program is applied. When the conditional products list for a bonus program is empty, it is considered that the program is valid for all products. Entity: Crm_Bonus_Program_Products
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ Provides a way to specify additional (to the one specified in Bonus Program.Cond
 
 ### Bonus_Program_Product_Id
 
-
-Bonus_Program_Product_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Bonus_Program_Product_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Bonus_Program_Products](Crm_Bonus_Program_Products.md).[Bonus_Program_Product_Id](Crm_Bonus_Program_Products.md#bonus_program_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,12 +57,9 @@ Bonus_Program_Product_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Bonus_Program_Id
-
-
-Bonus_Program_Id
 
 | Property | Value |
 | - | - |
@@ -72,9 +70,8 @@ Bonus_Program_Id
 |Referenced Table|[Crm_Bonus_Programs](Crm_Bonus_Programs.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Bonus_Program_Products](Crm_Bonus_Program_Products.md).[Bonus_Program_Id](Crm_Bonus_Program_Products.md#bonus_program_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -97,15 +94,9 @@ Bonus_Program_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product which is required to exist in the final sales document in order for the bonus program to be applied
 
 
 The product which is required to exist in the final sales document in order for the bonus program to be applied
@@ -119,9 +110,8 @@ The product which is required to exist in the final sales document in order for 
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Bonus_Program_Products](Crm_Bonus_Program_Products.md).[Product_Id](Crm_Bonus_Program_Products.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,12 +134,9 @@ The product which is required to exist in the final sales document in order for 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -159,9 +146,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Bonus_Program_Products](Crm_Bonus_Program_Products.md).[Row_Version](Crm_Bonus_Program_Products.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

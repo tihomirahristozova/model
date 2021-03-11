@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-srv_service_agreement_lines">Table Srv_Service_Agreement_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Service.ServiceAgreementLines.html">Applications.Service.ServiceAgreementLines</a></p>
 <p>Service agreement lines represent the individual serviced objects that are covered by the service agreement. Entity: Srv_Service_Agreement_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -149,7 +151,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="service_agreement_object_id">Service_Agreement_Object_Id</h3>
-<p>Service_Agreement_Object_Id</p>
 <table>
 <thead>
 <tr>
@@ -188,15 +189,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#service_agreement_object_id">Service_Agreement_Object_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -281,14 +278,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="service_agreement_id">Service_Agreement_Id</h3>
-<p>Service_Agreement_Id</p>
 <table>
 <thead>
 <tr>
@@ -327,15 +323,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#service_agreement_id">Service_Agreement_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -420,15 +412,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <table>
 <thead>
@@ -464,7 +454,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -473,10 +463,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -561,15 +547,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="service_object_id">Service_Object_Id</h3>
-<p>Service_Object_Id</p>
-<p>The service object, which is covered by the current agreement.</p>
 <p>The service object, which is covered by the current agreement.</p>
 <table>
 <thead>
@@ -609,15 +593,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#service_object_id">Service_Object_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -702,15 +682,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>The quantity of the service object that is included in the agreement</p>
 <p>The quantity of the service object that is included in the agreement</p>
 <table>
 <thead>
@@ -746,15 +724,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -846,8 +820,6 @@
 </tbody>
 </table>
 <h3 id="service_type_id">Service_Type_Id</h3>
-<p>Service_Type_Id</p>
-<p>The type (level) of service that is agreed</p>
 <p>The type (level) of service that is agreed</p>
 <table>
 <thead>
@@ -887,15 +859,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#service_type_id">Service_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -980,15 +948,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_start_date_time">Line_Start_Date_Time</h3>
-<p>Line_Start_Date_Time</p>
-<p>The starting date and time of the agreement coverage for the current line.</p>
 <p>The starting date and time of the agreement coverage for the current line.</p>
 <table>
 <thead>
@@ -1028,15 +994,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#line_start_date_time">Line_Start_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1128,8 +1090,6 @@
 </tbody>
 </table>
 <h3 id="line_end_date_time">Line_End_Date_Time</h3>
-<p>Line_End_Date_Time</p>
-<p>The ending date and time of the agreement coverage for the current line.</p>
 <p>The ending date and time of the agreement coverage for the current line.</p>
 <table>
 <thead>
@@ -1169,15 +1129,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#line_end_date_time">Line_End_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1269,7 +1225,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1308,15 +1263,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1389,7 +1340,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1424,15 +1374,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Lines.html">Srv_Service_Agreement_Lines</a>.<a href="Srv_Service_Agreement_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

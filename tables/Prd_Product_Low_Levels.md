@@ -18,12 +18,6 @@
 ### Product_Id
 
 
-Product_Id
-
-
-The product whose low level is recorded.
-
-
 The product whose low level is recorded.
 
 | Property | Value |
@@ -36,9 +30,8 @@ The product whose low level is recorded.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Product_Low_Levels](Prd_Product_Low_Levels.md).[Product_Id](Prd_Product_Low_Levels.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +54,9 @@ The product whose low level is recorded.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Low_Level
-
-
-Low_Level
-
-
-The lowest level in the production tree, where this product is used as ingredient. 0 for products, that are not ingredients
 
 
 The lowest level in the production tree, where this product is used as ingredient. 0 for products, that are not ingredients
@@ -82,9 +69,8 @@ The lowest level in the production tree, where this product is used as ingredien
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Product_Low_Levels](Prd_Product_Low_Levels.md).[Low_Level](Prd_Product_Low_Levels.md#low_level)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,9 +91,6 @@ The lowest level in the production tree, where this product is used as ingredien
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -116,9 +99,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Product_Low_Levels](Prd_Product_Low_Levels.md).[Row_Version](Prd_Product_Low_Levels.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

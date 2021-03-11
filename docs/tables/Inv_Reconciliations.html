@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-inv_reconciliations">Table Inv_Reconciliations</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.Reconciliations.html">Logistics.Inventory.Reconciliations</a></p>
 <p>Store reconciliations (physical counting). Usefull for real-world reconciliations and for opening balance. Entity: Inv_Reconciliations</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="reconciliation_id">Reconciliation_Id</h3>
-<p>Reconciliation_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#reconciliation_id">Reconciliation_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,14 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -321,15 +317,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -414,15 +406,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_store_id">Default_Store_Id</h3>
-<p>Default_Store_Id</p>
-<p>Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.</p>
 <p>Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.</p>
 <table>
 <thead>
@@ -462,15 +452,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#default_store_id">Default_Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -555,15 +541,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_store_bin_id">Default_Store_Bin_Id</h3>
-<p>Default_Store_Bin_Id</p>
-<p>The default store bin for the lines. When null, lines can specify different bins.</p>
 <p>The default store bin for the lines. When null, lines can specify different bins.</p>
 <table>
 <thead>
@@ -603,15 +587,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#default_store_bin_id">Default_Store_Bin_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -696,15 +676,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_product_group_id">Default_Product_Group_Id</h3>
-<p>Default_Product_Group_Id</p>
-<p>When not null is used to filter the product chooser for the lines.</p>
 <p>When not null is used to filter the product chooser for the lines.</p>
 <table>
 <thead>
@@ -744,15 +722,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#default_product_group_id">Default_Product_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -837,15 +811,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -881,15 +853,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -974,15 +942,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -1018,15 +984,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1111,14 +1073,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_valuation_group_id">Default_Valuation_Group_Id</h3>
-<p>Default_Valuation_Group_Id</p>
 <table>
 <thead>
 <tr>
@@ -1157,15 +1118,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#default_valuation_group_id">Default_Valuation_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1250,14 +1207,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1292,15 +1248,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Reconciliations.html">Inv_Reconciliations</a>.<a href="Inv_Reconciliations.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

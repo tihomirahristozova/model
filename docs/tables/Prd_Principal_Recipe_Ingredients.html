@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prd_principal_recipe_ingredients">Table Prd_Principal_Recipe_Ingredients</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Production.Technologies.PrincipalRecipeIngredients.html">Production.Technologies.PrincipalRecipeIngredients</a></p>
 <p>Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_Ingredients</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -152,7 +154,7 @@
 </tr>
 <tr>
 <td><a href="#usage_quantity_formula">Usage_Quantity_Formula</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Specifies formula for the usage quantity. The formula can reference properties in [&lt;Prop_Name&gt;] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity</td>
 </tr>
 <tr>
@@ -199,8 +201,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
-<p>The Id of the recipe ingredient. This changes for each different line of each different recipe in contrast to the ingredient id, which might be the same for many principal recipes</p>
 <p>The Id of the recipe ingredient. This changes for each different line of each different recipe in contrast to the ingredient id, which might be the same for many principal recipes</p>
 <table>
 <thead>
@@ -240,15 +240,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -333,14 +329,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="principal_recipe_id">Principal_Recipe_Id</h3>
-<p>Principal_Recipe_Id</p>
 <table>
 <thead>
 <tr>
@@ -379,15 +374,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#principal_recipe_id">Principal_Recipe_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -472,15 +463,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ingredient_id">Ingredient_Id</h3>
-<p>Ingredient_Id</p>
-<p>The Id of the ingredient. When copying principal recipes, this Id remains the same for the new principal recipe to provide upgrade path for old recipes.</p>
 <p>The Id of the ingredient. When copying principal recipes, this Id remains the same for the new principal recipe to provide upgrade path for old recipes.</p>
 <table>
 <thead>
@@ -516,15 +505,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#ingredient_id">Ingredient_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -609,15 +594,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ingredient_name">Ingredient_Name</h3>
-<p>Ingredient_Name</p>
-<p>The principal name of the ingredient.</p>
 <p>The principal name of the ingredient.</p>
 <table>
 <thead>
@@ -657,15 +640,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#ingredient_name">Ingredient_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -757,8 +736,6 @@
 </tbody>
 </table>
 <h3 id="conditional_property_id">Conditional_Property_Id</h3>
-<p>Conditional_Property_Id</p>
-<p>When not NULL, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product</p>
 <p>When not NULL, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product</p>
 <table>
 <thead>
@@ -798,15 +775,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#conditional_property_id">Conditional_Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -891,15 +864,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="conditional_property_value">Conditional_Property_Value</h3>
-<p>Conditional_Property_Value</p>
-<p>The desired value of Conditional Property in order for the template line to match.</p>
 <p>The desired value of Conditional Property in order for the template line to match.</p>
 <table>
 <thead>
@@ -939,15 +910,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#conditional_property_value">Conditional_Property_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1020,8 +987,6 @@
 </tbody>
 </table>
 <h3 id="conditional_property_description">Conditional_Property_Description</h3>
-<p>Conditional_Property_Description</p>
-<p>The desired description of Conditional Property in order for the template line to match.</p>
 <p>The desired description of Conditional Property in order for the template line to match.</p>
 <table>
 <thead>
@@ -1061,15 +1026,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#conditional_property_description">Conditional_Property_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1142,8 +1103,6 @@
 </tbody>
 </table>
 <h3 id="conditional_property_allowed_value_id">Conditional_Property_Allowed_Value_Id</h3>
-<p>Conditional_Property_Allowed_Value_Id</p>
-<p>When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value</p>
 <p>When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value</p>
 <table>
 <thead>
@@ -1183,15 +1142,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#conditional_property_allowed_value_id">Conditional_Property_Allowed_Value_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1276,15 +1231,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="material_group_id">Material_Group_Id</h3>
-<p>Material_Group_Id</p>
-<p>Filter for choosing specific material in the recipe (Gen_Product_Groups_Table)</p>
 <p>Filter for choosing specific material in the recipe (Gen_Product_Groups_Table)</p>
 <table>
 <thead>
@@ -1324,15 +1277,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#material_group_id">Material_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1417,15 +1366,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_material_id">Default_Material_Id</h3>
-<p>Default_Material_Id</p>
-<p>If not NULL, points to default product for this ingredient</p>
 <p>If not NULL, points to default product for this ingredient</p>
 <table>
 <thead>
@@ -1465,15 +1412,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#default_material_id">Default_Material_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1558,15 +1501,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="usage_quantity">Usage_Quantity</h3>
-<p>Usage_Quantity</p>
-<p>Quantity to be consumed from the material. NULL means that the quantity is specified with formula</p>
 <p>Quantity to be consumed from the material. NULL means that the quantity is specified with formula</p>
 <table>
 <thead>
@@ -1602,15 +1543,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#usage_quantity">Usage_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1702,8 +1639,6 @@
 </tbody>
 </table>
 <h3 id="usage_quantity_formula">Usage_Quantity_Formula</h3>
-<p>Usage_Quantity_Formula</p>
-<p>Specifies formula for the usage quantity. The formula can reference properties in [&lt;Prop_Name&gt;] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity</p>
 <p>Specifies formula for the usage quantity. The formula can reference properties in [&lt;Prop_Name&gt;] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity</p>
 <table>
 <thead>
@@ -1715,7 +1650,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1743,15 +1678,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#usage_quantity_formula">Usage_Quantity_Formula</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1824,8 +1755,6 @@
 </tbody>
 </table>
 <h3 id="usage_unit_id">Usage_Unit_Id</h3>
-<p>Usage_Unit_Id</p>
-<p>The measurement unit of Usage_Quantity. The selected item must support the specified unit</p>
 <p>The measurement unit of Usage_Quantity. The selected item must support the specified unit</p>
 <table>
 <thead>
@@ -1865,15 +1794,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#usage_unit_id">Usage_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1958,15 +1883,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="scrap_rate">Scrap_Rate</h3>
-<p>Scrap_Rate</p>
-<p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe.</p>
 <p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe.</p>
 <table>
 <thead>
@@ -2002,15 +1925,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#scrap_rate">Scrap_Rate</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2102,8 +2021,6 @@
 </tbody>
 </table>
 <h3 id="line_ord">Line_Ord</h3>
-<p>Line_Ord</p>
-<p>The position of the line in the recipe model</p>
 <p>The position of the line in the recipe model</p>
 <table>
 <thead>
@@ -2139,7 +2056,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -2148,10 +2065,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#line_ord">Line_Ord</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2224,8 +2137,6 @@
 </tbody>
 </table>
 <h3 id="material_from_property_id">Material_From_Property_Id</h3>
-<p>Material_From_Property_Id</p>
-<p>When not NULL, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain.</p>
 <p>When not NULL, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain.</p>
 <table>
 <thead>
@@ -2265,15 +2176,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#material_from_property_id">Material_From_Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2358,15 +2265,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_id">Operation_Id</h3>
-<p>Operation_Id</p>
-<p>Specifies for which operation this ingredient will be used</p>
 <p>Specifies for which operation this ingredient will be used</p>
 <table>
 <thead>
@@ -2406,15 +2311,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#operation_id">Operation_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2499,15 +2400,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="fixed_scrap_quantity">Fixed_Scrap_Quantity</h3>
-<p>Fixed_Scrap_Quantity</p>
-<p>Fixed scrap quantity for setup</p>
 <p>Fixed scrap quantity for setup</p>
 <table>
 <thead>
@@ -2543,15 +2442,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#fixed_scrap_quantity">Fixed_Scrap_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2624,8 +2519,6 @@
 </tbody>
 </table>
 <h3 id="default_store_id">Default_Store_Id</h3>
-<p>Default_Store_Id</p>
-<p>The default store from which to retrieve the material.</p>
 <p>The default store from which to retrieve the material.</p>
 <table>
 <thead>
@@ -2665,15 +2558,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#default_store_id">Default_Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2758,14 +2647,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2800,15 +2688,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Ingredients.html">Prd_Principal_Recipe_Ingredients</a>.<a href="Prd_Principal_Recipe_Ingredients.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

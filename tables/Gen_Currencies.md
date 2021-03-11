@@ -1,5 +1,10 @@
 # Table Gen_Currencies
 
+
+## Entity
+
+Entity: [General.Currencies](~/entities/General.Currencies.md)
+
 List of user-defined currencies. Entity: Gen_Currencies
 
 ## Summary
@@ -16,9 +21,6 @@ List of user-defined currencies. Entity: Gen_Currencies
 
 ### Currency_Id
 
-
-Currency_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Currency_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Currencies](Gen_Currencies.md).[Currency_Id](Gen_Currencies.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Currency_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Currency_Sign
-
-
-Currency_Sign
-
-
-The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.
 
 
 The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.
@@ -75,9 +70,8 @@ The international currency designator, as defined in ISO 4217. For example euro 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currencies](Gen_Currencies.md).[Currency_Sign](Gen_Currencies.md#currency_sign)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,13 +94,10 @@ The international currency designator, as defined in ISO 4217. For example euro 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Currency_Name
-
-
-Currency_Name
 
 | Property | Value |
 | - | - |
@@ -117,9 +108,8 @@ Currency_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currencies](Gen_Currencies.md).[Currency_Name](Gen_Currencies.md#currency_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,12 +137,6 @@ Currency_Name
 ### Show_Order
 
 
-Show_Order
-
-
-The order in which to show the currency in combo boxes, etc.
-
-
 The order in which to show the currency in combo boxes, etc.
 
 | Property | Value |
@@ -163,9 +147,8 @@ The order in which to show the currency in combo boxes, etc.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Currencies](Gen_Currencies.md).[Show_Order](Gen_Currencies.md#show_order)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,9 +169,6 @@ The order in which to show the currency in combo boxes, etc.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -197,9 +177,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currencies](Gen_Currencies.md).[Row_Version](Gen_Currencies.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

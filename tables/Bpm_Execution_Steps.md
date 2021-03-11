@@ -1,5 +1,10 @@
 # Table Bpm_Execution_Steps
 
+
+## Entity
+
+Entity: [Systems.Bpm.ExecutionSteps](~/entities/Systems.Bpm.ExecutionSteps.md)
+
 Contains both historical and active steps in the execution of the business processes. Entity: Bpm_Execution_Steps
 
 ## Summary
@@ -17,9 +22,6 @@ Contains both historical and active steps in the execution of the business proce
 
 ### Execution_Step_Id
 
-
-Execution_Step_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Execution_Step_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Bpm_Execution_Steps](Bpm_Execution_Steps.md).[Execution_Step_Id](Bpm_Execution_Steps.md#execution_step_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Execution_Step_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Instance_Id
-
-
-Process_Instance_Id
-
-
-The process instance, which is being executed.
 
 
 The process instance, which is being executed.
@@ -76,9 +71,8 @@ The process instance, which is being executed.
 |Referenced Table|[Bpm_Process_Instances](Bpm_Process_Instances.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Execution_Steps](Bpm_Execution_Steps.md).[Process_Instance_Id](Bpm_Execution_Steps.md#process_instance_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +95,9 @@ The process instance, which is being executed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Element_Id
-
-
-Process_Element_Id
-
-
-The process element, which is being executed for the instance.
 
 
 The process element, which is being executed for the instance.
@@ -123,9 +111,8 @@ The process element, which is being executed for the instance.
 |Referenced Table|[Bpm_Process_Elements](Bpm_Process_Elements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Execution_Steps](Bpm_Execution_Steps.md).[Process_Element_Id](Bpm_Execution_Steps.md#process_element_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +135,9 @@ The process element, which is being executed for the instance.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Execution_State
-
-
-Execution_State
-
-
-Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Executing; 30=Completing; 40=Failing; 50=Terminating; 60=Completed; 70=Failed; 80=Terminated.
 
 
 Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Executing; 30=Completing; 40=Failing; 50=Terminating; 60=Completed; 70=Failed; 80=Terminated.
@@ -169,9 +150,8 @@ Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Execut
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Bpm_Execution_Steps](Bpm_Execution_Steps.md).[Execution_State](Bpm_Execution_Steps.md#execution_state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +173,6 @@ Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Execut
 ### Start_Time
 
 
-Start_Time
-
-
-The date and time when the step execution started.
-
-
 The date and time when the step execution started.
 
 | Property | Value |
@@ -210,9 +184,8 @@ The date and time when the step execution started.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Bpm_Execution_Steps](Bpm_Execution_Steps.md).[Start_Time](Bpm_Execution_Steps.md#start_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -233,9 +206,6 @@ The date and time when the step execution started.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -244,9 +214,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Execution_Steps](Bpm_Execution_Steps.md).[Row_Version](Bpm_Execution_Steps.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

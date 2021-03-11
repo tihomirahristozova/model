@@ -1,5 +1,10 @@
 # Table Wms_Warehouse_Workers
 
+
+## Entity
+
+Entity: [Logistics.Wms.WarehouseWorkers](~/entities/Logistics.Wms.WarehouseWorkers.md)
+
 Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1)
 
 ## Owner Tables Hierarchy
@@ -14,7 +19,7 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse, where the worker works.|
 |[Warehouse_Worker_Name](#warehouse_worker_name)|`nvarchar(254)` `ML`|Name of the worker (multi-language).|
 |[Person_Id](#person_id)|`uniqueidentifier` |The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Is_Active](#is_active)|`bit` |Specifies whether the worker is active and can execute new warehouse tasks.|
 |[Active_From](#active_from)|`date` |The date, from which the worker record has become active in the warehouse.|
@@ -23,9 +28,6 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 ## Columns
 
 ### Warehouse_Worker_Id
-
-
-Warehouse_Worker_Id
 
 | Property | Value |
 | - | - |
@@ -36,9 +38,8 @@ Warehouse_Worker_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Warehouse_Worker_Id](Wms_Warehouse_Workers.md#warehouse_worker_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Warehouse_Worker_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Id
-
-
-Warehouse_Id
-
-
-The warehouse, where the worker works.
 
 
 The warehouse, where the worker works.
@@ -83,9 +78,8 @@ The warehouse, where the worker works.
 |Referenced Table|[Wms_Warehouses](Wms_Warehouses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Warehouse_Id](Wms_Warehouse_Workers.md#warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The warehouse, where the worker works.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Worker_Name
-
-
-Warehouse_Worker_Name
-
-
-Name of the worker (multi-language).
 
 
 Name of the worker (multi-language).
@@ -130,9 +118,8 @@ Name of the worker (multi-language).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Warehouse_Worker_Name](Wms_Warehouse_Workers.md#warehouse_worker_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,16 +142,10 @@ Name of the worker (multi-language).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Person_Id
-
-
-Person_Id
-
-
-The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person.
 
 
 The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person.
@@ -178,9 +159,8 @@ The definition of the person, when the worker is human worker. NULL means that t
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Person_Id](Wms_Warehouse_Workers.md#person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,25 +183,21 @@ The definition of the person, when the worker is human worker. NULL means that t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Notes](Wms_Warehouse_Workers.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,9 +218,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -253,9 +226,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Row_Version](Wms_Warehouse_Workers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,12 +249,6 @@ Row_Version
 ### Is_Active
 
 
-Is_Active
-
-
-Specifies whether the worker is active and can execute new warehouse tasks.
-
-
 Specifies whether the worker is active and can execute new warehouse tasks.
 
 | Property | Value |
@@ -293,9 +259,8 @@ Specifies whether the worker is active and can execute new warehouse tasks.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Is_Active](Wms_Warehouse_Workers.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -318,15 +283,9 @@ Specifies whether the worker is active and can execute new warehouse tasks.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Active_From
-
-
-Active_From
-
-
-The date, from which the worker record has become active in the warehouse.
 
 
 The date, from which the worker record has become active in the warehouse.
@@ -340,9 +299,8 @@ The date, from which the worker record has become active in the warehouse.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Active_From](Wms_Warehouse_Workers.md#active_from)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -365,16 +323,10 @@ The date, from which the worker record has become active in the warehouse.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Active_To
-
-
-Active_To
-
-
-The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.
 
 
 The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.
@@ -388,9 +340,8 @@ The date of termination of the activity of the worker in the warehouse. Can be N
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md).[Active_To](Wms_Warehouse_Workers.md#active_to)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -413,7 +364,7 @@ The date of termination of the activity of the worker in the warehouse. Can be N
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 

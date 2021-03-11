@@ -1,5 +1,10 @@
 # Table Crm_Discount_Types
 
+
+## Entity
+
+Entity: [Crm.DiscountTypes](~/entities/Crm.DiscountTypes.md)
+
 Contains the different types of discounts, which can be applied to sales lines. Different types of discounts can be combined for a single sales line. Entity: Crm_Discount_Types
 
 ## Summary
@@ -13,15 +18,12 @@ Contains the different types of discounts, which can be applied to sales lines. 
 |[Ord](#ord)|`int` |Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.|
 |[Action_Type](#action_type)|`nvarchar(1)` Allowed: `A`, `R`, `M`|Specifies the way the discount is applied over the previous discounts.|
 |[Is_System](#is_system)|`bit` |Specifies whether this discount type is created and managed by the system.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Discount_Type_Id
-
-
-Discount_Type_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Discount_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Discount_Type_Id](Crm_Discount_Types.md#discount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Discount_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Discount_Type_Code
-
-
-Discount_Type_Code
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Discount_Type_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Discount_Type_Code](Crm_Discount_Types.md#discount_type_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,12 +95,9 @@ Discount_Type_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Discount_Type_Name
-
-
-Discount_Type_Name
 
 | Property | Value |
 | - | - |
@@ -114,9 +108,8 @@ Discount_Type_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Discount_Type_Name](Crm_Discount_Types.md#discount_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,12 +137,6 @@ Discount_Type_Name
 ### Calculation_Method
 
 
-Calculation_Method
-
-
-Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.
-
-
 Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.
 
 | Property | Value |
@@ -161,10 +148,9 @@ Specifies whether the calculation method of the discount is based on a standard 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`S`, `P`, `B`|
 |Default Value|None|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Calculation_Method](Crm_Discount_Types.md#calculation_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,15 +173,9 @@ Specifies whether the calculation method of the discount is based on a standard 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Ord
-
-
-Ord
-
-
-Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.
 
 
 Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.
@@ -208,9 +188,8 @@ Determines the order in which the discounts are applied. The discounts with smal
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Ord](Crm_Discount_Types.md#ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,12 +217,6 @@ Determines the order in which the discounts are applied. The discounts with smal
 ### Action_Type
 
 
-Action_Type
-
-
-Specifies the way the discount is applied over the previous discounts.
-
-
 Specifies the way the discount is applied over the previous discounts.
 
 | Property | Value |
@@ -255,10 +228,9 @@ Specifies the way the discount is applied over the previous discounts.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `R`, `M`|
 |Default Value|A|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Action_Type](Crm_Discount_Types.md#action_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -281,15 +253,9 @@ Specifies the way the discount is applied over the previous discounts.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_System
-
-
-Is_System
-
-
-Specifies whether this discount type is created and managed by the system.
 
 
 Specifies whether this discount type is created and managed by the system.
@@ -302,9 +268,8 @@ Specifies whether this discount type is created and managed by the system.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Is_System](Crm_Discount_Types.md#is_system)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -327,25 +292,21 @@ Specifies whether this discount type is created and managed by the system.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Notes](Crm_Discount_Types.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -366,9 +327,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -377,9 +335,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Discount_Types](Crm_Discount_Types.md).[Row_Version](Crm_Discount_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

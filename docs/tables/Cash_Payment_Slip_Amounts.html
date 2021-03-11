@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cash_payment_slip_amounts">Table Cash_Payment_Slip_Amounts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Payments.PaymentSlipAmounts.html">Finance.Payments.PaymentSlipAmounts</a></p>
 <p>Mass payment amount. Each record generates one payment transaction. Entity: Cash_Payment_Slip_Amounts</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -159,8 +161,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet.</p>
 <p>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet.</p>
 <table>
 <thead>
@@ -200,15 +200,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -293,15 +289,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="party_name">Party_Name</h3>
-<p>Party_Name</p>
-<p>The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).</p>
 <p>The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).</p>
 <table>
 <thead>
@@ -341,15 +335,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#party_name">Party_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -422,8 +412,6 @@
 </tbody>
 </table>
 <h3 id="payment_date">Payment_Date</h3>
-<p>Payment_Date</p>
-<p>The date on which the payment is done</p>
 <p>The date on which the payment is done</p>
 <table>
 <thead>
@@ -463,15 +451,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#payment_date">Payment_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -563,8 +547,6 @@
 </tbody>
 </table>
 <h3 id="total_amount">Total_Amount</h3>
-<p>Total_Amount</p>
-<p>The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If NULL the total amount is calculated as sum of the amounts in the payment slip lines.</p>
 <p>The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If NULL the total amount is calculated as sum of the amounts in the payment slip lines.</p>
 <table>
 <thead>
@@ -600,15 +582,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#total_amount">Total_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -681,8 +659,6 @@
 </tbody>
 </table>
 <h3 id="direction">Direction</h3>
-<p>Direction</p>
-<p>'I' for Payment issue, 'R' for payment receipt</p>
 <p>'I' for Payment issue, 'R' for payment receipt</p>
 <table>
 <thead>
@@ -722,7 +698,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -731,10 +707,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#direction">Direction</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -819,15 +791,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_party_payment">Is_Party_Payment</h3>
-<p>Is_Party_Payment</p>
-<p>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.)</p>
 <p>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.)</p>
 <table>
 <thead>
@@ -863,15 +833,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#is_party_payment">Is_Party_Payment</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -944,8 +910,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
-<p>Description of the payed amount. The numbers of the documents which are payed for example.</p>
 <p>Description of the payed amount. The numbers of the documents which are payed for example.</p>
 <table>
 <thead>
@@ -985,15 +949,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1066,7 +1026,6 @@
 </tbody>
 </table>
 <h3 id="payment_slip_amount_id">Payment_Slip_Amount_Id</h3>
-<p>Payment_Slip_Amount_Id</p>
 <table>
 <thead>
 <tr>
@@ -1105,15 +1064,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#payment_slip_amount_id">Payment_Slip_Amount_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1198,14 +1153,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_slip_id">Payment_Slip_Id</h3>
-<p>Payment_Slip_Id</p>
 <table>
 <thead>
 <tr>
@@ -1244,15 +1198,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#payment_slip_id">Payment_Slip_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1337,15 +1287,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_reason_id">Payment_Reason_Id</h3>
-<p>Payment_Reason_Id</p>
-<p>The reason for the payment, as defined in Payment Reasons.</p>
 <p>The reason for the payment, as defined in Payment Reasons.</p>
 <table>
 <thead>
@@ -1385,15 +1333,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#payment_reason_id">Payment_Reason_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1478,15 +1422,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>The number of the line within the payment</p>
 <p>The number of the line within the payment</p>
 <table>
 <thead>
@@ -1522,7 +1464,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -1531,10 +1473,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1607,7 +1545,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1642,15 +1579,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Amounts.html">Cash_Payment_Slip_Amounts</a>.<a href="Cash_Payment_Slip_Amounts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

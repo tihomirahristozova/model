@@ -17,9 +17,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +25,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups_Level_Names](Gen_Product_Groups_Level_Names.md).[Id](Gen_Product_Groups_Level_Names.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +49,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### L1_Name
-
-
-L1_Name
 
 | Property | Value |
 | - | - |
@@ -69,9 +62,8 @@ L1_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups_Level_Names](Gen_Product_Groups_Level_Names.md).[L1_Name](Gen_Product_Groups_Level_Names.md#l1_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -92,9 +84,6 @@ L1_Name
 
 ### L2_Name
 
-
-L2_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(180)|
@@ -104,9 +93,8 @@ L2_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups_Level_Names](Gen_Product_Groups_Level_Names.md).[L2_Name](Gen_Product_Groups_Level_Names.md#l2_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -127,9 +115,6 @@ L2_Name
 
 ### L3_Name
 
-
-L3_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(180)|
@@ -139,9 +124,8 @@ L3_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups_Level_Names](Gen_Product_Groups_Level_Names.md).[L3_Name](Gen_Product_Groups_Level_Names.md#l3_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -162,9 +146,6 @@ L3_Name
 
 ### L4_Name
 
-
-L4_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(180)|
@@ -174,9 +155,8 @@ L4_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups_Level_Names](Gen_Product_Groups_Level_Names.md).[L4_Name](Gen_Product_Groups_Level_Names.md#l4_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,9 +177,6 @@ L4_Name
 
 ### L5_Name
 
-
-L5_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(180)|
@@ -209,9 +186,8 @@ L5_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups_Level_Names](Gen_Product_Groups_Level_Names.md).[L5_Name](Gen_Product_Groups_Level_Names.md#l5_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,9 +208,6 @@ L5_Name
 
 ### L6_Name
 
-
-L6_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(180)|
@@ -244,9 +217,8 @@ L6_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups_Level_Names](Gen_Product_Groups_Level_Names.md).[L6_Name](Gen_Product_Groups_Level_Names.md#l6_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

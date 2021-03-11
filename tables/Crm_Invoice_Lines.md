@@ -1,5 +1,10 @@
 # Table Crm_Invoice_Lines
 
+
+## Entity
+
+Entity: [Crm.Invoicing.InvoiceLines](~/entities/Crm.Invoicing.InvoiceLines.md)
+
 Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 
 ## Owner Tables Hierarchy
@@ -48,12 +53,6 @@ Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 ### Line_No
 
 
-Line_No
-
-
-Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
-
-
 Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 | Property | Value |
@@ -64,10 +63,9 @@ Consecutive line number, unique within the invoice. Usually is increasing in ste
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Line_No](Crm_Invoice_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -90,15 +88,9 @@ Consecutive line number, unique within the invoice. Usually is increasing in ste
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The invoiced product. When NULL, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item.
 
 
 The invoiced product. When NULL, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item.
@@ -112,9 +104,8 @@ The invoiced product. When NULL, although rarely used, the invoice line is still
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Product_Id](Crm_Invoice_Lines.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -137,15 +128,9 @@ The invoiced product. When NULL, although rarely used, the invoice line is still
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Product_Description
-
-
-Product_Description
-
-
-The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document
 
 
 The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document
@@ -159,9 +144,8 @@ The description of the invoiced product. Initially copied from the name of the i
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Product_Description](Crm_Invoice_Lines.md#product_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -183,12 +167,6 @@ The description of the invoiced product. Initially copied from the name of the i
 ### Unit_Price
 
 
-Unit_Price
-
-
-The unit selling price of Quantity
-
-
 The unit selling price of Quantity
 
 | Property | Value |
@@ -199,9 +177,8 @@ The unit selling price of Quantity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Unit_Price](Crm_Invoice_Lines.md#unit_price)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -223,12 +200,6 @@ The unit selling price of Quantity
 ### Quantity
 
 
-Quantity
-
-
-The quantity of the invoiced product
-
-
 The quantity of the invoiced product
 
 | Property | Value |
@@ -239,9 +210,8 @@ The quantity of the invoiced product
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Quantity](Crm_Invoice_Lines.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -269,12 +239,6 @@ The quantity of the invoiced product
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity
-
-
 The measurement unit of Quantity
 
 | Property | Value |
@@ -286,9 +250,8 @@ The measurement unit of Quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Quantity_Unit_Id](Crm_Invoice_Lines.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -311,15 +274,9 @@ The measurement unit of Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-Which serial number to receive/issue. NULL means that serial number is unknown or not applicable
 
 
 Which serial number to receive/issue. NULL means that serial number is unknown or not applicable
@@ -333,9 +290,8 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Serial_Number_Id](Crm_Invoice_Lines.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -358,15 +314,9 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Line_Amount
-
-
-Line_Amount
-
-
-Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.
 
 
 Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.
@@ -379,9 +329,8 @@ Amount for the line in the currency of the parent document. Usually equals Quant
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Line_Amount](Crm_Invoice_Lines.md#line_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -403,12 +352,6 @@ Amount for the line in the currency of the parent document. Usually equals Quant
 ### Line_Custom_Discount_Percent
 
 
-Line_Custom_Discount_Percent
-
-
-User-defined discount for the line
-
-
 User-defined discount for the line
 
 | Property | Value |
@@ -419,9 +362,8 @@ User-defined discount for the line
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|0|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Line_Custom_Discount_Percent](Crm_Invoice_Lines.md#line_custom_discount_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -449,12 +391,6 @@ User-defined discount for the line
 ### Line_Discount_Id
 
 
-Line_Discount_Id
-
-
-The line discount type used to form the Line_Standard_Discount_Percent
-
-
 The line discount type used to form the Line_Standard_Discount_Percent
 
 | Property | Value |
@@ -466,9 +402,8 @@ The line discount type used to form the Line_Standard_Discount_Percent
 |Referenced Table|[Crm_Line_Discounts](Crm_Line_Discounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Line_Discount_Id](Crm_Invoice_Lines.md#line_discount_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -491,15 +426,9 @@ The line discount type used to form the Line_Standard_Discount_Percent
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Line_Standard_Discount_Percent
-
-
-Line_Standard_Discount_Percent
-
-
-Standard discount for the line. This is automatically computed according to discount conditions
 
 
 Standard discount for the line. This is automatically computed according to discount conditions
@@ -512,9 +441,8 @@ Standard discount for the line. This is automatically computed according to disc
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|0|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Line_Standard_Discount_Percent](Crm_Invoice_Lines.md#line_standard_discount_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -536,12 +464,6 @@ Standard discount for the line. This is automatically computed according to disc
 ### Quantity_Base
 
 
-Quantity_Base
-
-
-The equivalent of Quantity in the base measurement unit of the Product
-
-
 The equivalent of Quantity in the base measurement unit of the Product
 
 | Property | Value |
@@ -552,9 +474,8 @@ The equivalent of Quantity in the base measurement unit of the Product
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Quantity_Base](Crm_Invoice_Lines.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -576,12 +497,6 @@ The equivalent of Quantity in the base measurement unit of the Product
 ### Transaction_Line_Id
 
 
-Transaction_Line_Id
-
-
-The store transaction line that is invoiced by this line, for Business Reason = S
-
-
 The store transaction line that is invoiced by this line, for Business Reason = S
 
 | Property | Value |
@@ -593,9 +508,8 @@ The store transaction line that is invoiced by this line, for Business Reason = 
 |Referenced Table|[Inv_Transaction_Lines](Inv_Transaction_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Transaction_Line_Id](Crm_Invoice_Lines.md#transaction_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -618,12 +532,9 @@ The store transaction line that is invoiced by this line, for Business Reason = 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -634,9 +545,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Notes](Crm_Invoice_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -658,12 +568,6 @@ Notes
 ### Delivery_Terms_Code
 
 
-Delivery_Terms_Code
-
-
-Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
-
-
 Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 
 | Property | Value |
@@ -675,10 +579,9 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Delivery_Terms_Code](Crm_Invoice_Lines.md#delivery_terms_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -700,12 +603,6 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 ### Intrastat_Transport_Mode_Code
 
 
-Intrastat_Transport_Mode_Code
-
-
-Transport mode; used for Intrastat reporting
-
-
 Transport mode; used for Intrastat reporting
 
 | Property | Value |
@@ -717,10 +614,9 @@ Transport mode; used for Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`|
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Intrastat_Transport_Mode_Code](Crm_Invoice_Lines.md#intrastat_transport_mode_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -742,12 +638,6 @@ Transport mode; used for Intrastat reporting
 ### Intrastat_Transport_Country_Id
 
 
-Intrastat_Transport_Country_Id
-
-
-Country of origin of the transport company; used for Intrastat reporting
-
-
 Country of origin of the transport company; used for Intrastat reporting
 
 | Property | Value |
@@ -759,9 +649,8 @@ Country of origin of the transport company; used for Intrastat reporting
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Intrastat_Transport_Country_Id](Crm_Invoice_Lines.md#intrastat_transport_country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -784,15 +673,9 @@ Country of origin of the transport company; used for Intrastat reporting
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Intrastat_Transaction_Nature_Code
-
-
-Intrastat_Transaction_Nature_Code
-
-
-Transaction nature; used for Intrastat reporting
 
 
 Transaction nature; used for Intrastat reporting
@@ -806,10 +689,9 @@ Transaction nature; used for Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Intrastat_Transaction_Nature_Code](Crm_Invoice_Lines.md#intrastat_transaction_nature_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -831,12 +713,6 @@ Transaction nature; used for Intrastat reporting
 ### Payment_Transaction_Id
 
 
-Payment_Transaction_Id
-
-
-The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment.
-
-
 The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment.
 
 | Property | Value |
@@ -848,9 +724,8 @@ The payment transaction, which is invoiced by this line, when Business Reason = 
 |Referenced Table|[Cash_Payment_Transactions](Cash_Payment_Transactions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Payment_Transaction_Id](Crm_Invoice_Lines.md#payment_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -873,15 +748,9 @@ The payment transaction, which is invoiced by this line, when Business Reason = 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Parent_Sales_Order_Line_Id
-
-
-Parent_Sales_Order_Line_Id
-
-
-When not NULL specifies the Sales Order line that is invoiced by this invoice line
 
 
 When not NULL specifies the Sales Order line that is invoiced by this invoice line
@@ -895,9 +764,8 @@ When not NULL specifies the Sales Order line that is invoiced by this invoice li
 |Referenced Table|[Crm_Sales_Order_Lines](Crm_Sales_Order_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Parent_Sales_Order_Line_Id](Crm_Invoice_Lines.md#parent_sales_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -920,12 +788,9 @@ When not NULL specifies the Sales Order line that is invoiced by this invoice li
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Invoice_Id
-
-
-Invoice_Id
 
 | Property | Value |
 | - | - |
@@ -936,9 +801,8 @@ Invoice_Id
 |Referenced Table|[Crm_Invoices](Crm_Invoices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Invoice_Id](Crm_Invoice_Lines.md#invoice_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -961,12 +825,9 @@ Invoice_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Invoice_Line_Id
-
-
-Invoice_Line_Id
 
 | Property | Value |
 | - | - |
@@ -977,9 +838,8 @@ Invoice_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Invoice_Line_Id](Crm_Invoice_Lines.md#invoice_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1002,15 +862,9 @@ Invoice_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Line_Deal_Type_Id
-
-
-Line_Deal_Type_Id
-
-
-Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created.
 
 
 Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created.
@@ -1024,9 +878,8 @@ Deal type for this line. If deal type in the line is different from deal type in
 |Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Line_Deal_Type_Id](Crm_Invoice_Lines.md#line_deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1049,15 +902,9 @@ Deal type for this line. If deal type in the line is different from deal type in
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sales_Order_Id
-
-
-Sales_Order_Id
-
-
-When not NULL specifies the Sales Order that is invoiced by this line
 
 
 When not NULL specifies the Sales Order that is invoiced by this line
@@ -1071,9 +918,8 @@ When not NULL specifies the Sales Order that is invoiced by this line
 |Referenced Table|[Crm_Sales_Orders](Crm_Sales_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Sales_Order_Id](Crm_Invoice_Lines.md#sales_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1096,16 +942,10 @@ When not NULL specifies the Sales Order that is invoiced by this line
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Business_Reason
-
-
-Business_Reason
-
-
-Business reason for invoicing of this product or service. S=Shipment, P=Payment
 
 
 Business reason for invoicing of this product or service. S=Shipment, P=Payment
@@ -1119,10 +959,9 @@ Business reason for invoicing of this product or service. S=Shipment, P=Payment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`P`, `S`|
 |Default Value|S|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Business_Reason](Crm_Invoice_Lines.md#business_reason)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1144,12 +983,6 @@ Business reason for invoicing of this product or service. S=Shipment, P=Payment
 ### Invoice_Order_Line_Id
 
 
-Invoice_Order_Line_Id
-
-
-Invoice order line which is invoiced by this line
-
-
 Invoice order line which is invoiced by this line
 
 | Property | Value |
@@ -1161,9 +994,8 @@ Invoice order line which is invoiced by this line
 |Referenced Table|[Crm_Invoice_Order_Lines](Crm_Invoice_Order_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Invoice_Order_Line_Id](Crm_Invoice_Lines.md#invoice_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1186,15 +1018,9 @@ Invoice order line which is invoiced by this line
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sales_Order_Amount
-
-
-Sales_Order_Amount
-
-
-Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing
 
 
 Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing
@@ -1207,9 +1033,8 @@ Specifies what portion of the amount of the sales order is invoiced with this li
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Sales_Order_Amount](Crm_Invoice_Lines.md#sales_order_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1230,9 +1055,6 @@ Specifies what portion of the amount of the sales order is invoiced with this li
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -1241,9 +1063,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Row_Version](Crm_Invoice_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1265,12 +1086,6 @@ Row_Version
 ### Standard_Quantity_Base
 
 
-Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
-
-
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 | Property | Value |
@@ -1281,9 +1096,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Standard_Quantity_Base](Crm_Invoice_Lines.md#standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1305,12 +1119,6 @@ The theoretical quantity in base measurement unit according to the current measu
 ### Parent_Line_No
 
 
-Parent_Line_No
-
-
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.
-
-
 The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.
 
 | Property | Value |
@@ -1321,9 +1129,8 @@ The number of the line within the parent document, which the current line execut
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Parent_Line_No](Crm_Invoice_Lines.md#parent_line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1345,12 +1152,6 @@ The number of the line within the parent document, which the current line execut
 ### Parent_Document_Id
 
 
-Parent_Document_Id
-
-
-The document, which the current line executes. NULL when the current line does not execute another line.
-
-
 The document, which the current line executes. NULL when the current line does not execute another line.
 
 | Property | Value |
@@ -1362,9 +1163,8 @@ The document, which the current line executes. NULL when the current line does n
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoice_Lines](Crm_Invoice_Lines.md).[Parent_Document_Id](Crm_Invoice_Lines.md#parent_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1387,6 +1187,6 @@ The document, which the current line executes. NULL when the current line does n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

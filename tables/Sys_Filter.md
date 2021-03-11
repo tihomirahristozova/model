@@ -20,9 +20,6 @@
 
 ### Session_Id
 
-
-Session_Id
-
 | Property | Value |
 | - | - |
 |Type|smallint|
@@ -31,9 +28,8 @@ Session_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Session_Id](Sys_Filter.md#session_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,9 +50,6 @@ Session_Id
 
 ### Table_Name
 
-
-Table_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -66,9 +59,8 @@ Table_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Table_Name](Sys_Filter.md#table_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -89,9 +81,6 @@ Table_Name
 
 ### Column_Name
 
-
-Column_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -101,9 +90,8 @@ Column_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Column_Name](Sys_Filter.md#column_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -124,9 +112,6 @@ Column_Name
 
 ### Filter_Type
 
-
-Filter_Type
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(20)|
@@ -136,9 +121,8 @@ Filter_Type
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Filter_Type](Sys_Filter.md#filter_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,9 +143,6 @@ Filter_Type
 
 ### Handle
 
-
-Handle
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -170,9 +151,8 @@ Handle
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Handle](Sys_Filter.md#handle)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,12 +175,9 @@ Handle
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Table_Alias
-
-
-Table_Alias
 
 | Property | Value |
 | - | - |
@@ -211,9 +188,8 @@ Table_Alias
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Table_Alias](Sys_Filter.md#table_alias)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,9 +210,6 @@ Table_Alias
 
 ### Filter_Value
 
-
-Filter_Value
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(300)|
@@ -246,9 +219,8 @@ Filter_Value
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Filter_Value](Sys_Filter.md#filter_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -269,9 +241,6 @@ Filter_Value
 
 ### Empty
 
-
-Empty
-
 | Property | Value |
 | - | - |
 |Type|bit|
@@ -280,9 +249,8 @@ Empty
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Empty](Sys_Filter.md#empty)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -303,9 +271,6 @@ Empty
 
 ### Include_Nulls
 
-
-Include_Nulls
-
 | Property | Value |
 | - | - |
 |Type|bit|
@@ -314,9 +279,8 @@ Include_Nulls
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Include_Nulls](Sys_Filter.md#include_nulls)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -337,9 +301,6 @@ Include_Nulls
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -348,9 +309,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Filter](Sys_Filter.md).[Row_Version](Sys_Filter.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

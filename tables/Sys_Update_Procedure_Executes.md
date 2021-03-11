@@ -1,5 +1,10 @@
 # Table Sys_Update_Procedure_Executes
 
+
+## Entity
+
+Entity: [Systems.Core.UpdateProcedureExecutes](~/entities/Systems.Core.UpdateProcedureExecutes.md)
+
 Contains data about the execution of Upgrade Procedures. Contains status messages and ensures that each procedure is executed only once. Entity: Sys_Update_Procedure_Executes
 
 ## Summary
@@ -17,9 +22,6 @@ Contains data about the execution of Upgrade Procedures. Contains status message
 
 ### Update_Procedure_Execute_Id
 
-
-Update_Procedure_Execute_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Update_Procedure_Execute_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Update_Procedure_Executes](Sys_Update_Procedure_Executes.md).[Update_Procedure_Execute_Id](Sys_Update_Procedure_Executes.md#update_procedure_execute_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Update_Procedure_Execute_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Update_Procedure
-
-
-Update_Procedure
-
-
-The system name of the executed update procedure.
 
 
 The system name of the executed update procedure.
@@ -76,9 +71,8 @@ The system name of the executed update procedure.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Update_Procedure_Executes](Sys_Update_Procedure_Executes.md).[Update_Procedure](Sys_Update_Procedure_Executes.md#update_procedure)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,12 +94,6 @@ The system name of the executed update procedure.
 ### Execute_Time
 
 
-Execute_Time
-
-
-The time, when the update procedure was executed.
-
-
 The time, when the update procedure was executed.
 
 | Property | Value |
@@ -117,9 +105,8 @@ The time, when the update procedure was executed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Sys_Update_Procedure_Executes](Sys_Update_Procedure_Executes.md).[Execute_Time](Sys_Update_Procedure_Executes.md#execute_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,12 +128,6 @@ The time, when the update procedure was executed.
 ### Successful
 
 
-Successful
-
-
-True when the execution was successfull.
-
-
 True when the execution was successfull.
 
 | Property | Value |
@@ -157,9 +138,8 @@ True when the execution was successfull.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Sys_Update_Procedure_Executes](Sys_Update_Procedure_Executes.md).[Successful](Sys_Update_Procedure_Executes.md#successful)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -181,12 +161,6 @@ True when the execution was successfull.
 ### Result_Message
 
 
-Result_Message
-
-
-Error or success message
-
-
 Error or success message
 
 | Property | Value |
@@ -198,9 +172,8 @@ Error or success message
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Update_Procedure_Executes](Sys_Update_Procedure_Executes.md).[Result_Message](Sys_Update_Procedure_Executes.md#result_message)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -221,9 +194,6 @@ Error or success message
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -232,9 +202,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Update_Procedure_Executes](Sys_Update_Procedure_Executes.md).[Row_Version](Sys_Update_Procedure_Executes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

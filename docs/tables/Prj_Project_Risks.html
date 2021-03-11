@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_project_risks">Table Prj_Project_Risks</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.ProjectRisks.html">Projects.ProjectRisks</a></p>
 <p>Contains risks, associated to projects. Entity: Prj_Project_Risks</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -111,7 +113,7 @@
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -136,7 +138,7 @@
 </tr>
 <tr>
 <td><a href="#resolution_strategy">Resolution_Strategy</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The strategy chosen to handle the risk</td>
 </tr>
 <tr>
@@ -158,7 +160,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="project_risk_id">Project_Risk_Id</h3>
-<p>Project_Risk_Id</p>
 <table>
 <thead>
 <tr>
@@ -197,15 +198,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#project_risk_id">Project_Risk_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -290,15 +287,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_id">Project_Id</h3>
-<p>Project_Id</p>
-<p>The project for which this risk applies.</p>
 <p>The project for which this risk applies.</p>
 <table>
 <thead>
@@ -338,15 +333,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#project_id">Project_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -431,15 +422,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="risk_name">Risk_Name</h3>
-<p>Risk_Name</p>
-<p>The short name of the risk.</p>
 <p>The short name of the risk.</p>
 <table>
 <thead>
@@ -479,15 +468,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#risk_name">Risk_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -572,14 +557,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
 <table>
 <thead>
 <tr>
@@ -590,7 +574,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -618,15 +602,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -718,8 +698,6 @@
 </tbody>
 </table>
 <h3 id="create_date">Create_Date</h3>
-<p>Create_Date</p>
-<p>The creation date of the project risk.</p>
 <p>The creation date of the project risk.</p>
 <table>
 <thead>
@@ -759,15 +737,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#create_date">Create_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -852,15 +826,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="probability_percent">Probability_Percent</h3>
-<p>Probability_Percent</p>
-<p>The probability of the risk occurring.</p>
 <p>The probability of the risk occurring.</p>
 <table>
 <thead>
@@ -896,15 +868,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#probability_percent">Probability_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -977,8 +945,6 @@
 </tbody>
 </table>
 <h3 id="impact_percent">Impact_Percent</h3>
-<p>Impact_Percent</p>
-<p>The impact of the risk to the project, expressed as percentage of the total project value.</p>
 <p>The impact of the risk to the project, expressed as percentage of the total project value.</p>
 <table>
 <thead>
@@ -1014,15 +980,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#impact_percent">Impact_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1095,8 +1057,6 @@
 </tbody>
 </table>
 <h3 id="responsible_person_id">Responsible_Person_Id</h3>
-<p>Responsible_Person_Id</p>
-<p>The person who is responsible for handling the risk</p>
 <p>The person who is responsible for handling the risk</p>
 <table>
 <thead>
@@ -1136,15 +1096,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#responsible_person_id">Responsible_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1229,15 +1185,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resolution_strategy">Resolution_Strategy</h3>
-<p>Resolution_Strategy</p>
-<p>The strategy chosen to handle the risk</p>
 <p>The strategy chosen to handle the risk</p>
 <table>
 <thead>
@@ -1249,7 +1203,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1277,15 +1231,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#resolution_strategy">Resolution_Strategy</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1370,15 +1320,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resolved">Resolved</h3>
-<p>Resolved</p>
-<p>1 if the risk is resolved</p>
 <p>1 if the risk is resolved</p>
 <table>
 <thead>
@@ -1414,15 +1362,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#resolved">Resolved</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1507,15 +1451,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resolve_date">Resolve_Date</h3>
-<p>Resolve_Date</p>
-<p>The date on which the risk is resolved</p>
 <p>The date on which the risk is resolved</p>
 <table>
 <thead>
@@ -1555,15 +1497,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#resolve_date">Resolve_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1648,14 +1586,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1690,15 +1627,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risks.html">Prj_Project_Risks</a>.<a href="Prj_Project_Risks.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

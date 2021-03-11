@@ -19,12 +19,6 @@
 ### Entity_Item_Id
 
 
-Entity_Item_Id
-
-
-The Id of the actual entity for which the value is specified.
-
-
 The Id of the actual entity for which the value is specified.
 
 | Property | Value |
@@ -36,9 +30,8 @@ The Id of the actual entity for which the value is specified.
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Values](Gen_Property_Values.md).[Entity_Item_Id](Gen_Property_Values.md#entity_item_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +54,9 @@ The Id of the actual entity for which the value is specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_Id
-
-
-Property_Id
-
-
-The property, whose value is stored here.
 
 
 The property, whose value is stored here.
@@ -83,9 +70,8 @@ The property, whose value is stored here.
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Values](Gen_Property_Values.md).[Property_Id](Gen_Property_Values.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +94,9 @@ The property, whose value is stored here.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_Value
-
-
-Property_Value
-
-
-The actual value of the property for the specified entity (the entity with the specified Id).
 
 
 The actual value of the property for the specified entity (the entity with the specified Id).
@@ -130,9 +110,8 @@ The actual value of the property for the specified entity (the entity with the s
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Values](Gen_Property_Values.md).[Property_Value](Gen_Property_Values.md#property_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,12 +133,6 @@ The actual value of the property for the specified entity (the entity with the s
 ### Description
 
 
-Description
-
-
-The actual description value of the property for the specified entity (the entity with the specified Id).
-
-
 The actual description value of the property for the specified entity (the entity with the specified Id).
 
 | Property | Value |
@@ -171,9 +144,8 @@ The actual description value of the property for the specified entity (the entit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Values](Gen_Property_Values.md).[Description](Gen_Property_Values.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,9 +166,6 @@ The actual description value of the property for the specified entity (the entit
 
 ### Property_Value_Id
 
-
-Property_Value_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -206,9 +175,8 @@ Property_Value_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Property_Values](Gen_Property_Values.md).[Property_Value_Id](Gen_Property_Values.md#property_value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -231,15 +199,9 @@ Property_Value_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Picture
-
-
-Picture
-
-
-The actual picture of the property for the specified entity (the entity with the specified Id).
 
 
 The actual picture of the property for the specified entity (the entity with the specified Id).
@@ -252,9 +214,8 @@ The actual picture of the property for the specified entity (the entity with the
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Values](Gen_Property_Values.md).[Picture](Gen_Property_Values.md#picture)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -276,12 +237,6 @@ The actual picture of the property for the specified entity (the entity with the
 ### Value_Id
 
 
-Value_Id
-
-
-The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. NULL for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values.
-
-
 The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. NULL for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values.
 
 | Property | Value |
@@ -292,9 +247,8 @@ The internal Id of the value of the property for the specified entity (the entit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Values](Gen_Property_Values.md).[Value_Id](Gen_Property_Values.md#value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -317,12 +271,9 @@ The internal Id of the value of the property for the specified entity (the entit
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -332,9 +283,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Values](Gen_Property_Values.md).[Row_Version](Gen_Property_Values.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

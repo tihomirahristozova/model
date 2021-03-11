@@ -1,5 +1,10 @@
 # Table Gen_Sequences
 
+
+## Entity
+
+Entity: [General.Sequences](~/entities/General.Sequences.md)
+
 Provides numbering sequences, applicable for use in a multi-threaded environment. Entity: Gen_Sequences
 
 ## Summary
@@ -15,9 +20,6 @@ Provides numbering sequences, applicable for use in a multi-threaded environment
 
 ### Sequence_Id
 
-
-Sequence_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Sequence_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Sequences](Gen_Sequences.md).[Sequence_Id](Gen_Sequences.md#sequence_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,12 +53,9 @@ Sequence_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Sequence_Name
-
-
-Sequence_Name
 
 | Property | Value |
 | - | - |
@@ -68,9 +66,8 @@ Sequence_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Sequences](Gen_Sequences.md).[Sequence_Name](Gen_Sequences.md#sequence_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,12 +95,6 @@ Sequence_Name
 ### Simultaneous_Transactions
 
 
-Simultaneous_Transactions
-
-
-When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available.
-
-
 When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available.
 
 | Property | Value |
@@ -114,9 +105,8 @@ When false, specifies that the users will wait in a queue for a single numbering
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Sequences](Gen_Sequences.md).[Simultaneous_Transactions](Gen_Sequences.md#simultaneous_transactions)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -137,9 +127,6 @@ When false, specifies that the users will wait in a queue for a single numbering
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -148,9 +135,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Sequences](Gen_Sequences.md).[Row_Version](Gen_Sequences.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

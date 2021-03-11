@@ -17,12 +17,6 @@
 ### Id
 
 
-Id
-
-
-Unique Id of the string property
-
-
 Unique Id of the string property
 
 | Property | Value |
@@ -34,9 +28,8 @@ Unique Id of the string property
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Characteristic_Types](Sys_Characteristic_Types.md).[Id](Sys_Characteristic_Types.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +52,9 @@ Unique Id of the string property
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Entity_Name
-
-
-Entity_Name
-
-
-The system entity containing the objects
 
 
 The system entity containing the objects
@@ -81,9 +68,8 @@ The system entity containing the objects
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Characteristic_Types](Sys_Characteristic_Types.md).[Entity_Name](Sys_Characteristic_Types.md#entity_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,12 +91,6 @@ The system entity containing the objects
 ### Characterstic_Name
 
 
-Characterstic_Name
-
-
-The name of the string property
-
-
 The name of the string property
 
 | Property | Value |
@@ -122,9 +102,8 @@ The name of the string property
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Characteristic_Types](Sys_Characteristic_Types.md).[Characterstic_Name](Sys_Characteristic_Types.md#characterstic_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +125,6 @@ The name of the string property
 ### Multi_Valued
 
 
-Multi_Valued
-
-
-1 - allow multiple values (with different Seq_No's in the values). 0 - allow single value only (Seq_No=1)
-
-
 1 - allow multiple values (with different Seq_No's in the values). 0 - allow single value only (Seq_No=1)
 
 | Property | Value |
@@ -162,9 +135,8 @@ Multi_Valued
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Characteristic_Types](Sys_Characteristic_Types.md).[Multi_Valued](Sys_Characteristic_Types.md#multi_valued)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,12 +158,6 @@ Multi_Valued
 ### Default_Value
 
 
-Default_Value
-
-
-Default value of this property. Nulls means that the property does not have default value
-
-
 Default value of this property. Nulls means that the property does not have default value
 
 | Property | Value |
@@ -203,9 +169,8 @@ Default value of this property. Nulls means that the property does not have defa
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Characteristic_Types](Sys_Characteristic_Types.md).[Default_Value](Sys_Characteristic_Types.md#default_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -226,9 +191,6 @@ Default value of this property. Nulls means that the property does not have defa
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -237,9 +199,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Characteristic_Types](Sys_Characteristic_Types.md).[Row_Version](Sys_Characteristic_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

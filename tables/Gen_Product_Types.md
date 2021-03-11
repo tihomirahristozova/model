@@ -1,5 +1,10 @@
 # Table Gen_Product_Types
 
+
+## Entity
+
+Entity: [General.Products.ProductTypes](~/entities/General.Products.ProductTypes.md)
+
 Categorization of the products by their nature. Entity: Gen_Product_Types
 
 ## Summary
@@ -22,9 +27,6 @@ Categorization of the products by their nature. Entity: Gen_Product_Types
 
 ### Product_Type_Id
 
-
-Product_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Product_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Product_Type_Id](Gen_Product_Types.md#product_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Product_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Product_Type_Code
-
-
-Product_Type_Code
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Product_Type_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Product_Type_Code](Gen_Product_Types.md#product_type_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,12 +97,9 @@ Product_Type_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Type_Name
-
-
-Product_Type_Name
 
 | Property | Value |
 | - | - |
@@ -116,9 +110,8 @@ Product_Type_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Product_Type_Name](Gen_Product_Types.md#product_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,16 +134,10 @@ Product_Type_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Is_Stocked
-
-
-Is_Stocked
-
-
-1=The products of this type are stocked in a warehouse; 0=otherwise (services)
 
 
 1=The products of this type are stocked in a warehouse; 0=otherwise (services)
@@ -163,9 +150,8 @@ Is_Stocked
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Is_Stocked](Gen_Product_Types.md#is_stocked)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -188,15 +174,9 @@ Is_Stocked
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Serviced
-
-
-Is_Serviced
-
-
-1 when the products of this type create service agreements and can be serviced
 
 
 1 when the products of this type create service agreements and can be serviced
@@ -209,9 +189,8 @@ Is_Serviced
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Is_Serviced](Gen_Product_Types.md#is_serviced)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,15 +213,9 @@ Is_Serviced
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Fixed_Asset
-
-
-Is_Fixed_Asset
-
-
-1 when assets are acquired or retired when products from this type are purchased or sold
 
 
 1 when assets are acquired or retired when products from this type are purchased or sold
@@ -255,9 +228,8 @@ Is_Fixed_Asset
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Is_Fixed_Asset](Gen_Product_Types.md#is_fixed_asset)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -280,15 +252,9 @@ Is_Fixed_Asset
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Shipped
-
-
-Is_Shipped
-
-
-1 when the products from this type are being shipped after sales.
 
 
 1 when the products from this type are being shipped after sales.
@@ -301,9 +267,8 @@ Is_Shipped
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Is_Shipped](Gen_Product_Types.md#is_shipped)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -326,15 +291,9 @@ Is_Shipped
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Service_Activity_Service
-
-
-Is_Service_Activity_Service
-
-
-1 when the product corresponds to service used in service documents (like service activities)
 
 
 1 when the product corresponds to service used in service documents (like service activities)
@@ -347,9 +306,8 @@ Is_Service_Activity_Service
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Is_Service_Activity_Service](Gen_Product_Types.md#is_service_activity_service)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -372,15 +330,9 @@ Is_Service_Activity_Service
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Default
-
-
-Is_Default
-
-
-When checked specifies that this type is set by default for new products unless another type is specified in the product groups.
 
 
 When checked specifies that this type is set by default for new products unless another type is specified in the product groups.
@@ -393,9 +345,8 @@ When checked specifies that this type is set by default for new products unless 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Is_Default](Gen_Product_Types.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -418,15 +369,9 @@ When checked specifies that this type is set by default for new products unless 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Lot_Auto_Creation
-
-
-Lot_Auto_Creation
-
-
-If checked specifies that lots are automatically created by the receiving orders with which the products are received.
 
 
 If checked specifies that lots are automatically created by the receiving orders with which the products are received.
@@ -439,9 +384,8 @@ If checked specifies that lots are automatically created by the receiving orders
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Lot_Auto_Creation](Gen_Product_Types.md#lot_auto_creation)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -462,9 +406,6 @@ If checked specifies that lots are automatically created by the receiving orders
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -473,9 +414,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Types](Gen_Product_Types.md).[Row_Version](Gen_Product_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

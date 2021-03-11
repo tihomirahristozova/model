@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_invoices_options">Table Crm_Invoices_Options</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Invoicing.InvoicesOptions.html">Crm.Invoicing.InvoicesOptions</a></p>
 <p>Default options for user document types for Invoices. Entity: Crm_Invoices_Options</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="invoices_option_id">Invoices_Option_Id</h3>
-<p>Invoices_Option_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices_Options.html">Crm_Invoices_Options</a>.<a href="Crm_Invoices_Options.html#invoices_option_id">Invoices_Option_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,15 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_type_id">Document_Type_Id</h3>
-<p>Document_Type_Id</p>
-<p>The document type for which the invoice option applies.</p>
 <p>The document type for which the invoice option applies.</p>
 <table>
 <thead>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices_Options.html">Crm_Invoices_Options</a>.<a href="Crm_Invoices_Options.html#document_type_id">Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_deal_type_id">Default_Deal_Type_Id</h3>
-<p>Default_Deal_Type_Id</p>
-<p>When not NULL, specifies default VAT deal type.</p>
 <p>When not NULL, specifies default VAT deal type.</p>
 <table>
 <thead>
@@ -459,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices_Options.html">Crm_Invoices_Options</a>.<a href="Crm_Invoices_Options.html#default_deal_type_id">Default_Deal_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -552,15 +537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sign_restriction">Sign_Restriction</h3>
-<p>Sign_Restriction</p>
-<p>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts</p>
 <p>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts</p>
 <table>
 <thead>
@@ -596,7 +579,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -605,10 +588,6 @@
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices_Options.html">Crm_Invoices_Options</a>.<a href="Crm_Invoices_Options.html#sign_restriction">Sign_Restriction</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -681,8 +660,6 @@
 </tbody>
 </table>
 <h3 id="total_amount_sign_restriction">Total_Amount_Sign_Restriction</h3>
-<p>Total_Amount_Sign_Restriction</p>
-<p>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts</p>
 <p>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts</p>
 <table>
 <thead>
@@ -718,7 +695,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -727,10 +704,6 @@
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices_Options.html">Crm_Invoices_Options</a>.<a href="Crm_Invoices_Options.html#total_amount_sign_restriction">Total_Amount_Sign_Restriction</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -803,8 +776,6 @@
 </tbody>
 </table>
 <h3 id="vat_deviation_document_amount_type_id">VAT_Deviation_Document_Amount_Type_Id</h3>
-<p>VAT_Deviation_Document_Amount_Type_Id</p>
-<p>Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT</p>
 <p>Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT</p>
 <table>
 <thead>
@@ -844,15 +815,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices_Options.html">Crm_Invoices_Options</a>.<a href="Crm_Invoices_Options.html#vat_deviation_document_amount_type_id">VAT_Deviation_Document_Amount_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -937,15 +904,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="creates_vat_entries">Creates_VAT_Entries</h3>
-<p>Creates_VAT_Entries</p>
-<p>Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided.</p>
 <p>Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided.</p>
 <table>
 <thead>
@@ -981,15 +946,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices_Options.html">Crm_Invoices_Options</a>.<a href="Crm_Invoices_Options.html#creates_vat_entries">Creates_VAT_Entries</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1062,7 +1023,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1097,15 +1057,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices_Options.html">Crm_Invoices_Options</a>.<a href="Crm_Invoices_Options.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Eam_Maintenance_Type_Groups
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.MaintenanceTypeGroups](~/entities/Applications.AssetManagement.MaintenanceTypeGroups.md)
+
 Represents the hierarchy of the groups of maintenance types. Entity: Eam_Maintenance_Type_Groups (Introduced in version 19.1)
 
 ## Summary
@@ -10,15 +15,12 @@ Represents the hierarchy of the groups of maintenance types. Entity: Eam_Mainten
 |[Maintenance_Type_Group_Code](#maintenance_type_group_code)|`nvarchar(16)` |Unique code of the group.|
 |[Parent_Maintenance_Type_Group_Id](#parent_maintenance_type_group_id)|`uniqueidentifier` |Parent group. NULL denotes a root group.|
 |[Maintenance_Type_Group_Name](#maintenance_type_group_name)|`nvarchar(254)` `ML`|Multilanguage name of the group.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Maintenance_Type_Group_Id
-
-
-Maintenance_Type_Group_Id
 
 | Property | Value |
 | - | - |
@@ -29,9 +31,8 @@ Maintenance_Type_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Maintenance_Type_Groups](Eam_Maintenance_Type_Groups.md).[Maintenance_Type_Group_Id](Eam_Maintenance_Type_Groups.md#maintenance_type_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Maintenance_Type_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Type_Group_Code
-
-
-Maintenance_Type_Group_Code
-
-
-Unique code of the group.
 
 
 Unique code of the group.
@@ -76,9 +71,8 @@ Unique code of the group.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Type_Groups](Eam_Maintenance_Type_Groups.md).[Maintenance_Type_Group_Code](Eam_Maintenance_Type_Groups.md#maintenance_type_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,16 +95,10 @@ Unique code of the group.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Parent_Maintenance_Type_Group_Id
-
-
-Parent_Maintenance_Type_Group_Id
-
-
-Parent group. NULL denotes a root group.
 
 
 Parent group. NULL denotes a root group.
@@ -124,9 +112,8 @@ Parent group. NULL denotes a root group.
 |Referenced Table|[Eam_Maintenance_Type_Groups](Eam_Maintenance_Type_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Type_Groups](Eam_Maintenance_Type_Groups.md).[Parent_Maintenance_Type_Group_Id](Eam_Maintenance_Type_Groups.md#parent_maintenance_type_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,15 +136,9 @@ Parent group. NULL denotes a root group.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Maintenance_Type_Group_Name
-
-
-Maintenance_Type_Group_Name
-
-
-Multilanguage name of the group.
 
 
 Multilanguage name of the group.
@@ -171,9 +152,8 @@ Multilanguage name of the group.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Type_Groups](Eam_Maintenance_Type_Groups.md).[Maintenance_Type_Group_Name](Eam_Maintenance_Type_Groups.md#maintenance_type_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,26 +176,22 @@ Multilanguage name of the group.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Type_Groups](Eam_Maintenance_Type_Groups.md).[Notes](Eam_Maintenance_Type_Groups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -236,9 +212,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -247,9 +220,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Type_Groups](Eam_Maintenance_Type_Groups.md).[Row_Version](Eam_Maintenance_Type_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_type_work_elements">Table Prj_Type_Work_Elements</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.TypeWorkElements.html">Projects.TypeWorkElements</a></p>
 <p>The work elements of the work breakdown structure of each project type. Entity: Prj_Type_Work_Elements</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -121,7 +123,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="project_type_work_element_id">Project_Type_Work_Element_Id</h3>
-<p>Project_Type_Work_Element_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Type_Work_Elements.html">Prj_Type_Work_Elements</a>.<a href="Prj_Type_Work_Elements.html#project_type_work_element_id">Project_Type_Work_Element_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,14 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_type_id">Project_Type_Id</h3>
-<p>Project_Type_Id</p>
 <table>
 <thead>
 <tr>
@@ -316,15 +312,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Type_Work_Elements.html">Prj_Type_Work_Elements</a>.<a href="Prj_Type_Work_Elements.html#project_type_id">Project_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -409,15 +401,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_full_path">Parent_Full_Path</h3>
-<p>Parent_Full_Path</p>
-<p>The full path of the parent work element in this project type. NULL when this is root element.</p>
 <p>The full path of the parent work element in this project type. NULL when this is root element.</p>
 <table>
 <thead>
@@ -457,15 +447,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Type_Work_Elements.html">Prj_Type_Work_Elements</a>.<a href="Prj_Type_Work_Elements.html#parent_full_path">Parent_Full_Path</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -550,7 +536,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -563,8 +549,6 @@
 </tbody>
 </table>
 <h3 id="work_element_code">Work_Element_Code</h3>
-<p>Work_Element_Code</p>
-<p>The code of the work element, unique among the sibling elements within the parent work element.</p>
 <p>The code of the work element, unique among the sibling elements within the parent work element.</p>
 <table>
 <thead>
@@ -604,15 +588,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Type_Work_Elements.html">Prj_Type_Work_Elements</a>.<a href="Prj_Type_Work_Elements.html#work_element_code">Work_Element_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -697,15 +677,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="work_element_name">Work_Element_Name</h3>
-<p>Work_Element_Name</p>
-<p>The name of the work element, unique among the sibling elements within the parent work element.</p>
 <p>The name of the work element, unique among the sibling elements within the parent work element.</p>
 <table>
 <thead>
@@ -745,15 +723,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Type_Work_Elements.html">Prj_Type_Work_Elements</a>.<a href="Prj_Type_Work_Elements.html#work_element_name">Work_Element_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -838,14 +812,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -856,7 +829,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -884,15 +857,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Type_Work_Elements.html">Prj_Type_Work_Elements</a>.<a href="Prj_Type_Work_Elements.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -965,8 +934,6 @@
 </tbody>
 </table>
 <h3 id="full_path">Full_Path</h3>
-<p>Full_Path</p>
-<p>The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.</p>
 <p>The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.</p>
 <table>
 <thead>
@@ -1006,15 +973,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Type_Work_Elements.html">Prj_Type_Work_Elements</a>.<a href="Prj_Type_Work_Elements.html#full_path">Full_Path</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1099,7 +1062,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1112,7 +1075,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1147,15 +1109,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Type_Work_Elements.html">Prj_Type_Work_Elements</a>.<a href="Prj_Type_Work_Elements.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

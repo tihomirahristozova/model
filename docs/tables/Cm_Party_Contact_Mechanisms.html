@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cm_party_contact_mechanisms">Table Cm_Party_Contact_Mechanisms</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Contacts.PartyContactMechanisms.html">General.Contacts.PartyContactMechanisms</a></p>
 <p>Specifies the contact mechanisms, which are attached to the parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Party_Contact_Mechanisms</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -163,8 +165,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
-<p>Unique party contact mechanism Id</p>
 <p>Unique party contact mechanism Id</p>
 <table>
 <thead>
@@ -204,15 +204,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -297,15 +293,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The party, having the contact mechanism</p>
 <p>The party, having the contact mechanism</p>
 <table>
 <thead>
@@ -345,15 +339,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -438,15 +428,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="contact_mechanism_id">Contact_Mechanism_Id</h3>
-<p>Contact_Mechanism_Id</p>
-<p>The contact mechanism of the party</p>
 <p>The contact mechanism of the party</p>
 <table>
 <thead>
@@ -486,15 +474,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#contact_mechanism_id">Contact_Mechanism_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -579,15 +563,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>From_Date</p>
-<p>The first date when the contact mechanism was valid. NULL means unknown date</p>
 <p>The first date when the contact mechanism was valid. NULL means unknown date</p>
 <table>
 <thead>
@@ -627,15 +609,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDate</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#from_date">From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -720,7 +698,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -733,8 +711,6 @@
 </tbody>
 </table>
 <h3 id="thru_date">Thru_Date</h3>
-<p>Thru_Date</p>
-<p>The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid</p>
 <p>The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid</p>
 <table>
 <thead>
@@ -774,15 +750,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#thru_date">Thru_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -867,7 +839,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -880,8 +852,6 @@
 </tbody>
 </table>
 <h3 id="non_solicitation">Non_Solicitation</h3>
-<p>Non_Solicitation</p>
-<p>If 1 then Don't use the mechanism for solicitation purposes</p>
 <p>If 1 then Don't use the mechanism for solicitation purposes</p>
 <table>
 <thead>
@@ -917,15 +887,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#non_solicitation">Non_Solicitation</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1010,14 +976,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1056,15 +1021,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1137,8 +1098,6 @@
 </tbody>
 </table>
 <h3 id="is_default">Is_Default</h3>
-<p>Is_Default</p>
-<p>1 - when this is the default contact mechanism for this party; 0 - otherwise</p>
 <p>1 - when this is the default contact mechanism for this party; 0 - otherwise</p>
 <table>
 <thead>
@@ -1174,15 +1133,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#is_default">Is_Default</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1267,15 +1222,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>True if the contact mechanism is currently active and can be used to contact the party.</p>
 <p>True if the contact mechanism is currently active and can be used to contact the party.</p>
 <table>
 <thead>
@@ -1311,15 +1264,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1404,15 +1353,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_ord">Line_Ord</h3>
-<p>Line_Ord</p>
-<p>Consecutive number of the contact information. The number is unique within the party.</p>
 <p>Consecutive number of the contact information. The number is unique within the party.</p>
 <table>
 <thead>
@@ -1448,7 +1395,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -1457,10 +1404,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#line_ord">Line_Ord</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1533,7 +1476,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1568,15 +1510,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1649,8 +1587,6 @@
 </tbody>
 </table>
 <h3 id="contact_mechanism_purpose_id">Contact_Mechanism_Purpose_Id</h3>
-<p>Contact_Mechanism_Purpose_Id</p>
-<p>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms.</p>
 <p>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms.</p>
 <table>
 <thead>
@@ -1690,15 +1626,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#contact_mechanism_purpose_id">Contact_Mechanism_Purpose_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1783,15 +1715,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="personal_data_process_id">Personal_Data_Process_Id</h3>
-<p>Personal_Data_Process_Id</p>
-<p>The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown.</p>
 <p>The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown.</p>
 <table>
 <thead>
@@ -1831,15 +1761,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Party_Contact_Mechanisms.html">Cm_Party_Contact_Mechanisms</a>.<a href="Cm_Party_Contact_Mechanisms.html#personal_data_process_id">Personal_Data_Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1924,7 +1850,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

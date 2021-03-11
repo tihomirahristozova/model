@@ -1,5 +1,10 @@
 # Table Prj_Type_Roles
 
+
+## Entity
+
+Entity: [Projects.TypeRoles](~/entities/Projects.TypeRoles.md)
+
 Contains the roles of the participants of each project type. Entity: Prj_Type_Roles
 
 ## Owner Tables Hierarchy
@@ -13,15 +18,12 @@ Contains the roles of the participants of each project type. Entity: Prj_Type_Ro
 |[Project_Type_Role_Id](#project_type_role_id)|`uniqueidentifier` `PK`||
 |[Project_Type_Id](#project_type_id)|`uniqueidentifier` ||
 |[Role_Name](#role_name)|`nvarchar(255)` |The name of the participant role|
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Project_Type_Role_Id
-
-
-Project_Type_Role_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Project_Type_Role_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Type_Roles](Prj_Type_Roles.md).[Project_Type_Role_Id](Prj_Type_Roles.md#project_type_role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,13 +58,10 @@ Project_Type_Role_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Project_Type_Id
-
-
-Project_Type_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Project_Type_Id
 |Referenced Table|[Prj_Types](Prj_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Roles](Prj_Type_Roles.md).[Project_Type_Id](Prj_Type_Roles.md#project_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +96,9 @@ Project_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Role_Name
-
-
-Role_Name
-
-
-The name of the participant role
 
 
 The name of the participant role
@@ -121,9 +112,8 @@ The name of the participant role
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Roles](Prj_Type_Roles.md).[Role_Name](Prj_Type_Roles.md#role_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,26 +136,22 @@ The name of the participant role
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prj_Type_Roles](Prj_Type_Roles.md).[Description](Prj_Type_Roles.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,9 +172,6 @@ Description
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -197,9 +180,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Roles](Prj_Type_Roles.md).[Row_Version](Prj_Type_Roles.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

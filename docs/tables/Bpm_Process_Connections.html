@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-bpm_process_connections">Table Bpm_Process_Connections</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Bpm.ProcessConnections.html">Systems.Bpm.ProcessConnections</a></p>
 <p>Contains the connections between process elements. Part of the process model. Entity: Bpm_Process_Connections</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#condition_filter_xml">Condition_Filter_Xml</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>When not NULL, specifies that the flow will be followed only if the condition is matched by the current values in the process instance.</td>
 </tr>
 <tr>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="process_connection_id">Process_Connection_Id</h3>
-<p>Process_Connection_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#process_connection_id">Process_Connection_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,15 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_id">Process_Id</h3>
-<p>Process_Id</p>
-<p>The process version to which this connection belongs.</p>
 <p>The process version to which this connection belongs.</p>
 <table>
 <thead>
@@ -323,15 +318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#process_id">Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -416,15 +407,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_connection_code">Process_Connection_Code</h3>
-<p>Process_Connection_Code</p>
-<p>Connection code, unique within the process. Used as ID for XML serialization purposes.</p>
 <p>Connection code, unique within the process. Used as ID for XML serialization purposes.</p>
 <table>
 <thead>
@@ -464,15 +453,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#process_connection_code">Process_Connection_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -557,7 +542,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -570,8 +555,6 @@
 </tbody>
 </table>
 <h3 id="process_connection_name">Process_Connection_Name</h3>
-<p>Process_Connection_Name</p>
-<p>Multilanguage connection name.</p>
 <p>Multilanguage connection name.</p>
 <table>
 <thead>
@@ -611,15 +594,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#process_connection_name">Process_Connection_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -704,7 +683,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -717,8 +696,6 @@
 </tbody>
 </table>
 <h3 id="source_process_node_id">Source_Process_Node_Id</h3>
-<p>Source_Process_Node_Id</p>
-<p>The element, from which the connection starts. The element should be in the same process as the connection.</p>
 <p>The element, from which the connection starts. The element should be in the same process as the connection.</p>
 <table>
 <thead>
@@ -758,15 +735,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#source_process_node_id">Source_Process_Node_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -851,15 +824,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="target_process_node_id">Target_Process_Node_Id</h3>
-<p>Target_Process_Node_Id</p>
-<p>The element, at which the connection ends. The element should be in the same process as the connection.</p>
 <p>The element, at which the connection ends. The element should be in the same process as the connection.</p>
 <table>
 <thead>
@@ -899,15 +870,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#target_process_node_id">Target_Process_Node_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -992,15 +959,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_filter_xml">Condition_Filter_Xml</h3>
-<p>Condition_Filter_Xml</p>
-<p>When not NULL, specifies that the flow will be followed only if the condition is matched by the current values in the process instance.</p>
 <p>When not NULL, specifies that the flow will be followed only if the condition is matched by the current values in the process instance.</p>
 <table>
 <thead>
@@ -1012,7 +977,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1040,15 +1005,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#condition_filter_xml">Condition_Filter_Xml</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1133,7 +1094,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1146,8 +1107,6 @@
 </tbody>
 </table>
 <h3 id="is_default">Is_Default</h3>
-<p>Is_Default</p>
-<p>Denotes this flow as the default sequence flow. It is taken only when all other flows are not valid. For example, gateways usually are followed by several conditional flows and one default flow.</p>
 <p>Denotes this flow as the default sequence flow. It is taken only when all other flows are not valid. For example, gateways usually are followed by several conditional flows and one default flow.</p>
 <table>
 <thead>
@@ -1183,15 +1142,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#is_default">Is_Default</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1276,14 +1231,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1318,15 +1272,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Connections.html">Bpm_Process_Connections</a>.<a href="Bpm_Process_Connections.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

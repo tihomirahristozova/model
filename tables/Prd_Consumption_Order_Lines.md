@@ -1,5 +1,10 @@
 # Table Prd_Consumption_Order_Lines
 
+
+## Entity
+
+Entity: [Production.ShopFloor.ConsumptionOrderLines](~/entities/Production.ShopFloor.ConsumptionOrderLines.md)
+
 Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_Lines
 
 ## Owner Tables Hierarchy
@@ -25,19 +30,13 @@ Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_L
 |[Consumed_Quantity_Base](#consumed_quantity_base)|`decimal(18, 3)` Readonly|The requested quantity equivalence in the base measurement category of the requested material.|
 |[Consumption_Order_Id](#consumption_order_id)|`uniqueidentifier` ||
 |[Id](#id)|`uniqueidentifier` `PK`|Unique order lline Id|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Consumed_Standard_Quantity_Base](#consumed_standard_quantity_base)|`decimal(18, 3)` Readonly|The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.|
 
 ## Columns
 
 ### Line_Ord
-
-
-Line_Ord
-
-
-Non-unique line number within the order
 
 
 Non-unique line number within the order
@@ -50,10 +49,9 @@ Non-unique line number within the order
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Line_Ord](Prd_Consumption_Order_Lines.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -75,12 +73,6 @@ Non-unique line number within the order
 ### Work_Order_Item_Ingredient_Id
 
 
-Work_Order_Item_Ingredient_Id
-
-
-The Work Order Item Ingredient for which we are ordering materials.
-
-
 The Work Order Item Ingredient for which we are ordering materials.
 
 | Property | Value |
@@ -92,9 +84,8 @@ The Work Order Item Ingredient for which we are ordering materials.
 |Referenced Table|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Work_Order_Item_Ingredient_Id](Prd_Consumption_Order_Lines.md#work_order_item_ingredient_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -117,15 +108,9 @@ The Work Order Item Ingredient for which we are ordering materials.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Scheduled_Date_Time
-
-
-Scheduled_Date_Time
-
-
-The scheduled date, when the material is needed.
 
 
 The scheduled date, when the material is needed.
@@ -139,9 +124,8 @@ The scheduled date, when the material is needed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Scheduled_Date_Time](Prd_Consumption_Order_Lines.md#scheduled_date_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -169,12 +153,6 @@ The scheduled date, when the material is needed.
 ### Product_Id
 
 
-Product_Id
-
-
-The requested material.
-
-
 The requested material.
 
 | Property | Value |
@@ -186,9 +164,8 @@ The requested material.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Product_Id](Prd_Consumption_Order_Lines.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -211,15 +188,9 @@ The requested material.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Consumed_Quantity
-
-
-Consumed_Quantity
-
-
-Requested quantity of the material.
 
 
 Requested quantity of the material.
@@ -232,9 +203,8 @@ Requested quantity of the material.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Consumed_Quantity](Prd_Consumption_Order_Lines.md#consumed_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -262,12 +232,6 @@ Requested quantity of the material.
 ### Consumed_Quantity_Unit_Id
 
 
-Consumed_Quantity_Unit_Id
-
-
-Measurement unit of the requested quantity.
-
-
 Measurement unit of the requested quantity.
 
 | Property | Value |
@@ -279,9 +243,8 @@ Measurement unit of the requested quantity.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Consumed_Quantity_Unit_Id](Prd_Consumption_Order_Lines.md#consumed_quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -304,15 +267,9 @@ Measurement unit of the requested quantity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store, from which the material is requested.
 
 
 The store, from which the material is requested.
@@ -326,9 +283,8 @@ The store, from which the material is requested.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Store_Id](Prd_Consumption_Order_Lines.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -351,15 +307,9 @@ The store, from which the material is requested.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Store_Bin_Id
-
-
-Store_Bin_Id
-
-
-If not NULL, specifies that the material has to be consumed from specific store bin
 
 
 If not NULL, specifies that the material has to be consumed from specific store bin
@@ -373,9 +323,8 @@ If not NULL, specifies that the material has to be consumed from specific store 
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Store_Bin_Id](Prd_Consumption_Order_Lines.md#store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -398,15 +347,9 @@ If not NULL, specifies that the material has to be consumed from specific store 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Lot_Id
-
-
-Lot_Id
-
-
-If not NULL, specifies that the material has to be consumed from specific lot
 
 
 If not NULL, specifies that the material has to be consumed from specific lot
@@ -420,9 +363,8 @@ If not NULL, specifies that the material has to be consumed from specific lot
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Lot_Id](Prd_Consumption_Order_Lines.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -445,15 +387,9 @@ If not NULL, specifies that the material has to be consumed from specific lot
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-If not NULL, specifies that the material has to be consumed with specific serial number
 
 
 If not NULL, specifies that the material has to be consumed with specific serial number
@@ -467,9 +403,8 @@ If not NULL, specifies that the material has to be consumed with specific serial
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Serial_Number_Id](Prd_Consumption_Order_Lines.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -492,15 +427,9 @@ If not NULL, specifies that the material has to be consumed with specific serial
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Consumption_Type
-
-
-Consumption_Type
-
-
-Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).
 
 
 Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).
@@ -514,10 +443,9 @@ Determines whether the material cost is distributed among all produced products,
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`S`, `A`|
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Consumption_Type](Prd_Consumption_Order_Lines.md#consumption_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -540,15 +468,9 @@ Determines whether the material cost is distributed among all produced products,
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Consumed_Quantity_Base
-
-
-Consumed_Quantity_Base
-
-
-The requested quantity equivalence in the base measurement category of the requested material.
 
 
 The requested quantity equivalence in the base measurement category of the requested material.
@@ -561,9 +483,8 @@ The requested quantity equivalence in the base measurement category of the reque
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Consumed_Quantity_Base](Prd_Consumption_Order_Lines.md#consumed_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -584,9 +505,6 @@ The requested quantity equivalence in the base measurement category of the reque
 
 ### Consumption_Order_Id
 
-
-Consumption_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -596,9 +514,8 @@ Consumption_Order_Id
 |Referenced Table|[Prd_Consumption_Orders](Prd_Consumption_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Consumption_Order_Id](Prd_Consumption_Order_Lines.md#consumption_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -621,15 +538,9 @@ Consumption_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Id
-
-
-Id
-
-
-Unique order lline Id
 
 
 Unique order lline Id
@@ -643,9 +554,8 @@ Unique order lline Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Id](Prd_Consumption_Order_Lines.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -668,25 +578,21 @@ Unique order lline Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Notes](Prd_Consumption_Order_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -707,9 +613,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -718,9 +621,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Row_Version](Prd_Consumption_Order_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -742,12 +644,6 @@ Row_Version
 ### Consumed_Standard_Quantity_Base
 
 
-Consumed_Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.
-
-
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.
 
 | Property | Value |
@@ -758,9 +654,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md).[Consumed_Standard_Quantity_Base](Prd_Consumption_Order_Lines.md#consumed_standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

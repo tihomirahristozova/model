@@ -1,5 +1,10 @@
 # View Cmm_Social_Reactions_Summary_Indexed_View
 
+
+## Entity
+
+Entity: [Communities.SocialReactionsSummary](~/entities/Communities.SocialReactionsSummary.md)
+
 Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary_Indexed_View
 
 ## Summary
@@ -15,9 +20,6 @@ Summary with the social reactions per comment and dataobject. Entity: Cmm_Social
 
 ### Data_Object_Id
 
-
-Data_Object_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -26,9 +28,9 @@ Data_Object_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Objects](Sys_Objects.md).[Object_Id](Sys_Objects.md#object_id)|
+|Base Table.Column|[Sys_Objects](Sys_Objects.md).[Object_Id](Sys_Objects.md#object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -51,13 +53,10 @@ Data_Object_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Social_Comment_Id
 
-
-Social_Comment_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -66,9 +65,8 @@ Social_Comment_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cmm_Social_Comments](Cmm_Social_Comments.md).[Social_Comment_Id](Cmm_Social_Comments.md#social_comment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -91,15 +89,9 @@ Social_Comment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Reaction_Type
-
-
-Reaction_Type
-
-
-The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.
 
 
 The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.
@@ -113,10 +105,9 @@ The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = S
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`LIK`, `LOV`, `HAH`, `WOW`, `SAD`, `ANG`|
 |Default Value|None|
-|Derived From|[Cmm_Social_Reactions_Summary_Indexed_View](Cmm_Social_Reactions_Summary_Indexed_View.md).[Reaction_Type](Cmm_Social_Reactions_Summary_Indexed_View.md#reaction_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -137,9 +128,6 @@ The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = S
 
 ### Cnt
 
-
-Cnt
-
 | Property | Value |
 | - | - |
 |Type|bigint|
@@ -148,9 +136,8 @@ Cnt
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Reactions_Summary_Indexed_View](Cmm_Social_Reactions_Summary_Indexed_View.md).[Cnt](Cmm_Social_Reactions_Summary_Indexed_View.md#cnt)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

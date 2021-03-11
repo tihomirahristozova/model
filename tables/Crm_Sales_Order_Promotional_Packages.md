@@ -1,5 +1,10 @@
 # Table Crm_Sales_Order_Promotional_Packages
 
+
+## Entity
+
+Entity: [Crm.Sales.SalesOrderPromotionalPackages](~/entities/Crm.Sales.SalesOrderPromotionalPackages.md)
+
 The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Promotional_Packages
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Pro
 
 ### Sales_Order_Promotional_Package_Id
 
-
-Sales_Order_Promotional_Package_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Sales_Order_Promotional_Package_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Sales_Order_Promotional_Packages](Crm_Sales_Order_Promotional_Packages.md).[Sales_Order_Promotional_Package_Id](Crm_Sales_Order_Promotional_Packages.md#sales_order_promotional_package_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Sales_Order_Promotional_Package_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Sales_Order_Id
-
-
-Sales_Order_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Sales_Order_Id
 |Referenced Table|[Crm_Sales_Orders](Crm_Sales_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Promotional_Packages](Crm_Sales_Order_Promotional_Packages.md).[Sales_Order_Id](Crm_Sales_Order_Promotional_Packages.md#sales_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Sales_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Promotional_Package_Id
-
-
-Promotional_Package_Id
-
-
-The type of promotional package sold
 
 
 The type of promotional package sold
@@ -122,9 +113,8 @@ The type of promotional package sold
 |Referenced Table|[Crm_Promotional_Packages](Crm_Promotional_Packages.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Promotional_Packages](Crm_Sales_Order_Promotional_Packages.md).[Promotional_Package_Id](Crm_Sales_Order_Promotional_Packages.md#promotional_package_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ The type of promotional package sold
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Number_Of_Packages
-
-
-Number_Of_Packages
-
-
-Number of packages sold
 
 
 Number of packages sold
@@ -168,9 +152,8 @@ Number of packages sold
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Sales_Order_Promotional_Packages](Crm_Sales_Order_Promotional_Packages.md).[Number_Of_Packages](Crm_Sales_Order_Promotional_Packages.md#number_of_packages)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,12 +175,6 @@ Number of packages sold
 ### Line_Number
 
 
-Line_Number
-
-
-Consecutive line number of the package, unique within the document.
-
-
 Consecutive line number of the package, unique within the document.
 
 | Property | Value |
@@ -208,10 +185,9 @@ Consecutive line number of the package, unique within the document.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Crm_Sales_Order_Promotional_Packages](Crm_Sales_Order_Promotional_Packages.md).[Line_Number](Crm_Sales_Order_Promotional_Packages.md#line_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,12 +210,9 @@ Consecutive line number of the package, unique within the document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -249,9 +222,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Promotional_Packages](Crm_Sales_Order_Promotional_Packages.md).[Row_Version](Crm_Sales_Order_Promotional_Packages.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

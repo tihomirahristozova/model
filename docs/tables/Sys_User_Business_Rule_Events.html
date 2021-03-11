@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_user_business_rule_events">Table Sys_User_Business_Rule_Events</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Bpm.UserBusinessRuleEvents.html">Systems.Bpm.UserBusinessRuleEvents</a></p>
 <p>Represents event registration of a business rule. Entity: Sys_User_Business_Rule_Events</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -133,8 +135,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="event_type">Event_Type</h3>
-<p>Event_Type</p>
-<p>The event for which to register the business rule.</p>
 <p>The event for which to register the business rule.</p>
 <table>
 <thead>
@@ -174,7 +174,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -183,10 +183,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Events.html">Sys_User_Business_Rule_Events</a>.<a href="Sys_User_Business_Rule_Events.html#event_type">Event_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -259,8 +255,6 @@
 </tbody>
 </table>
 <h3 id="event_parameter">Event_Parameter</h3>
-<p>Event_Parameter</p>
-<p>Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.</p>
 <p>Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.</p>
 <table>
 <thead>
@@ -300,15 +294,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Events.html">Sys_User_Business_Rule_Events</a>.<a href="Sys_User_Business_Rule_Events.html#event_parameter">Event_Parameter</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -381,8 +371,6 @@
 </tbody>
 </table>
 <h3 id="execution_priority">Execution_Priority</h3>
-<p>Execution_Priority</p>
-<p>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.</p>
 <p>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.</p>
 <table>
 <thead>
@@ -418,7 +406,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -427,10 +415,6 @@
 <tr>
 <td>Default Value</td>
 <td>50</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Events.html">Sys_User_Business_Rule_Events</a>.<a href="Sys_User_Business_Rule_Events.html#execution_priority">Execution_Priority</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -503,7 +487,6 @@
 </tbody>
 </table>
 <h3 id="user_business_rule_event_id">User_Business_Rule_Event_Id</h3>
-<p>User_Business_Rule_Event_Id</p>
 <table>
 <thead>
 <tr>
@@ -542,15 +525,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Events.html">Sys_User_Business_Rule_Events</a>.<a href="Sys_User_Business_Rule_Events.html#user_business_rule_event_id">User_Business_Rule_Event_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -635,15 +614,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="user_business_rule_id">User_Business_Rule_Id</h3>
-<p>User_Business_Rule_Id</p>
-<p>The rule, which will be registered for the event.</p>
 <p>The rule, which will be registered for the event.</p>
 <table>
 <thead>
@@ -683,15 +660,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Events.html">Sys_User_Business_Rule_Events</a>.<a href="Sys_User_Business_Rule_Events.html#user_business_rule_id">User_Business_Rule_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -776,15 +749,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="layer">Layer</h3>
-<p>Layer</p>
-<p>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.</p>
 <p>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.</p>
 <table>
 <thead>
@@ -824,7 +795,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -833,10 +804,6 @@
 <tr>
 <td>Default Value</td>
 <td>BKE</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Events.html">Sys_User_Business_Rule_Events</a>.<a href="Sys_User_Business_Rule_Events.html#layer">Layer</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -909,7 +876,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -944,15 +910,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Events.html">Sys_User_Business_Rule_Events</a>.<a href="Sys_User_Business_Rule_Events.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

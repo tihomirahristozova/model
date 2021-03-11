@@ -1,5 +1,10 @@
 # Table Cost_Distribution_Costs
 
+
+## Entity
+
+Entity: [Finance.Cost.DistributionCosts](~/entities/Finance.Cost.DistributionCosts.md)
+
 The cost types and their amounts which are distributed by a Cost Distribution document. Entity: Cost_Distribution_Costs
 
 ## Owner Tables Hierarchy
@@ -15,14 +20,11 @@ The cost types and their amounts which are distributed by a Cost Distribution do
 |[Cost_Distribution_Id](#cost_distribution_id)|`uniqueidentifier` ||
 |[Cost_Type_Id](#cost_type_id)|`uniqueidentifier` |The type of the cost, which will be distributed.|
 |[Amount_Base](#amount_base)|`decimal(12, 2)` |The cost (in base currency) which should be distributed.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 
 ## Columns
 
 ### Cost_Distribution_Cost_Id
-
-
-Cost_Distribution_Cost_Id
 
 | Property | Value |
 | - | - |
@@ -33,9 +35,8 @@ Cost_Distribution_Cost_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Distribution_Costs](Cost_Distribution_Costs.md).[Cost_Distribution_Cost_Id](Cost_Distribution_Costs.md#cost_distribution_cost_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Cost_Distribution_Cost_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Distribution_Id
-
-
-Cost_Distribution_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Cost_Distribution_Id
 |Referenced Table|[Cost_Distributions](Cost_Distributions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Costs](Cost_Distribution_Costs.md).[Cost_Distribution_Id](Cost_Distribution_Costs.md#cost_distribution_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +96,9 @@ Cost_Distribution_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Type_Id
-
-
-Cost_Type_Id
-
-
-The type of the cost, which will be distributed.
 
 
 The type of the cost, which will be distributed.
@@ -121,9 +112,8 @@ The type of the cost, which will be distributed.
 |Referenced Table|[Cost_Types](Cost_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Costs](Cost_Distribution_Costs.md).[Cost_Type_Id](Cost_Distribution_Costs.md#cost_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,15 +136,9 @@ The type of the cost, which will be distributed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Amount_Base
-
-
-Amount_Base
-
-
-The cost (in base currency) which should be distributed.
 
 
 The cost (in base currency) which should be distributed.
@@ -167,9 +151,8 @@ The cost (in base currency) which should be distributed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Costs](Cost_Distribution_Costs.md).[Amount_Base](Cost_Distribution_Costs.md#amount_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,25 +175,21 @@ The cost (in base currency) which should be distributed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Costs](Cost_Distribution_Costs.md).[Notes](Cost_Distribution_Costs.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

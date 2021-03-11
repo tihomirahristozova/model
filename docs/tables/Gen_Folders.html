@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_folders">Table Gen_Folders</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Folders.html">General.Folders</a></p>
 <p>Folders are the base for the file storage within the system. Each folder is a data object, with the primary idea of containing files. Entity: Gen_Folders (Introduced in version 21.1.1.8)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -124,7 +126,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="folder_id">Folder_Id</h3>
-<p>Folder_Id</p>
 <table>
 <thead>
 <tr>
@@ -163,15 +164,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Folders.html">Gen_Folders</a>.<a href="Gen_Folders.html#folder_id">Folder_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -256,15 +253,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_folder_id">Parent_Folder_Id</h3>
-<p>Parent_Folder_Id</p>
-<p>Parent folder. NULL if this is root folder.</p>
 <p>Parent folder. NULL if this is root folder.</p>
 <table>
 <thead>
@@ -304,15 +299,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Folders.html">Gen_Folders</a>.<a href="Gen_Folders.html#parent_folder_id">Parent_Folder_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -397,15 +388,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="folder_name">Folder_Name</h3>
-<p>Folder_Name</p>
-<p>Name of the folder. Unique within its parent folder.</p>
 <p>Name of the folder. Unique within its parent folder.</p>
 <table>
 <thead>
@@ -445,15 +434,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Folders.html">Gen_Folders</a>.<a href="Gen_Folders.html#folder_name">Folder_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -538,7 +523,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -551,7 +536,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -562,7 +546,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -590,15 +574,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Folders.html">Gen_Folders</a>.<a href="Gen_Folders.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -671,8 +651,6 @@
 </tbody>
 </table>
 <h3 id="access_key_id">Access_Key_Id</h3>
-<p>Access_Key_Id</p>
-<p>The access key, required to unlock the folder contents. NULL means the folder is unprotected and accessible to all internal users.</p>
 <p>The access key, required to unlock the folder contents. NULL means the folder is unprotected and accessible to all internal users.</p>
 <table>
 <thead>
@@ -712,15 +690,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Folders.html">Gen_Folders</a>.<a href="Gen_Folders.html#access_key_id">Access_Key_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -805,14 +779,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -847,15 +820,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Folders.html">Gen_Folders</a>.<a href="Gen_Folders.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

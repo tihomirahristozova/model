@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-rent_transaction_lines">Table Rent_Transaction_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Rental.TransactionLines.html">Applications.Rental.TransactionLines</a></p>
 <p>Contains all transactions of Record of Handover / Handing-Over Record lines. Entity: Rent_Transaction_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -132,7 +134,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Notes</td>
 </tr>
 <tr>
@@ -144,7 +146,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="rent_transaction_line_id">Rent_Transaction_Line_Id</h3>
-<p>Rent_Transaction_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -183,15 +184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Transaction_Lines.html">Rent_Transaction_Lines</a>.<a href="Rent_Transaction_Lines.html#rent_transaction_line_id">Rent_Transaction_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -276,14 +273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rent_transaction_id">Rent_Transaction_Id</h3>
-<p>Rent_Transaction_Id</p>
 <table>
 <thead>
 <tr>
@@ -322,15 +318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Transaction_Lines.html">Rent_Transaction_Lines</a>.<a href="Rent_Transaction_Lines.html#rent_transaction_id">Rent_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -415,15 +407,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rental_asset_id">Rental_Asset_Id</h3>
-<p>Rental_Asset_Id</p>
-<p>Rental asset</p>
 <p>Rental asset</p>
 <table>
 <thead>
@@ -463,15 +453,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#rental_asset_id">Rental_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -556,15 +542,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_type">Transaction_Type</h3>
-<p>Transaction_Type</p>
-<p>Transaction Type</p>
 <p>Transaction Type</p>
 <table>
 <thead>
@@ -604,7 +588,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -613,10 +597,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Transaction_Lines.html">Rent_Transaction_Lines</a>.<a href="Rent_Transaction_Lines.html#transaction_type">Transaction_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -701,7 +681,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -714,8 +694,6 @@
 </tbody>
 </table>
 <h3 id="lease_contract_id">Lease_Contract_Id</h3>
-<p>Lease_Contract_Id</p>
-<p>Lease Contract</p>
 <p>Lease Contract</p>
 <table>
 <thead>
@@ -755,15 +733,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Transaction_Lines.html">Rent_Transaction_Lines</a>.<a href="Rent_Transaction_Lines.html#lease_contract_id">Lease_Contract_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -848,15 +822,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lessee_customer_id">Lessee_Customer_Id</h3>
-<p>Lessee_Customer_Id</p>
-<p>Lessee Customer</p>
 <p>Lessee Customer</p>
 <table>
 <thead>
@@ -896,15 +868,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Transaction_Lines.html">Rent_Transaction_Lines</a>.<a href="Rent_Transaction_Lines.html#lessee_customer_id">Lessee_Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -989,15 +957,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_timestamp">Transaction_Timestamp</h3>
-<p>Transaction_Timestamp</p>
-<p>Transaction Timestamp</p>
 <p>Transaction Timestamp</p>
 <table>
 <thead>
@@ -1037,15 +1003,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Transaction_Lines.html">Rent_Transaction_Lines</a>.<a href="Rent_Transaction_Lines.html#transaction_timestamp">Transaction_Timestamp</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1130,7 +1092,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1144,8 +1106,6 @@
 </table>
 <h3 id="notes">Notes</h3>
 <p>Notes</p>
-<p>Notes</p>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1156,7 +1116,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1184,15 +1144,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Transaction_Lines.html">Rent_Transaction_Lines</a>.<a href="Rent_Transaction_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1265,7 +1221,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1300,15 +1255,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Transaction_Lines.html">Rent_Transaction_Lines</a>.<a href="Rent_Transaction_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

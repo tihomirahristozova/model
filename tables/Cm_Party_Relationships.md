@@ -1,5 +1,10 @@
 # Table Cm_Party_Relationships
 
+
+## Entity
+
+Entity: [General.Contacts.PartyRelationships](~/entities/General.Contacts.PartyRelationships.md)
+
 Defines the relationships between the parties. The data is preserved over time. Entity: Cm_Party_Relationships
 
 ## Summary
@@ -19,9 +24,6 @@ Defines the relationships between the parties. The data is preserved over time. 
 
 ### Relationship_Id
 
-
-Relationship_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Relationship_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Party_Relationships](Cm_Party_Relationships.md).[Relationship_Id](Cm_Party_Relationships.md#relationship_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Relationship_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Party_Id
-
-
-From_Party_Id
-
-
-The first party in the relationship
 
 
 The first party in the relationship
@@ -78,9 +73,8 @@ The first party in the relationship
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Relationships](Cm_Party_Relationships.md).[From_Party_Id](Cm_Party_Relationships.md#from_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +97,9 @@ The first party in the relationship
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Relationship_Type_Id
-
-
-Relationship_Type_Id
-
-
-The type of the relationship
 
 
 The type of the relationship
@@ -125,9 +113,8 @@ The type of the relationship
 |Referenced Table|[Cm_Party_Relationship_Types](Cm_Party_Relationship_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Relationships](Cm_Party_Relationships.md).[Relationship_Type_Id](Cm_Party_Relationships.md#relationship_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,15 +137,9 @@ The type of the relationship
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### To_Party_Id
-
-
-To_Party_Id
-
-
-The second party in the relationship
 
 
 The second party in the relationship
@@ -172,9 +153,8 @@ The second party in the relationship
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Relationships](Cm_Party_Relationships.md).[To_Party_Id](Cm_Party_Relationships.md#to_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,15 +177,9 @@ The second party in the relationship
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### From_Date
-
-
-From_Date
-
-
-The starting date of the relationship. NULL means the date is the begining of the time
 
 
 The starting date of the relationship. NULL means the date is the begining of the time
@@ -219,9 +193,8 @@ The starting date of the relationship. NULL means the date is the begining of th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Relationships](Cm_Party_Relationships.md).[From_Date](Cm_Party_Relationships.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,12 +222,6 @@ The starting date of the relationship. NULL means the date is the begining of th
 ### To_Date
 
 
-To_Date
-
-
-The ending date of the relationship. NULL means the relationship is still active
-
-
 The ending date of the relationship. NULL means the relationship is still active
 
 | Property | Value |
@@ -266,9 +233,8 @@ The ending date of the relationship. NULL means the relationship is still active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Relationships](Cm_Party_Relationships.md).[To_Date](Cm_Party_Relationships.md#to_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,9 +261,6 @@ The ending date of the relationship. NULL means the relationship is still active
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -307,9 +270,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Party_Relationships](Cm_Party_Relationships.md).[Notes](Cm_Party_Relationships.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -330,9 +292,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -341,9 +300,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Relationships](Cm_Party_Relationships.md).[Row_Version](Cm_Party_Relationships.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

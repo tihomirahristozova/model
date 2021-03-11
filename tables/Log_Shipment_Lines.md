@@ -1,5 +1,10 @@
 # Table Log_Shipment_Lines
 
+
+## Entity
+
+Entity: [Logistics.Shipment.ShipmentLines](~/entities/Logistics.Shipment.ShipmentLines.md)
+
 Represents detail lines of shipments. Each line contains the shipment of one product. Entity: Log_Shipment_Lines
 
 ## Owner Tables Hierarchy
@@ -24,7 +29,7 @@ Represents detail lines of shipments. Each line contains the shipment of one pro
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number of the shipped product. NULL means that serial number is unknown or not applicable.|
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Guarantee period in days for the offered product. NULL for non-serviced products|
 |[Parent_Document_Id](#parent_document_id)|`uniqueidentifier` |The document, which the current line executes. NULL when the current line does not execute another line.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Quantity_Base](#quantity_base)|`decimal(12, 3)` |The equivalence of Quantity in the base measurement category of the product.|
 |[Transaction_Line_Id](#transaction_line_id)|`uniqueidentifier` |The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product.|
 |[Line_Required_Delivery_Date](#line_required_delivery_date)|`datetime` |Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly|
@@ -44,9 +49,6 @@ Represents detail lines of shipments. Each line contains the shipment of one pro
 
 ### Shipment_Line_Id
 
-
-Shipment_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -56,9 +58,8 @@ Shipment_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Shipment_Line_Id](Log_Shipment_Lines.md#shipment_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -81,12 +82,9 @@ Shipment_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Shipment_Id
-
-
-Shipment_Id
 
 | Property | Value |
 | - | - |
@@ -97,9 +95,8 @@ Shipment_Id
 |Referenced Table|[Log_Shipments](Log_Shipments.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Shipment_Id](Log_Shipment_Lines.md#shipment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -122,15 +119,9 @@ Shipment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-Line number, unique for the shipment
 
 
 Line number, unique for the shipment
@@ -143,10 +134,9 @@ Line number, unique for the shipment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Line_No](Log_Shipment_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -168,12 +158,6 @@ Line number, unique for the shipment
 ### Shipment_Order_Line_Id
 
 
-Shipment_Order_Line_Id
-
-
-Shipment order line for which this quantity is shipped
-
-
 Shipment order line for which this quantity is shipped
 
 | Property | Value |
@@ -185,9 +169,8 @@ Shipment order line for which this quantity is shipped
 |Referenced Table|[Log_Shipment_Order_Lines](Log_Shipment_Order_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Shipment_Order_Line_Id](Log_Shipment_Lines.md#shipment_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -210,15 +193,9 @@ Shipment order line for which this quantity is shipped
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Parent_Sales_Order_Line_Id
-
-
-Parent_Sales_Order_Line_Id
-
-
-Sales order line which is shipped
 
 
 Sales order line which is shipped
@@ -232,9 +209,8 @@ Sales order line which is shipped
 |Referenced Table|[Crm_Sales_Order_Lines](Crm_Sales_Order_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Parent_Sales_Order_Line_Id](Log_Shipment_Lines.md#parent_sales_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -257,15 +233,9 @@ Sales order line which is shipped
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The quantity to be shipped
 
 
 The quantity to be shipped
@@ -278,9 +248,8 @@ The quantity to be shipped
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Quantity](Log_Shipment_Lines.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -302,12 +271,6 @@ The quantity to be shipped
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity
-
-
 The measurement unit of Quantity
 
 | Property | Value |
@@ -319,9 +282,8 @@ The measurement unit of Quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Quantity_Unit_Id](Log_Shipment_Lines.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -344,15 +306,9 @@ The measurement unit of Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Finished
-
-
-Finished
-
-
-1 if this shipment should prohibit further shipments for the sales order line
 
 
 1 if this shipment should prohibit further shipments for the sales order line
@@ -365,9 +321,8 @@ Finished
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Finished](Log_Shipment_Lines.md#finished)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -390,15 +345,9 @@ Finished
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Bin_Id
-
-
-Store_Bin_Id
-
-
-The store bin from which to take the goods
 
 
 The store bin from which to take the goods
@@ -412,9 +361,8 @@ The store bin from which to take the goods
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Store_Bin_Id](Log_Shipment_Lines.md#store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -437,15 +385,9 @@ The store bin from which to take the goods
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Lot_Id
-
-
-Lot_Id
-
-
-The store lot from which to take the goods
 
 
 The store lot from which to take the goods
@@ -459,9 +401,8 @@ The store lot from which to take the goods
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Lot_Id](Log_Shipment_Lines.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -484,15 +425,9 @@ The store lot from which to take the goods
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-The serial number of the shipped product. NULL means that serial number is unknown or not applicable.
 
 
 The serial number of the shipped product. NULL means that serial number is unknown or not applicable.
@@ -506,9 +441,8 @@ The serial number of the shipped product. NULL means that serial number is unkno
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Serial_Number_Id](Log_Shipment_Lines.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -531,15 +465,9 @@ The serial number of the shipped product. NULL means that serial number is unkno
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Guarantee_Period_Days
-
-
-Guarantee_Period_Days
-
-
-Guarantee period in days for the offered product. NULL for non-serviced products
 
 
 Guarantee period in days for the offered product. NULL for non-serviced products
@@ -552,9 +480,8 @@ Guarantee period in days for the offered product. NULL for non-serviced products
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Guarantee_Period_Days](Log_Shipment_Lines.md#guarantee_period_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -576,12 +503,6 @@ Guarantee period in days for the offered product. NULL for non-serviced products
 ### Parent_Document_Id
 
 
-Parent_Document_Id
-
-
-The document, which the current line executes. NULL when the current line does not execute another line.
-
-
 The document, which the current line executes. NULL when the current line does not execute another line.
 
 | Property | Value |
@@ -593,9 +514,8 @@ The document, which the current line executes. NULL when the current line does n
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Parent_Document_Id](Log_Shipment_Lines.md#parent_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -618,25 +538,21 @@ The document, which the current line executes. NULL when the current line does n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Notes](Log_Shipment_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -658,12 +574,6 @@ Notes
 ### Quantity_Base
 
 
-Quantity_Base
-
-
-The equivalence of Quantity in the base measurement category of the product.
-
-
 The equivalence of Quantity in the base measurement category of the product.
 
 | Property | Value |
@@ -674,9 +584,8 @@ The equivalence of Quantity in the base measurement category of the product.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Quantity_Base](Log_Shipment_Lines.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -698,12 +607,6 @@ The equivalence of Quantity in the base measurement category of the product.
 ### Transaction_Line_Id
 
 
-Transaction_Line_Id
-
-
-The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product.
-
-
 The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product.
 
 | Property | Value |
@@ -715,9 +618,8 @@ The Transaction Line, based on which this shipment line was created. The transac
 |Referenced Table|[Inv_Transaction_Lines](Inv_Transaction_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Transaction_Line_Id](Log_Shipment_Lines.md#transaction_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -740,15 +642,9 @@ The Transaction Line, based on which this shipment line was created. The transac
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Line_Required_Delivery_Date
-
-
-Line_Required_Delivery_Date
-
-
-Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly
 
 
 Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly
@@ -762,9 +658,8 @@ Required delivery date for this lines. Depending on the shipment route travel ti
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Line_Required_Delivery_Date](Log_Shipment_Lines.md#line_required_delivery_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -786,12 +681,6 @@ Required delivery date for this lines. Depending on the shipment route travel ti
 ### Parent_Line_No
 
 
-Parent_Line_No
-
-
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.
-
-
 The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.
 
 | Property | Value |
@@ -802,9 +691,8 @@ The number of the line within the parent document, which the current line execut
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Parent_Line_No](Log_Shipment_Lines.md#parent_line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -827,15 +715,9 @@ The number of the line within the parent document, which the current line execut
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Length_m
-
-
-Length_m
-
-
-The length of the package in meters. NULL means unknown
 
 
 The length of the package in meters. NULL means unknown
@@ -848,9 +730,8 @@ The length of the package in meters. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Length_m](Log_Shipment_Lines.md#length_m)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -872,12 +753,6 @@ The length of the package in meters. NULL means unknown
 ### Pallet_No
 
 
-Pallet_No
-
-
-The number of the pallet in which the goods are packaged. NULL means unknown
-
-
 The number of the pallet in which the goods are packaged. NULL means unknown
 
 | Property | Value |
@@ -888,9 +763,8 @@ The number of the pallet in which the goods are packaged. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Pallet_No](Log_Shipment_Lines.md#pallet_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -912,12 +786,6 @@ The number of the pallet in which the goods are packaged. NULL means unknown
 ### Width_m
 
 
-Width_m
-
-
-The width of the package in meters. NULL means unknown
-
-
 The width of the package in meters. NULL means unknown
 
 | Property | Value |
@@ -928,9 +796,8 @@ The width of the package in meters. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Width_m](Log_Shipment_Lines.md#width_m)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -951,9 +818,6 @@ The width of the package in meters. NULL means unknown
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -962,9 +826,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Row_Version](Log_Shipment_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -986,12 +849,6 @@ Row_Version
 ### Height_m
 
 
-Height_m
-
-
-The height of the package in meters. NULL means unknown
-
-
 The height of the package in meters. NULL means unknown
 
 | Property | Value |
@@ -1002,9 +859,8 @@ The height of the package in meters. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Height_m](Log_Shipment_Lines.md#height_m)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1026,12 +882,6 @@ The height of the package in meters. NULL means unknown
 ### Volume_l
 
 
-Volume_l
-
-
-The volume in litres of the whole batch. NULL means unknown
-
-
 The volume in litres of the whole batch. NULL means unknown
 
 | Property | Value |
@@ -1042,9 +892,8 @@ The volume in litres of the whole batch. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Volume_l](Log_Shipment_Lines.md#volume_l)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1066,12 +915,6 @@ The volume in litres of the whole batch. NULL means unknown
 ### Gross_Weight_kg
 
 
-Gross_Weight_kg
-
-
-The gross weight of the whole line in kilogramms. NULL means unknown
-
-
 The gross weight of the whole line in kilogramms. NULL means unknown
 
 | Property | Value |
@@ -1082,9 +925,8 @@ The gross weight of the whole line in kilogramms. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Gross_Weight_kg](Log_Shipment_Lines.md#gross_weight_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1106,12 +948,6 @@ The gross weight of the whole line in kilogramms. NULL means unknown
 ### Net_Weight_kg
 
 
-Net_Weight_kg
-
-
-The net weight of the entire batch of goods in kilograms. NULL means unknown
-
-
 The net weight of the entire batch of goods in kilograms. NULL means unknown
 
 | Property | Value |
@@ -1122,9 +958,8 @@ The net weight of the entire batch of goods in kilograms. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Net_Weight_kg](Log_Shipment_Lines.md#net_weight_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1146,12 +981,6 @@ The net weight of the entire batch of goods in kilograms. NULL means unknown
 ### Box_Count
 
 
-Box_Count
-
-
-The count of boxes in which the goods are packaged. NULL means unknown
-
-
 The count of boxes in which the goods are packaged. NULL means unknown
 
 | Property | Value |
@@ -1162,9 +991,8 @@ The count of boxes in which the goods are packaged. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Box_Count](Log_Shipment_Lines.md#box_count)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1186,12 +1014,6 @@ The count of boxes in which the goods are packaged. NULL means unknown
 ### Standard_Quantity_Base
 
 
-Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
-
-
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 | Property | Value |
@@ -1202,9 +1024,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipment_Lines](Log_Shipment_Lines.md).[Standard_Quantity_Base](Log_Shipment_Lines.md#standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cmm_social_posts">Table Cmm_Social_Posts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Communities.SocialPosts.html">Communities.SocialPosts</a></p>
 <p>User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#post_text">Post_Text</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The post contents in clear text.</td>
 </tr>
 <tr>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="social_post_id">Social_Post_Id</h3>
-<p>Social_Post_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Posts.html">Cmm_Social_Posts</a>.<a href="Cmm_Social_Posts.html#social_post_id">Social_Post_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,15 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="social_group_id">Social_Group_Id</h3>
-<p>Social_Group_Id</p>
-<p>The group in which the post is made.</p>
 <p>The group in which the post is made.</p>
 <table>
 <thead>
@@ -309,15 +304,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Posts.html">Cmm_Social_Posts</a>.<a href="Cmm_Social_Posts.html#social_group_id">Social_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -402,15 +393,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="user_id">User_Id</h3>
-<p>User_Id</p>
-<p>The user, who made the post.</p>
 <p>The user, who made the post.</p>
 <table>
 <thead>
@@ -450,15 +439,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Posts.html">Cmm_Social_Posts</a>.<a href="Cmm_Social_Posts.html#user_id">User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -543,15 +528,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="post_text">Post_Text</h3>
-<p>Post_Text</p>
-<p>The post contents in clear text.</p>
 <p>The post contents in clear text.</p>
 <table>
 <thead>
@@ -563,7 +546,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -591,15 +574,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Posts.html">Cmm_Social_Posts</a>.<a href="Cmm_Social_Posts.html#post_text">Post_Text</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -672,8 +651,6 @@
 </tbody>
 </table>
 <h3 id="creation_time_utc">Creation_Time_Utc</h3>
-<p>Creation_Time_Utc</p>
-<p>The exact server time (in UTC), when the post was created.</p>
 <p>The exact server time (in UTC), when the post was created.</p>
 <table>
 <thead>
@@ -713,15 +690,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Posts.html">Cmm_Social_Posts</a>.<a href="Cmm_Social_Posts.html#creation_time_utc">Creation_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -794,8 +767,6 @@
 </tbody>
 </table>
 <h3 id="last_interaction_time_utc">Last_Interaction_Time_Utc</h3>
-<p>Last_Interaction_Time_Utc</p>
-<p>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc.</p>
 <p>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc.</p>
 <table>
 <thead>
@@ -835,15 +806,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Posts.html">Cmm_Social_Posts</a>.<a href="Cmm_Social_Posts.html#last_interaction_time_utc">Last_Interaction_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -916,7 +883,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -951,15 +917,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Posts.html">Cmm_Social_Posts</a>.<a href="Cmm_Social_Posts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

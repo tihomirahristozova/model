@@ -1,5 +1,10 @@
 # Table Inv_Cost_Corrections
 
+
+## Entity
+
+Entity: [Logistics.Inventory.CostCorrections](~/entities/Logistics.Inventory.CostCorrections.md)
+
 Cost corrections provide a way to correct the cost of stock transactions after they are issued. Entity: Inv_Cost_Corrections
 
 ## Owner Tables Hierarchy
@@ -25,9 +30,6 @@ Cost corrections provide a way to correct the cost of stock transactions after t
 
 ### Cost_Correction_Id
 
-
-Cost_Correction_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +39,8 @@ Cost_Correction_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[Cost_Correction_Id](Inv_Cost_Corrections.md#cost_correction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,12 +63,9 @@ Cost_Correction_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -78,9 +76,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[Document_Id](Inv_Cost_Corrections.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +100,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Source_Transaction_Id
-
-
-Source_Transaction_Id
-
-
-Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the specified cost in the source transaction.
 
 
 Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the specified cost in the source transaction.
@@ -125,9 +116,8 @@ Transaction that determines which transactions need cost correction. The correct
 |Referenced Table|[Inv_Transactions](Inv_Transactions.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[Source_Transaction_Id](Inv_Cost_Corrections.md#source_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,15 +140,9 @@ Transaction that determines which transactions need cost correction. The correct
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Corrected_Transaction_Id
-
-
-Corrected_Transaction_Id
-
-
-Transaction that is corrected with this cost correction
 
 
 Transaction that is corrected with this cost correction
@@ -172,9 +156,8 @@ Transaction that is corrected with this cost correction
 |Referenced Table|[Inv_Transactions](Inv_Transactions.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[Corrected_Transaction_Id](Inv_Cost_Corrections.md#corrected_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,15 +180,9 @@ Transaction that is corrected with this cost correction
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### From_Date
-
-
-From_Date
-
-
-The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is NULL.
 
 
 The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is NULL.
@@ -219,9 +196,8 @@ The date from which to start looking for transactions, needing cost correction. 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[From_Date](Inv_Cost_Corrections.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,12 +219,6 @@ The date from which to start looking for transactions, needing cost correction. 
 ### Thru_Date
 
 
-Thru_Date
-
-
-The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is NULL.
-
-
 The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is NULL.
 
 | Property | Value |
@@ -260,9 +230,8 @@ The date at which to stop looking for transactions, needing cost correction. It 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[Thru_Date](Inv_Cost_Corrections.md#thru_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,12 +253,6 @@ The date at which to stop looking for transactions, needing cost correction. It 
 ### IsValid
 
 
-IsValid
-
-
-Obsolete. Not used. (Should be set to 1 if the document is completed and not void. Required for the indexed view Inv_Cost_Corrections_Summary, because Gen_Documents_Table cannot be included in the view)
-
-
 Obsolete. Not used. (Should be set to 1 if the document is completed and not void. Required for the indexed view Inv_Cost_Corrections_Summary, because Gen_Documents_Table cannot be included in the view)
 
 | Property | Value |
@@ -300,9 +263,8 @@ Obsolete. Not used. (Should be set to 1 if the document is completed and not voi
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[IsValid](Inv_Cost_Corrections.md#isvalid)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -324,12 +286,6 @@ Obsolete. Not used. (Should be set to 1 if the document is completed and not voi
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -340,9 +296,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[Is_Single_Execution](Inv_Cost_Corrections.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -365,17 +320,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -386,9 +335,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[Is_Released](Inv_Cost_Corrections.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -411,12 +359,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -426,9 +371,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Corrections](Inv_Cost_Corrections.md).[Row_Version](Inv_Cost_Corrections.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

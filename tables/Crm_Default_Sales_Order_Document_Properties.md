@@ -1,5 +1,10 @@
 # Table Crm_Default_Sales_Order_Document_Properties
 
+
+## Entity
+
+Entity: [Crm.Sales.DefaultSalesOrderDocumentProperties](~/entities/Crm.Sales.DefaultSalesOrderDocumentProperties.md)
+
 User-defined properties which shall be copied from the customer to the document for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Document_Properties
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ User-defined properties which shall be copied from the customer to the document 
 
 ### Default_Sales_Order_Document_Property_Id
 
-
-Default_Sales_Order_Document_Property_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Default_Sales_Order_Document_Property_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Default_Sales_Order_Document_Properties](Crm_Default_Sales_Order_Document_Properties.md).[Default_Sales_Order_Document_Property_Id](Crm_Default_Sales_Order_Document_Properties.md#default_sales_order_document_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Default_Sales_Order_Document_Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type for which the current definitions apply.
 
 
 The document type for which the current definitions apply.
@@ -79,9 +74,8 @@ The document type for which the current definitions apply.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Document_Properties](Crm_Default_Sales_Order_Document_Properties.md).[Document_Type_Id](Crm_Default_Sales_Order_Document_Properties.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,17 +98,11 @@ The document type for which the current definitions apply.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Property_Id
 
 
-Document_Property_Id
-
-
-The user-defined document property in which to copy the customers property value
-
-
 The user-defined document property in which to copy the customers property value
 
 | Property | Value |
@@ -126,9 +114,8 @@ The user-defined document property in which to copy the customers property value
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Document_Properties](Crm_Default_Sales_Order_Document_Properties.md).[Document_Property_Id](Crm_Default_Sales_Order_Document_Properties.md#document_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,17 +138,11 @@ The user-defined document property in which to copy the customers property value
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Customer_Property_Id
 
 
-Customer_Property_Id
-
-
-The user-defined customer property that shall be copied
-
-
 The user-defined customer property that shall be copied
 
 | Property | Value |
@@ -173,9 +154,8 @@ The user-defined customer property that shall be copied
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Document_Properties](Crm_Default_Sales_Order_Document_Properties.md).[Customer_Property_Id](Crm_Default_Sales_Order_Document_Properties.md#customer_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,12 +178,9 @@ The user-defined customer property that shall be copied
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -213,9 +190,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Document_Properties](Crm_Default_Sales_Order_Document_Properties.md).[Row_Version](Crm_Default_Sales_Order_Document_Properties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

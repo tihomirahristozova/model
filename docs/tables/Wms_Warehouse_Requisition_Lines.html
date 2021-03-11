@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-wms_warehouse_requisition_lines">Table Wms_Warehouse_Requisition_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Wms.WarehouseRequisitionLines.html">Logistics.Wms.WarehouseRequisitionLines</a></p>
 <p>Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requisition_Lines (Introduced in version 20.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -137,7 +139,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -164,7 +166,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="warehouse_requisition_line_id">Warehouse_Requisition_Line_Id</h3>
-<p>Warehouse_Requisition_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -203,15 +204,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#warehouse_requisition_line_id">Warehouse_Requisition_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -296,14 +293,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_requisition_id">Warehouse_Requisition_Id</h3>
-<p>Warehouse_Requisition_Id</p>
 <table>
 <thead>
 <tr>
@@ -342,15 +338,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#warehouse_requisition_id">Warehouse_Requisition_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -435,15 +427,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>The unique, consecutive line number within the requisition.</p>
 <p>The unique, consecutive line number within the requisition.</p>
 <table>
 <thead>
@@ -479,7 +469,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -488,10 +478,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -564,8 +550,6 @@
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The requested product.</p>
 <p>The requested product.</p>
 <table>
 <thead>
@@ -605,15 +589,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -698,15 +678,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lot_id">Lot_Id</h3>
-<p>Lot_Id</p>
-<p>The requested lot. NULL means that any lot can be used or the product does not use lots at all.</p>
 <p>The requested lot. NULL means that any lot can be used or the product does not use lots at all.</p>
 <table>
 <thead>
@@ -746,15 +724,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#lot_id">Lot_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -839,15 +813,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
-<p>Serial_Number_Id</p>
-<p>The requested serial number. NULL means that any serial number can be used or the product does not use serial numbers at all.</p>
 <p>The requested serial number. NULL means that any serial number can be used or the product does not use serial numbers at all.</p>
 <table>
 <thead>
@@ -887,15 +859,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#serial_number_id">Serial_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -980,15 +948,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>The requested quantity.</p>
 <p>The requested quantity.</p>
 <table>
 <thead>
@@ -1024,15 +990,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1117,7 +1079,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1130,8 +1092,6 @@
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit of Quantity.</p>
 <p>The measurement unit of Quantity.</p>
 <table>
 <thead>
@@ -1171,15 +1131,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1264,14 +1220,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1282,7 +1237,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1310,15 +1265,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1391,7 +1342,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1426,15 +1376,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1507,8 +1453,6 @@
 </tbody>
 </table>
 <h3 id="parent_document_id">Parent_Document_Id</h3>
-<p>Parent_Document_Id</p>
-<p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
 <p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
 <table>
 <thead>
@@ -1548,15 +1492,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#parent_document_id">Parent_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1641,15 +1581,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_line_no">Parent_Line_No</h3>
-<p>Parent_Line_No</p>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
 <p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
 <table>
 <thead>
@@ -1685,15 +1623,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#parent_line_no">Parent_Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1766,8 +1700,6 @@
 </tbody>
 </table>
 <h3 id="quantity_base">Quantity_Base</h3>
-<p>Quantity_Base</p>
-<p>Quantity in the base measurement unit of the product.</p>
 <p>Quantity in the base measurement unit of the product.</p>
 <table>
 <thead>
@@ -1803,15 +1735,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Requisition_Lines.html">Wms_Warehouse_Requisition_Lines</a>.<a href="Wms_Warehouse_Requisition_Lines.html#quantity_base">Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1896,7 +1824,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>

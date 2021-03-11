@@ -1,5 +1,10 @@
 # Table Gen_Document_Versions
 
+
+## Entity
+
+Entity: [General.DocumentVersions](~/entities/General.DocumentVersions.md)
+
 History of each saved version of each document. Entity: Gen_Document_Versions
 
 ## Owner Tables Hierarchy
@@ -13,7 +18,7 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 |[Document_Version_Id](#document_version_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` |The document whoose version is stored in this row|
 |[Version](#version)|`int` Readonly|The version number that is stored in this row|
-|[Document_Data_XML](#document_data_xml)|`nvarchar(2147483647)` |The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).|
+|[Document_Data_XML](#document_data_xml)|`nvarchar(max)` |The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).|
 |[Update_Time](#update_time)|`datetime` Readonly|The date and time when this version was saved|
 |[Update_User](#update_user)|`nvarchar(64)` Readonly|The login name of the user that saved this version|
 |[State](#state)|`smallint` Allowed: `0`, `10`, `20`, `30`, `40`, `50`, `5`, Readonly|The state of the document by the time it was saved|
@@ -25,9 +30,6 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 
 ### Document_Version_Id
 
-
-Document_Version_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +39,8 @@ Document_Version_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Document_Version_Id](Gen_Document_Versions.md#document_version_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,15 +63,9 @@ Document_Version_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The document whoose version is stored in this row
 
 
 The document whoose version is stored in this row
@@ -84,9 +79,8 @@ The document whoose version is stored in this row
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Document_Id](Gen_Document_Versions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,15 +103,9 @@ The document whoose version is stored in this row
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Version
-
-
-Version
-
-
-The version number that is stored in this row
 
 
 The version number that is stored in this row
@@ -130,9 +118,8 @@ The version number that is stored in this row
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Version](Gen_Document_Versions.md#version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,32 +142,25 @@ The version number that is stored in this row
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Document_Data_XML
-
-
-Document_Data_XML
-
-
-The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).
 
 
 The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Document_Data_XML](Gen_Document_Versions.md#document_data_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,12 +182,6 @@ The uncompressed XML representation of the document data, including the document
 ### Update_Time
 
 
-Update_Time
-
-
-The date and time when this version was saved
-
-
 The date and time when this version was saved
 
 | Property | Value |
@@ -219,9 +193,8 @@ The date and time when this version was saved
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Update_Time](Gen_Document_Versions.md#update_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,12 +222,6 @@ The date and time when this version was saved
 ### Update_User
 
 
-Update_User
-
-
-The login name of the user that saved this version
-
-
 The login name of the user that saved this version
 
 | Property | Value |
@@ -266,9 +233,8 @@ The login name of the user that saved this version
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Update_User](Gen_Document_Versions.md#update_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,16 +257,10 @@ The login name of the user that saved this version
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### State
-
-
-State
-
-
-The state of the document by the time it was saved
 
 
 The state of the document by the time it was saved
@@ -313,10 +273,9 @@ The state of the document by the time it was saved
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`0`, `10`, `20`, `30`, `40`, `50`, `5`|
 |Default Value|0|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[State](Gen_Document_Versions.md#state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -339,15 +298,9 @@ The state of the document by the time it was saved
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Data_Format
-
-
-Document_Data_Format
-
-
-The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.
 
 
 The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.
@@ -361,9 +314,8 @@ The format of the saved document data. 'U' - uncompressed and stored in Document
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|U|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Document_Data_Format](Gen_Document_Versions.md#document_data_format)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -385,12 +337,6 @@ The format of the saved document data. 'U' - uncompressed and stored in Document
 ### Document_Data
 
 
-Document_Data
-
-
-Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).
-
-
 Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).
 
 | Property | Value |
@@ -401,9 +347,8 @@ Compressed representation of the document data. Valid when Document Data Format 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Document_Data](Gen_Document_Versions.md#document_data)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -424,9 +369,6 @@ Compressed representation of the document data. Valid when Document Data Format 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -435,9 +377,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Versions](Gen_Document_Versions.md).[Row_Version](Gen_Document_Versions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

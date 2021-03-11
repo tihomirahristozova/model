@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-log_transportation_execution_lines">Table Log_Transportation_Execution_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Shipment.TransportationExecutionLines.html">Logistics.Shipment.TransportationExecutionLines</a></p>
 <p>Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -157,14 +159,13 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="transportation_execution_line_id">Transportation_Execution_Line_Id</h3>
-<p>Transportation_Execution_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -203,15 +204,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#transportation_execution_line_id">Transportation_Execution_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -296,14 +293,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transportation_execution_id">Transportation_Execution_Id</h3>
-<p>Transportation_Execution_Id</p>
 <table>
 <thead>
 <tr>
@@ -342,15 +338,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#transportation_execution_id">Transportation_Execution_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -435,15 +427,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Consecutive line number within this execution.</p>
 <p>Consecutive line number within this execution.</p>
 <table>
 <thead>
@@ -479,7 +469,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -488,10 +478,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -564,8 +550,6 @@
 </tbody>
 </table>
 <h3 id="execution_of_transportation_order_line_id">Execution_Of_Transportation_Order_Line_Id</h3>
-<p>Execution_Of_Transportation_Order_Line_Id</p>
-<p>The transportation order line, which is executed.</p>
 <p>The transportation order line, which is executed.</p>
 <table>
 <thead>
@@ -605,15 +589,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#execution_of_transportation_order_line_id">Execution_Of_Transportation_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -698,15 +678,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="geo_point_id">Geo_Point_Id</h3>
-<p>Geo_Point_Id</p>
-<p>The geographic point, where the operation is executed.</p>
 <p>The geographic point, where the operation is executed.</p>
 <table>
 <thead>
@@ -746,15 +724,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#geo_point_id">Geo_Point_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -839,15 +813,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_type">Operation_Type</h3>
-<p>Operation_Type</p>
-<p>The type of operation being executed. L=Loading; U=Unloading; O=Other.</p>
 <p>The type of operation being executed. L=Loading; U=Unloading; O=Other.</p>
 <table>
 <thead>
@@ -887,7 +859,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -896,10 +868,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#operation_type">Operation_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -972,8 +940,6 @@
 </tbody>
 </table>
 <h3 id="pallets_count">Pallets_Count</h3>
-<p>Pallets_Count</p>
-<p>Number of pallets affected by this operation. NULL when unknown or N/A.</p>
 <p>Number of pallets affected by this operation. NULL when unknown or N/A.</p>
 <table>
 <thead>
@@ -1009,15 +975,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#pallets_count">Pallets_Count</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1090,8 +1052,6 @@
 </tbody>
 </table>
 <h3 id="weight_kg">Weight_Kg</h3>
-<p>Weight_Kg</p>
-<p>Cargo weight in kg, affected by this operation. NULL when unknown or N/A.</p>
 <p>Cargo weight in kg, affected by this operation. NULL when unknown or N/A.</p>
 <table>
 <thead>
@@ -1127,15 +1087,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#weight_kg">Weight_Kg</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1208,8 +1164,6 @@
 </tbody>
 </table>
 <h3 id="volume_cbm">Volume_Cbm</h3>
-<p>Volume_Cbm</p>
-<p>Cargo volume in cubic meters, affected by this operation. NULL when unknown or N/A.</p>
 <p>Cargo volume in cubic meters, affected by this operation. NULL when unknown or N/A.</p>
 <table>
 <thead>
@@ -1245,15 +1199,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#volume_cbm">Volume_Cbm</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1326,8 +1276,6 @@
 </tbody>
 </table>
 <h3 id="execution_date">Execution_Date</h3>
-<p>Execution_Date</p>
-<p>The date when the operation was executed.</p>
 <p>The date when the operation was executed.</p>
 <table>
 <thead>
@@ -1367,15 +1315,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#execution_date">Execution_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1448,8 +1392,6 @@
 </tbody>
 </table>
 <h3 id="execution_time">Execution_Time</h3>
-<p>Execution_Time</p>
-<p>The time when the operation was executed.</p>
 <p>The time when the operation was executed.</p>
 <table>
 <thead>
@@ -1489,15 +1431,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#execution_time">Execution_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1570,8 +1508,6 @@
 </tbody>
 </table>
 <h3 id="pallet_number">Pallet_Number</h3>
-<p>Pallet_Number</p>
-<p>Pallet number, when applicable. NULL when unknown or not applicable.</p>
 <p>Pallet number, when applicable. NULL when unknown or not applicable.</p>
 <table>
 <thead>
@@ -1611,15 +1547,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#pallet_number">Pallet_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1692,7 +1624,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1703,7 +1634,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1731,15 +1662,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Execution_Lines.html">Log_Transportation_Execution_Lines</a>.<a href="Log_Transportation_Execution_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>

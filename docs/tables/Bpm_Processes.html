@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-bpm_processes">Table Bpm_Processes</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Bpm.Processes.html">Systems.Bpm.Processes</a></p>
 <p>Represents one business process version. All process model elements and execution instances are bound to specfic process version. Entity: Bpm_Processes</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="process_id">Process_Id</h3>
-<p>Process_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#process_id">Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,15 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_code">Process_Code</h3>
-<p>Process_Code</p>
-<p>Unique process code.</p>
 <p>Unique process code.</p>
 <table>
 <thead>
@@ -319,15 +314,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#process_code">Process_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -412,14 +403,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_name">Process_Name</h3>
-<p>Process_Name</p>
 <table>
 <thead>
 <tr>
@@ -458,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#process_name">Process_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -551,7 +537,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -564,8 +550,6 @@
 </tbody>
 </table>
 <h3 id="process_group_id">Process_Group_Id</h3>
-<p>Process_Group_Id</p>
-<p>The process group, to which this process belongs.</p>
 <p>The process group, to which this process belongs.</p>
 <table>
 <thead>
@@ -605,15 +589,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#process_group_id">Process_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -698,15 +678,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="locality">Locality</h3>
-<p>Locality</p>
-<p>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.</p>
 <p>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.</p>
 <table>
 <thead>
@@ -746,7 +724,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -755,10 +733,6 @@
 <tr>
 <td>Default Value</td>
 <td>L</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#locality">Locality</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -850,8 +824,6 @@
 </tbody>
 </table>
 <h3 id="is_executable">Is_Executable</h3>
-<p>Is_Executable</p>
-<p>Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed.</p>
 <p>Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed.</p>
 <table>
 <thead>
@@ -887,15 +859,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#is_executable">Is_Executable</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -980,15 +948,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_published">Is_Published</h3>
-<p>Is_Published</p>
-<p>Specifies whether the process is currently published for new instances.</p>
 <p>Specifies whether the process is currently published for new instances.</p>
 <table>
 <thead>
@@ -1024,15 +990,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#is_published">Is_Published</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1117,14 +1079,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
 <table>
 <thead>
 <tr>
@@ -1135,7 +1096,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1163,15 +1124,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1256,7 +1213,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1269,7 +1226,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1304,15 +1260,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Processes.html">Bpm_Processes</a>.<a href="Bpm_Processes.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Gen_Variant_Colors
 
+
+## Entity
+
+Entity: [General.Products.VariantColors](~/entities/General.Products.VariantColors.md)
+
 Contains the different colors, which can be assigned to product variants. Entity: Gen_Variant_Colors
 
 ## Summary
@@ -15,9 +20,6 @@ Contains the different colors, which can be assigned to product variants. Entity
 
 ### Variant_Color_Id
 
-
-Variant_Color_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Variant_Color_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Variant_Colors](Gen_Variant_Colors.md).[Variant_Color_Id](Gen_Variant_Colors.md#variant_color_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Variant_Color_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Variant_Color_Code
-
-
-Variant_Color_Code
-
-
-Unique code of the color. Used to generate parts of bar-codes and in other coding schemes.
 
 
 Unique code of the color. Used to generate parts of bar-codes and in other coding schemes.
@@ -74,9 +69,8 @@ Unique code of the color. Used to generate parts of bar-codes and in other codin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Colors](Gen_Variant_Colors.md).[Variant_Color_Code](Gen_Variant_Colors.md#variant_color_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,13 +93,10 @@ Unique code of the color. Used to generate parts of bar-codes and in other codin
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Variant_Color_Name
-
-
-Variant_Color_Name
 
 | Property | Value |
 | - | - |
@@ -116,9 +107,8 @@ Variant_Color_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Colors](Gen_Variant_Colors.md).[Variant_Color_Name](Gen_Variant_Colors.md#variant_color_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,13 +131,10 @@ Variant_Color_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -157,9 +144,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Colors](Gen_Variant_Colors.md).[Row_Version](Gen_Variant_Colors.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

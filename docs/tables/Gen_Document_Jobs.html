@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_document_jobs">Table Gen_Document_Jobs</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.DocumentJobs.html">General.DocumentJobs</a></p>
 <p>Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -111,7 +113,7 @@
 </tr>
 <tr>
 <td><a href="#filter_xml">Filter_Xml</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Specifies the documents, whose state will be changed.</td>
 </tr>
 <tr>
@@ -133,7 +135,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="document_job_id">Document_Job_Id</h3>
-<p>Document_Job_Id</p>
 <table>
 <thead>
 <tr>
@@ -172,15 +173,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Jobs.html">Gen_Document_Jobs</a>.<a href="Gen_Document_Jobs.html#document_job_id">Document_Job_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -265,15 +262,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="job_id">Job_Id</h3>
-<p>Job_Id</p>
-<p>The id of the general job.</p>
 <p>The id of the general job.</p>
 <table>
 <thead>
@@ -313,15 +308,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Jobs.html">Gen_Document_Jobs</a>.<a href="Gen_Document_Jobs.html#job_id">Job_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -406,15 +397,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_type_id">Document_Type_Id</h3>
-<p>Document_Type_Id</p>
-<p>The type of the document, whose state will be changed.</p>
 <p>The type of the document, whose state will be changed.</p>
 <table>
 <thead>
@@ -454,15 +443,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Jobs.html">Gen_Document_Jobs</a>.<a href="Gen_Document_Jobs.html#document_type_id">Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -547,15 +532,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="filter_xml">Filter_Xml</h3>
-<p>Filter_Xml</p>
-<p>Specifies the documents, whose state will be changed.</p>
 <p>Specifies the documents, whose state will be changed.</p>
 <table>
 <thead>
@@ -567,7 +550,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -595,15 +578,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Jobs.html">Gen_Document_Jobs</a>.<a href="Gen_Document_Jobs.html#filter_xml">Filter_Xml</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -676,8 +655,6 @@
 </tbody>
 </table>
 <h3 id="new_state">New_State</h3>
-<p>New_State</p>
-<p>Specifies the state, which should be set to the documents, matching the filter.</p>
 <p>Specifies the state, which should be set to the documents, matching the filter.</p>
 <table>
 <thead>
@@ -713,7 +690,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -722,10 +699,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Jobs.html">Gen_Document_Jobs</a>.<a href="Gen_Document_Jobs.html#new_state">New_State</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -798,7 +771,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -833,15 +805,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Jobs.html">Gen_Document_Jobs</a>.<a href="Gen_Document_Jobs.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -914,8 +882,6 @@
 </tbody>
 </table>
 <h3 id="new_user_status_id">New_User_Status_Id</h3>
-<p>New_User_Status_Id</p>
-<p>Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type.</p>
 <p>Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type.</p>
 <table>
 <thead>
@@ -955,15 +921,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Jobs.html">Gen_Document_Jobs</a>.<a href="Gen_Document_Jobs.html#new_user_status_id">New_User_Status_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1048,7 +1010,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-fleet_maintenance_plans">Table Fleet_Maintenance_Plans</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Fleet.MaintenancePlans.html">Applications.Fleet.MaintenancePlans</a></p>
 <p>Defines the periodic maintenance plans and the conditions for performing the next maintenance. Entity: Fleet_Maintenance_Plans</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="maintenance_plan_id">Maintenance_Plan_Id</h3>
-<p>Maintenance_Plan_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#maintenance_plan_id">Maintenance_Plan_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,14 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_plan_code">Maintenance_Plan_Code</h3>
-<p>Maintenance_Plan_Code</p>
 <table>
 <thead>
 <tr>
@@ -317,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#maintenance_plan_code">Maintenance_Plan_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -398,8 +390,6 @@
 </tbody>
 </table>
 <h3 id="maintenance_plan_name">Maintenance_Plan_Name</h3>
-<p>Maintenance_Plan_Name</p>
-<p>Maintenance plan name (Multilanguage).</p>
 <p>Maintenance plan name (Multilanguage).</p>
 <table>
 <thead>
@@ -439,15 +429,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#maintenance_plan_name">Maintenance_Plan_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -520,8 +506,6 @@
 </tbody>
 </table>
 <h3 id="check_months">Check_Months</h3>
-<p>Check_Months</p>
-<p>When not null, specifies the number of months between maintenances.</p>
 <p>When not null, specifies the number of months between maintenances.</p>
 <table>
 <thead>
@@ -557,15 +541,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#check_months">Check_Months</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -638,8 +618,6 @@
 </tbody>
 </table>
 <h3 id="check_days">Check_Days</h3>
-<p>Check_Days</p>
-<p>When not null, specifies the number of days between maintenances.</p>
 <p>When not null, specifies the number of days between maintenances.</p>
 <table>
 <thead>
@@ -675,15 +653,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#check_days">Check_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -756,8 +730,6 @@
 </tbody>
 </table>
 <h3 id="mileage_km">Mileage_Km</h3>
-<p>Mileage_Km</p>
-<p>When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.</p>
 <p>When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.</p>
 <table>
 <thead>
@@ -793,15 +765,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#mileage_km">Mileage_Km</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -874,8 +842,6 @@
 </tbody>
 </table>
 <h3 id="trip_count">Trip_Count</h3>
-<p>Trip_Count</p>
-<p>When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.</p>
 <p>When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.</p>
 <table>
 <thead>
@@ -911,15 +877,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#trip_count">Trip_Count</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -992,7 +954,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1003,7 +964,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1031,15 +992,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1112,8 +1069,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>True if the plan is active and can be selected from drop-downs.</p>
 <p>True if the plan is active and can be selected from drop-downs.</p>
 <table>
 <thead>
@@ -1149,15 +1104,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Plans.html">Fleet_Maintenance_Plans</a>.<a href="Fleet_Maintenance_Plans.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>

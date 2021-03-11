@@ -1,5 +1,10 @@
 # Table Gen_Areas
 
+
+## Entity
+
+Entity: [General.Geography.Areas](~/entities/General.Geography.Areas.md)
+
 Areas are user-defined division of the sales territories. Entity: Gen_Areas
 
 ## Summary
@@ -17,9 +22,6 @@ Areas are user-defined division of the sales territories. Entity: Gen_Areas
 
 ### Area_Id
 
-
-Area_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Area_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Areas](Gen_Areas.md).[Area_Id](Gen_Areas.md#area_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,12 +55,9 @@ Area_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Area_Name
-
-
-Area_Name
 
 | Property | Value |
 | - | - |
@@ -70,9 +68,8 @@ Area_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Areas](Gen_Areas.md).[Area_Name](Gen_Areas.md#area_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -95,13 +92,10 @@ Area_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Area_Code
-
-
-Area_Code
 
 | Property | Value |
 | - | - |
@@ -112,9 +106,8 @@ Area_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Areas](Gen_Areas.md).[Area_Code](Gen_Areas.md#area_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -137,16 +130,10 @@ Area_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Parent_Area_Id
-
-
-Parent_Area_Id
-
-
-Parent area in the hierarchy.
 
 
 Parent area in the hierarchy.
@@ -160,9 +147,8 @@ Parent area in the hierarchy.
 |Referenced Table|[Gen_Areas](Gen_Areas.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Areas](Gen_Areas.md).[Parent_Area_Id](Gen_Areas.md#parent_area_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -185,15 +171,9 @@ Parent area in the hierarchy.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Full_Path
-
-
-Full_Path
-
-
-Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'
 
 
 Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'
@@ -207,9 +187,8 @@ Full path to the area, starting with '/' and containing the area codes of all pa
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Areas](Gen_Areas.md).[Full_Path](Gen_Areas.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,13 +211,10 @@ Full path to the area, starting with '/' and containing the area codes of all pa
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -248,9 +224,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Areas](Gen_Areas.md).[Row_Version](Gen_Areas.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

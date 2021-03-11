@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-bpm_process_lanes">Table Bpm_Process_Lanes</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Bpm.ProcessLanes.html">Systems.Bpm.ProcessLanes</a></p>
 <p>The process lanes categorize elements in the process and contain logic for executor selection. Entity: Bpm_Process_Lanes</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -131,7 +133,7 @@
 </tr>
 <tr>
 <td><a href="#user_condition_filter_xml">User_Condition_Filter_Xml</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>User defined filter, used to select possible executors of tasks in the lane.</td>
 </tr>
 <tr>
@@ -151,7 +153,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -163,7 +165,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="process_lane_id">Process_Lane_Id</h3>
-<p>Process_Lane_Id</p>
 <table>
 <thead>
 <tr>
@@ -202,15 +203,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#process_lane_id">Process_Lane_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -295,15 +292,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_id">Process_Id</h3>
-<p>Process_Id</p>
-<p>The process to which this lane belongs</p>
 <p>The process to which this lane belongs</p>
 <table>
 <thead>
@@ -343,15 +338,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#process_id">Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -436,15 +427,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_lane_name">Process_Lane_Name</h3>
-<p>Process_Lane_Name</p>
-<p>Multilanguage lane name</p>
 <p>Multilanguage lane name</p>
 <table>
 <thead>
@@ -484,15 +473,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#process_lane_name">Process_Lane_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -577,7 +562,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -590,8 +575,6 @@
 </tbody>
 </table>
 <h3 id="is_system_executed">Is_System_Executed</h3>
-<p>Is_System_Executed</p>
-<p>When set, specifies that the lane allows only system executed tasks and will never have human user as executor.</p>
 <p>When set, specifies that the lane allows only system executed tasks and will never have human user as executor.</p>
 <table>
 <thead>
@@ -627,15 +610,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#is_system_executed">Is_System_Executed</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -720,15 +699,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="offer_to_role_id">Offer_To_Role_Id</h3>
-<p>Offer_To_Role_Id</p>
-<p>When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance.</p>
 <p>When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance.</p>
 <table>
 <thead>
@@ -768,15 +745,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#offer_to_role_id">Offer_To_Role_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -861,15 +834,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="assign_to_user_id">Assign_To_User_Id</h3>
-<p>Assign_To_User_Id</p>
-<p>When set, specifies that tasks from the lane are always assigned to specific user.</p>
 <p>When set, specifies that tasks from the lane are always assigned to specific user.</p>
 <table>
 <thead>
@@ -909,15 +880,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#assign_to_user_id">Assign_To_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1002,15 +969,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="assign_by_instance_property_id">Assign_By_Instance_Property_Id</h3>
-<p>Assign_By_Instance_Property_Id</p>
-<p>When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User.</p>
 <p>When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User.</p>
 <table>
 <thead>
@@ -1050,15 +1015,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#assign_by_instance_property_id">Assign_By_Instance_Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1143,15 +1104,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="user_condition_filter_xml">User_Condition_Filter_Xml</h3>
-<p>User_Condition_Filter_Xml</p>
-<p>User defined filter, used to select possible executors of tasks in the lane.</p>
 <p>User defined filter, used to select possible executors of tasks in the lane.</p>
 <table>
 <thead>
@@ -1163,7 +1122,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1191,15 +1150,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#user_condition_filter_xml">User_Condition_Filter_Xml</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1284,7 +1239,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1297,8 +1252,6 @@
 </tbody>
 </table>
 <h3 id="assign_by_user_condition">Assign_By_User_Condition</h3>
-<p>Assign_By_User_Condition</p>
-<p>Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned.</p>
 <p>Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned.</p>
 <table>
 <thead>
@@ -1338,7 +1291,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1347,10 +1300,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#assign_by_user_condition">Assign_By_User_Condition</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1435,7 +1384,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1448,8 +1397,6 @@
 </tbody>
 </table>
 <h3 id="locality">Locality</h3>
-<p>Locality</p>
-<p>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.</p>
 <p>Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.</p>
 <table>
 <thead>
@@ -1489,7 +1436,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1498,10 +1445,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#locality">Locality</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1586,7 +1529,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1599,8 +1542,6 @@
 </tbody>
 </table>
 <h3 id="restrict_to_single_user">Restrict_To_Single_User</h3>
-<p>Restrict_To_Single_User</p>
-<p>Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user.</p>
 <p>Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user.</p>
 <table>
 <thead>
@@ -1636,15 +1577,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#restrict_to_single_user">Restrict_To_Single_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1729,14 +1666,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1747,7 +1683,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1775,15 +1711,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1856,7 +1788,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1891,15 +1822,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Lanes.html">Bpm_Process_Lanes</a>.<a href="Bpm_Process_Lanes.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

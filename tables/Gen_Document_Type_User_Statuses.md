@@ -1,5 +1,10 @@
 # Table Gen_Document_Type_User_Statuses
 
+
+## Entity
+
+Entity: [General.DocumentTypeUserStatuses](~/entities/General.DocumentTypeUserStatuses.md)
+
 User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 
 ## Owner Tables Hierarchy
@@ -16,16 +21,13 @@ User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 |[User_Status_Name](#user_status_name)|`nvarchar(128)` |Multi-language name of the user status|
 |[Display_Order](#display_order)|`int` |Consecutive display order of the status, with regard to other statuses within the same document type|
 |[Active](#active)|`bit` |Is the user status active for applying to documents|
-|[Instructions](#instructions)|`nvarchar(2147483647)` |Instructions what should be done when this user status is active (Rich Text)|
+|[Instructions](#instructions)|`nvarchar(max)` |Instructions what should be done when this user status is active (Rich Text)|
 |[Is_Exit_Status](#is_exit_status)|`bit` |1 when the status allows going to the next system status, 0 otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### User_Status_Id
-
-
-User_Status_Id
 
 | Property | Value |
 | - | - |
@@ -36,9 +38,8 @@ User_Status_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[User_Status_Id](Gen_Document_Type_User_Statuses.md#user_status_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ User_Status_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type, to which this user status is bound
 
 
 The document type, to which this user status is bound
@@ -83,9 +78,8 @@ The document type, to which this user status is bound
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[Document_Type_Id](Gen_Document_Type_User_Statuses.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The document type, to which this user status is bound
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### State
-
-
-State
-
-
-The system state to which this user status is bound
 
 
 The system state to which this user status is bound
@@ -129,10 +117,9 @@ The system state to which this user status is bound
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`10`, `20`, `30`, `40`, `50`|
 |Default Value|None|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[State](Gen_Document_Type_User_Statuses.md#state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,15 +142,9 @@ The system state to which this user status is bound
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Status_Name
-
-
-User_Status_Name
-
-
-Multi-language name of the user status
 
 
 Multi-language name of the user status
@@ -177,9 +158,8 @@ Multi-language name of the user status
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[User_Status_Name](Gen_Document_Type_User_Statuses.md#user_status_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,16 +182,10 @@ Multi-language name of the user status
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Display_Order
-
-
-Display_Order
-
-
-Consecutive display order of the status, with regard to other statuses within the same document type
 
 
 Consecutive display order of the status, with regard to other statuses within the same document type
@@ -224,10 +198,9 @@ Consecutive display order of the status, with regard to other statuses within th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[Display_Order](Gen_Document_Type_User_Statuses.md#display_order)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -255,12 +228,6 @@ Consecutive display order of the status, with regard to other statuses within th
 ### Active
 
 
-Active
-
-
-Is the user status active for applying to documents
-
-
 Is the user status active for applying to documents
 
 | Property | Value |
@@ -271,9 +238,8 @@ Is the user status active for applying to documents
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[Active](Gen_Document_Type_User_Statuses.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -296,31 +262,24 @@ Is the user status active for applying to documents
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Instructions
-
-
-Instructions
-
-
-Instructions what should be done when this user status is active (Rich Text)
 
 
 Instructions what should be done when this user status is active (Rich Text)
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[Instructions](Gen_Document_Type_User_Statuses.md#instructions)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -342,12 +301,6 @@ Instructions what should be done when this user status is active (Rich Text)
 ### Is_Exit_Status
 
 
-Is_Exit_Status
-
-
-1 when the status allows going to the next system status, 0 otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released
-
-
 1 when the status allows going to the next system status, 0 otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released
 
 | Property | Value |
@@ -358,9 +311,8 @@ Is_Exit_Status
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[Is_Exit_Status](Gen_Document_Type_User_Statuses.md#is_exit_status)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -383,12 +335,9 @@ Is_Exit_Status
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -398,9 +347,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md).[Row_Version](Gen_Document_Type_User_Statuses.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

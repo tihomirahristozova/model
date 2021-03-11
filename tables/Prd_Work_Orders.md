@@ -1,5 +1,10 @@
 # Table Prd_Work_Orders
 
+
+## Entity
+
+Entity: [Production.ShopFloor.WorkOrders](~/entities/Production.ShopFloor.WorkOrders.md)
+
 Scheduled and released production orders. Each order can contain the production of many items. Entity: Prd_Work_Orders
 
 ## Owner Tables Hierarchy
@@ -17,7 +22,7 @@ Scheduled and released production orders. Each order can contain the production 
 |[Release_Date](#release_date)|`datetime` |Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order.|
 |[Completion_Date](#completion_date)|`datetime` |Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.|
 |[Duration_Hour](#duration_hour)|`decimal(10, 0)` |The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)|
-|[Notes](#notes)|`nvarchar(2147483647)` |User notes for the production order|
+|[Notes](#notes)|`nvarchar(max)` |User notes for the production order|
 |[Priority](#priority)|`smallint` Allowed: `1`, `2`, `3`, `4`, `5`|Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest|
 |[Default_Output_Store_Id](#default_output_store_id)|`uniqueidentifier` |Default output store for the finished products|
 |[Default_Materials_Store_Id](#default_materials_store_id)|`uniqueidentifier` |Default materials store for the ingredients|
@@ -29,9 +34,6 @@ Scheduled and released production orders. Each order can contain the production 
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -41,9 +43,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Id](Prd_Work_Orders.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,15 +67,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-Document Id for the released production orders. NULL for orders that are not yet released
 
 
 Document Id for the released production orders. NULL for orders that are not yet released
@@ -88,9 +83,8 @@ Document Id for the released production orders. NULL for orders that are not yet
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Document_Id](Prd_Work_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,15 +107,9 @@ Document Id for the released production orders. NULL for orders that are not yet
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Workgroup_Id
-
-
-Workgroup_Id
-
-
-The workgroup which performs the operations
 
 
 The workgroup which performs the operations
@@ -135,9 +123,8 @@ The workgroup which performs the operations
 |Referenced Table|[Prd_Workgroups](Prd_Workgroups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Workgroup_Id](Prd_Work_Orders.md#workgroup_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -160,15 +147,9 @@ The workgroup which performs the operations
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Due_Date
-
-
-Due_Date
-
-
-The final due date, when the production should be ready.
 
 
 The final due date, when the production should be ready.
@@ -182,9 +163,8 @@ The final due date, when the production should be ready.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Due_Date](Prd_Work_Orders.md#due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -206,12 +186,6 @@ The final due date, when the production should be ready.
 ### Release_Date
 
 
-Release_Date
-
-
-Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order.
-
-
 Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order.
 
 | Property | Value |
@@ -223,9 +197,8 @@ Scheduled release date. Specifies the date when the order is planned/released to
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Release_Date](Prd_Work_Orders.md#release_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,12 +220,6 @@ Scheduled release date. Specifies the date when the order is planned/released to
 ### Completion_Date
 
 
-Completion_Date
-
-
-Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.
-
-
 Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.
 
 | Property | Value |
@@ -264,9 +231,8 @@ Scheduled date of completion. Specifies the date when the workorder was complete
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Completion_Date](Prd_Work_Orders.md#completion_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,12 +254,6 @@ Scheduled date of completion. Specifies the date when the workorder was complete
 ### Duration_Hour
 
 
-Duration_Hour
-
-
-The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)
-
-
 The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)
 
 | Property | Value |
@@ -304,9 +264,8 @@ The duration of all operations in the protocol either planned (for planned order
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Duration_Hour](Prd_Work_Orders.md#duration_hour)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -328,26 +287,19 @@ The duration of all operations in the protocol either planned (for planned order
 ### Notes
 
 
-Notes
-
-
-User notes for the production order
-
-
 User notes for the production order
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Notes](Prd_Work_Orders.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -369,12 +321,6 @@ User notes for the production order
 ### Priority
 
 
-Priority
-
-
-Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest
-
-
 Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest
 
 | Property | Value |
@@ -385,10 +331,9 @@ Priority of the work order. Higher priority orders might seize resources from lo
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`|
 |Default Value|3|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Priority](Prd_Work_Orders.md#priority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -416,12 +361,6 @@ Priority of the work order. Higher priority orders might seize resources from lo
 ### Default_Output_Store_Id
 
 
-Default_Output_Store_Id
-
-
-Default output store for the finished products
-
-
 Default output store for the finished products
 
 | Property | Value |
@@ -433,9 +372,8 @@ Default output store for the finished products
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Default_Output_Store_Id](Prd_Work_Orders.md#default_output_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -458,17 +396,11 @@ Default output store for the finished products
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Default_Materials_Store_Id
 
 
-Default_Materials_Store_Id
-
-
-Default materials store for the ingredients
-
-
 Default materials store for the ingredients
 
 | Property | Value |
@@ -480,9 +412,8 @@ Default materials store for the ingredients
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Default_Materials_Store_Id](Prd_Work_Orders.md#default_materials_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -505,17 +436,11 @@ Default materials store for the ingredients
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -526,9 +451,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Is_Single_Execution](Prd_Work_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -551,17 +475,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -572,9 +490,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Is_Released](Prd_Work_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -597,12 +514,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -612,9 +526,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Orders](Prd_Work_Orders.md).[Row_Version](Prd_Work_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

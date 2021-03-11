@@ -1,5 +1,10 @@
 # Table Cash_Payment_Types
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentTypes](~/entities/Finance.Payments.PaymentTypes.md)
+
 Describes the way of payment. For example: in cash, by bank transfer, with credit card, etc. Entity: Cash_Payment_Types
 
 ## Summary
@@ -19,9 +24,6 @@ Describes the way of payment. For example: in cash, by bank transfer, with credi
 
 ### Payment_Type_Id
 
-
-Payment_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Payment_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Types](Cash_Payment_Types.md).[Payment_Type_Id](Cash_Payment_Types.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,12 +57,9 @@ Payment_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Type_Name
-
-
-Payment_Type_Name
 
 | Property | Value |
 | - | - |
@@ -72,9 +70,8 @@ Payment_Type_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Types](Cash_Payment_Types.md).[Payment_Type_Name](Cash_Payment_Types.md#payment_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,12 +99,6 @@ Payment_Type_Name
 ### Default_Payment_Account_Id
 
 
-Default_Payment_Account_Id
-
-
-When not NULL specifies the default payment account to use associated with this payment type
-
-
 When not NULL specifies the default payment account to use associated with this payment type
 
 | Property | Value |
@@ -119,9 +110,8 @@ When not NULL specifies the default payment account to use associated with this 
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Types](Cash_Payment_Types.md).[Default_Payment_Account_Id](Cash_Payment_Types.md#default_payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,12 +134,9 @@ When not NULL specifies the default payment account to use associated with this 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -160,9 +147,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Types](Cash_Payment_Types.md).[Enterprise_Company_Id](Cash_Payment_Types.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -185,15 +171,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### System_Type
-
-
-System_Type
-
-
-Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer
 
 
 Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer
@@ -207,10 +187,9 @@ Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card;
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`CH`, `CD`, `BT`, `TK`, `CK`, `U1`, `U2`, `U3`, `PK`, `IU`, `DG`, `OT`|
 |Default Value|None|
-|Derived From|[Cash_Payment_Types](Cash_Payment_Types.md).[System_Type](Cash_Payment_Types.md#system_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,12 +211,6 @@ Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card;
 ### Payment_Type_Code
 
 
-Payment_Type_Code
-
-
-The payment type unique code
-
-
 The payment type unique code
 
 | Property | Value |
@@ -249,9 +222,8 @@ The payment type unique code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Types](Cash_Payment_Types.md).[Payment_Type_Code](Cash_Payment_Types.md#payment_type_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -274,13 +246,10 @@ The payment type unique code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -290,9 +259,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Types](Cash_Payment_Types.md).[Row_Version](Cash_Payment_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -314,12 +282,6 @@ Row_Version
 ### Is_Active
 
 
-Is_Active
-
-
-Indicates wheather the payment type is active and usable for choosing in new documents.
-
-
 Indicates wheather the payment type is active and usable for choosing in new documents.
 
 | Property | Value |
@@ -330,9 +292,8 @@ Indicates wheather the payment type is active and usable for choosing in new doc
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Cash_Payment_Types](Cash_Payment_Types.md).[Is_Active](Cash_Payment_Types.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -355,6 +316,6 @@ Indicates wheather the payment type is active and usable for choosing in new doc
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 

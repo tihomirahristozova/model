@@ -1,5 +1,10 @@
 # Table Nat_BG_VAT_Document_Type_VAT_Codes
 
+
+## Entity
+
+Entity: [Finance.Vat.BGVATDocumentTypeVATCodes](~/entities/Finance.Vat.BGVATDocumentTypeVATCodes.md)
+
 Contains the VAT codes, which should be used, when reporting VAT for the different document types. Entity: Nat_BG_VAT_Document_Type_VAT_Codes
 
 ## Summary
@@ -17,12 +22,6 @@ Contains the VAT codes, which should be used, when reporting VAT for the differe
 ### Document_Type_VAT_Code_Id
 
 
-Document_Type_VAT_Code_Id
-
-
-Unique identification of the record.
-
-
 Unique identification of the record.
 
 | Property | Value |
@@ -34,9 +33,8 @@ Unique identification of the record.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Nat_BG_VAT_Document_Type_VAT_Codes](Nat_BG_VAT_Document_Type_VAT_Codes.md).[Document_Type_VAT_Code_Id](Nat_BG_VAT_Document_Type_VAT_Codes.md#document_type_vat_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +57,9 @@ Unique identification of the record.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-Document type that generates VAT entries.
 
 
 Document type that generates VAT entries.
@@ -81,9 +73,8 @@ Document type that generates VAT entries.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Document_Type_VAT_Codes](Nat_BG_VAT_Document_Type_VAT_Codes.md).[Document_Type_Id](Nat_BG_VAT_Document_Type_VAT_Codes.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +97,9 @@ Document type that generates VAT entries.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### VAT_Code
-
-
-VAT_Code
-
-
-VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.
 
 
 VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.
@@ -128,10 +113,9 @@ VAT code to use when creating VAT export files for the specified Document Type. 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`01`, `02`, `03`, `04`, `05`, `07`, `09`, `11`, `12`, `13`, `81`, `82`, `91`, `92`, `93`, `94`|
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Document_Type_VAT_Codes](Nat_BG_VAT_Document_Type_VAT_Codes.md).[VAT_Code](Nat_BG_VAT_Document_Type_VAT_Codes.md#vat_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,12 +137,6 @@ VAT code to use when creating VAT export files for the specified Document Type. 
 ### Cash_Reporting_VAT_Code
 
 
-Cash_Reporting_VAT_Code
-
-
-VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.
-
-
 VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.
 
 | Property | Value |
@@ -170,10 +148,9 @@ VAT code, which will be used when Cash Reporting mode is used for the entry. All
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`01`, `02`, `03`, `04`, `05`, `07`, `09`, `11`, `12`, `13`, `81`, `82`, `91`, `92`, `93`, `94`|
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Document_Type_VAT_Codes](Nat_BG_VAT_Document_Type_VAT_Codes.md).[Cash_Reporting_VAT_Code](Nat_BG_VAT_Document_Type_VAT_Codes.md#cash_reporting_vat_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,9 +171,6 @@ VAT code, which will be used when Cash Reporting mode is used for the entry. All
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -205,9 +179,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Document_Type_VAT_Codes](Nat_BG_VAT_Document_Type_VAT_Codes.md).[Row_Version](Nat_BG_VAT_Document_Type_VAT_Codes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

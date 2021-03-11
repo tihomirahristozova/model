@@ -1,5 +1,10 @@
 # Table Log_Transportation_Execution_Lines
 
+
+## Entity
+
+Entity: [Logistics.Shipment.TransportationExecutionLines](~/entities/Logistics.Shipment.TransportationExecutionLines.md)
+
 Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2)
 
 ## Owner Tables Hierarchy
@@ -23,14 +28,11 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 |[Execution_Date](#execution_date)|`date` |The date when the operation was executed.|
 |[Execution_Time](#execution_time)|`time` |The time when the operation was executed.|
 |[Pallet_Number](#pallet_number)|`nvarchar(32)` |Pallet number, when applicable. NULL when unknown or not applicable.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 
 ## Columns
 
 ### Transportation_Execution_Line_Id
-
-
-Transportation_Execution_Line_Id
 
 | Property | Value |
 | - | - |
@@ -41,9 +43,8 @@ Transportation_Execution_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Transportation_Execution_Line_Id](Log_Transportation_Execution_Lines.md#transportation_execution_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,12 +67,9 @@ Transportation_Execution_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transportation_Execution_Id
-
-
-Transportation_Execution_Id
 
 | Property | Value |
 | - | - |
@@ -82,9 +80,8 @@ Transportation_Execution_Id
 |Referenced Table|[Log_Transportation_Executions](Log_Transportation_Executions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Transportation_Execution_Id](Log_Transportation_Execution_Lines.md#transportation_execution_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +104,9 @@ Transportation_Execution_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-Consecutive line number within this execution.
 
 
 Consecutive line number within this execution.
@@ -128,10 +119,9 @@ Consecutive line number within this execution.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Line_No](Log_Transportation_Execution_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,12 +143,6 @@ Consecutive line number within this execution.
 ### Execution_Of_Transportation_Order_Line_Id
 
 
-Execution_Of_Transportation_Order_Line_Id
-
-
-The transportation order line, which is executed.
-
-
 The transportation order line, which is executed.
 
 | Property | Value |
@@ -170,9 +154,8 @@ The transportation order line, which is executed.
 |Referenced Table|[Log_Transportation_Order_Lines](Log_Transportation_Order_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Execution_Of_Transportation_Order_Line_Id](Log_Transportation_Execution_Lines.md#execution_of_transportation_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,15 +178,9 @@ The transportation order line, which is executed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Geo_Point_Id
-
-
-Geo_Point_Id
-
-
-The geographic point, where the operation is executed.
 
 
 The geographic point, where the operation is executed.
@@ -217,9 +194,8 @@ The geographic point, where the operation is executed.
 |Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Geo_Point_Id](Log_Transportation_Execution_Lines.md#geo_point_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,15 +218,9 @@ The geographic point, where the operation is executed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Operation_Type
-
-
-Operation_Type
-
-
-The type of operation being executed. L=Loading; U=Unloading; O=Other.
 
 
 The type of operation being executed. L=Loading; U=Unloading; O=Other.
@@ -264,10 +234,9 @@ The type of operation being executed. L=Loading; U=Unloading; O=Other.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`L`, `U`, `O`|
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Operation_Type](Log_Transportation_Execution_Lines.md#operation_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,12 +258,6 @@ The type of operation being executed. L=Loading; U=Unloading; O=Other.
 ### Pallets_Count
 
 
-Pallets_Count
-
-
-Number of pallets affected by this operation. NULL when unknown or N/A.
-
-
 Number of pallets affected by this operation. NULL when unknown or N/A.
 
 | Property | Value |
@@ -305,9 +268,8 @@ Number of pallets affected by this operation. NULL when unknown or N/A.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Pallets_Count](Log_Transportation_Execution_Lines.md#pallets_count)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -329,12 +291,6 @@ Number of pallets affected by this operation. NULL when unknown or N/A.
 ### Weight_Kg
 
 
-Weight_Kg
-
-
-Cargo weight in kg, affected by this operation. NULL when unknown or N/A.
-
-
 Cargo weight in kg, affected by this operation. NULL when unknown or N/A.
 
 | Property | Value |
@@ -345,9 +301,8 @@ Cargo weight in kg, affected by this operation. NULL when unknown or N/A.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Weight_Kg](Log_Transportation_Execution_Lines.md#weight_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -369,12 +324,6 @@ Cargo weight in kg, affected by this operation. NULL when unknown or N/A.
 ### Volume_Cbm
 
 
-Volume_Cbm
-
-
-Cargo volume in cubic meters, affected by this operation. NULL when unknown or N/A.
-
-
 Cargo volume in cubic meters, affected by this operation. NULL when unknown or N/A.
 
 | Property | Value |
@@ -385,9 +334,8 @@ Cargo volume in cubic meters, affected by this operation. NULL when unknown or N
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Volume_Cbm](Log_Transportation_Execution_Lines.md#volume_cbm)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -409,12 +357,6 @@ Cargo volume in cubic meters, affected by this operation. NULL when unknown or N
 ### Execution_Date
 
 
-Execution_Date
-
-
-The date when the operation was executed.
-
-
 The date when the operation was executed.
 
 | Property | Value |
@@ -426,9 +368,8 @@ The date when the operation was executed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Execution_Date](Log_Transportation_Execution_Lines.md#execution_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -450,12 +391,6 @@ The date when the operation was executed.
 ### Execution_Time
 
 
-Execution_Time
-
-
-The time when the operation was executed.
-
-
 The time when the operation was executed.
 
 | Property | Value |
@@ -467,9 +402,8 @@ The time when the operation was executed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Execution_Time](Log_Transportation_Execution_Lines.md#execution_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -491,12 +425,6 @@ The time when the operation was executed.
 ### Pallet_Number
 
 
-Pallet_Number
-
-
-Pallet number, when applicable. NULL when unknown or not applicable.
-
-
 Pallet number, when applicable. NULL when unknown or not applicable.
 
 | Property | Value |
@@ -508,9 +436,8 @@ Pallet number, when applicable. NULL when unknown or not applicable.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Pallet_Number](Log_Transportation_Execution_Lines.md#pallet_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -531,21 +458,17 @@ Pallet number, when applicable. NULL when unknown or not applicable.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Execution_Lines](Log_Transportation_Execution_Lines.md).[Notes](Log_Transportation_Execution_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Log_Transportation_Executions
 
+
+## Entity
+
+Entity: [Logistics.Shipment.TransportationExecutions](~/entities/Logistics.Shipment.TransportationExecutions.md)
+
 Contains executions (loading, unloading or other operations) of the transportation orders. Entity: Log_Transportation_Executions (Introduced in version 18.2)
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Contains executions (loading, unloading or other operations) of the transportati
 
 ### Transportation_Execution_Id
 
-
-Transportation_Execution_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Transportation_Execution_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Transportation_Executions](Log_Transportation_Executions.md).[Transportation_Execution_Id](Log_Transportation_Executions.md#transportation_execution_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Transportation_Execution_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Executions](Log_Transportation_Executions.md).[Document_Id](Log_Transportation_Executions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Execution_Date
-
-
-Execution_Date
-
-
-Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates.
 
 
 Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates.
@@ -120,9 +111,8 @@ Specifies the execution date, if it is the same for all lines. NULL means that t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Executions](Log_Transportation_Executions.md).[Execution_Date](Log_Transportation_Executions.md#execution_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,12 +134,6 @@ Specifies the execution date, if it is the same for all lines. NULL means that t
 ### Execution_Time
 
 
-Execution_Time
-
-
-Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times.
-
-
 Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times.
 
 | Property | Value |
@@ -161,9 +145,8 @@ Specifies the execution time, if it is the same for all lines. NULL means that t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Executions](Log_Transportation_Executions.md).[Execution_Time](Log_Transportation_Executions.md#execution_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -185,12 +168,6 @@ Specifies the execution time, if it is the same for all lines. NULL means that t
 ### Geo_Point_Id
 
 
-Geo_Point_Id
-
-
-Specifies the execution geographic point, if it is the same for all lines. NULL means that the lines have different geographic points.
-
-
 Specifies the execution geographic point, if it is the same for all lines. NULL means that the lines have different geographic points.
 
 | Property | Value |
@@ -202,9 +179,8 @@ Specifies the execution geographic point, if it is the same for all lines. NULL 
 |Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Executions](Log_Transportation_Executions.md).[Geo_Point_Id](Log_Transportation_Executions.md#geo_point_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -227,6 +203,6 @@ Specifies the execution geographic point, if it is the same for all lines. NULL 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

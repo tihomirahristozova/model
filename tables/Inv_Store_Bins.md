@@ -1,5 +1,10 @@
 # Table Inv_Store_Bins
 
+
+## Entity
+
+Entity: [Logistics.Inventory.StoreBins](~/entities/Logistics.Inventory.StoreBins.md)
+
 The storage locations within a store. If there are no differentiated storage locations, create only one, called “(Default)” or similar. Entity: Inv_Store_Bins
 
 ## Owner Tables Hierarchy
@@ -23,12 +28,6 @@ The storage locations within a store. If there are no differentiated storage loc
 ### Id
 
 
-Id
-
-
-Unique store bin id
-
-
 Unique store bin id
 
 | Property | Value |
@@ -40,9 +39,8 @@ Unique store bin id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Store_Bins](Inv_Store_Bins.md).[Id](Inv_Store_Bins.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,15 +63,9 @@ Unique store bin id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The id of the containing store
 
 
 The id of the containing store
@@ -87,9 +79,8 @@ The id of the containing store
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Bins](Inv_Store_Bins.md).[Store_Id](Inv_Store_Bins.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,15 +103,9 @@ The id of the containing store
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Bin_Name
-
-
-Store_Bin_Name
-
-
-Name of the store bin
 
 
 Name of the store bin
@@ -134,9 +119,8 @@ Name of the store bin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Bins](Inv_Store_Bins.md).[Store_Bin_Name](Inv_Store_Bins.md#store_bin_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -164,12 +148,6 @@ Name of the store bin
 ### Blocked_For_Party_Id
 
 
-Blocked_For_Party_Id
-
-
-If not NULL, the goods can only be used by the specified party
-
-
 If not NULL, the goods can only be used by the specified party
 
 | Property | Value |
@@ -181,9 +159,8 @@ If not NULL, the goods can only be used by the specified party
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Bins](Inv_Store_Bins.md).[Blocked_For_Party_Id](Inv_Store_Bins.md#blocked_for_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -206,15 +183,9 @@ If not NULL, the goods can only be used by the specified party
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Default
-
-
-Is_Default
-
-
-True, when this is the default storage bin for the specified store.
 
 
 True, when this is the default storage bin for the specified store.
@@ -227,9 +198,8 @@ True, when this is the default storage bin for the specified store.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Store_Bins](Inv_Store_Bins.md).[Is_Default](Inv_Store_Bins.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -250,9 +220,6 @@ True, when this is the default storage bin for the specified store.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -261,9 +228,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Bins](Inv_Store_Bins.md).[Row_Version](Inv_Store_Bins.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

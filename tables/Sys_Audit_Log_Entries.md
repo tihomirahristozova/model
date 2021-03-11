@@ -1,5 +1,10 @@
 # Table Sys_Audit_Log_Entries
 
+
+## Entity
+
+Entity: [Systems.Core.AuditLogEntries](~/entities/Systems.Core.AuditLogEntries.md)
+
 Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)
 
 ## Summary
@@ -14,7 +19,7 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 |[Entity_Name](#entity_name)|`nvarchar(64)` |The entity, which is being referenced by the event. Null when unknown or N/A.|
 |[Entity_Item_Id](#entity_item_id)|`uniqueidentifier` |The Id of the record, which is referenced by the event. Null when unknown or N/A.|
 |[User_Id](#user_id)|`uniqueidentifier` |The user account under which the event has occurred. Null only for events which are not user-specific.|
-|[Details](#details)|`nvarchar(2147483647)` |Detailed contents of the event. Contents depend on the Event Type and Event Name.|
+|[Details](#details)|`nvarchar(max)` |Detailed contents of the event. Contents depend on the Event Type and Event Name.|
 |[Personal_Data_Process_Id](#personal_data_process_id)|`uniqueidentifier` |The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A.|
 |[Application_Name](#application_name)|`nvarchar(64)` |The client application that triggered the event. Null when unknown or N/A.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -22,9 +27,6 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 ## Columns
 
 ### Audit_Log_Entry_Id
-
-
-Audit_Log_Entry_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Audit_Log_Entry_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Audit_Log_Entry_Id](Sys_Audit_Log_Entries.md#audit_log_entry_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Audit_Log_Entry_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Event_Time_Utc
-
-
-Event_Time_Utc
-
-
-The exact date and time (in Utc) when the event occurred.
 
 
 The exact date and time (in Utc) when the event occurred.
@@ -82,9 +77,8 @@ The exact date and time (in Utc) when the event occurred.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Event_Time_Utc](Sys_Audit_Log_Entries.md#event_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,12 +106,6 @@ The exact date and time (in Utc) when the event occurred.
 ### Event_Class
 
 
-Event_Class
-
-
-The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events.
-
-
 The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events.
 
 | Property | Value |
@@ -129,10 +117,9 @@ The event primary classification, which shows the source of the event. E=Entity 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`E`, `A`, `S`|
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Event_Class](Sys_Audit_Log_Entries.md#event_class)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,15 +142,9 @@ The event primary classification, which shows the source of the event. E=Entity 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Event_Type
-
-
-Event_Type
-
-
-Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event.
 
 
 Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event.
@@ -177,10 +158,9 @@ Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Upda
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EID`, `ELD`, `ECR`, `EUP`, `EDE`, `EMT`, `ETH`, `AIN`, `AOU`, `AUP`, `AFL`, `APW`, `ATH`, `STH`|
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Event_Type](Sys_Audit_Log_Entries.md#event_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,15 +183,9 @@ Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Upda
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Event_Name
-
-
-Event_Name
-
-
-Specific event or method name. Contents depend on the Event Type. Null when N/A.
 
 
 Specific event or method name. Contents depend on the Event Type. Null when N/A.
@@ -225,9 +199,8 @@ Specific event or method name. Contents depend on the Event Type. Null when N/A.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Event_Name](Sys_Audit_Log_Entries.md#event_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -250,16 +223,10 @@ Specific event or method name. Contents depend on the Event Type. Null when N/A.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Entity_Name
-
-
-Entity_Name
-
-
-The entity, which is being referenced by the event. Null when unknown or N/A.
 
 
 The entity, which is being referenced by the event. Null when unknown or N/A.
@@ -273,9 +240,8 @@ The entity, which is being referenced by the event. Null when unknown or N/A.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Entity_Name](Sys_Audit_Log_Entries.md#entity_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -298,16 +264,10 @@ The entity, which is being referenced by the event. Null when unknown or N/A.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Entity_Item_Id
-
-
-Entity_Item_Id
-
-
-The Id of the record, which is referenced by the event. Null when unknown or N/A.
 
 
 The Id of the record, which is referenced by the event. Null when unknown or N/A.
@@ -320,9 +280,8 @@ The Id of the record, which is referenced by the event. Null when unknown or N/A
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Entity_Item_Id](Sys_Audit_Log_Entries.md#entity_item_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -345,15 +304,9 @@ The Id of the record, which is referenced by the event. Null when unknown or N/A
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### User_Id
-
-
-User_Id
-
-
-The user account under which the event has occurred. Null only for events which are not user-specific.
 
 
 The user account under which the event has occurred. Null only for events which are not user-specific.
@@ -367,9 +320,8 @@ The user account under which the event has occurred. Null only for events which 
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[User_Id](Sys_Audit_Log_Entries.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -392,31 +344,24 @@ The user account under which the event has occurred. Null only for events which 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Details
-
-
-Details
-
-
-Detailed contents of the event. Contents depend on the Event Type and Event Name.
 
 
 Detailed contents of the event. Contents depend on the Event Type and Event Name.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Details](Sys_Audit_Log_Entries.md#details)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -438,12 +383,6 @@ Detailed contents of the event. Contents depend on the Event Type and Event Name
 ### Personal_Data_Process_Id
 
 
-Personal_Data_Process_Id
-
-
-The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A.
-
-
 The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A.
 
 | Property | Value |
@@ -455,9 +394,8 @@ The personal data process, which was used to process the data, referenced by the
 |Referenced Table|[Pdm_Personal_Data_Processes](Pdm_Personal_Data_Processes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Personal_Data_Process_Id](Sys_Audit_Log_Entries.md#personal_data_process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -480,15 +418,9 @@ The personal data process, which was used to process the data, referenced by the
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Application_Name
-
-
-Application_Name
-
-
-The client application that triggered the event. Null when unknown or N/A.
 
 
 The client application that triggered the event. Null when unknown or N/A.
@@ -502,9 +434,8 @@ The client application that triggered the event. Null when unknown or N/A.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Application_Name](Sys_Audit_Log_Entries.md#application_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -527,13 +458,10 @@ The client application that triggered the event. Null when unknown or N/A.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -543,9 +471,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log_Entries](Sys_Audit_Log_Entries.md).[Row_Version](Sys_Audit_Log_Entries.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

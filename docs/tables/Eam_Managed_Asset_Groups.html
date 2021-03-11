@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_managed_asset_groups">Table Eam_Managed_Asset_Groups</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.ManagedAssetGroups.html">Applications.AssetManagement.ManagedAssetGroups</a></p>
 <p>Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Introduced in version 19.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -124,7 +126,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="managed_asset_group_id">Managed_Asset_Group_Id</h3>
-<p>Managed_Asset_Group_Id</p>
 <table>
 <thead>
 <tr>
@@ -163,15 +164,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Groups.html">Eam_Managed_Asset_Groups</a>.<a href="Eam_Managed_Asset_Groups.html#managed_asset_group_id">Managed_Asset_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -256,15 +253,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_managed_asset_group_id">Parent_Managed_Asset_Group_Id</h3>
-<p>Parent_Managed_Asset_Group_Id</p>
-<p>The parent asset group in the hierarchy. NULL means this is a root group.</p>
 <p>The parent asset group in the hierarchy. NULL means this is a root group.</p>
 <table>
 <thead>
@@ -304,15 +299,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Groups.html">Eam_Managed_Asset_Groups</a>.<a href="Eam_Managed_Asset_Groups.html#parent_managed_asset_group_id">Parent_Managed_Asset_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -397,15 +388,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="managed_asset_group_code">Managed_Asset_Group_Code</h3>
-<p>Managed_Asset_Group_Code</p>
-<p>Unique (within all groups) code of the asset group.</p>
 <p>Unique (within all groups) code of the asset group.</p>
 <table>
 <thead>
@@ -445,15 +434,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Groups.html">Eam_Managed_Asset_Groups</a>.<a href="Eam_Managed_Asset_Groups.html#managed_asset_group_code">Managed_Asset_Group_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -538,7 +523,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -551,8 +536,6 @@
 </tbody>
 </table>
 <h3 id="managed_asset_group_name">Managed_Asset_Group_Name</h3>
-<p>Managed_Asset_Group_Name</p>
-<p>Name of the asset group (multi-language).</p>
 <p>Name of the asset group (multi-language).</p>
 <table>
 <thead>
@@ -592,15 +575,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Groups.html">Eam_Managed_Asset_Groups</a>.<a href="Eam_Managed_Asset_Groups.html#managed_asset_group_name">Managed_Asset_Group_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -685,7 +664,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -698,7 +677,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -709,7 +687,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -737,15 +715,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Groups.html">Eam_Managed_Asset_Groups</a>.<a href="Eam_Managed_Asset_Groups.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -818,7 +792,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -853,15 +826,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Groups.html">Eam_Managed_Asset_Groups</a>.<a href="Eam_Managed_Asset_Groups.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

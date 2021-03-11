@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-inv_transfer_order_lines">Table Inv_Transfer_Order_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.TransferOrderLines.html">Logistics.Inventory.TransferOrderLines</a></p>
 <p>Details of Transfer Orders. Each line contains order for the movement of one product. Entity: Inv_Transfer_Order_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -194,8 +196,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_ord">Line_Ord</h3>
-<p>Line_Ord</p>
-<p>Line ordinal position within the transaction. Duplicates are allowed, but not advised</p>
 <p>Line ordinal position within the transaction. Duplicates are allowed, but not advised</p>
 <table>
 <thead>
@@ -231,7 +231,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -240,10 +240,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#line_ord">Line_Ord</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -316,8 +312,6 @@
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The product which will be transferred</p>
 <p>The product which will be transferred</p>
 <table>
 <thead>
@@ -357,15 +351,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -450,15 +440,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_store_bin_id">From_Store_Bin_Id</h3>
-<p>From_Store_Bin_Id</p>
-<p>From which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable</p>
 <p>From which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable</p>
 <table>
 <thead>
@@ -498,15 +486,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#from_store_bin_id">From_Store_Bin_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -591,15 +575,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="to_store_bin_id">To_Store_Bin_Id</h3>
-<p>To_Store_Bin_Id</p>
-<p>To which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable</p>
 <p>To which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable</p>
 <table>
 <thead>
@@ -639,15 +621,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#to_store_bin_id">To_Store_Bin_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -732,15 +710,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lot_id">Lot_Id</h3>
-<p>Lot_Id</p>
-<p>If non-null, contains the specific lot to use for the movement</p>
 <p>If non-null, contains the specific lot to use for the movement</p>
 <table>
 <thead>
@@ -780,15 +756,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#lot_id">Lot_Id</a></td>
 </tr>
 <tr>
 <td>Depends On</td>
@@ -877,15 +849,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
-<p>Serial_Number_Id</p>
-<p>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</p>
 <p>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</p>
 <table>
 <thead>
@@ -925,15 +895,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#serial_number_id">Serial_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1018,15 +984,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>Quantity ordered for transfer</p>
 <p>Quantity ordered for transfer</p>
 <table>
 <thead>
@@ -1062,15 +1026,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1162,8 +1122,6 @@
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit of Quantity</p>
 <p>The measurement unit of Quantity</p>
 <table>
 <thead>
@@ -1203,15 +1161,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1296,15 +1250,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity_base">Quantity_Base</h3>
-<p>Quantity_Base</p>
-<p>Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update</p>
 <p>Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update</p>
 <table>
 <thead>
@@ -1340,15 +1292,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#quantity_base">Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1440,8 +1388,6 @@
 </tbody>
 </table>
 <h3 id="due_date_out">Due_Date_Out</h3>
-<p>Due_Date_Out</p>
-<p>When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header</p>
 <p>When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header</p>
 <table>
 <thead>
@@ -1481,15 +1427,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#due_date_out">Due_Date_Out</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1581,8 +1523,6 @@
 </tbody>
 </table>
 <h3 id="due_date_in">Due_Date_In</h3>
-<p>Due_Date_In</p>
-<p>The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header</p>
 <p>The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header</p>
 <table>
 <thead>
@@ -1622,15 +1562,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#due_date_in">Due_Date_In</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1722,8 +1658,6 @@
 </tbody>
 </table>
 <h3 id="product_code_id">Product_Code_Id</h3>
-<p>Product_Code_Id</p>
-<p>Selects the product thru some of the product codes.</p>
 <p>Selects the product thru some of the product codes.</p>
 <table>
 <thead>
@@ -1763,15 +1697,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#product_code_id">Product_Code_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1856,15 +1786,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="standard_unit_price">Standard_Unit_Price</h3>
-<p>Standard_Unit_Price</p>
-<p>Standard unit price of the product during the creation of the transfer order line</p>
 <p>Standard unit price of the product during the creation of the transfer order line</p>
 <table>
 <thead>
@@ -1900,15 +1828,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#standard_unit_price">Standard_Unit_Price</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1981,7 +1905,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2020,15 +1943,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2101,8 +2020,6 @@
 </tbody>
 </table>
 <h3 id="transfer_order_id">Transfer_Order_Id</h3>
-<p>Transfer_Order_Id</p>
-<p>The parent transfer order</p>
 <p>The parent transfer order</p>
 <table>
 <thead>
@@ -2142,15 +2059,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#transfer_order_id">Transfer_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2235,14 +2148,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transfer_order_line_id">Transfer_Order_Line_Id</h3>
-<p>Transfer_Order_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -2281,15 +2193,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#transfer_order_line_id">Transfer_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2374,15 +2282,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_variant_id">Product_Variant_Id</h3>
-<p>Product_Variant_Id</p>
-<p>If specified determines which product variant of the current product in this line is used.</p>
 <p>If specified determines which product variant of the current product in this line is used.</p>
 <table>
 <thead>
@@ -2422,15 +2328,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#product_variant_id">Product_Variant_Id</a></td>
 </tr>
 <tr>
 <td>Depends On</td>
@@ -2519,14 +2421,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2561,15 +2462,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2642,8 +2539,6 @@
 </tbody>
 </table>
 <h3 id="standard_quantity_base">Standard_Quantity_Base</h3>
-<p>Standard_Quantity_Base</p>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <table>
 <thead>
@@ -2679,15 +2574,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Order_Lines.html">Inv_Transfer_Order_Lines</a>.<a href="Inv_Transfer_Order_Lines.html#standard_quantity_base">Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Ast_Depreciation_Assets
 
+
+## Entity
+
+Entity: [Finance.Assets.DepreciationAssets](~/entities/Finance.Assets.DepreciationAssets.md)
+
 Depreciation document line. Can specify assets, whose depreciation should be calculated. Entity: Ast_Depreciation_Assets
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Depreciation document line. Can specify assets, whose depreciation should be cal
 
 ### Depreciation_Asset_Id
 
-
-Depreciation_Asset_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Depreciation_Asset_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Depreciation_Assets](Ast_Depreciation_Assets.md).[Depreciation_Asset_Id](Ast_Depreciation_Assets.md#depreciation_asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Depreciation_Asset_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Depreciation_Id
-
-
-Depreciation_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Depreciation_Id
 |Referenced Table|[Ast_Depreciations](Ast_Depreciations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Assets](Ast_Depreciation_Assets.md).[Depreciation_Id](Ast_Depreciation_Assets.md#depreciation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Depreciation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Asset_Id
-
-
-Asset_Id
-
-
-Specifies the asset, whose depreciation should be calculated with the current document.
 
 
 Specifies the asset, whose depreciation should be calculated with the current document.
@@ -120,9 +111,8 @@ Specifies the asset, whose depreciation should be calculated with the current do
 |Referenced Table|[Ast_Assets](Ast_Assets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Assets](Ast_Depreciation_Assets.md).[Asset_Id](Ast_Depreciation_Assets.md#asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,12 +135,9 @@ Specifies the asset, whose depreciation should be calculated with the current do
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -160,9 +147,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Assets](Ast_Depreciation_Assets.md).[Row_Version](Ast_Depreciation_Assets.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

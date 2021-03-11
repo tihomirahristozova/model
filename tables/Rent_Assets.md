@@ -1,5 +1,10 @@
 # Table Rent_Assets
 
+
+## Entity
+
+Entity: [Applications.Rental.Assets](~/entities/Applications.Rental.Assets.md)
+
 Contains the rentable assets. Entity: Rent_Assets
 
 ## Owner Tables Hierarchy
@@ -15,7 +20,7 @@ Contains the rentable assets. Entity: Rent_Assets
 |[Rental_Asset_Group_Id](#rental_asset_group_id)|`uniqueidentifier` |The logical group of the rental asset.|
 |[Rental_Asset_Code](#rental_asset_code)|`nvarchar(20)` |Unique rental asset code|
 |[Rental_Asset_Name](#rental_asset_name)|`nvarchar(254)` |The name of the rental asset.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Accounting_Asset_Id](#accounting_asset_id)|`uniqueidentifier` |When not NULL identifies the corresponding accounting asset|
 |[Sales_Product_Id](#sales_product_id)|`uniqueidentifier` ||
 |[Work_Schedule_Id](#work_schedule_id)|`uniqueidentifier` ||
@@ -32,9 +37,6 @@ Contains the rentable assets. Entity: Rent_Assets
 
 ### Rental_Asset_Id
 
-
-Rental_Asset_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -44,9 +46,8 @@ Rental_Asset_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Rental_Asset_Id](Rent_Assets.md#rental_asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -69,15 +70,9 @@ Rental_Asset_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Rental_Asset_Type_Id
-
-
-Rental_Asset_Type_Id
-
-
-The type of the asset.
 
 
 The type of the asset.
@@ -91,9 +86,8 @@ The type of the asset.
 |Referenced Table|[Rent_Asset_Types](Rent_Asset_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Rental_Asset_Type_Id](Rent_Assets.md#rental_asset_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -116,15 +110,9 @@ The type of the asset.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Rental_Asset_Group_Id
-
-
-Rental_Asset_Group_Id
-
-
-The logical group of the rental asset.
 
 
 The logical group of the rental asset.
@@ -138,9 +126,8 @@ The logical group of the rental asset.
 |Referenced Table|[Rent_Asset_Groups](Rent_Asset_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Rental_Asset_Group_Id](Rent_Assets.md#rental_asset_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -163,15 +150,9 @@ The logical group of the rental asset.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Rental_Asset_Code
-
-
-Rental_Asset_Code
-
-
-Unique rental asset code
 
 
 Unique rental asset code
@@ -185,9 +166,8 @@ Unique rental asset code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Rental_Asset_Code](Rent_Assets.md#rental_asset_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -210,16 +190,10 @@ Unique rental asset code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Rental_Asset_Name
-
-
-Rental_Asset_Name
-
-
-The name of the rental asset.
 
 
 The name of the rental asset.
@@ -233,9 +207,8 @@ The name of the rental asset.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Rental_Asset_Name](Rent_Assets.md#rental_asset_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -262,21 +235,17 @@ The name of the rental asset.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Notes](Rent_Assets.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -298,12 +267,6 @@ Notes
 ### Accounting_Asset_Id
 
 
-Accounting_Asset_Id
-
-
-When not NULL identifies the corresponding accounting asset
-
-
 When not NULL identifies the corresponding accounting asset
 
 | Property | Value |
@@ -315,9 +278,8 @@ When not NULL identifies the corresponding accounting asset
 |Referenced Table|[Ast_Assets](Ast_Assets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Accounting_Asset_Id](Rent_Assets.md#accounting_asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -340,12 +302,9 @@ When not NULL identifies the corresponding accounting asset
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sales_Product_Id
-
-
-Sales_Product_Id
 
 | Property | Value |
 | - | - |
@@ -356,9 +315,8 @@ Sales_Product_Id
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Sales_Product_Id](Rent_Assets.md#sales_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -381,12 +339,9 @@ Sales_Product_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Work_Schedule_Id
-
-
-Work_Schedule_Id
 
 | Property | Value |
 | - | - |
@@ -397,9 +352,8 @@ Work_Schedule_Id
 |Referenced Table|[Gen_Work_Schedules](Gen_Work_Schedules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Work_Schedule_Id](Rent_Assets.md#work_schedule_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -422,12 +376,9 @@ Work_Schedule_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Time_Period_Type
-
-
-Time_Period_Type
 
 | Property | Value |
 | - | - |
@@ -438,10 +389,9 @@ Time_Period_Type
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`D`, `M`|
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Time_Period_Type](Rent_Assets.md#time_period_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -464,12 +414,9 @@ Time_Period_Type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
-
-
-Product_Id
 
 | Property | Value |
 | - | - |
@@ -480,9 +427,8 @@ Product_Id
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Product_Id](Rent_Assets.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -505,12 +451,9 @@ Product_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
 
 | Property | Value |
 | - | - |
@@ -521,9 +464,8 @@ Serial_Number_Id
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Serial_Number_Id](Rent_Assets.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -546,12 +488,9 @@ Serial_Number_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Standard_Guarantee_Amount
-
-
-Standard_Guarantee_Amount
 
 | Property | Value |
 | - | - |
@@ -561,9 +500,8 @@ Standard_Guarantee_Amount
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Standard_Guarantee_Amount](Rent_Assets.md#standard_guarantee_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -586,12 +524,9 @@ Standard_Guarantee_Amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Standard_Guarantee_Amount_Currency_Id
-
-
-Standard_Guarantee_Amount_Currency_Id
 
 | Property | Value |
 | - | - |
@@ -602,9 +537,8 @@ Standard_Guarantee_Amount_Currency_Id
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Standard_Guarantee_Amount_Currency_Id](Rent_Assets.md#standard_guarantee_amount_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -627,12 +561,9 @@ Standard_Guarantee_Amount_Currency_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -642,9 +573,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Row_Version](Rent_Assets.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -665,9 +595,6 @@ Row_Version
 
 ### Is_Active
 
-
-Is_Active
-
 | Property | Value |
 | - | - |
 |Type|bit|
@@ -676,9 +603,8 @@ Is_Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Is_Active](Rent_Assets.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -701,12 +627,9 @@ Is_Active
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|True|no|no|
+|Equals|`True`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -717,9 +640,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Assets](Rent_Assets.md).[Enterprise_Company_Id](Rent_Assets.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -742,6 +664,6 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

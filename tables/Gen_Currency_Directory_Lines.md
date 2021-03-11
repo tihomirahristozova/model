@@ -1,5 +1,10 @@
 # Table Gen_Currency_Directory_Lines
 
+
+## Entity
+
+Entity: [General.CurrencyDirectoryLines](~/entities/General.CurrencyDirectoryLines.md)
+
 Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains exchange rate for a currency against the main currency of currency dire
 
 ### Currency_Directory_Line_Id
 
-
-Currency_Directory_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Currency_Directory_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Currency_Directory_Lines](Gen_Currency_Directory_Lines.md).[Currency_Directory_Line_Id](Gen_Currency_Directory_Lines.md#currency_directory_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Currency_Directory_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Currency_Directory_Id
-
-
-Currency_Directory_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Currency_Directory_Id
 |Referenced Table|[Gen_Currency_Directories](Gen_Currency_Directories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currency_Directory_Lines](Gen_Currency_Directory_Lines.md).[Currency_Directory_Id](Gen_Currency_Directory_Lines.md#currency_directory_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Currency_Directory_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Currency_Id
-
-
-From_Currency_Id
-
-
-The currency for which the exchange rate is recorded
 
 
 The currency for which the exchange rate is recorded
@@ -122,9 +113,8 @@ The currency for which the exchange rate is recorded
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currency_Directory_Lines](Gen_Currency_Directory_Lines.md).[From_Currency_Id](Gen_Currency_Directory_Lines.md#from_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ The currency for which the exchange rate is recorded
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Rate_Multiplier
-
-
-Rate_Multiplier
-
-
-The multiplier for conversion from From_Currency to Directory.To_Currency
 
 
 The multiplier for conversion from From_Currency to Directory.To_Currency
@@ -168,9 +152,8 @@ The multiplier for conversion from From_Currency to Directory.To_Currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Currency_Directory_Lines](Gen_Currency_Directory_Lines.md).[Rate_Multiplier](Gen_Currency_Directory_Lines.md#rate_multiplier)|
 |Format|N6|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,12 +175,6 @@ The multiplier for conversion from From_Currency to Directory.To_Currency
 ### Rate_Divisor
 
 
-Rate_Divisor
-
-
-The divisor for conversion from From_Currency to Directory.To_Currency
-
-
 The divisor for conversion from From_Currency to Directory.To_Currency
 
 | Property | Value |
@@ -208,9 +185,8 @@ The divisor for conversion from From_Currency to Directory.To_Currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Currency_Directory_Lines](Gen_Currency_Directory_Lines.md).[Rate_Divisor](Gen_Currency_Directory_Lines.md#rate_divisor)|
 |Format|N6|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -231,9 +207,6 @@ The divisor for conversion from From_Currency to Directory.To_Currency
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -242,9 +215,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currency_Directory_Lines](Gen_Currency_Directory_Lines.md).[Row_Version](Gen_Currency_Directory_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

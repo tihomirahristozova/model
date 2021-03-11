@@ -1,5 +1,10 @@
 # Table Acc_Cost_Centers
 
+
+## Entity
+
+Entity: [Finance.Accounting.CostCenters](~/entities/Finance.Accounting.CostCenters.md)
+
 Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Centers
 
 ## Summary
@@ -18,9 +23,6 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 
 ### Cost_Center_Id
 
-
-Cost_Center_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -30,9 +32,8 @@ Cost_Center_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Cost_Centers](Acc_Cost_Centers.md).[Cost_Center_Id](Acc_Cost_Centers.md#cost_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Cost_Center_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Parent_Cost_Center_Id
-
-
-Parent_Cost_Center_Id
-
-
-Parent cost center, NULL if this is root cost center
 
 
 Parent cost center, NULL if this is root cost center
@@ -77,9 +72,8 @@ Parent cost center, NULL if this is root cost center
 |Referenced Table|[Acc_Cost_Centers](Acc_Cost_Centers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Cost_Centers](Acc_Cost_Centers.md).[Parent_Cost_Center_Id](Acc_Cost_Centers.md#parent_cost_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,12 +96,9 @@ Parent cost center, NULL if this is root cost center
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Cost_Center_Name
-
-
-Cost_Center_Name
 
 | Property | Value |
 | - | - |
@@ -118,9 +109,8 @@ Cost_Center_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Cost_Centers](Acc_Cost_Centers.md).[Cost_Center_Name](Acc_Cost_Centers.md#cost_center_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,12 +138,6 @@ Cost_Center_Name
 ### Relative_Weight
 
 
-Relative_Weight
-
-
-The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used.
-
-
 The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used.
 
 | Property | Value |
@@ -164,9 +148,8 @@ The weight of this cost center, relative to the other cost centers within the sa
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Acc_Cost_Centers](Acc_Cost_Centers.md).[Relative_Weight](Acc_Cost_Centers.md#relative_weight)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,9 +170,6 @@ The weight of this cost center, relative to the other cost centers within the sa
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -199,9 +179,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Acc_Cost_Centers](Acc_Cost_Centers.md).[Notes](Acc_Cost_Centers.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -223,12 +202,6 @@ Notes
 ### Transfer_Cost_To_Profit_Center_Id
 
 
-Transfer_Cost_To_Profit_Center_Id
-
-
-Points to the profit center to which to transfer the cost. Valid only for leaf cost centers
-
-
 Points to the profit center to which to transfer the cost. Valid only for leaf cost centers
 
 | Property | Value |
@@ -240,9 +213,8 @@ Points to the profit center to which to transfer the cost. Valid only for leaf c
 |Referenced Table|[Acc_Profit_Centers](Acc_Profit_Centers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Cost_Centers](Acc_Cost_Centers.md).[Transfer_Cost_To_Profit_Center_Id](Acc_Cost_Centers.md#transfer_cost_to_profit_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -265,12 +237,9 @@ Points to the profit center to which to transfer the cost. Valid only for leaf c
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -280,9 +249,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Cost_Centers](Acc_Cost_Centers.md).[Row_Version](Acc_Cost_Centers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

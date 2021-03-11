@@ -1,5 +1,10 @@
 # Table Inv_Transfer_Orders
 
+
+## Entity
+
+Entity: [Logistics.Inventory.TransferOrders](~/entities/Logistics.Inventory.TransferOrders.md)
+
 Orders for stock transfers between stores. Entity: Inv_Transfer_Orders
 
 ## Owner Tables Hierarchy
@@ -16,7 +21,7 @@ Orders for stock transfers between stores. Entity: Inv_Transfer_Orders
 |[Default_Due_Date_In](#default_due_date_in)|`datetime` |The date, when the goods are expected to be received in the destination warehouse|
 |[From_Store_Id](#from_store_id)|`uniqueidentifier` |Specifies the store, from which the goods will be issued.|
 |[To_Store_Id](#to_store_id)|`uniqueidentifier` |Specifies the store, in which the goods will be received.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Status](#status)|`smallint` Allowed: `1`, `2`|Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released)|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
@@ -25,9 +30,6 @@ Orders for stock transfers between stores. Entity: Inv_Transfer_Orders
 ## Columns
 
 ### Transfer_Order_Id
-
-
-Transfer_Order_Id
 
 | Property | Value |
 | - | - |
@@ -38,9 +40,8 @@ Transfer_Order_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Transfer_Order_Id](Inv_Transfer_Orders.md#transfer_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,15 +64,9 @@ Transfer_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The unique stock transfer order id, as per documents table
 
 
 The unique stock transfer order id, as per documents table
@@ -85,9 +80,8 @@ The unique stock transfer order id, as per documents table
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Document_Id](Inv_Transfer_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,15 +104,9 @@ The unique stock transfer order id, as per documents table
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Default_Due_Date_Out
-
-
-Default_Due_Date_Out
-
-
-When the transfer is scheduled to issue the goods from the source warehouse
 
 
 When the transfer is scheduled to issue the goods from the source warehouse
@@ -132,9 +120,8 @@ When the transfer is scheduled to issue the goods from the source warehouse
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Default_Due_Date_Out](Inv_Transfer_Orders.md#default_due_date_out)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -162,12 +149,6 @@ When the transfer is scheduled to issue the goods from the source warehouse
 ### Default_Due_Date_In
 
 
-Default_Due_Date_In
-
-
-The date, when the goods are expected to be received in the destination warehouse
-
-
 The date, when the goods are expected to be received in the destination warehouse
 
 | Property | Value |
@@ -179,9 +160,8 @@ The date, when the goods are expected to be received in the destination warehous
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Default_Due_Date_In](Inv_Transfer_Orders.md#default_due_date_in)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -209,12 +189,6 @@ The date, when the goods are expected to be received in the destination warehous
 ### From_Store_Id
 
 
-From_Store_Id
-
-
-Specifies the store, from which the goods will be issued.
-
-
 Specifies the store, from which the goods will be issued.
 
 | Property | Value |
@@ -226,9 +200,8 @@ Specifies the store, from which the goods will be issued.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[From_Store_Id](Inv_Transfer_Orders.md#from_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -251,17 +224,11 @@ Specifies the store, from which the goods will be issued.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### To_Store_Id
 
 
-To_Store_Id
-
-
-Specifies the store, in which the goods will be received.
-
-
 Specifies the store, in which the goods will be received.
 
 | Property | Value |
@@ -273,9 +240,8 @@ Specifies the store, in which the goods will be received.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[To_Store_Id](Inv_Transfer_Orders.md#to_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -298,25 +264,21 @@ Specifies the store, in which the goods will be received.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Notes](Inv_Transfer_Orders.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -338,12 +300,6 @@ Notes
 ### Status
 
 
-Status
-
-
-Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released)
-
-
 Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released)
 
 | Property | Value |
@@ -354,10 +310,9 @@ Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Rele
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`|
 |Default Value|1|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Status](Inv_Transfer_Orders.md#status)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -379,12 +334,6 @@ Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Rele
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -395,9 +344,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Is_Single_Execution](Inv_Transfer_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -420,17 +368,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -441,9 +383,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Is_Released](Inv_Transfer_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -466,12 +407,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -481,9 +419,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Orders](Inv_Transfer_Orders.md).[Row_Version](Inv_Transfer_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

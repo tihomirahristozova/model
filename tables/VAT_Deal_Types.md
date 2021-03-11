@@ -1,5 +1,10 @@
 # Table VAT_Deal_Types
 
+
+## Entity
+
+Entity: [Finance.Vat.DealTypes](~/entities/Finance.Vat.DealTypes.md)
+
 Contains deal types supported by the system as well as user-defined types. Entity: VAT_Deal_Types
 
 ## Summary
@@ -18,12 +23,6 @@ Contains deal types supported by the system as well as user-defined types. Entit
 ### Deal_Type_Id
 
 
-Deal_Type_Id
-
-
-Unique Id for the deal type. Deal_Type_Id should be used for identifyind and updating system deal types.
-
-
 Unique Id for the deal type. Deal_Type_Id should be used for identifyind and updating system deal types.
 
 | Property | Value |
@@ -35,9 +34,8 @@ Unique Id for the deal type. Deal_Type_Id should be used for identifyind and upd
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[VAT_Deal_Types](VAT_Deal_Types.md).[Deal_Type_Id](VAT_Deal_Types.md#deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +58,9 @@ Unique Id for the deal type. Deal_Type_Id should be used for identifyind and upd
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Deal_Type_Name
-
-
-Deal_Type_Name
-
-
-Description of the deal type.
 
 
 Description of the deal type.
@@ -82,9 +74,8 @@ Description of the deal type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Deal_Types](VAT_Deal_Types.md).[Deal_Type_Name](VAT_Deal_Types.md#deal_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,16 +98,10 @@ Description of the deal type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Entry_Type
-
-
-Entry_Type
-
-
-Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.
 
 
 Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.
@@ -130,10 +115,9 @@ Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`P`, `S`|
 |Default Value|None|
-|Derived From|[VAT_Deal_Types](VAT_Deal_Types.md).[Entry_Type](VAT_Deal_Types.md#entry_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,15 +140,9 @@ Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Country_Id
-
-
-Country_Id
-
-
-The country for which this deal type applies. The country is matched against the country of the enterprise company.
 
 
 The country for which this deal type applies. The country is matched against the country of the enterprise company.
@@ -178,9 +156,8 @@ The country for which this deal type applies. The country is matched against the
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Deal_Types](VAT_Deal_Types.md).[Country_Id](VAT_Deal_Types.md#country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,15 +180,9 @@ The country for which this deal type applies. The country is matched against the
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_System
-
-
-Is_System
-
-
-Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.
 
 
 Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.
@@ -224,9 +195,8 @@ Is_System is True for those deal types that are managed by the system via update
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[VAT_Deal_Types](VAT_Deal_Types.md).[Is_System](VAT_Deal_Types.md#is_system)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,12 +219,9 @@ Is_System is True for those deal types that are managed by the system via update
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -264,9 +231,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Deal_Types](VAT_Deal_Types.md).[Row_Version](VAT_Deal_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

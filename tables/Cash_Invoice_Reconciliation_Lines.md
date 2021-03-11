@@ -21,9 +21,6 @@
 
 ### Invoice_Reconciliation_Line_Id
 
-
-Invoice_Reconciliation_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +30,8 @@ Invoice_Reconciliation_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Invoice_Reconciliation_Lines](Cash_Invoice_Reconciliation_Lines.md).[Invoice_Reconciliation_Line_Id](Cash_Invoice_Reconciliation_Lines.md#invoice_reconciliation_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +54,9 @@ Invoice_Reconciliation_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Invoice_Reconciliation_Id
-
-
-Invoice_Reconciliation_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +67,8 @@ Invoice_Reconciliation_Id
 |Referenced Table|[Cash_Invoice_Reconciliations](Cash_Invoice_Reconciliations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Invoice_Reconciliation_Lines](Cash_Invoice_Reconciliation_Lines.md).[Invoice_Reconciliation_Id](Cash_Invoice_Reconciliation_Lines.md#invoice_reconciliation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,17 +91,11 @@ Invoice_Reconciliation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Invoice_Document_Id
 
 
-Invoice_Document_Id
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -121,9 +107,8 @@ Obsolete. Not used.
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Invoice_Reconciliation_Lines](Cash_Invoice_Reconciliation_Lines.md).[Invoice_Document_Id](Cash_Invoice_Reconciliation_Lines.md#invoice_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,17 +131,11 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Transaction_Document_Id
 
 
-Payment_Transaction_Document_Id
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -168,9 +147,8 @@ Obsolete. Not used.
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Invoice_Reconciliation_Lines](Cash_Invoice_Reconciliation_Lines.md).[Payment_Transaction_Document_Id](Cash_Invoice_Reconciliation_Lines.md#payment_transaction_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,15 +171,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Covered_Invoice_Amount
-
-
-Covered_Invoice_Amount
-
-
-Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.
 
 
 Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.
@@ -214,9 +186,8 @@ Amount from the invoice that is covered by the payment. The amount is in the cur
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Invoice_Reconciliation_Lines](Cash_Invoice_Reconciliation_Lines.md).[Covered_Invoice_Amount](Cash_Invoice_Reconciliation_Lines.md#covered_invoice_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,9 +208,6 @@ Amount from the invoice that is covered by the payment. The amount is in the cur
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -248,9 +216,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Invoice_Reconciliation_Lines](Cash_Invoice_Reconciliation_Lines.md).[Row_Version](Cash_Invoice_Reconciliation_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

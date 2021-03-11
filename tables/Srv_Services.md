@@ -1,5 +1,10 @@
 # Table Srv_Services
 
+
+## Entity
+
+Entity: [Applications.Service.Services](~/entities/Applications.Service.Services.md)
+
 Contains the services, which can be performed. Entity: Srv_Services
 
 ## Summary
@@ -17,9 +22,6 @@ Contains the services, which can be performed. Entity: Srv_Services
 
 ### Service_Id
 
-
-Service_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Service_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Services](Srv_Services.md).[Service_Id](Srv_Services.md#service_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Service_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Code
-
-
-Service_Code
-
-
-Unique code of the service.
 
 
 Unique code of the service.
@@ -76,9 +71,8 @@ Unique code of the service.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Services](Srv_Services.md).[Service_Code](Srv_Services.md#service_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,16 +95,10 @@ Unique code of the service.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|yes|
 
 ### Service_Name
-
-
-Service_Name
-
-
-The name of the service.
 
 
 The name of the service.
@@ -124,9 +112,8 @@ The name of the service.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Services](Srv_Services.md).[Service_Name](Srv_Services.md#service_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,16 +136,10 @@ The name of the service.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Measurement_Unit_Id
-
-
-Measurement_Unit_Id
-
-
-The measurement unit in which the service rendered to the customer is quantified
 
 
 The measurement unit in which the service rendered to the customer is quantified
@@ -172,9 +153,8 @@ The measurement unit in which the service rendered to the customer is quantified
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Services](Srv_Services.md).[Measurement_Unit_Id](Srv_Services.md#measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,15 +177,9 @@ The measurement unit in which the service rendered to the customer is quantified
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Indicates wheather this service is currently used.
 
 
 Indicates wheather this service is currently used.
@@ -218,9 +192,8 @@ Indicates wheather this service is currently used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Srv_Services](Srv_Services.md).[Is_Active](Srv_Services.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,12 +216,9 @@ Indicates wheather this service is currently used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -258,9 +228,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Services](Srv_Services.md).[Row_Version](Srv_Services.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

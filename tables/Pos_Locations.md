@@ -1,5 +1,10 @@
 # Table Pos_Locations
 
+
+## Entity
+
+Entity: [Crm.Pos.Locations](~/entities/Crm.Pos.Locations.md)
+
 Defines a company location as POS enabled location. Entity: Pos_Locations (Introduced in version 19.1)
 
 ## Summary
@@ -17,9 +22,6 @@ Defines a company location as POS enabled location. Entity: Pos_Locations (Intro
 
 ### Pos_Location_Id
 
-
-Pos_Location_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Pos_Location_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pos_Locations](Pos_Locations.md).[Pos_Location_Id](Pos_Locations.md#pos_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Pos_Location_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company of the POS location.
 
 
 The enterprise company of the POS location.
@@ -76,9 +71,8 @@ The enterprise company of the POS location.
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Locations](Pos_Locations.md).[Enterprise_Company_Id](Pos_Locations.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +95,9 @@ The enterprise company of the POS location.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Location_Id
-
-
-Enterprise_Company_Location_Id
-
-
-The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location.
 
 
 The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location.
@@ -123,9 +111,8 @@ The enterprise company location of the POS location. Currently, only one POS loc
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Locations](Pos_Locations.md).[Enterprise_Company_Location_Id](Pos_Locations.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +135,9 @@ The enterprise company location of the POS location. Currently, only one POS loc
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Location_Code
-
-
-Pos_Location_Code
-
-
-Unique (with the enterprise company) code of this POS location.
 
 
 Unique (with the enterprise company) code of this POS location.
@@ -170,9 +151,8 @@ Unique (with the enterprise company) code of this POS location.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Locations](Pos_Locations.md).[Pos_Location_Code](Pos_Locations.md#pos_location_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,16 +175,10 @@ Unique (with the enterprise company) code of this POS location.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Indicates whether the POS location is currently active and can be chosen in drop-downs, etc.
 
 
 Indicates whether the POS location is currently active and can be chosen in drop-downs, etc.
@@ -217,9 +191,8 @@ Indicates whether the POS location is currently active and can be chosen in drop
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Pos_Locations](Pos_Locations.md).[Is_Active](Pos_Locations.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,12 +215,9 @@ Indicates whether the POS location is currently active and can be chosen in drop
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -257,9 +227,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Locations](Pos_Locations.md).[Row_Version](Pos_Locations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

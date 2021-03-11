@@ -1,5 +1,10 @@
 # Table Inv_Store_Groups
 
+
+## Entity
+
+Entity: [Logistics.Inventory.StoreGroups](~/entities/Logistics.Inventory.StoreGroups.md)
+
 Hierarchy of store groups. Entity: Inv_Store_Groups
 
 ## Summary
@@ -19,9 +24,6 @@ Hierarchy of store groups. Entity: Inv_Store_Groups
 
 ### Store_Group_Id
 
-
-Store_Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Store_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Store_Groups](Inv_Store_Groups.md).[Store_Group_Id](Inv_Store_Groups.md#store_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,12 +57,9 @@ Store_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Store_Group_Name
-
-
-Store_Group_Name
 
 | Property | Value |
 | - | - |
@@ -72,9 +70,8 @@ Store_Group_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Groups](Inv_Store_Groups.md).[Store_Group_Name](Inv_Store_Groups.md#store_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,9 +98,6 @@ Store_Group_Name
 
 ### Store_Group_Code
 
-
-Store_Group_Code
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(16)|
@@ -113,9 +107,8 @@ Store_Group_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Groups](Inv_Store_Groups.md).[Store_Group_Code](Inv_Store_Groups.md#store_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -138,16 +131,10 @@ Store_Group_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Parent_Full_Path
-
-
-Parent_Full_Path
-
-
-The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.
 
 
 The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.
@@ -161,9 +148,8 @@ The full path to the parent store group. It is stored in a dot separated, non-le
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Groups](Inv_Store_Groups.md).[Parent_Full_Path](Inv_Store_Groups.md#parent_full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,16 +172,10 @@ The full path to the parent store group. It is stored in a dot separated, non-le
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Full_Path
-
-
-Full_Path
-
-
-The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.
 
 
 The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.
@@ -209,9 +189,8 @@ The full path to the store group in a dot separated, non-leading dot format. For
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Groups](Inv_Store_Groups.md).[Full_Path](Inv_Store_Groups.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,13 +213,10 @@ The full path to the store group in a dot separated, non-leading dot format. For
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -251,9 +227,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Groups](Inv_Store_Groups.md).[Enterprise_Company_Id](Inv_Store_Groups.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -276,12 +251,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Location_Id
-
-
-Enterprise_Company_Location_Id
 
 | Property | Value |
 | - | - |
@@ -292,9 +264,8 @@ Enterprise_Company_Location_Id
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Groups](Inv_Store_Groups.md).[Enterprise_Company_Location_Id](Inv_Store_Groups.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -317,12 +288,9 @@ Enterprise_Company_Location_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -332,9 +300,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Groups](Inv_Store_Groups.md).[Row_Version](Inv_Store_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

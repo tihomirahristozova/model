@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_managed_asset_scheduled_maintenances">Table Eam_Managed_Asset_Scheduled_Maintenances</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.ManagedAssetScheduledMaintenances.html">Applications.AssetManagement.ManagedAssetScheduledMaintenances</a></p>
 <p>Contains the scheduled maintenances for the managed assets. Each maintenance can be planned based on date, parameter value or both. Past maintenance plans are kept only for reference and can be deleted at any time. Entity: Eam_Managed_Asset_Scheduled_Maintenances (Introduced in version 19.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="managed_asset_scheduled_maintenance_id">Managed_Asset_Scheduled_Maintenance_Id</h3>
-<p>Managed_Asset_Scheduled_Maintenance_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Scheduled_Maintenances.html">Eam_Managed_Asset_Scheduled_Maintenances</a>.<a href="Eam_Managed_Asset_Scheduled_Maintenances.html#managed_asset_scheduled_maintenance_id">Managed_Asset_Scheduled_Maintenance_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,15 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="managed_asset_id">Managed_Asset_Id</h3>
-<p>Managed_Asset_Id</p>
-<p>The asset, which will be maintained.</p>
 <p>The asset, which will be maintained.</p>
 <table>
 <thead>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Scheduled_Maintenances.html">Eam_Managed_Asset_Scheduled_Maintenances</a>.<a href="Eam_Managed_Asset_Scheduled_Maintenances.html#managed_asset_id">Managed_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_type_id">Maintenance_Type_Id</h3>
-<p>Maintenance_Type_Id</p>
-<p>The type of maintenance, which will be performed.</p>
 <p>The type of maintenance, which will be performed.</p>
 <table>
 <thead>
@@ -459,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Scheduled_Maintenances.html">Eam_Managed_Asset_Scheduled_Maintenances</a>.<a href="Eam_Managed_Asset_Scheduled_Maintenances.html#maintenance_type_id">Maintenance_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -552,15 +537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="date">Date</h3>
-<p>Date</p>
-<p>The date, when the maintenance is planned. NULL means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.</p>
 <p>The date, when the maintenance is planned. NULL means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.</p>
 <table>
 <thead>
@@ -600,15 +583,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Scheduled_Maintenances.html">Eam_Managed_Asset_Scheduled_Maintenances</a>.<a href="Eam_Managed_Asset_Scheduled_Maintenances.html#date">Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -693,7 +672,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -706,8 +685,6 @@
 </tbody>
 </table>
 <h3 id="tracked_parameter_value">Tracked_Parameter_Value</h3>
-<p>Tracked_Parameter_Value</p>
-<p>The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. NULL means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.</p>
 <p>The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. NULL means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.</p>
 <table>
 <thead>
@@ -743,15 +720,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Scheduled_Maintenances.html">Eam_Managed_Asset_Scheduled_Maintenances</a>.<a href="Eam_Managed_Asset_Scheduled_Maintenances.html#tracked_parameter_value">Tracked_Parameter_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -836,7 +809,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -849,8 +822,6 @@
 </tbody>
 </table>
 <h3 id="is_dismissed">Is_Dismissed</h3>
-<p>Is_Dismissed</p>
-<p>Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action.</p>
 <p>Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action.</p>
 <table>
 <thead>
@@ -886,15 +857,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Scheduled_Maintenances.html">Eam_Managed_Asset_Scheduled_Maintenances</a>.<a href="Eam_Managed_Asset_Scheduled_Maintenances.html#is_dismissed">Is_Dismissed</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -979,14 +946,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -997,7 +963,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1025,15 +991,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Scheduled_Maintenances.html">Eam_Managed_Asset_Scheduled_Maintenances</a>.<a href="Eam_Managed_Asset_Scheduled_Maintenances.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1106,7 +1068,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1141,15 +1102,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Scheduled_Maintenances.html">Eam_Managed_Asset_Scheduled_Maintenances</a>.<a href="Eam_Managed_Asset_Scheduled_Maintenances.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

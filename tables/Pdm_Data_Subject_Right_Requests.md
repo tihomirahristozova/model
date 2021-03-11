@@ -1,5 +1,10 @@
 # Table Pdm_Data_Subject_Right_Requests
 
+
+## Entity
+
+Entity: [Applications.PersonalData.DataSubjectRightRequests](~/entities/Applications.PersonalData.DataSubjectRightRequests.md)
+
 Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2)
 
 ## Summary
@@ -14,16 +19,13 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 |[Requested_Right](#requested_right)|`nvarchar(3)` Allowed: `REC`, `ERA`, `RES`, `POR`, `OBJ`, `OTH`|The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.|
 |[Completed_By_User_Id](#completed_by_user_id)|`uniqueidentifier` Readonly|The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.|
 |[Completed_On_Utc](#completed_on_utc)|`datetime` |Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.|
-|[Notes](#notes)|`nvarchar(2147483647)` |This should usually contain detailed implementation notes.|
+|[Notes](#notes)|`nvarchar(max)` |This should usually contain detailed implementation notes.|
 |[Status](#status)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`|The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Data_Subject_Right_Request_Id
-
-
-Data_Subject_Right_Request_Id
 
 | Property | Value |
 | - | - |
@@ -34,9 +36,8 @@ Data_Subject_Right_Request_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Data_Subject_Right_Request_Id](Pdm_Data_Subject_Right_Requests.md#data_subject_right_request_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Data_Subject_Right_Request_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company, to which the request was made.
 
 
 The enterprise company, to which the request was made.
@@ -81,9 +76,8 @@ The enterprise company, to which the request was made.
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Enterprise_Company_Id](Pdm_Data_Subject_Right_Requests.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The enterprise company, to which the request was made.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Person_Id
-
-
-Person_Id
-
-
-The person, whose data will be corrected with the request. 
 
 
 The person, whose data will be corrected with the request. 
@@ -128,9 +116,8 @@ The person, whose data will be corrected with the request.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Person_Id](Pdm_Data_Subject_Right_Requests.md#person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,15 +140,9 @@ The person, whose data will be corrected with the request.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Created_By_User_Id
-
-
-Created_By_User_Id
-
-
-The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person.
 
 
 The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person.
@@ -175,9 +156,8 @@ The user account, which was used to create the request. Null when the request wa
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Created_By_User_Id](Pdm_Data_Subject_Right_Requests.md#created_by_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,15 +180,9 @@ The user account, which was used to create the request. Null when the request wa
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Created_On_Utc
-
-
-Created_On_Utc
-
-
-The date and time (in UTC), when the request was created.
 
 
 The date and time (in UTC), when the request was created.
@@ -222,9 +196,8 @@ The date and time (in UTC), when the request was created.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Created_On_Utc](Pdm_Data_Subject_Right_Requests.md#created_on_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,12 +219,6 @@ The date and time (in UTC), when the request was created.
 ### Requested_Right
 
 
-Requested_Right
-
-
-The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.
-
-
 The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.
 
 | Property | Value |
@@ -263,10 +230,9 @@ The requested right, according to GDPR and other personal data regulations.  REC
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`REC`, `ERA`, `RES`, `POR`, `OBJ`, `OTH`|
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Requested_Right](Pdm_Data_Subject_Right_Requests.md#requested_right)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,15 +255,9 @@ The requested right, according to GDPR and other personal data regulations.  REC
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Completed_By_User_Id
-
-
-Completed_By_User_Id
-
-
-The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.
 
 
 The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.
@@ -311,9 +271,8 @@ The internal user account, which marked the request as implemented. Null when th
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Completed_By_User_Id](Pdm_Data_Subject_Right_Requests.md#completed_by_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -336,15 +295,9 @@ The internal user account, which marked the request as implemented. Null when th
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Completed_On_Utc
-
-
-Completed_On_Utc
-
-
-Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.
 
 
 Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.
@@ -358,9 +311,8 @@ Date and time (in UTC), when the requested right was implemented by the responsi
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Completed_On_Utc](Pdm_Data_Subject_Right_Requests.md#completed_on_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -382,26 +334,19 @@ Date and time (in UTC), when the requested right was implemented by the responsi
 ### Notes
 
 
-Notes
-
-
-This should usually contain detailed implementation notes.
-
-
 This should usually contain detailed implementation notes.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Notes](Pdm_Data_Subject_Right_Requests.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -423,12 +368,6 @@ This should usually contain detailed implementation notes.
 ### Status
 
 
-Status
-
-
-The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.
-
-
 The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.
 
 | Property | Value |
@@ -440,10 +379,9 @@ The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented;
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`|
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Status](Pdm_Data_Subject_Right_Requests.md#status)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -464,9 +402,6 @@ The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented;
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -475,9 +410,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Data_Subject_Right_Requests](Pdm_Data_Subject_Right_Requests.md).[Row_Version](Pdm_Data_Subject_Right_Requests.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

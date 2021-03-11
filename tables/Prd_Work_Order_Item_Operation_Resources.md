@@ -25,9 +25,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +34,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Work_Order_Item_Operation_Resources](Prd_Work_Order_Item_Operation_Resources.md).[Id](Prd_Work_Order_Item_Operation_Resources.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,15 +58,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Order_Item_Operation_Id
-
-
-Work_Order_Item_Operation_Id
-
-
-The work order item operation, containing the line.
 
 
 The work order item operation, containing the line.
@@ -84,9 +74,8 @@ The work order item operation, containing the line.
 |Referenced Table|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operation_Resources](Prd_Work_Order_Item_Operation_Resources.md).[Work_Order_Item_Operation_Id](Prd_Work_Order_Item_Operation_Resources.md#work_order_item_operation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,15 +98,9 @@ The work order item operation, containing the line.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Function_Id
-
-
-Function_Id
-
-
-Specifies the function, that the resource must be able to perform. This helps the selection of specific resource for the operation. This column is used as search/selection criteria. NULL means that the user must select the resource through all resources
 
 
 Specifies the function, that the resource must be able to perform. This helps the selection of specific resource for the operation. This column is used as search/selection criteria. NULL means that the user must select the resource through all resources
@@ -131,9 +114,8 @@ Specifies the function, that the resource must be able to perform. This helps th
 |Referenced Table|[Prd_Functions](Prd_Functions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operation_Resources](Prd_Work_Order_Item_Operation_Resources.md).[Function_Id](Prd_Work_Order_Item_Operation_Resources.md#function_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,15 +138,9 @@ Specifies the function, that the resource must be able to perform. This helps th
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Resource_Id
-
-
-Resource_Id
-
-
-A resource that will be utilized for this routing step
 
 
 A resource that will be utilized for this routing step
@@ -178,9 +154,8 @@ A resource that will be utilized for this routing step
 |Referenced Table|[Prd_Resources](Prd_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operation_Resources](Prd_Work_Order_Item_Operation_Resources.md).[Resource_Id](Prd_Work_Order_Item_Operation_Resources.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,15 +178,9 @@ A resource that will be utilized for this routing step
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Workgroup_Resource_Id
-
-
-Workgroup_Resource_Id
-
-
-The workgroup resource that is used for the operation
 
 
 The workgroup resource that is used for the operation
@@ -224,9 +193,8 @@ The workgroup resource that is used for the operation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operation_Resources](Prd_Work_Order_Item_Operation_Resources.md).[Workgroup_Resource_Id](Prd_Work_Order_Item_Operation_Resources.md#workgroup_resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,15 +217,9 @@ The workgroup resource that is used for the operation
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Locked_Quantity
-
-
-Locked_Quantity
-
-
-The quantity locked from the resource. The measurement unit is specified in Prd_Resources.
 
 
 The quantity locked from the resource. The measurement unit is specified in Prd_Resources.
@@ -270,9 +232,8 @@ The quantity locked from the resource. The measurement unit is specified in Prd_
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Prd_Work_Order_Item_Operation_Resources](Prd_Work_Order_Item_Operation_Resources.md).[Locked_Quantity](Prd_Work_Order_Item_Operation_Resources.md#locked_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -294,12 +255,6 @@ The quantity locked from the resource. The measurement unit is specified in Prd_
 ### Line_Ord
 
 
-Line_Ord
-
-
-The order of the line within the item.
-
-
 The order of the line within the item.
 
 | Property | Value |
@@ -310,10 +265,9 @@ The order of the line within the item.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Prd_Work_Order_Item_Operation_Resources](Prd_Work_Order_Item_Operation_Resources.md).[Line_Ord](Prd_Work_Order_Item_Operation_Resources.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,9 +288,6 @@ The order of the line within the item.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -345,9 +296,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operation_Resources](Prd_Work_Order_Item_Operation_Resources.md).[Row_Version](Prd_Work_Order_Item_Operation_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

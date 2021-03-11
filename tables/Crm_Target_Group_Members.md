@@ -1,5 +1,10 @@
 # Table Crm_Target_Group_Members
 
+
+## Entity
+
+Entity: [Crm.Marketing.TargetGroupMembers](~/entities/Crm.Marketing.TargetGroupMembers.md)
+
 Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 
 ### Target_Group_Member_Id
 
-
-Target_Group_Member_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Target_Group_Member_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Target_Group_Members](Crm_Target_Group_Members.md).[Target_Group_Member_Id](Crm_Target_Group_Members.md#target_group_member_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Target_Group_Member_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Target_Group_Id
-
-
-Target_Group_Id
-
-
-The target group, which includes the member party.
 
 
 The target group, which includes the member party.
@@ -78,9 +73,8 @@ The target group, which includes the member party.
 |Referenced Table|[Crm_Target_Groups](Crm_Target_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Target_Group_Members](Crm_Target_Group_Members.md).[Target_Group_Id](Crm_Target_Group_Members.md#target_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +97,9 @@ The target group, which includes the member party.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The member party.
 
 
 The member party.
@@ -125,9 +113,8 @@ The member party.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Target_Group_Members](Crm_Target_Group_Members.md).[Party_Id](Crm_Target_Group_Members.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,12 +137,9 @@ The member party.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -165,9 +149,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Target_Group_Members](Crm_Target_Group_Members.md).[Row_Version](Crm_Target_Group_Members.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

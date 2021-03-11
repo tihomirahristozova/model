@@ -1,5 +1,10 @@
 # Table Wms_Warehouse_Requisitions
 
+
+## Entity
+
+Entity: [Logistics.Wms.WarehouseRequisitions](~/entities/Logistics.Wms.WarehouseRequisitions.md)
+
 Contains request for warehouse operation created from another module. Entity: Wms_Warehouse_Requisitions (Introduced in version 20.1)
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains request for warehouse operation created from another module. Entity: Wm
 
 ### Warehouse_Requisition_Id
 
-
-Warehouse_Requisition_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Warehouse_Requisition_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md).[Warehouse_Requisition_Id](Wms_Warehouse_Requisitions.md#warehouse_requisition_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Warehouse_Requisition_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md).[Document_Id](Wms_Warehouse_Requisitions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Id
-
-
-Warehouse_Id
-
-
-The warehouse, for which the operation is requested.
 
 
 The warehouse, for which the operation is requested.
@@ -122,9 +113,8 @@ The warehouse, for which the operation is requested.
 |Referenced Table|[Wms_Warehouses](Wms_Warehouses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md).[Warehouse_Id](Wms_Warehouse_Requisitions.md#warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ The warehouse, for which the operation is requested.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Requisition_Type
-
-
-Requisition_Type
-
-
-The type of the requisition. I=Inbound; O=Outbound.
 
 
 The type of the requisition. I=Inbound; O=Outbound.
@@ -169,10 +153,9 @@ The type of the requisition. I=Inbound; O=Outbound.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `O`|
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md).[Requisition_Type](Wms_Warehouse_Requisitions.md#requisition_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,12 +178,9 @@ The type of the requisition. I=Inbound; O=Outbound.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -210,9 +190,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md).[Row_Version](Wms_Warehouse_Requisitions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,12 +213,6 @@ Row_Version
 ### Expected_Date
 
 
-Expected_Date
-
-
-Date, when the requisition is expected to be fulfilled.
-
-
 Date, when the requisition is expected to be fulfilled.
 
 | Property | Value |
@@ -251,9 +224,8 @@ Date, when the requisition is expected to be fulfilled.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md).[Expected_Date](Wms_Warehouse_Requisitions.md#expected_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -276,16 +248,10 @@ Date, when the requisition is expected to be fulfilled.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Expected_Time
-
-
-Expected_Time
-
-
-Time, when the requisition is expected to be executed. NULL when the time is unknown.
 
 
 Time, when the requisition is expected to be executed. NULL when the time is unknown.
@@ -299,9 +265,8 @@ Time, when the requisition is expected to be executed. NULL when the time is unk
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md).[Expected_Time](Wms_Warehouse_Requisitions.md#expected_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -324,7 +289,7 @@ Time, when the requisition is expected to be executed. NULL when the time is unk
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 

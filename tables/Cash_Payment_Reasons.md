@@ -1,5 +1,10 @@
 # Table Cash_Payment_Reasons
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentReasons](~/entities/Finance.Payments.PaymentReasons.md)
+
 Represents reasons for the payments. Contains both system and user-defined reasons. Entity: Cash_Payment_Reasons
 
 ## Summary
@@ -16,9 +21,6 @@ Represents reasons for the payments. Contains both system and user-defined reaso
 
 ### Payment_Reason_Id
 
-
-Payment_Reason_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Payment_Reason_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Reasons](Cash_Payment_Reasons.md).[Payment_Reason_Id](Cash_Payment_Reasons.md#payment_reason_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Payment_Reason_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Reason_Name
-
-
-Payment_Reason_Name
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Payment_Reason_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Reasons](Cash_Payment_Reasons.md).[Payment_Reason_Name](Cash_Payment_Reasons.md#payment_reason_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -94,16 +91,10 @@ Payment_Reason_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Is_System
-
-
-Is_System
-
-
-Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user.
 
 
 Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user.
@@ -116,9 +107,8 @@ Specifies whether the payment reason is defined by the system. The system define
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Payment_Reasons](Cash_Payment_Reasons.md).[Is_System](Cash_Payment_Reasons.md#is_system)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,15 +131,9 @@ Specifies whether the payment reason is defined by the system. The system define
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Specifies whether the payment reason is active and usable for choosing in new documents.
 
 
 Specifies whether the payment reason is active and usable for choosing in new documents.
@@ -162,9 +146,8 @@ Specifies whether the payment reason is active and usable for choosing in new do
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Cash_Payment_Reasons](Cash_Payment_Reasons.md).[Is_Active](Cash_Payment_Reasons.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,12 +170,9 @@ Specifies whether the payment reason is active and usable for choosing in new do
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -202,9 +182,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Reasons](Cash_Payment_Reasons.md).[Row_Version](Cash_Payment_Reasons.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

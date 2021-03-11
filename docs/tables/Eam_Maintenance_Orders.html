@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_maintenance_orders">Table Eam_Maintenance_Orders</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.MaintenanceOrders.html">Applications.AssetManagement.MaintenanceOrders</a></p>
 <p>Orders for maintenance. It is performed by a single service center, but can contain many different types of maintenance for many assets. The document is Activity and as such is scheduled and visible in the main calendar. Entity: Eam_Maintenance_Orders (Introduced in version 19.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="maintenance_order_id">Maintenance_Order_Id</h3>
-<p>Maintenance_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Orders.html">Eam_Maintenance_Orders</a>.<a href="Eam_Maintenance_Orders.html#maintenance_order_id">Maintenance_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,14 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="activity_id">Activity_Id</h3>
-<p>Activity_Id</p>
 <table>
 <thead>
 <tr>
@@ -307,15 +303,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Orders.html">Eam_Maintenance_Orders</a>.<a href="Eam_Maintenance_Orders.html#activity_id">Activity_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -400,15 +392,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="service_center_id">Service_Center_Id</h3>
-<p>Service_Center_Id</p>
-<p>The service center, which will perform the maintenance.</p>
 <p>The service center, which will perform the maintenance.</p>
 <table>
 <thead>
@@ -448,15 +438,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Orders.html">Eam_Maintenance_Orders</a>.<a href="Eam_Maintenance_Orders.html#service_center_id">Service_Center_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -541,15 +527,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="managed_asset_id">Managed_Asset_Id</h3>
-<p>Managed_Asset_Id</p>
-<p>The asset, which will be maintained. NULL means that more than one asset will be maintained.</p>
 <p>The asset, which will be maintained. NULL means that more than one asset will be maintained.</p>
 <table>
 <thead>
@@ -589,15 +573,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Orders.html">Eam_Maintenance_Orders</a>.<a href="Eam_Maintenance_Orders.html#managed_asset_id">Managed_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -682,15 +662,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_type_id">Maintenance_Type_Id</h3>
-<p>Maintenance_Type_Id</p>
-<p>The type of maintenance, which will be performed. NULL means that will be more than one type of maintenance performed.</p>
 <p>The type of maintenance, which will be performed. NULL means that will be more than one type of maintenance performed.</p>
 <table>
 <thead>
@@ -730,15 +708,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Orders.html">Eam_Maintenance_Orders</a>.<a href="Eam_Maintenance_Orders.html#maintenance_type_id">Maintenance_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -823,14 +797,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -865,15 +838,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Orders.html">Eam_Maintenance_Orders</a>.<a href="Eam_Maintenance_Orders.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

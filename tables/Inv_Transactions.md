@@ -1,5 +1,10 @@
 # Table Inv_Transactions
 
+
+## Entity
+
+Entity: [Logistics.Inventory.StoreTransactions](~/entities/Logistics.Inventory.StoreTransactions.md)
+
 Executed store-receipts(in) and store-issues(out). Store-issues are recorded with minus quantity. Entity: Inv_Transactions
 
 ## Owner Tables Hierarchy
@@ -30,9 +35,6 @@ Executed store-receipts(in) and store-issues(out). Store-issues are recorded wit
 
 ### Transaction_Id
 
-
-Transaction_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -42,9 +44,8 @@ Transaction_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Transaction_Id](Inv_Transactions.md#transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -67,15 +68,9 @@ Transaction_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The main document data of the transaction
 
 
 The main document data of the transaction
@@ -89,9 +84,8 @@ The main document data of the transaction
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Document_Id](Inv_Transactions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -114,15 +108,9 @@ The main document data of the transaction
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Parent_Store_Order_Id
-
-
-Parent_Store_Order_Id
-
-
-The parent (generating) store order. Deprecated, use the Parent Document reference.
 
 
 The parent (generating) store order. Deprecated, use the Parent Document reference.
@@ -136,9 +124,8 @@ The parent (generating) store order. Deprecated, use the Parent Document referen
 |Referenced Table|[Inv_Store_Orders](Inv_Store_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Parent_Store_Order_Id](Inv_Transactions.md#parent_store_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -161,15 +148,9 @@ The parent (generating) store order. Deprecated, use the Parent Document referen
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Scrap
-
-
-Is_Scrap
-
-
-0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.
 
 
 0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.
@@ -182,9 +163,8 @@ Is_Scrap
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Is_Scrap](Inv_Transactions.md#is_scrap)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -207,15 +187,9 @@ Is_Scrap
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Scrap_Type_Id
-
-
-Scrap_Type_Id
-
-
-Type of scrap (scrap reason). NULL if the transaction is not scrap
 
 
 Type of scrap (scrap reason). NULL if the transaction is not scrap
@@ -229,9 +203,8 @@ Type of scrap (scrap reason). NULL if the transaction is not scrap
 |Referenced Table|[Inv_Scrap_Types](Inv_Scrap_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Scrap_Type_Id](Inv_Transactions.md#scrap_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -254,15 +227,9 @@ Type of scrap (scrap reason). NULL if the transaction is not scrap
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store from which the goods are received or issued.
 
 
 The store from which the goods are received or issued.
@@ -276,9 +243,8 @@ The store from which the goods are received or issued.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Store_Id](Inv_Transactions.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -301,17 +267,11 @@ The store from which the goods are received or issued.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Issuing_Person_Id
 
 
-Issuing_Person_Id
-
-
-The person, responsible for the issuing of the document.
-
-
 The person, responsible for the issuing of the document.
 
 | Property | Value |
@@ -323,9 +283,8 @@ The person, responsible for the issuing of the document.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Issuing_Person_Id](Inv_Transactions.md#issuing_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -348,17 +307,11 @@ The person, responsible for the issuing of the document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Receiving_Person_Id
 
 
-Receiving_Person_Id
-
-
-The person, to which the document was sent.
-
-
 The person, to which the document was sent.
 
 | Property | Value |
@@ -370,9 +323,8 @@ The person, to which the document was sent.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Receiving_Person_Id](Inv_Transactions.md#receiving_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -395,15 +347,9 @@ The person, to which the document was sent.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Movement_Type
-
-
-Movement_Type
-
-
-Transaction movement type. R=RECEIPT, I=ISSUE
 
 
 Transaction movement type. R=RECEIPT, I=ISSUE
@@ -417,10 +363,9 @@ Transaction movement type. R=RECEIPT, I=ISSUE
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `R`|
 |Default Value|R|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Movement_Type](Inv_Transactions.md#movement_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -443,15 +388,9 @@ Transaction movement type. R=RECEIPT, I=ISSUE
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Currency_Id
-
-
-Document_Currency_Id
-
-
-The currency in which the document amounts are recorded.
 
 
 The currency in which the document amounts are recorded.
@@ -465,9 +404,8 @@ The currency in which the document amounts are recorded.
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Document_Currency_Id](Inv_Transactions.md#document_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -490,15 +428,9 @@ The currency in which the document amounts are recorded.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Cost_Source
-
-
-Cost_Source
-
-
-Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document
 
 
 Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document
@@ -512,10 +444,9 @@ Determines whether the cost in the transaction is taken from the store current a
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`S`, `D`|
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Cost_Source](Inv_Transactions.md#cost_source)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -537,12 +468,6 @@ Determines whether the cost in the transaction is taken from the store current a
 ### IsValid
 
 
-IsValid
-
-
-Managed by the system and used only for integrity purposes. Do not use.
-
-
 Managed by the system and used only for integrity purposes. Do not use.
 
 | Property | Value |
@@ -553,9 +478,8 @@ Managed by the system and used only for integrity purposes. Do not use.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[IsValid](Inv_Transactions.md#isvalid)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -577,12 +501,6 @@ Managed by the system and used only for integrity purposes. Do not use.
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -593,9 +511,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Is_Single_Execution](Inv_Transactions.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -618,17 +535,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -639,9 +550,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Is_Released](Inv_Transactions.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -664,12 +574,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -679,9 +586,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transactions](Inv_Transactions.md).[Row_Version](Inv_Transactions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

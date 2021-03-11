@@ -23,9 +23,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +32,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Principal_Recipe_Operation_Resources](Prd_Principal_Recipe_Operation_Resources.md).[Id](Prd_Principal_Recipe_Operation_Resources.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +56,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Principal_Recipe_Operation_Id
-
-
-Principal_Recipe_Operation_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +69,8 @@ Principal_Recipe_Operation_Id
 |Referenced Table|[Prd_Principal_Recipe_Operations](Prd_Principal_Recipe_Operations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Principal_Recipe_Operation_Resources](Prd_Principal_Recipe_Operation_Resources.md).[Principal_Recipe_Operation_Id](Prd_Principal_Recipe_Operation_Resources.md#principal_recipe_operation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,12 +93,9 @@ Principal_Recipe_Operation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Function_Id
-
-
-Function_Id
 
 | Property | Value |
 | - | - |
@@ -117,9 +106,8 @@ Function_Id
 |Referenced Table|[Prd_Functions](Prd_Functions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Principal_Recipe_Operation_Resources](Prd_Principal_Recipe_Operation_Resources.md).[Function_Id](Prd_Principal_Recipe_Operation_Resources.md#function_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -142,12 +130,9 @@ Function_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Lock_Quantity
-
-
-Lock_Quantity
 
 | Property | Value |
 | - | - |
@@ -157,9 +142,8 @@ Lock_Quantity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Principal_Recipe_Operation_Resources](Prd_Principal_Recipe_Operation_Resources.md).[Lock_Quantity](Prd_Principal_Recipe_Operation_Resources.md#lock_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -180,9 +164,6 @@ Lock_Quantity
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -192,9 +173,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Principal_Recipe_Operation_Resources](Prd_Principal_Recipe_Operation_Resources.md).[Notes](Prd_Principal_Recipe_Operation_Resources.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -215,9 +195,6 @@ Notes
 
 ### Line_Ord
 
-
-Line_Ord
-
 | Property | Value |
 | - | - |
 |Type|int|
@@ -226,9 +203,8 @@ Line_Ord
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Principal_Recipe_Operation_Resources](Prd_Principal_Recipe_Operation_Resources.md).[Line_Ord](Prd_Principal_Recipe_Operation_Resources.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,9 +225,6 @@ Line_Ord
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -260,9 +233,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Principal_Recipe_Operation_Resources](Prd_Principal_Recipe_Operation_Resources.md).[Row_Version](Prd_Principal_Recipe_Operation_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

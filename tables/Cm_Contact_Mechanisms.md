@@ -1,5 +1,10 @@
 # Table Cm_Contact_Mechanisms
 
+
+## Entity
+
+Entity: [General.Contacts.ContactMechanisms](~/entities/General.Contacts.ContactMechanisms.md)
+
 Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. Contact mechanisms can be attached to parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Contact_Mechanisms
 
 ## Summary
@@ -18,12 +23,6 @@ Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. C
 ### Id
 
 
-Id
-
-
-Unique contact mechanism Id
-
-
 Unique contact mechanism Id
 
 | Property | Value |
@@ -35,9 +34,8 @@ Unique contact mechanism Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Contact_Mechanisms](Cm_Contact_Mechanisms.md).[Id](Cm_Contact_Mechanisms.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +58,9 @@ Unique contact mechanism Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Contact_Mechanism_Name
-
-
-Contact_Mechanism_Name
-
-
-Contact mechanism description
 
 
 Contact mechanism description
@@ -82,9 +74,8 @@ Contact mechanism description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanisms](Cm_Contact_Mechanisms.md).[Contact_Mechanism_Name](Cm_Contact_Mechanisms.md#contact_mechanism_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,16 +98,10 @@ Contact mechanism description
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Contact_Mechanism_Type
-
-
-Contact_Mechanism_Type
-
-
-A=Address; E=e-mail; T=Telephone
 
 
 A=Address; E=e-mail; T=Telephone
@@ -130,10 +115,9 @@ A=Address; E=e-mail; T=Telephone
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `E`, `F`, `M`, `O`, `T`, `W`|
 |Default Value|A|
-|Derived From|[Cm_Contact_Mechanisms](Cm_Contact_Mechanisms.md).[Contact_Mechanism_Type](Cm_Contact_Mechanisms.md#contact_mechanism_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,12 +140,9 @@ A=Address; E=e-mail; T=Telephone
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -171,9 +152,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanisms](Cm_Contact_Mechanisms.md).[Row_Version](Cm_Contact_Mechanisms.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,12 +175,6 @@ Row_Version
 ### Geo_Point_Id
 
 
-Geo_Point_Id
-
-
-The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A.
-
-
 The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A.
 
 | Property | Value |
@@ -212,9 +186,8 @@ The geographical point, where the contact mechanism is situated. Null if this is
 |Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanisms](Cm_Contact_Mechanisms.md).[Geo_Point_Id](Cm_Contact_Mechanisms.md#geo_point_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,15 +210,9 @@ The geographical point, where the contact mechanism is situated. Null if this is
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Administrative_Region_Id
-
-
-Administrative_Region_Id
-
-
-The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A.
 
 
 The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A.
@@ -259,9 +226,8 @@ The administrative region, where the contact mechanism is situated. Null if this
 |Referenced Table|[Gen_Administrative_Regions](Gen_Administrative_Regions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanisms](Cm_Contact_Mechanisms.md).[Administrative_Region_Id](Cm_Contact_Mechanisms.md#administrative_region_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,6 +250,6 @@ The administrative region, where the contact mechanism is situated. Null if this
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

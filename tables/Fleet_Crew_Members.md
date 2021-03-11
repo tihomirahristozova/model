@@ -1,5 +1,10 @@
 # Table Fleet_Crew_Members
 
+
+## Entity
+
+Entity: [Applications.Fleet.CrewMembers](~/entities/Applications.Fleet.CrewMembers.md)
+
 Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 
 ## Owner Tables Hierarchy
@@ -23,12 +28,6 @@ Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 ### Crew_Member_Id
 
 
-Crew_Member_Id
-
-
-Id of the crew member
-
-
 Id of the crew member
 
 | Property | Value |
@@ -40,9 +39,8 @@ Id of the crew member
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Crew_Members](Fleet_Crew_Members.md).[Crew_Member_Id](Fleet_Crew_Members.md#crew_member_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,15 +63,9 @@ Id of the crew member
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Crew_Id
-
-
-Crew_Id
-
-
-The crew to which this member belongs
 
 
 The crew to which this member belongs
@@ -87,9 +79,8 @@ The crew to which this member belongs
 |Referenced Table|[Fleet_Crews](Fleet_Crews.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Crew_Members](Fleet_Crew_Members.md).[Crew_Id](Fleet_Crew_Members.md#crew_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,15 +103,9 @@ The crew to which this member belongs
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Person_Id
-
-
-Person_Id
-
-
-The crew member person
 
 
 The crew member person
@@ -134,9 +119,8 @@ The crew member person
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Crew_Members](Fleet_Crew_Members.md).[Person_Id](Fleet_Crew_Members.md#person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,12 +143,9 @@ The crew member person
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -175,9 +156,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Crew_Members](Fleet_Crew_Members.md).[Notes](Fleet_Crew_Members.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +179,6 @@ Notes
 ### Ordinal_Pos
 
 
-Ordinal_Pos
-
-
-Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader
-
-
 Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader
 
 | Property | Value |
@@ -215,9 +189,8 @@ Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Crew_Members](Fleet_Crew_Members.md).[Ordinal_Pos](Fleet_Crew_Members.md#ordinal_pos)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,9 +211,6 @@ Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -249,9 +219,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Crew_Members](Fleet_Crew_Members.md).[Row_Version](Fleet_Crew_Members.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

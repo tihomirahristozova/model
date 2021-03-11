@@ -1,5 +1,10 @@
 # Table Crm_Sales_Orders
 
+
+## Entity
+
+Entity: [Crm.Sales.SalesOrders](~/entities/Crm.Sales.SalesOrders.md)
+
 Sales order document headers. Entity: Crm_Sales_Orders
 
 ## Owner Tables Hierarchy
@@ -56,12 +61,6 @@ Sales order document headers. Entity: Crm_Sales_Orders
 ### Customer_Id
 
 
-Customer_Id
-
-
-The primary customer, which placed the sales order
-
-
 The primary customer, which placed the sales order
 
 | Property | Value |
@@ -73,9 +72,8 @@ The primary customer, which placed the sales order
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Customer_Id](Crm_Sales_Orders.md#customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +96,9 @@ The primary customer, which placed the sales order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Ship_To_Customer_Id
-
-
-Ship_To_Customer_Id
-
-
-The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer
 
 
 The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer
@@ -120,9 +112,8 @@ The customer to whom to ship the sales order. Usually it is a customer entry for
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Ship_To_Customer_Id](Crm_Sales_Orders.md#ship_to_customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,15 +136,9 @@ The customer to whom to ship the sales order. Usually it is a customer entry for
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Price_List_Id
-
-
-Price_List_Id
-
-
-The price list to be used for determining product prices in the lines
 
 
 The price list to be used for determining product prices in the lines
@@ -167,9 +152,8 @@ The price list to be used for determining product prices in the lines
 |Referenced Table|[Crm_Price_Lists](Crm_Price_Lists.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Price_List_Id](Crm_Sales_Orders.md#price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,15 +176,9 @@ The price list to be used for determining product prices in the lines
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Due_Date
-
-
-Payment_Due_Date
-
-
-The last term for the payment of the sales order
 
 
 The last term for the payment of the sales order
@@ -214,9 +192,8 @@ The last term for the payment of the sales order
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Payment_Due_Date](Crm_Sales_Orders.md#payment_due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,12 +221,6 @@ The last term for the payment of the sales order
 ### Payment_Type_Id
 
 
-Payment_Type_Id
-
-
-When not NULL specifies the payment type for the sales order
-
-
 When not NULL specifies the payment type for the sales order
 
 | Property | Value |
@@ -261,9 +232,8 @@ When not NULL specifies the payment type for the sales order
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Payment_Type_Id](Crm_Sales_Orders.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,15 +256,9 @@ When not NULL specifies the payment type for the sales order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Required_Delivery_Date
-
-
-Required_Delivery_Date
-
-
-The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.
 
 
 The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.
@@ -308,9 +272,8 @@ The required delivery date for all lines in the sales order. Initially calculate
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Required_Delivery_Date](Crm_Sales_Orders.md#required_delivery_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -338,12 +301,6 @@ The required delivery date for all lines in the sales order. Initially calculate
 ### Store_Id
 
 
-Store_Id
-
-
-The store from which to issue the sales order. NULL means that there is no store associated with the sales order or there are different stores for some of the lines
-
-
 The store from which to issue the sales order. NULL means that there is no store associated with the sales order or there are different stores for some of the lines
 
 | Property | Value |
@@ -355,9 +312,8 @@ The store from which to issue the sales order. NULL means that there is no store
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Store_Id](Crm_Sales_Orders.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -380,15 +336,9 @@ The store from which to issue the sales order. NULL means that there is no store
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Intrastat_Transport_Country_Id
-
-
-Intrastat_Transport_Country_Id
-
-
-Country of origin of the transport company; used for Intrastat reporting
 
 
 Country of origin of the transport company; used for Intrastat reporting
@@ -402,9 +352,8 @@ Country of origin of the transport company; used for Intrastat reporting
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Intrastat_Transport_Country_Id](Crm_Sales_Orders.md#intrastat_transport_country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -427,15 +376,9 @@ Country of origin of the transport company; used for Intrastat reporting
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Return_For_Invoice_Id
-
-
-Return_For_Invoice_Id
-
-
-When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document
 
 
 When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document
@@ -449,9 +392,8 @@ When specified indicates that some of the goods sold in the sales orders invoice
 |Referenced Table|[Crm_Invoices](Crm_Invoices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Return_For_Invoice_Id](Crm_Sales_Orders.md#return_for_invoice_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -474,15 +416,9 @@ When specified indicates that some of the goods sold in the sales orders invoice
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Return_For_Sales_Order_Id
-
-
-Return_For_Sales_Order_Id
-
-
-When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document
 
 
 When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document
@@ -496,9 +432,8 @@ When specified indicates that some of the goods sold in Return_For_Sales_Order_I
 |Referenced Table|[Crm_Sales_Orders](Crm_Sales_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Return_For_Sales_Order_Id](Crm_Sales_Orders.md#return_for_sales_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -521,16 +456,10 @@ When specified indicates that some of the goods sold in Return_For_Sales_Order_I
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|yes|
 
 ### Customer_Purchase_Order_No
-
-
-Customer_Purchase_Order_No
-
-
-Reference number of the customer's purchase order
 
 
 Reference number of the customer's purchase order
@@ -544,9 +473,8 @@ Reference number of the customer's purchase order
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Customer_Purchase_Order_No](Crm_Sales_Orders.md#customer_purchase_order_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -569,16 +497,10 @@ Reference number of the customer's purchase order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|yes|
 
 ### Intrastat_Transaction_Nature_Code
-
-
-Intrastat_Transaction_Nature_Code
-
-
-Transaction nature; used for Intrastat reporting
 
 
 Transaction nature; used for Intrastat reporting
@@ -592,10 +514,9 @@ Transaction nature; used for Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Intrastat_Transaction_Nature_Code](Crm_Sales_Orders.md#intrastat_transaction_nature_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -617,12 +538,6 @@ Transaction nature; used for Intrastat reporting
 ### Intrastat_Transport_Mode_Code
 
 
-Intrastat_Transport_Mode_Code
-
-
-Transport mode; used for Intrastat reporting
-
-
 Transport mode; used for Intrastat reporting
 
 | Property | Value |
@@ -634,10 +549,9 @@ Transport mode; used for Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`|
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Intrastat_Transport_Mode_Code](Crm_Sales_Orders.md#intrastat_transport_mode_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -659,12 +573,6 @@ Transport mode; used for Intrastat reporting
 ### Delivery_Terms_Code
 
 
-Delivery_Terms_Code
-
-
-Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
-
-
 Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 
 | Property | Value |
@@ -676,10 +584,9 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Delivery_Terms_Code](Crm_Sales_Orders.md#delivery_terms_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -701,12 +608,6 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 ### Credit_Limit_Override
 
 
-Credit_Limit_Override
-
-
-Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables
-
-
 Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables
 
 | Property | Value |
@@ -717,9 +618,8 @@ Allows the sales order to be released even in the case of violations of credit l
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Credit_Limit_Override](Crm_Sales_Orders.md#credit_limit_override)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -742,15 +642,9 @@ Allows the sales order to be released even in the case of violations of credit l
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### IsValid
-
-
-IsValid
-
-
-1 when the order is valid (e.g. released and not void). Used for internal processing.
 
 
 1 when the order is valid (e.g. released and not void). Used for internal processing.
@@ -763,9 +657,8 @@ IsValid
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[IsValid](Crm_Sales_Orders.md#isvalid)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -787,12 +680,6 @@ IsValid
 ### Sales_Person_Id
 
 
-Sales_Person_Id
-
-
-Internal company sales person
-
-
 Internal company sales person
 
 | Property | Value |
@@ -804,9 +691,8 @@ Internal company sales person
 |Referenced Table|[Crm_Sales_Persons](Crm_Sales_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Sales_Person_Id](Crm_Sales_Orders.md#sales_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -829,15 +715,9 @@ Internal company sales person
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Dealer_Id
-
-
-Dealer_Id
-
-
-The external dealer, associated with the sales order
 
 
 The external dealer, associated with the sales order
@@ -851,9 +731,8 @@ The external dealer, associated with the sales order
 |Referenced Table|[Crm_Dealers](Crm_Dealers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Dealer_Id](Crm_Sales_Orders.md#dealer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -876,15 +755,9 @@ The external dealer, associated with the sales order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Ship_To_Party_Contact_Mechanism_Id
-
-
-Ship_To_Party_Contact_Mechanism_Id
-
-
-The contact mechanism (address) to whih to ship the sales order
 
 
 The contact mechanism (address) to whih to ship the sales order
@@ -898,9 +771,8 @@ The contact mechanism (address) to whih to ship the sales order
 |Referenced Table|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Ship_To_Party_Contact_Mechanism_Id](Crm_Sales_Orders.md#ship_to_party_contact_mechanism_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -923,12 +795,9 @@ The contact mechanism (address) to whih to ship the sales order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sales_Order_Id
-
-
-Sales_Order_Id
 
 | Property | Value |
 | - | - |
@@ -939,9 +808,8 @@ Sales_Order_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Sales_Order_Id](Crm_Sales_Orders.md#sales_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -964,12 +832,9 @@ Sales_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -980,9 +845,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Document_Id](Crm_Sales_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1005,15 +869,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Currency_Id
-
-
-Document_Currency_Id
-
-
-The currency of the document; e.g. the currency of the amounts in the document
 
 
 The currency of the document; e.g. the currency of the amounts in the document
@@ -1027,9 +885,8 @@ The currency of the document; e.g. the currency of the amounts in the document
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Document_Currency_Id](Crm_Sales_Orders.md#document_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1052,15 +909,9 @@ The currency of the document; e.g. the currency of the amounts in the document
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Deal_Type_Id
-
-
-Deal_Type_Id
-
-
-Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type.
 
 
 Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type.
@@ -1074,9 +925,8 @@ Deal type to be passed to the invoice. If deal type in entered then the invoice 
 |Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Deal_Type_Id](Crm_Sales_Orders.md#deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1099,12 +949,9 @@ Deal type to be passed to the invoice. If deal type in entered then the invoice 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -1115,9 +962,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Notes](Crm_Sales_Orders.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1139,12 +985,6 @@ Notes
 ### Deal_Id
 
 
-Deal_Id
-
-
-The opportunity (deal) on which this order is based
-
-
 The opportunity (deal) on which this order is based
 
 | Property | Value |
@@ -1156,9 +996,8 @@ The opportunity (deal) on which this order is based
 |Referenced Table|[Crm_Deals](Crm_Deals.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Deal_Id](Crm_Sales_Orders.md#deal_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1181,15 +1020,9 @@ The opportunity (deal) on which this order is based
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Account_Id
-
-
-Payment_Account_Id
-
-
-When not NULL, the payment account, where the payment is expected. NULL=no expectation for account
 
 
 When not NULL, the payment account, where the payment is expected. NULL=no expectation for account
@@ -1203,9 +1036,8 @@ When not NULL, the payment account, where the payment is expected. NULL=no expec
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Payment_Account_Id](Crm_Sales_Orders.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1228,15 +1060,9 @@ When not NULL, the payment account, where the payment is expected. NULL=no expec
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### End_Customer_Party_Id
-
-
-End_Customer_Party_Id
-
-
-The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.
 
 
 The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.
@@ -1250,9 +1076,8 @@ The end customer is the customer of the dealer. It is stored for information pur
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[End_Customer_Party_Id](Crm_Sales_Orders.md#end_customer_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1275,15 +1100,9 @@ The end customer is the customer of the dealer. It is stored for information pur
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Fiscal_Sales_Number
-
-
-Fiscal_Sales_Number
-
-
-Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.
 
 
 Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.
@@ -1297,9 +1116,8 @@ Unique number of the sale, assigned for fiscal reporting purposes. The format is
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Fiscal_Sales_Number](Crm_Sales_Orders.md#fiscal_sales_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1322,16 +1140,10 @@ Unique number of the sale, assigned for fiscal reporting purposes. The format is
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Fiscal_Printer_Pos_Device_Id
-
-
-Fiscal_Printer_Pos_Device_Id
-
-
-For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.
 
 
 For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.
@@ -1345,9 +1157,8 @@ For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sa
 |Referenced Table|[Pos_Devices](Pos_Devices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Fiscal_Printer_Pos_Device_Id](Crm_Sales_Orders.md#fiscal_printer_pos_device_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1370,15 +1181,9 @@ For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sa
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Pos_Operator_Id
-
-
-Pos_Operator_Id
-
-
-For POS sales, specifies the POS operator, who created the sale. NULL when the sale is not a POS sale.
 
 
 For POS sales, specifies the POS operator, who created the sale. NULL when the sale is not a POS sale.
@@ -1392,9 +1197,8 @@ For POS sales, specifies the POS operator, who created the sale. NULL when the s
 |Referenced Table|[Pos_Operators](Pos_Operators.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Pos_Operator_Id](Crm_Sales_Orders.md#pos_operator_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1417,15 +1221,9 @@ For POS sales, specifies the POS operator, who created the sale. NULL when the s
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Pos_Terminal_Id
-
-
-Pos_Terminal_Id
-
-
-For POS sales, specifies the POS terminal, on which the sale is entered. NULL when the sales is not a POS sale.
 
 
 For POS sales, specifies the POS terminal, on which the sale is entered. NULL when the sales is not a POS sale.
@@ -1439,9 +1237,8 @@ For POS sales, specifies the POS terminal, on which the sale is entered. NULL wh
 |Referenced Table|[Pos_Terminals](Pos_Terminals.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Pos_Terminal_Id](Crm_Sales_Orders.md#pos_terminal_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1464,15 +1261,9 @@ For POS sales, specifies the POS terminal, on which the sale is entered. NULL wh
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Pos_Location_Id
-
-
-Pos_Location_Id
-
-
-For POS sales, specifies the POS location, in which the sale is performed. NULL when the sales is not a POS sale.
 
 
 For POS sales, specifies the POS location, in which the sale is performed. NULL when the sales is not a POS sale.
@@ -1486,9 +1277,8 @@ For POS sales, specifies the POS location, in which the sale is performed. NULL 
 |Referenced Table|[Pos_Locations](Pos_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Pos_Location_Id](Crm_Sales_Orders.md#pos_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1511,17 +1301,11 @@ For POS sales, specifies the POS location, in which the sale is performed. NULL 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -1532,9 +1316,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Is_Single_Execution](Crm_Sales_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1557,17 +1340,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -1578,9 +1355,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Is_Released](Crm_Sales_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1603,15 +1379,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### From_Date
-
-
-From_Date
-
-
-When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.
 
 
 When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.
@@ -1625,9 +1395,8 @@ When selling a service valid only for a period, denotes the beginning of the per
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[From_Date](Crm_Sales_Orders.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1649,12 +1418,6 @@ When selling a service valid only for a period, denotes the beginning of the per
 ### Payment_Due_Start_Date
 
 
-Payment_Due_Start_Date
-
-
-The date when the payment becomes due for documents with one installment. NULL when the document is with multiple installments.
-
-
 The date when the payment becomes due for documents with one installment. NULL when the document is with multiple installments.
 
 | Property | Value |
@@ -1666,9 +1429,8 @@ The date when the payment becomes due for documents with one installment. NULL w
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Payment_Due_Start_Date](Crm_Sales_Orders.md#payment_due_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1690,12 +1452,6 @@ The date when the payment becomes due for documents with one installment. NULL w
 ### Distribution_Channel_Id
 
 
-Distribution_Channel_Id
-
-
-The distribution channel, that is used to deliver the products
-
-
 The distribution channel, that is used to deliver the products
 
 | Property | Value |
@@ -1707,9 +1463,8 @@ The distribution channel, that is used to deliver the products
 |Referenced Table|[Crm_Distribution_Channels](Crm_Distribution_Channels.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Distribution_Channel_Id](Crm_Sales_Orders.md#distribution_channel_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1732,15 +1487,9 @@ The distribution channel, that is used to deliver the products
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Customer_Purchase_Order_Date
-
-
-Customer_Purchase_Order_Date
-
-
-Issue date of the referent customer purchase order
 
 
 Issue date of the referent customer purchase order
@@ -1754,9 +1503,8 @@ Issue date of the referent customer purchase order
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Customer_Purchase_Order_Date](Crm_Sales_Orders.md#customer_purchase_order_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1783,9 +1531,6 @@ Issue date of the referent customer purchase order
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -1794,9 +1539,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[Row_Version](Crm_Sales_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1818,12 +1562,6 @@ Row_Version
 ### To_Date
 
 
-To_Date
-
-
-When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.
-
-
 When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.
 
 | Property | Value |
@@ -1835,9 +1573,8 @@ When selling a service valid only for a period, denotes the end of the period. N
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders](Crm_Sales_Orders.md).[To_Date](Crm_Sales_Orders.md#to_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -111,12 +111,12 @@
 </tr>
 <tr>
 <td><a href="#old_values_xml">Old_Values_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Values of the document columns (without BLOBs) before the operation</td>
 </tr>
 <tr>
 <td><a href="#new_values_xml">New_Values_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The new values of the columns</td>
 </tr>
 <tr>
@@ -128,8 +128,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="object_id">Object_Id</h3>
-<p>Object_Id</p>
-<p>The Id of the affected object</p>
 <p>The Id of the affected object</p>
 <table>
 <thead>
@@ -169,15 +167,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Audit_Log.html">Sys_Audit_Log</a>.<a href="Sys_Audit_Log.html#object_id">Object_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -262,15 +256,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_system_user">Operation_System_User</h3>
-<p>Operation_System_User</p>
-<p>Not used.</p>
 <p>Not used.</p>
 <table>
 <thead>
@@ -314,15 +306,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Audit_Log.html">Sys_Audit_Log</a>.<a href="Sys_Audit_Log.html#operation_system_user">Operation_System_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -407,15 +395,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_time">Operation_Time</h3>
-<p>Operation_Time</p>
-<p>Not used.</p>
 <p>Not used.</p>
 <table>
 <thead>
@@ -459,15 +445,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Audit_Log.html">Sys_Audit_Log</a>.<a href="Sys_Audit_Log.html#operation_time">Operation_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -540,8 +522,6 @@
 </tbody>
 </table>
 <h3 id="operation_type">Operation_Type</h3>
-<p>Operation_Type</p>
-<p>The type of operation - I=INSERT, D=DELETE, U=UPDATE</p>
 <p>The type of operation - I=INSERT, D=DELETE, U=UPDATE</p>
 <table>
 <thead>
@@ -585,15 +565,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Audit_Log.html">Sys_Audit_Log</a>.<a href="Sys_Audit_Log.html#operation_type">Operation_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -666,8 +642,6 @@
 </tbody>
 </table>
 <h3 id="old_values_xml">Old_Values_XML</h3>
-<p>Old_Values_XML</p>
-<p>Values of the document columns (without BLOBs) before the operation</p>
 <p>Values of the document columns (without BLOBs) before the operation</p>
 <table>
 <thead>
@@ -679,7 +653,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -707,15 +681,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Audit_Log.html">Sys_Audit_Log</a>.<a href="Sys_Audit_Log.html#old_values_xml">Old_Values_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -788,8 +758,6 @@
 </tbody>
 </table>
 <h3 id="new_values_xml">New_Values_XML</h3>
-<p>New_Values_XML</p>
-<p>The new values of the columns</p>
 <p>The new values of the columns</p>
 <table>
 <thead>
@@ -801,7 +769,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -829,15 +797,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Audit_Log.html">Sys_Audit_Log</a>.<a href="Sys_Audit_Log.html#new_values_xml">New_Values_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -910,7 +874,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -945,15 +908,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Audit_Log.html">Sys_Audit_Log</a>.<a href="Sys_Audit_Log.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

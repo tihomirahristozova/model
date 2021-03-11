@@ -1,5 +1,10 @@
 # Table Cm_Party_Contact_Mechanisms
 
+
+## Entity
+
+Entity: [General.Contacts.PartyContactMechanisms](~/entities/General.Contacts.PartyContactMechanisms.md)
+
 Specifies the contact mechanisms, which are attached to the parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Party_Contact_Mechanisms
 
 ## Owner Tables Hierarchy
@@ -29,12 +34,6 @@ Specifies the contact mechanisms, which are attached to the parties. Currently e
 ### Id
 
 
-Id
-
-
-Unique party contact mechanism Id
-
-
 Unique party contact mechanism Id
 
 | Property | Value |
@@ -46,9 +45,8 @@ Unique party contact mechanism Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Id](Cm_Party_Contact_Mechanisms.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -71,15 +69,9 @@ Unique party contact mechanism Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The party, having the contact mechanism
 
 
 The party, having the contact mechanism
@@ -93,9 +85,8 @@ The party, having the contact mechanism
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Party_Id](Cm_Party_Contact_Mechanisms.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -118,15 +109,9 @@ The party, having the contact mechanism
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Contact_Mechanism_Id
-
-
-Contact_Mechanism_Id
-
-
-The contact mechanism of the party
 
 
 The contact mechanism of the party
@@ -140,9 +125,8 @@ The contact mechanism of the party
 |Referenced Table|[Cm_Contact_Mechanisms](Cm_Contact_Mechanisms.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Contact_Mechanism_Id](Cm_Party_Contact_Mechanisms.md#contact_mechanism_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -165,15 +149,9 @@ The contact mechanism of the party
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Date
-
-
-From_Date
-
-
-The first date when the contact mechanism was valid. NULL means unknown date
 
 
 The first date when the contact mechanism was valid. NULL means unknown date
@@ -187,9 +165,8 @@ The first date when the contact mechanism was valid. NULL means unknown date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[From_Date](Cm_Party_Contact_Mechanisms.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -212,18 +189,12 @@ The first date when the contact mechanism was valid. NULL means unknown date
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Thru_Date
 
 
-Thru_Date
-
-
-The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid
-
-
 The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid
 
 | Property | Value |
@@ -235,9 +206,8 @@ The last date on which the contact mechanism was valid for the party. NULL if th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Thru_Date](Cm_Party_Contact_Mechanisms.md#thru_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -260,16 +230,10 @@ The last date on which the contact mechanism was valid for the party. NULL if th
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Non_Solicitation
-
-
-Non_Solicitation
-
-
-If 1 then Don't use the mechanism for solicitation purposes
 
 
 If 1 then Don't use the mechanism for solicitation purposes
@@ -282,9 +246,8 @@ If 1 then Don't use the mechanism for solicitation purposes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Non_Solicitation](Cm_Party_Contact_Mechanisms.md#non_solicitation)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -307,12 +270,9 @@ If 1 then Don't use the mechanism for solicitation purposes
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -323,9 +283,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Notes](Cm_Party_Contact_Mechanisms.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -347,12 +306,6 @@ Notes
 ### Is_Default
 
 
-Is_Default
-
-
-1 - when this is the default contact mechanism for this party; 0 - otherwise
-
-
 1 - when this is the default contact mechanism for this party; 0 - otherwise
 
 | Property | Value |
@@ -363,9 +316,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Is_Default](Cm_Party_Contact_Mechanisms.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -388,17 +340,11 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Active
 
 
-Is_Active
-
-
-True if the contact mechanism is currently active and can be used to contact the party.
-
-
 True if the contact mechanism is currently active and can be used to contact the party.
 
 | Property | Value |
@@ -409,9 +355,8 @@ True if the contact mechanism is currently active and can be used to contact the
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Is_Active](Cm_Party_Contact_Mechanisms.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -434,15 +379,9 @@ True if the contact mechanism is currently active and can be used to contact the
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_Ord
-
-
-Line_Ord
-
-
-Consecutive number of the contact information. The number is unique within the party.
 
 
 Consecutive number of the contact information. The number is unique within the party.
@@ -455,10 +394,9 @@ Consecutive number of the contact information. The number is unique within the p
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Line_Ord](Cm_Party_Contact_Mechanisms.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -479,9 +417,6 @@ Consecutive number of the contact information. The number is unique within the p
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -490,9 +425,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Row_Version](Cm_Party_Contact_Mechanisms.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -514,12 +448,6 @@ Row_Version
 ### Contact_Mechanism_Purpose_Id
 
 
-Contact_Mechanism_Purpose_Id
-
-
-The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms.
-
-
 The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms.
 
 | Property | Value |
@@ -531,9 +459,8 @@ The purpose of this contact mechanism. Unique within the party. Can be used to s
 |Referenced Table|[Cm_Contact_Mechanism_Purposes](Cm_Contact_Mechanism_Purposes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Contact_Mechanism_Purpose_Id](Cm_Party_Contact_Mechanisms.md#contact_mechanism_purpose_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -556,15 +483,9 @@ The purpose of this contact mechanism. Unique within the party. Can be used to s
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Personal_Data_Process_Id
-
-
-Personal_Data_Process_Id
-
-
-The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown.
 
 
 The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown.
@@ -578,9 +499,8 @@ The personal data process, which is used to process the current data. Null when 
 |Referenced Table|[Pdm_Personal_Data_Processes](Pdm_Personal_Data_Processes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md).[Personal_Data_Process_Id](Cm_Party_Contact_Mechanisms.md#personal_data_process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -603,6 +523,6 @@ The personal data process, which is used to process the current data. Null when 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

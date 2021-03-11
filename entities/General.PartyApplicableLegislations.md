@@ -33,7 +33,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.PartyApplicableLegislations.md#party) | [Parties](General.Contacts.Parties.md) | The `Party`(General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Party](General.PartyApplicableLegislations.md#party) | [Parties](General.Contacts.Parties.md) | The Party to which this PartyApplicableLegislation belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 ### Party
 
-The `Party`(General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. `Required` `Filter(multi eq)` `Owner`
+The Party to which this PartyApplicableLegislation belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  

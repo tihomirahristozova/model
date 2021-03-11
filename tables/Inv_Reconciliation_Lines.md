@@ -1,5 +1,10 @@
 # Table Inv_Reconciliation_Lines
 
+
+## Entity
+
+Entity: [Logistics.Inventory.ReconciliationLines](~/entities/Logistics.Inventory.ReconciliationLines.md)
+
 Store reconciliations (physical counting) detail lines. Each line contains the reconciliation for one combination of product, lot, bin and serial number. Entity: Inv_Reconciliation_Lines
 
 ## Owner Tables Hierarchy
@@ -34,12 +39,6 @@ Store reconciliations (physical counting) detail lines. Each line contains the r
 ### Line_Ord
 
 
-Line_Ord
-
-
-The ordinal position of the line within the document. Duplicates are allowed, but not suggested
-
-
 The ordinal position of the line within the document. Duplicates are allowed, but not suggested
 
 | Property | Value |
@@ -50,10 +49,9 @@ The ordinal position of the line within the document. Duplicates are allowed, bu
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Line_Ord](Inv_Reconciliation_Lines.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -75,12 +73,6 @@ The ordinal position of the line within the document. Duplicates are allowed, bu
 ### Store_Id
 
 
-Store_Id
-
-
-The store, containing the reconciled product
-
-
 The store, containing the reconciled product
 
 | Property | Value |
@@ -92,9 +84,8 @@ The store, containing the reconciled product
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Store_Id](Inv_Reconciliation_Lines.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -117,15 +108,9 @@ The store, containing the reconciled product
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Bin_Id
-
-
-Store_Bin_Id
-
-
-The store bin, that was counted
 
 
 The store bin, that was counted
@@ -139,9 +124,8 @@ The store bin, that was counted
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Store_Bin_Id](Inv_Reconciliation_Lines.md#store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -164,15 +148,9 @@ The store bin, that was counted
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The id of the reconciled product
 
 
 The id of the reconciled product
@@ -186,9 +164,8 @@ The id of the reconciled product
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Product_Id](Inv_Reconciliation_Lines.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -211,15 +188,9 @@ The id of the reconciled product
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-Quantity found at the reconciliation, 
 
 
 Quantity found at the reconciliation, 
@@ -232,9 +203,8 @@ Quantity found at the reconciliation,
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Quantity](Inv_Reconciliation_Lines.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -262,12 +232,6 @@ Quantity found at the reconciliation,
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity
-
-
 The measurement unit of Quantity
 
 | Property | Value |
@@ -279,9 +243,8 @@ The measurement unit of Quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Quantity_Unit_Id](Inv_Reconciliation_Lines.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -304,15 +267,9 @@ The measurement unit of Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity_Base
-
-
-Quantity_Base
-
-
-Quantity found at the reconciliation, expressed in base measurement units
 
 
 Quantity found at the reconciliation, expressed in base measurement units
@@ -325,9 +282,8 @@ Quantity found at the reconciliation, expressed in base measurement units
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Quantity_Base](Inv_Reconciliation_Lines.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -355,12 +311,6 @@ Quantity found at the reconciliation, expressed in base measurement units
 ### Lot_Id
 
 
-Lot_Id
-
-
-The lot, which was reconciled.
-
-
 The lot, which was reconciled.
 
 | Property | Value |
@@ -372,9 +322,8 @@ The lot, which was reconciled.
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Lot_Id](Inv_Reconciliation_Lines.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -397,15 +346,9 @@ The lot, which was reconciled.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-Item serial number for serialized items. NULL for non-serializable items
 
 
 Item serial number for serialized items. NULL for non-serializable items
@@ -419,9 +362,8 @@ Item serial number for serialized items. NULL for non-serializable items
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Serial_Number_Id](Inv_Reconciliation_Lines.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -444,15 +386,9 @@ Item serial number for serialized items. NULL for non-serializable items
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Available_Quantity_Base
-
-
-Available_Quantity_Base
-
-
-Quantity found at the reconciliation, in the base measurement category of the product.
 
 
 Quantity found at the reconciliation, in the base measurement category of the product.
@@ -465,9 +401,8 @@ Quantity found at the reconciliation, in the base measurement category of the pr
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Available_Quantity_Base](Inv_Reconciliation_Lines.md#available_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -488,9 +423,6 @@ Quantity found at the reconciliation, in the base measurement category of the pr
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -500,9 +432,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Notes](Inv_Reconciliation_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -524,12 +455,6 @@ Notes
 ### Reconciliation_Id
 
 
-Reconciliation_Id
-
-
-Parent reconciliation Id
-
-
 Parent reconciliation Id
 
 | Property | Value |
@@ -541,9 +466,8 @@ Parent reconciliation Id
 |Referenced Table|[Inv_Reconciliations](Inv_Reconciliations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Reconciliation_Id](Inv_Reconciliation_Lines.md#reconciliation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -566,15 +490,9 @@ Parent reconciliation Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Reconciliation_Line_Id
-
-
-Reconciliation_Line_Id
-
-
-Unique line Id
 
 
 Unique line Id
@@ -588,9 +506,8 @@ Unique line Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Reconciliation_Line_Id](Inv_Reconciliation_Lines.md#reconciliation_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -613,15 +530,9 @@ Unique line Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transaction_Timestamp
-
-
-Transaction_Timestamp
-
-
-Exact time when the transaction occurred
 
 
 Exact time when the transaction occurred
@@ -635,9 +546,8 @@ Exact time when the transaction occurred
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Transaction_Timestamp](Inv_Reconciliation_Lines.md#transaction_timestamp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -658,9 +568,6 @@ Exact time when the transaction occurred
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -669,9 +576,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Row_Version](Inv_Reconciliation_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -693,12 +599,6 @@ Row_Version
 ### Product_Code_Id
 
 
-Product_Code_Id
-
-
-Selects the product thru some of the product codes.
-
-
 Selects the product thru some of the product codes.
 
 | Property | Value |
@@ -710,9 +610,8 @@ Selects the product thru some of the product codes.
 |Referenced Table|[Gen_Product_Codes](Gen_Product_Codes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Product_Code_Id](Inv_Reconciliation_Lines.md#product_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -735,15 +634,9 @@ Selects the product thru some of the product codes.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Standard_Quantity_Base
-
-
-Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
@@ -756,9 +649,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Lines](Inv_Reconciliation_Lines.md).[Standard_Quantity_Base](Inv_Reconciliation_Lines.md#standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

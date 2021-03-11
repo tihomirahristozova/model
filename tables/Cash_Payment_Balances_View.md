@@ -1,5 +1,10 @@
 # View Cash_Payment_Balances_View
 
+
+## Entity
+
+Entity: [Finance.Payments.OrderBalances](~/entities/Finance.Payments.OrderBalances.md)
+
 Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View
 
 ## Summary
@@ -31,12 +36,6 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 ### Ref_Document_Id
 
 
-Ref_Document_Id
-
-
-The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document.
-
-
 The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document.
 
 | Property | Value |
@@ -48,9 +47,8 @@ The document which has created the payment order and is the basis for the paymen
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Ref_Document_Id](Cash_Payment_Orders.md#ref_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -73,15 +71,9 @@ The document which has created the payment order and is the basis for the paymen
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Ref_Document_Type_Id
-
-
-Ref_Document_Type_Id
-
-
-The type of the document which has created the payment order and is the basis for the payment
 
 
 The type of the document which has created the payment order and is the basis for the payment
@@ -95,9 +87,8 @@ The type of the document which has created the payment order and is the basis fo
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Ref_Document_Type_Id](Cash_Payment_Orders.md#ref_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -120,15 +111,9 @@ The type of the document which has created the payment order and is the basis fo
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Ref_Document_No
-
-
-Ref_Document_No
-
-
-The number of the document which has created the payment order and is the basis for the payment
 
 
 The number of the document which has created the payment order and is the basis for the payment
@@ -142,9 +127,8 @@ The number of the document which has created the payment order and is the basis 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Ref_Document_No](Cash_Payment_Orders.md#ref_document_no)|
 |Format|0|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -167,15 +151,9 @@ The number of the document which has created the payment order and is the basis 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Ref_Document_Date
-
-
-Ref_Document_Date
-
-
-The date of the original document. NULL means that it is unknown
 
 
 The date of the original document. NULL means that it is unknown
@@ -189,9 +167,8 @@ The date of the original document. NULL means that it is unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Ref_Document_Date](Cash_Payment_Orders.md#ref_document_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -214,15 +191,9 @@ The date of the original document. NULL means that it is unknown
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Ref_Invoice_Document_Id
-
-
-Ref_Invoice_Document_Id
-
-
-The invoice document which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document.
 
 
 The invoice document which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document.
@@ -236,9 +207,8 @@ The invoice document which has created or is related to the payment order and is
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Ref_Invoice_Document_Id](Cash_Payment_Orders.md#ref_invoice_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -261,15 +231,9 @@ The invoice document which has created or is related to the payment order and is
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Ref_Invoice_Document_Type_Id
-
-
-Ref_Invoice_Document_Type_Id
-
-
-The document type of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
 
 
 The document type of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
@@ -283,9 +247,8 @@ The document type of the invoice which has created or is related to the payment 
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Ref_Invoice_Document_Type_Id](Cash_Payment_Orders.md#ref_invoice_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -308,15 +271,9 @@ The document type of the invoice which has created or is related to the payment 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Ref_Invoice_Document_No
-
-
-Ref_Invoice_Document_No
-
-
-The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
 
 
 The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
@@ -330,9 +287,8 @@ The number of the invoice which has created or is related to the payment order a
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Ref_Invoice_Document_No](Cash_Payment_Orders.md#ref_invoice_document_no)|
 |Format|0|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -355,15 +311,9 @@ The number of the invoice which has created or is related to the payment order a
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Ref_Invoice_Document_Date
-
-
-Ref_Invoice_Document_Date
-
-
-The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.
 
 
 The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.
@@ -377,9 +327,8 @@ The date of the related invoice. NULL means that the payment order isn't related
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Ref_Invoice_Document_Date](Cash_Payment_Orders.md#ref_invoice_document_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -402,16 +351,10 @@ The date of the related invoice. NULL means that the payment order isn't related
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|yes|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The party which is to pay or receive the amount
 
 
 The party which is to pay or receive the amount
@@ -425,9 +368,8 @@ The party which is to pay or receive the amount
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Party_Id](Cash_Payment_Orders.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -450,15 +392,9 @@ The party which is to pay or receive the amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Due_Date
-
-
-Due_Date
-
-
-The due date of the payment. NULL means there is no due date
 
 
 The due date of the payment. NULL means there is no due date
@@ -472,9 +408,8 @@ The due date of the payment. NULL means there is no due date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Due_Date](Cash_Payment_Orders.md#due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -497,16 +432,10 @@ The due date of the payment. NULL means there is no due date
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Direction
-
-
-Direction
-
-
-I for Payment issue, R for payment receipt
 
 
 I for Payment issue, R for payment receipt
@@ -520,10 +449,9 @@ I for Payment issue, R for payment receipt
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `R`|
 |Default Value|I|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Direction](Cash_Payment_Orders.md#direction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -546,15 +474,9 @@ I for Payment issue, R for payment receipt
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Order_Id
-
-
-Payment_Order_Id
-
-
-The payment order.
 
 
 The payment order.
@@ -567,9 +489,8 @@ The payment order.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Payment_Order_Id](Cash_Payment_Orders.md#payment_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -592,15 +513,9 @@ The payment order.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Currency_Id
-
-
-Currency_Id
-
-
-The currency of amounts.
 
 
 The currency of amounts.
@@ -614,9 +529,9 @@ The currency of amounts.
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Total_Amount_Currency_Id](Cash_Payment_Orders.md#total_amount_currency_id)|
+|Base Table.Column|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Total_Amount_Currency_Id](Cash_Payment_Orders.md#total_amount_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -639,15 +554,9 @@ The currency of amounts.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Paid_Amount
-
-
-Paid_Amount
-
-
-The paid amount. Taken from released payment transactions.
 
 
 The paid amount. Taken from released payment transactions.
@@ -660,9 +569,8 @@ The paid amount. Taken from released payment transactions.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Balances_View](Cash_Payment_Balances_View.md).[Paid_Amount](Cash_Payment_Balances_View.md#paid_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -684,12 +592,6 @@ The paid amount. Taken from released payment transactions.
 ### Order_Amount
 
 
-Order_Amount
-
-
-The total amount of the payment order.
-
-
 The total amount of the payment order.
 
 | Property | Value |
@@ -700,9 +602,9 @@ The total amount of the payment order.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Total_Amount](Cash_Payment_Orders.md#total_amount)|
+|Base Table.Column|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Total_Amount](Cash_Payment_Orders.md#total_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -725,16 +627,10 @@ The total amount of the payment order.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Due_Start_Date
-
-
-Due_Start_Date
-
-
-The date at which the payment becomes executable. NULL means the payment is executable at all times.
 
 
 The date at which the payment becomes executable. NULL means the payment is executable at all times.
@@ -748,9 +644,8 @@ The date at which the payment becomes executable. NULL means the payment is exec
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Due_Start_Date](Cash_Payment_Orders.md#due_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -773,16 +668,10 @@ The date at which the payment becomes executable. NULL means the payment is exec
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Location_Party_Id
-
-
-Location_Party_Id
-
-
-Location or sub-party of the Party_Id in the order
 
 
 Location or sub-party of the Party_Id in the order
@@ -796,9 +685,8 @@ Location or sub-party of the Party_Id in the order
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Orders](Cash_Payment_Orders.md).[Location_Party_Id](Cash_Payment_Orders.md#location_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -821,12 +709,9 @@ Location or sub-party of the Party_Id in the order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -837,9 +722,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Enterprise_Company_Id](Gen_Documents.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -862,15 +746,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Invoiced
-
-
-Is_Invoiced
-
-
-When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.
 
 
 When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.
@@ -883,9 +761,8 @@ When Is_Invoiced = true, then in the view results will be included only the Paym
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Balances_View](Cash_Payment_Balances_View.md).[Is_Invoiced](Cash_Payment_Balances_View.md#is_invoiced)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -908,6 +785,6 @@ When Is_Invoiced = true, then in the view results will be included only the Paym
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 

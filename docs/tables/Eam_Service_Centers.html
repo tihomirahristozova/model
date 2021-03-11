@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_service_centers">Table Eam_Service_Centers</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.ServiceCenters.html">Applications.AssetManagement.ServiceCenters</a></p>
 <p>Contains data about the service centers, which can maintain the assets. Entity: Eam_Service_Centers (Introduced in version 19.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -119,7 +121,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="service_center_id">Service_Center_Id</h3>
-<p>Service_Center_Id</p>
 <table>
 <thead>
 <tr>
@@ -158,15 +159,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Service_Centers.html">Eam_Service_Centers</a>.<a href="Eam_Service_Centers.html#service_center_id">Service_Center_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -251,15 +248,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The enterprise company, whose assets will be maintained by the service center. When NULL, the service center can maintain assets for all enterprise companies.</p>
 <p>The enterprise company, whose assets will be maintained by the service center. When NULL, the service center can maintain assets for all enterprise companies.</p>
 <table>
 <thead>
@@ -299,15 +294,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Service_Centers.html">Eam_Service_Centers</a>.<a href="Eam_Service_Centers.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -392,15 +383,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The person or company, actually performing the maintenance.</p>
 <p>The person or company, actually performing the maintenance.</p>
 <table>
 <thead>
@@ -440,15 +429,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Service_Centers.html">Eam_Service_Centers</a>.<a href="Eam_Service_Centers.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -533,14 +518,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -551,7 +535,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -579,15 +563,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Service_Centers.html">Eam_Service_Centers</a>.<a href="Eam_Service_Centers.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -660,7 +640,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -695,15 +674,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Service_Centers.html">Eam_Service_Centers</a>.<a href="Eam_Service_Centers.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -125,7 +125,7 @@
 </tr>
 <tr>
 <td><a href="#instructions">Instructions</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Full decription and instructions for the step. Displayed to user when executing the step</td>
 </tr>
 <tr>
@@ -137,8 +137,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="process_step_id">Process_Step_Id</h3>
-<p>Process_Step_Id</p>
-<p>Unique process step Id</p>
 <p>Unique process step Id</p>
 <table>
 <thead>
@@ -178,15 +176,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Process_Steps.html">Wf_Process_Steps</a>.<a href="Wf_Process_Steps.html#process_step_id">Process_Step_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,15 +265,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_id">Process_Id</h3>
-<p>Process_Id</p>
-<p>The process, to which this step belongs</p>
 <p>The process, to which this step belongs</p>
 <table>
 <thead>
@@ -319,15 +311,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Process_Steps.html">Wf_Process_Steps</a>.<a href="Wf_Process_Steps.html#process_id">Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -412,15 +400,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="step_code">Step_Code</h3>
-<p>Step_Code</p>
-<p>Unique code of the step. Used to sort the steps for display purposes</p>
 <p>Unique code of the step. Used to sort the steps for display purposes</p>
 <table>
 <thead>
@@ -460,15 +446,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Process_Steps.html">Wf_Process_Steps</a>.<a href="Wf_Process_Steps.html#step_code">Step_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -541,8 +523,6 @@
 </tbody>
 </table>
 <h3 id="step_type">Step_Type</h3>
-<p>Step_Type</p>
-<p>Step type. STU=Start step (by user action); STE=Start step - by email; END=Ending step; ACT=User action; CHO=Choice</p>
 <p>Step type. STU=Start step (by user action); STE=Start step - by email; END=Ending step; ACT=User action; CHO=Choice</p>
 <table>
 <thead>
@@ -582,15 +562,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Process_Steps.html">Wf_Process_Steps</a>.<a href="Wf_Process_Steps.html#step_type">Step_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -663,8 +639,6 @@
 </tbody>
 </table>
 <h3 id="short_title">Short_Title</h3>
-<p>Short_Title</p>
-<p>Very short multilanguage title, displayed on the process diagram. The user text should be 15-20 chars, for each language</p>
 <p>Very short multilanguage title, displayed on the process diagram. The user text should be 15-20 chars, for each language</p>
 <table>
 <thead>
@@ -704,15 +678,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Process_Steps.html">Wf_Process_Steps</a>.<a href="Wf_Process_Steps.html#short_title">Short_Title</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -785,8 +755,6 @@
 </tbody>
 </table>
 <h3 id="role_id">Role_Id</h3>
-<p>Role_Id</p>
-<p>The role responsible for execution of the step</p>
 <p>The role responsible for execution of the step</p>
 <table>
 <thead>
@@ -826,15 +794,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Process_Steps.html">Wf_Process_Steps</a>.<a href="Wf_Process_Steps.html#role_id">Role_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -919,15 +883,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="instructions">Instructions</h3>
-<p>Instructions</p>
-<p>Full decription and instructions for the step. Displayed to user when executing the step</p>
 <p>Full decription and instructions for the step. Displayed to user when executing the step</p>
 <table>
 <thead>
@@ -939,7 +901,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -967,15 +929,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Process_Steps.html">Wf_Process_Steps</a>.<a href="Wf_Process_Steps.html#instructions">Instructions</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1048,7 +1006,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1083,15 +1040,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Process_Steps.html">Wf_Process_Steps</a>.<a href="Wf_Process_Steps.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

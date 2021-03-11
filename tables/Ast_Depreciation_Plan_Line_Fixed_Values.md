@@ -1,5 +1,10 @@
 # Table Ast_Depreciation_Plan_Line_Fixed_Values
 
+
+## Entity
+
+Entity: [Finance.Assets.DepreciationPlanLineFixedValues](~/entities/Finance.Assets.DepreciationPlanLineFixedValues.md)
+
 When specified, contains user-defined asset depreciation values for each depreciation period. Entity: Ast_Depreciation_Plan_Line_Fixed_Values
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ When specified, contains user-defined asset depreciation values for each depreci
 
 ### Depreciation_Plan_Line_Fixed_Value_Id
 
-
-Depreciation_Plan_Line_Fixed_Value_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Depreciation_Plan_Line_Fixed_Value_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Depreciation_Plan_Line_Fixed_Values](Ast_Depreciation_Plan_Line_Fixed_Values.md).[Depreciation_Plan_Line_Fixed_Value_Id](Ast_Depreciation_Plan_Line_Fixed_Values.md#depreciation_plan_line_fixed_value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Depreciation_Plan_Line_Fixed_Value_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Depreciation_Plan_Line_Id
-
-
-Depreciation_Plan_Line_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Depreciation_Plan_Line_Id
 |Referenced Table|[Ast_Depreciation_Plan_Lines](Ast_Depreciation_Plan_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Line_Fixed_Values](Ast_Depreciation_Plan_Line_Fixed_Values.md).[Depreciation_Plan_Line_Id](Ast_Depreciation_Plan_Line_Fixed_Values.md#depreciation_plan_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Depreciation_Plan_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Fixed_Value_Period_Month
-
-
-Fixed_Value_Period_Month
-
-
-Month of the period for which the depreciation value is fixed
 
 
 Month of the period for which the depreciation value is fixed
@@ -122,9 +113,8 @@ Month of the period for which the depreciation value is fixed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Line_Fixed_Values](Ast_Depreciation_Plan_Line_Fixed_Values.md).[Fixed_Value_Period_Month](Ast_Depreciation_Plan_Line_Fixed_Values.md#fixed_value_period_month)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +136,6 @@ Month of the period for which the depreciation value is fixed
 ### Fixed_Value_Period_Year
 
 
-Fixed_Value_Period_Year
-
-
-Year of the period for which the depreciation value is fixed
-
-
 Year of the period for which the depreciation value is fixed
 
 | Property | Value |
@@ -162,9 +146,8 @@ Year of the period for which the depreciation value is fixed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Line_Fixed_Values](Ast_Depreciation_Plan_Line_Fixed_Values.md).[Fixed_Value_Period_Year](Ast_Depreciation_Plan_Line_Fixed_Values.md#fixed_value_period_year)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,12 +169,6 @@ Year of the period for which the depreciation value is fixed
 ### Depreciation_Value
 
 
-Depreciation_Value
-
-
-Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year
-
-
 Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year
 
 | Property | Value |
@@ -202,9 +179,8 @@ Fixed depreciation value for the period specified by Fixed_Value_Period_Month an
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Ast_Depreciation_Plan_Line_Fixed_Values](Ast_Depreciation_Plan_Line_Fixed_Values.md).[Depreciation_Value](Ast_Depreciation_Plan_Line_Fixed_Values.md#depreciation_value)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -225,9 +201,6 @@ Fixed depreciation value for the period specified by Fixed_Value_Period_Month an
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -236,9 +209,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Line_Fixed_Values](Ast_Depreciation_Plan_Line_Fixed_Values.md).[Row_Version](Ast_Depreciation_Plan_Line_Fixed_Values.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

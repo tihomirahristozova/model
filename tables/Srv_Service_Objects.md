@@ -1,5 +1,10 @@
 # Table Srv_Service_Objects
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceObjects](~/entities/Applications.Service.ServiceObjects.md)
+
 Contains the serviceable objects. The service objects can be covered by service agreements, serviced in service activities, etc. Entity: Srv_Service_Objects
 
 ## Summary
@@ -21,9 +26,6 @@ Contains the serviceable objects. The service objects can be covered by service 
 
 ### Service_Object_Id
 
-
-Service_Object_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Service_Object_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Service_Object_Id](Srv_Service_Objects.md#service_object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Service_Object_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Object_Name
-
-
-Service_Object_Name
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Service_Object_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Service_Object_Name](Srv_Service_Objects.md#service_object_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,16 +96,10 @@ Service_Object_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Serial_Number
-
-
-Serial_Number
-
-
-The serial number of the item, that is being serviced
 
 
 The serial number of the item, that is being serviced
@@ -122,9 +113,8 @@ The serial number of the item, that is being serviced
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Serial_Number](Srv_Service_Objects.md#serial_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,12 +142,6 @@ The serial number of the item, that is being serviced
 ### Service_Object_Type_Id
 
 
-Service_Object_Type_Id
-
-
-When not NULL specifies the type of the service object
-
-
 When not NULL specifies the type of the service object
 
 | Property | Value |
@@ -169,9 +153,8 @@ When not NULL specifies the type of the service object
 |Referenced Table|[Srv_Service_Object_Types](Srv_Service_Object_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Service_Object_Type_Id](Srv_Service_Objects.md#service_object_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,15 +177,9 @@ When not NULL specifies the type of the service object
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-When not-NULL identifies the product, from which the service object was created
 
 
 When not-NULL identifies the product, from which the service object was created
@@ -216,9 +193,8 @@ When not-NULL identifies the product, from which the service object was created
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Product_Id](Srv_Service_Objects.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,12 +217,9 @@ When not-NULL identifies the product, from which the service object was created
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -257,9 +230,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Notes](Srv_Service_Objects.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -280,9 +252,6 @@ Notes
 
 ### Enterprise_Company_Id
 
-
-Enterprise_Company_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -292,9 +261,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Enterprise_Company_Id](Srv_Service_Objects.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -317,15 +285,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data.
 
 
 Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data.
@@ -339,9 +301,8 @@ Serial number for the product, that corresponds to this service object. If there
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Serial_Number_Id](Srv_Service_Objects.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -364,15 +325,9 @@ Serial number for the product, that corresponds to this service object. If there
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serviced_Product_Id
-
-
-Serviced_Product_Id
-
-
-The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null.
 
 
 The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null.
@@ -386,9 +341,8 @@ The product, which is used to physically store the service object, when it is se
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Serviced_Product_Id](Srv_Service_Objects.md#serviced_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -411,12 +365,9 @@ The product, which is used to physically store the service object, when it is se
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -426,9 +377,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Objects](Srv_Service_Objects.md).[Row_Version](Srv_Service_Objects.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

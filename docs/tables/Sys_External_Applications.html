@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_external_applications">Table Sys_External_Applications</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Core.ExternalApplications.html">Systems.Core.ExternalApplications</a></p>
 <p>List of external applications. Used to run external applications. Entity: Sys_External_Applications</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#address">Address</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The address (path) to the application. The address is platform-dependant.</td>
 </tr>
 <tr>
@@ -137,7 +139,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -159,7 +161,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="external_application_id">External_Application_Id</h3>
-<p>External_Application_Id</p>
 <table>
 <thead>
 <tr>
@@ -198,15 +199,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#external_application_id">External_Application_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -291,15 +288,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="entity_name">Entity_Name</h3>
-<p>Entity_Name</p>
-<p>The entity, for which the application is defined.</p>
 <p>The entity, for which the application is defined.</p>
 <table>
 <thead>
@@ -339,15 +334,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#entity_name">Entity_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -432,15 +423,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="external_application_name">External_Application_Name</h3>
-<p>External_Application_Name</p>
-<p>The name of the external application.</p>
 <p>The name of the external application.</p>
 <table>
 <thead>
@@ -480,15 +469,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#external_application_name">External_Application_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -573,7 +558,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -586,8 +571,6 @@
 </tbody>
 </table>
 <h3 id="platform">Platform</h3>
-<p>Platform</p>
-<p>The execution platform of the application.</p>
 <p>The execution platform of the application.</p>
 <table>
 <thead>
@@ -627,7 +610,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -636,10 +619,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#platform">Platform</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -724,15 +703,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="address">Address</h3>
-<p>Address</p>
-<p>The address (path) to the application. The address is platform-dependant.</p>
 <p>The address (path) to the application. The address is platform-dependant.</p>
 <table>
 <thead>
@@ -744,7 +721,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -772,15 +749,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#address">Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -853,8 +826,6 @@
 </tbody>
 </table>
 <h3 id="available_in_mode">Available_In_Mode</h3>
-<p>Available_In_Mode</p>
-<p>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed.</p>
 <p>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed.</p>
 <table>
 <thead>
@@ -894,7 +865,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -903,10 +874,6 @@
 <tr>
 <td>Default Value</td>
 <td>SINGLE</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#available_in_mode">Available_In_Mode</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -991,15 +958,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="execute_for_all_objects">Execute_For_All_Objects</h3>
-<p>Execute_For_All_Objects</p>
-<p>Whether to execute the application for all selected objects at once or to execute the application for each object, one by one.</p>
 <p>Whether to execute the application for all selected objects at once or to execute the application for each object, one by one.</p>
 <table>
 <thead>
@@ -1035,15 +1000,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#execute_for_all_objects">Execute_For_All_Objects</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1128,15 +1089,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="save_before_start">Save_Before_Start</h3>
-<p>Save_Before_Start</p>
-<p>Whether to save the form data to the server before starting the application.</p>
 <p>Whether to save the form data to the server before starting the application.</p>
 <table>
 <thead>
@@ -1172,15 +1131,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#save_before_start">Save_Before_Start</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1265,15 +1220,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="refresh_after_finish">Refresh_After_Finish</h3>
-<p>Refresh_After_Finish</p>
-<p>Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification.</p>
 <p>Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification.</p>
 <table>
 <thead>
@@ -1309,15 +1262,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#refresh_after_finish">Refresh_After_Finish</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1402,14 +1351,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1420,7 +1368,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1448,15 +1396,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1529,7 +1473,6 @@
 </tbody>
 </table>
 <h3 id="access_key_id">Access_Key_Id</h3>
-<p>Access_Key_Id</p>
 <table>
 <thead>
 <tr>
@@ -1568,15 +1511,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#access_key_id">Access_Key_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1661,15 +1600,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Specifies whether the external application is currently used.</p>
 <p>Specifies whether the external application is currently used.</p>
 <table>
 <thead>
@@ -1705,15 +1642,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1798,14 +1731,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1840,15 +1772,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_External_Applications.html">Sys_External_Applications</a>.<a href="Sys_External_Applications.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

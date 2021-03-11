@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prd_output_order_consumption_lines">Table Prd_Output_Order_Consumption_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Production.ShopFloor.OutputOrderConsumptionLines.html">Production.ShopFloor.OutputOrderConsumptionLines</a></p>
 <p>The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders. Entity: Prd_Output_Order_Consumption_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -157,7 +159,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -169,7 +171,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="output_order_consumption_line_id">Output_Order_Consumption_Line_Id</h3>
-<p>Output_Order_Consumption_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -208,15 +209,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#output_order_consumption_line_id">Output_Order_Consumption_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -301,14 +298,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="output_order_id">Output_Order_Id</h3>
-<p>Output_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -347,15 +343,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#output_order_id">Output_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -440,14 +432,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
 <table>
 <thead>
 <tr>
@@ -482,7 +473,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -491,10 +482,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -567,8 +554,6 @@
 </tbody>
 </table>
 <h3 id="line_work_order_id">Line_Work_Order_Id</h3>
-<p>Line_Work_Order_Id</p>
-<p>Work order for the line. Initially copied from the header (if there work order is not null)</p>
 <p>Work order for the line. Initially copied from the header (if there work order is not null)</p>
 <table>
 <thead>
@@ -608,15 +593,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#line_work_order_id">Line_Work_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -701,15 +682,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="work_order_item_id">Work_Order_Item_Id</h3>
-<p>Work_Order_Item_Id</p>
-<p>The work order item, for which the consumption is recorded.</p>
 <p>The work order item, for which the consumption is recorded.</p>
 <table>
 <thead>
@@ -749,15 +728,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#work_order_item_id">Work_Order_Item_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -842,15 +817,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="work_order_item_operation_id">Work_Order_Item_Operation_Id</h3>
-<p>Work_Order_Item_Operation_Id</p>
-<p>The operation in which the material was consumed. NULL = unknown</p>
 <p>The operation in which the material was consumed. NULL = unknown</p>
 <table>
 <thead>
@@ -890,15 +863,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#work_order_item_operation_id">Work_Order_Item_Operation_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -983,15 +952,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="material_id">Material_Id</h3>
-<p>Material_Id</p>
-<p>The consumed material</p>
 <p>The consumed material</p>
 <table>
 <thead>
@@ -1031,15 +998,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#material_id">Material_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1124,15 +1087,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="consumed_quantity_for_setup">Consumed_Quantity_For_Setup</h3>
-<p>Consumed_Quantity_For_Setup</p>
-<p>The consumed quantity of the material while setting up the operation.</p>
 <p>The consumed quantity of the material while setting up the operation.</p>
 <table>
 <thead>
@@ -1168,15 +1129,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#consumed_quantity_for_setup">Consumed_Quantity_For_Setup</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1249,8 +1206,6 @@
 </tbody>
 </table>
 <h3 id="consumed_quantity_for_run">Consumed_Quantity_For_Run</h3>
-<p>Consumed_Quantity_For_Run</p>
-<p>The consumed quantity of the material for the operation.</p>
 <p>The consumed quantity of the material for the operation.</p>
 <table>
 <thead>
@@ -1286,15 +1241,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#consumed_quantity_for_run">Consumed_Quantity_For_Run</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1367,8 +1318,6 @@
 </tbody>
 </table>
 <h3 id="consumed_quantity_for_scrap">Consumed_Quantity_For_Scrap</h3>
-<p>Consumed_Quantity_For_Scrap</p>
-<p>The scrapped quantity of the material for this operation.</p>
 <p>The scrapped quantity of the material for this operation.</p>
 <table>
 <thead>
@@ -1404,15 +1353,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#consumed_quantity_for_scrap">Consumed_Quantity_For_Scrap</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1485,8 +1430,6 @@
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit for the consumed quantity for setup, run and scrap.</p>
 <p>The measurement unit for the consumed quantity for setup, run and scrap.</p>
 <table>
 <thead>
@@ -1526,15 +1469,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1619,15 +1558,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="scrap_type_id">Scrap_Type_Id</h3>
-<p>Scrap_Type_Id</p>
-<p>When Consumed_Quantity_For_Scrap &lt;&gt; 0 denotes the reason for the scrap</p>
 <p>When Consumed_Quantity_For_Scrap &lt;&gt; 0 denotes the reason for the scrap</p>
 <table>
 <thead>
@@ -1667,15 +1604,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#scrap_type_id">Scrap_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1760,14 +1693,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1778,7 +1710,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1806,15 +1738,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1887,7 +1815,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1922,15 +1849,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Output_Order_Consumption_Lines.html">Prd_Output_Order_Consumption_Lines</a>.<a href="Prd_Output_Order_Consumption_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

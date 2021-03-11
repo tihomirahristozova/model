@@ -1,5 +1,10 @@
 # Table Prj_Work_Report_Materials
 
+
+## Entity
+
+Entity: [Projects.WorkReportMaterials](~/entities/Projects.WorkReportMaterials.md)
+
 Each record contains a consumed material, reported by the related Work Report. Entity: Prj_Work_Report_Materials
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Each record contains a consumed material, reported by the related Work Report. E
 
 ### Work_Report_Material_Id
 
-
-Work_Report_Material_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Work_Report_Material_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Work_Report_Materials](Prj_Work_Report_Materials.md).[Work_Report_Material_Id](Prj_Work_Report_Materials.md#work_report_material_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,12 +62,9 @@ Work_Report_Material_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Report_Id
-
-
-Work_Report_Id
 
 | Property | Value |
 | - | - |
@@ -77,9 +75,8 @@ Work_Report_Id
 |Referenced Table|[Prj_Work_Reports](Prj_Work_Reports.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Materials](Prj_Work_Report_Materials.md).[Work_Report_Id](Prj_Work_Report_Materials.md#work_report_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +99,9 @@ Work_Report_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Task_Id
-
-
-Project_Task_Id
-
-
-The project task for which the materials are reported.
 
 
 The project task for which the materials are reported.
@@ -124,9 +115,8 @@ The project task for which the materials are reported.
 |Referenced Table|[Prj_Project_Tasks](Prj_Project_Tasks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Materials](Prj_Work_Report_Materials.md).[Project_Task_Id](Prj_Work_Report_Materials.md#project_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,15 +139,9 @@ The project task for which the materials are reported.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Material_Product_Id
-
-
-Material_Product_Id
-
-
-The consumed material.
 
 
 The consumed material.
@@ -171,9 +155,8 @@ The consumed material.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Materials](Prj_Work_Report_Materials.md).[Material_Product_Id](Prj_Work_Report_Materials.md#material_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,15 +179,9 @@ The consumed material.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The consumed quantity of the material.
 
 
 The consumed quantity of the material.
@@ -217,9 +194,8 @@ The consumed quantity of the material.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Work_Report_Materials](Prj_Work_Report_Materials.md).[Quantity](Prj_Work_Report_Materials.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,16 +218,10 @@ The consumed quantity of the material.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Quantity_Unit_Id
-
-
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting.
 
 
 The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting.
@@ -265,9 +235,8 @@ The measurement unit of Quantity. It is strongly suggested that the same unit is
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Materials](Prj_Work_Report_Materials.md).[Quantity_Unit_Id](Prj_Work_Report_Materials.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -290,15 +259,9 @@ The measurement unit of Quantity. It is strongly suggested that the same unit is
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity_Base
-
-
-Quantity_Base
-
-
-The equivalence of Quantity in the base measurement unit of the Material.
 
 
 The equivalence of Quantity in the base measurement unit of the Material.
@@ -311,9 +274,8 @@ The equivalence of Quantity in the base measurement unit of the Material.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Work_Report_Materials](Prj_Work_Report_Materials.md).[Quantity_Base](Prj_Work_Report_Materials.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -336,13 +298,10 @@ The equivalence of Quantity in the base measurement unit of the Material.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -352,9 +311,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Materials](Prj_Work_Report_Materials.md).[Row_Version](Prj_Work_Report_Materials.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

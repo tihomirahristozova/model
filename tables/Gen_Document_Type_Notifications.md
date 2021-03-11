@@ -1,5 +1,10 @@
 # Table Gen_Document_Type_Notifications
 
+
+## Entity
+
+Entity: [General.DocumentTypeNotifications](~/entities/General.DocumentTypeNotifications.md)
+
 Provides notification addresses to be notified upon occurrence of different document events. Entity: Gen_Document_Type_Notifications
 
 ## Owner Tables Hierarchy
@@ -16,19 +21,13 @@ Provides notification addresses to be notified upon occurrence of different docu
 |[State_Bit_Mask](#state_bit_mask)|`int` |The document states that will trigger the event|
 |[User_Status_Id](#user_status_id)|`uniqueidentifier` |When not NULL, specifies that the event will be triggered only on this user status|
 |[Status_Change_Direction](#status_change_direction)|`nvarchar(1)` Allowed: `*`, `0`, `+`, `-`|Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'|
-|[Filter_XML](#filter_xml)|`nvarchar(2147483647)` |Filtering condition for the document. Only documents which match the filter will trigger the event|
+|[Filter_XML](#filter_xml)|`nvarchar(max)` |Filtering condition for the document. Only documents which match the filter will trigger the event|
 |[To_Email_Address_List](#to_email_address_list)|`nvarchar(2048)` |List of email addressess to be notified|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Document_Type_Notification_Id
-
-
-Document_Type_Notification_Id
-
-
-.
 
 
 .
@@ -42,9 +41,8 @@ Document_Type_Notification_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[Document_Type_Notification_Id](Gen_Document_Type_Notifications.md#document_type_notification_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -67,15 +65,9 @@ Document_Type_Notification_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type for which this notification is set.
 
 
 The document type for which this notification is set.
@@ -89,9 +81,8 @@ The document type for which this notification is set.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[Document_Type_Id](Gen_Document_Type_Notifications.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -114,15 +105,9 @@ The document type for which this notification is set.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Event
-
-
-Document_Event
-
-
-The event which will trigger the notification
 
 
 The event which will trigger the notification
@@ -136,9 +121,8 @@ The event which will trigger the notification
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|StateChanging|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[Document_Event](Gen_Document_Type_Notifications.md#document_event)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -161,15 +145,9 @@ The event which will trigger the notification
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### State_Bit_Mask
-
-
-State_Bit_Mask
-
-
-The document states that will trigger the event
 
 
 The document states that will trigger the event
@@ -182,9 +160,8 @@ The document states that will trigger the event
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[State_Bit_Mask](Gen_Document_Type_Notifications.md#state_bit_mask)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -206,12 +183,6 @@ The document states that will trigger the event
 ### User_Status_Id
 
 
-User_Status_Id
-
-
-When not NULL, specifies that the event will be triggered only on this user status
-
-
 When not NULL, specifies that the event will be triggered only on this user status
 
 | Property | Value |
@@ -223,9 +194,8 @@ When not NULL, specifies that the event will be triggered only on this user stat
 |Referenced Table|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[User_Status_Id](Gen_Document_Type_Notifications.md#user_status_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,15 +218,9 @@ When not NULL, specifies that the event will be triggered only on this user stat
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Status_Change_Direction
-
-
-Status_Change_Direction
-
-
-Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'
 
 
 Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'
@@ -270,10 +234,9 @@ Direction of status change. Positive when the new status is greater than the pre
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`*`, `0`, `+`, `-`|
 |Default Value|*|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[Status_Change_Direction](Gen_Document_Type_Notifications.md#status_change_direction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,26 +258,19 @@ Direction of status change. Positive when the new status is greater than the pre
 ### Filter_XML
 
 
-Filter_XML
-
-
-Filtering condition for the document. Only documents which match the filter will trigger the event
-
-
 Filtering condition for the document. Only documents which match the filter will trigger the event
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[Filter_XML](Gen_Document_Type_Notifications.md#filter_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -336,12 +292,6 @@ Filtering condition for the document. Only documents which match the filter will
 ### To_Email_Address_List
 
 
-To_Email_Address_List
-
-
-List of email addressess to be notified
-
-
 List of email addressess to be notified
 
 | Property | Value |
@@ -353,9 +303,8 @@ List of email addressess to be notified
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[To_Email_Address_List](Gen_Document_Type_Notifications.md#to_email_address_list)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -376,9 +325,6 @@ List of email addressess to be notified
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -387,9 +333,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Notifications](Gen_Document_Type_Notifications.md).[Row_Version](Gen_Document_Type_Notifications.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

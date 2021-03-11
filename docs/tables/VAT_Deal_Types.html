@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-vat_deal_types">Table VAT_Deal_Types</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a></p>
 <p>Contains deal types supported by the system as well as user-defined types. Entity: VAT_Deal_Types</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -124,8 +126,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="deal_type_id">Deal_Type_Id</h3>
-<p>Deal_Type_Id</p>
-<p>Unique Id for the deal type. Deal_Type_Id should be used for identifyind and updating system deal types.</p>
 <p>Unique Id for the deal type. Deal_Type_Id should be used for identifyind and updating system deal types.</p>
 <table>
 <thead>
@@ -165,15 +165,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Deal_Types.html">VAT_Deal_Types</a>.<a href="VAT_Deal_Types.html#deal_type_id">Deal_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -258,15 +254,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="deal_type_name">Deal_Type_Name</h3>
-<p>Deal_Type_Name</p>
-<p>Description of the deal type.</p>
 <p>Description of the deal type.</p>
 <table>
 <thead>
@@ -306,15 +300,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Deal_Types.html">VAT_Deal_Types</a>.<a href="VAT_Deal_Types.html#deal_type_name">Deal_Type_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -399,7 +389,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -412,8 +402,6 @@
 </tbody>
 </table>
 <h3 id="entry_type">Entry_Type</h3>
-<p>Entry_Type</p>
-<p>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.</p>
 <p>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.</p>
 <table>
 <thead>
@@ -453,7 +441,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -462,10 +450,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Deal_Types.html">VAT_Deal_Types</a>.<a href="VAT_Deal_Types.html#entry_type">Entry_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -550,15 +534,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="country_id">Country_Id</h3>
-<p>Country_Id</p>
-<p>The country for which this deal type applies. The country is matched against the country of the enterprise company.</p>
 <p>The country for which this deal type applies. The country is matched against the country of the enterprise company.</p>
 <table>
 <thead>
@@ -598,15 +580,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Deal_Types.html">VAT_Deal_Types</a>.<a href="VAT_Deal_Types.html#country_id">Country_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -691,15 +669,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_system">Is_System</h3>
-<p>Is_System</p>
-<p>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.</p>
 <p>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.</p>
 <table>
 <thead>
@@ -735,15 +711,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Deal_Types.html">VAT_Deal_Types</a>.<a href="VAT_Deal_Types.html#is_system">Is_System</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -828,14 +800,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -870,15 +841,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Deal_Types.html">VAT_Deal_Types</a>.<a href="VAT_Deal_Types.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

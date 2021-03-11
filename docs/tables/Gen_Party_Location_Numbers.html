@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_party_location_numbers">Table Gen_Party_Location_Numbers</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.PartyLocationNumbers.html">General.PartyLocationNumbers</a></p>
 <p>Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="party_location_number_id">Party_Location_Number_Id</h3>
-<p>Party_Location_Number_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Location_Numbers.html">Gen_Party_Location_Numbers</a>.<a href="Gen_Party_Location_Numbers.html#party_location_number_id">Party_Location_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,15 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The party for which we are defining the location number.</p>
 <p>The party for which we are defining the location number.</p>
 <table>
 <thead>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Location_Numbers.html">Gen_Party_Location_Numbers</a>.<a href="Gen_Party_Location_Numbers.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="partner_party_id">Partner_Party_Id</h3>
-<p>Partner_Party_Id</p>
-<p>The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. NULL means that the location number is not dependent on the Partner Party.</p>
 <p>The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. NULL means that the location number is not dependent on the Partner Party.</p>
 <table>
 <thead>
@@ -459,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Location_Numbers.html">Gen_Party_Location_Numbers</a>.<a href="Gen_Party_Location_Numbers.html#partner_party_id">Partner_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -552,15 +537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="partner_location_number">Partner_Location_Number</h3>
-<p>Partner_Location_Number</p>
-<p>The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.</p>
 <p>The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.</p>
 <table>
 <thead>
@@ -600,15 +583,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Location_Numbers.html">Gen_Party_Location_Numbers</a>.<a href="Gen_Party_Location_Numbers.html#partner_location_number">Partner_Location_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -693,15 +672,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="location_coding_system">Location_Coding_System</h3>
-<p>Location_Coding_System</p>
-<p>The coding system for which we are defining the location number.</p>
 <p>The coding system for which we are defining the location number.</p>
 <table>
 <thead>
@@ -741,7 +718,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -750,10 +727,6 @@
 <tr>
 <td>Default Value</td>
 <td>GLN</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Location_Numbers.html">Gen_Party_Location_Numbers</a>.<a href="Gen_Party_Location_Numbers.html#location_coding_system">Location_Coding_System</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -838,15 +811,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="location_number">Location_Number</h3>
-<p>Location_Number</p>
-<p>The location number of Party.</p>
 <p>The location number of Party.</p>
 <table>
 <thead>
@@ -886,15 +857,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Location_Numbers.html">Gen_Party_Location_Numbers</a>.<a href="Gen_Party_Location_Numbers.html#location_number">Location_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -979,7 +946,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -992,8 +959,6 @@
 </tbody>
 </table>
 <h3 id="significance">Significance</h3>
-<p>Significance</p>
-<p>Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.</p>
 <p>Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.</p>
 <table>
 <thead>
@@ -1029,15 +994,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Location_Numbers.html">Gen_Party_Location_Numbers</a>.<a href="Gen_Party_Location_Numbers.html#significance">Significance</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1122,7 +1083,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1135,7 +1096,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1170,15 +1130,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Location_Numbers.html">Gen_Party_Location_Numbers</a>.<a href="Gen_Party_Location_Numbers.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

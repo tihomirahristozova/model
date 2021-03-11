@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-rent_lease_contract_lines">Table Rent_Lease_Contract_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Rental.LeaseContractLines.html">Applications.Rental.LeaseContractLines</a></p>
 <p>The detail lines of rental contracts. Each line contains rental conditions for one asset of the rental contract. Entity: Rent_Lease_Contract_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -122,7 +124,7 @@
 </tr>
 <tr>
 <td><a href="#line_notes">Line_Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Notes for this line.</td>
 </tr>
 <tr>
@@ -144,7 +146,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="lease_line_id">Lease_Line_Id</h3>
-<p>Lease_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -183,15 +184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Lease_Contract_Lines.html">Rent_Lease_Contract_Lines</a>.<a href="Rent_Lease_Contract_Lines.html#lease_line_id">Lease_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -276,14 +273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lease_contract_id">Lease_Contract_Id</h3>
-<p>Lease_Contract_Id</p>
 <table>
 <thead>
 <tr>
@@ -322,15 +318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Lease_Contract_Lines.html">Rent_Lease_Contract_Lines</a>.<a href="Rent_Lease_Contract_Lines.html#lease_contract_id">Lease_Contract_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -415,15 +407,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rental_asset_id">Rental_Asset_Id</h3>
-<p>Rental_Asset_Id</p>
-<p>The asset which is rented with the current contract.</p>
 <p>The asset which is rented with the current contract.</p>
 <table>
 <thead>
@@ -463,15 +453,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#rental_asset_id">Rental_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -556,15 +542,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="start_date">Start_Date</h3>
-<p>Start_Date</p>
-<p>Starting date of lease for this asset</p>
 <p>Starting date of lease for this asset</p>
 <table>
 <thead>
@@ -604,15 +588,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Lease_Contract_Lines.html">Rent_Lease_Contract_Lines</a>.<a href="Rent_Lease_Contract_Lines.html#start_date">Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -697,7 +677,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -710,8 +690,6 @@
 </tbody>
 </table>
 <h3 id="end_date">End_Date</h3>
-<p>End_Date</p>
-<p>Ending date of lease of this asset</p>
 <p>Ending date of lease of this asset</p>
 <table>
 <thead>
@@ -751,15 +729,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Lease_Contract_Lines.html">Rent_Lease_Contract_Lines</a>.<a href="Rent_Lease_Contract_Lines.html#end_date">End_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -844,7 +818,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -857,8 +831,6 @@
 </tbody>
 </table>
 <h3 id="line_notes">Line_Notes</h3>
-<p>Line_Notes</p>
-<p>Notes for this line.</p>
 <p>Notes for this line.</p>
 <table>
 <thead>
@@ -870,7 +842,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -898,15 +870,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Lease_Contract_Lines.html">Rent_Lease_Contract_Lines</a>.<a href="Rent_Lease_Contract_Lines.html#line_notes">Line_Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -979,7 +947,6 @@
 </tbody>
 </table>
 <h3 id="guarantee_amount">Guarantee_Amount</h3>
-<p>Guarantee_Amount</p>
 <table>
 <thead>
 <tr>
@@ -1014,15 +981,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Lease_Contract_Lines.html">Rent_Lease_Contract_Lines</a>.<a href="Rent_Lease_Contract_Lines.html#guarantee_amount">Guarantee_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1095,8 +1058,6 @@
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Consecutive number of the line within the lease contract.</p>
 <p>Consecutive number of the line within the lease contract.</p>
 <table>
 <thead>
@@ -1132,7 +1093,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -1141,10 +1102,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Lease_Contract_Lines.html">Rent_Lease_Contract_Lines</a>.<a href="Rent_Lease_Contract_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1229,7 +1186,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -1242,7 +1199,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1277,15 +1233,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Lease_Contract_Lines.html">Rent_Lease_Contract_Lines</a>.<a href="Rent_Lease_Contract_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

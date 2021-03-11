@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_product_supply">Table Gen_Product_Supply</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Products.ProductSupply.html">General.Products.ProductSupply</a></p>
 <p>Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -274,8 +276,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="store_id">Store_Id</h3>
-<p>Store_Id</p>
-<p>The store for which this rule is defined. When null, the rule is valid for all stores.</p>
 <p>The store for which this rule is defined. When null, the rule is valid for all stores.</p>
 <table>
 <thead>
@@ -315,15 +315,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#store_id">Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -408,15 +404,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="preferred_supplier_id">Preferred_Supplier_Id</h3>
-<p>Preferred_Supplier_Id</p>
-<p>Preferred supplier for the product. NULL if there is no preferred supplier</p>
 <p>Preferred supplier for the product. NULL if there is no preferred supplier</p>
 <table>
 <thead>
@@ -456,15 +450,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#preferred_supplier_id">Preferred_Supplier_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -549,15 +539,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="planning_lead_time_days">Planning_Lead_Time_Days</h3>
-<p>Planning_Lead_Time_Days</p>
-<p>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components</p>
 <p>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components</p>
 <table>
 <thead>
@@ -593,15 +581,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_lead_time_days">Planning_Lead_Time_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -674,8 +658,6 @@
 </tbody>
 </table>
 <h3 id="order_point_quantity_base">Order_Point_Quantity_Base</h3>
-<p>Order_Point_Quantity_Base</p>
-<p>Order point quantity under the OP replenishment system</p>
 <p>Order point quantity under the OP replenishment system</p>
 <table>
 <thead>
@@ -711,15 +693,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_point_quantity_base">Order_Point_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -792,8 +770,6 @@
 </tbody>
 </table>
 <h3 id="planning_maximum_inventory_quantity_base">Planning_Maximum_Inventory_Quantity_Base</h3>
-<p>Planning_Maximum_Inventory_Quantity_Base</p>
-<p>Maximum inventory. NULL if N/A</p>
 <p>Maximum inventory. NULL if N/A</p>
 <table>
 <thead>
@@ -829,15 +805,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_maximum_inventory_quantity_base">Planning_Maximum_Inventory_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -910,8 +882,6 @@
 </tbody>
 </table>
 <h3 id="order_multiple">Order_Multiple</h3>
-<p>Order_Multiple</p>
-<p>1 if the order qty should be multiple of lot size when buying or making</p>
 <p>1 if the order qty should be multiple of lot size when buying or making</p>
 <table>
 <thead>
@@ -947,15 +917,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_multiple">Order_Multiple</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1028,8 +994,6 @@
 </tbody>
 </table>
 <h3 id="order_lot_size_quantity_base">Order_Lot_Size_Quantity_Base</h3>
-<p>Order_Lot_Size_Quantity_Base</p>
-<p>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit</p>
 <p>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit</p>
 <table>
 <thead>
@@ -1065,15 +1029,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_lot_size_quantity_base">Order_Lot_Size_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1146,8 +1106,6 @@
 </tbody>
 </table>
 <h3 id="order_period_start_date">Order_Period_Start_Date</h3>
-<p>Order_Period_Start_Date</p>
-<p>Start date of the first period under fixed period replenishment system. NULL - not yet specified</p>
 <p>Start date of the first period under fixed period replenishment system. NULL - not yet specified</p>
 <table>
 <thead>
@@ -1187,15 +1145,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_period_start_date">Order_Period_Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1268,8 +1222,6 @@
 </tbody>
 </table>
 <h3 id="order_period_planning_days">Order_Period_Planning_Days</h3>
-<p>Order_Period_Planning_Days</p>
-<p>For how many days in the future should be planned - for fixed period replenishment system. NULL - not yet specified</p>
 <p>For how many days in the future should be planned - for fixed period replenishment system. NULL - not yet specified</p>
 <table>
 <thead>
@@ -1305,15 +1257,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_period_planning_days">Order_Period_Planning_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1386,8 +1334,6 @@
 </tbody>
 </table>
 <h3 id="manufacturing_policy">Manufacturing_Policy</h3>
-<p>Manufacturing_Policy</p>
-<p>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order</p>
 <p>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order</p>
 <table>
 <thead>
@@ -1427,7 +1373,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1436,10 +1382,6 @@
 <tr>
 <td>Default Value</td>
 <td>MTS</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#manufacturing_policy">Manufacturing_Policy</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1512,7 +1454,6 @@
 </tbody>
 </table>
 <h3 id="product_supply_id">Product_Supply_Id</h3>
-<p>Product_Supply_Id</p>
 <table>
 <thead>
 <tr>
@@ -1551,15 +1492,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#product_supply_id">Product_Supply_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1644,15 +1581,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_store_bin_id">Default_Store_Bin_Id</h3>
-<p>Default_Store_Bin_Id</p>
-<p>Default store bin for new deliveries using this supply scheme</p>
 <p>Default store bin for new deliveries using this supply scheme</p>
 <table>
 <thead>
@@ -1692,15 +1627,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#default_store_bin_id">Default_Store_Bin_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1785,15 +1716,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_store_id">From_Store_Id</h3>
-<p>From_Store_Id</p>
-<p>Used when the Procurement_Type is Transfer</p>
 <p>Used when the Procurement_Type is Transfer</p>
 <table>
 <thead>
@@ -1833,15 +1762,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#from_store_id">From_Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1926,15 +1851,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_default">Is_Default</h3>
-<p>Is_Default</p>
-<p>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information.</p>
 <p>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information.</p>
 <table>
 <thead>
@@ -1970,15 +1893,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#is_default">Is_Default</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2063,15 +1982,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>1 if this product supply is active</p>
 <p>1 if this product supply is active</p>
 <table>
 <thead>
@@ -2107,15 +2024,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2200,14 +2113,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -2246,15 +2158,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2339,15 +2247,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_group_id">Product_Group_Id</h3>
-<p>Product_Group_Id</p>
-<p>Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings</p>
 <p>Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings</p>
 <table>
 <thead>
@@ -2387,15 +2293,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#product_group_id">Product_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2480,15 +2382,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="buyer_name">Buyer_Name</h3>
-<p>Buyer_Name</p>
-<p>The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy</p>
 <p>The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy</p>
 <table>
 <thead>
@@ -2528,15 +2428,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#buyer_name">Buyer_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2609,8 +2505,6 @@
 </tbody>
 </table>
 <h3 id="order_lot_sizing_method">Order_Lot_Sizing_Method</h3>
-<p>Order_Lot_Sizing_Method</p>
-<p>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;</p>
 <p>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;</p>
 <table>
 <thead>
@@ -2650,7 +2544,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2659,10 +2553,6 @@
 <tr>
 <td>Default Value</td>
 <td>ROP</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_lot_sizing_method">Order_Lot_Sizing_Method</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2735,8 +2625,6 @@
 </tbody>
 </table>
 <h3 id="order_minimum">Order_Minimum</h3>
-<p>Order_Minimum</p>
-<p>Minimum order quantity both for buying and making</p>
 <p>Minimum order quantity both for buying and making</p>
 <table>
 <thead>
@@ -2772,15 +2660,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_minimum">Order_Minimum</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2853,8 +2737,6 @@
 </tbody>
 </table>
 <h3 id="generate_document_type_id">Generate_Document_Type_Id</h3>
-<p>Generate_Document_Type_Id</p>
-<p>Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule.</p>
 <p>Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule.</p>
 <table>
 <thead>
@@ -2894,15 +2776,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#generate_document_type_id">Generate_Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2987,15 +2865,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="fixed_order_quantity_base">Fixed_Order_Quantity_Base</h3>
-<p>Fixed_Order_Quantity_Base</p>
-<p>Fixed order quantity under the FOQ &amp; EOQ replenishment system</p>
 <p>Fixed order quantity under the FOQ &amp; EOQ replenishment system</p>
 <table>
 <thead>
@@ -3031,15 +2907,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#fixed_order_quantity_base">Fixed_Order_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3112,8 +2984,6 @@
 </tbody>
 </table>
 <h3 id="order_policy">Order_Policy</h3>
-<p>Order_Policy</p>
-<p>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning</p>
 <p>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning</p>
 <table>
 <thead>
@@ -3153,7 +3023,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -3162,10 +3032,6 @@
 <tr>
 <td>Default Value</td>
 <td>OPS</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_policy">Order_Policy</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3238,8 +3104,6 @@
 </tbody>
 </table>
 <h3 id="planning_order_cost_base_currency">Planning_Order_Cost_Base_Currency</h3>
-<p>Planning_Order_Cost_Base_Currency</p>
-<p>Projected cost to place an order and set-up equipment</p>
 <p>Projected cost to place an order and set-up equipment</p>
 <table>
 <thead>
@@ -3275,15 +3139,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_order_cost_base_currency">Planning_Order_Cost_Base_Currency</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3356,8 +3216,6 @@
 </tbody>
 </table>
 <h3 id="planning_order_cycle_days">Planning_Order_Cycle_Days</h3>
-<p>Planning_Order_Cycle_Days</p>
-<p>Number of days in one period under fixed period replenishment system. NULL - not yet specified</p>
 <p>Number of days in one period under fixed period replenishment system. NULL - not yet specified</p>
 <table>
 <thead>
@@ -3393,15 +3251,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_order_cycle_days">Planning_Order_Cycle_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3474,8 +3328,6 @@
 </tbody>
 </table>
 <h3 id="planning_annual_carrying_cost_percent">Planning_Annual_Carrying_Cost_Percent</h3>
-<p>Planning_Annual_Carrying_Cost_Percent</p>
-<p>The expected carrying cost as percentage of inventory cost. NULL means unknown</p>
 <p>The expected carrying cost as percentage of inventory cost. NULL means unknown</p>
 <table>
 <thead>
@@ -3511,15 +3363,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_annual_carrying_cost_percent">Planning_Annual_Carrying_Cost_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3592,8 +3440,6 @@
 </tbody>
 </table>
 <h3 id="planning_annual_usage_quantity_base">Planning_Annual_Usage_Quantity_Base</h3>
-<p>Planning_Annual_Usage_Quantity_Base</p>
-<p>Average usage of the product for 1 year. NUL means unknown</p>
 <p>Average usage of the product for 1 year. NUL means unknown</p>
 <table>
 <thead>
@@ -3629,15 +3475,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_annual_usage_quantity_base">Planning_Annual_Usage_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3710,8 +3552,6 @@
 </tbody>
 </table>
 <h3 id="planning_horizon_days">Planning_Horizon_Days</h3>
-<p>Planning_Horizon_Days</p>
-<p>Number of days in the future for which to plan the demand and supply</p>
 <p>Number of days in the future for which to plan the demand and supply</p>
 <table>
 <thead>
@@ -3747,15 +3587,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_horizon_days">Planning_Horizon_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3828,8 +3664,6 @@
 </tbody>
 </table>
 <h3 id="planning_safety_stock_quantity_base">Planning_Safety_Stock_Quantity_Base</h3>
-<p>Planning_Safety_Stock_Quantity_Base</p>
-<p>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product</p>
 <p>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product</p>
 <table>
 <thead>
@@ -3865,15 +3699,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_safety_stock_quantity_base">Planning_Safety_Stock_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3946,8 +3776,6 @@
 </tbody>
 </table>
 <h3 id="planning_time_fence_days">Planning_Time_Fence_Days</h3>
-<p>Planning_Time_Fence_Days</p>
-<p>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF</p>
 <p>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF</p>
 <table>
 <thead>
@@ -3983,15 +3811,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#planning_time_fence_days">Planning_Time_Fence_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4064,8 +3888,6 @@
 </tbody>
 </table>
 <h3 id="standard_cost_per_lot">Standard_Cost_Per_Lot</h3>
-<p>Standard_Cost_Per_Lot</p>
-<p>Standard cost for one lot of the product</p>
 <p>Standard cost for one lot of the product</p>
 <table>
 <thead>
@@ -4101,15 +3923,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#standard_cost_per_lot">Standard_Cost_Per_Lot</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4182,8 +4000,6 @@
 </tbody>
 </table>
 <h3 id="procurement_type">Procurement_Type</h3>
-<p>Procurement_Type</p>
-<p>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought</p>
 <p>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought</p>
 <table>
 <thead>
@@ -4223,7 +4039,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -4232,10 +4048,6 @@
 <tr>
 <td>Default Value</td>
 <td>B</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#procurement_type">Procurement_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4308,8 +4120,6 @@
 </tbody>
 </table>
 <h3 id="supply_schema_id">Supply_Schema_Id</h3>
-<p>Supply_Schema_Id</p>
-<p>The supply schema to use for the distribution of the product among warehouses</p>
 <p>The supply schema to use for the distribution of the product among warehouses</p>
 <table>
 <thead>
@@ -4345,15 +4155,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#supply_schema_id">Supply_Schema_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4438,14 +4244,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
 <table>
 <thead>
 <tr>
@@ -4484,15 +4289,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4577,15 +4378,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="order_maximum">Order_Maximum</h3>
-<p>Order_Maximum</p>
-<p>Order maximum when buying or making. NULL means no maximum</p>
 <p>Order maximum when buying or making. NULL means no maximum</p>
 <table>
 <thead>
@@ -4621,15 +4420,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#order_maximum">Order_Maximum</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4702,7 +4497,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -4737,15 +4531,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Supply.html">Gen_Product_Supply</a>.<a href="Gen_Product_Supply.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

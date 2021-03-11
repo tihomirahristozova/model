@@ -1,5 +1,10 @@
 # Table Bpm_Process_Lanes
 
+
+## Entity
+
+Entity: [Systems.Bpm.ProcessLanes](~/entities/Systems.Bpm.ProcessLanes.md)
+
 The process lanes categorize elements in the process and contain logic for executor selection. Entity: Bpm_Process_Lanes
 
 ## Owner Tables Hierarchy
@@ -17,19 +22,16 @@ The process lanes categorize elements in the process and contain logic for execu
 |[Offer_To_Role_Id](#offer_to_role_id)|`uniqueidentifier` |When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance.|
 |[Assign_To_User_Id](#assign_to_user_id)|`uniqueidentifier` |When set, specifies that tasks from the lane are always assigned to specific user.|
 |[Assign_By_Instance_Property_Id](#assign_by_instance_property_id)|`uniqueidentifier` |When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User.|
-|[User_Condition_Filter_Xml](#user_condition_filter_xml)|`nvarchar(2147483647)` |User defined filter, used to select possible executors of tasks in the lane.|
+|[User_Condition_Filter_Xml](#user_condition_filter_xml)|`nvarchar(max)` |User defined filter, used to select possible executors of tasks in the lane.|
 |[Assign_By_User_Condition](#assign_by_user_condition)|`nvarchar(1)` Allowed: `N`, `R`, `L`|Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned.|
 |[Locality](#locality)|`nvarchar(1)` Allowed: `P`, `L`, `C`, `I`|Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.|
 |[Restrict_To_Single_User](#restrict_to_single_user)|`bit` |Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Process_Lane_Id
-
-
-Process_Lane_Id
 
 | Property | Value |
 | - | - |
@@ -40,9 +42,8 @@ Process_Lane_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Process_Lane_Id](Bpm_Process_Lanes.md#process_lane_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,15 +66,9 @@ Process_Lane_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Id
-
-
-Process_Id
-
-
-The process to which this lane belongs
 
 
 The process to which this lane belongs
@@ -87,9 +82,8 @@ The process to which this lane belongs
 |Referenced Table|[Bpm_Processes](Bpm_Processes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Process_Id](Bpm_Process_Lanes.md#process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,15 +106,9 @@ The process to which this lane belongs
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Lane_Name
-
-
-Process_Lane_Name
-
-
-Multilanguage lane name
 
 
 Multilanguage lane name
@@ -134,9 +122,8 @@ Multilanguage lane name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Process_Lane_Name](Bpm_Process_Lanes.md#process_lane_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,16 +146,10 @@ Multilanguage lane name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Is_System_Executed
-
-
-Is_System_Executed
-
-
-When set, specifies that the lane allows only system executed tasks and will never have human user as executor.
 
 
 When set, specifies that the lane allows only system executed tasks and will never have human user as executor.
@@ -181,9 +162,8 @@ When set, specifies that the lane allows only system executed tasks and will nev
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Is_System_Executed](Bpm_Process_Lanes.md#is_system_executed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -206,15 +186,9 @@ When set, specifies that the lane allows only system executed tasks and will nev
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Offer_To_Role_Id
-
-
-Offer_To_Role_Id
-
-
-When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance.
 
 
 When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance.
@@ -228,9 +202,8 @@ When set, the tasks from the lane are offered for assignment to the users with t
 |Referenced Table|[Wf_Roles](Wf_Roles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Offer_To_Role_Id](Bpm_Process_Lanes.md#offer_to_role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -253,15 +226,9 @@ When set, the tasks from the lane are offered for assignment to the users with t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Assign_To_User_Id
-
-
-Assign_To_User_Id
-
-
-When set, specifies that tasks from the lane are always assigned to specific user.
 
 
 When set, specifies that tasks from the lane are always assigned to specific user.
@@ -275,9 +242,8 @@ When set, specifies that tasks from the lane are always assigned to specific use
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Assign_To_User_Id](Bpm_Process_Lanes.md#assign_to_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -300,15 +266,9 @@ When set, specifies that tasks from the lane are always assigned to specific use
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Assign_By_Instance_Property_Id
-
-
-Assign_By_Instance_Property_Id
-
-
-When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User.
 
 
 When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User.
@@ -322,9 +282,8 @@ When set, the user, specified in the instance property will be assigned the task
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Assign_By_Instance_Property_Id](Bpm_Process_Lanes.md#assign_by_instance_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -347,31 +306,24 @@ When set, the user, specified in the instance property will be assigned the task
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### User_Condition_Filter_Xml
-
-
-User_Condition_Filter_Xml
-
-
-User defined filter, used to select possible executors of tasks in the lane.
 
 
 User defined filter, used to select possible executors of tasks in the lane.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[User_Condition_Filter_Xml](Bpm_Process_Lanes.md#user_condition_filter_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -394,18 +346,12 @@ User defined filter, used to select possible executors of tasks in the lane.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Assign_By_User_Condition
 
 
-Assign_By_User_Condition
-
-
-Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned.
-
-
 Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned.
 
 | Property | Value |
@@ -417,10 +363,9 @@ Specifies direct assign action, based on User Condition. N=No direct assignment,
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`N`, `R`, `L`|
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Assign_By_User_Condition](Bpm_Process_Lanes.md#assign_by_user_condition)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -443,18 +388,12 @@ Specifies direct assign action, based on User Condition. N=No direct assignment,
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Locality
 
 
-Locality
-
-
-Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.
-
-
 Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.
 
 | Property | Value |
@@ -466,10 +405,9 @@ Process execution locality. Represents where the execution takes place and influ
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`P`, `L`, `C`, `I`|
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Locality](Bpm_Process_Lanes.md#locality)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -492,16 +430,10 @@ Process execution locality. Represents where the execution takes place and influ
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Restrict_To_Single_User
-
-
-Restrict_To_Single_User
-
-
-Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user.
 
 
 Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user.
@@ -514,9 +446,8 @@ Specifies whether the lane would be restricted to the first user, who is assigne
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Restrict_To_Single_User](Bpm_Process_Lanes.md#restrict_to_single_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -539,25 +470,21 @@ Specifies whether the lane would be restricted to the first user, who is assigne
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Notes](Bpm_Process_Lanes.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -578,9 +505,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -589,9 +513,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Lanes](Bpm_Process_Lanes.md).[Row_Version](Bpm_Process_Lanes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

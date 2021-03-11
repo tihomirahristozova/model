@@ -1,5 +1,10 @@
 # Table Fleet_Crews
 
+
+## Entity
+
+Entity: [Applications.Fleet.Crews](~/entities/Applications.Fleet.Crews.md)
+
 Represents the crews, which can operate vehicles. Entity: Fleet_Crews
 
 ## Owner Tables Hierarchy
@@ -21,12 +26,6 @@ Represents the crews, which can operate vehicles. Entity: Fleet_Crews
 ### Crew_Id
 
 
-Crew_Id
-
-
-Id of the crew
-
-
 Id of the crew
 
 | Property | Value |
@@ -38,9 +37,8 @@ Id of the crew
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Crews](Fleet_Crews.md).[Crew_Id](Fleet_Crews.md#crew_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,15 +61,9 @@ Id of the crew
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Crew_Name
-
-
-Crew_Name
-
-
-The name of the crew (multilanguage)
 
 
 The name of the crew (multilanguage)
@@ -85,9 +77,8 @@ The name of the crew (multilanguage)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Crews](Fleet_Crews.md).[Crew_Name](Fleet_Crews.md#crew_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,16 +101,10 @@ The name of the crew (multilanguage)
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company operating the crew
 
 
 The enterprise company operating the crew
@@ -133,9 +118,8 @@ The enterprise company operating the crew
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Crews](Fleet_Crews.md).[Enterprise_Company_Id](Fleet_Crews.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,15 +142,9 @@ The enterprise company operating the crew
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Active
-
-
-Active
-
-
-Is the crew active? 1-active for choosing; 0-otherwise
 
 
 Is the crew active? 1-active for choosing; 0-otherwise
@@ -179,9 +157,8 @@ Is the crew active? 1-active for choosing; 0-otherwise
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Fleet_Crews](Fleet_Crews.md).[Active](Fleet_Crews.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -204,12 +181,9 @@ Is the crew active? 1-active for choosing; 0-otherwise
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -219,9 +193,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Crews](Fleet_Crews.md).[Row_Version](Fleet_Crews.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

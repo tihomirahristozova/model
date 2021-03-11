@@ -1,5 +1,10 @@
 # Table Cm_Contact_Mechanism_Purposes
 
+
+## Entity
+
+Entity: [General.Contacts.ContactMechanismPurposes](~/entities/General.Contacts.ContactMechanismPurposes.md)
+
 Contains user-defined purposes for processing contact mechanisms. Used for personal data management. Entity: Cm_Contact_Mechanism_Purposes (Introduced in version 18.2)
 
 ## Summary
@@ -9,16 +14,13 @@ Contains user-defined purposes for processing contact mechanisms. Used for perso
 |[Contact_Mechanism_Purpose_Id](#contact_mechanism_purpose_id)|`uniqueidentifier` `PK`||
 |[Code](#code)|`nvarchar(16)` ||
 |[Name](#name)|`nvarchar(254)` `ML`|Name of the contact mechanism purpose (Multilanguage).|
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Contact_Mechanism_Type](#contact_mechanism_type)|`nvarchar(1)` Allowed: `A`, `E`, `F`, `M`, `O`, `T`, `W`|When specified, allows the purpose to be specified only for contact mechanisms of the specified type.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Contact_Mechanism_Purpose_Id
-
-
-Contact_Mechanism_Purpose_Id
 
 | Property | Value |
 | - | - |
@@ -29,9 +31,8 @@ Contact_Mechanism_Purpose_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Contact_Mechanism_Purposes](Cm_Contact_Mechanism_Purposes.md).[Contact_Mechanism_Purpose_Id](Cm_Contact_Mechanism_Purposes.md#contact_mechanism_purpose_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,12 +55,9 @@ Contact_Mechanism_Purpose_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Code
-
-
-Code
 
 | Property | Value |
 | - | - |
@@ -70,9 +68,8 @@ Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanism_Purposes](Cm_Contact_Mechanism_Purposes.md).[Code](Cm_Contact_Mechanism_Purposes.md#code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -95,16 +92,10 @@ Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Name
-
-
-Name
-
-
-Name of the contact mechanism purpose (Multilanguage).
 
 
 Name of the contact mechanism purpose (Multilanguage).
@@ -118,9 +109,8 @@ Name of the contact mechanism purpose (Multilanguage).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanism_Purposes](Cm_Contact_Mechanism_Purposes.md).[Name](Cm_Contact_Mechanism_Purposes.md#name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,21 +137,17 @@ Name of the contact mechanism purpose (Multilanguage).
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanism_Purposes](Cm_Contact_Mechanism_Purposes.md).[Description](Cm_Contact_Mechanism_Purposes.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -189,12 +175,6 @@ Description
 ### Contact_Mechanism_Type
 
 
-Contact_Mechanism_Type
-
-
-When specified, allows the purpose to be specified only for contact mechanisms of the specified type.
-
-
 When specified, allows the purpose to be specified only for contact mechanisms of the specified type.
 
 | Property | Value |
@@ -206,10 +186,9 @@ When specified, allows the purpose to be specified only for contact mechanisms o
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `E`, `F`, `M`, `O`, `T`, `W`|
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanism_Purposes](Cm_Contact_Mechanism_Purposes.md).[Contact_Mechanism_Type](Cm_Contact_Mechanism_Purposes.md#contact_mechanism_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,12 +211,9 @@ When specified, allows the purpose to be specified only for contact mechanisms o
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -247,9 +223,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Contact_Mechanism_Purposes](Cm_Contact_Mechanism_Purposes.md).[Row_Version](Cm_Contact_Mechanism_Purposes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

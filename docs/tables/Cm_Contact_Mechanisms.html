@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cm_contact_mechanisms">Table Cm_Contact_Mechanisms</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Contacts.ContactMechanisms.html">General.Contacts.ContactMechanisms</a></p>
 <p>Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. Contact mechanisms can be attached to parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Contact_Mechanisms</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -124,8 +126,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
-<p>Unique contact mechanism Id</p>
 <p>Unique contact mechanism Id</p>
 <table>
 <thead>
@@ -165,15 +165,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Contact_Mechanisms.html">Cm_Contact_Mechanisms</a>.<a href="Cm_Contact_Mechanisms.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -258,15 +254,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="contact_mechanism_name">Contact_Mechanism_Name</h3>
-<p>Contact_Mechanism_Name</p>
-<p>Contact mechanism description</p>
 <p>Contact mechanism description</p>
 <table>
 <thead>
@@ -306,15 +300,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Contact_Mechanisms.html">Cm_Contact_Mechanisms</a>.<a href="Cm_Contact_Mechanisms.html#contact_mechanism_name">Contact_Mechanism_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -399,7 +389,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -412,8 +402,6 @@
 </tbody>
 </table>
 <h3 id="contact_mechanism_type">Contact_Mechanism_Type</h3>
-<p>Contact_Mechanism_Type</p>
-<p>A=Address; E=e-mail; T=Telephone</p>
 <p>A=Address; E=e-mail; T=Telephone</p>
 <table>
 <thead>
@@ -453,7 +441,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -462,10 +450,6 @@
 <tr>
 <td>Default Value</td>
 <td>A</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Contact_Mechanisms.html">Cm_Contact_Mechanisms</a>.<a href="Cm_Contact_Mechanisms.html#contact_mechanism_type">Contact_Mechanism_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -550,14 +534,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -592,15 +575,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Contact_Mechanisms.html">Cm_Contact_Mechanisms</a>.<a href="Cm_Contact_Mechanisms.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -673,8 +652,6 @@
 </tbody>
 </table>
 <h3 id="geo_point_id">Geo_Point_Id</h3>
-<p>Geo_Point_Id</p>
-<p>The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A.</p>
 <p>The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A.</p>
 <table>
 <thead>
@@ -714,15 +691,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Contact_Mechanisms.html">Cm_Contact_Mechanisms</a>.<a href="Cm_Contact_Mechanisms.html#geo_point_id">Geo_Point_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -807,15 +780,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="administrative_region_id">Administrative_Region_Id</h3>
-<p>Administrative_Region_Id</p>
-<p>The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A.</p>
 <p>The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A.</p>
 <table>
 <thead>
@@ -855,15 +826,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Contact_Mechanisms.html">Cm_Contact_Mechanisms</a>.<a href="Cm_Contact_Mechanisms.html#administrative_region_id">Administrative_Region_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -948,7 +915,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

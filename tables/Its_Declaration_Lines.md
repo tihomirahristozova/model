@@ -1,5 +1,10 @@
 # Table Its_Declaration_Lines
 
+
+## Entity
+
+Entity: [Finance.Intrastat.DeclarationLines](~/entities/Finance.Intrastat.DeclarationLines.md)
+
 Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines
 
 ## Owner Tables Hierarchy
@@ -34,12 +39,6 @@ Contains the details of the Intrastat declarations, issued by the enterprise com
 ### Intrastat_Commodity_Code_Id
 
 
-Intrastat_Commodity_Code_Id
-
-
-The commodity code of the goods, according to the Intrastat commodity classification
-
-
 The commodity code of the goods, according to the Intrastat commodity classification
 
 | Property | Value |
@@ -51,9 +50,8 @@ The commodity code of the goods, according to the Intrastat commodity classifica
 |Referenced Table|[Its_Commodity_Codes](Its_Commodity_Codes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Intrastat_Commodity_Code_Id](Its_Declaration_Lines.md#intrastat_commodity_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -76,15 +74,9 @@ The commodity code of the goods, according to the Intrastat commodity classifica
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Administrative_Region_Id
-
-
-Administrative_Region_Id
-
-
-Administrative region of the enterprise company at the time of the declaration
 
 
 Administrative region of the enterprise company at the time of the declaration
@@ -98,9 +90,8 @@ Administrative region of the enterprise company at the time of the declaration
 |Referenced Table|[Gen_Administrative_Regions](Gen_Administrative_Regions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Administrative_Region_Id](Its_Declaration_Lines.md#administrative_region_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -123,15 +114,9 @@ Administrative region of the enterprise company at the time of the declaration
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Intrastat_Declaration_Line_Id
-
-
-Intrastat_Declaration_Line_Id
-
-
-The unique id of the line
 
 
 The unique id of the line
@@ -145,9 +130,8 @@ The unique id of the line
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Intrastat_Declaration_Line_Id](Its_Declaration_Lines.md#intrastat_declaration_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -170,15 +154,9 @@ The unique id of the line
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity_Supplementary_Unit
-
-
-Quantity_Supplementary_Unit
-
-
-Quantity of the goods in the supplementary unit. NULL when no supplementary unit is specified
 
 
 Quantity of the goods in the supplementary unit. NULL when no supplementary unit is specified
@@ -191,9 +169,8 @@ Quantity of the goods in the supplementary unit. NULL when no supplementary unit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Quantity_Supplementary_Unit](Its_Declaration_Lines.md#quantity_supplementary_unit)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -215,12 +192,6 @@ Quantity of the goods in the supplementary unit. NULL when no supplementary unit
 ### Statistical_Value_Amount_Base
 
 
-Statistical_Value_Amount_Base
-
-
-Statistical value of the goods in the base currency
-
-
 Statistical value of the goods in the base currency
 
 | Property | Value |
@@ -231,9 +202,8 @@ Statistical value of the goods in the base currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Statistical_Value_Amount_Base](Its_Declaration_Lines.md#statistical_value_amount_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -255,12 +225,6 @@ Statistical value of the goods in the base currency
 ### Invoiced_Value_Amount_Base
 
 
-Invoiced_Value_Amount_Base
-
-
-Invoiced value of the goods in the base currency
-
-
 Invoiced value of the goods in the base currency
 
 | Property | Value |
@@ -271,9 +235,8 @@ Invoiced value of the goods in the base currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Invoiced_Value_Amount_Base](Its_Declaration_Lines.md#invoiced_value_amount_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,12 +258,6 @@ Invoiced value of the goods in the base currency
 ### Net_Mass_Kg
 
 
-Net_Mass_Kg
-
-
-Net mass of the goods in kg
-
-
 Net mass of the goods in kg
 
 | Property | Value |
@@ -311,9 +268,8 @@ Net mass of the goods in kg
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Net_Mass_Kg](Its_Declaration_Lines.md#net_mass_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -336,15 +292,9 @@ Net mass of the goods in kg
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Delivery_Terms
-
-
-Delivery_Terms
-
-
-Delivery terms - classification according to Intrastat (which uses the common abbreviations)
 
 
 Delivery terms - classification according to Intrastat (which uses the common abbreviations)
@@ -358,10 +308,9 @@ Delivery terms - classification according to Intrastat (which uses the common ab
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Delivery_Terms](Its_Declaration_Lines.md#delivery_terms)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -383,12 +332,6 @@ Delivery terms - classification according to Intrastat (which uses the common ab
 ### Transport_Mode
 
 
-Transport_Mode
-
-
-Transportation mode - type of transportation used
-
-
 Transportation mode - type of transportation used
 
 | Property | Value |
@@ -400,10 +343,9 @@ Transportation mode - type of transportation used
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`, `7`, `8`, `9`|
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Transport_Mode](Its_Declaration_Lines.md#transport_mode)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -425,12 +367,6 @@ Transportation mode - type of transportation used
 ### Transaction_Nature
 
 
-Transaction_Nature
-
-
-Transaction nature, according to the Intrastat classification
-
-
 Transaction nature, according to the Intrastat classification
 
 | Property | Value |
@@ -442,10 +378,9 @@ Transaction nature, according to the Intrastat classification
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Transaction_Nature](Its_Declaration_Lines.md#transaction_nature)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -467,12 +402,6 @@ Transaction nature, according to the Intrastat classification
 ### Transport_Country_Id
 
 
-Transport_Country_Id
-
-
-The country of the transportation company
-
-
 The country of the transportation company
 
 | Property | Value |
@@ -484,9 +413,8 @@ The country of the transportation company
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Transport_Country_Id](Its_Declaration_Lines.md#transport_country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -509,17 +437,11 @@ The country of the transportation company
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Country_Id
 
 
-Party_Country_Id
-
-
-The country of the partner
-
-
 The country of the partner
 
 | Property | Value |
@@ -531,9 +453,8 @@ The country of the partner
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Party_Country_Id](Its_Declaration_Lines.md#party_country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -556,15 +477,9 @@ The country of the partner
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Origin_Country_Id
-
-
-Origin_Country_Id
-
-
-The country of origin of the goods. NULL for outbound declarations
 
 
 The country of origin of the goods. NULL for outbound declarations
@@ -578,9 +493,8 @@ The country of origin of the goods. NULL for outbound declarations
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Origin_Country_Id](Its_Declaration_Lines.md#origin_country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -603,15 +517,9 @@ The country of origin of the goods. NULL for outbound declarations
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Line_No
-
-
-Line_No
-
-
-Consequtive line number within the intrastat declaration
 
 
 Consequtive line number within the intrastat declaration
@@ -624,10 +532,9 @@ Consequtive line number within the intrastat declaration
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Line_No](Its_Declaration_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -650,15 +557,9 @@ Consequtive line number within the intrastat declaration
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Intrastat_Declaration_Id
-
-
-Intrastat_Declaration_Id
-
-
-The intrastat declaration, to which this line belongs
 
 
 The intrastat declaration, to which this line belongs
@@ -672,9 +573,8 @@ The intrastat declaration, to which this line belongs
 |Referenced Table|[Its_Declarations](Its_Declarations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Intrastat_Declaration_Id](Its_Declaration_Lines.md#intrastat_declaration_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -697,15 +597,9 @@ The intrastat declaration, to which this line belongs
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Line_Action
-
-
-Line_Action
-
-
-Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted
 
 
 Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted
@@ -719,10 +613,9 @@ Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Delet
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`NEW`, `EDN`, `EDO`, `DEL`|
 |Default Value|NEW|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Line_Action](Its_Declaration_Lines.md#line_action)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -743,9 +636,6 @@ Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Delet
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -754,9 +644,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declaration_Lines](Its_Declaration_Lines.md).[Row_Version](Its_Declaration_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

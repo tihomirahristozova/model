@@ -1,5 +1,10 @@
 # Table Crm_Sales_Order_Payment_Plans
 
+
+## Entity
+
+Entity: [Crm.Sales.SalesOrderPaymentPlans](~/entities/Crm.Sales.SalesOrderPaymentPlans.md)
+
 Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 
 ## Owner Tables Hierarchy
@@ -32,12 +37,6 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 ### Sales_Order_Payment_Plan_Id
 
 
-Sales_Order_Payment_Plan_Id
-
-
-Unique identification of the payment plan
-
-
 Unique identification of the payment plan
 
 | Property | Value |
@@ -49,9 +48,8 @@ Unique identification of the payment plan
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Sales_Order_Payment_Plan_Id](Crm_Sales_Order_Payment_Plans.md#sales_order_payment_plan_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -74,12 +72,9 @@ Unique identification of the payment plan
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Sales_Order_Id
-
-
-Sales_Order_Id
 
 | Property | Value |
 | - | - |
@@ -90,9 +85,8 @@ Sales_Order_Id
 |Referenced Table|[Crm_Sales_Orders](Crm_Sales_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Sales_Order_Id](Crm_Sales_Order_Payment_Plans.md#sales_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -115,15 +109,9 @@ Sales_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Installment_Number
-
-
-Installment_Number
-
-
-Consequtive installment number. Used for identifying different payments generated according this payment plan.
 
 
 Consequtive installment number. Used for identifying different payments generated according this payment plan.
@@ -136,10 +124,9 @@ Consequtive installment number. Used for identifying different payments generate
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Installment_Number](Crm_Sales_Order_Payment_Plans.md#installment_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -161,12 +148,6 @@ Consequtive installment number. Used for identifying different payments generate
 ### Due_Date_Form_Method
 
 
-Due_Date_Form_Method
-
-
-Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date
-
-
 Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date
 
 | Property | Value |
@@ -178,10 +159,9 @@ Method to determine the payment due date. SLS = Use sales order date, INV = Use 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EXP`, `INV`, `SLS`, `SDD`, `IDD`|
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Due_Date_Form_Method](Crm_Sales_Order_Payment_Plans.md#due_date_form_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,12 +183,6 @@ Method to determine the payment due date. SLS = Use sales order date, INV = Use 
 ### Explicit_Payment_Due_Date
 
 
-Explicit_Payment_Due_Date
-
-
-Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'
-
-
 Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'
 
 | Property | Value |
@@ -220,9 +194,8 @@ Explicitly specified payment due date. Must be filled if and only if Due_Date_Fo
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Explicit_Payment_Due_Date](Crm_Sales_Order_Payment_Plans.md#explicit_payment_due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,12 +217,6 @@ Explicitly specified payment due date. Must be filled if and only if Due_Date_Fo
 ### Payment_Term_Days
 
 
-Payment_Term_Days
-
-
-Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.
-
-
 Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.
 
 | Property | Value |
@@ -260,9 +227,8 @@ Payment term in days, which are to be added to form the payment due date. 0 mean
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Payment_Term_Days](Crm_Sales_Order_Payment_Plans.md#payment_term_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,12 +250,6 @@ Payment term in days, which are to be added to form the payment due date. 0 mean
 ### Amount_Percent
 
 
-Amount_Percent
-
-
-Percent of the sales order amount to be payed.
-
-
 Percent of the sales order amount to be payed.
 
 | Property | Value |
@@ -300,9 +260,8 @@ Percent of the sales order amount to be payed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Amount_Percent](Crm_Sales_Order_Payment_Plans.md#amount_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -324,12 +283,6 @@ Percent of the sales order amount to be payed.
 ### Remainder
 
 
-Remainder
-
-
-Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount).
-
-
 Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount).
 
 | Property | Value |
@@ -340,9 +293,8 @@ Indicates wheather this amount is the remainder of the document. Amount = Total 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Remainder](Crm_Sales_Order_Payment_Plans.md#remainder)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -364,12 +316,6 @@ Indicates wheather this amount is the remainder of the document. Amount = Total 
 ### Amount
 
 
-Amount
-
-
-Amount to be payed.
-
-
 Amount to be payed.
 
 | Property | Value |
@@ -380,9 +326,8 @@ Amount to be payed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Amount](Crm_Sales_Order_Payment_Plans.md#amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -403,9 +348,6 @@ Amount to be payed.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -415,9 +357,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Notes](Crm_Sales_Order_Payment_Plans.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -439,12 +380,6 @@ Notes
 ### Explicit_Payment_Due_Start_Date
 
 
-Explicit_Payment_Due_Start_Date
-
-
-Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.
-
-
 Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.
 
 | Property | Value |
@@ -456,9 +391,8 @@ Explicitly specified date on which the payment becomes executable. Can be specif
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Explicit_Payment_Due_Start_Date](Crm_Sales_Order_Payment_Plans.md#explicit_payment_due_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -480,12 +414,6 @@ Explicitly specified date on which the payment becomes executable. Can be specif
 ### Payment_Start_Days
 
 
-Payment_Start_Days
-
-
-Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.
-
-
 Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.
 
 | Property | Value |
@@ -496,9 +424,8 @@ Number of days until the payment becomes executable. The days are counted, start
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Payment_Start_Days](Crm_Sales_Order_Payment_Plans.md#payment_start_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -520,12 +447,6 @@ Number of days until the payment becomes executable. The days are counted, start
 ### Payment_Type_Id
 
 
-Payment_Type_Id
-
-
-Specifies the expected payment type. NULL means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred.
-
-
 Specifies the expected payment type. NULL means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred.
 
 | Property | Value |
@@ -537,9 +458,8 @@ Specifies the expected payment type. NULL means that there is no expected paymen
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Payment_Type_Id](Crm_Sales_Order_Payment_Plans.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -562,15 +482,9 @@ Specifies the expected payment type. NULL means that there is no expected paymen
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Account_Id
-
-
-Payment_Account_Id
-
-
-Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred.
 
 
 Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred.
@@ -584,9 +498,8 @@ Specifies the payment account towards which the payment is expected. NULL means 
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Payment_Account_Id](Crm_Sales_Order_Payment_Plans.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -609,12 +522,9 @@ Specifies the payment account towards which the payment is expected. NULL means 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -624,9 +534,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md).[Row_Version](Crm_Sales_Order_Payment_Plans.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

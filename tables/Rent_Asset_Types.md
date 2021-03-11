@@ -1,5 +1,10 @@
 # Table Rent_Asset_Types
 
+
+## Entity
+
+Entity: [Applications.Rental.AssetTypes](~/entities/Applications.Rental.AssetTypes.md)
+
 Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Types
 
 ## Summary
@@ -8,15 +13,12 @@ Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Ty
 | - | - | --- |
 |[Rental_Asset_Type_Id](#rental_asset_type_id)|`uniqueidentifier` `PK`||
 |[Rental_Asset_Type_Name](#rental_asset_type_name)|`nvarchar(254)` |The name of the rental asset type.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Rental_Asset_Type_Id
-
-
-Rental_Asset_Type_Id
 
 | Property | Value |
 | - | - |
@@ -27,9 +29,8 @@ Rental_Asset_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Asset_Types](Rent_Asset_Types.md).[Rental_Asset_Type_Id](Rent_Asset_Types.md#rental_asset_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Rental_Asset_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Rental_Asset_Type_Name
-
-
-Rental_Asset_Type_Name
-
-
-The name of the rental asset type.
 
 
 The name of the rental asset type.
@@ -74,9 +69,8 @@ The name of the rental asset type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Types](Rent_Asset_Types.md).[Rental_Asset_Type_Name](Rent_Asset_Types.md#rental_asset_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,21 +97,17 @@ The name of the rental asset type.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Rent_Asset_Types](Rent_Asset_Types.md).[Notes](Rent_Asset_Types.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,9 +134,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -155,9 +142,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Types](Rent_Asset_Types.md).[Row_Version](Rent_Asset_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

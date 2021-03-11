@@ -1,5 +1,10 @@
 # Table Crm_Sales_Persons
 
+
+## Entity
+
+Entity: [Crm.SalesPersons](~/entities/Crm.SalesPersons.md)
+
 Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons
 
 ## Owner Tables Hierarchy
@@ -28,12 +33,6 @@ Sales persons (or representatives) are sellers inside the enterprise company who
 ### Sales_Person_Id
 
 
-Sales_Person_Id
-
-
-Unique sales person Id
-
-
 Unique sales person Id
 
 | Property | Value |
@@ -45,9 +44,8 @@ Unique sales person Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Sales_Person_Id](Crm_Sales_Persons.md#sales_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -70,15 +68,9 @@ Unique sales person Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Person_Id
-
-
-Person_Id
-
-
-Base personal record
 
 
 Base personal record
@@ -92,9 +84,8 @@ Base personal record
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Person_Id](Crm_Sales_Persons.md#person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -117,12 +108,9 @@ Base personal record
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -133,9 +121,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Enterprise_Company_Id](Crm_Sales_Persons.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,15 +145,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Commission_Policy_Id
-
-
-Commission_Policy_Id
-
-
-Current commission policy for the sales person. NULL means there is no commission policy
 
 
 Current commission policy for the sales person. NULL means there is no commission policy
@@ -179,9 +160,8 @@ Current commission policy for the sales person. NULL means there is no commissio
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Commission_Policy_Id](Crm_Sales_Persons.md#commission_policy_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -204,15 +184,9 @@ Current commission policy for the sales person. NULL means there is no commissio
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Commission_Percent
-
-
-Commission_Percent
-
-
-The percentage (0..1) of commission percent. NULL means that there is no commission percent.
 
 
 The percentage (0..1) of commission percent. NULL means that there is no commission percent.
@@ -225,9 +199,8 @@ The percentage (0..1) of commission percent. NULL means that there is no commiss
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Commission_Percent](Crm_Sales_Persons.md#commission_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,12 +222,6 @@ The percentage (0..1) of commission percent. NULL means that there is no commiss
 ### Sales_Person_Group_Id
 
 
-Sales_Person_Group_Id
-
-
-The sales person group to which this sales person is assigned.
-
-
 The sales person group to which this sales person is assigned.
 
 | Property | Value |
@@ -266,9 +233,8 @@ The sales person group to which this sales person is assigned.
 |Referenced Table|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Sales_Person_Group_Id](Crm_Sales_Persons.md#sales_person_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,15 +257,9 @@ The sales person group to which this sales person is assigned.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Contract_Start_Date
-
-
-Contract_Start_Date
-
-
-The starting date of the contract with the sales person. NULL when it is unknown.
 
 
 The starting date of the contract with the sales person. NULL when it is unknown.
@@ -313,9 +273,8 @@ The starting date of the contract with the sales person. NULL when it is unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Contract_Start_Date](Crm_Sales_Persons.md#contract_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -343,12 +302,6 @@ The starting date of the contract with the sales person. NULL when it is unknown
 ### Contract_End_Date
 
 
-Contract_End_Date
-
-
-The ending date of the contract with the sales person. NULL when the sales person is still active.
-
-
 The ending date of the contract with the sales person. NULL when the sales person is still active.
 
 | Property | Value |
@@ -360,9 +313,8 @@ The ending date of the contract with the sales person. NULL when the sales perso
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Contract_End_Date](Crm_Sales_Persons.md#contract_end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -390,12 +342,6 @@ The ending date of the contract with the sales person. NULL when the sales perso
 ### Enterprise_Company_Location_Id
 
 
-Enterprise_Company_Location_Id
-
-
-The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location.
-
-
 The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location.
 
 | Property | Value |
@@ -407,9 +353,8 @@ The enterprise company location, to which the sales person is assigned. The sale
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Enterprise_Company_Location_Id](Crm_Sales_Persons.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -432,15 +377,9 @@ The enterprise company location, to which the sales person is assigned. The sale
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.
 
 
 Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.
@@ -453,9 +392,8 @@ Specifies whether the sales person is active and should be included in the list 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Is_Active](Crm_Sales_Persons.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -478,12 +416,9 @@ Specifies whether the sales person is active and should be included in the list 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -493,9 +428,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Persons](Crm_Sales_Persons.md).[Row_Version](Crm_Sales_Persons.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

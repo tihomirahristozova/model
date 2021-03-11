@@ -1,5 +1,10 @@
 # Table Scm_Purchase_Control_Documents
 
+
+## Entity
+
+Entity: [Logistics.Procurement.PurchaseControlDocuments](~/entities/Logistics.Procurement.PurchaseControlDocuments.md)
+
 The main document for purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Documents (Introduced in version 18.2)
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ The main document for purchase control data. The purchase control is used to tal
 
 ### Purchase_Control_Document_Id
 
-
-Purchase_Control_Document_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Purchase_Control_Document_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Purchase_Control_Documents](Scm_Purchase_Control_Documents.md).[Purchase_Control_Document_Id](Scm_Purchase_Control_Documents.md#purchase_control_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Purchase_Control_Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Control_Documents](Scm_Purchase_Control_Documents.md).[Document_Id](Scm_Purchase_Control_Documents.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +96,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Purchase_Requisition_Id
-
-
-Purchase_Requisition_Id
-
-
-The purchase requisition, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.
 
 
 The purchase requisition, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.
@@ -121,9 +112,8 @@ The purchase requisition, when it is the same for all lines. NULL when it is nul
 |Referenced Table|[Scm_Requisitions](Scm_Requisitions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Control_Documents](Scm_Purchase_Control_Documents.md).[Purchase_Requisition_Id](Scm_Purchase_Control_Documents.md#purchase_requisition_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,15 +136,9 @@ The purchase requisition, when it is the same for all lines. NULL when it is nul
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Purchase_Order_Id
-
-
-Purchase_Order_Id
-
-
-The purchase order, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.
 
 
 The purchase order, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.
@@ -168,9 +152,8 @@ The purchase order, when it is the same for all lines. NULL when it is null for 
 |Referenced Table|[Scm_Purchase_Orders](Scm_Purchase_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Control_Documents](Scm_Purchase_Control_Documents.md).[Purchase_Order_Id](Scm_Purchase_Control_Documents.md#purchase_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,15 +176,9 @@ The purchase order, when it is the same for all lines. NULL when it is null for 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Receiving_Order_Id
-
-
-Receiving_Order_Id
-
-
-The receiving order, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.
 
 
 The receiving order, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.
@@ -215,9 +192,8 @@ The receiving order, when it is the same for all lines. NULL when it is null for
 |Referenced Table|[Scm_Receiving_Orders](Scm_Receiving_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Control_Documents](Scm_Purchase_Control_Documents.md).[Receiving_Order_Id](Scm_Purchase_Control_Documents.md#receiving_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -240,15 +216,9 @@ The receiving order, when it is the same for all lines. NULL when it is null for
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Purchase_Invoice_Id
-
-
-Purchase_Invoice_Id
-
-
-The purchase invoice, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.
 
 
 The purchase invoice, when it is the same for all lines. NULL when it is null for the lines or the lines have different values.
@@ -262,9 +232,8 @@ The purchase invoice, when it is the same for all lines. NULL when it is null fo
 |Referenced Table|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Control_Documents](Scm_Purchase_Control_Documents.md).[Purchase_Invoice_Id](Scm_Purchase_Control_Documents.md#purchase_invoice_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -287,6 +256,6 @@ The purchase invoice, when it is the same for all lines. NULL when it is null fo
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

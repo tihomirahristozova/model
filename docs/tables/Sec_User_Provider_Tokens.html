@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sec_user_provider_tokens">Table Sec_User_Provider_Tokens</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Security.UserProviderTokens.html">Systems.Security.UserProviderTokens</a></p>
 <p>Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication. Entity: Sec_User_Provider_Tokens (Introduced in version 18.2)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -116,15 +118,13 @@
 </tr>
 <tr>
 <td><a href="#token_value">Token_Value</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="user_provider_token_id">User_Provider_Token_Id</h3>
-<p>User_Provider_Token_Id</p>
-<p>Primary key - not used</p>
 <p>Primary key - not used</p>
 <table>
 <thead>
@@ -164,15 +164,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_User_Provider_Tokens.html">Sec_User_Provider_Tokens</a>.<a href="Sec_User_Provider_Tokens.html#user_provider_token_id">User_Provider_Token_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -257,15 +253,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="user_id">User_Id</h3>
-<p>User_Id</p>
-<p>User for which we store tokens</p>
 <p>User for which we store tokens</p>
 <table>
 <thead>
@@ -305,15 +299,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_User_Provider_Tokens.html">Sec_User_Provider_Tokens</a>.<a href="Sec_User_Provider_Tokens.html#user_id">User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -398,15 +388,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="login_provider_name">Login_Provider_Name</h3>
-<p>Login_Provider_Name</p>
-<p>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc</p>
 <p>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc</p>
 <table>
 <thead>
@@ -446,15 +434,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_User_Provider_Tokens.html">Sec_User_Provider_Tokens</a>.<a href="Sec_User_Provider_Tokens.html#login_provider_name">Login_Provider_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -539,15 +523,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="token_name">Token_Name</h3>
-<p>Token_Name</p>
-<p>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery)</p>
 <p>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery)</p>
 <table>
 <thead>
@@ -587,15 +569,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_User_Provider_Tokens.html">Sec_User_Provider_Tokens</a>.<a href="Sec_User_Provider_Tokens.html#token_name">Token_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -680,15 +658,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="token_value">Token_Value</h3>
-<p>Token_Value</p>
-<p>Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.</p>
 <p>Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.</p>
 <table>
 <thead>
@@ -700,7 +676,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -728,15 +704,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_User_Provider_Tokens.html">Sec_User_Provider_Tokens</a>.<a href="Sec_User_Provider_Tokens.html#token_value">Token_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>

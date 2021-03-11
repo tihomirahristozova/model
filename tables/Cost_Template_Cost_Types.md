@@ -1,5 +1,10 @@
 # Table Cost_Template_Cost_Types
 
+
+## Entity
+
+Entity: [Finance.Cost.TemplateCostTypes](~/entities/Finance.Cost.TemplateCostTypes.md)
+
 Contains the cost types and their hierachy positions within a cost calculation. Entity: Cost_Template_Cost_Types
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Contains the cost types and their hierachy positions within a cost calculation. 
 
 ### Cost_Template_Cost_Type_Id
 
-
-Cost_Template_Cost_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Cost_Template_Cost_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Template_Cost_Types](Cost_Template_Cost_Types.md).[Cost_Template_Cost_Type_Id](Cost_Template_Cost_Types.md#cost_template_cost_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Cost_Template_Cost_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Template_Id
-
-
-Cost_Template_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Cost_Template_Id
 |Referenced Table|[Cost_Templates](Cost_Templates.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Template_Cost_Types](Cost_Template_Cost_Types.md).[Cost_Template_Id](Cost_Template_Cost_Types.md#cost_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Cost_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Type_Id
-
-
-Cost_Type_Id
-
-
-The Cost Type for which the hierarchy is specified.
 
 
 The Cost Type for which the hierarchy is specified.
@@ -120,9 +111,8 @@ The Cost Type for which the hierarchy is specified.
 |Referenced Table|[Cost_Types](Cost_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Template_Cost_Types](Cost_Template_Cost_Types.md).[Cost_Type_Id](Cost_Template_Cost_Types.md#cost_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,15 +135,9 @@ The Cost Type for which the hierarchy is specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Hierarchy_Level
-
-
-Hierarchy_Level
-
-
-The level in the hierarchy on which this cost is incurred (0..9)
 
 
 The level in the hierarchy on which this cost is incurred (0..9)
@@ -166,9 +150,8 @@ The level in the hierarchy on which this cost is incurred (0..9)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Template_Cost_Types](Cost_Template_Cost_Types.md).[Hierarchy_Level](Cost_Template_Cost_Types.md#hierarchy_level)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,9 +178,6 @@ The level in the hierarchy on which this cost is incurred (0..9)
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -206,9 +186,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Template_Cost_Types](Cost_Template_Cost_Types.md).[Row_Version](Cost_Template_Cost_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

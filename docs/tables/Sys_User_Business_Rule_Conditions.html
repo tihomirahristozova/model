@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_user_business_rule_conditions">Table Sys_User_Business_Rule_Conditions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Bpm.UserBusinessRuleConditions.html">Systems.Bpm.UserBusinessRuleConditions</a></p>
 <p>Represents one condition for the execution of a business rule. Entity: Sys_User_Business_Rule_Conditions</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -131,15 +133,13 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="user_business_rule_id">User_Business_Rule_Id</h3>
-<p>User_Business_Rule_Id</p>
-<p>The business rule, for which the condition is defined.</p>
 <p>The business rule, for which the condition is defined.</p>
 <table>
 <thead>
@@ -179,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Conditions.html">Sys_User_Business_Rule_Conditions</a>.<a href="Sys_User_Business_Rule_Conditions.html#user_business_rule_id">User_Business_Rule_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -272,15 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_no">Condition_No</h3>
-<p>Condition_No</p>
-<p>Unique consecutive number of the condition within the business rule.</p>
 <p>Unique consecutive number of the condition within the business rule.</p>
 <table>
 <thead>
@@ -316,7 +310,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -325,10 +319,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Conditions.html">Sys_User_Business_Rule_Conditions</a>.<a href="Sys_User_Business_Rule_Conditions.html#condition_no">Condition_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -401,8 +391,6 @@
 </tbody>
 </table>
 <h3 id="attribute_name">Attribute_Name</h3>
-<p>Attribute_Name</p>
-<p>The attribute, which will be tested.</p>
 <p>The attribute, which will be tested.</p>
 <table>
 <thead>
@@ -442,15 +430,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Conditions.html">Sys_User_Business_Rule_Conditions</a>.<a href="Sys_User_Business_Rule_Conditions.html#attribute_name">Attribute_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -523,8 +507,6 @@
 </tbody>
 </table>
 <h3 id="comparison_type">Comparison_Type</h3>
-<p>Comparison_Type</p>
-<p>How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value.</p>
 <p>How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value.</p>
 <table>
 <thead>
@@ -564,7 +546,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -573,10 +555,6 @@
 <tr>
 <td>Default Value</td>
 <td>Equals</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Conditions.html">Sys_User_Business_Rule_Conditions</a>.<a href="Sys_User_Business_Rule_Conditions.html#comparison_type">Comparison_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -649,8 +627,6 @@
 </tbody>
 </table>
 <h3 id="value">Value</h3>
-<p>Value</p>
-<p>The value against which the data attribute will be tested.</p>
 <p>The value against which the data attribute will be tested.</p>
 <table>
 <thead>
@@ -690,15 +666,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Conditions.html">Sys_User_Business_Rule_Conditions</a>.<a href="Sys_User_Business_Rule_Conditions.html#value">Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -771,7 +743,6 @@
 </tbody>
 </table>
 <h3 id="user_business_rule_condition_id">User_Business_Rule_Condition_Id</h3>
-<p>User_Business_Rule_Condition_Id</p>
 <table>
 <thead>
 <tr>
@@ -810,15 +781,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Conditions.html">Sys_User_Business_Rule_Conditions</a>.<a href="Sys_User_Business_Rule_Conditions.html#user_business_rule_condition_id">User_Business_Rule_Condition_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -903,14 +870,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -945,15 +911,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Conditions.html">Sys_User_Business_Rule_Conditions</a>.<a href="Sys_User_Business_Rule_Conditions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1026,7 +988,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1037,7 +998,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1065,15 +1026,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rule_Conditions.html">Sys_User_Business_Rule_Conditions</a>.<a href="Sys_User_Business_Rule_Conditions.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Inv_Product_Default_Store_Bins
 
+
+## Entity
+
+Entity: [Logistics.Inventory.ProductDefaultStoreBins](~/entities/Logistics.Inventory.ProductDefaultStoreBins.md)
+
 The default store bins in which products should be placed. Entity: Inv_Product_Default_Store_Bins
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ The default store bins in which products should be placed. Entity: Inv_Product_D
 
 ### Product_Default_Store_Bin_Id
 
-
-Product_Default_Store_Bin_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Product_Default_Store_Bin_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Product_Default_Store_Bins](Inv_Product_Default_Store_Bins.md).[Product_Default_Store_Bin_Id](Inv_Product_Default_Store_Bins.md#product_default_store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Product_Default_Store_Bin_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Product_Id
-
-
-Product_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Product_Id
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Product_Default_Store_Bins](Inv_Product_Default_Store_Bins.md).[Product_Id](Inv_Product_Default_Store_Bins.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Product_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store, for which the default bin is specified.
 
 
 The store, for which the default bin is specified.
@@ -120,9 +111,8 @@ The store, for which the default bin is specified.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Product_Default_Store_Bins](Inv_Product_Default_Store_Bins.md).[Store_Id](Inv_Product_Default_Store_Bins.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,15 +135,9 @@ The store, for which the default bin is specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Bin_Id
-
-
-Default_Bin_Id
-
-
-The default bin, which should be used for this product.
 
 
 The default bin, which should be used for this product.
@@ -167,9 +151,8 @@ The default bin, which should be used for this product.
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Product_Default_Store_Bins](Inv_Product_Default_Store_Bins.md).[Default_Bin_Id](Inv_Product_Default_Store_Bins.md#default_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,12 +175,9 @@ The default bin, which should be used for this product.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -207,9 +187,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Product_Default_Store_Bins](Inv_Product_Default_Store_Bins.md).[Row_Version](Inv_Product_Default_Store_Bins.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

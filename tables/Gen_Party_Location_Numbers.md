@@ -1,5 +1,10 @@
 # Table Gen_Party_Location_Numbers
 
+
+## Entity
+
+Entity: [General.PartyLocationNumbers](~/entities/General.PartyLocationNumbers.md)
+
 Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Location numbers for a party. Depending on the partner with which we are doing a
 
 ### Party_Location_Number_Id
 
-
-Party_Location_Number_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Party_Location_Number_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Party_Location_Numbers](Gen_Party_Location_Numbers.md).[Party_Location_Number_Id](Gen_Party_Location_Numbers.md#party_location_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Party_Location_Number_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The party for which we are defining the location number.
 
 
 The party for which we are defining the location number.
@@ -82,9 +77,8 @@ The party for which we are defining the location number.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Location_Numbers](Gen_Party_Location_Numbers.md).[Party_Id](Gen_Party_Location_Numbers.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The party for which we are defining the location number.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Partner_Party_Id
-
-
-Partner_Party_Id
-
-
-The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. NULL means that the location number is not dependent on the Partner Party.
 
 
 The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. NULL means that the location number is not dependent on the Partner Party.
@@ -129,9 +117,8 @@ The party with which we are doing exchange. Depending on the Partner Party, the 
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Location_Numbers](Gen_Party_Location_Numbers.md).[Partner_Party_Id](Gen_Party_Location_Numbers.md#partner_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ The party with which we are doing exchange. Depending on the Partner Party, the 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Partner_Location_Number
-
-
-Partner_Location_Number
-
-
-The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.
 
 
 The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.
@@ -176,9 +157,8 @@ The location number of the partner party for which we define the main Party loca
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Location_Numbers](Gen_Party_Location_Numbers.md).[Partner_Location_Number](Gen_Party_Location_Numbers.md#partner_location_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,15 +181,9 @@ The location number of the partner party for which we define the main Party loca
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Location_Coding_System
-
-
-Location_Coding_System
-
-
-The coding system for which we are defining the location number.
 
 
 The coding system for which we are defining the location number.
@@ -223,10 +197,9 @@ The coding system for which we are defining the location number.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`GLN`, `INT`|
 |Default Value|GLN|
-|Derived From|[Gen_Party_Location_Numbers](Gen_Party_Location_Numbers.md).[Location_Coding_System](Gen_Party_Location_Numbers.md#location_coding_system)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,15 +222,9 @@ The coding system for which we are defining the location number.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Location_Number
-
-
-Location_Number
-
-
-The location number of Party.
 
 
 The location number of Party.
@@ -271,9 +238,8 @@ The location number of Party.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Location_Numbers](Gen_Party_Location_Numbers.md).[Location_Number](Gen_Party_Location_Numbers.md#location_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -296,16 +262,10 @@ The location number of Party.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Significance
-
-
-Significance
-
-
-Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.
 
 
 Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.
@@ -318,9 +278,8 @@ Order of significance of the location number within the main Party. If there are
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Party_Location_Numbers](Gen_Party_Location_Numbers.md).[Significance](Gen_Party_Location_Numbers.md#significance)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -343,13 +302,10 @@ Order of significance of the location number within the main Party. If there are
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -359,9 +315,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Location_Numbers](Gen_Party_Location_Numbers.md).[Row_Version](Gen_Party_Location_Numbers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

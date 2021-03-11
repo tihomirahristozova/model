@@ -1,5 +1,10 @@
 # Table Gen_Document_Distributed_Amounts
 
+
+## Entity
+
+Entity: [General.DocumentDistributedAmounts](~/entities/General.DocumentDistributedAmounts.md)
+
 Contains the amounts which are distributed by the system over the document lines as a result of additional amount calculations. Entity: Gen_Document_Distributed_Amounts
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains the amounts which are distributed by the system over the document lines
 
 ### Distributed_Amount_Id
 
-
-Distributed_Amount_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Distributed_Amount_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Distributed_Amounts](Gen_Document_Distributed_Amounts.md).[Distributed_Amount_Id](Gen_Document_Distributed_Amounts.md#distributed_amount_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Distributed_Amount_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Distributed_Amounts](Gen_Document_Distributed_Amounts.md).[Document_Id](Gen_Document_Distributed_Amounts.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Line_Id
-
-
-Document_Line_Id
-
-
-The Id of the line over which the amount is distributed.
 
 
 The Id of the line over which the amount is distributed.
@@ -121,9 +112,8 @@ The Id of the line over which the amount is distributed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Distributed_Amounts](Gen_Document_Distributed_Amounts.md).[Document_Line_Id](Gen_Document_Distributed_Amounts.md#document_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,15 +136,9 @@ The Id of the line over which the amount is distributed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Document_Amount_Type_Id
-
-
-Document_Amount_Type_Id
-
-
-The type of amount which is distributed.
 
 
 The type of amount which is distributed.
@@ -168,9 +152,8 @@ The type of amount which is distributed.
 |Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Distributed_Amounts](Gen_Document_Distributed_Amounts.md).[Document_Amount_Type_Id](Gen_Document_Distributed_Amounts.md#document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,15 +176,9 @@ The type of amount which is distributed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Amount
-
-
-Amount
-
-
-The amount which has beed distributed over the current line. The amount is in the currency of the document.
 
 
 The amount which has beed distributed over the current line. The amount is in the currency of the document.
@@ -214,9 +191,8 @@ The amount which has beed distributed over the current line. The amount is in th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Distributed_Amounts](Gen_Document_Distributed_Amounts.md).[Amount](Gen_Document_Distributed_Amounts.md#amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,12 +220,6 @@ The amount which has beed distributed over the current line. The amount is in th
 ### Referenced_Document_Id
 
 
-Referenced_Document_Id
-
-
-In not null the Document_Line_Id is a line of the document with Referenced_Document_Id
-
-
 In not null the Document_Line_Id is a line of the document with Referenced_Document_Id
 
 | Property | Value |
@@ -261,9 +231,8 @@ In not null the Document_Line_Id is a line of the document with Referenced_Docum
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Distributed_Amounts](Gen_Document_Distributed_Amounts.md).[Referenced_Document_Id](Gen_Document_Distributed_Amounts.md#referenced_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,12 +255,9 @@ In not null the Document_Line_Id is a line of the document with Referenced_Docum
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -301,9 +267,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Distributed_Amounts](Gen_Document_Distributed_Amounts.md).[Row_Version](Gen_Document_Distributed_Amounts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

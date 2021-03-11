@@ -1,5 +1,10 @@
 # Table Pos_Terminals
 
+
+## Entity
+
+Entity: [Crm.Pos.Terminals](~/entities/Crm.Pos.Terminals.md)
+
 Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1)
 
 ## Summary
@@ -18,9 +23,6 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 
 ### Pos_Terminal_Id
 
-
-Pos_Terminal_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -30,9 +32,8 @@ Pos_Terminal_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pos_Terminals](Pos_Terminals.md).[Pos_Terminal_Id](Pos_Terminals.md#pos_terminal_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Pos_Terminal_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Location_Id
-
-
-Pos_Location_Id
-
-
-The POS location, where the terminal is located.
 
 
 The POS location, where the terminal is located.
@@ -77,9 +72,8 @@ The POS location, where the terminal is located.
 |Referenced Table|[Pos_Locations](Pos_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Terminals](Pos_Terminals.md).[Pos_Location_Id](Pos_Terminals.md#pos_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +96,9 @@ The POS location, where the terminal is located.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Terminal_Code
-
-
-Pos_Terminal_Code
-
-
-Unique (within the location) code of the POS terminal.
 
 
 Unique (within the location) code of the POS terminal.
@@ -124,9 +112,8 @@ Unique (within the location) code of the POS terminal.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Terminals](Pos_Terminals.md).[Pos_Terminal_Code](Pos_Terminals.md#pos_terminal_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,16 +136,10 @@ Unique (within the location) code of the POS terminal.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Pos_Terminal_Name
-
-
-Pos_Terminal_Name
-
-
-The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.
 
 
 The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.
@@ -172,9 +153,8 @@ The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Terminals](Pos_Terminals.md).[Pos_Terminal_Name](Pos_Terminals.md#pos_terminal_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,16 +177,10 @@ The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Represents whether the POS terminal is active and can be chosen from drop-downs for new records.
 
 
 Represents whether the POS terminal is active and can be chosen from drop-downs for new records.
@@ -219,9 +193,8 @@ Represents whether the POS terminal is active and can be chosen from drop-downs 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Pos_Terminals](Pos_Terminals.md).[Is_Active](Pos_Terminals.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,12 +217,9 @@ Represents whether the POS terminal is active and can be chosen from drop-downs 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -259,9 +229,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Terminals](Pos_Terminals.md).[Row_Version](Pos_Terminals.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -283,12 +252,6 @@ Row_Version
 ### Default_Fiscal_Printer_Pos_Device_Id
 
 
-Default_Fiscal_Printer_Pos_Device_Id
-
-
-The POS Fiscal Device which is set by default in documents when the POS Terminal is selected.
-
-
 The POS Fiscal Device which is set by default in documents when the POS Terminal is selected.
 
 | Property | Value |
@@ -300,9 +263,8 @@ The POS Fiscal Device which is set by default in documents when the POS Terminal
 |Referenced Table|[Pos_Devices](Pos_Devices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Terminals](Pos_Terminals.md).[Default_Fiscal_Printer_Pos_Device_Id](Pos_Terminals.md#default_fiscal_printer_pos_device_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -325,6 +287,6 @@ The POS Fiscal Device which is set by default in documents when the POS Terminal
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

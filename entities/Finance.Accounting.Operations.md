@@ -518,7 +518,7 @@ _Domain API Request_: **POST**
   * **completion**  
     How the sub-documents will be completed, if at all  
     _Type_: General.DocumentCompletion  
-    Determines how `Document`(General.Documents.md) will be completed  
+    Determines how Document will be completed  
     _Allowed Values (General.DocumentCompletion Enum Members)_  
 
     | Value | Description |
@@ -591,7 +591,7 @@ In some cases the objects in child collection of the document depend on values f
 
 ### GetAllParentDocuments
 
-Gets all parent documents, traversing the parent document chain by using the `Parent`(General.Documents.md#parent) property.              (Inherited from [Documents](General.Documents.md))  
+Gets all parent documents, traversing the parent document chain by using the Parent property.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **Collection Of [Documents](General.Documents.md)**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **GET**  

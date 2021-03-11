@@ -1,5 +1,10 @@
 # Table Eam_Service_Centers
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.ServiceCenters](~/entities/Applications.AssetManagement.ServiceCenters.md)
+
 Contains data about the service centers, which can maintain the assets. Entity: Eam_Service_Centers (Introduced in version 19.1)
 
 ## Summary
@@ -9,15 +14,12 @@ Contains data about the service centers, which can maintain the assets. Entity: 
 |[Service_Center_Id](#service_center_id)|`uniqueidentifier` `PK`||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company, whose assets will be maintained by the service center. When NULL, the service center can maintain assets for all enterprise companies.|
 |[Party_Id](#party_id)|`uniqueidentifier` |The person or company, actually performing the maintenance.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Service_Center_Id
-
-
-Service_Center_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Service_Center_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Service_Centers](Eam_Service_Centers.md).[Service_Center_Id](Eam_Service_Centers.md#service_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Service_Center_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company, whose assets will be maintained by the service center. When NULL, the service center can maintain assets for all enterprise companies.
 
 
 The enterprise company, whose assets will be maintained by the service center. When NULL, the service center can maintain assets for all enterprise companies.
@@ -75,9 +70,8 @@ The enterprise company, whose assets will be maintained by the service center. W
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Service_Centers](Eam_Service_Centers.md).[Enterprise_Company_Id](Eam_Service_Centers.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +94,9 @@ The enterprise company, whose assets will be maintained by the service center. W
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The person or company, actually performing the maintenance.
 
 
 The person or company, actually performing the maintenance.
@@ -122,9 +110,8 @@ The person or company, actually performing the maintenance.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Service_Centers](Eam_Service_Centers.md).[Party_Id](Eam_Service_Centers.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,25 +134,21 @@ The person or company, actually performing the maintenance.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Eam_Service_Centers](Eam_Service_Centers.md).[Notes](Eam_Service_Centers.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,9 +169,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -197,9 +177,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Service_Centers](Eam_Service_Centers.md).[Row_Version](Eam_Service_Centers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

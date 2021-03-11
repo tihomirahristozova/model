@@ -1,5 +1,10 @@
 # Table Cash_Bulk_Payment_Orders
 
+
+## Entity
+
+Entity: [Finance.Payments.BulkPaymentOrders](~/entities/Finance.Payments.BulkPaymentOrders.md)
+
 Bulk payment orders document. Can generate a multitude of payment orders. Often used for opening balances. Entity: Cash_Bulk_Payment_Orders
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Bulk payment orders document. Can generate a multitude of payment orders. Often 
 
 ### Bulk_Payment_Order_Id
 
-
-Bulk_Payment_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Bulk_Payment_Order_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Bulk_Payment_Orders](Cash_Bulk_Payment_Orders.md).[Bulk_Payment_Order_Id](Cash_Bulk_Payment_Orders.md#bulk_payment_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Bulk_Payment_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Orders](Cash_Bulk_Payment_Orders.md).[Document_Id](Cash_Bulk_Payment_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,17 +95,11 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -119,9 +110,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Bulk_Payment_Orders](Cash_Bulk_Payment_Orders.md).[Is_Single_Execution](Cash_Bulk_Payment_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,17 +134,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -165,9 +149,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Bulk_Payment_Orders](Cash_Bulk_Payment_Orders.md).[Is_Released](Cash_Bulk_Payment_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,12 +173,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -205,9 +185,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Orders](Cash_Bulk_Payment_Orders.md).[Row_Version](Cash_Bulk_Payment_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Prj_Type_Work_Types
 
+
+## Entity
+
+Entity: [Projects.TypeWorkTypes](~/entities/Projects.TypeWorkTypes.md)
+
 Contains the work types, that can be performed in projects of this project type. Entity: Prj_Type_Work_Types
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Contains the work types, that can be performed in projects of this project type.
 
 ### Work_Type_Id
 
-
-Work_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Work_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Type_Work_Types](Prj_Type_Work_Types.md).[Work_Type_Id](Prj_Type_Work_Types.md#work_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Work_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Project_Type_Id
-
-
-Project_Type_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Project_Type_Id
 |Referenced Table|[Prj_Types](Prj_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Types](Prj_Type_Work_Types.md).[Project_Type_Id](Prj_Type_Work_Types.md#project_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +96,9 @@ Project_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Type_Name
-
-
-Work_Type_Name
-
-
-The name of the work type.
 
 
 The name of the work type.
@@ -121,9 +112,8 @@ The name of the work type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Types](Prj_Type_Work_Types.md).[Work_Type_Name](Prj_Type_Work_Types.md#work_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,16 +136,10 @@ The name of the work type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Billed_With_Product_Id
-
-
-Billed_With_Product_Id
-
-
-The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. NULL means that the work type cannot be billed
 
 
 The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. NULL means that the work type cannot be billed
@@ -169,9 +153,8 @@ The product, which is used for billing purposes for this work type. The price of
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Types](Prj_Type_Work_Types.md).[Billed_With_Product_Id](Prj_Type_Work_Types.md#billed_with_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,15 +177,9 @@ The product, which is used for billing purposes for this work type. The price of
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-True when the work type is currently active and selectable in new documents.
 
 
 True when the work type is currently active and selectable in new documents.
@@ -215,9 +192,8 @@ True when the work type is currently active and selectable in new documents.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Prj_Type_Work_Types](Prj_Type_Work_Types.md).[Is_Active](Prj_Type_Work_Types.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -240,12 +216,9 @@ True when the work type is currently active and selectable in new documents.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -255,9 +228,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Types](Prj_Type_Work_Types.md).[Row_Version](Prj_Type_Work_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

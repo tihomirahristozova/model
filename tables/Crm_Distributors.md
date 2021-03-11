@@ -1,5 +1,10 @@
 # Table Crm_Distributors
 
+
+## Entity
+
+Entity: [Crm.Distributors](~/entities/Crm.Distributors.md)
+
 Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors
 
 ## Owner Tables Hierarchy
@@ -20,12 +25,6 @@ Distributors are external for the enterprise persons or companies who obtain sal
 ### Distributor_Id
 
 
-Distributor_Id
-
-
-Unique distributor Id
-
-
 Unique distributor Id
 
 | Property | Value |
@@ -37,9 +36,8 @@ Unique distributor Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Distributors](Crm_Distributors.md).[Distributor_Id](Crm_Distributors.md#distributor_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,15 +60,9 @@ Unique distributor Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-Base party Id
 
 
 Base party Id
@@ -84,9 +76,8 @@ Base party Id
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Distributors](Crm_Distributors.md).[Party_Id](Crm_Distributors.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,15 +100,9 @@ Base party Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Flat_Commision_Percentage
-
-
-Flat_Commision_Percentage
-
-
-Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations
 
 
 Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations
@@ -130,9 +115,8 @@ Not-zero if commision percentage should be applyied to all sales, regardless of 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Distributors](Crm_Distributors.md).[Flat_Commision_Percentage](Crm_Distributors.md#flat_commision_percentage)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,9 +137,6 @@ Not-zero if commision percentage should be applyied to all sales, regardless of 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -164,9 +145,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Distributors](Crm_Distributors.md).[Row_Version](Crm_Distributors.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

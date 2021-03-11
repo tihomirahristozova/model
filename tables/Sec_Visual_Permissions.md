@@ -1,5 +1,10 @@
 # Table Sec_Visual_Permissions
 
+
+## Entity
+
+Entity: [Systems.Security.VisualPermissions](~/entities/Systems.Security.VisualPermissions.md)
+
 Contains permissions, which are honored only by client applications and are used to provide access to (primarily show/hide) different elements of the user interface. Entity: Sec_Visual_Permissions
 
 ## Summary
@@ -19,9 +24,6 @@ Contains permissions, which are honored only by client applications and are used
 
 ### Visual_Permission_Id
 
-
-Visual_Permission_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Visual_Permission_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_Visual_Permissions](Sec_Visual_Permissions.md).[Visual_Permission_Id](Sec_Visual_Permissions.md#visual_permission_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Visual_Permission_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Application_Name
-
-
-Application_Name
-
-
-The application for which the permission is specified
 
 
 The application for which the permission is specified
@@ -78,9 +73,8 @@ The application for which the permission is specified
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Visual_Permissions](Sec_Visual_Permissions.md).[Application_Name](Sec_Visual_Permissions.md#application_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,17 +97,11 @@ The application for which the permission is specified
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Form_Name
 
 
-Form_Name
-
-
-Optionally, the form which will be secured
-
-
 Optionally, the form which will be secured
 
 | Property | Value |
@@ -125,9 +113,8 @@ Optionally, the form which will be secured
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Visual_Permissions](Sec_Visual_Permissions.md).[Form_Name](Sec_Visual_Permissions.md#form_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,17 +137,11 @@ Optionally, the form which will be secured
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Panel_Name
 
 
-Panel_Name
-
-
-Optionally, the panel from the form which will be secured
-
-
 Optionally, the panel from the form which will be secured
 
 | Property | Value |
@@ -172,9 +153,8 @@ Optionally, the panel from the form which will be secured
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Visual_Permissions](Sec_Visual_Permissions.md).[Panel_Name](Sec_Visual_Permissions.md#panel_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,15 +177,9 @@ Optionally, the panel from the form which will be secured
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Element_Name
-
-
-Element_Name
-
-
-Optionally, the element from the panel which will be secured
 
 
 Optionally, the element from the panel which will be secured
@@ -219,9 +193,8 @@ Optionally, the element from the panel which will be secured
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Visual_Permissions](Sec_Visual_Permissions.md).[Element_Name](Sec_Visual_Permissions.md#element_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,15 +217,9 @@ Optionally, the element from the panel which will be secured
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Operation_Name
-
-
-Operation_Name
-
-
-Optionally, the operation on the element which will be secured
 
 
 Optionally, the operation on the element which will be secured
@@ -266,9 +233,8 @@ Optionally, the operation on the element which will be secured
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Visual_Permissions](Sec_Visual_Permissions.md).[Operation_Name](Sec_Visual_Permissions.md#operation_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,15 +257,9 @@ Optionally, the operation on the element which will be secured
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Access_Key_Id
-
-
-Access_Key_Id
-
-
-The security access key which controls the access to the visual permission
 
 
 The security access key which controls the access to the visual permission
@@ -313,9 +273,8 @@ The security access key which controls the access to the visual permission
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Visual_Permissions](Sec_Visual_Permissions.md).[Access_Key_Id](Sec_Visual_Permissions.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -338,12 +297,9 @@ The security access key which controls the access to the visual permission
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -353,9 +309,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Visual_Permissions](Sec_Visual_Permissions.md).[Row_Version](Sec_Visual_Permissions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

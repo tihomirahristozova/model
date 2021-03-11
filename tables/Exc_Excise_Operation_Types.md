@@ -1,5 +1,10 @@
 # Table Exc_Excise_Operation_Types
 
+
+## Entity
+
+Entity: [Finance.Excise.ExciseOperationTypes](~/entities/Finance.Excise.ExciseOperationTypes.md)
+
 Types of excise operations. Used by general documents to specify the operation type according to the excise classifications. Entity: Exc_Excise_Operation_Types (Introduced in version 21.1.1.59)
 
 ## Summary
@@ -9,15 +14,12 @@ Types of excise operations. Used by general documents to specify the operation t
 |[Excise_Operation_Type_Id](#excise_operation_type_id)|`uniqueidentifier` `PK`||
 |[Code](#code)|`nvarchar(16)` ||
 |[Name](#name)|`nvarchar(254)` ||
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Excise_Operation_Type_Id
-
-
-Excise_Operation_Type_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Excise_Operation_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Exc_Excise_Operation_Types](Exc_Excise_Operation_Types.md).[Excise_Operation_Type_Id](Exc_Excise_Operation_Types.md#excise_operation_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Excise_Operation_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Code
-
-
-Code
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Excise_Operation_Types](Exc_Excise_Operation_Types.md).[Code](Exc_Excise_Operation_Types.md#code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -94,13 +91,10 @@ Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Name
-
-
-Name
 
 | Property | Value |
 | - | - |
@@ -111,9 +105,8 @@ Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Excise_Operation_Types](Exc_Excise_Operation_Types.md).[Name](Exc_Excise_Operation_Types.md#name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -136,26 +129,22 @@ Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Excise_Operation_Types](Exc_Excise_Operation_Types.md).[Notes](Exc_Excise_Operation_Types.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -176,9 +165,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -187,9 +173,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Excise_Operation_Types](Exc_Excise_Operation_Types.md).[Row_Version](Exc_Excise_Operation_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

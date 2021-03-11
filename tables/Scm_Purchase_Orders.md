@@ -1,5 +1,10 @@
 # Table Scm_Purchase_Orders
 
+
+## Entity
+
+Entity: [Logistics.Procurement.PurchaseOrders](~/entities/Logistics.Procurement.PurchaseOrders.md)
+
 Contains purchase order headers. The purchase orders are documents, sent to a supplier, to inform him for an order of goods or services. Entity: Scm_Purchase_Orders
 
 ## Owner Tables Hierarchy
@@ -16,7 +21,7 @@ Contains purchase order headers. The purchase orders are documents, sent to a su
 |[Store_Id](#store_id)|`uniqueidentifier` |The store in which the goods are expected to be received.|
 |[Planned_Release_Date](#planned_release_date)|`datetime` |The date, when the document is planned to be realeased and send to the supplier.|
 |[Planned_Delivery_Date](#planned_delivery_date)|`datetime` |When not null, specifies the planned delivery date for all lines.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency of the unit prices and amounts in the document.|
 |[Payment_Due_Date](#payment_due_date)|`datetime` |Due date for paying the order. NULL means to use the default, which is the document date.|
 |[Invoice_Document_No](#invoice_document_no)|`nvarchar(20)` |Contains the purchase invoice number when it is known in advance, null otherwise.|
@@ -31,9 +36,6 @@ Contains purchase order headers. The purchase orders are documents, sent to a su
 
 ### Purchase_Order_Id
 
-
-Purchase_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -43,9 +45,8 @@ Purchase_Order_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Purchase_Order_Id](Scm_Purchase_Orders.md#purchase_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -68,12 +69,9 @@ Purchase_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -84,9 +82,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Document_Id](Scm_Purchase_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,15 +106,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Supplier_Id
-
-
-Supplier_Id
-
-
-The supplier of the products.
 
 
 The supplier of the products.
@@ -131,9 +122,8 @@ The supplier of the products.
 |Referenced Table|[Scm_Suppliers](Scm_Suppliers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Supplier_Id](Scm_Purchase_Orders.md#supplier_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,15 +146,9 @@ The supplier of the products.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store in which the goods are expected to be received.
 
 
 The store in which the goods are expected to be received.
@@ -178,9 +162,8 @@ The store in which the goods are expected to be received.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Store_Id](Scm_Purchase_Orders.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,15 +186,9 @@ The store in which the goods are expected to be received.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Planned_Release_Date
-
-
-Planned_Release_Date
-
-
-The date, when the document is planned to be realeased and send to the supplier.
 
 
 The date, when the document is planned to be realeased and send to the supplier.
@@ -225,9 +202,8 @@ The date, when the document is planned to be realeased and send to the supplier.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Planned_Release_Date](Scm_Purchase_Orders.md#planned_release_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -255,12 +231,6 @@ The date, when the document is planned to be realeased and send to the supplier.
 ### Planned_Delivery_Date
 
 
-Planned_Delivery_Date
-
-
-When not null, specifies the planned delivery date for all lines.
-
-
 When not null, specifies the planned delivery date for all lines.
 
 | Property | Value |
@@ -272,9 +242,8 @@ When not null, specifies the planned delivery date for all lines.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Planned_Delivery_Date](Scm_Purchase_Orders.md#planned_delivery_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -301,21 +270,17 @@ When not null, specifies the planned delivery date for all lines.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Notes](Scm_Purchase_Orders.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -337,12 +302,6 @@ Notes
 ### Document_Currency_Id
 
 
-Document_Currency_Id
-
-
-The currency of the unit prices and amounts in the document.
-
-
 The currency of the unit prices and amounts in the document.
 
 | Property | Value |
@@ -354,9 +313,8 @@ The currency of the unit prices and amounts in the document.
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Document_Currency_Id](Scm_Purchase_Orders.md#document_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -379,15 +337,9 @@ The currency of the unit prices and amounts in the document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Payment_Due_Date
-
-
-Payment_Due_Date
-
-
-Due date for paying the order. NULL means to use the default, which is the document date.
 
 
 Due date for paying the order. NULL means to use the default, which is the document date.
@@ -401,9 +353,8 @@ Due date for paying the order. NULL means to use the default, which is the docum
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Payment_Due_Date](Scm_Purchase_Orders.md#payment_due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -431,12 +382,6 @@ Due date for paying the order. NULL means to use the default, which is the docum
 ### Invoice_Document_No
 
 
-Invoice_Document_No
-
-
-Contains the purchase invoice number when it is known in advance, null otherwise.
-
-
 Contains the purchase invoice number when it is known in advance, null otherwise.
 
 | Property | Value |
@@ -448,9 +393,8 @@ Contains the purchase invoice number when it is known in advance, null otherwise
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Invoice_Document_No](Scm_Purchase_Orders.md#invoice_document_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -473,15 +417,9 @@ Contains the purchase invoice number when it is known in advance, null otherwise
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Purchase_Price_List_Id
-
-
-Purchase_Price_List_Id
-
-
-The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.
 
 
 The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.
@@ -495,9 +433,8 @@ The price list, which, when non-NULL, is used to automatically load unit prices 
 |Referenced Table|[Scm_Purchase_Price_Lists](Scm_Purchase_Price_Lists.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Purchase_Price_List_Id](Scm_Purchase_Orders.md#purchase_price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -520,12 +457,9 @@ The price list, which, when non-NULL, is used to automatically load unit prices 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Account_Id
-
-
-Payment_Account_Id
 
 | Property | Value |
 | - | - |
@@ -536,9 +470,8 @@ Payment_Account_Id
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Payment_Account_Id](Scm_Purchase_Orders.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -561,17 +494,11 @@ Payment_Account_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -582,9 +509,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Is_Single_Execution](Scm_Purchase_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -607,17 +533,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -628,9 +548,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Is_Released](Scm_Purchase_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -653,12 +572,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -668,9 +584,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Row_Version](Scm_Purchase_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -692,12 +607,6 @@ Row_Version
 ### Payment_Type_Id
 
 
-Payment_Type_Id
-
-
-When not NULL specifies the payment type for the sales order
-
-
 When not NULL specifies the payment type for the sales order
 
 | Property | Value |
@@ -709,9 +618,8 @@ When not NULL specifies the payment type for the sales order
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Orders](Scm_Purchase_Orders.md).[Payment_Type_Id](Scm_Purchase_Orders.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -734,6 +642,6 @@ When not NULL specifies the payment type for the sales order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

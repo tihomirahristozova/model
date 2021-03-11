@@ -1,5 +1,10 @@
 # Table Crm_Dealers
 
+
+## Entity
+
+Entity: [Crm.Dealers](~/entities/Crm.Dealers.md)
+
 External dealers. Entity: Crm_Dealers
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ External dealers. Entity: Crm_Dealers
 
 ### Dealer_Id
 
-
-Dealer_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Dealer_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Dealers](Crm_Dealers.md).[Dealer_Id](Crm_Dealers.md#dealer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Dealer_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The base party record of the dealer
 
 
 The base party record of the dealer
@@ -81,9 +76,8 @@ The base party record of the dealer
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Dealers](Crm_Dealers.md).[Party_Id](Crm_Dealers.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The base party record of the dealer
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company for which this dealer is recorded
 
 
 The enterprise company for which this dealer is recorded
@@ -128,9 +116,8 @@ The enterprise company for which this dealer is recorded
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Dealers](Crm_Dealers.md).[Enterprise_Company_Id](Crm_Dealers.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,15 +140,9 @@ The enterprise company for which this dealer is recorded
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### From_Date
-
-
-From_Date
-
-
-Start of the dealer relationship
 
 
 Start of the dealer relationship
@@ -175,9 +156,8 @@ Start of the dealer relationship
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Crm_Dealers](Crm_Dealers.md).[From_Date](Crm_Dealers.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,12 +185,6 @@ Start of the dealer relationship
 ### Thru_Date
 
 
-Thru_Date
-
-
-Termination date of the dealership. NULL for active dealers
-
-
 Termination date of the dealership. NULL for active dealers
 
 | Property | Value |
@@ -222,9 +196,8 @@ Termination date of the dealership. NULL for active dealers
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Dealers](Crm_Dealers.md).[Thru_Date](Crm_Dealers.md#thru_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -251,9 +224,6 @@ Termination date of the dealership. NULL for active dealers
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -263,9 +233,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Dealers](Crm_Dealers.md).[Notes](Crm_Dealers.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,9 +255,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -297,9 +263,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Dealers](Crm_Dealers.md).[Row_Version](Crm_Dealers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

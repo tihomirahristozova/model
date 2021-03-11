@@ -1,5 +1,10 @@
 # Table Gen_Resource_Groups
 
+
+## Entity
+
+Entity: [General.Resources.ResourceGroups](~/entities/General.Resources.ResourceGroups.md)
+
 Resource groups categorize the resources. Entity: Gen_Resource_Groups
 
 ## Summary
@@ -17,12 +22,6 @@ Resource groups categorize the resources. Entity: Gen_Resource_Groups
 ### Resource_Group_Id
 
 
-Resource_Group_Id
-
-
-Resource Group Id
-
-
 Resource Group Id
 
 | Property | Value |
@@ -34,9 +33,8 @@ Resource Group Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Resource_Groups](Gen_Resource_Groups.md).[Resource_Group_Id](Gen_Resource_Groups.md#resource_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +57,9 @@ Resource Group Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Group_Name
-
-
-Resource_Group_Name
-
-
-Resource group name. Unique within its parent
 
 
 Resource group name. Unique within its parent
@@ -81,9 +73,8 @@ Resource group name. Unique within its parent
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Groups](Gen_Resource_Groups.md).[Resource_Group_Name](Gen_Resource_Groups.md#resource_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,16 +97,10 @@ Resource group name. Unique within its parent
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company to which this resource group belongs. NULL means that the group is valid for all companies. Can be NULL only if the parent group company is also NULL
 
 
 The enterprise company to which this resource group belongs. NULL means that the group is valid for all companies. Can be NULL only if the parent group company is also NULL
@@ -129,9 +114,8 @@ The enterprise company to which this resource group belongs. NULL means that the
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Groups](Gen_Resource_Groups.md).[Enterprise_Company_Id](Gen_Resource_Groups.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +138,9 @@ The enterprise company to which this resource group belongs. NULL means that the
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Parent_Resource_Group_Id
-
-
-Parent_Resource_Group_Id
-
-
-The parent resource group or NULL if this is root group
 
 
 The parent resource group or NULL if this is root group
@@ -176,9 +154,8 @@ The parent resource group or NULL if this is root group
 |Referenced Table|[Gen_Resource_Groups](Gen_Resource_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Groups](Gen_Resource_Groups.md).[Parent_Resource_Group_Id](Gen_Resource_Groups.md#parent_resource_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,12 +178,9 @@ The parent resource group or NULL if this is root group
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -216,9 +190,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Groups](Gen_Resource_Groups.md).[Row_Version](Gen_Resource_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Prj_Project_Task_Materials
 
+
+## Entity
+
+Entity: [Projects.ProjectTaskMaterials](~/entities/Projects.ProjectTaskMaterials.md)
+
 Contains the materials, which are required for a project task. Entity: Prj_Project_Task_Materials
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Contains the materials, which are required for a project task. Entity: Prj_Proje
 
 ### Project_Task_Material_Id
 
-
-Project_Task_Material_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Project_Task_Material_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Project_Task_Material_Id](Prj_Project_Task_Materials.md#project_task_material_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Project_Task_Material_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Project_Task_Id
-
-
-Project_Task_Id
-
-
-The task for which is the material requirement
 
 
 The task for which is the material requirement
@@ -83,9 +78,8 @@ The task for which is the material requirement
 |Referenced Table|[Prj_Project_Tasks](Prj_Project_Tasks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Project_Task_Id](Prj_Project_Task_Materials.md#project_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The task for which is the material requirement
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Material_Product_Id
-
-
-Material_Product_Id
-
-
-The product Id of the required material
 
 
 The product Id of the required material
@@ -130,9 +118,8 @@ The product Id of the required material
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Material_Product_Id](Prj_Project_Task_Materials.md#material_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,15 +142,9 @@ The product Id of the required material
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The required quantity of the material
 
 
 The required quantity of the material
@@ -176,9 +157,8 @@ The required quantity of the material
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Quantity](Prj_Project_Task_Materials.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,12 +180,6 @@ The required quantity of the material
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of the required quantity
-
-
 The measurement unit of the required quantity
 
 | Property | Value |
@@ -217,9 +191,8 @@ The measurement unit of the required quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Quantity_Unit_Id](Prj_Project_Task_Materials.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,15 +215,9 @@ The measurement unit of the required quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_Number
-
-
-Line_Number
-
-
-Line number within the task, increased in steps of 10. Used for sorting purposes
 
 
 Line number within the task, increased in steps of 10. Used for sorting purposes
@@ -263,10 +230,9 @@ Line number within the task, increased in steps of 10. Used for sorting purposes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
 |Autoincrement|1|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Line_Number](Prj_Project_Task_Materials.md#line_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,12 +254,6 @@ Line number within the task, increased in steps of 10. Used for sorting purposes
 ### Budgeted_Material_Amount
 
 
-Budgeted_Material_Amount
-
-
-Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount
-
-
 Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount
 
 | Property | Value |
@@ -304,9 +264,8 @@ Budgeted amount for the material in the currency of the project. NULL means ther
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Budgeted_Material_Amount](Prj_Project_Task_Materials.md#budgeted_material_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -328,12 +287,6 @@ Budgeted amount for the material in the currency of the project. NULL means ther
 ### Quantity_Base
 
 
-Quantity_Base
-
-
-The equivalence of Quantity in the base measurement unit of the Material.
-
-
 The equivalence of Quantity in the base measurement unit of the Material.
 
 | Property | Value |
@@ -344,9 +297,8 @@ The equivalence of Quantity in the base measurement unit of the Material.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Quantity_Base](Prj_Project_Task_Materials.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -367,9 +319,6 @@ The equivalence of Quantity in the base measurement unit of the Material.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -378,9 +327,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Materials](Prj_Project_Task_Materials.md).[Row_Version](Prj_Project_Task_Materials.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

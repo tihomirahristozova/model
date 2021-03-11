@@ -1,5 +1,10 @@
 # Table Fleet_Trips
 
+
+## Entity
+
+Entity: [Applications.Fleet.Trips](~/entities/Applications.Fleet.Trips.md)
+
 Represents actual trip made by the vehicles. Entity: Fleet_Trips
 
 ## Owner Tables Hierarchy
@@ -25,12 +30,6 @@ Represents actual trip made by the vehicles. Entity: Fleet_Trips
 ### Trip_Id
 
 
-Trip_Id
-
-
-Trip unique id
-
-
 Trip unique id
 
 | Property | Value |
@@ -42,9 +41,8 @@ Trip unique id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Trip_Id](Fleet_Trips.md#trip_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -67,15 +65,9 @@ Trip unique id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
-
-
-Trip document data
 
 
 Trip document data
@@ -89,9 +81,8 @@ Trip document data
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Document_Id](Fleet_Trips.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -114,15 +105,9 @@ Trip document data
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Vehicle_Set_Id
-
-
-Vehicle_Set_Id
-
-
-The vehicle set for which the trip is reported
 
 
 The vehicle set for which the trip is reported
@@ -136,9 +121,8 @@ The vehicle set for which the trip is reported
 |Referenced Table|[Fleet_Vehicle_Sets](Fleet_Vehicle_Sets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Vehicle_Set_Id](Fleet_Trips.md#vehicle_set_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -161,15 +145,9 @@ The vehicle set for which the trip is reported
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Crew_Id
-
-
-Crew_Id
-
-
-The crew, which operated the vehicle set
 
 
 The crew, which operated the vehicle set
@@ -183,9 +161,8 @@ The crew, which operated the vehicle set
 |Referenced Table|[Fleet_Crews](Fleet_Crews.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Crew_Id](Fleet_Trips.md#crew_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -208,15 +185,9 @@ The crew, which operated the vehicle set
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Primary_Vehicle_Starting_Mileage
-
-
-Primary_Vehicle_Starting_Mileage
-
-
-Mileage of the primary vehicle in the vehicle set at the begining of the trip. NULL means unknown
 
 
 Mileage of the primary vehicle in the vehicle set at the begining of the trip. NULL means unknown
@@ -229,9 +200,8 @@ Mileage of the primary vehicle in the vehicle set at the begining of the trip. N
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Primary_Vehicle_Starting_Mileage](Fleet_Trips.md#primary_vehicle_starting_mileage)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -253,12 +223,6 @@ Mileage of the primary vehicle in the vehicle set at the begining of the trip. N
 ### Primary_Vehicle_Ending_Mileage
 
 
-Primary_Vehicle_Ending_Mileage
-
-
-Mileage of the primary vehicle in the vehicle set at the ending of the trip. NULL means unknown
-
-
 Mileage of the primary vehicle in the vehicle set at the ending of the trip. NULL means unknown
 
 | Property | Value |
@@ -269,9 +233,8 @@ Mileage of the primary vehicle in the vehicle set at the ending of the trip. NUL
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Primary_Vehicle_Ending_Mileage](Fleet_Trips.md#primary_vehicle_ending_mileage)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,12 +256,6 @@ Mileage of the primary vehicle in the vehicle set at the ending of the trip. NUL
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -309,9 +266,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Is_Single_Execution](Fleet_Trips.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,17 +290,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -355,9 +305,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Is_Released](Fleet_Trips.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -380,12 +329,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -395,9 +341,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trips](Fleet_Trips.md).[Row_Version](Fleet_Trips.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

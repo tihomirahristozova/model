@@ -1,5 +1,10 @@
 # Table Prd_Work_Order_Item_Ingredients
 
+
+## Entity
+
+Entity: [Production.ShopFloor.WorkOrderItemIngredients](~/entities/Production.ShopFloor.WorkOrderItemIngredients.md)
+
 The materials consumed in the production order operations. Entity: Prd_Work_Order_Item_Ingredients
 
 ## Owner Tables Hierarchy
@@ -38,12 +43,6 @@ The materials consumed in the production order operations. Entity: Prd_Work_Orde
 ### Line_Ord
 
 
-Line_Ord
-
-
-The order of the line within the item.
-
-
 The order of the line within the item.
 
 | Property | Value |
@@ -54,10 +53,9 @@ The order of the line within the item.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Line_Ord](Prd_Work_Order_Item_Ingredients.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -80,16 +78,10 @@ The order of the line within the item.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|yes|
 
 ### Work_Order_Item_Id
-
-
-Work_Order_Item_Id
-
-
-The work order item for which the materials in this line are used. If NULL means that the materials are distributed amongst all work order items in the document.
 
 
 The work order item for which the materials in this line are used. If NULL means that the materials are distributed amongst all work order items in the document.
@@ -103,9 +95,8 @@ The work order item for which the materials in this line are used. If NULL means
 |Referenced Table|[Prd_Work_Order_Items](Prd_Work_Order_Items.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Work_Order_Item_Id](Prd_Work_Order_Item_Ingredients.md#work_order_item_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -128,15 +119,9 @@ The work order item for which the materials in this line are used. If NULL means
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Material_Id
-
-
-Material_Id
-
-
-The Id of the consumed material (Gen_Products_Table)
 
 
 The Id of the consumed material (Gen_Products_Table)
@@ -150,9 +135,8 @@ The Id of the consumed material (Gen_Products_Table)
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Material_Id](Prd_Work_Order_Item_Ingredients.md#material_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -175,15 +159,9 @@ The Id of the consumed material (Gen_Products_Table)
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Used_Quantity
-
-
-Used_Quantity
-
-
-The quantity of the material consumed in the operation
 
 
 The quantity of the material consumed in the operation
@@ -196,9 +174,8 @@ The quantity of the material consumed in the operation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Used_Quantity](Prd_Work_Order_Item_Ingredients.md#used_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -220,12 +197,6 @@ The quantity of the material consumed in the operation
 ### Used_Quantity_Unit_Id
 
 
-Used_Quantity_Unit_Id
-
-
-The measurement unit of the quantity of the material consumed in the operation
-
-
 The measurement unit of the quantity of the material consumed in the operation
 
 | Property | Value |
@@ -237,9 +208,8 @@ The measurement unit of the quantity of the material consumed in the operation
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Used_Quantity_Unit_Id](Prd_Work_Order_Item_Ingredients.md#used_quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -262,15 +232,9 @@ The measurement unit of the quantity of the material consumed in the operation
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store from which to retrieve the material.
 
 
 The store from which to retrieve the material.
@@ -284,9 +248,8 @@ The store from which to retrieve the material.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Store_Id](Prd_Work_Order_Item_Ingredients.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -309,12 +272,9 @@ The store from which to retrieve the material.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -325,9 +285,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Notes](Prd_Work_Order_Item_Ingredients.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -349,12 +308,6 @@ Notes
 ### Id
 
 
-Id
-
-
-The Id of the production order operation
-
-
 The Id of the production order operation
 
 | Property | Value |
@@ -366,9 +319,8 @@ The Id of the production order operation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Id](Prd_Work_Order_Item_Ingredients.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -391,12 +343,9 @@ The Id of the production order operation
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -406,9 +355,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Row_Version](Prd_Work_Order_Item_Ingredients.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -430,12 +378,6 @@ Row_Version
 ### Serial_Number_Id
 
 
-Serial_Number_Id
-
-
-If not NULL, specifies the serial number of the ingredient
-
-
 If not NULL, specifies the serial number of the ingredient
 
 | Property | Value |
@@ -447,9 +389,8 @@ If not NULL, specifies the serial number of the ingredient
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Serial_Number_Id](Prd_Work_Order_Item_Ingredients.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -472,15 +413,9 @@ If not NULL, specifies the serial number of the ingredient
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Code_Id
-
-
-Product_Code_Id
-
-
-Selects the product thru some of the product codes.
 
 
 Selects the product thru some of the product codes.
@@ -494,9 +429,8 @@ Selects the product thru some of the product codes.
 |Referenced Table|[Gen_Product_Codes](Gen_Product_Codes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Product_Code_Id](Prd_Work_Order_Item_Ingredients.md#product_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -519,15 +453,9 @@ Selects the product thru some of the product codes.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Lot_Id
-
-
-Lot_Id
-
-
-Lot from which to get the material. When NULL, any lot can be used.
 
 
 Lot from which to get the material. When NULL, any lot can be used.
@@ -541,9 +469,8 @@ Lot from which to get the material. When NULL, any lot can be used.
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Lot_Id](Prd_Work_Order_Item_Ingredients.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -566,15 +493,9 @@ Lot from which to get the material. When NULL, any lot can be used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Used_Quantity_Base
-
-
-Used_Quantity_Base
-
-
-The equivalence of Used Quantity in the base measurement category of the material.
 
 
 The equivalence of Used Quantity in the base measurement category of the material.
@@ -587,9 +508,8 @@ The equivalence of Used Quantity in the base measurement category of the materia
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Used_Quantity_Base](Prd_Work_Order_Item_Ingredients.md#used_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -611,12 +531,6 @@ The equivalence of Used Quantity in the base measurement category of the materia
 ### Operation_Id
 
 
-Operation_Id
-
-
-Specifies for which operation this ingredient is used
-
-
 Specifies for which operation this ingredient is used
 
 | Property | Value |
@@ -628,9 +542,8 @@ Specifies for which operation this ingredient is used
 |Referenced Table|[Prd_Operations](Prd_Operations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Operation_Id](Prd_Work_Order_Item_Ingredients.md#operation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -653,15 +566,9 @@ Specifies for which operation this ingredient is used
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Distribute_By
-
-
-Distribute_By
-
-
-Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT NULL iif Work_Order_Item_Id is NULL. MC=Measurement, SP=Standard_Price
 
 
 Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT NULL iif Work_Order_Item_Id is NULL. MC=Measurement, SP=Standard_Price
@@ -675,10 +582,9 @@ Distribution method in case the materials from the line are distributed amongst 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`SP`, `MC`, `SC`|
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Distribute_By](Prd_Work_Order_Item_Ingredients.md#distribute_by)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -700,12 +606,6 @@ Distribution method in case the materials from the line are distributed amongst 
 ### Principal_Recipe_Ingredient_Id
 
 
-Principal_Recipe_Ingredient_Id
-
-
-The principal recipe ingredient on which this record is based.
-
-
 The principal recipe ingredient on which this record is based.
 
 | Property | Value |
@@ -717,9 +617,8 @@ The principal recipe ingredient on which this record is based.
 |Referenced Table|[Prd_Principal_Recipe_Ingredients](Prd_Principal_Recipe_Ingredients.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Principal_Recipe_Ingredient_Id](Prd_Work_Order_Item_Ingredients.md#principal_recipe_ingredient_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -742,15 +641,9 @@ The principal recipe ingredient on which this record is based.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Store_Bin_Id
-
-
-Store_Bin_Id
-
-
-The store bin from which to take the ingredients
 
 
 The store bin from which to take the ingredients
@@ -764,9 +657,8 @@ The store bin from which to take the ingredients
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Store_Bin_Id](Prd_Work_Order_Item_Ingredients.md#store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -789,15 +681,9 @@ The store bin from which to take the ingredients
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Fixed_Scrap_Quantity
-
-
-Fixed_Scrap_Quantity
-
-
-The quantity of the material, which will be used for setup.
 
 
 The quantity of the material, which will be used for setup.
@@ -810,9 +696,8 @@ The quantity of the material, which will be used for setup.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Fixed_Scrap_Quantity](Prd_Work_Order_Item_Ingredients.md#fixed_scrap_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -833,9 +718,6 @@ The quantity of the material, which will be used for setup.
 
 ### Work_Order_Id
 
-
-Work_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -845,9 +727,8 @@ Work_Order_Id
 |Referenced Table|[Prd_Work_Orders](Prd_Work_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Work_Order_Id](Prd_Work_Order_Item_Ingredients.md#work_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -870,15 +751,9 @@ Work_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Distribute_By_Measurement_Category_Id
-
-
-Distribute_By_Measurement_Category_Id
-
-
-Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT NULL iif Distribute_By = MC.
 
 
 Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT NULL iif Distribute_By = MC.
@@ -892,9 +767,8 @@ Measurement category by which the materials from the line are distributed amongs
 |Referenced Table|[Gen_Measurement_Categories](Gen_Measurement_Categories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Distribute_By_Measurement_Category_Id](Prd_Work_Order_Item_Ingredients.md#distribute_by_measurement_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -917,15 +791,9 @@ Measurement category by which the materials from the line are distributed amongs
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Used_Standard_Quantity_Base
-
-
-Used_Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.
 
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.
@@ -938,9 +806,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Ingredients](Prd_Work_Order_Item_Ingredients.md).[Used_Standard_Quantity_Base](Prd_Work_Order_Item_Ingredients.md#used_standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

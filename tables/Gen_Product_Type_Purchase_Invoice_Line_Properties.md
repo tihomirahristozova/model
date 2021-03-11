@@ -1,5 +1,10 @@
 # Table Gen_Product_Type_Purchase_Invoice_Line_Properties
 
+
+## Entity
+
+Entity: [General.Products.ProductTypePurchaseInvoiceLineProperties](~/entities/General.Products.ProductTypePurchaseInvoiceLineProperties.md)
+
 When specified for a product type, contains the suggested user-defined properties, which can be specified when creating new purchase invoice lines with products of this type. Entity: Gen_Product_Type_Purchase_Invoice_Line_Properties
 
 ## Owner Tables Hierarchy
@@ -22,12 +27,6 @@ When specified for a product type, contains the suggested user-defined propertie
 ### Property_No
 
 
-Property_No
-
-
-The consecutive number (position) of the property within the current product type.
-
-
 The consecutive number (position) of the property within the current product type.
 
 | Property | Value |
@@ -38,10 +37,9 @@ The consecutive number (position) of the property within the current product typ
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Gen_Product_Type_Purchase_Invoice_Line_Properties](Gen_Product_Type_Purchase_Invoice_Line_Properties.md).[Property_No](Gen_Product_Type_Purchase_Invoice_Line_Properties.md#property_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,12 +61,6 @@ The consecutive number (position) of the property within the current product typ
 ### Property_Id
 
 
-Property_Id
-
-
-The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'.
-
-
 The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'.
 
 | Property | Value |
@@ -80,9 +72,8 @@ The user-defined property. It should be with Entity Type = 'Purchase Invoice Lin
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Type_Purchase_Invoice_Line_Properties](Gen_Product_Type_Purchase_Invoice_Line_Properties.md).[Property_Id](Gen_Product_Type_Purchase_Invoice_Line_Properties.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +96,9 @@ The user-defined property. It should be with Entity Type = 'Purchase Invoice Lin
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Required
-
-
-Required
-
-
-True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.
 
 
 True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.
@@ -126,9 +111,8 @@ True when the property is required, when creating new purchase invoice lines. Fa
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Type_Purchase_Invoice_Line_Properties](Gen_Product_Type_Purchase_Invoice_Line_Properties.md).[Required](Gen_Product_Type_Purchase_Invoice_Line_Properties.md#required)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,9 +133,6 @@ True when the property is required, when creating new purchase invoice lines. Fa
 
 ### Product_Type_Purchase_Invoice_Line_Property_Id
 
-
-Product_Type_Purchase_Invoice_Line_Property_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -161,9 +142,8 @@ Product_Type_Purchase_Invoice_Line_Property_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Type_Purchase_Invoice_Line_Properties](Gen_Product_Type_Purchase_Invoice_Line_Properties.md).[Product_Type_Purchase_Invoice_Line_Property_Id](Gen_Product_Type_Purchase_Invoice_Line_Properties.md#product_type_purchase_invoice_line_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,12 +166,9 @@ Product_Type_Purchase_Invoice_Line_Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Type_Id
-
-
-Product_Type_Id
 
 | Property | Value |
 | - | - |
@@ -202,9 +179,8 @@ Product_Type_Id
 |Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Type_Purchase_Invoice_Line_Properties](Gen_Product_Type_Purchase_Invoice_Line_Properties.md).[Product_Type_Id](Gen_Product_Type_Purchase_Invoice_Line_Properties.md#product_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -227,12 +203,9 @@ Product_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -242,9 +215,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Type_Purchase_Invoice_Line_Properties](Gen_Product_Type_Purchase_Invoice_Line_Properties.md).[Row_Version](Gen_Product_Type_Purchase_Invoice_Line_Properties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

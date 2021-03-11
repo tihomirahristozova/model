@@ -1,5 +1,10 @@
 # Table Sys_Object_Files
 
+
+## Entity
+
+Entity: [Systems.Core.ObjectFiles](~/entities/Systems.Core.ObjectFiles.md)
+
 Contains files attached to objects. Entity: Sys_Object_Files
 
 ## Owner Tables Hierarchy
@@ -16,7 +21,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 |[Embedded_File_Contents](#embedded_file_contents)|`varbinary` |Contains the contents of the file, when it is embedded in the database. NULL for linked files|
 |[Linked_File_Path](#linked_file_path)|`nvarchar(1024)` |When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files|
 |[File_Name](#file_name)|`nvarchar(254)` |The file name of the linked or embedded file|
-|[Notes](#notes)|`nvarchar(2147483647)` |User notes for the file attachment|
+|[Notes](#notes)|`nvarchar(max)` |User notes for the file attachment|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Content_Location](#content_location)|`nvarchar(3)` Allowed: `EMB`, `URL`, `FSL`|The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.|
 |[Media_Type](#media_type)|`nvarchar(128)` |For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.|
@@ -33,12 +38,6 @@ Contains files attached to objects. Entity: Sys_Object_Files
 ### Object_File_Id
 
 
-Object_File_Id
-
-
-.
-
-
 .
 
 | Property | Value |
@@ -50,9 +49,8 @@ Object_File_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Object_File_Id](Sys_Object_Files.md#object_file_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -75,15 +73,9 @@ Object_File_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Object_Id
-
-
-Object_Id
-
-
-The object to which the file is attached
 
 
 The object to which the file is attached
@@ -97,9 +89,8 @@ The object to which the file is attached
 |Referenced Table|[Sys_Objects](Sys_Objects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Object_Id](Sys_Object_Files.md#object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -122,15 +113,9 @@ The object to which the file is attached
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Purpose_Code
-
-
-Purpose_Code
-
-
-Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.
 
 
 Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.
@@ -144,9 +129,8 @@ Code, designating the usage purpose of the file. The meaning of each code is up 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Purpose_Code](Sys_Object_Files.md#purpose_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -169,15 +153,9 @@ Code, designating the usage purpose of the file. The meaning of each code is up 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Embedded_File_Contents
-
-
-Embedded_File_Contents
-
-
-Contains the contents of the file, when it is embedded in the database. NULL for linked files
 
 
 Contains the contents of the file, when it is embedded in the database. NULL for linked files
@@ -190,9 +168,8 @@ Contains the contents of the file, when it is embedded in the database. NULL for
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Embedded_File_Contents](Sys_Object_Files.md#embedded_file_contents)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -214,12 +191,6 @@ Contains the contents of the file, when it is embedded in the database. NULL for
 ### Linked_File_Path
 
 
-Linked_File_Path
-
-
-When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files
-
-
 When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files
 
 | Property | Value |
@@ -231,9 +202,8 @@ When the file is linked, contains the full path (including the file name) to the
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Linked_File_Path](Sys_Object_Files.md#linked_file_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -256,16 +226,10 @@ When the file is linked, contains the full path (including the file name) to the
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### File_Name
-
-
-File_Name
-
-
-The file name of the linked or embedded file
 
 
 The file name of the linked or embedded file
@@ -279,9 +243,8 @@ The file name of the linked or embedded file
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[File_Name](Sys_Object_Files.md#file_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -304,32 +267,25 @@ The file name of the linked or embedded file
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
-
-
-Notes
-
-
-User notes for the file attachment
 
 
 User notes for the file attachment
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Notes](Sys_Object_Files.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -350,9 +306,6 @@ User notes for the file attachment
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -361,9 +314,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Row_Version](Sys_Object_Files.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -385,12 +337,6 @@ Row_Version
 ### Content_Location
 
 
-Content_Location
-
-
-The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.
-
-
 The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.
 
 | Property | Value |
@@ -402,10 +348,9 @@ The location of the file contents. EMB=Embedded in the database; URL=Internet UR
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EMB`, `URL`, `FSL`|
 |Default Value|EMB|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Content_Location](Sys_Object_Files.md#content_location)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -428,15 +373,9 @@ The location of the file contents. EMB=Embedded in the database; URL=Internet UR
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Media_Type
-
-
-Media_Type
-
-
-For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.
 
 
 For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.
@@ -450,9 +389,8 @@ For media files, contains the Media Type as per the IANA registry (formerly know
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Media_Type](Sys_Object_Files.md#media_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -474,12 +412,6 @@ For media files, contains the Media Type as per the IANA registry (formerly know
 ### Media_Width
 
 
-Media_Width
-
-
-Used (non-null) only for media files. Specifies the width for displaying the media.
-
-
 Used (non-null) only for media files. Specifies the width for displaying the media.
 
 | Property | Value |
@@ -490,9 +422,8 @@ Used (non-null) only for media files. Specifies the width for displaying the med
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Media_Width](Sys_Object_Files.md#media_width)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -514,12 +445,6 @@ Used (non-null) only for media files. Specifies the width for displaying the med
 ### Media_Height
 
 
-Media_Height
-
-
-Used (non-null) only for media files. Specifies the width for displaying the media.
-
-
 Used (non-null) only for media files. Specifies the width for displaying the media.
 
 | Property | Value |
@@ -530,9 +455,8 @@ Used (non-null) only for media files. Specifies the width for displaying the med
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Media_Height](Sys_Object_Files.md#media_height)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -554,12 +478,6 @@ Used (non-null) only for media files. Specifies the width for displaying the med
 ### Creation_Time_Utc
 
 
-Creation_Time_Utc
-
-
-Time (in UTC), when the file was created.
-
-
 Time (in UTC), when the file was created.
 
 | Property | Value |
@@ -571,9 +489,8 @@ Time (in UTC), when the file was created.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTimeUtc|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Creation_Time_Utc](Sys_Object_Files.md#creation_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -595,12 +512,6 @@ Time (in UTC), when the file was created.
 ### Last_Update_Time_Utc
 
 
-Last_Update_Time_Utc
-
-
-Time (in UTC), when the file was last updated.
-
-
 Time (in UTC), when the file was last updated.
 
 | Property | Value |
@@ -612,9 +523,8 @@ Time (in UTC), when the file was last updated.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTimeUtc|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Last_Update_Time_Utc](Sys_Object_Files.md#last_update_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -636,12 +546,6 @@ Time (in UTC), when the file was last updated.
 ### Creation_User_Id
 
 
-Creation_User_Id
-
-
-The user, who created the file record. NULL if it is unknown.
-
-
 The user, who created the file record. NULL if it is unknown.
 
 | Property | Value |
@@ -653,9 +557,8 @@ The user, who created the file record. NULL if it is unknown.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Creation_User_Id](Sys_Object_Files.md#creation_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -678,17 +581,11 @@ The user, who created the file record. NULL if it is unknown.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Last_Update_User_Id
 
 
-Last_Update_User_Id
-
-
-The user, who performed the last update to the file record. NULL if it is unknown.
-
-
 The user, who performed the last update to the file record. NULL if it is unknown.
 
 | Property | Value |
@@ -700,9 +597,8 @@ The user, who performed the last update to the file record. NULL if it is unknow
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Last_Update_User_Id](Sys_Object_Files.md#last_update_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -725,15 +621,9 @@ The user, who performed the last update to the file record. NULL if it is unknow
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Section
-
-
-Section
-
-
-A section name used to group files
 
 
 A section name used to group files
@@ -747,9 +637,8 @@ A section name used to group files
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Files](Sys_Object_Files.md).[Section](Sys_Object_Files.md#section)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

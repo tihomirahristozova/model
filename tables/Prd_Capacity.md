@@ -1,5 +1,10 @@
 # Table Prd_Capacity
 
+
+## Entity
+
+Entity: [Production.Resources.Capacity](~/entities/Production.Resources.Capacity.md)
+
 Contains capacity of workgroup resources available for production. Entity: Prd_Capacity
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Contains capacity of workgroup resources available for production. Entity: Prd_C
 
 ### Capacity_Id
 
-
-Capacity_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Capacity_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Capacity](Prd_Capacity.md).[Capacity_Id](Prd_Capacity.md#capacity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Capacity_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Workgroup_Resource_Id
-
-
-Workgroup_Resource_Id
-
-
-The capacity-constrained resource
 
 
 The capacity-constrained resource
@@ -82,9 +77,8 @@ The capacity-constrained resource
 |Referenced Table|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Capacity](Prd_Capacity.md).[Workgroup_Resource_Id](Prd_Capacity.md#workgroup_resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The capacity-constrained resource
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Calendar_Date
-
-
-Calendar_Date
-
-
-Date of the availability period
 
 
 Date of the availability period
@@ -129,9 +117,8 @@ Date of the availability period
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Capacity](Prd_Capacity.md).[Calendar_Date](Prd_Capacity.md#calendar_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,12 +146,6 @@ Date of the availability period
 ### Available_Start_Time
 
 
-Available_Start_Time
-
-
-Start of availability period during Calendar_Date
-
-
 Start of availability period during Calendar_Date
 
 | Property | Value |
@@ -176,9 +157,8 @@ Start of availability period during Calendar_Date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Capacity](Prd_Capacity.md).[Available_Start_Time](Prd_Capacity.md#available_start_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,12 +180,6 @@ Start of availability period during Calendar_Date
 ### Available_End_Time
 
 
-Available_End_Time
-
-
-End of availability period during Calendar_Date
-
-
 End of availability period during Calendar_Date
 
 | Property | Value |
@@ -217,9 +191,8 @@ End of availability period during Calendar_Date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Capacity](Prd_Capacity.md).[Available_End_Time](Prd_Capacity.md#available_end_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,12 +214,6 @@ End of availability period during Calendar_Date
 ### Available_Quantity
 
 
-Available_Quantity
-
-
-Quantity of the resource, available to production
-
-
 Quantity of the resource, available to production
 
 | Property | Value |
@@ -257,9 +224,8 @@ Quantity of the resource, available to production
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Capacity](Prd_Capacity.md).[Available_Quantity](Prd_Capacity.md#available_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -280,9 +246,6 @@ Quantity of the resource, available to production
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -291,9 +254,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Capacity](Prd_Capacity.md).[Row_Version](Prd_Capacity.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

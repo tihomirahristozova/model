@@ -1,5 +1,10 @@
 # Table Crm_Distribution_Channels
 
+
+## Entity
+
+Entity: [Crm.Marketing.DistributionChannels](~/entities/Crm.Marketing.DistributionChannels.md)
+
 General list of distribution channels. Used to control prices and availability of products for the different channels. Entity: Crm_Distribution_Channels
 
 ## Summary
@@ -10,15 +15,12 @@ General list of distribution channels. Used to control prices and availability o
 |[Distribution_Channel_Code](#distribution_channel_code)|`nvarchar(10)` |Unique distribution channel code|
 |[Distribution_Channel_Name](#distribution_channel_name)|`nvarchar(254)` `ML`|Multi-language name of the distribution channel|
 |[Is_Active](#is_active)|`bit` |Is the channel active for new sales? 1=Yes, 0=No|
-|[Description](#description)|`nvarchar(2147483647)` |Full description of the distribution channel|
+|[Description](#description)|`nvarchar(max)` |Full description of the distribution channel|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Distribution_Channel_Id
-
-
-Distribution_Channel_Id
 
 | Property | Value |
 | - | - |
@@ -29,9 +31,8 @@ Distribution_Channel_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Distribution_Channels](Crm_Distribution_Channels.md).[Distribution_Channel_Id](Crm_Distribution_Channels.md#distribution_channel_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Distribution_Channel_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Distribution_Channel_Code
-
-
-Distribution_Channel_Code
-
-
-Unique distribution channel code
 
 
 Unique distribution channel code
@@ -76,9 +71,8 @@ Unique distribution channel code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Distribution_Channels](Crm_Distribution_Channels.md).[Distribution_Channel_Code](Crm_Distribution_Channels.md#distribution_channel_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,16 +95,10 @@ Unique distribution channel code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Distribution_Channel_Name
-
-
-Distribution_Channel_Name
-
-
-Multi-language name of the distribution channel
 
 
 Multi-language name of the distribution channel
@@ -124,9 +112,8 @@ Multi-language name of the distribution channel
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Distribution_Channels](Crm_Distribution_Channels.md).[Distribution_Channel_Name](Crm_Distribution_Channels.md#distribution_channel_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,16 +136,10 @@ Multi-language name of the distribution channel
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Is the channel active for new sales? 1=Yes, 0=No
 
 
 Is the channel active for new sales? 1=Yes, 0=No
@@ -171,9 +152,8 @@ Is the channel active for new sales? 1=Yes, 0=No
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Crm_Distribution_Channels](Crm_Distribution_Channels.md).[Is_Active](Crm_Distribution_Channels.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,31 +176,24 @@ Is the channel active for new sales? 1=Yes, 0=No
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Description
-
-
-Description
-
-
-Full description of the distribution channel
 
 
 Full description of the distribution channel
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Distribution_Channels](Crm_Distribution_Channels.md).[Description](Crm_Distribution_Channels.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,9 +214,6 @@ Full description of the distribution channel
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -252,9 +222,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Distribution_Channels](Crm_Distribution_Channels.md).[Row_Version](Crm_Distribution_Channels.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_resources">Table Prj_Resources</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.Resources.html">Projects.Resources</a></p>
 <p>Contains the enterprise resources, which are available for including in projects. Entity: Prj_Resources</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -111,7 +113,7 @@
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -123,7 +125,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="resource_id">Resource_Id</h3>
-<p>Resource_Id</p>
 <table>
 <thead>
 <tr>
@@ -162,15 +163,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Resources.html">Prj_Resources</a>.<a href="Prj_Resources.html#resource_id">Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -255,15 +252,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The enterprise company owning the resource</p>
 <p>The enterprise company owning the resource</p>
 <table>
 <thead>
@@ -303,15 +298,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Resources.html">Prj_Resources</a>.<a href="Prj_Resources.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -396,14 +387,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_name">Resource_Name</h3>
-<p>Resource_Name</p>
 <table>
 <thead>
 <tr>
@@ -442,15 +432,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Resources.html">Prj_Resources</a>.<a href="Prj_Resources.html#resource_name">Resource_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -523,7 +509,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
 <table>
 <thead>
 <tr>
@@ -534,7 +519,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -562,15 +547,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Resources.html">Prj_Resources</a>.<a href="Prj_Resources.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -643,7 +624,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -678,15 +658,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Resources.html">Prj_Resources</a>.<a href="Prj_Resources.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

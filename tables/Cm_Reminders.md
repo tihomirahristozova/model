@@ -1,5 +1,10 @@
 # Table Cm_Reminders
 
+
+## Entity
+
+Entity: [General.Contacts.Reminders](~/entities/General.Contacts.Reminders.md)
+
 Reminders for activities. The reminders are alarms, which can be turned off. Each activity can have multiple reminders. Entity: Cm_Reminders
 
 ## Owner Tables Hierarchy
@@ -14,7 +19,7 @@ Reminders for activities. The reminders are alarms, which can be turned off. Eac
 |[Reminder_Id](#reminder_id)|`uniqueidentifier` `PK`||
 |[Activity_Id](#activity_id)|`uniqueidentifier` |The activity to which this reminder is attached|
 |[Reminder_Time](#reminder_time)|`datetime` |The time when the alarm should snooze to the user|
-|[Notes](#notes)|`nvarchar(2147483647)` |Notes that describe this specific reminder for the task|
+|[Notes](#notes)|`nvarchar(max)` |Notes that describe this specific reminder for the task|
 |[Is_Dismissed](#is_dismissed)|`bit` |When 1 the reminder was dismissed by the user; the initial value is 0|
 |[Is_Default](#is_default)|`bit` |1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -22,9 +27,6 @@ Reminders for activities. The reminders are alarms, which can be turned off. Eac
 ## Columns
 
 ### Reminder_Id
-
-
-Reminder_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Reminder_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Reminders](Cm_Reminders.md).[Reminder_Id](Cm_Reminders.md#reminder_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Reminder_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Activity_Id
-
-
-Activity_Id
-
-
-The activity to which this reminder is attached
 
 
 The activity to which this reminder is attached
@@ -82,9 +77,8 @@ The activity to which this reminder is attached
 |Referenced Table|[Cm_Activities](Cm_Activities.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Reminders](Cm_Reminders.md).[Activity_Id](Cm_Reminders.md#activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The activity to which this reminder is attached
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Reminder_Time
-
-
-Reminder_Time
-
-
-The time when the alarm should snooze to the user
 
 
 The time when the alarm should snooze to the user
@@ -129,9 +117,8 @@ The time when the alarm should snooze to the user
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Reminders](Cm_Reminders.md).[Reminder_Time](Cm_Reminders.md#reminder_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,26 +146,19 @@ The time when the alarm should snooze to the user
 ### Notes
 
 
-Notes
-
-
-Notes that describe this specific reminder for the task
-
-
 Notes that describe this specific reminder for the task
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Reminders](Cm_Reminders.md).[Notes](Cm_Reminders.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,12 +180,6 @@ Notes that describe this specific reminder for the task
 ### Is_Dismissed
 
 
-Is_Dismissed
-
-
-When 1 the reminder was dismissed by the user; the initial value is 0
-
-
 When 1 the reminder was dismissed by the user; the initial value is 0
 
 | Property | Value |
@@ -216,9 +190,8 @@ When 1 the reminder was dismissed by the user; the initial value is 0
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cm_Reminders](Cm_Reminders.md).[Is_Dismissed](Cm_Reminders.md#is_dismissed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,17 +214,11 @@ When 1 the reminder was dismissed by the user; the initial value is 0
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Default
 
 
-Is_Default
-
-
-1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form
-
-
 1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form
 
 | Property | Value |
@@ -262,9 +229,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cm_Reminders](Cm_Reminders.md).[Is_Default](Cm_Reminders.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -287,12 +253,9 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -302,9 +265,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Reminders](Cm_Reminders.md).[Row_Version](Cm_Reminders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

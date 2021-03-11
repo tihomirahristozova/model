@@ -1,5 +1,10 @@
 # Table Eam_Managed_Asset_Type_Maintenance_Types
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes](~/entities/Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md)
+
 Defines the types of maintenances, which are allowed for assets of the different types. Entity: Eam_Managed_Asset_Type_Maintenance_Types (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -16,18 +21,12 @@ Defines the types of maintenances, which are allowed for assets of the different
 |[Default_Schedule_Months](#default_schedule_months)|`int` |Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in months.|
 |[Default_Schedule_Days](#default_schedule_days)|`int` |Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in days.|
 |[Default_Parameter_Change](#default_parameter_change)|`int` |Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means, that maintenances are not scheduled based on parameter change.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Managed_Asset_Type_Maintenance_Type_Id
-
-
-Managed_Asset_Type_Maintenance_Type_Id
-
-
-Defines the types of maintenances, which are allowed for assets of the different types.
 
 
 Defines the types of maintenances, which are allowed for assets of the different types.
@@ -41,9 +40,8 @@ Defines the types of maintenances, which are allowed for assets of the different
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Managed_Asset_Type_Maintenance_Types](Eam_Managed_Asset_Type_Maintenance_Types.md).[Managed_Asset_Type_Maintenance_Type_Id](Eam_Managed_Asset_Type_Maintenance_Types.md#managed_asset_type_maintenance_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,15 +64,9 @@ Defines the types of maintenances, which are allowed for assets of the different
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Type_Id
-
-
-Managed_Asset_Type_Id
-
-
-The asset type for which the allowed maintenance type is defined.
 
 
 The asset type for which the allowed maintenance type is defined.
@@ -88,9 +80,8 @@ The asset type for which the allowed maintenance type is defined.
 |Referenced Table|[Eam_Managed_Asset_Types](Eam_Managed_Asset_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Maintenance_Types](Eam_Managed_Asset_Type_Maintenance_Types.md).[Managed_Asset_Type_Id](Eam_Managed_Asset_Type_Maintenance_Types.md#managed_asset_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,15 +104,9 @@ The asset type for which the allowed maintenance type is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Type_Id
-
-
-Maintenance_Type_Id
-
-
-The allowed maintenance type for the asset type.
 
 
 The allowed maintenance type for the asset type.
@@ -135,9 +120,8 @@ The allowed maintenance type for the asset type.
 |Referenced Table|[Eam_Maintenance_Types](Eam_Maintenance_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Maintenance_Types](Eam_Managed_Asset_Type_Maintenance_Types.md).[Maintenance_Type_Id](Eam_Managed_Asset_Type_Maintenance_Types.md#maintenance_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -160,15 +144,9 @@ The allowed maintenance type for the asset type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Schedule_Months
-
-
-Default_Schedule_Months
-
-
-Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in months.
 
 
 Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in months.
@@ -181,9 +159,8 @@ Specifies the number of months between two maintenances. When not null, this sch
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Maintenance_Types](Eam_Managed_Asset_Type_Maintenance_Types.md).[Default_Schedule_Months](Eam_Managed_Asset_Type_Maintenance_Types.md#default_schedule_months)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,12 +182,6 @@ Specifies the number of months between two maintenances. When not null, this sch
 ### Default_Schedule_Days
 
 
-Default_Schedule_Days
-
-
-Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in days.
-
-
 Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in days.
 
 | Property | Value |
@@ -221,9 +192,8 @@ Specifies the maximum number of days between two maintenances (in addition to th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Maintenance_Types](Eam_Managed_Asset_Type_Maintenance_Types.md).[Default_Schedule_Days](Eam_Managed_Asset_Type_Maintenance_Types.md#default_schedule_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -245,12 +215,6 @@ Specifies the maximum number of days between two maintenances (in addition to th
 ### Default_Parameter_Change
 
 
-Default_Parameter_Change
-
-
-Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means, that maintenances are not scheduled based on parameter change.
-
-
 Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means, that maintenances are not scheduled based on parameter change.
 
 | Property | Value |
@@ -261,9 +225,8 @@ Default positive change of the tracked parameter between two maintenances. When 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Maintenance_Types](Eam_Managed_Asset_Type_Maintenance_Types.md).[Default_Parameter_Change](Eam_Managed_Asset_Type_Maintenance_Types.md#default_parameter_change)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,21 +247,17 @@ Default positive change of the tracked parameter between two maintenances. When 
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Maintenance_Types](Eam_Managed_Asset_Type_Maintenance_Types.md).[Notes](Eam_Managed_Asset_Type_Maintenance_Types.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -319,9 +278,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -330,9 +286,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Maintenance_Types](Eam_Managed_Asset_Type_Maintenance_Types.md).[Row_Version](Eam_Managed_Asset_Type_Maintenance_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

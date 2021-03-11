@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cm_activity_templates">Table Cm_Activity_Templates</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Contacts.ActivityTemplates.html">General.Contacts.ActivityTemplates</a></p>
 <p>Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#activity_subject_mask">Activity_Subject_Mask</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.</td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="activity_template_id">Activity_Template_Id</h3>
-<p>Activity_Template_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#activity_template_id">Activity_Template_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,14 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="route_id">Route_Id</h3>
-<p>Route_Id</p>
 <table>
 <thead>
 <tr>
@@ -317,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#route_id">Route_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -410,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="responsible_party_id">Responsible_Party_Id</h3>
-<p>Responsible_Party_Id</p>
-<p>If Null the user that starts the generation route is responsible party of the activity.</p>
 <p>If Null the user that starts the generation route is responsible party of the activity.</p>
 <table>
 <thead>
@@ -458,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#responsible_party_id">Responsible_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -551,15 +537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="activity_subject_mask">Activity_Subject_Mask</h3>
-<p>Activity_Subject_Mask</p>
-<p>A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.</p>
 <p>A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.</p>
 <table>
 <thead>
@@ -571,7 +555,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -599,15 +583,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#activity_subject_mask">Activity_Subject_Mask</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -680,8 +660,6 @@
 </tbody>
 </table>
 <h3 id="source_date_field">Source_Date_Field</h3>
-<p>Source_Date_Field</p>
-<p>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.</p>
 <p>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.</p>
 <table>
 <thead>
@@ -721,15 +699,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#source_date_field">Source_Date_Field</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -802,8 +776,6 @@
 </tbody>
 </table>
 <h3 id="additional_days">Additional_Days</h3>
-<p>Additional_Days</p>
-<p>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.</p>
 <p>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.</p>
 <table>
 <thead>
@@ -839,15 +811,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#additional_days">Additional_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -920,8 +888,6 @@
 </tbody>
 </table>
 <h3 id="start_time">Start_Time</h3>
-<p>Start_Time</p>
-<p>The time of the day when the activity starts</p>
 <p>The time of the day when the activity starts</p>
 <table>
 <thead>
@@ -961,15 +927,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#start_time">Start_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1042,7 +1004,6 @@
 </tbody>
 </table>
 <h3 id="reminder_time">Reminder_Time</h3>
-<p>Reminder_Time</p>
 <table>
 <thead>
 <tr>
@@ -1081,15 +1042,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#reminder_time">Reminder_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1162,7 +1119,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1197,15 +1153,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activity_Templates.html">Cm_Activity_Templates</a>.<a href="Cm_Activity_Templates.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

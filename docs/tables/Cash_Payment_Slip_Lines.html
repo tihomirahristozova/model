@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cash_payment_slip_lines">Table Cash_Payment_Slip_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Payments.PaymentSlipLines.html">Finance.Payments.PaymentSlipLines</a></p>
 <p>Mass payment line, which is distribution of an amount among payment orders. Each record generates one payment transaction line. Entity: Cash_Payment_Slip_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -130,8 +132,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="amount">Amount</h3>
-<p>Amount</p>
-<p>The part of the total amount in the payment slip amount, that is distributed to the specified payment order</p>
 <p>The part of the total amount in the payment slip amount, that is distributed to the specified payment order</p>
 <table>
 <thead>
@@ -167,15 +167,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Lines.html">Cash_Payment_Slip_Lines</a>.<a href="Cash_Payment_Slip_Lines.html#amount">Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -248,8 +244,6 @@
 </tbody>
 </table>
 <h3 id="covered_order_amount">Covered_Order_Amount</h3>
-<p>Covered_Order_Amount</p>
-<p>The part of the original payment order amount, that is covered by this payment slip line</p>
 <p>The part of the original payment order amount, that is covered by this payment slip line</p>
 <table>
 <thead>
@@ -285,15 +279,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Lines.html">Cash_Payment_Slip_Lines</a>.<a href="Cash_Payment_Slip_Lines.html#covered_order_amount">Covered_Order_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -366,8 +356,6 @@
 </tbody>
 </table>
 <h3 id="payment_order_id">Payment_Order_Id</h3>
-<p>Payment_Order_Id</p>
-<p>The payment order, that is covered by this payment slip line</p>
 <p>The payment order, that is covered by this payment slip line</p>
 <table>
 <thead>
@@ -407,15 +395,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Lines.html">Cash_Payment_Slip_Lines</a>.<a href="Cash_Payment_Slip_Lines.html#payment_order_id">Payment_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -500,14 +484,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_slip_line_id">Payment_Slip_Line_Id</h3>
-<p>Payment_Slip_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -546,15 +529,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Lines.html">Cash_Payment_Slip_Lines</a>.<a href="Cash_Payment_Slip_Lines.html#payment_slip_line_id">Payment_Slip_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -639,14 +618,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_slip_amount_id">Payment_Slip_Amount_Id</h3>
-<p>Payment_Slip_Amount_Id</p>
 <table>
 <thead>
 <tr>
@@ -685,15 +663,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Lines.html">Cash_Payment_Slip_Lines</a>.<a href="Cash_Payment_Slip_Lines.html#payment_slip_amount_id">Payment_Slip_Amount_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -778,14 +752,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -820,15 +793,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slip_Lines.html">Cash_Payment_Slip_Lines</a>.<a href="Cash_Payment_Slip_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

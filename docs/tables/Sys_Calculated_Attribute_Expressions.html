@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_calculated_attribute_expressions">Table Sys_Calculated_Attribute_Expressions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Bpm.CalculatedAttributeExpressions.html">Systems.Bpm.CalculatedAttributeExpressions</a></p>
 <p>Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -136,7 +138,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -158,8 +160,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="expression_no">Expression_No</h3>
-<p>Expression_No</p>
-<p>Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute.</p>
 <p>Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute.</p>
 <table>
 <thead>
@@ -195,7 +195,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -204,10 +204,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#expression_no">Expression_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -280,8 +276,6 @@
 </tbody>
 </table>
 <h3 id="operator">Operator</h3>
-<p>Operator</p>
-<p>The exprssion operator. Available operators are limited to a pre-selected list of operators.</p>
 <p>The exprssion operator. Available operators are limited to a pre-selected list of operators.</p>
 <table>
 <thead>
@@ -321,7 +315,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -330,10 +324,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#operator">Operator</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -406,8 +396,6 @@
 </tbody>
 </table>
 <h3 id="parameter1_type">Parameter1_Type</h3>
-<p>Parameter1_Type</p>
-<p>The type of the parameter specifies how to obtain the parameter value.</p>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
 <table>
 <thead>
@@ -447,7 +435,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -456,10 +444,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#parameter1_type">Parameter1_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -532,8 +516,6 @@
 </tbody>
 </table>
 <h3 id="parameter1_value">Parameter1_Value</h3>
-<p>Parameter1_Value</p>
-<p>The actual value of parameter 1.</p>
 <p>The actual value of parameter 1.</p>
 <table>
 <thead>
@@ -573,15 +555,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#parameter1_value">Parameter1_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -654,8 +632,6 @@
 </tbody>
 </table>
 <h3 id="parameter2_type">Parameter2_Type</h3>
-<p>Parameter2_Type</p>
-<p>The type of the parameter specifies how to obtain the parameter value.</p>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
 <table>
 <thead>
@@ -695,7 +671,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -704,10 +680,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#parameter2_type">Parameter2_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -780,8 +752,6 @@
 </tbody>
 </table>
 <h3 id="parameter2_value">Parameter2_Value</h3>
-<p>Parameter2_Value</p>
-<p>The actual value of the parameter.</p>
 <p>The actual value of the parameter.</p>
 <table>
 <thead>
@@ -821,15 +791,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#parameter2_value">Parameter2_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -902,8 +868,6 @@
 </tbody>
 </table>
 <h3 id="parameter3_type">Parameter3_Type</h3>
-<p>Parameter3_Type</p>
-<p>The type of the parameter specifies how to obtain the parameter value.</p>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
 <table>
 <thead>
@@ -943,7 +907,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -952,10 +916,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#parameter3_type">Parameter3_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1028,8 +988,6 @@
 </tbody>
 </table>
 <h3 id="parameter3_value">Parameter3_Value</h3>
-<p>Parameter3_Value</p>
-<p>The actual value of the parameter.</p>
 <p>The actual value of the parameter.</p>
 <table>
 <thead>
@@ -1069,15 +1027,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#parameter3_value">Parameter3_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1150,7 +1104,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1161,7 +1114,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1189,15 +1142,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1270,7 +1219,6 @@
 </tbody>
 </table>
 <h3 id="calculated_attribute_expression_id">Calculated_Attribute_Expression_Id</h3>
-<p>Calculated_Attribute_Expression_Id</p>
 <table>
 <thead>
 <tr>
@@ -1309,15 +1257,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#calculated_attribute_expression_id">Calculated_Attribute_Expression_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1402,14 +1346,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="calculated_attribute_id">Calculated_Attribute_Id</h3>
-<p>Calculated_Attribute_Id</p>
 <table>
 <thead>
 <tr>
@@ -1448,15 +1391,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#calculated_attribute_id">Calculated_Attribute_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1541,14 +1480,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1583,15 +1521,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Calculated_Attribute_Expressions.html">Sys_Calculated_Attribute_Expressions</a>.<a href="Sys_Calculated_Attribute_Expressions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-rent_asset_groups">Table Rent_Asset_Groups</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Rental.AssetGroups.html">Applications.Rental.AssetGroups</a></p>
 <p>Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Groups</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="rental_asset_group_id">Rental_Asset_Group_Id</h3>
-<p>Rental_Asset_Group_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Groups.html">Rent_Asset_Groups</a>.<a href="Rent_Asset_Groups.html#rental_asset_group_id">Rental_Asset_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,15 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rental_asset_group_code">Rental_Asset_Group_Code</h3>
-<p>Rental_Asset_Group_Code</p>
-<p>Asset group code, unique within the parent node.</p>
 <p>Asset group code, unique within the parent node.</p>
 <table>
 <thead>
@@ -309,15 +304,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Groups.html">Rent_Asset_Groups</a>.<a href="Rent_Asset_Groups.html#rental_asset_group_code">Rental_Asset_Group_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -402,7 +393,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -415,8 +406,6 @@
 </tbody>
 </table>
 <h3 id="rental_asset_group_name">Rental_Asset_Group_Name</h3>
-<p>Rental_Asset_Group_Name</p>
-<p>Asset group name, unique within the parent node.</p>
 <p>Asset group name, unique within the parent node.</p>
 <table>
 <thead>
@@ -456,15 +445,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Groups.html">Rent_Asset_Groups</a>.<a href="Rent_Asset_Groups.html#rental_asset_group_name">Rental_Asset_Group_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -549,7 +534,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -562,7 +547,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -573,7 +557,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -601,15 +585,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Groups.html">Rent_Asset_Groups</a>.<a href="Rent_Asset_Groups.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -682,8 +662,6 @@
 </tbody>
 </table>
 <h3 id="parent_full_path">Parent_Full_Path</h3>
-<p>Parent_Full_Path</p>
-<p>The full path of the parent node.</p>
 <p>The full path of the parent node.</p>
 <table>
 <thead>
@@ -723,15 +701,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Groups.html">Rent_Asset_Groups</a>.<a href="Rent_Asset_Groups.html#parent_full_path">Parent_Full_Path</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -816,15 +790,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="full_path">Full_Path</h3>
-<p>Full_Path</p>
-<p>The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.</p>
 <p>The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.</p>
 <table>
 <thead>
@@ -864,15 +836,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Groups.html">Rent_Asset_Groups</a>.<a href="Rent_Asset_Groups.html#full_path">Full_Path</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -945,7 +913,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -980,15 +947,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Groups.html">Rent_Asset_Groups</a>.<a href="Rent_Asset_Groups.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

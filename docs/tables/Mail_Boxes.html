@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-mail_boxes">Table Mail_Boxes</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Mail.Boxes.html">Applications.Mail.Boxes</a></p>
 <p>Represents user mailboxes. Entity: Mail_Boxes</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -152,7 +154,7 @@
 </tr>
 <tr>
 <td><a href="#signature_html">Signature_Html</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Html text of the default signature, when creating new emails from this mailbox. When is NULL, a default generic signature is attached</td>
 </tr>
 <tr>
@@ -169,7 +171,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="mail_box_id">Mail_Box_Id</h3>
-<p>Mail_Box_Id</p>
 <table>
 <thead>
 <tr>
@@ -208,15 +209,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#mail_box_id">Mail_Box_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -301,15 +298,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="owner_user_id">Owner_User_Id</h3>
-<p>Owner_User_Id</p>
-<p>The user, who owns the mailbox</p>
 <p>The user, who owns the mailbox</p>
 <table>
 <thead>
@@ -349,15 +344,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#owner_user_id">Owner_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -442,15 +433,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="email_address">Email_Address</h3>
-<p>Email_Address</p>
-<p>The email address associated with this mail box</p>
 <p>The email address associated with this mail box</p>
 <table>
 <thead>
@@ -490,15 +479,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#email_address">Email_Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -583,15 +568,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sync_protocol">Sync_Protocol</h3>
-<p>Sync_Protocol</p>
-<p>Synchronization protocol, 'POP3' or 'IMAP'. NULL means that syncrhonization is not setup</p>
 <p>Synchronization protocol, 'POP3' or 'IMAP'. NULL means that syncrhonization is not setup</p>
 <table>
 <thead>
@@ -631,7 +614,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -640,10 +623,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#sync_protocol">Sync_Protocol</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -716,8 +695,6 @@
 </tbody>
 </table>
 <h3 id="sync_server_address">Sync_Server_Address</h3>
-<p>Sync_Server_Address</p>
-<p>Incoming and outgoing mail server internet address. NULL when synchronization is not setup</p>
 <p>Incoming and outgoing mail server internet address. NULL when synchronization is not setup</p>
 <table>
 <thead>
@@ -757,15 +734,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#sync_server_address">Sync_Server_Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -838,8 +811,6 @@
 </tbody>
 </table>
 <h3 id="sync_user_name">Sync_User_Name</h3>
-<p>Sync_User_Name</p>
-<p>User name to supply to the server, when retrieving email. NULL when the connection is not setup or the server does not require user name</p>
 <p>User name to supply to the server, when retrieving email. NULL when the connection is not setup or the server does not require user name</p>
 <table>
 <thead>
@@ -879,15 +850,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#sync_user_name">Sync_User_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -960,8 +927,6 @@
 </tbody>
 </table>
 <h3 id="sync_password">Sync_Password</h3>
-<p>Sync_Password</p>
-<p>The password to supply to the server when retrieving email. NULL when the connection is not setup or the server does not require user name</p>
 <p>The password to supply to the server when retrieving email. NULL when the connection is not setup or the server does not require user name</p>
 <table>
 <thead>
@@ -1001,15 +966,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#sync_password">Sync_Password</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1082,8 +1043,6 @@
 </tbody>
 </table>
 <h3 id="active">Active</h3>
-<p>Active</p>
-<p>1 when the mail box is active for mail sinchronization, sending and receiving</p>
 <p>1 when the mail box is active for mail sinchronization, sending and receiving</p>
 <table>
 <thead>
@@ -1119,15 +1078,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#active">Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1212,15 +1167,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="send_server_address">Send_Server_Address</h3>
-<p>Send_Server_Address</p>
-<p>The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server</p>
 <p>The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server</p>
 <table>
 <thead>
@@ -1260,15 +1213,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#send_server_address">Send_Server_Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1341,8 +1290,6 @@
 </tbody>
 </table>
 <h3 id="is_default">Is_Default</h3>
-<p>Is_Default</p>
-<p>1 when this is the default mailbox for the user.</p>
 <p>1 when this is the default mailbox for the user.</p>
 <table>
 <thead>
@@ -1378,15 +1325,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#is_default">Is_Default</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1471,15 +1414,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_encrypted">Is_Encrypted</h3>
-<p>Is_Encrypted</p>
-<p>1 when the mailbox messages are stored in encrypted format</p>
 <p>1 when the mailbox messages are stored in encrypted format</p>
 <table>
 <thead>
@@ -1515,15 +1456,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#is_encrypted">Is_Encrypted</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1608,15 +1545,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="reset_on_next_sync">Reset_On_Next_Sync</h3>
-<p>Reset_On_Next_Sync</p>
-<p>Reset is pending: 1 = next sync should delete and retrieve again all messages; 0 = no pending reset</p>
 <p>Reset is pending: 1 = next sync should delete and retrieve again all messages; 0 = no pending reset</p>
 <table>
 <thead>
@@ -1652,15 +1587,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#reset_on_next_sync">Reset_On_Next_Sync</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1745,15 +1676,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="signature_html">Signature_Html</h3>
-<p>Signature_Html</p>
-<p>Html text of the default signature, when creating new emails from this mailbox. When is NULL, a default generic signature is attached</p>
 <p>Html text of the default signature, when creating new emails from this mailbox. When is NULL, a default generic signature is attached</p>
 <table>
 <thead>
@@ -1765,7 +1694,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1793,15 +1722,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#signature_html">Signature_Html</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1874,8 +1799,6 @@
 </tbody>
 </table>
 <h3 id="sent_items_folder_name">Sent_Items_Folder_Name</h3>
-<p>Sent_Items_Folder_Name</p>
-<p>The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).</p>
 <p>The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).</p>
 <table>
 <thead>
@@ -1915,15 +1838,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#sent_items_folder_name">Sent_Items_Folder_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1996,7 +1915,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2031,15 +1949,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Boxes.html">Mail_Boxes</a>.<a href="Mail_Boxes.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

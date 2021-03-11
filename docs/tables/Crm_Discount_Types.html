@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_discount_types">Table Crm_Discount_Types</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.DiscountTypes.html">Crm.DiscountTypes</a></p>
 <p>Contains the different types of discounts, which can be applied to sales lines. Different types of discounts can be combined for a single sales line. Entity: Crm_Discount_Types</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="discount_type_id">Discount_Type_Id</h3>
-<p>Discount_Type_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#discount_type_id">Discount_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,14 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="discount_type_code">Discount_Type_Code</h3>
-<p>Discount_Type_Code</p>
 <table>
 <thead>
 <tr>
@@ -317,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#discount_type_code">Discount_Type_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -410,14 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="discount_type_name">Discount_Type_Name</h3>
-<p>Discount_Type_Name</p>
 <table>
 <thead>
 <tr>
@@ -456,15 +447,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#discount_type_name">Discount_Type_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -556,8 +543,6 @@
 </tbody>
 </table>
 <h3 id="calculation_method">Calculation_Method</h3>
-<p>Calculation_Method</p>
-<p>Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.</p>
 <p>Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.</p>
 <table>
 <thead>
@@ -597,7 +582,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -606,10 +591,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#calculation_method">Calculation_Method</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -694,15 +675,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ord">Ord</h3>
-<p>Ord</p>
-<p>Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.</p>
 <p>Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.</p>
 <table>
 <thead>
@@ -738,15 +717,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#ord">Ord</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -838,8 +813,6 @@
 </tbody>
 </table>
 <h3 id="action_type">Action_Type</h3>
-<p>Action_Type</p>
-<p>Specifies the way the discount is applied over the previous discounts.</p>
 <p>Specifies the way the discount is applied over the previous discounts.</p>
 <table>
 <thead>
@@ -879,7 +852,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -888,10 +861,6 @@
 <tr>
 <td>Default Value</td>
 <td>A</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#action_type">Action_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -976,15 +945,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_system">Is_System</h3>
-<p>Is_System</p>
-<p>Specifies whether this discount type is created and managed by the system.</p>
 <p>Specifies whether this discount type is created and managed by the system.</p>
 <table>
 <thead>
@@ -1020,15 +987,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#is_system">Is_System</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1113,14 +1076,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1131,7 +1093,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1159,15 +1121,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1240,7 +1198,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1275,15 +1232,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Discount_Types.html">Crm_Discount_Types</a>.<a href="Crm_Discount_Types.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-srv_service_orders">Table Srv_Service_Orders</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Service.ServiceOrders.html">Applications.Service.ServiceOrders</a></p>
 <p>Service Orders are issued when a new servicing is required. Entity: Srv_Service_Orders</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="service_order_id">Service_Order_Id</h3>
-<p>Service_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#service_order_id">Service_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,14 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -321,15 +317,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -414,15 +406,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="customer_id">Customer_Id</h3>
-<p>Customer_Id</p>
-<p>The client, requesting servicing.</p>
 <p>The client, requesting servicing.</p>
 <table>
 <thead>
@@ -462,15 +452,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#customer_id">Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -555,15 +541,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="service_agreement_id">Service_Agreement_Id</h3>
-<p>Service_Agreement_Id</p>
-<p>When not NULL denotes that the order will be bound to the terms in the specified agreement.</p>
 <p>When not NULL denotes that the order will be bound to the terms in the specified agreement.</p>
 <table>
 <thead>
@@ -603,15 +587,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#service_agreement_id">Service_Agreement_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -696,15 +676,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -740,15 +718,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -833,15 +807,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -877,15 +849,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -970,15 +938,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
-<p>Store_Id</p>
-<p>The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null.</p>
 <p>The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null.</p>
 <table>
 <thead>
@@ -1018,15 +984,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#store_id">Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1111,15 +1073,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ship_to_customer_id">Ship_To_Customer_Id</h3>
-<p>Ship_To_Customer_Id</p>
-<p>Customer location of the main customer from which the service object is taken.</p>
 <p>Customer location of the main customer from which the service object is taken.</p>
 <table>
 <thead>
@@ -1159,15 +1119,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#ship_to_customer_id">Ship_To_Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1252,14 +1208,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1294,15 +1249,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Orders.html">Srv_Service_Orders</a>.<a href="Srv_Service_Orders.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

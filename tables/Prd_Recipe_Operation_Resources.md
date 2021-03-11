@@ -24,9 +24,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +33,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Id](Prd_Recipe_Operation_Resources.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,12 +57,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Recipe_Operation_Id
-
-
-Recipe_Operation_Id
 
 | Property | Value |
 | - | - |
@@ -77,9 +70,8 @@ Recipe_Operation_Id
 |Referenced Table|[Prd_Recipe_Operations](Prd_Recipe_Operations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Recipe_Operation_Id](Prd_Recipe_Operation_Resources.md#recipe_operation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,17 +94,11 @@ Recipe_Operation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Function_Id
 
 
-Function_Id
-
-
-If specified, might be used as search criteria for setup of the resource usage of a workorder. Either this or Resource_Id must be specified
-
-
 If specified, might be used as search criteria for setup of the resource usage of a workorder. Either this or Resource_Id must be specified
 
 | Property | Value |
@@ -123,9 +109,8 @@ If specified, might be used as search criteria for setup of the resource usage o
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Function_Id](Prd_Recipe_Operation_Resources.md#function_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,17 +133,11 @@ If specified, might be used as search criteria for setup of the resource usage o
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Resource_Id
 
 
-Resource_Id
-
-
-If specified, the routing step will always use the specified resource. Either this or Function_Id must be specified
-
-
 If specified, the routing step will always use the specified resource. Either this or Function_Id must be specified
 
 | Property | Value |
@@ -169,9 +148,8 @@ If specified, the routing step will always use the specified resource. Either th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Resource_Id](Prd_Recipe_Operation_Resources.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,17 +172,11 @@ If specified, the routing step will always use the specified resource. Either th
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Workgroup_Resource_Id
 
 
-Workgroup_Resource_Id
-
-
-The exact workgroup resource that is engaged in the operation
-
-
 The exact workgroup resource that is engaged in the operation
 
 | Property | Value |
@@ -215,9 +187,8 @@ The exact workgroup resource that is engaged in the operation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Workgroup_Resource_Id](Prd_Recipe_Operation_Resources.md#workgroup_resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -240,15 +211,9 @@ The exact workgroup resource that is engaged in the operation
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Lock_Quantity
-
-
-Lock_Quantity
-
-
-The quantity of the workgroup resource that should be locked
 
 
 The quantity of the workgroup resource that should be locked
@@ -261,9 +226,8 @@ The quantity of the workgroup resource that should be locked
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Lock_Quantity](Prd_Recipe_Operation_Resources.md#lock_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,9 +248,6 @@ The quantity of the workgroup resource that should be locked
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -296,9 +257,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Notes](Prd_Recipe_Operation_Resources.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -319,9 +279,6 @@ Notes
 
 ### Line_Ord
 
-
-Line_Ord
-
 | Property | Value |
 | - | - |
 |Type|int|
@@ -330,9 +287,8 @@ Line_Ord
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Line_Ord](Prd_Recipe_Operation_Resources.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -353,9 +309,6 @@ Line_Ord
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -364,9 +317,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipe_Operation_Resources](Prd_Recipe_Operation_Resources.md).[Row_Version](Prd_Recipe_Operation_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

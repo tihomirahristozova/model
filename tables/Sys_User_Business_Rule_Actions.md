@@ -1,5 +1,10 @@
 # Table Sys_User_Business_Rule_Actions
 
+
+## Entity
+
+Entity: [Systems.Bpm.UserBusinessRuleActions](~/entities/Systems.Bpm.UserBusinessRuleActions.md)
+
 Represents an action within a business rule. Entity: Sys_User_Business_Rule_Actions
 
 ## Owner Tables Hierarchy
@@ -27,12 +32,6 @@ Represents an action within a business rule. Entity: Sys_User_Business_Rule_Acti
 ### Action_No
 
 
-Action_No
-
-
-Consecutive number of the action, unique within the business rule.
-
-
 Consecutive number of the action, unique within the business rule.
 
 | Property | Value |
@@ -43,10 +42,9 @@ Consecutive number of the action, unique within the business rule.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Action_No](Sys_User_Business_Rule_Actions.md#action_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -68,12 +66,6 @@ Consecutive number of the action, unique within the business rule.
 ### Action_Type
 
 
-Action_Type
-
-
-Specifies the type of action to perform.
-
-
 Specifies the type of action to perform.
 
 | Property | Value |
@@ -85,10 +77,9 @@ Specifies the type of action to perform.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Allowed Values|`SETVALUE`, `FAIL`, `SENDMAIL`, `WARNING`, `NOTIFYUSER`|
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Action_Type](Sys_User_Business_Rule_Actions.md#action_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,12 +101,6 @@ Specifies the type of action to perform.
 ### Parameter1_Type
 
 
-Parameter1_Type
-
-
-The type of the parameter specifies how to obtain the parameter value.
-
-
 The type of the parameter specifies how to obtain the parameter value.
 
 | Property | Value |
@@ -127,10 +112,9 @@ The type of the parameter specifies how to obtain the parameter value.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`CONST`, `ATTRIB`, `REF`, `CHILD`, `FMTSTR`|
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Parameter1_Type](Sys_User_Business_Rule_Actions.md#parameter1_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,12 +136,6 @@ The type of the parameter specifies how to obtain the parameter value.
 ### Parameter1_Value
 
 
-Parameter1_Value
-
-
-The actual value of the parameter.
-
-
 The actual value of the parameter.
 
 | Property | Value |
@@ -169,9 +147,8 @@ The actual value of the parameter.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Parameter1_Value](Sys_User_Business_Rule_Actions.md#parameter1_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +170,6 @@ The actual value of the parameter.
 ### Parameter2_Type
 
 
-Parameter2_Type
-
-
-The type of the parameter specifies how to obtain the parameter value.
-
-
 The type of the parameter specifies how to obtain the parameter value.
 
 | Property | Value |
@@ -210,10 +181,9 @@ The type of the parameter specifies how to obtain the parameter value.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`CONST`, `ATTRIB`, `REF`, `CHILD`, `FMTSTR`|
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Parameter2_Type](Sys_User_Business_Rule_Actions.md#parameter2_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -235,12 +205,6 @@ The type of the parameter specifies how to obtain the parameter value.
 ### Parameter2_Value
 
 
-Parameter2_Value
-
-
-The actual value of the parameter.
-
-
 The actual value of the parameter.
 
 | Property | Value |
@@ -252,9 +216,8 @@ The actual value of the parameter.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Parameter2_Value](Sys_User_Business_Rule_Actions.md#parameter2_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -276,12 +239,6 @@ The actual value of the parameter.
 ### Parameter3_Type
 
 
-Parameter3_Type
-
-
-The type of the parameter specifies how to obtain the parameter value.
-
-
 The type of the parameter specifies how to obtain the parameter value.
 
 | Property | Value |
@@ -293,10 +250,9 @@ The type of the parameter specifies how to obtain the parameter value.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`CONST`, `ATTRIB`, `REF`, `CHILD`, `FMTSTR`|
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Parameter3_Type](Sys_User_Business_Rule_Actions.md#parameter3_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -318,12 +274,6 @@ The type of the parameter specifies how to obtain the parameter value.
 ### Parameter3_Value
 
 
-Parameter3_Value
-
-
-The actual value of the parameter.
-
-
 The actual value of the parameter.
 
 | Property | Value |
@@ -335,9 +285,8 @@ The actual value of the parameter.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Parameter3_Value](Sys_User_Business_Rule_Actions.md#parameter3_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -358,9 +307,6 @@ The actual value of the parameter.
 
 ### User_Business_Rule_Action_Id
 
-
-User_Business_Rule_Action_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -370,9 +316,8 @@ User_Business_Rule_Action_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[User_Business_Rule_Action_Id](Sys_User_Business_Rule_Actions.md#user_business_rule_action_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -395,15 +340,9 @@ User_Business_Rule_Action_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Business_Rule_Id
-
-
-User_Business_Rule_Id
-
-
-The business rule, for which the action is defined.
 
 
 The business rule, for which the action is defined.
@@ -417,9 +356,8 @@ The business rule, for which the action is defined.
 |Referenced Table|[Sys_User_Business_Rules](Sys_User_Business_Rules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[User_Business_Rule_Id](Sys_User_Business_Rule_Actions.md#user_business_rule_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -442,12 +380,9 @@ The business rule, for which the action is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -457,9 +392,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Actions](Sys_User_Business_Rule_Actions.md).[Row_Version](Sys_User_Business_Rule_Actions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Crm_Pricing_Model_Price_Lists
 
+
+## Entity
+
+Entity: [Crm.Pricing.PricingModelPriceLists](~/entities/Crm.Pricing.PricingModelPriceLists.md)
+
 The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Model_Price_Lists
 
 ## Owner Tables Hierarchy
@@ -22,12 +27,6 @@ The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Mod
 ### Pricing_Model_Price_List_Id
 
 
-Pricing_Model_Price_List_Id
-
-
-Pricing Model Price List
-
-
 Pricing Model Price List
 
 | Property | Value |
@@ -39,9 +38,8 @@ Pricing Model Price List
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Pricing_Model_Price_Lists](Crm_Pricing_Model_Price_Lists.md).[Pricing_Model_Price_List_Id](Crm_Pricing_Model_Price_Lists.md#pricing_model_price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,15 +62,9 @@ Pricing Model Price List
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Pricing_Model_Id
-
-
-Pricing_Model_Id
-
-
-The pricing model, for which the price list is listed
 
 
 The pricing model, for which the price list is listed
@@ -86,9 +78,8 @@ The pricing model, for which the price list is listed
 |Referenced Table|[Crm_Pricing_Models](Crm_Pricing_Models.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Price_Lists](Crm_Pricing_Model_Price_Lists.md).[Pricing_Model_Id](Crm_Pricing_Model_Price_Lists.md#pricing_model_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -111,15 +102,9 @@ The pricing model, for which the price list is listed
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-The consecutive number of this price list within the pricing model
 
 
 The consecutive number of this price list within the pricing model
@@ -132,10 +117,9 @@ The consecutive number of this price list within the pricing model
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Crm_Pricing_Model_Price_Lists](Crm_Pricing_Model_Price_Lists.md).[Line_No](Crm_Pricing_Model_Price_Lists.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -157,12 +141,6 @@ The consecutive number of this price list within the pricing model
 ### Price_List_Id
 
 
-Price_List_Id
-
-
-The price list, which is included in the pricing model
-
-
 The price list, which is included in the pricing model
 
 | Property | Value |
@@ -174,9 +152,8 @@ The price list, which is included in the pricing model
 |Referenced Table|[Crm_Price_Lists](Crm_Price_Lists.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Price_Lists](Crm_Pricing_Model_Price_Lists.md).[Price_List_Id](Crm_Pricing_Model_Price_Lists.md#price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,15 +176,9 @@ The price list, which is included in the pricing model
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Margin_Percent
-
-
-Margin_Percent
-
-
-Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. NULL, when the price will not be automatically calculated in this way
 
 
 Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. NULL, when the price will not be automatically calculated in this way
@@ -220,9 +191,8 @@ Used, when the price will be automatically calculated as percentage difference f
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Price_Lists](Crm_Pricing_Model_Price_Lists.md).[Margin_Percent](Crm_Pricing_Model_Price_Lists.md#margin_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,9 +213,6 @@ Used, when the price will be automatically calculated as percentage difference f
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -254,9 +221,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Price_Lists](Crm_Pricing_Model_Price_Lists.md).[Row_Version](Crm_Pricing_Model_Price_Lists.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

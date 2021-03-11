@@ -1,5 +1,10 @@
 # Table Gen_Config
 
+
+## Entity
+
+Entity: [General.Config](~/entities/General.Config.md)
+
 Hierarchical repository of configuration options. Entity: Gen_Config
 
 ## Summary
@@ -19,9 +24,6 @@ Hierarchical repository of configuration options. Entity: Gen_Config
 
 ### Config_Id
 
-
-Config_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Config_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Config](Gen_Config.md).[Config_Id](Gen_Config.md#config_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Config_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Key_Path
-
-
-Key_Path
-
-
-Full path of the configuration option
 
 
 Full path of the configuration option
@@ -78,9 +73,8 @@ Full path of the configuration option
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Config](Gen_Config.md).[Key_Path](Gen_Config.md#key_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,12 +97,9 @@ Full path of the configuration option
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Description
-
-
-Description
 
 | Property | Value |
 | - | - |
@@ -119,9 +110,8 @@ Description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Config](Gen_Config.md).[Description](Gen_Config.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -143,12 +133,6 @@ Description
 ### User_Login
 
 
-User_Login
-
-
-If not NULL, the configuration option is specific to the user
-
-
 If not NULL, the configuration option is specific to the user
 
 | Property | Value |
@@ -160,9 +144,8 @@ If not NULL, the configuration option is specific to the user
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Config](Gen_Config.md).[User_Login](Gen_Config.md#user_login)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -185,17 +168,11 @@ If not NULL, the configuration option is specific to the user
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### User_Machine
 
 
-User_Machine
-
-
-If not NULL, the configuration option is specific to the machine
-
-
 If not NULL, the configuration option is specific to the machine
 
 | Property | Value |
@@ -207,9 +184,8 @@ If not NULL, the configuration option is specific to the machine
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Config](Gen_Config.md).[User_Machine](Gen_Config.md#user_machine)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,15 +208,9 @@ If not NULL, the configuration option is specific to the machine
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Key_Value
-
-
-Key_Value
-
-
-The value of the configuration option
 
 
 The value of the configuration option
@@ -254,9 +224,8 @@ The value of the configuration option
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Config](Gen_Config.md).[Key_Value](Gen_Config.md#key_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,9 +246,6 @@ The value of the configuration option
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -288,9 +254,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Config](Gen_Config.md).[Row_Version](Gen_Config.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -312,12 +277,6 @@ Row_Version
 ### Is_Active
 
 
-Is_Active
-
-
-Indicates whether this config entry is active. Inactive config entries are not taken into account.
-
-
 Indicates whether this config entry is active. Inactive config entries are not taken into account.
 
 | Property | Value |
@@ -328,9 +287,8 @@ Indicates whether this config entry is active. Inactive config entries are not t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Config](Gen_Config.md).[Is_Active](Gen_Config.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -353,6 +311,6 @@ Indicates whether this config entry is active. Inactive config entries are not t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 

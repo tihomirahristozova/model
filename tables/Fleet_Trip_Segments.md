@@ -1,5 +1,10 @@
 # Table Fleet_Trip_Segments
 
+
+## Entity
+
+Entity: [Applications.Fleet.TripSegments](~/entities/Applications.Fleet.TripSegments.md)
+
 Represents the segments which comprise the route of the trips. Entity: Fleet_Trip_Segments
 
 ## Owner Tables Hierarchy
@@ -26,12 +31,6 @@ Represents the segments which comprise the route of the trips. Entity: Fleet_Tri
 ### Trip_Segment_Id
 
 
-Trip_Segment_Id
-
-
-Unique trip segment id
-
-
 Unique trip segment id
 
 | Property | Value |
@@ -43,9 +42,8 @@ Unique trip segment id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Trip_Segment_Id](Fleet_Trip_Segments.md#trip_segment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -68,15 +66,9 @@ Unique trip segment id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Trip_Id
-
-
-Trip_Id
-
-
-The trip for which the segment is defined
 
 
 The trip for which the segment is defined
@@ -90,9 +82,8 @@ The trip for which the segment is defined
 |Referenced Table|[Fleet_Trips](Fleet_Trips.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Trip_Id](Fleet_Trip_Segments.md#trip_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -115,15 +106,9 @@ The trip for which the segment is defined
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Starting_Map_Point_Id
-
-
-Starting_Map_Point_Id
-
-
-The starting geographical point of the route segment
 
 
 The starting geographical point of the route segment
@@ -137,9 +122,8 @@ The starting geographical point of the route segment
 |Referenced Table|[Geo_Map_Points](Geo_Map_Points.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Starting_Map_Point_Id](Fleet_Trip_Segments.md#starting_map_point_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -162,15 +146,9 @@ The starting geographical point of the route segment
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Starting_Timestamp
-
-
-Starting_Timestamp
-
-
-The starting date and time of the travel on the segment
 
 
 The starting date and time of the travel on the segment
@@ -184,9 +162,8 @@ The starting date and time of the travel on the segment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Starting_Timestamp](Fleet_Trip_Segments.md#starting_timestamp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -208,12 +185,6 @@ The starting date and time of the travel on the segment
 ### Ending_Map_Point_Id
 
 
-Ending_Map_Point_Id
-
-
-The ending geographical point of the route segment
-
-
 The ending geographical point of the route segment
 
 | Property | Value |
@@ -225,9 +196,8 @@ The ending geographical point of the route segment
 |Referenced Table|[Geo_Map_Points](Geo_Map_Points.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Ending_Map_Point_Id](Fleet_Trip_Segments.md#ending_map_point_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -250,15 +220,9 @@ The ending geographical point of the route segment
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Ending_Timestamp
-
-
-Ending_Timestamp
-
-
-The ending date and time of the travel on the segment
 
 
 The ending date and time of the travel on the segment
@@ -272,9 +236,8 @@ The ending date and time of the travel on the segment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Ending_Timestamp](Fleet_Trip_Segments.md#ending_timestamp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -296,12 +259,6 @@ The ending date and time of the travel on the segment
 ### Mileage
 
 
-Mileage
-
-
-Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. NULL means unknown mileage
-
-
 Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. NULL means unknown mileage
 
 | Property | Value |
@@ -312,9 +269,8 @@ Mileage of the route segment. The mileage is measured in the operational units o
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Mileage](Fleet_Trip_Segments.md#mileage)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -336,12 +292,6 @@ Mileage of the route segment. The mileage is measured in the operational units o
 ### Notes
 
 
-Notes
-
-
-Notes for the segment
-
-
 Notes for the segment
 
 | Property | Value |
@@ -353,9 +303,8 @@ Notes for the segment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Notes](Fleet_Trip_Segments.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -376,9 +325,6 @@ Notes for the segment
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -387,9 +333,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Trip_Segments](Fleet_Trip_Segments.md).[Row_Version](Fleet_Trip_Segments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

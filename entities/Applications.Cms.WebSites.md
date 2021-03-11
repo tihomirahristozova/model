@@ -45,7 +45,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | Languages | [WebSiteLanguages](Applications.Cms.WebSiteLanguages.md) | List of `WebSiteLanguage`(Applications.Cms.WebSiteLanguages.md) child objects, based on the `Applications.Cms.WebSiteLanguage.WebSite`(Applications.Cms.WebSiteLanguages.md#website) back reference 
-| WebModules | [WebModules](Applications.Cms.WebModules.md) | List of `WebModule`(Applications.Cms.WebModules.md) child objects, based on the `Applications.Cms.WebModule.WebSite`(Applications.Cms.WebModules.md#website) back reference 
+| WebModules | [WebModules](Applications.Cms.WebModules.md) | List of WebModule child objects, based on the Applications.Cms.WebModule.WebSite back reference 
 
 
 ## Attribute Details

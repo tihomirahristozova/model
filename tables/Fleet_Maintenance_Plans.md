@@ -1,5 +1,10 @@
 # Table Fleet_Maintenance_Plans
 
+
+## Entity
+
+Entity: [Applications.Fleet.MaintenancePlans](~/entities/Applications.Fleet.MaintenancePlans.md)
+
 Defines the periodic maintenance plans and the conditions for performing the next maintenance. Entity: Fleet_Maintenance_Plans
 
 ## Summary
@@ -13,15 +18,12 @@ Defines the periodic maintenance plans and the conditions for performing the nex
 |[Check_Days](#check_days)|`int` |When not null, specifies the number of days between maintenances.|
 |[Mileage_Km](#mileage_km)|`int` |When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.|
 |[Trip_Count](#trip_count)|`int` |When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Is_Active](#is_active)|`bit` |True if the plan is active and can be selected from drop-downs.|
 
 ## Columns
 
 ### Maintenance_Plan_Id
-
-
-Maintenance_Plan_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Maintenance_Plan_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Maintenance_Plan_Id](Fleet_Maintenance_Plans.md#maintenance_plan_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Maintenance_Plan_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Plan_Code
-
-
-Maintenance_Plan_Code
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Maintenance_Plan_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Maintenance_Plan_Code](Fleet_Maintenance_Plans.md#maintenance_plan_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -97,12 +94,6 @@ Maintenance_Plan_Code
 ### Maintenance_Plan_Name
 
 
-Maintenance_Plan_Name
-
-
-Maintenance plan name (Multilanguage).
-
-
 Maintenance plan name (Multilanguage).
 
 | Property | Value |
@@ -114,9 +105,8 @@ Maintenance plan name (Multilanguage).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Maintenance_Plan_Name](Fleet_Maintenance_Plans.md#maintenance_plan_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -138,12 +128,6 @@ Maintenance plan name (Multilanguage).
 ### Check_Months
 
 
-Check_Months
-
-
-When not null, specifies the number of months between maintenances.
-
-
 When not null, specifies the number of months between maintenances.
 
 | Property | Value |
@@ -154,9 +138,8 @@ When not null, specifies the number of months between maintenances.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Check_Months](Fleet_Maintenance_Plans.md#check_months)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -178,12 +161,6 @@ When not null, specifies the number of months between maintenances.
 ### Check_Days
 
 
-Check_Days
-
-
-When not null, specifies the number of days between maintenances.
-
-
 When not null, specifies the number of days between maintenances.
 
 | Property | Value |
@@ -194,9 +171,8 @@ When not null, specifies the number of days between maintenances.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Check_Days](Fleet_Maintenance_Plans.md#check_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -218,12 +194,6 @@ When not null, specifies the number of days between maintenances.
 ### Mileage_Km
 
 
-Mileage_Km
-
-
-When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.
-
-
 When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.
 
 | Property | Value |
@@ -234,9 +204,8 @@ When not null, specifies the number of kilometers that must have passed since th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Mileage_Km](Fleet_Maintenance_Plans.md#mileage_km)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -258,12 +227,6 @@ When not null, specifies the number of kilometers that must have passed since th
 ### Trip_Count
 
 
-Trip_Count
-
-
-When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.
-
-
 When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.
 
 | Property | Value |
@@ -274,9 +237,8 @@ When not null, specifies the number of trips that must be performed since the la
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Trip_Count](Fleet_Maintenance_Plans.md#trip_count)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -297,21 +259,17 @@ When not null, specifies the number of trips that must be performed since the la
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Notes](Fleet_Maintenance_Plans.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -333,12 +291,6 @@ Notes
 ### Is_Active
 
 
-Is_Active
-
-
-True if the plan is active and can be selected from drop-downs.
-
-
 True if the plan is active and can be selected from drop-downs.
 
 | Property | Value |
@@ -349,9 +301,8 @@ True if the plan is active and can be selected from drop-downs.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md).[Is_Active](Fleet_Maintenance_Plans.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

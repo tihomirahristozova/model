@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-fleet_vehicle_alerts">Table Fleet_Vehicle_Alerts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Fleet.VehicleAlerts.html">Applications.Fleet.VehicleAlerts</a></p>
 <p>Contains alerts, specific to one vehicle. Alerts are created based on many sources and stay active, until excplicitly hidden. Entity: Fleet_Vehicle_Alerts</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="vehicle_alert_id">Vehicle_Alert_Id</h3>
-<p>Vehicle_Alert_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicle_Alerts.html">Fleet_Vehicle_Alerts</a>.<a href="Fleet_Vehicle_Alerts.html#vehicle_alert_id">Vehicle_Alert_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,15 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="vehicle_id">Vehicle_Id</h3>
-<p>Vehicle_Id</p>
-<p>The vehicle, for which is the alert.</p>
 <p>The vehicle, for which is the alert.</p>
 <table>
 <thead>
@@ -309,15 +304,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicle_Alerts.html">Fleet_Vehicle_Alerts</a>.<a href="Fleet_Vehicle_Alerts.html#vehicle_id">Vehicle_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -402,15 +393,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="time">Time</h3>
-<p>Time</p>
-<p>The time of the alert.</p>
 <p>The time of the alert.</p>
 <table>
 <thead>
@@ -450,15 +439,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicle_Alerts.html">Fleet_Vehicle_Alerts</a>.<a href="Fleet_Vehicle_Alerts.html#time">Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -531,8 +516,6 @@
 </tbody>
 </table>
 <h3 id="source">Source</h3>
-<p>Source</p>
-<p>The source of the alert. G=GPS, O=OBD, M=Maintenance.</p>
 <p>The source of the alert. G=GPS, O=OBD, M=Maintenance.</p>
 <table>
 <thead>
@@ -572,15 +555,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicle_Alerts.html">Fleet_Vehicle_Alerts</a>.<a href="Fleet_Vehicle_Alerts.html#source">Source</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -653,8 +632,6 @@
 </tbody>
 </table>
 <h3 id="alert_type">Alert_Type</h3>
-<p>Alert_Type</p>
-<p>The type of the alert. The type is specfic to the Source.</p>
 <p>The type of the alert. The type is specfic to the Source.</p>
 <table>
 <thead>
@@ -694,15 +671,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicle_Alerts.html">Fleet_Vehicle_Alerts</a>.<a href="Fleet_Vehicle_Alerts.html#alert_type">Alert_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -775,8 +748,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
-<p>Description of the alert (Multilanguage).</p>
 <p>Description of the alert (Multilanguage).</p>
 <table>
 <thead>
@@ -816,15 +787,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicle_Alerts.html">Fleet_Vehicle_Alerts</a>.<a href="Fleet_Vehicle_Alerts.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -897,8 +864,6 @@
 </tbody>
 </table>
 <h3 id="is_hidden">Is_Hidden</h3>
-<p>Is_Hidden</p>
-<p>Specifies, whether the alert is hidden (e.g. managed by the responsible person).</p>
 <p>Specifies, whether the alert is hidden (e.g. managed by the responsible person).</p>
 <table>
 <thead>
@@ -934,15 +899,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicle_Alerts.html">Fleet_Vehicle_Alerts</a>.<a href="Fleet_Vehicle_Alerts.html#is_hidden">Is_Hidden</a></td>
 </tr>
 <tr>
 <td>Format</td>

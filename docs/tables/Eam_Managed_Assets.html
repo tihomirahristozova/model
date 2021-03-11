@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_managed_assets">Table Eam_Managed_Assets</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></p>
 <p>Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="managed_asset_id">Managed_Asset_Id</h3>
-<p>Managed_Asset_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#managed_asset_id">Managed_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,15 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The enterprise company to which the managed asset belongs.</p>
 <p>The enterprise company to which the managed asset belongs.</p>
 <table>
 <thead>
@@ -319,15 +314,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -412,15 +403,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="managed_asset_code">Managed_Asset_Code</h3>
-<p>Managed_Asset_Code</p>
-<p>Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.</p>
 <p>Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.</p>
 <table>
 <thead>
@@ -460,15 +449,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#managed_asset_code">Managed_Asset_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -553,7 +538,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -566,8 +551,6 @@
 </tbody>
 </table>
 <h3 id="managed_asset_name">Managed_Asset_Name</h3>
-<p>Managed_Asset_Name</p>
-<p>Name of the managed asset (multi-language).</p>
 <p>Name of the managed asset (multi-language).</p>
 <table>
 <thead>
@@ -607,15 +590,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#managed_asset_name">Managed_Asset_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -700,7 +679,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -713,8 +692,6 @@
 </tbody>
 </table>
 <h3 id="managed_asset_type_id">Managed_Asset_Type_Id</h3>
-<p>Managed_Asset_Type_Id</p>
-<p>The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc.</p>
 <p>The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc.</p>
 <table>
 <thead>
@@ -754,15 +731,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#managed_asset_type_id">Managed_Asset_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -847,15 +820,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="managed_asset_group_id">Managed_Asset_Group_Id</h3>
-<p>Managed_Asset_Group_Id</p>
-<p>The organizational group of the asset. Used for organizational purposes only.</p>
 <p>The organizational group of the asset. Used for organizational purposes only.</p>
 <table>
 <thead>
@@ -895,15 +866,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#managed_asset_group_id">Managed_Asset_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -988,15 +955,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="registration_number">Registration_Number</h3>
-<p>Registration_Number</p>
-<p>Registration number of the asset with the national registration authorities. NULL means the registation number is unknown or N/A.</p>
 <p>Registration number of the asset with the national registration authorities. NULL means the registation number is unknown or N/A.</p>
 <table>
 <thead>
@@ -1036,15 +1001,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#registration_number">Registration_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1129,7 +1090,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1142,7 +1103,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1153,7 +1113,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1181,15 +1141,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1262,7 +1218,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1297,15 +1252,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Assets.html">Eam_Managed_Assets</a>.<a href="Eam_Managed_Assets.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

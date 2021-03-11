@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cm_company_locations">Table Cm_Company_Locations</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a></p>
 <p>Stores company locations. The locations are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The locations, departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Locations</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="company_location_id">Company_Location_Id</h3>
-<p>Company_Location_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#company_location_id">Company_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,15 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The party of the company location.</p>
 <p>The party of the company location.</p>
 <table>
 <thead>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="company_id">Company_Id</h3>
-<p>Company_Id</p>
-<p>The company to which this location belongs.</p>
 <p>The company to which this location belongs.</p>
 <table>
 <thead>
@@ -459,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#company_id">Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -552,15 +537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="location_name">Location_Name</h3>
-<p>Location_Name</p>
-<p>The name of the company location.</p>
 <p>The name of the company location.</p>
 <table>
 <thead>
@@ -600,15 +583,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#location_name">Location_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -693,7 +672,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -706,8 +685,6 @@
 </tbody>
 </table>
 <h3 id="working_time">Working_Time</h3>
-<p>Working_Time</p>
-<p>Textual representation of the working time of the location.</p>
 <p>Textual representation of the working time of the location.</p>
 <table>
 <thead>
@@ -747,15 +724,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#working_time">Working_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -828,8 +801,6 @@
 </tbody>
 </table>
 <h3 id="bill_to">Bill_To</h3>
-<p>Bill_To</p>
-<p>If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, NULL = unidentified</p>
 <p>If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, NULL = unidentified</p>
 <table>
 <thead>
@@ -869,7 +840,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -878,10 +849,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#bill_to">Bill_To</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -954,7 +921,6 @@
 </tbody>
 </table>
 <h3 id="access_key_id">Access_Key_Id</h3>
-<p>Access_Key_Id</p>
 <table>
 <thead>
 <tr>
@@ -993,15 +959,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#access_key_id">Access_Key_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1086,14 +1048,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1128,15 +1089,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

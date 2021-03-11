@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="view-inv_store_order_lines_unfulfilled_view">View Inv_Store_Order_Lines_Unfulfilled_View</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.StoreOrderLinesUnfulfilledView.html">Logistics.Inventory.StoreOrderLinesUnfulfilledView</a></p>
 <p>Returns the remaining (unfulfilled) quantity and cost for each Store Order Line in Store Orders, which are Planned, FirmPlanned or Released. Is_Fulfilled and Is_QuantityFulfilled can be used to filter out lines which appear fulfilled. For best performance, the store orders should be finished after fulfilling. Entity: Inv_Store_Order_Lines_Unfulfilled_View (Introduced in version 21.1.1.16)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -154,8 +156,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
-<p>Serial_Number_Id</p>
-<p>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</p>
 <p>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</p>
 <table>
 <thead>
@@ -195,15 +195,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines.html">Inv_Store_Order_Lines</a>.<a href="Inv_Store_Order_Lines.html#serial_number_id">Serial_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -288,15 +284,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lot_id">Lot_Id</h3>
-<p>Lot_Id</p>
-<p>If non-null, contains the specific lot to use for the movement</p>
 <p>If non-null, contains the specific lot to use for the movement</p>
 <table>
 <thead>
@@ -336,15 +330,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines.html">Inv_Store_Order_Lines</a>.<a href="Inv_Store_Order_Lines.html#lot_id">Lot_Id</a></td>
 </tr>
 <tr>
 <td>Depends On</td>
@@ -433,14 +423,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_order_line_id">Store_Order_Line_Id</h3>
-<p>Store_Order_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -475,15 +464,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines.html">Inv_Store_Order_Lines</a>.<a href="Inv_Store_Order_Lines.html#store_order_line_id">Store_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -568,14 +553,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_date">Document_Date</h3>
-<p>Document_Date</p>
 <table>
 <thead>
 <tr>
@@ -614,15 +598,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDate</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#document_date">Document_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -707,7 +687,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -720,7 +700,6 @@
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -759,15 +738,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -852,14 +827,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
-<p>Store_Id</p>
 <table>
 <thead>
 <tr>
@@ -898,15 +872,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Orders.html">Inv_Store_Orders</a>.<a href="Inv_Store_Orders.html#store_id">Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -991,14 +961,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
 <table>
 <thead>
 <tr>
@@ -1037,15 +1006,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines.html">Inv_Store_Order_Lines</a>.<a href="Inv_Store_Order_Lines.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1130,15 +1095,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_variant_id">Product_Variant_Id</h3>
-<p>Product_Variant_Id</p>
-<p>If specified determines which product variant of the current product in this line is used.</p>
 <p>If specified determines which product variant of the current product in this line is used.</p>
 <table>
 <thead>
@@ -1178,15 +1141,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines.html">Inv_Store_Order_Lines</a>.<a href="Inv_Store_Order_Lines.html#product_variant_id">Product_Variant_Id</a></td>
 </tr>
 <tr>
 <td>Depends On</td>
@@ -1275,15 +1234,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="order_remaining_quantity_base">Order_Remaining_Quantity_Base</h3>
-<p>Order_Remaining_Quantity_Base</p>
-<p>The remaining (unfulfilled) quantity of the order line in base measurement unit.</p>
 <p>The remaining (unfulfilled) quantity of the order line in base measurement unit.</p>
 <table>
 <thead>
@@ -1319,15 +1276,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines_Unfulfilled_View.html">Inv_Store_Order_Lines_Unfulfilled_View</a>.<a href="Inv_Store_Order_Lines_Unfulfilled_View.html#order_remaining_quantity_base">Order_Remaining_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1412,7 +1365,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -1425,8 +1378,6 @@
 </tbody>
 </table>
 <h3 id="order_remaining_line_cost">Order_Remaining_Line_Cost</h3>
-<p>Order_Remaining_Line_Cost</p>
-<p>The remaining (unfulfilled) line cost of the order line.</p>
 <p>The remaining (unfulfilled) line cost of the order line.</p>
 <table>
 <thead>
@@ -1462,15 +1413,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines_Unfulfilled_View.html">Inv_Store_Order_Lines_Unfulfilled_View</a>.<a href="Inv_Store_Order_Lines_Unfulfilled_View.html#order_remaining_line_cost">Order_Remaining_Line_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1555,7 +1502,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -1568,8 +1515,6 @@
 </tbody>
 </table>
 <h3 id="is_fulfilled">Is_Fulfilled</h3>
-<p>Is_Fulfilled</p>
-<p>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</p>
 <p>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</p>
 <table>
 <thead>
@@ -1605,15 +1550,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines_Unfulfilled_View.html">Inv_Store_Order_Lines_Unfulfilled_View</a>.<a href="Inv_Store_Order_Lines_Unfulfilled_View.html#is_fulfilled">Is_Fulfilled</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1698,15 +1639,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_quantityfulfilled">Is_QuantityFulfilled</h3>
-<p>Is_QuantityFulfilled</p>
-<p>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</p>
 <p>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</p>
 <table>
 <thead>
@@ -1742,15 +1681,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Store_Order_Lines_Unfulfilled_View.html">Inv_Store_Order_Lines_Unfulfilled_View</a>.<a href="Inv_Store_Order_Lines_Unfulfilled_View.html#is_quantityfulfilled">Is_QuantityFulfilled</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1835,7 +1770,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>

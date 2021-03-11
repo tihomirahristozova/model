@@ -1,5 +1,10 @@
 # Table Srv_Service_Activity_Agreed_Materials
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceActivityAgreedMaterials](~/entities/Applications.Service.ServiceActivityAgreedMaterials.md)
+
 Contains the materials, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Materials
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Contains the materials, which were agreed for this service activity (repair), be
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Activity_Agreed_Materials](Srv_Service_Activity_Agreed_Materials.md).[Id](Srv_Service_Activity_Agreed_Materials.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Activity_Material_Id
-
-
-Service_Activity_Material_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Service_Activity_Material_Id
 |Referenced Table|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Agreed_Materials](Srv_Service_Activity_Agreed_Materials.md).[Service_Activity_Material_Id](Srv_Service_Activity_Agreed_Materials.md#service_activity_material_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Service_Activity_Material_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Agreement_Material_Id
-
-
-Service_Agreement_Material_Id
-
-
-Service agreement material line that records the paid or agreed in advance material
 
 
 Service agreement material line that records the paid or agreed in advance material
@@ -123,9 +114,8 @@ Service agreement material line that records the paid or agreed in advance mater
 |Referenced Table|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Agreed_Materials](Srv_Service_Activity_Agreed_Materials.md).[Service_Agreement_Material_Id](Srv_Service_Activity_Agreed_Materials.md#service_agreement_material_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +138,9 @@ Service agreement material line that records the paid or agreed in advance mater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Agreed_Quantity
-
-
-Agreed_Quantity
-
-
-Quantity from the service agreement material line that is accounted for this service activity material line
 
 
 Quantity from the service agreement material line that is accounted for this service activity material line
@@ -169,9 +153,8 @@ Quantity from the service agreement material line that is accounted for this ser
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Srv_Service_Activity_Agreed_Materials](Srv_Service_Activity_Agreed_Materials.md).[Agreed_Quantity](Srv_Service_Activity_Agreed_Materials.md#agreed_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,9 +175,6 @@ Quantity from the service agreement material line that is accounted for this ser
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -203,9 +183,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Agreed_Materials](Srv_Service_Activity_Agreed_Materials.md).[Row_Version](Srv_Service_Activity_Agreed_Materials.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

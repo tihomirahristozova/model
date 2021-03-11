@@ -1,5 +1,10 @@
 # Table Gen_Product_Group_Required_Properties
 
+
+## Entity
+
+Entity: [General.Products.ProductGroupRequiredProperties](~/entities/General.Products.ProductGroupRequiredProperties.md)
+
 Contains the properties, that are required to be set, when creating new products in the category and its sub-categories. Entity: Gen_Product_Group_Required_Properties
 
 ## Owner Tables Hierarchy
@@ -25,12 +30,6 @@ Contains the properties, that are required to be set, when creating new products
 ### Property_No
 
 
-Property_No
-
-
-The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers.
-
-
 The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers.
 
 | Property | Value |
@@ -41,10 +40,9 @@ The consecutive number (position) of the property within the product group and i
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
 |Autoincrement|1|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Property_No](Gen_Product_Group_Required_Properties.md#property_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,12 +64,6 @@ The consecutive number (position) of the property within the product group and i
 ### Property_Id
 
 
-Property_Id
-
-
-The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'.
-
-
 The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'.
 
 | Property | Value |
@@ -83,9 +75,8 @@ The property, that is required when creating new products in the group. The prop
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Property_Id](Gen_Product_Group_Required_Properties.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +99,9 @@ The property, that is required when creating new products in the group. The prop
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Property_Value
-
-
-Default_Property_Value
-
-
-When not null, specifies the default value of the property, for new products in the group.
 
 
 When not null, specifies the default value of the property, for new products in the group.
@@ -130,9 +115,8 @@ When not null, specifies the default value of the property, for new products in 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Default_Property_Value](Gen_Product_Group_Required_Properties.md#default_property_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,12 +138,6 @@ When not null, specifies the default value of the property, for new products in 
 ### Default_Property_Value_Description
 
 
-Default_Property_Value_Description
-
-
-When not null, specifies the default description value of the property, for new products in the group.
-
-
 When not null, specifies the default description value of the property, for new products in the group.
 
 | Property | Value |
@@ -171,9 +149,8 @@ When not null, specifies the default description value of the property, for new 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Default_Property_Value_Description](Gen_Product_Group_Required_Properties.md#default_property_value_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,9 +171,6 @@ When not null, specifies the default description value of the property, for new 
 
 ### Required_Property_Id
 
-
-Required_Property_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -206,9 +180,8 @@ Required_Property_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Required_Property_Id](Gen_Product_Group_Required_Properties.md#required_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -231,12 +204,9 @@ Required_Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Group_Id
-
-
-Product_Group_Id
 
 | Property | Value |
 | - | - |
@@ -247,9 +217,8 @@ Product_Group_Id
 |Referenced Table|[Gen_Product_Groups](Gen_Product_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Product_Group_Id](Gen_Product_Group_Required_Properties.md#product_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -272,15 +241,9 @@ Product_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Value_Id
-
-
-Default_Value_Id
-
-
-When not null, specifies the default internal Id value of the property, for new products in the group.
 
 
 When not null, specifies the default internal Id value of the property, for new products in the group.
@@ -293,9 +256,8 @@ When not null, specifies the default internal Id value of the property, for new 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Default_Value_Id](Gen_Product_Group_Required_Properties.md#default_value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -318,15 +280,9 @@ When not null, specifies the default internal Id value of the property, for new 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Required
-
-
-Required
-
-
-Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested.
 
 
 Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested.
@@ -339,9 +295,8 @@ Specifies whether the property is required (or only suggested) to be set for new
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Required](Gen_Product_Group_Required_Properties.md#required)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -362,9 +317,6 @@ Specifies whether the property is required (or only suggested) to be set for new
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -373,9 +325,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md).[Row_Version](Gen_Product_Group_Required_Properties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

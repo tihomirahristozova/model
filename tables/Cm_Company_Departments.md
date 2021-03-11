@@ -1,5 +1,10 @@
 # Table Cm_Company_Departments
 
+
+## Entity
+
+Entity: [General.Contacts.CompanyDepartments](~/entities/General.Contacts.CompanyDepartments.md)
+
 Hierarchical structure of the company departments. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Departments
 
 ## Owner Tables Hierarchy
@@ -15,15 +20,12 @@ Hierarchical structure of the company departments. The departments and divisions
 |[Company_Id](#company_id)|`uniqueidentifier` ||
 |[Department_Name](#department_name)|`nvarchar(254)` |The name of the department.|
 |[Parent_Company_Department_Id](#parent_company_department_id)|`uniqueidentifier` |The parent department. NULL if this is root department in the company|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Company_Department_Id
-
-
-Company_Department_Id
 
 | Property | Value |
 | - | - |
@@ -34,9 +36,8 @@ Company_Department_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Company_Departments](Cm_Company_Departments.md).[Company_Department_Id](Cm_Company_Departments.md#company_department_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Company_Department_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Company_Id
-
-
-Company_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Company_Id
 |Referenced Table|[Cm_Companies](Cm_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Departments](Cm_Company_Departments.md).[Company_Id](Cm_Company_Departments.md#company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Department_Name
-
-
-Department_Name
-
-
-The name of the department.
 
 
 The name of the department.
@@ -122,9 +113,8 @@ The name of the department.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Departments](Cm_Company_Departments.md).[Department_Name](Cm_Company_Departments.md#department_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,12 +142,6 @@ The name of the department.
 ### Parent_Company_Department_Id
 
 
-Parent_Company_Department_Id
-
-
-The parent department. NULL if this is root department in the company
-
-
 The parent department. NULL if this is root department in the company
 
 | Property | Value |
@@ -169,9 +153,8 @@ The parent department. NULL if this is root department in the company
 |Referenced Table|[Cm_Company_Departments](Cm_Company_Departments.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Departments](Cm_Company_Departments.md).[Parent_Company_Department_Id](Cm_Company_Departments.md#parent_company_department_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,25 +177,21 @@ The parent department. NULL if this is root department in the company
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Company_Departments](Cm_Company_Departments.md).[Notes](Cm_Company_Departments.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -233,9 +212,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -244,9 +220,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Departments](Cm_Company_Departments.md).[Row_Version](Cm_Company_Departments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

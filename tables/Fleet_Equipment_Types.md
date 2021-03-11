@@ -1,5 +1,10 @@
 # Table Fleet_Equipment_Types
 
+
+## Entity
+
+Entity: [Applications.Fleet.EquipmentTypes](~/entities/Applications.Fleet.EquipmentTypes.md)
+
 Contains types of equipment, which can be installed on the vehicles. Entity: Fleet_Equipment_Types
 
 ## Summary
@@ -15,12 +20,6 @@ Contains types of equipment, which can be installed on the vehicles. Entity: Fle
 ### Equipment_Type_Id
 
 
-Equipment_Type_Id
-
-
-Uniq Vehicle type Id
-
-
 Uniq Vehicle type Id
 
 | Property | Value |
@@ -32,9 +31,8 @@ Uniq Vehicle type Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Equipment_Types](Fleet_Equipment_Types.md).[Equipment_Type_Id](Fleet_Equipment_Types.md#equipment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +55,9 @@ Uniq Vehicle type Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Equipment_Type_Name
-
-
-Equipment_Type_Name
-
-
-Name of the equipment type
 
 
 Name of the equipment type
@@ -79,9 +71,8 @@ Name of the equipment type
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Equipment_Types](Fleet_Equipment_Types.md).[Equipment_Type_Name](Fleet_Equipment_Types.md#equipment_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,13 +95,10 @@ Name of the equipment type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -120,9 +108,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Equipment_Types](Fleet_Equipment_Types.md).[Row_Version](Fleet_Equipment_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

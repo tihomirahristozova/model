@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_product_variants">Table Gen_Product_Variants</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.ProductVariants.html">General.ProductVariants</a></p>
 <p>Contains definitions of different variants of a product. The variants are differentiated by color, size and style. Entity: Gen_Product_Variants</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="product_variant_id">Product_Variant_Id</h3>
-<p>Product_Variant_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#product_variant_id">Product_Variant_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,15 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The product for which this variant is defined.</p>
 <p>The product for which this variant is defined.</p>
 <table>
 <thead>
@@ -323,15 +318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -416,15 +407,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_variant_code">Product_Variant_Code</h3>
-<p>Product_Variant_Code</p>
-<p>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.</p>
 <p>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.</p>
 <table>
 <thead>
@@ -464,15 +453,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#product_variant_code">Product_Variant_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -557,7 +542,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -570,8 +555,6 @@
 </tbody>
 </table>
 <h3 id="variant_color_id">Variant_Color_Id</h3>
-<p>Variant_Color_Id</p>
-<p>The color of the variant. NULL means that the variant does not have a specific color.</p>
 <p>The color of the variant. NULL means that the variant does not have a specific color.</p>
 <table>
 <thead>
@@ -611,15 +594,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#variant_color_id">Variant_Color_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -704,15 +683,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="variant_size_id">Variant_Size_Id</h3>
-<p>Variant_Size_Id</p>
-<p>The size of the variant. NULL means that the variant does not have a specific size.</p>
 <p>The size of the variant. NULL means that the variant does not have a specific size.</p>
 <table>
 <thead>
@@ -752,15 +729,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#variant_size_id">Variant_Size_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -845,15 +818,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="variant_style_id">Variant_Style_Id</h3>
-<p>Variant_Style_Id</p>
-<p>The style of the variant. NULL means that the variant does not have a specific style.</p>
 <p>The style of the variant. NULL means that the variant does not have a specific style.</p>
 <table>
 <thead>
@@ -893,15 +864,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#variant_style_id">Variant_Style_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -986,15 +953,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="bar_code">Bar_Code</h3>
-<p>Bar_Code</p>
-<p>When specified, it contains a bar code which uniquely identifies the product variant.</p>
 <p>When specified, it contains a bar code which uniquely identifies the product variant.</p>
 <table>
 <thead>
@@ -1034,15 +999,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#bar_code">Bar_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1127,7 +1088,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1140,8 +1101,6 @@
 </tbody>
 </table>
 <h3 id="product_variant_name">Product_Variant_Name</h3>
-<p>Product_Variant_Name</p>
-<p>Product variant name. It is the concatenation of the names of the color, size and style.</p>
 <p>Product variant name. It is the concatenation of the names of the color, size and style.</p>
 <table>
 <thead>
@@ -1181,15 +1140,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#product_variant_name">Product_Variant_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1262,7 +1217,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1297,15 +1251,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Variants.html">Gen_Product_Variants</a>.<a href="Gen_Product_Variants.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

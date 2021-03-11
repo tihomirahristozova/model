@@ -1,5 +1,10 @@
 # Table Prd_Recipes
 
+
+## Entity
+
+Entity: [Production.Technologies.Recipes](~/entities/Production.Technologies.Recipes.md)
+
 Contains the characteristics of operations used to create products. Entity: Prd_Recipes
 
 ## Summary
@@ -32,12 +37,6 @@ Contains the characteristics of operations used to create products. Entity: Prd_
 ### Recipe_Name
 
 
-Recipe_Name
-
-
-The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.
-
-
 The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.
 
 | Property | Value |
@@ -49,9 +48,8 @@ The name of the recipe. When there is only 1 recipe, it is often equal to the pr
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Recipe_Name](Prd_Recipes.md#recipe_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -79,12 +77,6 @@ The name of the recipe. When there is only 1 recipe, it is often equal to the pr
 ### Id
 
 
-Id
-
-
-Unique recipe Id
-
-
 Unique recipe Id
 
 | Property | Value |
@@ -96,9 +88,8 @@ Unique recipe Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Id](Prd_Recipes.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -121,15 +112,9 @@ Unique recipe Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Currency_Directory_Id
-
-
-Currency_Directory_Id
-
-
-Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product.
 
 
 Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product.
@@ -143,9 +128,8 @@ Currency directory, which is used to convert the costs and prices of materials, 
 |Referenced Table|[Gen_Currency_Directories](Gen_Currency_Directories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Currency_Directory_Id](Prd_Recipes.md#currency_directory_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -168,12 +152,9 @@ Currency directory, which is used to convert the costs and prices of materials, 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Update_User
-
-
-Update_User
 
 | Property | Value |
 | - | - |
@@ -184,9 +165,8 @@ Update_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Update_User](Prd_Recipes.md#update_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -213,9 +193,6 @@ Update_User
 
 ### Update_Time
 
-
-Update_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -225,9 +202,8 @@ Update_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Update_Time](Prd_Recipes.md#update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -254,9 +230,6 @@ Update_Time
 
 ### Creation_User
 
-
-Creation_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -266,9 +239,8 @@ Creation_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Creation_User](Prd_Recipes.md#creation_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,9 +267,6 @@ Creation_User
 
 ### Creation_Time
 
-
-Creation_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -307,9 +276,8 @@ Creation_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Creation_Time](Prd_Recipes.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -337,12 +305,6 @@ Creation_Time
 ### Is_Default
 
 
-Is_Default
-
-
-Default for period: Release_Date - Expiry_Date
-
-
 Default for period: Release_Date - Expiry_Date
 
 | Property | Value |
@@ -353,9 +315,8 @@ Default for period: Release_Date - Expiry_Date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Is_Default](Prd_Recipes.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -378,15 +339,9 @@ Default for period: Release_Date - Expiry_Date
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
-
-
-User comments for the recipe
 
 
 User comments for the recipe
@@ -400,9 +355,8 @@ User comments for the recipe
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Notes](Prd_Recipes.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -424,12 +378,6 @@ User comments for the recipe
 ### Price_Per_Lot
 
 
-Price_Per_Lot
-
-
-Price for one lot of the product (according to Lot_Size_Quantity_Base)
-
-
 Price for one lot of the product (according to Lot_Size_Quantity_Base)
 
 | Property | Value |
@@ -440,9 +388,8 @@ Price for one lot of the product (according to Lot_Size_Quantity_Base)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Price_Per_Lot](Prd_Recipes.md#price_per_lot)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -464,12 +411,6 @@ Price for one lot of the product (according to Lot_Size_Quantity_Base)
 ### Price
 
 
-Price
-
-
-The price for the specified Produce_Quantity
-
-
 The price for the specified Produce_Quantity
 
 | Property | Value |
@@ -480,9 +421,8 @@ The price for the specified Produce_Quantity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Price](Prd_Recipes.md#price)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -504,12 +444,6 @@ The price for the specified Produce_Quantity
 ### Scrap_Rate
 
 
-Scrap_Rate
-
-
-The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe
-
-
 The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe
 
 | Property | Value |
@@ -520,9 +454,8 @@ The percentage (0..1) of scrap usually occurring during the operation. Specifyin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|0|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Scrap_Rate](Prd_Recipes.md#scrap_rate)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -544,12 +477,6 @@ The percentage (0..1) of scrap usually occurring during the operation. Specifyin
 ### Routing_Id
 
 
-Routing_Id
-
-
-The routing used to create the product. NULL means that workorders might not use routing.
-
-
 The routing used to create the product. NULL means that workorders might not use routing.
 
 | Property | Value |
@@ -561,9 +488,8 @@ The routing used to create the product. NULL means that workorders might not use
 |Referenced Table|[Prd_Routings](Prd_Routings.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Routing_Id](Prd_Recipes.md#routing_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -586,15 +512,9 @@ The routing used to create the product. NULL means that workorders might not use
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Produce_Quantity
-
-
-Produce_Quantity
-
-
-Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id
 
 
 Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id
@@ -607,9 +527,8 @@ Lot size. This is the produced quantity in one production run. The quantity is m
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Produce_Quantity](Prd_Recipes.md#produce_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -631,12 +550,6 @@ Lot size. This is the produced quantity in one production run. The quantity is m
 ### Expiry_Date
 
 
-Expiry_Date
-
-
-The last date, when the recipe should be used. NULL means that the recipe might still be in use
-
-
 The last date, when the recipe should be used. NULL means that the recipe might still be in use
 
 | Property | Value |
@@ -648,9 +561,8 @@ The last date, when the recipe should be used. NULL means that the recipe might 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Expiry_Date](Prd_Recipes.md#expiry_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -678,12 +590,6 @@ The last date, when the recipe should be used. NULL means that the recipe might 
 ### Release_Date
 
 
-Release_Date
-
-
-The date, when the recipe was released to production
-
-
 The date, when the recipe was released to production
 
 | Property | Value |
@@ -695,9 +601,8 @@ The date, when the recipe was released to production
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Release_Date](Prd_Recipes.md#release_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -725,12 +630,6 @@ The date, when the recipe was released to production
 ### Product_Id
 
 
-Product_Id
-
-
-The Id of the produced product
-
-
 The Id of the produced product
 
 | Property | Value |
@@ -742,9 +641,8 @@ The Id of the produced product
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Product_Id](Prd_Recipes.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -767,15 +665,9 @@ The Id of the produced product
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Principal_Recipe_Id
-
-
-Principal_Recipe_Id
-
-
-The prinicipal recipe, used to create this recipe. NULL means that this recipe was created without the help of principal recipe
 
 
 The prinicipal recipe, used to create this recipe. NULL means that this recipe was created without the help of principal recipe
@@ -789,9 +681,8 @@ The prinicipal recipe, used to create this recipe. NULL means that this recipe w
 |Referenced Table|[Prd_Principal_Recipes](Prd_Principal_Recipes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Principal_Recipe_Id](Prd_Recipes.md#principal_recipe_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -814,15 +705,9 @@ The prinicipal recipe, used to create this recipe. NULL means that this recipe w
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store for which this technology is valid. The store is matched with the output store specified in the production order. When NULL, the technology is valid for all stores.
 
 
 The store for which this technology is valid. The store is matched with the output store specified in the production order. When NULL, the technology is valid for all stores.
@@ -836,9 +721,8 @@ The store for which this technology is valid. The store is matched with the outp
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Store_Id](Prd_Recipes.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -861,12 +745,9 @@ The store for which this technology is valid. The store is matched with the outp
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -876,9 +757,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Recipes](Prd_Recipes.md).[Row_Version](Prd_Recipes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

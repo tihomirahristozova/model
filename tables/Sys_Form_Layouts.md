@@ -1,5 +1,10 @@
 # Table Sys_Form_Layouts
 
+
+## Entity
+
+Entity: [Systems.UI.FormLayouts](~/entities/Systems.UI.FormLayouts.md)
+
 Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 
 ## Summary
@@ -24,9 +29,6 @@ Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 
 ### Form_Layout_Id
 
-
-Form_Layout_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Form_Layout_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Form_Layout_Id](Sys_Form_Layouts.md#form_layout_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Form_Layout_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Application_Name
-
-
-Application_Name
-
-
-The application, which consumes the layout.
 
 
 The application, which consumes the layout.
@@ -83,9 +78,8 @@ The application, which consumes the layout.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Application_Name](Sys_Form_Layouts.md#application_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The application, which consumes the layout.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Form_Name
-
-
-Form_Name
-
-
-The form, for which the layout is applied.
 
 
 The form, for which the layout is applied.
@@ -130,9 +118,8 @@ The form, for which the layout is applied.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Form_Name](Sys_Form_Layouts.md#form_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,18 +142,12 @@ The form, for which the layout is applied.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Layout_Name
 
 
-Layout_Name
-
-
-The name of a named layout. Standard layouts have empty string names.
-
-
 The name of a named layout. Standard layouts have empty string names.
 
 | Property | Value |
@@ -178,9 +159,8 @@ The name of a named layout. Standard layouts have empty string names.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Layout_Name](Sys_Form_Layouts.md#layout_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,16 +183,10 @@ The name of a named layout. Standard layouts have empty string names.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### User_Name
-
-
-User_Name
-
-
-The user for which the layout is applied. NULL means that the layout is applied for all users.
 
 
 The user for which the layout is applied. NULL means that the layout is applied for all users.
@@ -226,9 +200,8 @@ The user for which the layout is applied. NULL means that the layout is applied 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[User_Name](Sys_Form_Layouts.md#user_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -251,13 +224,10 @@ The user for which the layout is applied. NULL means that the layout is applied 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Machine_Name
-
-
-Machine_Name
 
 | Property | Value |
 | - | - |
@@ -268,9 +238,8 @@ Machine_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Machine_Name](Sys_Form_Layouts.md#machine_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,16 +262,10 @@ Machine_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Panel_Name
-
-
-Panel_Name
-
-
-The visual panel, for which the layout is applied.
 
 
 The visual panel, for which the layout is applied.
@@ -316,9 +279,8 @@ The visual panel, for which the layout is applied.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|Form|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Panel_Name](Sys_Form_Layouts.md#panel_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -341,12 +303,9 @@ The visual panel, for which the layout is applied.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Layout_Xml
-
-
-Layout_Xml
 
 | Property | Value |
 | - | - |
@@ -357,9 +316,8 @@ Layout_Xml
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Layout_Xml](Sys_Form_Layouts.md#layout_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -381,12 +339,6 @@ Layout_Xml
 ### Access_Key_Id
 
 
-Access_Key_Id
-
-
-The security access key which controls the access to the layout view
-
-
 The security access key which controls the access to the layout view
 
 | Property | Value |
@@ -398,9 +350,8 @@ The security access key which controls the access to the layout view
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Access_Key_Id](Sys_Form_Layouts.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -423,15 +374,9 @@ The security access key which controls the access to the layout view
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Layout
-
-
-Layout
-
-
-The byte storage of the layout.
 
 
 The byte storage of the layout.
@@ -444,9 +389,8 @@ The byte storage of the layout.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Layout](Sys_Form_Layouts.md#layout)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -468,12 +412,6 @@ The byte storage of the layout.
 ### Layout_Format
 
 
-Layout_Format
-
-
-The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.
-
-
 The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.
 
 | Property | Value |
@@ -485,10 +423,9 @@ The format of the data in the Layout column. Values can be: 'U' - uncompressed; 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`D`, `L`, `U`|
 |Default Value|U|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Layout_Format](Sys_Form_Layouts.md#layout_format)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -510,12 +447,6 @@ The format of the data in the Layout column. Values can be: 'U' - uncompressed; 
 ### Role_Id
 
 
-Role_Id
-
-
-The role, for which the layout is applied.
-
-
 The role, for which the layout is applied.
 
 | Property | Value |
@@ -527,9 +458,8 @@ The role, for which the layout is applied.
 |Referenced Table|[Wf_Roles](Wf_Roles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Role_Id](Sys_Form_Layouts.md#role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -552,12 +482,9 @@ The role, for which the layout is applied.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -567,9 +494,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Form_Layouts](Sys_Form_Layouts.md).[Row_Version](Sys_Form_Layouts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

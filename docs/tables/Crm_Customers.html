@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_customers">Table Crm_Customers</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Customers.html">Crm.Customers</a></p>
 <p>Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -243,8 +245,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="customer_id">Customer_Id</h3>
-<p>Customer_Id</p>
-<p>Unique customer Id</p>
 <p>Unique customer Id</p>
 <table>
 <thead>
@@ -284,15 +284,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#customer_id">Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -377,15 +373,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>Base party Id</p>
 <p>Base party Id</p>
 <table>
 <thead>
@@ -425,15 +419,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -518,15 +508,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies.</p>
 <p>The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies.</p>
 <table>
 <thead>
@@ -566,15 +554,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -659,15 +643,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>From_Date</p>
-<p>Start date of the customer relationship</p>
 <p>Start date of the customer relationship</p>
 <table>
 <thead>
@@ -707,15 +689,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDate</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#from_date">From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -807,8 +785,6 @@
 </tbody>
 </table>
 <h3 id="thru_date">Thru_Date</h3>
-<p>Thru_Date</p>
-<p>The date of customer relationship termination. NULL for active customers.</p>
 <p>The date of customer relationship termination. NULL for active customers.</p>
 <table>
 <thead>
@@ -848,15 +824,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#thru_date">Thru_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -948,8 +920,6 @@
 </tbody>
 </table>
 <h3 id="default_price_list_id">Default_Price_List_Id</h3>
-<p>Default_Price_List_Id</p>
-<p>If not NULL, specifies default price list when selling to this customer</p>
 <p>If not NULL, specifies default price list when selling to this customer</p>
 <table>
 <thead>
@@ -989,15 +959,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#default_price_list_id">Default_Price_List_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1082,15 +1048,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_payment_term_days">Default_Payment_Term_Days</h3>
-<p>Default_Payment_Term_Days</p>
-<p>Default payment term in days when issuing documents for this customer</p>
 <p>Default payment term in days when issuing documents for this customer</p>
 <table>
 <thead>
@@ -1126,15 +1090,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#default_payment_term_days">Default_Payment_Term_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1207,8 +1167,6 @@
 </tbody>
 </table>
 <h3 id="default_delivery_term_days">Default_Delivery_Term_Days</h3>
-<p>Default_Delivery_Term_Days</p>
-<p>Default term in days for goods delivery, starting at the day of sale</p>
 <p>Default term in days for goods delivery, starting at the day of sale</p>
 <table>
 <thead>
@@ -1244,15 +1202,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#default_delivery_term_days">Default_Delivery_Term_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1325,8 +1279,6 @@
 </tbody>
 </table>
 <h3 id="customer_number">Customer_Number</h3>
-<p>Customer_Number</p>
-<p>Unique customer number</p>
 <p>Unique customer number</p>
 <table>
 <thead>
@@ -1366,15 +1318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#customer_number">Customer_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1459,7 +1407,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1472,8 +1420,6 @@
 </tbody>
 </table>
 <h3 id="default_payment_type_id">Default_Payment_Type_Id</h3>
-<p>Default_Payment_Type_Id</p>
-<p>If not NULL, specifies default payment type for the sales, offers and invoices for this customer</p>
 <p>If not NULL, specifies default payment type for the sales, offers and invoices for this customer</p>
 <table>
 <thead>
@@ -1513,15 +1459,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#default_payment_type_id">Default_Payment_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1606,15 +1548,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="credit_limit">Credit_Limit</h3>
-<p>Credit_Limit</p>
-<p>Total credit limit for the customer in the customers' default currency. NULL means there is no limit</p>
 <p>Total credit limit for the customer in the customers' default currency. NULL means there is no limit</p>
 <table>
 <thead>
@@ -1650,15 +1590,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#credit_limit">Credit_Limit</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1731,8 +1667,6 @@
 </tbody>
 </table>
 <h3 id="sales_person_id">Sales_Person_Id</h3>
-<p>Sales_Person_Id</p>
-<p>The default sales person for new sales documents for this customer</p>
 <p>The default sales person for new sales documents for this customer</p>
 <table>
 <thead>
@@ -1772,15 +1706,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#sales_person_id">Sales_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1865,14 +1795,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="creation_time">Creation_Time</h3>
-<p>Creation_Time</p>
 <table>
 <thead>
 <tr>
@@ -1911,15 +1840,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#creation_time">Creation_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2011,7 +1936,6 @@
 </tbody>
 </table>
 <h3 id="creation_user">Creation_User</h3>
-<p>Creation_User</p>
 <table>
 <thead>
 <tr>
@@ -2050,15 +1974,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#creation_user">Creation_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2150,7 +2070,6 @@
 </tbody>
 </table>
 <h3 id="update_time">Update_Time</h3>
-<p>Update_Time</p>
 <table>
 <thead>
 <tr>
@@ -2189,15 +2108,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#update_time">Update_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2289,7 +2204,6 @@
 </tbody>
 </table>
 <h3 id="update_user">Update_User</h3>
-<p>Update_User</p>
 <table>
 <thead>
 <tr>
@@ -2328,15 +2242,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#update_user">Update_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2428,8 +2338,6 @@
 </tbody>
 </table>
 <h3 id="collections_responsible_employee_id">Collections_Responsible_Employee_Id</h3>
-<p>Collections_Responsible_Employee_Id</p>
-<p>The employee, who is responsible for the collections from the customer</p>
 <p>The employee, who is responsible for the collections from the customer</p>
 <table>
 <thead>
@@ -2469,15 +2377,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#collections_responsible_employee_id">Collections_Responsible_Employee_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2562,15 +2466,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_payment_account_id">Default_Payment_Account_Id</h3>
-<p>Default_Payment_Account_Id</p>
-<p>The default payment account to use when creating new documents for this customer</p>
 <p>The default payment account to use when creating new documents for this customer</p>
 <table>
 <thead>
@@ -2610,15 +2512,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#default_payment_account_id">Default_Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2703,15 +2601,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_currency_id">Default_Currency_Id</h3>
-<p>Default_Currency_Id</p>
-<p>The primary currency for value calculations for this customer - for credit limit, due amounts, etc.</p>
 <p>The primary currency for value calculations for this customer - for credit limit, due amounts, etc.</p>
 <table>
 <thead>
@@ -2751,15 +2647,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#default_currency_id">Default_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2844,15 +2736,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="customer_type_id">Customer_Type_Id</h3>
-<p>Customer_Type_Id</p>
-<p>The user-defined type of this customer. NULL when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes</p>
 <p>The user-defined type of this customer. NULL when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes</p>
 <table>
 <thead>
@@ -2892,15 +2782,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#customer_type_id">Customer_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2985,15 +2871,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="persist_sales_orders_lots">Persist_Sales_Orders_Lots</h3>
-<p>Persist_Sales_Orders_Lots</p>
-<p>If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.</p>
 <p>If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.</p>
 <table>
 <thead>
@@ -3029,15 +2913,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#persist_sales_orders_lots">Persist_Sales_Orders_Lots</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3122,15 +3002,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_distribution_channel_id">Default_Distribution_Channel_Id</h3>
-<p>Default_Distribution_Channel_Id</p>
-<p>The default distribution channel used when selling to the customer</p>
 <p>The default distribution channel used when selling to the customer</p>
 <table>
 <thead>
@@ -3170,15 +3048,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#default_distribution_channel_id">Default_Distribution_Channel_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3263,15 +3137,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="active">Active</h3>
-<p>Active</p>
-<p>1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents</p>
 <p>1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents</p>
 <table>
 <thead>
@@ -3307,15 +3179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#active">Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3400,15 +3268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_payment_start_days">Default_Payment_Start_Days</h3>
-<p>Default_Payment_Start_Days</p>
-<p>Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.</p>
 <p>Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.</p>
 <table>
 <thead>
@@ -3444,15 +3310,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#default_payment_start_days">Default_Payment_Start_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3525,8 +3387,6 @@
 </tbody>
 </table>
 <h3 id="grace_period_days">Grace_Period_Days</h3>
-<p>Grace_Period_Days</p>
-<p>Number of days after the payment deadline, during which the system still allows new sales orders for the customer.</p>
 <p>Number of days after the payment deadline, during which the system still allows new sales orders for the customer.</p>
 <table>
 <thead>
@@ -3562,15 +3422,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#grace_period_days">Grace_Period_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3643,8 +3499,6 @@
 </tbody>
 </table>
 <h3 id="serviced_by_enterprise_company_location_id">Serviced_By_Enterprise_Company_Location_Id</h3>
-<p>Serviced_By_Enterprise_Company_Location_Id</p>
-<p>The enterprise company location, which sells to this client by default.</p>
 <p>The enterprise company location, which sells to this client by default.</p>
 <table>
 <thead>
@@ -3684,15 +3538,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#serviced_by_enterprise_company_location_id">Serviced_By_Enterprise_Company_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3777,15 +3627,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="allow_use_as_primary_customer">Allow_Use_As_Primary_Customer</h3>
-<p>Allow_Use_As_Primary_Customer</p>
-<p>Specifies whether to allow the customer to be used as primary customer in a sales deal.</p>
 <p>Specifies whether to allow the customer to be used as primary customer in a sales deal.</p>
 <table>
 <thead>
@@ -3821,15 +3669,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#allow_use_as_primary_customer">Allow_Use_As_Primary_Customer</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3914,15 +3758,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="allow_use_as_ship_to_customer">Allow_Use_As_Ship_To_Customer</h3>
-<p>Allow_Use_As_Ship_To_Customer</p>
-<p>True to allow the customer to be used as ship to customer in a sales deal.</p>
 <p>True to allow the customer to be used as ship to customer in a sales deal.</p>
 <table>
 <thead>
@@ -3958,15 +3800,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#allow_use_as_ship_to_customer">Allow_Use_As_Ship_To_Customer</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4051,14 +3889,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -4093,15 +3930,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Customers.html">Crm_Customers</a>.<a href="Crm_Customers.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

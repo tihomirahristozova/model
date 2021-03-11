@@ -1,5 +1,10 @@
 # Table Prd_Resources
 
+
+## Entity
+
+Entity: [Production.Resources.Resources](~/entities/Production.Resources.Resources.md)
+
 Resource types available to production. Entity: Prd_Resources
 
 ## Owner Tables Hierarchy
@@ -28,12 +33,6 @@ Resource types available to production. Entity: Prd_Resources
 ### Id
 
 
-Id
-
-
-Unique resource id
-
-
 Unique resource id
 
 | Property | Value |
@@ -45,9 +44,8 @@ Unique resource id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Id](Prd_Resources.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -70,15 +68,9 @@ Unique resource id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Group_Id
-
-
-Resource_Group_Id
-
-
-The Id of the containing resource group
 
 
 The Id of the containing resource group
@@ -92,9 +84,8 @@ The Id of the containing resource group
 |Referenced Table|[Prd_Resource_Groups](Prd_Resource_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Resource_Group_Id](Prd_Resources.md#resource_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -117,15 +108,9 @@ The Id of the containing resource group
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Name
-
-
-Resource_Name
-
-
-Name of the resource
 
 
 Name of the resource
@@ -139,9 +124,8 @@ Name of the resource
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Resource_Name](Prd_Resources.md#resource_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -169,12 +153,6 @@ Name of the resource
 ### Primary_Unit_Id
 
 
-Primary_Unit_Id
-
-
-Primary measurement unit for quantities of the resource
-
-
 Primary measurement unit for quantities of the resource
 
 | Property | Value |
@@ -186,9 +164,8 @@ Primary measurement unit for quantities of the resource
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Primary_Unit_Id](Prd_Resources.md#primary_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -211,15 +188,9 @@ Primary measurement unit for quantities of the resource
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Setup_Scrap_Quantity
-
-
-Setup_Scrap_Quantity
-
-
-The usual quantity of fixed scrap occurring when changing production. 
 
 
 The usual quantity of fixed scrap occurring when changing production. 
@@ -232,9 +203,8 @@ The usual quantity of fixed scrap occurring when changing production.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Setup_Scrap_Quantity](Prd_Resources.md#setup_scrap_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -256,12 +226,6 @@ The usual quantity of fixed scrap occurring when changing production.
 ### Setup_Scrap_Unit
 
 
-Setup_Scrap_Unit
-
-
-The measurement units of Setup_Scrap_Quantity
-
-
 The measurement units of Setup_Scrap_Quantity
 
 | Property | Value |
@@ -273,9 +237,8 @@ The measurement units of Setup_Scrap_Quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Setup_Scrap_Unit](Prd_Resources.md#setup_scrap_unit)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -298,15 +261,9 @@ The measurement units of Setup_Scrap_Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Setup_Duration_Hours
-
-
-Setup_Duration_Hours
-
-
-The usual duration of setup when changing production
 
 
 The usual duration of setup when changing production
@@ -319,9 +276,8 @@ The usual duration of setup when changing production
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Setup_Duration_Hours](Prd_Resources.md#setup_duration_hours)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -343,12 +299,6 @@ The usual duration of setup when changing production
 ### Notes
 
 
-Notes
-
-
-User notes for the resource
-
-
 User notes for the resource
 
 | Property | Value |
@@ -360,9 +310,8 @@ User notes for the resource
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Notes](Prd_Resources.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -384,12 +333,6 @@ User notes for the resource
 ### Standard_Price_Per_Hour
 
 
-Standard_Price_Per_Hour
-
-
-Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.
-
-
 Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.
 
 | Property | Value |
@@ -400,9 +343,8 @@ Standard price per hour for this resource. It participates in the calculation of
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Standard_Price_Per_Hour](Prd_Resources.md#standard_price_per_hour)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -424,12 +366,6 @@ Standard price per hour for this resource. It participates in the calculation of
 ### Resource_Currency_Id
 
 
-Resource_Currency_Id
-
-
-Currency for this resource. This currency applies for the standard price and cost per hour.
-
-
 Currency for this resource. This currency applies for the standard price and cost per hour.
 
 | Property | Value |
@@ -441,9 +377,8 @@ Currency for this resource. This currency applies for the standard price and cos
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Resource_Currency_Id](Prd_Resources.md#resource_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -466,15 +401,9 @@ Currency for this resource. This currency applies for the standard price and cos
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Standard_Cost_Per_Hour
-
-
-Standard_Cost_Per_Hour
-
-
-Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.
 
 
 Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.
@@ -487,9 +416,8 @@ Standard cost per hour for this resource. It participates in the calculation of 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Standard_Cost_Per_Hour](Prd_Resources.md#standard_cost_per_hour)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -510,9 +438,6 @@ Standard cost per hour for this resource. It participates in the calculation of 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -521,9 +446,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resources](Prd_Resources.md).[Row_Version](Prd_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

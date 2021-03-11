@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_sales_orders">Table Crm_Sales_Orders</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a></p>
 <p>Sales order document headers. Entity: Crm_Sales_Orders</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -298,8 +300,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="customer_id">Customer_Id</h3>
-<p>Customer_Id</p>
-<p>The primary customer, which placed the sales order</p>
 <p>The primary customer, which placed the sales order</p>
 <table>
 <thead>
@@ -339,15 +339,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#customer_id">Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -432,15 +428,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ship_to_customer_id">Ship_To_Customer_Id</h3>
-<p>Ship_To_Customer_Id</p>
-<p>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer</p>
 <p>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer</p>
 <table>
 <thead>
@@ -480,15 +474,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#ship_to_customer_id">Ship_To_Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -573,15 +563,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="price_list_id">Price_List_Id</h3>
-<p>Price_List_Id</p>
-<p>The price list to be used for determining product prices in the lines</p>
 <p>The price list to be used for determining product prices in the lines</p>
 <table>
 <thead>
@@ -621,15 +609,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#price_list_id">Price_List_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -714,15 +698,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_due_date">Payment_Due_Date</h3>
-<p>Payment_Due_Date</p>
-<p>The last term for the payment of the sales order</p>
 <p>The last term for the payment of the sales order</p>
 <table>
 <thead>
@@ -762,15 +744,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#payment_due_date">Payment_Due_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -862,8 +840,6 @@
 </tbody>
 </table>
 <h3 id="payment_type_id">Payment_Type_Id</h3>
-<p>Payment_Type_Id</p>
-<p>When not NULL specifies the payment type for the sales order</p>
 <p>When not NULL specifies the payment type for the sales order</p>
 <table>
 <thead>
@@ -903,15 +879,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#payment_type_id">Payment_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -996,15 +968,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="required_delivery_date">Required_Delivery_Date</h3>
-<p>Required_Delivery_Date</p>
-<p>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.</p>
 <p>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.</p>
 <table>
 <thead>
@@ -1044,15 +1014,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#required_delivery_date">Required_Delivery_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1144,8 +1110,6 @@
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
-<p>Store_Id</p>
-<p>The store from which to issue the sales order. NULL means that there is no store associated with the sales order or there are different stores for some of the lines</p>
 <p>The store from which to issue the sales order. NULL means that there is no store associated with the sales order or there are different stores for some of the lines</p>
 <table>
 <thead>
@@ -1185,15 +1149,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#store_id">Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1278,15 +1238,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="intrastat_transport_country_id">Intrastat_Transport_Country_Id</h3>
-<p>Intrastat_Transport_Country_Id</p>
-<p>Country of origin of the transport company; used for Intrastat reporting</p>
 <p>Country of origin of the transport company; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -1326,15 +1284,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#intrastat_transport_country_id">Intrastat_Transport_Country_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1419,15 +1373,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="return_for_invoice_id">Return_For_Invoice_Id</h3>
-<p>Return_For_Invoice_Id</p>
-<p>When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document</p>
 <p>When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document</p>
 <table>
 <thead>
@@ -1467,15 +1419,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#return_for_invoice_id">Return_For_Invoice_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1560,15 +1508,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="return_for_sales_order_id">Return_For_Sales_Order_Id</h3>
-<p>Return_For_Sales_Order_Id</p>
-<p>When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document</p>
 <p>When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document</p>
 <table>
 <thead>
@@ -1608,15 +1554,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#return_for_sales_order_id">Return_For_Sales_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1701,7 +1643,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1714,8 +1656,6 @@
 </tbody>
 </table>
 <h3 id="customer_purchase_order_no">Customer_Purchase_Order_No</h3>
-<p>Customer_Purchase_Order_No</p>
-<p>Reference number of the customer's purchase order</p>
 <p>Reference number of the customer's purchase order</p>
 <table>
 <thead>
@@ -1755,15 +1695,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#customer_purchase_order_no">Customer_Purchase_Order_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1848,7 +1784,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1861,8 +1797,6 @@
 </tbody>
 </table>
 <h3 id="intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</h3>
-<p>Intrastat_Transaction_Nature_Code</p>
-<p>Transaction nature; used for Intrastat reporting</p>
 <p>Transaction nature; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -1902,7 +1836,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1911,10 +1845,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1987,8 +1917,6 @@
 </tbody>
 </table>
 <h3 id="intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</h3>
-<p>Intrastat_Transport_Mode_Code</p>
-<p>Transport mode; used for Intrastat reporting</p>
 <p>Transport mode; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -2028,7 +1956,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2037,10 +1965,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2113,8 +2037,6 @@
 </tbody>
 </table>
 <h3 id="delivery_terms_code">Delivery_Terms_Code</h3>
-<p>Delivery_Terms_Code</p>
-<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <table>
 <thead>
@@ -2154,7 +2076,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2163,10 +2085,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#delivery_terms_code">Delivery_Terms_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2239,8 +2157,6 @@
 </tbody>
 </table>
 <h3 id="credit_limit_override">Credit_Limit_Override</h3>
-<p>Credit_Limit_Override</p>
-<p>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables</p>
 <p>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables</p>
 <table>
 <thead>
@@ -2276,15 +2192,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#credit_limit_override">Credit_Limit_Override</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2369,15 +2281,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="isvalid">IsValid</h3>
-<p>IsValid</p>
-<p>1 when the order is valid (e.g. released and not void). Used for internal processing.</p>
 <p>1 when the order is valid (e.g. released and not void). Used for internal processing.</p>
 <table>
 <thead>
@@ -2413,15 +2323,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#isvalid">IsValid</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2494,8 +2400,6 @@
 </tbody>
 </table>
 <h3 id="sales_person_id">Sales_Person_Id</h3>
-<p>Sales_Person_Id</p>
-<p>Internal company sales person</p>
 <p>Internal company sales person</p>
 <table>
 <thead>
@@ -2535,15 +2439,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#sales_person_id">Sales_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2628,15 +2528,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="dealer_id">Dealer_Id</h3>
-<p>Dealer_Id</p>
-<p>The external dealer, associated with the sales order</p>
 <p>The external dealer, associated with the sales order</p>
 <table>
 <thead>
@@ -2676,15 +2574,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#dealer_id">Dealer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2769,15 +2663,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ship_to_party_contact_mechanism_id">Ship_To_Party_Contact_Mechanism_Id</h3>
-<p>Ship_To_Party_Contact_Mechanism_Id</p>
-<p>The contact mechanism (address) to whih to ship the sales order</p>
 <p>The contact mechanism (address) to whih to ship the sales order</p>
 <table>
 <thead>
@@ -2817,15 +2709,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#ship_to_party_contact_mechanism_id">Ship_To_Party_Contact_Mechanism_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2910,14 +2798,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sales_order_id">Sales_Order_Id</h3>
-<p>Sales_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -2956,15 +2843,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#sales_order_id">Sales_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3049,14 +2932,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -3095,15 +2977,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3188,15 +3066,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_currency_id">Document_Currency_Id</h3>
-<p>Document_Currency_Id</p>
-<p>The currency of the document; e.g. the currency of the amounts in the document</p>
 <p>The currency of the document; e.g. the currency of the amounts in the document</p>
 <table>
 <thead>
@@ -3236,15 +3112,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#document_currency_id">Document_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3329,15 +3201,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="deal_type_id">Deal_Type_Id</h3>
-<p>Deal_Type_Id</p>
-<p>Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type.</p>
 <p>Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type.</p>
 <table>
 <thead>
@@ -3377,15 +3247,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#deal_type_id">Deal_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3470,14 +3336,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -3516,15 +3381,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3597,8 +3458,6 @@
 </tbody>
 </table>
 <h3 id="deal_id">Deal_Id</h3>
-<p>Deal_Id</p>
-<p>The opportunity (deal) on which this order is based</p>
 <p>The opportunity (deal) on which this order is based</p>
 <table>
 <thead>
@@ -3638,15 +3497,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#deal_id">Deal_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3731,15 +3586,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_account_id">Payment_Account_Id</h3>
-<p>Payment_Account_Id</p>
-<p>When not NULL, the payment account, where the payment is expected. NULL=no expectation for account</p>
 <p>When not NULL, the payment account, where the payment is expected. NULL=no expectation for account</p>
 <table>
 <thead>
@@ -3779,15 +3632,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#payment_account_id">Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3872,15 +3721,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="end_customer_party_id">End_Customer_Party_Id</h3>
-<p>End_Customer_Party_Id</p>
-<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.</p>
 <p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.</p>
 <table>
 <thead>
@@ -3920,15 +3767,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#end_customer_party_id">End_Customer_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4013,15 +3856,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="fiscal_sales_number">Fiscal_Sales_Number</h3>
-<p>Fiscal_Sales_Number</p>
-<p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.</p>
 <p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.</p>
 <table>
 <thead>
@@ -4061,15 +3902,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#fiscal_sales_number">Fiscal_Sales_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4154,7 +3991,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -4167,8 +4004,6 @@
 </tbody>
 </table>
 <h3 id="fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</h3>
-<p>Fiscal_Printer_Pos_Device_Id</p>
-<p>For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.</p>
 <p>For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.</p>
 <table>
 <thead>
@@ -4208,15 +4043,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4301,15 +4132,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="pos_operator_id">Pos_Operator_Id</h3>
-<p>Pos_Operator_Id</p>
-<p>For POS sales, specifies the POS operator, who created the sale. NULL when the sale is not a POS sale.</p>
 <p>For POS sales, specifies the POS operator, who created the sale. NULL when the sale is not a POS sale.</p>
 <table>
 <thead>
@@ -4349,15 +4178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#pos_operator_id">Pos_Operator_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4442,15 +4267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="pos_terminal_id">Pos_Terminal_Id</h3>
-<p>Pos_Terminal_Id</p>
-<p>For POS sales, specifies the POS terminal, on which the sale is entered. NULL when the sales is not a POS sale.</p>
 <p>For POS sales, specifies the POS terminal, on which the sale is entered. NULL when the sales is not a POS sale.</p>
 <table>
 <thead>
@@ -4490,15 +4313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#pos_terminal_id">Pos_Terminal_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4583,15 +4402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="pos_location_id">Pos_Location_Id</h3>
-<p>Pos_Location_Id</p>
-<p>For POS sales, specifies the POS location, in which the sale is performed. NULL when the sales is not a POS sale.</p>
 <p>For POS sales, specifies the POS location, in which the sale is performed. NULL when the sales is not a POS sale.</p>
 <table>
 <thead>
@@ -4631,15 +4448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#pos_location_id">Pos_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4724,15 +4537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -4768,15 +4579,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4861,15 +4668,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -4905,15 +4710,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4998,15 +4799,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>From_Date</p>
-<p>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.</p>
 <p>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.</p>
 <table>
 <thead>
@@ -5046,15 +4845,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#from_date">From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -5127,8 +4922,6 @@
 </tbody>
 </table>
 <h3 id="payment_due_start_date">Payment_Due_Start_Date</h3>
-<p>Payment_Due_Start_Date</p>
-<p>The date when the payment becomes due for documents with one installment. NULL when the document is with multiple installments.</p>
 <p>The date when the payment becomes due for documents with one installment. NULL when the document is with multiple installments.</p>
 <table>
 <thead>
@@ -5168,15 +4961,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#payment_due_start_date">Payment_Due_Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -5249,8 +5038,6 @@
 </tbody>
 </table>
 <h3 id="distribution_channel_id">Distribution_Channel_Id</h3>
-<p>Distribution_Channel_Id</p>
-<p>The distribution channel, that is used to deliver the products</p>
 <p>The distribution channel, that is used to deliver the products</p>
 <table>
 <thead>
@@ -5290,15 +5077,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#distribution_channel_id">Distribution_Channel_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -5383,15 +5166,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="customer_purchase_order_date">Customer_Purchase_Order_Date</h3>
-<p>Customer_Purchase_Order_Date</p>
-<p>Issue date of the referent customer purchase order</p>
 <p>Issue date of the referent customer purchase order</p>
 <table>
 <thead>
@@ -5431,15 +5212,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#customer_purchase_order_date">Customer_Purchase_Order_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -5531,7 +5308,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -5566,15 +5342,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -5647,8 +5419,6 @@
 </tbody>
 </table>
 <h3 id="to_date">To_Date</h3>
-<p>To_Date</p>
-<p>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.</p>
 <p>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.</p>
 <table>
 <thead>
@@ -5688,15 +5458,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Orders.html">Crm_Sales_Orders</a>.<a href="Crm_Sales_Orders.html#to_date">To_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>

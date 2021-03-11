@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_sales_order_payment_plans">Table Crm_Sales_Order_Payment_Plans</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Sales.SalesOrderPaymentPlans.html">Crm.Sales.SalesOrderPaymentPlans</a></p>
 <p>Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -174,8 +176,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="sales_order_payment_plan_id">Sales_Order_Payment_Plan_Id</h3>
-<p>Sales_Order_Payment_Plan_Id</p>
-<p>Unique identification of the payment plan</p>
 <p>Unique identification of the payment plan</p>
 <table>
 <thead>
@@ -215,15 +215,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#sales_order_payment_plan_id">Sales_Order_Payment_Plan_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -308,14 +304,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sales_order_id">Sales_Order_Id</h3>
-<p>Sales_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -354,15 +349,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#sales_order_id">Sales_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -447,15 +438,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="installment_number">Installment_Number</h3>
-<p>Installment_Number</p>
-<p>Consequtive installment number. Used for identifying different payments generated according this payment plan.</p>
 <p>Consequtive installment number. Used for identifying different payments generated according this payment plan.</p>
 <table>
 <thead>
@@ -491,7 +480,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -500,10 +489,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#installment_number">Installment_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -576,8 +561,6 @@
 </tbody>
 </table>
 <h3 id="due_date_form_method">Due_Date_Form_Method</h3>
-<p>Due_Date_Form_Method</p>
-<p>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date</p>
 <p>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date</p>
 <table>
 <thead>
@@ -617,7 +600,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -626,10 +609,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#due_date_form_method">Due_Date_Form_Method</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -702,8 +681,6 @@
 </tbody>
 </table>
 <h3 id="explicit_payment_due_date">Explicit_Payment_Due_Date</h3>
-<p>Explicit_Payment_Due_Date</p>
-<p>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'</p>
 <p>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'</p>
 <table>
 <thead>
@@ -743,15 +720,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#explicit_payment_due_date">Explicit_Payment_Due_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -824,8 +797,6 @@
 </tbody>
 </table>
 <h3 id="payment_term_days">Payment_Term_Days</h3>
-<p>Payment_Term_Days</p>
-<p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.</p>
 <p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.</p>
 <table>
 <thead>
@@ -861,15 +832,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#payment_term_days">Payment_Term_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -942,8 +909,6 @@
 </tbody>
 </table>
 <h3 id="amount_percent">Amount_Percent</h3>
-<p>Amount_Percent</p>
-<p>Percent of the sales order amount to be payed.</p>
 <p>Percent of the sales order amount to be payed.</p>
 <table>
 <thead>
@@ -979,15 +944,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#amount_percent">Amount_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1060,8 +1021,6 @@
 </tbody>
 </table>
 <h3 id="remainder">Remainder</h3>
-<p>Remainder</p>
-<p>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount).</p>
 <p>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount).</p>
 <table>
 <thead>
@@ -1097,15 +1056,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#remainder">Remainder</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1178,8 +1133,6 @@
 </tbody>
 </table>
 <h3 id="amount">Amount</h3>
-<p>Amount</p>
-<p>Amount to be payed.</p>
 <p>Amount to be payed.</p>
 <table>
 <thead>
@@ -1215,15 +1168,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#amount">Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1296,7 +1245,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1335,15 +1283,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1416,8 +1360,6 @@
 </tbody>
 </table>
 <h3 id="explicit_payment_due_start_date">Explicit_Payment_Due_Start_Date</h3>
-<p>Explicit_Payment_Due_Start_Date</p>
-<p>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</p>
 <p>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</p>
 <table>
 <thead>
@@ -1457,15 +1399,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#explicit_payment_due_start_date">Explicit_Payment_Due_Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1538,8 +1476,6 @@
 </tbody>
 </table>
 <h3 id="payment_start_days">Payment_Start_Days</h3>
-<p>Payment_Start_Days</p>
-<p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.</p>
 <p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.</p>
 <table>
 <thead>
@@ -1575,15 +1511,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#payment_start_days">Payment_Start_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1656,8 +1588,6 @@
 </tbody>
 </table>
 <h3 id="payment_type_id">Payment_Type_Id</h3>
-<p>Payment_Type_Id</p>
-<p>Specifies the expected payment type. NULL means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred.</p>
 <p>Specifies the expected payment type. NULL means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred.</p>
 <table>
 <thead>
@@ -1697,15 +1627,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#payment_type_id">Payment_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1790,15 +1716,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_account_id">Payment_Account_Id</h3>
-<p>Payment_Account_Id</p>
-<p>Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred.</p>
 <p>Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred.</p>
 <table>
 <thead>
@@ -1838,15 +1762,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#payment_account_id">Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1931,14 +1851,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1973,15 +1892,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Plans.html">Crm_Sales_Order_Payment_Plans</a>.<a href="Crm_Sales_Order_Payment_Plans.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

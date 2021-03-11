@@ -1,5 +1,10 @@
 # Table Sys_Calculated_Attributes
 
+
+## Entity
+
+Entity: [Systems.Bpm.CalculatedAttributes](~/entities/Systems.Bpm.CalculatedAttributes.md)
+
 User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 
 ## Summary
@@ -10,7 +15,7 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 |[Name](#name)|`nvarchar(128)` |The unique name of the attribute within the repository.|
 |[Caption](#caption)|`nvarchar(512)` `ML`|The multi-language caption, used to display the attribute.|
 |[Is_Active](#is_active)|`bit` |True if the attribute is activated and added to the repository.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Calculated_Attribute_Id](#calculated_attribute_id)|`uniqueidentifier` `PK`||
 |[Starting_Expression_No](#starting_expression_no)|`int` |The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -18,12 +23,6 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 ## Columns
 
 ### Repository_Name
-
-
-Repository_Name
-
-
-The repository, for which the attribute is defined.
 
 
 The repository, for which the attribute is defined.
@@ -37,9 +36,8 @@ The repository, for which the attribute is defined.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Calculated_Attributes](Sys_Calculated_Attributes.md).[Repository_Name](Sys_Calculated_Attributes.md#repository_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,15 +60,9 @@ The repository, for which the attribute is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Name
-
-
-Name
-
-
-The unique name of the attribute within the repository.
 
 
 The unique name of the attribute within the repository.
@@ -84,9 +76,8 @@ The unique name of the attribute within the repository.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Calculated_Attributes](Sys_Calculated_Attributes.md).[Name](Sys_Calculated_Attributes.md#name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,16 +100,10 @@ The unique name of the attribute within the repository.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Caption
-
-
-Caption
-
-
-The multi-language caption, used to display the attribute.
 
 
 The multi-language caption, used to display the attribute.
@@ -132,9 +117,8 @@ The multi-language caption, used to display the attribute.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Calculated_Attributes](Sys_Calculated_Attributes.md).[Caption](Sys_Calculated_Attributes.md#caption)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,12 +140,6 @@ The multi-language caption, used to display the attribute.
 ### Is_Active
 
 
-Is_Active
-
-
-True if the attribute is activated and added to the repository.
-
-
 True if the attribute is activated and added to the repository.
 
 | Property | Value |
@@ -172,9 +150,8 @@ True if the attribute is activated and added to the repository.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Calculated_Attributes](Sys_Calculated_Attributes.md).[Is_Active](Sys_Calculated_Attributes.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,21 +172,17 @@ True if the attribute is activated and added to the repository.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Calculated_Attributes](Sys_Calculated_Attributes.md).[Notes](Sys_Calculated_Attributes.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,9 +203,6 @@ Notes
 
 ### Calculated_Attribute_Id
 
-
-Calculated_Attribute_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -242,9 +212,8 @@ Calculated_Attribute_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Calculated_Attributes](Sys_Calculated_Attributes.md).[Calculated_Attribute_Id](Sys_Calculated_Attributes.md#calculated_attribute_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -267,15 +236,9 @@ Calculated_Attribute_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Starting_Expression_No
-
-
-Starting_Expression_No
-
-
-The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute.
 
 
 The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute.
@@ -288,9 +251,8 @@ The expression, from which the calculation starts. The result of the expression 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|10|
-|Derived From|[Sys_Calculated_Attributes](Sys_Calculated_Attributes.md).[Starting_Expression_No](Sys_Calculated_Attributes.md#starting_expression_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -311,9 +273,6 @@ The expression, from which the calculation starts. The result of the expression 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -322,9 +281,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Calculated_Attributes](Sys_Calculated_Attributes.md).[Row_Version](Sys_Calculated_Attributes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

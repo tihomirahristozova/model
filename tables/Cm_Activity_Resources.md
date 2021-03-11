@@ -1,5 +1,10 @@
 # Table Cm_Activity_Resources
 
+
+## Entity
+
+Entity: [General.Contacts.ActivityResources](~/entities/General.Contacts.ActivityResources.md)
+
 Contains the resources, allocated to the activities. Entity: Cm_Activity_Resources
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains the resources, allocated to the activities. Entity: Cm_Activity_Resourc
 
 ### Activity_Resource_Id
 
-
-Activity_Resource_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Activity_Resource_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Activity_Resources](Cm_Activity_Resources.md).[Activity_Resource_Id](Cm_Activity_Resources.md#activity_resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Activity_Resource_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Activity_Id
-
-
-Activity_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Activity_Id
 |Referenced Table|[Cm_Activities](Cm_Activities.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Resources](Cm_Activity_Resources.md).[Activity_Id](Cm_Activity_Resources.md#activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Activity_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Id
-
-
-Resource_Id
-
-
-The resource, which is required by the activity.
 
 
 The resource, which is required by the activity.
@@ -122,9 +113,8 @@ The resource, which is required by the activity.
 |Referenced Table|[Gen_Resources](Gen_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Resources](Cm_Activity_Resources.md).[Resource_Id](Cm_Activity_Resources.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ The resource, which is required by the activity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Usage_Percent
-
-
-Resource_Usage_Percent
-
-
-The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required.
 
 
 The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required.
@@ -168,9 +152,8 @@ The planned resource usage for this activity in percents (100% = 1). Values of m
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|1|
-|Derived From|[Cm_Activity_Resources](Cm_Activity_Resources.md).[Resource_Usage_Percent](Cm_Activity_Resources.md#resource_usage_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,9 +174,6 @@ The planned resource usage for this activity in percents (100% = 1). Values of m
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(255)|
@@ -203,9 +183,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Activity_Resources](Cm_Activity_Resources.md).[Notes](Cm_Activity_Resources.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -226,9 +205,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -237,9 +213,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Resources](Cm_Activity_Resources.md).[Row_Version](Cm_Activity_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

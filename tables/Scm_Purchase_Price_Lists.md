@@ -1,5 +1,10 @@
 # Table Scm_Purchase_Price_Lists
 
+
+## Entity
+
+Entity: [Logistics.Procurement.PurchasePriceLists](~/entities/Logistics.Procurement.PurchasePriceLists.md)
+
 Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 
 ## Summary
@@ -16,9 +21,6 @@ Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 
 ### Purchase_Price_List_Id
 
-
-Purchase_Price_List_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Purchase_Price_List_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Purchase_Price_Lists](Scm_Purchase_Price_Lists.md).[Purchase_Price_List_Id](Scm_Purchase_Price_Lists.md#purchase_price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Purchase_Price_List_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Purchase_Price_List_Name
-
-
-Purchase_Price_List_Name
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Purchase_Price_List_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Price_Lists](Scm_Purchase_Price_Lists.md).[Purchase_Price_List_Name](Scm_Purchase_Price_Lists.md#purchase_price_list_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -94,18 +91,12 @@ Purchase_Price_List_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### From_Date
 
 
-From_Date
-
-
-Starting validity of the price list
-
-
 Starting validity of the price list
 
 | Property | Value |
@@ -117,9 +108,8 @@ Starting validity of the price list
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Price_Lists](Scm_Purchase_Price_Lists.md).[From_Date](Scm_Purchase_Price_Lists.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -142,18 +132,12 @@ Starting validity of the price list
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Thru_Date
 
 
-Thru_Date
-
-
-Ending validity of the price list
-
-
 Ending validity of the price list
 
 | Property | Value |
@@ -165,9 +149,8 @@ Ending validity of the price list
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Price_Lists](Scm_Purchase_Price_Lists.md).[Thru_Date](Scm_Purchase_Price_Lists.md#thru_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,13 +173,10 @@ Ending validity of the price list
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -206,9 +186,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Price_Lists](Scm_Purchase_Price_Lists.md).[Row_Version](Scm_Purchase_Price_Lists.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

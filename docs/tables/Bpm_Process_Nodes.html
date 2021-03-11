@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-bpm_process_nodes">Table Bpm_Process_Nodes</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Bpm.ProcessNodes.html">Systems.Bpm.ProcessNodes</a></p>
 <p>Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#instructions_html">Instructions_Html</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Detailed instructions to the executor in HTML format.</td>
 </tr>
 <tr>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="process_node_id">Process_Node_Id</h3>
-<p>Process_Node_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Nodes.html">Bpm_Process_Nodes</a>.<a href="Bpm_Process_Nodes.html#process_node_id">Process_Node_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,15 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_id">Process_Id</h3>
-<p>Process_Id</p>
-<p>The process, to which this Node belongs.</p>
 <p>The process, to which this Node belongs.</p>
 <table>
 <thead>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Nodes.html">Bpm_Process_Nodes</a>.<a href="Bpm_Process_Nodes.html#process_id">Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_lane_id">Process_Lane_Id</h3>
-<p>Process_Lane_Id</p>
-<p>The process lane to which this Node belongs.</p>
 <p>The process lane to which this Node belongs.</p>
 <table>
 <thead>
@@ -459,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Nodes.html">Bpm_Process_Nodes</a>.<a href="Bpm_Process_Nodes.html#process_lane_id">Process_Lane_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -552,15 +537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_node_code">Process_Node_Code</h3>
-<p>Process_Node_Code</p>
-<p>Node code, unique within the process. Used as ID for XML serialization purposes.</p>
 <p>Node code, unique within the process. Used as ID for XML serialization purposes.</p>
 <table>
 <thead>
@@ -600,15 +583,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Nodes.html">Bpm_Process_Nodes</a>.<a href="Bpm_Process_Nodes.html#process_node_code">Process_Node_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -693,7 +672,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -706,8 +685,6 @@
 </tbody>
 </table>
 <h3 id="process_node_name">Process_Node_Name</h3>
-<p>Process_Node_Name</p>
-<p>Multilanguage process name.</p>
 <p>Multilanguage process name.</p>
 <table>
 <thead>
@@ -747,15 +724,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Nodes.html">Bpm_Process_Nodes</a>.<a href="Bpm_Process_Nodes.html#process_node_name">Process_Node_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -840,7 +813,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -853,8 +826,6 @@
 </tbody>
 </table>
 <h3 id="node_type">Node_Type</h3>
-<p>Node_Type</p>
-<p>Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process.</p>
 <p>Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process.</p>
 <table>
 <thead>
@@ -894,7 +865,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -903,10 +874,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Nodes.html">Bpm_Process_Nodes</a>.<a href="Bpm_Process_Nodes.html#node_type">Node_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -991,7 +958,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1004,8 +971,6 @@
 </tbody>
 </table>
 <h3 id="instructions_html">Instructions_Html</h3>
-<p>Instructions_Html</p>
-<p>Detailed instructions to the executor in HTML format.</p>
 <p>Detailed instructions to the executor in HTML format.</p>
 <table>
 <thead>
@@ -1017,7 +982,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1045,15 +1010,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Nodes.html">Bpm_Process_Nodes</a>.<a href="Bpm_Process_Nodes.html#instructions_html">Instructions_Html</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1138,7 +1099,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1151,7 +1112,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1186,15 +1146,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Bpm_Process_Nodes.html">Bpm_Process_Nodes</a>.<a href="Bpm_Process_Nodes.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

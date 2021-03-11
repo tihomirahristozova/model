@@ -1,5 +1,10 @@
 # Table Gen_Product_Catalogs
 
+
+## Entity
+
+Entity: [General.ProductCatalogs](~/entities/General.ProductCatalogs.md)
+
 Product catalogs serve to organize the products for display primarily in web pages. Entity: Gen_Product_Catalogs
 
 ## Summary
@@ -10,10 +15,10 @@ Product catalogs serve to organize the products for display primarily in web pag
 |[Product_Catalog_Code](#product_catalog_code)|`nvarchar(16)` |Unique catalog code.|
 |[Product_Catalog_Name](#product_catalog_name)|`nvarchar(254)` `ML`|Product catalog name (multilanguage).|
 |[Root_Product_Group_Id](#root_product_group_id)|`uniqueidentifier` |The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Logo](#logo)|`varbinary` |The logo of the product catalog. Used for web and other visualization of the catalog.|
-|[Header_Html](#header_html)|`nvarchar(2147483647)` |The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.|
-|[Footer_Html](#footer_html)|`nvarchar(2147483647)` |The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.|
+|[Header_Html](#header_html)|`nvarchar(max)` |The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.|
+|[Footer_Html](#footer_html)|`nvarchar(max)` |The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.|
 |[Background_Image](#background_image)|`varbinary` |The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.|
 |[Background_Position_Horizontal](#background_position_horizontal)|`nvarchar(1)` Allowed: `L`, `C`, `R`|Horizontal position of the Background Image. L=Left, C=Center, R=Right.|
 |[Background_Position_Vertical](#background_position_vertical)|`nvarchar(1)` Allowed: `T`, `C`, `B`|Vertical position of the Background Image. T=Top, C=Center, B=Bottom.|
@@ -27,12 +32,6 @@ Product catalogs serve to organize the products for display primarily in web pag
 ### Product_Catalog_Id
 
 
-Product_Catalog_Id
-
-
-Unique catalog id.
-
-
 Unique catalog id.
 
 | Property | Value |
@@ -44,9 +43,8 @@ Unique catalog id.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Product_Catalog_Id](Gen_Product_Catalogs.md#product_catalog_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -69,15 +67,9 @@ Unique catalog id.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Catalog_Code
-
-
-Product_Catalog_Code
-
-
-Unique catalog code.
 
 
 Unique catalog code.
@@ -91,9 +83,8 @@ Unique catalog code.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Product_Catalog_Code](Gen_Product_Catalogs.md#product_catalog_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -115,12 +106,6 @@ Unique catalog code.
 ### Product_Catalog_Name
 
 
-Product_Catalog_Name
-
-
-Product catalog name (multilanguage).
-
-
 Product catalog name (multilanguage).
 
 | Property | Value |
@@ -132,9 +117,8 @@ Product catalog name (multilanguage).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Product_Catalog_Name](Gen_Product_Catalogs.md#product_catalog_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,12 +140,6 @@ Product catalog name (multilanguage).
 ### Root_Product_Group_Id
 
 
-Root_Product_Group_Id
-
-
-The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.
-
-
 The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.
 
 | Property | Value |
@@ -173,9 +151,8 @@ The root (starting) product group of the catalog. Each catalog starts from a roo
 |Referenced Table|[Gen_Product_Groups](Gen_Product_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Root_Product_Group_Id](Gen_Product_Catalogs.md#root_product_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,25 +175,21 @@ The root (starting) product group of the catalog. Each catalog starts from a roo
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Notes](Gen_Product_Catalogs.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,12 +211,6 @@ Notes
 ### Logo
 
 
-Logo
-
-
-The logo of the product catalog. Used for web and other visualization of the catalog.
-
-
 The logo of the product catalog. Used for web and other visualization of the catalog.
 
 | Property | Value |
@@ -254,9 +221,8 @@ The logo of the product catalog. Used for web and other visualization of the cat
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Logo](Gen_Product_Catalogs.md#logo)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -278,26 +244,19 @@ The logo of the product catalog. Used for web and other visualization of the cat
 ### Header_Html
 
 
-Header_Html
-
-
-The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.
-
-
 The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Header_Html](Gen_Product_Catalogs.md#header_html)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -319,26 +278,19 @@ The header of the catalog in HTML format. Primarily used for web visualizations 
 ### Footer_Html
 
 
-Footer_Html
-
-
-The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.
-
-
 The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Footer_Html](Gen_Product_Catalogs.md#footer_html)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -360,12 +312,6 @@ The footer of the catalog in HTML format. Primarily used for web visualizations 
 ### Background_Image
 
 
-Background_Image
-
-
-The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.
-
-
 The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.
 
 | Property | Value |
@@ -376,9 +322,8 @@ The background image to be used for web visualization of the catalog. NULL means
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Background_Image](Gen_Product_Catalogs.md#background_image)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -400,12 +345,6 @@ The background image to be used for web visualization of the catalog. NULL means
 ### Background_Position_Horizontal
 
 
-Background_Position_Horizontal
-
-
-Horizontal position of the Background Image. L=Left, C=Center, R=Right.
-
-
 Horizontal position of the Background Image. L=Left, C=Center, R=Right.
 
 | Property | Value |
@@ -417,10 +356,9 @@ Horizontal position of the Background Image. L=Left, C=Center, R=Right.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`L`, `C`, `R`|
 |Default Value|L|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Background_Position_Horizontal](Gen_Product_Catalogs.md#background_position_horizontal)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -442,12 +380,6 @@ Horizontal position of the Background Image. L=Left, C=Center, R=Right.
 ### Background_Position_Vertical
 
 
-Background_Position_Vertical
-
-
-Vertical position of the Background Image. T=Top, C=Center, B=Bottom.
-
-
 Vertical position of the Background Image. T=Top, C=Center, B=Bottom.
 
 | Property | Value |
@@ -459,10 +391,9 @@ Vertical position of the Background Image. T=Top, C=Center, B=Bottom.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`T`, `C`, `B`|
 |Default Value|T|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Background_Position_Vertical](Gen_Product_Catalogs.md#background_position_vertical)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -484,12 +415,6 @@ Vertical position of the Background Image. T=Top, C=Center, B=Bottom.
 ### Background_Repeat
 
 
-Background_Repeat
-
-
-Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.
-
-
 Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.
 
 | Property | Value |
@@ -501,10 +426,9 @@ Specifies if and how the background image will be repeated. R=Repeat both vertic
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`R`, `X`, `Y`, `N`|
 |Default Value|R|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Background_Repeat](Gen_Product_Catalogs.md#background_repeat)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -526,12 +450,6 @@ Specifies if and how the background image will be repeated. R=Repeat both vertic
 ### Background_Color
 
 
-Background_Color
-
-
-When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.
-
-
 When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.
 
 | Property | Value |
@@ -542,9 +460,8 @@ When not NULL, specifies the background color to use for visualization of the ca
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Background_Color](Gen_Product_Catalogs.md#background_color)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -565,9 +482,6 @@ When not NULL, specifies the background color to use for visualization of the ca
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -576,9 +490,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Row_Version](Gen_Product_Catalogs.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -600,12 +513,6 @@ Row_Version
 ### Web_Site_Id
 
 
-Web_Site_Id
-
-
-The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site.
-
-
 The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site.
 
 | Property | Value |
@@ -617,9 +524,8 @@ The ECommerce web site, which will be used to host the product catalog. When NUL
 |Referenced Table|[Sys_Web_Sites](Sys_Web_Sites.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Catalogs](Gen_Product_Catalogs.md).[Web_Site_Id](Gen_Product_Catalogs.md#web_site_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -642,6 +548,6 @@ The ECommerce web site, which will be used to host the product catalog. When NUL
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

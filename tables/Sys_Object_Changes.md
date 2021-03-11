@@ -1,5 +1,10 @@
 # Table Sys_Object_Changes
 
+
+## Entity
+
+Entity: [Systems.Core.ObjectChanges](~/entities/Systems.Core.ObjectChanges.md)
+
 Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -16,15 +21,12 @@ Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in 
 |[Repository_Name](#repository_name)|`nvarchar(64)` |The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.|
 |[Entity_Item_Id](#entity_item_id)|`uniqueidentifier` |The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.|
 |[Change_Type](#change_type)|`nvarchar(1)` Allowed: `C`, `U`, `D`|Type of change - Create, Update or Delete.|
-|[Old_Values_Json](#old_values_json)|`nvarchar(2147483647)` |Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.|
+|[Old_Values_Json](#old_values_json)|`nvarchar(max)` |Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Object_Change_Id
-
-
-Object_Change_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Object_Change_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Object_Changes](Sys_Object_Changes.md).[Object_Change_Id](Sys_Object_Changes.md#object_change_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Object_Change_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Object_Changeset_Id
-
-
-Object_Changeset_Id
-
-
-The changeset containing this change.
 
 
 The changeset containing this change.
@@ -82,9 +77,8 @@ The changeset containing this change.
 |Referenced Table|[Sys_Object_Changesets](Sys_Object_Changesets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Changes](Sys_Object_Changes.md).[Object_Changeset_Id](Sys_Object_Changes.md#object_changeset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The changeset containing this change.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Root_Object_Id
-
-
-Root_Object_Id
-
-
-The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level.
 
 
 The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level.
@@ -129,9 +117,8 @@ The root object in the aggregate of the object, which has been changed. Each cha
 |Referenced Table|[Sys_Objects](Sys_Objects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Changes](Sys_Object_Changes.md).[Root_Object_Id](Sys_Object_Changes.md#root_object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ The root object in the aggregate of the object, which has been changed. Each cha
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Repository_Name
-
-
-Repository_Name
-
-
-The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.
 
 
 The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.
@@ -176,9 +157,8 @@ The repository of the actual changed object, described by this change. This is d
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Changes](Sys_Object_Changes.md).[Repository_Name](Sys_Object_Changes.md#repository_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,16 +181,10 @@ The repository of the actual changed object, described by this change. This is d
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Entity_Item_Id
-
-
-Entity_Item_Id
-
-
-The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.
 
 
 The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.
@@ -223,9 +197,8 @@ The id of the actual changed object, described by this change. This is different
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Changes](Sys_Object_Changes.md).[Entity_Item_Id](Sys_Object_Changes.md#entity_item_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,15 +221,9 @@ The id of the actual changed object, described by this change. This is different
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Change_Type
-
-
-Change_Type
-
-
-Type of change - Create, Update or Delete.
 
 
 Type of change - Create, Update or Delete.
@@ -270,10 +237,9 @@ Type of change - Create, Update or Delete.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`C`, `U`, `D`|
 |Default Value|None|
-|Derived From|[Sys_Object_Changes](Sys_Object_Changes.md).[Change_Type](Sys_Object_Changes.md#change_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,26 +261,19 @@ Type of change - Create, Update or Delete.
 ### Old_Values_Json
 
 
-Old_Values_Json
-
-
-Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.
-
-
 Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Changes](Sys_Object_Changes.md).[Old_Values_Json](Sys_Object_Changes.md#old_values_json)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -335,9 +294,6 @@ Old values in a name-value Json format. Only changed data attributes are recorde
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -346,9 +302,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Changes](Sys_Object_Changes.md).[Row_Version](Sys_Object_Changes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

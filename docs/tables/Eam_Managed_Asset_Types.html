@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_managed_asset_types">Table Eam_Managed_Asset_Types</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.ManagedAssetTypes.html">Applications.AssetManagement.ManagedAssetTypes</a></p>
 <p>Types of managed assets. Used to categorize the assets and the tracked parameters for each type. Entity: Eam_Managed_Asset_Types (Introduced in version 19.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -124,8 +126,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="managed_asset_type_id">Managed_Asset_Type_Id</h3>
-<p>Managed_Asset_Type_Id</p>
-<p>Types of Managed assets. Used to categorize the tracked parameters of the assets.</p>
 <p>Types of Managed assets. Used to categorize the tracked parameters of the assets.</p>
 <table>
 <thead>
@@ -165,15 +165,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Types.html">Eam_Managed_Asset_Types</a>.<a href="Eam_Managed_Asset_Types.html#managed_asset_type_id">Managed_Asset_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -258,15 +254,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="managed_asset_type_code">Managed_Asset_Type_Code</h3>
-<p>Managed_Asset_Type_Code</p>
-<p>Unique code of the asset type.</p>
 <p>Unique code of the asset type.</p>
 <table>
 <thead>
@@ -306,15 +300,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Types.html">Eam_Managed_Asset_Types</a>.<a href="Eam_Managed_Asset_Types.html#managed_asset_type_code">Managed_Asset_Type_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -399,7 +389,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -412,8 +402,6 @@
 </tbody>
 </table>
 <h3 id="managed_asset_type_name">Managed_Asset_Type_Name</h3>
-<p>Managed_Asset_Type_Name</p>
-<p>Multilanguage name of the asset type.</p>
 <p>Multilanguage name of the asset type.</p>
 <table>
 <thead>
@@ -453,15 +441,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Types.html">Eam_Managed_Asset_Types</a>.<a href="Eam_Managed_Asset_Types.html#managed_asset_type_name">Managed_Asset_Type_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -546,7 +530,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -559,7 +543,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -570,7 +553,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -598,15 +581,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Types.html">Eam_Managed_Asset_Types</a>.<a href="Eam_Managed_Asset_Types.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -679,8 +658,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Specifies whether the asset type is active for choosing in drop-down choices.</p>
 <p>Specifies whether the asset type is active for choosing in drop-down choices.</p>
 <table>
 <thead>
@@ -716,15 +693,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Types.html">Eam_Managed_Asset_Types</a>.<a href="Eam_Managed_Asset_Types.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -797,7 +770,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -832,15 +804,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Types.html">Eam_Managed_Asset_Types</a>.<a href="Eam_Managed_Asset_Types.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

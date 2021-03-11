@@ -1,5 +1,10 @@
 # Table Exc_Measuring_Transactions
 
+
+## Entity
+
+Entity: [Finance.Excise.MeasuringTransactions](~/entities/Finance.Excise.MeasuringTransactions.md)
+
 Transaction of product input or output, measured with specialized measuring device for excise purposes. Entity: Exc_Measuring_Transactions (Introduced in version 21.1.1.9)
 
 ## Summary
@@ -19,15 +24,12 @@ Transaction of product input or output, measured with specialized measuring devi
 |[Alcohol_Degree](#alcohol_degree)|`int` |For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.|
 |[Alcohol_Temperature](#alcohol_temperature)|`int` |For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.|
 |[Alcohol_Density](#alcohol_density)|`int` |For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Measuring_Transaction_Id
-
-
-Measuring_Transaction_Id
 
 | Property | Value |
 | - | - |
@@ -38,9 +40,8 @@ Measuring_Transaction_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Measuring_Transaction_Id](Exc_Measuring_Transactions.md#measuring_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,15 +64,9 @@ Measuring_Transaction_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Tax_Warehouse_Id
-
-
-Tax_Warehouse_Id
-
-
-The tax warehouse, where the transaction occurred.
 
 
 The tax warehouse, where the transaction occurred.
@@ -85,9 +80,8 @@ The tax warehouse, where the transaction occurred.
 |Referenced Table|[Exc_Tax_Warehouses](Exc_Tax_Warehouses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Tax_Warehouse_Id](Exc_Measuring_Transactions.md#tax_warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,15 +104,9 @@ The tax warehouse, where the transaction occurred.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Measuring_Device_Code
-
-
-Measuring_Device_Code
-
-
-The code of the measuring device, used to measure the transaction.
 
 
 The code of the measuring device, used to measure the transaction.
@@ -132,9 +120,8 @@ The code of the measuring device, used to measure the transaction.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Measuring_Device_Code](Exc_Measuring_Transactions.md#measuring_device_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -157,16 +144,10 @@ The code of the measuring device, used to measure the transaction.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Transaction_Number
-
-
-Transaction_Number
-
-
-Transaction number, unique for the measuring device.
 
 
 Transaction number, unique for the measuring device.
@@ -180,9 +161,8 @@ Transaction number, unique for the measuring device.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Transaction_Number](Exc_Measuring_Transactions.md#transaction_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,16 +185,10 @@ Transaction number, unique for the measuring device.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Direction
-
-
-Direction
-
-
-The direction of the transaction - IN/OUT.
 
 
 The direction of the transaction - IN/OUT.
@@ -228,10 +202,9 @@ The direction of the transaction - IN/OUT.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `O`|
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Direction](Exc_Measuring_Transactions.md#direction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -253,12 +226,6 @@ The direction of the transaction - IN/OUT.
 ### Start_Time_Utc
 
 
-Start_Time_Utc
-
-
-Starting time of the transaction (in UTC time).
-
-
 Starting time of the transaction (in UTC time).
 
 | Property | Value |
@@ -270,9 +237,8 @@ Starting time of the transaction (in UTC time).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Start_Time_Utc](Exc_Measuring_Transactions.md#start_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,18 +261,12 @@ Starting time of the transaction (in UTC time).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### End_Time_Utc
 
 
-End_Time_Utc
-
-
-Ending time of the transaction (in UTC time).
-
-
 Ending time of the transaction (in UTC time).
 
 | Property | Value |
@@ -318,9 +278,8 @@ Ending time of the transaction (in UTC time).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[End_Time_Utc](Exc_Measuring_Transactions.md#end_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -343,16 +302,10 @@ Ending time of the transaction (in UTC time).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product, which was being measured.
 
 
 The product, which was being measured.
@@ -366,9 +319,8 @@ The product, which was being measured.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Product_Id](Exc_Measuring_Transactions.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -391,15 +343,9 @@ The product, which was being measured.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The quantity of the product, measured with this transaction.
 
 
 The quantity of the product, measured with this transaction.
@@ -412,9 +358,8 @@ The quantity of the product, measured with this transaction.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Quantity](Exc_Measuring_Transactions.md#quantity)|
 |Format|N3|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -437,16 +382,10 @@ The quantity of the product, measured with this transaction.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Quantity_Unit_Id
-
-
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity.
 
 
 The measurement unit of Quantity.
@@ -460,9 +399,8 @@ The measurement unit of Quantity.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Quantity_Unit_Id](Exc_Measuring_Transactions.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -485,15 +423,9 @@ The measurement unit of Quantity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Alcohol_Degree
-
-
-Alcohol_Degree
-
-
-For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.
 
 
 For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.
@@ -506,9 +438,8 @@ For alcoholic products, contains the percentage of pure alcohol. NULL when the t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Alcohol_Degree](Exc_Measuring_Transactions.md#alcohol_degree)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -531,18 +462,12 @@ For alcoholic products, contains the percentage of pure alcohol. NULL when the t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Alcohol_Temperature
 
 
-Alcohol_Temperature
-
-
-For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.
-
-
 For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.
 
 | Property | Value |
@@ -553,9 +478,8 @@ For alcoholic products, contains the temperature of the fluid, when Alcohol Degr
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Alcohol_Temperature](Exc_Measuring_Transactions.md#alcohol_temperature)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -578,18 +502,12 @@ For alcoholic products, contains the temperature of the fluid, when Alcohol Degr
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Alcohol_Density
 
 
-Alcohol_Density
-
-
-For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.
-
-
 For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.
 
 | Property | Value |
@@ -600,9 +518,8 @@ For alcoholic products, contains the average density for the whole transaction. 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Alcohol_Density](Exc_Measuring_Transactions.md#alcohol_density)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -625,26 +542,22 @@ For alcoholic products, contains the average density for the whole transaction. 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Notes](Exc_Measuring_Transactions.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -665,9 +578,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -676,9 +586,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md).[Row_Version](Exc_Measuring_Transactions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

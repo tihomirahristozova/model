@@ -1,5 +1,10 @@
 # Table Rent_Asset_Type_Properties
 
+
+## Entity
+
+Entity: [Applications.Rental.AssetTypeProperties](~/entities/Applications.Rental.AssetTypeProperties.md)
+
 Contains the properties, which are required for each asset category. Entity: Rent_Asset_Type_Properties
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Contains the properties, which are required for each asset category. Entity: Ren
 
 ### Rental_Asset_Type_Property_Id
 
-
-Rental_Asset_Type_Property_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Rental_Asset_Type_Property_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Asset_Type_Properties](Rent_Asset_Type_Properties.md).[Rental_Asset_Type_Property_Id](Rent_Asset_Type_Properties.md#rental_asset_type_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Rental_Asset_Type_Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Rental_Asset_Type_Id
-
-
-Rental_Asset_Type_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Rental_Asset_Type_Id
 |Referenced Table|[Rent_Asset_Types](Rent_Asset_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Properties](Rent_Asset_Type_Properties.md).[Rental_Asset_Type_Id](Rent_Asset_Type_Properties.md#rental_asset_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +96,9 @@ Rental_Asset_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_Id
-
-
-Property_Id
-
-
-The user-defined property, which is required for assets of the specified type.
 
 
 The user-defined property, which is required for assets of the specified type.
@@ -121,9 +112,8 @@ The user-defined property, which is required for assets of the specified type.
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Properties](Rent_Asset_Type_Properties.md).[Property_Id](Rent_Asset_Type_Properties.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,15 +136,9 @@ The user-defined property, which is required for assets of the specified type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Value
-
-
-Default_Value
-
-
-The default value of the property.
 
 
 The default value of the property.
@@ -168,9 +152,8 @@ The default value of the property.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Properties](Rent_Asset_Type_Properties.md).[Default_Value](Rent_Asset_Type_Properties.md#default_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,12 +181,6 @@ The default value of the property.
 ### Default_Value_Id
 
 
-Default_Value_Id
-
-
-The value id of the default value of the property.
-
-
 The value id of the default value of the property.
 
 | Property | Value |
@@ -214,9 +191,8 @@ The value id of the default value of the property.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Properties](Rent_Asset_Type_Properties.md).[Default_Value_Id](Rent_Asset_Type_Properties.md#default_value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,12 +215,9 @@ The value id of the default value of the property.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -254,9 +227,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Properties](Rent_Asset_Type_Properties.md).[Row_Version](Rent_Asset_Type_Properties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Party_Pictures
 
+
+## Entity
+
+Entity: [General.Contacts.PartyPictures](~/entities/General.Contacts.PartyPictures.md)
+
 Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 
 ## Owner Tables Hierarchy
@@ -24,12 +29,6 @@ Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 ### Picture_No
 
 
-Picture_No
-
-
-Unique picture number within the party. Also used for sorting
-
-
 Unique picture number within the party. Also used for sorting
 
 | Property | Value |
@@ -40,10 +39,9 @@ Unique picture number within the party. Also used for sorting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Gen_Party_Pictures](Gen_Party_Pictures.md).[Picture_No](Gen_Party_Pictures.md#picture_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,12 +64,9 @@ Unique picture number within the party. Also used for sorting
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
 
 | Property | Value |
 | - | - |
@@ -82,9 +77,8 @@ Party_Id
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Pictures](Gen_Party_Pictures.md).[Party_Id](Gen_Party_Pictures.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ Party_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Comments
-
-
-Comments
-
-
-Notes for this party picture.
 
 
 Notes for this party picture.
@@ -129,9 +117,8 @@ Notes for this party picture.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Pictures](Gen_Party_Pictures.md).[Comments](Gen_Party_Pictures.md#comments)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,12 +140,6 @@ Notes for this party picture.
 ### Is_Default
 
 
-Is_Default
-
-
-1=This is the default picture for the party; 0=otherwise
-
-
 1=This is the default picture for the party; 0=otherwise
 
 | Property | Value |
@@ -169,9 +150,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Party_Pictures](Gen_Party_Pictures.md).[Is_Default](Gen_Party_Pictures.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,15 +174,9 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Picture
-
-
-Picture
-
-
-The actual party picture data. Can be NULL if we insert only some comments.
 
 
 The actual party picture data. Can be NULL if we insert only some comments.
@@ -215,9 +189,8 @@ The actual party picture data. Can be NULL if we insert only some comments.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Pictures](Gen_Party_Pictures.md).[Picture](Gen_Party_Pictures.md#picture)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,9 +211,6 @@ The actual party picture data. Can be NULL if we insert only some comments.
 
 ### Party_Picture_Id
 
-
-Party_Picture_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -250,9 +220,8 @@ Party_Picture_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Party_Pictures](Gen_Party_Pictures.md).[Party_Picture_Id](Gen_Party_Pictures.md#party_picture_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -275,12 +244,9 @@ Party_Picture_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Logo
-
-
-Is_Logo
 
 | Property | Value |
 | - | - |
@@ -290,9 +256,8 @@ Is_Logo
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Party_Pictures](Gen_Party_Pictures.md).[Is_Logo](Gen_Party_Pictures.md#is_logo)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -315,12 +280,9 @@ Is_Logo
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -330,9 +292,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Pictures](Gen_Party_Pictures.md).[Row_Version](Gen_Party_Pictures.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

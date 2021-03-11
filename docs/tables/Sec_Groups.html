@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sec_groups">Table Sec_Groups</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Security.Groups.html">Systems.Security.Groups</a></p>
 <p>Groups of users. Used for providing group access to secured data. Entity: Sec_Groups</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="group_id">Group_Id</h3>
-<p>Group_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Groups.html">Sec_Groups</a>.<a href="Sec_Groups.html#group_id">Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,14 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="group_name">Group_Name</h3>
-<p>Group_Name</p>
 <table>
 <thead>
 <tr>
@@ -307,15 +303,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Groups.html">Sec_Groups</a>.<a href="Sec_Groups.html#group_name">Group_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -407,7 +399,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -446,15 +437,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Groups.html">Sec_Groups</a>.<a href="Sec_Groups.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -527,8 +514,6 @@
 </tbody>
 </table>
 <h3 id="edit_period_days">Edit_Period_Days</h3>
-<p>Edit_Period_Days</p>
-<p>The number of days before which the documents can not be corrected, released or voided</p>
 <p>The number of days before which the documents can not be corrected, released or voided</p>
 <table>
 <thead>
@@ -564,15 +549,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Groups.html">Sec_Groups</a>.<a href="Sec_Groups.html#edit_period_days">Edit_Period_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -645,8 +626,6 @@
 </tbody>
 </table>
 <h3 id="group_type">Group_Type</h3>
-<p>Group_Type</p>
-<p>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody</p>
 <p>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody</p>
 <table>
 <thead>
@@ -686,7 +665,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -695,10 +674,6 @@
 <tr>
 <td>Default Value</td>
 <td>G</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Groups.html">Sec_Groups</a>.<a href="Sec_Groups.html#group_type">Group_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -771,8 +746,6 @@
 </tbody>
 </table>
 <h3 id="group_for_user_id">Group_For_User_Id</h3>
-<p>Group_For_User_Id</p>
-<p>When Group_Type=U, contains the user for which the group is defined, NULL otherwise</p>
 <p>When Group_Type=U, contains the user for which the group is defined, NULL otherwise</p>
 <table>
 <thead>
@@ -812,15 +785,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Groups.html">Sec_Groups</a>.<a href="Sec_Groups.html#group_for_user_id">Group_For_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -905,14 +874,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -947,15 +915,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Groups.html">Sec_Groups</a>.<a href="Sec_Groups.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_project_tasks">Table Prj_Project_Tasks</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.ProjectTasks.html">Projects.ProjectTasks</a></p>
 <p>Represents one task of a project. Entity: Prj_Project_Tasks</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -174,7 +176,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="project_task_id">Project_Task_Id</h3>
-<p>Project_Task_Id</p>
 <table>
 <thead>
 <tr>
@@ -213,15 +214,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#project_task_id">Project_Task_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -306,15 +303,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_id">Project_Id</h3>
-<p>Project_Id</p>
-<p>The project, to which this task belongs.</p>
 <p>The project, to which this task belongs.</p>
 <table>
 <thead>
@@ -354,15 +349,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#project_id">Project_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -447,15 +438,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_work_element_id">Project_Work_Element_Id</h3>
-<p>Project_Work_Element_Id</p>
-<p>The work element under which the task is filed.</p>
 <p>The work element under which the task is filed.</p>
 <table>
 <thead>
@@ -495,15 +484,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#project_work_element_id">Project_Work_Element_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -588,15 +573,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="task_name">Task_Name</h3>
-<p>Task_Name</p>
-<p>The short name of the task. It is best practice to contain the target of the task.</p>
 <p>The short name of the task. It is best practice to contain the target of the task.</p>
 <table>
 <thead>
@@ -636,15 +619,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#task_name">Task_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -729,7 +708,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -742,7 +721,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -753,7 +731,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -781,15 +759,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -862,8 +836,6 @@
 </tbody>
 </table>
 <h3 id="resource_id">Resource_Id</h3>
-<p>Resource_Id</p>
-<p>The resource, which is required for the task. NULL means - do not plan any resource</p>
 <p>The resource, which is required for the task. NULL means - do not plan any resource</p>
 <table>
 <thead>
@@ -903,15 +875,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#resource_id">Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -996,15 +964,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="start_date_time">Start_Date_Time</h3>
-<p>Start_Date_Time</p>
-<p>The date and time when the task is planned to start.</p>
 <p>The date and time when the task is planned to start.</p>
 <table>
 <thead>
@@ -1044,15 +1010,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#start_date_time">Start_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1137,7 +1099,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1150,8 +1112,6 @@
 </tbody>
 </table>
 <h3 id="finish_date_time">Finish_Date_Time</h3>
-<p>Finish_Date_Time</p>
-<p>The date and time when the task is planned to finish.</p>
 <p>The date and time when the task is planned to finish.</p>
 <table>
 <thead>
@@ -1191,15 +1151,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#finish_date_time">Finish_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1284,7 +1240,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1297,8 +1253,6 @@
 </tbody>
 </table>
 <h3 id="work_type_id">Work_Type_Id</h3>
-<p>Work_Type_Id</p>
-<p>Type of work to be done. NULL means that type of work is undetermined yet.</p>
 <p>Type of work to be done. NULL means that type of work is undetermined yet.</p>
 <table>
 <thead>
@@ -1338,15 +1292,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#work_type_id">Work_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1431,15 +1381,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="planned_duration_hours">Planned_Duration_Hours</h3>
-<p>Planned_Duration_Hours</p>
-<p>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.</p>
 <p>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.</p>
 <table>
 <thead>
@@ -1475,15 +1423,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#planned_duration_hours">Planned_Duration_Hours</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1556,8 +1500,6 @@
 </tbody>
 </table>
 <h3 id="budget_labor_amount">Budget_Labor_Amount</h3>
-<p>Budget_Labor_Amount</p>
-<p>Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated</p>
 <p>Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated</p>
 <table>
 <thead>
@@ -1593,15 +1535,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#budget_labor_amount">Budget_Labor_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1674,8 +1612,6 @@
 </tbody>
 </table>
 <h3 id="responsible_party_id">Responsible_Party_Id</h3>
-<p>Responsible_Party_Id</p>
-<p>The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined</p>
 <p>The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined</p>
 <table>
 <thead>
@@ -1715,15 +1651,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#responsible_party_id">Responsible_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1808,15 +1740,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="activity_id">Activity_Id</h3>
-<p>Activity_Id</p>
-<p>The Id of the Cm_Activity created for this task. NULL means that activity is still not created</p>
 <p>The Id of the Cm_Activity created for this task. NULL means that activity is still not created</p>
 <table>
 <thead>
@@ -1856,15 +1786,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#activity_id">Activity_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1949,15 +1875,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_task_no">Project_Task_No</h3>
-<p>Project_Task_No</p>
-<p>Consecutive task number, unique within the project.</p>
 <p>Consecutive task number, unique within the project.</p>
 <table>
 <thead>
@@ -1993,7 +1917,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -2002,10 +1926,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#project_task_no">Project_Task_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2078,8 +1998,6 @@
 </tbody>
 </table>
 <h3 id="task_type_id">Task_Type_Id</h3>
-<p>Task_Type_Id</p>
-<p>The type of the task. Determines the work type of the tasks, default billing rules, etc.</p>
 <p>The type of the task. Determines the work type of the tasks, default billing rules, etc.</p>
 <table>
 <thead>
@@ -2119,15 +2037,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#task_type_id">Task_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2212,14 +2126,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2254,15 +2167,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Tasks.html">Prj_Project_Tasks</a>.<a href="Prj_Project_Tasks.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

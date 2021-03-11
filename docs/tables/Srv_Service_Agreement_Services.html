@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-srv_service_agreement_services">Table Srv_Service_Agreement_Services</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Service.ServiceAgreementServices.html">Applications.Service.ServiceAgreementServices</a></p>
 <p>Contains the free services, included in the service agreement. Entity: Srv_Service_Agreement_Services</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -149,8 +151,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <table>
 <thead>
@@ -186,7 +186,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -195,10 +195,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,8 +267,6 @@
 </tbody>
 </table>
 <h3 id="service_id">Service_Id</h3>
-<p>Service_Id</p>
-<p>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be NULL)</p>
 <p>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be NULL)</p>
 <table>
 <thead>
@@ -312,15 +306,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#service_id">Service_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -405,15 +395,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="service_product_id">Service_Product_Id</h3>
-<p>Service_Product_Id</p>
-<p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be NULL)</p>
 <p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be NULL)</p>
 <table>
 <thead>
@@ -453,15 +441,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#service_product_id">Service_Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -546,15 +530,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>Quantity of the agreed servcice or product</p>
 <p>Quantity of the agreed servcice or product</p>
 <table>
 <thead>
@@ -590,15 +572,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -671,8 +649,6 @@
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit of Quantity.</p>
 <p>The measurement unit of Quantity.</p>
 <table>
 <thead>
@@ -712,15 +688,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -805,15 +777,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="start_date">Start_Date</h3>
-<p>Start_Date</p>
-<p>Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.</p>
 <p>Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.</p>
 <table>
 <thead>
@@ -853,15 +823,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#start_date">Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -934,8 +900,6 @@
 </tbody>
 </table>
 <h3 id="end_date">End_Date</h3>
-<p>End_Date</p>
-<p>End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.</p>
 <p>End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.</p>
 <table>
 <thead>
@@ -975,15 +939,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#end_date">End_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1056,7 +1016,6 @@
 </tbody>
 </table>
 <h3 id="service_agreement_service_id">Service_Agreement_Service_Id</h3>
-<p>Service_Agreement_Service_Id</p>
 <table>
 <thead>
 <tr>
@@ -1095,15 +1054,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#service_agreement_service_id">Service_Agreement_Service_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1188,14 +1143,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="service_agreement_id">Service_Agreement_Id</h3>
-<p>Service_Agreement_Id</p>
 <table>
 <thead>
 <tr>
@@ -1234,15 +1188,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#service_agreement_id">Service_Agreement_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1327,14 +1277,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1369,15 +1318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Srv_Service_Agreement_Services.html">Srv_Service_Agreement_Services</a>.<a href="Srv_Service_Agreement_Services.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_managed_asset_locations">Table Eam_Managed_Asset_Locations</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.ManagedAssetLocations.html">Applications.AssetManagement.ManagedAssetLocations</a></p>
 <p>Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -121,7 +123,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Might contain additional notes for the exact location of the asset within the enterprise company location.</td>
 </tr>
 <tr>
@@ -133,7 +135,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="managed_asset_location_id">Managed_Asset_Location_Id</h3>
-<p>Managed_Asset_Location_Id</p>
 <table>
 <thead>
 <tr>
@@ -172,15 +173,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Locations.html">Eam_Managed_Asset_Locations</a>.<a href="Eam_Managed_Asset_Locations.html#managed_asset_location_id">Managed_Asset_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -265,15 +262,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="managed_asset_id">Managed_Asset_Id</h3>
-<p>Managed_Asset_Id</p>
-<p>The asset, whose location is recorded.</p>
 <p>The asset, whose location is recorded.</p>
 <table>
 <thead>
@@ -313,15 +308,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Locations.html">Eam_Managed_Asset_Locations</a>.<a href="Eam_Managed_Asset_Locations.html#managed_asset_id">Managed_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -406,15 +397,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
-<p>Enterprise_Company_Location_Id</p>
-<p>The enterprise company location, where the asset is assigned.</p>
 <p>The enterprise company location, where the asset is assigned.</p>
 <table>
 <thead>
@@ -454,15 +443,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Locations.html">Eam_Managed_Asset_Locations</a>.<a href="Eam_Managed_Asset_Locations.html#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -547,15 +532,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>From_Date</p>
-<p>The date on which the asset is assigned to the location.</p>
 <p>The date on which the asset is assigned to the location.</p>
 <table>
 <thead>
@@ -595,15 +578,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Locations.html">Eam_Managed_Asset_Locations</a>.<a href="Eam_Managed_Asset_Locations.html#from_date">From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -676,8 +655,6 @@
 </tbody>
 </table>
 <h3 id="responsible_person_id">Responsible_Person_Id</h3>
-<p>Responsible_Person_Id</p>
-<p>The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person.</p>
 <p>The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person.</p>
 <table>
 <thead>
@@ -717,15 +694,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Locations.html">Eam_Managed_Asset_Locations</a>.<a href="Eam_Managed_Asset_Locations.html#responsible_person_id">Responsible_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -810,15 +783,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
-<p>Might contain additional notes for the exact location of the asset within the enterprise company location.</p>
 <p>Might contain additional notes for the exact location of the asset within the enterprise company location.</p>
 <table>
 <thead>
@@ -830,7 +801,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -858,15 +829,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Locations.html">Eam_Managed_Asset_Locations</a>.<a href="Eam_Managed_Asset_Locations.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -939,7 +906,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -974,15 +940,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Managed_Asset_Locations.html">Eam_Managed_Asset_Locations</a>.<a href="Eam_Managed_Asset_Locations.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

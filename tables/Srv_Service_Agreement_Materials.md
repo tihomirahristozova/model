@@ -1,5 +1,10 @@
 # Table Srv_Service_Agreement_Materials
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceAgreementMaterials](~/entities/Applications.Service.ServiceAgreementMaterials.md)
+
 Contains the free materials, included in the service agreement. Entity: Srv_Service_Agreement_Materials
 
 ## Owner Tables Hierarchy
@@ -28,12 +33,6 @@ Contains the free materials, included in the service agreement. Entity: Srv_Serv
 ### Line_No
 
 
-Line_No
-
-
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
-
-
 Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 | Property | Value |
@@ -44,10 +43,9 @@ Consecutive line number, unique within the document. Usually is increasing in st
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Line_No](Srv_Service_Agreement_Materials.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -69,12 +67,6 @@ Consecutive line number, unique within the document. Usually is increasing in st
 ### Product_Id
 
 
-Product_Id
-
-
-Paid or agreed in advance material that won't be invoiced after service activities
-
-
 Paid or agreed in advance material that won't be invoiced after service activities
 
 | Property | Value |
@@ -86,9 +78,8 @@ Paid or agreed in advance material that won't be invoiced after service activiti
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Product_Id](Srv_Service_Agreement_Materials.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -111,15 +102,9 @@ Paid or agreed in advance material that won't be invoiced after service activiti
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-Quantity of the agreed material
 
 
 Quantity of the agreed material
@@ -132,9 +117,8 @@ Quantity of the agreed material
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Quantity](Srv_Service_Agreement_Materials.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,12 +140,6 @@ Quantity of the agreed material
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity.
-
-
 The measurement unit of Quantity.
 
 | Property | Value |
@@ -173,9 +151,8 @@ The measurement unit of Quantity.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Quantity_Unit_Id](Srv_Service_Agreement_Materials.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,15 +175,9 @@ The measurement unit of Quantity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Start_Date
-
-
-Start_Date
-
-
-Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.
 
 
 Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.
@@ -220,9 +191,8 @@ Start date from which the agreedment for the material is valid. For the agreemen
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Start_Date](Srv_Service_Agreement_Materials.md#start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,12 +214,6 @@ Start date from which the agreedment for the material is valid. For the agreemen
 ### End_Date
 
 
-End_Date
-
-
-End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.
-
-
 End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.
 
 | Property | Value |
@@ -261,9 +225,8 @@ End date to which the agreedment for the material is valid. For the agreement pe
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[End_Date](Srv_Service_Agreement_Materials.md#end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,9 +247,6 @@ End date to which the agreedment for the material is valid. For the agreement pe
 
 ### Service_Agreement_Material_Id
 
-
-Service_Agreement_Material_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -296,9 +256,8 @@ Service_Agreement_Material_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Service_Agreement_Material_Id](Srv_Service_Agreement_Materials.md#service_agreement_material_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -321,12 +280,9 @@ Service_Agreement_Material_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Agreement_Id
-
-
-Service_Agreement_Id
 
 | Property | Value |
 | - | - |
@@ -337,9 +293,8 @@ Service_Agreement_Id
 |Referenced Table|[Srv_Service_Agreements](Srv_Service_Agreements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Service_Agreement_Id](Srv_Service_Agreement_Materials.md#service_agreement_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -362,15 +317,9 @@ Service_Agreement_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Quantity_Base
-
-
-Quantity_Base
-
-
-The equivalence of Quantity in the base measurement category of the product.
 
 
 The equivalence of Quantity in the base measurement category of the product.
@@ -383,9 +332,8 @@ The equivalence of Quantity in the base measurement category of the product.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Quantity_Base](Srv_Service_Agreement_Materials.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -406,9 +354,6 @@ The equivalence of Quantity in the base measurement category of the product.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -417,9 +362,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Row_Version](Srv_Service_Agreement_Materials.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -441,12 +385,6 @@ Row_Version
 ### Standard_Quantity_Base
 
 
-Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
-
-
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 | Property | Value |
@@ -457,9 +395,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Materials](Srv_Service_Agreement_Materials.md).[Standard_Quantity_Base](Srv_Service_Agreement_Materials.md#standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

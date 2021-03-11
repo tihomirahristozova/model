@@ -1,5 +1,10 @@
 # Table Crm_Product_Prices
 
+
+## Entity
+
+Entity: [Crm.ProductPrices](~/entities/Crm.ProductPrices.md)
+
 Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices
 
 ## Summary
@@ -33,12 +38,6 @@ Specific prices of products. A price is applied after matching the specified cri
 ### Price_List_Id
 
 
-Price_List_Id
-
-
-When not NULL, specifies that the sales document must have the specified price list.
-
-
 When not NULL, specifies that the sales document must have the specified price list.
 
 | Property | Value |
@@ -50,9 +49,8 @@ When not NULL, specifies that the sales document must have the specified price l
 |Referenced Table|[Crm_Price_Lists](Crm_Price_Lists.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Price_List_Id](Crm_Product_Prices.md#price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -75,15 +73,9 @@ When not NULL, specifies that the sales document must have the specified price l
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Price
-
-
-Price
-
-
-Price in the specified currency and for the specified quantity
 
 
 Price in the specified currency and for the specified quantity
@@ -96,9 +88,8 @@ Price in the specified currency and for the specified quantity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Price](Crm_Product_Prices.md#price)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -121,16 +112,10 @@ Price in the specified currency and for the specified quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Currency_Id
-
-
-Currency_Id
-
-
-The currency of the price
 
 
 The currency of the price
@@ -144,9 +129,8 @@ The currency of the price
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Currency_Id](Crm_Product_Prices.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -169,15 +153,9 @@ The currency of the price
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Price_Quantity_Measurement_Unit_Id
-
-
-Price_Quantity_Measurement_Unit_Id
-
-
-The measurement unit of Price_Quantity
 
 
 The measurement unit of Price_Quantity
@@ -191,9 +169,8 @@ The measurement unit of Price_Quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Price_Quantity_Measurement_Unit_Id](Crm_Product_Prices.md#price_quantity_measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -216,15 +193,9 @@ The measurement unit of Price_Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Customer_Id
-
-
-Customer_Id
-
-
-When not NULL, specifies that the customer of the sales document must be the specified customer.
 
 
 When not NULL, specifies that the customer of the sales document must be the specified customer.
@@ -238,9 +209,8 @@ When not NULL, specifies that the customer of the sales document must be the spe
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Customer_Id](Crm_Product_Prices.md#customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -263,15 +233,9 @@ When not NULL, specifies that the customer of the sales document must be the spe
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-When not NULL, specifies that the sales document must be in the specified enterprise company.
 
 
 When not NULL, specifies that the sales document must be in the specified enterprise company.
@@ -285,9 +249,8 @@ When not NULL, specifies that the sales document must be in the specified enterp
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Enterprise_Company_Id](Crm_Product_Prices.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -310,15 +273,9 @@ When not NULL, specifies that the sales document must be in the specified enterp
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Priority
-
-
-Priority
-
-
-Priority of the price comparative to other prices. Only the highest priority price is applied.
 
 
 Priority of the price comparative to other prices. Only the highest priority price is applied.
@@ -331,10 +288,9 @@ Priority of the price comparative to other prices. Only the highest priority pri
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`|
 |Default Value|2|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Priority](Crm_Product_Prices.md#priority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -357,12 +313,9 @@ Priority of the price comparative to other prices. Only the highest priority pri
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -373,9 +326,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Notes](Crm_Product_Prices.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -397,12 +349,6 @@ Notes
 ### Min_Quantity
 
 
-Min_Quantity
-
-
-Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)
-
-
 Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)
 
 | Property | Value |
@@ -413,9 +359,8 @@ Minimal quantity required to use this price (in the Price_Quantity_Measurement_U
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Min_Quantity](Crm_Product_Prices.md#min_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -438,16 +383,10 @@ Minimal quantity required to use this price (in the Price_Quantity_Measurement_U
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Max_Quantity
-
-
-Max_Quantity
-
-
-Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit
 
 
 Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit
@@ -460,9 +399,8 @@ Maximum quantity for which this price is valid in the Price_Quantity_Measurement
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Max_Quantity](Crm_Product_Prices.md#max_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -485,16 +423,10 @@ Maximum quantity for which this price is valid in the Price_Quantity_Measurement
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### From_Date
-
-
-From_Date
-
-
-Starting date of validity of the price
 
 
 Starting date of validity of the price
@@ -508,9 +440,8 @@ Starting date of validity of the price
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[From_Date](Crm_Product_Prices.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -533,16 +464,10 @@ Starting date of validity of the price
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Thru_Date
-
-
-Thru_Date
-
-
-Ending date (inclusive) of the validity of the price
 
 
 Ending date (inclusive) of the validity of the price
@@ -556,9 +481,8 @@ Ending date (inclusive) of the validity of the price
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Thru_Date](Crm_Product_Prices.md#thru_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -581,16 +505,10 @@ Ending date (inclusive) of the validity of the price
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Target_Group_Id
-
-
-Target_Group_Id
-
-
-When not NULL, specifies a criteria, which is matched only when the customer of the sales document is included in the group.
 
 
 When not NULL, specifies a criteria, which is matched only when the customer of the sales document is included in the group.
@@ -604,9 +522,8 @@ When not NULL, specifies a criteria, which is matched only when the customer of 
 |Referenced Table|[Crm_Target_Groups](Crm_Target_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Target_Group_Id](Crm_Product_Prices.md#target_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -629,15 +546,9 @@ When not NULL, specifies a criteria, which is matched only when the customer of 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Price_Type_Id
-
-
-Price_Type_Id
-
-
-Price type of the current product price. The price types are used to set additional priority condition for the prices.
 
 
 Price type of the current product price. The price types are used to set additional priority condition for the prices.
@@ -651,9 +562,8 @@ Price type of the current product price. The price types are used to set additio
 |Referenced Table|[Crm_Price_Types](Crm_Price_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Price_Type_Id](Crm_Product_Prices.md#price_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -676,15 +586,9 @@ Price type of the current product price. The price types are used to set additio
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Location_Id
-
-
-Enterprise_Company_Location_Id
-
-
-When set, specifies that the sales document must be of the specified enterprise company location.
 
 
 When set, specifies that the sales document must be of the specified enterprise company location.
@@ -698,9 +602,8 @@ When set, specifies that the sales document must be of the specified enterprise 
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Enterprise_Company_Location_Id](Crm_Product_Prices.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -723,15 +626,9 @@ When set, specifies that the sales document must be of the specified enterprise 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Distribution_Channel_Id
-
-
-Distribution_Channel_Id
-
-
-Use the price only when selling through the specified channel
 
 
 Use the price only when selling through the specified channel
@@ -745,9 +642,8 @@ Use the price only when selling through the specified channel
 |Referenced Table|[Crm_Distribution_Channels](Crm_Distribution_Channels.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Distribution_Channel_Id](Crm_Product_Prices.md#distribution_channel_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -770,12 +666,9 @@ Use the price only when selling through the specified channel
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Price_Id
-
-
-Product_Price_Id
 
 | Property | Value |
 | - | - |
@@ -786,9 +679,8 @@ Product_Price_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Product_Price_Id](Crm_Product_Prices.md#product_price_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -811,15 +703,9 @@ Product_Price_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Price_Quantity
-
-
-Price_Quantity
-
-
-The quantity of the product for which the price is specified
 
 
 The quantity of the product for which the price is specified
@@ -832,9 +718,8 @@ The quantity of the product for which the price is specified
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Price_Quantity](Crm_Product_Prices.md#price_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -862,12 +747,6 @@ The quantity of the product for which the price is specified
 ### Product_Id
 
 
-Product_Id
-
-
-The product for which a price will be defined
-
-
 The product for which a price will be defined
 
 | Property | Value |
@@ -879,9 +758,8 @@ The product for which a price will be defined
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Product_Id](Crm_Product_Prices.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -904,15 +782,9 @@ The product for which a price will be defined
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Ship_To_Customer_Id
-
-
-Ship_To_Customer_Id
-
-
-When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer.
 
 
 When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer.
@@ -926,9 +798,8 @@ When not null, specifies that the price will be applied only when the sales docu
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Ship_To_Customer_Id](Crm_Product_Prices.md#ship_to_customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -951,12 +822,9 @@ When not null, specifies that the price will be applied only when the sales docu
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -966,9 +834,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Product_Prices](Crm_Product_Prices.md).[Row_Version](Crm_Product_Prices.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

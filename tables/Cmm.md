@@ -1,9 +1,7 @@
 # Cmm
 
 * [Cmm_Notification_Settings](Cmm_Notification_Settings.md)
-* [Cmm_Notification_Settings_Table_Load_Navigator](Cmm_Notification_Settings_Table_Load_Navigator.md)
 * [Cmm_Notifications](Cmm_Notifications.md)
-* [Cmm_Notifications_Table_Load_Navigator](Cmm_Notifications_Table_Load_Navigator.md)
 * [Cmm_Social_Comments](Cmm_Social_Comments.md)
 * [Cmm_Social_Group_Members](Cmm_Social_Group_Members.md)
 * [Cmm_Social_Groups](Cmm_Social_Groups.md)

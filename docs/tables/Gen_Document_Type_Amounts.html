@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_document_type_amounts">Table Gen_Document_Type_Amounts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.DocumentTypeAmounts.html">General.DocumentTypeAmounts</a></p>
 <p>Specifies amount types, that should be automatically added to documents of a given type. Entity: Gen_Document_Type_Amounts</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="document_type_amount_id">Document_Type_Amount_Id</h3>
-<p>Document_Type_Amount_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Amounts.html">Gen_Document_Type_Amounts</a>.<a href="Gen_Document_Type_Amounts.html#document_type_amount_id">Document_Type_Amount_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,15 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_type_id">Document_Type_Id</h3>
-<p>Document_Type_Id</p>
-<p>The document type for which the amount type is specified</p>
 <p>The document type for which the amount type is specified</p>
 <table>
 <thead>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Amounts.html">Gen_Document_Type_Amounts</a>.<a href="Gen_Document_Type_Amounts.html#document_type_id">Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_amount_type_id">Document_Amount_Type_Id</h3>
-<p>Document_Amount_Type_Id</p>
-<p>The amount type that should be automatically added to the documents of the specified type</p>
 <p>The amount type that should be automatically added to the documents of the specified type</p>
 <table>
 <thead>
@@ -459,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Amounts.html">Gen_Document_Type_Amounts</a>.<a href="Gen_Document_Type_Amounts.html#document_amount_type_id">Document_Amount_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -552,15 +537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_percent">Default_Percent</h3>
-<p>Default_Percent</p>
-<p>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type</p>
 <p>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type</p>
 <table>
 <thead>
@@ -596,15 +579,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Amounts.html">Gen_Document_Type_Amounts</a>.<a href="Gen_Document_Type_Amounts.html#default_percent">Default_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -677,8 +656,6 @@
 </tbody>
 </table>
 <h3 id="user_can_change_input">User_Can_Change_Input</h3>
-<p>User_Can_Change_Input</p>
-<p>1 if the user, entering the document is allowed to change the default input percent</p>
 <p>1 if the user, entering the document is allowed to change the default input percent</p>
 <table>
 <thead>
@@ -714,15 +691,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Amounts.html">Gen_Document_Type_Amounts</a>.<a href="Gen_Document_Type_Amounts.html#user_can_change_input">User_Can_Change_Input</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -795,8 +768,6 @@
 </tbody>
 </table>
 <h3 id="required_from_date">Required_From_Date</h3>
-<p>Required_From_Date</p>
-<p>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.</p>
 <p>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.</p>
 <table>
 <thead>
@@ -836,15 +807,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Amounts.html">Gen_Document_Type_Amounts</a>.<a href="Gen_Document_Type_Amounts.html#required_from_date">Required_From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -936,8 +903,6 @@
 </tbody>
 </table>
 <h3 id="required_thru_date">Required_Thru_Date</h3>
-<p>Required_Thru_Date</p>
-<p>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.</p>
 <p>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.</p>
 <table>
 <thead>
@@ -977,15 +942,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Amounts.html">Gen_Document_Type_Amounts</a>.<a href="Gen_Document_Type_Amounts.html#required_thru_date">Required_Thru_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1077,7 +1038,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1112,15 +1072,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Amounts.html">Gen_Document_Type_Amounts</a>.<a href="Gen_Document_Type_Amounts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

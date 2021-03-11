@@ -1,5 +1,10 @@
 # Table Cost_Distribution_Results
 
+
+## Entity
+
+Entity: [Finance.Cost.DistributionResults](~/entities/Finance.Cost.DistributionResults.md)
+
 Contains the results of a cost distribution calculation. Entity: Cost_Distribution_Results
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains the results of a cost distribution calculation. Entity: Cost_Distributi
 
 ### Cost_Distribution_Result_Id
 
-
-Cost_Distribution_Result_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Cost_Distribution_Result_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Distribution_Results](Cost_Distribution_Results.md).[Cost_Distribution_Result_Id](Cost_Distribution_Results.md#cost_distribution_result_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Cost_Distribution_Result_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Distribution_Id
-
-
-Cost_Distribution_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Cost_Distribution_Id
 |Referenced Table|[Cost_Distributions](Cost_Distributions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Results](Cost_Distribution_Results.md).[Cost_Distribution_Id](Cost_Distribution_Results.md#cost_distribution_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Cost_Distribution_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-Consecutive line number (within the cost distribution document) of the result.
 
 
 Consecutive line number (within the cost distribution document) of the result.
@@ -121,10 +112,9 @@ Consecutive line number (within the cost distribution document) of the result.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Cost_Distribution_Results](Cost_Distribution_Results.md).[Line_No](Cost_Distribution_Results.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +136,6 @@ Consecutive line number (within the cost distribution document) of the result.
 ### Output_Line_No
 
 
-Output_Line_No
-
-
-The line number (within the document) of the output over which the cost is distributed.
-
-
 The line number (within the document) of the output over which the cost is distributed.
 
 | Property | Value |
@@ -162,9 +146,8 @@ The line number (within the document) of the output over which the cost is distr
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Results](Cost_Distribution_Results.md).[Output_Line_No](Cost_Distribution_Results.md#output_line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,12 +169,6 @@ The line number (within the document) of the output over which the cost is distr
 ### Cost_Type_Id
 
 
-Cost_Type_Id
-
-
-The cost type for which the current distribution is calculated.
-
-
 The cost type for which the current distribution is calculated.
 
 | Property | Value |
@@ -203,9 +180,8 @@ The cost type for which the current distribution is calculated.
 |Referenced Table|[Cost_Types](Cost_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Results](Cost_Distribution_Results.md).[Cost_Type_Id](Cost_Distribution_Results.md#cost_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -228,15 +204,9 @@ The cost type for which the current distribution is calculated.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Distributed_Amount_Base
-
-
-Distributed_Amount_Base
-
-
-The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.
 
 
 The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.
@@ -249,9 +219,8 @@ The amount (in base currency) of the distributed cost. The amount is calculated 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Results](Cost_Distribution_Results.md).[Distributed_Amount_Base](Cost_Distribution_Results.md#distributed_amount_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

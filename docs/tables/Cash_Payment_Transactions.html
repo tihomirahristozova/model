@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cash_payment_transactions">Table Cash_Payment_Transactions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Payments.PaymentTransactions.html">Finance.Payments.PaymentTransactions</a></p>
 <p>Represents actual payments, which increase or decrease the balance of a payment account. Entity: Cash_Payment_Transactions</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -208,8 +210,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The party that is paying or receiving the money</p>
 <p>The party that is paying or receiving the money</p>
 <table>
 <thead>
@@ -249,15 +249,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -342,15 +338,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_account_id">Payment_Account_Id</h3>
-<p>Payment_Account_Id</p>
-<p>The account towards which the payment was effected</p>
 <p>The account towards which the payment was effected</p>
 <table>
 <thead>
@@ -390,15 +384,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#payment_account_id">Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -483,15 +473,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="direction">Direction</h3>
-<p>Direction</p>
-<p>I for Payment issue, R for payment receipt</p>
 <p>I for Payment issue, R for payment receipt</p>
 <table>
 <thead>
@@ -531,7 +519,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -540,10 +528,6 @@
 <tr>
 <td>Default Value</td>
 <td>R</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#direction">Direction</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -628,15 +612,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="total_amount">Total_Amount</h3>
-<p>Total_Amount</p>
-<p>The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines</p>
 <p>The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines</p>
 <table>
 <thead>
@@ -672,15 +654,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#total_amount">Total_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -753,8 +731,6 @@
 </tbody>
 </table>
 <h3 id="total_amount_currency_id">Total_Amount_Currency_Id</h3>
-<p>Total_Amount_Currency_Id</p>
-<p>The currency of the total amount</p>
 <p>The currency of the total amount</p>
 <table>
 <thead>
@@ -794,15 +770,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#total_amount_currency_id">Total_Amount_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -887,15 +859,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="requires_allocation">Requires_Allocation</h3>
-<p>Requires_Allocation</p>
-<p>1=The total amount should be allocated to payment orders; 0=Payment orders are not required</p>
 <p>1=The total amount should be allocated to payment orders; 0=Payment orders are not required</p>
 <table>
 <thead>
@@ -931,15 +901,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#requires_allocation">Requires_Allocation</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1024,15 +990,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_slip_no">Payment_Slip_No</h3>
-<p>Payment_Slip_No</p>
-<p>The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips</p>
 <p>The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips</p>
 <table>
 <thead>
@@ -1072,15 +1036,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#payment_slip_no">Payment_Slip_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1165,15 +1125,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_slip_id">Payment_Slip_Id</h3>
-<p>Payment_Slip_Id</p>
-<p>When not NULL specifies that this payment was part of a payment slip</p>
 <p>When not NULL specifies that this payment was part of a payment slip</p>
 <table>
 <thead>
@@ -1213,15 +1171,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#payment_slip_id">Payment_Slip_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1306,14 +1260,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1352,15 +1305,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1433,7 +1382,6 @@
 </tbody>
 </table>
 <h3 id="payment_transaction_id">Payment_Transaction_Id</h3>
-<p>Payment_Transaction_Id</p>
 <table>
 <thead>
 <tr>
@@ -1472,15 +1420,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#payment_transaction_id">Payment_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1565,15 +1509,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
-<p>The document data of the payment transaction</p>
 <p>The document data of the payment transaction</p>
 <table>
 <thead>
@@ -1613,15 +1555,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1706,15 +1644,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="original_payment_transaction_id">Original_Payment_Transaction_Id</h3>
-<p>Original_Payment_Transaction_Id</p>
-<p>Original Payment Transaction</p>
 <p>Original Payment Transaction</p>
 <table>
 <thead>
@@ -1754,15 +1690,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#original_payment_transaction_id">Original_Payment_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1847,15 +1779,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_reason_id">Payment_Reason_Id</h3>
-<p>Payment_Reason_Id</p>
-<p>The payment reason, as defined in Payment Reasons.</p>
 <p>The payment reason, as defined in Payment Reasons.</p>
 <table>
 <thead>
@@ -1895,15 +1825,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#payment_reason_id">Payment_Reason_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1988,15 +1914,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -2032,15 +1956,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2125,15 +2045,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -2169,15 +2087,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2262,14 +2176,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2304,15 +2217,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2385,8 +2294,6 @@
 </tbody>
 </table>
 <h3 id="payment_type_id">Payment_Type_Id</h3>
-<p>Payment_Type_Id</p>
-<p>Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.</p>
 <p>Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.</p>
 <table>
 <thead>
@@ -2426,15 +2333,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#payment_type_id">Payment_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2519,15 +2422,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</h3>
-<p>Fiscal_Printer_Pos_Device_Id</p>
-<p>For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.</p>
 <p>For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.</p>
 <table>
 <thead>
@@ -2567,15 +2468,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2660,15 +2557,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_payment_slip_amount_id">Parent_Payment_Slip_Amount_Id</h3>
-<p>Parent_Payment_Slip_Amount_Id</p>
-<p>The Payment Slip Amount, which the current payment transaction fulfills . NULL when the current document does not execute any Payment Slip Amount.</p>
 <p>The Payment Slip Amount, which the current payment transaction fulfills . NULL when the current document does not execute any Payment Slip Amount.</p>
 <table>
 <thead>
@@ -2708,15 +2603,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#parent_payment_slip_amount_id">Parent_Payment_Slip_Amount_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2801,15 +2692,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="pos_location_id">Pos_Location_Id</h3>
-<p>Pos_Location_Id</p>
-<p>For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order.</p>
 <p>For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order.</p>
 <table>
 <thead>
@@ -2849,15 +2738,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#pos_location_id">Pos_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2942,15 +2827,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="pos_operator_id">Pos_Operator_Id</h3>
-<p>Pos_Operator_Id</p>
-<p>For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order.</p>
 <p>For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order.</p>
 <table>
 <thead>
@@ -2990,15 +2873,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#pos_operator_id">Pos_Operator_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3083,15 +2962,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="reversal_reason">Reversal_Reason</h3>
-<p>Reversal_Reason</p>
-<p>The reason for the reversal of the payment.</p>
 <p>The reason for the reversal of the payment.</p>
 <table>
 <thead>
@@ -3131,7 +3008,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -3140,10 +3017,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Transactions.html">Cash_Payment_Transactions</a>.<a href="Cash_Payment_Transactions.html#reversal_reason">Reversal_Reason</a></td>
 </tr>
 <tr>
 <td>Format</td>

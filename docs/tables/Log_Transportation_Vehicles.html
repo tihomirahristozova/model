@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-log_transportation_vehicles">Table Log_Transportation_Vehicles</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Shipment.TransportationVehicles.html">Logistics.Shipment.TransportationVehicles</a></p>
 <p>A vehicle, which is used for transportation. One actual vehicle might be defined multiple times as transportation vehicle - for different modes of transportation or cargo types. Entity: Log_Transportation_Vehicles</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -136,7 +138,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -148,7 +150,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="transportation_vehicle_id">Transportation_Vehicle_Id</h3>
-<p>Transportation_Vehicle_Id</p>
 <table>
 <thead>
 <tr>
@@ -187,15 +188,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#transportation_vehicle_id">Transportation_Vehicle_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -280,15 +277,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The enterprise company to which the transportation vehicle will be bound.</p>
 <p>The enterprise company to which the transportation vehicle will be bound.</p>
 <table>
 <thead>
@@ -328,15 +323,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -421,15 +412,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="code">Code</h3>
-<p>Code</p>
-<p>The unique code (or call sign) of this transportation vehicle.</p>
 <p>The unique code (or call sign) of this transportation vehicle.</p>
 <table>
 <thead>
@@ -469,15 +458,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#code">Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -562,7 +547,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -575,8 +560,6 @@
 </tbody>
 </table>
 <h3 id="vehicle_id">Vehicle_Id</h3>
-<p>Vehicle_Id</p>
-<p>The definition of the base vehicle.</p>
 <p>The definition of the base vehicle.</p>
 <table>
 <thead>
@@ -616,15 +599,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#vehicle_id">Vehicle_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -709,15 +688,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transportation_mode_id">Transportation_Mode_Id</h3>
-<p>Transportation_Mode_Id</p>
-<p>The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode.</p>
 <p>The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode.</p>
 <table>
 <thead>
@@ -757,15 +734,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#transportation_mode_id">Transportation_Mode_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -850,15 +823,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="cargo_type_id">Cargo_Type_Id</h3>
-<p>Cargo_Type_Id</p>
-<p>The cargo type supported by this transportation vehicle.</p>
 <p>The cargo type supported by this transportation vehicle.</p>
 <table>
 <thead>
@@ -898,15 +869,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#cargo_type_id">Cargo_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -991,15 +958,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="max_cargo_weight_kg">Max_Cargo_Weight_Kg</h3>
-<p>Max_Cargo_Weight_Kg</p>
-<p>The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.</p>
 <p>The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.</p>
 <table>
 <thead>
@@ -1035,15 +1000,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#max_cargo_weight_kg">Max_Cargo_Weight_Kg</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1116,8 +1077,6 @@
 </tbody>
 </table>
 <h3 id="max_pallets_count">Max_Pallets_Count</h3>
-<p>Max_Pallets_Count</p>
-<p>The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced.</p>
 <p>The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced.</p>
 <table>
 <thead>
@@ -1153,15 +1112,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#max_pallets_count">Max_Pallets_Count</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1234,7 +1189,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1245,7 +1199,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1273,15 +1227,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1354,7 +1304,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1389,15 +1338,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Transportation_Vehicles.html">Log_Transportation_Vehicles</a>.<a href="Log_Transportation_Vehicles.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

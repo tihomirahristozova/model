@@ -1,5 +1,10 @@
 # Table Srv_Service_Object_Types
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceObjectTypes](~/entities/Applications.Service.ServiceObjectTypes.md)
+
 Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 
 ## Summary
@@ -14,9 +19,6 @@ Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 
 ### Service_Object_Type_Id
 
-
-Service_Object_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -26,9 +28,8 @@ Service_Object_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Object_Types](Srv_Service_Object_Types.md).[Service_Object_Type_Id](Srv_Service_Object_Types.md#service_object_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -51,12 +52,9 @@ Service_Object_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Object_Type_Name
-
-
-Service_Object_Type_Name
 
 | Property | Value |
 | - | - |
@@ -67,9 +65,8 @@ Service_Object_Type_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Object_Types](Srv_Service_Object_Types.md).[Service_Object_Type_Name](Srv_Service_Object_Types.md#service_object_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -92,13 +89,10 @@ Service_Object_Type_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -108,9 +102,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Object_Types](Srv_Service_Object_Types.md).[Row_Version](Srv_Service_Object_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -18,9 +18,6 @@
 
 ### Role_Group_Id
 
-
-Role_Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -30,9 +27,8 @@ Role_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wf_Role_Groups](Wf_Role_Groups.md).[Role_Group_Id](Wf_Role_Groups.md#role_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,12 +51,9 @@ Role_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Role_Id
-
-
-Role_Id
 
 | Property | Value |
 | - | - |
@@ -71,9 +64,8 @@ Role_Id
 |Referenced Table|[Wf_Roles](Wf_Roles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Role_Groups](Wf_Role_Groups.md).[Role_Id](Wf_Role_Groups.md#role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -96,12 +88,9 @@ Role_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Group_Id
-
-
-Group_Id
 
 | Property | Value |
 | - | - |
@@ -112,9 +101,8 @@ Group_Id
 |Referenced Table|[Sec_Groups](Sec_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Role_Groups](Wf_Role_Groups.md).[Group_Id](Wf_Role_Groups.md#group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -137,12 +125,9 @@ Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -152,9 +137,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Role_Groups](Wf_Role_Groups.md).[Row_Version](Wf_Role_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Eam_Tracked_Parameters
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.TrackedParameters](~/entities/Applications.AssetManagement.TrackedParameters.md)
+
 Parameters of assets, tracked for maintenance reasons, like car mileage, aircraft cycles, etc. Entity: Eam_Tracked_Parameters (Introduced in version 19.1)
 
 ## Summary
@@ -9,16 +14,13 @@ Parameters of assets, tracked for maintenance reasons, like car mileage, aircraf
 |[Tracked_Parameter_Id](#tracked_parameter_id)|`uniqueidentifier` `PK`||
 |[Tracked_Parameter_Code](#tracked_parameter_code)|`nvarchar(16)` |Unique code of the asset parameter.|
 |[Tracked_Parameter_Name](#tracked_parameter_name)|`nvarchar(254)` `ML`|Multilanguage name of the asset parameter.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Is_Active](#is_active)|`bit` |Specifies whether the parameter is active for choosing in drop downs.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Tracked_Parameter_Id
-
-
-Tracked_Parameter_Id
 
 | Property | Value |
 | - | - |
@@ -29,9 +31,8 @@ Tracked_Parameter_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md).[Tracked_Parameter_Id](Eam_Tracked_Parameters.md#tracked_parameter_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Tracked_Parameter_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Tracked_Parameter_Code
-
-
-Tracked_Parameter_Code
-
-
-Unique code of the asset parameter.
 
 
 Unique code of the asset parameter.
@@ -76,9 +71,8 @@ Unique code of the asset parameter.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md).[Tracked_Parameter_Code](Eam_Tracked_Parameters.md#tracked_parameter_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,16 +95,10 @@ Unique code of the asset parameter.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Tracked_Parameter_Name
-
-
-Tracked_Parameter_Name
-
-
-Multilanguage name of the asset parameter.
 
 
 Multilanguage name of the asset parameter.
@@ -124,9 +112,8 @@ Multilanguage name of the asset parameter.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md).[Tracked_Parameter_Name](Eam_Tracked_Parameters.md#tracked_parameter_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,26 +136,22 @@ Multilanguage name of the asset parameter.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md).[Notes](Eam_Tracked_Parameters.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,12 +179,6 @@ Notes
 ### Is_Active
 
 
-Is_Active
-
-
-Specifies whether the parameter is active for choosing in drop downs.
-
-
 Specifies whether the parameter is active for choosing in drop downs.
 
 | Property | Value |
@@ -212,9 +189,8 @@ Specifies whether the parameter is active for choosing in drop downs.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md).[Is_Active](Eam_Tracked_Parameters.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,12 +213,9 @@ Specifies whether the parameter is active for choosing in drop downs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -252,9 +225,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md).[Row_Version](Eam_Tracked_Parameters.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

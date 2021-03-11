@@ -1,5 +1,10 @@
 # Table Sec_Groups
 
+
+## Entity
+
+Entity: [Systems.Security.Groups](~/entities/Systems.Security.Groups.md)
+
 Groups of users. Used for providing group access to secured data. Entity: Sec_Groups
 
 ## Summary
@@ -18,9 +23,6 @@ Groups of users. Used for providing group access to secured data. Entity: Sec_Gr
 
 ### Group_Id
 
-
-Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -30,9 +32,8 @@ Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_Groups](Sec_Groups.md).[Group_Id](Sec_Groups.md#group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,12 +56,9 @@ Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Group_Name
-
-
-Group_Name
 
 | Property | Value |
 | - | - |
@@ -71,9 +69,8 @@ Group_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Groups](Sec_Groups.md).[Group_Name](Sec_Groups.md#group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,9 +97,6 @@ Group_Name
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -112,9 +106,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sec_Groups](Sec_Groups.md).[Notes](Sec_Groups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -136,12 +129,6 @@ Notes
 ### Edit_Period_Days
 
 
-Edit_Period_Days
-
-
-The number of days before which the documents can not be corrected, released or voided
-
-
 The number of days before which the documents can not be corrected, released or voided
 
 | Property | Value |
@@ -152,9 +139,8 @@ The number of days before which the documents can not be corrected, released or 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Groups](Sec_Groups.md).[Edit_Period_Days](Sec_Groups.md#edit_period_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -176,12 +162,6 @@ The number of days before which the documents can not be corrected, released or 
 ### Group_Type
 
 
-Group_Type
-
-
-Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody
-
-
 Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody
 
 | Property | Value |
@@ -193,10 +173,9 @@ Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`G`, `U`, `A`, `E`|
 |Default Value|G|
-|Derived From|[Sec_Groups](Sec_Groups.md).[Group_Type](Sec_Groups.md#group_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -218,12 +197,6 @@ Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E
 ### Group_For_User_Id
 
 
-Group_For_User_Id
-
-
-When Group_Type=U, contains the user for which the group is defined, NULL otherwise
-
-
 When Group_Type=U, contains the user for which the group is defined, NULL otherwise
 
 | Property | Value |
@@ -235,9 +208,8 @@ When Group_Type=U, contains the user for which the group is defined, NULL otherw
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Groups](Sec_Groups.md).[Group_For_User_Id](Sec_Groups.md#group_for_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -260,12 +232,9 @@ When Group_Type=U, contains the user for which the group is defined, NULL otherw
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -275,9 +244,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Groups](Sec_Groups.md).[Row_Version](Sec_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

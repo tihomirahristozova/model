@@ -1,5 +1,10 @@
 # Table Cms_News_Web_Modules
 
+
+## Entity
+
+Entity: [Applications.Cms.NewsWebModules](~/entities/Applications.Cms.NewsWebModules.md)
+
 Represents a web module, containing news. Entity: Cms_News_Web_Modules
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ Represents a web module, containing news. Entity: Cms_News_Web_Modules
 
 ### News_Web_Module_Id
 
-
-News_Web_Module_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ News_Web_Module_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cms_News_Web_Modules](Cms_News_Web_Modules.md).[News_Web_Module_Id](Cms_News_Web_Modules.md#news_web_module_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ News_Web_Module_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Web_Module_Id
-
-
-Web_Module_Id
-
-
-The web module, which this News Module inherits.
 
 
 The web module, which this News Module inherits.
@@ -78,9 +73,8 @@ The web module, which this News Module inherits.
 |Referenced Table|[Cms_Web_Modules](Cms_Web_Modules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_News_Web_Modules](Cms_News_Web_Modules.md).[Web_Module_Id](Cms_News_Web_Modules.md#web_module_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,12 +97,9 @@ The web module, which this News Module inherits.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -118,9 +109,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_News_Web_Modules](Cms_News_Web_Modules.md).[Row_Version](Cms_News_Web_Modules.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

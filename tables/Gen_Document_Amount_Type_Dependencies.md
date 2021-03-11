@@ -1,5 +1,10 @@
 # Table Gen_Document_Amount_Type_Dependencies
 
+
+## Entity
+
+Entity: [General.DocumentAmountTypeDependencies](~/entities/General.DocumentAmountTypeDependencies.md)
+
 Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Amount_Type_Dependencies
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Am
 
 ### Document_Amount_Type_Dependency_Id
 
-
-Document_Amount_Type_Dependency_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Document_Amount_Type_Dependency_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Amount_Type_Dependencies](Gen_Document_Amount_Type_Dependencies.md).[Document_Amount_Type_Dependency_Id](Gen_Document_Amount_Type_Dependencies.md#document_amount_type_dependency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Document_Amount_Type_Dependency_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Amount_Type_Id
-
-
-Document_Amount_Type_Id
-
-
-The amount for which the base amount is specified.
 
 
 The amount for which the base amount is specified.
@@ -78,9 +73,8 @@ The amount for which the base amount is specified.
 |Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Type_Dependencies](Gen_Document_Amount_Type_Dependencies.md).[Document_Amount_Type_Id](Gen_Document_Amount_Type_Dependencies.md#document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +97,9 @@ The amount for which the base amount is specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Depends_On_Document_Amount_Type_Id
-
-
-Depends_On_Document_Amount_Type_Id
-
-
-The base amount type on which the current amount depends.
 
 
 The base amount type on which the current amount depends.
@@ -125,9 +113,8 @@ The base amount type on which the current amount depends.
 |Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Type_Dependencies](Gen_Document_Amount_Type_Dependencies.md).[Depends_On_Document_Amount_Type_Id](Gen_Document_Amount_Type_Dependencies.md#depends_on_document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,12 +137,9 @@ The base amount type on which the current amount depends.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -165,9 +149,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Type_Dependencies](Gen_Document_Amount_Type_Dependencies.md).[Row_Version](Gen_Document_Amount_Type_Dependencies.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

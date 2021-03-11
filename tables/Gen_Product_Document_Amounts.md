@@ -1,5 +1,10 @@
 # Table Gen_Product_Document_Amounts
 
+
+## Entity
+
+Entity: [General.Products.ProductDocumentAmounts](~/entities/General.Products.ProductDocumentAmounts.md)
+
 Contains custom percent ratios for additional amount distribution over products. Entity: Gen_Product_Document_Amounts
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Contains custom percent ratios for additional amount distribution over products.
 
 ### Product_Document_Amount_Id
 
-
-Product_Document_Amount_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Product_Document_Amount_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Document_Amounts](Gen_Product_Document_Amounts.md).[Product_Document_Amount_Id](Gen_Product_Document_Amounts.md#product_document_amount_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Product_Document_Amount_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Product_Id
-
-
-Product_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Product_Id
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Document_Amounts](Gen_Product_Document_Amounts.md).[Product_Id](Gen_Product_Document_Amounts.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Product_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Amount_Type_Id
-
-
-Document_Amount_Type_Id
-
-
-The amount type for which the custom percent is defined.
 
 
 The amount type for which the custom percent is defined.
@@ -120,9 +111,8 @@ The amount type for which the custom percent is defined.
 |Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Document_Amounts](Gen_Product_Document_Amounts.md).[Document_Amount_Type_Id](Gen_Product_Document_Amounts.md#document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,15 +135,9 @@ The amount type for which the custom percent is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_Percent
-
-
-Line_Percent
-
-
-The custom percent for the current product and amount type.
 
 
 The custom percent for the current product and amount type.
@@ -166,9 +150,8 @@ The custom percent for the current product and amount type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|0|
-|Derived From|[Gen_Product_Document_Amounts](Gen_Product_Document_Amounts.md).[Line_Percent](Gen_Product_Document_Amounts.md#line_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -189,9 +172,6 @@ The custom percent for the current product and amount type.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -200,9 +180,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Document_Amounts](Gen_Product_Document_Amounts.md).[Row_Version](Gen_Product_Document_Amounts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

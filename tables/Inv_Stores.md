@@ -1,5 +1,10 @@
 # Table Inv_Stores
 
+
+## Entity
+
+Entity: [Logistics.Inventory.Stores](~/entities/Logistics.Inventory.Stores.md)
+
 Represents the physical warehouses. Entity: Inv_Stores
 
 ## Owner Tables Hierarchy
@@ -39,12 +44,6 @@ Represents the physical warehouses. Entity: Inv_Stores
 ### Id
 
 
-Id
-
-
-Unique store Id
-
-
 Unique store Id
 
 | Property | Value |
@@ -56,9 +55,8 @@ Unique store Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Id](Inv_Stores.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -81,15 +79,9 @@ Unique store Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The party of the store. Each store is a party and is stored based on a party definition.
 
 
 The party of the store. Each store is a party and is stored based on a party definition.
@@ -103,9 +95,8 @@ The party of the store. Each store is a party and is stored based on a party def
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Party_Id](Inv_Stores.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -128,15 +119,9 @@ The party of the store. Each store is a party and is stored based on a party def
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Parent_Store_Id
-
-
-Parent_Store_Id
-
-
-Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity).
 
 
 Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity).
@@ -150,9 +135,8 @@ Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Gro
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Parent_Store_Id](Inv_Stores.md#parent_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -175,12 +159,9 @@ Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Gro
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Store_Code
-
-
-Store_Code
 
 | Property | Value |
 | - | - |
@@ -191,9 +172,8 @@ Store_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Store_Code](Inv_Stores.md#store_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -216,16 +196,10 @@ Store_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Store_Name
-
-
-Store_Name
-
-
-Name of the store
 
 
 Name of the store
@@ -239,9 +213,8 @@ Name of the store
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Store_Name](Inv_Stores.md#store_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -268,9 +241,6 @@ Name of the store
 
 ### Access_Key_Id
 
-
-Access_Key_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -280,9 +250,8 @@ Access_Key_Id
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Access_Key_Id](Inv_Stores.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -305,15 +274,9 @@ Access_Key_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Responsible_Party_Id
-
-
-Responsible_Party_Id
-
-
-Primary responsible party (usually employee) for the stock in the store.
 
 
 Primary responsible party (usually employee) for the stock in the store.
@@ -327,9 +290,8 @@ Primary responsible party (usually employee) for the stock in the store.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Responsible_Party_Id](Inv_Stores.md#responsible_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -352,15 +314,9 @@ Primary responsible party (usually employee) for the stock in the store.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Number_Of_Dimensions
-
-
-Number_Of_Dimensions
-
-
-Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.
 
 
 Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.
@@ -373,9 +329,8 @@ Number of dimensions in the coordinate system of the storage bins. 0 means singl
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Number_Of_Dimensions](Inv_Stores.md#number_of_dimensions)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -398,15 +353,9 @@ Number of dimensions in the coordinate system of the storage bins. 0 means singl
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Default_Store_Bin_Id
-
-
-Default_Store_Bin_Id
-
-
-To be used when store bin is unknown
 
 
 To be used when store bin is unknown
@@ -420,9 +369,8 @@ To be used when store bin is unknown
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Default_Store_Bin_Id](Inv_Stores.md#default_store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -445,15 +393,9 @@ To be used when store bin is unknown
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Default_Supply_Store_Id
-
-
-Default_Supply_Store_Id
-
-
-The store from which goods are usually supplied to this store
 
 
 The store from which goods are usually supplied to this store
@@ -466,9 +408,8 @@ The store from which goods are usually supplied to this store
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Default_Supply_Store_Id](Inv_Stores.md#default_supply_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -491,15 +432,9 @@ The store from which goods are usually supplied to this store
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Unmanaged
-
-
-Unmanaged
-
-
-If 0 the system will expect the user to process the store transactions. If 1 the system will auto-generate them
 
 
 If 0 the system will expect the user to process the store transactions. If 1 the system will auto-generate them
@@ -512,9 +447,8 @@ If 0 the system will expect the user to process the store transactions. If 1 the
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Unmanaged](Inv_Stores.md#unmanaged)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -536,12 +470,6 @@ If 0 the system will expect the user to process the store transactions. If 1 the
 ### Schema_XML
 
 
-Schema_XML
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -553,9 +481,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Schema_XML](Inv_Stores.md#schema_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -577,12 +504,6 @@ Obsolete. Not used.
 ### Currency_Id
 
 
-Currency_Id
-
-
-The currency for the warehouse cost calculations. When NULL, the base currency for the enterprise company will be used
-
-
 The currency for the warehouse cost calculations. When NULL, the base currency for the enterprise company will be used
 
 | Property | Value |
@@ -594,9 +515,8 @@ The currency for the warehouse cost calculations. When NULL, the base currency f
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Currency_Id](Inv_Stores.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -619,12 +539,9 @@ The currency for the warehouse cost calculations. When NULL, the base currency f
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -635,9 +552,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Enterprise_Company_Id](Inv_Stores.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -660,12 +576,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Creation_Time
-
-
-Creation_Time
 
 | Property | Value |
 | - | - |
@@ -676,9 +589,8 @@ Creation_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Creation_Time](Inv_Stores.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -705,9 +617,6 @@ Creation_Time
 
 ### Creation_User
 
-
-Creation_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -717,9 +626,8 @@ Creation_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Creation_User](Inv_Stores.md#creation_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -746,9 +654,6 @@ Creation_User
 
 ### Update_Time
 
-
-Update_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -758,9 +663,8 @@ Update_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Update_Time](Inv_Stores.md#update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -787,9 +691,6 @@ Update_Time
 
 ### Update_User
 
-
-Update_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -799,9 +700,8 @@ Update_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Update_User](Inv_Stores.md#update_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -828,9 +728,6 @@ Update_User
 
 ### Enterprise_Company_Location_Id
 
-
-Enterprise_Company_Location_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -840,9 +737,8 @@ Enterprise_Company_Location_Id
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Enterprise_Company_Location_Id](Inv_Stores.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -865,15 +761,9 @@ Enterprise_Company_Location_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Store_Group_Id
-
-
-Store_Group_Id
-
-
-The store group, to which this store belongs.
 
 
 The store group, to which this store belongs.
@@ -887,9 +777,8 @@ The store group, to which this store belongs.
 |Referenced Table|[Inv_Store_Groups](Inv_Store_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Store_Group_Id](Inv_Stores.md#store_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -912,15 +801,9 @@ The store group, to which this store belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Active
-
-
-Active
-
-
-Obsolete - Use Gen_Parties.Is_Active
 
 
 Obsolete - Use Gen_Parties.Is_Active
@@ -933,9 +816,8 @@ Obsolete - Use Gen_Parties.Is_Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Active](Inv_Stores.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -956,9 +838,6 @@ Obsolete - Use Gen_Parties.Is_Active
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -967,9 +846,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Row_Version](Inv_Stores.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -991,12 +869,6 @@ Row_Version
 ### Warehouse_Id
 
 
-Warehouse_Id
-
-
-Specifies, the warehouse, which manages the warehouse operations for the store. NULL for stores, which do not have managed operations.
-
-
 Specifies, the warehouse, which manages the warehouse operations for the store. NULL for stores, which do not have managed operations.
 
 | Property | Value |
@@ -1008,9 +880,8 @@ Specifies, the warehouse, which manages the warehouse operations for the store. 
 |Referenced Table|[Wms_Warehouses](Wms_Warehouses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Stores](Inv_Stores.md).[Warehouse_Id](Inv_Stores.md#warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1033,6 +904,6 @@ Specifies, the warehouse, which manages the warehouse operations for the store. 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

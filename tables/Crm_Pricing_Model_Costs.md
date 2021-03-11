@@ -1,5 +1,10 @@
 # Table Crm_Pricing_Model_Costs
 
+
+## Entity
+
+Entity: [Crm.Pricing.PricingModelCosts](~/entities/Crm.Pricing.PricingModelCosts.md)
+
 List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 
 ## Owner Tables Hierarchy
@@ -24,12 +29,6 @@ List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 ### Pricing_Model_Cost_Id
 
 
-Pricing_Model_Cost_Id
-
-
-Pricing Model Cost
-
-
 Pricing Model Cost
 
 | Property | Value |
@@ -41,9 +40,8 @@ Pricing Model Cost
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Pricing_Model_Costs](Crm_Pricing_Model_Costs.md).[Pricing_Model_Cost_Id](Crm_Pricing_Model_Costs.md#pricing_model_cost_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,15 +64,9 @@ Pricing Model Cost
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Pricing_Model_Id
-
-
-Pricing_Model_Id
-
-
-Pricing model, for which the cost is defined
 
 
 Pricing model, for which the cost is defined
@@ -88,9 +80,8 @@ Pricing model, for which the cost is defined
 |Referenced Table|[Crm_Pricing_Models](Crm_Pricing_Models.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Costs](Crm_Pricing_Model_Costs.md).[Pricing_Model_Id](Crm_Pricing_Model_Costs.md#pricing_model_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,15 +104,9 @@ Pricing model, for which the cost is defined
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-The consequtive number of the cost within the pricing model
 
 
 The consequtive number of the cost within the pricing model
@@ -134,10 +119,9 @@ The consequtive number of the cost within the pricing model
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Crm_Pricing_Model_Costs](Crm_Pricing_Model_Costs.md).[Line_No](Crm_Pricing_Model_Costs.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,12 +143,6 @@ The consequtive number of the cost within the pricing model
 ### Cost_Type_Id
 
 
-Cost_Type_Id
-
-
-The cost type, which is listed for the pricing model
-
-
 The cost type, which is listed for the pricing model
 
 | Property | Value |
@@ -176,9 +154,8 @@ The cost type, which is listed for the pricing model
 |Referenced Table|[Cost_Types](Cost_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Costs](Crm_Pricing_Model_Costs.md).[Cost_Type_Id](Crm_Pricing_Model_Costs.md#cost_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,15 +178,9 @@ The cost type, which is listed for the pricing model
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Amount_Percent
-
-
-Amount_Percent
-
-
-Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way
 
 
 Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way
@@ -222,9 +193,8 @@ Used when the cost is calculated as percent of the amount. NULL when the cost is
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Costs](Crm_Pricing_Model_Costs.md).[Amount_Percent](Crm_Pricing_Model_Costs.md#amount_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,12 +216,6 @@ Used when the cost is calculated as percent of the amount. NULL when the cost is
 ### Amount_Per_Unit
 
 
-Amount_Per_Unit
-
-
-Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. NULL when the cost is calculated in a different way
-
-
 Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. NULL when the cost is calculated in a different way
 
 | Property | Value |
@@ -262,9 +226,8 @@ Used when the cost is calculated as amount per unit of the product. The unit is 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Costs](Crm_Pricing_Model_Costs.md).[Amount_Per_Unit](Crm_Pricing_Model_Costs.md#amount_per_unit)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,12 +249,6 @@ Used when the cost is calculated as amount per unit of the product. The unit is 
 ### Measurement_Unit_Id
 
 
-Measurement_Unit_Id
-
-
-The measurement unit for which the Amount_Per_Unit is defined. NULL when the cost is calculated in a different way
-
-
 The measurement unit for which the Amount_Per_Unit is defined. NULL when the cost is calculated in a different way
 
 | Property | Value |
@@ -303,9 +260,8 @@ The measurement unit for which the Amount_Per_Unit is defined. NULL when the cos
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Costs](Crm_Pricing_Model_Costs.md).[Measurement_Unit_Id](Crm_Pricing_Model_Costs.md#measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -328,12 +284,9 @@ The measurement unit for which the Amount_Per_Unit is defined. NULL when the cos
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -343,9 +296,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Pricing_Model_Costs](Crm_Pricing_Model_Costs.md).[Row_Version](Crm_Pricing_Model_Costs.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

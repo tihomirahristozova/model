@@ -1,5 +1,10 @@
 # Table Cmm_Social_Groups
 
+
+## Entity
+
+Entity: [Communities.SocialGroups](~/entities/Communities.SocialGroups.md)
+
 Represents a group of users, sharing interest in the group topic. Entity: Cmm_Social_Groups (Introduced in version 20.1)
 
 ## Summary
@@ -9,15 +14,12 @@ Represents a group of users, sharing interest in the group topic. Entity: Cmm_So
 |[Social_Group_Id](#social_group_id)|`uniqueidentifier` `PK`||
 |[Social_Group_Code](#social_group_code)|`nvarchar(32)` |Unique code of the group. Also used as group slug for Internet URL purposes.|
 |[Social_Group_Name](#social_group_name)|`nvarchar(256)` |Multilanguage name of the group.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Social_Group_Id
-
-
-Social_Group_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Social_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cmm_Social_Groups](Cmm_Social_Groups.md).[Social_Group_Id](Cmm_Social_Groups.md#social_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Social_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Social_Group_Code
-
-
-Social_Group_Code
-
-
-Unique code of the group. Also used as group slug for Internet URL purposes.
 
 
 Unique code of the group. Also used as group slug for Internet URL purposes.
@@ -75,9 +70,8 @@ Unique code of the group. Also used as group slug for Internet URL purposes.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Groups](Cmm_Social_Groups.md).[Social_Group_Code](Cmm_Social_Groups.md#social_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,12 +93,6 @@ Unique code of the group. Also used as group slug for Internet URL purposes.
 ### Social_Group_Name
 
 
-Social_Group_Name
-
-
-Multilanguage name of the group.
-
-
 Multilanguage name of the group.
 
 | Property | Value |
@@ -116,9 +104,8 @@ Multilanguage name of the group.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Groups](Cmm_Social_Groups.md).[Social_Group_Name](Cmm_Social_Groups.md#social_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -139,21 +126,17 @@ Multilanguage name of the group.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Groups](Cmm_Social_Groups.md).[Notes](Cmm_Social_Groups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -174,9 +157,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -185,9 +165,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Groups](Cmm_Social_Groups.md).[Row_Version](Cmm_Social_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

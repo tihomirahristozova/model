@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_sales_persons">Table Crm_Sales_Persons</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.SalesPersons.html">Crm.SalesPersons</a></p>
 <p>Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -154,8 +156,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="sales_person_id">Sales_Person_Id</h3>
-<p>Sales_Person_Id</p>
-<p>Unique sales person Id</p>
 <p>Unique sales person Id</p>
 <table>
 <thead>
@@ -195,15 +195,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#sales_person_id">Sales_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -288,15 +284,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="person_id">Person_Id</h3>
-<p>Person_Id</p>
-<p>Base personal record</p>
 <p>Base personal record</p>
 <table>
 <thead>
@@ -336,15 +330,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#person_id">Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -429,14 +419,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -475,15 +464,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -568,15 +553,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="commission_policy_id">Commission_Policy_Id</h3>
-<p>Commission_Policy_Id</p>
-<p>Current commission policy for the sales person. NULL means there is no commission policy</p>
 <p>Current commission policy for the sales person. NULL means there is no commission policy</p>
 <table>
 <thead>
@@ -612,15 +595,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#commission_policy_id">Commission_Policy_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -705,15 +684,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="commission_percent">Commission_Percent</h3>
-<p>Commission_Percent</p>
-<p>The percentage (0..1) of commission percent. NULL means that there is no commission percent.</p>
 <p>The percentage (0..1) of commission percent. NULL means that there is no commission percent.</p>
 <table>
 <thead>
@@ -749,15 +726,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#commission_percent">Commission_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -830,8 +803,6 @@
 </tbody>
 </table>
 <h3 id="sales_person_group_id">Sales_Person_Group_Id</h3>
-<p>Sales_Person_Group_Id</p>
-<p>The sales person group to which this sales person is assigned.</p>
 <p>The sales person group to which this sales person is assigned.</p>
 <table>
 <thead>
@@ -871,15 +842,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#sales_person_group_id">Sales_Person_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -964,15 +931,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="contract_start_date">Contract_Start_Date</h3>
-<p>Contract_Start_Date</p>
-<p>The starting date of the contract with the sales person. NULL when it is unknown.</p>
 <p>The starting date of the contract with the sales person. NULL when it is unknown.</p>
 <table>
 <thead>
@@ -1012,15 +977,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#contract_start_date">Contract_Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1112,8 +1073,6 @@
 </tbody>
 </table>
 <h3 id="contract_end_date">Contract_End_Date</h3>
-<p>Contract_End_Date</p>
-<p>The ending date of the contract with the sales person. NULL when the sales person is still active.</p>
 <p>The ending date of the contract with the sales person. NULL when the sales person is still active.</p>
 <table>
 <thead>
@@ -1153,15 +1112,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#contract_end_date">Contract_End_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1253,8 +1208,6 @@
 </tbody>
 </table>
 <h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
-<p>Enterprise_Company_Location_Id</p>
-<p>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location.</p>
 <p>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location.</p>
 <table>
 <thead>
@@ -1294,15 +1247,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1387,15 +1336,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.</p>
 <p>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.</p>
 <table>
 <thead>
@@ -1431,15 +1378,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1524,14 +1467,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1566,15 +1508,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a>.<a href="Crm_Sales_Persons.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

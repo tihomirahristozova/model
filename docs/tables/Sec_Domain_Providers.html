@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sec_domain_providers">Table Sec_Domain_Providers</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Security.DomainProviders.html">Systems.Security.DomainProviders</a></p>
 <p>The external authentication providers, linked to the domain. Contains data about registration, usually the app id or app key. Entity: Sec_Domain_Providers (Introduced in version 20.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -111,7 +113,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -148,7 +150,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="domain_provider_id">Domain_Provider_Id</h3>
-<p>Domain_Provider_Id</p>
 <table>
 <thead>
 <tr>
@@ -187,15 +188,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#domain_provider_id">Domain_Provider_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -280,15 +277,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="domain_id">Domain_Id</h3>
-<p>Domain_Id</p>
-<p>The domain for which the provider is setup.</p>
 <p>The domain for which the provider is setup.</p>
 <table>
 <thead>
@@ -328,15 +323,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#domain_id">Domain_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -421,15 +412,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="provider_name">Provider_Name</h3>
-<p>Provider_Name</p>
-<p>The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.</p>
 <p>The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.</p>
 <table>
 <thead>
@@ -469,7 +458,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -478,10 +467,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#provider_name">Provider_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -566,14 +551,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -584,7 +568,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -612,15 +596,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -693,7 +673,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -728,15 +707,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -809,8 +784,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Specifies whether the provider is currently active for the domain.</p>
 <p>Specifies whether the provider is currently active for the domain.</p>
 <table>
 <thead>
@@ -846,15 +819,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -939,15 +908,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="client_id">Client_ID</h3>
-<p>Client_ID</p>
-<p>This is the Client_ID of our registration within the provider.</p>
 <p>This is the Client_ID of our registration within the provider.</p>
 <table>
 <thead>
@@ -987,15 +954,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#client_id">Client_ID</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1068,8 +1031,6 @@
 </tbody>
 </table>
 <h3 id="client_secret">Client_Secret</h3>
-<p>Client_Secret</p>
-<p>This is the password, which we, as a client app, use to access the authentication provider.</p>
 <p>This is the password, which we, as a client app, use to access the authentication provider.</p>
 <table>
 <thead>
@@ -1109,15 +1070,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#client_secret">Client_Secret</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1190,8 +1147,6 @@
 </tbody>
 </table>
 <h3 id="tenant_id">Tenant_ID</h3>
-<p>Tenant_ID</p>
-<p>When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.</p>
 <p>When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.</p>
 <table>
 <thead>
@@ -1231,15 +1186,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#tenant_id">Tenant_ID</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1312,8 +1263,6 @@
 </tbody>
 </table>
 <h3 id="display_name">Display_Name</h3>
-<p>Display_Name</p>
-<p>Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.</p>
 <p>Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.</p>
 <table>
 <thead>
@@ -1353,15 +1302,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Domain_Providers.html">Sec_Domain_Providers</a>.<a href="Sec_Domain_Providers.html#display_name">Display_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>

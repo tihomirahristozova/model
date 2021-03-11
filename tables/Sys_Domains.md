@@ -14,12 +14,6 @@
 ### Id
 
 
-Id
-
-
-Unique ID of the domain
-
-
 Unique ID of the domain
 
 | Property | Value |
@@ -30,9 +24,8 @@ Unique ID of the domain
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Domains](Sys_Domains.md).[Id](Sys_Domains.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +48,9 @@ Unique ID of the domain
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Domain_Name
-
-
-Domain_Name
-
-
-Name of the domain
 
 
 Name of the domain
@@ -78,9 +65,8 @@ Name of the domain
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Domains](Sys_Domains.md).[Domain_Name](Sys_Domains.md#domain_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,9 +87,6 @@ Name of the domain
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -112,9 +95,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Domains](Sys_Domains.md).[Row_Version](Sys_Domains.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

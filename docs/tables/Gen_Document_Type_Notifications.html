@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_document_type_notifications">Table Gen_Document_Type_Notifications</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.DocumentTypeNotifications.html">General.DocumentTypeNotifications</a></p>
 <p>Provides notification addresses to be notified upon occurrence of different document events. Entity: Gen_Document_Type_Notifications</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#filter_xml">Filter_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Filtering condition for the document. Only documents which match the filter will trigger the event</td>
 </tr>
 <tr>
@@ -143,8 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="document_type_notification_id">Document_Type_Notification_Id</h3>
-<p>Document_Type_Notification_Id</p>
-<p>.</p>
 <p>.</p>
 <table>
 <thead>
@@ -184,15 +184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#document_type_notification_id">Document_Type_Notification_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -277,15 +273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_type_id">Document_Type_Id</h3>
-<p>Document_Type_Id</p>
-<p>The document type for which this notification is set.</p>
 <p>The document type for which this notification is set.</p>
 <table>
 <thead>
@@ -325,15 +319,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#document_type_id">Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -418,15 +408,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_event">Document_Event</h3>
-<p>Document_Event</p>
-<p>The event which will trigger the notification</p>
 <p>The event which will trigger the notification</p>
 <table>
 <thead>
@@ -466,15 +454,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>StateChanging</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#document_event">Document_Event</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -559,15 +543,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="state_bit_mask">State_Bit_Mask</h3>
-<p>State_Bit_Mask</p>
-<p>The document states that will trigger the event</p>
 <p>The document states that will trigger the event</p>
 <table>
 <thead>
@@ -603,15 +585,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#state_bit_mask">State_Bit_Mask</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -684,8 +662,6 @@
 </tbody>
 </table>
 <h3 id="user_status_id">User_Status_Id</h3>
-<p>User_Status_Id</p>
-<p>When not NULL, specifies that the event will be triggered only on this user status</p>
 <p>When not NULL, specifies that the event will be triggered only on this user status</p>
 <table>
 <thead>
@@ -725,15 +701,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#user_status_id">User_Status_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -818,15 +790,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="status_change_direction">Status_Change_Direction</h3>
-<p>Status_Change_Direction</p>
-<p>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'</p>
 <p>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'</p>
 <table>
 <thead>
@@ -866,7 +836,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -875,10 +845,6 @@
 <tr>
 <td>Default Value</td>
 <td>*</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#status_change_direction">Status_Change_Direction</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -951,8 +917,6 @@
 </tbody>
 </table>
 <h3 id="filter_xml">Filter_XML</h3>
-<p>Filter_XML</p>
-<p>Filtering condition for the document. Only documents which match the filter will trigger the event</p>
 <p>Filtering condition for the document. Only documents which match the filter will trigger the event</p>
 <table>
 <thead>
@@ -964,7 +928,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -992,15 +956,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#filter_xml">Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1073,8 +1033,6 @@
 </tbody>
 </table>
 <h3 id="to_email_address_list">To_Email_Address_List</h3>
-<p>To_Email_Address_List</p>
-<p>List of email addressess to be notified</p>
 <p>List of email addressess to be notified</p>
 <table>
 <thead>
@@ -1114,15 +1072,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#to_email_address_list">To_Email_Address_List</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1195,7 +1149,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1230,15 +1183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Notifications.html">Gen_Document_Type_Notifications</a>.<a href="Gen_Document_Type_Notifications.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_maintenance_order_lines">Table Eam_Maintenance_Order_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.MaintenanceOrderLines.html">Applications.AssetManagement.MaintenanceOrderLines</a></p>
 <p>Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -133,15 +135,13 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Consecutive line number, unique within the maintenance order.</p>
 <p>Consecutive line number, unique within the maintenance order.</p>
 <table>
 <thead>
@@ -177,7 +177,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -186,10 +186,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Order_Lines.html">Eam_Maintenance_Order_Lines</a>.<a href="Eam_Maintenance_Order_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -262,7 +258,6 @@
 </tbody>
 </table>
 <h3 id="maintenance_order_line_id">Maintenance_Order_Line_Id</h3>
-<p>Maintenance_Order_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -301,15 +296,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Order_Lines.html">Eam_Maintenance_Order_Lines</a>.<a href="Eam_Maintenance_Order_Lines.html#maintenance_order_line_id">Maintenance_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -394,14 +385,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_order_id">Maintenance_Order_Id</h3>
-<p>Maintenance_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -440,15 +430,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Order_Lines.html">Eam_Maintenance_Order_Lines</a>.<a href="Eam_Maintenance_Order_Lines.html#maintenance_order_id">Maintenance_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -533,15 +519,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="managed_asset_id">Managed_Asset_Id</h3>
-<p>Managed_Asset_Id</p>
-<p>The maintained asset.</p>
 <p>The maintained asset.</p>
 <table>
 <thead>
@@ -581,15 +565,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Order_Lines.html">Eam_Maintenance_Order_Lines</a>.<a href="Eam_Maintenance_Order_Lines.html#managed_asset_id">Managed_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -674,15 +654,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_type_id">Maintenance_Type_Id</h3>
-<p>Maintenance_Type_Id</p>
-<p>The type of maintenance performed.</p>
 <p>The type of maintenance performed.</p>
 <table>
 <thead>
@@ -722,15 +700,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Order_Lines.html">Eam_Maintenance_Order_Lines</a>.<a href="Eam_Maintenance_Order_Lines.html#maintenance_type_id">Maintenance_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -815,15 +789,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="next_service_date">Next_Service_Date</h3>
-<p>Next_Service_Date</p>
-<p>Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.</p>
 <p>Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.</p>
 <table>
 <thead>
@@ -863,15 +835,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Order_Lines.html">Eam_Maintenance_Order_Lines</a>.<a href="Eam_Maintenance_Order_Lines.html#next_service_date">Next_Service_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -944,8 +912,6 @@
 </tbody>
 </table>
 <h3 id="next_service_tracked_parameter_value">Next_Service_Tracked_Parameter_Value</h3>
-<p>Next_Service_Tracked_Parameter_Value</p>
-<p>Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used.</p>
 <p>Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used.</p>
 <table>
 <thead>
@@ -981,15 +947,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Order_Lines.html">Eam_Maintenance_Order_Lines</a>.<a href="Eam_Maintenance_Order_Lines.html#next_service_tracked_parameter_value">Next_Service_Tracked_Parameter_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1062,7 +1024,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1073,7 +1034,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1101,15 +1062,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Order_Lines.html">Eam_Maintenance_Order_Lines</a>.<a href="Eam_Maintenance_Order_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Cms_Product_Catalog_Web_Modules
 
+
+## Entity
+
+Entity: [Applications.Cms.ProductCatalogWebModules](~/entities/Applications.Cms.ProductCatalogWebModules.md)
+
 A web module, which presents a whole product catalog. Entity: Cms_Product_Catalog_Web_Modules
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ A web module, which presents a whole product catalog. Entity: Cms_Product_Catalo
 
 ### Product_Catalog_Web_Module_Id
 
-
-Product_Catalog_Web_Module_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Product_Catalog_Web_Module_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cms_Product_Catalog_Web_Modules](Cms_Product_Catalog_Web_Modules.md).[Product_Catalog_Web_Module_Id](Cms_Product_Catalog_Web_Modules.md#product_catalog_web_module_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Product_Catalog_Web_Module_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Web_Module_Id
-
-
-Web_Module_Id
-
-
-The base web module, which this module inherits.
 
 
 The base web module, which this module inherits.
@@ -79,9 +74,8 @@ The base web module, which this module inherits.
 |Referenced Table|[Cms_Web_Modules](Cms_Web_Modules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Product_Catalog_Web_Modules](Cms_Product_Catalog_Web_Modules.md).[Web_Module_Id](Cms_Product_Catalog_Web_Modules.md#web_module_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The base web module, which this module inherits.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Catalog_Id
-
-
-Product_Catalog_Id
-
-
-The product catalog, which is represented by this web module.
 
 
 The product catalog, which is represented by this web module.
@@ -126,9 +114,8 @@ The product catalog, which is represented by this web module.
 |Referenced Table|[Gen_Product_Catalogs](Gen_Product_Catalogs.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Product_Catalog_Web_Modules](Cms_Product_Catalog_Web_Modules.md).[Product_Catalog_Id](Cms_Product_Catalog_Web_Modules.md#product_catalog_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,12 +138,9 @@ The product catalog, which is represented by this web module.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -166,9 +150,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Product_Catalog_Web_Modules](Cms_Product_Catalog_Web_Modules.md).[Row_Version](Cms_Product_Catalog_Web_Modules.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

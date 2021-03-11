@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_web_hosts">Table Sys_Web_Hosts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Core.WebHosts.html">Systems.Core.WebHosts</a></p>
 <p>Contains the names and https certificates of the different host names used to host sites. Entity: Sys_Web_Hosts (Introduced in version 19.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -97,7 +99,7 @@
 </tr>
 <tr>
 <td><a href="#web_host_name">Web_Host_Name</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.</td>
 </tr>
 <tr>
@@ -117,7 +119,7 @@
 </tr>
 <tr>
 <td><a href="#certificate_password">Certificate_Password</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.</td>
 </tr>
 <tr>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="web_host_id">Web_Host_Id</h3>
-<p>Web_Host_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#web_host_id">Web_Host_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,15 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="web_host_name">Web_Host_Name</h3>
-<p>Web_Host_Name</p>
-<p>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.</p>
 <p>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.</p>
 <table>
 <thead>
@@ -291,7 +286,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -319,15 +314,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#web_host_name">Web_Host_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -412,7 +403,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -425,8 +416,6 @@
 </tbody>
 </table>
 <h3 id="certificate_type">Certificate_Type</h3>
-<p>Certificate_Type</p>
-<p>The type of certificate uploaded. Currently, only PFX is supported.</p>
 <p>The type of certificate uploaded. Currently, only PFX is supported.</p>
 <table>
 <thead>
@@ -466,15 +455,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>PFX</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#certificate_type">Certificate_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -559,15 +544,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="certificate_original_filename">Certificate_Original_Filename</h3>
-<p>Certificate_Original_Filename</p>
-<p>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.</p>
 <p>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.</p>
 <table>
 <thead>
@@ -607,15 +590,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#certificate_original_filename">Certificate_Original_Filename</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -700,7 +679,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -713,8 +692,6 @@
 </tbody>
 </table>
 <h3 id="certificate_contents">Certificate_Contents</h3>
-<p>Certificate_Contents</p>
-<p>The contents of the web host certificate. NULL means to use the server system certificate.</p>
 <p>The contents of the web host certificate. NULL means to use the server system certificate.</p>
 <table>
 <thead>
@@ -750,15 +727,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#certificate_contents">Certificate_Contents</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -831,8 +804,6 @@
 </tbody>
 </table>
 <h3 id="certificate_password">Certificate_Password</h3>
-<p>Certificate_Password</p>
-<p>The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.</p>
 <p>The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.</p>
 <table>
 <thead>
@@ -844,7 +815,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -872,15 +843,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#certificate_password">Certificate_Password</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -953,8 +920,6 @@
 </tbody>
 </table>
 <h3 id="certificate_expiry_date">Certificate_Expiry_Date</h3>
-<p>Certificate_Expiry_Date</p>
-<p>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.</p>
 <p>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.</p>
 <table>
 <thead>
@@ -994,15 +959,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#certificate_expiry_date">Certificate_Expiry_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1087,14 +1048,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1105,7 +1065,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1133,15 +1093,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1214,7 +1170,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1249,15 +1204,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Web_Hosts.html">Sys_Web_Hosts</a>.<a href="Sys_Web_Hosts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

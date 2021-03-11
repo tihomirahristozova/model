@@ -1,5 +1,10 @@
 # Table Scm_Receiving_Order_Lines
 
+
+## Entity
+
+Entity: [Logistics.Procurement.ReceivingOrderLines](~/entities/Logistics.Procurement.ReceivingOrderLines.md)
+
 Contains detail records of Receiving Orders. Each line contains the receiving of a quantity of a product. Entity: Scm_Receiving_Order_Lines
 
 ## Owner Tables Hierarchy
@@ -41,9 +46,6 @@ Contains detail records of Receiving Orders. Each line contains the receiving of
 
 ### Line_No
 
-
-Line_No
-
 | Property | Value |
 | - | - |
 |Type|int|
@@ -52,10 +54,9 @@ Line_No
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Line_No](Scm_Receiving_Order_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -77,12 +78,6 @@ Line_No
 ### Product_Id
 
 
-Product_Id
-
-
-The received product.
-
-
 The received product.
 
 | Property | Value |
@@ -94,9 +89,8 @@ The received product.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Product_Id](Scm_Receiving_Order_Lines.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -119,15 +113,9 @@ The received product.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Quantity
-
-
-Quantity
-
-
-The received quantity.
 
 
 The received quantity.
@@ -140,9 +128,8 @@ The received quantity.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Quantity](Scm_Receiving_Order_Lines.md#quantity)|
 |Format|N3|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -170,12 +157,6 @@ The received quantity.
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product.
-
-
 The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product.
 
 | Property | Value |
@@ -187,9 +168,8 @@ The measurement unit of Quantity. Initially copied from the Default Measurement 
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Quantity_Unit_Id](Scm_Receiving_Order_Lines.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -212,15 +192,9 @@ The measurement unit of Quantity. Initially copied from the Default Measurement 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Lot_Id
-
-
-Lot_Id
-
-
-The lot of the received goods.
 
 
 The lot of the received goods.
@@ -234,9 +208,8 @@ The lot of the received goods.
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Lot_Id](Scm_Receiving_Order_Lines.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -259,15 +232,9 @@ The lot of the received goods.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-Which serial number to receive/issue. NULL means that serial number is unknown or not applicable
 
 
 Which serial number to receive/issue. NULL means that serial number is unknown or not applicable
@@ -281,9 +248,8 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Serial_Number_Id](Scm_Receiving_Order_Lines.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -306,12 +272,9 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -322,9 +285,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Notes](Scm_Receiving_Order_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -346,12 +308,6 @@ Notes
 ### Store_Bin_Id
 
 
-Store_Bin_Id
-
-
-The store bin in which to receive the goods.
-
-
 The store bin in which to receive the goods.
 
 | Property | Value |
@@ -363,9 +319,8 @@ The store bin in which to receive the goods.
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Store_Bin_Id](Scm_Receiving_Order_Lines.md#store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -388,15 +343,9 @@ The store bin in which to receive the goods.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Confirmed_Quantity_Base
-
-
-Confirmed_Quantity_Base
-
-
-The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.
 
 
 The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.
@@ -409,9 +358,8 @@ The theoretical equivalence of Confirmed Quantity in base measurement unit accor
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Confirmed_Quantity_Base](Scm_Receiving_Order_Lines.md#confirmed_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -433,12 +381,6 @@ The theoretical equivalence of Confirmed Quantity in base measurement unit accor
 ### Quantity_Base
 
 
-Quantity_Base
-
-
-The equivalence of Quantity, in the base measurement category of the product.
-
-
 The equivalence of Quantity, in the base measurement category of the product.
 
 | Property | Value |
@@ -449,9 +391,8 @@ The equivalence of Quantity, in the base measurement category of the product.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Quantity_Base](Scm_Receiving_Order_Lines.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -473,12 +414,6 @@ The equivalence of Quantity, in the base measurement category of the product.
 ### Confirmed_Quantity
 
 
-Confirmed_Quantity
-
-
-The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.
-
-
 The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.
 
 | Property | Value |
@@ -489,9 +424,8 @@ The final confirmed received quantity, after adjustments. It is used in all calc
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Confirmed_Quantity](Scm_Receiving_Order_Lines.md#confirmed_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -512,9 +446,6 @@ The final confirmed received quantity, after adjustments. It is used in all calc
 
 ### Receiving_Order_Line_Id
 
-
-Receiving_Order_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -524,9 +455,8 @@ Receiving_Order_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Receiving_Order_Line_Id](Scm_Receiving_Order_Lines.md#receiving_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -549,15 +479,9 @@ Receiving_Order_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Finished
-
-
-Finished
-
-
-When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected.
 
 
 When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected.
@@ -570,9 +494,8 @@ When true, denotes that this is the last receivement for this purchase order lin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Finished](Scm_Receiving_Order_Lines.md#finished)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -594,12 +517,6 @@ When true, denotes that this is the last receivement for this purchase order lin
 ### Product_Code_Id
 
 
-Product_Code_Id
-
-
-When not NULL, specifies that the product was selected using the specified product code record.
-
-
 When not NULL, specifies that the product was selected using the specified product code record.
 
 | Property | Value |
@@ -611,9 +528,8 @@ When not NULL, specifies that the product was selected using the specified produ
 |Referenced Table|[Gen_Product_Codes](Gen_Product_Codes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Product_Code_Id](Scm_Receiving_Order_Lines.md#product_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -636,15 +552,9 @@ When not NULL, specifies that the product was selected using the specified produ
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Description
-
-
-Product_Description
-
-
-The name of the received product, initially copied from the name in the product definition. The field can be edited by the user.
 
 
 The name of the received product, initially copied from the name in the product definition. The field can be edited by the user.
@@ -658,9 +568,8 @@ The name of the received product, initially copied from the name in the product 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Product_Description](Scm_Receiving_Order_Lines.md#product_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -681,9 +590,6 @@ The name of the received product, initially copied from the name in the product 
 
 ### Receiving_Order_Id
 
-
-Receiving_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -693,9 +599,8 @@ Receiving_Order_Id
 |Referenced Table|[Scm_Receiving_Orders](Scm_Receiving_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Receiving_Order_Id](Scm_Receiving_Order_Lines.md#receiving_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -718,15 +623,9 @@ Receiving_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Purchase_Order_Line_Id
-
-
-Purchase_Order_Line_Id
-
-
-The purchase order line for which we are receiving quantity.
 
 
 The purchase order line for which we are receiving quantity.
@@ -740,9 +639,8 @@ The purchase order line for which we are receiving quantity.
 |Referenced Table|[Scm_Purchase_Order_Lines](Scm_Purchase_Order_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Purchase_Order_Line_Id](Scm_Receiving_Order_Lines.md#purchase_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -765,15 +663,9 @@ The purchase order line for which we are receiving quantity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Price_Per_Unit
-
-
-Price_Per_Unit
-
-
-The unit price of the received products, in the documents currency.
 
 
 The unit price of the received products, in the documents currency.
@@ -786,9 +678,8 @@ The unit price of the received products, in the documents currency.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Price_Per_Unit](Scm_Receiving_Order_Lines.md#price_per_unit)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -810,12 +701,6 @@ The unit price of the received products, in the documents currency.
 ### Purchase_Product_Price_Id
 
 
-Purchase_Product_Price_Id
-
-
-When not NULL, specifies that the purchase unit price is loaded automatically from the specified purchase price record.
-
-
 When not NULL, specifies that the purchase unit price is loaded automatically from the specified purchase price record.
 
 | Property | Value |
@@ -827,9 +712,8 @@ When not NULL, specifies that the purchase unit price is loaded automatically fr
 |Referenced Table|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Purchase_Product_Price_Id](Scm_Receiving_Order_Lines.md#purchase_product_price_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -852,15 +736,9 @@ When not NULL, specifies that the purchase unit price is loaded automatically fr
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Line_Store_Id
-
-
-Line_Store_Id
-
-
-The store in which the goods are received.
 
 
 The store in which the goods are received.
@@ -874,9 +752,8 @@ The store in which the goods are received.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Line_Store_Id](Scm_Receiving_Order_Lines.md#line_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -899,15 +776,9 @@ The store in which the goods are received.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Line_Amount
-
-
-Line_Amount
-
-
-The total amount for the line. Equals to Quantity * Price_Per_Unit
 
 
 The total amount for the line. Equals to Quantity * Price_Per_Unit
@@ -920,9 +791,8 @@ The total amount for the line. Equals to Quantity * Price_Per_Unit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Line_Amount](Scm_Receiving_Order_Lines.md#line_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -944,12 +814,6 @@ The total amount for the line. Equals to Quantity * Price_Per_Unit
 ### Standard_Quantity_Base
 
 
-Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
-
-
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 | Property | Value |
@@ -960,9 +824,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Standard_Quantity_Base](Scm_Receiving_Order_Lines.md#standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -984,12 +847,6 @@ The theoretical quantity in base measurement unit according to the current measu
 ### Product_Variant_Id
 
 
-Product_Variant_Id
-
-
-If specified determines which product variant of the current product in this line is used.
-
-
 If specified determines which product variant of the current product in this line is used.
 
 | Property | Value |
@@ -1001,9 +858,8 @@ If specified determines which product variant of the current product in this lin
 |Referenced Table|[Gen_Product_Variants](Gen_Product_Variants.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Product_Variant_Id](Scm_Receiving_Order_Lines.md#product_variant_id)|
 |Depends On|[Product_Id](#product_id)|
 |Format||
 |Ignore for Insert Order|no|
@@ -1027,12 +883,9 @@ If specified determines which product variant of the current product in this lin
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -1042,9 +895,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Row_Version](Scm_Receiving_Order_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1066,12 +918,6 @@ Row_Version
 ### Confirmed_Standard_Quantity_Base
 
 
-Confirmed_Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.
-
-
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.
 
 | Property | Value |
@@ -1082,9 +928,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Receiving_Order_Lines](Scm_Receiving_Order_Lines.md).[Confirmed_Standard_Quantity_Base](Scm_Receiving_Order_Lines.md#confirmed_standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

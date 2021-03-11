@@ -1,5 +1,10 @@
 # Table Cm_Company_Locations
 
+
+## Entity
+
+Entity: [General.Contacts.CompanyLocations](~/entities/General.Contacts.CompanyLocations.md)
+
 Stores company locations. The locations are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The locations, departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Locations
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Stores company locations. The locations are parties and as such, can be organize
 
 ### Company_Location_Id
 
-
-Company_Location_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Company_Location_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Company_Locations](Cm_Company_Locations.md).[Company_Location_Id](Cm_Company_Locations.md#company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Company_Location_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The party of the company location.
 
 
 The party of the company location.
@@ -82,9 +77,8 @@ The party of the company location.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Locations](Cm_Company_Locations.md).[Party_Id](Cm_Company_Locations.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The party of the company location.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Company_Id
-
-
-Company_Id
-
-
-The company to which this location belongs.
 
 
 The company to which this location belongs.
@@ -129,9 +117,8 @@ The company to which this location belongs.
 |Referenced Table|[Cm_Companies](Cm_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Locations](Cm_Company_Locations.md).[Company_Id](Cm_Company_Locations.md#company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ The company to which this location belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Location_Name
-
-
-Location_Name
-
-
-The name of the company location.
 
 
 The name of the company location.
@@ -176,9 +157,8 @@ The name of the company location.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Locations](Cm_Company_Locations.md).[Location_Name](Cm_Company_Locations.md#location_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,16 +181,10 @@ The name of the company location.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Working_Time
-
-
-Working_Time
-
-
-Textual representation of the working time of the location.
 
 
 Textual representation of the working time of the location.
@@ -224,9 +198,8 @@ Textual representation of the working time of the location.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Company_Locations](Cm_Company_Locations.md).[Working_Time](Cm_Company_Locations.md#working_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,12 +221,6 @@ Textual representation of the working time of the location.
 ### Bill_To
 
 
-Bill_To
-
-
-If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, NULL = unidentified
-
-
 If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, NULL = unidentified
 
 | Property | Value |
@@ -265,10 +232,9 @@ If filled indicates which party is billed for the amounts from documents that re
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`C`, `L`|
 |Default Value|None|
-|Derived From|[Cm_Company_Locations](Cm_Company_Locations.md).[Bill_To](Cm_Company_Locations.md#bill_to)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,9 +255,6 @@ If filled indicates which party is billed for the amounts from documents that re
 
 ### Access_Key_Id
 
-
-Access_Key_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -301,9 +264,8 @@ Access_Key_Id
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Locations](Cm_Company_Locations.md).[Access_Key_Id](Cm_Company_Locations.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -326,12 +288,9 @@ Access_Key_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -341,9 +300,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Locations](Cm_Company_Locations.md).[Row_Version](Cm_Company_Locations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

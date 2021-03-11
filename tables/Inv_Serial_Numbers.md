@@ -1,5 +1,10 @@
 # Table Inv_Serial_Numbers
 
+
+## Entity
+
+Entity: [Logistics.Inventory.SerialNumbers](~/entities/Logistics.Inventory.SerialNumbers.md)
+
 Serial numbers, used by the items. Rows are created on first occurrence of the serial number in a document. Rows can be deleted after deleting the last occurence of the serial number in a document. Entity: Inv_Serial_Numbers
 
 ## Summary
@@ -16,12 +21,6 @@ Serial numbers, used by the items. Rows are created on first occurrence of the s
 ### Id
 
 
-Id
-
-
-Unique serial number Id
-
-
 Unique serial number Id
 
 | Property | Value |
@@ -33,9 +32,8 @@ Unique serial number Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Serial_Numbers](Inv_Serial_Numbers.md).[Id](Inv_Serial_Numbers.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +56,9 @@ Unique serial number Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product, to which the serial number is bound
 
 
 The product, to which the serial number is bound
@@ -80,9 +72,8 @@ The product, to which the serial number is bound
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Serial_Numbers](Inv_Serial_Numbers.md).[Product_Id](Inv_Serial_Numbers.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +96,9 @@ The product, to which the serial number is bound
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Serial_Number
-
-
-Serial_Number
-
-
-The serial number text
 
 
 The serial number text
@@ -127,9 +112,8 @@ The serial number text
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Serial_Numbers](Inv_Serial_Numbers.md).[Serial_Number](Inv_Serial_Numbers.md#serial_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,13 +136,10 @@ The serial number text
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -168,9 +149,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Serial_Numbers](Inv_Serial_Numbers.md).[Row_Version](Inv_Serial_Numbers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

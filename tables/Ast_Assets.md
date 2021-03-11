@@ -1,5 +1,10 @@
 # Table Ast_Assets
 
+
+## Entity
+
+Entity: [Finance.Assets.Assets](~/entities/Finance.Assets.Assets.md)
+
 The fixed assets. Entity: Ast_Assets
 
 ## Owner Tables Hierarchy
@@ -29,9 +34,6 @@ The fixed assets. Entity: Ast_Assets
 
 ### Asset_Id
 
-
-Asset_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -41,9 +43,8 @@ Asset_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Asset_Id](Ast_Assets.md#asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,12 +67,9 @@ Asset_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -82,9 +80,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Enterprise_Company_Id](Ast_Assets.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +104,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Asset_Group_Id
-
-
-Asset_Group_Id
-
-
-The asset group to which this asset belongs.
 
 
 The asset group to which this asset belongs.
@@ -129,9 +120,8 @@ The asset group to which this asset belongs.
 |Referenced Table|[Ast_Asset_Groups](Ast_Asset_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Asset_Group_Id](Ast_Assets.md#asset_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +144,9 @@ The asset group to which this asset belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Asset_Category_Id
-
-
-Asset_Category_Id
-
-
-The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset.
 
 
 The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset.
@@ -176,9 +160,8 @@ The category of this asset. The category may determine default values for the de
 |Referenced Table|[Ast_Asset_Categories](Ast_Asset_Categories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Asset_Category_Id](Ast_Assets.md#asset_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,12 +184,9 @@ The category of this asset. The category may determine default values for the de
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Asset_Code
-
-
-Asset_Code
 
 | Property | Value |
 | - | - |
@@ -217,9 +197,8 @@ Asset_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Asset_Code](Ast_Assets.md#asset_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,13 +221,10 @@ Asset_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|yes|
 
 ### Asset_Name
-
-
-Asset_Name
 
 | Property | Value |
 | - | - |
@@ -259,9 +235,8 @@ Asset_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Asset_Name](Ast_Assets.md#asset_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,12 +264,6 @@ Asset_Name
 ### Serial_Number
 
 
-Serial_Number
-
-
-Serial number of the asset.
-
-
 Serial number of the asset.
 
 | Property | Value |
@@ -306,9 +275,8 @@ Serial number of the asset.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Serial_Number](Ast_Assets.md#serial_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -331,15 +299,9 @@ Serial number of the asset.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Primary_Valuation_Model_Id
-
-
-Primary_Valuation_Model_Id
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -353,9 +315,8 @@ Obsolete. Not used.
 |Referenced Table|[Ast_Valuation_Models](Ast_Valuation_Models.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Primary_Valuation_Model_Id](Ast_Assets.md#primary_valuation_model_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -378,15 +339,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Valuation_Currency_Id
-
-
-Valuation_Currency_Id
-
-
-Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored.
 
 
 Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored.
@@ -400,9 +355,8 @@ Currency in which changes of the asset values (purchase value, depreciation valu
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Valuation_Currency_Id](Ast_Assets.md#valuation_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -425,15 +379,9 @@ Currency in which changes of the asset values (purchase value, depreciation valu
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Purchase_Date
-
-
-Purchase_Date
-
-
-Original purchase date of the asset.
 
 
 Original purchase date of the asset.
@@ -447,9 +395,8 @@ Original purchase date of the asset.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Purchase_Date](Ast_Assets.md#purchase_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -470,9 +417,6 @@ Original purchase date of the asset.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -482,9 +426,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Notes](Ast_Assets.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -506,12 +449,6 @@ Notes
 ### Deployment_Date
 
 
-Deployment_Date
-
-
-Date, when the asset is first deployed. Null if the asset is not deployed yet
-
-
 Date, when the asset is first deployed. Null if the asset is not deployed yet
 
 | Property | Value |
@@ -523,9 +460,8 @@ Date, when the asset is first deployed. Null if the asset is not deployed yet
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Deployment_Date](Ast_Assets.md#deployment_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -547,12 +483,6 @@ Date, when the asset is first deployed. Null if the asset is not deployed yet
 ### Is_Active
 
 
-Is_Active
-
-
-Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.
-
-
 Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.
 
 | Property | Value |
@@ -563,9 +493,8 @@ Checked if the assets is active and can be used in documents. The inactive asset
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Is_Active](Ast_Assets.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -588,12 +517,9 @@ Checked if the assets is active and can be used in documents. The inactive asset
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -603,9 +529,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Assets](Ast_Assets.md).[Row_Version](Ast_Assets.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Acc_Profit_Centers
 
+
+## Entity
+
+Entity: [Finance.Accounting.ProfitCenters](~/entities/Finance.Accounting.ProfitCenters.md)
+
 Defines company profit centers and their relative weight for automatic balance transfers from cost centers. Entity: Acc_Profit_Centers
 
 ## Summary
@@ -17,9 +22,6 @@ Defines company profit centers and their relative weight for automatic balance t
 
 ### Profit_Center_Id
 
-
-Profit_Center_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Profit_Center_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Profit_Centers](Acc_Profit_Centers.md).[Profit_Center_Id](Acc_Profit_Centers.md#profit_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Profit_Center_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Parent_Profit_Center_Id
-
-
-Parent_Profit_Center_Id
-
-
-Parent profit center, NULL if this is root profit center
 
 
 Parent profit center, NULL if this is root profit center
@@ -76,9 +71,8 @@ Parent profit center, NULL if this is root profit center
 |Referenced Table|[Acc_Profit_Centers](Acc_Profit_Centers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Profit_Centers](Acc_Profit_Centers.md).[Parent_Profit_Center_Id](Acc_Profit_Centers.md#parent_profit_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,12 +95,9 @@ Parent profit center, NULL if this is root profit center
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Profit_Center_Name
-
-
-Profit_Center_Name
 
 | Property | Value |
 | - | - |
@@ -117,9 +108,8 @@ Profit_Center_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Profit_Centers](Acc_Profit_Centers.md).[Profit_Center_Name](Acc_Profit_Centers.md#profit_center_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,12 +137,6 @@ Profit_Center_Name
 ### Relative_Weight
 
 
-Relative_Weight
-
-
-The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used.
-
-
 The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used.
 
 | Property | Value |
@@ -163,9 +147,8 @@ The weight of this profit center, relative to the other profit centers within th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Acc_Profit_Centers](Acc_Profit_Centers.md).[Relative_Weight](Acc_Profit_Centers.md#relative_weight)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,9 +169,6 @@ The weight of this profit center, relative to the other profit centers within th
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -198,9 +178,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Acc_Profit_Centers](Acc_Profit_Centers.md).[Notes](Acc_Profit_Centers.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -221,9 +200,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -232,9 +208,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Profit_Centers](Acc_Profit_Centers.md).[Row_Version](Acc_Profit_Centers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

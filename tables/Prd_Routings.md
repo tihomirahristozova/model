@@ -17,9 +17,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +26,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Routings](Prd_Routings.md).[Id](Prd_Routings.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +50,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Group_Id
-
-
-Product_Group_Id
-
-
-The group of production items that can use the routing
 
 
 The group of production items that can use the routing
@@ -75,9 +65,8 @@ The group of production items that can use the routing
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Routings](Prd_Routings.md).[Product_Group_Id](Prd_Routings.md#product_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,12 +89,9 @@ The group of production items that can use the routing
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Routing_Name
-
-
-Routing_Name
 
 | Property | Value |
 | - | - |
@@ -116,9 +102,8 @@ Routing_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Routings](Prd_Routings.md).[Routing_Name](Prd_Routings.md#routing_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +131,6 @@ Routing_Name
 ### Is_Shared
 
 
-Is_Shared
-
-
-1 if the routing can be used by many recipes, 0 if the routing is privately used by recipe and/or recipe model.
-
-
 1 if the routing can be used by many recipes, 0 if the routing is privately used by recipe and/or recipe model.
 
 | Property | Value |
@@ -162,9 +141,8 @@ Is_Shared
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Prd_Routings](Prd_Routings.md).[Is_Shared](Prd_Routings.md#is_shared)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,15 +165,9 @@ Is_Shared
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Release_Date
-
-
-Release_Date
-
-
-The date, when the route is released for use
 
 
 The date, when the route is released for use
@@ -209,9 +181,8 @@ The date, when the route is released for use
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Prd_Routings](Prd_Routings.md).[Release_Date](Prd_Routings.md#release_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,12 +210,6 @@ The date, when the route is released for use
 ### Expiry_Date
 
 
-Expiry_Date
-
-
-The last date, when the route should be used. NULL means that the route might still be in use
-
-
 The last date, when the route should be used. NULL means that the route might still be in use
 
 | Property | Value |
@@ -256,9 +221,8 @@ The last date, when the route should be used. NULL means that the route might st
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Routings](Prd_Routings.md).[Expiry_Date](Prd_Routings.md#expiry_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -285,9 +249,6 @@ The last date, when the route should be used. NULL means that the route might st
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -296,9 +257,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Routings](Prd_Routings.md).[Row_Version](Prd_Routings.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

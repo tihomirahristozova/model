@@ -21,12 +21,6 @@
 ### Reconciliation_Order_Id
 
 
-Reconciliation_Order_Id
-
-
-Reconciliation order Id
-
-
 Reconciliation order Id
 
 | Property | Value |
@@ -38,9 +32,8 @@ Reconciliation order Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Reconciliation_Orders](Inv_Reconciliation_Orders.md).[Reconciliation_Order_Id](Inv_Reconciliation_Orders.md#reconciliation_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,15 +56,9 @@ Reconciliation order Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The Id of the base document
 
 
 The Id of the base document
@@ -85,9 +72,8 @@ The Id of the base document
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Orders](Inv_Reconciliation_Orders.md).[Document_Id](Inv_Reconciliation_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,15 +96,9 @@ The Id of the base document
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Due_Date
-
-
-Due_Date
-
-
-Date, when the transaction is scheduled to occur
 
 
 Date, when the transaction is scheduled to occur
@@ -132,9 +112,8 @@ Date, when the transaction is scheduled to occur
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Inv_Reconciliation_Orders](Inv_Reconciliation_Orders.md).[Due_Date](Inv_Reconciliation_Orders.md#due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,12 +135,6 @@ Date, when the transaction is scheduled to occur
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -172,9 +145,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Reconciliation_Orders](Inv_Reconciliation_Orders.md).[Is_Single_Execution](Inv_Reconciliation_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,17 +169,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -218,9 +184,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Reconciliation_Orders](Inv_Reconciliation_Orders.md).[Is_Released](Inv_Reconciliation_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,12 +208,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -258,9 +220,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliation_Orders](Inv_Reconciliation_Orders.md).[Row_Version](Inv_Reconciliation_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

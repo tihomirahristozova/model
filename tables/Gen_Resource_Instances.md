@@ -1,5 +1,10 @@
 # Table Gen_Resource_Instances
 
+
+## Entity
+
+Entity: [General.Resources.ResourceInstances](~/entities/General.Resources.ResourceInstances.md)
+
 Represents concrete instances of resources. Entity: Gen_Resource_Instances
 
 ## Owner Tables Hierarchy
@@ -13,9 +18,9 @@ Represents concrete instances of resources. Entity: Gen_Resource_Instances
 | - | - | --- |
 |[Resource_Instance_Id](#resource_instance_id)|`uniqueidentifier` `PK`||
 |[Resource_Id](#resource_id)|`uniqueidentifier` |The resource of which this is instance.|
-|[Resource_Instance_Name](#resource_instance_name)|`nvarchar(2147483647)` |Multilanguage resource instance name.|
+|[Resource_Instance_Name](#resource_instance_name)|`nvarchar(max)` |Multilanguage resource instance name.|
 |[Resource_Instance_Code](#resource_instance_code)|`nvarchar(16)` |Code of the instance, unique within the resource.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Party_Id](#party_id)|`uniqueidentifier` |The party, which is represented by this resource instance. NULL, when the resource instance is not a party.|
 |[Asset_Id](#asset_id)|`uniqueidentifier` |The asset, which is represented by this resource instance. NULL, when the resource instance is not an asset.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -23,9 +28,6 @@ Represents concrete instances of resources. Entity: Gen_Resource_Instances
 ## Columns
 
 ### Resource_Instance_Id
-
-
-Resource_Instance_Id
 
 | Property | Value |
 | - | - |
@@ -36,9 +38,8 @@ Resource_Instance_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Resource_Instances](Gen_Resource_Instances.md).[Resource_Instance_Id](Gen_Resource_Instances.md#resource_instance_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Resource_Instance_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Id
-
-
-Resource_Id
-
-
-The resource of which this is instance.
 
 
 The resource of which this is instance.
@@ -83,9 +78,8 @@ The resource of which this is instance.
 |Referenced Table|[Gen_Resources](Gen_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Instances](Gen_Resource_Instances.md).[Resource_Id](Gen_Resource_Instances.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,31 +102,24 @@ The resource of which this is instance.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Instance_Name
-
-
-Resource_Instance_Name
-
-
-Multilanguage resource instance name.
 
 
 Multilanguage resource instance name.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|no|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Instances](Gen_Resource_Instances.md).[Resource_Instance_Name](Gen_Resource_Instances.md#resource_instance_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,16 +142,10 @@ Multilanguage resource instance name.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Resource_Instance_Code
-
-
-Resource_Instance_Code
-
-
-Code of the instance, unique within the resource.
 
 
 Code of the instance, unique within the resource.
@@ -178,9 +159,8 @@ Code of the instance, unique within the resource.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Instances](Gen_Resource_Instances.md).[Resource_Instance_Code](Gen_Resource_Instances.md#resource_instance_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,26 +183,22 @@ Code of the instance, unique within the resource.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Instances](Gen_Resource_Instances.md).[Notes](Gen_Resource_Instances.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,12 +220,6 @@ Notes
 ### Party_Id
 
 
-Party_Id
-
-
-The party, which is represented by this resource instance. NULL, when the resource instance is not a party.
-
-
 The party, which is represented by this resource instance. NULL, when the resource instance is not a party.
 
 | Property | Value |
@@ -261,9 +231,8 @@ The party, which is represented by this resource instance. NULL, when the resour
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Instances](Gen_Resource_Instances.md).[Party_Id](Gen_Resource_Instances.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,15 +255,9 @@ The party, which is represented by this resource instance. NULL, when the resour
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Asset_Id
-
-
-Asset_Id
-
-
-The asset, which is represented by this resource instance. NULL, when the resource instance is not an asset.
 
 
 The asset, which is represented by this resource instance. NULL, when the resource instance is not an asset.
@@ -308,9 +271,8 @@ The asset, which is represented by this resource instance. NULL, when the resour
 |Referenced Table|[Ast_Assets](Ast_Assets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Instances](Gen_Resource_Instances.md).[Asset_Id](Gen_Resource_Instances.md#asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -333,12 +295,9 @@ The asset, which is represented by this resource instance. NULL, when the resour
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -348,9 +307,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Instances](Gen_Resource_Instances.md).[Row_Version](Gen_Resource_Instances.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

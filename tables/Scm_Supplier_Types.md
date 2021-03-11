@@ -1,5 +1,10 @@
 # Table Scm_Supplier_Types
 
+
+## Entity
+
+Entity: [Logistics.Procurement.SupplierTypes](~/entities/Logistics.Procurement.SupplierTypes.md)
+
 Supplier types are primarily used to differentiate the security level access to the different supplier groups. Entity: Scm_Supplier_Types
 
 ## Summary
@@ -15,9 +20,6 @@ Supplier types are primarily used to differentiate the security level access to 
 
 ### Supplier_Type_Id
 
-
-Supplier_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Supplier_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Supplier_Types](Scm_Supplier_Types.md).[Supplier_Type_Id](Scm_Supplier_Types.md#supplier_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,12 +53,9 @@ Supplier_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Supplier_Type_Name
-
-
-Supplier_Type_Name
 
 | Property | Value |
 | - | - |
@@ -68,9 +66,8 @@ Supplier_Type_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Supplier_Types](Scm_Supplier_Types.md).[Supplier_Type_Name](Scm_Supplier_Types.md#supplier_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -93,16 +90,10 @@ Supplier_Type_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Access_Key_Id
-
-
-Access_Key_Id
-
-
-The access key required for accessing all suppliers of this supplier type.
 
 
 The access key required for accessing all suppliers of this supplier type.
@@ -116,9 +107,8 @@ The access key required for accessing all suppliers of this supplier type.
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Supplier_Types](Scm_Supplier_Types.md).[Access_Key_Id](Scm_Supplier_Types.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,12 +131,9 @@ The access key required for accessing all suppliers of this supplier type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -156,9 +143,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Supplier_Types](Scm_Supplier_Types.md).[Row_Version](Scm_Supplier_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

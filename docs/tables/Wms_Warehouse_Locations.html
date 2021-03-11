@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-wms_warehouse_locations">Table Wms_Warehouse_Locations</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Wms.WarehouseLocations.html">Logistics.Wms.WarehouseLocations</a></p>
 <p>One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -116,7 +118,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -128,7 +130,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="warehouse_location_id">Warehouse_Location_Id</h3>
-<p>Warehouse_Location_Id</p>
 <table>
 <thead>
 <tr>
@@ -167,15 +168,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Locations.html">Wms_Warehouse_Locations</a>.<a href="Wms_Warehouse_Locations.html#warehouse_location_id">Warehouse_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -260,15 +257,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_id">Warehouse_Id</h3>
-<p>Warehouse_Id</p>
-<p>The warehouse containing the location.</p>
 <p>The warehouse containing the location.</p>
 <table>
 <thead>
@@ -308,15 +303,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Locations.html">Wms_Warehouse_Locations</a>.<a href="Wms_Warehouse_Locations.html#warehouse_id">Warehouse_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -401,15 +392,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_zone_id">Warehouse_Zone_Id</h3>
-<p>Warehouse_Zone_Id</p>
-<p>The zone, which contains the location.</p>
 <p>The zone, which contains the location.</p>
 <table>
 <thead>
@@ -449,15 +438,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Locations.html">Wms_Warehouse_Locations</a>.<a href="Wms_Warehouse_Locations.html#warehouse_zone_id">Warehouse_Zone_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -542,15 +527,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="location_address">Location_Address</h3>
-<p>Location_Address</p>
-<p>The address of the location. Should be unique within the warehouse.</p>
 <p>The address of the location. Should be unique within the warehouse.</p>
 <table>
 <thead>
@@ -590,15 +573,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Locations.html">Wms_Warehouse_Locations</a>.<a href="Wms_Warehouse_Locations.html#location_address">Location_Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -683,7 +662,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -696,7 +675,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -707,7 +685,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -735,15 +713,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Locations.html">Wms_Warehouse_Locations</a>.<a href="Wms_Warehouse_Locations.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -816,7 +790,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -851,15 +824,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Locations.html">Wms_Warehouse_Locations</a>.<a href="Wms_Warehouse_Locations.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

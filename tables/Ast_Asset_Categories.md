@@ -1,5 +1,10 @@
 # Table Ast_Asset_Categories
 
+
+## Entity
+
+Entity: [Finance.Assets.AssetCategories](~/entities/Finance.Assets.AssetCategories.md)
+
 Categorization of the assets, which specifies their depreciation plans. Entity: Ast_Asset_Categories
 
 ## Summary
@@ -16,9 +21,6 @@ Categorization of the assets, which specifies their depreciation plans. Entity: 
 
 ### Asset_Category_Id
 
-
-Asset_Category_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Asset_Category_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Asset_Categories](Ast_Asset_Categories.md).[Asset_Category_Id](Ast_Asset_Categories.md#asset_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Asset_Category_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Asset_Category_Code
-
-
-Asset_Category_Code
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Asset_Category_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Categories](Ast_Asset_Categories.md).[Asset_Category_Code](Ast_Asset_Categories.md#asset_category_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -94,12 +91,9 @@ Asset_Category_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Asset_Category_Name
-
-
-Asset_Category_Name
 
 | Property | Value |
 | - | - |
@@ -110,9 +104,8 @@ Asset_Category_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Categories](Ast_Asset_Categories.md).[Asset_Category_Name](Ast_Asset_Categories.md#asset_category_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -140,12 +133,6 @@ Asset_Category_Name
 ### Product_Type_Id
 
 
-Product_Type_Id
-
-
-Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type.
-
-
 Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type.
 
 | Property | Value |
@@ -157,9 +144,8 @@ Product type that correspondes to this category. Depreciation plan templates spe
 |Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Categories](Ast_Asset_Categories.md).[Product_Type_Id](Ast_Asset_Categories.md#product_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -182,12 +168,9 @@ Product type that correspondes to this category. Depreciation plan templates spe
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -197,9 +180,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Categories](Ast_Asset_Categories.md).[Row_Version](Ast_Asset_Categories.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

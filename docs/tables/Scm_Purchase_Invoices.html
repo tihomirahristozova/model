@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-scm_purchase_invoices">Table Scm_Purchase_Invoices</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a></p>
 <p>Contains purchase invoice headers. Entity: Scm_Purchase_Invoices</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -228,7 +230,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="purchase_invoice_id">Purchase_Invoice_Id</h3>
-<p>Purchase_Invoice_Id</p>
 <table>
 <thead>
 <tr>
@@ -267,15 +268,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#purchase_invoice_id">Purchase_Invoice_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -360,14 +357,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -406,15 +402,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -499,15 +491,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="supplier_id">Supplier_Id</h3>
-<p>Supplier_Id</p>
-<p>The supplier of the purchase, who is issuing the document.</p>
 <p>The supplier of the purchase, who is issuing the document.</p>
 <table>
 <thead>
@@ -547,15 +537,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#supplier_id">Supplier_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -640,15 +626,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_currency_id">Document_Currency_Id</h3>
-<p>Document_Currency_Id</p>
-<p>The currency of the unit prices and amounts in the document.</p>
 <p>The currency of the unit prices and amounts in the document.</p>
 <table>
 <thead>
@@ -688,15 +672,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#document_currency_id">Document_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -781,15 +761,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_type_id">Payment_Type_Id</h3>
-<p>Payment_Type_Id</p>
-<p>The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated</p>
 <p>The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated</p>
 <table>
 <thead>
@@ -829,15 +807,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#payment_type_id">Payment_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -922,15 +896,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purchase_order_id">Purchase_Order_Id</h3>
-<p>Purchase_Order_Id</p>
-<p>The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed</p>
 <p>The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed</p>
 <table>
 <thead>
@@ -970,15 +942,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#purchase_order_id">Purchase_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1063,15 +1031,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="receiving_order_id">Receiving_Order_Id</h3>
-<p>Receiving_Order_Id</p>
-<p>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO</p>
 <p>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO</p>
 <table>
 <thead>
@@ -1111,15 +1077,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#receiving_order_id">Receiving_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1204,15 +1166,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="credit_note_original_purchase_invoice_id">Credit_Note_Original_Purchase_Invoice_Id</h3>
-<p>Credit_Note_Original_Purchase_Invoice_Id</p>
-<p>The original invoice, which is debited/credited with this note</p>
 <p>The original invoice, which is debited/credited with this note</p>
 <table>
 <thead>
@@ -1252,15 +1212,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#credit_note_original_purchase_invoice_id">Credit_Note_Original_Purchase_Invoice_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1345,15 +1301,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="credit_note_reason">Credit_Note_Reason</h3>
-<p>Credit_Note_Reason</p>
-<p>Reason for the debit/credit note</p>
 <p>Reason for the debit/credit note</p>
 <table>
 <thead>
@@ -1393,15 +1347,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#credit_note_reason">Credit_Note_Reason</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1474,8 +1424,6 @@
 </tbody>
 </table>
 <h3 id="deal_type_id">Deal_Type_Id</h3>
-<p>Deal_Type_Id</p>
-<p>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.</p>
 <p>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.</p>
 <table>
 <thead>
@@ -1515,15 +1463,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#deal_type_id">Deal_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1608,15 +1552,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="cost_center_id">Cost_Center_Id</h3>
-<p>Cost_Center_Id</p>
-<p>Cost center for which the amount from this document will be accounted.</p>
 <p>Cost center for which the amount from this document will be accounted.</p>
 <table>
 <thead>
@@ -1656,15 +1598,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#cost_center_id">Cost_Center_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1749,15 +1687,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="apply_date">Apply_Date</h3>
-<p>Apply_Date</p>
-<p>Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date.</p>
 <p>Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date.</p>
 <table>
 <thead>
@@ -1797,15 +1733,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#apply_date">Apply_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1897,8 +1829,6 @@
 </tbody>
 </table>
 <h3 id="sale_deal_type_id">Sale_Deal_Type_Id</h3>
-<p>Sale_Deal_Type_Id</p>
-<p>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.</p>
 <p>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.</p>
 <table>
 <thead>
@@ -1938,15 +1868,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#sale_deal_type_id">Sale_Deal_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2031,15 +1957,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="vat_notes">VAT_Notes</h3>
-<p>VAT_Notes</p>
-<p>Description of the operation that will be entered in the VAT ledgers.</p>
 <p>Description of the operation that will be entered in the VAT ledgers.</p>
 <table>
 <thead>
@@ -2079,15 +2003,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#vat_notes">VAT_Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2160,8 +2080,6 @@
 </tbody>
 </table>
 <h3 id="payment_due_date">Payment_Due_Date</h3>
-<p>Payment_Due_Date</p>
-<p>Due date for paying the invoice. NULL means to use the default</p>
 <p>Due date for paying the invoice. NULL means to use the default</p>
 <table>
 <thead>
@@ -2201,15 +2119,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#payment_due_date">Payment_Due_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2301,8 +2215,6 @@
 </tbody>
 </table>
 <h3 id="payment_account_id">Payment_Account_Id</h3>
-<p>Payment_Account_Id</p>
-<p>When not NULL, specifies the default payment account for the payment order</p>
 <p>When not NULL, specifies the default payment account for the payment order</p>
 <table>
 <thead>
@@ -2342,15 +2254,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#payment_account_id">Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2435,15 +2343,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purchase_price_list_id">Purchase_Price_List_Id</h3>
-<p>Purchase_Price_List_Id</p>
-<p>The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.</p>
 <p>The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.</p>
 <table>
 <thead>
@@ -2483,15 +2389,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#purchase_price_list_id">Purchase_Price_List_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2576,15 +2478,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="delivery_terms_code">Delivery_Terms_Code</h3>
-<p>Delivery_Terms_Code</p>
-<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <table>
 <thead>
@@ -2624,7 +2524,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2633,10 +2533,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#delivery_terms_code">Delivery_Terms_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2709,8 +2605,6 @@
 </tbody>
 </table>
 <h3 id="intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</h3>
-<p>Intrastat_Transaction_Nature_Code</p>
-<p>Transaction nature; used for Intrastat reporting</p>
 <p>Transaction nature; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -2750,7 +2644,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2759,10 +2653,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2835,8 +2725,6 @@
 </tbody>
 </table>
 <h3 id="intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</h3>
-<p>Intrastat_Transport_Mode_Code</p>
-<p>Transport mode; used for Intrastat reporting</p>
 <p>Transport mode; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -2876,7 +2764,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2885,10 +2773,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2961,8 +2845,6 @@
 </tbody>
 </table>
 <h3 id="intrastat_transport_country_id">Intrastat_Transport_Country_Id</h3>
-<p>Intrastat_Transport_Country_Id</p>
-<p>Country of origin of the transport company; used for Intrastat reporting</p>
 <p>Country of origin of the transport company; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -3002,15 +2884,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#intrastat_transport_country_id">Intrastat_Transport_Country_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3095,15 +2973,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="intrastat_destination_region_id">Intrastat_Destination_Region_Id</h3>
-<p>Intrastat_Destination_Region_Id</p>
-<p>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.</p>
 <p>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.</p>
 <table>
 <thead>
@@ -3143,15 +3019,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#intrastat_destination_region_id">Intrastat_Destination_Region_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3236,15 +3108,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="vat_cash_reporting_mode">VAT_Cash_Reporting_Mode</h3>
-<p>VAT_Cash_Reporting_Mode</p>
-<p>When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries.</p>
 <p>When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries.</p>
 <table>
 <thead>
@@ -3280,15 +3150,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#vat_cash_reporting_mode">VAT_Cash_Reporting_Mode</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3373,15 +3239,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -3417,15 +3281,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3510,15 +3370,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -3554,15 +3412,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3647,14 +3501,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -3689,15 +3542,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a>.<a href="Scm_Purchase_Invoices.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

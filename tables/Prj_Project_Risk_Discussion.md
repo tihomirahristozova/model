@@ -1,5 +1,10 @@
 # Table Prj_Project_Risk_Discussion
 
+
+## Entity
+
+Entity: [Projects.ProjectRiskDiscussion](~/entities/Projects.ProjectRiskDiscussion.md)
+
 Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 
 ## Owner Tables Hierarchy
@@ -15,16 +20,13 @@ Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 |[Project_Risk_Id](#project_risk_id)|`uniqueidentifier` ||
 |[Contributed_By_User_Id](#contributed_by_user_id)|`uniqueidentifier` Readonly|The user, who contributed (wrote) the message.|
 |[Contribution_Time](#contribution_time)|`datetime` Readonly|The time, when the message was contributed.|
-|[Message](#message)|`nvarchar(2147483647)` |The contents of the message.|
+|[Message](#message)|`nvarchar(max)` |The contents of the message.|
 |[Last_Edit_Time](#last_edit_time)|`datetime` Readonly|Contains the last edit time of the message. NULL if the message was never edited|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Project_Risk_Message_Id
-
-
-Project_Risk_Message_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Project_Risk_Message_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Project_Risk_Discussion](Prj_Project_Risk_Discussion.md).[Project_Risk_Message_Id](Prj_Project_Risk_Discussion.md#project_risk_message_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Project_Risk_Message_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Project_Risk_Id
-
-
-Project_Risk_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Project_Risk_Id
 |Referenced Table|[Prj_Project_Risks](Prj_Project_Risks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Risk_Discussion](Prj_Project_Risk_Discussion.md).[Project_Risk_Id](Prj_Project_Risk_Discussion.md#project_risk_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Project_Risk_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Contributed_By_User_Id
-
-
-Contributed_By_User_Id
-
-
-The user, who contributed (wrote) the message.
 
 
 The user, who contributed (wrote) the message.
@@ -123,9 +114,8 @@ The user, who contributed (wrote) the message.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Risk_Discussion](Prj_Project_Risk_Discussion.md).[Contributed_By_User_Id](Prj_Project_Risk_Discussion.md#contributed_by_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +138,9 @@ The user, who contributed (wrote) the message.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Contribution_Time
-
-
-Contribution_Time
-
-
-The time, when the message was contributed.
 
 
 The time, when the message was contributed.
@@ -170,9 +154,8 @@ The time, when the message was contributed.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Prj_Project_Risk_Discussion](Prj_Project_Risk_Discussion.md).[Contribution_Time](Prj_Project_Risk_Discussion.md#contribution_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,31 +178,24 @@ The time, when the message was contributed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Message
-
-
-Message
-
-
-The contents of the message.
 
 
 The contents of the message.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|no|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prj_Project_Risk_Discussion](Prj_Project_Risk_Discussion.md).[Message](Prj_Project_Risk_Discussion.md#message)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,12 +217,6 @@ The contents of the message.
 ### Last_Edit_Time
 
 
-Last_Edit_Time
-
-
-Contains the last edit time of the message. NULL if the message was never edited
-
-
 Contains the last edit time of the message. NULL if the message was never edited
 
 | Property | Value |
@@ -258,9 +228,8 @@ Contains the last edit time of the message. NULL if the message was never edited
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Risk_Discussion](Prj_Project_Risk_Discussion.md).[Last_Edit_Time](Prj_Project_Risk_Discussion.md#last_edit_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -283,12 +252,9 @@ Contains the last edit time of the message. NULL if the message was never edited
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -298,9 +264,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Risk_Discussion](Prj_Project_Risk_Discussion.md).[Row_Version](Prj_Project_Risk_Discussion.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

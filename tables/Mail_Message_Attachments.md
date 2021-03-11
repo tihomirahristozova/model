@@ -1,5 +1,10 @@
 # Table Mail_Message_Attachments
 
+
+## Entity
+
+Entity: [Applications.Mail.MessageAttachments](~/entities/Applications.Mail.MessageAttachments.md)
+
 Represents attachments to mail messages. Entity: Mail_Message_Attachments
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Represents attachments to mail messages. Entity: Mail_Message_Attachments
 
 ### Mail_Message_Attachment_Id
 
-
-Mail_Message_Attachment_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Mail_Message_Attachment_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Mail_Message_Attachments](Mail_Message_Attachments.md).[Mail_Message_Attachment_Id](Mail_Message_Attachments.md#mail_message_attachment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,12 +62,9 @@ Mail_Message_Attachment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Mail_Message_Id
-
-
-Mail_Message_Id
 
 | Property | Value |
 | - | - |
@@ -77,9 +75,8 @@ Mail_Message_Id
 |Referenced Table|[Mail_Messages](Mail_Messages.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Message_Attachments](Mail_Message_Attachments.md).[Mail_Message_Id](Mail_Message_Attachments.md#mail_message_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,12 +99,9 @@ Mail_Message_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Name
-
-
-Name
 
 | Property | Value |
 | - | - |
@@ -118,9 +112,8 @@ Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Message_Attachments](Mail_Message_Attachments.md).[Name](Mail_Message_Attachments.md#name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -143,16 +136,10 @@ Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Content_Descriptors
-
-
-Content_Descriptors
-
-
-Content flags, like "Content-Type: text/plain; charset=utf-8"
 
 
 Content flags, like "Content-Type: text/plain; charset=utf-8"
@@ -166,9 +153,8 @@ Content flags, like "Content-Type: text/plain; charset=utf-8"
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Message_Attachments](Mail_Message_Attachments.md).[Content_Descriptors](Mail_Message_Attachments.md#content_descriptors)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,12 +176,6 @@ Content flags, like "Content-Type: text/plain; charset=utf-8"
 ### Attachment_Content
 
 
-Attachment_Content
-
-
-The actual content of the attachment. NULL when the content is not downloaded or is unknown for some other reason
-
-
 The actual content of the attachment. NULL when the content is not downloaded or is unknown for some other reason
 
 | Property | Value |
@@ -206,9 +186,8 @@ The actual content of the attachment. NULL when the content is not downloaded or
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Message_Attachments](Mail_Message_Attachments.md).[Attachment_Content](Mail_Message_Attachments.md#attachment_content)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,12 +209,6 @@ The actual content of the attachment. NULL when the content is not downloaded or
 ### Content_Downloaded
 
 
-Content_Downloaded
-
-
-1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail
-
-
 1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail
 
 | Property | Value |
@@ -246,9 +219,8 @@ Content_Downloaded
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Mail_Message_Attachments](Mail_Message_Attachments.md).[Content_Downloaded](Mail_Message_Attachments.md#content_downloaded)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -271,12 +243,9 @@ Content_Downloaded
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -286,9 +255,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Message_Attachments](Mail_Message_Attachments.md).[Row_Version](Mail_Message_Attachments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

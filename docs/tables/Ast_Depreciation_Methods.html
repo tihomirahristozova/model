@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-ast_depreciation_methods">Table Ast_Depreciation_Methods</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Assets.DepreciationMethods.html">Finance.Assets.DepreciationMethods</a></p>
 <p>Depreciation methods. Contains both system-defined and user-defined methods. Entity: Ast_Depreciation_Methods</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="depreciation_method_id">Depreciation_Method_Id</h3>
-<p>Depreciation_Method_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#depreciation_method_id">Depreciation_Method_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,14 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="depreciation_method_name">Depreciation_Method_Name</h3>
-<p>Depreciation_Method_Name</p>
 <table>
 <thead>
 <tr>
@@ -317,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#depreciation_method_name">Depreciation_Method_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -417,8 +409,6 @@
 </tbody>
 </table>
 <h3 id="depreciation_function">Depreciation_Function</h3>
-<p>Depreciation_Function</p>
-<p>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table</p>
 <p>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table</p>
 <table>
 <thead>
@@ -458,7 +448,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -467,10 +457,6 @@
 <tr>
 <td>Default Value</td>
 <td>STL</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#depreciation_function">Depreciation_Function</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -543,8 +529,6 @@
 </tbody>
 </table>
 <h3 id="factor">Factor</h3>
-<p>Factor</p>
-<p>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor</p>
 <p>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor</p>
 <table>
 <thead>
@@ -580,15 +564,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#factor">Factor</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -661,8 +641,6 @@
 </tbody>
 </table>
 <h3 id="months_in_a_period">Months_In_A_Period</h3>
-<p>Months_In_A_Period</p>
-<p>Number of equal valued months calculated with single application of the function</p>
 <p>Number of equal valued months calculated with single application of the function</p>
 <table>
 <thead>
@@ -698,15 +676,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>12</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#months_in_a_period">Months_In_A_Period</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -779,8 +753,6 @@
 </tbody>
 </table>
 <h3 id="start_from_next_month">Start_From_Next_Month</h3>
-<p>Start_From_Next_Month</p>
-<p>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.</p>
 <p>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.</p>
 <table>
 <thead>
@@ -816,15 +788,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#start_from_next_month">Start_From_Next_Month</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -897,8 +865,6 @@
 </tbody>
 </table>
 <h3 id="is_system">Is_System</h3>
-<p>Is_System</p>
-<p>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.</p>
 <p>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.</p>
 <table>
 <thead>
@@ -934,15 +900,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#is_system">Is_System</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1027,15 +989,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="period_determination_method">Period_Determination_Method</h3>
-<p>Period_Determination_Method</p>
-<p>Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days</p>
 <p>Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days</p>
 <table>
 <thead>
@@ -1075,7 +1035,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1084,10 +1044,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#period_determination_method">Period_Determination_Method</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1160,7 +1116,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1195,15 +1150,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ast_Depreciation_Methods.html">Ast_Depreciation_Methods</a>.<a href="Ast_Depreciation_Methods.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

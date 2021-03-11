@@ -1,5 +1,10 @@
 # Table Acc_Vouchers
 
+
+## Entity
+
+Entity: [Finance.Accounting.AccountingVouchers](~/entities/Finance.Accounting.AccountingVouchers.md)
+
 Contains the accounting vouchers (postings) in the general ledger. Entity: Acc_Vouchers
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains the accounting vouchers (postings) in the general ledger. Entity: Acc_V
 
 ### Voucher_Id
 
-
-Voucher_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Voucher_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Vouchers](Acc_Vouchers.md).[Voucher_Id](Acc_Vouchers.md#voucher_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Voucher_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Vouchers](Acc_Vouchers.md).[Document_Id](Acc_Vouchers.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,12 +97,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Description
-
-
-Description
 
 | Property | Value |
 | - | - |
@@ -116,9 +110,8 @@ Description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Vouchers](Acc_Vouchers.md).[Description](Acc_Vouchers.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -140,12 +133,6 @@ Description
 ### Default_Referenced_Document_Id
 
 
-Default_Referenced_Document_Id
-
-
-Default for Referenced_Document_Id in the lines
-
-
 Default for Referenced_Document_Id in the lines
 
 | Property | Value |
@@ -157,9 +144,8 @@ Default for Referenced_Document_Id in the lines
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Vouchers](Acc_Vouchers.md).[Default_Referenced_Document_Id](Acc_Vouchers.md#default_referenced_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -182,17 +168,11 @@ Default for Referenced_Document_Id in the lines
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -203,9 +183,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Acc_Vouchers](Acc_Vouchers.md).[Is_Single_Execution](Acc_Vouchers.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -228,17 +207,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -249,9 +222,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Acc_Vouchers](Acc_Vouchers.md).[Is_Released](Acc_Vouchers.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -274,12 +246,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -289,9 +258,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Vouchers](Acc_Vouchers.md).[Row_Version](Acc_Vouchers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

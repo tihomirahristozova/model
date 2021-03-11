@@ -1,5 +1,10 @@
 # Table Inv_Reconciliations
 
+
+## Entity
+
+Entity: [Logistics.Inventory.Reconciliations](~/entities/Logistics.Inventory.Reconciliations.md)
+
 Store reconciliations (physical counting). Usefull for real-world reconciliations and for opening balance. Entity: Inv_Reconciliations
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Store reconciliations (physical counting). Usefull for real-world reconciliation
 
 ### Reconciliation_Id
 
-
-Reconciliation_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Reconciliation_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Reconciliation_Id](Inv_Reconciliations.md#reconciliation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,12 +62,9 @@ Reconciliation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -77,9 +75,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Document_Id](Inv_Reconciliations.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +99,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Store_Id
-
-
-Default_Store_Id
-
-
-Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.
 
 
 Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.
@@ -124,9 +115,8 @@ Default (but not mandatory) store for the lines. NULL means that the store shoul
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Default_Store_Id](Inv_Reconciliations.md#default_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,15 +139,9 @@ Default (but not mandatory) store for the lines. NULL means that the store shoul
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Default_Store_Bin_Id
-
-
-Default_Store_Bin_Id
-
-
-The default store bin for the lines. When null, lines can specify different bins.
 
 
 The default store bin for the lines. When null, lines can specify different bins.
@@ -171,9 +155,8 @@ The default store bin for the lines. When null, lines can specify different bins
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Default_Store_Bin_Id](Inv_Reconciliations.md#default_store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,15 +179,9 @@ The default store bin for the lines. When null, lines can specify different bins
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Default_Product_Group_Id
-
-
-Default_Product_Group_Id
-
-
-When not null is used to filter the product chooser for the lines.
 
 
 When not null is used to filter the product chooser for the lines.
@@ -218,9 +195,8 @@ When not null is used to filter the product chooser for the lines.
 |Referenced Table|[Gen_Product_Groups](Gen_Product_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Default_Product_Group_Id](Inv_Reconciliations.md#default_product_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,17 +219,11 @@ When not null is used to filter the product chooser for the lines.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -264,9 +234,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Is_Single_Execution](Inv_Reconciliations.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,17 +258,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -310,9 +273,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Is_Released](Inv_Reconciliations.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -335,12 +297,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Default_Valuation_Group_Id
-
-
-Default_Valuation_Group_Id
 
 | Property | Value |
 | - | - |
@@ -351,9 +310,8 @@ Default_Valuation_Group_Id
 |Referenced Table|[Inv_Product_Valuation_Groups](Inv_Product_Valuation_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Default_Valuation_Group_Id](Inv_Reconciliations.md#default_valuation_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -376,12 +334,9 @@ Default_Valuation_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -391,9 +346,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Reconciliations](Inv_Reconciliations.md).[Row_Version](Inv_Reconciliations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

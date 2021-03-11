@@ -1,5 +1,10 @@
 # Table Gen_Document_Type_Security_Conditions
 
+
+## Entity
+
+Entity: [General.DocumentTypeSecurityConditions](~/entities/General.DocumentTypeSecurityConditions.md)
+
 Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions
 
 ## Summary
@@ -8,7 +13,7 @@ Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_
 | - | - | --- |
 |[Document_Type_Security_Condition_Id](#document_type_security_condition_id)|`uniqueidentifier` `PK`||
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The document type, whose documents will be secured by the current rule.|
-|[Condition_Filter_Xml](#condition_filter_xml)|`nvarchar(2147483647)` |Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.|
+|[Condition_Filter_Xml](#condition_filter_xml)|`nvarchar(max)` |Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.|
 |[Priority](#priority)|`tinyint` Allowed: `1`, `2`, `3`, `4`, `5`|Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.|
 |[Document_Access_Key_Id](#document_access_key_id)|`uniqueidentifier` |The access key, which will be used to secure new documents, when this rule is selected.|
 |[Description](#description)|`nvarchar(254)` ||
@@ -17,9 +22,6 @@ Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_
 ## Columns
 
 ### Document_Type_Security_Condition_Id
-
-
-Document_Type_Security_Condition_Id
 
 | Property | Value |
 | - | - |
@@ -30,9 +32,8 @@ Document_Type_Security_Condition_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Type_Security_Conditions](Gen_Document_Type_Security_Conditions.md).[Document_Type_Security_Condition_Id](Gen_Document_Type_Security_Conditions.md#document_type_security_condition_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Document_Type_Security_Condition_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type, whose documents will be secured by the current rule.
 
 
 The document type, whose documents will be secured by the current rule.
@@ -77,9 +72,8 @@ The document type, whose documents will be secured by the current rule.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Security_Conditions](Gen_Document_Type_Security_Conditions.md).[Document_Type_Id](Gen_Document_Type_Security_Conditions.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,31 +96,24 @@ The document type, whose documents will be secured by the current rule.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Condition_Filter_Xml
-
-
-Condition_Filter_Xml
-
-
-Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.
 
 
 Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|no|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Security_Conditions](Gen_Document_Type_Security_Conditions.md).[Condition_Filter_Xml](Gen_Document_Type_Security_Conditions.md#condition_filter_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,12 +135,6 @@ Specifies the documents, for which the current rule is applicable. The XML filte
 ### Priority
 
 
-Priority
-
-
-Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.
-
-
 Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.
 
 | Property | Value |
@@ -164,10 +145,9 @@ Priority of the rule against other rules, which are also applicable. Only the hi
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`|
 |Default Value|3|
-|Derived From|[Gen_Document_Type_Security_Conditions](Gen_Document_Type_Security_Conditions.md).[Priority](Gen_Document_Type_Security_Conditions.md#priority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,12 +175,6 @@ Priority of the rule against other rules, which are also applicable. Only the hi
 ### Document_Access_Key_Id
 
 
-Document_Access_Key_Id
-
-
-The access key, which will be used to secure new documents, when this rule is selected.
-
-
 The access key, which will be used to secure new documents, when this rule is selected.
 
 | Property | Value |
@@ -212,9 +186,8 @@ The access key, which will be used to secure new documents, when this rule is se
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Security_Conditions](Gen_Document_Type_Security_Conditions.md).[Document_Access_Key_Id](Gen_Document_Type_Security_Conditions.md#document_access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,12 +210,9 @@ The access key, which will be used to secure new documents, when this rule is se
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Description
-
-
-Description
 
 | Property | Value |
 | - | - |
@@ -253,9 +223,8 @@ Description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Security_Conditions](Gen_Document_Type_Security_Conditions.md).[Description](Gen_Document_Type_Security_Conditions.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -278,13 +247,10 @@ Description
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -294,9 +260,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Type_Security_Conditions](Gen_Document_Type_Security_Conditions.md).[Row_Version](Gen_Document_Type_Security_Conditions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

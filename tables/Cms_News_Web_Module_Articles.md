@@ -1,5 +1,10 @@
 # Table Cms_News_Web_Module_Articles
 
+
+## Entity
+
+Entity: [Applications.Cms.NewsWebModuleArticles](~/entities/Applications.Cms.NewsWebModuleArticles.md)
+
 Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
 
 ## Summary
@@ -12,15 +17,12 @@ Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
 |[Is_Published](#is_published)|`bit` |Specifies whether the article is published for display on web.|
 |[Publish_Date](#publish_date)|`datetime` |The date and time when the news article should appear to be published.|
 |[Language_Code](#language_code)|`nvarchar(8)` |The language code of the article text.|
-|[Article_Text_Html](#article_text_html)|`nvarchar(2147483647)` |The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code.|
+|[Article_Text_Html](#article_text_html)|`nvarchar(max)` |The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### News_Web_Module_Article_Id
-
-
-News_Web_Module_Article_Id
 
 | Property | Value |
 | - | - |
@@ -31,9 +33,8 @@ News_Web_Module_Article_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cms_News_Web_Module_Articles](Cms_News_Web_Module_Articles.md).[News_Web_Module_Article_Id](Cms_News_Web_Module_Articles.md#news_web_module_article_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ News_Web_Module_Article_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### News_Web_Module_Id
-
-
-News_Web_Module_Id
-
-
-The News Web Module, to which the current article is added.
 
 
 The News Web Module, to which the current article is added.
@@ -78,9 +73,8 @@ The News Web Module, to which the current article is added.
 |Referenced Table|[Cms_News_Web_Modules](Cms_News_Web_Modules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_News_Web_Module_Articles](Cms_News_Web_Module_Articles.md).[News_Web_Module_Id](Cms_News_Web_Module_Articles.md#news_web_module_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +97,9 @@ The News Web Module, to which the current article is added.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Author_Public_User_Id
-
-
-Author_Public_User_Id
-
-
-The author of the news article.
 
 
 The author of the news article.
@@ -125,9 +113,8 @@ The author of the news article.
 |Referenced Table|[Ext_Public_Users](Ext_Public_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_News_Web_Module_Articles](Cms_News_Web_Module_Articles.md).[Author_Public_User_Id](Cms_News_Web_Module_Articles.md#author_public_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,15 +137,9 @@ The author of the news article.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Published
-
-
-Is_Published
-
-
-Specifies whether the article is published for display on web.
 
 
 Specifies whether the article is published for display on web.
@@ -171,9 +152,8 @@ Specifies whether the article is published for display on web.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cms_News_Web_Module_Articles](Cms_News_Web_Module_Articles.md).[Is_Published](Cms_News_Web_Module_Articles.md#is_published)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,12 +175,6 @@ Specifies whether the article is published for display on web.
 ### Publish_Date
 
 
-Publish_Date
-
-
-The date and time when the news article should appear to be published.
-
-
 The date and time when the news article should appear to be published.
 
 | Property | Value |
@@ -212,9 +186,8 @@ The date and time when the news article should appear to be published.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Cms_News_Web_Module_Articles](Cms_News_Web_Module_Articles.md).[Publish_Date](Cms_News_Web_Module_Articles.md#publish_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -236,12 +209,6 @@ The date and time when the news article should appear to be published.
 ### Language_Code
 
 
-Language_Code
-
-
-The language code of the article text.
-
-
 The language code of the article text.
 
 | Property | Value |
@@ -253,9 +220,8 @@ The language code of the article text.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_News_Web_Module_Articles](Cms_News_Web_Module_Articles.md).[Language_Code](Cms_News_Web_Module_Articles.md#language_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,26 +243,19 @@ The language code of the article text.
 ### Article_Text_Html
 
 
-Article_Text_Html
-
-
-The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code.
-
-
 The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_News_Web_Module_Articles](Cms_News_Web_Module_Articles.md).[Article_Text_Html](Cms_News_Web_Module_Articles.md#article_text_html)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -317,9 +276,6 @@ The actual article text, stored as Html. Only the <BODY> of the Html is stored. 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -328,9 +284,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_News_Web_Module_Articles](Cms_News_Web_Module_Articles.md).[Row_Version](Cms_News_Web_Module_Articles.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

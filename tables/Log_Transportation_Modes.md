@@ -1,5 +1,10 @@
 # Table Log_Transportation_Modes
 
+
+## Entity
+
+Entity: [Logistics.Shipment.TransportationModes](~/entities/Logistics.Shipment.TransportationModes.md)
+
 Represents a mode of transportation, like water, air, road, etc. Entity: Log_Transportation_Modes
 
 ## Summary
@@ -16,9 +21,6 @@ Represents a mode of transportation, like water, air, road, etc. Entity: Log_Tra
 
 ### Transportation_Mode_Id
 
-
-Transportation_Mode_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Transportation_Mode_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Transportation_Modes](Log_Transportation_Modes.md).[Transportation_Mode_Id](Log_Transportation_Modes.md#transportation_mode_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Transportation_Mode_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transportation_Mode_Code
-
-
-Transportation_Mode_Code
-
-
-Unique transportation mode code.
 
 
 Unique transportation mode code.
@@ -75,9 +70,8 @@ Unique transportation mode code.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Modes](Log_Transportation_Modes.md).[Transportation_Mode_Code](Log_Transportation_Modes.md#transportation_mode_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,16 +94,10 @@ Unique transportation mode code.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Transportation_Mode_Name
-
-
-Transportation_Mode_Name
-
-
-Multilanguage name of the mode of transportation.
 
 
 Multilanguage name of the mode of transportation.
@@ -123,9 +111,8 @@ Multilanguage name of the mode of transportation.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Modes](Log_Transportation_Modes.md).[Transportation_Mode_Name](Log_Transportation_Modes.md#transportation_mode_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,16 +135,10 @@ Multilanguage name of the mode of transportation.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### System_Icon
-
-
-System_Icon
-
-
-Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other.
 
 
 Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other.
@@ -171,9 +152,8 @@ Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=O
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|O|
-|Derived From|[Log_Transportation_Modes](Log_Transportation_Modes.md).[System_Icon](Log_Transportation_Modes.md#system_icon)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,9 +174,6 @@ Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=O
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -205,9 +182,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Modes](Log_Transportation_Modes.md).[Row_Version](Log_Transportation_Modes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

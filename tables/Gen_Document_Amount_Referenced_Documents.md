@@ -1,5 +1,10 @@
 # Table Gen_Document_Amount_Referenced_Documents
 
+
+## Entity
+
+Entity: [General.DocumentAmountReferencedDocuments](~/entities/General.DocumentAmountReferencedDocuments.md)
+
 Contains the documents which are referenced by each document amount. Entity: Gen_Document_Amount_Referenced_Documents
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ Contains the documents which are referenced by each document amount. Entity: Gen
 
 ### Document_Amount_Referenced_Document_Id
 
-
-Document_Amount_Referenced_Document_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Document_Amount_Referenced_Document_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Amount_Referenced_Documents](Gen_Document_Amount_Referenced_Documents.md).[Document_Amount_Referenced_Document_Id](Gen_Document_Amount_Referenced_Documents.md#document_amount_referenced_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Document_Amount_Referenced_Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Amount_Id
-
-
-Document_Amount_Id
-
-
-The document amount for which the referenced document is specified.
 
 
 The document amount for which the referenced document is specified.
@@ -78,9 +73,8 @@ The document amount for which the referenced document is specified.
 |Referenced Table|[Gen_Document_Amounts](Gen_Document_Amounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Referenced_Documents](Gen_Document_Amount_Referenced_Documents.md).[Document_Amount_Id](Gen_Document_Amount_Referenced_Documents.md#document_amount_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +97,9 @@ The document amount for which the referenced document is specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Referenced_Document_Id
-
-
-Referenced_Document_Id
-
-
-The document which is referenced by the document amount.
 
 
 The document which is referenced by the document amount.
@@ -125,9 +113,8 @@ The document which is referenced by the document amount.
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Referenced_Documents](Gen_Document_Amount_Referenced_Documents.md).[Referenced_Document_Id](Gen_Document_Amount_Referenced_Documents.md#referenced_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,12 +137,9 @@ The document which is referenced by the document amount.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -165,9 +149,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Referenced_Documents](Gen_Document_Amount_Referenced_Documents.md).[Row_Version](Gen_Document_Amount_Referenced_Documents.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Ext_Public_Users
 
+
+## Entity
+
+Entity: [Systems.External.PublicUsers](~/entities/Systems.External.PublicUsers.md)
+
 /Users of the publicly offered services. This includes Internet, external and employee users. Entity: Ext_Public_Users
 
 ## Summary
@@ -24,7 +29,7 @@
 |[Company_Name](#company_name)|`nvarchar(64)` |The name of the company, for which the user works, as specified by the user.|
 |[Company_Id](#company_id)|`uniqueidentifier` |Link to an internal company record, specified by internal employee.|
 |[Person_Id](#person_id)|`uniqueidentifier` |Link to an internal person record. Usually specified by internal employee, but can also be an automated process.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Profile_Picture](#profile_picture)|`varbinary` |Profile picture of the user.|
 |[About_Me_Text](#about_me_text)|`nvarchar(1024)` |About me text, written by the user.|
 |[Created_On](#created_on)|`datetime` |The date and time when the user was created.|
@@ -36,9 +41,6 @@
 
 ### Public_User_Id
 
-
-Public_User_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -48,9 +50,8 @@ Public_User_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Public_User_Id](Ext_Public_Users.md#public_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -73,15 +74,9 @@ Public_User_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Public_User_List_Id
-
-
-Public_User_List_Id
-
-
-The list in which the user account is saved.
 
 
 The list in which the user account is saved.
@@ -95,9 +90,8 @@ The list in which the user account is saved.
 |Referenced Table|[Ext_Public_User_Lists](Ext_Public_User_Lists.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Public_User_List_Id](Ext_Public_Users.md#public_user_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -120,15 +114,9 @@ The list in which the user account is saved.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### First_Name
-
-
-First_Name
-
-
-First name of the user.
 
 
 First name of the user.
@@ -142,9 +130,8 @@ First name of the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[First_Name](Ext_Public_Users.md#first_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -172,12 +159,6 @@ First name of the user.
 ### Last_Name
 
 
-Last_Name
-
-
-Last name of the user.
-
-
 Last name of the user.
 
 | Property | Value |
@@ -189,9 +170,8 @@ Last name of the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Last_Name](Ext_Public_Users.md#last_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -219,12 +199,6 @@ Last name of the user.
 ### Password_Algorithm
 
 
-Password_Algorithm
-
-
-Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'.
-
-
 Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'.
 
 | Property | Value |
@@ -236,9 +210,8 @@ Uniquely specifies the password storage algorithm among some system recognized a
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Password_Algorithm](Ext_Public_Users.md#password_algorithm)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -266,12 +239,6 @@ Uniquely specifies the password storage algorithm among some system recognized a
 ### Password_Hash
 
 
-Password_Hash
-
-
-Actual password storage. The format of the contents is determined by Password Algorithm.
-
-
 Actual password storage. The format of the contents is determined by Password Algorithm.
 
 | Property | Value |
@@ -283,9 +250,8 @@ Actual password storage. The format of the contents is determined by Password Al
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Password_Hash](Ext_Public_Users.md#password_hash)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -313,12 +279,6 @@ Actual password storage. The format of the contents is determined by Password Al
 ### Is_Active
 
 
-Is_Active
-
-
-Specifies whether the user account is active and access should be allowed.
-
-
 Specifies whether the user account is active and access should be allowed.
 
 | Property | Value |
@@ -329,9 +289,8 @@ Specifies whether the user account is active and access should be allowed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Is_Active](Ext_Public_Users.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -354,15 +313,9 @@ Specifies whether the user account is active and access should be allowed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Email
-
-
-Email
-
-
-The primary email of the user. Used for notifications and password restore.
 
 
 The primary email of the user. Used for notifications and password restore.
@@ -376,9 +329,8 @@ The primary email of the user. Used for notifications and password restore.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Email](Ext_Public_Users.md#email)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -406,12 +358,6 @@ The primary email of the user. Used for notifications and password restore.
 ### Alternate_Email
 
 
-Alternate_Email
-
-
-Alternate email of the user. Can be used for backup email for password restore.
-
-
 Alternate email of the user. Can be used for backup email for password restore.
 
 | Property | Value |
@@ -423,9 +369,8 @@ Alternate email of the user. Can be used for backup email for password restore.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Alternate_Email](Ext_Public_Users.md#alternate_email)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -453,12 +398,6 @@ Alternate email of the user. Can be used for backup email for password restore.
 ### Country
 
 
-Country
-
-
-The country of residence of the user, with latin letters.
-
-
 The country of residence of the user, with latin letters.
 
 | Property | Value |
@@ -470,9 +409,8 @@ The country of residence of the user, with latin letters.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Country](Ext_Public_Users.md#country)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -500,12 +438,6 @@ The country of residence of the user, with latin letters.
 ### State
 
 
-State
-
-
-The state of residence of the user within the country. Can be specified with latin or local characters.
-
-
 The state of residence of the user within the country. Can be specified with latin or local characters.
 
 | Property | Value |
@@ -517,9 +449,8 @@ The state of residence of the user within the country. Can be specified with lat
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[State](Ext_Public_Users.md#state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -547,12 +478,6 @@ The state of residence of the user within the country. Can be specified with lat
 ### City
 
 
-City
-
-
-The state of residence of the user. Can be specified with latin or local letters.
-
-
 The state of residence of the user. Can be specified with latin or local letters.
 
 | Property | Value |
@@ -564,9 +489,8 @@ The state of residence of the user. Can be specified with latin or local letters
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[City](Ext_Public_Users.md#city)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -594,12 +518,6 @@ The state of residence of the user. Can be specified with latin or local letters
 ### Address
 
 
-Address
-
-
-The primary address of the user. Can be specified with latin or local characters.
-
-
 The primary address of the user. Can be specified with latin or local characters.
 
 | Property | Value |
@@ -611,9 +529,8 @@ The primary address of the user. Can be specified with latin or local characters
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Address](Ext_Public_Users.md#address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -641,12 +558,6 @@ The primary address of the user. Can be specified with latin or local characters
 ### Postal_Code
 
 
-Postal_Code
-
-
-The postal code of the default address of the user.
-
-
 The postal code of the default address of the user.
 
 | Property | Value |
@@ -658,9 +569,8 @@ The postal code of the default address of the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Postal_Code](Ext_Public_Users.md#postal_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -688,12 +598,6 @@ The postal code of the default address of the user.
 ### Phone_Number
 
 
-Phone_Number
-
-
-The primary phone number of the user.
-
-
 The primary phone number of the user.
 
 | Property | Value |
@@ -705,9 +609,8 @@ The primary phone number of the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Phone_Number](Ext_Public_Users.md#phone_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -735,12 +638,6 @@ The primary phone number of the user.
 ### Company_Name
 
 
-Company_Name
-
-
-The name of the company, for which the user works, as specified by the user.
-
-
 The name of the company, for which the user works, as specified by the user.
 
 | Property | Value |
@@ -752,9 +649,8 @@ The name of the company, for which the user works, as specified by the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Company_Name](Ext_Public_Users.md#company_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -782,12 +678,6 @@ The name of the company, for which the user works, as specified by the user.
 ### Company_Id
 
 
-Company_Id
-
-
-Link to an internal company record, specified by internal employee.
-
-
 Link to an internal company record, specified by internal employee.
 
 | Property | Value |
@@ -799,9 +689,8 @@ Link to an internal company record, specified by internal employee.
 |Referenced Table|[Cm_Companies](Cm_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Company_Id](Ext_Public_Users.md#company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -824,15 +713,9 @@ Link to an internal company record, specified by internal employee.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Person_Id
-
-
-Person_Id
-
-
-Link to an internal person record. Usually specified by internal employee, but can also be an automated process.
 
 
 Link to an internal person record. Usually specified by internal employee, but can also be an automated process.
@@ -846,9 +729,8 @@ Link to an internal person record. Usually specified by internal employee, but c
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Person_Id](Ext_Public_Users.md#person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -871,25 +753,21 @@ Link to an internal person record. Usually specified by internal employee, but c
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Notes](Ext_Public_Users.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -911,12 +789,6 @@ Notes
 ### Profile_Picture
 
 
-Profile_Picture
-
-
-Profile picture of the user.
-
-
 Profile picture of the user.
 
 | Property | Value |
@@ -927,9 +799,8 @@ Profile picture of the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Profile_Picture](Ext_Public_Users.md#profile_picture)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -951,12 +822,6 @@ Profile picture of the user.
 ### About_Me_Text
 
 
-About_Me_Text
-
-
-About me text, written by the user.
-
-
 About me text, written by the user.
 
 | Property | Value |
@@ -968,9 +833,8 @@ About me text, written by the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[About_Me_Text](Ext_Public_Users.md#about_me_text)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -992,12 +856,6 @@ About me text, written by the user.
 ### Created_On
 
 
-Created_On
-
-
-The date and time when the user was created.
-
-
 The date and time when the user was created.
 
 | Property | Value |
@@ -1009,9 +867,8 @@ The date and time when the user was created.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Created_On](Ext_Public_Users.md#created_on)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1032,9 +889,6 @@ The date and time when the user was created.
 
 ### Password_Recovery_Code
 
-
-Password_Recovery_Code
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -1043,9 +897,8 @@ Password_Recovery_Code
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Password_Recovery_Code](Ext_Public_Users.md#password_recovery_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1068,12 +921,9 @@ Password_Recovery_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Password_Recovery_Creation_Time
-
-
-Password_Recovery_Creation_Time
 
 | Property | Value |
 | - | - |
@@ -1084,9 +934,8 @@ Password_Recovery_Creation_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Password_Recovery_Creation_Time](Ext_Public_Users.md#password_recovery_creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1107,9 +956,6 @@ Password_Recovery_Creation_Time
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -1118,9 +964,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_Users](Ext_Public_Users.md).[Row_Version](Ext_Public_Users.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Prd_Resource_Functions
 
+
+## Entity
+
+Entity: [Production.Resources.ResourceFunctions](~/entities/Production.Resources.ResourceFunctions.md)
+
 List of functions that a specific resource is able to perform. Entity: Prd_Resource_Functions
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ List of functions that a specific resource is able to perform. Entity: Prd_Resou
 
 ### Resource_Function_Id
 
-
-Resource_Function_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Resource_Function_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Resource_Functions](Prd_Resource_Functions.md).[Resource_Function_Id](Prd_Resource_Functions.md#resource_function_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Resource_Function_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Id
-
-
-Resource_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Resource_Id
 |Referenced Table|[Prd_Resources](Prd_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resource_Functions](Prd_Resource_Functions.md).[Resource_Id](Prd_Resource_Functions.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,12 +96,9 @@ Resource_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Function_Id
-
-
-Function_Id
 
 | Property | Value |
 | - | - |
@@ -115,9 +109,8 @@ Function_Id
 |Referenced Table|[Prd_Functions](Prd_Functions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resource_Functions](Prd_Resource_Functions.md).[Function_Id](Prd_Resource_Functions.md#function_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -140,15 +133,9 @@ Function_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
-
-
-User notes on the resource function
 
 
 User notes on the resource function
@@ -162,9 +149,8 @@ User notes on the resource function
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Resource_Functions](Prd_Resource_Functions.md).[Notes](Prd_Resource_Functions.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -185,9 +171,6 @@ User notes on the resource function
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -196,9 +179,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Resource_Functions](Prd_Resource_Functions.md).[Row_Version](Prd_Resource_Functions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

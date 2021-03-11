@@ -29,9 +29,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -41,9 +38,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Id](Prd_Production_Schedule.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,15 +62,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The document Id of the base order for this MPS entry
 
 
 The document Id of the base order for this MPS entry
@@ -88,9 +78,8 @@ The document Id of the base order for this MPS entry
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Document_Id](Prd_Production_Schedule.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,15 +102,9 @@ The document Id of the base order for this MPS entry
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Workgroup_Id
-
-
-Workgroup_Id
-
-
-The workgroup, which is scheduled
 
 
 The workgroup, which is scheduled
@@ -135,9 +118,8 @@ The workgroup, which is scheduled
 |Referenced Table|[Prd_Workgroups](Prd_Workgroups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Workgroup_Id](Prd_Production_Schedule.md#workgroup_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -160,15 +142,9 @@ The workgroup, which is scheduled
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The item that is scheduled for production
 
 
 The item that is scheduled for production
@@ -182,9 +158,8 @@ The item that is scheduled for production
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Product_Id](Prd_Production_Schedule.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -207,15 +182,9 @@ The item that is scheduled for production
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The quantity that should be produced
 
 
 The quantity that should be produced
@@ -228,9 +197,8 @@ The quantity that should be produced
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Quantity](Prd_Production_Schedule.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -252,12 +220,6 @@ The quantity that should be produced
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity
-
-
 The measurement unit of Quantity
 
 | Property | Value |
@@ -269,9 +231,8 @@ The measurement unit of Quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Quantity_Unit_Id](Prd_Production_Schedule.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -294,15 +255,9 @@ The measurement unit of Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Need_Date
-
-
-Need_Date
-
-
-The date, when the item should be ready for shipment
 
 
 The date, when the item should be ready for shipment
@@ -316,9 +271,8 @@ The date, when the item should be ready for shipment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Need_Date](Prd_Production_Schedule.md#need_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -340,12 +294,6 @@ The date, when the item should be ready for shipment
 ### Notes
 
 
-Notes
-
-
-Short note from the scheduler
-
-
 Short note from the scheduler
 
 | Property | Value |
@@ -357,9 +305,8 @@ Short note from the scheduler
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Notes](Prd_Production_Schedule.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -380,9 +327,6 @@ Short note from the scheduler
 
 ### Customer_Name_Temp
 
-
-Customer_Name_Temp
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -392,9 +336,8 @@ Customer_Name_Temp
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Customer_Name_Temp](Prd_Production_Schedule.md#customer_name_temp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -415,9 +358,6 @@ Customer_Name_Temp
 
 ### Order_Number_Temp
 
-
-Order_Number_Temp
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(16)|
@@ -427,9 +367,8 @@ Order_Number_Temp
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Order_Number_Temp](Prd_Production_Schedule.md#order_number_temp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -450,9 +389,6 @@ Order_Number_Temp
 
 ### Order_Date_Temp
 
-
-Order_Date_Temp
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -462,9 +398,8 @@ Order_Date_Temp
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Order_Date_Temp](Prd_Production_Schedule.md#order_date_temp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -486,12 +421,6 @@ Order_Date_Temp
 ### Status
 
 
-Status
-
-
-P=Planned; R=Released to manufacturing (e.g. history record)
-
-
 P=Planned; R=Released to manufacturing (e.g. history record)
 
 | Property | Value |
@@ -503,9 +432,8 @@ P=Planned; R=Released to manufacturing (e.g. history record)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|P|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Status](Prd_Production_Schedule.md#status)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -527,12 +455,6 @@ P=Planned; R=Released to manufacturing (e.g. history record)
 ### Schedule_Basis
 
 
-Schedule_Basis
-
-
-M=MPS; F=FAS
-
-
 M=MPS; F=FAS
 
 | Property | Value |
@@ -544,9 +466,8 @@ M=MPS; F=FAS
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|M|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Schedule_Basis](Prd_Production_Schedule.md#schedule_basis)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -568,12 +489,6 @@ M=MPS; F=FAS
 ### Store_Id
 
 
-Store_Id
-
-
-The store where the product must be finished
-
-
 The store where the product must be finished
 
 | Property | Value |
@@ -585,9 +500,8 @@ The store where the product must be finished
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Store_Id](Prd_Production_Schedule.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -610,12 +524,9 @@ The store where the product must be finished
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -625,9 +536,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Production_Schedule](Prd_Production_Schedule.md).[Row_Version](Prd_Production_Schedule.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

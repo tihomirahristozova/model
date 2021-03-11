@@ -1,5 +1,10 @@
 # Table Prd_Operation_Groups
 
+
+## Entity
+
+Entity: [Production.Resources.OperationGroups](~/entities/Production.Resources.OperationGroups.md)
+
 Groups of operations. Entity: Prd_Operation_Groups
 
 ## Summary
@@ -16,9 +21,6 @@ Groups of operations. Entity: Prd_Operation_Groups
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Operation_Groups](Prd_Operation_Groups.md).[Id](Prd_Operation_Groups.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent
-
-
-Parent
-
-
-Path of parent group
 
 
 Path of parent group
@@ -75,9 +70,8 @@ Path of parent group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|/|
-|Derived From|[Prd_Operation_Groups](Prd_Operation_Groups.md).[Parent](Prd_Operation_Groups.md#parent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,9 +98,6 @@ Path of parent group
 
 ### Operation_Group_Name
 
-
-Operation_Group_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -116,9 +107,8 @@ Operation_Group_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operation_Groups](Prd_Operation_Groups.md).[Operation_Group_Name](Prd_Operation_Groups.md#operation_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +136,6 @@ Operation_Group_Name
 ### Full_Path
 
 
-Full_Path
-
-
-The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character.
-
-
 The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character.
 
 | Property | Value |
@@ -163,9 +147,8 @@ The full path to the operation group. The full path starts with, ends with and i
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value||
-|Derived From|[Prd_Operation_Groups](Prd_Operation_Groups.md).[Full_Path](Prd_Operation_Groups.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,9 +175,6 @@ The full path to the operation group. The full path starts with, ends with and i
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -203,9 +183,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operation_Groups](Prd_Operation_Groups.md).[Row_Version](Prd_Operation_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

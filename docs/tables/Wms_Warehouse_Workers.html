@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-wms_warehouse_workers">Table Wms_Warehouse_Workers</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Wms.WarehouseWorkers.html">Logistics.Wms.WarehouseWorkers</a></p>
 <p>Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -116,7 +118,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="warehouse_worker_id">Warehouse_Worker_Id</h3>
-<p>Warehouse_Worker_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#warehouse_worker_id">Warehouse_Worker_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,15 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_id">Warehouse_Id</h3>
-<p>Warehouse_Id</p>
-<p>The warehouse, where the worker works.</p>
 <p>The warehouse, where the worker works.</p>
 <table>
 <thead>
@@ -323,15 +318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#warehouse_id">Warehouse_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -416,15 +407,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_worker_name">Warehouse_Worker_Name</h3>
-<p>Warehouse_Worker_Name</p>
-<p>Name of the worker (multi-language).</p>
 <p>Name of the worker (multi-language).</p>
 <table>
 <thead>
@@ -464,15 +453,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#warehouse_worker_name">Warehouse_Worker_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -557,7 +542,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -570,8 +555,6 @@
 </tbody>
 </table>
 <h3 id="person_id">Person_Id</h3>
-<p>Person_Id</p>
-<p>The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person.</p>
 <p>The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person.</p>
 <table>
 <thead>
@@ -611,15 +594,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#person_id">Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -704,14 +683,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -722,7 +700,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -750,15 +728,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -831,7 +805,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -866,15 +839,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -947,8 +916,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Specifies whether the worker is active and can execute new warehouse tasks.</p>
 <p>Specifies whether the worker is active and can execute new warehouse tasks.</p>
 <table>
 <thead>
@@ -984,15 +951,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1077,15 +1040,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="active_from">Active_From</h3>
-<p>Active_From</p>
-<p>The date, from which the worker record has become active in the warehouse.</p>
 <p>The date, from which the worker record has become active in the warehouse.</p>
 <table>
 <thead>
@@ -1125,15 +1086,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDate</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#active_from">Active_From</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1218,7 +1175,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1231,8 +1188,6 @@
 </tbody>
 </table>
 <h3 id="active_to">Active_To</h3>
-<p>Active_To</p>
-<p>The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.</p>
 <p>The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.</p>
 <table>
 <thead>
@@ -1272,15 +1227,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Workers.html">Wms_Warehouse_Workers</a>.<a href="Wms_Warehouse_Workers.html#active_to">Active_To</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1365,7 +1316,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

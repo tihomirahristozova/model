@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-acc_template_lines">Table Acc_Template_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Accounting.TemplateLines.html">Finance.Accounting.TemplateLines</a></p>
 <p>Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -185,8 +187,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Consecutive number of the line within the template. Determines the order of execution of the template lines.</p>
 <p>Consecutive number of the line within the template. Determines the order of execution of the template lines.</p>
 <table>
 <thead>
@@ -222,7 +222,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -231,10 +231,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -307,8 +303,6 @@
 </tbody>
 </table>
 <h3 id="filter_xml">Filter_XML</h3>
-<p>Filter_XML</p>
-<p>The line is accounted only when the filter is satisfied compared with the source document header</p>
 <p>The line is accounted only when the filter is satisfied compared with the source document header</p>
 <table>
 <thead>
@@ -348,15 +342,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#filter_xml">Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -429,8 +419,6 @@
 </tbody>
 </table>
 <h3 id="debit_account_id">Debit_Account_Id</h3>
-<p>Debit_Account_Id</p>
-<p>The account which should be debited</p>
 <p>The account which should be debited</p>
 <table>
 <thead>
@@ -470,15 +458,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#debit_account_id">Debit_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -563,15 +547,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="credit_account_id">Credit_Account_Id</h3>
-<p>Credit_Account_Id</p>
-<p>The account which should be credited</p>
 <p>The account which should be credited</p>
 <table>
 <thead>
@@ -611,15 +593,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#credit_account_id">Credit_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -704,15 +682,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="amount_source_name">Amount_Source_Name</h3>
-<p>Amount_Source_Name</p>
-<p>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.</p>
 <p>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.</p>
 <table>
 <thead>
@@ -752,15 +728,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#amount_source_name">Amount_Source_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -833,8 +805,6 @@
 </tbody>
 </table>
 <h3 id="amount_row_id">Amount_Row_Id</h3>
-<p>Amount_Row_Id</p>
-<p>The id of the row from the amount rowset where the amount is located. NULL means to account one by one for all rows within the rowset</p>
 <p>The id of the row from the amount rowset where the amount is located. NULL means to account one by one for all rows within the rowset</p>
 <table>
 <thead>
@@ -870,15 +840,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#amount_row_id">Amount_Row_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -963,15 +929,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="amount_row_name">Amount_Row_Name</h3>
-<p>Amount_Row_Name</p>
-<p>The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Row_Id is specified or there is no name</p>
 <p>The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Row_Id is specified or there is no name</p>
 <table>
 <thead>
@@ -1011,15 +975,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#amount_row_name">Amount_Row_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1092,8 +1052,6 @@
 </tbody>
 </table>
 <h3 id="amount_source_filter">Amount_Source_Filter</h3>
-<p>Amount_Source_Filter</p>
-<p>Filter that further specifies which rows from the amount rowset determine the amount</p>
 <p>Filter that further specifies which rows from the amount rowset determine the amount</p>
 <table>
 <thead>
@@ -1133,15 +1091,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#amount_source_filter">Amount_Source_Filter</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1214,8 +1168,6 @@
 </tbody>
 </table>
 <h3 id="amount_column_name">Amount_Column_Name</h3>
-<p>Amount_Column_Name</p>
-<p>The name of the column within the amount rowset where the amount is located</p>
 <p>The name of the column within the amount rowset where the amount is located</p>
 <table>
 <thead>
@@ -1255,15 +1207,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#amount_column_name">Amount_Column_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1336,8 +1284,6 @@
 </tbody>
 </table>
 <h3 id="multiplier">Multiplier</h3>
-<p>Multiplier</p>
-<p>Factor by which the amount from the source will be multiplied</p>
 <p>Factor by which the amount from the source will be multiplied</p>
 <table>
 <thead>
@@ -1373,15 +1319,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#multiplier">Multiplier</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1454,8 +1396,6 @@
 </tbody>
 </table>
 <h3 id="valid_from_date">Valid_From_Date</h3>
-<p>Valid_From_Date</p>
-<p>Start date from which the accounting template line is valid</p>
 <p>Start date from which the accounting template line is valid</p>
 <table>
 <thead>
@@ -1495,15 +1435,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#valid_from_date">Valid_From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1588,7 +1524,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1601,8 +1537,6 @@
 </tbody>
 </table>
 <h3 id="amount_condition">Amount_Condition</h3>
-<p>Amount_Condition</p>
-<p>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</p>
 <p>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</p>
 <table>
 <thead>
@@ -1642,7 +1576,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1651,10 +1585,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#amount_condition">Amount_Condition</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1727,7 +1657,6 @@
 </tbody>
 </table>
 <h3 id="template_line_id">Template_Line_Id</h3>
-<p>Template_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -1766,15 +1695,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#template_line_id">Template_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1859,15 +1784,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="valid_to_date">Valid_To_Date</h3>
-<p>Valid_To_Date</p>
-<p>End date to which the accounting template line is valid</p>
 <p>End date to which the accounting template line is valid</p>
 <table>
 <thead>
@@ -1907,15 +1830,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#valid_to_date">Valid_To_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2000,7 +1919,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2013,7 +1932,6 @@
 </tbody>
 </table>
 <h3 id="template_id">Template_Id</h3>
-<p>Template_Id</p>
 <table>
 <thead>
 <tr>
@@ -2052,15 +1970,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#template_id">Template_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2145,14 +2059,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2191,15 +2104,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2272,7 +2181,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2307,15 +2215,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Template_Lines.html">Acc_Template_Lines</a>.<a href="Acc_Template_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

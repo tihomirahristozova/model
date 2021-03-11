@@ -1,5 +1,10 @@
 # Table Bpm_Processes
 
+
+## Entity
+
+Entity: [Systems.Bpm.Processes](~/entities/Systems.Bpm.Processes.md)
+
 Represents one business process version. All process model elements and execution instances are bound to specfic process version. Entity: Bpm_Processes
 
 ## Summary
@@ -13,15 +18,12 @@ Represents one business process version. All process model elements and executio
 |[Locality](#locality)|`nvarchar(1)` Allowed: `P`, `L`, `C`, `I`|Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.|
 |[Is_Executable](#is_executable)|`bit` |Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed.|
 |[Is_Published](#is_published)|`bit` |Specifies whether the process is currently published for new instances.|
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Process_Id
-
-
-Process_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Process_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Process_Id](Bpm_Processes.md#process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Process_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Code
-
-
-Process_Code
-
-
-Unique process code.
 
 
 Unique process code.
@@ -79,9 +74,8 @@ Unique process code.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Process_Code](Bpm_Processes.md#process_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,12 +98,9 @@ Unique process code.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Name
-
-
-Process_Name
 
 | Property | Value |
 | - | - |
@@ -120,9 +111,8 @@ Process_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Process_Name](Bpm_Processes.md#process_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,16 +135,10 @@ Process_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Process_Group_Id
-
-
-Process_Group_Id
-
-
-The process group, to which this process belongs.
 
 
 The process group, to which this process belongs.
@@ -168,9 +152,8 @@ The process group, to which this process belongs.
 |Referenced Table|[Bpm_Process_Groups](Bpm_Process_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Process_Group_Id](Bpm_Processes.md#process_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,15 +176,9 @@ The process group, to which this process belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Locality
-
-
-Locality
-
-
-Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.
 
 
 Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.
@@ -215,10 +192,9 @@ Process execution locality. Represents where the execution takes place and influ
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`P`, `L`, `C`, `I`|
 |Default Value|L|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Locality](Bpm_Processes.md#locality)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,12 +222,6 @@ Process execution locality. Represents where the execution takes place and influ
 ### Is_Executable
 
 
-Is_Executable
-
-
-Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed.
-
-
 Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed.
 
 | Property | Value |
@@ -262,9 +232,8 @@ Specifies whether the process is executable. In order to be executable, a proces
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Is_Executable](Bpm_Processes.md#is_executable)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -287,17 +256,11 @@ Specifies whether the process is executable. In order to be executable, a proces
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Published
 
 
-Is_Published
-
-
-Specifies whether the process is currently published for new instances.
-
-
 Specifies whether the process is currently published for new instances.
 
 | Property | Value |
@@ -308,9 +271,8 @@ Specifies whether the process is currently published for new instances.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Is_Published](Bpm_Processes.md#is_published)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -333,25 +295,21 @@ Specifies whether the process is currently published for new instances.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Description](Bpm_Processes.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -374,13 +332,10 @@ Description
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -390,9 +345,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Processes](Bpm_Processes.md).[Row_Version](Bpm_Processes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

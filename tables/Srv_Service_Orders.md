@@ -1,5 +1,10 @@
 # Table Srv_Service_Orders
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceOrders](~/entities/Applications.Service.ServiceOrders.md)
+
 Service Orders are issued when a new servicing is required. Entity: Srv_Service_Orders
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Service Orders are issued when a new servicing is required. Entity: Srv_Service_
 
 ### Service_Order_Id
 
-
-Service_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Service_Order_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Service_Order_Id](Srv_Service_Orders.md#service_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,12 +62,9 @@ Service_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -77,9 +75,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Document_Id](Srv_Service_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +99,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Customer_Id
-
-
-Customer_Id
-
-
-The client, requesting servicing.
 
 
 The client, requesting servicing.
@@ -124,9 +115,8 @@ The client, requesting servicing.
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Customer_Id](Srv_Service_Orders.md#customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,15 +139,9 @@ The client, requesting servicing.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Agreement_Id
-
-
-Service_Agreement_Id
-
-
-When not NULL denotes that the order will be bound to the terms in the specified agreement.
 
 
 When not NULL denotes that the order will be bound to the terms in the specified agreement.
@@ -171,9 +155,8 @@ When not NULL denotes that the order will be bound to the terms in the specified
 |Referenced Table|[Srv_Service_Agreements](Srv_Service_Agreements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Service_Agreement_Id](Srv_Service_Orders.md#service_agreement_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,17 +179,11 @@ When not NULL denotes that the order will be bound to the terms in the specified
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -217,9 +194,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Is_Single_Execution](Srv_Service_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,17 +218,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -263,9 +233,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Is_Released](Srv_Service_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,15 +257,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null.
 
 
 The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null.
@@ -310,9 +273,8 @@ The store in which to physically store service objects, received for servicing. 
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Store_Id](Srv_Service_Orders.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -335,15 +297,9 @@ The store in which to physically store service objects, received for servicing. 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Ship_To_Customer_Id
-
-
-Ship_To_Customer_Id
-
-
-Customer location of the main customer from which the service object is taken.
 
 
 Customer location of the main customer from which the service object is taken.
@@ -357,9 +313,8 @@ Customer location of the main customer from which the service object is taken.
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Ship_To_Customer_Id](Srv_Service_Orders.md#ship_to_customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -382,12 +337,9 @@ Customer location of the main customer from which the service object is taken.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -397,9 +349,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Orders](Srv_Service_Orders.md).[Row_Version](Srv_Service_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

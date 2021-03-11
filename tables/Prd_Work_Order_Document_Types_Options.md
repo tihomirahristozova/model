@@ -1,5 +1,10 @@
 # Table Prd_Work_Order_Document_Types_Options
 
+
+## Entity
+
+Entity: [Production.WorkOrderDocumentTypesOptions](~/entities/Production.WorkOrderDocumentTypesOptions.md)
+
 Options for user-defined Work Order document types. Entity: Prd_Work_Order_Document_Types_Options
 
 ## Summary
@@ -16,12 +21,6 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 ### Work_Order_Document_Types_Option_Id
 
 
-Work_Order_Document_Types_Option_Id
-
-
-Option for user-defined Work Order document type
-
-
 Option for user-defined Work Order document type
 
 | Property | Value |
@@ -33,9 +32,8 @@ Option for user-defined Work Order document type
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Work_Order_Document_Types_Options](Prd_Work_Order_Document_Types_Options.md).[Work_Order_Document_Types_Option_Id](Prd_Work_Order_Document_Types_Options.md#work_order_document_types_option_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +56,9 @@ Option for user-defined Work Order document type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-User-defined Work Order document type
 
 
 User-defined Work Order document type
@@ -80,9 +72,8 @@ User-defined Work Order document type
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Document_Types_Options](Prd_Work_Order_Document_Types_Options.md).[Document_Type_Id](Prd_Work_Order_Document_Types_Options.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +96,9 @@ User-defined Work Order document type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Completing_Output_Order_Document_Type_Id
-
-
-Completing_Output_Order_Document_Type_Id
-
-
-User-defined Completing Output Order document type
 
 
 User-defined Completing Output Order document type
@@ -127,9 +112,8 @@ User-defined Completing Output Order document type
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Document_Types_Options](Prd_Work_Order_Document_Types_Options.md).[Completing_Output_Order_Document_Type_Id](Prd_Work_Order_Document_Types_Options.md#completing_output_order_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,12 +136,9 @@ User-defined Completing Output Order document type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -167,9 +148,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Document_Types_Options](Prd_Work_Order_Document_Types_Options.md).[Row_Version](Prd_Work_Order_Document_Types_Options.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Prj_Project_Task_Dependancies
 
+
+## Entity
+
+Entity: [Projects.ProjectTaskDependancies](~/entities/Projects.ProjectTaskDependancies.md)
+
 Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependancies
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependanci
 
 ### Project_Task_Dependancy_Id
 
-
-Project_Task_Dependancy_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Project_Task_Dependancy_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Project_Task_Dependancies](Prj_Project_Task_Dependancies.md).[Project_Task_Dependancy_Id](Prj_Project_Task_Dependancies.md#project_task_dependancy_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Project_Task_Dependancy_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Project_Task_Id
-
-
-Project_Task_Id
-
-
-The task which depends on another task
 
 
 The task which depends on another task
@@ -79,9 +74,8 @@ The task which depends on another task
 |Referenced Table|[Prj_Project_Tasks](Prj_Project_Tasks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Dependancies](Prj_Project_Task_Dependancies.md).[Project_Task_Id](Prj_Project_Task_Dependancies.md#project_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The task which depends on another task
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Depends_On_Task_Id
-
-
-Depends_On_Task_Id
-
-
-The task on which Project_Task depends
 
 
 The task on which Project_Task depends
@@ -126,9 +114,8 @@ The task on which Project_Task depends
 |Referenced Table|[Prj_Project_Tasks](Prj_Project_Tasks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Dependancies](Prj_Project_Task_Dependancies.md).[Depends_On_Task_Id](Prj_Project_Task_Dependancies.md#depends_on_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,15 +138,9 @@ The task on which Project_Task depends
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Dependancy_Type
-
-
-Dependancy_Type
-
-
-FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)
 
 
 FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)
@@ -173,10 +154,9 @@ FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=S
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`FS`, `SS`, `FF`, `SF`, `SY`|
 |Default Value|FS|
-|Derived From|[Prj_Project_Task_Dependancies](Prj_Project_Task_Dependancies.md).[Dependancy_Type](Prj_Project_Task_Dependancies.md#dependancy_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,9 +177,6 @@ FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=S
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -208,9 +185,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Dependancies](Prj_Project_Task_Dependancies.md).[Row_Version](Prj_Project_Task_Dependancies.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

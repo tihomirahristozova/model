@@ -1,5 +1,10 @@
 # Table Gen_Party_Bank_Accounts
 
+
+## Entity
+
+Entity: [General.Contacts.PartyBankAccounts](~/entities/General.Contacts.PartyBankAccounts.md)
+
 The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 
 ## Owner Tables Hierarchy
@@ -25,9 +30,6 @@ The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 
 ### Party_Bank_Account_Id
 
-
-Party_Bank_Account_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +39,8 @@ Party_Bank_Account_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Party_Bank_Account_Id](Gen_Party_Bank_Accounts.md#party_bank_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,12 +63,9 @@ Party_Bank_Account_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
 
 | Property | Value |
 | - | - |
@@ -78,9 +76,8 @@ Party_Id
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Party_Id](Gen_Party_Bank_Accounts.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +100,9 @@ Party_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Bank_Code
-
-
-Bank_Code
-
-
-The code of the bank, usually the BIC code
 
 
 The code of the bank, usually the BIC code
@@ -125,9 +116,8 @@ The code of the bank, usually the BIC code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Code](Gen_Party_Bank_Accounts.md#bank_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,15 +140,9 @@ The code of the bank, usually the BIC code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Bank_Name
-
-
-Bank_Name
-
-
-The full name of the bank
 
 
 The full name of the bank
@@ -172,9 +156,8 @@ The full name of the bank
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Name](Gen_Party_Bank_Accounts.md#bank_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,12 +185,6 @@ The full name of the bank
 ### Bank_Branch_Name
 
 
-Bank_Branch_Name
-
-
-The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments
-
-
 The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments
 
 | Property | Value |
@@ -219,9 +196,8 @@ The name of the branch office of the bank, where the account is located. Require
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Branch_Name](Gen_Party_Bank_Accounts.md#bank_branch_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,12 +219,6 @@ The name of the branch office of the bank, where the account is located. Require
 ### Bank_Address
 
 
-Bank_Address
-
-
-The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments
-
-
 The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments
 
 | Property | Value |
@@ -260,9 +230,8 @@ The address of the bank or the bank branch office. Required (not-null) only for 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Address](Gen_Party_Bank_Accounts.md#bank_address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,12 +253,6 @@ The address of the bank or the bank branch office. Required (not-null) only for 
 ### Bank_Account_Code
 
 
-Bank_Account_Code
-
-
-The code of the account, usually the IBAN code
-
-
 The code of the account, usually the IBAN code
 
 | Property | Value |
@@ -301,9 +264,8 @@ The code of the account, usually the IBAN code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Bank_Account_Code](Gen_Party_Bank_Accounts.md#bank_account_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -326,13 +288,10 @@ The code of the account, usually the IBAN code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -343,9 +302,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Notes](Gen_Party_Bank_Accounts.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -367,12 +325,6 @@ Notes
 ### Is_Default
 
 
-Is_Default
-
-
-1 if the this is the default account for the party. Only one default per party is allowed
-
-
 1 if the this is the default account for the party. Only one default per party is allowed
 
 | Property | Value |
@@ -383,9 +335,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Is_Default](Gen_Party_Bank_Accounts.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -408,12 +359,9 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -423,9 +371,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md).[Row_Version](Gen_Party_Bank_Accounts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

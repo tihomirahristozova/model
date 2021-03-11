@@ -1,5 +1,10 @@
 # Table Inv_Transfer_Orders_Options
 
+
+## Entity
+
+Entity: [Logistics.Inventory.TransferOrdersOptions](~/entities/Logistics.Inventory.TransferOrdersOptions.md)
+
 Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_Options
 
 ## Summary
@@ -15,9 +20,6 @@ Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_O
 
 ### Transfer_Order_Option_Id
 
-
-Transfer_Order_Option_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Transfer_Order_Option_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Transfer_Orders_Options](Inv_Transfer_Orders_Options.md).[Transfer_Order_Option_Id](Inv_Transfer_Orders_Options.md#transfer_order_option_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Transfer_Order_Option_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type, for which these options apply.
 
 
 The document type, for which these options apply.
@@ -74,9 +69,8 @@ The document type, for which these options apply.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Orders_Options](Inv_Transfer_Orders_Options.md).[Document_Type_Id](Inv_Transfer_Orders_Options.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +93,9 @@ The document type, for which these options apply.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Available_Quantity_Only
-
-
-Available_Quantity_Only
-
-
-Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity.
 
 
 Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity.
@@ -120,9 +108,8 @@ Specifies, that transfer orders of this document type will be allowed to be rele
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transfer_Orders_Options](Inv_Transfer_Orders_Options.md).[Available_Quantity_Only](Inv_Transfer_Orders_Options.md#available_quantity_only)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,12 +132,9 @@ Specifies, that transfer orders of this document type will be allowed to be rele
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -160,9 +144,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Orders_Options](Inv_Transfer_Orders_Options.md).[Row_Version](Inv_Transfer_Orders_Options.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

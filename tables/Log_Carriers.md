@@ -1,5 +1,10 @@
 # Table Log_Carriers
 
+
+## Entity
+
+Entity: [Logistics.Shipment.Carriers](~/entities/Logistics.Shipment.Carriers.md)
+
 Represents a carrier agreement. One actual carrier can have different agreements over time or with different enterprise companies. Entity: Log_Carriers
 
 ## Summary
@@ -13,15 +18,12 @@ Represents a carrier agreement. One actual carrier can have different agreements
 |[Is_Active](#is_active)|`bit` |Specifies whether the carrier agreement is active.|
 |[Agreement_Start_Date](#agreement_start_date)|`date` |The start date of the agreement with this carrier.|
 |[Agreement_End_Date](#agreement_end_date)|`date` |The ending date of the agreement with this carrier. NULL for agreements which are still active.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Carrier_Id
-
-
-Carrier_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Carrier_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Carrier_Id](Log_Carriers.md#carrier_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Carrier_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Code
-
-
-Code
-
-
-Unique carrier code (or call sign). The code is unique within all enterprise companies.
 
 
 Unique carrier code (or call sign). The code is unique within all enterprise companies.
@@ -79,9 +74,8 @@ Unique carrier code (or call sign). The code is unique within all enterprise com
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Code](Log_Carriers.md#code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,16 +98,10 @@ Unique carrier code (or call sign). The code is unique within all enterprise com
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company which signed the carrier agreement.
 
 
 The enterprise company which signed the carrier agreement.
@@ -127,9 +115,8 @@ The enterprise company which signed the carrier agreement.
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Enterprise_Company_Id](Log_Carriers.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The enterprise company which signed the carrier agreement.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Supplier_Id
-
-
-Supplier_Id
-
-
-The supplier contract with the carrier.
 
 
 The supplier contract with the carrier.
@@ -174,9 +155,8 @@ The supplier contract with the carrier.
 |Referenced Table|[Scm_Suppliers](Scm_Suppliers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Supplier_Id](Log_Carriers.md#supplier_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,15 +179,9 @@ The supplier contract with the carrier.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Specifies whether the carrier agreement is active.
 
 
 Specifies whether the carrier agreement is active.
@@ -220,9 +194,8 @@ Specifies whether the carrier agreement is active.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Is_Active](Log_Carriers.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -245,15 +218,9 @@ Specifies whether the carrier agreement is active.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Agreement_Start_Date
-
-
-Agreement_Start_Date
-
-
-The start date of the agreement with this carrier.
 
 
 The start date of the agreement with this carrier.
@@ -267,9 +234,8 @@ The start date of the agreement with this carrier.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Agreement_Start_Date](Log_Carriers.md#agreement_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -292,16 +258,10 @@ The start date of the agreement with this carrier.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Agreement_End_Date
-
-
-Agreement_End_Date
-
-
-The ending date of the agreement with this carrier. NULL for agreements which are still active.
 
 
 The ending date of the agreement with this carrier. NULL for agreements which are still active.
@@ -315,9 +275,8 @@ The ending date of the agreement with this carrier. NULL for agreements which ar
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Agreement_End_Date](Log_Carriers.md#agreement_end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -340,26 +299,22 @@ The ending date of the agreement with this carrier. NULL for agreements which ar
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Notes](Log_Carriers.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -380,9 +335,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -391,9 +343,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Carriers](Log_Carriers.md).[Row_Version](Log_Carriers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

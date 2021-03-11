@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_measurement_units">Table Gen_Measurement_Units</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.MeasurementUnits.html">General.MeasurementUnits</a></p>
 <p>Contains all measurement units, grouped in categories. Each category has one base unit (with ratio 1/1) and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Units</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -136,7 +138,7 @@
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
-<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td><code>nvarchar(max)</code> <code>ML</code></td>
 <td>Full multi-language description of the measurement unit.</td>
 </tr>
 <tr>
@@ -148,8 +150,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
-<p>Unique measurement unit Id</p>
 <p>Unique measurement unit Id</p>
 <table>
 <thead>
@@ -189,15 +189,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -282,15 +278,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="measurement_category_id">Measurement_Category_Id</h3>
-<p>Measurement_Category_Id</p>
-<p>Base measurement category Id</p>
 <p>Base measurement category Id</p>
 <table>
 <thead>
@@ -330,15 +324,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#measurement_category_id">Measurement_Category_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -423,15 +413,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="measurement_unit_name">Measurement_Unit_Name</h3>
-<p>Measurement_Unit_Name</p>
-<p>Name of the measurement unit</p>
 <p>Name of the measurement unit</p>
 <table>
 <thead>
@@ -471,15 +459,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#measurement_unit_name">Measurement_Unit_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -564,7 +548,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -577,8 +561,6 @@
 </tbody>
 </table>
 <h3 id="multiplier">Multiplier</h3>
-<p>Multiplier</p>
-<p>Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base)</p>
 <p>Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base)</p>
 <table>
 <thead>
@@ -614,15 +596,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#multiplier">Multiplier</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -695,8 +673,6 @@
 </tbody>
 </table>
 <h3 id="divisor">Divisor</h3>
-<p>Divisor</p>
-<p>Divisor of the relative value of the measurement unit against other units (divisor when converting to base)</p>
 <p>Divisor of the relative value of the measurement unit against other units (divisor when converting to base)</p>
 <table>
 <thead>
@@ -732,15 +708,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#divisor">Divisor</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -813,8 +785,6 @@
 </tbody>
 </table>
 <h3 id="is_default_unit">Is_Default_Unit</h3>
-<p>Is_Default_Unit</p>
-<p>1 if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category</p>
 <p>1 if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category</p>
 <table>
 <thead>
@@ -850,15 +820,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#is_default_unit">Is_Default_Unit</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -943,15 +909,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="system_unit">System_Unit</h3>
-<p>System_Unit</p>
-<p>Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH</p>
 <p>Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH</p>
 <table>
 <thead>
@@ -991,7 +955,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1000,10 +964,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#system_unit">System_Unit</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1088,7 +1048,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1101,8 +1061,6 @@
 </tbody>
 </table>
 <h3 id="measurement_unit_code">Measurement_Unit_Code</h3>
-<p>Measurement_Unit_Code</p>
-<p>When not null, contains unique measurement unit code.</p>
 <p>When not null, contains unique measurement unit code.</p>
 <table>
 <thead>
@@ -1142,15 +1100,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#measurement_unit_code">Measurement_Unit_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1235,7 +1189,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1248,8 +1202,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
-<p>Full multi-language description of the measurement unit.</p>
 <p>Full multi-language description of the measurement unit.</p>
 <table>
 <thead>
@@ -1261,7 +1213,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1289,15 +1241,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1370,7 +1318,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1405,15 +1352,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a>.<a href="Gen_Measurement_Units.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

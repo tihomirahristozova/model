@@ -1,5 +1,10 @@
 # Table Prj_Template_Risks
 
+
+## Entity
+
+Entity: [Projects.TemplateRisks](~/entities/Projects.TemplateRisks.md)
+
 Contains project risks, which will be copied to projects, based on the template. Entity: Prj_Template_Risks
 
 ## Owner Tables Hierarchy
@@ -13,7 +18,7 @@ Contains project risks, which will be copied to projects, based on the template.
 |[Project_Template_Risk_Id](#project_template_risk_id)|`uniqueidentifier` `PK`||
 |[Project_Template_Id](#project_template_id)|`uniqueidentifier` ||
 |[Risk_Name](#risk_name)|`nvarchar(254)` |The name of the risk.|
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Probability_Percent](#probability_percent)|`decimal(3, 2)` |The probability of the risk occurring.|
 |[Impact_Percent](#impact_percent)|`decimal(3, 2)` |The impact of the risk to the project, expressed as percentage of the total project value.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -21,9 +26,6 @@ Contains project risks, which will be copied to projects, based on the template.
 ## Columns
 
 ### Project_Template_Risk_Id
-
-
-Project_Template_Risk_Id
 
 | Property | Value |
 | - | - |
@@ -34,9 +36,8 @@ Project_Template_Risk_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Template_Risks](Prj_Template_Risks.md).[Project_Template_Risk_Id](Prj_Template_Risks.md#project_template_risk_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Project_Template_Risk_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Template_Id
-
-
-Project_Template_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Project_Template_Id
 |Referenced Table|[Prj_Templates](Prj_Templates.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Template_Risks](Prj_Template_Risks.md).[Project_Template_Id](Prj_Template_Risks.md#project_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Project_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Risk_Name
-
-
-Risk_Name
-
-
-The name of the risk.
 
 
 The name of the risk.
@@ -122,9 +113,8 @@ The name of the risk.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Template_Risks](Prj_Template_Risks.md).[Risk_Name](Prj_Template_Risks.md#risk_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,21 +135,17 @@ The name of the risk.
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Template_Risks](Prj_Template_Risks.md).[Description](Prj_Template_Risks.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -181,12 +167,6 @@ Description
 ### Probability_Percent
 
 
-Probability_Percent
-
-
-The probability of the risk occurring.
-
-
 The probability of the risk occurring.
 
 | Property | Value |
@@ -197,9 +177,8 @@ The probability of the risk occurring.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Template_Risks](Prj_Template_Risks.md).[Probability_Percent](Prj_Template_Risks.md#probability_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -221,12 +200,6 @@ The probability of the risk occurring.
 ### Impact_Percent
 
 
-Impact_Percent
-
-
-The impact of the risk to the project, expressed as percentage of the total project value.
-
-
 The impact of the risk to the project, expressed as percentage of the total project value.
 
 | Property | Value |
@@ -237,9 +210,8 @@ The impact of the risk to the project, expressed as percentage of the total proj
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Template_Risks](Prj_Template_Risks.md).[Impact_Percent](Prj_Template_Risks.md#impact_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -260,9 +232,6 @@ The impact of the risk to the project, expressed as percentage of the total proj
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -271,9 +240,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Template_Risks](Prj_Template_Risks.md).[Row_Version](Prj_Template_Risks.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

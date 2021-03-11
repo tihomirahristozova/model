@@ -1,5 +1,10 @@
 # Table Rent_Transaction_Templates
 
+
+## Entity
+
+Entity: [Applications.Rental.TransactionTemplates](~/entities/Applications.Rental.TransactionTemplates.md)
+
 Specifies additional options for document routes, generating Rental Transactions. Entity: Rent_Transaction_Templates
 
 ## Summary
@@ -15,9 +20,6 @@ Specifies additional options for document routes, generating Rental Transactions
 
 ### Rent_Transaction_Template_Id
 
-
-Rent_Transaction_Template_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Rent_Transaction_Template_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Transaction_Templates](Rent_Transaction_Templates.md).[Rent_Transaction_Template_Id](Rent_Transaction_Templates.md#rent_transaction_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Rent_Transaction_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Route_Id
-
-
-Route_Id
-
-
-The route for which the transaction template is defined.
 
 
 The route for which the transaction template is defined.
@@ -74,9 +69,8 @@ The route for which the transaction template is defined.
 |Referenced Table|[Wf_Routes](Wf_Routes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Transaction_Templates](Rent_Transaction_Templates.md).[Route_Id](Rent_Transaction_Templates.md#route_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,12 +93,9 @@ The route for which the transaction template is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transaction_Type
-
-
-Transaction_Type
 
 | Property | Value |
 | - | - |
@@ -115,10 +106,9 @@ Transaction_Type
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`D`, `R`, `W`, `S`|
 |Default Value|None|
-|Derived From|[Rent_Transaction_Templates](Rent_Transaction_Templates.md).[Transaction_Type](Rent_Transaction_Templates.md#transaction_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -139,9 +129,6 @@ Transaction_Type
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -150,9 +137,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Transaction_Templates](Rent_Transaction_Templates.md).[Row_Version](Rent_Transaction_Templates.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

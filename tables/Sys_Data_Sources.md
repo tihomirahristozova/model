@@ -1,5 +1,10 @@
 # Table Sys_Data_Sources
 
+
+## Entity
+
+Entity: [Systems.Reporting.DataSources](~/entities/Systems.Reporting.DataSources.md)
+
 Contains user-defined data sources, which retrieve rows from multiple queries. Entity: Sys_Data_Sources
 
 ## Summary
@@ -17,9 +22,6 @@ Contains user-defined data sources, which retrieve rows from multiple queries. E
 
 ### Data_Source_Id
 
-
-Data_Source_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Data_Source_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Data_Sources](Sys_Data_Sources.md).[Data_Source_Id](Sys_Data_Sources.md#data_source_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Data_Source_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Data_Source_Name
-
-
-Data_Source_Name
-
-
-The name of the data source.
 
 
 The name of the data source.
@@ -76,9 +71,8 @@ The name of the data source.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Data_Sources](Sys_Data_Sources.md).[Data_Source_Name](Sys_Data_Sources.md#data_source_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,16 +95,10 @@ The name of the data source.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Base_Query_Name
-
-
-Base_Query_Name
-
-
-The name of the query or table that is used for root reference point of the loaded data.
 
 
 The name of the query or table that is used for root reference point of the loaded data.
@@ -124,9 +112,8 @@ The name of the query or table that is used for root reference point of the load
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Data_Sources](Sys_Data_Sources.md).[Base_Query_Name](Sys_Data_Sources.md#base_query_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,16 +136,10 @@ The name of the query or table that is used for root reference point of the load
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Show_Parent_Tables
-
-
-Show_Parent_Tables
-
-
-Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not.
 
 
 Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not.
@@ -171,9 +152,8 @@ Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Quer
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Data_Sources](Sys_Data_Sources.md).[Show_Parent_Tables](Sys_Data_Sources.md#show_parent_tables)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,12 +175,6 @@ Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Quer
 ### Data_Source_Type
 
 
-Data_Source_Type
-
-
-'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE 
-
-
 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE 
 
 | Property | Value |
@@ -212,10 +186,9 @@ Data_Source_Type
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`M`, `D`, `S`|
 |Default Value|M|
-|Derived From|[Sys_Data_Sources](Sys_Data_Sources.md).[Data_Source_Type](Sys_Data_Sources.md#data_source_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,12 +211,9 @@ Data_Source_Type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -253,9 +223,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Data_Sources](Sys_Data_Sources.md).[Row_Version](Sys_Data_Sources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

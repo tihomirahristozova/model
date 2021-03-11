@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-mail_box_folders">Table Mail_Box_Folders</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Mail.BoxFolders.html">Applications.Mail.BoxFolders</a></p>
 <p>Contains the folders inside the mailboxes. Entity: Mail_Box_Folders</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -116,7 +118,7 @@
 </tr>
 <tr>
 <td><a href="#sync_state">Sync_State</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.</td>
 </tr>
 <tr>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="mail_box_id">Mail_Box_Id</h3>
-<p>Mail_Box_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Box_Folders.html">Mail_Box_Folders</a>.<a href="Mail_Box_Folders.html#mail_box_id">Mail_Box_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,15 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="folder_name">Folder_Name</h3>
-<p>Folder_Name</p>
-<p>Multi-language folder name</p>
 <p>Multi-language folder name</p>
 <table>
 <thead>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Box_Folders.html">Mail_Box_Folders</a>.<a href="Mail_Box_Folders.html#folder_name">Folder_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,7 +402,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -424,8 +415,6 @@
 </tbody>
 </table>
 <h3 id="parent_folder_id">Parent_Folder_Id</h3>
-<p>Parent_Folder_Id</p>
-<p>The parent folder in the folder hierarchy. Null when the folder is a root folder.</p>
 <p>The parent folder in the folder hierarchy. Null when the folder is a root folder.</p>
 <table>
 <thead>
@@ -465,15 +454,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Box_Folders.html">Mail_Box_Folders</a>.<a href="Mail_Box_Folders.html#parent_folder_id">Parent_Folder_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -558,15 +543,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="system_purpose">System_Purpose</h3>
-<p>System_Purpose</p>
-<p>When not NULL means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash.</p>
 <p>When not NULL means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash.</p>
 <table>
 <thead>
@@ -606,7 +589,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -615,10 +598,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Box_Folders.html">Mail_Box_Folders</a>.<a href="Mail_Box_Folders.html#system_purpose">System_Purpose</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -703,15 +682,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sync_state">Sync_State</h3>
-<p>Sync_State</p>
-<p>The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.</p>
 <p>The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.</p>
 <table>
 <thead>
@@ -723,7 +700,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -751,15 +728,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Box_Folders.html">Mail_Box_Folders</a>.<a href="Mail_Box_Folders.html#sync_state">Sync_State</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -832,7 +805,6 @@
 </tbody>
 </table>
 <h3 id="mail_box_folder_id">Mail_Box_Folder_Id</h3>
-<p>Mail_Box_Folder_Id</p>
 <table>
 <thead>
 <tr>
@@ -871,15 +843,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Box_Folders.html">Mail_Box_Folders</a>.<a href="Mail_Box_Folders.html#mail_box_folder_id">Mail_Box_Folder_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -964,15 +932,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="server_folder_id">Server_Folder_ID</h3>
-<p>Server_Folder_ID</p>
-<p>ID of the folder on the mail server in the format of the mail server</p>
 <p>ID of the folder on the mail server in the format of the mail server</p>
 <table>
 <thead>
@@ -1012,15 +978,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Box_Folders.html">Mail_Box_Folders</a>.<a href="Mail_Box_Folders.html#server_folder_id">Server_Folder_ID</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1105,14 +1067,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1147,15 +1108,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Box_Folders.html">Mail_Box_Folders</a>.<a href="Mail_Box_Folders.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

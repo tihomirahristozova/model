@@ -1,5 +1,10 @@
 # Table Cms_Web_Site_Languages
 
+
+## Entity
+
+Entity: [Applications.Cms.WebSiteLanguages](~/entities/Applications.Cms.WebSiteLanguages.md)
+
 Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 
 ## Owner Tables Hierarchy
@@ -14,15 +19,12 @@ Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 |[Web_Site_Id](#web_site_id)|`uniqueidentifier` |The web site, for which the language is specified.|
 |[Language_Code](#language_code)|`nvarchar(2)` |Two letter ISO language code. Sub-tags are currently not supported.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the support for the language is activated and should be published on the web.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Web_Site_Language_Id
-
-
-Web_Site_Language_Id
 
 | Property | Value |
 | - | - |
@@ -33,9 +35,8 @@ Web_Site_Language_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cms_Web_Site_Languages](Cms_Web_Site_Languages.md).[Web_Site_Language_Id](Cms_Web_Site_Languages.md#web_site_language_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Web_Site_Language_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Web_Site_Id
-
-
-Web_Site_Id
-
-
-The web site, for which the language is specified.
 
 
 The web site, for which the language is specified.
@@ -80,9 +75,8 @@ The web site, for which the language is specified.
 |Referenced Table|[Cms_Web_Sites](Cms_Web_Sites.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Web_Site_Languages](Cms_Web_Site_Languages.md).[Web_Site_Id](Cms_Web_Site_Languages.md#web_site_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The web site, for which the language is specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Language_Code
-
-
-Language_Code
-
-
-Two letter ISO language code. Sub-tags are currently not supported.
 
 
 Two letter ISO language code. Sub-tags are currently not supported.
@@ -127,9 +115,8 @@ Two letter ISO language code. Sub-tags are currently not supported.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Web_Site_Languages](Cms_Web_Site_Languages.md).[Language_Code](Cms_Web_Site_Languages.md#language_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,12 +138,6 @@ Two letter ISO language code. Sub-tags are currently not supported.
 ### Is_Active
 
 
-Is_Active
-
-
-Specifies whether the support for the language is activated and should be published on the web.
-
-
 Specifies whether the support for the language is activated and should be published on the web.
 
 | Property | Value |
@@ -167,9 +148,8 @@ Specifies whether the support for the language is activated and should be publis
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cms_Web_Site_Languages](Cms_Web_Site_Languages.md).[Is_Active](Cms_Web_Site_Languages.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,21 +170,17 @@ Specifies whether the support for the language is activated and should be publis
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Web_Site_Languages](Cms_Web_Site_Languages.md).[Notes](Cms_Web_Site_Languages.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -225,9 +201,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -236,9 +209,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Web_Site_Languages](Cms_Web_Site_Languages.md).[Row_Version](Cms_Web_Site_Languages.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

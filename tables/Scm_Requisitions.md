@@ -1,5 +1,10 @@
 # Table Scm_Requisitions
 
+
+## Entity
+
+Entity: [Logistics.Procurement.Requisitions](~/entities/Logistics.Procurement.Requisitions.md)
+
 Contains the internal requisitions for products. Requisitions are consolidated by the purchase department into purchase orders. Entity: Scm_Requisitions
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Contains the internal requisitions for products. Requisitions are consolidated b
 
 ### Requisition_Id
 
-
-Requisition_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Requisition_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Requisitions](Scm_Requisitions.md).[Requisition_Id](Scm_Requisitions.md#requisition_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,12 +62,9 @@ Requisition_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -77,9 +75,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Requisitions](Scm_Requisitions.md).[Document_Id](Scm_Requisitions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +99,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store in which the products are needed.
 
 
 The store in which the products are needed.
@@ -124,9 +115,8 @@ The store in which the products are needed.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Requisitions](Scm_Requisitions.md).[Store_Id](Scm_Requisitions.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,15 +139,9 @@ The store in which the products are needed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Requested_By_Party_Id
-
-
-Requested_By_Party_Id
-
-
-The party, which is requesting the purchase order.
 
 
 The party, which is requesting the purchase order.
@@ -171,9 +155,8 @@ The party, which is requesting the purchase order.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Requisitions](Scm_Requisitions.md).[Requested_By_Party_Id](Scm_Requisitions.md#requested_by_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,15 +179,9 @@ The party, which is requesting the purchase order.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Required_Delivery_Date
-
-
-Required_Delivery_Date
-
-
-When not null, specifies the required delivery date for all lines.
 
 
 When not null, specifies the required delivery date for all lines.
@@ -218,9 +195,8 @@ When not null, specifies the required delivery date for all lines.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Requisitions](Scm_Requisitions.md).[Required_Delivery_Date](Scm_Requisitions.md#required_delivery_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,9 +223,6 @@ When not null, specifies the required delivery date for all lines.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -259,9 +232,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Notes](Gen_Documents.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -283,12 +255,6 @@ Notes
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -299,9 +265,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Scm_Requisitions](Scm_Requisitions.md).[Is_Single_Execution](Scm_Requisitions.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -324,17 +289,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -345,9 +304,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Scm_Requisitions](Scm_Requisitions.md).[Is_Released](Scm_Requisitions.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -370,12 +328,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -385,9 +340,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Requisitions](Scm_Requisitions.md).[Row_Version](Scm_Requisitions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

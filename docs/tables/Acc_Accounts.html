@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-acc_accounts">Table Acc_Accounts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a></p>
 <p>Contains the leaf level of the chart of accounts. Entity: Acc_Accounts</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -149,7 +151,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="account_id">Account_Id</h3>
-<p>Account_Id</p>
 <table>
 <thead>
 <tr>
@@ -188,15 +189,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#account_id">Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -281,15 +278,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="account_group_id">Account_Group_Id</h3>
-<p>Account_Group_Id</p>
-<p>The account group to which this account belongs</p>
 <p>The account group to which this account belongs</p>
 <table>
 <thead>
@@ -329,15 +324,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#account_group_id">Account_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -422,15 +413,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="account_number">Account_Number</h3>
-<p>Account_Number</p>
-<p>The number of the account, unique within the account group</p>
 <p>The number of the account, unique within the account group</p>
 <table>
 <thead>
@@ -470,15 +459,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#account_number">Account_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -570,8 +555,6 @@
 </tbody>
 </table>
 <h3 id="account_full_number">Account_Full_Number</h3>
-<p>Account_Full_Number</p>
-<p>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number</p>
 <p>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number</p>
 <table>
 <thead>
@@ -611,15 +594,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#account_full_number">Account_Full_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -711,8 +690,6 @@
 </tbody>
 </table>
 <h3 id="account_name">Account_Name</h3>
-<p>Account_Name</p>
-<p>The account name</p>
 <p>The account name</p>
 <table>
 <thead>
@@ -752,15 +729,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#account_name">Account_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -852,7 +825,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
 <table>
 <thead>
 <tr>
@@ -891,15 +863,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -972,8 +940,6 @@
 </tbody>
 </table>
 <h3 id="currency_id">Currency_Id</h3>
-<p>Currency_Id</p>
-<p>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed</p>
 <p>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed</p>
 <table>
 <thead>
@@ -1013,15 +979,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#currency_id">Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1106,15 +1068,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="discontinued">Discontinued</h3>
-<p>Discontinued</p>
-<p>1 means that the account won't be used any more and should not appear in combo boxes</p>
 <p>1 means that the account won't be used any more and should not appear in combo boxes</p>
 <table>
 <thead>
@@ -1150,15 +1110,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#discontinued">Discontinued</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1243,14 +1199,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -1289,15 +1244,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1382,15 +1333,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="currency_valuation_method">Currency_Valuation_Method</h3>
-<p>Currency_Valuation_Method</p>
-<p>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document</p>
 <p>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document</p>
 <table>
 <thead>
@@ -1430,7 +1379,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1439,10 +1388,6 @@
 <tr>
 <td>Default Value</td>
 <td>ACB</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#currency_valuation_method">Currency_Valuation_Method</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1515,7 +1460,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1550,15 +1494,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Accounts.html">Acc_Accounts</a>.<a href="Acc_Accounts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

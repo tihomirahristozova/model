@@ -1,5 +1,10 @@
 # Table Gen_Document_Fulfillments
 
+
+## Entity
+
+Entity: [General.DocumentFulfillments](~/entities/General.DocumentFulfillments.md)
+
 Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced in version 20.1)
 
 ## Summary
@@ -22,9 +27,6 @@ Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced 
 
 ### Document_Fulfillment_Id
 
-
-Document_Fulfillment_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Document_Fulfillment_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Document_Fulfillment_Id](Gen_Document_Fulfillments.md#document_fulfillment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Document_Fulfillment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The Document, which is fulfilled.
 
 
 The Document, which is fulfilled.
@@ -81,9 +76,8 @@ The Document, which is fulfilled.
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Document_Id](Gen_Document_Fulfillments.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,17 +100,11 @@ The Document, which is fulfilled.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Fulfillment_Type
 
 
-Fulfillment_Type
-
-
-Type of fulfillment: P=Planned; C=Completed.
-
-
 Type of fulfillment: P=Planned; C=Completed.
 
 | Property | Value |
@@ -128,10 +116,9 @@ Type of fulfillment: P=Planned; C=Completed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`P`, `C`|
 |Default Value|None|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Fulfillment_Type](Gen_Document_Fulfillments.md#fulfillment_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,17 +141,11 @@ Type of fulfillment: P=Planned; C=Completed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_Type
 
 
-Line_Type
-
-
-Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.
-
-
 Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.
 
 | Property | Value |
@@ -176,9 +157,8 @@ Detail (line) type, for example materials, services, etc. L=Line. Other values a
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|L|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Line_Type](Gen_Document_Fulfillments.md#line_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,15 +181,9 @@ Detail (line) type, for example materials, services, etc. L=Line. Other values a
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Line_Id
-
-
-Document_Line_Id
-
-
-The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type.
 
 
 The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type.
@@ -222,9 +196,8 @@ The Id of the fulfilled line within the document. The attribute contains the Id 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Document_Line_Id](Gen_Document_Fulfillments.md#document_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,15 +220,9 @@ The Id of the fulfilled line within the document. The attribute contains the Id 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.
 
 
 Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.
@@ -268,9 +235,8 @@ Line number. Used for human-readability of the fulfillment. NULL if the lines do
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Line_No](Gen_Document_Fulfillments.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,16 +259,10 @@ Line number. Used for human-readability of the fulfillment. NULL if the lines do
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Quantity_Base
-
-
-Quantity_Base
-
-
-Fulfilled quantity in the base measurement unit of the product.
 
 
 Fulfilled quantity in the base measurement unit of the product.
@@ -315,9 +275,8 @@ Fulfilled quantity in the base measurement unit of the product.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Quantity_Base](Gen_Document_Fulfillments.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -340,16 +299,10 @@ Fulfilled quantity in the base measurement unit of the product.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Is_Final
-
-
-Is_Final
-
-
-Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.
 
 
 Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.
@@ -362,9 +315,8 @@ Specifies whether this fulfillment finalizes the line, regardless of any remaini
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Is_Final](Gen_Document_Fulfillments.md#is_final)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -387,15 +339,9 @@ Specifies whether this fulfillment finalizes the line, regardless of any remaini
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Creation_User_Id
-
-
-Creation_User_Id
-
-
-The user, who created the record.
 
 
 The user, who created the record.
@@ -409,9 +355,8 @@ The user, who created the record.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Creation_User_Id](Gen_Document_Fulfillments.md#creation_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -434,15 +379,9 @@ The user, who created the record.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Creation_Time_Utc
-
-
-Creation_Time_Utc
-
-
-The exact time in UTC, when the fulfillment was created in the system.
 
 
 The exact time in UTC, when the fulfillment was created in the system.
@@ -456,9 +395,8 @@ The exact time in UTC, when the fulfillment was created in the system.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTimeUtc|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Creation_Time_Utc](Gen_Document_Fulfillments.md#creation_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -481,13 +419,10 @@ The exact time in UTC, when the fulfillment was created in the system.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -497,9 +432,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md).[Row_Version](Gen_Document_Fulfillments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

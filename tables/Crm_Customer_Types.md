@@ -1,5 +1,10 @@
 # Table Crm_Customer_Types
 
+
+## Entity
+
+Entity: [Crm.CustomerTypes](~/entities/Crm.CustomerTypes.md)
+
 User defined customer type. Primarily used for customer definition security, because it has record level security, which is also applied to the individual customer definitions. Entity: Crm_Customer_Types
 
 ## Summary
@@ -15,9 +20,6 @@ User defined customer type. Primarily used for customer definition security, bec
 
 ### Customer_Type_Id
 
-
-Customer_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Customer_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Customer_Types](Crm_Customer_Types.md).[Customer_Type_Id](Crm_Customer_Types.md#customer_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,12 +53,9 @@ Customer_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Customer_Type_Name
-
-
-Customer_Type_Name
 
 | Property | Value |
 | - | - |
@@ -68,9 +66,8 @@ Customer_Type_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Types](Crm_Customer_Types.md).[Customer_Type_Name](Crm_Customer_Types.md#customer_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -93,13 +90,10 @@ Customer_Type_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Access_Key_Id
-
-
-Access_Key_Id
 
 | Property | Value |
 | - | - |
@@ -110,9 +104,8 @@ Access_Key_Id
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Types](Crm_Customer_Types.md).[Access_Key_Id](Crm_Customer_Types.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -135,12 +128,9 @@ Access_Key_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -150,9 +140,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Types](Crm_Customer_Types.md).[Row_Version](Crm_Customer_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

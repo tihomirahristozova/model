@@ -1,5 +1,10 @@
 # Table Srv_Service_Agreement_Services
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceAgreementServices](~/entities/Applications.Service.ServiceAgreementServices.md)
+
 Contains the free services, included in the service agreement. Entity: Srv_Service_Agreement_Services
 
 ## Owner Tables Hierarchy
@@ -27,12 +32,6 @@ Contains the free services, included in the service agreement. Entity: Srv_Servi
 ### Line_No
 
 
-Line_No
-
-
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
-
-
 Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 | Property | Value |
@@ -43,10 +42,9 @@ Consecutive line number, unique within the document. Usually is increasing in st
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Line_No](Srv_Service_Agreement_Services.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -68,12 +66,6 @@ Consecutive line number, unique within the document. Usually is increasing in st
 ### Service_Id
 
 
-Service_Id
-
-
-Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be NULL)
-
-
 Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be NULL)
 
 | Property | Value |
@@ -85,9 +77,8 @@ Paid or agreed in advance service that won't be invoiced after service activitie
 |Referenced Table|[Srv_Services](Srv_Services.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Service_Id](Srv_Service_Agreement_Services.md#service_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,15 +101,9 @@ Paid or agreed in advance service that won't be invoiced after service activitie
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Service_Product_Id
-
-
-Service_Product_Id
-
-
-Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be NULL)
 
 
 Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be NULL)
@@ -132,9 +117,8 @@ Paid or agreed in advance product that will be substracted from the invoiced pro
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Service_Product_Id](Srv_Service_Agreement_Services.md#service_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -157,15 +141,9 @@ Paid or agreed in advance product that will be substracted from the invoiced pro
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Quantity
-
-
-Quantity
-
-
-Quantity of the agreed servcice or product
 
 
 Quantity of the agreed servcice or product
@@ -178,9 +156,8 @@ Quantity of the agreed servcice or product
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Quantity](Srv_Service_Agreement_Services.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,12 +179,6 @@ Quantity of the agreed servcice or product
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity.
-
-
 The measurement unit of Quantity.
 
 | Property | Value |
@@ -219,9 +190,8 @@ The measurement unit of Quantity.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Quantity_Unit_Id](Srv_Service_Agreement_Services.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,15 +214,9 @@ The measurement unit of Quantity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Start_Date
-
-
-Start_Date
-
-
-Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
 
 
 Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
@@ -266,9 +230,8 @@ Start date from which the agreedment for the service or product is valid. For th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Start_Date](Srv_Service_Agreement_Services.md#start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -290,12 +253,6 @@ Start date from which the agreedment for the service or product is valid. For th
 ### End_Date
 
 
-End_Date
-
-
-End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
-
-
 End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
 
 | Property | Value |
@@ -307,9 +264,8 @@ End date to which the agreedment for the service or product is valid. For the ag
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[End_Date](Srv_Service_Agreement_Services.md#end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -330,9 +286,6 @@ End date to which the agreedment for the service or product is valid. For the ag
 
 ### Service_Agreement_Service_Id
 
-
-Service_Agreement_Service_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -342,9 +295,8 @@ Service_Agreement_Service_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Service_Agreement_Service_Id](Srv_Service_Agreement_Services.md#service_agreement_service_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -367,12 +319,9 @@ Service_Agreement_Service_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Agreement_Id
-
-
-Service_Agreement_Id
 
 | Property | Value |
 | - | - |
@@ -383,9 +332,8 @@ Service_Agreement_Id
 |Referenced Table|[Srv_Service_Agreements](Srv_Service_Agreements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Service_Agreement_Id](Srv_Service_Agreement_Services.md#service_agreement_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -408,12 +356,9 @@ Service_Agreement_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -423,9 +368,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md).[Row_Version](Srv_Service_Agreement_Services.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

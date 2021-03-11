@@ -1,5 +1,10 @@
 # Table Srv_Service_Activity_Agreed_Services
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceActivityAgreedServices](~/entities/Applications.Service.ServiceActivityAgreedServices.md)
+
 Contains the services, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Services
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Contains the services, which were agreed for this service activity (repair), bef
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Activity_Agreed_Services](Srv_Service_Activity_Agreed_Services.md).[Id](Srv_Service_Activity_Agreed_Services.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Activity_Service_Id
-
-
-Service_Activity_Service_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Service_Activity_Service_Id
 |Referenced Table|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Agreed_Services](Srv_Service_Activity_Agreed_Services.md).[Service_Activity_Service_Id](Srv_Service_Activity_Agreed_Services.md#service_activity_service_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Service_Activity_Service_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Agreement_Service_Id
-
-
-Service_Agreement_Service_Id
-
-
-Service agreement service line that records the paid or agreed in advance service or product
 
 
 Service agreement service line that records the paid or agreed in advance service or product
@@ -123,9 +114,8 @@ Service agreement service line that records the paid or agreed in advance servic
 |Referenced Table|[Srv_Service_Agreement_Services](Srv_Service_Agreement_Services.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Agreed_Services](Srv_Service_Activity_Agreed_Services.md).[Service_Agreement_Service_Id](Srv_Service_Activity_Agreed_Services.md#service_agreement_service_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +138,9 @@ Service agreement service line that records the paid or agreed in advance servic
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Agreed_Quantity
-
-
-Agreed_Quantity
-
-
-Quantity from the service agreement service line that is accounted for this service activity service line
 
 
 Quantity from the service agreement service line that is accounted for this service activity service line
@@ -169,9 +153,8 @@ Quantity from the service agreement service line that is accounted for this serv
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Srv_Service_Activity_Agreed_Services](Srv_Service_Activity_Agreed_Services.md).[Agreed_Quantity](Srv_Service_Activity_Agreed_Services.md#agreed_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,9 +175,6 @@ Quantity from the service agreement service line that is accounted for this serv
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -203,9 +183,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Agreed_Services](Srv_Service_Activity_Agreed_Services.md).[Row_Version](Srv_Service_Activity_Agreed_Services.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

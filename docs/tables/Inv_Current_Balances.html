@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="view-inv_current_balances">View Inv_Current_Balances</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.CurrentBalances.html">Logistics.Inventory.CurrentBalances</a></p>
 <p>The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -149,8 +151,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="quantity_base">Quantity_Base</h3>
-<p>Quantity_Base</p>
-<p>The quantity of the stock received/issued in base measurement unit</p>
 <p>The quantity of the stock received/issued in base measurement unit</p>
 <table>
 <thead>
@@ -186,15 +186,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Current_Balances.html">Inv_Current_Balances</a>.<a href="Inv_Current_Balances.html#quantity_base">Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -286,8 +282,6 @@
 </tbody>
 </table>
 <h3 id="store_bin_id">Store_Bin_Id</h3>
-<p>Store_Bin_Id</p>
-<p>Store bin, from/to which the transaction was performed.</p>
 <p>Store bin, from/to which the transaction was performed.</p>
 <table>
 <thead>
@@ -327,15 +321,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#store_bin_id">Store_Bin_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -420,15 +410,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lot_id">Lot_Id</h3>
-<p>Lot_Id</p>
-<p>If non-null, contains the specific lot to use for the movement</p>
 <p>If non-null, contains the specific lot to use for the movement</p>
 <table>
 <thead>
@@ -468,15 +456,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#lot_id">Lot_Id</a></td>
 </tr>
 <tr>
 <td>Depends On</td>
@@ -565,15 +549,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
-<p>Serial_Number_Id</p>
-<p>Item serial number for serialized items. NULL for non-serialized items</p>
 <p>Item serial number for serialized items. NULL for non-serialized items</p>
 <table>
 <thead>
@@ -613,15 +595,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#serial_number_id">Serial_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -706,14 +684,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -752,15 +729,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -845,14 +818,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
-<p>Store_Id</p>
 <table>
 <thead>
 <tr>
@@ -891,15 +863,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#store_id">Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -984,14 +952,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
 <table>
 <thead>
 <tr>
@@ -1030,15 +997,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1123,15 +1086,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_variant_id">Product_Variant_Id</h3>
-<p>Product_Variant_Id</p>
-<p>If specified determines which product variant of the current product in this line is used.</p>
 <p>If specified determines which product variant of the current product in this line is used.</p>
 <table>
 <thead>
@@ -1171,15 +1132,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#product_variant_id">Product_Variant_Id</a></td>
 </tr>
 <tr>
 <td>Depends On</td>
@@ -1268,15 +1225,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_cost">Product_Cost</h3>
-<p>Product_Cost</p>
-<p>The cost of the inventory in the products currency.</p>
 <p>The cost of the inventory in the products currency.</p>
 <table>
 <thead>
@@ -1312,15 +1267,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Current_Balances.html">Inv_Current_Balances</a>.<a href="Inv_Current_Balances.html#product_cost">Product_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1393,8 +1344,6 @@
 </tbody>
 </table>
 <h3 id="store_cost">Store_Cost</h3>
-<p>Store_Cost</p>
-<p>The cost of the inventory in the stores currency.</p>
 <p>The cost of the inventory in the stores currency.</p>
 <table>
 <thead>
@@ -1430,15 +1379,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Current_Balances.html">Inv_Current_Balances</a>.<a href="Inv_Current_Balances.html#store_cost">Store_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1511,8 +1456,6 @@
 </tbody>
 </table>
 <h3 id="base_cost">Base_Cost</h3>
-<p>Base_Cost</p>
-<p>The cost of the inventory in base currency of the enterprise company.</p>
 <p>The cost of the inventory in base currency of the enterprise company.</p>
 <table>
 <thead>
@@ -1548,15 +1491,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Current_Balances.html">Inv_Current_Balances</a>.<a href="Inv_Current_Balances.html#base_cost">Base_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>

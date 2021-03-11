@@ -1,5 +1,10 @@
 # Table Eam_Managed_Asset_Maintenance_Schedules
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.ManagedAssetMaintenanceSchedules](~/entities/Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md)
+
 Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_Asset_Maintenance_Schedules (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -16,15 +21,12 @@ Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_A
 |[Schedule_Months](#schedule_months)|`int` |Number of months between planned maintenances. NULL means that the schedule is not planned based on months.|
 |[Schedule_Days](#schedule_days)|`int` |Number of days between planned maintenances. NULL means that the schedule is not planned based on days.|
 |[Parameter_Change_Delta](#parameter_change_delta)|`int` |The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Managed_Asset_Maintenance_Schedule_Id
-
-
-Managed_Asset_Maintenance_Schedule_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Managed_Asset_Maintenance_Schedule_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Managed_Asset_Maintenance_Schedules](Eam_Managed_Asset_Maintenance_Schedules.md).[Managed_Asset_Maintenance_Schedule_Id](Eam_Managed_Asset_Maintenance_Schedules.md#managed_asset_maintenance_schedule_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Managed_Asset_Maintenance_Schedule_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Id
-
-
-Managed_Asset_Id
-
-
-The managed asset for which the maintenance schedule applies.
 
 
 The managed asset for which the maintenance schedule applies.
@@ -82,9 +77,8 @@ The managed asset for which the maintenance schedule applies.
 |Referenced Table|[Eam_Managed_Assets](Eam_Managed_Assets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Maintenance_Schedules](Eam_Managed_Asset_Maintenance_Schedules.md).[Managed_Asset_Id](Eam_Managed_Asset_Maintenance_Schedules.md#managed_asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The managed asset for which the maintenance schedule applies.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Type_Id
-
-
-Maintenance_Type_Id
-
-
-What type of maintenance is scheduled.
 
 
 What type of maintenance is scheduled.
@@ -129,9 +117,8 @@ What type of maintenance is scheduled.
 |Referenced Table|[Eam_Maintenance_Types](Eam_Maintenance_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Maintenance_Schedules](Eam_Managed_Asset_Maintenance_Schedules.md).[Maintenance_Type_Id](Eam_Managed_Asset_Maintenance_Schedules.md#maintenance_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ What type of maintenance is scheduled.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Schedule_Months
-
-
-Schedule_Months
-
-
-Number of months between planned maintenances. NULL means that the schedule is not planned based on months.
 
 
 Number of months between planned maintenances. NULL means that the schedule is not planned based on months.
@@ -175,9 +156,8 @@ Number of months between planned maintenances. NULL means that the schedule is n
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Maintenance_Schedules](Eam_Managed_Asset_Maintenance_Schedules.md).[Schedule_Months](Eam_Managed_Asset_Maintenance_Schedules.md#schedule_months)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +179,6 @@ Number of months between planned maintenances. NULL means that the schedule is n
 ### Schedule_Days
 
 
-Schedule_Days
-
-
-Number of days between planned maintenances. NULL means that the schedule is not planned based on days.
-
-
 Number of days between planned maintenances. NULL means that the schedule is not planned based on days.
 
 | Property | Value |
@@ -215,9 +189,8 @@ Number of days between planned maintenances. NULL means that the schedule is not
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Maintenance_Schedules](Eam_Managed_Asset_Maintenance_Schedules.md).[Schedule_Days](Eam_Managed_Asset_Maintenance_Schedules.md#schedule_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,12 +212,6 @@ Number of days between planned maintenances. NULL means that the schedule is not
 ### Parameter_Change_Delta
 
 
-Parameter_Change_Delta
-
-
-The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.
-
-
 The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.
 
 | Property | Value |
@@ -255,9 +222,8 @@ The value of the tracked parameter change between planned maintenances. The trac
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Maintenance_Schedules](Eam_Managed_Asset_Maintenance_Schedules.md).[Parameter_Change_Delta](Eam_Managed_Asset_Maintenance_Schedules.md#parameter_change_delta)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -280,26 +246,22 @@ The value of the tracked parameter change between planned maintenances. The trac
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Maintenance_Schedules](Eam_Managed_Asset_Maintenance_Schedules.md).[Notes](Eam_Managed_Asset_Maintenance_Schedules.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -320,9 +282,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -331,9 +290,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Maintenance_Schedules](Eam_Managed_Asset_Maintenance_Schedules.md).[Row_Version](Eam_Managed_Asset_Maintenance_Schedules.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

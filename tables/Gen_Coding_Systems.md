@@ -1,5 +1,10 @@
 # Table Gen_Coding_Systems
 
+
+## Entity
+
+Entity: [General.Products.CodingSystems](~/entities/General.Products.CodingSystems.md)
+
 Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 
 ## Summary
@@ -8,7 +13,7 @@ Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 | - | - | --- |
 |[Coding_System_Id](#coding_system_id)|`uniqueidentifier` `PK`||
 |[Coding_System_Name](#coding_system_name)|`nvarchar(254)` `ML`||
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Default_Measurement_Unit_Id](#default_measurement_unit_id)|`uniqueidentifier` |When not NULL, specifies a measurement unit to be used as default, instead of the products default unit|
 |[Is_Unique](#is_unique)|`bit` |1 when the coding system can contain only unique product codes. 0 - duplicate product codes are allowed|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -16,9 +21,6 @@ Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 ## Columns
 
 ### Coding_System_Id
-
-
-Coding_System_Id
 
 | Property | Value |
 | - | - |
@@ -29,9 +31,8 @@ Coding_System_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Coding_Systems](Gen_Coding_Systems.md).[Coding_System_Id](Gen_Coding_Systems.md#coding_system_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,12 +55,9 @@ Coding_System_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Coding_System_Name
-
-
-Coding_System_Name
 
 | Property | Value |
 | - | - |
@@ -70,9 +68,8 @@ Coding_System_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Coding_Systems](Gen_Coding_Systems.md).[Coding_System_Name](Gen_Coding_Systems.md#coding_system_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -95,26 +92,22 @@ Coding_System_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Coding_Systems](Gen_Coding_Systems.md).[Description](Gen_Coding_Systems.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -136,12 +129,6 @@ Description
 ### Default_Measurement_Unit_Id
 
 
-Default_Measurement_Unit_Id
-
-
-When not NULL, specifies a measurement unit to be used as default, instead of the products default unit
-
-
 When not NULL, specifies a measurement unit to be used as default, instead of the products default unit
 
 | Property | Value |
@@ -153,9 +140,8 @@ When not NULL, specifies a measurement unit to be used as default, instead of th
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Coding_Systems](Gen_Coding_Systems.md).[Default_Measurement_Unit_Id](Gen_Coding_Systems.md#default_measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -178,15 +164,9 @@ When not NULL, specifies a measurement unit to be used as default, instead of th
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Unique
-
-
-Is_Unique
-
-
-1 when the coding system can contain only unique product codes. 0 - duplicate product codes are allowed
 
 
 1 when the coding system can contain only unique product codes. 0 - duplicate product codes are allowed
@@ -199,9 +179,8 @@ Is_Unique
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Coding_Systems](Gen_Coding_Systems.md).[Is_Unique](Gen_Coding_Systems.md#is_unique)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -224,12 +203,9 @@ Is_Unique
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -239,9 +215,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Coding_Systems](Gen_Coding_Systems.md).[Row_Version](Gen_Coding_Systems.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

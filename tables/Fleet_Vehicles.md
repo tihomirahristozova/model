@@ -1,5 +1,10 @@
 # Table Fleet_Vehicles
 
+
+## Entity
+
+Entity: [Applications.Fleet.Vehicles](~/entities/Applications.Fleet.Vehicles.md)
+
 Contains vehicle definitions. Entity: Fleet_Vehicles
 
 ## Summary
@@ -30,7 +35,7 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 |[Fuel_Compsumption](#fuel_compsumption)|`decimal(7, 1)` |Average fuel consumption in the fuel measurement unit for 1 operational unit|
 |[Maximum_Speed_KmH](#maximum_speed_kmh)|`int` |Maximum speed in km/h|
 |[Owner_Party_Id](#owner_party_id)|`uniqueidentifier` |Vehicle owner|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Operational_Measurement_Unit_Id](#operational_measurement_unit_id)|`uniqueidentifier` |The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. NULL means that the unit is unknown|
 |[Fuel_Measurement_Unit_Id](#fuel_measurement_unit_id)|`uniqueidentifier` |The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -44,12 +49,6 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 ### Vehicle_Id
 
 
-Vehicle_Id
-
-
-Unique vehicle id
-
-
 Unique vehicle id
 
 | Property | Value |
@@ -61,9 +60,8 @@ Unique vehicle id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Vehicle_Id](Fleet_Vehicles.md#vehicle_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -86,15 +84,9 @@ Unique vehicle id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Vehicle_Type
-
-
-Vehicle_Type
-
-
-Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown
 
 
 Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown
@@ -108,9 +100,8 @@ Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Vehicle_Type](Fleet_Vehicles.md#vehicle_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|yes|
@@ -133,18 +124,12 @@ Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Make
 
 
-Make
-
-
-The name of the manufacturer of the vehicle. NULL means that the value is unknown
-
-
 The name of the manufacturer of the vehicle. NULL means that the value is unknown
 
 | Property | Value |
@@ -156,9 +141,8 @@ The name of the manufacturer of the vehicle. NULL means that the value is unknow
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Make](Fleet_Vehicles.md#make)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|yes|
@@ -181,18 +165,12 @@ The name of the manufacturer of the vehicle. NULL means that the value is unknow
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Model
 
 
-Model
-
-
-The model of the vehicle
-
-
 The model of the vehicle
 
 | Property | Value |
@@ -204,9 +182,8 @@ The model of the vehicle
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Model](Fleet_Vehicles.md#model)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|yes|
@@ -229,16 +206,10 @@ The model of the vehicle
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Vehicle_Registration_Number
-
-
-Vehicle_Registration_Number
-
-
-The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority
 
 
 The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority
@@ -252,9 +223,8 @@ The registration plate number. Can be numeric or alphanumeric code. It should be
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Vehicle_Registration_Number](Fleet_Vehicles.md#vehicle_registration_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,18 +247,12 @@ The registration plate number. Can be numeric or alphanumeric code. It should be
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Issuing_Authority
 
 
-Issuing_Authority
-
-
-The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable
-
-
 The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable
 
 | Property | Value |
@@ -300,9 +264,8 @@ The country or state issuing the registration number. NULL (not recommended) mea
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Issuing_Authority](Fleet_Vehicles.md#issuing_authority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|yes|
@@ -325,18 +288,12 @@ The country or state issuing the registration number. NULL (not recommended) mea
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Primary_Color
 
 
-Primary_Color
-
-
-The primary color of the vehicle. NULL means that the value is unknown or not applicable
-
-
 The primary color of the vehicle. NULL means that the value is unknown or not applicable
 
 | Property | Value |
@@ -348,9 +305,8 @@ The primary color of the vehicle. NULL means that the value is unknown or not ap
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Primary_Color](Fleet_Vehicles.md#primary_color)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|yes|
@@ -373,18 +329,12 @@ The primary color of the vehicle. NULL means that the value is unknown or not ap
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Manufacture_Year
 
 
-Manufacture_Year
-
-
-The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown
-
-
 The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown
 
 | Property | Value |
@@ -395,9 +345,8 @@ The year when the vehicle was manufactured or first registered - whichever is kn
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Manufacture_Year](Fleet_Vehicles.md#manufacture_year)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -420,18 +369,12 @@ The year when the vehicle was manufactured or first registered - whichever is kn
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Engine_Size_cc
 
 
-Engine_Size_cc
-
-
-Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)
-
-
 Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)
 
 | Property | Value |
@@ -442,9 +385,8 @@ Engine size in cubic centimeters (cm3). NULL means that the value is unknown or 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Engine_Size_cc](Fleet_Vehicles.md#engine_size_cc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -467,18 +409,12 @@ Engine size in cubic centimeters (cm3). NULL means that the value is unknown or 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Engine_Power_hp
 
 
-Engine_Power_hp
-
-
-Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine
-
-
 Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine
 
 | Property | Value |
@@ -489,9 +425,8 @@ Engine output power in horse power. NULL means that the value is unknown or not 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Engine_Power_hp](Fleet_Vehicles.md#engine_power_hp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -514,18 +449,12 @@ Engine output power in horse power. NULL means that the value is unknown or not 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Engine_Identification_Number
 
 
-Engine_Identification_Number
-
-
-Engine identification number
-
-
 Engine identification number
 
 | Property | Value |
@@ -537,9 +466,8 @@ Engine identification number
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Engine_Identification_Number](Fleet_Vehicles.md#engine_identification_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -562,18 +490,12 @@ Engine identification number
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Vehicle_Identification_Number
 
 
-Vehicle_Identification_Number
-
-
-VIN, aka Chassis number
-
-
 VIN, aka Chassis number
 
 | Property | Value |
@@ -585,9 +507,8 @@ VIN, aka Chassis number
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Vehicle_Identification_Number](Fleet_Vehicles.md#vehicle_identification_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -610,18 +531,12 @@ VIN, aka Chassis number
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Seating_Places_Count
 
 
-Seating_Places_Count
-
-
-Number of seating places, excluding driver
-
-
 Number of seating places, excluding driver
 
 | Property | Value |
@@ -632,9 +547,8 @@ Number of seating places, excluding driver
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Seating_Places_Count](Fleet_Vehicles.md#seating_places_count)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -657,18 +571,12 @@ Number of seating places, excluding driver
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Crew_Count
 
 
-Crew_Count
-
-
-Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts
-
-
 Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts
 
 | Property | Value |
@@ -679,9 +587,8 @@ Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Crew_Count](Fleet_Vehicles.md#crew_count)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -704,16 +611,10 @@ Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Standing_Places_Count
-
-
-Standing_Places_Count
-
-
-Number of standing places, if applicable
 
 
 Number of standing places, if applicable
@@ -726,9 +627,8 @@ Number of standing places, if applicable
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Standing_Places_Count](Fleet_Vehicles.md#standing_places_count)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -750,12 +650,6 @@ Number of standing places, if applicable
 ### Vehicle_Mass_Kg
 
 
-Vehicle_Mass_Kg
-
-
-Vehicle own mass in kg
-
-
 Vehicle own mass in kg
 
 | Property | Value |
@@ -766,9 +660,8 @@ Vehicle own mass in kg
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Vehicle_Mass_Kg](Fleet_Vehicles.md#vehicle_mass_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -790,12 +683,6 @@ Vehicle own mass in kg
 ### Technical_Maximum_Laden_Mass_Kg
 
 
-Technical_Maximum_Laden_Mass_Kg
-
-
-Maximum technically permissible laden mass in kg
-
-
 Maximum technically permissible laden mass in kg
 
 | Property | Value |
@@ -806,9 +693,8 @@ Maximum technically permissible laden mass in kg
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Technical_Maximum_Laden_Mass_Kg](Fleet_Vehicles.md#technical_maximum_laden_mass_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -830,12 +716,6 @@ Maximum technically permissible laden mass in kg
 ### Authority_Maximum_Laden_Mass_Kg
 
 
-Authority_Maximum_Laden_Mass_Kg
-
-
-Maximum permissible laden mass, as determined by the registration authority
-
-
 Maximum permissible laden mass, as determined by the registration authority
 
 | Property | Value |
@@ -846,9 +726,8 @@ Maximum permissible laden mass, as determined by the registration authority
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Authority_Maximum_Laden_Mass_Kg](Fleet_Vehicles.md#authority_maximum_laden_mass_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -870,12 +749,6 @@ Maximum permissible laden mass, as determined by the registration authority
 ### Trainset_Maximum_Laden_Mass_Kg
 
 
-Trainset_Maximum_Laden_Mass_Kg
-
-
-Maximum permissible laden mass of a whole trainset, including the vehicle
-
-
 Maximum permissible laden mass of a whole trainset, including the vehicle
 
 | Property | Value |
@@ -886,9 +759,8 @@ Maximum permissible laden mass of a whole trainset, including the vehicle
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Trainset_Maximum_Laden_Mass_Kg](Fleet_Vehicles.md#trainset_maximum_laden_mass_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -910,12 +782,6 @@ Maximum permissible laden mass of a whole trainset, including the vehicle
 ### Fuel_Type
 
 
-Fuel_Type
-
-
-Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.
-
-
 Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.
 
 | Property | Value |
@@ -927,9 +793,8 @@ Fuel type of the engine or the power source of the engine (Multilanguage) - e.g.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Fuel_Type](Fleet_Vehicles.md#fuel_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|yes|
@@ -952,16 +817,10 @@ Fuel type of the engine or the power source of the engine (Multilanguage) - e.g.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Fuel_Capacity
-
-
-Fuel_Capacity
-
-
-Maximum fuel capacity of the engine or the battery in the fuel measurement unit
 
 
 Maximum fuel capacity of the engine or the battery in the fuel measurement unit
@@ -974,9 +833,8 @@ Maximum fuel capacity of the engine or the battery in the fuel measurement unit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Fuel_Capacity](Fleet_Vehicles.md#fuel_capacity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -998,12 +856,6 @@ Maximum fuel capacity of the engine or the battery in the fuel measurement unit
 ### Fuel_Compsumption
 
 
-Fuel_Compsumption
-
-
-Average fuel consumption in the fuel measurement unit for 1 operational unit
-
-
 Average fuel consumption in the fuel measurement unit for 1 operational unit
 
 | Property | Value |
@@ -1014,9 +866,8 @@ Average fuel consumption in the fuel measurement unit for 1 operational unit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Fuel_Compsumption](Fleet_Vehicles.md#fuel_compsumption)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1038,12 +889,6 @@ Average fuel consumption in the fuel measurement unit for 1 operational unit
 ### Maximum_Speed_KmH
 
 
-Maximum_Speed_KmH
-
-
-Maximum speed in km/h
-
-
 Maximum speed in km/h
 
 | Property | Value |
@@ -1054,9 +899,8 @@ Maximum speed in km/h
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Maximum_Speed_KmH](Fleet_Vehicles.md#maximum_speed_kmh)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1078,12 +922,6 @@ Maximum speed in km/h
 ### Owner_Party_Id
 
 
-Owner_Party_Id
-
-
-Vehicle owner
-
-
 Vehicle owner
 
 | Property | Value |
@@ -1095,9 +933,8 @@ Vehicle owner
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Owner_Party_Id](Fleet_Vehicles.md#owner_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1120,25 +957,21 @@ Vehicle owner
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Notes](Fleet_Vehicles.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1160,12 +993,6 @@ Notes
 ### Operational_Measurement_Unit_Id
 
 
-Operational_Measurement_Unit_Id
-
-
-The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. NULL means that the unit is unknown
-
-
 The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. NULL means that the unit is unknown
 
 | Property | Value |
@@ -1177,9 +1004,8 @@ The measurement unit in which the operation of the vehicle is measured. E.g. km 
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Operational_Measurement_Unit_Id](Fleet_Vehicles.md#operational_measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1202,17 +1028,11 @@ The measurement unit in which the operation of the vehicle is measured. E.g. km 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Fuel_Measurement_Unit_Id
 
 
-Fuel_Measurement_Unit_Id
-
-
-The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown
-
-
 The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown
 
 | Property | Value |
@@ -1224,9 +1044,8 @@ The measurement unit in which the fuel is measured. E.g. liters for automobiles,
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Fuel_Measurement_Unit_Id](Fleet_Vehicles.md#fuel_measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1249,12 +1068,9 @@ The measurement unit in which the fuel is measured. E.g. liters for automobiles,
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -1264,9 +1080,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Row_Version](Fleet_Vehicles.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1288,12 +1103,6 @@ Row_Version
 ### Maintenance_Profile_Id
 
 
-Maintenance_Profile_Id
-
-
-When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.
-
-
 When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.
 
 | Property | Value |
@@ -1305,9 +1114,8 @@ When not null, specifies, that the vehicle should be maintained according to the
 |Referenced Table|[Fleet_Maintenance_Profiles](Fleet_Maintenance_Profiles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Maintenance_Profile_Id](Fleet_Vehicles.md#maintenance_profile_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1330,15 +1138,9 @@ When not null, specifies, that the vehicle should be maintained according to the
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-True if the vehicle is still owned and managed by the enterprise.
 
 
 True if the vehicle is still owned and managed by the enterprise.
@@ -1351,9 +1153,8 @@ True if the vehicle is still owned and managed by the enterprise.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Is_Active](Fleet_Vehicles.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1375,12 +1176,6 @@ True if the vehicle is still owned and managed by the enterprise.
 ### Active_From
 
 
-Active_From
-
-
-The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.
-
-
 The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.
 
 | Property | Value |
@@ -1392,9 +1187,8 @@ The date and time, when the vehicle has been purchased or started to be managed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Active_From](Fleet_Vehicles.md#active_from)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1416,12 +1210,6 @@ The date and time, when the vehicle has been purchased or started to be managed.
 ### Active_Till
 
 
-Active_Till
-
-
-The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.
-
-
 The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.
 
 | Property | Value |
@@ -1433,9 +1221,8 @@ The date and time, when the vehicle has been sold or has stopped being managed. 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicles](Fleet_Vehicles.md).[Active_Till](Fleet_Vehicles.md#active_till)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

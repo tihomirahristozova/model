@@ -1,5 +1,10 @@
 # Table Eam_Managed_Asset_Type_Tracked_Parameters
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.ManagedAssetTypeTrackedParameters](~/entities/Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md)
+
 Defines the parameters, which are tracked for the assets of the different types. Entity: Eam_Managed_Asset_Type_Tracked_Parameters (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -13,18 +18,12 @@ Defines the parameters, which are tracked for the assets of the different types.
 |[Managed_Asset_Type_Tracked_Parameter_Id](#managed_asset_type_tracked_parameter_id)|`uniqueidentifier` `PK`|Defines the parameters, which are tracked for the assets of the different types.|
 |[Managed_Asset_Type_Id](#managed_asset_type_id)|`uniqueidentifier` |The asset type for which the tracked parameter is defined.|
 |[Tracked_Parameter_Id](#tracked_parameter_id)|`uniqueidentifier` |The parameter, which will be tracked for assets of the specified type.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Managed_Asset_Type_Tracked_Parameter_Id
-
-
-Managed_Asset_Type_Tracked_Parameter_Id
-
-
-Defines the parameters, which are tracked for the assets of the different types.
 
 
 Defines the parameters, which are tracked for the assets of the different types.
@@ -38,9 +37,8 @@ Defines the parameters, which are tracked for the assets of the different types.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Managed_Asset_Type_Tracked_Parameters](Eam_Managed_Asset_Type_Tracked_Parameters.md).[Managed_Asset_Type_Tracked_Parameter_Id](Eam_Managed_Asset_Type_Tracked_Parameters.md#managed_asset_type_tracked_parameter_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,15 +61,9 @@ Defines the parameters, which are tracked for the assets of the different types.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Type_Id
-
-
-Managed_Asset_Type_Id
-
-
-The asset type for which the tracked parameter is defined.
 
 
 The asset type for which the tracked parameter is defined.
@@ -85,9 +77,8 @@ The asset type for which the tracked parameter is defined.
 |Referenced Table|[Eam_Managed_Asset_Types](Eam_Managed_Asset_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Tracked_Parameters](Eam_Managed_Asset_Type_Tracked_Parameters.md).[Managed_Asset_Type_Id](Eam_Managed_Asset_Type_Tracked_Parameters.md#managed_asset_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,15 +101,9 @@ The asset type for which the tracked parameter is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Tracked_Parameter_Id
-
-
-Tracked_Parameter_Id
-
-
-The parameter, which will be tracked for assets of the specified type.
 
 
 The parameter, which will be tracked for assets of the specified type.
@@ -132,9 +117,8 @@ The parameter, which will be tracked for assets of the specified type.
 |Referenced Table|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Tracked_Parameters](Eam_Managed_Asset_Type_Tracked_Parameters.md).[Tracked_Parameter_Id](Eam_Managed_Asset_Type_Tracked_Parameters.md#tracked_parameter_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -157,25 +141,21 @@ The parameter, which will be tracked for assets of the specified type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Tracked_Parameters](Eam_Managed_Asset_Type_Tracked_Parameters.md).[Notes](Eam_Managed_Asset_Type_Tracked_Parameters.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,9 +176,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -207,9 +184,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Type_Tracked_Parameters](Eam_Managed_Asset_Type_Tracked_Parameters.md).[Row_Version](Eam_Managed_Asset_Type_Tracked_Parameters.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

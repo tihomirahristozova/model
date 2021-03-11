@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-wms_warehouse_order_lines">Table Wms_Warehouse_Order_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Wms.WarehouseOrderLines.html">Logistics.Wms.WarehouseOrderLines</a></p>
 <p>A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lines (Introduced in version 20.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -172,7 +174,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -184,7 +186,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="warehouse_order_line_id">Warehouse_Order_Line_Id</h3>
-<p>Warehouse_Order_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -223,15 +224,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#warehouse_order_line_id">Warehouse_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -316,14 +313,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_order_id">Warehouse_Order_Id</h3>
-<p>Warehouse_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -362,15 +358,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#warehouse_order_id">Warehouse_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -455,15 +447,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Unique consecutive line number within the order.</p>
 <p>Unique consecutive line number within the order.</p>
 <table>
 <thead>
@@ -499,7 +489,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -508,10 +498,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -596,15 +582,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_worker_id">Warehouse_Worker_Id</h3>
-<p>Warehouse_Worker_Id</p>
-<p>Human or robot worker, which should execute the operation. NULL means that the line is shared among all workers, assigned to the order.</p>
 <p>Human or robot worker, which should execute the operation. NULL means that the line is shared among all workers, assigned to the order.</p>
 <table>
 <thead>
@@ -644,15 +628,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#warehouse_worker_id">Warehouse_Worker_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -737,15 +717,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="task_type">Task_Type</h3>
-<p>Task_Type</p>
-<p>The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task.</p>
 <p>The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task.</p>
 <table>
 <thead>
@@ -785,7 +763,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -794,10 +772,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#task_type">Task_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -882,15 +856,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_zone_id">Warehouse_Zone_Id</h3>
-<p>Warehouse_Zone_Id</p>
-<p>The warehouse zone, in which the operation should be performed. NULL for operations which do not require specific zone.</p>
 <p>The warehouse zone, in which the operation should be performed. NULL for operations which do not require specific zone.</p>
 <table>
 <thead>
@@ -930,15 +902,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#warehouse_zone_id">Warehouse_Zone_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1023,15 +991,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="warehouse_location_id">Warehouse_Location_Id</h3>
-<p>Warehouse_Location_Id</p>
-<p>Location, where the opeartion should be performed. NULL for operations, which do not require location.</p>
 <p>Location, where the opeartion should be performed. NULL for operations, which do not require location.</p>
 <table>
 <thead>
@@ -1071,15 +1037,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#warehouse_location_id">Warehouse_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1164,15 +1126,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The product, which should be used for the operation.</p>
 <p>The product, which should be used for the operation.</p>
 <table>
 <thead>
@@ -1212,15 +1172,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1305,15 +1261,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_variant_id">Product_Variant_Id</h3>
-<p>Product_Variant_Id</p>
-<p>The product variant, which should be used.</p>
 <p>The product variant, which should be used.</p>
 <table>
 <thead>
@@ -1353,15 +1307,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#product_variant_id">Product_Variant_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1446,15 +1396,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lot_id">Lot_Id</h3>
-<p>Lot_Id</p>
-<p>The lot of the product, which should be used. NULL for operations, which are not lot-specific, or when any lot can be used.</p>
 <p>The lot of the product, which should be used. NULL for operations, which are not lot-specific, or when any lot can be used.</p>
 <table>
 <thead>
@@ -1494,15 +1442,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#lot_id">Lot_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1587,15 +1531,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
-<p>Serial_Number_Id</p>
-<p>The serial number of the product, which should be used. NULL for operations, which are not serial number-specific, or when any serial number can be used.</p>
 <p>The serial number of the product, which should be used. NULL for operations, which are not serial number-specific, or when any serial number can be used.</p>
 <table>
 <thead>
@@ -1635,15 +1577,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#serial_number_id">Serial_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1728,15 +1666,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="logistic_unit_id">Logistic_Unit_Id</h3>
-<p>Logistic_Unit_Id</p>
-<p>Logistic unit, which should be used in the operation.</p>
 <p>Logistic unit, which should be used in the operation.</p>
 <table>
 <thead>
@@ -1776,15 +1712,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#logistic_unit_id">Logistic_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1869,15 +1801,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>The quantity of the product, which should be processed.</p>
 <p>The quantity of the product, which should be processed.</p>
 <table>
 <thead>
@@ -1913,15 +1843,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2006,7 +1932,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -2019,8 +1945,6 @@
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit of Quantity. NULL for operations, which are not quantity-related.</p>
 <p>The measurement unit of Quantity. NULL for operations, which are not quantity-related.</p>
 <table>
 <thead>
@@ -2060,15 +1984,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2153,15 +2073,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="to_warehouse_location_id">To_Warehouse_Location_Id</h3>
-<p>To_Warehouse_Location_Id</p>
-<p>Destination warehouse location. NULL for operations, which do not specify destination location.</p>
 <p>Destination warehouse location. NULL for operations, which do not specify destination location.</p>
 <table>
 <thead>
@@ -2201,15 +2119,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#to_warehouse_location_id">To_Warehouse_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2294,14 +2208,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2312,7 +2225,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2340,15 +2253,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2421,7 +2330,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2456,15 +2364,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wms_Warehouse_Order_Lines.html">Wms_Warehouse_Order_Lines</a>.<a href="Wms_Warehouse_Order_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

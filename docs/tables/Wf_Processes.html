@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-wf_processes">Table Wf_Processes</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Workflow.Processes.html">Systems.Workflow.Processes</a></p>
 <p>Contains the business process diagrams. Entity: Wf_Processes</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -102,7 +104,7 @@
 </tr>
 <tr>
 <td><a href="#schema_layout">Schema_Layout</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.</td>
 </tr>
 <tr>
@@ -164,7 +166,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="process_id">Process_Id</h3>
-<p>Process_Id</p>
 <table>
 <thead>
 <tr>
@@ -203,15 +204,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#process_id">Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -296,14 +293,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="process_name">Process_Name</h3>
-<p>Process_Name</p>
 <table>
 <thead>
 <tr>
@@ -342,15 +338,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#process_name">Process_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -435,7 +427,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -448,8 +440,6 @@
 </tbody>
 </table>
 <h3 id="schema_layout">Schema_Layout</h3>
-<p>Schema_Layout</p>
-<p>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.</p>
 <p>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.</p>
 <table>
 <thead>
@@ -461,7 +451,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -489,15 +479,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#schema_layout">Schema_Layout</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -570,8 +556,6 @@
 </tbody>
 </table>
 <h3 id="schema_format">Schema_Format</h3>
-<p>Schema_Format</p>
-<p>Application specific format of the Schema Layout.</p>
 <p>Application specific format of the Schema Layout.</p>
 <table>
 <thead>
@@ -611,15 +595,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>D</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#schema_format">Schema_Format</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -692,8 +672,6 @@
 </tbody>
 </table>
 <h3 id="thumbnail">Thumbnail</h3>
-<p>Thumbnail</p>
-<p>Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.</p>
 <p>Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.</p>
 <table>
 <thead>
@@ -729,15 +707,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#thumbnail">Thumbnail</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -810,7 +784,6 @@
 </tbody>
 </table>
 <h3 id="creation_time">Creation_Time</h3>
-<p>Creation_Time</p>
 <table>
 <thead>
 <tr>
@@ -849,15 +822,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#creation_time">Creation_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -930,7 +899,6 @@
 </tbody>
 </table>
 <h3 id="creation_user">Creation_User</h3>
-<p>Creation_User</p>
 <table>
 <thead>
 <tr>
@@ -969,15 +937,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#creation_user">Creation_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1050,7 +1014,6 @@
 </tbody>
 </table>
 <h3 id="update_time">Update_Time</h3>
-<p>Update_Time</p>
 <table>
 <thead>
 <tr>
@@ -1089,15 +1052,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#update_time">Update_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1170,7 +1129,6 @@
 </tbody>
 </table>
 <h3 id="update_user">Update_User</h3>
-<p>Update_User</p>
 <table>
 <thead>
 <tr>
@@ -1209,15 +1167,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#update_user">Update_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1290,7 +1244,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1329,15 +1282,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1410,8 +1359,6 @@
 </tbody>
 </table>
 <h3 id="is_landscape">Is_Landscape</h3>
-<p>Is_Landscape</p>
-<p>Specifies whether the process diagram is intended to be viewed in landscape mode.</p>
 <p>Specifies whether the process diagram is intended to be viewed in landscape mode.</p>
 <table>
 <thead>
@@ -1447,15 +1394,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#is_landscape">Is_Landscape</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1528,8 +1471,6 @@
 </tbody>
 </table>
 <h3 id="start_event">Start_Event</h3>
-<p>Start_Event</p>
-<p>USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process</p>
 <p>USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process</p>
 <table>
 <thead>
@@ -1569,15 +1510,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#start_event">Start_Event</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1650,8 +1587,6 @@
 </tbody>
 </table>
 <h3 id="start_role_id">Start_Role_Id</h3>
-<p>Start_Role_Id</p>
-<p>When Start_Event='USR' then specifies the role which the user must play in order to start the process. NULL when Start_Event&lt;&gt;'USR'</p>
 <p>When Start_Event='USR' then specifies the role which the user must play in order to start the process. NULL when Start_Event&lt;&gt;'USR'</p>
 <table>
 <thead>
@@ -1687,15 +1622,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#start_role_id">Start_Role_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1780,14 +1711,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1822,15 +1752,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Wf_Processes.html">Wf_Processes</a>.<a href="Wf_Processes.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

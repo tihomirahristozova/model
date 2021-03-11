@@ -1,5 +1,10 @@
 # Table Scm_Purchase_Product_Prices
 
+
+## Entity
+
+Entity: [Logistics.Procurement.PurchaseProductPrices](~/entities/Logistics.Procurement.PurchaseProductPrices.md)
+
 Contains purchase prices of the products. Used for automatically loading unit prices in the purchase documents. Entity: Scm_Purchase_Product_Prices
 
 ## Summary
@@ -27,9 +32,6 @@ Contains purchase prices of the products. Used for automatically loading unit pr
 
 ### Purchase_Product_Price_Id
 
-
-Purchase_Product_Price_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -39,9 +41,8 @@ Purchase_Product_Price_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Purchase_Product_Price_Id](Scm_Purchase_Product_Prices.md#purchase_product_price_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,15 +65,9 @@ Purchase_Product_Price_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product for which a purchase price will be defined
 
 
 The product for which a purchase price will be defined
@@ -86,9 +81,8 @@ The product for which a purchase price will be defined
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Product_Id](Scm_Purchase_Product_Prices.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -111,15 +105,9 @@ The product for which a purchase price will be defined
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Supplier_Id
-
-
-Supplier_Id
-
-
-When not null, specifies that the price is valid only for the specified supplier.
 
 
 When not null, specifies that the price is valid only for the specified supplier.
@@ -133,9 +121,8 @@ When not null, specifies that the price is valid only for the specified supplier
 |Referenced Table|[Scm_Suppliers](Scm_Suppliers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Supplier_Id](Scm_Purchase_Product_Prices.md#supplier_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,12 +145,9 @@ When not null, specifies that the price is valid only for the specified supplier
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -174,9 +158,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Enterprise_Company_Id](Scm_Purchase_Product_Prices.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,15 +182,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Purchase_Price_List_Id
-
-
-Purchase_Price_List_Id
-
-
-When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list.
 
 
 When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list.
@@ -221,9 +198,8 @@ When not null, specifies that this price is valid only when the purchase documen
 |Referenced Table|[Scm_Purchase_Price_Lists](Scm_Purchase_Price_Lists.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Purchase_Price_List_Id](Scm_Purchase_Product_Prices.md#purchase_price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,15 +222,9 @@ When not null, specifies that this price is valid only when the purchase documen
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Price
-
-
-Price
-
-
-Price in the specified currency and for the specified quantity
 
 
 Price in the specified currency and for the specified quantity
@@ -267,9 +237,8 @@ Price in the specified currency and for the specified quantity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Price](Scm_Purchase_Product_Prices.md#price)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,12 +260,6 @@ Price in the specified currency and for the specified quantity
 ### Currency_Id
 
 
-Currency_Id
-
-
-The currency of the price
-
-
 The currency of the price
 
 | Property | Value |
@@ -308,9 +271,8 @@ The currency of the price
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Currency_Id](Scm_Purchase_Product_Prices.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -333,15 +295,9 @@ The currency of the price
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Price_Quantity
-
-
-Price_Quantity
-
-
-The quantity of the product for which the price is specified
 
 
 The quantity of the product for which the price is specified
@@ -354,9 +310,8 @@ The quantity of the product for which the price is specified
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Price_Quantity](Scm_Purchase_Product_Prices.md#price_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -378,12 +333,6 @@ The quantity of the product for which the price is specified
 ### Price_Quantity_Measurement_Unit_Id
 
 
-Price_Quantity_Measurement_Unit_Id
-
-
-The measurement unit of Price_Quantity
-
-
 The measurement unit of Price_Quantity
 
 | Property | Value |
@@ -395,9 +344,8 @@ The measurement unit of Price_Quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Price_Quantity_Measurement_Unit_Id](Scm_Purchase_Product_Prices.md#price_quantity_measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -420,15 +368,9 @@ The measurement unit of Price_Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Date
-
-
-From_Date
-
-
-Starting date of validity of the price
 
 
 Starting date of validity of the price
@@ -442,9 +384,8 @@ Starting date of validity of the price
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[From_Date](Scm_Purchase_Product_Prices.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -467,18 +408,12 @@ Starting date of validity of the price
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Thru_Date
 
 
-Thru_Date
-
-
-Ending date (inclusive) of the validity of the price
-
-
 Ending date (inclusive) of the validity of the price
 
 | Property | Value |
@@ -490,9 +425,8 @@ Ending date (inclusive) of the validity of the price
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Thru_Date](Scm_Purchase_Product_Prices.md#thru_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -515,16 +449,10 @@ Ending date (inclusive) of the validity of the price
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Priority
-
-
-Priority
-
-
-Priority of the price comparative to other prices
 
 
 Priority of the price comparative to other prices
@@ -537,10 +465,9 @@ Priority of the price comparative to other prices
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`|
 |Default Value|2|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Priority](Scm_Purchase_Product_Prices.md#priority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -563,12 +490,9 @@ Priority of the price comparative to other prices
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -579,9 +503,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Notes](Scm_Purchase_Product_Prices.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -603,12 +526,6 @@ Notes
 ### Min_Quantity
 
 
-Min_Quantity
-
-
-Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)
-
-
 Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)
 
 | Property | Value |
@@ -619,9 +536,8 @@ Minimal quantity required to use this price (in the Price_Quantity_Measurement_U
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Min_Quantity](Scm_Purchase_Product_Prices.md#min_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -644,17 +560,11 @@ Minimal quantity required to use this price (in the Price_Quantity_Measurement_U
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Max_Quantity
 
 
-Max_Quantity
-
-
-Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit
-
-
 Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit
 
 | Property | Value |
@@ -665,9 +575,8 @@ Maximum quantity for which this price is valid in the Price_Quantity_Measurement
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Max_Quantity](Scm_Purchase_Product_Prices.md#max_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -690,12 +599,9 @@ Maximum quantity for which this price is valid in the Price_Quantity_Measurement
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -705,9 +611,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Product_Prices](Scm_Purchase_Product_Prices.md).[Row_Version](Scm_Purchase_Product_Prices.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

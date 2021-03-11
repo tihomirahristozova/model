@@ -15,18 +15,12 @@
 |[Step_Type](#step_type)|`nvarchar(3)` |Step type. STU=Start step (by user action); STE=Start step - by email; END=Ending step; ACT=User action; CHO=Choice|
 |[Short_Title](#short_title)|`nvarchar(128)` |Very short multilanguage title, displayed on the process diagram. The user text should be 15-20 chars, for each language|
 |[Role_Id](#role_id)|`uniqueidentifier` |The role responsible for execution of the step|
-|[Instructions](#instructions)|`nvarchar(2147483647)` |Full decription and instructions for the step. Displayed to user when executing the step|
+|[Instructions](#instructions)|`nvarchar(max)` |Full decription and instructions for the step. Displayed to user when executing the step|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Process_Step_Id
-
-
-Process_Step_Id
-
-
-Unique process step Id
 
 
 Unique process step Id
@@ -40,9 +34,8 @@ Unique process step Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wf_Process_Steps](Wf_Process_Steps.md).[Process_Step_Id](Wf_Process_Steps.md#process_step_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,15 +58,9 @@ Unique process step Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Id
-
-
-Process_Id
-
-
-The process, to which this step belongs
 
 
 The process, to which this step belongs
@@ -87,9 +74,8 @@ The process, to which this step belongs
 |Referenced Table|[Wf_Processes](Wf_Processes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Process_Steps](Wf_Process_Steps.md).[Process_Id](Wf_Process_Steps.md#process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,15 +98,9 @@ The process, to which this step belongs
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Step_Code
-
-
-Step_Code
-
-
-Unique code of the step. Used to sort the steps for display purposes
 
 
 Unique code of the step. Used to sort the steps for display purposes
@@ -134,9 +114,8 @@ Unique code of the step. Used to sort the steps for display purposes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Wf_Process_Steps](Wf_Process_Steps.md).[Step_Code](Wf_Process_Steps.md#step_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,12 +137,6 @@ Unique code of the step. Used to sort the steps for display purposes
 ### Step_Type
 
 
-Step_Type
-
-
-Step type. STU=Start step (by user action); STE=Start step - by email; END=Ending step; ACT=User action; CHO=Choice
-
-
 Step type. STU=Start step (by user action); STE=Start step - by email; END=Ending step; ACT=User action; CHO=Choice
 
 | Property | Value |
@@ -175,9 +148,8 @@ Step type. STU=Start step (by user action); STE=Start step - by email; END=Endin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Process_Steps](Wf_Process_Steps.md).[Step_Type](Wf_Process_Steps.md#step_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +171,6 @@ Step type. STU=Start step (by user action); STE=Start step - by email; END=Endin
 ### Short_Title
 
 
-Short_Title
-
-
-Very short multilanguage title, displayed on the process diagram. The user text should be 15-20 chars, for each language
-
-
 Very short multilanguage title, displayed on the process diagram. The user text should be 15-20 chars, for each language
 
 | Property | Value |
@@ -216,9 +182,8 @@ Very short multilanguage title, displayed on the process diagram. The user text 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Process_Steps](Wf_Process_Steps.md).[Short_Title](Wf_Process_Steps.md#short_title)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -240,12 +205,6 @@ Very short multilanguage title, displayed on the process diagram. The user text 
 ### Role_Id
 
 
-Role_Id
-
-
-The role responsible for execution of the step
-
-
 The role responsible for execution of the step
 
 | Property | Value |
@@ -257,9 +216,8 @@ The role responsible for execution of the step
 |Referenced Table|[Wf_Roles](Wf_Roles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Process_Steps](Wf_Process_Steps.md).[Role_Id](Wf_Process_Steps.md#role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -282,31 +240,24 @@ The role responsible for execution of the step
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Instructions
-
-
-Instructions
-
-
-Full decription and instructions for the step. Displayed to user when executing the step
 
 
 Full decription and instructions for the step. Displayed to user when executing the step
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Process_Steps](Wf_Process_Steps.md).[Instructions](Wf_Process_Steps.md#instructions)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -327,9 +278,6 @@ Full decription and instructions for the step. Displayed to user when executing 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -338,9 +286,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Process_Steps](Wf_Process_Steps.md).[Row_Version](Wf_Process_Steps.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

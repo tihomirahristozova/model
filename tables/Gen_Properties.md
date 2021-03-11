@@ -1,5 +1,10 @@
 # Table Gen_Properties
 
+
+## Entity
+
+Entity: [General.CustomProperties](~/entities/General.CustomProperties.md)
+
 User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties
 
 ## Summary
@@ -20,15 +25,12 @@ User-defined properties, which can supplement the system properties of almost al
 |[Key_Order](#key_order)|`tinyint` |When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis|
 |[Allowed_Values_Parent_Property_Id](#allowed_values_parent_property_id)|`uniqueidentifier` |Specifies the user defined property, which is used for filtering the allowed values by value of the parent property|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Hint](#hint)|`nvarchar(2147483647)` `ML`|The hint, which is displayed alongside the property.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Hint](#hint)|`nvarchar(max)` `ML`|The hint, which is displayed alongside the property.|
+|[Notes](#notes)|`nvarchar(max)` ||
 
 ## Columns
 
 ### Property_Id
-
-
-Property_Id
 
 | Property | Value |
 | - | - |
@@ -39,9 +41,8 @@ Property_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Property_Id](Gen_Properties.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,15 +65,9 @@ Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_Code
-
-
-Property_Code
-
-
-Unique property code.
 
 
 Unique property code.
@@ -86,9 +81,8 @@ Unique property code.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Property_Code](Gen_Properties.md#property_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -111,13 +105,10 @@ Unique property code.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Property_Name
-
-
-Property_Name
 
 | Property | Value |
 | - | - |
@@ -128,9 +119,8 @@ Property_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Property_Name](Gen_Properties.md#property_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,12 +148,6 @@ Property_Name
 ### Entity_Name
 
 
-Entity_Name
-
-
-The entity for which the property is applicable.
-
-
 The entity for which the property is applicable.
 
 | Property | Value |
@@ -175,9 +159,8 @@ The entity for which the property is applicable.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Entity_Name](Gen_Properties.md#entity_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,15 +183,9 @@ The entity for which the property is applicable.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Allowed_Values_Entity_Name
-
-
-Allowed_Values_Entity_Name
-
-
-When not NULL, specifies that the allowed values are retrieved from the specified entity
 
 
 When not NULL, specifies that the allowed values are retrieved from the specified entity
@@ -222,9 +199,8 @@ When not NULL, specifies that the allowed values are retrieved from the specifie
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Allowed_Values_Entity_Name](Gen_Properties.md#allowed_values_entity_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,15 +223,9 @@ When not NULL, specifies that the allowed values are retrieved from the specifie
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Allowed_Values_Filter_XML
-
-
-Allowed_Values_Filter_XML
-
-
-When not NULL specifies the filter to apply when extracting allowed values from entity
 
 
 When not NULL specifies the filter to apply when extracting allowed values from entity
@@ -269,9 +239,8 @@ When not NULL specifies the filter to apply when extracting allowed values from 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Allowed_Values_Filter_XML](Gen_Properties.md#allowed_values_filter_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,12 +262,6 @@ When not NULL specifies the filter to apply when extracting allowed values from 
 ### Limit_To_Allowed_Values
 
 
-Limit_To_Allowed_Values
-
-
-When true, allows the property to be set only to allowed value. When false, the property can have any value.
-
-
 When true, allows the property to be set only to allowed value. When false, the property can have any value.
 
 | Property | Value |
@@ -309,9 +272,8 @@ When true, allows the property to be set only to allowed value. When false, the 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Limit_To_Allowed_Values](Gen_Properties.md#limit_to_allowed_values)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,15 +296,9 @@ When true, allows the property to be set only to allowed value. When false, the 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Mask_Length
-
-
-Mask_Length
-
-
-Limits te length of the property value to the specified number of characters. Null means no limitation
 
 
 Limits te length of the property value to the specified number of characters. Null means no limitation
@@ -355,9 +311,8 @@ Limits te length of the property value to the specified number of characters. Nu
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Mask_Length](Gen_Properties.md#mask_length)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -379,12 +334,6 @@ Limits te length of the property value to the specified number of characters. Nu
 ### Allowed_Values_Property_Id
 
 
-Allowed_Values_Property_Id
-
-
-When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.
-
-
 When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.
 
 | Property | Value |
@@ -396,9 +345,8 @@ When not null, specifies that the current property can have the same allowed val
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Allowed_Values_Property_Id](Gen_Properties.md#allowed_values_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -421,15 +369,9 @@ When not null, specifies that the current property can have the same allowed val
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Properties_Category_Id
-
-
-Properties_Category_Id
-
-
-When not null, categorizes the property under a category.
 
 
 When not null, categorizes the property under a category.
@@ -443,9 +385,8 @@ When not null, categorizes the property under a category.
 |Referenced Table|[Gen_Properties_Categories](Gen_Properties_Categories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Properties_Category_Id](Gen_Properties.md#properties_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -468,15 +409,9 @@ When not null, categorizes the property under a category.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Property_Type
-
-
-Property_Type
-
-
-Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.
 
 
 Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.
@@ -490,10 +425,9 @@ Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`T`, `N`, `P`, `D`|
 |Default Value|T|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Property_Type](Gen_Properties.md#property_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -515,12 +449,6 @@ Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.
 ### Key_Order
 
 
-Key_Order
-
-
-When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis
-
-
 When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis
 
 | Property | Value |
@@ -531,9 +459,8 @@ When not null, indicates, that the property is a key property and contains the p
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Key_Order](Gen_Properties.md#key_order)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -555,12 +482,6 @@ When not null, indicates, that the property is a key property and contains the p
 ### Allowed_Values_Parent_Property_Id
 
 
-Allowed_Values_Parent_Property_Id
-
-
-Specifies the user defined property, which is used for filtering the allowed values by value of the parent property
-
-
 Specifies the user defined property, which is used for filtering the allowed values by value of the parent property
 
 | Property | Value |
@@ -572,9 +493,8 @@ Specifies the user defined property, which is used for filtering the allowed val
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Allowed_Values_Parent_Property_Id](Gen_Properties.md#allowed_values_parent_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -597,12 +517,9 @@ Specifies the user defined property, which is used for filtering the allowed val
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -612,9 +529,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Row_Version](Gen_Properties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -636,26 +552,19 @@ Row_Version
 ### Hint
 
 
-Hint
-
-
-The hint, which is displayed alongside the property.
-
-
 The hint, which is displayed alongside the property.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|yes|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Hint](Gen_Properties.md#hint)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -678,26 +587,22 @@ The hint, which is displayed alongside the property.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties](Gen_Properties.md).[Notes](Gen_Properties.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

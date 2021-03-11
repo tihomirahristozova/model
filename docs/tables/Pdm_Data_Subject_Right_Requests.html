@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-pdm_data_subject_right_requests">Table Pdm_Data_Subject_Right_Requests</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.PersonalData.DataSubjectRightRequests.html">Applications.PersonalData.DataSubjectRightRequests</a></p>
 <p>Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -132,7 +134,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>This should usually contain detailed implementation notes.</td>
 </tr>
 <tr>
@@ -149,7 +151,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="data_subject_right_request_id">Data_Subject_Right_Request_Id</h3>
-<p>Data_Subject_Right_Request_Id</p>
 <table>
 <thead>
 <tr>
@@ -188,15 +189,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#data_subject_right_request_id">Data_Subject_Right_Request_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -281,15 +278,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The enterprise company, to which the request was made.</p>
 <p>The enterprise company, to which the request was made.</p>
 <table>
 <thead>
@@ -329,15 +324,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -422,15 +413,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="person_id">Person_Id</h3>
-<p>Person_Id</p>
-<p>The person, whose data will be corrected with the request.</p>
 <p>The person, whose data will be corrected with the request.</p>
 <table>
 <thead>
@@ -470,15 +459,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#person_id">Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -563,15 +548,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="created_by_user_id">Created_By_User_Id</h3>
-<p>Created_By_User_Id</p>
-<p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person.</p>
 <p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person.</p>
 <table>
 <thead>
@@ -611,15 +594,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#created_by_user_id">Created_By_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -704,15 +683,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="created_on_utc">Created_On_Utc</h3>
-<p>Created_On_Utc</p>
-<p>The date and time (in UTC), when the request was created.</p>
 <p>The date and time (in UTC), when the request was created.</p>
 <table>
 <thead>
@@ -752,15 +729,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#created_on_utc">Created_On_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -833,8 +806,6 @@
 </tbody>
 </table>
 <h3 id="requested_right">Requested_Right</h3>
-<p>Requested_Right</p>
-<p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.</p>
 <p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.</p>
 <table>
 <thead>
@@ -874,7 +845,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -883,10 +854,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#requested_right">Requested_Right</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -971,15 +938,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="completed_by_user_id">Completed_By_User_Id</h3>
-<p>Completed_By_User_Id</p>
-<p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.</p>
 <p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.</p>
 <table>
 <thead>
@@ -1019,15 +984,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#completed_by_user_id">Completed_By_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1112,15 +1073,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="completed_on_utc">Completed_On_Utc</h3>
-<p>Completed_On_Utc</p>
-<p>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.</p>
 <p>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.</p>
 <table>
 <thead>
@@ -1160,15 +1119,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#completed_on_utc">Completed_On_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1241,8 +1196,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
-<p>This should usually contain detailed implementation notes.</p>
 <p>This should usually contain detailed implementation notes.</p>
 <table>
 <thead>
@@ -1254,7 +1207,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1282,15 +1235,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1363,8 +1312,6 @@
 </tbody>
 </table>
 <h3 id="status">Status</h3>
-<p>Status</p>
-<p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.</p>
 <p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.</p>
 <table>
 <thead>
@@ -1404,7 +1351,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1413,10 +1360,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#status">Status</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1489,7 +1432,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1524,15 +1466,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Data_Subject_Right_Requests.html">Pdm_Data_Subject_Right_Requests</a>.<a href="Pdm_Data_Subject_Right_Requests.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

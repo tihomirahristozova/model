@@ -1,5 +1,10 @@
 # Table Wms_Warehouse_Orders
 
+
+## Entity
+
+Entity: [Logistics.Wms.WarehouseOrders](~/entities/Logistics.Wms.WarehouseOrders.md)
+
 Contains order for internal warehouse operation or plan for execution of warehouse requisition. Entity: Wms_Warehouse_Orders (Introduced in version 20.1)
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Contains order for internal warehouse operation or plan for execution of warehou
 
 ### Warehouse_Order_Id
 
-
-Warehouse_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Warehouse_Order_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md).[Warehouse_Order_Id](Wms_Warehouse_Orders.md#warehouse_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Warehouse_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md).[Document_Id](Wms_Warehouse_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Id
-
-
-Warehouse_Id
-
-
-The warehouse, where the order will be executed.
 
 
 The warehouse, where the order will be executed.
@@ -120,9 +111,8 @@ The warehouse, where the order will be executed.
 |Referenced Table|[Wms_Warehouses](Wms_Warehouses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md).[Warehouse_Id](Wms_Warehouse_Orders.md#warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,12 +135,9 @@ The warehouse, where the order will be executed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -160,9 +147,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md).[Row_Version](Wms_Warehouse_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -184,12 +170,6 @@ Row_Version
 ### Warehouse_Worker_Id
 
 
-Warehouse_Worker_Id
-
-
-When set, denotes that the whole order is assigned to the specified worker.
-
-
 When set, denotes that the whole order is assigned to the specified worker.
 
 | Property | Value |
@@ -201,9 +181,8 @@ When set, denotes that the whole order is assigned to the specified worker.
 |Referenced Table|[Wms_Warehouse_Workers](Wms_Warehouse_Workers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md).[Warehouse_Worker_Id](Wms_Warehouse_Orders.md#warehouse_worker_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -226,6 +205,6 @@ When set, denotes that the whole order is assigned to the specified worker.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

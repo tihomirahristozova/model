@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="view-cash_payment_balances_view">View Cash_Payment_Balances_View</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Payments.OrderBalances.html">Finance.Payments.OrderBalances</a></p>
 <p>Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -189,8 +191,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="ref_document_id">Ref_Document_Id</h3>
-<p>Ref_Document_Id</p>
-<p>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document.</p>
 <p>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document.</p>
 <table>
 <thead>
@@ -230,15 +230,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#ref_document_id">Ref_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -323,15 +319,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ref_document_type_id">Ref_Document_Type_Id</h3>
-<p>Ref_Document_Type_Id</p>
-<p>The type of the document which has created the payment order and is the basis for the payment</p>
 <p>The type of the document which has created the payment order and is the basis for the payment</p>
 <table>
 <thead>
@@ -371,15 +365,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#ref_document_type_id">Ref_Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -464,15 +454,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ref_document_no">Ref_Document_No</h3>
-<p>Ref_Document_No</p>
-<p>The number of the document which has created the payment order and is the basis for the payment</p>
 <p>The number of the document which has created the payment order and is the basis for the payment</p>
 <table>
 <thead>
@@ -512,15 +500,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#ref_document_no">Ref_Document_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -605,15 +589,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ref_document_date">Ref_Document_Date</h3>
-<p>Ref_Document_Date</p>
-<p>The date of the original document. NULL means that it is unknown</p>
 <p>The date of the original document. NULL means that it is unknown</p>
 <table>
 <thead>
@@ -653,15 +635,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#ref_document_date">Ref_Document_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -746,15 +724,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ref_invoice_document_id">Ref_Invoice_Document_Id</h3>
-<p>Ref_Invoice_Document_Id</p>
-<p>The invoice document which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document.</p>
 <p>The invoice document which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document.</p>
 <table>
 <thead>
@@ -794,15 +770,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#ref_invoice_document_id">Ref_Invoice_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -887,15 +859,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ref_invoice_document_type_id">Ref_Invoice_Document_Type_Id</h3>
-<p>Ref_Invoice_Document_Type_Id</p>
-<p>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.</p>
 <p>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.</p>
 <table>
 <thead>
@@ -935,15 +905,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#ref_invoice_document_type_id">Ref_Invoice_Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1028,15 +994,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ref_invoice_document_no">Ref_Invoice_Document_No</h3>
-<p>Ref_Invoice_Document_No</p>
-<p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.</p>
 <p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.</p>
 <table>
 <thead>
@@ -1076,15 +1040,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#ref_invoice_document_no">Ref_Invoice_Document_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1169,15 +1129,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ref_invoice_document_date">Ref_Invoice_Document_Date</h3>
-<p>Ref_Invoice_Document_Date</p>
-<p>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.</p>
 <p>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.</p>
 <table>
 <thead>
@@ -1217,15 +1175,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#ref_invoice_document_date">Ref_Invoice_Document_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1310,7 +1264,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1323,8 +1277,6 @@
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The party which is to pay or receive the amount</p>
 <p>The party which is to pay or receive the amount</p>
 <table>
 <thead>
@@ -1364,15 +1316,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1457,15 +1405,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="due_date">Due_Date</h3>
-<p>Due_Date</p>
-<p>The due date of the payment. NULL means there is no due date</p>
 <p>The due date of the payment. NULL means there is no due date</p>
 <table>
 <thead>
@@ -1505,15 +1451,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#due_date">Due_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1598,7 +1540,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1611,8 +1553,6 @@
 </tbody>
 </table>
 <h3 id="direction">Direction</h3>
-<p>Direction</p>
-<p>I for Payment issue, R for payment receipt</p>
 <p>I for Payment issue, R for payment receipt</p>
 <table>
 <thead>
@@ -1652,7 +1592,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1661,10 +1601,6 @@
 <tr>
 <td>Default Value</td>
 <td>I</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#direction">Direction</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1749,15 +1685,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_order_id">Payment_Order_Id</h3>
-<p>Payment_Order_Id</p>
-<p>The payment order.</p>
 <p>The payment order.</p>
 <table>
 <thead>
@@ -1793,15 +1727,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#payment_order_id">Payment_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1886,15 +1816,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="currency_id">Currency_Id</h3>
-<p>Currency_Id</p>
-<p>The currency of amounts.</p>
 <p>The currency of amounts.</p>
 <table>
 <thead>
@@ -1934,14 +1862,14 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
 </tr>
 <tr>
-<td>Derived From</td>
+<td>Base Table.Column</td>
 <td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#total_amount_currency_id">Total_Amount_Currency_Id</a></td>
 </tr>
 <tr>
@@ -2027,15 +1955,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="paid_amount">Paid_Amount</h3>
-<p>Paid_Amount</p>
-<p>The paid amount. Taken from released payment transactions.</p>
 <p>The paid amount. Taken from released payment transactions.</p>
 <table>
 <thead>
@@ -2071,15 +1997,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Balances_View.html">Cash_Payment_Balances_View</a>.<a href="Cash_Payment_Balances_View.html#paid_amount">Paid_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2152,8 +2074,6 @@
 </tbody>
 </table>
 <h3 id="order_amount">Order_Amount</h3>
-<p>Order_Amount</p>
-<p>The total amount of the payment order.</p>
 <p>The total amount of the payment order.</p>
 <table>
 <thead>
@@ -2189,14 +2109,14 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
 </tr>
 <tr>
-<td>Derived From</td>
+<td>Base Table.Column</td>
 <td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#total_amount">Total_Amount</a></td>
 </tr>
 <tr>
@@ -2282,7 +2202,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -2295,8 +2215,6 @@
 </tbody>
 </table>
 <h3 id="due_start_date">Due_Start_Date</h3>
-<p>Due_Start_Date</p>
-<p>The date at which the payment becomes executable. NULL means the payment is executable at all times.</p>
 <p>The date at which the payment becomes executable. NULL means the payment is executable at all times.</p>
 <table>
 <thead>
@@ -2336,15 +2254,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#due_start_date">Due_Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2429,7 +2343,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -2442,8 +2356,6 @@
 </tbody>
 </table>
 <h3 id="location_party_id">Location_Party_Id</h3>
-<p>Location_Party_Id</p>
-<p>Location or sub-party of the Party_Id in the order</p>
 <p>Location or sub-party of the Party_Id in the order</p>
 <table>
 <thead>
@@ -2483,15 +2395,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Orders.html">Cash_Payment_Orders</a>.<a href="Cash_Payment_Orders.html#location_party_id">Location_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2576,14 +2484,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -2622,15 +2529,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2715,15 +2618,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_invoiced">Is_Invoiced</h3>
-<p>Is_Invoiced</p>
-<p>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.</p>
 <p>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.</p>
 <table>
 <thead>
@@ -2759,15 +2660,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Balances_View.html">Cash_Payment_Balances_View</a>.<a href="Cash_Payment_Balances_View.html#is_invoiced">Is_Invoiced</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2852,7 +2749,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>

@@ -1,5 +1,10 @@
 # Table Sys_User_Business_Rules
 
+
+## Entity
+
+Entity: [Systems.Bpm.UserBusinessRules](~/entities/Systems.Bpm.UserBusinessRules.md)
+
 Represents user-defined business rule. Entity: Sys_User_Business_Rules
 
 ## Summary
@@ -11,20 +16,17 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 |[User_Business_Rule_Name](#user_business_rule_name)|`nvarchar(254)` `ML`||
 |[Repository_Name](#repository_name)|`nvarchar(128)` |The name of the repository, for which this business rule is defined.|
 |[Layer](#layer)|`nvarchar(3)` Allowed: `FTE`, `BKE`, `COM`|Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Is_Active](#is_active)|`bit` |Specifies whether the rule is activated.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[User_Startable](#user_startable)|`bit` |Specifies, that the rule can be manually started by the user.|
 |[Icon](#icon)|`varbinary` |Visual icon of the rule in .PNG format.|
 |[Script_Language](#script_language)|`nvarchar(16)` Allowed: `Integrated`, `CSharp`|The programming language used to define the rule actions.|
-|[Script_Text](#script_text)|`nvarchar(2147483647)` |The program code used to define the rule actions.|
+|[Script_Text](#script_text)|`nvarchar(max)` |The program code used to define the rule actions.|
 
 ## Columns
 
 ### User_Business_Rule_Id
-
-
-User_Business_Rule_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ User_Business_Rule_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[User_Business_Rule_Id](Sys_User_Business_Rules.md#user_business_rule_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ User_Business_Rule_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Business_Rule_Code
-
-
-User_Business_Rule_Code
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ User_Business_Rule_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[User_Business_Rule_Code](Sys_User_Business_Rules.md#user_business_rule_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,13 +98,10 @@ User_Business_Rule_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### User_Business_Rule_Name
-
-
-User_Business_Rule_Name
 
 | Property | Value |
 | - | - |
@@ -118,9 +112,8 @@ User_Business_Rule_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[User_Business_Rule_Name](Sys_User_Business_Rules.md#user_business_rule_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,12 +141,6 @@ User_Business_Rule_Name
 ### Repository_Name
 
 
-Repository_Name
-
-
-The name of the repository, for which this business rule is defined.
-
-
 The name of the repository, for which this business rule is defined.
 
 | Property | Value |
@@ -165,9 +152,8 @@ The name of the repository, for which this business rule is defined.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[Repository_Name](Sys_User_Business_Rules.md#repository_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,16 +176,10 @@ The name of the repository, for which this business rule is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Layer
-
-
-Layer
-
-
-Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).
 
 
 Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).
@@ -213,10 +193,9 @@ Specifies in which layers the rule will be available. The available events and a
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`FTE`, `BKE`, `COM`|
 |Default Value|BKE|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[Layer](Sys_User_Business_Rules.md#layer)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,25 +218,21 @@ Specifies in which layers the rule will be available. The available events and a
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[Notes](Sys_User_Business_Rules.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -279,12 +254,6 @@ Notes
 ### Is_Active
 
 
-Is_Active
-
-
-Specifies whether the rule is activated.
-
-
 Specifies whether the rule is activated.
 
 | Property | Value |
@@ -295,9 +264,8 @@ Specifies whether the rule is activated.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[Is_Active](Sys_User_Business_Rules.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -320,12 +288,9 @@ Specifies whether the rule is activated.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -335,9 +300,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[Row_Version](Sys_User_Business_Rules.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -359,12 +323,6 @@ Row_Version
 ### User_Startable
 
 
-User_Startable
-
-
-Specifies, that the rule can be manually started by the user.
-
-
 Specifies, that the rule can be manually started by the user.
 
 | Property | Value |
@@ -375,9 +333,8 @@ Specifies, that the rule can be manually started by the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[User_Startable](Sys_User_Business_Rules.md#user_startable)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -400,15 +357,9 @@ Specifies, that the rule can be manually started by the user.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Icon
-
-
-Icon
-
-
-Visual icon of the rule in .PNG format.
 
 
 Visual icon of the rule in .PNG format.
@@ -421,9 +372,8 @@ Visual icon of the rule in .PNG format.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[Icon](Sys_User_Business_Rules.md#icon)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -445,12 +395,6 @@ Visual icon of the rule in .PNG format.
 ### Script_Language
 
 
-Script_Language
-
-
-The programming language used to define the rule actions.
-
-
 The programming language used to define the rule actions.
 
 | Property | Value |
@@ -462,10 +406,9 @@ The programming language used to define the rule actions.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`Integrated`, `CSharp`|
 |Default Value|Integrated|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[Script_Language](Sys_User_Business_Rules.md#script_language)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -487,26 +430,19 @@ The programming language used to define the rule actions.
 ### Script_Text
 
 
-Script_Text
-
-
-The program code used to define the rule actions.
-
-
 The program code used to define the rule actions.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rules](Sys_User_Business_Rules.md).[Script_Text](Sys_User_Business_Rules.md#script_text)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

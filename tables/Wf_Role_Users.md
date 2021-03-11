@@ -1,5 +1,10 @@
 # Table Wf_Role_Users
 
+
+## Entity
+
+Entity: [Systems.Workflow.RoleUsers](~/entities/Systems.Workflow.RoleUsers.md)
+
 The roles "played" by the security users. Entity: Wf_Role_Users
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ The roles "played" by the security users. Entity: Wf_Role_Users
 
 ### Role_User_Id
 
-
-Role_User_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Role_User_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wf_Role_Users](Wf_Role_Users.md).[Role_User_Id](Wf_Role_Users.md#role_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,12 +57,9 @@ Role_User_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Role_Id
-
-
-Role_Id
 
 | Property | Value |
 | - | - |
@@ -72,9 +70,8 @@ Role_Id
 |Referenced Table|[Wf_Roles](Wf_Roles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Role_Users](Wf_Role_Users.md).[Role_Id](Wf_Role_Users.md#role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -97,12 +94,9 @@ Role_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Id
-
-
-User_Id
 
 | Property | Value |
 | - | - |
@@ -113,9 +107,8 @@ User_Id
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Role_Users](Wf_Role_Users.md).[User_Id](Wf_Role_Users.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -138,12 +131,9 @@ User_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -153,9 +143,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Role_Users](Wf_Role_Users.md).[Row_Version](Wf_Role_Users.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

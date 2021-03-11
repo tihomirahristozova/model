@@ -1,5 +1,10 @@
 # Table Gen_Parties
 
+
+## Entity
+
+Entity: [General.Contacts.Parties](~/entities/General.Contacts.Parties.md)
+
 Contains base data for different kind of parties - companies, persons, departments, etc. Entity: Gen_Parties
 
 ## Summary
@@ -29,12 +34,6 @@ Contains base data for different kind of parties - companies, persons, departmen
 ### Id
 
 
-Id
-
-
-Unique party id
-
-
 Unique party id
 
 | Property | Value |
@@ -46,9 +45,8 @@ Unique party id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Id](Gen_Parties.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -71,15 +69,9 @@ Unique party id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Name
-
-
-Party_Name
-
-
-The name of the party
 
 
 The name of the party
@@ -93,9 +85,8 @@ The name of the party
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Party_Name](Gen_Parties.md#party_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -118,16 +109,10 @@ The name of the party
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Party_Type
-
-
-Party_Type
-
-
-Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division
 
 
 Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division
@@ -141,10 +126,9 @@ Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company L
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`C`, `L`, `P`, `S`, `V`|
 |Default Value|P|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Party_Type](Gen_Parties.md#party_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -167,15 +151,9 @@ Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company L
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Code
-
-
-Party_Code
-
-
-The unique code of the party
 
 
 The unique code of the party
@@ -189,9 +167,8 @@ The unique code of the party
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Party_Code](Gen_Parties.md#party_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -214,13 +191,10 @@ The unique code of the party
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -231,9 +205,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Notes](Gen_Parties.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -255,12 +228,6 @@ Notes
 ### Parent_Party_Id
 
 
-Parent_Party_Id
-
-
-Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
-
-
 Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
 
 | Property | Value |
@@ -272,9 +239,8 @@ Organizational unit (branch from the hierarchy of all parties) to which this par
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Parent_Party_Id](Gen_Parties.md#parent_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -297,15 +263,9 @@ Organizational unit (branch from the hierarchy of all parties) to which this par
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Party_Unique_Number
-
-
-Party_Unique_Number
-
-
-Unique number of the party (National number for persons, Registration number for companies)
 
 
 Unique number of the party (National number for persons, Registration number for companies)
@@ -319,9 +279,8 @@ Unique number of the party (National number for persons, Registration number for
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Party_Unique_Number](Gen_Parties.md#party_unique_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -344,13 +303,10 @@ Unique number of the party (National number for persons, Registration number for
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Creation_Time
-
-
-Creation_Time
 
 | Property | Value |
 | - | - |
@@ -361,9 +317,8 @@ Creation_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Creation_Time](Gen_Parties.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -390,9 +345,6 @@ Creation_Time
 
 ### Creation_User
 
-
-Creation_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -402,9 +354,8 @@ Creation_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Creation_User](Gen_Parties.md#creation_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -431,9 +382,6 @@ Creation_User
 
 ### Update_Time
 
-
-Update_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -443,9 +391,8 @@ Update_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Update_Time](Gen_Parties.md#update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -472,9 +419,6 @@ Update_Time
 
 ### Update_User
 
-
-Update_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -484,9 +428,8 @@ Update_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Update_User](Gen_Parties.md#update_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -514,12 +457,6 @@ Update_User
 ### GLN
 
 
-GLN
-
-
-Global Location Number used by EDI systems
-
-
 Global Location Number used by EDI systems
 
 | Property | Value |
@@ -531,9 +468,8 @@ Global Location Number used by EDI systems
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[GLN](Gen_Parties.md#gln)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -556,15 +492,9 @@ Global Location Number used by EDI systems
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Area_Id
-
-
-Area_Id
-
-
-The area in which the party is situated.
 
 
 The area in which the party is situated.
@@ -578,9 +508,8 @@ The area in which the party is situated.
 |Referenced Table|[Gen_Areas](Gen_Areas.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Area_Id](Gen_Parties.md#area_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -603,15 +532,9 @@ The area in which the party is situated.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Default_Product_Coding_System_Id
-
-
-Default_Product_Coding_System_Id
-
-
-When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
 
 
 When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
@@ -625,9 +548,8 @@ When not null, specifies coding system for products, which is required by the pa
 |Referenced Table|[Gen_Coding_Systems](Gen_Coding_Systems.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Default_Product_Coding_System_Id](Gen_Parties.md#default_product_coding_system_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -650,15 +572,9 @@ When not null, specifies coding system for products, which is required by the pa
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Administrative_Region_Id
-
-
-Administrative_Region_Id
-
-
-The administrative region in which the party is situated.
 
 
 The administrative region in which the party is situated.
@@ -672,9 +588,8 @@ The administrative region in which the party is situated.
 |Referenced Table|[Gen_Administrative_Regions](Gen_Administrative_Regions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Administrative_Region_Id](Gen_Parties.md#administrative_region_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -697,15 +612,9 @@ The administrative region in which the party is situated.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Specifies whether the current party is active in the system or not.
 
 
 Specifies whether the current party is active in the system or not.
@@ -718,9 +627,8 @@ Specifies whether the current party is active in the system or not.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Is_Active](Gen_Parties.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -743,12 +651,9 @@ Specifies whether the current party is active in the system or not.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -758,9 +663,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Parties](Gen_Parties.md).[Row_Version](Gen_Parties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_invoices">Table Crm_Invoices</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Invoicing.Invoices.html">Crm.Invoicing.Invoices</a></p>
 <p>Invoices issued by the enterprise companies. Entity: Crm_Invoices</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -228,8 +230,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="customer_id">Customer_Id</h3>
-<p>Customer_Id</p>
-<p>The customer to which the invoice is issued</p>
 <p>The customer to which the invoice is issued</p>
 <table>
 <thead>
@@ -269,15 +269,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#customer_id">Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -362,15 +358,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_currency_id">Document_Currency_Id</h3>
-<p>Document_Currency_Id</p>
-<p>The currency in which the document is issued. All amounts are in this currency</p>
 <p>The currency in which the document is issued. All amounts are in this currency</p>
 <table>
 <thead>
@@ -410,15 +404,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#document_currency_id">Document_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -503,15 +493,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_type_id">Payment_Type_Id</h3>
-<p>Payment_Type_Id</p>
-<p>When not NULL specifies the payment type for the invoice</p>
 <p>When not NULL specifies the payment type for the invoice</p>
 <table>
 <thead>
@@ -551,15 +539,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#payment_type_id">Payment_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -644,15 +628,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_type_description">Payment_Type_Description</h3>
-<p>Payment_Type_Description</p>
-<p>Description of the payment type. Initially copied from the name of the Payment Type</p>
 <p>Description of the payment type. Initially copied from the name of the Payment Type</p>
 <table>
 <thead>
@@ -692,15 +674,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#payment_type_description">Payment_Type_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -773,8 +751,6 @@
 </tbody>
 </table>
 <h3 id="delivery_date">Delivery_Date</h3>
-<p>Delivery_Date</p>
-<p>Date, when the delivery was effected. When NULL = document date</p>
 <p>Date, when the delivery was effected. When NULL = document date</p>
 <table>
 <thead>
@@ -814,15 +790,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#delivery_date">Delivery_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -895,7 +867,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -934,15 +905,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1015,8 +982,6 @@
 </tbody>
 </table>
 <h3 id="credit_note_original_invoice_id">Credit_Note_Original_Invoice_Id</h3>
-<p>Credit_Note_Original_Invoice_Id</p>
-<p>When this is credit note, may contain the original Invoice. NULL for normal invoices or when the original document is unknown.</p>
 <p>When this is credit note, may contain the original Invoice. NULL for normal invoices or when the original document is unknown.</p>
 <table>
 <thead>
@@ -1056,15 +1021,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#credit_note_original_invoice_id">Credit_Note_Original_Invoice_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1149,15 +1110,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="credit_note_description">Credit_Note_Description</h3>
-<p>Credit_Note_Description</p>
-<p>Descriptions/reason for the credit note.</p>
 <p>Descriptions/reason for the credit note.</p>
 <table>
 <thead>
@@ -1197,15 +1156,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#credit_note_description">Credit_Note_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1278,7 +1233,6 @@
 </tbody>
 </table>
 <h3 id="invoice_id">Invoice_Id</h3>
-<p>Invoice_Id</p>
 <table>
 <thead>
 <tr>
@@ -1317,15 +1271,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#invoice_id">Invoice_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1410,15 +1360,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1454,15 +1402,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1547,14 +1491,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_due_start_date">Payment_Due_Start_Date</h3>
-<p>Payment_Due_Start_Date</p>
 <table>
 <thead>
 <tr>
@@ -1593,15 +1536,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#payment_due_start_date">Payment_Due_Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1674,8 +1613,6 @@
 </tbody>
 </table>
 <h3 id="vat_cash_reporting_mode">VAT_Cash_Reporting_Mode</h3>
-<p>VAT_Cash_Reporting_Mode</p>
-<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.</p>
 <p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.</p>
 <table>
 <thead>
@@ -1711,15 +1648,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#vat_cash_reporting_mode">VAT_Cash_Reporting_Mode</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1804,15 +1737,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="intrastat_transport_country_id">Intrastat_Transport_Country_Id</h3>
-<p>Intrastat_Transport_Country_Id</p>
-<p>Country of origin of the transport company; used for Intrastat reporting</p>
 <p>Country of origin of the transport company; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -1852,15 +1783,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#intrastat_transport_country_id">Intrastat_Transport_Country_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1945,15 +1872,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</h3>
-<p>Intrastat_Transport_Mode_Code</p>
-<p>Transport mode; used for Intrastat reporting</p>
 <p>Transport mode; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -1993,7 +1918,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2002,10 +1927,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2078,8 +1999,6 @@
 </tbody>
 </table>
 <h3 id="intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</h3>
-<p>Intrastat_Transaction_Nature_Code</p>
-<p>Transaction nature; used for Intrastat reporting</p>
 <p>Transaction nature; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -2119,7 +2038,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2128,10 +2047,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2204,8 +2119,6 @@
 </tbody>
 </table>
 <h3 id="delivery_terms_code">Delivery_Terms_Code</h3>
-<p>Delivery_Terms_Code</p>
-<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <table>
 <thead>
@@ -2245,7 +2158,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2254,10 +2167,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#delivery_terms_code">Delivery_Terms_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2330,8 +2239,6 @@
 </tbody>
 </table>
 <h3 id="deal_type_id">Deal_Type_Id</h3>
-<p>Deal_Type_Id</p>
-<p>VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type.</p>
 <p>VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type.</p>
 <table>
 <thead>
@@ -2371,15 +2278,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#deal_type_id">Deal_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2464,15 +2367,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="isvalid">IsValid</h3>
-<p>IsValid</p>
-<p>Used for internal purposes. 1 when the invoice is valid (released and not void) for summing</p>
 <p>Used for internal purposes. 1 when the invoice is valid (released and not void) for summing</p>
 <table>
 <thead>
@@ -2508,15 +2409,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#isvalid">IsValid</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2589,8 +2486,6 @@
 </tbody>
 </table>
 <h3 id="vat_notes">VAT_Notes</h3>
-<p>VAT_Notes</p>
-<p>Description of the operation that will be entered in the VAT ledgers.</p>
 <p>Description of the operation that will be entered in the VAT ledgers.</p>
 <table>
 <thead>
@@ -2630,15 +2525,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#vat_notes">VAT_Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2711,8 +2602,6 @@
 </tbody>
 </table>
 <h3 id="apply_date">Apply_Date</h3>
-<p>Apply_Date</p>
-<p>When not NULL specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date.</p>
 <p>When not NULL specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date.</p>
 <table>
 <thead>
@@ -2752,15 +2641,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#apply_date">Apply_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2833,8 +2718,6 @@
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -2870,15 +2753,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2963,15 +2842,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_due_date">Payment_Due_Date</h3>
-<p>Payment_Due_Date</p>
-<p>When not NULL specifies due date for the payment</p>
 <p>When not NULL specifies due date for the payment</p>
 <table>
 <thead>
@@ -3011,15 +2888,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#payment_due_date">Payment_Due_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3092,8 +2965,6 @@
 </tbody>
 </table>
 <h3 id="payment_account_id">Payment_Account_Id</h3>
-<p>Payment_Account_Id</p>
-<p>When not NULL, specifies the default payment account for the payment order</p>
 <p>When not NULL, specifies the default payment account for the payment order</p>
 <table>
 <thead>
@@ -3133,15 +3004,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#payment_account_id">Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3226,14 +3093,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -3272,15 +3138,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3365,15 +3227,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="automatic_order_linking">Automatic_Order_Linking</h3>
-<p>Automatic_Order_Linking</p>
-<p>Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release</p>
 <p>Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release</p>
 <table>
 <thead>
@@ -3409,15 +3269,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#automatic_order_linking">Automatic_Order_Linking</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3490,7 +3346,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -3525,15 +3380,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoices.html">Crm_Invoices</a>.<a href="Crm_Invoices.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Log_Transportation_Requisition_Lines
 
+
+## Entity
+
+Entity: [Logistics.Shipment.TransportationRequisitionLines](~/entities/Logistics.Shipment.TransportationRequisitionLines.md)
+
 One line in a client requisition for transportation. Different lines usually represent requisitions for different cargo types. Entity: Log_Transportation_Requisition_Lines
 
 ## Owner Tables Hierarchy
@@ -27,9 +32,6 @@ One line in a client requisition for transportation. Different lines usually rep
 
 ### Transportation_Requisition_Line_Id
 
-
-Transportation_Requisition_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -39,9 +41,8 @@ Transportation_Requisition_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Transportation_Requisition_Line_Id](Log_Transportation_Requisition_Lines.md#transportation_requisition_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,12 +65,9 @@ Transportation_Requisition_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transportation_Requisition_Id
-
-
-Transportation_Requisition_Id
 
 | Property | Value |
 | - | - |
@@ -80,9 +78,8 @@ Transportation_Requisition_Id
 |Referenced Table|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Transportation_Requisition_Id](Log_Transportation_Requisition_Lines.md#transportation_requisition_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,12 +102,9 @@ Transportation_Requisition_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
 
 | Property | Value |
 | - | - |
@@ -120,10 +114,9 @@ Line_No
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Line_No](Log_Transportation_Requisition_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,15 +139,9 @@ Line_No
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cargo_Type_Id
-
-
-Cargo_Type_Id
-
-
-The type of the transported cargo.
 
 
 The type of the transported cargo.
@@ -168,9 +155,8 @@ The type of the transported cargo.
 |Referenced Table|[Log_Cargo_Types](Log_Cargo_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Cargo_Type_Id](Log_Transportation_Requisition_Lines.md#cargo_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,15 +179,9 @@ The type of the transported cargo.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Contents_Description
-
-
-Contents_Description
-
-
-Textual description of the cargo contents.
 
 
 Textual description of the cargo contents.
@@ -215,9 +195,8 @@ Textual description of the cargo contents.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Contents_Description](Log_Transportation_Requisition_Lines.md#contents_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,12 +218,6 @@ Textual description of the cargo contents.
 ### Weight_Kg
 
 
-Weight_Kg
-
-
-The weight of the cargo, in KG (kilogramms). NULL when it is unknown.
-
-
 The weight of the cargo, in KG (kilogramms). NULL when it is unknown.
 
 | Property | Value |
@@ -255,9 +228,8 @@ The weight of the cargo, in KG (kilogramms). NULL when it is unknown.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Weight_Kg](Log_Transportation_Requisition_Lines.md#weight_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -279,12 +251,6 @@ The weight of the cargo, in KG (kilogramms). NULL when it is unknown.
 ### Volume_Cbm
 
 
-Volume_Cbm
-
-
-The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.
-
-
 The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.
 
 | Property | Value |
@@ -295,9 +261,8 @@ The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Volume_Cbm](Log_Transportation_Requisition_Lines.md#volume_cbm)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -319,12 +284,6 @@ The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.
 ### Pallets_Count
 
 
-Pallets_Count
-
-
-Number of palettes comprising the cargo. NULL when it is unknown.
-
-
 Number of palettes comprising the cargo. NULL when it is unknown.
 
 | Property | Value |
@@ -335,9 +294,8 @@ Number of palettes comprising the cargo. NULL when it is unknown.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Pallets_Count](Log_Transportation_Requisition_Lines.md#pallets_count)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -359,12 +317,6 @@ Number of palettes comprising the cargo. NULL when it is unknown.
 ### Parent_Document_Id
 
 
-Parent_Document_Id
-
-
-The document, which the current line executes. NULL when the current line does not execute another line.
-
-
 The document, which the current line executes. NULL when the current line does not execute another line.
 
 | Property | Value |
@@ -376,9 +328,8 @@ The document, which the current line executes. NULL when the current line does n
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Parent_Document_Id](Log_Transportation_Requisition_Lines.md#parent_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -401,15 +352,9 @@ The document, which the current line executes. NULL when the current line does n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Parent_Line_No
-
-
-Parent_Line_No
-
-
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.
 
 
 The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.
@@ -422,9 +367,8 @@ The number of the line within the parent document, which the current line execut
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Parent_Line_No](Log_Transportation_Requisition_Lines.md#parent_line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -447,12 +391,9 @@ The number of the line within the parent document, which the current line execut
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -462,9 +403,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisition_Lines](Log_Transportation_Requisition_Lines.md).[Row_Version](Log_Transportation_Requisition_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

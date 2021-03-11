@@ -1,5 +1,10 @@
 # Table Sys_User_Business_Rule_Events
 
+
+## Entity
+
+Entity: [Systems.Bpm.UserBusinessRuleEvents](~/entities/Systems.Bpm.UserBusinessRuleEvents.md)
+
 Represents event registration of a business rule. Entity: Sys_User_Business_Rule_Events
 
 ## Owner Tables Hierarchy
@@ -23,12 +28,6 @@ Represents event registration of a business rule. Entity: Sys_User_Business_Rule
 ### Event_Type
 
 
-Event_Type
-
-
-The event for which to register the business rule.
-
-
 The event for which to register the business rule.
 
 | Property | Value |
@@ -40,10 +39,9 @@ The event for which to register the business rule.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`AGGREGATECLIENTCOMMIT`, `ATTRIBUTECHANGED`, `ATTRIBUTECHANGING`, `CLIENTCOMMIT`, `COMMIT`, `STATECHANGED`, `STATECHANGING`, `VOIDING`|
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Events](Sys_User_Business_Rule_Events.md).[Event_Type](Sys_User_Business_Rule_Events.md#event_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,12 +63,6 @@ The event for which to register the business rule.
 ### Event_Parameter
 
 
-Event_Parameter
-
-
-Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.
-
-
 Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.
 
 | Property | Value |
@@ -82,9 +74,8 @@ Registration parameter. The meaning is determined by the event. Usually - attrib
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Events](Sys_User_Business_Rule_Events.md).[Event_Parameter](Sys_User_Business_Rule_Events.md#event_parameter)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,12 +97,6 @@ Registration parameter. The meaning is determined by the event. Usually - attrib
 ### Execution_Priority
 
 
-Execution_Priority
-
-
-Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.
-
-
 Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.
 
 | Property | Value |
@@ -122,10 +107,9 @@ Execution priority. Lower values indicate earlier priorities. Possible values - 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`30`, `50`, `70`|
 |Default Value|50|
-|Derived From|[Sys_User_Business_Rule_Events](Sys_User_Business_Rule_Events.md).[Execution_Priority](Sys_User_Business_Rule_Events.md#execution_priority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,9 +130,6 @@ Execution priority. Lower values indicate earlier priorities. Possible values - 
 
 ### User_Business_Rule_Event_Id
 
-
-User_Business_Rule_Event_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -158,9 +139,8 @@ User_Business_Rule_Event_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_User_Business_Rule_Events](Sys_User_Business_Rule_Events.md).[User_Business_Rule_Event_Id](Sys_User_Business_Rule_Events.md#user_business_rule_event_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -183,15 +163,9 @@ User_Business_Rule_Event_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Business_Rule_Id
-
-
-User_Business_Rule_Id
-
-
-The rule, which will be registered for the event.
 
 
 The rule, which will be registered for the event.
@@ -205,9 +179,8 @@ The rule, which will be registered for the event.
 |Referenced Table|[Sys_User_Business_Rules](Sys_User_Business_Rules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Events](Sys_User_Business_Rule_Events.md).[User_Business_Rule_Id](Sys_User_Business_Rule_Events.md#user_business_rule_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,15 +203,9 @@ The rule, which will be registered for the event.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Layer
-
-
-Layer
-
-
-Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.
 
 
 Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.
@@ -252,10 +219,9 @@ Specifies the layer on which to register the event. Allowed values = FTE-FrontEn
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`FTE`, `BKE`|
 |Default Value|BKE|
-|Derived From|[Sys_User_Business_Rule_Events](Sys_User_Business_Rule_Events.md).[Layer](Sys_User_Business_Rule_Events.md#layer)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -276,9 +242,6 @@ Specifies the layer on which to register the event. Allowed values = FTE-FrontEn
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -287,9 +250,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Events](Sys_User_Business_Rule_Events.md).[Row_Version](Sys_User_Business_Rule_Events.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

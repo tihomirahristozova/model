@@ -1,5 +1,10 @@
 # Table Acc_Templates
 
+
+## Entity
+
+Entity: [Finance.Accounting.Templates](~/entities/Finance.Accounting.Templates.md)
+
 Accounting templates are used to automate the postings for repetitive business transactions. Templates can be bound to almost all documents and automate their postings. Entity: Acc_Templates
 
 ## Owner Tables Hierarchy
@@ -15,15 +20,12 @@ Accounting templates are used to automate the postings for repetitive business t
 |[Template_Name](#template_name)|`nvarchar(254)` ||
 |[Route_Id](#route_id)|`uniqueidentifier` |The route which activates the template|
 |[Voucher_Date_Source](#voucher_date_source)|`nvarchar(2000)` |Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual.|
-|[Voucher_Description_Mask](#voucher_description_mask)|`nvarchar(2147483647)` |Template voucher description. Can use field substitutes, surrounded with square brackets|
+|[Voucher_Description_Mask](#voucher_description_mask)|`nvarchar(max)` |Template voucher description. Can use field substitutes, surrounded with square brackets|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Template_Id
-
-
-Template_Id
 
 | Property | Value |
 | - | - |
@@ -34,9 +36,8 @@ Template_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Templates](Acc_Templates.md).[Template_Id](Acc_Templates.md#template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Template_Name
-
-
-Template_Name
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Template_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Templates](Acc_Templates.md).[Template_Name](Acc_Templates.md#template_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,12 +102,6 @@ Template_Name
 ### Route_Id
 
 
-Route_Id
-
-
-The route which activates the template
-
-
 The route which activates the template
 
 | Property | Value |
@@ -122,9 +113,8 @@ The route which activates the template
 |Referenced Table|[Wf_Routes](Wf_Routes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Templates](Acc_Templates.md).[Route_Id](Acc_Templates.md#route_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ The route which activates the template
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Voucher_Date_Source
-
-
-Voucher_Date_Source
-
-
-Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual.
 
 
 Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual.
@@ -169,9 +153,8 @@ Determines the source for the document date of the generated voucher. If not spe
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Templates](Acc_Templates.md).[Voucher_Date_Source](Acc_Templates.md#voucher_date_source)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,26 +176,19 @@ Determines the source for the document date of the generated voucher. If not spe
 ### Voucher_Description_Mask
 
 
-Voucher_Description_Mask
-
-
-Template voucher description. Can use field substitutes, surrounded with square brackets
-
-
 Template voucher description. Can use field substitutes, surrounded with square brackets
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Templates](Acc_Templates.md).[Voucher_Description_Mask](Acc_Templates.md#voucher_description_mask)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -233,9 +209,6 @@ Template voucher description. Can use field substitutes, surrounded with square 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -244,9 +217,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Templates](Acc_Templates.md).[Row_Version](Acc_Templates.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

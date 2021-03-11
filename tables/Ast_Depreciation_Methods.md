@@ -1,5 +1,10 @@
 # Table Ast_Depreciation_Methods
 
+
+## Entity
+
+Entity: [Finance.Assets.DepreciationMethods](~/entities/Finance.Assets.DepreciationMethods.md)
+
 Depreciation methods. Contains both system-defined and user-defined methods. Entity: Ast_Depreciation_Methods
 
 ## Summary
@@ -20,9 +25,6 @@ Depreciation methods. Contains both system-defined and user-defined methods. Ent
 
 ### Depreciation_Method_Id
 
-
-Depreciation_Method_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Depreciation_Method_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Depreciation_Method_Id](Ast_Depreciation_Methods.md#depreciation_method_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Depreciation_Method_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Depreciation_Method_Name
-
-
-Depreciation_Method_Name
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Depreciation_Method_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Depreciation_Method_Name](Ast_Depreciation_Methods.md#depreciation_method_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,12 +100,6 @@ Depreciation_Method_Name
 ### Depreciation_Function
 
 
-Depreciation_Function
-
-
-Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table
-
-
 Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table
 
 | Property | Value |
@@ -120,10 +111,9 @@ Basic mathematical depreciation function used to calculate asset depreciation. S
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`FAC`, `STL`, `SYD`, `TAB`|
 |Default Value|STL|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Depreciation_Function](Ast_Depreciation_Methods.md#depreciation_function)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,12 +135,6 @@ Basic mathematical depreciation function used to calculate asset depreciation. S
 ### Factor
 
 
-Factor
-
-
-Factor used in factor depreciation function. Factor < 1 means declining depreciation; >1 - increasing. The depreciation is multiplied for each period by the factor
-
-
 Factor used in factor depreciation function. Factor < 1 means declining depreciation; >1 - increasing. The depreciation is multiplied for each period by the factor
 
 | Property | Value |
@@ -161,9 +145,8 @@ Factor used in factor depreciation function. Factor < 1 means declining deprecia
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Factor](Ast_Depreciation_Methods.md#factor)|
 |Format|N3|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -185,12 +168,6 @@ Factor used in factor depreciation function. Factor < 1 means declining deprecia
 ### Months_In_A_Period
 
 
-Months_In_A_Period
-
-
-Number of equal valued months calculated with single application of the function
-
-
 Number of equal valued months calculated with single application of the function
 
 | Property | Value |
@@ -201,9 +178,8 @@ Number of equal valued months calculated with single application of the function
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|12|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Months_In_A_Period](Ast_Depreciation_Methods.md#months_in_a_period)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -225,12 +201,6 @@ Number of equal valued months calculated with single application of the function
 ### Start_From_Next_Month
 
 
-Start_From_Next_Month
-
-
-When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.
-
-
 When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.
 
 | Property | Value |
@@ -241,9 +211,8 @@ When true, denotes that the depreciation starts from the month, following the mo
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Start_From_Next_Month](Ast_Depreciation_Methods.md#start_from_next_month)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -265,12 +234,6 @@ When true, denotes that the depreciation starts from the month, following the mo
 ### Is_System
 
 
-Is_System
-
-
-Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.
-
-
 Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.
 
 | Property | Value |
@@ -281,9 +244,8 @@ Is_System is True for those depreciation methods that are managed by the system 
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Is_System](Ast_Depreciation_Methods.md#is_system)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -306,15 +268,9 @@ Is_System is True for those depreciation methods that are managed by the system 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Period_Determination_Method
-
-
-Period_Determination_Method
-
-
-Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days
 
 
 Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days
@@ -328,10 +284,9 @@ Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Curr
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`NM`, `CM`, `BD`|
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Period_Determination_Method](Ast_Depreciation_Methods.md#period_determination_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -352,9 +307,6 @@ Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Curr
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -363,9 +315,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md).[Row_Version](Ast_Depreciation_Methods.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

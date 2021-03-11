@@ -1,5 +1,10 @@
 # Table Gen_Variant_Sizes
 
+
+## Entity
+
+Entity: [General.Products.VariantSizes](~/entities/General.Products.VariantSizes.md)
+
 Contains the different sizes, which can be assigned to product variants. Entity: Gen_Variant_Sizes
 
 ## Summary
@@ -15,9 +20,6 @@ Contains the different sizes, which can be assigned to product variants. Entity:
 
 ### Variant_Size_Id
 
-
-Variant_Size_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Variant_Size_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Variant_Sizes](Gen_Variant_Sizes.md).[Variant_Size_Id](Gen_Variant_Sizes.md#variant_size_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Variant_Size_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Variant_Size_Code
-
-
-Variant_Size_Code
-
-
-Unique code of the size. Used to generate parts of bar-codes and in other coding schemes.
 
 
 Unique code of the size. Used to generate parts of bar-codes and in other coding schemes.
@@ -74,9 +69,8 @@ Unique code of the size. Used to generate parts of bar-codes and in other coding
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Sizes](Gen_Variant_Sizes.md).[Variant_Size_Code](Gen_Variant_Sizes.md#variant_size_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,16 +93,10 @@ Unique code of the size. Used to generate parts of bar-codes and in other coding
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Variant_Size_Name
-
-
-Variant_Size_Name
-
-
-The name of the variant size.
 
 
 The name of the variant size.
@@ -122,9 +110,8 @@ The name of the variant size.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Sizes](Gen_Variant_Sizes.md).[Variant_Size_Name](Gen_Variant_Sizes.md#variant_size_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,13 +134,10 @@ The name of the variant size.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -163,9 +147,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Sizes](Gen_Variant_Sizes.md).[Row_Version](Gen_Variant_Sizes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

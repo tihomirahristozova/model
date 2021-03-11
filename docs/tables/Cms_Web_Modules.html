@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cms_web_modules">Table Cms_Web_Modules</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Cms.WebModules.html">Applications.Cms.WebModules</a></p>
 <p>The abstract basic building block of web sites. Each module can render multiple web pages. Entity: Cms_Web_Modules</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="web_module_id">Web_Module_Id</h3>
-<p>Web_Module_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#web_module_id">Web_Module_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,15 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="web_site_id">Web_Site_Id</h3>
-<p>Web_Site_Id</p>
-<p>The web site to which the module belongs.</p>
 <p>The web site to which the module belongs.</p>
 <table>
 <thead>
@@ -323,15 +318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#web_site_id">Web_Site_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -416,15 +407,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_web_module_id">Parent_Web_Module_Id</h3>
-<p>Parent_Web_Module_Id</p>
-<p>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module.</p>
 <p>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module.</p>
 <table>
 <thead>
@@ -464,15 +453,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#parent_web_module_id">Parent_Web_Module_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -557,15 +542,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="web_module_name">Web_Module_Name</h3>
-<p>Web_Module_Name</p>
-<p>Multilanguage Module name. This is used as a title when displaying the web Module.</p>
 <p>Multilanguage Module name. This is used as a title when displaying the web Module.</p>
 <table>
 <thead>
@@ -605,15 +588,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#web_module_name">Web_Module_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -705,8 +684,6 @@
 </tbody>
 </table>
 <h3 id="local_url">Local_Url</h3>
-<p>Local_Url</p>
-<p>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path.</p>
 <p>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path.</p>
 <table>
 <thead>
@@ -746,15 +723,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#local_url">Local_Url</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -846,8 +819,6 @@
 </tbody>
 </table>
 <h3 id="is_published">Is_Published</h3>
-<p>Is_Published</p>
-<p>Specifies whether the module is published and will be showed in the web site.</p>
 <p>Specifies whether the module is published and will be showed in the web site.</p>
 <table>
 <thead>
@@ -883,15 +854,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#is_published">Is_Published</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -976,15 +943,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="module_picture">Module_Picture</h3>
-<p>Module_Picture</p>
-<p>Default picture. Used for picture links, small module icons, etc. PNG format is suggested.</p>
 <p>Default picture. Used for picture links, small module icons, etc. PNG format is suggested.</p>
 <table>
 <thead>
@@ -1020,15 +985,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#module_picture">Module_Picture</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1101,8 +1062,6 @@
 </tbody>
 </table>
 <h3 id="module_type">Module_Type</h3>
-<p>Module_Type</p>
-<p>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.</p>
 <p>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.</p>
 <table>
 <thead>
@@ -1142,7 +1101,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1151,10 +1110,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#module_type">Module_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1246,7 +1201,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1281,15 +1235,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_Web_Modules.html">Cms_Web_Modules</a>.<a href="Cms_Web_Modules.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

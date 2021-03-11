@@ -1,5 +1,10 @@
 # Table Dw_Data_Measure_Groups
 
+
+## Entity
+
+Entity: [Applications.DataWarehouse.DataMeasureGroups](~/entities/Applications.DataWarehouse.DataMeasureGroups.md)
+
 Contains the groups of measures in the general data warehouse. Entity: Dw_Data_Measure_Groups (Introduced in version 18.2)
 
 ## Summary
@@ -10,14 +15,11 @@ Contains the groups of measures in the general data warehouse. Entity: Dw_Data_M
 |[Parent_Data_Measure_Group_Id](#parent_data_measure_group_id)|`uniqueidentifier` |Parent data measure group in the hierarchy. Null when this is root node.|
 |[Data_Measure_Group_Code](#data_measure_group_code)|`nvarchar(16)` |Unique group code.|
 |[Data_Measure_Group_Name](#data_measure_group_name)|`nvarchar(254)` |Group name (multilanguage).|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 
 ## Columns
 
 ### Data_Measure_Group_Id
-
-
-Data_Measure_Group_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Data_Measure_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Dw_Data_Measure_Groups](Dw_Data_Measure_Groups.md).[Data_Measure_Group_Id](Dw_Data_Measure_Groups.md#data_measure_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Data_Measure_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent_Data_Measure_Group_Id
-
-
-Parent_Data_Measure_Group_Id
-
-
-Parent data measure group in the hierarchy. Null when this is root node.
 
 
 Parent data measure group in the hierarchy. Null when this is root node.
@@ -75,9 +70,8 @@ Parent data measure group in the hierarchy. Null when this is root node.
 |Referenced Table|[Dw_Data_Measure_Groups](Dw_Data_Measure_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Dw_Data_Measure_Groups](Dw_Data_Measure_Groups.md).[Parent_Data_Measure_Group_Id](Dw_Data_Measure_Groups.md#parent_data_measure_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +94,9 @@ Parent data measure group in the hierarchy. Null when this is root node.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Data_Measure_Group_Code
-
-
-Data_Measure_Group_Code
-
-
-Unique group code.
 
 
 Unique group code.
@@ -122,9 +110,8 @@ Unique group code.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Dw_Data_Measure_Groups](Dw_Data_Measure_Groups.md).[Data_Measure_Group_Code](Dw_Data_Measure_Groups.md#data_measure_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,16 +134,10 @@ Unique group code.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Data_Measure_Group_Name
-
-
-Data_Measure_Group_Name
-
-
-Group name (multilanguage).
 
 
 Group name (multilanguage).
@@ -170,9 +151,8 @@ Group name (multilanguage).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Dw_Data_Measure_Groups](Dw_Data_Measure_Groups.md).[Data_Measure_Group_Name](Dw_Data_Measure_Groups.md#data_measure_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,26 +175,22 @@ Group name (multilanguage).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Dw_Data_Measure_Groups](Dw_Data_Measure_Groups.md).[Notes](Dw_Data_Measure_Groups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

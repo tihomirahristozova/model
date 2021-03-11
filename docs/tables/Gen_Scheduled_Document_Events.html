@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_scheduled_document_events">Table Gen_Scheduled_Document_Events</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.ScheduledDocumentEvents.html">General.ScheduledDocumentEvents</a></p>
 <p>Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#last_process_status">Last_Process_Status</a></td>
-<td><code>nvarchar(2147483647)</code> Readonly</td>
+<td><code>nvarchar(max)</code> Readonly</td>
 <td>Status/information of the last attemp to process the event. Usually shows the cause in case of failure.</td>
 </tr>
 <tr>
@@ -149,7 +151,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="scheduled_document_event_id">Scheduled_Document_Event_Id</h3>
-<p>Scheduled_Document_Event_Id</p>
 <table>
 <thead>
 <tr>
@@ -188,15 +189,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#scheduled_document_event_id">Scheduled_Document_Event_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -281,15 +278,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="source_document_id">Source_Document_Id</h3>
-<p>Source_Document_Id</p>
-<p>The document that has caused this event to be scheduled</p>
 <p>The document that has caused this event to be scheduled</p>
 <table>
 <thead>
@@ -329,15 +324,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#source_document_id">Source_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -422,15 +413,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_event">Document_Event</h3>
-<p>Document_Event</p>
-<p>The type of the document event that is scheduled to be processed</p>
 <p>The type of the document event that is scheduled to be processed</p>
 <table>
 <thead>
@@ -470,15 +459,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#document_event">Document_Event</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -551,8 +536,6 @@
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
-<p>The document for which the event will be processed</p>
 <p>The document for which the event will be processed</p>
 <table>
 <thead>
@@ -592,15 +575,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -685,15 +664,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="state">State</h3>
-<p>State</p>
-<p>The state of the document for which the event will be processed</p>
 <p>The state of the document for which the event will be processed</p>
 <table>
 <thead>
@@ -729,7 +706,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -738,10 +715,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#state">State</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -814,8 +787,6 @@
 </tbody>
 </table>
 <h3 id="processed">Processed</h3>
-<p>Processed</p>
-<p>Indicates wheather the event is already processed or not</p>
 <p>Indicates wheather the event is already processed or not</p>
 <table>
 <thead>
@@ -851,15 +822,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#processed">Processed</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -944,15 +911,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="last_process_time">Last_Process_Time</h3>
-<p>Last_Process_Time</p>
-<p>The time of the last attempt to process the event</p>
 <p>The time of the last attempt to process the event</p>
 <table>
 <thead>
@@ -992,15 +957,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#last_process_time">Last_Process_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1073,8 +1034,6 @@
 </tbody>
 </table>
 <h3 id="last_process_status">Last_Process_Status</h3>
-<p>Last_Process_Status</p>
-<p>Status/information of the last attemp to process the event. Usually shows the cause in case of failure.</p>
 <p>Status/information of the last attemp to process the event. Usually shows the cause in case of failure.</p>
 <table>
 <thead>
@@ -1086,7 +1045,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1114,15 +1073,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#last_process_status">Last_Process_Status</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1195,7 +1150,6 @@
 </tbody>
 </table>
 <h3 id="creation_time">Creation_Time</h3>
-<p>Creation_Time</p>
 <table>
 <thead>
 <tr>
@@ -1234,15 +1188,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#creation_time">Creation_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1315,8 +1265,6 @@
 </tbody>
 </table>
 <h3 id="cancelled">Cancelled</h3>
-<p>Cancelled</p>
-<p>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.</p>
 <p>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.</p>
 <table>
 <thead>
@@ -1352,15 +1300,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#cancelled">Cancelled</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1445,14 +1389,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1487,15 +1430,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Scheduled_Document_Events.html">Gen_Scheduled_Document_Events</a>.<a href="Gen_Scheduled_Document_Events.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

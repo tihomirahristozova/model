@@ -1,5 +1,10 @@
 # Table Inv_Store_Orders
 
+
+## Entity
+
+Entity: [Logistics.Inventory.StoreOrders](~/entities/Logistics.Inventory.StoreOrders.md)
+
 Orders for store transactions. After an order is executed, store transaction is created. Entity: Inv_Store_Orders
 
 ## Owner Tables Hierarchy
@@ -33,9 +38,6 @@ Orders for store transactions. After an order is executed, store transaction is 
 
 ### Store_Order_Id
 
-
-Store_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -45,9 +47,8 @@ Store_Order_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Store_Order_Id](Inv_Store_Orders.md#store_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -70,15 +71,9 @@ Store_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The Id of the store order document entry
 
 
 The Id of the store order document entry
@@ -92,9 +87,8 @@ The Id of the store order document entry
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Document_Id](Inv_Store_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -117,15 +111,9 @@ The Id of the store order document entry
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The designated warehouse for the operation
 
 
 The designated warehouse for the operation
@@ -139,9 +127,8 @@ The designated warehouse for the operation
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Store_Id](Inv_Store_Orders.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -164,15 +151,9 @@ The designated warehouse for the operation
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Due_Date
-
-
-Due_Date
-
-
-The final date, when the store transaction should occur.
 
 
 The final date, when the store transaction should occur.
@@ -186,9 +167,8 @@ The final date, when the store transaction should occur.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Due_Date](Inv_Store_Orders.md#due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -216,12 +196,6 @@ The final date, when the store transaction should occur.
 ### Movement_Type
 
 
-Movement_Type
-
-
-Store order movement type. R=RECEIPT, I=ISSUE
-
-
 Store order movement type. R=RECEIPT, I=ISSUE
 
 | Property | Value |
@@ -233,10 +207,9 @@ Store order movement type. R=RECEIPT, I=ISSUE
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `R`|
 |Default Value|R|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Movement_Type](Inv_Store_Orders.md#movement_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -259,15 +232,9 @@ Store order movement type. R=RECEIPT, I=ISSUE
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Status
-
-
-Status
-
-
-P=Planned; F=Firm planned; R=Released; C=Completed
 
 
 P=Planned; F=Firm planned; R=Released; C=Completed
@@ -281,9 +248,8 @@ P=Planned; F=Firm planned; R=Released; C=Completed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|P|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Status](Inv_Store_Orders.md#status)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -305,12 +271,6 @@ P=Planned; F=Firm planned; R=Released; C=Completed
 ### Planned_Release_Date
 
 
-Planned_Release_Date
-
-
-Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.
-
-
 Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.
 
 | Property | Value |
@@ -322,9 +282,8 @@ Date, when the respective store transaction document is scheduled to be released
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Planned_Release_Date](Inv_Store_Orders.md#planned_release_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -352,12 +311,6 @@ Date, when the respective store transaction document is scheduled to be released
 ### Planned_Completion_Date
 
 
-Planned_Completion_Date
-
-
-Date, when the quantities are expected to be completely issued/received
-
-
 Date, when the quantities are expected to be completely issued/received
 
 | Property | Value |
@@ -369,9 +322,8 @@ Date, when the quantities are expected to be completely issued/received
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Planned_Completion_Date](Inv_Store_Orders.md#planned_completion_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -399,12 +351,6 @@ Date, when the quantities are expected to be completely issued/received
 ### Driver_Name
 
 
-Driver_Name
-
-
-The name of the driver, who will deliver the stocks.
-
-
 The name of the driver, who will deliver the stocks.
 
 | Property | Value |
@@ -416,9 +362,8 @@ The name of the driver, who will deliver the stocks.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Driver_Name](Inv_Store_Orders.md#driver_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -440,12 +385,6 @@ The name of the driver, who will deliver the stocks.
 ### Temp_Transport_Company_Name
 
 
-Temp_Transport_Company_Name
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -457,9 +396,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Temp_Transport_Company_Name](Inv_Store_Orders.md#temp_transport_company_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -481,12 +419,6 @@ Obsolete. Not used.
 ### Vehicle_Reg_Number
 
 
-Vehicle_Reg_Number
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -498,9 +430,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Vehicle_Reg_Number](Inv_Store_Orders.md#vehicle_reg_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -522,12 +453,6 @@ Obsolete. Not used.
 ### Ordering_Person_Id
 
 
-Ordering_Person_Id
-
-
-The person, which ordered the operation.
-
-
 The person, which ordered the operation.
 
 | Property | Value |
@@ -539,9 +464,8 @@ The person, which ordered the operation.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Ordering_Person_Id](Inv_Store_Orders.md#ordering_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -564,17 +488,11 @@ The person, which ordered the operation.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Issued_By_Party_Id
 
 
-Issued_By_Party_Id
-
-
-The party, which issued the goods.
-
-
 The party, which issued the goods.
 
 | Property | Value |
@@ -586,9 +504,8 @@ The party, which issued the goods.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Issued_By_Party_Id](Inv_Store_Orders.md#issued_by_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -611,17 +528,11 @@ The party, which issued the goods.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Received_By_Party_Id
 
 
-Received_By_Party_Id
-
-
-The party, which received the goods.
-
-
 The party, which received the goods.
 
 | Property | Value |
@@ -633,9 +544,8 @@ The party, which received the goods.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Received_By_Party_Id](Inv_Store_Orders.md#received_by_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -658,15 +568,9 @@ The party, which received the goods.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Document_Currency_Id
-
-
-Document_Currency_Id
-
-
-The currency in which the document amounts are expessed.
 
 
 The currency in which the document amounts are expessed.
@@ -680,9 +584,8 @@ The currency in which the document amounts are expessed.
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Document_Currency_Id](Inv_Store_Orders.md#document_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -705,17 +608,11 @@ The currency in which the document amounts are expessed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -726,9 +623,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Is_Single_Execution](Inv_Store_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -751,17 +647,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -772,9 +662,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Is_Released](Inv_Store_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -797,12 +686,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -812,9 +698,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Row_Version](Inv_Store_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Cash_Bulk_Payment_Order_Lines
 
+
+## Entity
+
+Entity: [Finance.Payments.BulkPaymentOrderLines](~/entities/Finance.Payments.BulkPaymentOrderLines.md)
+
 Bulk payment order document line. Each line usually creates one payment order. Entity: Cash_Bulk_Payment_Order_Lines
 
 ## Owner Tables Hierarchy
@@ -41,12 +46,6 @@ Bulk payment order document line. Each line usually creates one payment order. E
 ### Ref_Document_Type_Id
 
 
-Ref_Document_Type_Id
-
-
-The type of the document which is the basis for the payment
-
-
 The type of the document which is the basis for the payment
 
 | Property | Value |
@@ -58,9 +57,8 @@ The type of the document which is the basis for the payment
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Ref_Document_Type_Id](Cash_Bulk_Payment_Order_Lines.md#ref_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -83,15 +81,9 @@ The type of the document which is the basis for the payment
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Ref_Document_No
-
-
-Ref_Document_No
-
-
-The number of the document which is the basis for the payment
 
 
 The number of the document which is the basis for the payment
@@ -105,9 +97,8 @@ The number of the document which is the basis for the payment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Ref_Document_No](Cash_Bulk_Payment_Order_Lines.md#ref_document_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -129,12 +120,6 @@ The number of the document which is the basis for the payment
 ### Ref_Document_Date
 
 
-Ref_Document_Date
-
-
-The date of the base document. NULL means that it is unknown
-
-
 The date of the base document. NULL means that it is unknown
 
 | Property | Value |
@@ -146,9 +131,8 @@ The date of the base document. NULL means that it is unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Ref_Document_Date](Cash_Bulk_Payment_Order_Lines.md#ref_document_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -170,12 +154,6 @@ The date of the base document. NULL means that it is unknown
 ### Ref_Invoice_Document_Type_Id
 
 
-Ref_Invoice_Document_Type_Id
-
-
-The document type of the invoice which is related and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
-
-
 The document type of the invoice which is related and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
 
 | Property | Value |
@@ -187,9 +165,8 @@ The document type of the invoice which is related and is the basis for the payme
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Ref_Invoice_Document_Type_Id](Cash_Bulk_Payment_Order_Lines.md#ref_invoice_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -212,15 +189,9 @@ The document type of the invoice which is related and is the basis for the payme
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Ref_Invoice_Document_No
-
-
-Ref_Invoice_Document_No
-
-
-The number of the invoice which is related and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
 
 
 The number of the invoice which is related and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
@@ -234,9 +205,8 @@ The number of the invoice which is related and is the basis for the payment. NUL
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Ref_Invoice_Document_No](Cash_Bulk_Payment_Order_Lines.md#ref_invoice_document_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -258,12 +228,6 @@ The number of the invoice which is related and is the basis for the payment. NUL
 ### Ref_Invoice_Document_Date
 
 
-Ref_Invoice_Document_Date
-
-
-The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.
-
-
 The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.
 
 | Property | Value |
@@ -275,9 +239,8 @@ The date of the related invoice. NULL means that the payment order isn't related
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Ref_Invoice_Document_Date](Cash_Bulk_Payment_Order_Lines.md#ref_invoice_document_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -299,12 +262,6 @@ The date of the related invoice. NULL means that the payment order isn't related
 ### Party_Id
 
 
-Party_Id
-
-
-The party which is to pay or receive the amount
-
-
 The party which is to pay or receive the amount
 
 | Property | Value |
@@ -316,9 +273,8 @@ The party which is to pay or receive the amount
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Party_Id](Cash_Bulk_Payment_Order_Lines.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -341,15 +297,9 @@ The party which is to pay or receive the amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Due_Date
-
-
-Due_Date
-
-
-The due date of the payment. NULL means there is no due date
 
 
 The due date of the payment. NULL means there is no due date
@@ -363,9 +313,8 @@ The due date of the payment. NULL means there is no due date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Due_Date](Cash_Bulk_Payment_Order_Lines.md#due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -393,12 +342,6 @@ The due date of the payment. NULL means there is no due date
 ### Direction
 
 
-Direction
-
-
-I for Payment issue, R for payment receipt
-
-
 I for Payment issue, R for payment receipt
 
 | Property | Value |
@@ -410,10 +353,9 @@ I for Payment issue, R for payment receipt
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `R`|
 |Default Value|I|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Direction](Cash_Bulk_Payment_Order_Lines.md#direction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -436,15 +378,9 @@ I for Payment issue, R for payment receipt
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Total_Amount
-
-
-Total_Amount
-
-
-Total amount that should be payed
 
 
 Total amount that should be payed
@@ -457,9 +393,8 @@ Total amount that should be payed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Total_Amount](Cash_Bulk_Payment_Order_Lines.md#total_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -481,12 +416,6 @@ Total amount that should be payed
 ### Total_Amount_Currency_Id
 
 
-Total_Amount_Currency_Id
-
-
-The currency of Total Amount
-
-
 The currency of Total Amount
 
 | Property | Value |
@@ -498,9 +427,8 @@ The currency of Total Amount
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Total_Amount_Currency_Id](Cash_Bulk_Payment_Order_Lines.md#total_amount_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -523,15 +451,9 @@ The currency of Total Amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Invoice_Amount
-
-
-Invoice_Amount
-
-
-The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)
 
 
 The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)
@@ -544,9 +466,8 @@ The specified invoice amount. (the invoice amount converted to the Total_Amount_
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Invoice_Amount](Cash_Bulk_Payment_Order_Lines.md#invoice_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -568,12 +489,6 @@ The specified invoice amount. (the invoice amount converted to the Total_Amount_
 ### Invoice_Amount_Currency_Id
 
 
-Invoice_Amount_Currency_Id
-
-
-The currency of Invoice Amount
-
-
 The currency of Invoice Amount
 
 | Property | Value |
@@ -585,9 +500,8 @@ The currency of Invoice Amount
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Invoice_Amount_Currency_Id](Cash_Bulk_Payment_Order_Lines.md#invoice_amount_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -610,12 +524,9 @@ The currency of Invoice Amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -626,9 +537,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Notes](Cash_Bulk_Payment_Order_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -650,12 +560,6 @@ Notes
 ### Bill_To
 
 
-Bill_To
-
-
-If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), NULL = unidentified
-
-
 If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), NULL = unidentified
 
 | Property | Value |
@@ -667,10 +571,9 @@ If filled indicates which party is billed for the total amount. Possible values:
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`C`, `L`|
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Bill_To](Cash_Bulk_Payment_Order_Lines.md#bill_to)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -692,12 +595,6 @@ If filled indicates which party is billed for the total amount. Possible values:
 ### Payment_Type_Id
 
 
-Payment_Type_Id
-
-
-Expected payment type. When null, there is no expectation for payment type.
-
-
 Expected payment type. When null, there is no expectation for payment type.
 
 | Property | Value |
@@ -709,9 +606,8 @@ Expected payment type. When null, there is no expectation for payment type.
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Payment_Type_Id](Cash_Bulk_Payment_Order_Lines.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -734,15 +630,9 @@ Expected payment type. When null, there is no expectation for payment type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Location_Party_Id
-
-
-Location_Party_Id
-
-
-Location or sub-party of the Party_Id
 
 
 Location or sub-party of the Party_Id
@@ -756,9 +646,8 @@ Location or sub-party of the Party_Id
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Location_Party_Id](Cash_Bulk_Payment_Order_Lines.md#location_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -781,12 +670,9 @@ Location or sub-party of the Party_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Bulk_Payment_Order_Line_Id
-
-
-Bulk_Payment_Order_Line_Id
 
 | Property | Value |
 | - | - |
@@ -797,9 +683,8 @@ Bulk_Payment_Order_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Bulk_Payment_Order_Line_Id](Cash_Bulk_Payment_Order_Lines.md#bulk_payment_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -822,15 +707,9 @@ Bulk_Payment_Order_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Account_Id
-
-
-Payment_Account_Id
-
-
-When not NULL, specifies the payment account that is expected or will be used by the payment transaction
 
 
 When not NULL, specifies the payment account that is expected or will be used by the payment transaction
@@ -844,9 +723,8 @@ When not NULL, specifies the payment account that is expected or will be used by
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Payment_Account_Id](Cash_Bulk_Payment_Order_Lines.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -869,15 +747,9 @@ When not NULL, specifies the payment account that is expected or will be used by
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Installment_Number
-
-
-Installment_Number
-
-
-Consequtive installment number. Used for identifying the payment when using payment plans. NULL means that the payment is not part of a payment plan
 
 
 Consequtive installment number. Used for identifying the payment when using payment plans. NULL means that the payment is not part of a payment plan
@@ -890,9 +762,8 @@ Consequtive installment number. Used for identifying the payment when using paym
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Installment_Number](Cash_Bulk_Payment_Order_Lines.md#installment_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -914,12 +785,6 @@ Consequtive installment number. Used for identifying the payment when using paym
 ### Ref_Invoice_Apply_Date
 
 
-Ref_Invoice_Apply_Date
-
-
-The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.
-
-
 The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.
 
 | Property | Value |
@@ -931,9 +796,8 @@ The apply date of the related invoice. Not specified when the payment order isn'
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Ref_Invoice_Apply_Date](Cash_Bulk_Payment_Order_Lines.md#ref_invoice_apply_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -954,9 +818,6 @@ The apply date of the related invoice. Not specified when the payment order isn'
 
 ### Bulk_Payment_Order_Id
 
-
-Bulk_Payment_Order_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -966,9 +827,8 @@ Bulk_Payment_Order_Id
 |Referenced Table|[Cash_Bulk_Payment_Orders](Cash_Bulk_Payment_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Bulk_Payment_Order_Id](Cash_Bulk_Payment_Order_Lines.md#bulk_payment_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -991,15 +851,9 @@ Bulk_Payment_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Amount_With_VAT
-
-
-Is_Amount_With_VAT
-
-
-Is_Amount_With_VAT=1 if the requested amount includes VAT
 
 
 Is_Amount_With_VAT=1 if the requested amount includes VAT
@@ -1012,9 +866,8 @@ Is_Amount_With_VAT=1 if the requested amount includes VAT
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Is_Amount_With_VAT](Cash_Bulk_Payment_Order_Lines.md#is_amount_with_vat)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1037,12 +890,9 @@ Is_Amount_With_VAT=1 if the requested amount includes VAT
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -1052,9 +902,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Bulk_Payment_Order_Lines](Cash_Bulk_Payment_Order_Lines.md).[Row_Version](Cash_Bulk_Payment_Order_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Document_Amounts
 
+
+## Entity
+
+Entity: [General.DocumentAmounts](~/entities/General.DocumentAmounts.md)
+
 Contains a specific instance of an additional amount for a specific document. Entity: Gen_Document_Amounts
 
 ## Owner Tables Hierarchy
@@ -27,9 +32,6 @@ Contains a specific instance of an additional amount for a specific document. En
 
 ### Document_Amount_Id
 
-
-Document_Amount_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -39,9 +41,8 @@ Document_Amount_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Document_Amount_Id](Gen_Document_Amounts.md#document_amount_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,12 +65,9 @@ Document_Amount_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -80,9 +78,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Document_Id](Gen_Document_Amounts.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +102,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Amount_Type_Id
-
-
-Document_Amount_Type_Id
-
-
-The type of the amount.
 
 
 The type of the amount.
@@ -127,9 +118,8 @@ The type of the amount.
 |Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Document_Amount_Type_Id](Gen_Document_Amounts.md#document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +142,9 @@ The type of the amount.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Input_Percent
-
-
-Input_Percent
-
-
-When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type).
 
 
 When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type).
@@ -173,9 +157,8 @@ When not null, specifies that the amount for this document will be calculated as
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Input_Percent](Gen_Document_Amounts.md#input_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,12 +186,6 @@ When not null, specifies that the amount for this document will be calculated as
 ### Input_Amount
 
 
-Input_Amount
-
-
-When not null, specifies directly the amount of the additional amount.
-
-
 When not null, specifies directly the amount of the additional amount.
 
 | Property | Value |
@@ -219,9 +196,8 @@ When not null, specifies directly the amount of the additional amount.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Input_Amount](Gen_Document_Amounts.md#input_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,12 +225,6 @@ When not null, specifies directly the amount of the additional amount.
 ### Input_Amount_Currency_Id
 
 
-Input_Amount_Currency_Id
-
-
-When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null.
-
-
 When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null.
 
 | Property | Value |
@@ -266,9 +236,8 @@ When specifying the amount directly in Input Amount, this contains the currency 
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Input_Amount_Currency_Id](Gen_Document_Amounts.md#input_amount_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,15 +260,9 @@ When specifying the amount directly in Input Amount, this contains the currency 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### User_Can_Change_Input
-
-
-User_Can_Change_Input
-
-
-1 if the user, entering the document is allowed to change the default input percent
 
 
 1 if the user, entering the document is allowed to change the default input percent
@@ -312,9 +275,8 @@ User_Can_Change_Input
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[User_Can_Change_Input](Gen_Document_Amounts.md#user_can_change_input)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -336,12 +298,6 @@ User_Can_Change_Input
 ### Input_Unit_Amount
 
 
-Input_Unit_Amount
-
-
-Input unit amount for the calculation of the current amount.
-
-
 Input unit amount for the calculation of the current amount.
 
 | Property | Value |
@@ -352,9 +308,8 @@ Input unit amount for the calculation of the current amount.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Input_Unit_Amount](Gen_Document_Amounts.md#input_unit_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -377,16 +332,10 @@ Input unit amount for the calculation of the current amount.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Input_Unit_Id
-
-
-Input_Unit_Id
-
-
-Measurement unit of the input unit amount.
 
 
 Measurement unit of the input unit amount.
@@ -400,9 +349,8 @@ Measurement unit of the input unit amount.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Input_Unit_Id](Gen_Document_Amounts.md#input_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -425,12 +373,9 @@ Measurement unit of the input unit amount.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -440,9 +385,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Row_Version](Gen_Document_Amounts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -464,12 +408,6 @@ Row_Version
 ### Base_Amount
 
 
-Base_Amount
-
-
-The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.
-
-
 The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.
 
 | Property | Value |
@@ -480,9 +418,8 @@ The calculated base amount (in documents currency) from the last document amount
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Base_Amount](Gen_Document_Amounts.md#base_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -504,12 +441,6 @@ The calculated base amount (in documents currency) from the last document amount
 ### Total_Distributed_Amount
 
 
-Total_Distributed_Amount
-
-
-The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet.
-
-
 The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet.
 
 | Property | Value |
@@ -520,9 +451,8 @@ The total amount (in documents currency) which was distributed to the documents 
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amounts](Gen_Document_Amounts.md).[Total_Distributed_Amount](Gen_Document_Amounts.md#total_distributed_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

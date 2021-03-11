@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prd_operations">Table Prd_Operations</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Production.Resources.Operations.html">Production.Resources.Operations</a></p>
 <p>The different steps performed to create products. Entity: Prd_Operations</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -151,7 +153,7 @@
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -178,7 +180,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
 <table>
 <thead>
 <tr>
@@ -217,15 +218,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -310,14 +307,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_group_id">Operation_Group_Id</h3>
-<p>Operation_Group_Id</p>
 <table>
 <thead>
 <tr>
@@ -356,15 +352,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#operation_group_id">Operation_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -449,14 +441,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_name">Operation_Name</h3>
-<p>Operation_Name</p>
 <table>
 <thead>
 <tr>
@@ -495,15 +486,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#operation_name">Operation_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -595,8 +582,6 @@
 </tbody>
 </table>
 <h3 id="workgroup_resource_id">Workgroup_Resource_Id</h3>
-<p>Workgroup_Resource_Id</p>
-<p>When not NULL, specifies the Workgroup Resource, which is required by the operation.</p>
 <p>When not NULL, specifies the Workgroup Resource, which is required by the operation.</p>
 <table>
 <thead>
@@ -636,15 +621,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#workgroup_resource_id">Workgroup_Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -729,15 +710,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="use_quantity_base">Use_Quantity_Base</h3>
-<p>Use_Quantity_Base</p>
-<p>Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource</p>
 <p>Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource</p>
 <table>
 <thead>
@@ -773,15 +752,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#use_quantity_base">Use_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -854,8 +829,6 @@
 </tbody>
 </table>
 <h3 id="minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</h3>
-<p>Minimum_Concurrent_Start_Time_Minutes</p>
-<p>How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting</p>
 <p>How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting</p>
 <table>
 <thead>
@@ -891,15 +864,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -972,8 +941,6 @@
 </tbody>
 </table>
 <h3 id="setup_time_minutes">Setup_Time_Minutes</h3>
-<p>Setup_Time_Minutes</p>
-<p>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.</p>
 <p>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.</p>
 <table>
 <thead>
@@ -1009,15 +976,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#setup_time_minutes">Setup_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1090,8 +1053,6 @@
 </tbody>
 </table>
 <h3 id="run_time_minutes">Run_Time_Minutes</h3>
-<p>Run_Time_Minutes</p>
-<p>The time required to process one product lot. The run time is calculated for each produced lot.</p>
 <p>The time required to process one product lot. The run time is calculated for each produced lot.</p>
 <table>
 <thead>
@@ -1127,15 +1088,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#run_time_minutes">Run_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1208,8 +1165,6 @@
 </tbody>
 </table>
 <h3 id="wait_time_minutes">Wait_Time_Minutes</h3>
-<p>Wait_Time_Minutes</p>
-<p>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.</p>
 <p>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.</p>
 <table>
 <thead>
@@ -1245,15 +1200,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#wait_time_minutes">Wait_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1326,8 +1277,6 @@
 </tbody>
 </table>
 <h3 id="move_time_minutes">Move_Time_Minutes</h3>
-<p>Move_Time_Minutes</p>
-<p>The time required for the product to move to the next operation. During this time no resource is allocated.</p>
 <p>The time required for the product to move to the next operation. During this time no resource is allocated.</p>
 <table>
 <thead>
@@ -1363,15 +1312,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#move_time_minutes">Move_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1444,8 +1389,6 @@
 </tbody>
 </table>
 <h3 id="scrap_rate">Scrap_Rate</h3>
-<p>Scrap_Rate</p>
-<p>The percentage (0..1) of scrap usually occurring during the production operation. NULL means that the scrap rate cannot be generally calculated.</p>
 <p>The percentage (0..1) of scrap usually occurring during the production operation. NULL means that the scrap rate cannot be generally calculated.</p>
 <table>
 <thead>
@@ -1481,15 +1424,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#scrap_rate">Scrap_Rate</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1562,7 +1501,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
 <table>
 <thead>
 <tr>
@@ -1573,7 +1511,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1601,15 +1539,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1682,8 +1616,6 @@
 </tbody>
 </table>
 <h3 id="tooling">Tooling</h3>
-<p>Tooling</p>
-<p>Short description of the needed instruments for the operation.</p>
 <p>Short description of the needed instruments for the operation.</p>
 <table>
 <thead>
@@ -1723,15 +1655,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#tooling">Tooling</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1804,8 +1732,6 @@
 </tbody>
 </table>
 <h3 id="operation_instructions_id">Operation_Instructions_Id</h3>
-<p>Operation_Instructions_Id</p>
-<p>Full instructions for the operation.</p>
 <p>Full instructions for the operation.</p>
 <table>
 <thead>
@@ -1845,15 +1771,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#operation_instructions_id">Operation_Instructions_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1938,15 +1860,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="standard_price_per_hour">Standard_Price_Per_Hour</h3>
-<p>Standard_Price_Per_Hour</p>
-<p>Standard price for 1 hour work for this operation.</p>
 <p>Standard price for 1 hour work for this operation.</p>
 <table>
 <thead>
@@ -1982,15 +1902,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#standard_price_per_hour">Standard_Price_Per_Hour</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2063,7 +1979,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2098,15 +2013,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Operations.html">Prd_Operations</a>.<a href="Prd_Operations.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

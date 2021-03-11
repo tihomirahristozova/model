@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sec_trusted_application_authorizations">Table Sec_Trusted_Application_Authorizations</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Security.TrustedApplicationAuthorizations.html">Systems.Security.TrustedApplicationAuthorizations</a></p>
 <p>Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -136,7 +138,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -148,7 +150,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="trusted_application_authorization_id">Trusted_Application_Authorization_Id</h3>
-<p>Trusted_Application_Authorization_Id</p>
 <table>
 <thead>
 <tr>
@@ -187,15 +188,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#trusted_application_authorization_id">Trusted_Application_Authorization_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -280,15 +277,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="trusted_application_id">Trusted_Application_Id</h3>
-<p>Trusted_Application_Id</p>
-<p>The application, which is authorized.</p>
 <p>The application, which is authorized.</p>
 <table>
 <thead>
@@ -328,15 +323,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#trusted_application_id">Trusted_Application_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -421,15 +412,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="granting_user_id">Granting_User_Id</h3>
-<p>Granting_User_Id</p>
-<p>The user, who authorized the application.</p>
 <p>The user, who authorized the application.</p>
 <table>
 <thead>
@@ -469,15 +458,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#granting_user_id">Granting_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -562,15 +547,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="context_user_id">Context_User_Id</h3>
-<p>Context_User_Id</p>
-<p>The user, whose permissions are granted to the application.</p>
 <p>The user, whose permissions are granted to the application.</p>
 <table>
 <thead>
@@ -610,15 +593,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#context_user_id">Context_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -703,15 +682,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="grant_time_utc">Grant_Time_Utc</h3>
-<p>Grant_Time_Utc</p>
-<p>The time (in UTC) when the authorization was granted.</p>
 <p>The time (in UTC) when the authorization was granted.</p>
 <table>
 <thead>
@@ -751,15 +728,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTimeUtc</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#grant_time_utc">Grant_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -832,8 +805,6 @@
 </tbody>
 </table>
 <h3 id="valid_from_utc">Valid_From_Utc</h3>
-<p>Valid_From_Utc</p>
-<p>The start of the validitiy of the authorization. NULL means that there is no restriction.</p>
 <p>The start of the validitiy of the authorization. NULL means that there is no restriction.</p>
 <table>
 <thead>
@@ -873,15 +844,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#valid_from_utc">Valid_From_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -954,8 +921,6 @@
 </tbody>
 </table>
 <h3 id="valid_until_utc">Valid_Until_Utc</h3>
-<p>Valid_Until_Utc</p>
-<p>The time (in UTC) when the grant expires. NULL means that there is no time restriction.</p>
 <p>The time (in UTC) when the grant expires. NULL means that there is no time restriction.</p>
 <table>
 <thead>
@@ -995,15 +960,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#valid_until_utc">Valid_Until_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1076,8 +1037,6 @@
 </tbody>
 </table>
 <h3 id="is_revoked">Is_Revoked</h3>
-<p>Is_Revoked</p>
-<p>Specifies whether the grant is explicitly revoked.</p>
 <p>Specifies whether the grant is explicitly revoked.</p>
 <table>
 <thead>
@@ -1113,15 +1072,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#is_revoked">Is_Revoked</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1194,7 +1149,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1205,7 +1159,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1233,15 +1187,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1314,7 +1264,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1349,15 +1298,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Application_Authorizations.html">Sec_Trusted_Application_Authorizations</a>.<a href="Sec_Trusted_Application_Authorizations.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

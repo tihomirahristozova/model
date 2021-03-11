@@ -1,5 +1,10 @@
 # Table Cm_Company_Divisions
 
+
+## Entity
+
+Entity: [General.Contacts.CompanyDivisions](~/entities/General.Contacts.CompanyDivisions.md)
+
 Stores company divisions structure. The divisions are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Divisions
 
 ## Owner Tables Hierarchy
@@ -22,12 +27,6 @@ Stores company divisions structure. The divisions are parties and as such, can b
 ### Company_Division_Id
 
 
-Company_Division_Id
-
-
-Company Division
-
-
 Company Division
 
 | Property | Value |
@@ -39,9 +38,8 @@ Company Division
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Company_Divisions](Cm_Company_Divisions.md).[Company_Division_Id](Cm_Company_Divisions.md#company_division_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,15 +62,9 @@ Company Division
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The base party of the company division
 
 
 The base party of the company division
@@ -86,9 +78,8 @@ The base party of the company division
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Divisions](Cm_Company_Divisions.md).[Party_Id](Cm_Company_Divisions.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -111,15 +102,9 @@ The base party of the company division
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Company_Division_Code
-
-
-Company_Division_Code
-
-
-Company division code, unique within the company
 
 
 Company division code, unique within the company
@@ -133,9 +118,8 @@ Company division code, unique within the company
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Divisions](Cm_Company_Divisions.md).[Company_Division_Code](Cm_Company_Divisions.md#company_division_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,16 +142,10 @@ Company division code, unique within the company
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Company_Division_Name
-
-
-Company_Division_Name
-
-
-Multi-language company divsion name
 
 
 Multi-language company divsion name
@@ -181,9 +159,8 @@ Multi-language company divsion name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Divisions](Cm_Company_Divisions.md).[Company_Division_Name](Cm_Company_Divisions.md#company_division_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -206,16 +183,10 @@ Multi-language company divsion name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Company_Id
-
-
-Company_Id
-
-
-The company to which this company division belongs
 
 
 The company to which this company division belongs
@@ -229,9 +200,8 @@ The company to which this company division belongs
 |Referenced Table|[Cm_Companies](Cm_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Divisions](Cm_Company_Divisions.md).[Company_Id](Cm_Company_Divisions.md#company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -254,12 +224,9 @@ The company to which this company division belongs
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -269,9 +236,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Company_Divisions](Cm_Company_Divisions.md).[Row_Version](Cm_Company_Divisions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

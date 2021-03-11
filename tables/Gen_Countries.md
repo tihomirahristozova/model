@@ -1,5 +1,10 @@
 # Table Gen_Countries
 
+
+## Entity
+
+Entity: [General.Geography.Countries](~/entities/General.Geography.Countries.md)
+
 List of countries, listed by their internet suffix code. Entity: Gen_Countries
 
 ## Summary
@@ -17,12 +22,6 @@ List of countries, listed by their internet suffix code. Entity: Gen_Countries
 ### Country_Id
 
 
-Country_Id
-
-
-Unique country Id
-
-
 Unique country Id
 
 | Property | Value |
@@ -34,9 +33,8 @@ Unique country Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Countries](Gen_Countries.md).[Country_Id](Gen_Countries.md#country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +57,9 @@ Unique country Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Code
-
-
-Code
-
-
-Internet suffix code of the country
 
 
 Internet suffix code of the country
@@ -81,9 +73,8 @@ Internet suffix code of the country
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Countries](Gen_Countries.md).[Code](Gen_Countries.md#code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,16 +97,10 @@ Internet suffix code of the country
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Country_Name
-
-
-Country_Name
-
-
-Name of the country
 
 
 Name of the country
@@ -129,9 +114,8 @@ Name of the country
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Countries](Gen_Countries.md).[Country_Name](Gen_Countries.md#country_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,9 +142,6 @@ Name of the country
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -169,9 +150,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Countries](Gen_Countries.md).[Row_Version](Gen_Countries.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +173,6 @@ Row_Version
 ### Intrastat_Code
 
 
-Intrastat_Code
-
-
-This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used.
-
-
 This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used.
 
 | Property | Value |
@@ -210,9 +184,8 @@ This code is used when creating the Intrastat Declaration. If the field is empty
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Countries](Gen_Countries.md).[Intrastat_Code](Gen_Countries.md#intrastat_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

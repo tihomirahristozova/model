@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_reports">Table Sys_Reports</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Reporting.Reports.html">Systems.Reporting.Reports</a></p>
 <p>User-defined reports. Reports retrieve data from data sources and present it in a user-defined layout. Entity: Sys_Reports</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,12 +114,12 @@
 </tr>
 <tr>
 <td><a href="#report_layout">Report_Layout</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout</td>
 </tr>
 <tr>
 <td><a href="#template_filter_xml">Template_Filter_Xml</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.</td>
 </tr>
 <tr>
@@ -154,7 +156,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="report_id">Report_Id</h3>
-<p>Report_Id</p>
 <table>
 <thead>
 <tr>
@@ -193,15 +194,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#report_id">Report_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -286,15 +283,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="report_name">Report_Name</h3>
-<p>Report_Name</p>
-<p>Multi-language report name</p>
 <p>Multi-language report name</p>
 <table>
 <thead>
@@ -334,15 +329,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#report_name">Report_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -427,7 +418,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -440,8 +431,6 @@
 </tbody>
 </table>
 <h3 id="query_name">Query_Name</h3>
-<p>Query_Name</p>
-<p>The query on which the report is based</p>
 <p>The query on which the report is based</p>
 <table>
 <thead>
@@ -481,15 +470,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#query_name">Query_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -574,15 +559,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="data_source_id">Data_Source_Id</h3>
-<p>Data_Source_Id</p>
-<p>Report data source. If specified should be based on the query in Query_Name. NULL means that the report is based directly on the query</p>
 <p>Report data source. If specified should be based on the query in Query_Name. NULL means that the report is based directly on the query</p>
 <table>
 <thead>
@@ -622,15 +605,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#data_source_id">Data_Source_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -715,15 +694,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="report_layout">Report_Layout</h3>
-<p>Report_Layout</p>
-<p>The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout</p>
 <p>The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout</p>
 <table>
 <thead>
@@ -735,7 +712,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -763,15 +740,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#report_layout">Report_Layout</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -844,8 +817,6 @@
 </tbody>
 </table>
 <h3 id="template_filter_xml">Template_Filter_Xml</h3>
-<p>Template_Filter_Xml</p>
-<p>Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.</p>
 <p>Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.</p>
 <table>
 <thead>
@@ -857,7 +828,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -885,15 +856,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#template_filter_xml">Template_Filter_Xml</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -966,8 +933,6 @@
 </tbody>
 </table>
 <h3 id="template_priority">Template_Priority</h3>
-<p>Template_Priority</p>
-<p>Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.</p>
 <p>Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.</p>
 <table>
 <thead>
@@ -1003,15 +968,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#template_priority">Template_Priority</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1084,8 +1045,6 @@
 </tbody>
 </table>
 <h3 id="one_row">One_Row</h3>
-<p>One_Row</p>
-<p>True means that report can be used for one-row forms only. False means that the report can be used for navigators only.</p>
 <p>True means that report can be used for one-row forms only. False means that the report can be used for navigators only.</p>
 <table>
 <thead>
@@ -1121,15 +1080,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#one_row">One_Row</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1202,7 +1157,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1241,15 +1195,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1322,8 +1272,6 @@
 </tbody>
 </table>
 <h3 id="layout_format">Layout_Format</h3>
-<p>Layout_Format</p>
-<p>Format specifier of the layout. Recognized by the application</p>
 <p>Format specifier of the layout. Recognized by the application</p>
 <table>
 <thead>
@@ -1363,15 +1311,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#layout_format">Layout_Format</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1456,15 +1400,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="report_binary_layout">Report_Binary_Layout</h3>
-<p>Report_Binary_Layout</p>
-<p>The printout layout, when the format requires binary storage. Alternative to Report_Layout</p>
 <p>The printout layout, when the format requires binary storage. Alternative to Report_Layout</p>
 <table>
 <thead>
@@ -1500,15 +1442,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#report_binary_layout">Report_Binary_Layout</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1581,7 +1519,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1616,15 +1553,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Reports.html">Sys_Reports</a>.<a href="Sys_Reports.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

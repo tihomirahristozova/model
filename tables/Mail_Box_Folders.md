@@ -1,5 +1,10 @@
 # Table Mail_Box_Folders
 
+
+## Entity
+
+Entity: [Applications.Mail.BoxFolders](~/entities/Applications.Mail.BoxFolders.md)
+
 Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 
 ## Owner Tables Hierarchy
@@ -14,7 +19,7 @@ Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 |[Folder_Name](#folder_name)|`nvarchar(254)` `ML`|Multi-language folder name|
 |[Parent_Folder_Id](#parent_folder_id)|`uniqueidentifier` |The parent folder in the folder hierarchy. Null when the folder is a root folder.|
 |[System_Purpose](#system_purpose)|`nvarchar(1)` Allowed: `M`, `I`, `D`, `O`, `S`, `T`, Readonly|When not NULL means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash.|
-|[Sync_State](#sync_state)|`nvarchar(2147483647)` |The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.|
+|[Sync_State](#sync_state)|`nvarchar(max)` |The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.|
 |[Mail_Box_Folder_Id](#mail_box_folder_id)|`uniqueidentifier` `PK`||
 |[Server_Folder_ID](#server_folder_id)|`nvarchar(256)` |ID of the folder on the mail server in the format of the mail server|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -22,9 +27,6 @@ Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 ## Columns
 
 ### Mail_Box_Id
-
-
-Mail_Box_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Mail_Box_Id
 |Referenced Table|[Mail_Boxes](Mail_Boxes.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Box_Folders](Mail_Box_Folders.md).[Mail_Box_Id](Mail_Box_Folders.md#mail_box_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Mail_Box_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Folder_Name
-
-
-Folder_Name
-
-
-Multi-language folder name
 
 
 Multi-language folder name
@@ -82,9 +77,8 @@ Multi-language folder name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Box_Folders](Mail_Box_Folders.md).[Folder_Name](Mail_Box_Folders.md#folder_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,16 +101,10 @@ Multi-language folder name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Parent_Folder_Id
-
-
-Parent_Folder_Id
-
-
-The parent folder in the folder hierarchy. Null when the folder is a root folder.
 
 
 The parent folder in the folder hierarchy. Null when the folder is a root folder.
@@ -130,9 +118,8 @@ The parent folder in the folder hierarchy. Null when the folder is a root folder
 |Referenced Table|[Mail_Box_Folders](Mail_Box_Folders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Box_Folders](Mail_Box_Folders.md).[Parent_Folder_Id](Mail_Box_Folders.md#parent_folder_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,15 +142,9 @@ The parent folder in the folder hierarchy. Null when the folder is a root folder
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### System_Purpose
-
-
-System_Purpose
-
-
-When not NULL means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash.
 
 
 When not NULL means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash.
@@ -177,10 +158,9 @@ When not NULL means that the folder has special system designation. Designations
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`M`, `I`, `D`, `O`, `S`, `T`|
 |Default Value|None|
-|Derived From|[Mail_Box_Folders](Mail_Box_Folders.md).[System_Purpose](Mail_Box_Folders.md#system_purpose)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,31 +183,24 @@ When not NULL means that the folder has special system designation. Designations
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sync_State
-
-
-Sync_State
-
-
-The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.
 
 
 The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Box_Folders](Mail_Box_Folders.md).[Sync_State](Mail_Box_Folders.md#sync_state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,9 +221,6 @@ The synchronization state for the folder. The format of the contents is dependan
 
 ### Mail_Box_Folder_Id
 
-
-Mail_Box_Folder_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -260,9 +230,8 @@ Mail_Box_Folder_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Mail_Box_Folders](Mail_Box_Folders.md).[Mail_Box_Folder_Id](Mail_Box_Folders.md#mail_box_folder_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -285,15 +254,9 @@ Mail_Box_Folder_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Server_Folder_ID
-
-
-Server_Folder_ID
-
-
-ID of the folder on the mail server in the format of the mail server
 
 
 ID of the folder on the mail server in the format of the mail server
@@ -307,9 +270,8 @@ ID of the folder on the mail server in the format of the mail server
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Box_Folders](Mail_Box_Folders.md).[Server_Folder_ID](Mail_Box_Folders.md#server_folder_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -332,12 +294,9 @@ ID of the folder on the mail server in the format of the mail server
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -347,9 +306,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Box_Folders](Mail_Box_Folders.md).[Row_Version](Mail_Box_Folders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

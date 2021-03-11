@@ -1,5 +1,10 @@
 # Table Cost_Distributions
 
+
+## Entity
+
+Entity: [Finance.Cost.Distributions](~/entities/Finance.Cost.Distributions.md)
+
 Used for cost distribution. Contains the period and the store of the cost distribution. Entity: Cost_Distributions
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Used for cost distribution. Contains the period and the store of the cost distri
 
 ### Cost_Distribution_Id
 
-
-Cost_Distribution_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Cost_Distribution_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Distributions](Cost_Distributions.md).[Cost_Distribution_Id](Cost_Distributions.md#cost_distribution_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Cost_Distribution_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distributions](Cost_Distributions.md).[Document_Id](Cost_Distributions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Start_Date
-
-
-Start_Date
-
-
-The starting date of the covered period.
 
 
 The starting date of the covered period.
@@ -120,9 +111,8 @@ The starting date of the covered period.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distributions](Cost_Distributions.md).[Start_Date](Cost_Distributions.md#start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,12 +140,6 @@ The starting date of the covered period.
 ### End_Date
 
 
-End_Date
-
-
-The ending date of the covered period.
-
-
 The ending date of the covered period.
 
 | Property | Value |
@@ -167,9 +151,8 @@ The ending date of the covered period.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distributions](Cost_Distributions.md).[End_Date](Cost_Distributions.md#end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,12 +180,6 @@ The ending date of the covered period.
 ### Store_Id
 
 
-Store_Id
-
-
-The store (warehouse) for which the distribution is made. NULL means that the distribution covers multiple warehouses.
-
-
 The store (warehouse) for which the distribution is made. NULL means that the distribution covers multiple warehouses.
 
 | Property | Value |
@@ -214,9 +191,8 @@ The store (warehouse) for which the distribution is made. NULL means that the di
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distributions](Cost_Distributions.md).[Store_Id](Cost_Distributions.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,6 +215,6 @@ The store (warehouse) for which the distribution is made. NULL means that the di
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

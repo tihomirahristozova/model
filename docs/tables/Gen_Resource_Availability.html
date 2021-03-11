@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_resource_availability">Table Gen_Resource_Availability</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Resources.ResourceAvailability.html">General.Resources.ResourceAvailability</a></p>
 <p>Contains the resources availability for the different periods. Each period is a separate record. The availability of a resource for any given date is determined by the sum of all availability periods that include it. Entity: Gen_Resource_Availability</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="resource_availability_id">Resource_Availability_Id</h3>
-<p>Resource_Availability_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Availability.html">Gen_Resource_Availability</a>.<a href="Gen_Resource_Availability.html#resource_availability_id">Resource_Availability_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,15 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_id">Resource_Id</h3>
-<p>Resource_Id</p>
-<p>The resource, for which we provide availability.</p>
 <p>The resource, for which we provide availability.</p>
 <table>
 <thead>
@@ -309,15 +304,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Availability.html">Gen_Resource_Availability</a>.<a href="Gen_Resource_Availability.html#resource_id">Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -402,15 +393,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>From_Date</p>
-<p>The date from which availability starts.</p>
 <p>The date from which availability starts.</p>
 <table>
 <thead>
@@ -450,15 +439,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Availability.html">Gen_Resource_Availability</a>.<a href="Gen_Resource_Availability.html#from_date">From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -531,8 +516,6 @@
 </tbody>
 </table>
 <h3 id="to_date">To_Date</h3>
-<p>To_Date</p>
-<p>The date to which the availability continues. When NULL, the availability continues infinitely.</p>
 <p>The date to which the availability continues. When NULL, the availability continues infinitely.</p>
 <table>
 <thead>
@@ -572,15 +555,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Availability.html">Gen_Resource_Availability</a>.<a href="Gen_Resource_Availability.html#to_date">To_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -653,8 +632,6 @@
 </tbody>
 </table>
 <h3 id="available_resources">Available_Resources</h3>
-<p>Available_Resources</p>
-<p>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.</p>
 <p>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.</p>
 <table>
 <thead>
@@ -690,15 +667,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Availability.html">Gen_Resource_Availability</a>.<a href="Gen_Resource_Availability.html#available_resources">Available_Resources</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -771,7 +744,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -806,15 +778,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Availability.html">Gen_Resource_Availability</a>.<a href="Gen_Resource_Availability.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

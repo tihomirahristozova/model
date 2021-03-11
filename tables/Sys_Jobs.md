@@ -1,5 +1,10 @@
 # Table Sys_Jobs
 
+
+## Entity
+
+Entity: [Systems.Core.Jobs](~/entities/Systems.Core.Jobs.md)
+
 The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in version 20.1)
 
 ## Summary
@@ -10,16 +15,13 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 |[Job_Type](#job_type)|`nvarchar(3)` Allowed: `DOC`, `POS`, `DNT`, `DPI`|The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications.|
 |[Job_Name](#job_name)|`nvarchar(254)` |The name of the job.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the job is active and ready for running.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Run_On_Idle](#run_on_idle)|`bit` |Specifies whether to automatically run the job when the server is idle.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Job_Id
-
-
-Job_Id
 
 | Property | Value |
 | - | - |
@@ -30,9 +32,8 @@ Job_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Jobs](Sys_Jobs.md).[Job_Id](Sys_Jobs.md#job_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Job_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Job_Type
-
-
-Job_Type
-
-
-The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications.
 
 
 The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications.
@@ -77,10 +72,9 @@ The system type of the job. DOC=Document Change State, POS=Run Postponed Events,
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`DOC`, `POS`, `DNT`, `DPI`|
 |Default Value|None|
-|Derived From|[Sys_Jobs](Sys_Jobs.md).[Job_Type](Sys_Jobs.md#job_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +97,9 @@ The system type of the job. DOC=Document Change State, POS=Run Postponed Events,
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Job_Name
-
-
-Job_Name
-
-
-The name of the job.
 
 
 The name of the job.
@@ -125,9 +113,8 @@ The name of the job.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Jobs](Sys_Jobs.md).[Job_Name](Sys_Jobs.md#job_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,16 +137,10 @@ The name of the job.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Specifies whether the job is active and ready for running.
 
 
 Specifies whether the job is active and ready for running.
@@ -172,9 +153,8 @@ Specifies whether the job is active and ready for running.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Sys_Jobs](Sys_Jobs.md).[Is_Active](Sys_Jobs.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,25 +177,21 @@ Specifies whether the job is active and ready for running.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Jobs](Sys_Jobs.md).[Notes](Sys_Jobs.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,12 +213,6 @@ Notes
 ### Run_On_Idle
 
 
-Run_On_Idle
-
-
-Specifies whether to automatically run the job when the server is idle.
-
-
 Specifies whether to automatically run the job when the server is idle.
 
 | Property | Value |
@@ -253,9 +223,8 @@ Specifies whether to automatically run the job when the server is idle.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Sys_Jobs](Sys_Jobs.md).[Run_On_Idle](Sys_Jobs.md#run_on_idle)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -278,12 +247,9 @@ Specifies whether to automatically run the job when the server is idle.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -293,9 +259,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Jobs](Sys_Jobs.md).[Row_Version](Sys_Jobs.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

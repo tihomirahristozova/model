@@ -1,5 +1,10 @@
 # Table Cost_Types
 
+
+## Entity
+
+Entity: [Finance.Cost.CostTypes](~/entities/Finance.Cost.CostTypes.md)
+
 Types of costs. Entity: Cost_Types
 
 ## Summary
@@ -15,9 +20,6 @@ Types of costs. Entity: Cost_Types
 
 ### Cost_Type_Id
 
-
-Cost_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Cost_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Types](Cost_Types.md).[Cost_Type_Id](Cost_Types.md#cost_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Cost_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Type_Code
-
-
-Cost_Type_Code
-
-
-Unique cost type code. Used for charting
 
 
 Unique cost type code. Used for charting
@@ -74,9 +69,8 @@ Unique cost type code. Used for charting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Types](Cost_Types.md).[Cost_Type_Code](Cost_Types.md#cost_type_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +93,9 @@ Unique cost type code. Used for charting
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Type_Name
-
-
-Cost_Type_Name
-
-
-Multilanguage cost type name
 
 
 Multilanguage cost type name
@@ -121,9 +109,8 @@ Multilanguage cost type name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Types](Cost_Types.md).[Cost_Type_Name](Cost_Types.md#cost_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,9 +137,6 @@ Multilanguage cost type name
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -161,9 +145,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Types](Cost_Types.md).[Row_Version](Cost_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

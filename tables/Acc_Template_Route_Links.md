@@ -1,5 +1,10 @@
 # Table Acc_Template_Route_Links
 
+
+## Entity
+
+Entity: [Finance.Accounting.TemplateRouteLinks](~/entities/Finance.Accounting.TemplateRouteLinks.md)
+
 When specified denotes that another route uses the template, initially bound to one route. Entity: Acc_Template_Route_Links
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ When specified denotes that another route uses the template, initially bound to 
 
 ### Template_Route_Link_Id
 
-
-Template_Route_Link_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Template_Route_Link_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Template_Route_Links](Acc_Template_Route_Links.md).[Template_Route_Link_Id](Acc_Template_Route_Links.md#template_route_link_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Template_Route_Link_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Route_Id
-
-
-Route_Id
-
-
-Route for which the specified template will be activated
 
 
 Route for which the specified template will be activated
@@ -79,9 +74,8 @@ Route for which the specified template will be activated
 |Referenced Table|[Wf_Routes](Wf_Routes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Route_Links](Acc_Template_Route_Links.md).[Route_Id](Acc_Template_Route_Links.md#route_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ Route for which the specified template will be activated
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Template_Id
-
-
-Template_Id
-
-
-Template that will be activated for the specified route
 
 
 Template that will be activated for the specified route
@@ -126,9 +114,8 @@ Template that will be activated for the specified route
 |Referenced Table|[Acc_Templates](Acc_Templates.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Route_Links](Acc_Template_Route_Links.md).[Template_Id](Acc_Template_Route_Links.md#template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,12 +138,9 @@ Template that will be activated for the specified route
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -166,9 +150,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Route_Links](Acc_Template_Route_Links.md).[Row_Version](Acc_Template_Route_Links.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Acc_Financial_Statement_Node_Correspondances
 
+
+## Entity
+
+Entity: [Finance.Accounting.FinancialStatementNodeCorrespondances](~/entities/Finance.Accounting.FinancialStatementNodeCorrespondances.md)
+
 Contains the actual correspondance filters, which specify how each financial statement node is calculated. Entity: Acc_Financial_Statement_Node_Correspondances
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains the actual correspondance filters, which specify how each financial sta
 
 ### Financial_Statement_Node_Correspondance_Id
 
-
-Financial_Statement_Node_Correspondance_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Financial_Statement_Node_Correspondance_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Financial_Statement_Node_Correspondances](Acc_Financial_Statement_Node_Correspondances.md).[Financial_Statement_Node_Correspondance_Id](Acc_Financial_Statement_Node_Correspondances.md#financial_statement_node_correspondance_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Financial_Statement_Node_Correspondance_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Financial_Statement_Node_Id
-
-
-Financial_Statement_Node_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Financial_Statement_Node_Id
 |Referenced Table|[Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Node_Correspondances](Acc_Financial_Statement_Node_Correspondances.md).[Financial_Statement_Node_Id](Acc_Financial_Statement_Node_Correspondances.md#financial_statement_node_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Financial_Statement_Node_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Account_Group_Id
-
-
-Account_Group_Id
-
-
-Main account group determining the correspondances for which the balances are summed
 
 
 Main account group determining the correspondances for which the balances are summed
@@ -122,9 +113,8 @@ Main account group determining the correspondances for which the balances are su
 |Referenced Table|[Acc_Account_Groups](Acc_Account_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Node_Correspondances](Acc_Financial_Statement_Node_Correspondances.md).[Account_Group_Id](Acc_Financial_Statement_Node_Correspondances.md#account_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ Main account group determining the correspondances for which the balances are su
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Correspondant_Account_Group_Id
-
-
-Correspondant_Account_Group_Id
-
-
-Correspondant account group determining the correspondances for which the balances are summed. If NULL means that the balances of all correspondances for the main account group are summed.
 
 
 Correspondant account group determining the correspondances for which the balances are summed. If NULL means that the balances of all correspondances for the main account group are summed.
@@ -169,9 +153,8 @@ Correspondant account group determining the correspondances for which the balanc
 |Referenced Table|[Acc_Account_Groups](Acc_Account_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Node_Correspondances](Acc_Financial_Statement_Node_Correspondances.md).[Correspondant_Account_Group_Id](Acc_Financial_Statement_Node_Correspondances.md#correspondant_account_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,15 +177,9 @@ Correspondant account group determining the correspondances for which the balanc
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Multiplier
-
-
-Multiplier
-
-
-Factor by which the correspondence balance will be multiplied.
 
 
 Factor by which the correspondence balance will be multiplied.
@@ -215,9 +192,8 @@ Factor by which the correspondence balance will be multiplied.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Acc_Financial_Statement_Node_Correspondances](Acc_Financial_Statement_Node_Correspondances.md).[Multiplier](Acc_Financial_Statement_Node_Correspondances.md#multiplier)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,9 +214,6 @@ Factor by which the correspondence balance will be multiplied.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -249,9 +222,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Node_Correspondances](Acc_Financial_Statement_Node_Correspondances.md).[Row_Version](Acc_Financial_Statement_Node_Correspondances.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

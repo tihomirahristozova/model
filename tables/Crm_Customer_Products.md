@@ -1,5 +1,10 @@
 # Table Crm_Customer_Products
 
+
+## Entity
+
+Entity: [Crm.CustomerProducts](~/entities/Crm.CustomerProducts.md)
+
 Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products
 
 ## Owner Tables Hierarchy
@@ -26,12 +31,6 @@ Contains the products, that are contracted (listed) with a customer. Entity: Crm
 ### Customer_Product_Id
 
 
-Customer_Product_Id
-
-
-Customer Product listing
-
-
 Customer Product listing
 
 | Property | Value |
@@ -43,9 +42,8 @@ Customer Product listing
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[Customer_Product_Id](Crm_Customer_Products.md#customer_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -68,15 +66,9 @@ Customer Product listing
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Customer_Id
-
-
-Customer_Id
-
-
-Customer, for which the product is listed
 
 
 Customer, for which the product is listed
@@ -90,9 +82,8 @@ Customer, for which the product is listed
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[Customer_Id](Crm_Customer_Products.md#customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -115,15 +106,9 @@ Customer, for which the product is listed
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Company_Division_Id
-
-
-Company_Division_Id
-
-
-When the customer is a company, denotes the division for which the product is listed. NULL when the customer is not a company or when the listing is not division specific
 
 
 When the customer is a company, denotes the division for which the product is listed. NULL when the customer is not a company or when the listing is not division specific
@@ -137,9 +122,8 @@ When the customer is a company, denotes the division for which the product is li
 |Referenced Table|[Cm_Company_Divisions](Cm_Company_Divisions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[Company_Division_Id](Crm_Customer_Products.md#company_division_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -162,15 +146,9 @@ When the customer is a company, denotes the division for which the product is li
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Company_Location_Id
-
-
-Company_Location_Id
-
-
-When the customer is a company, denotes the location for which the product is listed. NULL when the customer is not a company or when the listing is not location specific
 
 
 When the customer is a company, denotes the location for which the product is listed. NULL when the customer is not a company or when the listing is not location specific
@@ -184,9 +162,8 @@ When the customer is a company, denotes the location for which the product is li
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[Company_Location_Id](Crm_Customer_Products.md#company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -209,15 +186,9 @@ When the customer is a company, denotes the location for which the product is li
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product, which is listed for the customer
 
 
 The product, which is listed for the customer
@@ -231,9 +202,8 @@ The product, which is listed for the customer
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[Product_Id](Crm_Customer_Products.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -256,15 +226,9 @@ The product, which is listed for the customer
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Date
-
-
-From_Date
-
-
-The initial date of the listing. NULL when the initial date is unknown
 
 
 The initial date of the listing. NULL when the initial date is unknown
@@ -278,9 +242,8 @@ The initial date of the listing. NULL when the initial date is unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[From_Date](Crm_Customer_Products.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -303,18 +266,12 @@ The initial date of the listing. NULL when the initial date is unknown
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|no|no|
 
 ### To_Date
 
 
-To_Date
-
-
-The final date of the listing. NULL when the final date is unknown
-
-
 The final date of the listing. NULL when the final date is unknown
 
 | Property | Value |
@@ -326,9 +283,8 @@ The final date of the listing. NULL when the final date is unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[To_Date](Crm_Customer_Products.md#to_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -351,16 +307,10 @@ The final date of the listing. NULL when the final date is unknown
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Notes
-
-
-Notes
-
-
-Notes for the listing
 
 
 Notes for the listing
@@ -374,9 +324,8 @@ Notes for the listing
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[Notes](Crm_Customer_Products.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -397,9 +346,6 @@ Notes for the listing
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -408,9 +354,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Customer_Products](Crm_Customer_Products.md).[Row_Version](Crm_Customer_Products.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

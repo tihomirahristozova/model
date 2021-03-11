@@ -17,12 +17,6 @@
 ### Property_Id
 
 
-Property_Id
-
-
-Unique Id of the property
-
-
 Unique Id of the property
 
 | Property | Value |
@@ -33,9 +27,8 @@ Unique Id of the property
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Property_Types](Sys_Property_Types.md).[Property_Id](Sys_Property_Types.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +51,9 @@ Unique Id of the property
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Entity_Name
-
-
-Entity_Name
-
-
-The system entity containing the objects
 
 
 The system entity containing the objects
@@ -81,9 +68,8 @@ The system entity containing the objects
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Property_Types](Sys_Property_Types.md).[Entity_Name](Sys_Property_Types.md#entity_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,9 +90,6 @@ The system entity containing the objects
 
 ### Property_Name
 
-
-Property_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -117,9 +100,8 @@ Property_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Property_Types](Sys_Property_Types.md).[Property_Name](Sys_Property_Types.md#property_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,12 +123,6 @@ Property_Name
 ### Domain_Id
 
 
-Domain_Id
-
-
-Domain of allowed values for this property
-
-
 Domain of allowed values for this property
 
 | Property | Value |
@@ -158,9 +134,8 @@ Domain of allowed values for this property
 |Referenced Table|[Sys_Domains](Sys_Domains.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Property_Types](Sys_Property_Types.md).[Domain_Id](Sys_Property_Types.md#domain_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -183,15 +158,9 @@ Domain of allowed values for this property
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Multi_Valued
-
-
-Multi_Valued
-
-
-1 - allow multiple values (with different Seq_No's in the values). 0 - allow single value only (Seq_No=1)
 
 
 1 - allow multiple values (with different Seq_No's in the values). 0 - allow single value only (Seq_No=1)
@@ -204,9 +173,8 @@ Multi_Valued
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Property_Types](Sys_Property_Types.md).[Multi_Valued](Sys_Property_Types.md#multi_valued)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -227,9 +195,6 @@ Multi_Valued
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -238,9 +203,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Property_Types](Sys_Property_Types.md).[Row_Version](Sys_Property_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Inv_Transaction_Lines
 
+
+## Entity
+
+Entity: [Logistics.Inventory.StoreTransactionLines](~/entities/Logistics.Inventory.StoreTransactionLines.md)
+
 Details records of Transactions. Each detail contains the movement for one product. Entity: Inv_Transaction_Lines
 
 ## Owner Tables Hierarchy
@@ -48,12 +53,6 @@ Details records of Transactions. Each detail contains the movement for one produ
 ### Line_No
 
 
-Line_No
-
-
-Line number, unique within the store transaction.
-
-
 Line number, unique within the store transaction.
 
 | Property | Value |
@@ -64,10 +63,9 @@ Line number, unique within the store transaction.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Line_No](Inv_Transaction_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -89,12 +87,6 @@ Line number, unique within the store transaction.
 ### Product_Id
 
 
-Product_Id
-
-
-The item that was received/issued
-
-
 The item that was received/issued
 
 | Property | Value |
@@ -106,9 +98,8 @@ The item that was received/issued
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Product_Id](Inv_Transaction_Lines.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -131,15 +122,9 @@ The item that was received/issued
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Quantity_Base
-
-
-Quantity_Base
-
-
-The quantity of the stock received/issued in base measurement unit
 
 
 The quantity of the stock received/issued in base measurement unit
@@ -152,9 +137,8 @@ The quantity of the stock received/issued in base measurement unit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Quantity_Base](Inv_Transaction_Lines.md#quantity_base)|
 |Format|N3|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -182,12 +166,6 @@ The quantity of the stock received/issued in base measurement unit
 ### Store_Bin_Id
 
 
-Store_Bin_Id
-
-
-Store bin, from/to which the transaction was performed.
-
-
 Store bin, from/to which the transaction was performed.
 
 | Property | Value |
@@ -199,9 +177,8 @@ Store bin, from/to which the transaction was performed.
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Store_Bin_Id](Inv_Transaction_Lines.md#store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -224,15 +201,9 @@ Store bin, from/to which the transaction was performed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Guarantee_Period_Days
-
-
-Guarantee_Period_Days
-
-
-Guarantee period in days for the offered product. NULL for non-serviced products
 
 
 Guarantee period in days for the offered product. NULL for non-serviced products
@@ -245,9 +216,8 @@ Guarantee period in days for the offered product. NULL for non-serviced products
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Guarantee_Period_Days](Inv_Transaction_Lines.md#guarantee_period_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -269,12 +239,6 @@ Guarantee period in days for the offered product. NULL for non-serviced products
 ### Lot_Id
 
 
-Lot_Id
-
-
-If non-null, contains the specific lot to use for the movement
-
-
 If non-null, contains the specific lot to use for the movement
 
 | Property | Value |
@@ -286,9 +250,8 @@ If non-null, contains the specific lot to use for the movement
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Lot_Id](Inv_Transaction_Lines.md#lot_id)|
 |Depends On|[Product_Id](#product_id)|
 |Format||
 |Ignore for Insert Order|no|
@@ -312,15 +275,9 @@ If non-null, contains the specific lot to use for the movement
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-Item serial number for serialized items. NULL for non-serialized items
 
 
 Item serial number for serialized items. NULL for non-serialized items
@@ -334,9 +291,8 @@ Item serial number for serialized items. NULL for non-serialized items
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Serial_Number_Id](Inv_Transaction_Lines.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -359,15 +315,9 @@ Item serial number for serialized items. NULL for non-serialized items
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Line_Document_Cost
-
-
-Line_Document_Cost
-
-
-The cost of the transaction in the currency of the document
 
 
 The cost of the transaction in the currency of the document
@@ -380,9 +330,8 @@ The cost of the transaction in the currency of the document
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Line_Document_Cost](Inv_Transaction_Lines.md#line_document_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -404,12 +353,6 @@ The cost of the transaction in the currency of the document
 ### Line_Product_Cost
 
 
-Line_Product_Cost
-
-
-The cost of the transaction in the currency of the product
-
-
 The cost of the transaction in the currency of the product
 
 | Property | Value |
@@ -420,9 +363,8 @@ The cost of the transaction in the currency of the product
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Line_Product_Cost](Inv_Transaction_Lines.md#line_product_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -444,12 +386,6 @@ The cost of the transaction in the currency of the product
 ### Line_Cost
 
 
-Line_Cost
-
-
-Total cost for the line
-
-
 Total cost for the line
 
 | Property | Value |
@@ -460,9 +396,8 @@ Total cost for the line
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Line_Cost](Inv_Transaction_Lines.md#line_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -484,12 +419,6 @@ Total cost for the line
 ### Line_Store_Cost
 
 
-Line_Store_Cost
-
-
-The cost of the transaction in the currency of the warehouse
-
-
 The cost of the transaction in the currency of the warehouse
 
 | Property | Value |
@@ -500,9 +429,8 @@ The cost of the transaction in the currency of the warehouse
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Line_Store_Cost](Inv_Transaction_Lines.md#line_store_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -524,12 +452,6 @@ The cost of the transaction in the currency of the warehouse
 ### Product_Code_Id
 
 
-Product_Code_Id
-
-
-Used to set the Product_Id thru the coding systems
-
-
 Used to set the Product_Id thru the coding systems
 
 | Property | Value |
@@ -541,9 +463,8 @@ Used to set the Product_Id thru the coding systems
 |Referenced Table|[Gen_Product_Codes](Gen_Product_Codes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Product_Code_Id](Inv_Transaction_Lines.md#product_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -566,15 +487,9 @@ Used to set the Product_Id thru the coding systems
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Transaction_Timestamp
-
-
-Transaction_Timestamp
-
-
-Exact time when the transaction changes the cost of the product
 
 
 Exact time when the transaction changes the cost of the product
@@ -588,9 +503,8 @@ Exact time when the transaction changes the cost of the product
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Transaction_Timestamp](Inv_Transaction_Lines.md#transaction_timestamp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -618,12 +532,6 @@ Exact time when the transaction changes the cost of the product
 ### Parent_Line_Id
 
 
-Parent_Line_Id
-
-
-Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line.
-
-
 Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line.
 
 | Property | Value |
@@ -634,9 +542,8 @@ Used, when transaction lines are generated directly from other entities (differe
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Parent_Line_Id](Inv_Transaction_Lines.md#parent_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -659,15 +566,9 @@ Used, when transaction lines are generated directly from other entities (differe
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Line_Base_Cost
-
-
-Line_Base_Cost
-
-
-The cost of the transaction in the currency of the enterprise company
 
 
 The cost of the transaction in the currency of the enterprise company
@@ -680,9 +581,8 @@ The cost of the transaction in the currency of the enterprise company
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Line_Base_Cost](Inv_Transaction_Lines.md#line_base_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -704,12 +604,6 @@ The cost of the transaction in the currency of the enterprise company
 ### Allow_Over_Execution
 
 
-Allow_Over_Execution
-
-
-When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line.
-
-
 When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line.
 
 | Property | Value |
@@ -720,9 +614,8 @@ When true, specifies, that we explicitly allow over-execution. Over-execution is
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Allow_Over_Execution](Inv_Transaction_Lines.md#allow_over_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -744,12 +637,6 @@ When true, specifies, that we explicitly allow over-execution. Over-execution is
 ### Original_Product_Id
 
 
-Original_Product_Id
-
-
-When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead.
-
-
 When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead.
 
 | Property | Value |
@@ -761,9 +648,8 @@ When specified, contains the original product, which was ordered to be received 
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Original_Product_Id](Inv_Transaction_Lines.md#original_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -786,15 +672,9 @@ When specified, contains the original product, which was ordered to be received 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit
 
 
 The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit
@@ -807,9 +687,8 @@ The quantity received/issued in the measurement unit, specified in Quantity_Unit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Quantity](Inv_Transaction_Lines.md#quantity)|
 |Format|N3|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -831,12 +710,6 @@ The quantity received/issued in the measurement unit, specified in Quantity_Unit
 ### Parent_Store_Order_Line_Id
 
 
-Parent_Store_Order_Line_Id
-
-
-The line, containing the ordered quantity, which this execution line executes.
-
-
 The line, containing the ordered quantity, which this execution line executes.
 
 | Property | Value |
@@ -848,9 +721,8 @@ The line, containing the ordered quantity, which this execution line executes.
 |Referenced Table|[Inv_Store_Order_Lines](Inv_Store_Order_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Parent_Store_Order_Line_Id](Inv_Transaction_Lines.md#parent_store_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -873,15 +745,9 @@ The line, containing the ordered quantity, which this execution line executes.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Transaction_Line_Id
-
-
-Transaction_Line_Id
-
-
-Unique transaction line id
 
 
 Unique transaction line id
@@ -895,9 +761,8 @@ Unique transaction line id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Transaction_Line_Id](Inv_Transaction_Lines.md#transaction_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -920,15 +785,9 @@ Unique transaction line id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transaction_Id
-
-
-Transaction_Id
-
-
-The transaction to which the transaction line belongs.
 
 
 The transaction to which the transaction line belongs.
@@ -942,9 +801,8 @@ The transaction to which the transaction line belongs.
 |Referenced Table|[Inv_Transactions](Inv_Transactions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Transaction_Id](Inv_Transaction_Lines.md#transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -967,15 +825,9 @@ The transaction to which the transaction line belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Finished
-
-
-Finished
-
-
-1 if this transaction entry completes the operation. 0 if there might be more entries
 
 
 1 if this transaction entry completes the operation. 0 if there might be more entries
@@ -988,9 +840,8 @@ Finished
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Finished](Inv_Transaction_Lines.md#finished)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1013,15 +864,9 @@ Finished
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Unit_Cost
-
-
-Unit_Cost
-
-
-Cost for 1 of the specified quantity
 
 
 Cost for 1 of the specified quantity
@@ -1034,9 +879,8 @@ Cost for 1 of the specified quantity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Unit_Cost](Inv_Transaction_Lines.md#unit_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1058,12 +902,6 @@ Cost for 1 of the specified quantity
 ### Temp_Order_No
 
 
-Temp_Order_No
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -1075,9 +913,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Temp_Order_No](Inv_Transaction_Lines.md#temp_order_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1100,15 +937,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Quantity_Unit_Id
-
-
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity. NULL means that the quantity is specified only in base measurement unit
 
 
 The measurement unit of Quantity. NULL means that the quantity is specified only in base measurement unit
@@ -1122,9 +953,8 @@ The measurement unit of Quantity. NULL means that the quantity is specified only
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Quantity_Unit_Id](Inv_Transaction_Lines.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1147,12 +977,9 @@ The measurement unit of Quantity. NULL means that the quantity is specified only
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -1163,9 +990,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Notes](Inv_Transaction_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1187,12 +1013,6 @@ Notes
 ### Product_Variant_Id
 
 
-Product_Variant_Id
-
-
-If specified determines which product variant of the current product in this line is used.
-
-
 If specified determines which product variant of the current product in this line is used.
 
 | Property | Value |
@@ -1204,9 +1024,8 @@ If specified determines which product variant of the current product in this lin
 |Referenced Table|[Gen_Product_Variants](Gen_Product_Variants.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Product_Variant_Id](Inv_Transaction_Lines.md#product_variant_id)|
 |Depends On|[Product_Id](#product_id)|
 |Format||
 |Ignore for Insert Order|no|
@@ -1230,12 +1049,9 @@ If specified determines which product variant of the current product in this lin
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -1245,9 +1061,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Row_Version](Inv_Transaction_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1269,12 +1084,6 @@ Row_Version
 ### Parent_Line_No
 
 
-Parent_Line_No
-
-
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.
-
-
 The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.
 
 | Property | Value |
@@ -1285,9 +1094,8 @@ The number of the line within the parent document, which the current line execut
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Parent_Line_No](Inv_Transaction_Lines.md#parent_line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1309,12 +1117,6 @@ The number of the line within the parent document, which the current line execut
 ### Parent_Document_Id
 
 
-Parent_Document_Id
-
-
-The document, which the current line executes. NULL when the current line does not execute another line.
-
-
 The document, which the current line executes. NULL when the current line does not execute another line.
 
 | Property | Value |
@@ -1326,9 +1128,8 @@ The document, which the current line executes. NULL when the current line does n
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Parent_Document_Id](Inv_Transaction_Lines.md#parent_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1351,15 +1152,9 @@ The document, which the current line executes. NULL when the current line does n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Standard_Quantity_Base
-
-
-Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
@@ -1372,9 +1167,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Standard_Quantity_Base](Inv_Transaction_Lines.md#standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

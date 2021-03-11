@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-pdm_processing_consents">Table Pdm_Processing_Consents</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.PersonalData.ProcessingConsents.html">Applications.PersonalData.ProcessingConsents</a></p>
 <p>Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -152,7 +154,7 @@
 </tr>
 <tr>
 <td><a href="#consent_text">Consent_Text</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The actual text of the consent.</td>
 </tr>
 <tr>
@@ -182,12 +184,12 @@
 </tr>
 <tr>
 <td><a href="#allow_other_data">Allow_Other_Data</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Comma-separated list of other types of data, which was allowed for processing with this consent.</td>
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -199,7 +201,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="processing_consent_id">Processing_Consent_Id</h3>
-<p>Processing_Consent_Id</p>
 <table>
 <thead>
 <tr>
@@ -238,15 +239,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#processing_consent_id">Processing_Consent_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -331,15 +328,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="person_id">Person_Id</h3>
-<p>Person_Id</p>
-<p>The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record.</p>
 <p>The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record.</p>
 <table>
 <thead>
@@ -379,15 +374,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#person_id">Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -472,15 +463,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="user_id">User_Id</h3>
-<p>User_Id</p>
-<p>The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user.</p>
 <p>The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user.</p>
 <table>
 <thead>
@@ -520,15 +509,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#user_id">User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -613,15 +598,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="personal_data_process_id">Personal_Data_Process_Id</h3>
-<p>Personal_Data_Process_Id</p>
-<p>The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes.</p>
 <p>The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes.</p>
 <table>
 <thead>
@@ -661,15 +644,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#personal_data_process_id">Personal_Data_Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -754,15 +733,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="given_on_utc">Given_On_Utc</h3>
-<p>Given_On_Utc</p>
-<p>The date and time (in Utc), when the consent was given.</p>
 <p>The date and time (in Utc), when the consent was given.</p>
 <table>
 <thead>
@@ -802,15 +779,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#given_on_utc">Given_On_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -902,8 +875,6 @@
 </tbody>
 </table>
 <h3 id="retracted_on_utc">Retracted_On_Utc</h3>
-<p>Retracted_On_Utc</p>
-<p>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted.</p>
 <p>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted.</p>
 <table>
 <thead>
@@ -943,15 +914,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#retracted_on_utc">Retracted_On_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1043,8 +1010,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given.</p>
 <p>Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given.</p>
 <table>
 <thead>
@@ -1080,15 +1045,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1173,15 +1134,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_child">Is_Child</h3>
-<p>Is_Child</p>
-<p>Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child.</p>
 <p>Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child.</p>
 <table>
 <thead>
@@ -1217,15 +1176,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#is_child">Is_Child</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1310,15 +1265,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_name">Parent_Name</h3>
-<p>Parent_Name</p>
-<p>When a parental rights holder gives a consent for a child, contains the name of the parent.</p>
 <p>When a parental rights holder gives a consent for a child, contains the name of the parent.</p>
 <table>
 <thead>
@@ -1358,15 +1311,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#parent_name">Parent_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1451,7 +1400,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1464,8 +1413,6 @@
 </tbody>
 </table>
 <h3 id="parent_email">Parent_Email</h3>
-<p>Parent_Email</p>
-<p>When a parental rights holder gives a consent for a child, contains the email of the parent.</p>
 <p>When a parental rights holder gives a consent for a child, contains the email of the parent.</p>
 <table>
 <thead>
@@ -1505,15 +1452,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#parent_email">Parent_Email</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1605,8 +1548,6 @@
 </tbody>
 </table>
 <h3 id="parent_phone">Parent_Phone</h3>
-<p>Parent_Phone</p>
-<p>When a parental rights holder gives a consent for a child, contains the phone number of the parent.</p>
 <p>When a parental rights holder gives a consent for a child, contains the phone number of the parent.</p>
 <table>
 <thead>
@@ -1646,15 +1587,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#parent_phone">Parent_Phone</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1746,8 +1683,6 @@
 </tbody>
 </table>
 <h3 id="consent_type">Consent_Type</h3>
-<p>Consent_Type</p>
-<p>The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).</p>
 <p>The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).</p>
 <table>
 <thead>
@@ -1787,7 +1722,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1796,10 +1731,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#consent_type">Consent_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1884,15 +1815,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="consent_text">Consent_Text</h3>
-<p>Consent_Text</p>
-<p>The actual text of the consent.</p>
 <p>The actual text of the consent.</p>
 <table>
 <thead>
@@ -1904,7 +1833,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1932,15 +1861,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#consent_text">Consent_Text</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2032,8 +1957,6 @@
 </tbody>
 </table>
 <h3 id="consent_image">Consent_Image</h3>
-<p>Consent_Image</p>
-<p>If not null, it is a graphical image, containing additional information for the consent.</p>
 <p>If not null, it is a graphical image, containing additional information for the consent.</p>
 <table>
 <thead>
@@ -2069,15 +1992,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#consent_image">Consent_Image</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2150,8 +2069,6 @@
 </tbody>
 </table>
 <h3 id="allow_basic_data">Allow_Basic_Data</h3>
-<p>Allow_Basic_Data</p>
-<p>Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc.</p>
 <p>Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc.</p>
 <table>
 <thead>
@@ -2187,15 +2104,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#allow_basic_data">Allow_Basic_Data</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2280,15 +2193,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="allow_email">Allow_Email</h3>
-<p>Allow_Email</p>
-<p>Allows the processing of the email address.</p>
 <p>Allows the processing of the email address.</p>
 <table>
 <thead>
@@ -2324,15 +2235,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#allow_email">Allow_Email</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2417,15 +2324,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="allow_address">Allow_Address</h3>
-<p>Allow_Address</p>
-<p>Allows the processing of the physical address.</p>
 <p>Allows the processing of the physical address.</p>
 <table>
 <thead>
@@ -2461,15 +2366,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#allow_address">Allow_Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2554,15 +2455,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="allow_phone">Allow_Phone</h3>
-<p>Allow_Phone</p>
-<p>Allows the processing of the telephone number.</p>
 <p>Allows the processing of the telephone number.</p>
 <table>
 <thead>
@@ -2598,15 +2497,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#allow_phone">Allow_Phone</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2691,15 +2586,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="allow_other_data">Allow_Other_Data</h3>
-<p>Allow_Other_Data</p>
-<p>Comma-separated list of other types of data, which was allowed for processing with this consent.</p>
 <p>Comma-separated list of other types of data, which was allowed for processing with this consent.</p>
 <table>
 <thead>
@@ -2711,7 +2604,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2739,15 +2632,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#allow_other_data">Allow_Other_Data</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2832,14 +2721,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2850,7 +2738,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2878,15 +2766,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2959,7 +2843,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2994,15 +2877,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Processing_Consents.html">Pdm_Processing_Consents</a>.<a href="Pdm_Processing_Consents.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

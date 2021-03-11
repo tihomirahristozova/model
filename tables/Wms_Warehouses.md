@@ -1,5 +1,10 @@
 # Table Wms_Warehouses
 
+
+## Entity
+
+Entity: [Logistics.Wms.Warehouses](~/entities/Logistics.Wms.Warehouses.md)
+
 Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1)
 
 ## Summary
@@ -8,15 +13,12 @@ Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1)
 | - | - | --- |
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Name](#warehouse_name)|`nvarchar(254)` `ML`|Name of the warehouse (multilanguage).|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Warehouse_Id
-
-
-Warehouse_Id
 
 | Property | Value |
 | - | - |
@@ -27,9 +29,8 @@ Warehouse_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wms_Warehouses](Wms_Warehouses.md).[Warehouse_Id](Wms_Warehouses.md#warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Warehouse_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Name
-
-
-Warehouse_Name
-
-
-Name of the warehouse (multilanguage).
 
 
 Name of the warehouse (multilanguage).
@@ -74,9 +69,8 @@ Name of the warehouse (multilanguage).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouses](Wms_Warehouses.md).[Warehouse_Name](Wms_Warehouses.md#warehouse_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,26 +93,22 @@ Name of the warehouse (multilanguage).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouses](Wms_Warehouses.md).[Notes](Wms_Warehouses.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -139,9 +129,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -150,9 +137,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouses](Wms_Warehouses.md).[Row_Version](Wms_Warehouses.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

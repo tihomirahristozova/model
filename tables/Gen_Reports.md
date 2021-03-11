@@ -1,5 +1,10 @@
 # Table Gen_Reports
 
+
+## Entity
+
+Entity: [General.Reports](~/entities/General.Reports.md)
+
 Contains user-defined data-sources. The data sources is a user-defined way (similar to query designer) to extract, filter, join and transform data for presentation purposes. Entity: Gen_Reports
 
 ## Summary
@@ -17,9 +22,6 @@ Contains user-defined data-sources. The data sources is a user-defined way (simi
 
 ### Report_Id
 
-
-Report_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Report_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Reports](Gen_Reports.md).[Report_Id](Gen_Reports.md#report_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,12 +55,9 @@ Report_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Report_Name
-
-
-Report_Name
 
 | Property | Value |
 | - | - |
@@ -70,9 +68,8 @@ Report_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Reports](Gen_Reports.md).[Report_Name](Gen_Reports.md#report_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -95,16 +92,10 @@ Report_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Query_Name
-
-
-Query_Name
-
-
-The name of the query or table that is used for root reference point of the loaded data.
 
 
 The name of the query or table that is used for root reference point of the loaded data.
@@ -118,9 +109,8 @@ The name of the query or table that is used for root reference point of the load
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Reports](Gen_Reports.md).[Query_Name](Gen_Reports.md#query_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -143,16 +133,10 @@ The name of the query or table that is used for root reference point of the load
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Is_Table
-
-
-Is_Table
-
-
-If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml. 
 
 
 If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml. 
@@ -165,9 +149,8 @@ If True the Query_Name is name of a table, otherwise is name of a query that can
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Reports](Gen_Reports.md).[Is_Table](Gen_Reports.md#is_table)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,15 +173,9 @@ If True the Query_Name is name of a table, otherwise is name of a query that can
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Show_Parent_Tables
-
-
-Show_Parent_Tables
-
-
-Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not.
 
 
 Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not.
@@ -211,9 +188,8 @@ Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Quer
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Reports](Gen_Reports.md).[Show_Parent_Tables](Gen_Reports.md#show_parent_tables)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,9 +210,6 @@ Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Quer
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -245,9 +218,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Reports](Gen_Reports.md).[Row_Version](Gen_Reports.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

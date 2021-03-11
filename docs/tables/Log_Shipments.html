@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-log_shipments">Table Log_Shipments</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Shipment.Shipments.html">Logistics.Shipment.Shipments</a></p>
 <p>Represents shipments of sales orders to customers. Entity: Log_Shipments</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -148,7 +150,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="shipment_id">Shipment_Id</h3>
-<p>Shipment_Id</p>
 <table>
 <thead>
 <tr>
@@ -187,15 +188,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#shipment_id">Shipment_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -280,14 +277,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -326,15 +322,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -419,15 +411,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ship_to_party_contact_mechanism_id">Ship_To_Party_Contact_Mechanism_Id</h3>
-<p>Ship_To_Party_Contact_Mechanism_Id</p>
-<p>Destination address where the goods should be shipped</p>
 <p>Destination address where the goods should be shipped</p>
 <table>
 <thead>
@@ -467,15 +457,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#ship_to_party_contact_mechanism_id">Ship_To_Party_Contact_Mechanism_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -560,15 +546,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="required_delivery_date">Required_Delivery_Date</h3>
-<p>Required_Delivery_Date</p>
-<p>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When NULL means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines)</p>
 <p>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When NULL means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines)</p>
 <table>
 <thead>
@@ -608,15 +592,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#required_delivery_date">Required_Delivery_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -708,8 +688,6 @@
 </tbody>
 </table>
 <h3 id="ship_from_store_id">Ship_From_Store_Id</h3>
-<p>Ship_From_Store_Id</p>
-<p>The store from which the shipment should be effected</p>
 <p>The store from which the shipment should be effected</p>
 <table>
 <thead>
@@ -749,15 +727,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#ship_from_store_id">Ship_From_Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -842,15 +816,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="issued_by_person_id">Issued_By_Person_Id</h3>
-<p>Issued_By_Person_Id</p>
-<p>The person who signed for the shipment</p>
 <p>The person who signed for the shipment</p>
 <table>
 <thead>
@@ -890,15 +862,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#issued_by_person_id">Issued_By_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -983,15 +951,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="received_by_person_id">Received_By_Person_Id</h3>
-<p>Received_By_Person_Id</p>
-<p>The person who received the goods for/from the shipment</p>
 <p>The person who received the goods for/from the shipment</p>
 <table>
 <thead>
@@ -1031,15 +997,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#received_by_person_id">Received_By_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1124,15 +1086,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1168,15 +1128,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1261,15 +1217,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -1305,15 +1259,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1398,14 +1348,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1440,15 +1389,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Shipments.html">Log_Shipments</a>.<a href="Log_Shipments.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

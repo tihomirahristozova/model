@@ -1,5 +1,10 @@
 # Table Sec_Column_Permissions
 
+
+## Entity
+
+Entity: [Systems.Security.ColumnPermissions](~/entities/Systems.Security.ColumnPermissions.md)
+
 User permissions for accessing the system data columns. Entity: Sec_Column_Permissions
 
 ## Summary
@@ -16,9 +21,6 @@ User permissions for accessing the system data columns. Entity: Sec_Column_Permi
 
 ### Column_Permission_Id
 
-
-Column_Permission_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Column_Permission_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_Column_Permissions](Sec_Column_Permissions.md).[Column_Permission_Id](Sec_Column_Permissions.md#column_permission_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Column_Permission_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Table_Name
-
-
-Table_Name
-
-
-The table in which is the secured column.
 
 
 The table in which is the secured column.
@@ -75,9 +70,8 @@ The table in which is the secured column.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Column_Permissions](Sec_Column_Permissions.md).[Table_Name](Sec_Column_Permissions.md#table_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +94,9 @@ The table in which is the secured column.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Column_Name
-
-
-Column_Name
-
-
-The name of the secured column.
 
 
 The name of the secured column.
@@ -122,9 +110,8 @@ The name of the secured column.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Column_Permissions](Sec_Column_Permissions.md).[Column_Name](Sec_Column_Permissions.md#column_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +134,9 @@ The name of the secured column.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Access_Key_Id
-
-
-Access_Key_Id
-
-
-The required access key for accessing the column.
 
 
 The required access key for accessing the column.
@@ -169,9 +150,8 @@ The required access key for accessing the column.
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Column_Permissions](Sec_Column_Permissions.md).[Access_Key_Id](Sec_Column_Permissions.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,12 +174,9 @@ The required access key for accessing the column.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -209,9 +186,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Column_Permissions](Sec_Column_Permissions.md).[Row_Version](Sec_Column_Permissions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

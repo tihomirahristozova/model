@@ -1,5 +1,10 @@
 # Table Rent_Transactions
 
+
+## Entity
+
+Entity: [Applications.Rental.Transactions](~/entities/Applications.Rental.Transactions.md)
+
 Contains all transactions of Record of Handover / Handing-Over Record . Entity: Rent_Transactions
 
 ## Owner Tables Hierarchy
@@ -25,12 +30,6 @@ Contains all transactions of Record of Handover / Handing-Over Record . Entity: 
 ### Rent_Transaction_Id
 
 
-Rent_Transaction_Id
-
-
-Rent Transaction PK
-
-
 Rent Transaction PK
 
 | Property | Value |
@@ -42,9 +41,8 @@ Rent Transaction PK
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Rent_Transaction_Id](Rent_Transactions.md#rent_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -67,15 +65,9 @@ Rent Transaction PK
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-Document Id
 
 
 Document Id
@@ -89,9 +81,8 @@ Document Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Document_Id](Rent_Transactions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -114,15 +105,9 @@ Document Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transaction_Type
-
-
-Transaction_Type
-
-
-Transaction Type
 
 
 Transaction Type
@@ -136,10 +121,9 @@ Transaction Type
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`D`, `R`, `W`, `S`|
 |Default Value|None|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Transaction_Type](Rent_Transactions.md#transaction_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -162,16 +146,10 @@ Transaction Type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Lease_Contract_Id
-
-
-Lease_Contract_Id
-
-
-Lease Contract
 
 
 Lease Contract
@@ -185,9 +163,8 @@ Lease Contract
 |Referenced Table|[Rent_Lease_Contracts](Rent_Lease_Contracts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Lease_Contract_Id](Rent_Transactions.md#lease_contract_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -210,15 +187,9 @@ Lease Contract
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Lessee_Customer_Id
-
-
-Lessee_Customer_Id
-
-
-Lessee Customer
 
 
 Lessee Customer
@@ -232,9 +203,8 @@ Lessee Customer
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Lessee_Customer_Id](Rent_Transactions.md#lessee_customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -257,15 +227,9 @@ Lessee Customer
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Transaction_Timestamp
-
-
-Transaction_Timestamp
-
-
-Transaction Timestamp
 
 
 Transaction Timestamp
@@ -279,9 +243,8 @@ Transaction Timestamp
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Transaction_Timestamp](Rent_Transactions.md#transaction_timestamp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -304,18 +267,12 @@ Transaction Timestamp
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -326,9 +283,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Is_Single_Execution](Rent_Transactions.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -351,17 +307,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -372,9 +322,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Is_Released](Rent_Transactions.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -397,12 +346,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -412,9 +358,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Transactions](Rent_Transactions.md).[Row_Version](Rent_Transactions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

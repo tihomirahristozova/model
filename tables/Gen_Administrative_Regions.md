@@ -1,5 +1,10 @@
 # Table Gen_Administrative_Regions
 
+
+## Entity
+
+Entity: [General.Geography.AdministrativeRegions](~/entities/General.Geography.AdministrativeRegions.md)
+
 Hierarchical structure of the legally defined administrative regions. Administrative regions are sub-divisions of the countries. Entity: Gen_Administrative_Regions
 
 ## Summary
@@ -20,9 +25,6 @@ Hierarchical structure of the legally defined administrative regions. Administra
 
 ### Administrative_Region_Id
 
-
-Administrative_Region_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Administrative_Region_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Administrative_Region_Id](Gen_Administrative_Regions.md#administrative_region_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Administrative_Region_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Administrative_Region_Code
-
-
-Administrative_Region_Code
-
-
-Administrative code of country territorial subdivision
 
 
 Administrative code of country territorial subdivision
@@ -79,9 +74,8 @@ Administrative code of country territorial subdivision
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Administrative_Region_Code](Gen_Administrative_Regions.md#administrative_region_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,16 +98,10 @@ Administrative code of country territorial subdivision
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Administrative_Region_Name
-
-
-Administrative_Region_Name
-
-
-Name of country territorial subdivision
 
 
 Name of country territorial subdivision
@@ -127,9 +115,8 @@ Name of country territorial subdivision
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Administrative_Region_Name](Gen_Administrative_Regions.md#administrative_region_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -157,12 +144,6 @@ Name of country territorial subdivision
 ### Parent_Full_Path
 
 
-Parent_Full_Path
-
-
-Parent region of the current territorial subdivision
-
-
 Parent region of the current territorial subdivision
 
 | Property | Value |
@@ -174,9 +155,8 @@ Parent region of the current territorial subdivision
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Parent_Full_Path](Gen_Administrative_Regions.md#parent_full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,16 +179,10 @@ Parent region of the current territorial subdivision
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Full_Path
-
-
-Full_Path
-
-
-Full identification path of the current country territorial subdivision
 
 
 Full identification path of the current country territorial subdivision
@@ -222,9 +196,8 @@ Full identification path of the current country territorial subdivision
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Full_Path](Gen_Administrative_Regions.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,16 +220,10 @@ Full identification path of the current country territorial subdivision
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Country_Id
-
-
-Country_Id
-
-
-Country of the territorial subdivision
 
 
 Country of the territorial subdivision
@@ -270,9 +237,8 @@ Country of the territorial subdivision
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Country_Id](Gen_Administrative_Regions.md#country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,15 +261,9 @@ Country of the territorial subdivision
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Valid_From
-
-
-Valid_From
-
-
-Start date of validity of this administrative division. NULL when the starting date is unknown in the past.
 
 
 Start date of validity of this administrative division. NULL when the starting date is unknown in the past.
@@ -317,9 +277,8 @@ Start date of validity of this administrative division. NULL when the starting d
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Valid_From](Gen_Administrative_Regions.md#valid_from)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -347,12 +306,6 @@ Start date of validity of this administrative division. NULL when the starting d
 ### Valid_To
 
 
-Valid_To
-
-
-End date of validity of this administative division. NULL when the division is still active or ending date is unknown
-
-
 End date of validity of this administative division. NULL when the division is still active or ending date is unknown
 
 | Property | Value |
@@ -364,9 +317,8 @@ End date of validity of this administative division. NULL when the division is s
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Valid_To](Gen_Administrative_Regions.md#valid_to)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -393,9 +345,6 @@ End date of validity of this administative division. NULL when the division is s
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -404,9 +353,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Administrative_Regions](Gen_Administrative_Regions.md).[Row_Version](Gen_Administrative_Regions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

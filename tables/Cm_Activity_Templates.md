@@ -1,5 +1,10 @@
 # Table Cm_Activity_Templates
 
+
+## Entity
+
+Entity: [General.Contacts.ActivityTemplates](~/entities/General.Contacts.ActivityTemplates.md)
+
 Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates
 
 ## Summary
@@ -9,7 +14,7 @@ Templates for automatical generation of activity from any document. Entity: Cm_A
 |[Activity_Template_Id](#activity_template_id)|`uniqueidentifier` `PK`||
 |[Route_Id](#route_id)|`uniqueidentifier` ||
 |[Responsible_Party_Id](#responsible_party_id)|`uniqueidentifier` |If Null the user that starts the generation route is responsible party of the activity.|
-|[Activity_Subject_Mask](#activity_subject_mask)|`nvarchar(2147483647)` |A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.|
+|[Activity_Subject_Mask](#activity_subject_mask)|`nvarchar(max)` |A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.|
 |[Source_Date_Field](#source_date_field)|`nvarchar(64)` |A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.|
 |[Additional_Days](#additional_days)|`int` |The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.|
 |[Start_Time](#start_time)|`time` |The time of the day when the activity starts|
@@ -20,9 +25,6 @@ Templates for automatical generation of activity from any document. Entity: Cm_A
 
 ### Activity_Template_Id
 
-
-Activity_Template_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Activity_Template_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Activity_Template_Id](Cm_Activity_Templates.md#activity_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Activity_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Route_Id
-
-
-Route_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Route_Id
 |Referenced Table|[Wf_Routes](Wf_Routes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Route_Id](Cm_Activity_Templates.md#route_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Route_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Responsible_Party_Id
-
-
-Responsible_Party_Id
-
-
-If Null the user that starts the generation route is responsible party of the activity.
 
 
 If Null the user that starts the generation route is responsible party of the activity.
@@ -120,9 +111,8 @@ If Null the user that starts the generation route is responsible party of the ac
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Responsible_Party_Id](Cm_Activity_Templates.md#responsible_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,31 +135,24 @@ If Null the user that starts the generation route is responsible party of the ac
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Activity_Subject_Mask
-
-
-Activity_Subject_Mask
-
-
-A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.
 
 
 A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Activity_Subject_Mask](Cm_Activity_Templates.md#activity_subject_mask)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,12 +174,6 @@ A mask that uses fields from the header table of the source document in the spec
 ### Source_Date_Field
 
 
-Source_Date_Field
-
-
-A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.
-
-
 A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.
 
 | Property | Value |
@@ -208,9 +185,8 @@ A name of a field from the header or the document table of the source document i
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Source_Date_Field](Cm_Activity_Templates.md#source_date_field)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,12 +208,6 @@ A name of a field from the header or the document table of the source document i
 ### Additional_Days
 
 
-Additional_Days
-
-
-The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.
-
-
 The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.
 
 | Property | Value |
@@ -248,9 +218,8 @@ The number of days that will be added to the date in the Header_Date_Field. The 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Additional_Days](Cm_Activity_Templates.md#additional_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -272,12 +241,6 @@ The number of days that will be added to the date in the Header_Date_Field. The 
 ### Start_Time
 
 
-Start_Time
-
-
-The time of the day when the activity starts
-
-
 The time of the day when the activity starts
 
 | Property | Value |
@@ -289,9 +252,8 @@ The time of the day when the activity starts
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Start_Time](Cm_Activity_Templates.md#start_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -312,9 +274,6 @@ The time of the day when the activity starts
 
 ### Reminder_Time
 
-
-Reminder_Time
-
 | Property | Value |
 | - | - |
 |Type|time|
@@ -324,9 +283,8 @@ Reminder_Time
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Reminder_Time](Cm_Activity_Templates.md#reminder_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -347,9 +305,6 @@ Reminder_Time
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -358,9 +313,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Templates](Cm_Activity_Templates.md).[Row_Version](Cm_Activity_Templates.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

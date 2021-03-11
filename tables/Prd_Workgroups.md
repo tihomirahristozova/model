@@ -1,5 +1,10 @@
 # Table Prd_Workgroups
 
+
+## Entity
+
+Entity: [Production.Resources.Workgroups](~/entities/Production.Resources.Workgroups.md)
+
 Production workgroups. Entity: Prd_Workgroups
 
 ## Summary
@@ -19,12 +24,6 @@ Production workgroups. Entity: Prd_Workgroups
 ### Id
 
 
-Id
-
-
-Unique workgroup auto-generated Id
-
-
 Unique workgroup auto-generated Id
 
 | Property | Value |
@@ -36,9 +35,8 @@ Unique workgroup auto-generated Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Workgroups](Prd_Workgroups.md).[Id](Prd_Workgroups.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +59,9 @@ Unique workgroup auto-generated Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent
-
-
-Parent
-
-
-Path-like parent workgroup name
 
 
 Path-like parent workgroup name
@@ -83,9 +75,8 @@ Path-like parent workgroup name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|/|
-|Derived From|[Prd_Workgroups](Prd_Workgroups.md).[Parent](Prd_Workgroups.md#parent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,12 +104,6 @@ Path-like parent workgroup name
 ### Workgroup_Name
 
 
-Workgroup_Name
-
-
-Name of the workgroup
-
-
 Name of the workgroup
 
 | Property | Value |
@@ -130,9 +115,8 @@ Name of the workgroup
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroups](Prd_Workgroups.md).[Workgroup_Name](Prd_Workgroups.md#workgroup_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -160,12 +144,6 @@ Name of the workgroup
 ### Full_Path
 
 
-Full_Path
-
-
-The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'.
-
-
 The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'.
 
 | Property | Value |
@@ -177,9 +155,8 @@ The full path to the current node, represented with slash ('/') as leading, trai
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value||
-|Derived From|[Prd_Workgroups](Prd_Workgroups.md).[Full_Path](Prd_Workgroups.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,9 +177,6 @@ The full path to the current node, represented with slash ('/') as leading, trai
 
 ### Cost_Currency
 
-
-Cost_Currency
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(3)|
@@ -212,9 +186,8 @@ Cost_Currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroups](Prd_Workgroups.md).[Cost_Currency](Prd_Workgroups.md#cost_currency)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -236,12 +209,6 @@ Cost_Currency
 ### Notes
 
 
-Notes
-
-
-User notes for the workgroup
-
-
 User notes for the workgroup
 
 | Property | Value |
@@ -253,9 +220,8 @@ User notes for the workgroup
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Workgroups](Prd_Workgroups.md).[Notes](Prd_Workgroups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -276,9 +242,6 @@ User notes for the workgroup
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -287,9 +250,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroups](Prd_Workgroups.md).[Row_Version](Prd_Workgroups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

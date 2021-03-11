@@ -1,5 +1,10 @@
 # Table Acc_Account_Groups
 
+
+## Entity
+
+Entity: [Finance.Accounting.AccountGroups](~/entities/Finance.Accounting.AccountGroups.md)
+
 Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
 ## Summary
@@ -19,9 +24,6 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
 ### Account_Group_Id
 
-
-Account_Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Account_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Account_Groups](Acc_Account_Groups.md).[Account_Group_Id](Acc_Account_Groups.md#account_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Account_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent_Account_Group_Id
-
-
-Parent_Account_Group_Id
-
-
-Parent account group. NULL if this is root group
 
 
 Parent account group. NULL if this is root group
@@ -78,9 +73,8 @@ Parent account group. NULL if this is root group
 |Referenced Table|[Acc_Account_Groups](Acc_Account_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Account_Groups](Acc_Account_Groups.md).[Parent_Account_Group_Id](Acc_Account_Groups.md#parent_account_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +97,9 @@ Parent account group. NULL if this is root group
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Account_Group_Number
-
-
-Account_Group_Number
-
-
-Unique account group number. May contain characters, if required
 
 
 Unique account group number. May contain characters, if required
@@ -125,9 +113,8 @@ Unique account group number. May contain characters, if required
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Account_Groups](Acc_Account_Groups.md).[Account_Group_Number](Acc_Account_Groups.md#account_group_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,12 +142,6 @@ Unique account group number. May contain characters, if required
 ### Account_Group_Name
 
 
-Account_Group_Name
-
-
-Account group name, required. Must be unique within the parent group
-
-
 Account group name, required. Must be unique within the parent group
 
 | Property | Value |
@@ -172,9 +153,8 @@ Account group name, required. Must be unique within the parent group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Account_Groups](Acc_Account_Groups.md).[Account_Group_Name](Acc_Account_Groups.md#account_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,12 +182,6 @@ Account group name, required. Must be unique within the parent group
 ### Full_Path
 
 
-Full_Path
-
-
-Full path to the group. Contains delimited list of group numbers of parent groups
-
-
 Full path to the group. Contains delimited list of group numbers of parent groups
 
 | Property | Value |
@@ -219,9 +193,8 @@ Full path to the group. Contains delimited list of group numbers of parent group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Account_Groups](Acc_Account_Groups.md).[Full_Path](Acc_Account_Groups.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,9 +221,6 @@ Full path to the group. Contains delimited list of group numbers of parent group
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -260,9 +230,8 @@ Description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Acc_Account_Groups](Acc_Account_Groups.md).[Description](Acc_Account_Groups.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,12 +253,6 @@ Description
 ### Discontinued
 
 
-Discontinued
-
-
-1 means that the account group won't be used any more and should not appear in combo boxes
-
-
 1 means that the account group won't be used any more and should not appear in combo boxes
 
 | Property | Value |
@@ -300,9 +263,8 @@ Discontinued
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Acc_Account_Groups](Acc_Account_Groups.md).[Discontinued](Acc_Account_Groups.md#discontinued)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -325,12 +287,9 @@ Discontinued
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -340,9 +299,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Account_Groups](Acc_Account_Groups.md).[Row_Version](Acc_Account_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

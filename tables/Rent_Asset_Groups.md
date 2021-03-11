@@ -1,5 +1,10 @@
 # Table Rent_Asset_Groups
 
+
+## Entity
+
+Entity: [Applications.Rental.AssetGroups](~/entities/Applications.Rental.AssetGroups.md)
+
 Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Groups
 
 ## Summary
@@ -9,7 +14,7 @@ Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Gr
 |[Rental_Asset_Group_Id](#rental_asset_group_id)|`uniqueidentifier` `PK`||
 |[Rental_Asset_Group_Code](#rental_asset_group_code)|`nvarchar(3)` |Asset group code, unique within the parent node.|
 |[Rental_Asset_Group_Name](#rental_asset_group_name)|`nvarchar(254)` |Asset group name, unique within the parent node.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Parent_Full_Path](#parent_full_path)|`nvarchar(25)` |The full path of the parent node.|
 |[Full_Path](#full_path)|`nvarchar(25)` Readonly|The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -17,9 +22,6 @@ Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Gr
 ## Columns
 
 ### Rental_Asset_Group_Id
-
-
-Rental_Asset_Group_Id
 
 | Property | Value |
 | - | - |
@@ -30,9 +32,8 @@ Rental_Asset_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Asset_Groups](Rent_Asset_Groups.md).[Rental_Asset_Group_Id](Rent_Asset_Groups.md#rental_asset_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Rental_Asset_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Rental_Asset_Group_Code
-
-
-Rental_Asset_Group_Code
-
-
-Asset group code, unique within the parent node.
 
 
 Asset group code, unique within the parent node.
@@ -77,9 +72,8 @@ Asset group code, unique within the parent node.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Groups](Rent_Asset_Groups.md).[Rental_Asset_Group_Code](Rent_Asset_Groups.md#rental_asset_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,16 +96,10 @@ Asset group code, unique within the parent node.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Rental_Asset_Group_Name
-
-
-Rental_Asset_Group_Name
-
-
-Asset group name, unique within the parent node.
 
 
 Asset group name, unique within the parent node.
@@ -125,9 +113,8 @@ Asset group name, unique within the parent node.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Groups](Rent_Asset_Groups.md).[Rental_Asset_Group_Name](Rent_Asset_Groups.md#rental_asset_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,26 +137,22 @@ Asset group name, unique within the parent node.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Rent_Asset_Groups](Rent_Asset_Groups.md).[Notes](Rent_Asset_Groups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,12 +174,6 @@ Notes
 ### Parent_Full_Path
 
 
-Parent_Full_Path
-
-
-The full path of the parent node.
-
-
 The full path of the parent node.
 
 | Property | Value |
@@ -208,9 +185,8 @@ The full path of the parent node.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Groups](Rent_Asset_Groups.md).[Parent_Full_Path](Rent_Asset_Groups.md#parent_full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -233,15 +209,9 @@ The full path of the parent node.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Full_Path
-
-
-Full_Path
-
-
-The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.
 
 
 The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.
@@ -255,9 +225,8 @@ The full path of the node in the format of dot-delimited, dot-terminated codes o
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Groups](Rent_Asset_Groups.md).[Full_Path](Rent_Asset_Groups.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -278,9 +247,6 @@ The full path of the node in the format of dot-delimited, dot-terminated codes o
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -289,9 +255,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Groups](Rent_Asset_Groups.md).[Row_Version](Rent_Asset_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

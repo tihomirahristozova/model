@@ -1,5 +1,10 @@
 # Table Log_Transportation_Vehicles
 
+
+## Entity
+
+Entity: [Logistics.Shipment.TransportationVehicles](~/entities/Logistics.Shipment.TransportationVehicles.md)
+
 A vehicle, which is used for transportation. One actual vehicle might be defined multiple times as transportation vehicle - for different modes of transportation or cargo types. Entity: Log_Transportation_Vehicles
 
 ## Owner Tables Hierarchy
@@ -18,15 +23,12 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 |[Cargo_Type_Id](#cargo_type_id)|`uniqueidentifier` |The cargo type supported by this transportation vehicle.|
 |[Max_Cargo_Weight_Kg](#max_cargo_weight_kg)|`int` |The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.|
 |[Max_Pallets_Count](#max_pallets_count)|`int` |The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Transportation_Vehicle_Id
-
-
-Transportation_Vehicle_Id
 
 | Property | Value |
 | - | - |
@@ -37,9 +39,8 @@ Transportation_Vehicle_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Transportation_Vehicle_Id](Log_Transportation_Vehicles.md#transportation_vehicle_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,15 +63,9 @@ Transportation_Vehicle_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company to which the transportation vehicle will be bound.
 
 
 The enterprise company to which the transportation vehicle will be bound.
@@ -84,9 +79,8 @@ The enterprise company to which the transportation vehicle will be bound.
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Enterprise_Company_Id](Log_Transportation_Vehicles.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,15 +103,9 @@ The enterprise company to which the transportation vehicle will be bound.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Code
-
-
-Code
-
-
-The unique code (or call sign) of this transportation vehicle.
 
 
 The unique code (or call sign) of this transportation vehicle.
@@ -131,9 +119,8 @@ The unique code (or call sign) of this transportation vehicle.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Code](Log_Transportation_Vehicles.md#code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,16 +143,10 @@ The unique code (or call sign) of this transportation vehicle.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Vehicle_Id
-
-
-Vehicle_Id
-
-
-The definition of the base vehicle.
 
 
 The definition of the base vehicle.
@@ -179,9 +160,8 @@ The definition of the base vehicle.
 |Referenced Table|[Fleet_Vehicles](Fleet_Vehicles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Vehicle_Id](Log_Transportation_Vehicles.md#vehicle_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -204,15 +184,9 @@ The definition of the base vehicle.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transportation_Mode_Id
-
-
-Transportation_Mode_Id
-
-
-The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode.
 
 
 The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode.
@@ -226,9 +200,8 @@ The mode of transportation provided by this transportation vehicle. The same bas
 |Referenced Table|[Log_Transportation_Modes](Log_Transportation_Modes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Transportation_Mode_Id](Log_Transportation_Vehicles.md#transportation_mode_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -251,15 +224,9 @@ The mode of transportation provided by this transportation vehicle. The same bas
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cargo_Type_Id
-
-
-Cargo_Type_Id
-
-
-The cargo type supported by this transportation vehicle.
 
 
 The cargo type supported by this transportation vehicle.
@@ -273,9 +240,8 @@ The cargo type supported by this transportation vehicle.
 |Referenced Table|[Log_Cargo_Types](Log_Cargo_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Cargo_Type_Id](Log_Transportation_Vehicles.md#cargo_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -298,15 +264,9 @@ The cargo type supported by this transportation vehicle.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Max_Cargo_Weight_Kg
-
-
-Max_Cargo_Weight_Kg
-
-
-The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.
 
 
 The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.
@@ -319,9 +279,8 @@ The maximum weight of the cargo (in kg), which can be transported. NULL when thi
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Max_Cargo_Weight_Kg](Log_Transportation_Vehicles.md#max_cargo_weight_kg)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -343,12 +302,6 @@ The maximum weight of the cargo (in kg), which can be transported. NULL when thi
 ### Max_Pallets_Count
 
 
-Max_Pallets_Count
-
-
-The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced.
-
-
 The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced.
 
 | Property | Value |
@@ -359,9 +312,8 @@ The maximum number of pallets, which can be transported by the vehicle. NULL whe
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Max_Pallets_Count](Log_Transportation_Vehicles.md#max_pallets_count)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -382,21 +334,17 @@ The maximum number of pallets, which can be transported by the vehicle. NULL whe
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Notes](Log_Transportation_Vehicles.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -417,9 +365,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -428,9 +373,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Vehicles](Log_Transportation_Vehicles.md).[Row_Version](Log_Transportation_Vehicles.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Scheduled_Document_Events
 
+
+## Entity
+
+Entity: [General.ScheduledDocumentEvents](~/entities/General.ScheduledDocumentEvents.md)
+
 Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events
 
 ## Summary
@@ -13,7 +18,7 @@ Contains postponed events, which will be executed later. Usually these are large
 |[State](#state)|`smallint` Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly|The state of the document for which the event will be processed|
 |[Processed](#processed)|`bit` Readonly|Indicates wheather the event is already processed or not|
 |[Last_Process_Time](#last_process_time)|`datetime` Readonly|The time of the last attempt to process the event|
-|[Last_Process_Status](#last_process_status)|`nvarchar(2147483647)` Readonly|Status/information of the last attemp to process the event. Usually shows the cause in case of failure.|
+|[Last_Process_Status](#last_process_status)|`nvarchar(max)` Readonly|Status/information of the last attemp to process the event. Usually shows the cause in case of failure.|
 |[Creation_Time](#creation_time)|`datetime` Readonly||
 |[Cancelled](#cancelled)|`bit` |When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -21,9 +26,6 @@ Contains postponed events, which will be executed later. Usually these are large
 ## Columns
 
 ### Scheduled_Document_Event_Id
-
-
-Scheduled_Document_Event_Id
 
 | Property | Value |
 | - | - |
@@ -34,9 +36,8 @@ Scheduled_Document_Event_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Scheduled_Document_Event_Id](Gen_Scheduled_Document_Events.md#scheduled_document_event_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Scheduled_Document_Event_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Source_Document_Id
-
-
-Source_Document_Id
-
-
-The document that has caused this event to be scheduled
 
 
 The document that has caused this event to be scheduled
@@ -81,9 +76,8 @@ The document that has caused this event to be scheduled
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Source_Document_Id](Gen_Scheduled_Document_Events.md#source_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The document that has caused this event to be scheduled
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Event
-
-
-Document_Event
-
-
-The type of the document event that is scheduled to be processed
 
 
 The type of the document event that is scheduled to be processed
@@ -128,9 +116,8 @@ The type of the document event that is scheduled to be processed
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Document_Event](Gen_Scheduled_Document_Events.md#document_event)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,12 +139,6 @@ The type of the document event that is scheduled to be processed
 ### Document_Id
 
 
-Document_Id
-
-
-The document for which the event will be processed
-
-
 The document for which the event will be processed
 
 | Property | Value |
@@ -169,9 +150,8 @@ The document for which the event will be processed
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Document_Id](Gen_Scheduled_Document_Events.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,15 +174,9 @@ The document for which the event will be processed
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### State
-
-
-State
-
-
-The state of the document for which the event will be processed
 
 
 The state of the document for which the event will be processed
@@ -215,10 +189,9 @@ The state of the document for which the event will be processed
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`0`, `5`, `10`, `20`, `30`, `40`, `50`|
 |Default Value|None|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[State](Gen_Scheduled_Document_Events.md#state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -240,12 +213,6 @@ The state of the document for which the event will be processed
 ### Processed
 
 
-Processed
-
-
-Indicates wheather the event is already processed or not
-
-
 Indicates wheather the event is already processed or not
 
 | Property | Value |
@@ -256,9 +223,8 @@ Indicates wheather the event is already processed or not
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Processed](Gen_Scheduled_Document_Events.md#processed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -281,15 +247,9 @@ Indicates wheather the event is already processed or not
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Last_Process_Time
-
-
-Last_Process_Time
-
-
-The time of the last attempt to process the event
 
 
 The time of the last attempt to process the event
@@ -303,9 +263,8 @@ The time of the last attempt to process the event
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Last_Process_Time](Gen_Scheduled_Document_Events.md#last_process_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -327,26 +286,19 @@ The time of the last attempt to process the event
 ### Last_Process_Status
 
 
-Last_Process_Status
-
-
-Status/information of the last attemp to process the event. Usually shows the cause in case of failure.
-
-
 Status/information of the last attemp to process the event. Usually shows the cause in case of failure.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Last_Process_Status](Gen_Scheduled_Document_Events.md#last_process_status)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -367,9 +319,6 @@ Status/information of the last attemp to process the event. Usually shows the ca
 
 ### Creation_Time
 
-
-Creation_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -379,9 +328,8 @@ Creation_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Creation_Time](Gen_Scheduled_Document_Events.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -403,12 +351,6 @@ Creation_Time
 ### Cancelled
 
 
-Cancelled
-
-
-When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.
-
-
 When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.
 
 | Property | Value |
@@ -419,9 +361,8 @@ When true, specifies that this document event has been cancelled (either manuall
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Cancelled](Gen_Scheduled_Document_Events.md#cancelled)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -444,12 +385,9 @@ When true, specifies that this document event has been cancelled (either manuall
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -459,9 +397,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Scheduled_Document_Events](Gen_Scheduled_Document_Events.md).[Row_Version](Gen_Scheduled_Document_Events.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

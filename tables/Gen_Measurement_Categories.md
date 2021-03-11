@@ -1,5 +1,10 @@
 # Table Gen_Measurement_Categories
 
+
+## Entity
+
+Entity: [General.MeasurementCategories](~/entities/General.MeasurementCategories.md)
+
 Categories of measurement units. The units within a category are directly convertable to each other. Each category contains one base unit and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Categories
 
 ## Summary
@@ -16,12 +21,6 @@ Categories of measurement units. The units within a category are directly conver
 ### Id
 
 
-Id
-
-
-Unique measurement category Id
-
-
 Unique measurement category Id
 
 | Property | Value |
@@ -33,9 +32,8 @@ Unique measurement category Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Measurement_Categories](Gen_Measurement_Categories.md).[Id](Gen_Measurement_Categories.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +56,9 @@ Unique measurement category Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Measurement_Category_Name
-
-
-Measurement_Category_Name
 
 | Property | Value |
 | - | - |
@@ -74,9 +69,8 @@ Measurement_Category_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Measurement_Categories](Gen_Measurement_Categories.md).[Measurement_Category_Name](Gen_Measurement_Categories.md#measurement_category_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,16 +93,10 @@ Measurement_Category_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Is_Default
-
-
-Is_Default
-
-
-1=This category is the default category; 0=otherwise
 
 
 1=This category is the default category; 0=otherwise
@@ -121,9 +109,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Measurement_Categories](Gen_Measurement_Categories.md).[Is_Default](Gen_Measurement_Categories.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +133,9 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -161,9 +145,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Measurement_Categories](Gen_Measurement_Categories.md).[Row_Version](Gen_Measurement_Categories.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

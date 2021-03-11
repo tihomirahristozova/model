@@ -1,5 +1,10 @@
 # Table Crm_Sales_Orders_Options
 
+
+## Entity
+
+Entity: [Crm.Sales.SalesOrdersOptions](~/entities/Crm.Sales.SalesOrdersOptions.md)
+
 Options for sales orders of specific user defined document type. Entity: Crm_Sales_Orders_Options
 
 ## Owner Tables Hierarchy
@@ -25,9 +30,6 @@ Options for sales orders of specific user defined document type. Entity: Crm_Sal
 
 ### Sales_Order_Option_Id
 
-
-Sales_Order_Option_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +39,8 @@ Sales_Order_Option_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Sales_Order_Option_Id](Crm_Sales_Orders_Options.md#sales_order_option_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,15 +63,9 @@ Sales_Order_Option_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type for which the sales order option applies.
 
 
 The document type for which the sales order option applies.
@@ -84,9 +79,8 @@ The document type for which the sales order option applies.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Document_Type_Id](Crm_Sales_Orders_Options.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,15 +103,9 @@ The document type for which the sales order option applies.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Available_Quantity_Only
-
-
-Available_Quantity_Only
-
-
-When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)
 
 
 When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)
@@ -130,9 +118,8 @@ When 1 indicates that the sales order can be released only if there is sufficien
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Available_Quantity_Only](Crm_Sales_Orders_Options.md#available_quantity_only)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,15 +142,9 @@ When 1 indicates that the sales order can be released only if there is sufficien
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Allowed_Directions
-
-
-Allowed_Directions
-
-
-Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)
 
 
 Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)
@@ -177,10 +158,9 @@ Allowed directions (return or normal sale) for the sales orders of this document
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`S`, `R`, `*`, `A`|
 |Default Value|A|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Allowed_Directions](Crm_Sales_Orders_Options.md#allowed_directions)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,15 +183,9 @@ Allowed directions (return or normal sale) for the sales orders of this document
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Minimum_Amount
-
-
-Minimum_Amount
-
-
-When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.
 
 
 When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.
@@ -224,9 +198,8 @@ When not NULL, specifies minimal total amount of the sales order, which is requi
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Minimum_Amount](Crm_Sales_Orders_Options.md#minimum_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,12 +221,6 @@ When not NULL, specifies minimal total amount of the sales order, which is requi
 ### Minimum_Amount_Currency_Id
 
 
-Minimum_Amount_Currency_Id
-
-
-The currency of Minimal Amount
-
-
 The currency of Minimal Amount
 
 | Property | Value |
@@ -265,9 +232,8 @@ The currency of Minimal Amount
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Minimum_Amount_Currency_Id](Crm_Sales_Orders_Options.md#minimum_amount_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -290,15 +256,9 @@ The currency of Minimal Amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### VAT_Deviation_Document_Amount_Type_Id
-
-
-VAT_Deviation_Document_Amount_Type_Id
-
-
-Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT
 
 
 Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT
@@ -312,9 +272,8 @@ Document amount that contains the difference between the total amount of the sal
 |Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[VAT_Deviation_Document_Amount_Type_Id](Crm_Sales_Orders_Options.md#vat_deviation_document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -337,15 +296,9 @@ Document amount that contains the difference between the total amount of the sal
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Deal_Document_Type_Id
-
-
-Deal_Document_Type_Id
-
-
-If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities.
 
 
 If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities.
@@ -359,9 +312,8 @@ If filled then new opportunities (deals) from the specified type are created aut
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Deal_Document_Type_Id](Crm_Sales_Orders_Options.md#deal_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -384,15 +336,9 @@ If filled then new opportunities (deals) from the specified type are created aut
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Shipment_Allowance
-
-
-Shipment_Allowance
-
-
-Terms on which the shipment of the products in the sales order is allowed.
 
 
 Terms on which the shipment of the products in the sales order is allowed.
@@ -406,10 +352,9 @@ Terms on which the shipment of the products in the sales order is allowed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `P`, `W`|
 |Default Value|A|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Shipment_Allowance](Crm_Sales_Orders_Options.md#shipment_allowance)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -430,9 +375,6 @@ Terms on which the shipment of the products in the sales order is allowed.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -441,9 +383,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Orders_Options](Crm_Sales_Orders_Options.md).[Row_Version](Crm_Sales_Orders_Options.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

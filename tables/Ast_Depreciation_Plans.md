@@ -1,5 +1,10 @@
 # Table Ast_Depreciation_Plans
 
+
+## Entity
+
+Entity: [Finance.Assets.DepreciationPlans](~/entities/Finance.Assets.DepreciationPlans.md)
+
 Each depreciation plan document can create depreciation plans for numerous assets. Entity: Ast_Depreciation_Plans
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Each depreciation plan document can create depreciation plans for numerous asset
 
 ### Depreciation_Plan_Id
 
-
-Depreciation_Plan_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Depreciation_Plan_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Depreciation_Plans](Ast_Depreciation_Plans.md).[Depreciation_Plan_Id](Ast_Depreciation_Plans.md#depreciation_plan_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Depreciation_Plan_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plans](Ast_Depreciation_Plans.md).[Document_Id](Ast_Depreciation_Plans.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,17 +95,11 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -119,9 +110,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Ast_Depreciation_Plans](Ast_Depreciation_Plans.md).[Is_Single_Execution](Ast_Depreciation_Plans.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,17 +134,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -165,9 +149,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Ast_Depreciation_Plans](Ast_Depreciation_Plans.md).[Is_Released](Ast_Depreciation_Plans.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,12 +173,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -205,9 +185,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plans](Ast_Depreciation_Plans.md).[Row_Version](Ast_Depreciation_Plans.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

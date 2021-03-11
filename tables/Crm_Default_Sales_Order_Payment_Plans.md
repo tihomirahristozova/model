@@ -1,5 +1,10 @@
 # Table Crm_Default_Sales_Order_Payment_Plans
 
+
+## Entity
+
+Entity: [Crm.Sales.DefaultSalesOrderPaymentPlans](~/entities/Crm.Sales.DefaultSalesOrderPaymentPlans.md)
+
 Default payment plan for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Payment_Plans
 
 ## Owner Tables Hierarchy
@@ -27,9 +32,6 @@ Default payment plan for new documents of the specified document type. Entity: C
 
 ### Default_Sales_Order_Payment_Plan_Id
 
-
-Default_Sales_Order_Payment_Plan_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -39,9 +41,8 @@ Default_Sales_Order_Payment_Plan_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Default_Sales_Order_Payment_Plan_Id](Crm_Default_Sales_Order_Payment_Plans.md#default_sales_order_payment_plan_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,12 +65,9 @@ Default_Sales_Order_Payment_Plan_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
 
 | Property | Value |
 | - | - |
@@ -80,9 +78,8 @@ Document_Type_Id
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Document_Type_Id](Crm_Default_Sales_Order_Payment_Plans.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +102,9 @@ Document_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Installment_Number
-
-
-Installment_Number
-
-
-Consequtive installment number. Used for identifying different payments generated according this payment plan.
 
 
 Consequtive installment number. Used for identifying different payments generated according this payment plan.
@@ -126,10 +117,9 @@ Consequtive installment number. Used for identifying different payments generate
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Installment_Number](Crm_Default_Sales_Order_Payment_Plans.md#installment_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,12 +141,6 @@ Consequtive installment number. Used for identifying different payments generate
 ### Due_Date_Form_Method
 
 
-Due_Date_Form_Method
-
-
-Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date
-
-
 Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date
 
 | Property | Value |
@@ -168,10 +152,9 @@ Method to determine the payment due date. SLS = Use sales order date, INV = Use 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EXP`, `INV`, `SLS`, `SDD`, `IDD`|
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Due_Date_Form_Method](Crm_Default_Sales_Order_Payment_Plans.md#due_date_form_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +176,6 @@ Method to determine the payment due date. SLS = Use sales order date, INV = Use 
 ### Payment_Term_Days
 
 
-Payment_Term_Days
-
-
-Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.
-
-
 Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.
 
 | Property | Value |
@@ -209,9 +186,8 @@ Payment term in days, which are to be added to form the payment due date. 0 mean
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Payment_Term_Days](Crm_Default_Sales_Order_Payment_Plans.md#payment_term_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -233,12 +209,6 @@ Payment term in days, which are to be added to form the payment due date. 0 mean
 ### Amount_Percent
 
 
-Amount_Percent
-
-
-Percent of the sales order amount to be payed.
-
-
 Percent of the sales order amount to be payed.
 
 | Property | Value |
@@ -249,9 +219,8 @@ Percent of the sales order amount to be payed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Amount_Percent](Crm_Default_Sales_Order_Payment_Plans.md#amount_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -273,12 +242,6 @@ Percent of the sales order amount to be payed.
 ### Remainder
 
 
-Remainder
-
-
-Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent).
-
-
 Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent).
 
 | Property | Value |
@@ -289,9 +252,8 @@ Indicates wheather this amount is the remainder of the document. Amount = Total 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Remainder](Crm_Default_Sales_Order_Payment_Plans.md#remainder)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -313,12 +275,6 @@ Indicates wheather this amount is the remainder of the document. Amount = Total 
 ### Enterprise_Company_Id
 
 
-Enterprise_Company_Id
-
-
-Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies.
-
-
 Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies.
 
 | Property | Value |
@@ -330,9 +286,8 @@ Enterprise company for which the current default installment template is valid. 
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Enterprise_Company_Id](Crm_Default_Sales_Order_Payment_Plans.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -355,15 +310,9 @@ Enterprise company for which the current default installment template is valid. 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Location_Id
-
-
-Enterprise_Company_Location_Id
-
-
-Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations.
 
 
 Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations.
@@ -377,9 +326,8 @@ Enterprise company location (within the chosen enterprise company) for which the
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Enterprise_Company_Location_Id](Crm_Default_Sales_Order_Payment_Plans.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -402,15 +350,9 @@ Enterprise company location (within the chosen enterprise company) for which the
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Account_Id
-
-
-Payment_Account_Id
-
-
-Default payment account for the current installment. NULL means that there is no default account.
 
 
 Default payment account for the current installment. NULL means that there is no default account.
@@ -424,9 +366,8 @@ Default payment account for the current installment. NULL means that there is no
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Payment_Account_Id](Crm_Default_Sales_Order_Payment_Plans.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -449,15 +390,9 @@ Default payment account for the current installment. NULL means that there is no
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Type_Id
-
-
-Payment_Type_Id
-
-
-Default payment type for the current installment. NULL means that there is no default payment type.
 
 
 Default payment type for the current installment. NULL means that there is no default payment type.
@@ -471,9 +406,8 @@ Default payment type for the current installment. NULL means that there is no de
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Payment_Type_Id](Crm_Default_Sales_Order_Payment_Plans.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -496,12 +430,9 @@ Default payment type for the current installment. NULL means that there is no de
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -511,9 +442,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Default_Sales_Order_Payment_Plans](Crm_Default_Sales_Order_Payment_Plans.md).[Row_Version](Crm_Default_Sales_Order_Payment_Plans.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

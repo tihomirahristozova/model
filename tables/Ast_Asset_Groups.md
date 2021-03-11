@@ -1,5 +1,10 @@
 # Table Ast_Asset_Groups
 
+
+## Entity
+
+Entity: [Finance.Assets.AssetGroups](~/entities/Finance.Assets.AssetGroups.md)
+
 User-defined grouping of the assets. Entity: Ast_Asset_Groups
 
 ## Summary
@@ -17,9 +22,6 @@ User-defined grouping of the assets. Entity: Ast_Asset_Groups
 
 ### Asset_Group_Id
 
-
-Asset_Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Asset_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Asset_Groups](Ast_Asset_Groups.md).[Asset_Group_Id](Ast_Asset_Groups.md#asset_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Asset_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent_Asset_Group_Id
-
-
-Parent_Asset_Group_Id
-
-
-Parent asset group in the hierarchy.
 
 
 Parent asset group in the hierarchy.
@@ -76,9 +71,8 @@ Parent asset group in the hierarchy.
 |Referenced Table|[Ast_Asset_Groups](Ast_Asset_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Groups](Ast_Asset_Groups.md).[Parent_Asset_Group_Id](Ast_Asset_Groups.md#parent_asset_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,12 +95,9 @@ Parent asset group in the hierarchy.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Asset_Group_Code
-
-
-Asset_Group_Code
 
 | Property | Value |
 | - | - |
@@ -117,9 +108,8 @@ Asset_Group_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Groups](Ast_Asset_Groups.md).[Asset_Group_Code](Ast_Asset_Groups.md#asset_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -142,12 +132,9 @@ Asset_Group_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Asset_Group_Name
-
-
-Asset_Group_Name
 
 | Property | Value |
 | - | - |
@@ -158,9 +145,8 @@ Asset_Group_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Groups](Ast_Asset_Groups.md).[Asset_Group_Name](Ast_Asset_Groups.md#asset_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -188,12 +174,6 @@ Asset_Group_Name
 ### Default_Valuation_Model_Id
 
 
-Default_Valuation_Model_Id
-
-
-Default valuation model when creating new assets from this group
-
-
 Default valuation model when creating new assets from this group
 
 | Property | Value |
@@ -205,9 +185,8 @@ Default valuation model when creating new assets from this group
 |Referenced Table|[Ast_Valuation_Models](Ast_Valuation_Models.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Groups](Ast_Asset_Groups.md).[Default_Valuation_Model_Id](Ast_Asset_Groups.md#default_valuation_model_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,12 +209,9 @@ Default valuation model when creating new assets from this group
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -245,9 +221,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Asset_Groups](Ast_Asset_Groups.md).[Row_Version](Ast_Asset_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

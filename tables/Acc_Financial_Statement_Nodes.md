@@ -1,5 +1,10 @@
 # Table Acc_Financial_Statement_Nodes
 
+
+## Entity
+
+Entity: [Finance.Accounting.FinancialStatementNodes](~/entities/Finance.Accounting.FinancialStatementNodes.md)
+
 Contains the hierarchical structure of the user-defined financial statements. Entity: Acc_Financial_Statement_Nodes
 
 ## Owner Tables Hierarchy
@@ -23,12 +28,6 @@ Contains the hierarchical structure of the user-defined financial statements. En
 ### Parent_Full_Path
 
 
-Parent_Full_Path
-
-
-Parent financial statement node specified through its full identification path
-
-
 Parent financial statement node specified through its full identification path
 
 | Property | Value |
@@ -40,9 +39,8 @@ Parent financial statement node specified through its full identification path
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md).[Parent_Full_Path](Acc_Financial_Statement_Nodes.md#parent_full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -70,12 +68,6 @@ Parent financial statement node specified through its full identification path
 ### Financial_Statement_Node_Code
 
 
-Financial_Statement_Node_Code
-
-
-Identifying code of the financial statement node. Unique within the parent financial statement node.
-
-
 Identifying code of the financial statement node. Unique within the parent financial statement node.
 
 | Property | Value |
@@ -87,9 +79,8 @@ Identifying code of the financial statement node. Unique within the parent finan
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md).[Financial_Statement_Node_Code](Acc_Financial_Statement_Nodes.md#financial_statement_node_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,16 +103,10 @@ Identifying code of the financial statement node. Unique within the parent finan
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Financial_Statement_Node_Name
-
-
-Financial_Statement_Node_Name
-
-
-Name of the financial statement node
 
 
 Name of the financial statement node
@@ -135,9 +120,8 @@ Name of the financial statement node
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md).[Financial_Statement_Node_Name](Acc_Financial_Statement_Nodes.md#financial_statement_node_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -165,12 +149,6 @@ Name of the financial statement node
 ### Full_Path
 
 
-Full_Path
-
-
-Full identification path of the financial statement node
-
-
 Full identification path of the financial statement node
 
 | Property | Value |
@@ -182,9 +160,8 @@ Full identification path of the financial statement node
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md).[Full_Path](Acc_Financial_Statement_Nodes.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -211,9 +188,6 @@ Full identification path of the financial statement node
 
 ### Financial_Statement_Node_Id
 
-
-Financial_Statement_Node_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -223,9 +197,8 @@ Financial_Statement_Node_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md).[Financial_Statement_Node_Id](Acc_Financial_Statement_Nodes.md#financial_statement_node_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,12 +221,9 @@ Financial_Statement_Node_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Financial_Statement_Id
-
-
-Financial_Statement_Id
 
 | Property | Value |
 | - | - |
@@ -264,9 +234,8 @@ Financial_Statement_Id
 |Referenced Table|[Acc_Financial_Statements](Acc_Financial_Statements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md).[Financial_Statement_Id](Acc_Financial_Statement_Nodes.md#financial_statement_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,12 +258,9 @@ Financial_Statement_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -304,9 +270,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md).[Row_Version](Acc_Financial_Statement_Nodes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_product_catalogs">Table Gen_Product_Catalogs</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.ProductCatalogs.html">General.ProductCatalogs</a></p>
 <p>Product catalogs serve to organize the products for display primarily in web pages. Entity: Gen_Product_Catalogs</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -122,12 +124,12 @@
 </tr>
 <tr>
 <td><a href="#header_html">Header_Html</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.</td>
 </tr>
 <tr>
 <td><a href="#footer_html">Footer_Html</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.</td>
 </tr>
 <tr>
@@ -169,8 +171,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="product_catalog_id">Product_Catalog_Id</h3>
-<p>Product_Catalog_Id</p>
-<p>Unique catalog id.</p>
 <p>Unique catalog id.</p>
 <table>
 <thead>
@@ -210,15 +210,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#product_catalog_id">Product_Catalog_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -303,15 +299,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_catalog_code">Product_Catalog_Code</h3>
-<p>Product_Catalog_Code</p>
-<p>Unique catalog code.</p>
 <p>Unique catalog code.</p>
 <table>
 <thead>
@@ -351,15 +345,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#product_catalog_code">Product_Catalog_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -432,8 +422,6 @@
 </tbody>
 </table>
 <h3 id="product_catalog_name">Product_Catalog_Name</h3>
-<p>Product_Catalog_Name</p>
-<p>Product catalog name (multilanguage).</p>
 <p>Product catalog name (multilanguage).</p>
 <table>
 <thead>
@@ -473,15 +461,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#product_catalog_name">Product_Catalog_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -554,8 +538,6 @@
 </tbody>
 </table>
 <h3 id="root_product_group_id">Root_Product_Group_Id</h3>
-<p>Root_Product_Group_Id</p>
-<p>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.</p>
 <p>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.</p>
 <table>
 <thead>
@@ -595,15 +577,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#root_product_group_id">Root_Product_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -688,14 +666,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -706,7 +683,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -734,15 +711,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -815,8 +788,6 @@
 </tbody>
 </table>
 <h3 id="logo">Logo</h3>
-<p>Logo</p>
-<p>The logo of the product catalog. Used for web and other visualization of the catalog.</p>
 <p>The logo of the product catalog. Used for web and other visualization of the catalog.</p>
 <table>
 <thead>
@@ -852,15 +823,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#logo">Logo</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -933,8 +900,6 @@
 </tbody>
 </table>
 <h3 id="header_html">Header_Html</h3>
-<p>Header_Html</p>
-<p>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.</p>
 <p>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.</p>
 <table>
 <thead>
@@ -946,7 +911,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -974,15 +939,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#header_html">Header_Html</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1055,8 +1016,6 @@
 </tbody>
 </table>
 <h3 id="footer_html">Footer_Html</h3>
-<p>Footer_Html</p>
-<p>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.</p>
 <p>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.</p>
 <table>
 <thead>
@@ -1068,7 +1027,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1096,15 +1055,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#footer_html">Footer_Html</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1177,8 +1132,6 @@
 </tbody>
 </table>
 <h3 id="background_image">Background_Image</h3>
-<p>Background_Image</p>
-<p>The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.</p>
 <p>The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.</p>
 <table>
 <thead>
@@ -1214,15 +1167,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#background_image">Background_Image</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1295,8 +1244,6 @@
 </tbody>
 </table>
 <h3 id="background_position_horizontal">Background_Position_Horizontal</h3>
-<p>Background_Position_Horizontal</p>
-<p>Horizontal position of the Background Image. L=Left, C=Center, R=Right.</p>
 <p>Horizontal position of the Background Image. L=Left, C=Center, R=Right.</p>
 <table>
 <thead>
@@ -1336,7 +1283,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1345,10 +1292,6 @@
 <tr>
 <td>Default Value</td>
 <td>L</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#background_position_horizontal">Background_Position_Horizontal</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1421,8 +1364,6 @@
 </tbody>
 </table>
 <h3 id="background_position_vertical">Background_Position_Vertical</h3>
-<p>Background_Position_Vertical</p>
-<p>Vertical position of the Background Image. T=Top, C=Center, B=Bottom.</p>
 <p>Vertical position of the Background Image. T=Top, C=Center, B=Bottom.</p>
 <table>
 <thead>
@@ -1462,7 +1403,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1471,10 +1412,6 @@
 <tr>
 <td>Default Value</td>
 <td>T</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#background_position_vertical">Background_Position_Vertical</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1547,8 +1484,6 @@
 </tbody>
 </table>
 <h3 id="background_repeat">Background_Repeat</h3>
-<p>Background_Repeat</p>
-<p>Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.</p>
 <p>Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.</p>
 <table>
 <thead>
@@ -1588,7 +1523,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1597,10 +1532,6 @@
 <tr>
 <td>Default Value</td>
 <td>R</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#background_repeat">Background_Repeat</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1673,8 +1604,6 @@
 </tbody>
 </table>
 <h3 id="background_color">Background_Color</h3>
-<p>Background_Color</p>
-<p>When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</p>
 <p>When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</p>
 <table>
 <thead>
@@ -1710,15 +1639,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#background_color">Background_Color</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1791,7 +1716,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1826,15 +1750,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1907,8 +1827,6 @@
 </tbody>
 </table>
 <h3 id="web_site_id">Web_Site_Id</h3>
-<p>Web_Site_Id</p>
-<p>The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site.</p>
 <p>The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site.</p>
 <table>
 <thead>
@@ -1948,15 +1866,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Catalogs.html">Gen_Product_Catalogs</a>.<a href="Gen_Product_Catalogs.html#web_site_id">Web_Site_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2041,7 +1955,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

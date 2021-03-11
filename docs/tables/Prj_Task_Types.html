@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_task_types">Table Prj_Task_Types</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.TaskTypes.html">Projects.TaskTypes</a></p>
 <p>Represents the different types of tasks, which can be included in the projects. Entity: Prj_Task_Types</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -102,7 +104,7 @@
 </tr>
 <tr>
 <td><a href="#task_type_name">Task_Type_Name</a></td>
-<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td><code>nvarchar(max)</code> <code>ML</code></td>
 <td>The multilanguage task type name.</td>
 </tr>
 <tr>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
-<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td><code>nvarchar(max)</code> <code>ML</code></td>
 <td>Multilanguage description of the task type.</td>
 </tr>
 <tr>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="task_type_id">Task_Type_Id</h3>
-<p>Task_Type_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Task_Types.html">Prj_Task_Types</a>.<a href="Prj_Task_Types.html#task_type_id">Task_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,15 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_type_id">Project_Type_Id</h3>
-<p>Project_Type_Id</p>
-<p>When not NULL, specifies that this task type can be used only for projects of the specified type.</p>
 <p>When not NULL, specifies that this task type can be used only for projects of the specified type.</p>
 <table>
 <thead>
@@ -309,15 +304,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Task_Types.html">Prj_Task_Types</a>.<a href="Prj_Task_Types.html#project_type_id">Project_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -402,15 +393,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="task_type_name">Task_Type_Name</h3>
-<p>Task_Type_Name</p>
-<p>The multilanguage task type name.</p>
 <p>The multilanguage task type name.</p>
 <table>
 <thead>
@@ -422,7 +411,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -450,15 +439,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Task_Types.html">Prj_Task_Types</a>.<a href="Prj_Task_Types.html#task_type_name">Task_Type_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -543,7 +528,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -556,8 +541,6 @@
 </tbody>
 </table>
 <h3 id="icon">Icon</h3>
-<p>Icon</p>
-<p>Icon representing the task type. Preferrably 32x32 pixels.</p>
 <p>Icon representing the task type. Preferrably 32x32 pixels.</p>
 <table>
 <thead>
@@ -593,15 +576,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Task_Types.html">Prj_Task_Types</a>.<a href="Prj_Task_Types.html#icon">Icon</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -674,8 +653,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
-<p>Multilanguage description of the task type.</p>
 <p>Multilanguage description of the task type.</p>
 <table>
 <thead>
@@ -687,7 +664,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -715,15 +692,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Task_Types.html">Prj_Task_Types</a>.<a href="Prj_Task_Types.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -796,8 +769,6 @@
 </tbody>
 </table>
 <h3 id="display_order">Display_Order</h3>
-<p>Display_Order</p>
-<p>Display order position of the task. Lowest numbers are shown first (on top).</p>
 <p>Display order position of the task. Lowest numbers are shown first (on top).</p>
 <table>
 <thead>
@@ -833,15 +804,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Task_Types.html">Prj_Task_Types</a>.<a href="Prj_Task_Types.html#display_order">Display_Order</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -914,7 +881,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -949,15 +915,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Task_Types.html">Prj_Task_Types</a>.<a href="Prj_Task_Types.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

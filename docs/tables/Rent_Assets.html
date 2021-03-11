@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-rent_assets">Table Rent_Assets</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Rental.Assets.html">Applications.Rental.Assets</a></p>
 <p>Contains the rentable assets. Entity: Rent_Assets</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -121,7 +123,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -183,7 +185,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="rental_asset_id">Rental_Asset_Id</h3>
-<p>Rental_Asset_Id</p>
 <table>
 <thead>
 <tr>
@@ -222,15 +223,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#rental_asset_id">Rental_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -315,15 +312,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rental_asset_type_id">Rental_Asset_Type_Id</h3>
-<p>Rental_Asset_Type_Id</p>
-<p>The type of the asset.</p>
 <p>The type of the asset.</p>
 <table>
 <thead>
@@ -363,15 +358,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#rental_asset_type_id">Rental_Asset_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -456,15 +447,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rental_asset_group_id">Rental_Asset_Group_Id</h3>
-<p>Rental_Asset_Group_Id</p>
-<p>The logical group of the rental asset.</p>
 <p>The logical group of the rental asset.</p>
 <table>
 <thead>
@@ -504,15 +493,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#rental_asset_group_id">Rental_Asset_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -597,15 +582,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rental_asset_code">Rental_Asset_Code</h3>
-<p>Rental_Asset_Code</p>
-<p>Unique rental asset code</p>
 <p>Unique rental asset code</p>
 <table>
 <thead>
@@ -645,15 +628,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#rental_asset_code">Rental_Asset_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -738,7 +717,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -751,8 +730,6 @@
 </tbody>
 </table>
 <h3 id="rental_asset_name">Rental_Asset_Name</h3>
-<p>Rental_Asset_Name</p>
-<p>The name of the rental asset.</p>
 <p>The name of the rental asset.</p>
 <table>
 <thead>
@@ -792,15 +769,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#rental_asset_name">Rental_Asset_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -892,7 +865,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -903,7 +875,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -931,15 +903,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1012,8 +980,6 @@
 </tbody>
 </table>
 <h3 id="accounting_asset_id">Accounting_Asset_Id</h3>
-<p>Accounting_Asset_Id</p>
-<p>When not NULL identifies the corresponding accounting asset</p>
 <p>When not NULL identifies the corresponding accounting asset</p>
 <table>
 <thead>
@@ -1053,15 +1019,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#accounting_asset_id">Accounting_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1146,14 +1108,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sales_product_id">Sales_Product_Id</h3>
-<p>Sales_Product_Id</p>
 <table>
 <thead>
 <tr>
@@ -1192,15 +1153,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#sales_product_id">Sales_Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1285,14 +1242,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="work_schedule_id">Work_Schedule_Id</h3>
-<p>Work_Schedule_Id</p>
 <table>
 <thead>
 <tr>
@@ -1331,15 +1287,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#work_schedule_id">Work_Schedule_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1424,14 +1376,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="time_period_type">Time_Period_Type</h3>
-<p>Time_Period_Type</p>
 <table>
 <thead>
 <tr>
@@ -1470,7 +1421,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1479,10 +1430,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#time_period_type">Time_Period_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1567,14 +1514,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
 <table>
 <thead>
 <tr>
@@ -1613,15 +1559,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1706,14 +1648,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
-<p>Serial_Number_Id</p>
 <table>
 <thead>
 <tr>
@@ -1752,15 +1693,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#serial_number_id">Serial_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1845,14 +1782,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="standard_guarantee_amount">Standard_Guarantee_Amount</h3>
-<p>Standard_Guarantee_Amount</p>
 <table>
 <thead>
 <tr>
@@ -1887,15 +1823,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#standard_guarantee_amount">Standard_Guarantee_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1980,14 +1912,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="standard_guarantee_amount_currency_id">Standard_Guarantee_Amount_Currency_Id</h3>
-<p>Standard_Guarantee_Amount_Currency_Id</p>
 <table>
 <thead>
 <tr>
@@ -2026,15 +1957,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#standard_guarantee_amount_currency_id">Standard_Guarantee_Amount_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2119,14 +2046,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2161,15 +2087,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2242,7 +2164,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
 <table>
 <thead>
 <tr>
@@ -2277,15 +2198,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2370,14 +2287,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>True</td>
+<td><code>True</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -2416,15 +2332,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Assets.html">Rent_Assets</a>.<a href="Rent_Assets.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2509,7 +2421,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

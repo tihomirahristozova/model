@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-inv_transaction_lines">Table Inv_Transaction_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></p>
 <p>Details records of Transactions. Each detail contains the movement for one product. Entity: Inv_Transaction_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -254,8 +256,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Line number, unique within the store transaction.</p>
 <p>Line number, unique within the store transaction.</p>
 <table>
 <thead>
@@ -291,7 +291,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -300,10 +300,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -376,8 +372,6 @@
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The item that was received/issued</p>
 <p>The item that was received/issued</p>
 <table>
 <thead>
@@ -417,15 +411,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -510,15 +500,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity_base">Quantity_Base</h3>
-<p>Quantity_Base</p>
-<p>The quantity of the stock received/issued in base measurement unit</p>
 <p>The quantity of the stock received/issued in base measurement unit</p>
 <table>
 <thead>
@@ -554,15 +542,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#quantity_base">Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -654,8 +638,6 @@
 </tbody>
 </table>
 <h3 id="store_bin_id">Store_Bin_Id</h3>
-<p>Store_Bin_Id</p>
-<p>Store bin, from/to which the transaction was performed.</p>
 <p>Store bin, from/to which the transaction was performed.</p>
 <table>
 <thead>
@@ -695,15 +677,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#store_bin_id">Store_Bin_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -788,15 +766,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="guarantee_period_days">Guarantee_Period_Days</h3>
-<p>Guarantee_Period_Days</p>
-<p>Guarantee period in days for the offered product. NULL for non-serviced products</p>
 <p>Guarantee period in days for the offered product. NULL for non-serviced products</p>
 <table>
 <thead>
@@ -832,15 +808,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#guarantee_period_days">Guarantee_Period_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -913,8 +885,6 @@
 </tbody>
 </table>
 <h3 id="lot_id">Lot_Id</h3>
-<p>Lot_Id</p>
-<p>If non-null, contains the specific lot to use for the movement</p>
 <p>If non-null, contains the specific lot to use for the movement</p>
 <table>
 <thead>
@@ -954,15 +924,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#lot_id">Lot_Id</a></td>
 </tr>
 <tr>
 <td>Depends On</td>
@@ -1051,15 +1017,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
-<p>Serial_Number_Id</p>
-<p>Item serial number for serialized items. NULL for non-serialized items</p>
 <p>Item serial number for serialized items. NULL for non-serialized items</p>
 <table>
 <thead>
@@ -1099,15 +1063,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#serial_number_id">Serial_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1192,15 +1152,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_document_cost">Line_Document_Cost</h3>
-<p>Line_Document_Cost</p>
-<p>The cost of the transaction in the currency of the document</p>
 <p>The cost of the transaction in the currency of the document</p>
 <table>
 <thead>
@@ -1236,15 +1194,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#line_document_cost">Line_Document_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1317,8 +1271,6 @@
 </tbody>
 </table>
 <h3 id="line_product_cost">Line_Product_Cost</h3>
-<p>Line_Product_Cost</p>
-<p>The cost of the transaction in the currency of the product</p>
 <p>The cost of the transaction in the currency of the product</p>
 <table>
 <thead>
@@ -1354,15 +1306,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#line_product_cost">Line_Product_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1435,8 +1383,6 @@
 </tbody>
 </table>
 <h3 id="line_cost">Line_Cost</h3>
-<p>Line_Cost</p>
-<p>Total cost for the line</p>
 <p>Total cost for the line</p>
 <table>
 <thead>
@@ -1472,15 +1418,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#line_cost">Line_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1553,8 +1495,6 @@
 </tbody>
 </table>
 <h3 id="line_store_cost">Line_Store_Cost</h3>
-<p>Line_Store_Cost</p>
-<p>The cost of the transaction in the currency of the warehouse</p>
 <p>The cost of the transaction in the currency of the warehouse</p>
 <table>
 <thead>
@@ -1590,15 +1530,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#line_store_cost">Line_Store_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1671,8 +1607,6 @@
 </tbody>
 </table>
 <h3 id="product_code_id">Product_Code_Id</h3>
-<p>Product_Code_Id</p>
-<p>Used to set the Product_Id thru the coding systems</p>
 <p>Used to set the Product_Id thru the coding systems</p>
 <table>
 <thead>
@@ -1712,15 +1646,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#product_code_id">Product_Code_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1805,15 +1735,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_timestamp">Transaction_Timestamp</h3>
-<p>Transaction_Timestamp</p>
-<p>Exact time when the transaction changes the cost of the product</p>
 <p>Exact time when the transaction changes the cost of the product</p>
 <table>
 <thead>
@@ -1853,15 +1781,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#transaction_timestamp">Transaction_Timestamp</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1953,8 +1877,6 @@
 </tbody>
 </table>
 <h3 id="parent_line_id">Parent_Line_Id</h3>
-<p>Parent_Line_Id</p>
-<p>Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line.</p>
 <p>Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line.</p>
 <table>
 <thead>
@@ -1990,15 +1912,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#parent_line_id">Parent_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2083,15 +2001,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_base_cost">Line_Base_Cost</h3>
-<p>Line_Base_Cost</p>
-<p>The cost of the transaction in the currency of the enterprise company</p>
 <p>The cost of the transaction in the currency of the enterprise company</p>
 <table>
 <thead>
@@ -2127,15 +2043,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#line_base_cost">Line_Base_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2208,8 +2120,6 @@
 </tbody>
 </table>
 <h3 id="allow_over_execution">Allow_Over_Execution</h3>
-<p>Allow_Over_Execution</p>
-<p>When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line.</p>
 <p>When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line.</p>
 <table>
 <thead>
@@ -2245,15 +2155,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#allow_over_execution">Allow_Over_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2326,8 +2232,6 @@
 </tbody>
 </table>
 <h3 id="original_product_id">Original_Product_Id</h3>
-<p>Original_Product_Id</p>
-<p>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead.</p>
 <p>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead.</p>
 <table>
 <thead>
@@ -2367,15 +2271,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#original_product_id">Original_Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2460,15 +2360,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit</p>
 <p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit</p>
 <table>
 <thead>
@@ -2504,15 +2402,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2585,8 +2479,6 @@
 </tbody>
 </table>
 <h3 id="parent_store_order_line_id">Parent_Store_Order_Line_Id</h3>
-<p>Parent_Store_Order_Line_Id</p>
-<p>The line, containing the ordered quantity, which this execution line executes.</p>
 <p>The line, containing the ordered quantity, which this execution line executes.</p>
 <table>
 <thead>
@@ -2626,15 +2518,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#parent_store_order_line_id">Parent_Store_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2719,15 +2607,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_line_id">Transaction_Line_Id</h3>
-<p>Transaction_Line_Id</p>
-<p>Unique transaction line id</p>
 <p>Unique transaction line id</p>
 <table>
 <thead>
@@ -2767,15 +2653,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#transaction_line_id">Transaction_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2860,15 +2742,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="transaction_id">Transaction_Id</h3>
-<p>Transaction_Id</p>
-<p>The transaction to which the transaction line belongs.</p>
 <p>The transaction to which the transaction line belongs.</p>
 <table>
 <thead>
@@ -2908,15 +2788,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#transaction_id">Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3001,15 +2877,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="finished">Finished</h3>
-<p>Finished</p>
-<p>1 if this transaction entry completes the operation. 0 if there might be more entries</p>
 <p>1 if this transaction entry completes the operation. 0 if there might be more entries</p>
 <table>
 <thead>
@@ -3045,15 +2919,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#finished">Finished</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3138,15 +3008,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="unit_cost">Unit_Cost</h3>
-<p>Unit_Cost</p>
-<p>Cost for 1 of the specified quantity</p>
 <p>Cost for 1 of the specified quantity</p>
 <table>
 <thead>
@@ -3182,15 +3050,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#unit_cost">Unit_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3263,8 +3127,6 @@
 </tbody>
 </table>
 <h3 id="temp_order_no">Temp_Order_No</h3>
-<p>Temp_Order_No</p>
-<p>Obsolete. Not used.</p>
 <p>Obsolete. Not used.</p>
 <table>
 <thead>
@@ -3304,15 +3166,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#temp_order_no">Temp_Order_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3397,15 +3255,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit of Quantity. NULL means that the quantity is specified only in base measurement unit</p>
 <p>The measurement unit of Quantity. NULL means that the quantity is specified only in base measurement unit</p>
 <table>
 <thead>
@@ -3445,15 +3301,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3538,14 +3390,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -3584,15 +3435,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3665,8 +3512,6 @@
 </tbody>
 </table>
 <h3 id="product_variant_id">Product_Variant_Id</h3>
-<p>Product_Variant_Id</p>
-<p>If specified determines which product variant of the current product in this line is used.</p>
 <p>If specified determines which product variant of the current product in this line is used.</p>
 <table>
 <thead>
@@ -3706,15 +3551,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#product_variant_id">Product_Variant_Id</a></td>
 </tr>
 <tr>
 <td>Depends On</td>
@@ -3803,14 +3644,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -3845,15 +3685,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3926,8 +3762,6 @@
 </tbody>
 </table>
 <h3 id="parent_line_no">Parent_Line_No</h3>
-<p>Parent_Line_No</p>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
 <p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
 <table>
 <thead>
@@ -3963,15 +3797,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#parent_line_no">Parent_Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4044,8 +3874,6 @@
 </tbody>
 </table>
 <h3 id="parent_document_id">Parent_Document_Id</h3>
-<p>Parent_Document_Id</p>
-<p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
 <p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
 <table>
 <thead>
@@ -4085,15 +3913,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#parent_document_id">Parent_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4178,15 +4002,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="standard_quantity_base">Standard_Quantity_Base</h3>
-<p>Standard_Quantity_Base</p>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <table>
 <thead>
@@ -4222,15 +4044,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transaction_Lines.html">Inv_Transaction_Lines</a>.<a href="Inv_Transaction_Lines.html#standard_quantity_base">Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>

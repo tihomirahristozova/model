@@ -1,5 +1,10 @@
 # View Inv_Demand_Management_ATP_By_Lots
 
+
+## Entity
+
+Entity: [Logistics.Inventory.DemandManagement.AvailableToPromiseByLots](~/entities/Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md)
+
 Quantities available to promise for the different date periods. Also contains the current and projected availability. The algorithm accounts for the quantities for each lot and separately for the quantities without lot. Entity: Inv_Demand_Management_ATP_By_Lots
 
 ## Summary
@@ -22,12 +27,6 @@ Quantities available to promise for the different date periods. Also contains th
 ### Product_Id
 
 
-Product_Id
-
-
-The Product, for which the quantities are calculated.
-
-
 The Product, for which the quantities are calculated.
 
 | Property | Value |
@@ -39,9 +38,8 @@ The Product, for which the quantities are calculated.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Order_Lines](Inv_Store_Order_Lines.md).[Product_Id](Inv_Store_Order_Lines.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,15 +62,9 @@ The Product, for which the quantities are calculated.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-Тhe Enterprise Company, for which the quantities are calculated.
 
 
 Тhe Enterprise Company, for which the quantities are calculated.
@@ -86,9 +78,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Enterprise_Company_Id](Gen_Documents.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -111,15 +102,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The Store, for which the quantities are calculated.
 
 
 The Store, for which the quantities are calculated.
@@ -133,9 +118,8 @@ The Store, for which the quantities are calculated.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Orders](Inv_Store_Orders.md).[Store_Id](Inv_Store_Orders.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,15 +142,9 @@ The Store, for which the quantities are calculated.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Lot_Id
-
-
-Lot_Id
-
-
-The Lot, for which the quantities are calculated.
 
 
 The Lot, for which the quantities are calculated.
@@ -180,9 +158,8 @@ The Lot, for which the quantities are calculated.
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Order_Lines](Inv_Store_Order_Lines.md).[Lot_Id](Inv_Store_Order_Lines.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,15 +182,9 @@ The Lot, for which the quantities are calculated.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### From_Date
-
-
-From_Date
-
-
-Тhe date from which the available to promise quantity is valid.
 
 
 Тhe date from which the available to promise quantity is valid.
@@ -227,9 +198,8 @@ From_Date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Demand_Management_ATP_By_Lots](Inv_Demand_Management_ATP_By_Lots.md).[From_Date](Inv_Demand_Management_ATP_By_Lots.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -252,16 +222,10 @@ From_Date
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Movements_Base
-
-
-Movements_Base
-
-
-The sum of the quantity of all planned stock movements on this date in а base measurement unit. 
 
 
 The sum of the quantity of all planned stock movements on this date in а base measurement unit. 
@@ -274,9 +238,8 @@ The sum of the quantity of all planned stock movements on this date in а base m
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Demand_Management_ATP_By_Lots](Inv_Demand_Management_ATP_By_Lots.md).[Movements_Base](Inv_Demand_Management_ATP_By_Lots.md#movements_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -298,12 +261,6 @@ The sum of the quantity of all planned stock movements on this date in а base m
 ### Movements_To_Date_Base
 
 
-Movements_To_Date_Base
-
-
-The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative.
-
-
 The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative.
 
 | Property | Value |
@@ -314,9 +271,8 @@ The sum of the quantity of all planned stock movements until this date (inclusiv
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Demand_Management_ATP_By_Lots](Inv_Demand_Management_ATP_By_Lots.md).[Movements_To_Date_Base](Inv_Demand_Management_ATP_By_Lots.md#movements_to_date_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -338,12 +294,6 @@ The sum of the quantity of all planned stock movements until this date (inclusiv
 ### Current_Availability_Base
 
 
-Current_Availability_Base
-
-
-The current availability in а base measurement unit.
-
-
 The current availability in а base measurement unit.
 
 | Property | Value |
@@ -354,9 +304,8 @@ The current availability in а base measurement unit.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Demand_Management_ATP_By_Lots](Inv_Demand_Management_ATP_By_Lots.md).[Current_Availability_Base](Inv_Demand_Management_ATP_By_Lots.md#current_availability_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -378,12 +327,6 @@ The current availability in а base measurement unit.
 ### Projected_Availability_Base
 
 
-Projected_Availability_Base
-
-
-Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability.
-
-
 Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability.
 
 | Property | Value |
@@ -394,9 +337,8 @@ Projected Availability in а base measurement unit on the particular date. The v
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Demand_Management_ATP_By_Lots](Inv_Demand_Management_ATP_By_Lots.md).[Projected_Availability_Base](Inv_Demand_Management_ATP_By_Lots.md#projected_availability_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -418,12 +360,6 @@ Projected Availability in а base measurement unit on the particular date. The v
 ### ATP_Base
 
 
-ATP_Base
-
-
-Indicates the quantity available to promise (in a base unit). It is valid from this date on.
-
-
 Indicates the quantity available to promise (in a base unit). It is valid from this date on.
 
 | Property | Value |
@@ -434,9 +370,8 @@ Indicates the quantity available to promise (in a base unit). It is valid from t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Demand_Management_ATP_By_Lots](Inv_Demand_Management_ATP_By_Lots.md).[ATP_Base](Inv_Demand_Management_ATP_By_Lots.md#atp_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

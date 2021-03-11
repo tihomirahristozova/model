@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_user_business_rules">Table Sys_User_Business_Rules</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></p>
 <p>Represents user-defined business rule. Entity: Sys_User_Business_Rules</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -117,7 +119,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -147,14 +149,13 @@
 </tr>
 <tr>
 <td><a href="#script_text">Script_Text</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The program code used to define the rule actions.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="user_business_rule_id">User_Business_Rule_Id</h3>
-<p>User_Business_Rule_Id</p>
 <table>
 <thead>
 <tr>
@@ -193,15 +194,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#user_business_rule_id">User_Business_Rule_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -286,14 +283,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="user_business_rule_code">User_Business_Rule_Code</h3>
-<p>User_Business_Rule_Code</p>
 <table>
 <thead>
 <tr>
@@ -332,15 +328,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#user_business_rule_code">User_Business_Rule_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -425,7 +417,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -438,7 +430,6 @@
 </tbody>
 </table>
 <h3 id="user_business_rule_name">User_Business_Rule_Name</h3>
-<p>User_Business_Rule_Name</p>
 <table>
 <thead>
 <tr>
@@ -477,15 +468,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#user_business_rule_name">User_Business_Rule_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -577,8 +564,6 @@
 </tbody>
 </table>
 <h3 id="repository_name">Repository_Name</h3>
-<p>Repository_Name</p>
-<p>The name of the repository, for which this business rule is defined.</p>
 <p>The name of the repository, for which this business rule is defined.</p>
 <table>
 <thead>
@@ -618,15 +603,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#repository_name">Repository_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -711,7 +692,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -724,8 +705,6 @@
 </tbody>
 </table>
 <h3 id="layer">Layer</h3>
-<p>Layer</p>
-<p>Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).</p>
 <p>Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).</p>
 <table>
 <thead>
@@ -765,7 +744,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -774,10 +753,6 @@
 <tr>
 <td>Default Value</td>
 <td>BKE</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#layer">Layer</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -862,14 +837,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -880,7 +854,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -908,15 +882,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -989,8 +959,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Specifies whether the rule is activated.</p>
 <p>Specifies whether the rule is activated.</p>
 <table>
 <thead>
@@ -1026,15 +994,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1119,14 +1083,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1161,15 +1124,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1242,8 +1201,6 @@
 </tbody>
 </table>
 <h3 id="user_startable">User_Startable</h3>
-<p>User_Startable</p>
-<p>Specifies, that the rule can be manually started by the user.</p>
 <p>Specifies, that the rule can be manually started by the user.</p>
 <table>
 <thead>
@@ -1279,15 +1236,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#user_startable">User_Startable</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1372,15 +1325,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="icon">Icon</h3>
-<p>Icon</p>
-<p>Visual icon of the rule in .PNG format.</p>
 <p>Visual icon of the rule in .PNG format.</p>
 <table>
 <thead>
@@ -1416,15 +1367,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#icon">Icon</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1497,8 +1444,6 @@
 </tbody>
 </table>
 <h3 id="script_language">Script_Language</h3>
-<p>Script_Language</p>
-<p>The programming language used to define the rule actions.</p>
 <p>The programming language used to define the rule actions.</p>
 <table>
 <thead>
@@ -1538,7 +1483,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1547,10 +1492,6 @@
 <tr>
 <td>Default Value</td>
 <td>Integrated</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#script_language">Script_Language</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1623,8 +1564,6 @@
 </tbody>
 </table>
 <h3 id="script_text">Script_Text</h3>
-<p>Script_Text</p>
-<p>The program code used to define the rule actions.</p>
 <p>The program code used to define the rule actions.</p>
 <table>
 <thead>
@@ -1636,7 +1575,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1664,15 +1603,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a>.<a href="Sys_User_Business_Rules.html#script_text">Script_Text</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Cash_Payment_Slips
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentSlips](~/entities/Finance.Payments.PaymentSlips.md)
+
 Represents mass payment document (payment slip). Entity: Cash_Payment_Slips
 
 ## Owner Tables Hierarchy
@@ -25,12 +30,6 @@ Represents mass payment document (payment slip). Entity: Cash_Payment_Slips
 ### Payment_Account_Id
 
 
-Payment_Account_Id
-
-
-The account towards which the payments was effected
-
-
 The account towards which the payments was effected
 
 | Property | Value |
@@ -42,9 +41,8 @@ The account towards which the payments was effected
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Payment_Account_Id](Cash_Payment_Slips.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -67,15 +65,9 @@ The account towards which the payments was effected
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Document_Currency_Id
-
-
-Document_Currency_Id
-
-
-The currency of the amounts in this document
 
 
 The currency of the amounts in this document
@@ -89,9 +81,8 @@ The currency of the amounts in this document
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Document_Currency_Id](Cash_Payment_Slips.md#document_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -114,15 +105,9 @@ The currency of the amounts in this document
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Slip_No
-
-
-Payment_Slip_No
-
-
-When not null, contains the number of the slip, as issued by the banking institution.
 
 
 When not null, contains the number of the slip, as issued by the banking institution.
@@ -136,9 +121,8 @@ When not null, contains the number of the slip, as issued by the banking institu
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Payment_Slip_No](Cash_Payment_Slips.md#payment_slip_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,9 +143,6 @@ When not null, contains the number of the slip, as issued by the banking institu
 
 ### Payment_Slip_Id
 
-
-Payment_Slip_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -171,9 +152,8 @@ Payment_Slip_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Payment_Slip_Id](Cash_Payment_Slips.md#payment_slip_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,12 +176,9 @@ Payment_Slip_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -212,9 +189,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Document_Id](Cash_Payment_Slips.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,17 +213,11 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -258,9 +228,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Is_Single_Execution](Cash_Payment_Slips.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -283,17 +252,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -304,9 +267,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Is_Released](Cash_Payment_Slips.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -329,12 +291,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -344,9 +303,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Row_Version](Cash_Payment_Slips.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -368,12 +326,6 @@ Row_Version
 ### Payment_Type_Id
 
 
-Payment_Type_Id
-
-
-When not NULL specifies the payment type for the sales order
-
-
 When not NULL specifies the payment type for the sales order
 
 | Property | Value |
@@ -385,9 +337,8 @@ When not NULL specifies the payment type for the sales order
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slips](Cash_Payment_Slips.md).[Payment_Type_Id](Cash_Payment_Slips.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -410,6 +361,6 @@ When not NULL specifies the payment type for the sales order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

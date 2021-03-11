@@ -1,5 +1,10 @@
 # Table Gen_Printouts
 
+
+## Entity
+
+Entity: [General.Printouts](~/entities/General.Printouts.md)
+
 Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts
 
 ## Owner Tables Hierarchy
@@ -25,16 +30,13 @@ Contains data about binding of printout layouts to specific user-defined documen
 |[Backward_Compatibility](#backward_compatibility)|`bit` |Obsolete. Not used.|
 |[Allow_Printing_On_State](#allow_printing_on_state)|`smallint` Allowed: `0`, `10`, `20`, `30`, `40`, `50`|The user can print documents only with state equal or greater than Allow_Printing_On_State|
 |[Ord_Priority](#ord_priority)|`int` |Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command.|
-|[Ord_Filter_Xml](#ord_filter_xml)|`nvarchar(2147483647)` |The condition, required to be matched in order for the printout to be executed upon "Print All" command.|
+|[Ord_Filter_Xml](#ord_filter_xml)|`nvarchar(max)` |The condition, required to be matched in order for the printout to be executed upon "Print All" command.|
 |[Notes](#notes)|`nvarchar(512)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Printout_Id
-
-
-Printout_Id
 
 | Property | Value |
 | - | - |
@@ -45,9 +47,8 @@ Printout_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Printout_Id](Gen_Printouts.md#printout_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -70,15 +71,9 @@ Printout_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Application_Name
-
-
-Application_Name
-
-
-The application which stored and uses the printout
 
 
 The application which stored and uses the printout
@@ -92,9 +87,8 @@ The application which stored and uses the printout
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Application_Name](Gen_Printouts.md#application_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -116,12 +110,6 @@ The application which stored and uses the printout
 ### Printout_Name
 
 
-Printout_Name
-
-
-The name of the printout. Unique within the application form
-
-
 The name of the printout. Unique within the application form
 
 | Property | Value |
@@ -133,9 +121,8 @@ The name of the printout. Unique within the application form
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Printout_Name](Gen_Printouts.md#printout_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -162,9 +149,6 @@ The name of the printout. Unique within the application form
 
 ### Enterprise_Company_Id
 
-
-Enterprise_Company_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -174,9 +158,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Enterprise_Company_Id](Gen_Printouts.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,15 +182,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type to which this printout layout is bound.
 
 
 The document type to which this printout layout is bound.
@@ -221,9 +198,8 @@ The document type to which this printout layout is bound.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Document_Type_Id](Gen_Printouts.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,15 +222,9 @@ The document type to which this printout layout is bound.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Printout_Layout_Id
-
-
-Printout_Layout_Id
-
-
-The printout layout, that is bound to the document type.
 
 
 The printout layout, that is bound to the document type.
@@ -268,9 +238,8 @@ The printout layout, that is bound to the document type.
 |Referenced Table|[Gen_Printout_Layouts](Gen_Printout_Layouts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Printout_Layout_Id](Gen_Printouts.md#printout_layout_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,15 +262,9 @@ The printout layout, that is bound to the document type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Definition_Format
-
-
-Definition_Format
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -315,9 +278,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|default|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Definition_Format](Gen_Printouts.md#definition_format)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -339,12 +301,6 @@ Obsolete. Not used.
 ### Definition
 
 
-Definition
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -356,9 +312,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Definition](Gen_Printouts.md#definition)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -380,12 +335,6 @@ Obsolete. Not used.
 ### Is_Default
 
 
-Is_Default
-
-
-1 if this is the default printout for the application form
-
-
 1 if this is the default printout for the application form
 
 | Property | Value |
@@ -396,9 +345,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Is_Default](Gen_Printouts.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -421,15 +369,9 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Ord
-
-
-Ord
-
-
-Order in the list of printouts when using direct printing
 
 
 Order in the list of printouts when using direct printing
@@ -442,9 +384,8 @@ Order in the list of printouts when using direct printing
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Ord](Gen_Printouts.md#ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -466,12 +407,6 @@ Order in the list of printouts when using direct printing
 ### Copies
 
 
-Copies
-
-
-Number of copies that should be printed when using direct printing
-
-
 Number of copies that should be printed when using direct printing
 
 | Property | Value |
@@ -482,9 +417,8 @@ Number of copies that should be printed when using direct printing
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Copies](Gen_Printouts.md#copies)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -506,12 +440,6 @@ Number of copies that should be printed when using direct printing
 ### Report_Id
 
 
-Report_Id
-
-
-If not NULL points to a custom report that indicates which data will be loaded in the printout.
-
-
 If not NULL points to a custom report that indicates which data will be loaded in the printout.
 
 | Property | Value |
@@ -523,9 +451,8 @@ If not NULL points to a custom report that indicates which data will be loaded i
 |Referenced Table|[Sys_Data_Sources](Sys_Data_Sources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Report_Id](Gen_Printouts.md#report_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -548,15 +475,9 @@ If not NULL points to a custom report that indicates which data will be loaded i
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Backward_Compatibility
-
-
-Backward_Compatibility
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -569,9 +490,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Backward_Compatibility](Gen_Printouts.md#backward_compatibility)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -593,12 +513,6 @@ Obsolete. Not used.
 ### Allow_Printing_On_State
 
 
-Allow_Printing_On_State
-
-
-The user can print documents only with state equal or greater than Allow_Printing_On_State
-
-
 The user can print documents only with state equal or greater than Allow_Printing_On_State
 
 | Property | Value |
@@ -609,10 +523,9 @@ The user can print documents only with state equal or greater than Allow_Printin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`0`, `10`, `20`, `30`, `40`, `50`|
 |Default Value|0|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Allow_Printing_On_State](Gen_Printouts.md#allow_printing_on_state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -634,12 +547,6 @@ The user can print documents only with state equal or greater than Allow_Printin
 ### Ord_Priority
 
 
-Ord_Priority
-
-
-Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command.
-
-
 Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command.
 
 | Property | Value |
@@ -650,9 +557,8 @@ Ordinal position and priority of the printout, in regard to other printouts with
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Ord_Priority](Gen_Printouts.md#ord_priority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -674,26 +580,19 @@ Ordinal position and priority of the printout, in regard to other printouts with
 ### Ord_Filter_Xml
 
 
-Ord_Filter_Xml
-
-
-The condition, required to be matched in order for the printout to be executed upon "Print All" command.
-
-
 The condition, required to be matched in order for the printout to be executed upon "Print All" command.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Ord_Filter_Xml](Gen_Printouts.md#ord_filter_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -714,9 +613,6 @@ The condition, required to be matched in order for the printout to be executed u
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(512)|
@@ -726,9 +622,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Notes](Gen_Printouts.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -749,9 +644,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -760,9 +652,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Printouts](Gen_Printouts.md).[Row_Version](Gen_Printouts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

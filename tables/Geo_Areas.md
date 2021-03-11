@@ -16,9 +16,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +25,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Geo_Areas](Geo_Areas.md).[Id](Geo_Areas.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +49,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Country_Code
-
-
-Country_Code
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -75,9 +65,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Geo_Areas](Geo_Areas.md).[Country_Code](Geo_Areas.md#country_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,12 +88,6 @@ Obsolete. Not used.
 ### Parent
 
 
-Parent
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -116,9 +99,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|/|
-|Derived From|[Geo_Areas](Geo_Areas.md).[Parent](Geo_Areas.md#parent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -140,12 +122,6 @@ Obsolete. Not used.
 ### Area_Name
 
 
-Area_Name
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -157,9 +133,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Geo_Areas](Geo_Areas.md).[Area_Name](Geo_Areas.md#area_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -181,12 +156,6 @@ Obsolete. Not used.
 ### Full_Path
 
 
-Full_Path
-
-
-Obsolete. Not used.
-
-
 Obsolete. Not used.
 
 | Property | Value |
@@ -198,9 +167,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Geo_Areas](Geo_Areas.md).[Full_Path](Geo_Areas.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -221,9 +189,6 @@ Obsolete. Not used.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -232,9 +197,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Geo_Areas](Geo_Areas.md).[Row_Version](Geo_Areas.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

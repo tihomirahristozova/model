@@ -1,5 +1,10 @@
 # Table Fleet_Vehicle_Alerts
 
+
+## Entity
+
+Entity: [Applications.Fleet.VehicleAlerts](~/entities/Applications.Fleet.VehicleAlerts.md)
+
 Contains alerts, specific to one vehicle. Alerts are created based on many sources and stay active, until excplicitly hidden. Entity: Fleet_Vehicle_Alerts
 
 ## Summary
@@ -18,9 +23,6 @@ Contains alerts, specific to one vehicle. Alerts are created based on many sourc
 
 ### Vehicle_Alert_Id
 
-
-Vehicle_Alert_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -30,9 +32,8 @@ Vehicle_Alert_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Vehicle_Alerts](Fleet_Vehicle_Alerts.md).[Vehicle_Alert_Id](Fleet_Vehicle_Alerts.md#vehicle_alert_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Vehicle_Alert_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Vehicle_Id
-
-
-Vehicle_Id
-
-
-The vehicle, for which is the alert.
 
 
 The vehicle, for which is the alert.
@@ -77,9 +72,8 @@ The vehicle, for which is the alert.
 |Referenced Table|[Fleet_Vehicles](Fleet_Vehicles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Alerts](Fleet_Vehicle_Alerts.md).[Vehicle_Id](Fleet_Vehicle_Alerts.md#vehicle_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +96,9 @@ The vehicle, for which is the alert.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Time
-
-
-Time
-
-
-The time of the alert.
 
 
 The time of the alert.
@@ -124,9 +112,8 @@ The time of the alert.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Alerts](Fleet_Vehicle_Alerts.md).[Time](Fleet_Vehicle_Alerts.md#time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,12 +135,6 @@ The time of the alert.
 ### Source
 
 
-Source
-
-
-The source of the alert. G=GPS, O=OBD, M=Maintenance.
-
-
 The source of the alert. G=GPS, O=OBD, M=Maintenance.
 
 | Property | Value |
@@ -165,9 +146,8 @@ The source of the alert. G=GPS, O=OBD, M=Maintenance.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Alerts](Fleet_Vehicle_Alerts.md).[Source](Fleet_Vehicle_Alerts.md#source)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -189,12 +169,6 @@ The source of the alert. G=GPS, O=OBD, M=Maintenance.
 ### Alert_Type
 
 
-Alert_Type
-
-
-The type of the alert. The type is specfic to the Source.
-
-
 The type of the alert. The type is specfic to the Source.
 
 | Property | Value |
@@ -206,9 +180,8 @@ The type of the alert. The type is specfic to the Source.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Alerts](Fleet_Vehicle_Alerts.md).[Alert_Type](Fleet_Vehicle_Alerts.md#alert_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,12 +203,6 @@ The type of the alert. The type is specfic to the Source.
 ### Description
 
 
-Description
-
-
-Description of the alert (Multilanguage).
-
-
 Description of the alert (Multilanguage).
 
 | Property | Value |
@@ -247,9 +214,8 @@ Description of the alert (Multilanguage).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Alerts](Fleet_Vehicle_Alerts.md).[Description](Fleet_Vehicle_Alerts.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -271,12 +237,6 @@ Description of the alert (Multilanguage).
 ### Is_Hidden
 
 
-Is_Hidden
-
-
-Specifies, whether the alert is hidden (e.g. managed by the responsible person).
-
-
 Specifies, whether the alert is hidden (e.g. managed by the responsible person).
 
 | Property | Value |
@@ -287,9 +247,8 @@ Specifies, whether the alert is hidden (e.g. managed by the responsible person).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Fleet_Vehicle_Alerts](Fleet_Vehicle_Alerts.md).[Is_Hidden](Fleet_Vehicle_Alerts.md#is_hidden)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

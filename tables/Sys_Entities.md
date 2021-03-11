@@ -1,5 +1,10 @@
 # Table Sys_Entities
 
+
+## Entity
+
+Entity: [Systems.Core.EntitySettings](~/entities/Systems.Core.EntitySettings.md)
+
 Contains entities, which have secured access. Entity: Sys_Entities
 
 ## Summary
@@ -21,9 +26,6 @@ Contains entities, which have secured access. Entity: Sys_Entities
 
 ### Entity_Id
 
-
-Entity_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Entity_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Entity_Id](Sys_Entities.md#entity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Entity_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Entity_Name
-
-
-Entity_Name
-
-
-The system name of the entity, which is being secured.
 
 
 The system name of the entity, which is being secured.
@@ -80,9 +75,8 @@ The system name of the entity, which is being secured.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Entity_Name](Sys_Entities.md#entity_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,16 +99,10 @@ The system name of the entity, which is being secured.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Access_Key_Id
-
-
-Access_Key_Id
-
-
-The access key, required to access the secured entity.
 
 
 The access key, required to access the secured entity.
@@ -128,9 +116,8 @@ The access key, required to access the secured entity.
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Access_Key_Id](Sys_Entities.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,12 +140,9 @@ The access key, required to access the secured entity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -168,9 +152,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Row_Version](Sys_Entities.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,12 +175,6 @@ Row_Version
 ### Log_Read_Many
 
 
-Log_Read_Many
-
-
-Specifies whether to log every load of many records for this entity.
-
-
 Specifies whether to log every load of many records for this entity.
 
 | Property | Value |
@@ -208,9 +185,8 @@ Specifies whether to log every load of many records for this entity.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Log_Read_Many](Sys_Entities.md#log_read_many)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,12 +208,6 @@ Specifies whether to log every load of many records for this entity.
 ### Log_Read_By_Id
 
 
-Log_Read_By_Id
-
-
-Specifies whether to log every load by Id for this entity.
-
-
 Specifies whether to log every load by Id for this entity.
 
 | Property | Value |
@@ -248,9 +218,8 @@ Specifies whether to log every load by Id for this entity.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Log_Read_By_Id](Sys_Entities.md#log_read_by_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -272,12 +241,6 @@ Specifies whether to log every load by Id for this entity.
 ### Log_Update
 
 
-Log_Update
-
-
-Specifies whether to log every update for this entity.
-
-
 Specifies whether to log every update for this entity.
 
 | Property | Value |
@@ -288,9 +251,8 @@ Specifies whether to log every update for this entity.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Log_Update](Sys_Entities.md#log_update)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -312,12 +274,6 @@ Specifies whether to log every update for this entity.
 ### Log_Delete
 
 
-Log_Delete
-
-
-Specifies whether to log every delete for this entity.
-
-
 Specifies whether to log every delete for this entity.
 
 | Property | Value |
@@ -328,9 +284,8 @@ Specifies whether to log every delete for this entity.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Log_Delete](Sys_Entities.md#log_delete)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -352,12 +307,6 @@ Specifies whether to log every delete for this entity.
 ### Log_Create
 
 
-Log_Create
-
-
-Specifies whether to log every insert for this entity.
-
-
 Specifies whether to log every insert for this entity.
 
 | Property | Value |
@@ -368,9 +317,8 @@ Specifies whether to log every insert for this entity.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Log_Create](Sys_Entities.md#log_create)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -392,12 +340,6 @@ Specifies whether to log every insert for this entity.
 ### Track_Changes_Level
 
 
-Track_Changes_Level
-
-
-The track changes level for the entity
-
-
 The track changes level for the entity
 
 | Property | Value |
@@ -408,10 +350,9 @@ The track changes level for the entity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`0`, `1`, `2`, `3`, `4`|
 |Default Value|0|
-|Derived From|[Sys_Entities](Sys_Entities.md).[Track_Changes_Level](Sys_Entities.md#track_changes_level)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -434,6 +375,6 @@ The track changes level for the entity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_resource_cost_rates">Table Gen_Resource_Cost_Rates</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Resources.ResourceCostRates.html">General.Resources.ResourceCostRates</a></p>
 <p>Contains cost rates for different periods for resources. Each record is valid until the next From Date. Entity: Gen_Resource_Cost_Rates</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -132,7 +134,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -144,7 +146,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="resource_cost_rate_id">Resource_Cost_Rate_Id</h3>
-<p>Resource_Cost_Rate_Id</p>
 <table>
 <thead>
 <tr>
@@ -183,15 +184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#resource_cost_rate_id">Resource_Cost_Rate_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -276,15 +273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_id">Resource_Id</h3>
-<p>Resource_Id</p>
-<p>The resource for which the cost rate is defined.</p>
 <p>The resource for which the cost rate is defined.</p>
 <table>
 <thead>
@@ -324,15 +319,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#resource_id">Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -417,15 +408,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The enterprise company for which the cost is defined.</p>
 <p>The enterprise company for which the cost is defined.</p>
 <table>
 <thead>
@@ -465,15 +454,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -558,15 +543,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>From_Date</p>
-<p>Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.</p>
 <p>Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.</p>
 <table>
 <thead>
@@ -606,15 +589,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#from_date">From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -699,7 +678,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -712,8 +691,6 @@
 </tbody>
 </table>
 <h3 id="standard_rate_per_hour">Standard_Rate_Per_Hour</h3>
-<p>Standard_Rate_Per_Hour</p>
-<p>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.</p>
 <p>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.</p>
 <table>
 <thead>
@@ -749,15 +726,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#standard_rate_per_hour">Standard_Rate_Per_Hour</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -842,7 +815,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -855,8 +828,6 @@
 </tbody>
 </table>
 <h3 id="overtime_rate_per_hour">Overtime_Rate_Per_Hour</h3>
-<p>Overtime_Rate_Per_Hour</p>
-<p>The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. NULL means that there is no special overtime rate and the standard rate should be applied.</p>
 <p>The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. NULL means that there is no special overtime rate and the standard rate should be applied.</p>
 <table>
 <thead>
@@ -892,15 +863,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#overtime_rate_per_hour">Overtime_Rate_Per_Hour</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -985,7 +952,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -998,8 +965,6 @@
 </tbody>
 </table>
 <h3 id="per_use_cost">Per_Use_Cost</h3>
-<p>Per_Use_Cost</p>
-<p>One-time cost for each usage of the resource in the resources costing currency.</p>
 <p>One-time cost for each usage of the resource in the resources costing currency.</p>
 <table>
 <thead>
@@ -1035,15 +1000,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#per_use_cost">Per_Use_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1128,7 +1089,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1141,7 +1102,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1152,7 +1112,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1180,15 +1140,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1261,7 +1217,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1296,15 +1251,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Cost_Rates.html">Gen_Resource_Cost_Rates</a>.<a href="Gen_Resource_Cost_Rates.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

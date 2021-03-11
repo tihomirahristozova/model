@@ -1,5 +1,10 @@
 # Table Cmm_Notifications
 
+
+## Entity
+
+Entity: [Communities.Notifications](~/entities/Communities.Notifications.md)
+
 A single notification of a user. Entity: Cmm_Notifications (Introduced in version 20.1)
 
 ## Summary
@@ -19,9 +24,6 @@ A single notification of a user. Entity: Cmm_Notifications (Introduced in versio
 
 ### Notification_Id
 
-
-Notification_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Notification_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cmm_Notifications](Cmm_Notifications.md).[Notification_Id](Cmm_Notifications.md#notification_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Notification_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Id
-
-
-User_Id
-
-
-The user, who is notified.
 
 
 The user, who is notified.
@@ -78,9 +73,8 @@ The user, who is notified.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Notifications](Cmm_Notifications.md).[User_Id](Cmm_Notifications.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +97,9 @@ The user, who is notified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Data_Object_Id
-
-
-Data_Object_Id
-
-
-The data object about which the notification is created. Null means that the notification is not about any specific data object.
 
 
 The data object about which the notification is created. Null means that the notification is not about any specific data object.
@@ -125,9 +113,8 @@ The data object about which the notification is created. Null means that the not
 |Referenced Table|[Sys_Objects](Sys_Objects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Notifications](Cmm_Notifications.md).[Data_Object_Id](Cmm_Notifications.md#data_object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,15 +137,9 @@ The data object about which the notification is created. Null means that the not
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Creation_Time_Utc
-
-
-Creation_Time_Utc
-
-
-The exact server time (in UTC), when the notification was created.
 
 
 The exact server time (in UTC), when the notification was created.
@@ -172,9 +153,8 @@ The exact server time (in UTC), when the notification was created.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTimeUtc|
-|Derived From|[Cmm_Notifications](Cmm_Notifications.md).[Creation_Time_Utc](Cmm_Notifications.md#creation_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,12 +182,6 @@ The exact server time (in UTC), when the notification was created.
 ### Notification_Class
 
 
-Notification_Class
-
-
-The class of the notification from a predefined list of system classes.
-
-
 The class of the notification from a predefined list of system classes.
 
 | Property | Value |
@@ -219,9 +193,8 @@ The class of the notification from a predefined list of system classes.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Notifications](Cmm_Notifications.md).[Notification_Class](Cmm_Notifications.md#notification_class)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,15 +217,9 @@ The class of the notification from a predefined list of system classes.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Subject
-
-
-Subject
-
-
-The short subject of the notification (in the Default Culture of the user).
 
 
 The short subject of the notification (in the Default Culture of the user).
@@ -266,9 +233,8 @@ The short subject of the notification (in the Default Culture of the user).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Notifications](Cmm_Notifications.md).[Subject](Cmm_Notifications.md#subject)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,16 +257,10 @@ The short subject of the notification (in the Default Culture of the user).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Is_Read
-
-
-Is_Read
-
-
-Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.
 
 
 Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.
@@ -313,9 +273,8 @@ Specifies whether the user has read the notification. If the system changes the 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cmm_Notifications](Cmm_Notifications.md).[Is_Read](Cmm_Notifications.md#is_read)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -338,12 +297,9 @@ Specifies whether the user has read the notification. If the system changes the 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -353,9 +309,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Notifications](Cmm_Notifications.md).[Row_Version](Cmm_Notifications.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cms_news_web_module_articles">Table Cms_News_Web_Module_Articles</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Cms.NewsWebModuleArticles.html">Applications.Cms.NewsWebModuleArticles</a></p>
 <p>Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -122,7 +124,7 @@
 </tr>
 <tr>
 <td><a href="#article_text_html">Article_Text_Html</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The actual article text, stored as Html. Only the <body> of the Html is stored. The language of the text is specified in Language Code.</body></td>
 </tr>
 <tr>
@@ -134,7 +136,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="news_web_module_article_id">News_Web_Module_Article_Id</h3>
-<p>News_Web_Module_Article_Id</p>
 <table>
 <thead>
 <tr>
@@ -173,15 +174,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_News_Web_Module_Articles.html">Cms_News_Web_Module_Articles</a>.<a href="Cms_News_Web_Module_Articles.html#news_web_module_article_id">News_Web_Module_Article_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -266,15 +263,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="news_web_module_id">News_Web_Module_Id</h3>
-<p>News_Web_Module_Id</p>
-<p>The News Web Module, to which the current article is added.</p>
 <p>The News Web Module, to which the current article is added.</p>
 <table>
 <thead>
@@ -314,15 +309,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_News_Web_Module_Articles.html">Cms_News_Web_Module_Articles</a>.<a href="Cms_News_Web_Module_Articles.html#news_web_module_id">News_Web_Module_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -407,15 +398,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="author_public_user_id">Author_Public_User_Id</h3>
-<p>Author_Public_User_Id</p>
-<p>The author of the news article.</p>
 <p>The author of the news article.</p>
 <table>
 <thead>
@@ -455,15 +444,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_News_Web_Module_Articles.html">Cms_News_Web_Module_Articles</a>.<a href="Cms_News_Web_Module_Articles.html#author_public_user_id">Author_Public_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -548,15 +533,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_published">Is_Published</h3>
-<p>Is_Published</p>
-<p>Specifies whether the article is published for display on web.</p>
 <p>Specifies whether the article is published for display on web.</p>
 <table>
 <thead>
@@ -592,15 +575,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_News_Web_Module_Articles.html">Cms_News_Web_Module_Articles</a>.<a href="Cms_News_Web_Module_Articles.html#is_published">Is_Published</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -673,8 +652,6 @@
 </tbody>
 </table>
 <h3 id="publish_date">Publish_Date</h3>
-<p>Publish_Date</p>
-<p>The date and time when the news article should appear to be published.</p>
 <p>The date and time when the news article should appear to be published.</p>
 <table>
 <thead>
@@ -714,15 +691,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_News_Web_Module_Articles.html">Cms_News_Web_Module_Articles</a>.<a href="Cms_News_Web_Module_Articles.html#publish_date">Publish_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -795,8 +768,6 @@
 </tbody>
 </table>
 <h3 id="language_code">Language_Code</h3>
-<p>Language_Code</p>
-<p>The language code of the article text.</p>
 <p>The language code of the article text.</p>
 <table>
 <thead>
@@ -836,15 +807,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_News_Web_Module_Articles.html">Cms_News_Web_Module_Articles</a>.<a href="Cms_News_Web_Module_Articles.html#language_code">Language_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -917,8 +884,6 @@
 </tbody>
 </table>
 <h3 id="article_text_html">Article_Text_Html</h3>
-<p>Article_Text_Html</p>
-<p>The actual article text, stored as Html. Only the <body> of the Html is stored. The language of the text is specified in Language Code.<p>
 <p>The actual article text, stored as Html. Only the <body> of the Html is stored. The language of the text is specified in Language Code.<p>
 <table>
 <thead>
@@ -930,7 +895,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -958,15 +923,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_News_Web_Module_Articles.html">Cms_News_Web_Module_Articles</a>.<a href="Cms_News_Web_Module_Articles.html#article_text_html">Article_Text_Html</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1039,7 +1000,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1074,15 +1034,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cms_News_Web_Module_Articles.html">Cms_News_Web_Module_Articles</a>.<a href="Cms_News_Web_Module_Articles.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1154,7 +1110,7 @@
 </tr>
 </tbody>
 </table>
-</body></body></article>
+</body></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

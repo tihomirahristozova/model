@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_entities">Table Sys_Entities</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Core.EntitySettings.html">Systems.Core.EntitySettings</a></p>
 <p>Contains entities, which have secured access. Entity: Sys_Entities</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -144,7 +146,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="entity_id">Entity_Id</h3>
-<p>Entity_Id</p>
 <table>
 <thead>
 <tr>
@@ -183,15 +184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#entity_id">Entity_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -276,15 +273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="entity_name">Entity_Name</h3>
-<p>Entity_Name</p>
-<p>The system name of the entity, which is being secured.</p>
 <p>The system name of the entity, which is being secured.</p>
 <table>
 <thead>
@@ -324,15 +319,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#entity_name">Entity_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -417,7 +408,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -430,8 +421,6 @@
 </tbody>
 </table>
 <h3 id="access_key_id">Access_Key_Id</h3>
-<p>Access_Key_Id</p>
-<p>The access key, required to access the secured entity.</p>
 <p>The access key, required to access the secured entity.</p>
 <table>
 <thead>
@@ -471,15 +460,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#access_key_id">Access_Key_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -564,14 +549,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -606,15 +590,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -687,8 +667,6 @@
 </tbody>
 </table>
 <h3 id="log_read_many">Log_Read_Many</h3>
-<p>Log_Read_Many</p>
-<p>Specifies whether to log every load of many records for this entity.</p>
 <p>Specifies whether to log every load of many records for this entity.</p>
 <table>
 <thead>
@@ -724,15 +702,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#log_read_many">Log_Read_Many</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -805,8 +779,6 @@
 </tbody>
 </table>
 <h3 id="log_read_by_id">Log_Read_By_Id</h3>
-<p>Log_Read_By_Id</p>
-<p>Specifies whether to log every load by Id for this entity.</p>
 <p>Specifies whether to log every load by Id for this entity.</p>
 <table>
 <thead>
@@ -842,15 +814,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#log_read_by_id">Log_Read_By_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -923,8 +891,6 @@
 </tbody>
 </table>
 <h3 id="log_update">Log_Update</h3>
-<p>Log_Update</p>
-<p>Specifies whether to log every update for this entity.</p>
 <p>Specifies whether to log every update for this entity.</p>
 <table>
 <thead>
@@ -960,15 +926,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#log_update">Log_Update</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1041,8 +1003,6 @@
 </tbody>
 </table>
 <h3 id="log_delete">Log_Delete</h3>
-<p>Log_Delete</p>
-<p>Specifies whether to log every delete for this entity.</p>
 <p>Specifies whether to log every delete for this entity.</p>
 <table>
 <thead>
@@ -1078,15 +1038,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#log_delete">Log_Delete</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1159,8 +1115,6 @@
 </tbody>
 </table>
 <h3 id="log_create">Log_Create</h3>
-<p>Log_Create</p>
-<p>Specifies whether to log every insert for this entity.</p>
 <p>Specifies whether to log every insert for this entity.</p>
 <table>
 <thead>
@@ -1196,15 +1150,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#log_create">Log_Create</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1277,8 +1227,6 @@
 </tbody>
 </table>
 <h3 id="track_changes_level">Track_Changes_Level</h3>
-<p>Track_Changes_Level</p>
-<p>The track changes level for the entity</p>
 <p>The track changes level for the entity</p>
 <table>
 <thead>
@@ -1314,7 +1262,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1323,10 +1271,6 @@
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Entities.html">Sys_Entities</a>.<a href="Sys_Entities.html#track_changes_level">Track_Changes_Level</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1411,7 +1355,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>

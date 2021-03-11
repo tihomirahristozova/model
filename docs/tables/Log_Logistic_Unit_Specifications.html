@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-log_logistic_unit_specifications">Table Log_Logistic_Unit_Specifications</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.LogisticUnitSpecifications.html">Logistics.LogisticUnitSpecifications</a></p>
 <p>Specification of a logistic unit. The database can contain any kind of specification, but most client applications and integrated methods process GS1 specifications (application codes). Entity: Log_Logistic_Unit_Specifications (Introduced in version 21.1.0.77)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -121,7 +123,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -133,7 +135,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="logistic_unit_specification_id">Logistic_Unit_Specification_Id</h3>
-<p>Logistic_Unit_Specification_Id</p>
 <table>
 <thead>
 <tr>
@@ -172,15 +173,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Logistic_Unit_Specifications.html">Log_Logistic_Unit_Specifications</a>.<a href="Log_Logistic_Unit_Specifications.html#logistic_unit_specification_id">Logistic_Unit_Specification_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -265,15 +262,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="logistic_unit_id">Logistic_Unit_Id</h3>
-<p>Logistic_Unit_Id</p>
-<p>The logistic unit, which is detailed by this specification.</p>
 <p>The logistic unit, which is detailed by this specification.</p>
 <table>
 <thead>
@@ -313,15 +308,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Logistic_Unit_Specifications.html">Log_Logistic_Unit_Specifications</a>.<a href="Log_Logistic_Unit_Specifications.html#logistic_unit_id">Logistic_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -406,15 +397,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="code">Code</h3>
-<p>Code</p>
-<p>The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.</p>
 <p>The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.</p>
 <table>
 <thead>
@@ -454,15 +443,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Logistic_Unit_Specifications.html">Log_Logistic_Unit_Specifications</a>.<a href="Log_Logistic_Unit_Specifications.html#code">Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -547,7 +532,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -560,8 +545,6 @@
 </tbody>
 </table>
 <h3 id="name">Name</h3>
-<p>Name</p>
-<p>Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).</p>
 <p>Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).</p>
 <table>
 <thead>
@@ -601,15 +584,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Logistic_Unit_Specifications.html">Log_Logistic_Unit_Specifications</a>.<a href="Log_Logistic_Unit_Specifications.html#name">Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -694,7 +673,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -707,8 +686,6 @@
 </tbody>
 </table>
 <h3 id="value">Value</h3>
-<p>Value</p>
-<p>Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.</p>
 <p>Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.</p>
 <table>
 <thead>
@@ -748,15 +725,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Logistic_Unit_Specifications.html">Log_Logistic_Unit_Specifications</a>.<a href="Log_Logistic_Unit_Specifications.html#value">Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -841,7 +814,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -854,7 +827,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -865,7 +837,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -893,15 +865,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Logistic_Unit_Specifications.html">Log_Logistic_Unit_Specifications</a>.<a href="Log_Logistic_Unit_Specifications.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -974,7 +942,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1009,15 +976,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Logistic_Unit_Specifications.html">Log_Logistic_Unit_Specifications</a>.<a href="Log_Logistic_Unit_Specifications.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

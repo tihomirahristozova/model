@@ -1,5 +1,10 @@
 # Table Exc_Tax_Warehouses
 
+
+## Entity
+
+Entity: [Finance.Excise.TaxWarehouses](~/entities/Finance.Excise.TaxWarehouses.md)
+
 Contains excise-related data for warehouses (stores), which are defined as tax warehouses. Products subject to excise duties must be produced in tax warehouses. They can also be stored, under duty suspension, in these tax warehouses. Entity: Exc_Tax_Warehouses (Introduced in version 21.1.1.1)
 
 ## Summary
@@ -14,9 +19,6 @@ Contains excise-related data for warehouses (stores), which are defined as tax w
 
 ### Tax_Warehouse_Id
 
-
-Tax_Warehouse_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -26,9 +28,8 @@ Tax_Warehouse_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Exc_Tax_Warehouses](Exc_Tax_Warehouses.md).[Tax_Warehouse_Id](Exc_Tax_Warehouses.md#tax_warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -51,15 +52,9 @@ Tax_Warehouse_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The base warehouse (store), which is declared as tax warehouse.
 
 
 The base warehouse (store), which is declared as tax warehouse.
@@ -73,9 +68,8 @@ The base warehouse (store), which is declared as tax warehouse.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Tax_Warehouses](Exc_Tax_Warehouses.md).[Store_Id](Exc_Tax_Warehouses.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,12 +92,9 @@ The base warehouse (store), which is declared as tax warehouse.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -113,9 +104,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Exc_Tax_Warehouses](Exc_Tax_Warehouses.md).[Row_Version](Exc_Tax_Warehouses.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Folders
 
+
+## Entity
+
+Entity: [General.Folders](~/entities/General.Folders.md)
+
 Folders are the base for the file storage within the system. Each folder is a data object, with the primary idea of containing files. Entity: Gen_Folders (Introduced in version 21.1.1.8)
 
 ## Summary
@@ -9,16 +14,13 @@ Folders are the base for the file storage within the system. Each folder is a da
 |[Folder_Id](#folder_id)|`uniqueidentifier` `PK`||
 |[Parent_Folder_Id](#parent_folder_id)|`uniqueidentifier` |Parent folder. NULL if this is root folder.|
 |[Folder_Name](#folder_name)|`nvarchar(128)` |Name of the folder. Unique within its parent folder.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` |The access key, required to unlock the folder contents. NULL means the folder is unprotected and accessible to all internal users.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Folder_Id
-
-
-Folder_Id
 
 | Property | Value |
 | - | - |
@@ -29,9 +31,8 @@ Folder_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Folders](Gen_Folders.md).[Folder_Id](Gen_Folders.md#folder_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Folder_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent_Folder_Id
-
-
-Parent_Folder_Id
-
-
-Parent folder. NULL if this is root folder.
 
 
 Parent folder. NULL if this is root folder.
@@ -76,9 +71,8 @@ Parent folder. NULL if this is root folder.
 |Referenced Table|[Gen_Folders](Gen_Folders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Folders](Gen_Folders.md).[Parent_Folder_Id](Gen_Folders.md#parent_folder_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +95,9 @@ Parent folder. NULL if this is root folder.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Folder_Name
-
-
-Folder_Name
-
-
-Name of the folder. Unique within its parent folder.
 
 
 Name of the folder. Unique within its parent folder.
@@ -123,9 +111,8 @@ Name of the folder. Unique within its parent folder.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Folders](Gen_Folders.md).[Folder_Name](Gen_Folders.md#folder_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,26 +135,22 @@ Name of the folder. Unique within its parent folder.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Folders](Gen_Folders.md).[Notes](Gen_Folders.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -189,12 +172,6 @@ Notes
 ### Access_Key_Id
 
 
-Access_Key_Id
-
-
-The access key, required to unlock the folder contents. NULL means the folder is unprotected and accessible to all internal users.
-
-
 The access key, required to unlock the folder contents. NULL means the folder is unprotected and accessible to all internal users.
 
 | Property | Value |
@@ -206,9 +183,8 @@ The access key, required to unlock the folder contents. NULL means the folder is
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Folders](Gen_Folders.md).[Access_Key_Id](Gen_Folders.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -231,12 +207,9 @@ The access key, required to unlock the folder contents. NULL means the folder is
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -246,9 +219,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Folders](Gen_Folders.md).[Row_Version](Gen_Folders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

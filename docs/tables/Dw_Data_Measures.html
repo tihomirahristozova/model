@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-dw_data_measures">Table Dw_Data_Measures</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.DataWarehouse.DataMeasures.html">Applications.DataWarehouse.DataMeasures</a></p>
 <p>Contains the data measures of the General data warehouse. Entity: Dw_Data_Measures (Introduced in version 18.2)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -127,14 +129,13 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="data_measure_id">Data_Measure_Id</h3>
-<p>Data_Measure_Id</p>
 <table>
 <thead>
 <tr>
@@ -173,15 +174,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Dw_Data_Measures.html">Dw_Data_Measures</a>.<a href="Dw_Data_Measures.html#data_measure_id">Data_Measure_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -266,15 +263,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="data_measure_code">Data_Measure_Code</h3>
-<p>Data_Measure_Code</p>
-<p>Unique measure code.</p>
 <p>Unique measure code.</p>
 <table>
 <thead>
@@ -314,15 +309,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Dw_Data_Measures.html">Dw_Data_Measures</a>.<a href="Dw_Data_Measures.html#data_measure_code">Data_Measure_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -407,7 +398,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -420,8 +411,6 @@
 </tbody>
 </table>
 <h3 id="data_measure_group_id">Data_Measure_Group_Id</h3>
-<p>Data_Measure_Group_Id</p>
-<p>The group to which this measure belongs.</p>
 <p>The group to which this measure belongs.</p>
 <table>
 <thead>
@@ -461,15 +450,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Dw_Data_Measures.html">Dw_Data_Measures</a>.<a href="Dw_Data_Measures.html#data_measure_group_id">Data_Measure_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -554,15 +539,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="data_measure_name">Data_Measure_Name</h3>
-<p>Data_Measure_Name</p>
-<p>The name of the measure (multilanguage).</p>
 <p>The name of the measure (multilanguage).</p>
 <table>
 <thead>
@@ -602,15 +585,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Dw_Data_Measures.html">Dw_Data_Measures</a>.<a href="Dw_Data_Measures.html#data_measure_name">Data_Measure_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -695,7 +674,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -708,8 +687,6 @@
 </tbody>
 </table>
 <h3 id="period">Period</h3>
-<p>Period</p>
-<p>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</p>
 <p>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</p>
 <table>
 <thead>
@@ -749,7 +726,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -758,10 +735,6 @@
 <tr>
 <td>Default Value</td>
 <td>Q</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Dw_Data_Measures.html">Dw_Data_Measures</a>.<a href="Dw_Data_Measures.html#period">Period</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -846,15 +819,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="green_zone_spread_percent">Green_Zone_Spread_Percent</h3>
-<p>Green_Zone_Spread_Percent</p>
-<p>The plus or minus percent, by which the goal can be missed, but still considered achieved.</p>
 <p>The plus or minus percent, by which the goal can be missed, but still considered achieved.</p>
 <table>
 <thead>
@@ -890,15 +861,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0.2</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Dw_Data_Measures.html">Dw_Data_Measures</a>.<a href="Dw_Data_Measures.html#green_zone_spread_percent">Green_Zone_Spread_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -983,15 +950,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="horizontal_trend_spread_percent">Horizontal_Trend_Spread_Percent</h3>
-<p>Horizontal_Trend_Spread_Percent</p>
-<p>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.</p>
 <p>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.</p>
 <table>
 <thead>
@@ -1027,15 +992,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0.01</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Dw_Data_Measures.html">Dw_Data_Measures</a>.<a href="Dw_Data_Measures.html#horizontal_trend_spread_percent">Horizontal_Trend_Spread_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1120,14 +1081,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1138,7 +1098,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1166,15 +1126,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Dw_Data_Measures.html">Dw_Data_Measures</a>.<a href="Dw_Data_Measures.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>

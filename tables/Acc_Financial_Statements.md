@@ -1,5 +1,10 @@
 # Table Acc_Financial_Statements
 
+
+## Entity
+
+Entity: [Finance.Accounting.FinancialStatements](~/entities/Finance.Accounting.FinancialStatements.md)
+
 Contains the user-defined financial statement definitions. Entity: Acc_Financial_Statements
 
 ## Summary
@@ -15,9 +20,6 @@ Contains the user-defined financial statement definitions. Entity: Acc_Financial
 
 ### Financial_Statement_Id
 
-
-Financial_Statement_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Financial_Statement_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Financial_Statements](Acc_Financial_Statements.md).[Financial_Statement_Id](Acc_Financial_Statements.md#financial_statement_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Financial_Statement_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Financial_Statement_Code
-
-
-Financial_Statement_Code
-
-
-Unique identifying code of the financial statement
 
 
 Unique identifying code of the financial statement
@@ -74,9 +69,8 @@ Unique identifying code of the financial statement
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statements](Acc_Financial_Statements.md).[Financial_Statement_Code](Acc_Financial_Statements.md#financial_statement_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,16 +93,10 @@ Unique identifying code of the financial statement
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Financial_Statement_Name
-
-
-Financial_Statement_Name
-
-
-Name of the financial statement
 
 
 Name of the financial statement
@@ -122,9 +110,8 @@ Name of the financial statement
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statements](Acc_Financial_Statements.md).[Financial_Statement_Name](Acc_Financial_Statements.md#financial_statement_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,13 +134,10 @@ Name of the financial statement
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -163,9 +147,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Financial_Statements](Acc_Financial_Statements.md).[Row_Version](Acc_Financial_Statements.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

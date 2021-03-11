@@ -1,5 +1,10 @@
 # Table Rent_Lease_Contracts
 
+
+## Entity
+
+Entity: [Applications.Rental.LeaseContracts](~/entities/Applications.Rental.LeaseContracts.md)
+
 Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
 
 ## Owner Tables Hierarchy
@@ -26,9 +31,6 @@ Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
 
 ### Lease_Contract_Id
 
-
-Lease_Contract_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -38,9 +40,8 @@ Lease_Contract_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Lease_Contract_Id](Rent_Lease_Contracts.md#lease_contract_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,12 +64,9 @@ Lease_Contract_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -79,9 +77,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Document_Id](Rent_Lease_Contracts.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +101,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Lessee_Customer_Id
-
-
-Lessee_Customer_Id
-
-
-The customer record of the lessee
 
 
 The customer record of the lessee
@@ -126,9 +117,8 @@ The customer record of the lessee
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Lessee_Customer_Id](Rent_Lease_Contracts.md#lessee_customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,15 +141,9 @@ The customer record of the lessee
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Currency_Id
-
-
-Currency_Id
-
-
-The currency of the lease contract amounts
 
 
 The currency of the lease contract amounts
@@ -173,9 +157,8 @@ The currency of the lease contract amounts
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Currency_Id](Rent_Lease_Contracts.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,15 +181,9 @@ The currency of the lease contract amounts
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Start_Date
-
-
-Start_Date
-
-
-Starting date of the lease contract
 
 
 Starting date of the lease contract
@@ -220,9 +197,8 @@ Starting date of the lease contract
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Start_Date](Rent_Lease_Contracts.md#start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -245,18 +221,12 @@ Starting date of the lease contract
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### End_Date
 
 
-End_Date
-
-
-Ending date (inclusive) of the lease contract
-
-
 Ending date (inclusive) of the lease contract
 
 | Property | Value |
@@ -268,9 +238,8 @@ Ending date (inclusive) of the lease contract
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[End_Date](Rent_Lease_Contracts.md#end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,13 +262,10 @@ Ending date (inclusive) of the lease contract
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Credit_Limit_Override
-
-
-Credit_Limit_Override
 
 | Property | Value |
 | - | - |
@@ -309,9 +275,8 @@ Credit_Limit_Override
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Credit_Limit_Override](Rent_Lease_Contracts.md#credit_limit_override)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -332,9 +297,6 @@ Credit_Limit_Override
 
 ### Payment_Account_Id
 
-
-Payment_Account_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -344,9 +306,8 @@ Payment_Account_Id
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Payment_Account_Id](Rent_Lease_Contracts.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -369,17 +330,11 @@ Payment_Account_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -390,9 +345,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Is_Single_Execution](Rent_Lease_Contracts.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -415,17 +369,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -436,9 +384,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Is_Released](Rent_Lease_Contracts.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -461,12 +408,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -476,9 +420,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contracts](Rent_Lease_Contracts.md).[Row_Version](Rent_Lease_Contracts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

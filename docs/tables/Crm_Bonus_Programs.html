@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_bonus_programs">Table Crm_Bonus_Programs</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Marketing.BonusPrograms.html">Crm.Marketing.BonusPrograms</a></p>
 <p>Bonus programs allow automatic adding of new line with bonus product or automatic application of discount in a sales document. Entity: Crm_Bonus_Programs</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -152,7 +154,7 @@
 </tr>
 <tr>
 <td><a href="#condition_customer_filter_xml">Condition_Customer_Filter_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties</td>
 </tr>
 <tr>
@@ -162,7 +164,7 @@
 </tr>
 <tr>
 <td><a href="#condition_ship_to_customer_filter_xml">Condition_Ship_To_Customer_Filter_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics</td>
 </tr>
 <tr>
@@ -232,7 +234,7 @@
 </tr>
 <tr>
 <td><a href="#condition_distribution_channel_filter_xml">Condition_Distribution_Channel_Filter_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics</td>
 </tr>
 <tr>
@@ -254,7 +256,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="bonus_program_id">Bonus_Program_Id</h3>
-<p>Bonus_Program_Id</p>
 <table>
 <thead>
 <tr>
@@ -293,15 +294,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_program_id">Bonus_Program_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -386,15 +383,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="bonus_program_name">Bonus_Program_Name</h3>
-<p>Bonus_Program_Name</p>
-<p>The name of the bonus program</p>
 <p>The name of the bonus program</p>
 <table>
 <thead>
@@ -434,15 +429,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_program_name">Bonus_Program_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -527,7 +518,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -540,8 +531,6 @@
 </tbody>
 </table>
 <h3 id="condition_product_id">Condition_Product_Id</h3>
-<p>Condition_Product_Id</p>
-<p>When not NULL, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If NULL the other conditions should be evaluated against the whole order.</p>
 <p>When not NULL, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If NULL the other conditions should be evaluated against the whole order.</p>
 <table>
 <thead>
@@ -581,15 +570,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_product_id">Condition_Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -674,15 +659,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_min_quantity">Condition_Min_Quantity</h3>
-<p>Condition_Min_Quantity</p>
-<p>When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified</p>
 <p>When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified</p>
 <table>
 <thead>
@@ -718,15 +701,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_min_quantity">Condition_Min_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -811,7 +790,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -824,8 +803,6 @@
 </tbody>
 </table>
 <h3 id="condition_max_quantity">Condition_Max_Quantity</h3>
-<p>Condition_Max_Quantity</p>
-<p>When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified</p>
 <p>When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified</p>
 <table>
 <thead>
@@ -861,15 +838,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_max_quantity">Condition_Max_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -954,7 +927,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -967,8 +940,6 @@
 </tbody>
 </table>
 <h3 id="condition_min_amount">Condition_Min_Amount</h3>
-<p>Condition_Min_Amount</p>
-<p>If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus</p>
 <p>If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus</p>
 <table>
 <thead>
@@ -1004,15 +975,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_min_amount">Condition_Min_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1097,7 +1064,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1110,8 +1077,6 @@
 </tbody>
 </table>
 <h3 id="condition_max_amount">Condition_Max_Amount</h3>
-<p>Condition_Max_Amount</p>
-<p>If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus</p>
 <p>If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus</p>
 <table>
 <thead>
@@ -1147,15 +1112,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_max_amount">Condition_Max_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1240,7 +1201,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1253,8 +1214,6 @@
 </tbody>
 </table>
 <h3 id="condition_document_currency_id">Condition_Document_Currency_Id</h3>
-<p>Condition_Document_Currency_Id</p>
-<p>Condition for the document amount. Should be not NULL if any of the amount conditions are not NULL</p>
 <p>Condition for the document amount. Should be not NULL if any of the amount conditions are not NULL</p>
 <table>
 <thead>
@@ -1294,15 +1253,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_document_currency_id">Condition_Document_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1387,15 +1342,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_from_date">Condition_From_Date</h3>
-<p>Condition_From_Date</p>
-<p>Starting date of the bonus. NULL means that there is no starting date restriction</p>
 <p>Starting date of the bonus. NULL means that there is no starting date restriction</p>
 <table>
 <thead>
@@ -1435,15 +1388,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_from_date">Condition_From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1528,7 +1477,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1541,8 +1490,6 @@
 </tbody>
 </table>
 <h3 id="condition_to_date">Condition_To_Date</h3>
-<p>Condition_To_Date</p>
-<p>Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction</p>
 <p>Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction</p>
 <table>
 <thead>
@@ -1582,15 +1529,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_to_date">Condition_To_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1675,7 +1618,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1688,8 +1631,6 @@
 </tbody>
 </table>
 <h3 id="condition_target_group_id">Condition_Target_Group_Id</h3>
-<p>Condition_Target_Group_Id</p>
-<p>When not NULL, specifies that the bonus should be applied only to the specified target customer group</p>
 <p>When not NULL, specifies that the bonus should be applied only to the specified target customer group</p>
 <table>
 <thead>
@@ -1729,15 +1670,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_target_group_id">Condition_Target_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1822,15 +1759,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_customer_id">Condition_Customer_Id</h3>
-<p>Condition_Customer_Id</p>
-<p>When not NULL, specifies that the bonus should be applied only to the specified customer</p>
 <p>When not NULL, specifies that the bonus should be applied only to the specified customer</p>
 <table>
 <thead>
@@ -1870,15 +1805,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_customer_id">Condition_Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1963,15 +1894,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_customer_filter_xml">Condition_Customer_Filter_XML</h3>
-<p>Condition_Customer_Filter_XML</p>
-<p>When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties</p>
 <p>When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties</p>
 <table>
 <thead>
@@ -1983,7 +1912,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2011,15 +1940,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_customer_filter_xml">Condition_Customer_Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2092,8 +2017,6 @@
 </tbody>
 </table>
 <h3 id="condition_ship_to_customer_id">Condition_Ship_To_Customer_Id</h3>
-<p>Condition_Ship_To_Customer_Id</p>
-<p>When not NULL, specifies that the bonus should be applied only when shipping to the specified customer</p>
 <p>When not NULL, specifies that the bonus should be applied only when shipping to the specified customer</p>
 <table>
 <thead>
@@ -2133,15 +2056,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_ship_to_customer_id">Condition_Ship_To_Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2226,15 +2145,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_ship_to_customer_filter_xml">Condition_Ship_To_Customer_Filter_XML</h3>
-<p>Condition_Ship_To_Customer_Filter_XML</p>
-<p>When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics</p>
 <p>When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics</p>
 <table>
 <thead>
@@ -2246,7 +2163,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2274,15 +2191,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_ship_to_customer_filter_xml">Condition_Ship_To_Customer_Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2355,8 +2268,6 @@
 </tbody>
 </table>
 <h3 id="condition_price_list_id">Condition_Price_List_Id</h3>
-<p>Condition_Price_List_Id</p>
-<p>When not NULL, specifies that the bonus should be applied only when the sales order is based on the speicfied price list</p>
 <p>When not NULL, specifies that the bonus should be applied only when the sales order is based on the speicfied price list</p>
 <table>
 <thead>
@@ -2396,15 +2307,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_price_list_id">Condition_Price_List_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2489,15 +2396,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="active">Active</h3>
-<p>Active</p>
-<p>General condition if the bonus is active. The other conditions are verified only for active bonus programs</p>
 <p>General condition if the bonus is active. The other conditions are verified only for active bonus programs</p>
 <table>
 <thead>
@@ -2533,15 +2438,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#active">Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2626,15 +2527,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="bonus_action">Bonus_Action</h3>
-<p>Bonus_Action</p>
-<p>Bonus action: P-Add product to the order, A-Add amount, D-Give discount</p>
 <p>Bonus action: P-Add product to the order, A-Add amount, D-Give discount</p>
 <table>
 <thead>
@@ -2674,7 +2573,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2683,10 +2582,6 @@
 <tr>
 <td>Default Value</td>
 <td>D</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_action">Bonus_Action</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2771,15 +2666,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="bonus_product_id">Bonus_Product_Id</h3>
-<p>Bonus_Product_Id</p>
-<p>The product that is rewarded if the bonus conditions are met. NULL means that the bonus reward is not product</p>
 <p>The product that is rewarded if the bonus conditions are met. NULL means that the bonus reward is not product</p>
 <table>
 <thead>
@@ -2819,15 +2712,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_product_id">Bonus_Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2912,15 +2801,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="bonus_product_quantity">Bonus_Product_Quantity</h3>
-<p>Bonus_Product_Quantity</p>
-<p>The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL</p>
 <p>The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL</p>
 <table>
 <thead>
@@ -2956,15 +2843,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_product_quantity">Bonus_Product_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3037,8 +2920,6 @@
 </tbody>
 </table>
 <h3 id="bonus_product_quantity_unit_id">Bonus_Product_Quantity_Unit_Id</h3>
-<p>Bonus_Product_Quantity_Unit_Id</p>
-<p>The measurement unit of the quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL</p>
 <p>The measurement unit of the quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL</p>
 <table>
 <thead>
@@ -3078,15 +2959,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_product_quantity_unit_id">Bonus_Product_Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3171,15 +3048,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="bonus_product_quantity_multiplier_for_each_lot_size">Bonus_Product_Quantity_Multiplier_For_Each_Lot_Size</h3>
-<p>Bonus_Product_Quantity_Multiplier_For_Each_Lot_Size</p>
-<p>When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified</p>
 <p>When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified</p>
 <table>
 <thead>
@@ -3215,15 +3090,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_product_quantity_multiplier_for_each_lot_size">Bonus_Product_Quantity_Multiplier_For_Each_Lot_Size</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3296,8 +3167,6 @@
 </tbody>
 </table>
 <h3 id="bonus_document_amount_type_id">Bonus_Document_Amount_Type_Id</h3>
-<p>Bonus_Document_Amount_Type_Id</p>
-<p>When not NULL specifies that a document amount should be added to the order when the bonus conditions are met. NULL means that the bonus reward is not a document amount</p>
 <p>When not NULL specifies that a document amount should be added to the order when the bonus conditions are met. NULL means that the bonus reward is not a document amount</p>
 <table>
 <thead>
@@ -3337,15 +3206,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_document_amount_type_id">Bonus_Document_Amount_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3430,15 +3295,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="bonus_document_amount_percent">Bonus_Document_Amount_Percent</h3>
-<p>Bonus_Document_Amount_Percent</p>
-<p>The percent of the document amount that is rewarded. Should be NULL if and only if the bonus document amount is NULL</p>
 <p>The percent of the document amount that is rewarded. Should be NULL if and only if the bonus document amount is NULL</p>
 <table>
 <thead>
@@ -3474,15 +3337,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_document_amount_percent">Bonus_Document_Amount_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3555,8 +3414,6 @@
 </tbody>
 </table>
 <h3 id="bonus_line_discount_percent">Bonus_Line_Discount_Percent</h3>
-<p>Bonus_Line_Discount_Percent</p>
-<p>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount)</p>
 <p>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount)</p>
 <table>
 <thead>
@@ -3592,15 +3449,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#bonus_line_discount_percent">Bonus_Line_Discount_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3673,8 +3526,6 @@
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>When set, specifies that the sales document must be of the specified enterprise company.</p>
 <p>When set, specifies that the sales document must be of the specified enterprise company.</p>
 <table>
 <thead>
@@ -3714,15 +3565,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3807,15 +3654,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="priority">Priority</h3>
-<p>Priority</p>
-<p>Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority</p>
 <p>Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority</p>
 <table>
 <thead>
@@ -3851,7 +3696,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -3860,10 +3705,6 @@
 <tr>
 <td>Default Value</td>
 <td>2</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#priority">Priority</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3948,15 +3789,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_distribution_channel_id">Condition_Distribution_Channel_Id</h3>
-<p>Condition_Distribution_Channel_Id</p>
-<p>When not NULL, specifies that the bonus should be applied only when the specified channel is used</p>
 <p>When not NULL, specifies that the bonus should be applied only when the specified channel is used</p>
 <table>
 <thead>
@@ -3996,15 +3835,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_distribution_channel_id">Condition_Distribution_Channel_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4089,15 +3924,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_distribution_channel_filter_xml">Condition_Distribution_Channel_Filter_XML</h3>
-<p>Condition_Distribution_Channel_Filter_XML</p>
-<p>When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics</p>
 <p>When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics</p>
 <table>
 <thead>
@@ -4109,7 +3942,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -4137,15 +3970,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_distribution_channel_filter_xml">Condition_Distribution_Channel_Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4218,8 +4047,6 @@
 </tbody>
 </table>
 <h3 id="condition_product_group_id">Condition_Product_Group_Id</h3>
-<p>Condition_Product_Group_Id</p>
-<p>When not NULL, specifies that the bonus should be applied only to products from the specified product group or its subgroups</p>
 <p>When not NULL, specifies that the bonus should be applied only to products from the specified product group or its subgroups</p>
 <table>
 <thead>
@@ -4259,15 +4086,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#condition_product_group_id">Condition_Product_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4352,14 +4175,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -4394,15 +4216,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4475,8 +4293,6 @@
 </tbody>
 </table>
 <h3 id="company_location_id">Company_Location_Id</h3>
-<p>Company_Location_Id</p>
-<p>When set, specifies that the sales document must be of the specified enterprise company location.</p>
 <p>When set, specifies that the sales document must be of the specified enterprise company location.</p>
 <table>
 <thead>
@@ -4516,15 +4332,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Bonus_Programs.html">Crm_Bonus_Programs</a>.<a href="Crm_Bonus_Programs.html#company_location_id">Company_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4609,7 +4421,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

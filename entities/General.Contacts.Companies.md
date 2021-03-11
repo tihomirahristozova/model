@@ -225,7 +225,7 @@ _Supports Order By_: **False**
 Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **[PartyType](General.Contacts.Companies.md#partytype)**  
-Allowed values for the `PartyType`(General.Contacts.Parties.md#partytype) data attribute  
+Allowed values for the PartyType data attribute  
 _Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)_  
 
 | Value | Description |

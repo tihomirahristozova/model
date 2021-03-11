@@ -1,5 +1,10 @@
 # Table Gen_Properties_Categories
 
+
+## Entity
+
+Entity: [General.PropertiesCategories](~/entities/General.PropertiesCategories.md)
+
 Categories of properties. Entity: Gen_Properties_Categories
 
 ## Summary
@@ -14,9 +19,6 @@ Categories of properties. Entity: Gen_Properties_Categories
 
 ### Properties_Category_Id
 
-
-Properties_Category_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -26,9 +28,8 @@ Properties_Category_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Properties_Categories](Gen_Properties_Categories.md).[Properties_Category_Id](Gen_Properties_Categories.md#properties_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -51,12 +52,9 @@ Properties_Category_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Properties_Category_Name
-
-
-Properties_Category_Name
 
 | Property | Value |
 | - | - |
@@ -67,9 +65,8 @@ Properties_Category_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties_Categories](Gen_Properties_Categories.md).[Properties_Category_Name](Gen_Properties_Categories.md#properties_category_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -92,13 +89,10 @@ Properties_Category_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -108,9 +102,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Properties_Categories](Gen_Properties_Categories.md).[Row_Version](Gen_Properties_Categories.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

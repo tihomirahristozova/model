@@ -12,14 +12,11 @@
 | - | - | --- |
 |[Object_Change_Id](#object_change_id)|`uniqueidentifier` `PK`||
 |[Attribute_Name](#attribute_name)|`nvarchar(64)` `PK`||
-|[New_Value](#new_value)|`nvarchar(2147483647)` ||
+|[New_Value](#new_value)|`nvarchar(max)` ||
 
 ## Columns
 
 ### Object_Change_Id
-
-
-Object_Change_Id
 
 | Property | Value |
 | - | - |
@@ -31,9 +28,8 @@ Object_Change_Id
 |Referenced Table|[Sys_Object_Changes](Sys_Object_Changes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Attribute_Changes](Sys_Attribute_Changes.md).[Object_Change_Id](Sys_Attribute_Changes.md#object_change_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,12 +52,9 @@ Object_Change_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Attribute_Name
-
-
-Attribute_Name
 
 | Property | Value |
 | - | - |
@@ -73,9 +66,8 @@ Attribute_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Attribute_Changes](Sys_Attribute_Changes.md).[Attribute_Name](Sys_Attribute_Changes.md#attribute_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,25 +90,21 @@ Attribute_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### New_Value
 
-
-New_Value
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Attribute_Changes](Sys_Attribute_Changes.md).[New_Value](Sys_Attribute_Changes.md#new_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -139,7 +127,7 @@ New_Value
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 

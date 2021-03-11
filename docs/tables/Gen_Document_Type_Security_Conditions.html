@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_document_type_security_conditions">Table Gen_Document_Type_Security_Conditions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.DocumentTypeSecurityConditions.html">General.DocumentTypeSecurityConditions</a></p>
 <p>Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -102,7 +104,7 @@
 </tr>
 <tr>
 <td><a href="#condition_filter_xml">Condition_Filter_Xml</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.</td>
 </tr>
 <tr>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="document_type_security_condition_id">Document_Type_Security_Condition_Id</h3>
-<p>Document_Type_Security_Condition_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Security_Conditions.html">Gen_Document_Type_Security_Conditions</a>.<a href="Gen_Document_Type_Security_Conditions.html#document_type_security_condition_id">Document_Type_Security_Condition_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,15 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_type_id">Document_Type_Id</h3>
-<p>Document_Type_Id</p>
-<p>The document type, whose documents will be secured by the current rule.</p>
 <p>The document type, whose documents will be secured by the current rule.</p>
 <table>
 <thead>
@@ -309,15 +304,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Security_Conditions.html">Gen_Document_Type_Security_Conditions</a>.<a href="Gen_Document_Type_Security_Conditions.html#document_type_id">Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -402,15 +393,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="condition_filter_xml">Condition_Filter_Xml</h3>
-<p>Condition_Filter_Xml</p>
-<p>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.</p>
 <p>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.</p>
 <table>
 <thead>
@@ -422,7 +411,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -450,15 +439,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Security_Conditions.html">Gen_Document_Type_Security_Conditions</a>.<a href="Gen_Document_Type_Security_Conditions.html#condition_filter_xml">Condition_Filter_Xml</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -531,8 +516,6 @@
 </tbody>
 </table>
 <h3 id="priority">Priority</h3>
-<p>Priority</p>
-<p>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.</p>
 <p>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.</p>
 <table>
 <thead>
@@ -568,7 +551,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -577,10 +560,6 @@
 <tr>
 <td>Default Value</td>
 <td>3</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Security_Conditions.html">Gen_Document_Type_Security_Conditions</a>.<a href="Gen_Document_Type_Security_Conditions.html#priority">Priority</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -672,8 +651,6 @@
 </tbody>
 </table>
 <h3 id="document_access_key_id">Document_Access_Key_Id</h3>
-<p>Document_Access_Key_Id</p>
-<p>The access key, which will be used to secure new documents, when this rule is selected.</p>
 <p>The access key, which will be used to secure new documents, when this rule is selected.</p>
 <table>
 <thead>
@@ -713,15 +690,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Security_Conditions.html">Gen_Document_Type_Security_Conditions</a>.<a href="Gen_Document_Type_Security_Conditions.html#document_access_key_id">Document_Access_Key_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -806,14 +779,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
 <table>
 <thead>
 <tr>
@@ -852,15 +824,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Security_Conditions.html">Gen_Document_Type_Security_Conditions</a>.<a href="Gen_Document_Type_Security_Conditions.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -945,7 +913,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -958,7 +926,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -993,15 +960,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Type_Security_Conditions.html">Gen_Document_Type_Security_Conditions</a>.<a href="Gen_Document_Type_Security_Conditions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

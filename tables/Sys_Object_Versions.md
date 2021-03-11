@@ -1,5 +1,10 @@
 # Table Sys_Object_Versions
 
+
+## Entity
+
+Entity: [Systems.Core.ObjectVersions](~/entities/Systems.Core.ObjectVersions.md)
+
 Contains history of saved version of the managed objects. Entity: Sys_Object_Versions
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 
 ### Object_Version_Id
 
-
-Object_Version_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Object_Version_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[Object_Version_Id](Sys_Object_Versions.md#object_version_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Object_Version_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Object_Id
-
-
-Object_Id
-
-
-The object, for which a version is stored.
 
 
 The object, for which a version is stored.
@@ -83,9 +78,8 @@ The object, for which a version is stored.
 |Referenced Table|[Sys_Objects](Sys_Objects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[Object_Id](Sys_Object_Versions.md#object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The object, for which a version is stored.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Version
-
-
-Version
-
-
-The version number of the version, stored in the current row, starting from 1.
 
 
 The version number of the version, stored in the current row, starting from 1.
@@ -129,9 +117,8 @@ The version number of the version, stored in the current row, starting from 1.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[Version](Sys_Object_Versions.md#version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,16 +141,10 @@ The version number of the version, stored in the current row, starting from 1.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### User_Id
-
-
-User_Id
-
-
-The user, which saved the version.
 
 
 The user, which saved the version.
@@ -177,9 +158,8 @@ The user, which saved the version.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[User_Id](Sys_Object_Versions.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,15 +182,9 @@ The user, which saved the version.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Version_Time
-
-
-Version_Time
-
-
-The timestamp when the version was saved.
 
 
 The timestamp when the version was saved.
@@ -224,9 +198,8 @@ The timestamp when the version was saved.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[Version_Time](Sys_Object_Versions.md#version_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -254,12 +227,6 @@ The timestamp when the version was saved.
 ### Object_Contents
 
 
-Object_Contents
-
-
-The compressed contents of the object.
-
-
 The compressed contents of the object.
 
 | Property | Value |
@@ -270,9 +237,8 @@ The compressed contents of the object.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[Object_Contents](Sys_Object_Versions.md#object_contents)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -294,12 +260,6 @@ The compressed contents of the object.
 ### Version_Type
 
 
-Version_Type
-
-
-Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object.
-
-
 Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object.
 
 | Property | Value |
@@ -311,10 +271,9 @@ Specifies the action, which occurred on the actual object, referred by the syste
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`C`, `U`|
 |Default Value|None|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[Version_Type](Sys_Object_Versions.md#version_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -336,12 +295,6 @@ Specifies the action, which occurred on the actual object, referred by the syste
 ### Server_Version
 
 
-Server_Version
-
-
-The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). NULL means the version is unknown.
-
-
 The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). NULL means the version is unknown.
 
 | Property | Value |
@@ -353,9 +306,8 @@ The version of the EnterpriseOne server, which created the version. The version 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[Server_Version](Sys_Object_Versions.md#server_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -376,9 +328,6 @@ The version of the EnterpriseOne server, which created the version. The version 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -387,9 +336,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Object_Versions](Sys_Object_Versions.md).[Row_Version](Sys_Object_Versions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

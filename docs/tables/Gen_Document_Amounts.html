@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_document_amounts">Table Gen_Document_Amounts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.DocumentAmounts.html">General.DocumentAmounts</a></p>
 <p>Contains a specific instance of an additional amount for a specific document. Entity: Gen_Document_Amounts</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -158,7 +160,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="document_amount_id">Document_Amount_Id</h3>
-<p>Document_Amount_Id</p>
 <table>
 <thead>
 <tr>
@@ -197,15 +198,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#document_amount_id">Document_Amount_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -290,14 +287,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -336,15 +332,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -429,15 +421,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_amount_type_id">Document_Amount_Type_Id</h3>
-<p>Document_Amount_Type_Id</p>
-<p>The type of the amount.</p>
 <p>The type of the amount.</p>
 <table>
 <thead>
@@ -477,15 +467,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#document_amount_type_id">Document_Amount_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -570,15 +556,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="input_percent">Input_Percent</h3>
-<p>Input_Percent</p>
-<p>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type).</p>
 <p>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type).</p>
 <table>
 <thead>
@@ -614,15 +598,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#input_percent">Input_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -714,8 +694,6 @@
 </tbody>
 </table>
 <h3 id="input_amount">Input_Amount</h3>
-<p>Input_Amount</p>
-<p>When not null, specifies directly the amount of the additional amount.</p>
 <p>When not null, specifies directly the amount of the additional amount.</p>
 <table>
 <thead>
@@ -751,15 +729,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#input_amount">Input_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -851,8 +825,6 @@
 </tbody>
 </table>
 <h3 id="input_amount_currency_id">Input_Amount_Currency_Id</h3>
-<p>Input_Amount_Currency_Id</p>
-<p>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null.</p>
 <p>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null.</p>
 <table>
 <thead>
@@ -892,15 +864,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#input_amount_currency_id">Input_Amount_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -985,15 +953,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="user_can_change_input">User_Can_Change_Input</h3>
-<p>User_Can_Change_Input</p>
-<p>1 if the user, entering the document is allowed to change the default input percent</p>
 <p>1 if the user, entering the document is allowed to change the default input percent</p>
 <table>
 <thead>
@@ -1029,15 +995,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#user_can_change_input">User_Can_Change_Input</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1110,8 +1072,6 @@
 </tbody>
 </table>
 <h3 id="input_unit_amount">Input_Unit_Amount</h3>
-<p>Input_Unit_Amount</p>
-<p>Input unit amount for the calculation of the current amount.</p>
 <p>Input unit amount for the calculation of the current amount.</p>
 <table>
 <thead>
@@ -1147,15 +1107,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#input_unit_amount">Input_Unit_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1240,7 +1196,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1253,8 +1209,6 @@
 </tbody>
 </table>
 <h3 id="input_unit_id">Input_Unit_Id</h3>
-<p>Input_Unit_Id</p>
-<p>Measurement unit of the input unit amount.</p>
 <p>Measurement unit of the input unit amount.</p>
 <table>
 <thead>
@@ -1294,15 +1248,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#input_unit_id">Input_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1387,14 +1337,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1429,15 +1378,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1510,8 +1455,6 @@
 </tbody>
 </table>
 <h3 id="base_amount">Base_Amount</h3>
-<p>Base_Amount</p>
-<p>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.</p>
 <p>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.</p>
 <table>
 <thead>
@@ -1547,15 +1490,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#base_amount">Base_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1628,8 +1567,6 @@
 </tbody>
 </table>
 <h3 id="total_distributed_amount">Total_Distributed_Amount</h3>
-<p>Total_Distributed_Amount</p>
-<p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet.</p>
 <p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet.</p>
 <table>
 <thead>
@@ -1665,15 +1602,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Amounts.html">Gen_Document_Amounts</a>.<a href="Gen_Document_Amounts.html#total_distributed_amount">Total_Distributed_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>

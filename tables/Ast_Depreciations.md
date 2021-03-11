@@ -1,5 +1,10 @@
 # Table Ast_Depreciations
 
+
+## Entity
+
+Entity: [Finance.Assets.Depreciations](~/entities/Finance.Assets.Depreciations.md)
+
 Depreciation documents contain actual depreciation values for one or more assets for one period. Entity: Ast_Depreciations
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Depreciation documents contain actual depreciation values for one or more assets
 
 ### Depreciation_Id
 
-
-Depreciation_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Depreciation_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Depreciations](Ast_Depreciations.md).[Depreciation_Id](Ast_Depreciations.md#depreciation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Depreciation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciations](Ast_Depreciations.md).[Document_Id](Ast_Depreciations.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Start_Date
-
-
-Start_Date
-
-
-Start date of the depreciation period accounted with this document
 
 
 Start date of the depreciation period accounted with this document
@@ -123,9 +114,8 @@ Start date of the depreciation period accounted with this document
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciations](Ast_Depreciations.md).[Start_Date](Ast_Depreciations.md#start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,12 +137,6 @@ Start date of the depreciation period accounted with this document
 ### End_Date
 
 
-End_Date
-
-
-End date of the depreciation period accounted with this document
-
-
 End date of the depreciation period accounted with this document
 
 | Property | Value |
@@ -164,9 +148,8 @@ End date of the depreciation period accounted with this document
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciations](Ast_Depreciations.md).[End_Date](Ast_Depreciations.md#end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -188,12 +171,6 @@ End date of the depreciation period accounted with this document
 ### Depreciation_Range
 
 
-Depreciation_Range
-
-
-Determines whether all assets in the system will be depreciated or only the assets specified in the current document will be depreciated. A = 'All assets', S = 'Specified assets'
-
-
 Determines whether all assets in the system will be depreciated or only the assets specified in the current document will be depreciated. A = 'All assets', S = 'Specified assets'
 
 | Property | Value |
@@ -205,10 +182,9 @@ Determines whether all assets in the system will be depreciated or only the asse
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `S`|
 |Default Value|A|
-|Derived From|[Ast_Depreciations](Ast_Depreciations.md).[Depreciation_Range](Ast_Depreciations.md#depreciation_range)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -231,17 +207,11 @@ Determines whether all assets in the system will be depreciated or only the asse
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -252,9 +222,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Ast_Depreciations](Ast_Depreciations.md).[Is_Single_Execution](Ast_Depreciations.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,17 +246,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -298,9 +261,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Ast_Depreciations](Ast_Depreciations.md).[Is_Released](Ast_Depreciations.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -323,12 +285,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -338,9 +297,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciations](Ast_Depreciations.md).[Row_Version](Ast_Depreciations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

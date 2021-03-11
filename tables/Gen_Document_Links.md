@@ -1,5 +1,10 @@
 # Table Gen_Document_Links
 
+
+## Entity
+
+Entity: [General.DocumentLinks](~/entities/General.DocumentLinks.md)
+
 Obsolete. Not used. Entity: Gen_Document_Links
 
 ## Summary
@@ -15,9 +20,6 @@ Obsolete. Not used. Entity: Gen_Document_Links
 
 ### Link_Type_Id
 
-
-Link_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Link_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Links](Gen_Document_Links.md).[Link_Type_Id](Gen_Document_Links.md#link_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,12 +53,9 @@ Link_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Document_Id
-
-
-From_Document_Id
 
 | Property | Value |
 | - | - |
@@ -68,9 +66,8 @@ From_Document_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Links](Gen_Document_Links.md).[From_Document_Id](Gen_Document_Links.md#from_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -93,12 +90,9 @@ From_Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### To_Document_Id
-
-
-To_Document_Id
 
 | Property | Value |
 | - | - |
@@ -109,9 +103,8 @@ To_Document_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Links](Gen_Document_Links.md).[To_Document_Id](Gen_Document_Links.md#to_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -134,12 +127,9 @@ To_Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -149,9 +139,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Links](Gen_Document_Links.md).[Row_Version](Gen_Document_Links.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Product_Group_Range_Properties
 
+
+## Entity
+
+Entity: [General.Products.ProductGroupRangeProperties](~/entities/General.Products.ProductGroupRangeProperties.md)
+
 When specified for a product group, provides a way for automatical creation of new products, based on altering a set of values of some user-defined properties. Each value combination is used to create a new, unique product within the group. Entity: Gen_Product_Group_Range_Properties
 
 ## Owner Tables Hierarchy
@@ -16,15 +21,12 @@ When specified for a product group, provides a way for automatical creation of n
 |[Range_Type](#range_type)|`nvarchar(1)` Allowed: `R`, `L`|Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;|
 |[From_Property_Value](#from_property_value)|`nvarchar(254)` |Starting value of the range of alternative values. Used only when Rage Type = R (range).|
 |[To_Property_Value](#to_property_value)|`nvarchar(254)` |Ending value of the range of alternative values. Used only when Rage Type = R (range).|
-|[Property_Values_List](#property_values_list)|`nvarchar(2147483647)` |Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).|
+|[Property_Values_List](#property_values_list)|`nvarchar(max)` |Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Range_Property_Id
-
-
-Range_Property_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Range_Property_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Group_Range_Properties](Gen_Product_Group_Range_Properties.md).[Range_Property_Id](Gen_Product_Group_Range_Properties.md#range_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Range_Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Product_Group_Id
-
-
-Product_Group_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Product_Group_Id
 |Referenced Table|[Gen_Product_Groups](Gen_Product_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Range_Properties](Gen_Product_Group_Range_Properties.md).[Product_Group_Id](Gen_Product_Group_Range_Properties.md#product_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Product_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_Id
-
-
-Property_Id
-
-
-The property whose values will be altered.
 
 
 The property whose values will be altered.
@@ -123,9 +114,8 @@ The property whose values will be altered.
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Range_Properties](Gen_Product_Group_Range_Properties.md).[Property_Id](Gen_Product_Group_Range_Properties.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +138,9 @@ The property whose values will be altered.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Range_Type
-
-
-Range_Type
-
-
-Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;
 
 
 Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;
@@ -170,10 +154,9 @@ Specifies the method of the creation of the value set: R - by range from-to; E -
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`R`, `L`|
 |Default Value|R|
-|Derived From|[Gen_Product_Group_Range_Properties](Gen_Product_Group_Range_Properties.md).[Range_Type](Gen_Product_Group_Range_Properties.md#range_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,12 +178,6 @@ Specifies the method of the creation of the value set: R - by range from-to; E -
 ### From_Property_Value
 
 
-From_Property_Value
-
-
-Starting value of the range of alternative values. Used only when Rage Type = R (range).
-
-
 Starting value of the range of alternative values. Used only when Rage Type = R (range).
 
 | Property | Value |
@@ -212,9 +189,8 @@ Starting value of the range of alternative values. Used only when Rage Type = R 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Range_Properties](Gen_Product_Group_Range_Properties.md).[From_Property_Value](Gen_Product_Group_Range_Properties.md#from_property_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -236,12 +212,6 @@ Starting value of the range of alternative values. Used only when Rage Type = R 
 ### To_Property_Value
 
 
-To_Property_Value
-
-
-Ending value of the range of alternative values. Used only when Rage Type = R (range).
-
-
 Ending value of the range of alternative values. Used only when Rage Type = R (range).
 
 | Property | Value |
@@ -253,9 +223,8 @@ Ending value of the range of alternative values. Used only when Rage Type = R (r
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Range_Properties](Gen_Product_Group_Range_Properties.md).[To_Property_Value](Gen_Product_Group_Range_Properties.md#to_property_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,26 +246,19 @@ Ending value of the range of alternative values. Used only when Rage Type = R (r
 ### Property_Values_List
 
 
-Property_Values_List
-
-
-Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).
-
-
 Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Range_Properties](Gen_Product_Group_Range_Properties.md).[Property_Values_List](Gen_Product_Group_Range_Properties.md#property_values_list)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -317,9 +279,6 @@ Contains the enumeration of all values in the alternating value set. Used only w
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -328,9 +287,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Group_Range_Properties](Gen_Product_Group_Range_Properties.md).[Row_Version](Gen_Product_Group_Range_Properties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_work_report_resources">Table Prj_Work_Report_Resources</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.WorkReportResources.html">Projects.WorkReportResources</a></p>
 <p>Each record contains usage of resource, reported by the related Work Report. Entity: Prj_Work_Report_Resources</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -144,7 +146,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="work_report_resource_id">Work_Report_Resource_Id</h3>
-<p>Work_Report_Resource_Id</p>
 <table>
 <thead>
 <tr>
@@ -183,15 +184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#work_report_resource_id">Work_Report_Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -276,14 +273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="work_report_id">Work_Report_Id</h3>
-<p>Work_Report_Id</p>
 <table>
 <thead>
 <tr>
@@ -322,15 +318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#work_report_id">Work_Report_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -415,15 +407,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_task_id">Project_Task_Id</h3>
-<p>Project_Task_Id</p>
-<p>The project task for which the work is reported.</p>
 <p>The project task for which the work is reported.</p>
 <table>
 <thead>
@@ -463,15 +453,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#project_task_id">Project_Task_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -556,15 +542,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_id">Resource_Id</h3>
-<p>Resource_Id</p>
-<p>The resource, for which usage is reported.</p>
 <p>The resource, for which usage is reported.</p>
 <table>
 <thead>
@@ -604,15 +588,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#resource_id">Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -697,15 +677,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_instance_id">Resource_Instance_Id</h3>
-<p>Resource_Instance_Id</p>
-<p>The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used.</p>
 <p>The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used.</p>
 <table>
 <thead>
@@ -745,15 +723,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#resource_instance_id">Resource_Instance_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -838,7 +812,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -851,8 +825,6 @@
 </tbody>
 </table>
 <h3 id="total_resource_usage_hours">Total_Resource_Usage_Hours</h3>
-<p>Total_Resource_Usage_Hours</p>
-<p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.</p>
 <p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.</p>
 <table>
 <thead>
@@ -888,15 +860,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#total_resource_usage_hours">Total_Resource_Usage_Hours</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -981,7 +949,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -994,8 +962,6 @@
 </tbody>
 </table>
 <h3 id="actual_start_time">Actual_Start_Time</h3>
-<p>Actual_Start_Time</p>
-<p>Optionally, specifies the actual date and time when the resource usage began.</p>
 <p>Optionally, specifies the actual date and time when the resource usage began.</p>
 <table>
 <thead>
@@ -1035,15 +1001,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#actual_start_time">Actual_Start_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1128,7 +1090,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1141,8 +1103,6 @@
 </tbody>
 </table>
 <h3 id="actual_end_time">Actual_End_Time</h3>
-<p>Actual_End_Time</p>
-<p>Optionally, specifies the actual date and time when the resource usage ended.</p>
 <p>Optionally, specifies the actual date and time when the resource usage ended.</p>
 <table>
 <thead>
@@ -1182,15 +1142,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#actual_end_time">Actual_End_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1275,7 +1231,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1288,7 +1244,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1323,15 +1278,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Report_Resources.html">Prj_Work_Report_Resources</a>.<a href="Prj_Work_Report_Resources.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

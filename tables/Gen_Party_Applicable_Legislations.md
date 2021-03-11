@@ -1,5 +1,10 @@
 # Table Gen_Party_Applicable_Legislations
 
+
+## Entity
+
+Entity: [General.PartyApplicableLegislations](~/entities/General.PartyApplicableLegislations.md)
+
 Specifies a legislation, which is applicable for a party. A single party can have more than one applicable legislations. Entity: Gen_Party_Applicable_Legislations (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Specifies a legislation, which is applicable for a party. A single party can hav
 
 ### Party_Applicable_Legislation_Id
 
-
-Party_Applicable_Legislation_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Party_Applicable_Legislation_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Party_Applicable_Legislations](Gen_Party_Applicable_Legislations.md).[Party_Applicable_Legislation_Id](Gen_Party_Applicable_Legislations.md#party_applicable_legislation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Party_Applicable_Legislation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Party_Id
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Applicable_Legislations](Gen_Party_Applicable_Legislations.md).[Party_Id](Gen_Party_Applicable_Legislations.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Party_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Applicable_Legislation
-
-
-Applicable_Legislation
-
-
-A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc.
 
 
 A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc.
@@ -120,10 +111,9 @@ A legislation, which applies to the specified party. The list of legislations is
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`AE`, `AU`, `BG`, `CA`, `CN`, `CZ`, `DE`, `ES`, `EU`, `FR`, `GR`, `HU`, `IN`, `IT`, `JP`, `MK`, `PL`, `PT`, `RO`, `RS`, `RU`, `TR`, `UK`, `US`, `ZA`|
 |Default Value|None|
-|Derived From|[Gen_Party_Applicable_Legislations](Gen_Party_Applicable_Legislations.md).[Applicable_Legislation](Gen_Party_Applicable_Legislations.md#applicable_legislation)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +136,9 @@ A legislation, which applies to the specified party. The list of legislations is
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -162,9 +149,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Party_Applicable_Legislations](Gen_Party_Applicable_Legislations.md).[Notes](Gen_Party_Applicable_Legislations.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,9 +177,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -202,9 +185,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Party_Applicable_Legislations](Gen_Party_Applicable_Legislations.md).[Row_Version](Gen_Party_Applicable_Legislations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

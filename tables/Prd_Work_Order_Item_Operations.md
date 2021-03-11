@@ -1,5 +1,10 @@
 # Table Prd_Work_Order_Item_Operations
 
+
+## Entity
+
+Entity: [Production.ShopFloor.WorkOrderItemOperations](~/entities/Production.ShopFloor.WorkOrderItemOperations.md)
+
 The operations that are performed to produce the product. Entity: Prd_Work_Order_Item_Operations
 
 ## Owner Tables Hierarchy
@@ -14,11 +19,11 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 | - | - | --- |
 |[Line_Ord](#line_ord)|`int` |Order of the line within the work order routing|
 |[Operation_Id](#operation_id)|`uniqueidentifier` |The performed operation.|
-|[Operation_Description](#operation_description)|`nvarchar(2147483647)` |The short description of the operation.|
+|[Operation_Description](#operation_description)|`nvarchar(max)` |The short description of the operation.|
 |[Workgroup_Resource_Id](#workgroup_resource_id)|`uniqueidentifier` |The resource that will be used for the operation. NULL means that no resource will be locked for the operation|
 |[Use_Quantity](#use_quantity)|`decimal(9, 3)` |Quantity of the resource, that should be allocated for the operation|
 |[Id](#id)|`uniqueidentifier` `PK`||
-|[Tooling](#tooling)|`nvarchar(2147483647)` |The tools needed for the routing step|
+|[Tooling](#tooling)|`nvarchar(max)` |The tools needed for the routing step|
 |[Actual_End_Date_Time](#actual_end_date_time)|`datetime` |The date/time when the operation has completed. NULL means that the operation is not completed.|
 |[Actual_Start_Date_Time](#actual_start_date_time)|`datetime` |The date/time when the operation has started. NULL means that the has not started yet|
 |[Scrap_Rate](#scrap_rate)|`decimal(7, 6)` |Projected scrap rate of the operation|
@@ -38,12 +43,6 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 ### Line_Ord
 
 
-Line_Ord
-
-
-Order of the line within the work order routing
-
-
 Order of the line within the work order routing
 
 | Property | Value |
@@ -54,10 +53,9 @@ Order of the line within the work order routing
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Line_Ord](Prd_Work_Order_Item_Operations.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -80,16 +78,10 @@ Order of the line within the work order routing
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|yes|
 
 ### Operation_Id
-
-
-Operation_Id
-
-
-The performed operation.
 
 
 The performed operation.
@@ -103,9 +95,8 @@ The performed operation.
 |Referenced Table|[Prd_Operations](Prd_Operations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Operation_Id](Prd_Work_Order_Item_Operations.md#operation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -128,31 +119,24 @@ The performed operation.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Operation_Description
-
-
-Operation_Description
-
-
-The short description of the operation.
 
 
 The short description of the operation.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Operation_Description](Prd_Work_Order_Item_Operations.md#operation_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -174,12 +158,6 @@ The short description of the operation.
 ### Workgroup_Resource_Id
 
 
-Workgroup_Resource_Id
-
-
-The resource that will be used for the operation. NULL means that no resource will be locked for the operation
-
-
 The resource that will be used for the operation. NULL means that no resource will be locked for the operation
 
 | Property | Value |
@@ -191,9 +169,8 @@ The resource that will be used for the operation. NULL means that no resource wi
 |Referenced Table|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Workgroup_Resource_Id](Prd_Work_Order_Item_Operations.md#workgroup_resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -216,15 +193,9 @@ The resource that will be used for the operation. NULL means that no resource wi
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Use_Quantity
-
-
-Use_Quantity
-
-
-Quantity of the resource, that should be allocated for the operation
 
 
 Quantity of the resource, that should be allocated for the operation
@@ -237,9 +208,8 @@ Quantity of the resource, that should be allocated for the operation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Use_Quantity](Prd_Work_Order_Item_Operations.md#use_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -260,9 +230,6 @@ Quantity of the resource, that should be allocated for the operation
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -272,9 +239,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Id](Prd_Work_Order_Item_Operations.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -297,31 +263,24 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Tooling
-
-
-Tooling
-
-
-The tools needed for the routing step
 
 
 The tools needed for the routing step
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Tooling](Prd_Work_Order_Item_Operations.md#tooling)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -343,12 +302,6 @@ The tools needed for the routing step
 ### Actual_End_Date_Time
 
 
-Actual_End_Date_Time
-
-
-The date/time when the operation has completed. NULL means that the operation is not completed.
-
-
 The date/time when the operation has completed. NULL means that the operation is not completed.
 
 | Property | Value |
@@ -360,9 +313,8 @@ The date/time when the operation has completed. NULL means that the operation is
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Actual_End_Date_Time](Prd_Work_Order_Item_Operations.md#actual_end_date_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -384,12 +336,6 @@ The date/time when the operation has completed. NULL means that the operation is
 ### Actual_Start_Date_Time
 
 
-Actual_Start_Date_Time
-
-
-The date/time when the operation has started. NULL means that the has not started yet
-
-
 The date/time when the operation has started. NULL means that the has not started yet
 
 | Property | Value |
@@ -401,9 +347,8 @@ The date/time when the operation has started. NULL means that the has not starte
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Actual_Start_Date_Time](Prd_Work_Order_Item_Operations.md#actual_start_date_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -425,12 +370,6 @@ The date/time when the operation has started. NULL means that the has not starte
 ### Scrap_Rate
 
 
-Scrap_Rate
-
-
-Projected scrap rate of the operation
-
-
 Projected scrap rate of the operation
 
 | Property | Value |
@@ -441,9 +380,8 @@ Projected scrap rate of the operation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Scrap_Rate](Prd_Work_Order_Item_Operations.md#scrap_rate)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -465,12 +403,6 @@ Projected scrap rate of the operation
 ### Move_Time_Minutes
 
 
-Move_Time_Minutes
-
-
-Time to move the lot to the next operation in minutes
-
-
 Time to move the lot to the next operation in minutes
 
 | Property | Value |
@@ -481,9 +413,8 @@ Time to move the lot to the next operation in minutes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Move_Time_Minutes](Prd_Work_Order_Item_Operations.md#move_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -505,12 +436,6 @@ Time to move the lot to the next operation in minutes
 ### Setup_Time_Minutes
 
 
-Setup_Time_Minutes
-
-
-Time needed to setup the equipment in minutes
-
-
 Time needed to setup the equipment in minutes
 
 | Property | Value |
@@ -521,9 +446,8 @@ Time needed to setup the equipment in minutes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Setup_Time_Minutes](Prd_Work_Order_Item_Operations.md#setup_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -545,12 +469,6 @@ Time needed to setup the equipment in minutes
 ### Run_Time_Minutes
 
 
-Run_Time_Minutes
-
-
-Time for production of one lot of the produced item in minutes
-
-
 Time for production of one lot of the produced item in minutes
 
 | Property | Value |
@@ -561,9 +479,8 @@ Time for production of one lot of the produced item in minutes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Run_Time_Minutes](Prd_Work_Order_Item_Operations.md#run_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -584,9 +501,6 @@ Time for production of one lot of the produced item in minutes
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -596,9 +510,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Notes](Prd_Work_Order_Item_Operations.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -620,12 +533,6 @@ Notes
 ### Minimum_Concurrent_Start_Time_Minutes
 
 
-Minimum_Concurrent_Start_Time_Minutes
-
-
-How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting
-
-
 How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting
 
 | Property | Value |
@@ -636,9 +543,8 @@ How many minutes after the start of this operation can the next operation start.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Minimum_Concurrent_Start_Time_Minutes](Prd_Work_Order_Item_Operations.md#minimum_concurrent_start_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -660,12 +566,6 @@ How many minutes after the start of this operation can the next operation start.
 ### Scheduled_End_Date_Time
 
 
-Scheduled_End_Date_Time
-
-
-The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)
-
-
 The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)
 
 | Property | Value |
@@ -677,9 +577,8 @@ The date/time when the operation is scheduled to complete. NULL means that there
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Scheduled_End_Date_Time](Prd_Work_Order_Item_Operations.md#scheduled_end_date_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -701,12 +600,6 @@ The date/time when the operation is scheduled to complete. NULL means that there
 ### Scheduled_Start_Date_Time
 
 
-Scheduled_Start_Date_Time
-
-
-The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)
-
-
 The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)
 
 | Property | Value |
@@ -718,9 +611,8 @@ The date/time when the operation is planned to start. NULL means that there is s
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Scheduled_Start_Date_Time](Prd_Work_Order_Item_Operations.md#scheduled_start_date_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -742,12 +634,6 @@ The date/time when the operation is planned to start. NULL means that there is s
 ### Work_Order_Item_Id
 
 
-Work_Order_Item_Id
-
-
-The work order item, containing the line.
-
-
 The work order item, containing the line.
 
 | Property | Value |
@@ -759,9 +645,8 @@ The work order item, containing the line.
 |Referenced Table|[Prd_Work_Order_Items](Prd_Work_Order_Items.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Work_Order_Item_Id](Prd_Work_Order_Item_Operations.md#work_order_item_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -784,15 +669,9 @@ The work order item, containing the line.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Wait_Time_Minutes
-
-
-Wait_Time_Minutes
-
-
-Wait time (drying, cooling, etc.) after the operation in minutes
 
 
 Wait time (drying, cooling, etc.) after the operation in minutes
@@ -805,9 +684,8 @@ Wait time (drying, cooling, etc.) after the operation in minutes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Wait_Time_Minutes](Prd_Work_Order_Item_Operations.md#wait_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -828,9 +706,6 @@ Wait time (drying, cooling, etc.) after the operation in minutes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -839,9 +714,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md).[Row_Version](Prd_Work_Order_Item_Operations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

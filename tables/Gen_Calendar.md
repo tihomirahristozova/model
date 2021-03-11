@@ -13,12 +13,6 @@
 ### Calendar_Date
 
 
-Calendar_Date
-
-
-Obsolete, not used
-
-
 Obsolete, not used
 
 | Property | Value |
@@ -31,9 +25,8 @@ Obsolete, not used
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Calendar](Gen_Calendar.md).[Calendar_Date](Gen_Calendar.md#calendar_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,9 +47,6 @@ Obsolete, not used
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -65,9 +55,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Calendar](Gen_Calendar.md).[Row_Version](Gen_Calendar.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

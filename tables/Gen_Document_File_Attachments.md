@@ -1,5 +1,10 @@
 # Table Gen_Document_File_Attachments
 
+
+## Entity
+
+Entity: [General.DocumentFileAttachments](~/entities/General.DocumentFileAttachments.md)
+
 Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 
 ## Owner Tables Hierarchy
@@ -13,7 +18,7 @@ Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 |[File_Name](#file_name)|`nvarchar(128)` |The display name of the file. Initially set to the file name (without path) of the linked or the embedded file|
 |[Is_Linked](#is_linked)|`bit` |1 when the document is linked (ony file name is kept). 0 when the document is embedded|
 |[Linked_File_Path](#linked_file_path)|`nvarchar(254)` |Path to the linked file. NULL when the file is embedded|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Document_File_Id](#document_file_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Embedded_File_Contents](#embedded_file_contents)|`varbinary` |The contents of the embedded file. NULL when the file is linked|
@@ -22,12 +27,6 @@ Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 ## Columns
 
 ### File_Name
-
-
-File_Name
-
-
-The display name of the file. Initially set to the file name (without path) of the linked or the embedded file
 
 
 The display name of the file. Initially set to the file name (without path) of the linked or the embedded file
@@ -41,9 +40,8 @@ The display name of the file. Initially set to the file name (without path) of t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_File_Attachments](Gen_Document_File_Attachments.md).[File_Name](Gen_Document_File_Attachments.md#file_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,12 +63,6 @@ The display name of the file. Initially set to the file name (without path) of t
 ### Is_Linked
 
 
-Is_Linked
-
-
-1 when the document is linked (ony file name is kept). 0 when the document is embedded
-
-
 1 when the document is linked (ony file name is kept). 0 when the document is embedded
 
 | Property | Value |
@@ -81,9 +73,8 @@ Is_Linked
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Document_File_Attachments](Gen_Document_File_Attachments.md).[Is_Linked](Gen_Document_File_Attachments.md#is_linked)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +97,9 @@ Is_Linked
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Linked_File_Path
-
-
-Linked_File_Path
-
-
-Path to the linked file. NULL when the file is embedded
 
 
 Path to the linked file. NULL when the file is embedded
@@ -128,9 +113,8 @@ Path to the linked file. NULL when the file is embedded
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_File_Attachments](Gen_Document_File_Attachments.md).[Linked_File_Path](Gen_Document_File_Attachments.md#linked_file_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,21 +135,17 @@ Path to the linked file. NULL when the file is embedded
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Document_File_Attachments](Gen_Document_File_Attachments.md).[Notes](Gen_Document_File_Attachments.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,9 +166,6 @@ Notes
 
 ### Document_File_Id
 
-
-Document_File_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -198,9 +175,8 @@ Document_File_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_File_Attachments](Gen_Document_File_Attachments.md).[Document_File_Id](Gen_Document_File_Attachments.md#document_file_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -223,12 +199,9 @@ Document_File_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -239,9 +212,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_File_Attachments](Gen_Document_File_Attachments.md).[Document_Id](Gen_Document_File_Attachments.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -264,15 +236,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Embedded_File_Contents
-
-
-Embedded_File_Contents
-
-
-The contents of the embedded file. NULL when the file is linked
 
 
 The contents of the embedded file. NULL when the file is linked
@@ -285,9 +251,8 @@ The contents of the embedded file. NULL when the file is linked
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_File_Attachments](Gen_Document_File_Attachments.md).[Embedded_File_Contents](Gen_Document_File_Attachments.md#embedded_file_contents)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -308,9 +273,6 @@ The contents of the embedded file. NULL when the file is linked
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -319,9 +281,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_File_Attachments](Gen_Document_File_Attachments.md).[Row_Version](Gen_Document_File_Attachments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Log_Logistic_Unit_Types
 
+
+## Entity
+
+Entity: [Logistics.LogisticUnitTypes](~/entities/Logistics.LogisticUnitTypes.md)
+
 Types of logistic units, like EU-PALLET, 40x40 pallet, ISO container, etc. Entity: Log_Logistic_Unit_Types (Introduced in version 21.1.0.77)
 
 ## Summary
@@ -9,15 +14,12 @@ Types of logistic units, like EU-PALLET, 40x40 pallet, ISO container, etc. Entit
 |[Logistic_Unit_Type_Id](#logistic_unit_type_id)|`uniqueidentifier` `PK`||
 |[Code](#code)|`nvarchar(16)` |Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers.|
 |[Name](#name)|`nvarchar(254)` `ML`|Multi-language name of the logistic unit type.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Logistic_Unit_Type_Id
-
-
-Logistic_Unit_Type_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Logistic_Unit_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Logistic_Unit_Types](Log_Logistic_Unit_Types.md).[Logistic_Unit_Type_Id](Log_Logistic_Unit_Types.md#logistic_unit_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Logistic_Unit_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Code
-
-
-Code
-
-
-Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers.
 
 
 Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers.
@@ -75,9 +70,8 @@ Unique code of the logistic unit type. Used for display and selection purposes. 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Types](Log_Logistic_Unit_Types.md).[Code](Log_Logistic_Unit_Types.md#code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,16 +94,10 @@ Unique code of the logistic unit type. Used for display and selection purposes. 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Name
-
-
-Name
-
-
-Multi-language name of the logistic unit type.
 
 
 Multi-language name of the logistic unit type.
@@ -123,9 +111,8 @@ Multi-language name of the logistic unit type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Types](Log_Logistic_Unit_Types.md).[Name](Log_Logistic_Unit_Types.md#name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,26 +135,22 @@ Multi-language name of the logistic unit type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Types](Log_Logistic_Unit_Types.md).[Notes](Log_Logistic_Unit_Types.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,9 +177,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -205,9 +185,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Types](Log_Logistic_Unit_Types.md).[Row_Version](Log_Logistic_Unit_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

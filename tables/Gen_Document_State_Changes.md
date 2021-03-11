@@ -1,5 +1,10 @@
 # Table Gen_Document_State_Changes
 
+
+## Entity
+
+Entity: [General.DocumentStateChanges](~/entities/General.DocumentStateChanges.md)
+
 History of document state changes. Entity: Gen_Document_State_Changes
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ History of document state changes. Entity: Gen_Document_State_Changes
 
 ### Document_State_Change_Id
 
-
-Document_State_Change_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Document_State_Change_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[Document_State_Change_Id](Gen_Document_State_Changes.md#document_state_change_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Document_State_Change_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The document which has changed state.
 
 
 The document which has changed state.
@@ -83,9 +78,8 @@ The document which has changed state.
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[Document_Id](Gen_Document_State_Changes.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The document which has changed state.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### New_State
-
-
-New_State
-
-
-The new state after the change.
 
 
 The new state after the change.
@@ -129,10 +117,9 @@ The new state after the change.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`0`, `10`, `20`, `30`, `40`, `50`, `5`|
 |Default Value|None|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[New_State](Gen_Document_State_Changes.md#new_state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,15 +142,9 @@ The new state after the change.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Update_Time
-
-
-Update_Time
-
-
-The time when the change took effect.
 
 
 The time when the change took effect.
@@ -177,9 +158,8 @@ The time when the change took effect.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[Update_Time](Gen_Document_State_Changes.md#update_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -207,12 +187,6 @@ The time when the change took effect.
 ### Update_User
 
 
-Update_User
-
-
-The login name of the user, who made the status change
-
-
 The login name of the user, who made the status change
 
 | Property | Value |
@@ -224,9 +198,8 @@ The login name of the user, who made the status change
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[Update_User](Gen_Document_State_Changes.md#update_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,15 +222,9 @@ The login name of the user, who made the status change
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Status_Id
-
-
-User_Status_Id
-
-
-The new user status after the change.
 
 
 The new user status after the change.
@@ -271,9 +238,8 @@ The new user status after the change.
 |Referenced Table|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[User_Status_Id](Gen_Document_State_Changes.md#user_status_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -296,12 +262,9 @@ The new user status after the change.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### System_Initiated
-
-
-System_Initiated
 
 | Property | Value |
 | - | - |
@@ -311,9 +274,8 @@ System_Initiated
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[System_Initiated](Gen_Document_State_Changes.md#system_initiated)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,9 +296,6 @@ System_Initiated
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -345,9 +304,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[Row_Version](Gen_Document_State_Changes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -369,12 +327,6 @@ Row_Version
 ### Void
 
 
-Void
-
-
-1 if the document is voided with this change
-
-
 1 if the document is voided with this change
 
 | Property | Value |
@@ -385,9 +337,8 @@ Void
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Document_State_Changes](Gen_Document_State_Changes.md).[Void](Gen_Document_State_Changes.md#void)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -410,6 +361,6 @@ Void
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 

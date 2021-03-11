@@ -1,5 +1,10 @@
 # Table Crm_Promotional_Package_Lines
 
+
+## Entity
+
+Entity: [Crm.PromotionalPackageLines](~/entities/Crm.PromotionalPackageLines.md)
+
 Detail records (lines) of promotional package definition. Entity: Crm_Promotional_Package_Lines
 
 ## Owner Tables Hierarchy
@@ -26,9 +31,6 @@ Detail records (lines) of promotional package definition. Entity: Crm_Promotiona
 
 ### Promotional_Package_Line_Id
 
-
-Promotional_Package_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -38,9 +40,8 @@ Promotional_Package_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Promotional_Package_Line_Id](Crm_Promotional_Package_Lines.md#promotional_package_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,12 +64,9 @@ Promotional_Package_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Promotional_Package_Id
-
-
-Promotional_Package_Id
 
 | Property | Value |
 | - | - |
@@ -79,9 +77,8 @@ Promotional_Package_Id
 |Referenced Table|[Crm_Promotional_Packages](Crm_Promotional_Packages.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Promotional_Package_Id](Crm_Promotional_Package_Lines.md#promotional_package_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +101,9 @@ Promotional_Package_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_Number
-
-
-Line_Number
-
-
-Consecutive line number
 
 
 Consecutive line number
@@ -125,10 +116,9 @@ Consecutive line number
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Line_Number](Crm_Promotional_Package_Lines.md#line_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,12 +140,6 @@ Consecutive line number
 ### Product_Id
 
 
-Product_Id
-
-
-The product, which is included in the promotional package
-
-
 The product, which is included in the promotional package
 
 | Property | Value |
@@ -167,9 +151,8 @@ The product, which is included in the promotional package
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Product_Id](Crm_Promotional_Package_Lines.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,15 +175,9 @@ The product, which is included in the promotional package
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The quantity of the product in the package in the base measurement unit of the Product.
 
 
 The quantity of the product in the package in the base measurement unit of the Product.
@@ -213,9 +190,8 @@ The quantity of the product in the package in the base measurement unit of the P
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Quantity](Crm_Promotional_Package_Lines.md#quantity)|
 |Format|N3|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,12 +219,6 @@ The quantity of the product in the package in the base measurement unit of the P
 ### Standard_Discount_Percent_Adjust
 
 
-Standard_Discount_Percent_Adjust
-
-
-The value of change (in percents) for the standard discount
-
-
 The value of change (in percents) for the standard discount
 
 | Property | Value |
@@ -259,9 +229,8 @@ The value of change (in percents) for the standard discount
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|0|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Standard_Discount_Percent_Adjust](Crm_Promotional_Package_Lines.md#standard_discount_percent_adjust)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -283,12 +252,6 @@ The value of change (in percents) for the standard discount
 ### Standard_Discount_Adjust_Or_Replace
 
 
-Standard_Discount_Adjust_Or_Replace
-
-
-Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount
-
-
 Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount
 
 | Property | Value |
@@ -300,10 +263,9 @@ Specifies standard discount change action: A=ADD, M=Mark down - apply after stan
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `R`, `M`|
 |Default Value|R|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Standard_Discount_Adjust_Or_Replace](Crm_Promotional_Package_Lines.md#standard_discount_adjust_or_replace)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -325,12 +287,6 @@ Specifies standard discount change action: A=ADD, M=Mark down - apply after stan
 ### Unit_Price
 
 
-Unit_Price
-
-
-When not null specifies directly unit price for the product. When NULL, the package specifies only discount
-
-
 When not null specifies directly unit price for the product. When NULL, the package specifies only discount
 
 | Property | Value |
@@ -341,9 +297,8 @@ When not null specifies directly unit price for the product. When NULL, the pack
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Unit_Price](Crm_Promotional_Package_Lines.md#unit_price)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -365,12 +320,6 @@ When not null specifies directly unit price for the product. When NULL, the pack
 ### Unit_Price_Currency_Id
 
 
-Unit_Price_Currency_Id
-
-
-Currency of the unit price. NULL if the package specifies only discount
-
-
 Currency of the unit price. NULL if the package specifies only discount
 
 | Property | Value |
@@ -382,9 +331,8 @@ Currency of the unit price. NULL if the package specifies only discount
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Unit_Price_Currency_Id](Crm_Promotional_Package_Lines.md#unit_price_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -407,12 +355,9 @@ Currency of the unit price. NULL if the package specifies only discount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -422,9 +367,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Row_Version](Crm_Promotional_Package_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -446,12 +390,6 @@ Row_Version
 ### Lot_Id
 
 
-Lot_Id
-
-
-The Product lot number in the promotional package.
-
-
 The Product lot number in the promotional package.
 
 | Property | Value |
@@ -463,9 +401,8 @@ The Product lot number in the promotional package.
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md).[Lot_Id](Crm_Promotional_Package_Lines.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -488,6 +425,6 @@ The Product lot number in the promotional package.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

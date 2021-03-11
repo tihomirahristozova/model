@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_promotional_packages">Table Crm_Promotional_Packages</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.PromotionalPackages.html">Crm.PromotionalPackages</a></p>
 <p>Promotional packages are packages of products, which are sold together at a special pricing and discount conditions. Entity: Crm_Promotional_Packages</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -132,12 +134,12 @@
 </tr>
 <tr>
 <td><a href="#valid_for_customer_filter_xml">Valid_For_Customer_Filter_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>When not NULL, the package is valid only for the customers, that match the filter</td>
 </tr>
 <tr>
 <td><a href="#valid_for_distribution_channel_filter_xml">Valid_For_Distribution_Channel_Filter_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>When not NULL, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.</td>
 </tr>
 <tr>
@@ -167,7 +169,7 @@
 </tr>
 <tr>
 <td><a href="#valid_for_ship_to_customer_filter_xml">Valid_For_Ship_To_Customer_Filter_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>When not NULL, specifies validity condition for the Ship To Customer of the sales document.</td>
 </tr>
 <tr>
@@ -179,8 +181,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="promotional_package_code">Promotional_Package_Code</h3>
-<p>Promotional_Package_Code</p>
-<p>Unique code of the promotional package</p>
 <p>Unique code of the promotional package</p>
 <table>
 <thead>
@@ -220,15 +220,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#promotional_package_code">Promotional_Package_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -313,7 +309,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -326,7 +322,6 @@
 </tbody>
 </table>
 <h3 id="promotional_package_name">Promotional_Package_Name</h3>
-<p>Promotional_Package_Name</p>
 <table>
 <thead>
 <tr>
@@ -365,15 +360,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#promotional_package_name">Promotional_Package_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -458,7 +449,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -471,8 +462,6 @@
 </tbody>
 </table>
 <h3 id="active">Active</h3>
-<p>Active</p>
-<p>Package status: 1 = the offer is available for new documents; 0 = otherwise</p>
 <p>Package status: 1 = the offer is available for new documents; 0 = otherwise</p>
 <table>
 <thead>
@@ -508,15 +497,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#active">Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -601,15 +586,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="valid_from_date">Valid_From_Date</h3>
-<p>Valid_From_Date</p>
-<p>When not NULL specifies the first date when the package is valid for offering. The date is compared against the document date</p>
 <p>When not NULL specifies the first date when the package is valid for offering. The date is compared against the document date</p>
 <table>
 <thead>
@@ -649,15 +632,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_from_date">Valid_From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -742,7 +721,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -755,8 +734,6 @@
 </tbody>
 </table>
 <h3 id="valid_to_date">Valid_To_Date</h3>
-<p>Valid_To_Date</p>
-<p>When not NULL specifies the last date (inclusive) when the package is valid. The date is compared against the document date</p>
 <p>When not NULL specifies the last date (inclusive) when the package is valid. The date is compared against the document date</p>
 <table>
 <thead>
@@ -796,15 +773,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_to_date">Valid_To_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -889,7 +862,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -902,8 +875,6 @@
 </tbody>
 </table>
 <h3 id="valid_for_price_list_id">Valid_For_Price_List_Id</h3>
-<p>Valid_For_Price_List_Id</p>
-<p>When not NULL, the package is valid only for the specified price list</p>
 <p>When not NULL, the package is valid only for the specified price list</p>
 <table>
 <thead>
@@ -943,15 +914,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_for_price_list_id">Valid_For_Price_List_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1036,15 +1003,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="valid_for_customer_id">Valid_For_Customer_Id</h3>
-<p>Valid_For_Customer_Id</p>
-<p>When not NULL, the package is valid only for the specified customer</p>
 <p>When not NULL, the package is valid only for the specified customer</p>
 <table>
 <thead>
@@ -1084,15 +1049,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_for_customer_id">Valid_For_Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1177,15 +1138,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="valid_for_target_group_id">Valid_For_Target_Group_Id</h3>
-<p>Valid_For_Target_Group_Id</p>
-<p>When not NULL, the package is valid only for the specified customer target group</p>
 <p>When not NULL, the package is valid only for the specified customer target group</p>
 <table>
 <thead>
@@ -1225,15 +1184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_for_target_group_id">Valid_For_Target_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1318,15 +1273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="valid_for_customer_filter_xml">Valid_For_Customer_Filter_XML</h3>
-<p>Valid_For_Customer_Filter_XML</p>
-<p>When not NULL, the package is valid only for the customers, that match the filter</p>
 <p>When not NULL, the package is valid only for the customers, that match the filter</p>
 <table>
 <thead>
@@ -1338,7 +1291,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1366,15 +1319,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_for_customer_filter_xml">Valid_For_Customer_Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1447,8 +1396,6 @@
 </tbody>
 </table>
 <h3 id="valid_for_distribution_channel_filter_xml">Valid_For_Distribution_Channel_Filter_XML</h3>
-<p>Valid_For_Distribution_Channel_Filter_XML</p>
-<p>When not NULL, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.</p>
 <p>When not NULL, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.</p>
 <table>
 <thead>
@@ -1460,7 +1407,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1488,15 +1435,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_for_distribution_channel_filter_xml">Valid_For_Distribution_Channel_Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1569,8 +1512,6 @@
 </tbody>
 </table>
 <h3 id="valid_for_distribution_channel_id">Valid_For_Distribution_Channel_Id</h3>
-<p>Valid_For_Distribution_Channel_Id</p>
-<p>When not NULL, the package is valid only for the specified distribution channel of the sales order</p>
 <p>When not NULL, the package is valid only for the specified distribution channel of the sales order</p>
 <table>
 <thead>
@@ -1610,15 +1551,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_for_distribution_channel_id">Valid_For_Distribution_Channel_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1703,15 +1640,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>When not NULL, indicates that the package is valid only for the specified enterprise company.</p>
 <p>When not NULL, indicates that the package is valid only for the specified enterprise company.</p>
 <table>
 <thead>
@@ -1751,15 +1686,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1844,14 +1775,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="promotional_package_id">Promotional_Package_Id</h3>
-<p>Promotional_Package_Id</p>
 <table>
 <thead>
 <tr>
@@ -1890,15 +1820,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#promotional_package_id">Promotional_Package_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1983,15 +1909,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="valid_for_ship_to_customer_id">Valid_For_Ship_To_Customer_Id</h3>
-<p>Valid_For_Ship_To_Customer_Id</p>
-<p>When not NULL, specifies that the package is valid only when the sales document is for the specified Ship To Customer.</p>
 <p>When not NULL, specifies that the package is valid only when the sales document is for the specified Ship To Customer.</p>
 <table>
 <thead>
@@ -2031,15 +1955,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_for_ship_to_customer_id">Valid_For_Ship_To_Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2124,14 +2044,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2166,15 +2085,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2247,8 +2162,6 @@
 </tbody>
 </table>
 <h3 id="valid_for_ship_to_customer_filter_xml">Valid_For_Ship_To_Customer_Filter_XML</h3>
-<p>Valid_For_Ship_To_Customer_Filter_XML</p>
-<p>When not NULL, specifies validity condition for the Ship To Customer of the sales document.</p>
 <p>When not NULL, specifies validity condition for the Ship To Customer of the sales document.</p>
 <table>
 <thead>
@@ -2260,7 +2173,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2288,15 +2201,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#valid_for_ship_to_customer_filter_xml">Valid_For_Ship_To_Customer_Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2369,7 +2278,6 @@
 </tbody>
 </table>
 <h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
-<p>Enterprise_Company_Location_Id</p>
 <table>
 <thead>
 <tr>
@@ -2408,15 +2316,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Promotional_Packages.html">Crm_Promotional_Packages</a>.<a href="Crm_Promotional_Packages.html#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2501,7 +2405,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

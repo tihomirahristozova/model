@@ -1,5 +1,10 @@
 # Table Scm_Purchase_Invoices
 
+
+## Entity
+
+Entity: [Logistics.Procurement.PurchaseInvoices](~/entities/Logistics.Procurement.PurchaseInvoices.md)
+
 Contains purchase invoice headers. Entity: Scm_Purchase_Invoices
 
 ## Owner Tables Hierarchy
@@ -41,9 +46,6 @@ Contains purchase invoice headers. Entity: Scm_Purchase_Invoices
 
 ### Purchase_Invoice_Id
 
-
-Purchase_Invoice_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -53,9 +55,8 @@ Purchase_Invoice_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Purchase_Invoice_Id](Scm_Purchase_Invoices.md#purchase_invoice_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -78,12 +79,9 @@ Purchase_Invoice_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -94,9 +92,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Document_Id](Scm_Purchase_Invoices.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -119,15 +116,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Supplier_Id
-
-
-Supplier_Id
-
-
-The supplier of the purchase, who is issuing the document.
 
 
 The supplier of the purchase, who is issuing the document.
@@ -141,9 +132,8 @@ The supplier of the purchase, who is issuing the document.
 |Referenced Table|[Scm_Suppliers](Scm_Suppliers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Supplier_Id](Scm_Purchase_Invoices.md#supplier_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -166,15 +156,9 @@ The supplier of the purchase, who is issuing the document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Currency_Id
-
-
-Document_Currency_Id
-
-
-The currency of the unit prices and amounts in the document.
 
 
 The currency of the unit prices and amounts in the document.
@@ -188,9 +172,8 @@ The currency of the unit prices and amounts in the document.
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Document_Currency_Id](Scm_Purchase_Invoices.md#document_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -213,15 +196,9 @@ The currency of the unit prices and amounts in the document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Type_Id
-
-
-Payment_Type_Id
-
-
-The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated
 
 
 The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated
@@ -235,9 +212,8 @@ The payment type to be used. NULL is allowed only temporary and should be specif
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Payment_Type_Id](Scm_Purchase_Invoices.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -260,15 +236,9 @@ The payment type to be used. NULL is allowed only temporary and should be specif
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Purchase_Order_Id
-
-
-Purchase_Order_Id
-
-
-The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed
 
 
 The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed
@@ -282,9 +252,8 @@ The purchase order that was sent to the supplier and is the base for the invoice
 |Referenced Table|[Scm_Purchase_Orders](Scm_Purchase_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Purchase_Order_Id](Scm_Purchase_Invoices.md#purchase_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -307,15 +276,9 @@ The purchase order that was sent to the supplier and is the base for the invoice
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Receiving_Order_Id
-
-
-Receiving_Order_Id
-
-
-The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO
 
 
 The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO
@@ -329,9 +292,8 @@ The receiving order for the goods that were invoiced. The id is used for 2 or 3 
 |Referenced Table|[Scm_Receiving_Orders](Scm_Receiving_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Receiving_Order_Id](Scm_Purchase_Invoices.md#receiving_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -354,15 +316,9 @@ The receiving order for the goods that were invoiced. The id is used for 2 or 3 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Credit_Note_Original_Purchase_Invoice_Id
-
-
-Credit_Note_Original_Purchase_Invoice_Id
-
-
-The original invoice, which is debited/credited with this note
 
 
 The original invoice, which is debited/credited with this note
@@ -376,9 +332,8 @@ The original invoice, which is debited/credited with this note
 |Referenced Table|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Credit_Note_Original_Purchase_Invoice_Id](Scm_Purchase_Invoices.md#credit_note_original_purchase_invoice_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -401,15 +356,9 @@ The original invoice, which is debited/credited with this note
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Credit_Note_Reason
-
-
-Credit_Note_Reason
-
-
-Reason for the debit/credit note
 
 
 Reason for the debit/credit note
@@ -423,9 +372,8 @@ Reason for the debit/credit note
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Credit_Note_Reason](Scm_Purchase_Invoices.md#credit_note_reason)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -447,12 +395,6 @@ Reason for the debit/credit note
 ### Deal_Type_Id
 
 
-Deal_Type_Id
-
-
-Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.
-
-
 Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.
 
 | Property | Value |
@@ -464,9 +406,8 @@ Deal type for this purchase invoice. If deal type in entered then VAT entry is c
 |Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Deal_Type_Id](Scm_Purchase_Invoices.md#deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -489,15 +430,9 @@ Deal type for this purchase invoice. If deal type in entered then VAT entry is c
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Cost_Center_Id
-
-
-Cost_Center_Id
-
-
-Cost center for which the amount from this document will be accounted.
 
 
 Cost center for which the amount from this document will be accounted.
@@ -511,9 +446,8 @@ Cost center for which the amount from this document will be accounted.
 |Referenced Table|[Acc_Cost_Centers](Acc_Cost_Centers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Cost_Center_Id](Scm_Purchase_Invoices.md#cost_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -536,15 +470,9 @@ Cost center for which the amount from this document will be accounted.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Apply_Date
-
-
-Apply_Date
-
-
-Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date.
 
 
 Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date.
@@ -558,9 +486,8 @@ Specifies the date on which to create the VAT ledger entry for this purchase inv
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Apply_Date](Scm_Purchase_Invoices.md#apply_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -588,12 +515,6 @@ Specifies the date on which to create the VAT ledger entry for this purchase inv
 ### Sale_Deal_Type_Id
 
 
-Sale_Deal_Type_Id
-
-
-Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.
-
-
 Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.
 
 | Property | Value |
@@ -605,9 +526,8 @@ Sale deal type for this purchase invoice. If sale deal type in entered then Sale
 |Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Sale_Deal_Type_Id](Scm_Purchase_Invoices.md#sale_deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -630,15 +550,9 @@ Sale deal type for this purchase invoice. If sale deal type in entered then Sale
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### VAT_Notes
-
-
-VAT_Notes
-
-
-Description of the operation that will be entered in the VAT ledgers.
 
 
 Description of the operation that will be entered in the VAT ledgers.
@@ -652,9 +566,8 @@ Description of the operation that will be entered in the VAT ledgers.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[VAT_Notes](Scm_Purchase_Invoices.md#vat_notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -676,12 +589,6 @@ Description of the operation that will be entered in the VAT ledgers.
 ### Payment_Due_Date
 
 
-Payment_Due_Date
-
-
-Due date for paying the invoice. NULL means to use the default 
-
-
 Due date for paying the invoice. NULL means to use the default 
 
 | Property | Value |
@@ -693,9 +600,8 @@ Due date for paying the invoice. NULL means to use the default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Payment_Due_Date](Scm_Purchase_Invoices.md#payment_due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -723,12 +629,6 @@ Due date for paying the invoice. NULL means to use the default
 ### Payment_Account_Id
 
 
-Payment_Account_Id
-
-
-When not NULL, specifies the default payment account for the payment order
-
-
 When not NULL, specifies the default payment account for the payment order
 
 | Property | Value |
@@ -740,9 +640,8 @@ When not NULL, specifies the default payment account for the payment order
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Payment_Account_Id](Scm_Purchase_Invoices.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -765,15 +664,9 @@ When not NULL, specifies the default payment account for the payment order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Purchase_Price_List_Id
-
-
-Purchase_Price_List_Id
-
-
-The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.
 
 
 The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.
@@ -787,9 +680,8 @@ The price list, which, when non-NULL, is used to automatically load unit prices 
 |Referenced Table|[Scm_Purchase_Price_Lists](Scm_Purchase_Price_Lists.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Purchase_Price_List_Id](Scm_Purchase_Invoices.md#purchase_price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -812,15 +704,9 @@ The price list, which, when non-NULL, is used to automatically load unit prices 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Delivery_Terms_Code
-
-
-Delivery_Terms_Code
-
-
-Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 
 
 Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
@@ -834,10 +720,9 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Delivery_Terms_Code](Scm_Purchase_Invoices.md#delivery_terms_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -859,12 +744,6 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 ### Intrastat_Transaction_Nature_Code
 
 
-Intrastat_Transaction_Nature_Code
-
-
-Transaction nature; used for Intrastat reporting
-
-
 Transaction nature; used for Intrastat reporting
 
 | Property | Value |
@@ -876,10 +755,9 @@ Transaction nature; used for Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Intrastat_Transaction_Nature_Code](Scm_Purchase_Invoices.md#intrastat_transaction_nature_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -901,12 +779,6 @@ Transaction nature; used for Intrastat reporting
 ### Intrastat_Transport_Mode_Code
 
 
-Intrastat_Transport_Mode_Code
-
-
-Transport mode; used for Intrastat reporting
-
-
 Transport mode; used for Intrastat reporting
 
 | Property | Value |
@@ -918,10 +790,9 @@ Transport mode; used for Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`|
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Intrastat_Transport_Mode_Code](Scm_Purchase_Invoices.md#intrastat_transport_mode_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -943,12 +814,6 @@ Transport mode; used for Intrastat reporting
 ### Intrastat_Transport_Country_Id
 
 
-Intrastat_Transport_Country_Id
-
-
-Country of origin of the transport company; used for Intrastat reporting
-
-
 Country of origin of the transport company; used for Intrastat reporting
 
 | Property | Value |
@@ -960,9 +825,8 @@ Country of origin of the transport company; used for Intrastat reporting
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Intrastat_Transport_Country_Id](Scm_Purchase_Invoices.md#intrastat_transport_country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -985,15 +849,9 @@ Country of origin of the transport company; used for Intrastat reporting
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Intrastat_Destination_Region_Id
-
-
-Intrastat_Destination_Region_Id
-
-
-Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.
 
 
 Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.
@@ -1007,9 +865,8 @@ Region, which is the final destination of the goods. Used for Intrastat reportin
 |Referenced Table|[Gen_Administrative_Regions](Gen_Administrative_Regions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Intrastat_Destination_Region_Id](Scm_Purchase_Invoices.md#intrastat_destination_region_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1032,15 +889,9 @@ Region, which is the final destination of the goods. Used for Intrastat reportin
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### VAT_Cash_Reporting_Mode
-
-
-VAT_Cash_Reporting_Mode
-
-
-When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries.
 
 
 When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries.
@@ -1053,9 +904,8 @@ When True, indicates, that this invoice uses the special 'Cash reporting mode' w
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[VAT_Cash_Reporting_Mode](Scm_Purchase_Invoices.md#vat_cash_reporting_mode)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1078,17 +928,11 @@ When True, indicates, that this invoice uses the special 'Cash reporting mode' w
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -1099,9 +943,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Is_Single_Execution](Scm_Purchase_Invoices.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1124,17 +967,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -1145,9 +982,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Is_Released](Scm_Purchase_Invoices.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1170,12 +1006,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -1185,9 +1018,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices](Scm_Purchase_Invoices.md).[Row_Version](Scm_Purchase_Invoices.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

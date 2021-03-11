@@ -1,5 +1,10 @@
 # Table Pos_Devices
 
+
+## Entity
+
+Entity: [Crm.Pos.Devices](~/entities/Crm.Pos.Devices.md)
+
 Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -16,16 +21,13 @@ Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Intr
 |[Device_Registration_No](#device_registration_no)|`nvarchar(32)` |The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.|
 |[Protocol_Name](#protocol_name)|`nvarchar(32)` Allowed: `ERPNET_FP`|The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.|
 |[Electronic_Address](#electronic_address)|`nvarchar(254)` |The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc.|
-|[Settings_Json](#settings_json)|`nvarchar(2147483647)` |Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.|
+|[Settings_Json](#settings_json)|`nvarchar(max)` |Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the device is currently active and can be choosen from drop-downs in new records.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Pos_Device_Id
-
-
-Pos_Device_Id
 
 | Property | Value |
 | - | - |
@@ -36,9 +38,8 @@ Pos_Device_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Pos_Device_Id](Pos_Devices.md#pos_device_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Pos_Device_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Terminal_Id
-
-
-Pos_Terminal_Id
-
-
-The POS terminal, to which this device is attached.
 
 
 The POS terminal, to which this device is attached.
@@ -83,9 +78,8 @@ The POS terminal, to which this device is attached.
 |Referenced Table|[Pos_Terminals](Pos_Terminals.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Pos_Terminal_Id](Pos_Devices.md#pos_terminal_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The POS terminal, to which this device is attached.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Device_Type
-
-
-Device_Type
-
-
-Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.
 
 
 Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.
@@ -130,10 +118,9 @@ Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printe
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`PAY`, `CSH`, `FIP`, `OTH`|
 |Default Value|OTH|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Device_Type](Pos_Devices.md#device_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,15 +143,9 @@ Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printe
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Device_Registration_No
-
-
-Device_Registration_No
-
-
-The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.
 
 
 The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.
@@ -178,9 +159,8 @@ The unique registration number of the device, assigned by the manufacturer. NULL
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Device_Registration_No](Pos_Devices.md#device_registration_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,16 +183,10 @@ The unique registration number of the device, assigned by the manufacturer. NULL
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Protocol_Name
-
-
-Protocol_Name
-
-
-The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.
 
 
 The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.
@@ -226,10 +200,9 @@ The name of the protocol, which can be used to communicate with the device. NULL
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`ERPNET_FP`|
 |Default Value|None|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Protocol_Name](Pos_Devices.md#protocol_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -251,12 +224,6 @@ The name of the protocol, which can be used to communicate with the device. NULL
 ### Electronic_Address
 
 
-Electronic_Address
-
-
-The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc.
-
-
 The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc.
 
 | Property | Value |
@@ -268,9 +235,8 @@ The absolute address (Internet or other) which can be used for electronic commun
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Electronic_Address](Pos_Devices.md#electronic_address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,32 +259,25 @@ The absolute address (Internet or other) which can be used for electronic commun
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Settings_Json
-
-
-Settings_Json
-
-
-Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.
 
 
 Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Settings_Json](Pos_Devices.md#settings_json)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -340,12 +299,6 @@ Settings and operator access codes for the POS device. The data is stored as Jso
 ### Is_Active
 
 
-Is_Active
-
-
-Indicates whether the device is currently active and can be choosen from drop-downs in new records.
-
-
 Indicates whether the device is currently active and can be choosen from drop-downs in new records.
 
 | Property | Value |
@@ -356,9 +309,8 @@ Indicates whether the device is currently active and can be choosen from drop-do
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Is_Active](Pos_Devices.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -381,12 +333,9 @@ Indicates whether the device is currently active and can be choosen from drop-do
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -396,9 +345,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Devices](Pos_Devices.md).[Row_Version](Pos_Devices.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

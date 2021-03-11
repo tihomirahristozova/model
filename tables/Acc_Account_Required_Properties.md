@@ -1,5 +1,10 @@
 # Table Acc_Account_Required_Properties
 
+
+## Entity
+
+Entity: [Finance.Accounting.AccountRequiredProperties](~/entities/Finance.Accounting.AccountRequiredProperties.md)
+
 Defines the required properties for new vouchers, for each account. Entity: Acc_Account_Required_Properties
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Defines the required properties for new vouchers, for each account. Entity: Acc_
 
 ### Account_Required_Property_Id
 
-
-Account_Required_Property_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Account_Required_Property_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Account_Required_Properties](Acc_Account_Required_Properties.md).[Account_Required_Property_Id](Acc_Account_Required_Properties.md#account_required_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Account_Required_Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Account_Id
-
-
-Account_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Account_Id
 |Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Account_Required_Properties](Acc_Account_Required_Properties.md).[Account_Id](Acc_Account_Required_Properties.md#account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +96,9 @@ Account_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_Id
-
-
-Property_Id
-
-
-A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers
 
 
 A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers
@@ -121,9 +112,8 @@ A property of type (Entity_Name = Account Voucher Line) for which the user can s
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Account_Required_Properties](Acc_Account_Required_Properties.md).[Property_Id](Acc_Account_Required_Properties.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,15 +136,9 @@ A property of type (Entity_Name = Account Voucher Line) for which the user can s
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Key_Property
-
-
-Key_Property
-
-
-Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes
 
 
 Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes
@@ -167,9 +151,8 @@ Key properties particiate in forming the grouping key, which is the smallest uni
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Acc_Account_Required_Properties](Acc_Account_Required_Properties.md).[Key_Property](Acc_Account_Required_Properties.md#key_property)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,15 +175,9 @@ Key properties particiate in forming the grouping key, which is the smallest uni
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Key_Order
-
-
-Key_Order
-
-
-The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.
 
 
 The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.
@@ -213,10 +190,9 @@ The key order determines in which order the values and descriptions of the prope
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Acc_Account_Required_Properties](Acc_Account_Required_Properties.md).[Key_Order](Acc_Account_Required_Properties.md#key_order)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,9 +213,6 @@ The key order determines in which order the values and descriptions of the prope
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -248,9 +221,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Account_Required_Properties](Acc_Account_Required_Properties.md).[Row_Version](Acc_Account_Required_Properties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

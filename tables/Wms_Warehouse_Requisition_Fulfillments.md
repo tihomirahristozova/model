@@ -1,5 +1,10 @@
 # Table Wms_Warehouse_Requisition_Fulfillments
 
+
+## Entity
+
+Entity: [Logistics.Wms.WarehouseRequisitionFulfillments](~/entities/Logistics.Wms.WarehouseRequisitionFulfillments.md)
+
 Fulfillment ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_Fulfillments (Introduced in version 20.1)
 
 ## Summary
@@ -20,9 +25,6 @@ Fulfillment ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition
 
 ### Warehouse_Requisition_Fulfillment_Id
 
-
-Warehouse_Requisition_Fulfillment_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Warehouse_Requisition_Fulfillment_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Warehouse_Requisition_Fulfillment_Id](Wms_Warehouse_Requisition_Fulfillments.md#warehouse_requisition_fulfillment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Warehouse_Requisition_Fulfillment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Requisition_Id
-
-
-Warehouse_Requisition_Id
-
-
-The warehouse requisiton, which is fulfilled.
 
 
 The warehouse requisiton, which is fulfilled.
@@ -79,9 +74,8 @@ The warehouse requisiton, which is fulfilled.
 |Referenced Table|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Warehouse_Requisition_Id](Wms_Warehouse_Requisition_Fulfillments.md#warehouse_requisition_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The warehouse requisiton, which is fulfilled.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Requisition_Line_Id
-
-
-Warehouse_Requisition_Line_Id
-
-
-The requisition line, which is fulfilled.
 
 
 The requisition line, which is fulfilled.
@@ -126,9 +114,8 @@ The requisition line, which is fulfilled.
 |Referenced Table|[Wms_Warehouse_Requisition_Lines](Wms_Warehouse_Requisition_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Warehouse_Requisition_Line_Id](Wms_Warehouse_Requisition_Fulfillments.md#warehouse_requisition_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,15 +138,9 @@ The requisition line, which is fulfilled.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Fulfillment_Type
-
-
-Fulfillment_Type
-
-
-Type of fulfillment: P=Plan created; C=Requisition completed.
 
 
 Type of fulfillment: P=Plan created; C=Requisition completed.
@@ -173,9 +154,8 @@ Type of fulfillment: P=Plan created; C=Requisition completed.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Fulfillment_Type](Wms_Warehouse_Requisition_Fulfillments.md#fulfillment_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,12 +177,6 @@ Type of fulfillment: P=Plan created; C=Requisition completed.
 ### Quantity
 
 
-Quantity
-
-
-Quantity fulfilled (in the measurement unit of the requisition line).
-
-
 Quantity fulfilled (in the measurement unit of the requisition line).
 
 | Property | Value |
@@ -213,9 +187,8 @@ Quantity fulfilled (in the measurement unit of the requisition line).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Quantity](Wms_Warehouse_Requisition_Fulfillments.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,12 +210,6 @@ Quantity fulfilled (in the measurement unit of the requisition line).
 ### Is_Final
 
 
-Is_Final
-
-
-Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities.
-
-
 Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities.
 
 | Property | Value |
@@ -253,9 +220,8 @@ Specifies whether this fulfillment finalizes the requisition line, regardless of
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Is_Final](Wms_Warehouse_Requisition_Fulfillments.md#is_final)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,12 +243,6 @@ Specifies whether this fulfillment finalizes the requisition line, regardless of
 ### Creation_User_Id
 
 
-Creation_User_Id
-
-
-The user, who created the record.
-
-
 The user, who created the record.
 
 | Property | Value |
@@ -294,9 +254,8 @@ The user, who created the record.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Creation_User_Id](Wms_Warehouse_Requisition_Fulfillments.md#creation_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -319,15 +278,9 @@ The user, who created the record.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Creation_Time_Utc
-
-
-Creation_Time_Utc
-
-
-The exact time in UTC, when the fulfillment was created in the system.
 
 
 The exact time in UTC, when the fulfillment was created in the system.
@@ -341,9 +294,8 @@ The exact time in UTC, when the fulfillment was created in the system.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Creation_Time_Utc](Wms_Warehouse_Requisition_Fulfillments.md#creation_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -364,9 +316,6 @@ The exact time in UTC, when the fulfillment was created in the system.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -375,9 +324,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md).[Row_Version](Wms_Warehouse_Requisition_Fulfillments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

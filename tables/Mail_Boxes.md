@@ -1,5 +1,10 @@
 # Table Mail_Boxes
 
+
+## Entity
+
+Entity: [Applications.Mail.Boxes](~/entities/Applications.Mail.Boxes.md)
+
 Represents user mailboxes. Entity: Mail_Boxes
 
 ## Summary
@@ -18,16 +23,13 @@ Represents user mailboxes. Entity: Mail_Boxes
 |[Is_Default](#is_default)|`bit` |1 when this is the default mailbox for the user.|
 |[Is_Encrypted](#is_encrypted)|`bit` |1 when the mailbox messages are stored in encrypted format|
 |[Reset_On_Next_Sync](#reset_on_next_sync)|`bit` Readonly|Reset is pending: 1 = next sync should delete and retrieve again all messages; 0 = no pending reset|
-|[Signature_Html](#signature_html)|`nvarchar(2147483647)` |Html text of the default signature, when creating new emails from this mailbox. When is NULL, a default generic signature is attached|
+|[Signature_Html](#signature_html)|`nvarchar(max)` |Html text of the default signature, when creating new emails from this mailbox. When is NULL, a default generic signature is attached|
 |[Sent_Items_Folder_Name](#sent_items_folder_name)|`nvarchar(254)` |The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Mail_Box_Id
-
-
-Mail_Box_Id
 
 | Property | Value |
 | - | - |
@@ -38,9 +40,8 @@ Mail_Box_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Mail_Box_Id](Mail_Boxes.md#mail_box_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,15 +64,9 @@ Mail_Box_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Owner_User_Id
-
-
-Owner_User_Id
-
-
-The user, who owns the mailbox
 
 
 The user, who owns the mailbox
@@ -85,9 +80,8 @@ The user, who owns the mailbox
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Owner_User_Id](Mail_Boxes.md#owner_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,15 +104,9 @@ The user, who owns the mailbox
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Email_Address
-
-
-Email_Address
-
-
-The email address associated with this mail box
 
 
 The email address associated with this mail box
@@ -132,9 +120,8 @@ The email address associated with this mail box
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Email_Address](Mail_Boxes.md#email_address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -157,15 +144,9 @@ The email address associated with this mail box
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Sync_Protocol
-
-
-Sync_Protocol
-
-
-Synchronization protocol, 'POP3' or 'IMAP'. NULL means that syncrhonization is not setup
 
 
 Synchronization protocol, 'POP3' or 'IMAP'. NULL means that syncrhonization is not setup
@@ -179,10 +160,9 @@ Synchronization protocol, 'POP3' or 'IMAP'. NULL means that syncrhonization is n
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`IMAP`, `POP3`, `MEWS`|
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Sync_Protocol](Mail_Boxes.md#sync_protocol)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -204,12 +184,6 @@ Synchronization protocol, 'POP3' or 'IMAP'. NULL means that syncrhonization is n
 ### Sync_Server_Address
 
 
-Sync_Server_Address
-
-
-Incoming and outgoing mail server internet address. NULL when synchronization is not setup
-
-
 Incoming and outgoing mail server internet address. NULL when synchronization is not setup
 
 | Property | Value |
@@ -221,9 +195,8 @@ Incoming and outgoing mail server internet address. NULL when synchronization is
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Sync_Server_Address](Mail_Boxes.md#sync_server_address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -245,12 +218,6 @@ Incoming and outgoing mail server internet address. NULL when synchronization is
 ### Sync_User_Name
 
 
-Sync_User_Name
-
-
-User name to supply to the server, when retrieving email. NULL when the connection is not setup or the server does not require user name
-
-
 User name to supply to the server, when retrieving email. NULL when the connection is not setup or the server does not require user name
 
 | Property | Value |
@@ -262,9 +229,8 @@ User name to supply to the server, when retrieving email. NULL when the connecti
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Sync_User_Name](Mail_Boxes.md#sync_user_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,12 +252,6 @@ User name to supply to the server, when retrieving email. NULL when the connecti
 ### Sync_Password
 
 
-Sync_Password
-
-
-The password to supply to the server when retrieving email. NULL when the connection is not setup or the server does not require user name
-
-
 The password to supply to the server when retrieving email. NULL when the connection is not setup or the server does not require user name
 
 | Property | Value |
@@ -303,9 +263,8 @@ The password to supply to the server when retrieving email. NULL when the connec
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Sync_Password](Mail_Boxes.md#sync_password)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -327,12 +286,6 @@ The password to supply to the server when retrieving email. NULL when the connec
 ### Active
 
 
-Active
-
-
-1 when the mail box is active for mail sinchronization, sending and receiving
-
-
 1 when the mail box is active for mail sinchronization, sending and receiving
 
 | Property | Value |
@@ -343,9 +296,8 @@ Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Active](Mail_Boxes.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -368,15 +320,9 @@ Active
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Send_Server_Address
-
-
-Send_Server_Address
-
-
-The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server
 
 
 The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server
@@ -390,9 +336,8 @@ The address of the server to use for sending mail. The same credentials as the s
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Send_Server_Address](Mail_Boxes.md#send_server_address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -414,12 +359,6 @@ The address of the server to use for sending mail. The same credentials as the s
 ### Is_Default
 
 
-Is_Default
-
-
-1 when this is the default mailbox for the user.
-
-
 1 when this is the default mailbox for the user.
 
 | Property | Value |
@@ -430,9 +369,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Is_Default](Mail_Boxes.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -455,17 +393,11 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Encrypted
 
 
-Is_Encrypted
-
-
-1 when the mailbox messages are stored in encrypted format
-
-
 1 when the mailbox messages are stored in encrypted format
 
 | Property | Value |
@@ -476,9 +408,8 @@ Is_Encrypted
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Is_Encrypted](Mail_Boxes.md#is_encrypted)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -501,15 +432,9 @@ Is_Encrypted
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Reset_On_Next_Sync
-
-
-Reset_On_Next_Sync
-
-
-Reset is pending: 1 = next sync should delete and retrieve again all messages; 0 = no pending reset
 
 
 Reset is pending: 1 = next sync should delete and retrieve again all messages; 0 = no pending reset
@@ -522,9 +447,8 @@ Reset is pending: 1 = next sync should delete and retrieve again all messages; 0
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Reset_On_Next_Sync](Mail_Boxes.md#reset_on_next_sync)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -547,31 +471,24 @@ Reset is pending: 1 = next sync should delete and retrieve again all messages; 0
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Signature_Html
-
-
-Signature_Html
-
-
-Html text of the default signature, when creating new emails from this mailbox. When is NULL, a default generic signature is attached
 
 
 Html text of the default signature, when creating new emails from this mailbox. When is NULL, a default generic signature is attached
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Signature_Html](Mail_Boxes.md#signature_html)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -593,12 +510,6 @@ Html text of the default signature, when creating new emails from this mailbox. 
 ### Sent_Items_Folder_Name
 
 
-Sent_Items_Folder_Name
-
-
-The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).
-
-
 The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).
 
 | Property | Value |
@@ -610,9 +521,8 @@ The name of the SentItems folder. It is left empty, EnterpriseOne won't save the
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Sent_Items_Folder_Name](Mail_Boxes.md#sent_items_folder_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -633,9 +543,6 @@ The name of the SentItems folder. It is left empty, EnterpriseOne won't save the
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -644,9 +551,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Mail_Boxes](Mail_Boxes.md).[Row_Version](Mail_Boxes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

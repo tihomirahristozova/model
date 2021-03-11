@@ -1,5 +1,10 @@
 # Table Pos_Product_Type_Tax_Groups
 
+
+## Entity
+
+Entity: [Crm.Pos.ProductTypeTaxGroups](~/entities/Crm.Pos.ProductTypeTaxGroups.md)
+
 Contains the tax group codes for the product types. The tax group codes are used when sales documents are printed to fiscal printers or exported to fiscal authorities. Entity: Pos_Product_Type_Tax_Groups (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -14,15 +19,12 @@ Contains the tax group codes for the product types. The tax group codes are used
 |[Product_Type_Id](#product_type_id)|`uniqueidentifier` |The product type for which the tax group is specified.|
 |[Applicable_Legislation](#applicable_legislation)|`nvarchar(8)` Allowed: `AE`, `AU`, `BG`, `CA`, `CN`, `CZ`, `DE`, `ES`, `EU`, `FR`, `GR`, `HU`, `IN`, `IT`, `JP`, `MK`, `PL`, `PT`, `RO`, `RS`, `RU`, `TR`, `UK`, `US`, `ZA`|The legislation, for which the tax group is applicable.|
 |[Tax_Group](#tax_group)|`int` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`|The tax group of the product type within the specified applicable legislation.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Product_Type_Tax_Group_Id
-
-
-Product_Type_Tax_Group_Id
 
 | Property | Value |
 | - | - |
@@ -33,9 +35,8 @@ Product_Type_Tax_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md).[Product_Type_Tax_Group_Id](Pos_Product_Type_Tax_Groups.md#product_type_tax_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Product_Type_Tax_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Type_Id
-
-
-Product_Type_Id
-
-
-The product type for which the tax group is specified.
 
 
 The product type for which the tax group is specified.
@@ -80,9 +75,8 @@ The product type for which the tax group is specified.
 |Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md).[Product_Type_Id](Pos_Product_Type_Tax_Groups.md#product_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The product type for which the tax group is specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Applicable_Legislation
-
-
-Applicable_Legislation
-
-
-The legislation, for which the tax group is applicable.
 
 
 The legislation, for which the tax group is applicable.
@@ -127,10 +115,9 @@ The legislation, for which the tax group is applicable.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`AE`, `AU`, `BG`, `CA`, `CN`, `CZ`, `DE`, `ES`, `EU`, `FR`, `GR`, `HU`, `IN`, `IT`, `JP`, `MK`, `PL`, `PT`, `RO`, `RS`, `RU`, `TR`, `UK`, `US`, `ZA`|
 |Default Value|None|
-|Derived From|[Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md).[Applicable_Legislation](Pos_Product_Type_Tax_Groups.md#applicable_legislation)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,15 +140,9 @@ The legislation, for which the tax group is applicable.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Tax_Group
-
-
-Tax_Group
-
-
-The tax group of the product type within the specified applicable legislation.
 
 
 The tax group of the product type within the specified applicable legislation.
@@ -174,10 +155,9 @@ The tax group of the product type within the specified applicable legislation.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`|
 |Default Value|None|
-|Derived From|[Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md).[Tax_Group](Pos_Product_Type_Tax_Groups.md#tax_group)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,25 +180,21 @@ The tax group of the product type within the specified applicable legislation.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md).[Notes](Pos_Product_Type_Tax_Groups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,13 +217,10 @@ Notes
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -257,9 +230,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md).[Row_Version](Pos_Product_Type_Tax_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

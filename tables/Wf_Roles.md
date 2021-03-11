@@ -1,5 +1,10 @@
 # Table Wf_Roles
 
+
+## Entity
+
+Entity: [Systems.Workflow.Roles](~/entities/Systems.Workflow.Roles.md)
+
 The various roles, which the users can play. Entity: Wf_Roles
 
 ## Summary
@@ -8,16 +13,13 @@ The various roles, which the users can play. Entity: Wf_Roles
 | - | - | --- |
 |[Role_Id](#role_id)|`uniqueidentifier` `PK`||
 |[Role_Name](#role_name)|`nvarchar(254)` ||
-|[Role_Description](#role_description)|`nvarchar(2147483647)` |Description of the role.|
+|[Role_Description](#role_description)|`nvarchar(max)` |Description of the role.|
 |[Visual_Style](#visual_style)|`nvarchar(64)` |The default visual style for the user interface|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Role_Id
-
-
-Role_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Role_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wf_Roles](Wf_Roles.md).[Role_Id](Wf_Roles.md#role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Role_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Role_Name
-
-
-Role_Name
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Role_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Roles](Wf_Roles.md).[Role_Name](Wf_Roles.md#role_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -94,32 +91,25 @@ Role_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Role_Description
-
-
-Role_Description
-
-
-Description of the role.
 
 
 Description of the role.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Roles](Wf_Roles.md).[Role_Description](Wf_Roles.md#role_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,12 +131,6 @@ Description of the role.
 ### Visual_Style
 
 
-Visual_Style
-
-
-The default visual style for the user interface
-
-
 The default visual style for the user interface
 
 | Property | Value |
@@ -158,9 +142,8 @@ The default visual style for the user interface
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Roles](Wf_Roles.md).[Visual_Style](Wf_Roles.md#visual_style)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -181,9 +164,6 @@ The default visual style for the user interface
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -192,9 +172,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Roles](Wf_Roles.md).[Row_Version](Wf_Roles.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

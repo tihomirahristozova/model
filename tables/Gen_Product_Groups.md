@@ -1,5 +1,10 @@
 # Table Gen_Product_Groups
 
+
+## Entity
+
+Entity: [General.Products.ProductGroups](~/entities/General.Products.ProductGroups.md)
+
 Hierarchical categorization of the products. Entity: Gen_Product_Groups
 
 ## Summary
@@ -33,12 +38,6 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 ### Id
 
 
-Id
-
-
-Unique Id of the item group
-
-
 Unique Id of the item group
 
 | Property | Value |
@@ -50,9 +49,8 @@ Unique Id of the item group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Id](Gen_Product_Groups.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -75,15 +73,9 @@ Unique Id of the item group
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent
-
-
-Parent
-
-
-Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names.
 
 
 Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names.
@@ -97,9 +89,8 @@ Full tree path of the parent group in the form /parent/.../leaf/. Contains the g
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|/|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Parent](Gen_Product_Groups.md#parent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -122,15 +113,9 @@ Full tree path of the parent group in the form /parent/.../leaf/. Contains the g
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Product_Group_Name
-
-
-Product_Group_Name
-
-
-Group name should be unique among the other groups within the same parent
 
 
 Group name should be unique among the other groups within the same parent
@@ -144,9 +129,8 @@ Group name should be unique among the other groups within the same parent
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Product_Group_Name](Gen_Product_Groups.md#product_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -169,13 +153,10 @@ Group name should be unique among the other groups within the same parent
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Product_Group_Code
-
-
-Product_Group_Code
 
 | Property | Value |
 | - | - |
@@ -186,9 +167,8 @@ Product_Group_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Product_Group_Code](Gen_Product_Groups.md#product_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -211,16 +191,10 @@ Product_Group_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Full_Path
-
-
-Full_Path
-
-
-Full tree path in the form /parent/.../leaf/. Contains the group names.
 
 
 Full tree path in the form /parent/.../leaf/. Contains the group names.
@@ -234,9 +208,8 @@ Full tree path in the form /parent/.../leaf/. Contains the group names.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value||
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Full_Path](Gen_Product_Groups.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -259,16 +232,10 @@ Full tree path in the form /parent/.../leaf/. Contains the group names.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|yes|
 
 ### Notes
-
-
-Notes
-
-
-User notes for the item group
 
 
 User notes for the item group
@@ -282,9 +249,8 @@ User notes for the item group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Notes](Gen_Product_Groups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -306,12 +272,6 @@ User notes for the item group
 ### Next_Part_Number
 
 
-Next_Part_Number
-
-
-Contains the next part number to be auto-assigned to parts, created in the group or sub-groups
-
-
 Contains the next part number to be auto-assigned to parts, created in the group or sub-groups
 
 | Property | Value |
@@ -323,9 +283,8 @@ Contains the next part number to be auto-assigned to parts, created in the group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Next_Part_Number](Gen_Product_Groups.md#next_part_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -347,12 +306,6 @@ Contains the next part number to be auto-assigned to parts, created in the group
 ### Product_Name_Mask
 
 
-Product_Name_Mask
-
-
-When not NULL specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes
-
-
 When not NULL specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes
 
 | Property | Value |
@@ -364,9 +317,8 @@ When not NULL specifies mask for new product names for this group and its sub-gr
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Product_Name_Mask](Gen_Product_Groups.md#product_name_mask)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -388,12 +340,6 @@ When not NULL specifies mask for new product names for this group and its sub-gr
 ### Product_Description_Mask
 
 
-Product_Description_Mask
-
-
-When not NULL specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes
-
-
 When not NULL specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes
 
 | Property | Value |
@@ -405,9 +351,8 @@ When not NULL specifies mask for new product descriptions for this group and its
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Product_Description_Mask](Gen_Product_Groups.md#product_description_mask)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -429,12 +374,6 @@ When not NULL specifies mask for new product descriptions for this group and its
 ### Configurator_Status
 
 
-Configurator_Status
-
-
-Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly
-
-
 Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly
 
 | Property | Value |
@@ -445,10 +384,9 @@ Usage of product configurator for new products. 0=Product configurator cannot be
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`0`, `1`, `2`|
 |Default Value|0|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Configurator_Status](Gen_Product_Groups.md#configurator_status)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -470,12 +408,6 @@ Usage of product configurator for new products. 0=Product configurator cannot be
 ### Configurator_Creates_Recipe
 
 
-Configurator_Creates_Recipe
-
-
-Whether the product configurator should create one default recipe. 1=yes;0=no
-
-
 Whether the product configurator should create one default recipe. 1=yes;0=no
 
 | Property | Value |
@@ -486,9 +418,8 @@ Whether the product configurator should create one default recipe. 1=yes;0=no
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Configurator_Creates_Recipe](Gen_Product_Groups.md#configurator_creates_recipe)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -510,12 +441,6 @@ Whether the product configurator should create one default recipe. 1=yes;0=no
 ### Default_Product_Type_Id
 
 
-Default_Product_Type_Id
-
-
-When not null, specifies default product type, which should be assigned to new products in the group.
-
-
 When not null, specifies default product type, which should be assigned to new products in the group.
 
 | Property | Value |
@@ -527,9 +452,8 @@ When not null, specifies default product type, which should be assigned to new p
 |Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Default_Product_Type_Id](Gen_Product_Groups.md#default_product_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -552,15 +476,9 @@ When not null, specifies default product type, which should be assigned to new p
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Default_Measurement_Unit_Id
-
-
-Default_Measurement_Unit_Id
-
-
-When not null, specifies default measurement unit, which should be assigned to new products in the group.
 
 
 When not null, specifies default measurement unit, which should be assigned to new products in the group.
@@ -574,9 +492,8 @@ When not null, specifies default measurement unit, which should be assigned to n
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Default_Measurement_Unit_Id](Gen_Product_Groups.md#default_measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -599,15 +516,9 @@ When not null, specifies default measurement unit, which should be assigned to n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Pricing_Model_Id
-
-
-Pricing_Model_Id
-
-
-When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models.
 
 
 When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models.
@@ -621,9 +532,8 @@ When not null, specifies the pricing model, for the products in this product gro
 |Referenced Table|[Crm_Pricing_Models](Crm_Pricing_Models.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Pricing_Model_Id](Gen_Product_Groups.md#pricing_model_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -646,15 +556,9 @@ When not null, specifies the pricing model, for the products in this product gro
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-When not NULL, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company.
 
 
 When not NULL, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company.
@@ -668,9 +572,8 @@ When not NULL, specifies that the product group, its sub-groups and products are
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Enterprise_Company_Id](Gen_Product_Groups.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -693,15 +596,9 @@ When not NULL, specifies that the product group, its sub-groups and products are
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Next_Serial_Number
-
-
-Next_Serial_Number
-
-
-When not NULL, specifies the next serial number, that should be assigned to new produced items.
 
 
 When not NULL, specifies the next serial number, that should be assigned to new produced items.
@@ -715,9 +612,8 @@ When not NULL, specifies the next serial number, that should be assigned to new 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Next_Serial_Number](Gen_Product_Groups.md#next_serial_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -740,16 +636,10 @@ When not NULL, specifies the next serial number, that should be assigned to new 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Picture
-
-
-Picture
-
-
-The picture of the product group
 
 
 The picture of the product group
@@ -762,9 +652,8 @@ The picture of the product group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Picture](Gen_Product_Groups.md#picture)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -786,12 +675,6 @@ The picture of the product group
 ### Active
 
 
-Active
-
-
-1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents
-
-
 1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents
 
 | Property | Value |
@@ -802,9 +685,8 @@ Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Active](Gen_Product_Groups.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -827,15 +709,9 @@ Active
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Use_Lots
-
-
-Use_Lots
-
-
-Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.
 
 
 Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.
@@ -849,10 +725,9 @@ Specifies whether for the products from this group and its sub-groups the use of
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `N`, `R`|
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Use_Lots](Gen_Product_Groups.md#use_lots)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -874,12 +749,6 @@ Specifies whether for the products from this group and its sub-groups the use of
 ### Picture_Last_Update_Time
 
 
-Picture_Last_Update_Time
-
-
-Last update time of the Picture
-
-
 Last update time of the Picture
 
 | Property | Value |
@@ -891,9 +760,8 @@ Last update time of the Picture
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Picture_Last_Update_Time](Gen_Product_Groups.md#picture_last_update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -920,9 +788,6 @@ Last update time of the Picture
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -931,9 +796,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Groups](Gen_Product_Groups.md).[Row_Version](Gen_Product_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

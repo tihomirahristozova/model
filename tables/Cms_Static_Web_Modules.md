@@ -1,5 +1,10 @@
 # Table Cms_Static_Web_Modules
 
+
+## Entity
+
+Entity: [Applications.Cms.StaticWebModules](~/entities/Applications.Cms.StaticWebModules.md)
+
 A web module, which contains one web page with static text. Entity: Cms_Static_Web_Modules
 
 ## Owner Tables Hierarchy
@@ -14,15 +19,12 @@ A web module, which contains one web page with static text. Entity: Cms_Static_W
 |[Static_Web_Module_Id](#static_web_module_id)|`uniqueidentifier` `PK`||
 |[Web_Module_Id](#web_module_id)|`uniqueidentifier` |The web module, which is inherited by this static module.|
 |[Language_Code](#language_code)|`nvarchar(7)` |The language code of the content.|
-|[Content_Html](#content_html)|`nvarchar(2147483647)` |The actual html content of the pade. Only the <BODY> of the html is stored.|
+|[Content_Html](#content_html)|`nvarchar(max)` |The actual html content of the pade. Only the <BODY> of the html is stored.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Static_Web_Module_Id
-
-
-Static_Web_Module_Id
 
 | Property | Value |
 | - | - |
@@ -33,9 +35,8 @@ Static_Web_Module_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cms_Static_Web_Modules](Cms_Static_Web_Modules.md).[Static_Web_Module_Id](Cms_Static_Web_Modules.md#static_web_module_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Static_Web_Module_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Web_Module_Id
-
-
-Web_Module_Id
-
-
-The web module, which is inherited by this static module.
 
 
 The web module, which is inherited by this static module.
@@ -80,9 +75,8 @@ The web module, which is inherited by this static module.
 |Referenced Table|[Cms_Web_Modules](Cms_Web_Modules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Static_Web_Modules](Cms_Static_Web_Modules.md).[Web_Module_Id](Cms_Static_Web_Modules.md#web_module_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The web module, which is inherited by this static module.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Language_Code
-
-
-Language_Code
-
-
-The language code of the content.
 
 
 The language code of the content.
@@ -127,9 +115,8 @@ The language code of the content.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|EN|
-|Derived From|[Cms_Static_Web_Modules](Cms_Static_Web_Modules.md).[Language_Code](Cms_Static_Web_Modules.md#language_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,26 +138,19 @@ The language code of the content.
 ### Content_Html
 
 
-Content_Html
-
-
-The actual html content of the pade. Only the <BODY> of the html is stored.
-
-
 The actual html content of the pade. Only the <BODY> of the html is stored.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Static_Web_Modules](Cms_Static_Web_Modules.md).[Content_Html](Cms_Static_Web_Modules.md#content_html)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,9 +171,6 @@ The actual html content of the pade. Only the <BODY> of the html is stored.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -202,9 +179,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cms_Static_Web_Modules](Cms_Static_Web_Modules.md).[Row_Version](Cms_Static_Web_Modules.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

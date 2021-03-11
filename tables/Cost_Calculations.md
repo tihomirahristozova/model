@@ -1,5 +1,10 @@
 # Table Cost_Calculations
 
+
+## Entity
+
+Entity: [Finance.Cost.Calculations](~/entities/Finance.Cost.Calculations.md)
+
 Represents one cost calculation and allocation. Entity: Cost_Calculations
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Represents one cost calculation and allocation. Entity: Cost_Calculations
 
 ### Calculation_Id
 
-
-Calculation_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Calculation_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Calculations](Cost_Calculations.md).[Calculation_Id](Cost_Calculations.md#calculation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Calculation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculations](Cost_Calculations.md).[Document_Id](Cost_Calculations.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Cost_Template_Id
-
-
-Cost_Template_Id
-
-
-The cost template used to drive the cost calculation and allocation.
 
 
 The cost template used to drive the cost calculation and allocation.
@@ -123,9 +114,8 @@ The cost template used to drive the cost calculation and allocation.
 |Referenced Table|[Cost_Templates](Cost_Templates.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculations](Cost_Calculations.md).[Cost_Template_Id](Cost_Calculations.md#cost_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +138,9 @@ The cost template used to drive the cost calculation and allocation.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Date
-
-
-From_Date
-
-
-Starting date for which to extract source data from other modules for this calculation
 
 
 Starting date for which to extract source data from other modules for this calculation
@@ -170,9 +154,8 @@ Starting date for which to extract source data from other modules for this calcu
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculations](Cost_Calculations.md).[From_Date](Cost_Calculations.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,12 +183,6 @@ Starting date for which to extract source data from other modules for this calcu
 ### Thru_Date
 
 
-Thru_Date
-
-
-Ending date (inclusive) for which to extract source data from other modules for this calculation
-
-
 Ending date (inclusive) for which to extract source data from other modules for this calculation
 
 | Property | Value |
@@ -217,9 +194,8 @@ Ending date (inclusive) for which to extract source data from other modules for 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculations](Cost_Calculations.md).[Thru_Date](Cost_Calculations.md#thru_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,12 +223,6 @@ Ending date (inclusive) for which to extract source data from other modules for 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -263,9 +233,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cost_Calculations](Cost_Calculations.md).[Is_Single_Execution](Cost_Calculations.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,17 +257,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -309,9 +272,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cost_Calculations](Cost_Calculations.md).[Is_Released](Cost_Calculations.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,12 +296,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -349,9 +308,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculations](Cost_Calculations.md).[Row_Version](Cost_Calculations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

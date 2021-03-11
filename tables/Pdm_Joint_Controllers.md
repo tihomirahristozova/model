@@ -1,5 +1,10 @@
 # Table Pdm_Joint_Controllers
 
+
+## Entity
+
+Entity: [Applications.PersonalData.JointControllers](~/entities/Applications.PersonalData.JointControllers.md)
+
 Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2)
 
 ## Owner Tables Hierarchy
@@ -13,15 +18,12 @@ Contains relationship between process and joint controllers. For processes with 
 |[Joint_Controller_Id](#joint_controller_id)|`uniqueidentifier` `PK`||
 |[Personal_Data_Process_Id](#personal_data_process_id)|`uniqueidentifier` |The process, which is managed jointly.|
 |[Joint_Controller_Party_Id](#joint_controller_party_id)|`uniqueidentifier` |The party, controlling the process.|
-|[Notes](#notes)|`nvarchar(2147483647)` |Should usually contain a short description of the role of the joint controller.|
+|[Notes](#notes)|`nvarchar(max)` |Should usually contain a short description of the role of the joint controller.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Joint_Controller_Id
-
-
-Joint_Controller_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Joint_Controller_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pdm_Joint_Controllers](Pdm_Joint_Controllers.md).[Joint_Controller_Id](Pdm_Joint_Controllers.md#joint_controller_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Joint_Controller_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Personal_Data_Process_Id
-
-
-Personal_Data_Process_Id
-
-
-The process, which is managed jointly.
 
 
 The process, which is managed jointly.
@@ -79,9 +74,8 @@ The process, which is managed jointly.
 |Referenced Table|[Pdm_Personal_Data_Processes](Pdm_Personal_Data_Processes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Joint_Controllers](Pdm_Joint_Controllers.md).[Personal_Data_Process_Id](Pdm_Joint_Controllers.md#personal_data_process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The process, which is managed jointly.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Joint_Controller_Party_Id
-
-
-Joint_Controller_Party_Id
-
-
-The party, controlling the process.
 
 
 The party, controlling the process.
@@ -126,9 +114,8 @@ The party, controlling the process.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Joint_Controllers](Pdm_Joint_Controllers.md).[Joint_Controller_Party_Id](Pdm_Joint_Controllers.md#joint_controller_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,31 +138,24 @@ The party, controlling the process.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
-
-
-Should usually contain a short description of the role of the joint controller.
 
 
 Should usually contain a short description of the role of the joint controller.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Joint_Controllers](Pdm_Joint_Controllers.md).[Notes](Pdm_Joint_Controllers.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,9 +176,6 @@ Should usually contain a short description of the role of the joint controller.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -207,9 +184,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Joint_Controllers](Pdm_Joint_Controllers.md).[Row_Version](Pdm_Joint_Controllers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

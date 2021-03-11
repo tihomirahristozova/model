@@ -1,5 +1,10 @@
 # Table Geo_Map_Points
 
+
+## Entity
+
+Entity: [General.Geography.MapPoints](~/entities/General.Geography.MapPoints.md)
+
 Geographical map points are used as points of interest on the map. They are used for routing and other purposes. The points of interest for the different enterprise companies are different. Entity: Geo_Map_Points
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Geographical map points are used as points of interest on the map. They are used
 
 ### Map_Point_Id
 
-
-Map_Point_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Map_Point_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Geo_Map_Points](Geo_Map_Points.md).[Map_Point_Id](Geo_Map_Points.md#map_point_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Map_Point_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Map_Point_Name
-
-
-Map_Point_Name
-
-
-Map point short name (Multilanguage)
 
 
 Map point short name (Multilanguage)
@@ -81,9 +76,8 @@ Map point short name (Multilanguage)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Geo_Map_Points](Geo_Map_Points.md).[Map_Point_Name](Geo_Map_Points.md#map_point_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,16 +100,10 @@ Map point short name (Multilanguage)
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company for within the name of the map point has meaning
 
 
 The enterprise company for within the name of the map point has meaning
@@ -129,9 +117,8 @@ The enterprise company for within the name of the map point has meaning
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Geo_Map_Points](Geo_Map_Points.md).[Enterprise_Company_Id](Geo_Map_Points.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,12 +141,9 @@ The enterprise company for within the name of the map point has meaning
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -169,9 +153,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Geo_Map_Points](Geo_Map_Points.md).[Row_Version](Geo_Map_Points.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +176,6 @@ Row_Version
 ### Latitude
 
 
-Latitude
-
-
-Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].
-
-
 Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].
 
 | Property | Value |
@@ -209,9 +186,8 @@ Latitude is the vertical angle from equator to the pole of the point. Positive v
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Geo_Map_Points](Geo_Map_Points.md).[Latitude](Geo_Map_Points.md#latitude)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -233,12 +209,6 @@ Latitude is the vertical angle from equator to the pole of the point. Positive v
 ### Longitude
 
 
-Longitude
-
-
-Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].
-
-
 Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].
 
 | Property | Value |
@@ -249,9 +219,8 @@ Longitude is angle from the prime meridian (in England) in east-west direction. 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Geo_Map_Points](Geo_Map_Points.md).[Longitude](Geo_Map_Points.md#longitude)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -273,12 +242,6 @@ Longitude is angle from the prime meridian (in England) in east-west direction. 
 ### Address
 
 
-Address
-
-
-The descriptive physical address, related to this map point.
-
-
 The descriptive physical address, related to this map point.
 
 | Property | Value |
@@ -290,9 +253,8 @@ The descriptive physical address, related to this map point.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Geo_Map_Points](Geo_Map_Points.md).[Address](Geo_Map_Points.md#address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

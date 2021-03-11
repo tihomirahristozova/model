@@ -1,5 +1,10 @@
 # Table Eam_Maintenance_Types
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.MaintenanceTypes](~/entities/Applications.AssetManagement.MaintenanceTypes.md)
+
 Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1)
 
 ## Summary
@@ -10,7 +15,7 @@ Types of maintenances which can be scheduled and performed on the managed assets
 |[Maintenance_Type_Code](#maintenance_type_code)|`nvarchar(16)` |Unique code of the maintenance type.|
 |[Maintenance_Type_Group_Id](#maintenance_type_group_id)|`uniqueidentifier` |The group, to which this maintenance type belongs.|
 |[Maintenance_Type_Name](#maintenance_type_name)|`nvarchar(254)` `ML`|Multilanguage name of the maintenance type.|
-|[Description](#description)|`nvarchar(2147483647)` `ML`|Detailed description of the maintenance (multilanguage).|
+|[Description](#description)|`nvarchar(max)` `ML`|Detailed description of the maintenance (multilanguage).|
 |[Default_Schedule_Months](#default_schedule_months)|`int` |Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.|
 |[Default_Schedule_Days](#default_schedule_days)|`int` |Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.|
 |[Tracked_Parameter_Id](#tracked_parameter_id)|`uniqueidentifier` |Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.|
@@ -21,9 +26,6 @@ Types of maintenances which can be scheduled and performed on the managed assets
 
 ### Maintenance_Type_Id
 
-
-Maintenance_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Maintenance_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Maintenance_Type_Id](Eam_Maintenance_Types.md#maintenance_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Maintenance_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Type_Code
-
-
-Maintenance_Type_Code
-
-
-Unique code of the maintenance type.
 
 
 Unique code of the maintenance type.
@@ -80,9 +75,8 @@ Unique code of the maintenance type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Maintenance_Type_Code](Eam_Maintenance_Types.md#maintenance_type_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,16 +99,10 @@ Unique code of the maintenance type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Maintenance_Type_Group_Id
-
-
-Maintenance_Type_Group_Id
-
-
-The group, to which this maintenance type belongs.
 
 
 The group, to which this maintenance type belongs.
@@ -128,9 +116,8 @@ The group, to which this maintenance type belongs.
 |Referenced Table|[Eam_Maintenance_Type_Groups](Eam_Maintenance_Type_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Maintenance_Type_Group_Id](Eam_Maintenance_Types.md#maintenance_type_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,15 +140,9 @@ The group, to which this maintenance type belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Type_Name
-
-
-Maintenance_Type_Name
-
-
-Multilanguage name of the maintenance type.
 
 
 Multilanguage name of the maintenance type.
@@ -175,9 +156,8 @@ Multilanguage name of the maintenance type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Maintenance_Type_Name](Eam_Maintenance_Types.md#maintenance_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,32 +180,25 @@ Multilanguage name of the maintenance type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Description
-
-
-Description
-
-
-Detailed description of the maintenance (multilanguage).
 
 
 Detailed description of the maintenance (multilanguage).
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|yes|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Description](Eam_Maintenance_Types.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,12 +220,6 @@ Detailed description of the maintenance (multilanguage).
 ### Default_Schedule_Months
 
 
-Default_Schedule_Months
-
-
-Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.
-
-
 Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.
 
 | Property | Value |
@@ -263,9 +230,8 @@ Specifies the maximum number of months between two maintenances. NULL means that
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Default_Schedule_Months](Eam_Maintenance_Types.md#default_schedule_months)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -287,12 +253,6 @@ Specifies the maximum number of months between two maintenances. NULL means that
 ### Default_Schedule_Days
 
 
-Default_Schedule_Days
-
-
-Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.
-
-
 Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.
 
 | Property | Value |
@@ -303,9 +263,8 @@ Specifies the maximum number of days between two maintenances (in addition to th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Default_Schedule_Days](Eam_Maintenance_Types.md#default_schedule_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -327,12 +286,6 @@ Specifies the maximum number of days between two maintenances (in addition to th
 ### Tracked_Parameter_Id
 
 
-Tracked_Parameter_Id
-
-
-Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.
-
-
 Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.
 
 | Property | Value |
@@ -344,9 +297,8 @@ Specifies the parameter, on which the next scheduled maintenance will be based. 
 |Referenced Table|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Tracked_Parameter_Id](Eam_Maintenance_Types.md#tracked_parameter_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -369,15 +321,9 @@ Specifies the parameter, on which the next scheduled maintenance will be based. 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Default_Parameter_Change
-
-
-Default_Parameter_Change
-
-
-Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change.
 
 
 Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change.
@@ -390,9 +336,8 @@ Default positive change of the tracked parameter between two maintenances. NULL 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Default_Parameter_Change](Eam_Maintenance_Types.md#default_parameter_change)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -413,9 +358,6 @@ Default positive change of the tracked parameter between two maintenances. NULL 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -424,9 +366,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Types](Eam_Maintenance_Types.md).[Row_Version](Eam_Maintenance_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

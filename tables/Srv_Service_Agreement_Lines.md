@@ -1,5 +1,10 @@
 # Table Srv_Service_Agreement_Lines
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceAgreementLines](~/entities/Applications.Service.ServiceAgreementLines.md)
+
 Service agreement lines represent the individual serviced objects that are covered by the service agreement. Entity: Srv_Service_Agreement_Lines
 
 ## Owner Tables Hierarchy
@@ -26,9 +31,6 @@ Service agreement lines represent the individual serviced objects that are cover
 
 ### Service_Agreement_Object_Id
 
-
-Service_Agreement_Object_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -38,9 +40,8 @@ Service_Agreement_Object_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Service_Agreement_Object_Id](Srv_Service_Agreement_Lines.md#service_agreement_object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,12 +64,9 @@ Service_Agreement_Object_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Agreement_Id
-
-
-Service_Agreement_Id
 
 | Property | Value |
 | - | - |
@@ -79,9 +77,8 @@ Service_Agreement_Id
 |Referenced Table|[Srv_Service_Agreements](Srv_Service_Agreements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Service_Agreement_Id](Srv_Service_Agreement_Lines.md#service_agreement_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +101,9 @@ Service_Agreement_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 
 Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
@@ -125,10 +116,9 @@ Consecutive line number, unique within the document. Usually is increasing in st
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Line_No](Srv_Service_Agreement_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,15 +141,9 @@ Consecutive line number, unique within the document. Usually is increasing in st
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Object_Id
-
-
-Service_Object_Id
-
-
-The service object, which is covered by the current agreement.
 
 
 The service object, which is covered by the current agreement.
@@ -173,9 +157,8 @@ The service object, which is covered by the current agreement.
 |Referenced Table|[Srv_Service_Objects](Srv_Service_Objects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Service_Object_Id](Srv_Service_Agreement_Lines.md#service_object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,15 +181,9 @@ The service object, which is covered by the current agreement.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The quantity of the service object that is included in the agreement
 
 
 The quantity of the service object that is included in the agreement
@@ -219,9 +196,8 @@ The quantity of the service object that is included in the agreement
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Quantity](Srv_Service_Agreement_Lines.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,12 +225,6 @@ The quantity of the service object that is included in the agreement
 ### Service_Type_Id
 
 
-Service_Type_Id
-
-
-The type (level) of service that is agreed
-
-
 The type (level) of service that is agreed
 
 | Property | Value |
@@ -266,9 +236,8 @@ The type (level) of service that is agreed
 |Referenced Table|[Srv_Service_Types](Srv_Service_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Service_Type_Id](Srv_Service_Agreement_Lines.md#service_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,15 +260,9 @@ The type (level) of service that is agreed
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_Start_Date_Time
-
-
-Line_Start_Date_Time
-
-
-The starting date and time of the agreement coverage for the current line.
 
 
 The starting date and time of the agreement coverage for the current line.
@@ -313,9 +276,8 @@ The starting date and time of the agreement coverage for the current line.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Line_Start_Date_Time](Srv_Service_Agreement_Lines.md#line_start_date_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -343,12 +305,6 @@ The starting date and time of the agreement coverage for the current line.
 ### Line_End_Date_Time
 
 
-Line_End_Date_Time
-
-
-The ending date and time of the agreement coverage for the current line.
-
-
 The ending date and time of the agreement coverage for the current line.
 
 | Property | Value |
@@ -360,9 +316,8 @@ The ending date and time of the agreement coverage for the current line.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Line_End_Date_Time](Srv_Service_Agreement_Lines.md#line_end_date_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -389,9 +344,6 @@ The ending date and time of the agreement coverage for the current line.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -401,9 +353,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Notes](Srv_Service_Agreement_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -424,9 +375,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -435,9 +383,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreement_Lines](Srv_Service_Agreement_Lines.md).[Row_Version](Srv_Service_Agreement_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

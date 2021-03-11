@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prd_principal_recipe_operations">Table Prd_Principal_Recipe_Operations</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Production.Technologies.PrincipalRecipeOperations.html">Production.Technologies.PrincipalRecipeOperations</a></p>
 <p>Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_Operations</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#operation_description">Operation_Description</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The description of the operation. Initially copied from the generic operation definition.</td>
 </tr>
 <tr>
@@ -204,7 +206,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
 <table>
 <thead>
 <tr>
@@ -243,15 +244,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -336,14 +333,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="principal_recipe_id">Principal_Recipe_Id</h3>
-<p>Principal_Recipe_Id</p>
 <table>
 <thead>
 <tr>
@@ -382,15 +378,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#principal_recipe_id">Principal_Recipe_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -475,15 +467,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_id">Operation_Id</h3>
-<p>Operation_Id</p>
-<p>The generic operation definition. The data is copied locally and can be modified for this specific record.</p>
 <p>The generic operation definition. The data is copied locally and can be modified for this specific record.</p>
 <table>
 <thead>
@@ -523,15 +513,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#operation_id">Operation_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -616,15 +602,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_description">Operation_Description</h3>
-<p>Operation_Description</p>
-<p>The description of the operation. Initially copied from the generic operation definition.</p>
 <p>The description of the operation. Initially copied from the generic operation definition.</p>
 <table>
 <thead>
@@ -636,7 +620,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -664,15 +648,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#operation_description">Operation_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -745,8 +725,6 @@
 </tbody>
 </table>
 <h3 id="workgroup_resource_id">Workgroup_Resource_Id</h3>
-<p>Workgroup_Resource_Id</p>
-<p>Required workgroup resource for the operation. NULL means that no resource is required or the resource will be specified later</p>
 <p>Required workgroup resource for the operation. NULL means that no resource is required or the resource will be specified later</p>
 <table>
 <thead>
@@ -786,15 +764,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#workgroup_resource_id">Workgroup_Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -879,15 +853,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="use_quantity">Use_Quantity</h3>
-<p>Use_Quantity</p>
-<p>Quantity of the workgroup resource that should be allocated for the operation</p>
 <p>Quantity of the workgroup resource that should be allocated for the operation</p>
 <table>
 <thead>
@@ -923,15 +895,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#use_quantity">Use_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1023,8 +991,6 @@
 </tbody>
 </table>
 <h3 id="use_quantity_unit_id">Use_Quantity_Unit_Id</h3>
-<p>Use_Quantity_Unit_Id</p>
-<p>The measurement unit of Use_Quantity</p>
 <p>The measurement unit of Use_Quantity</p>
 <table>
 <thead>
@@ -1064,15 +1030,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#use_quantity_unit_id">Use_Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1157,15 +1119,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</h3>
-<p>Minimum_Concurrent_Start_Time_Minutes</p>
-<p>How many minutes after the start of the previous operation can this operation start. NULL means that this operation should wait the previous operation to finish before starting</p>
 <p>How many minutes after the start of the previous operation can this operation start. NULL means that this operation should wait the previous operation to finish before starting</p>
 <table>
 <thead>
@@ -1201,15 +1161,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1282,8 +1238,6 @@
 </tbody>
 </table>
 <h3 id="setup_time_minutes">Setup_Time_Minutes</h3>
-<p>Setup_Time_Minutes</p>
-<p>Time needed to setup the equipment</p>
 <p>Time needed to setup the equipment</p>
 <table>
 <thead>
@@ -1319,15 +1273,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#setup_time_minutes">Setup_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1419,8 +1369,6 @@
 </tbody>
 </table>
 <h3 id="run_time_minutes">Run_Time_Minutes</h3>
-<p>Run_Time_Minutes</p>
-<p>Duration of the operation for one piece in the standard measurement unit of the product</p>
 <p>Duration of the operation for one piece in the standard measurement unit of the product</p>
 <table>
 <thead>
@@ -1456,15 +1404,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#run_time_minutes">Run_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1556,8 +1500,6 @@
 </tbody>
 </table>
 <h3 id="wait_time_minutes">Wait_Time_Minutes</h3>
-<p>Wait_Time_Minutes</p>
-<p>Wait time (drying, cooling, etc.) after the operation in minutes</p>
 <p>Wait time (drying, cooling, etc.) after the operation in minutes</p>
 <table>
 <thead>
@@ -1593,15 +1535,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#wait_time_minutes">Wait_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1693,8 +1631,6 @@
 </tbody>
 </table>
 <h3 id="move_time_minutes">Move_Time_Minutes</h3>
-<p>Move_Time_Minutes</p>
-<p>Time to move the lot to the next operation in minutes</p>
 <p>Time to move the lot to the next operation in minutes</p>
 <table>
 <thead>
@@ -1730,15 +1666,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#move_time_minutes">Move_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1830,8 +1762,6 @@
 </tbody>
 </table>
 <h3 id="scrap_rate">Scrap_Rate</h3>
-<p>Scrap_Rate</p>
-<p>Standard rate of scrap during the operation</p>
 <p>Standard rate of scrap during the operation</p>
 <table>
 <thead>
@@ -1867,15 +1797,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#scrap_rate">Scrap_Rate</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1948,7 +1874,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1987,15 +1912,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2068,8 +1989,6 @@
 </tbody>
 </table>
 <h3 id="tooling">Tooling</h3>
-<p>Tooling</p>
-<p>The tools needed for the routing step</p>
 <p>The tools needed for the routing step</p>
 <table>
 <thead>
@@ -2109,15 +2028,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#tooling">Tooling</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2190,8 +2105,6 @@
 </tbody>
 </table>
 <h3 id="operation_instruction_id">Operation_Instruction_Id</h3>
-<p>Operation_Instruction_Id</p>
-<p>Link to additional data, containing instructions in external format</p>
 <p>Link to additional data, containing instructions in external format</p>
 <table>
 <thead>
@@ -2231,15 +2144,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#operation_instruction_id">Operation_Instruction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2324,15 +2233,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_ord">Line_Ord</h3>
-<p>Line_Ord</p>
-<p>Consecutive line number within the principal recipe.</p>
 <p>Consecutive line number within the principal recipe.</p>
 <table>
 <thead>
@@ -2368,7 +2275,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -2377,10 +2284,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#line_ord">Line_Ord</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2453,8 +2356,6 @@
 </tbody>
 </table>
 <h3 id="conditional_property_id">Conditional_Property_Id</h3>
-<p>Conditional_Property_Id</p>
-<p>When not NULL, specifies that, when creating recipe, the operation will be added only if this property is set for the main product</p>
 <p>When not NULL, specifies that, when creating recipe, the operation will be added only if this property is set for the main product</p>
 <table>
 <thead>
@@ -2494,15 +2395,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#conditional_property_id">Conditional_Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2587,15 +2484,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="conditional_property_value">Conditional_Property_Value</h3>
-<p>Conditional_Property_Value</p>
-<p>The desired value of the Conditional Property.</p>
 <p>The desired value of the Conditional Property.</p>
 <table>
 <thead>
@@ -2635,15 +2530,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#conditional_property_value">Conditional_Property_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2716,8 +2607,6 @@
 </tbody>
 </table>
 <h3 id="conditional_property_description">Conditional_Property_Description</h3>
-<p>Conditional_Property_Description</p>
-<p>The desired description of the Conditional Property.</p>
 <p>The desired description of the Conditional Property.</p>
 <table>
 <thead>
@@ -2757,15 +2646,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#conditional_property_description">Conditional_Property_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2838,7 +2723,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2873,15 +2757,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Principal_Recipe_Operations.html">Prd_Principal_Recipe_Operations</a>.<a href="Prd_Principal_Recipe_Operations.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-inv_cost_corrections">Table Inv_Cost_Corrections</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.CostCorrections.html">Logistics.Inventory.CostCorrections</a></p>
 <p>Cost corrections provide a way to correct the cost of stock transactions after they are issued. Entity: Inv_Cost_Corrections</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -148,7 +150,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="cost_correction_id">Cost_Correction_Id</h3>
-<p>Cost_Correction_Id</p>
 <table>
 <thead>
 <tr>
@@ -187,15 +188,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#cost_correction_id">Cost_Correction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -280,14 +277,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -326,15 +322,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -419,15 +411,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="source_transaction_id">Source_Transaction_Id</h3>
-<p>Source_Transaction_Id</p>
-<p>Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the specified cost in the source transaction.</p>
 <p>Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the specified cost in the source transaction.</p>
 <table>
 <thead>
@@ -467,15 +457,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#source_transaction_id">Source_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -560,15 +546,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="corrected_transaction_id">Corrected_Transaction_Id</h3>
-<p>Corrected_Transaction_Id</p>
-<p>Transaction that is corrected with this cost correction</p>
 <p>Transaction that is corrected with this cost correction</p>
 <table>
 <thead>
@@ -608,15 +592,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#corrected_transaction_id">Corrected_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -701,15 +681,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>From_Date</p>
-<p>The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is NULL.</p>
 <p>The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is NULL.</p>
 <table>
 <thead>
@@ -749,15 +727,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#from_date">From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -830,8 +804,6 @@
 </tbody>
 </table>
 <h3 id="thru_date">Thru_Date</h3>
-<p>Thru_Date</p>
-<p>The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is NULL.</p>
 <p>The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is NULL.</p>
 <table>
 <thead>
@@ -871,15 +843,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#thru_date">Thru_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -952,8 +920,6 @@
 </tbody>
 </table>
 <h3 id="isvalid">IsValid</h3>
-<p>IsValid</p>
-<p>Obsolete. Not used. (Should be set to 1 if the document is completed and not void. Required for the indexed view Inv_Cost_Corrections_Summary, because Gen_Documents_Table cannot be included in the view)</p>
 <p>Obsolete. Not used. (Should be set to 1 if the document is completed and not void. Required for the indexed view Inv_Cost_Corrections_Summary, because Gen_Documents_Table cannot be included in the view)</p>
 <table>
 <thead>
@@ -989,15 +955,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#isvalid">IsValid</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1070,8 +1032,6 @@
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1107,15 +1067,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1200,15 +1156,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -1244,15 +1198,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1337,14 +1287,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1379,15 +1328,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Cost_Corrections.html">Inv_Cost_Corrections</a>.<a href="Inv_Cost_Corrections.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Gen_Currency_Directories
 
+
+## Entity
+
+Entity: [General.CurrencyDirectories](~/entities/General.CurrencyDirectories.md)
+
 Contains a named set of currency exchange rates against a single currency for a given date. Multiple directories with different names can exist for single date. For example, buy and sell rates are recorded as separate directories. Entity: Gen_Currency_Directories
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Contains a named set of currency exchange rates against a single currency for a 
 
 ### Currency_Directory_Id
 
-
-Currency_Directory_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Currency_Directory_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[Currency_Directory_Id](Gen_Currency_Directories.md#currency_directory_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Currency_Directory_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Currency_Directory_Name
-
-
-Currency_Directory_Name
-
-
-The name of the currency directory, used to distinguish it from the other directories on the same date
 
 
 The name of the currency directory, used to distinguish it from the other directories on the same date
@@ -83,9 +78,8 @@ The name of the currency directory, used to distinguish it from the other direct
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[Currency_Directory_Name](Gen_Currency_Directories.md#currency_directory_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,9 +106,6 @@ The name of the currency directory, used to distinguish it from the other direct
 
 ### Document_Id
 
-
-Document_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -124,9 +115,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[Document_Id](Gen_Currency_Directories.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,15 +139,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### To_Currency_Id
-
-
-To_Currency_Id
-
-
-The destination currency for the conversions for this directory
 
 
 The destination currency for the conversions for this directory
@@ -171,9 +155,8 @@ The destination currency for the conversions for this directory
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[To_Currency_Id](Gen_Currency_Directories.md#to_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,15 +179,9 @@ The destination currency for the conversions for this directory
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Valid
-
-
-Is_Valid
-
-
-Shows if the current currency directory is valid to be used in documents
 
 
 Shows if the current currency directory is valid to be used in documents
@@ -217,9 +194,8 @@ Shows if the current currency directory is valid to be used in documents
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[Is_Valid](Gen_Currency_Directories.md#is_valid)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,12 +218,9 @@ Shows if the current currency directory is valid to be used in documents
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Default
-
-
-Is_Default
 
 | Property | Value |
 | - | - |
@@ -257,9 +230,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[Is_Default](Gen_Currency_Directories.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -282,17 +254,11 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -303,9 +269,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[Is_Single_Execution](Gen_Currency_Directories.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -328,17 +293,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -349,9 +308,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[Is_Released](Gen_Currency_Directories.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -374,12 +332,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -389,9 +344,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Currency_Directories](Gen_Currency_Directories.md).[Row_Version](Gen_Currency_Directories.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cost_distribution_costs">Table Cost_Distribution_Costs</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Cost.DistributionCosts.html">Finance.Cost.DistributionCosts</a></p>
 <p>The cost types and their amounts which are distributed by a Cost Distribution document. Entity: Cost_Distribution_Costs</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -117,14 +119,13 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="cost_distribution_cost_id">Cost_Distribution_Cost_Id</h3>
-<p>Cost_Distribution_Cost_Id</p>
 <table>
 <thead>
 <tr>
@@ -163,15 +164,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cost_Distribution_Costs.html">Cost_Distribution_Costs</a>.<a href="Cost_Distribution_Costs.html#cost_distribution_cost_id">Cost_Distribution_Cost_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -256,14 +253,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="cost_distribution_id">Cost_Distribution_Id</h3>
-<p>Cost_Distribution_Id</p>
 <table>
 <thead>
 <tr>
@@ -302,15 +298,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cost_Distribution_Costs.html">Cost_Distribution_Costs</a>.<a href="Cost_Distribution_Costs.html#cost_distribution_id">Cost_Distribution_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -395,15 +387,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="cost_type_id">Cost_Type_Id</h3>
-<p>Cost_Type_Id</p>
-<p>The type of the cost, which will be distributed.</p>
 <p>The type of the cost, which will be distributed.</p>
 <table>
 <thead>
@@ -443,15 +433,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cost_Distribution_Costs.html">Cost_Distribution_Costs</a>.<a href="Cost_Distribution_Costs.html#cost_type_id">Cost_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -536,15 +522,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="amount_base">Amount_Base</h3>
-<p>Amount_Base</p>
-<p>The cost (in base currency) which should be distributed.</p>
 <p>The cost (in base currency) which should be distributed.</p>
 <table>
 <thead>
@@ -580,15 +564,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cost_Distribution_Costs.html">Cost_Distribution_Costs</a>.<a href="Cost_Distribution_Costs.html#amount_base">Amount_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -673,14 +653,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -691,7 +670,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -719,15 +698,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cost_Distribution_Costs.html">Cost_Distribution_Costs</a>.<a href="Cost_Distribution_Costs.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>

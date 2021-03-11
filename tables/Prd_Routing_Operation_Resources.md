@@ -21,9 +21,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +30,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Routing_Operation_Resources](Prd_Routing_Operation_Resources.md).[Id](Prd_Routing_Operation_Resources.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +54,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Routing_Operation_Id
-
-
-Routing_Operation_Id
-
-
-The routing operation, containing the line
 
 
 The routing operation, containing the line
@@ -80,9 +70,8 @@ The routing operation, containing the line
 |Referenced Table|[Prd_Routing_Operations](Prd_Routing_Operations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Routing_Operation_Resources](Prd_Routing_Operation_Resources.md).[Routing_Operation_Id](Prd_Routing_Operation_Resources.md#routing_operation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +94,9 @@ The routing operation, containing the line
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Function_Id
-
-
-Function_Id
-
-
-Specifies the function, that the resource must be able to perform. This helps the selection of specific resource for the operation.
 
 
 Specifies the function, that the resource must be able to perform. This helps the selection of specific resource for the operation.
@@ -127,9 +110,8 @@ Specifies the function, that the resource must be able to perform. This helps th
 |Referenced Table|[Prd_Functions](Prd_Functions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Routing_Operation_Resources](Prd_Routing_Operation_Resources.md).[Function_Id](Prd_Routing_Operation_Resources.md#function_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +134,9 @@ Specifies the function, that the resource must be able to perform. This helps th
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Lock_Quantity
-
-
-Lock_Quantity
-
-
-the quantity of the resource to be locked. The measurement unit is specified in the Prd_Functions table.Primary_Unit.
 
 
 the quantity of the resource to be locked. The measurement unit is specified in the Prd_Functions table.Primary_Unit.
@@ -173,9 +149,8 @@ the quantity of the resource to be locked. The measurement unit is specified in 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Prd_Routing_Operation_Resources](Prd_Routing_Operation_Resources.md).[Lock_Quantity](Prd_Routing_Operation_Resources.md#lock_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,12 +172,6 @@ the quantity of the resource to be locked. The measurement unit is specified in 
 ### Line_Ord
 
 
-Line_Ord
-
-
-The position of the line in the recipe model
-
-
 The position of the line in the recipe model
 
 | Property | Value |
@@ -213,9 +182,8 @@ The position of the line in the recipe model
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Routing_Operation_Resources](Prd_Routing_Operation_Resources.md).[Line_Ord](Prd_Routing_Operation_Resources.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -236,9 +204,6 @@ The position of the line in the recipe model
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -247,9 +212,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Routing_Operation_Resources](Prd_Routing_Operation_Resources.md).[Row_Version](Prd_Routing_Operation_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

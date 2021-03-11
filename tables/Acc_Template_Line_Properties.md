@@ -1,5 +1,10 @@
 # Table Acc_Template_Line_Properties
 
+
+## Entity
+
+Entity: [Finance.Accounting.TemplateLineProperties](~/entities/Finance.Accounting.TemplateLineProperties.md)
+
 Contains the way to obtain the values for each required property of both the debit and the credit accounts. Entity: Acc_Template_Line_Properties
 
 ## Owner Tables Hierarchy
@@ -29,12 +34,6 @@ Contains the way to obtain the values for each required property of both the deb
 ### Is_Debit
 
 
-Is_Debit
-
-
-If Is_Debit=1 then this property is for the debit account in the template line for which is this record. If Is_Debit=0 then the property is for the credit account.
-
-
 If Is_Debit=1 then this property is for the debit account in the template line for which is this record. If Is_Debit=0 then the property is for the credit account.
 
 | Property | Value |
@@ -45,9 +44,8 @@ If Is_Debit=1 then this property is for the debit account in the template line f
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Is_Debit](Acc_Template_Line_Properties.md#is_debit)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -70,15 +68,9 @@ If Is_Debit=1 then this property is for the debit account in the template line f
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_No
-
-
-Property_No
-
-
-The ordinal position of the property value in the item key of the account.
 
 
 The ordinal position of the property value in the item key of the account.
@@ -91,9 +83,8 @@ The ordinal position of the property value in the item key of the account.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Property_No](Acc_Template_Line_Properties.md#property_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -116,15 +107,9 @@ The ordinal position of the property value in the item key of the account.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Property_Id
-
-
-Property_Id
-
-
-The property which value will be included in the item key of the account.
 
 
 The property which value will be included in the item key of the account.
@@ -138,9 +123,8 @@ The property which value will be included in the item key of the account.
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Property_Id](Acc_Template_Line_Properties.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -163,15 +147,9 @@ The property which value will be included in the item key of the account.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_Value_Source_Type
-
-
-Property_Value_Source_Type
-
-
-Type of source for the property value. For example: System properties, User properties for document, Constant, ...
 
 
 Type of source for the property value. For example: System properties, User properties for document, Constant, ...
@@ -185,9 +163,8 @@ Type of source for the property value. For example: System properties, User prop
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Property_Value_Source_Type](Acc_Template_Line_Properties.md#property_value_source_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -209,12 +186,6 @@ Type of source for the property value. For example: System properties, User prop
 ### Property_Value_Source
 
 
-Property_Value_Source
-
-
-Source for the property value according to the chosen source type.
-
-
 Source for the property value according to the chosen source type.
 
 | Property | Value |
@@ -226,9 +197,8 @@ Source for the property value according to the chosen source type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Property_Value_Source](Acc_Template_Line_Properties.md#property_value_source)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,9 +219,6 @@ Source for the property value according to the chosen source type.
 
 ### Template_Line_Property_Id
 
-
-Template_Line_Property_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -261,9 +228,8 @@ Template_Line_Property_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Template_Line_Property_Id](Acc_Template_Line_Properties.md#template_line_property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,12 +252,9 @@ Template_Line_Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Template_Line_Id
-
-
-Template_Line_Id
 
 | Property | Value |
 | - | - |
@@ -302,9 +265,8 @@ Template_Line_Id
 |Referenced Table|[Acc_Template_Lines](Acc_Template_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Template_Line_Id](Acc_Template_Line_Properties.md#template_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -327,15 +289,9 @@ Template_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Property_Description
-
-
-Property_Description
-
-
-Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant)
 
 
 Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant)
@@ -349,9 +305,8 @@ Description for the property value that should be used when the description can'
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Property_Description](Acc_Template_Line_Properties.md#property_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -373,12 +328,6 @@ Description for the property value that should be used when the description can'
 ### Constant_Value_Id
 
 
-Constant_Value_Id
-
-
-The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant.
-
-
 The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant.
 
 | Property | Value |
@@ -389,9 +338,8 @@ The internal Id of a property value, selected as constant value. Applicable only
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Constant_Value_Id](Acc_Template_Line_Properties.md#constant_value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -414,12 +362,9 @@ The internal Id of a property value, selected as constant value. Applicable only
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -429,9 +374,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Line_Properties](Acc_Template_Line_Properties.md).[Row_Version](Acc_Template_Line_Properties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

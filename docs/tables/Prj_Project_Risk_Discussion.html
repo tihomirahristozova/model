@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_project_risk_discussion">Table Prj_Project_Risk_Discussion</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.ProjectRiskDiscussion.html">Projects.ProjectRiskDiscussion</a></p>
 <p>Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -117,7 +119,7 @@
 </tr>
 <tr>
 <td><a href="#message">Message</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The contents of the message.</td>
 </tr>
 <tr>
@@ -134,7 +136,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="project_risk_message_id">Project_Risk_Message_Id</h3>
-<p>Project_Risk_Message_Id</p>
 <table>
 <thead>
 <tr>
@@ -173,15 +174,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risk_Discussion.html">Prj_Project_Risk_Discussion</a>.<a href="Prj_Project_Risk_Discussion.html#project_risk_message_id">Project_Risk_Message_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -266,14 +263,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_risk_id">Project_Risk_Id</h3>
-<p>Project_Risk_Id</p>
 <table>
 <thead>
 <tr>
@@ -312,15 +308,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risk_Discussion.html">Prj_Project_Risk_Discussion</a>.<a href="Prj_Project_Risk_Discussion.html#project_risk_id">Project_Risk_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -405,15 +397,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="contributed_by_user_id">Contributed_By_User_Id</h3>
-<p>Contributed_By_User_Id</p>
-<p>The user, who contributed (wrote) the message.</p>
 <p>The user, who contributed (wrote) the message.</p>
 <table>
 <thead>
@@ -453,15 +443,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risk_Discussion.html">Prj_Project_Risk_Discussion</a>.<a href="Prj_Project_Risk_Discussion.html#contributed_by_user_id">Contributed_By_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -546,15 +532,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="contribution_time">Contribution_Time</h3>
-<p>Contribution_Time</p>
-<p>The time, when the message was contributed.</p>
 <p>The time, when the message was contributed.</p>
 <table>
 <thead>
@@ -594,15 +578,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risk_Discussion.html">Prj_Project_Risk_Discussion</a>.<a href="Prj_Project_Risk_Discussion.html#contribution_time">Contribution_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -687,15 +667,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="message">Message</h3>
-<p>Message</p>
-<p>The contents of the message.</p>
 <p>The contents of the message.</p>
 <table>
 <thead>
@@ -707,7 +685,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -735,15 +713,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risk_Discussion.html">Prj_Project_Risk_Discussion</a>.<a href="Prj_Project_Risk_Discussion.html#message">Message</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -816,8 +790,6 @@
 </tbody>
 </table>
 <h3 id="last_edit_time">Last_Edit_Time</h3>
-<p>Last_Edit_Time</p>
-<p>Contains the last edit time of the message. NULL if the message was never edited</p>
 <p>Contains the last edit time of the message. NULL if the message was never edited</p>
 <table>
 <thead>
@@ -857,15 +829,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risk_Discussion.html">Prj_Project_Risk_Discussion</a>.<a href="Prj_Project_Risk_Discussion.html#last_edit_time">Last_Edit_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -950,14 +918,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -992,15 +959,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Risk_Discussion.html">Prj_Project_Risk_Discussion</a>.<a href="Prj_Project_Risk_Discussion.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

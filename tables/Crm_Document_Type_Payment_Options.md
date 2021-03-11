@@ -1,5 +1,10 @@
 # Table Crm_Document_Type_Payment_Options
 
+
+## Entity
+
+Entity: [Crm.Sales.DocumentTypePaymentOptions](~/entities/Crm.Sales.DocumentTypePaymentOptions.md)
+
 Contains payment options for user documnet types for sales orders. Entity: Crm_Document_Type_Payment_Options
 
 ## Summary
@@ -17,9 +22,6 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 
 ### Document_Type_Payment_Option_Id
 
-
-Document_Type_Payment_Option_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Document_Type_Payment_Option_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Document_Type_Payment_Options](Crm_Document_Type_Payment_Options.md).[Document_Type_Payment_Option_Id](Crm_Document_Type_Payment_Options.md#document_type_payment_option_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Document_Type_Payment_Option_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type for which the payment option applies.
 
 
 The document type for which the payment option applies.
@@ -76,9 +71,8 @@ The document type for which the payment option applies.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Document_Type_Payment_Options](Crm_Document_Type_Payment_Options.md).[Document_Type_Id](Crm_Document_Type_Payment_Options.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +95,9 @@ The document type for which the payment option applies.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company for which the payment options are specified
 
 
 The enterprise company for which the payment options are specified
@@ -123,9 +111,8 @@ The enterprise company for which the payment options are specified
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Document_Type_Payment_Options](Crm_Document_Type_Payment_Options.md).[Enterprise_Company_Id](Crm_Document_Type_Payment_Options.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +135,9 @@ The enterprise company for which the payment options are specified
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Deferred_Payment_Minimal_Ammount
-
-
-Deferred_Payment_Minimal_Ammount
-
-
-The minimal order total amount, which an order must have in order to use deferred payment
 
 
 The minimal order total amount, which an order must have in order to use deferred payment
@@ -169,9 +150,8 @@ The minimal order total amount, which an order must have in order to use deferre
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Document_Type_Payment_Options](Crm_Document_Type_Payment_Options.md).[Deferred_Payment_Minimal_Ammount](Crm_Document_Type_Payment_Options.md#deferred_payment_minimal_ammount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +173,6 @@ The minimal order total amount, which an order must have in order to use deferre
 ### Deferred_Payment_Minimal_Ammount_Currency_Id
 
 
-Deferred_Payment_Minimal_Ammount_Currency_Id
-
-
-The currency of Deferred Payment Minimal Amount
-
-
 The currency of Deferred Payment Minimal Amount
 
 | Property | Value |
@@ -210,9 +184,8 @@ The currency of Deferred Payment Minimal Amount
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Document_Type_Payment_Options](Crm_Document_Type_Payment_Options.md).[Deferred_Payment_Minimal_Ammount_Currency_Id](Crm_Document_Type_Payment_Options.md#deferred_payment_minimal_ammount_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -235,12 +208,9 @@ The currency of Deferred Payment Minimal Amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -250,9 +220,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Document_Type_Payment_Options](Crm_Document_Type_Payment_Options.md).[Row_Version](Crm_Document_Type_Payment_Options.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_sales_order_payment_orders_templates">Table Crm_Sales_Order_Payment_Orders_Templates</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Sales.SalesOrderPaymentOrdersTemplates.html">Crm.Sales.SalesOrderPaymentOrdersTemplates</a></p>
 <p>Contains options for generation of payment orders. Each option set is assigned to specific generation route. Entity: Crm_Sales_Order_Payment_Orders_Templates</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -134,7 +136,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
 <table>
 <thead>
 <tr>
@@ -173,15 +174,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Orders_Templates.html">Crm_Sales_Order_Payment_Orders_Templates</a>.<a href="Crm_Sales_Order_Payment_Orders_Templates.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -266,15 +263,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="route_id">Route_Id</h3>
-<p>Route_Id</p>
-<p>The route to which the current option set is assigned.</p>
 <p>The route to which the current option set is assigned.</p>
 <table>
 <thead>
@@ -314,15 +309,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Orders_Templates.html">Crm_Sales_Order_Payment_Orders_Templates</a>.<a href="Crm_Sales_Order_Payment_Orders_Templates.html#route_id">Route_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -407,15 +398,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_amount_with_vat">Is_Amount_With_VAT</h3>
-<p>Is_Amount_With_VAT</p>
-<p>1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order.</p>
 <p>1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order.</p>
 <table>
 <thead>
@@ -451,15 +440,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Orders_Templates.html">Crm_Sales_Order_Payment_Orders_Templates</a>.<a href="Crm_Sales_Order_Payment_Orders_Templates.html#is_amount_with_vat">Is_Amount_With_VAT</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -532,8 +517,6 @@
 </tbody>
 </table>
 <h3 id="update_for_invoices">Update_For_Invoices</h3>
-<p>Update_For_Invoices</p>
-<p>Update the payment order when invoices are issued for any of the sales orders lines.</p>
 <p>Update the payment order when invoices are issued for any of the sales orders lines.</p>
 <table>
 <thead>
@@ -569,15 +552,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Orders_Templates.html">Crm_Sales_Order_Payment_Orders_Templates</a>.<a href="Crm_Sales_Order_Payment_Orders_Templates.html#update_for_invoices">Update_For_Invoices</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -650,8 +629,6 @@
 </tbody>
 </table>
 <h3 id="create_for_not_invoiced_amounts">Create_For_Not_Invoiced_Amounts</h3>
-<p>Create_For_Not_Invoiced_Amounts</p>
-<p>1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.</p>
 <p>1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.</p>
 <table>
 <thead>
@@ -687,15 +664,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Orders_Templates.html">Crm_Sales_Order_Payment_Orders_Templates</a>.<a href="Crm_Sales_Order_Payment_Orders_Templates.html#create_for_not_invoiced_amounts">Create_For_Not_Invoiced_Amounts</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -768,8 +741,6 @@
 </tbody>
 </table>
 <h3 id="create_for_invoiced_amounts">Create_For_Invoiced_Amounts</h3>
-<p>Create_For_Invoiced_Amounts</p>
-<p>1 to add to the payment order, the part of the amount of the sales order, which is invoiced.</p>
 <p>1 to add to the payment order, the part of the amount of the sales order, which is invoiced.</p>
 <table>
 <thead>
@@ -805,15 +776,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Orders_Templates.html">Crm_Sales_Order_Payment_Orders_Templates</a>.<a href="Crm_Sales_Order_Payment_Orders_Templates.html#create_for_invoiced_amounts">Create_For_Invoiced_Amounts</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -886,7 +853,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -921,15 +887,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Sales_Order_Payment_Orders_Templates.html">Crm_Sales_Order_Payment_Orders_Templates</a>.<a href="Crm_Sales_Order_Payment_Orders_Templates.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

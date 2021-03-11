@@ -1,5 +1,10 @@
 # Table Crm_Invoices
 
+
+## Entity
+
+Entity: [Crm.Invoicing.Invoices](~/entities/Crm.Invoicing.Invoices.md)
+
 Invoices issued by the enterprise companies. Entity: Crm_Invoices
 
 ## Owner Tables Hierarchy
@@ -42,12 +47,6 @@ Invoices issued by the enterprise companies. Entity: Crm_Invoices
 ### Customer_Id
 
 
-Customer_Id
-
-
-The customer to which the invoice is issued
-
-
 The customer to which the invoice is issued
 
 | Property | Value |
@@ -59,9 +58,8 @@ The customer to which the invoice is issued
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Customer_Id](Crm_Invoices.md#customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -84,15 +82,9 @@ The customer to which the invoice is issued
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Currency_Id
-
-
-Document_Currency_Id
-
-
-The currency in which the document is issued. All amounts are in this currency
 
 
 The currency in which the document is issued. All amounts are in this currency
@@ -106,9 +98,8 @@ The currency in which the document is issued. All amounts are in this currency
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Document_Currency_Id](Crm_Invoices.md#document_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -131,15 +122,9 @@ The currency in which the document is issued. All amounts are in this currency
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Type_Id
-
-
-Payment_Type_Id
-
-
-When not NULL specifies the payment type for the invoice
 
 
 When not NULL specifies the payment type for the invoice
@@ -153,9 +138,8 @@ When not NULL specifies the payment type for the invoice
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Payment_Type_Id](Crm_Invoices.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -178,15 +162,9 @@ When not NULL specifies the payment type for the invoice
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Type_Description
-
-
-Payment_Type_Description
-
-
-Description of the payment type. Initially copied from the name of the Payment Type
 
 
 Description of the payment type. Initially copied from the name of the Payment Type
@@ -200,9 +178,8 @@ Description of the payment type. Initially copied from the name of the Payment T
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Payment_Type_Description](Crm_Invoices.md#payment_type_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -224,12 +201,6 @@ Description of the payment type. Initially copied from the name of the Payment T
 ### Delivery_Date
 
 
-Delivery_Date
-
-
-Date, when the delivery was effected. When NULL = document date
-
-
 Date, when the delivery was effected. When NULL = document date
 
 | Property | Value |
@@ -241,9 +212,8 @@ Date, when the delivery was effected. When NULL = document date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Delivery_Date](Crm_Invoices.md#delivery_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -264,9 +234,6 @@ Date, when the delivery was effected. When NULL = document date
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -276,9 +243,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Notes](Crm_Invoices.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -300,12 +266,6 @@ Notes
 ### Credit_Note_Original_Invoice_Id
 
 
-Credit_Note_Original_Invoice_Id
-
-
-When this is credit note, may contain the original Invoice. NULL for normal invoices or when the original document is unknown.
-
-
 When this is credit note, may contain the original Invoice. NULL for normal invoices or when the original document is unknown.
 
 | Property | Value |
@@ -317,9 +277,8 @@ When this is credit note, may contain the original Invoice. NULL for normal invo
 |Referenced Table|[Crm_Invoices](Crm_Invoices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Credit_Note_Original_Invoice_Id](Crm_Invoices.md#credit_note_original_invoice_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -342,15 +301,9 @@ When this is credit note, may contain the original Invoice. NULL for normal invo
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Credit_Note_Description
-
-
-Credit_Note_Description
-
-
-Descriptions/reason for the credit note.
 
 
 Descriptions/reason for the credit note.
@@ -364,9 +317,8 @@ Descriptions/reason for the credit note.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Credit_Note_Description](Crm_Invoices.md#credit_note_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -387,9 +339,6 @@ Descriptions/reason for the credit note.
 
 ### Invoice_Id
 
-
-Invoice_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -399,9 +348,8 @@ Invoice_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Invoice_Id](Crm_Invoices.md#invoice_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -424,15 +372,9 @@ Invoice_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Single_Execution
-
-
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
 
 
 Specifies whether the document is a single execution of its order document.
@@ -445,9 +387,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Is_Single_Execution](Crm_Invoices.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -470,12 +411,9 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Due_Start_Date
-
-
-Payment_Due_Start_Date
 
 | Property | Value |
 | - | - |
@@ -486,9 +424,8 @@ Payment_Due_Start_Date
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Payment_Due_Start_Date](Crm_Invoices.md#payment_due_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -510,12 +447,6 @@ Payment_Due_Start_Date
 ### VAT_Cash_Reporting_Mode
 
 
-VAT_Cash_Reporting_Mode
-
-
-When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.
-
-
 When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.
 
 | Property | Value |
@@ -526,9 +457,8 @@ When true, specifies, that the special cash reporting mode should be used for VA
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[VAT_Cash_Reporting_Mode](Crm_Invoices.md#vat_cash_reporting_mode)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -551,15 +481,9 @@ When true, specifies, that the special cash reporting mode should be used for VA
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Intrastat_Transport_Country_Id
-
-
-Intrastat_Transport_Country_Id
-
-
-Country of origin of the transport company; used for Intrastat reporting
 
 
 Country of origin of the transport company; used for Intrastat reporting
@@ -573,9 +497,8 @@ Country of origin of the transport company; used for Intrastat reporting
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Intrastat_Transport_Country_Id](Crm_Invoices.md#intrastat_transport_country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -598,15 +521,9 @@ Country of origin of the transport company; used for Intrastat reporting
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Intrastat_Transport_Mode_Code
-
-
-Intrastat_Transport_Mode_Code
-
-
-Transport mode; used for Intrastat reporting
 
 
 Transport mode; used for Intrastat reporting
@@ -620,10 +537,9 @@ Transport mode; used for Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`|
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Intrastat_Transport_Mode_Code](Crm_Invoices.md#intrastat_transport_mode_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -645,12 +561,6 @@ Transport mode; used for Intrastat reporting
 ### Intrastat_Transaction_Nature_Code
 
 
-Intrastat_Transaction_Nature_Code
-
-
-Transaction nature; used for Intrastat reporting
-
-
 Transaction nature; used for Intrastat reporting
 
 | Property | Value |
@@ -662,10 +572,9 @@ Transaction nature; used for Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Intrastat_Transaction_Nature_Code](Crm_Invoices.md#intrastat_transaction_nature_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -687,12 +596,6 @@ Transaction nature; used for Intrastat reporting
 ### Delivery_Terms_Code
 
 
-Delivery_Terms_Code
-
-
-Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
-
-
 Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 
 | Property | Value |
@@ -704,10 +607,9 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Delivery_Terms_Code](Crm_Invoices.md#delivery_terms_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -729,12 +631,6 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 ### Deal_Type_Id
 
 
-Deal_Type_Id
-
-
-VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type.
-
-
 VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type.
 
 | Property | Value |
@@ -746,9 +642,8 @@ VAT deal type for this invoice. If deal type in entered then VAT entry is create
 |Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Deal_Type_Id](Crm_Invoices.md#deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -771,15 +666,9 @@ VAT deal type for this invoice. If deal type in entered then VAT entry is create
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### IsValid
-
-
-IsValid
-
-
-Used for internal purposes. 1 when the invoice is valid (released and not void) for summing
 
 
 Used for internal purposes. 1 when the invoice is valid (released and not void) for summing
@@ -792,9 +681,8 @@ Used for internal purposes. 1 when the invoice is valid (released and not void) 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[IsValid](Crm_Invoices.md#isvalid)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -816,12 +704,6 @@ Used for internal purposes. 1 when the invoice is valid (released and not void) 
 ### VAT_Notes
 
 
-VAT_Notes
-
-
-Description of the operation that will be entered in the VAT ledgers.
-
-
 Description of the operation that will be entered in the VAT ledgers.
 
 | Property | Value |
@@ -833,9 +715,8 @@ Description of the operation that will be entered in the VAT ledgers.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[VAT_Notes](Crm_Invoices.md#vat_notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -857,12 +738,6 @@ Description of the operation that will be entered in the VAT ledgers.
 ### Apply_Date
 
 
-Apply_Date
-
-
-When not NULL specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date.
-
-
 When not NULL specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date.
 
 | Property | Value |
@@ -874,9 +749,8 @@ When not NULL specifies that the VAT entry for this invoice should be applied fo
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Apply_Date](Crm_Invoices.md#apply_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -898,12 +772,6 @@ When not NULL specifies that the VAT entry for this invoice should be applied fo
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -914,9 +782,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Is_Released](Crm_Invoices.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -939,15 +806,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Due_Date
-
-
-Payment_Due_Date
-
-
-When not NULL specifies due date for the payment
 
 
 When not NULL specifies due date for the payment
@@ -961,9 +822,8 @@ When not NULL specifies due date for the payment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Payment_Due_Date](Crm_Invoices.md#payment_due_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -985,12 +845,6 @@ When not NULL specifies due date for the payment
 ### Payment_Account_Id
 
 
-Payment_Account_Id
-
-
-When not NULL, specifies the default payment account for the payment order
-
-
 When not NULL, specifies the default payment account for the payment order
 
 | Property | Value |
@@ -1002,9 +856,8 @@ When not NULL, specifies the default payment account for the payment order
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Payment_Account_Id](Crm_Invoices.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1027,12 +880,9 @@ When not NULL, specifies the default payment account for the payment order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -1043,9 +893,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Document_Id](Crm_Invoices.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1068,15 +917,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Automatic_Order_Linking
-
-
-Automatic_Order_Linking
-
-
-Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release
 
 
 Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release
@@ -1089,9 +932,8 @@ Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Automatic_Order_Linking](Crm_Invoices.md#automatic_order_linking)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1112,9 +954,6 @@ Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -1123,9 +962,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices](Crm_Invoices.md).[Row_Version](Crm_Invoices.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

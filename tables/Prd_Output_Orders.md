@@ -1,5 +1,10 @@
 # Table Prd_Output_Orders
 
+
+## Entity
+
+Entity: [Production.ShopFloor.OutputOrders](~/entities/Production.ShopFloor.OutputOrders.md)
+
 Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Output_Orders](Prd_Output_Orders.md).[Id](Prd_Output_Orders.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Orders](Prd_Output_Orders.md).[Document_Id](Prd_Output_Orders.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Order_Id
-
-
-Work_Order_Id
-
-
-The Work Order for which this Output Order is storing data.
 
 
 The Work Order for which this Output Order is storing data.
@@ -122,9 +113,8 @@ The Work Order for which this Output Order is storing data.
 |Referenced Table|[Prd_Work_Orders](Prd_Work_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Orders](Prd_Output_Orders.md).[Work_Order_Id](Prd_Output_Orders.md#work_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ The Work Order for which this Output Order is storing data.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Status
-
-
-Status
-
-
-N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed
 
 
 N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed
@@ -169,9 +153,8 @@ N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|N|
-|Derived From|[Prd_Output_Orders](Prd_Output_Orders.md).[Status](Prd_Output_Orders.md#status)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +176,6 @@ N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -209,9 +186,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Prd_Output_Orders](Prd_Output_Orders.md).[Is_Single_Execution](Prd_Output_Orders.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,17 +210,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -255,9 +225,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Prd_Output_Orders](Prd_Output_Orders.md).[Is_Released](Prd_Output_Orders.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -280,12 +249,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -295,9 +261,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Orders](Prd_Output_Orders.md).[Row_Version](Prd_Output_Orders.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

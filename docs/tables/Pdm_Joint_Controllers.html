@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-pdm_joint_controllers">Table Pdm_Joint_Controllers</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.PersonalData.JointControllers.html">Applications.PersonalData.JointControllers</a></p>
 <p>Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -111,7 +113,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Should usually contain a short description of the role of the joint controller.</td>
 </tr>
 <tr>
@@ -123,7 +125,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="joint_controller_id">Joint_Controller_Id</h3>
-<p>Joint_Controller_Id</p>
 <table>
 <thead>
 <tr>
@@ -162,15 +163,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Joint_Controllers.html">Pdm_Joint_Controllers</a>.<a href="Pdm_Joint_Controllers.html#joint_controller_id">Joint_Controller_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -255,15 +252,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="personal_data_process_id">Personal_Data_Process_Id</h3>
-<p>Personal_Data_Process_Id</p>
-<p>The process, which is managed jointly.</p>
 <p>The process, which is managed jointly.</p>
 <table>
 <thead>
@@ -303,15 +298,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Joint_Controllers.html">Pdm_Joint_Controllers</a>.<a href="Pdm_Joint_Controllers.html#personal_data_process_id">Personal_Data_Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -396,15 +387,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="joint_controller_party_id">Joint_Controller_Party_Id</h3>
-<p>Joint_Controller_Party_Id</p>
-<p>The party, controlling the process.</p>
 <p>The party, controlling the process.</p>
 <table>
 <thead>
@@ -444,15 +433,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Joint_Controllers.html">Pdm_Joint_Controllers</a>.<a href="Pdm_Joint_Controllers.html#joint_controller_party_id">Joint_Controller_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -537,15 +522,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
-<p>Should usually contain a short description of the role of the joint controller.</p>
 <p>Should usually contain a short description of the role of the joint controller.</p>
 <table>
 <thead>
@@ -557,7 +540,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -585,15 +568,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Joint_Controllers.html">Pdm_Joint_Controllers</a>.<a href="Pdm_Joint_Controllers.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -666,7 +645,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -701,15 +679,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Joint_Controllers.html">Pdm_Joint_Controllers</a>.<a href="Pdm_Joint_Controllers.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

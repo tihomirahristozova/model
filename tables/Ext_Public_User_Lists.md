@@ -1,5 +1,10 @@
 # Table Ext_Public_User_Lists
 
+
+## Entity
+
+Entity: [Systems.External.PublicUserLists](~/entities/Systems.External.PublicUserLists.md)
+
 Each list represents a unique collection of public users. Entity: Ext_Public_User_Lists
 
 ## Summary
@@ -9,15 +14,12 @@ Each list represents a unique collection of public users. Entity: Ext_Public_Use
 |[Public_User_List_Id](#public_user_list_id)|`uniqueidentifier` `PK`||
 |[Public_User_List_Name](#public_user_list_name)|`nvarchar(64)` ||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Public_User_List_Id
-
-
-Public_User_List_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Public_User_List_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ext_Public_User_Lists](Ext_Public_User_Lists.md).[Public_User_List_Id](Ext_Public_User_Lists.md#public_user_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Public_User_List_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Public_User_List_Name
-
-
-Public_User_List_Name
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Public_User_List_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_User_Lists](Ext_Public_User_Lists.md).[Public_User_List_Name](Ext_Public_User_Lists.md#public_user_list_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,12 +96,6 @@ Public_User_List_Name
 ### Enterprise_Company_Id
 
 
-Enterprise_Company_Id
-
-
-The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies.
-
-
 The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies.
 
 | Property | Value |
@@ -116,9 +107,8 @@ The enterprise company to which this list belongs. Null means that the list is a
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_User_Lists](Ext_Public_User_Lists.md).[Enterprise_Company_Id](Ext_Public_User_Lists.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,25 +131,21 @@ The enterprise company to which this list belongs. Null means that the list is a
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_User_Lists](Ext_Public_User_Lists.md).[Notes](Ext_Public_User_Lists.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -180,9 +166,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -191,9 +174,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ext_Public_User_Lists](Ext_Public_User_Lists.md).[Row_Version](Ext_Public_User_Lists.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

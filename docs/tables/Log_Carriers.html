@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-log_carriers">Table Log_Carriers</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Shipment.Carriers.html">Logistics.Shipment.Carriers</a></p>
 <p>Represents a carrier agreement. One actual carrier can have different agreements over time or with different enterprise companies. Entity: Log_Carriers</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="carrier_id">Carrier_Id</h3>
-<p>Carrier_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#carrier_id">Carrier_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,15 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="code">Code</h3>
-<p>Code</p>
-<p>Unique carrier code (or call sign). The code is unique within all enterprise companies.</p>
 <p>Unique carrier code (or call sign). The code is unique within all enterprise companies.</p>
 <table>
 <thead>
@@ -319,15 +314,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#code">Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -412,7 +403,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -425,8 +416,6 @@
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The enterprise company which signed the carrier agreement.</p>
 <p>The enterprise company which signed the carrier agreement.</p>
 <table>
 <thead>
@@ -466,15 +455,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -559,15 +544,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="supplier_id">Supplier_Id</h3>
-<p>Supplier_Id</p>
-<p>The supplier contract with the carrier.</p>
 <p>The supplier contract with the carrier.</p>
 <table>
 <thead>
@@ -607,15 +590,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#supplier_id">Supplier_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -700,15 +679,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Specifies whether the carrier agreement is active.</p>
 <p>Specifies whether the carrier agreement is active.</p>
 <table>
 <thead>
@@ -744,15 +721,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -837,15 +810,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="agreement_start_date">Agreement_Start_Date</h3>
-<p>Agreement_Start_Date</p>
-<p>The start date of the agreement with this carrier.</p>
 <p>The start date of the agreement with this carrier.</p>
 <table>
 <thead>
@@ -885,15 +856,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDate</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#agreement_start_date">Agreement_Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -978,7 +945,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -991,8 +958,6 @@
 </tbody>
 </table>
 <h3 id="agreement_end_date">Agreement_End_Date</h3>
-<p>Agreement_End_Date</p>
-<p>The ending date of the agreement with this carrier. NULL for agreements which are still active.</p>
 <p>The ending date of the agreement with this carrier. NULL for agreements which are still active.</p>
 <table>
 <thead>
@@ -1032,15 +997,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#agreement_end_date">Agreement_End_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1125,7 +1086,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1138,7 +1099,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1149,7 +1109,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1177,15 +1137,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1258,7 +1214,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1293,15 +1248,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Log_Carriers.html">Log_Carriers</a>.<a href="Log_Carriers.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

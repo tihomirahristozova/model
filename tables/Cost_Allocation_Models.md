@@ -1,5 +1,10 @@
 # Table Cost_Allocation_Models
 
+
+## Entity
+
+Entity: [Finance.Cost.AllocationModels](~/entities/Finance.Cost.AllocationModels.md)
+
 User-defined models for cost allocation. Entity: Cost_Allocation_Models
 
 ## Summary
@@ -15,9 +20,6 @@ User-defined models for cost allocation. Entity: Cost_Allocation_Models
 
 ### Cost_Allocation_Model_Id
 
-
-Cost_Allocation_Model_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Cost_Allocation_Model_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Allocation_Models](Cost_Allocation_Models.md).[Cost_Allocation_Model_Id](Cost_Allocation_Models.md#cost_allocation_model_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Cost_Allocation_Model_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Allocation_Model_Name
-
-
-Cost_Allocation_Model_Name
-
-
-Multilanguage allocation model name
 
 
 Multilanguage allocation model name
@@ -74,9 +69,8 @@ Multilanguage allocation model name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Allocation_Models](Cost_Allocation_Models.md).[Cost_Allocation_Model_Name](Cost_Allocation_Models.md#cost_allocation_model_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,12 +92,6 @@ Multilanguage allocation model name
 ### Currency_Id
 
 
-Currency_Id
-
-
-The currency in which the calculation is done. This is applied to the production and the results
-
-
 The currency in which the calculation is done. This is applied to the production and the results
 
 | Property | Value |
@@ -115,9 +103,8 @@ The currency in which the calculation is done. This is applied to the production
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Allocation_Models](Cost_Allocation_Models.md).[Currency_Id](Cost_Allocation_Models.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -140,12 +127,9 @@ The currency in which the calculation is done. This is applied to the production
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -155,9 +139,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Allocation_Models](Cost_Allocation_Models.md).[Row_Version](Cost_Allocation_Models.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

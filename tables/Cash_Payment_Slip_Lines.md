@@ -1,5 +1,10 @@
 # Table Cash_Payment_Slip_Lines
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentSlipLines](~/entities/Finance.Payments.PaymentSlipLines.md)
+
 Mass payment line, which is distribution of an amount among payment orders. Each record generates one payment transaction line. Entity: Cash_Payment_Slip_Lines
 
 ## Owner Tables Hierarchy
@@ -24,12 +29,6 @@ Mass payment line, which is distribution of an amount among payment orders. Each
 ### Amount
 
 
-Amount
-
-
-The part of the total amount in the payment slip amount, that is distributed to the specified payment order
-
-
 The part of the total amount in the payment slip amount, that is distributed to the specified payment order
 
 | Property | Value |
@@ -40,9 +39,8 @@ The part of the total amount in the payment slip amount, that is distributed to 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Payment_Slip_Lines](Cash_Payment_Slip_Lines.md).[Amount](Cash_Payment_Slip_Lines.md#amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,12 +62,6 @@ The part of the total amount in the payment slip amount, that is distributed to 
 ### Covered_Order_Amount
 
 
-Covered_Order_Amount
-
-
-The part of the original payment order amount, that is covered by this payment slip line
-
-
 The part of the original payment order amount, that is covered by this payment slip line
 
 | Property | Value |
@@ -80,9 +72,8 @@ The part of the original payment order amount, that is covered by this payment s
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Payment_Slip_Lines](Cash_Payment_Slip_Lines.md).[Covered_Order_Amount](Cash_Payment_Slip_Lines.md#covered_order_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,12 +95,6 @@ The part of the original payment order amount, that is covered by this payment s
 ### Payment_Order_Id
 
 
-Payment_Order_Id
-
-
-The payment order, that is covered by this payment slip line
-
-
 The payment order, that is covered by this payment slip line
 
 | Property | Value |
@@ -121,9 +106,8 @@ The payment order, that is covered by this payment slip line
 |Referenced Table|[Cash_Payment_Orders](Cash_Payment_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Lines](Cash_Payment_Slip_Lines.md).[Payment_Order_Id](Cash_Payment_Slip_Lines.md#payment_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +130,9 @@ The payment order, that is covered by this payment slip line
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Slip_Line_Id
-
-
-Payment_Slip_Line_Id
 
 | Property | Value |
 | - | - |
@@ -162,9 +143,8 @@ Payment_Slip_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Slip_Lines](Cash_Payment_Slip_Lines.md).[Payment_Slip_Line_Id](Cash_Payment_Slip_Lines.md#payment_slip_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,12 +167,9 @@ Payment_Slip_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Slip_Amount_Id
-
-
-Payment_Slip_Amount_Id
 
 | Property | Value |
 | - | - |
@@ -203,9 +180,8 @@ Payment_Slip_Amount_Id
 |Referenced Table|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Lines](Cash_Payment_Slip_Lines.md).[Payment_Slip_Amount_Id](Cash_Payment_Slip_Lines.md#payment_slip_amount_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -228,12 +204,9 @@ Payment_Slip_Amount_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -243,9 +216,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Lines](Cash_Payment_Slip_Lines.md).[Row_Version](Cash_Payment_Slip_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

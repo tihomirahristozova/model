@@ -1,5 +1,10 @@
 # Table Inv_Transfer_Order_Lines
 
+
+## Entity
+
+Entity: [Logistics.Inventory.TransferOrderLines](~/entities/Logistics.Inventory.TransferOrderLines.md)
+
 Details of Transfer Orders. Each line contains order for the movement of one product. Entity: Inv_Transfer_Order_Lines
 
 ## Owner Tables Hierarchy
@@ -36,12 +41,6 @@ Details of Transfer Orders. Each line contains order for the movement of one pro
 ### Line_Ord
 
 
-Line_Ord
-
-
-Line ordinal position within the transaction. Duplicates are allowed, but not advised
-
-
 Line ordinal position within the transaction. Duplicates are allowed, but not advised
 
 | Property | Value |
@@ -52,10 +51,9 @@ Line ordinal position within the transaction. Duplicates are allowed, but not ad
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Line_Ord](Inv_Transfer_Order_Lines.md#line_ord)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -77,12 +75,6 @@ Line ordinal position within the transaction. Duplicates are allowed, but not ad
 ### Product_Id
 
 
-Product_Id
-
-
-The product which will be transferred
-
-
 The product which will be transferred
 
 | Property | Value |
@@ -94,9 +86,8 @@ The product which will be transferred
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Product_Id](Inv_Transfer_Order_Lines.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -119,15 +110,9 @@ The product which will be transferred
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### From_Store_Bin_Id
-
-
-From_Store_Bin_Id
-
-
-From which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable
 
 
 From which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable
@@ -141,9 +126,8 @@ From which store bin to issue/receive the products. NULL means that the store bi
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[From_Store_Bin_Id](Inv_Transfer_Order_Lines.md#from_store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -166,15 +150,9 @@ From which store bin to issue/receive the products. NULL means that the store bi
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### To_Store_Bin_Id
-
-
-To_Store_Bin_Id
-
-
-To which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable
 
 
 To which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable
@@ -188,9 +166,8 @@ To which store bin to issue/receive the products. NULL means that the store bin 
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[To_Store_Bin_Id](Inv_Transfer_Order_Lines.md#to_store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -213,15 +190,9 @@ To which store bin to issue/receive the products. NULL means that the store bin 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Lot_Id
-
-
-Lot_Id
-
-
-If non-null, contains the specific lot to use for the movement
 
 
 If non-null, contains the specific lot to use for the movement
@@ -235,9 +206,8 @@ If non-null, contains the specific lot to use for the movement
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Lot_Id](Inv_Transfer_Order_Lines.md#lot_id)|
 |Depends On|[Product_Id](#product_id)|
 |Format||
 |Ignore for Insert Order|no|
@@ -261,15 +231,9 @@ If non-null, contains the specific lot to use for the movement
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-Which serial number to receive/issue. NULL means that serial number is unknown or not applicable
 
 
 Which serial number to receive/issue. NULL means that serial number is unknown or not applicable
@@ -283,9 +247,8 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Serial_Number_Id](Inv_Transfer_Order_Lines.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -308,15 +271,9 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Quantity
-
-
-Quantity
-
-
-Quantity ordered for transfer
 
 
 Quantity ordered for transfer
@@ -329,9 +286,8 @@ Quantity ordered for transfer
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Quantity](Inv_Transfer_Order_Lines.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -359,12 +315,6 @@ Quantity ordered for transfer
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity
-
-
 The measurement unit of Quantity
 
 | Property | Value |
@@ -376,9 +326,8 @@ The measurement unit of Quantity
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Quantity_Unit_Id](Inv_Transfer_Order_Lines.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -401,15 +350,9 @@ The measurement unit of Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity_Base
-
-
-Quantity_Base
-
-
-Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update
 
 
 Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update
@@ -422,9 +365,8 @@ Quantity in the base (default) measurement unit of the Item (calculated at the t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Quantity_Base](Inv_Transfer_Order_Lines.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -452,12 +394,6 @@ Quantity in the base (default) measurement unit of the Item (calculated at the t
 ### Due_Date_Out
 
 
-Due_Date_Out
-
-
-When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header
-
-
 When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header
 
 | Property | Value |
@@ -469,9 +405,8 @@ When this line of the transfer is scheduled to issue the goods from the source w
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Due_Date_Out](Inv_Transfer_Order_Lines.md#due_date_out)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -499,12 +434,6 @@ When this line of the transfer is scheduled to issue the goods from the source w
 ### Due_Date_In
 
 
-Due_Date_In
-
-
-The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header
-
-
 The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header
 
 | Property | Value |
@@ -516,9 +445,8 @@ The date, when the goods are expected to be received in the destination warehous
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Due_Date_In](Inv_Transfer_Order_Lines.md#due_date_in)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -546,12 +474,6 @@ The date, when the goods are expected to be received in the destination warehous
 ### Product_Code_Id
 
 
-Product_Code_Id
-
-
-Selects the product thru some of the product codes.
-
-
 Selects the product thru some of the product codes.
 
 | Property | Value |
@@ -563,9 +485,8 @@ Selects the product thru some of the product codes.
 |Referenced Table|[Gen_Product_Codes](Gen_Product_Codes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Product_Code_Id](Inv_Transfer_Order_Lines.md#product_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -588,15 +509,9 @@ Selects the product thru some of the product codes.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Standard_Unit_Price
-
-
-Standard_Unit_Price
-
-
-Standard unit price of the product during the creation of the transfer order line
 
 
 Standard unit price of the product during the creation of the transfer order line
@@ -609,9 +524,8 @@ Standard unit price of the product during the creation of the transfer order lin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Standard_Unit_Price](Inv_Transfer_Order_Lines.md#standard_unit_price)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -632,9 +546,6 @@ Standard unit price of the product during the creation of the transfer order lin
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -644,9 +555,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Notes](Inv_Transfer_Order_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -668,12 +578,6 @@ Notes
 ### Transfer_Order_Id
 
 
-Transfer_Order_Id
-
-
-The parent transfer order
-
-
 The parent transfer order
 
 | Property | Value |
@@ -685,9 +589,8 @@ The parent transfer order
 |Referenced Table|[Inv_Transfer_Orders](Inv_Transfer_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Transfer_Order_Id](Inv_Transfer_Order_Lines.md#transfer_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -710,12 +613,9 @@ The parent transfer order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transfer_Order_Line_Id
-
-
-Transfer_Order_Line_Id
 
 | Property | Value |
 | - | - |
@@ -726,9 +626,8 @@ Transfer_Order_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Transfer_Order_Line_Id](Inv_Transfer_Order_Lines.md#transfer_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -751,15 +650,9 @@ Transfer_Order_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Variant_Id
-
-
-Product_Variant_Id
-
-
-If specified determines which product variant of the current product in this line is used.
 
 
 If specified determines which product variant of the current product in this line is used.
@@ -773,9 +666,8 @@ If specified determines which product variant of the current product in this lin
 |Referenced Table|[Gen_Product_Variants](Gen_Product_Variants.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Product_Variant_Id](Inv_Transfer_Order_Lines.md#product_variant_id)|
 |Depends On|[Product_Id](#product_id)|
 |Format||
 |Ignore for Insert Order|no|
@@ -799,12 +691,9 @@ If specified determines which product variant of the current product in this lin
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -814,9 +703,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Row_Version](Inv_Transfer_Order_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -838,12 +726,6 @@ Row_Version
 ### Standard_Quantity_Base
 
 
-Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
-
-
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 | Property | Value |
@@ -854,9 +736,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transfer_Order_Lines](Inv_Transfer_Order_Lines.md).[Standard_Quantity_Base](Inv_Transfer_Order_Lines.md#standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

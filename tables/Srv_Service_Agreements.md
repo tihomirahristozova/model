@@ -1,5 +1,10 @@
 # Table Srv_Service_Agreements
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceAgreements](~/entities/Applications.Service.ServiceAgreements.md)
+
 Service agreements represent SLAs between the enterprise company and its clients. Entity: Srv_Service_Agreements
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Service agreements represent SLAs between the enterprise company and its clients
 
 ### Service_Agreement_Id
 
-
-Service_Agreement_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Service_Agreement_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Agreements](Srv_Service_Agreements.md).[Service_Agreement_Id](Srv_Service_Agreements.md#service_agreement_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Service_Agreement_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreements](Srv_Service_Agreements.md).[Document_Id](Srv_Service_Agreements.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Customer_Id
-
-
-Customer_Id
-
-
-The client of the service agreement.
 
 
 The client of the service agreement.
@@ -123,9 +114,8 @@ The client of the service agreement.
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreements](Srv_Service_Agreements.md).[Customer_Id](Srv_Service_Agreements.md#customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +138,9 @@ The client of the service agreement.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Start_Date_Time
-
-
-Start_Date_Time
-
-
-Start date and time of the validity of the agreement.
 
 
 Start date and time of the validity of the agreement.
@@ -170,9 +154,8 @@ Start date and time of the validity of the agreement.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreements](Srv_Service_Agreements.md).[Start_Date_Time](Srv_Service_Agreements.md#start_date_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,12 +183,6 @@ Start date and time of the validity of the agreement.
 ### End_Date_Time
 
 
-End_Date_Time
-
-
-End date and time of the validity of the agreement.
-
-
 End date and time of the validity of the agreement.
 
 | Property | Value |
@@ -217,9 +194,8 @@ End date and time of the validity of the agreement.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreements](Srv_Service_Agreements.md).[End_Date_Time](Srv_Service_Agreements.md#end_date_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,12 +223,6 @@ End date and time of the validity of the agreement.
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -263,9 +233,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Srv_Service_Agreements](Srv_Service_Agreements.md).[Is_Single_Execution](Srv_Service_Agreements.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,17 +257,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -309,9 +272,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Srv_Service_Agreements](Srv_Service_Agreements.md).[Is_Released](Srv_Service_Agreements.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,12 +296,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -349,9 +308,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Agreements](Srv_Service_Agreements.md).[Row_Version](Srv_Service_Agreements.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

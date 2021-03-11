@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_invoice_lines">Table Crm_Invoice_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Invoicing.InvoiceLines.html">Crm.Invoicing.InvoiceLines</a></p>
 <p>Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -254,8 +256,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <p>Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <table>
 <thead>
@@ -291,7 +291,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -300,10 +300,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -388,15 +384,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The invoiced product. When NULL, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item.</p>
 <p>The invoiced product. When NULL, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item.</p>
 <table>
 <thead>
@@ -436,15 +430,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -529,15 +519,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_description">Product_Description</h3>
-<p>Product_Description</p>
-<p>The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document</p>
 <p>The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document</p>
 <table>
 <thead>
@@ -577,15 +565,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#product_description">Product_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -658,8 +642,6 @@
 </tbody>
 </table>
 <h3 id="unit_price">Unit_Price</h3>
-<p>Unit_Price</p>
-<p>The unit selling price of Quantity</p>
 <p>The unit selling price of Quantity</p>
 <table>
 <thead>
@@ -695,15 +677,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#unit_price">Unit_Price</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -776,8 +754,6 @@
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>The quantity of the invoiced product</p>
 <p>The quantity of the invoiced product</p>
 <table>
 <thead>
@@ -813,15 +789,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -913,8 +885,6 @@
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit of Quantity</p>
 <p>The measurement unit of Quantity</p>
 <table>
 <thead>
@@ -954,15 +924,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1047,15 +1013,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="serial_number_id">Serial_Number_Id</h3>
-<p>Serial_Number_Id</p>
-<p>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</p>
 <p>Which serial number to receive/issue. NULL means that serial number is unknown or not applicable</p>
 <table>
 <thead>
@@ -1095,15 +1059,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#serial_number_id">Serial_Number_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1188,15 +1148,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_amount">Line_Amount</h3>
-<p>Line_Amount</p>
-<p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.</p>
 <p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.</p>
 <table>
 <thead>
@@ -1232,15 +1190,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#line_amount">Line_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1313,8 +1267,6 @@
 </tbody>
 </table>
 <h3 id="line_custom_discount_percent">Line_Custom_Discount_Percent</h3>
-<p>Line_Custom_Discount_Percent</p>
-<p>User-defined discount for the line</p>
 <p>User-defined discount for the line</p>
 <table>
 <thead>
@@ -1350,15 +1302,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#line_custom_discount_percent">Line_Custom_Discount_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1450,8 +1398,6 @@
 </tbody>
 </table>
 <h3 id="line_discount_id">Line_Discount_Id</h3>
-<p>Line_Discount_Id</p>
-<p>The line discount type used to form the Line_Standard_Discount_Percent</p>
 <p>The line discount type used to form the Line_Standard_Discount_Percent</p>
 <table>
 <thead>
@@ -1491,15 +1437,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#line_discount_id">Line_Discount_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1584,15 +1526,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_standard_discount_percent">Line_Standard_Discount_Percent</h3>
-<p>Line_Standard_Discount_Percent</p>
-<p>Standard discount for the line. This is automatically computed according to discount conditions</p>
 <p>Standard discount for the line. This is automatically computed according to discount conditions</p>
 <table>
 <thead>
@@ -1628,15 +1568,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#line_standard_discount_percent">Line_Standard_Discount_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1709,8 +1645,6 @@
 </tbody>
 </table>
 <h3 id="quantity_base">Quantity_Base</h3>
-<p>Quantity_Base</p>
-<p>The equivalent of Quantity in the base measurement unit of the Product</p>
 <p>The equivalent of Quantity in the base measurement unit of the Product</p>
 <table>
 <thead>
@@ -1746,15 +1680,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#quantity_base">Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1827,8 +1757,6 @@
 </tbody>
 </table>
 <h3 id="transaction_line_id">Transaction_Line_Id</h3>
-<p>Transaction_Line_Id</p>
-<p>The store transaction line that is invoiced by this line, for Business Reason = S</p>
 <p>The store transaction line that is invoiced by this line, for Business Reason = S</p>
 <table>
 <thead>
@@ -1868,15 +1796,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#transaction_line_id">Transaction_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1961,14 +1885,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2007,15 +1930,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2088,8 +2007,6 @@
 </tbody>
 </table>
 <h3 id="delivery_terms_code">Delivery_Terms_Code</h3>
-<p>Delivery_Terms_Code</p>
-<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <table>
 <thead>
@@ -2129,7 +2046,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2138,10 +2055,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#delivery_terms_code">Delivery_Terms_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2214,8 +2127,6 @@
 </tbody>
 </table>
 <h3 id="intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</h3>
-<p>Intrastat_Transport_Mode_Code</p>
-<p>Transport mode; used for Intrastat reporting</p>
 <p>Transport mode; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -2255,7 +2166,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2264,10 +2175,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2340,8 +2247,6 @@
 </tbody>
 </table>
 <h3 id="intrastat_transport_country_id">Intrastat_Transport_Country_Id</h3>
-<p>Intrastat_Transport_Country_Id</p>
-<p>Country of origin of the transport company; used for Intrastat reporting</p>
 <p>Country of origin of the transport company; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -2381,15 +2286,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#intrastat_transport_country_id">Intrastat_Transport_Country_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2474,15 +2375,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</h3>
-<p>Intrastat_Transaction_Nature_Code</p>
-<p>Transaction nature; used for Intrastat reporting</p>
 <p>Transaction nature; used for Intrastat reporting</p>
 <table>
 <thead>
@@ -2522,7 +2421,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2531,10 +2430,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2607,8 +2502,6 @@
 </tbody>
 </table>
 <h3 id="payment_transaction_id">Payment_Transaction_Id</h3>
-<p>Payment_Transaction_Id</p>
-<p>The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment.</p>
 <p>The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment.</p>
 <table>
 <thead>
@@ -2648,15 +2541,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#payment_transaction_id">Payment_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2741,15 +2630,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_sales_order_line_id">Parent_Sales_Order_Line_Id</h3>
-<p>Parent_Sales_Order_Line_Id</p>
-<p>When not NULL specifies the Sales Order line that is invoiced by this invoice line</p>
 <p>When not NULL specifies the Sales Order line that is invoiced by this invoice line</p>
 <table>
 <thead>
@@ -2789,15 +2676,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#parent_sales_order_line_id">Parent_Sales_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2882,14 +2765,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="invoice_id">Invoice_Id</h3>
-<p>Invoice_Id</p>
 <table>
 <thead>
 <tr>
@@ -2928,15 +2810,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#invoice_id">Invoice_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3021,14 +2899,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="invoice_line_id">Invoice_Line_Id</h3>
-<p>Invoice_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -3067,15 +2944,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#invoice_line_id">Invoice_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3160,15 +3033,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_deal_type_id">Line_Deal_Type_Id</h3>
-<p>Line_Deal_Type_Id</p>
-<p>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created.</p>
 <p>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created.</p>
 <table>
 <thead>
@@ -3208,15 +3079,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#line_deal_type_id">Line_Deal_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3301,15 +3168,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sales_order_id">Sales_Order_Id</h3>
-<p>Sales_Order_Id</p>
-<p>When not NULL specifies the Sales Order that is invoiced by this line</p>
 <p>When not NULL specifies the Sales Order that is invoiced by this line</p>
 <table>
 <thead>
@@ -3349,15 +3214,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#sales_order_id">Sales_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3442,7 +3303,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -3455,8 +3316,6 @@
 </tbody>
 </table>
 <h3 id="business_reason">Business_Reason</h3>
-<p>Business_Reason</p>
-<p>Business reason for invoicing of this product or service. S=Shipment, P=Payment</p>
 <p>Business reason for invoicing of this product or service. S=Shipment, P=Payment</p>
 <table>
 <thead>
@@ -3496,7 +3355,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -3505,10 +3364,6 @@
 <tr>
 <td>Default Value</td>
 <td>S</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#business_reason">Business_Reason</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3581,8 +3436,6 @@
 </tbody>
 </table>
 <h3 id="invoice_order_line_id">Invoice_Order_Line_Id</h3>
-<p>Invoice_Order_Line_Id</p>
-<p>Invoice order line which is invoiced by this line</p>
 <p>Invoice order line which is invoiced by this line</p>
 <table>
 <thead>
@@ -3622,15 +3475,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#invoice_order_line_id">Invoice_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3715,15 +3564,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="sales_order_amount">Sales_Order_Amount</h3>
-<p>Sales_Order_Amount</p>
-<p>Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing</p>
 <p>Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing</p>
 <table>
 <thead>
@@ -3759,15 +3606,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#sales_order_amount">Sales_Order_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3840,7 +3683,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -3875,15 +3717,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3956,8 +3794,6 @@
 </tbody>
 </table>
 <h3 id="standard_quantity_base">Standard_Quantity_Base</h3>
-<p>Standard_Quantity_Base</p>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <table>
 <thead>
@@ -3993,15 +3829,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#standard_quantity_base">Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4074,8 +3906,6 @@
 </tbody>
 </table>
 <h3 id="parent_line_no">Parent_Line_No</h3>
-<p>Parent_Line_No</p>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
 <p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
 <table>
 <thead>
@@ -4111,15 +3941,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#parent_line_no">Parent_Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4192,8 +4018,6 @@
 </tbody>
 </table>
 <h3 id="parent_document_id">Parent_Document_Id</h3>
-<p>Parent_Document_Id</p>
-<p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
 <p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
 <table>
 <thead>
@@ -4233,15 +4057,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Invoice_Lines.html">Crm_Invoice_Lines</a>.<a href="Crm_Invoice_Lines.html#parent_document_id">Parent_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4326,7 +4146,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

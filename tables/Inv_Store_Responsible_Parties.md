@@ -1,5 +1,10 @@
 # Table Inv_Store_Responsible_Parties
 
+
+## Entity
+
+Entity: [Logistics.Inventory.StoreResponsibleParties](~/entities/Logistics.Inventory.StoreResponsibleParties.md)
+
 Contains the list of responsible parties (usually persons) for the stores. Stores can have multiple responsible parties. Entity: Inv_Store_Responsible_Parties
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ Contains the list of responsible parties (usually persons) for the stores. Store
 
 ### Store_Responsible_Party_Id
 
-
-Store_Responsible_Party_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ Store_Responsible_Party_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Store_Responsible_Parties](Inv_Store_Responsible_Parties.md).[Store_Responsible_Party_Id](Inv_Store_Responsible_Parties.md#store_responsible_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Store_Responsible_Party_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store for which we specify the responsible party.
 
 
 The store for which we specify the responsible party.
@@ -79,9 +74,8 @@ The store for which we specify the responsible party.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Responsible_Parties](Inv_Store_Responsible_Parties.md).[Store_Id](Inv_Store_Responsible_Parties.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The store for which we specify the responsible party.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Responsible_Party_Id
-
-
-Responsible_Party_Id
-
-
-The responsible party (usually employee) of the store.
 
 
 The responsible party (usually employee) of the store.
@@ -126,9 +114,8 @@ The responsible party (usually employee) of the store.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Responsible_Parties](Inv_Store_Responsible_Parties.md).[Responsible_Party_Id](Inv_Store_Responsible_Parties.md#responsible_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,12 +138,9 @@ The responsible party (usually employee) of the store.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -166,9 +150,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Store_Responsible_Parties](Inv_Store_Responsible_Parties.md).[Row_Version](Inv_Store_Responsible_Parties.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Sec_User_Provider_Logins
 
+
+## Entity
+
+Entity: [Systems.Security.UserProviderLogins](~/entities/Systems.Security.UserProviderLogins.md)
+
 External login providers. Entity: Sec_User_Provider_Logins (Introduced in version 18.2)
 
 ## Owner Tables Hierarchy
@@ -20,9 +25,6 @@ External login providers. Entity: Sec_User_Provider_Logins (Introduced in versio
 
 ### User_Provider_Login_Id
 
-
-User_Provider_Login_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -32,9 +34,8 @@ User_Provider_Login_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_User_Provider_Logins](Sec_User_Provider_Logins.md).[User_Provider_Login_Id](Sec_User_Provider_Logins.md#user_provider_login_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ User_Provider_Login_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Id
-
-
-User_Id
-
-
-The user for which the login is defined.
 
 
 The user for which the login is defined.
@@ -79,9 +74,8 @@ The user for which the login is defined.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_User_Provider_Logins](Sec_User_Provider_Logins.md).[User_Id](Sec_User_Provider_Logins.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The user for which the login is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Provider_Name
-
-
-Provider_Name
-
-
-The system name of the authentication provider. It should be already registered for the domain.
 
 
 The system name of the authentication provider. It should be already registered for the domain.
@@ -126,10 +114,9 @@ The system name of the authentication provider. It should be already registered 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`ERPNET`, `GOOGLE`, `FACEBOOK`|
 |Default Value|None|
-|Derived From|[Sec_User_Provider_Logins](Sec_User_Provider_Logins.md).[Provider_Name](Sec_User_Provider_Logins.md#provider_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The system name of the authentication provider. It should be already registered 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Provider_Key
-
-
-Provider_Key
-
-
-The key, which the provider provided for logging the user.
 
 
 The key, which the provider provided for logging the user.
@@ -174,9 +155,8 @@ The key, which the provider provided for logging the user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_User_Provider_Logins](Sec_User_Provider_Logins.md).[Provider_Key](Sec_User_Provider_Logins.md#provider_key)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +179,9 @@ The key, which the provider provided for logging the user.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -214,9 +191,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_User_Provider_Logins](Sec_User_Provider_Logins.md).[Row_Version](Sec_User_Provider_Logins.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Acc_Voucher_Lines
 
+
+## Entity
+
+Entity: [Finance.Accounting.AccountingVoucherLines](~/entities/Finance.Accounting.AccountingVoucherLines.md)
+
 Contains one debit or credit posting within an accounting voucher. Entity: Acc_Voucher_Lines
 
 ## Owner Tables Hierarchy
@@ -35,12 +40,6 @@ Contains one debit or credit posting within an accounting voucher. Entity: Acc_V
 ### Line_No
 
 
-Line_No
-
-
-Consecutive number of the line within the voucher
-
-
 Consecutive number of the line within the voucher
 
 | Property | Value |
@@ -51,10 +50,9 @@ Consecutive number of the line within the voucher
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Line_No](Acc_Voucher_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -76,12 +74,6 @@ Consecutive number of the line within the voucher
 ### Account_Id
 
 
-Account_Id
-
-
-The account being debited or credited
-
-
 The account being debited or credited
 
 | Property | Value |
@@ -93,9 +85,8 @@ The account being debited or credited
 |Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Account_Id](Acc_Voucher_Lines.md#account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -118,15 +109,9 @@ The account being debited or credited
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Item_Key
-
-
-Item_Key
-
-
-The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.
 
 
 The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.
@@ -140,9 +125,8 @@ The item (grouping) key for the account in the line. Account_Id + Item_Key - the
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Item_Key](Acc_Voucher_Lines.md#item_key)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -165,16 +149,10 @@ The item (grouping) key for the account in the line. Account_Id + Item_Key - the
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Currency_Id
-
-
-Currency_Id
-
-
-The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field.
 
 
 The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field.
@@ -188,9 +166,8 @@ The currency of the movement in this line. If there is defined currency for the 
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Currency_Id](Acc_Voucher_Lines.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -213,15 +190,9 @@ The currency of the movement in this line. If there is defined currency for the 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Debit
-
-
-Debit
-
-
-The amount of the debit in the currency of the account. 0 means that the account is not debited
 
 
 The amount of the debit in the currency of the account. 0 means that the account is not debited
@@ -234,9 +205,8 @@ The amount of the debit in the currency of the account. 0 means that the account
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Debit](Acc_Voucher_Lines.md#debit)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -258,12 +228,6 @@ The amount of the debit in the currency of the account. 0 means that the account
 ### Debit_Base
 
 
-Debit_Base
-
-
-The amount of debit in base currency
-
-
 The amount of debit in base currency
 
 | Property | Value |
@@ -274,9 +238,8 @@ The amount of debit in base currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Debit_Base](Acc_Voucher_Lines.md#debit_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -298,12 +261,6 @@ The amount of debit in base currency
 ### Credit
 
 
-Credit
-
-
-The amount of the credit in the currency of the account. 0 means that the account is not credited
-
-
 The amount of the credit in the currency of the account. 0 means that the account is not credited
 
 | Property | Value |
@@ -314,9 +271,8 @@ The amount of the credit in the currency of the account. 0 means that the accoun
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Credit](Acc_Voucher_Lines.md#credit)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -338,12 +294,6 @@ The amount of the credit in the currency of the account. 0 means that the accoun
 ### Credit_Base
 
 
-Credit_Base
-
-
-The amount of credit in base currency
-
-
 The amount of credit in base currency
 
 | Property | Value |
@@ -354,9 +304,8 @@ The amount of credit in base currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Credit_Base](Acc_Voucher_Lines.md#credit_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -378,12 +327,6 @@ The amount of credit in base currency
 ### Referenced_Document_Id
 
 
-Referenced_Document_Id
-
-
-The document which is referenced by the line. By default, this is the document of the voucher
-
-
 The document which is referenced by the line. By default, this is the document of the voucher
 
 | Property | Value |
@@ -395,9 +338,8 @@ The document which is referenced by the line. By default, this is the document o
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Referenced_Document_Id](Acc_Voucher_Lines.md#referenced_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -420,15 +362,9 @@ The document which is referenced by the line. By default, this is the document o
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Rate_Multiplier
-
-
-Rate_Multiplier
-
-
-The multiplier for conversion from Debit/Credit to base currency
 
 
 The multiplier for conversion from Debit/Credit to base currency
@@ -441,9 +377,8 @@ The multiplier for conversion from Debit/Credit to base currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Rate_Multiplier](Acc_Voucher_Lines.md#rate_multiplier)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -465,12 +400,6 @@ The multiplier for conversion from Debit/Credit to base currency
 ### Rate_Divisor
 
 
-Rate_Divisor
-
-
-The divisor for conversion from Debit/Credit to base currency
-
-
 The divisor for conversion from Debit/Credit to base currency
 
 | Property | Value |
@@ -481,9 +410,8 @@ The divisor for conversion from Debit/Credit to base currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Rate_Divisor](Acc_Voucher_Lines.md#rate_divisor)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -505,12 +433,6 @@ The divisor for conversion from Debit/Credit to base currency
 ### Cost_Center_Id
 
 
-Cost_Center_Id
-
-
-The cost center to which this cost is related
-
-
 The cost center to which this cost is related
 
 | Property | Value |
@@ -522,9 +444,8 @@ The cost center to which this cost is related
 |Referenced Table|[Acc_Cost_Centers](Acc_Cost_Centers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Cost_Center_Id](Acc_Voucher_Lines.md#cost_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -547,15 +468,9 @@ The cost center to which this cost is related
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Profit_Center_Id
-
-
-Profit_Center_Id
-
-
-The profit center to which this revenue is related
 
 
 The profit center to which this revenue is related
@@ -569,9 +484,8 @@ The profit center to which this revenue is related
 |Referenced Table|[Acc_Profit_Centers](Acc_Profit_Centers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Profit_Center_Id](Acc_Voucher_Lines.md#profit_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -594,15 +508,9 @@ The profit center to which this revenue is related
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Correspondance_No
-
-
-Correspondance_No
-
-
-The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits
 
 
 The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits
@@ -615,9 +523,8 @@ The number of the correspondance group within the accounting voucher. For each c
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Correspondance_No](Acc_Voucher_Lines.md#correspondance_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -639,12 +546,6 @@ The number of the correspondance group within the accounting voucher. For each c
 ### Correspondant_Amount
 
 
-Correspondant_Amount
-
-
-The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).
-
-
 The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).
 
 | Property | Value |
@@ -655,9 +556,8 @@ The amount (in the currency of the correspondant line) to which the amount in th
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Correspondant_Amount](Acc_Voucher_Lines.md#correspondant_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -678,9 +578,6 @@ The amount (in the currency of the correspondant line) to which the amount in th
 
 ### Voucher_Line_Id
 
-
-Voucher_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -690,9 +587,8 @@ Voucher_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Voucher_Line_Id](Acc_Voucher_Lines.md#voucher_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -715,15 +611,9 @@ Voucher_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Voucher_Id
-
-
-Voucher_Id
-
-
-The voucher to which this line is attached
 
 
 The voucher to which this line is attached
@@ -737,9 +627,8 @@ The voucher to which this line is attached
 |Referenced Table|[Acc_Vouchers](Acc_Vouchers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Voucher_Id](Acc_Voucher_Lines.md#voucher_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -762,12 +651,9 @@ The voucher to which this line is attached
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -777,9 +663,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Voucher_Lines](Acc_Voucher_Lines.md).[Row_Version](Acc_Voucher_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

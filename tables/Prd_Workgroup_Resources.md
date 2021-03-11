@@ -1,5 +1,10 @@
 # Table Prd_Workgroup_Resources
 
+
+## Entity
+
+Entity: [Production.Resources.WorkgroupResources](~/entities/Production.Resources.WorkgroupResources.md)
+
 Describes the availability of resources in the active workgroups. Entity: Prd_Workgroup_Resources
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md).[Id](Prd_Workgroup_Resources.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Workgroup_Id
-
-
-Workgroup_Id
-
-
-Id of the workgroup, containing the resource
 
 
 Id of the workgroup, containing the resource
@@ -80,9 +75,8 @@ Id of the workgroup, containing the resource
 |Referenced Table|[Prd_Workgroups](Prd_Workgroups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md).[Workgroup_Id](Prd_Workgroup_Resources.md#workgroup_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ Id of the workgroup, containing the resource
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Id
-
-
-Resource_Id
-
-
-The contained resource type
 
 
 The contained resource type
@@ -127,9 +115,8 @@ The contained resource type
 |Referenced Table|[Prd_Resources](Prd_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md).[Resource_Id](Prd_Workgroup_Resources.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The contained resource type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Available_Quantity
-
-
-Available_Quantity
-
-
-Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources
 
 
 Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources
@@ -173,9 +154,8 @@ Quantity available of the resource in this workgroup. The measurement unit is sp
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md).[Available_Quantity](Prd_Workgroup_Resources.md#available_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,12 +177,6 @@ Quantity available of the resource in this workgroup. The measurement unit is sp
 ### Notes
 
 
-Notes
-
-
-User notes for the workgroup resource
-
-
 User notes for the workgroup resource
 
 | Property | Value |
@@ -214,9 +188,8 @@ User notes for the workgroup resource
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md).[Notes](Prd_Workgroup_Resources.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,9 +210,6 @@ User notes for the workgroup resource
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -248,9 +218,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md).[Row_Version](Prd_Workgroup_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

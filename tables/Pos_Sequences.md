@@ -1,5 +1,10 @@
 # Table Pos_Sequences
 
+
+## Entity
+
+Entity: [Crm.Pos.Sequences](~/entities/Crm.Pos.Sequences.md)
+
 Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequences (Introduced in version 19.1)
 
 ## Summary
@@ -17,9 +22,6 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 
 ### Pos_Sequence_Id
 
-
-Pos_Sequence_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Pos_Sequence_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pos_Sequences](Pos_Sequences.md).[Pos_Sequence_Id](Pos_Sequences.md#pos_sequence_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Pos_Sequence_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Device_Id
-
-
-Pos_Device_Id
-
-
-The POS device, for which the sequence is defined.
 
 
 The POS device, for which the sequence is defined.
@@ -76,9 +71,8 @@ The POS device, for which the sequence is defined.
 |Referenced Table|[Pos_Devices](Pos_Devices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Sequences](Pos_Sequences.md).[Pos_Device_Id](Pos_Sequences.md#pos_device_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +95,9 @@ The POS device, for which the sequence is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Next_No
-
-
-Next_No
-
-
-The next consecutive number which will be assigned on the next request.
 
 
 The next consecutive number which will be assigned on the next request.
@@ -123,9 +111,8 @@ The next consecutive number which will be assigned on the next request.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Sequences](Pos_Sequences.md).[Next_No](Pos_Sequences.md#next_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,16 +135,10 @@ The next consecutive number which will be assigned on the next request.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Max_No
-
-
-Max_No
-
-
-Specifies the maximum number allowed in the sequence. NULL means that the sequence will grow unlimited.
 
 
 Specifies the maximum number allowed in the sequence. NULL means that the sequence will grow unlimited.
@@ -171,9 +152,8 @@ Specifies the maximum number allowed in the sequence. NULL means that the sequen
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Sequences](Pos_Sequences.md).[Max_No](Pos_Sequences.md#max_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,13 +176,10 @@ Specifies the maximum number allowed in the sequence. NULL means that the sequen
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -212,9 +189,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Sequences](Pos_Sequences.md).[Row_Version](Pos_Sequences.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -236,12 +212,6 @@ Row_Version
 ### Is_Active
 
 
-Is_Active
-
-
-Indicates whether this sequence is active.
-
-
 Indicates whether this sequence is active.
 
 | Property | Value |
@@ -252,9 +222,8 @@ Indicates whether this sequence is active.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Pos_Sequences](Pos_Sequences.md).[Is_Active](Pos_Sequences.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,6 +246,6 @@ Indicates whether this sequence is active.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 

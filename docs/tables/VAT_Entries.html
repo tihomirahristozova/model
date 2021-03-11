@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-vat_entries">Table VAT_Entries</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Vat.Entries.html">Finance.Vat.Entries</a></p>
 <p>Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -178,8 +180,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="entry_id">Entry_Id</h3>
-<p>Entry_Id</p>
-<p>Unique identification number of this VAT entry.</p>
 <p>Unique identification number of this VAT entry.</p>
 <table>
 <thead>
@@ -219,15 +219,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#entry_id">Entry_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -312,14 +308,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -358,15 +353,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -451,15 +442,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="entry_type">Entry_Type</h3>
-<p>Entry_Type</p>
-<p>Type of the VAT entry. S=Sales, P=Purchases.</p>
 <p>Type of the VAT entry. S=Sales, P=Purchases.</p>
 <table>
 <thead>
@@ -499,7 +488,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -508,10 +497,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#entry_type">Entry_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -596,15 +581,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="deal_type_id">Deal_Type_Id</h3>
-<p>Deal_Type_Id</p>
-<p>Deal type that caused this entry.</p>
 <p>Deal type that caused this entry.</p>
 <table>
 <thead>
@@ -644,15 +627,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#deal_type_id">Deal_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -737,15 +716,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The corresponding party that is involved in the operation that caused this entry.</p>
 <p>The corresponding party that is involved in the operation that caused this entry.</p>
 <table>
 <thead>
@@ -785,15 +762,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -878,15 +851,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="registration_vat_number">Registration_VAT_Number</h3>
-<p>Registration_VAT_Number</p>
-<p>VAT number by registration (or national number) for the party specified by Party_Id.</p>
 <p>VAT number by registration (or national number) for the party specified by Party_Id.</p>
 <table>
 <thead>
@@ -926,15 +897,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#registration_vat_number">Registration_VAT_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1019,15 +986,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="registration_number">Registration_Number</h3>
-<p>Registration_Number</p>
-<p>Identification code (IC) for the party specified by Party_Id.</p>
 <p>Identification code (IC) for the party specified by Party_Id.</p>
 <table>
 <thead>
@@ -1067,15 +1032,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#registration_number">Registration_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1148,8 +1109,6 @@
 </tbody>
 </table>
 <h3 id="referenced_document_type_id">Referenced_Document_Type_Id</h3>
-<p>Referenced_Document_Type_Id</p>
-<p>Type of the document that represents the operation that caused this entry.</p>
 <p>Type of the document that represents the operation that caused this entry.</p>
 <table>
 <thead>
@@ -1189,15 +1148,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#referenced_document_type_id">Referenced_Document_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1282,15 +1237,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="referenced_document_no">Referenced_Document_No</h3>
-<p>Referenced_Document_No</p>
-<p>Number of the document that represents the operation that caused this entry.</p>
 <p>Number of the document that represents the operation that caused this entry.</p>
 <table>
 <thead>
@@ -1330,15 +1283,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#referenced_document_no">Referenced_Document_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1423,15 +1372,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="amount_base">Amount_Base</h3>
-<p>Amount_Base</p>
-<p>Amount of the operation without the tax in base currency.</p>
 <p>Amount of the operation without the tax in base currency.</p>
 <table>
 <thead>
@@ -1467,15 +1414,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#amount_base">Amount_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1548,8 +1491,6 @@
 </tbody>
 </table>
 <h3 id="vat_amount_base">VAT_Amount_Base</h3>
-<p>VAT_Amount_Base</p>
-<p>The amount of the tax for the operation in base currency.</p>
 <p>The amount of the tax for the operation in base currency.</p>
 <table>
 <thead>
@@ -1585,15 +1526,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#vat_amount_base">VAT_Amount_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1666,8 +1603,6 @@
 </tbody>
 </table>
 <h3 id="apply_date">Apply_Date</h3>
-<p>Apply_Date</p>
-<p>Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period</p>
 <p>Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period</p>
 <table>
 <thead>
@@ -1707,15 +1642,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#apply_date">Apply_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1807,8 +1738,6 @@
 </tbody>
 </table>
 <h3 id="cash_reporting_mode">Cash_Reporting_Mode</h3>
-<p>Cash_Reporting_Mode</p>
-<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.</p>
 <p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.</p>
 <table>
 <thead>
@@ -1844,15 +1773,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#cash_reporting_mode">Cash_Reporting_Mode</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1925,8 +1850,6 @@
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1962,15 +1885,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2055,15 +1974,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -2099,15 +2016,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2192,14 +2105,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2234,15 +2146,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="VAT_Entries.html">VAT_Entries</a>.<a href="VAT_Entries.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

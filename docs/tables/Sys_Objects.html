@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_objects">Table Sys_Objects</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Core.ExtensibleDataObjects.html">Systems.Core.ExtensibleDataObjects</a></p>
 <p>Extends data in other tables with attached files, custom properties, etc. Each row is an object, bound to exactly one row in the primary table. Each object can be bound to a row in a different primary table, specified in Entity_Type. Entity: Sys_Objects</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -144,8 +146,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="object_id">Object_Id</h3>
-<p>Object_Id</p>
-<p>.</p>
 <p>.</p>
 <table>
 <thead>
@@ -185,15 +185,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#object_id">Object_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -278,15 +274,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="entity_type">Entity_Type</h3>
-<p>Entity_Type</p>
-<p>The entity type of the row to which the object is bound</p>
 <p>The entity type of the row to which the object is bound</p>
 <table>
 <thead>
@@ -326,15 +320,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td></td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#entity_type">Entity_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -419,15 +409,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="entity_item_id">Entity_Item_Id</h3>
-<p>Entity_Item_Id</p>
-<p>The Id of the primary row to which the object is bound</p>
 <p>The Id of the primary row to which the object is bound</p>
 <table>
 <thead>
@@ -463,15 +451,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#entity_item_id">Entity_Item_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -556,15 +540,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="latest_version">Latest_Version</h3>
-<p>Latest_Version</p>
-<p>The latest saved version of the object. Starts from 1 and increments with 1 for each new version.</p>
 <p>The latest saved version of the object. Starts from 1 and increments with 1 for each new version.</p>
 <table>
 <thead>
@@ -600,15 +582,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#latest_version">Latest_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -681,7 +659,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -716,15 +693,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -797,8 +770,6 @@
 </tbody>
 </table>
 <h3 id="creation_time_utc">Creation_Time_Utc</h3>
-<p>Creation_Time_Utc</p>
-<p>The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.</p>
 <p>The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.</p>
 <table>
 <thead>
@@ -838,15 +809,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#creation_time_utc">Creation_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -938,8 +905,6 @@
 </tbody>
 </table>
 <h3 id="creation_user_id">Creation_User_Id</h3>
-<p>Creation_User_Id</p>
-<p>The user, who created the object represented by this system object . NULL means that it is unknown.</p>
 <p>The user, who created the object represented by this system object . NULL means that it is unknown.</p>
 <table>
 <thead>
@@ -979,15 +944,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#creation_user_id">Creation_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1072,15 +1033,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="last_update_time_utc">Last_Update_Time_Utc</h3>
-<p>Last_Update_Time_Utc</p>
-<p>The exact server time (in UTC) of the last modification of the object represented by this system object. NULL means that it is unknown.</p>
 <p>The exact server time (in UTC) of the last modification of the object represented by this system object. NULL means that it is unknown.</p>
 <table>
 <thead>
@@ -1120,15 +1079,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#last_update_time_utc">Last_Update_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1220,8 +1175,6 @@
 </tbody>
 </table>
 <h3 id="last_update_user_id">Last_Update_User_Id</h3>
-<p>Last_Update_User_Id</p>
-<p>The user, who made the last modification of the object represented by this system object . NULL means that it is unknown.</p>
 <p>The user, who made the last modification of the object represented by this system object . NULL means that it is unknown.</p>
 <table>
 <thead>
@@ -1261,15 +1214,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#last_update_user_id">Last_Update_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1354,15 +1303,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_deleted">Is_Deleted</h3>
-<p>Is_Deleted</p>
-<p>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes.</p>
 <p>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes.</p>
 <table>
 <thead>
@@ -1398,15 +1345,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#is_deleted">Is_Deleted</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1491,7 +1434,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>

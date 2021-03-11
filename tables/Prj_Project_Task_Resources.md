@@ -1,5 +1,10 @@
 # Table Prj_Project_Task_Resources
 
+
+## Entity
+
+Entity: [Projects.ProjectTaskResources](~/entities/Projects.ProjectTaskResources.md)
+
 Contains the resources, required by the project tasks. Entity: Prj_Project_Task_Resources
 
 ## Owner Tables Hierarchy
@@ -28,9 +33,6 @@ Contains the resources, required by the project tasks. Entity: Prj_Project_Task_
 
 ### Project_Task_Resource_Id
 
-
-Project_Task_Resource_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -40,9 +42,8 @@ Project_Task_Resource_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Project_Task_Resource_Id](Prj_Project_Task_Resources.md#project_task_resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,15 +66,9 @@ Project_Task_Resource_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Task_Id
-
-
-Project_Task_Id
-
-
-The task for which the resource is planned.
 
 
 The task for which the resource is planned.
@@ -87,9 +82,8 @@ The task for which the resource is planned.
 |Referenced Table|[Prj_Project_Tasks](Prj_Project_Tasks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Project_Task_Id](Prj_Project_Task_Resources.md#project_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,15 +106,9 @@ The task for which the resource is planned.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Id
-
-
-Resource_Id
-
-
-The planned resource.
 
 
 The planned resource.
@@ -134,9 +122,8 @@ The planned resource.
 |Referenced Table|[Gen_Resources](Gen_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Resource_Id](Prj_Project_Task_Resources.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,15 +146,9 @@ The planned resource.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Usage_Percent
-
-
-Resource_Usage_Percent
-
-
-The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.
 
 
 The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.
@@ -180,9 +161,8 @@ The planned resource usage for this activity in percents. Values of more than 10
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|1|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Resource_Usage_Percent](Prj_Project_Task_Resources.md#resource_usage_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,12 +185,9 @@ The planned resource usage for this activity in percents. Values of more than 10
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -221,9 +198,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Notes](Prj_Project_Task_Resources.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -245,12 +221,6 @@ Notes
 ### Resource_Usage_Hours
 
 
-Resource_Usage_Hours
-
-
-The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage.
-
-
 The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage.
 
 | Property | Value |
@@ -261,9 +231,8 @@ The total number of resource-hours, which are planned for this task. Equals to t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Resource_Usage_Hours](Prj_Project_Task_Resources.md#resource_usage_hours)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,17 +255,11 @@ The total number of resource-hours, which are planned for this task. Equals to t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Per_Hour
 
 
-Cost_Per_Hour
-
-
-Cost per hour for the resource usage for this task (in the currency of the project).
-
-
 Cost per hour for the resource usage for this task (in the currency of the project).
 
 | Property | Value |
@@ -307,9 +270,8 @@ Cost per hour for the resource usage for this task (in the currency of the proje
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Cost_Per_Hour](Prj_Project_Task_Resources.md#cost_per_hour)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -332,17 +294,11 @@ Cost per hour for the resource usage for this task (in the currency of the proje
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Task_Total_Cost
 
 
-Task_Total_Cost
-
-
-Total cost for this task (in the currency of the project).
-
-
 Total cost for this task (in the currency of the project).
 
 | Property | Value |
@@ -353,9 +309,8 @@ Total cost for this task (in the currency of the project).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Task_Total_Cost](Prj_Project_Task_Resources.md#task_total_cost)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -378,15 +333,9 @@ Total cost for this task (in the currency of the project).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Billing_Price_Per_Hour
-
-
-Billing_Price_Per_Hour
-
-
-When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. NULL means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price
 
 
 When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. NULL means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price
@@ -399,9 +348,8 @@ When not null, specifies the price per hour (in the currency of the Project) of 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Billing_Price_Per_Hour](Prj_Project_Task_Resources.md#billing_price_per_hour)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -424,17 +372,11 @@ When not null, specifies the price per hour (in the currency of the Project) of 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Billing_Total_Amount
 
 
-Billing_Total_Amount
-
-
-When not NULL, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). NULL means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour.
-
-
 When not NULL, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). NULL means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour.
 
 | Property | Value |
@@ -445,9 +387,8 @@ When not NULL, specifies that this item will be billed for the specified fixed t
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Billing_Total_Amount](Prj_Project_Task_Resources.md#billing_total_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -470,15 +411,9 @@ When not NULL, specifies that this item will be billed for the specified fixed t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Per_Use_Cost
-
-
-Per_Use_Cost
-
-
-One time cost for each resource usage, specified in the projects currency.
 
 
 One time cost for each resource usage, specified in the projects currency.
@@ -491,9 +426,8 @@ One time cost for each resource usage, specified in the projects currency.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Per_Use_Cost](Prj_Project_Task_Resources.md#per_use_cost)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -515,12 +449,6 @@ One time cost for each resource usage, specified in the projects currency.
 ### Resource_Instance_Id
 
 
-Resource_Instance_Id
-
-
-The concrete resource instance, which should be used. NULL when no specific resource instance is required.
-
-
 The concrete resource instance, which should be used. NULL when no specific resource instance is required.
 
 | Property | Value |
@@ -532,9 +460,8 @@ The concrete resource instance, which should be used. NULL when no specific reso
 |Referenced Table|[Gen_Resource_Instances](Gen_Resource_Instances.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Resource_Instance_Id](Prj_Project_Task_Resources.md#resource_instance_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -557,12 +484,9 @@ The concrete resource instance, which should be used. NULL when no specific reso
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -572,9 +496,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Resources](Prj_Project_Task_Resources.md).[Row_Version](Prj_Project_Task_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

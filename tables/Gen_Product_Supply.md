@@ -1,5 +1,10 @@
 # Table Gen_Product_Supply
 
+
+## Entity
+
+Entity: [General.Products.ProductSupply](~/entities/General.Products.ProductSupply.md)
+
 Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply
 
 ## Summary
@@ -48,12 +53,6 @@ Contains supply rules, which are used by the procurement planning system. Entity
 ### Store_Id
 
 
-Store_Id
-
-
-The store for which this rule is defined. When null, the rule is valid for all stores.
-
-
 The store for which this rule is defined. When null, the rule is valid for all stores.
 
 | Property | Value |
@@ -65,9 +64,8 @@ The store for which this rule is defined. When null, the rule is valid for all s
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Store_Id](Gen_Product_Supply.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -90,15 +88,9 @@ The store for which this rule is defined. When null, the rule is valid for all s
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Preferred_Supplier_Id
-
-
-Preferred_Supplier_Id
-
-
-Preferred supplier for the product. NULL if there is no preferred supplier
 
 
 Preferred supplier for the product. NULL if there is no preferred supplier
@@ -112,9 +104,8 @@ Preferred supplier for the product. NULL if there is no preferred supplier
 |Referenced Table|[Scm_Suppliers](Scm_Suppliers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Preferred_Supplier_Id](Gen_Product_Supply.md#preferred_supplier_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -137,15 +128,9 @@ Preferred supplier for the product. NULL if there is no preferred supplier
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Planning_Lead_Time_Days
-
-
-Planning_Lead_Time_Days
-
-
-The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components
 
 
 The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components
@@ -158,9 +143,8 @@ The number of days required to supply or manufacture the product. The number is 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Lead_Time_Days](Gen_Product_Supply.md#planning_lead_time_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -182,12 +166,6 @@ The number of days required to supply or manufacture the product. The number is 
 ### Order_Point_Quantity_Base
 
 
-Order_Point_Quantity_Base
-
-
-Order point quantity under the OP replenishment system
-
-
 Order point quantity under the OP replenishment system
 
 | Property | Value |
@@ -198,9 +176,8 @@ Order point quantity under the OP replenishment system
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Point_Quantity_Base](Gen_Product_Supply.md#order_point_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -222,12 +199,6 @@ Order point quantity under the OP replenishment system
 ### Planning_Maximum_Inventory_Quantity_Base
 
 
-Planning_Maximum_Inventory_Quantity_Base
-
-
-Maximum inventory. NULL if N/A
-
-
 Maximum inventory. NULL if N/A
 
 | Property | Value |
@@ -238,9 +209,8 @@ Maximum inventory. NULL if N/A
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Maximum_Inventory_Quantity_Base](Gen_Product_Supply.md#planning_maximum_inventory_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -262,12 +232,6 @@ Maximum inventory. NULL if N/A
 ### Order_Multiple
 
 
-Order_Multiple
-
-
-1 if the order qty should be multiple of lot size when buying or making
-
-
 1 if the order qty should be multiple of lot size when buying or making
 
 | Property | Value |
@@ -278,9 +242,8 @@ Order_Multiple
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Multiple](Gen_Product_Supply.md#order_multiple)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -302,12 +265,6 @@ Order_Multiple
 ### Order_Lot_Size_Quantity_Base
 
 
-Order_Lot_Size_Quantity_Base
-
-
-The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit
-
-
 The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit
 
 | Property | Value |
@@ -318,9 +275,8 @@ The quantity of the product, normally ordered from the plant or supplier. The qu
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Lot_Size_Quantity_Base](Gen_Product_Supply.md#order_lot_size_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -342,12 +298,6 @@ The quantity of the product, normally ordered from the plant or supplier. The qu
 ### Order_Period_Start_Date
 
 
-Order_Period_Start_Date
-
-
-Start date of the first period under fixed period replenishment system. NULL - not yet specified
-
-
 Start date of the first period under fixed period replenishment system. NULL - not yet specified
 
 | Property | Value |
@@ -359,9 +309,8 @@ Start date of the first period under fixed period replenishment system. NULL - n
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Period_Start_Date](Gen_Product_Supply.md#order_period_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -383,12 +332,6 @@ Start date of the first period under fixed period replenishment system. NULL - n
 ### Order_Period_Planning_Days
 
 
-Order_Period_Planning_Days
-
-
-For how many days in the future should be planned - for fixed period replenishment system. NULL - not yet specified
-
-
 For how many days in the future should be planned - for fixed period replenishment system. NULL - not yet specified
 
 | Property | Value |
@@ -399,9 +342,8 @@ For how many days in the future should be planned - for fixed period replenishme
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Period_Planning_Days](Gen_Product_Supply.md#order_period_planning_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -423,12 +365,6 @@ For how many days in the future should be planned - for fixed period replenishme
 ### Manufacturing_Policy
 
 
-Manufacturing_Policy
-
-
-MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order
-
-
 MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order
 
 | Property | Value |
@@ -440,10 +376,9 @@ MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Orde
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`ATO`, `MTO`, `MTS`, `ETO`|
 |Default Value|MTS|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Manufacturing_Policy](Gen_Product_Supply.md#manufacturing_policy)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -464,9 +399,6 @@ MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Orde
 
 ### Product_Supply_Id
 
-
-Product_Supply_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -476,9 +408,8 @@ Product_Supply_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Product_Supply_Id](Gen_Product_Supply.md#product_supply_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -501,15 +432,9 @@ Product_Supply_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Store_Bin_Id
-
-
-Default_Store_Bin_Id
-
-
-Default store bin for new deliveries using this supply scheme
 
 
 Default store bin for new deliveries using this supply scheme
@@ -523,9 +448,8 @@ Default store bin for new deliveries using this supply scheme
 |Referenced Table|[Inv_Store_Bins](Inv_Store_Bins.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Default_Store_Bin_Id](Gen_Product_Supply.md#default_store_bin_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -548,15 +472,9 @@ Default store bin for new deliveries using this supply scheme
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### From_Store_Id
-
-
-From_Store_Id
-
-
-Used when the Procurement_Type is Transfer
 
 
 Used when the Procurement_Type is Transfer
@@ -570,9 +488,8 @@ Used when the Procurement_Type is Transfer
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[From_Store_Id](Gen_Product_Supply.md#from_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -595,17 +512,11 @@ Used when the Procurement_Type is Transfer
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Default
 
 
-Is_Default
-
-
-Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information.
-
-
 Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information.
 
 | Property | Value |
@@ -616,9 +527,8 @@ Specifies whether this is the default supply rule. The planning system works usi
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Is_Default](Gen_Product_Supply.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -641,17 +551,11 @@ Specifies whether this is the default supply rule. The planning system works usi
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Active
 
 
-Is_Active
-
-
-1 if this product supply is active
-
-
 1 if this product supply is active
 
 | Property | Value |
@@ -662,9 +566,8 @@ Is_Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Is_Active](Gen_Product_Supply.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -687,12 +590,9 @@ Is_Active
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -703,9 +603,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Enterprise_Company_Id](Gen_Product_Supply.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -728,15 +627,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Group_Id
-
-
-Product_Group_Id
-
-
-Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings
 
 
 Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings
@@ -750,9 +643,8 @@ Not null when the method is a default method for a whole product group. In this 
 |Referenced Table|[Gen_Product_Groups](Gen_Product_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Product_Group_Id](Gen_Product_Supply.md#product_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -775,15 +667,9 @@ Not null when the method is a default method for a whole product group. In this 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Buyer_Name
-
-
-Buyer_Name
-
-
-The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy
 
 
 The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy
@@ -797,9 +683,8 @@ The code or name of the person, who is in charge for purchasing the product from
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Buyer_Name](Gen_Product_Supply.md#buyer_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -821,12 +706,6 @@ The code or name of the person, who is in charge for purchasing the product from
 ### Order_Lot_Sizing_Method
 
 
-Order_Lot_Sizing_Method
-
-
-LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;
-
-
 LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;
 
 | Property | Value |
@@ -838,10 +717,9 @@ LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOr
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`EOQ`, `FOQ`, `LFL`, `LFP`, `ROP`, `ROT`|
 |Default Value|ROP|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Lot_Sizing_Method](Gen_Product_Supply.md#order_lot_sizing_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -863,12 +741,6 @@ LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOr
 ### Order_Minimum
 
 
-Order_Minimum
-
-
-Minimum order quantity both for buying and making
-
-
 Minimum order quantity both for buying and making
 
 | Property | Value |
@@ -879,9 +751,8 @@ Minimum order quantity both for buying and making
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Minimum](Gen_Product_Supply.md#order_minimum)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -903,12 +774,6 @@ Minimum order quantity both for buying and making
 ### Generate_Document_Type_Id
 
 
-Generate_Document_Type_Id
-
-
-Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule.
-
-
 Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule.
 
 | Property | Value |
@@ -920,9 +785,8 @@ Specifies the type of the document which should be generated by the procurement 
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Generate_Document_Type_Id](Gen_Product_Supply.md#generate_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -945,15 +809,9 @@ Specifies the type of the document which should be generated by the procurement 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Fixed_Order_Quantity_Base
-
-
-Fixed_Order_Quantity_Base
-
-
-Fixed order quantity under the FOQ & EOQ replenishment system
 
 
 Fixed order quantity under the FOQ & EOQ replenishment system
@@ -966,9 +824,8 @@ Fixed order quantity under the FOQ & EOQ replenishment system
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Fixed_Order_Quantity_Base](Gen_Product_Supply.md#fixed_order_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -990,12 +847,6 @@ Fixed order quantity under the FOQ & EOQ replenishment system
 ### Order_Policy
 
 
-Order_Policy
-
-
-Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning
-
-
 Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning
 
 | Property | Value |
@@ -1007,10 +858,9 @@ Order policy/replenishment system. OPS=Order Point System; OPT=Order Point Syste
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`MRP`, `OPS`, `OPT`, `PRS`|
 |Default Value|OPS|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Policy](Gen_Product_Supply.md#order_policy)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1032,12 +882,6 @@ Order policy/replenishment system. OPS=Order Point System; OPT=Order Point Syste
 ### Planning_Order_Cost_Base_Currency
 
 
-Planning_Order_Cost_Base_Currency
-
-
-Projected cost to place an order and set-up equipment
-
-
 Projected cost to place an order and set-up equipment
 
 | Property | Value |
@@ -1048,9 +892,8 @@ Projected cost to place an order and set-up equipment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Order_Cost_Base_Currency](Gen_Product_Supply.md#planning_order_cost_base_currency)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1072,12 +915,6 @@ Projected cost to place an order and set-up equipment
 ### Planning_Order_Cycle_Days
 
 
-Planning_Order_Cycle_Days
-
-
-Number of days in one period under fixed period replenishment system. NULL - not yet specified
-
-
 Number of days in one period under fixed period replenishment system. NULL - not yet specified
 
 | Property | Value |
@@ -1088,9 +925,8 @@ Number of days in one period under fixed period replenishment system. NULL - not
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Order_Cycle_Days](Gen_Product_Supply.md#planning_order_cycle_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1112,12 +948,6 @@ Number of days in one period under fixed period replenishment system. NULL - not
 ### Planning_Annual_Carrying_Cost_Percent
 
 
-Planning_Annual_Carrying_Cost_Percent
-
-
-The expected carrying cost as percentage of inventory cost. NULL means unknown
-
-
 The expected carrying cost as percentage of inventory cost. NULL means unknown
 
 | Property | Value |
@@ -1128,9 +958,8 @@ The expected carrying cost as percentage of inventory cost. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Annual_Carrying_Cost_Percent](Gen_Product_Supply.md#planning_annual_carrying_cost_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1152,12 +981,6 @@ The expected carrying cost as percentage of inventory cost. NULL means unknown
 ### Planning_Annual_Usage_Quantity_Base
 
 
-Planning_Annual_Usage_Quantity_Base
-
-
-Average usage of the product for 1 year. NUL means unknown
-
-
 Average usage of the product for 1 year. NUL means unknown
 
 | Property | Value |
@@ -1168,9 +991,8 @@ Average usage of the product for 1 year. NUL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Annual_Usage_Quantity_Base](Gen_Product_Supply.md#planning_annual_usage_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1192,12 +1014,6 @@ Average usage of the product for 1 year. NUL means unknown
 ### Planning_Horizon_Days
 
 
-Planning_Horizon_Days
-
-
-Number of days in the future for which to plan the demand and supply
-
-
 Number of days in the future for which to plan the demand and supply
 
 | Property | Value |
@@ -1208,9 +1024,8 @@ Number of days in the future for which to plan the demand and supply
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Horizon_Days](Gen_Product_Supply.md#planning_horizon_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1232,12 +1047,6 @@ Number of days in the future for which to plan the demand and supply
 ### Planning_Safety_Stock_Quantity_Base
 
 
-Planning_Safety_Stock_Quantity_Base
-
-
-Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product
-
-
 Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product
 
 | Property | Value |
@@ -1248,9 +1057,8 @@ Planned lowest inventory level, protecting against unplanned demands. The quanti
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Safety_Stock_Quantity_Base](Gen_Product_Supply.md#planning_safety_stock_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1272,12 +1080,6 @@ Planned lowest inventory level, protecting against unplanned demands. The quanti
 ### Planning_Time_Fence_Days
 
 
-Planning_Time_Fence_Days
-
-
-Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF
-
-
 Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF
 
 | Property | Value |
@@ -1288,9 +1090,8 @@ Period in the future inside of which changes to the MPS are carefully evaluated 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Planning_Time_Fence_Days](Gen_Product_Supply.md#planning_time_fence_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1312,12 +1113,6 @@ Period in the future inside of which changes to the MPS are carefully evaluated 
 ### Standard_Cost_Per_Lot
 
 
-Standard_Cost_Per_Lot
-
-
-Standard cost for one lot of the product
-
-
 Standard cost for one lot of the product
 
 | Property | Value |
@@ -1328,9 +1123,8 @@ Standard cost for one lot of the product
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Standard_Cost_Per_Lot](Gen_Product_Supply.md#standard_cost_per_lot)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1352,12 +1146,6 @@ Standard cost for one lot of the product
 ### Procurement_Type
 
 
-Procurement_Type
-
-
-M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought
-
-
 M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought
 
 | Property | Value |
@@ -1369,10 +1157,9 @@ M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or extern
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`B`, `M`, `T`|
 |Default Value|B|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Procurement_Type](Gen_Product_Supply.md#procurement_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1394,12 +1181,6 @@ M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or extern
 ### Supply_Schema_Id
 
 
-Supply_Schema_Id
-
-
-The supply schema to use for the distribution of the product among warehouses
-
-
 The supply schema to use for the distribution of the product among warehouses
 
 | Property | Value |
@@ -1410,9 +1191,8 @@ The supply schema to use for the distribution of the product among warehouses
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Supply_Schema_Id](Gen_Product_Supply.md#supply_schema_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1435,12 +1215,9 @@ The supply schema to use for the distribution of the product among warehouses
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
-
-
-Product_Id
 
 | Property | Value |
 | - | - |
@@ -1451,9 +1228,8 @@ Product_Id
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Product_Id](Gen_Product_Supply.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1476,15 +1252,9 @@ Product_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Order_Maximum
-
-
-Order_Maximum
-
-
-Order maximum when buying or making. NULL means no maximum
 
 
 Order maximum when buying or making. NULL means no maximum
@@ -1497,9 +1267,8 @@ Order maximum when buying or making. NULL means no maximum
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Order_Maximum](Gen_Product_Supply.md#order_maximum)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1520,9 +1289,6 @@ Order maximum when buying or making. NULL means no maximum
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -1531,9 +1297,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Supply](Gen_Product_Supply.md).[Row_Version](Gen_Product_Supply.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

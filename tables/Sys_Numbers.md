@@ -11,9 +11,6 @@
 
 ### Number
 
-
-Number
-
 | Property | Value |
 | - | - |
 |Type|int|
@@ -23,9 +20,8 @@ Number
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Numbers](Sys_Numbers.md).[Number](Sys_Numbers.md#number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

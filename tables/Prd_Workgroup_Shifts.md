@@ -1,5 +1,10 @@
 # Table Prd_Workgroup_Shifts
 
+
+## Entity
+
+Entity: [Production.Resources.WorkgroupShifts](~/entities/Production.Resources.WorkgroupShifts.md)
+
 Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 
 ## Owner Tables Hierarchy
@@ -23,12 +28,6 @@ Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 ### Id
 
 
-Id
-
-
-Unique workgroup shift Id
-
-
 Unique workgroup shift Id
 
 | Property | Value |
@@ -40,9 +39,8 @@ Unique workgroup shift Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Workgroup_Shifts](Prd_Workgroup_Shifts.md).[Id](Prd_Workgroup_Shifts.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,12 +63,9 @@ Unique workgroup shift Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Workgroup_Id
-
-
-Workgroup_Id
 
 | Property | Value |
 | - | - |
@@ -81,9 +76,8 @@ Workgroup_Id
 |Referenced Table|[Prd_Workgroups](Prd_Workgroups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroup_Shifts](Prd_Workgroup_Shifts.md).[Workgroup_Id](Prd_Workgroup_Shifts.md#workgroup_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ Workgroup_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Shift_Name
-
-
-Shift_Name
-
-
-The name of the workgroup shift.
 
 
 The name of the workgroup shift.
@@ -128,9 +116,8 @@ The name of the workgroup shift.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroup_Shifts](Prd_Workgroup_Shifts.md).[Shift_Name](Prd_Workgroup_Shifts.md#shift_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,12 +145,6 @@ The name of the workgroup shift.
 ### Establishment_Date
 
 
-Establishment_Date
-
-
-When the workgroup shift was established. Used as minimum date when generating calendar
-
-
 When the workgroup shift was established. Used as minimum date when generating calendar
 
 | Property | Value |
@@ -175,9 +156,8 @@ When the workgroup shift was established. Used as minimum date when generating c
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Prd_Workgroup_Shifts](Prd_Workgroup_Shifts.md).[Establishment_Date](Prd_Workgroup_Shifts.md#establishment_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,12 +185,6 @@ When the workgroup shift was established. Used as minimum date when generating c
 ### Work_Schedule_Id
 
 
-Work_Schedule_Id
-
-
-The work schedule used to calculate the working time for the shift.
-
-
 The work schedule used to calculate the working time for the shift.
 
 | Property | Value |
@@ -222,9 +196,8 @@ The work schedule used to calculate the working time for the shift.
 |Referenced Table|[Gen_Work_Schedules](Gen_Work_Schedules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroup_Shifts](Prd_Workgroup_Shifts.md).[Work_Schedule_Id](Prd_Workgroup_Shifts.md#work_schedule_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,15 +220,9 @@ The work schedule used to calculate the working time for the shift.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Efficiency_Factor_Percent
-
-
-Efficiency_Factor_Percent
-
-
-Efficiency factor of the routing steps for this shift, expressed as percentage
 
 
 Efficiency factor of the routing steps for this shift, expressed as percentage
@@ -268,9 +235,8 @@ Efficiency factor of the routing steps for this shift, expressed as percentage
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|1|
-|Derived From|[Prd_Workgroup_Shifts](Prd_Workgroup_Shifts.md).[Efficiency_Factor_Percent](Prd_Workgroup_Shifts.md#efficiency_factor_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,9 +257,6 @@ Efficiency factor of the routing steps for this shift, expressed as percentage
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -302,9 +265,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Workgroup_Shifts](Prd_Workgroup_Shifts.md).[Row_Version](Prd_Workgroup_Shifts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Eam_Managed_Asset_Groups
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.ManagedAssetGroups](~/entities/Applications.AssetManagement.ManagedAssetGroups.md)
+
 Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Introduced in version 19.1)
 
 ## Summary
@@ -10,15 +15,12 @@ Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Intr
 |[Parent_Managed_Asset_Group_Id](#parent_managed_asset_group_id)|`uniqueidentifier` |The parent asset group in the hierarchy. NULL means this is a root group.|
 |[Managed_Asset_Group_Code](#managed_asset_group_code)|`nvarchar(16)` |Unique (within all groups) code of the asset group.|
 |[Managed_Asset_Group_Name](#managed_asset_group_name)|`nvarchar(254)` `ML`|Name of the asset group (multi-language).|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Managed_Asset_Group_Id
-
-
-Managed_Asset_Group_Id
 
 | Property | Value |
 | - | - |
@@ -29,9 +31,8 @@ Managed_Asset_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Managed_Asset_Groups](Eam_Managed_Asset_Groups.md).[Managed_Asset_Group_Id](Eam_Managed_Asset_Groups.md#managed_asset_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Managed_Asset_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent_Managed_Asset_Group_Id
-
-
-Parent_Managed_Asset_Group_Id
-
-
-The parent asset group in the hierarchy. NULL means this is a root group.
 
 
 The parent asset group in the hierarchy. NULL means this is a root group.
@@ -76,9 +71,8 @@ The parent asset group in the hierarchy. NULL means this is a root group.
 |Referenced Table|[Eam_Managed_Asset_Groups](Eam_Managed_Asset_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Groups](Eam_Managed_Asset_Groups.md).[Parent_Managed_Asset_Group_Id](Eam_Managed_Asset_Groups.md#parent_managed_asset_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +95,9 @@ The parent asset group in the hierarchy. NULL means this is a root group.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Managed_Asset_Group_Code
-
-
-Managed_Asset_Group_Code
-
-
-Unique (within all groups) code of the asset group.
 
 
 Unique (within all groups) code of the asset group.
@@ -123,9 +111,8 @@ Unique (within all groups) code of the asset group.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Groups](Eam_Managed_Asset_Groups.md).[Managed_Asset_Group_Code](Eam_Managed_Asset_Groups.md#managed_asset_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,16 +135,10 @@ Unique (within all groups) code of the asset group.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Managed_Asset_Group_Name
-
-
-Managed_Asset_Group_Name
-
-
-Name of the asset group (multi-language).
 
 
 Name of the asset group (multi-language).
@@ -171,9 +152,8 @@ Name of the asset group (multi-language).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Groups](Eam_Managed_Asset_Groups.md).[Managed_Asset_Group_Name](Eam_Managed_Asset_Groups.md#managed_asset_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,26 +176,22 @@ Name of the asset group (multi-language).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Groups](Eam_Managed_Asset_Groups.md).[Notes](Eam_Managed_Asset_Groups.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -236,9 +212,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -247,9 +220,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Groups](Eam_Managed_Asset_Groups.md).[Row_Version](Eam_Managed_Asset_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

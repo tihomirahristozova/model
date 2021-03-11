@@ -1,5 +1,10 @@
 # Table Prj_Resources
 
+
+## Entity
+
+Entity: [Projects.Resources](~/entities/Projects.Resources.md)
+
 Contains the enterprise resources, which are available for including in projects. Entity: Prj_Resources
 
 ## Owner Tables Hierarchy
@@ -13,15 +18,12 @@ Contains the enterprise resources, which are available for including in projects
 |[Resource_Id](#resource_id)|`uniqueidentifier` `PK`||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company owning the resource|
 |[Resource_Name](#resource_name)|`nvarchar(254)` ||
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Resource_Id
-
-
-Resource_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Resource_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Resources](Prj_Resources.md).[Resource_Id](Prj_Resources.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Resource_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company owning the resource
 
 
 The enterprise company owning the resource
@@ -79,9 +74,8 @@ The enterprise company owning the resource
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Resources](Prj_Resources.md).[Enterprise_Company_Id](Prj_Resources.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,12 +98,9 @@ The enterprise company owning the resource
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Resource_Name
-
-
-Resource_Name
 
 | Property | Value |
 | - | - |
@@ -120,9 +111,8 @@ Resource_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Resources](Prj_Resources.md).[Resource_Name](Prj_Resources.md#resource_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -143,21 +133,17 @@ Resource_Name
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prj_Resources](Prj_Resources.md).[Description](Prj_Resources.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -178,9 +164,6 @@ Description
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -189,9 +172,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Resources](Prj_Resources.md).[Row_Version](Prj_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

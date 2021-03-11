@@ -1,5 +1,10 @@
 # Table Cash_Payment_Slip_Amounts
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentSlipAmounts](~/entities/Finance.Payments.PaymentSlipAmounts.md)
+
 Mass payment amount. Each record generates one payment transaction. Entity: Cash_Payment_Slip_Amounts
 
 ## Owner Tables Hierarchy
@@ -29,12 +34,6 @@ Mass payment amount. Each record generates one payment transaction. Entity: Cash
 ### Party_Id
 
 
-Party_Id
-
-
-The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet.
-
-
 The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet.
 
 | Property | Value |
@@ -46,9 +45,8 @@ The party that is paying or receiving the money. The column can be left blank if
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Party_Id](Cash_Payment_Slip_Amounts.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -71,15 +69,9 @@ The party that is paying or receiving the money. The column can be left blank if
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Party_Name
-
-
-Party_Name
-
-
-The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).
 
 
 The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).
@@ -93,9 +85,8 @@ The name of the party that is paying or receiving the money. The column can be l
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Party_Name](Cash_Payment_Slip_Amounts.md#party_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -117,12 +108,6 @@ The name of the party that is paying or receiving the money. The column can be l
 ### Payment_Date
 
 
-Payment_Date
-
-
-The date on which the payment is done
-
-
 The date on which the payment is done
 
 | Property | Value |
@@ -134,9 +119,8 @@ The date on which the payment is done
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Payment_Date](Cash_Payment_Slip_Amounts.md#payment_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -164,12 +148,6 @@ The date on which the payment is done
 ### Total_Amount
 
 
-Total_Amount
-
-
-The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If NULL the total amount is calculated as sum of the amounts in the payment slip lines.
-
-
 The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If NULL the total amount is calculated as sum of the amounts in the payment slip lines.
 
 | Property | Value |
@@ -180,9 +158,8 @@ The total amount payed. The distribution of the amount amongst the payment order
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Total_Amount](Cash_Payment_Slip_Amounts.md#total_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -204,12 +181,6 @@ The total amount payed. The distribution of the amount amongst the payment order
 ### Direction
 
 
-Direction
-
-
-'I' for Payment issue, 'R' for payment receipt
-
-
 'I' for Payment issue, 'R' for payment receipt
 
 | Property | Value |
@@ -221,10 +192,9 @@ Direction
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `R`|
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Direction](Cash_Payment_Slip_Amounts.md#direction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,15 +217,9 @@ Direction
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Party_Payment
-
-
-Is_Party_Payment
-
-
-Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.)
 
 
 Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.)
@@ -268,9 +232,8 @@ Indicates whether the amount is payed or received by party or not (i.e. the amou
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Is_Party_Payment](Cash_Payment_Slip_Amounts.md#is_party_payment)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -292,12 +255,6 @@ Indicates whether the amount is payed or received by party or not (i.e. the amou
 ### Description
 
 
-Description
-
-
-Description of the payed amount. The numbers of the documents which are payed for example.
-
-
 Description of the payed amount. The numbers of the documents which are payed for example.
 
 | Property | Value |
@@ -309,9 +266,8 @@ Description of the payed amount. The numbers of the documents which are payed fo
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Description](Cash_Payment_Slip_Amounts.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -332,9 +288,6 @@ Description of the payed amount. The numbers of the documents which are payed fo
 
 ### Payment_Slip_Amount_Id
 
-
-Payment_Slip_Amount_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -344,9 +297,8 @@ Payment_Slip_Amount_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Payment_Slip_Amount_Id](Cash_Payment_Slip_Amounts.md#payment_slip_amount_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -369,12 +321,9 @@ Payment_Slip_Amount_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Slip_Id
-
-
-Payment_Slip_Id
 
 | Property | Value |
 | - | - |
@@ -385,9 +334,8 @@ Payment_Slip_Id
 |Referenced Table|[Cash_Payment_Slips](Cash_Payment_Slips.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Payment_Slip_Id](Cash_Payment_Slip_Amounts.md#payment_slip_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -410,15 +358,9 @@ Payment_Slip_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Reason_Id
-
-
-Payment_Reason_Id
-
-
-The reason for the payment, as defined in Payment Reasons.
 
 
 The reason for the payment, as defined in Payment Reasons.
@@ -432,9 +374,8 @@ The reason for the payment, as defined in Payment Reasons.
 |Referenced Table|[Cash_Payment_Reasons](Cash_Payment_Reasons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Payment_Reason_Id](Cash_Payment_Slip_Amounts.md#payment_reason_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -457,15 +398,9 @@ The reason for the payment, as defined in Payment Reasons.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Line_No
-
-
-Line_No
-
-
-The number of the line within the payment
 
 
 The number of the line within the payment
@@ -478,10 +413,9 @@ The number of the line within the payment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Line_No](Cash_Payment_Slip_Amounts.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -502,9 +436,6 @@ The number of the line within the payment
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -513,9 +444,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md).[Row_Version](Cash_Payment_Slip_Amounts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

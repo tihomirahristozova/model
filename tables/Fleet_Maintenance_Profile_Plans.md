@@ -1,5 +1,10 @@
 # Table Fleet_Maintenance_Profile_Plans
 
+
+## Entity
+
+Entity: [Applications.Fleet.MaintenanceProfilePlans](~/entities/Applications.Fleet.MaintenanceProfilePlans.md)
+
 Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenance_Profile_Plans
 
 ## Owner Tables Hierarchy
@@ -13,15 +18,12 @@ Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenan
 |[Maintenance_Profile_Plan_Id](#maintenance_profile_plan_id)|`uniqueidentifier` `PK`||
 |[Maintenance_Profile_Id](#maintenance_profile_id)|`uniqueidentifier` |The maintenance profile, which includes the plan.|
 |[Maintenance_Plan_Id](#maintenance_plan_id)|`uniqueidentifier` |The maintenance plan, which is included in the profile.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Is_Active](#is_active)|`bit` |1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.|
 
 ## Columns
 
 ### Maintenance_Profile_Plan_Id
-
-
-Maintenance_Profile_Plan_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Maintenance_Profile_Plan_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Maintenance_Profile_Plans](Fleet_Maintenance_Profile_Plans.md).[Maintenance_Profile_Plan_Id](Fleet_Maintenance_Profile_Plans.md#maintenance_profile_plan_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Maintenance_Profile_Plan_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Profile_Id
-
-
-Maintenance_Profile_Id
-
-
-The maintenance profile, which includes the plan.
 
 
 The maintenance profile, which includes the plan.
@@ -79,9 +74,8 @@ The maintenance profile, which includes the plan.
 |Referenced Table|[Fleet_Maintenance_Profiles](Fleet_Maintenance_Profiles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Profile_Plans](Fleet_Maintenance_Profile_Plans.md).[Maintenance_Profile_Id](Fleet_Maintenance_Profile_Plans.md#maintenance_profile_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The maintenance profile, which includes the plan.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Plan_Id
-
-
-Maintenance_Plan_Id
-
-
-The maintenance plan, which is included in the profile.
 
 
 The maintenance plan, which is included in the profile.
@@ -126,9 +114,8 @@ The maintenance plan, which is included in the profile.
 |Referenced Table|[Fleet_Maintenance_Plans](Fleet_Maintenance_Plans.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Profile_Plans](Fleet_Maintenance_Profile_Plans.md).[Maintenance_Plan_Id](Fleet_Maintenance_Profile_Plans.md#maintenance_plan_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,25 +138,21 @@ The maintenance plan, which is included in the profile.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Profile_Plans](Fleet_Maintenance_Profile_Plans.md).[Notes](Fleet_Maintenance_Profile_Plans.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,12 +174,6 @@ Notes
 ### Is_Active
 
 
-Is_Active
-
-
-1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.
-
-
 1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.
 
 | Property | Value |
@@ -207,9 +184,8 @@ Is_Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Fleet_Maintenance_Profile_Plans](Fleet_Maintenance_Profile_Plans.md).[Is_Active](Fleet_Maintenance_Profile_Plans.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

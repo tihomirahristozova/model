@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_party_pictures">Table Gen_Party_Pictures</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Contacts.PartyPictures.html">General.Contacts.PartyPictures</a></p>
 <p>Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -138,8 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="picture_no">Picture_No</h3>
-<p>Picture_No</p>
-<p>Unique picture number within the party. Also used for sorting</p>
 <p>Unique picture number within the party. Also used for sorting</p>
 <table>
 <thead>
@@ -175,7 +175,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -184,10 +184,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Pictures.html">Gen_Party_Pictures</a>.<a href="Gen_Party_Pictures.html#picture_no">Picture_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -272,14 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
 <table>
 <thead>
 <tr>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Pictures.html">Gen_Party_Pictures</a>.<a href="Gen_Party_Pictures.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="comments">Comments</h3>
-<p>Comments</p>
-<p>Notes for this party picture.</p>
 <p>Notes for this party picture.</p>
 <table>
 <thead>
@@ -459,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Pictures.html">Gen_Party_Pictures</a>.<a href="Gen_Party_Pictures.html#comments">Comments</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -540,8 +525,6 @@
 </tbody>
 </table>
 <h3 id="is_default">Is_Default</h3>
-<p>Is_Default</p>
-<p>1=This is the default picture for the party; 0=otherwise</p>
 <p>1=This is the default picture for the party; 0=otherwise</p>
 <table>
 <thead>
@@ -577,15 +560,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Pictures.html">Gen_Party_Pictures</a>.<a href="Gen_Party_Pictures.html#is_default">Is_Default</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -670,15 +649,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="picture">Picture</h3>
-<p>Picture</p>
-<p>The actual party picture data. Can be NULL if we insert only some comments.</p>
 <p>The actual party picture data. Can be NULL if we insert only some comments.</p>
 <table>
 <thead>
@@ -714,15 +691,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Pictures.html">Gen_Party_Pictures</a>.<a href="Gen_Party_Pictures.html#picture">Picture</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -795,7 +768,6 @@
 </tbody>
 </table>
 <h3 id="party_picture_id">Party_Picture_Id</h3>
-<p>Party_Picture_Id</p>
 <table>
 <thead>
 <tr>
@@ -834,15 +806,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Pictures.html">Gen_Party_Pictures</a>.<a href="Gen_Party_Pictures.html#party_picture_id">Party_Picture_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -927,14 +895,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_logo">Is_Logo</h3>
-<p>Is_Logo</p>
 <table>
 <thead>
 <tr>
@@ -969,15 +936,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Pictures.html">Gen_Party_Pictures</a>.<a href="Gen_Party_Pictures.html#is_logo">Is_Logo</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1062,14 +1025,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1104,15 +1066,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Party_Pictures.html">Gen_Party_Pictures</a>.<a href="Gen_Party_Pictures.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

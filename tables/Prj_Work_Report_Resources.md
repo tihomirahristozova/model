@@ -1,5 +1,10 @@
 # Table Prj_Work_Report_Resources
 
+
+## Entity
+
+Entity: [Projects.WorkReportResources](~/entities/Projects.WorkReportResources.md)
+
 Each record contains usage of resource, reported by the related Work Report. Entity: Prj_Work_Report_Resources
 
 ## Owner Tables Hierarchy
@@ -25,9 +30,6 @@ Each record contains usage of resource, reported by the related Work Report. Ent
 
 ### Work_Report_Resource_Id
 
-
-Work_Report_Resource_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +39,8 @@ Work_Report_Resource_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Work_Report_Resource_Id](Prj_Work_Report_Resources.md#work_report_resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,12 +63,9 @@ Work_Report_Resource_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Report_Id
-
-
-Work_Report_Id
 
 | Property | Value |
 | - | - |
@@ -78,9 +76,8 @@ Work_Report_Id
 |Referenced Table|[Prj_Work_Reports](Prj_Work_Reports.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Work_Report_Id](Prj_Work_Report_Resources.md#work_report_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +100,9 @@ Work_Report_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Task_Id
-
-
-Project_Task_Id
-
-
-The project task for which the work is reported.
 
 
 The project task for which the work is reported.
@@ -125,9 +116,8 @@ The project task for which the work is reported.
 |Referenced Table|[Prj_Project_Tasks](Prj_Project_Tasks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Project_Task_Id](Prj_Work_Report_Resources.md#project_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,15 +140,9 @@ The project task for which the work is reported.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Id
-
-
-Resource_Id
-
-
-The resource, for which usage is reported.
 
 
 The resource, for which usage is reported.
@@ -172,9 +156,8 @@ The resource, for which usage is reported.
 |Referenced Table|[Gen_Resources](Gen_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Resource_Id](Prj_Work_Report_Resources.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,15 +180,9 @@ The resource, for which usage is reported.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Instance_Id
-
-
-Resource_Instance_Id
-
-
-The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used.
 
 
 The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used.
@@ -219,9 +196,8 @@ The concrete resource instance used. NULL when no concrete resource was used or 
 |Referenced Table|[Gen_Resource_Instances](Gen_Resource_Instances.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Resource_Instance_Id](Prj_Work_Report_Resources.md#resource_instance_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,16 +220,10 @@ The concrete resource instance used. NULL when no concrete resource was used or 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Total_Resource_Usage_Hours
-
-
-Total_Resource_Usage_Hours
-
-
-The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.
 
 
 The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.
@@ -266,9 +236,8 @@ The total number of resource-hours, which are actually consumed. Equals to the d
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Total_Resource_Usage_Hours](Prj_Work_Report_Resources.md#total_resource_usage_hours)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,18 +260,12 @@ The total number of resource-hours, which are actually consumed. Equals to the d
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Actual_Start_Time
 
 
-Actual_Start_Time
-
-
-Optionally, specifies the actual date and time when the resource usage began.
-
-
 Optionally, specifies the actual date and time when the resource usage began.
 
 | Property | Value |
@@ -314,9 +277,8 @@ Optionally, specifies the actual date and time when the resource usage began.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Actual_Start_Time](Prj_Work_Report_Resources.md#actual_start_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -339,18 +301,12 @@ Optionally, specifies the actual date and time when the resource usage began.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Actual_End_Time
 
 
-Actual_End_Time
-
-
-Optionally, specifies the actual date and time when the resource usage ended.
-
-
 Optionally, specifies the actual date and time when the resource usage ended.
 
 | Property | Value |
@@ -362,9 +318,8 @@ Optionally, specifies the actual date and time when the resource usage ended.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Actual_End_Time](Prj_Work_Report_Resources.md#actual_end_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -387,13 +342,10 @@ Optionally, specifies the actual date and time when the resource usage ended.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -403,9 +355,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Work_Report_Resources](Prj_Work_Report_Resources.md).[Row_Version](Prj_Work_Report_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

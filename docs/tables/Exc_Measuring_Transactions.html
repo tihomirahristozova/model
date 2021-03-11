@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-exc_measuring_transactions">Table Exc_Measuring_Transactions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Excise.MeasuringTransactions.html">Finance.Excise.MeasuringTransactions</a></p>
 <p>Transaction of product input or output, measured with specialized measuring device for excise purposes. Entity: Exc_Measuring_Transactions (Introduced in version 21.1.1.9)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -157,7 +159,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -169,7 +171,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="measuring_transaction_id">Measuring_Transaction_Id</h3>
-<p>Measuring_Transaction_Id</p>
 <table>
 <thead>
 <tr>
@@ -208,15 +209,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#measuring_transaction_id">Measuring_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -301,15 +298,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="tax_warehouse_id">Tax_Warehouse_Id</h3>
-<p>Tax_Warehouse_Id</p>
-<p>The tax warehouse, where the transaction occurred.</p>
 <p>The tax warehouse, where the transaction occurred.</p>
 <table>
 <thead>
@@ -349,15 +344,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#tax_warehouse_id">Tax_Warehouse_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -442,15 +433,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="measuring_device_code">Measuring_Device_Code</h3>
-<p>Measuring_Device_Code</p>
-<p>The code of the measuring device, used to measure the transaction.</p>
 <p>The code of the measuring device, used to measure the transaction.</p>
 <table>
 <thead>
@@ -490,15 +479,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#measuring_device_code">Measuring_Device_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -583,7 +568,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -596,8 +581,6 @@
 </tbody>
 </table>
 <h3 id="transaction_number">Transaction_Number</h3>
-<p>Transaction_Number</p>
-<p>Transaction number, unique for the measuring device.</p>
 <p>Transaction number, unique for the measuring device.</p>
 <table>
 <thead>
@@ -637,15 +620,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#transaction_number">Transaction_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -730,7 +709,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -743,8 +722,6 @@
 </tbody>
 </table>
 <h3 id="direction">Direction</h3>
-<p>Direction</p>
-<p>The direction of the transaction - IN/OUT.</p>
 <p>The direction of the transaction - IN/OUT.</p>
 <table>
 <thead>
@@ -784,7 +761,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -793,10 +770,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#direction">Direction</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -869,8 +842,6 @@
 </tbody>
 </table>
 <h3 id="start_time_utc">Start_Time_Utc</h3>
-<p>Start_Time_Utc</p>
-<p>Starting time of the transaction (in UTC time).</p>
 <p>Starting time of the transaction (in UTC time).</p>
 <table>
 <thead>
@@ -910,15 +881,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#start_time_utc">Start_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1003,7 +970,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1016,8 +983,6 @@
 </tbody>
 </table>
 <h3 id="end_time_utc">End_Time_Utc</h3>
-<p>End_Time_Utc</p>
-<p>Ending time of the transaction (in UTC time).</p>
 <p>Ending time of the transaction (in UTC time).</p>
 <table>
 <thead>
@@ -1057,15 +1022,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#end_time_utc">End_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1150,7 +1111,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1163,8 +1124,6 @@
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The product, which was being measured.</p>
 <p>The product, which was being measured.</p>
 <table>
 <thead>
@@ -1204,15 +1163,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1297,15 +1252,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>The quantity of the product, measured with this transaction.</p>
 <p>The quantity of the product, measured with this transaction.</p>
 <table>
 <thead>
@@ -1341,15 +1294,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1434,7 +1383,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1447,8 +1396,6 @@
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit of Quantity.</p>
 <p>The measurement unit of Quantity.</p>
 <table>
 <thead>
@@ -1488,15 +1435,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1581,15 +1524,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="alcohol_degree">Alcohol_Degree</h3>
-<p>Alcohol_Degree</p>
-<p>For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.</p>
 <p>For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.</p>
 <table>
 <thead>
@@ -1625,15 +1566,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#alcohol_degree">Alcohol_Degree</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1718,7 +1655,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1731,8 +1668,6 @@
 </tbody>
 </table>
 <h3 id="alcohol_temperature">Alcohol_Temperature</h3>
-<p>Alcohol_Temperature</p>
-<p>For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.</p>
 <p>For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.</p>
 <table>
 <thead>
@@ -1768,15 +1703,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#alcohol_temperature">Alcohol_Temperature</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1861,7 +1792,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1874,8 +1805,6 @@
 </tbody>
 </table>
 <h3 id="alcohol_density">Alcohol_Density</h3>
-<p>Alcohol_Density</p>
-<p>For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.</p>
 <p>For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.</p>
 <table>
 <thead>
@@ -1911,15 +1840,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#alcohol_density">Alcohol_Density</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2004,7 +1929,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2017,7 +1942,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2028,7 +1952,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2056,15 +1980,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2137,7 +2057,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2172,15 +2091,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a>.<a href="Exc_Measuring_Transactions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

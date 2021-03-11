@@ -1,5 +1,10 @@
 # Table Nat_BG_VAT_Declaring_Persons
 
+
+## Entity
+
+Entity: [Finance.Vat.BGVATDeclaringPersons](~/entities/Finance.Vat.BGVATDeclaringPersons.md)
+
 National data: Contains the persons, which are authorized to issue and sign VAT declarations. Entity: Nat_BG_VAT_Declaring_Persons
 
 ## Owner Tables Hierarchy
@@ -26,12 +31,6 @@ National data: Contains the persons, which are authorized to issue and sign VAT 
 ### Declaring_Person_Id
 
 
-Declaring_Person_Id
-
-
-Unique identification of the declaring person.
-
-
 Unique identification of the declaring person.
 
 | Property | Value |
@@ -43,9 +42,8 @@ Unique identification of the declaring person.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Declaring_Person_Id](Nat_BG_VAT_Declaring_Persons.md#declaring_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -68,15 +66,9 @@ Unique identification of the declaring person.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company for which the person is presenting the declaration.
 
 
 The enterprise company for which the person is presenting the declaration.
@@ -90,9 +82,8 @@ The enterprise company for which the person is presenting the declaration.
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Enterprise_Company_Id](Nat_BG_VAT_Declaring_Persons.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -115,15 +106,9 @@ The enterprise company for which the person is presenting the declaration.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Person_Id
-
-
-Person_Id
-
-
-The person that is presenting the declaration.
 
 
 The person that is presenting the declaration.
@@ -137,9 +122,8 @@ The person that is presenting the declaration.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Person_Id](Nat_BG_VAT_Declaring_Persons.md#person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -162,15 +146,9 @@ The person that is presenting the declaration.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Declarer_Type
-
-
-Declarer_Type
-
-
-Type of the declaring person. A=Attorney, R=Representative.
 
 
 Type of the declaring person. A=Attorney, R=Representative.
@@ -184,10 +162,9 @@ Type of the declaring person. A=Attorney, R=Representative.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `R`|
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Declarer_Type](Nat_BG_VAT_Declaring_Persons.md#declarer_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -210,15 +187,9 @@ Type of the declaring person. A=Attorney, R=Representative.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Declaring_Person_City
-
-
-Declaring_Person_City
-
-
-City from the address for correspondation of the declaring person.
 
 
 City from the address for correspondation of the declaring person.
@@ -232,9 +203,8 @@ City from the address for correspondation of the declaring person.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Declaring_Person_City](Nat_BG_VAT_Declaring_Persons.md#declaring_person_city)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -256,12 +226,6 @@ City from the address for correspondation of the declaring person.
 ### Declaring_Person_Postcode
 
 
-Declaring_Person_Postcode
-
-
-Postcode from the address for correspondation of the declaring person.
-
-
 Postcode from the address for correspondation of the declaring person.
 
 | Property | Value |
@@ -273,9 +237,8 @@ Postcode from the address for correspondation of the declaring person.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Declaring_Person_Postcode](Nat_BG_VAT_Declaring_Persons.md#declaring_person_postcode)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -297,12 +260,6 @@ Postcode from the address for correspondation of the declaring person.
 ### Declaring_Person_Address
 
 
-Declaring_Person_Address
-
-
-Address for correspondation of the declaring person.
-
-
 Address for correspondation of the declaring person.
 
 | Property | Value |
@@ -314,9 +271,8 @@ Address for correspondation of the declaring person.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Declaring_Person_Address](Nat_BG_VAT_Declaring_Persons.md#declaring_person_address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -338,12 +294,6 @@ Address for correspondation of the declaring person.
 ### Declaring_Person_Position
 
 
-Declaring_Person_Position
-
-
-Position of the declaring person in the enterprise company.
-
-
 Position of the declaring person in the enterprise company.
 
 | Property | Value |
@@ -355,9 +305,8 @@ Position of the declaring person in the enterprise company.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Declaring_Person_Position](Nat_BG_VAT_Declaring_Persons.md#declaring_person_position)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -379,12 +328,6 @@ Position of the declaring person in the enterprise company.
 ### Is_Default
 
 
-Is_Default
-
-
-True if this is the default person, which issues VAT declarations for this Enterprise Company.
-
-
 True if this is the default person, which issues VAT declarations for this Enterprise Company.
 
 | Property | Value |
@@ -395,9 +338,8 @@ True if this is the default person, which issues VAT declarations for this Enter
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Is_Default](Nat_BG_VAT_Declaring_Persons.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -418,9 +360,6 @@ True if this is the default person, which issues VAT declarations for this Enter
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -429,9 +368,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md).[Row_Version](Nat_BG_VAT_Declaring_Persons.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

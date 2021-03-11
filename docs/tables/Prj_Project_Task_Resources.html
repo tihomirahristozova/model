@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_project_task_resources">Table Prj_Project_Task_Resources</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.ProjectTaskResources.html">Projects.ProjectTaskResources</a></p>
 <p>Contains the resources, required by the project tasks. Entity: Prj_Project_Task_Resources</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -163,7 +165,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="project_task_resource_id">Project_Task_Resource_Id</h3>
-<p>Project_Task_Resource_Id</p>
 <table>
 <thead>
 <tr>
@@ -202,15 +203,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#project_task_resource_id">Project_Task_Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -295,15 +292,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_task_id">Project_Task_Id</h3>
-<p>Project_Task_Id</p>
-<p>The task for which the resource is planned.</p>
 <p>The task for which the resource is planned.</p>
 <table>
 <thead>
@@ -343,15 +338,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#project_task_id">Project_Task_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -436,15 +427,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_id">Resource_Id</h3>
-<p>Resource_Id</p>
-<p>The planned resource.</p>
 <p>The planned resource.</p>
 <table>
 <thead>
@@ -484,15 +473,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#resource_id">Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -577,15 +562,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_usage_percent">Resource_Usage_Percent</h3>
-<p>Resource_Usage_Percent</p>
-<p>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.</p>
 <p>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.</p>
 <table>
 <thead>
@@ -621,15 +604,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#resource_usage_percent">Resource_Usage_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -714,14 +693,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -760,15 +738,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -841,8 +815,6 @@
 </tbody>
 </table>
 <h3 id="resource_usage_hours">Resource_Usage_Hours</h3>
-<p>Resource_Usage_Hours</p>
-<p>The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage.</p>
 <p>The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage.</p>
 <table>
 <thead>
@@ -878,15 +850,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#resource_usage_hours">Resource_Usage_Hours</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -971,15 +939,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="cost_per_hour">Cost_Per_Hour</h3>
-<p>Cost_Per_Hour</p>
-<p>Cost per hour for the resource usage for this task (in the currency of the project).</p>
 <p>Cost per hour for the resource usage for this task (in the currency of the project).</p>
 <table>
 <thead>
@@ -1015,15 +981,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#cost_per_hour">Cost_Per_Hour</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1108,15 +1070,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="task_total_cost">Task_Total_Cost</h3>
-<p>Task_Total_Cost</p>
-<p>Total cost for this task (in the currency of the project).</p>
 <p>Total cost for this task (in the currency of the project).</p>
 <table>
 <thead>
@@ -1152,15 +1112,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#task_total_cost">Task_Total_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1245,15 +1201,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="billing_price_per_hour">Billing_Price_Per_Hour</h3>
-<p>Billing_Price_Per_Hour</p>
-<p>When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. NULL means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price</p>
 <p>When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. NULL means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price</p>
 <table>
 <thead>
@@ -1289,15 +1243,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#billing_price_per_hour">Billing_Price_Per_Hour</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1382,15 +1332,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="billing_total_amount">Billing_Total_Amount</h3>
-<p>Billing_Total_Amount</p>
-<p>When not NULL, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). NULL means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour.</p>
 <p>When not NULL, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). NULL means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour.</p>
 <table>
 <thead>
@@ -1426,15 +1374,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#billing_total_amount">Billing_Total_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1519,15 +1463,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="per_use_cost">Per_Use_Cost</h3>
-<p>Per_Use_Cost</p>
-<p>One time cost for each resource usage, specified in the projects currency.</p>
 <p>One time cost for each resource usage, specified in the projects currency.</p>
 <table>
 <thead>
@@ -1563,15 +1505,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#per_use_cost">Per_Use_Cost</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1644,8 +1582,6 @@
 </tbody>
 </table>
 <h3 id="resource_instance_id">Resource_Instance_Id</h3>
-<p>Resource_Instance_Id</p>
-<p>The concrete resource instance, which should be used. NULL when no specific resource instance is required.</p>
 <p>The concrete resource instance, which should be used. NULL when no specific resource instance is required.</p>
 <table>
 <thead>
@@ -1685,15 +1621,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#resource_instance_id">Resource_Instance_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1778,14 +1710,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1820,15 +1751,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Project_Task_Resources.html">Prj_Project_Task_Resources</a>.<a href="Prj_Project_Task_Resources.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

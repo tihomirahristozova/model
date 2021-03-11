@@ -1,5 +1,10 @@
 # Table Rent_Lease_Contract_Line_Consumables
 
+
+## Entity
+
+Entity: [Applications.Rental.LeaseContractLineConsumables](~/entities/Applications.Rental.LeaseContractLineConsumables.md)
+
 Contains the consumables, which are sold accompanying asset rentals. Entity: Rent_Lease_Contract_Line_Consumables
 
 ## Owner Tables Hierarchy
@@ -25,9 +30,6 @@ Contains the consumables, which are sold accompanying asset rentals. Entity: Ren
 
 ### Lease_Line_Consumable_Id
 
-
-Lease_Line_Consumable_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +39,8 @@ Lease_Line_Consumable_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Lease_Contract_Line_Consumables](Rent_Lease_Contract_Line_Consumables.md).[Lease_Line_Consumable_Id](Rent_Lease_Contract_Line_Consumables.md#lease_line_consumable_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,15 +63,9 @@ Lease_Line_Consumable_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Lease_Line_Id
-
-
-Lease_Line_Id
-
-
-Lease line with which the current consumable is given.
 
 
 Lease line with which the current consumable is given.
@@ -84,9 +79,8 @@ Lease line with which the current consumable is given.
 |Referenced Table|[Rent_Lease_Contract_Lines](Rent_Lease_Contract_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contract_Line_Consumables](Rent_Lease_Contract_Line_Consumables.md).[Lease_Line_Id](Rent_Lease_Contract_Line_Consumables.md#lease_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,15 +103,9 @@ Lease line with which the current consumable is given.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The consumable to be sold accompanying the asset.
 
 
 The consumable to be sold accompanying the asset.
@@ -131,9 +119,8 @@ The consumable to be sold accompanying the asset.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contract_Line_Consumables](Rent_Lease_Contract_Line_Consumables.md).[Product_Id](Rent_Lease_Contract_Line_Consumables.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,15 +143,9 @@ The consumable to be sold accompanying the asset.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Consumable_Quantity
-
-
-Consumable_Quantity
-
-
-The quantity sold of the consumable.
 
 
 The quantity sold of the consumable.
@@ -177,9 +158,8 @@ The quantity sold of the consumable.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Rent_Lease_Contract_Line_Consumables](Rent_Lease_Contract_Line_Consumables.md).[Consumable_Quantity](Rent_Lease_Contract_Line_Consumables.md#consumable_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,12 +181,6 @@ The quantity sold of the consumable.
 ### Consumable_Quantity_Unit_Id
 
 
-Consumable_Quantity_Unit_Id
-
-
-The measurement unit of Consumable Quantity.
-
-
 The measurement unit of Consumable Quantity.
 
 | Property | Value |
@@ -218,9 +192,8 @@ The measurement unit of Consumable Quantity.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contract_Line_Consumables](Rent_Lease_Contract_Line_Consumables.md).[Consumable_Quantity_Unit_Id](Rent_Lease_Contract_Line_Consumables.md#consumable_quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,15 +216,9 @@ The measurement unit of Consumable Quantity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-Store from which the consumable is issued.
 
 
 Store from which the consumable is issued.
@@ -265,9 +232,8 @@ Store from which the consumable is issued.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contract_Line_Consumables](Rent_Lease_Contract_Line_Consumables.md).[Store_Id](Rent_Lease_Contract_Line_Consumables.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -290,15 +256,9 @@ Store from which the consumable is issued.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-Consecutive number of the consumable within the lease contract line.
 
 
 Consecutive number of the consumable within the lease contract line.
@@ -311,10 +271,9 @@ Consecutive number of the consumable within the lease contract line.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Rent_Lease_Contract_Line_Consumables](Rent_Lease_Contract_Line_Consumables.md).[Line_No](Rent_Lease_Contract_Line_Consumables.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -337,13 +296,10 @@ Consecutive number of the consumable within the lease contract line.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -353,9 +309,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Lease_Contract_Line_Consumables](Rent_Lease_Contract_Line_Consumables.md).[Row_Version](Rent_Lease_Contract_Line_Consumables.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_product_group_range_properties">Table Gen_Product_Group_Range_Properties</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Products.ProductGroupRangeProperties.html">General.Products.ProductGroupRangeProperties</a></p>
 <p>When specified for a product group, provides a way for automatical creation of new products, based on altering a set of values of some user-defined properties. Each value combination is used to create a new, unique product within the group. Entity: Gen_Product_Group_Range_Properties</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#property_values_list">Property_Values_List</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).</td>
 </tr>
 <tr>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="range_property_id">Range_Property_Id</h3>
-<p>Range_Property_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Group_Range_Properties.html">Gen_Product_Group_Range_Properties</a>.<a href="Gen_Product_Group_Range_Properties.html#range_property_id">Range_Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,14 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_group_id">Product_Group_Id</h3>
-<p>Product_Group_Id</p>
 <table>
 <thead>
 <tr>
@@ -316,15 +312,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Group_Range_Properties.html">Gen_Product_Group_Range_Properties</a>.<a href="Gen_Product_Group_Range_Properties.html#product_group_id">Product_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -409,15 +401,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="property_id">Property_Id</h3>
-<p>Property_Id</p>
-<p>The property whose values will be altered.</p>
 <p>The property whose values will be altered.</p>
 <table>
 <thead>
@@ -457,15 +447,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Group_Range_Properties.html">Gen_Product_Group_Range_Properties</a>.<a href="Gen_Product_Group_Range_Properties.html#property_id">Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -550,15 +536,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="range_type">Range_Type</h3>
-<p>Range_Type</p>
-<p>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;</p>
 <p>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;</p>
 <table>
 <thead>
@@ -598,7 +582,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -607,10 +591,6 @@
 <tr>
 <td>Default Value</td>
 <td>R</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Group_Range_Properties.html">Gen_Product_Group_Range_Properties</a>.<a href="Gen_Product_Group_Range_Properties.html#range_type">Range_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -683,8 +663,6 @@
 </tbody>
 </table>
 <h3 id="from_property_value">From_Property_Value</h3>
-<p>From_Property_Value</p>
-<p>Starting value of the range of alternative values. Used only when Rage Type = R (range).</p>
 <p>Starting value of the range of alternative values. Used only when Rage Type = R (range).</p>
 <table>
 <thead>
@@ -724,15 +702,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Group_Range_Properties.html">Gen_Product_Group_Range_Properties</a>.<a href="Gen_Product_Group_Range_Properties.html#from_property_value">From_Property_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -805,8 +779,6 @@
 </tbody>
 </table>
 <h3 id="to_property_value">To_Property_Value</h3>
-<p>To_Property_Value</p>
-<p>Ending value of the range of alternative values. Used only when Rage Type = R (range).</p>
 <p>Ending value of the range of alternative values. Used only when Rage Type = R (range).</p>
 <table>
 <thead>
@@ -846,15 +818,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Group_Range_Properties.html">Gen_Product_Group_Range_Properties</a>.<a href="Gen_Product_Group_Range_Properties.html#to_property_value">To_Property_Value</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -927,8 +895,6 @@
 </tbody>
 </table>
 <h3 id="property_values_list">Property_Values_List</h3>
-<p>Property_Values_List</p>
-<p>Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).</p>
 <p>Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).</p>
 <table>
 <thead>
@@ -940,7 +906,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -968,15 +934,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Group_Range_Properties.html">Gen_Product_Group_Range_Properties</a>.<a href="Gen_Product_Group_Range_Properties.html#property_values_list">Property_Values_List</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1049,7 +1011,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1084,15 +1045,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Group_Range_Properties.html">Gen_Product_Group_Range_Properties</a>.<a href="Gen_Product_Group_Range_Properties.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

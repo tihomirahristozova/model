@@ -15,12 +15,6 @@
 ### Domain_Value_Id
 
 
-Domain_Value_Id
-
-
-Unique ID of the value
-
-
 Unique ID of the value
 
 | Property | Value |
@@ -32,9 +26,8 @@ Unique ID of the value
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Domain_Values](Sys_Domain_Values.md).[Domain_Value_Id](Sys_Domain_Values.md#domain_value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +50,9 @@ Unique ID of the value
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Domain_Id
-
-
-Domain_Id
-
-
-The domain of the value
 
 
 The domain of the value
@@ -78,9 +65,8 @@ The domain of the value
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Domain_Values](Sys_Domain_Values.md).[Domain_Id](Sys_Domain_Values.md#domain_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +89,9 @@ The domain of the value
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Value_Name
-
-
-Value_Name
-
-
-Name of value. Unique within parent
 
 
 Name of value. Unique within parent
@@ -125,9 +105,8 @@ Name of value. Unique within parent
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Domain_Values](Sys_Domain_Values.md).[Value_Name](Sys_Domain_Values.md#value_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,9 +127,6 @@ Name of value. Unique within parent
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -159,9 +135,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Domain_Values](Sys_Domain_Values.md).[Row_Version](Sys_Domain_Values.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

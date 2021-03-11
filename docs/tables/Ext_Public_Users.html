@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-ext_public_users">Table Ext_Public_Users</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.External.PublicUsers.html">Systems.External.PublicUsers</a></p>
 <p>/Users of the publicly offered services. This includes Internet, external and employee users. Entity: Ext_Public_Users</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -182,7 +184,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -219,7 +221,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="public_user_id">Public_User_Id</h3>
-<p>Public_User_Id</p>
 <table>
 <thead>
 <tr>
@@ -258,15 +259,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#public_user_id">Public_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -351,15 +348,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="public_user_list_id">Public_User_List_Id</h3>
-<p>Public_User_List_Id</p>
-<p>The list in which the user account is saved.</p>
 <p>The list in which the user account is saved.</p>
 <table>
 <thead>
@@ -399,15 +394,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#public_user_list_id">Public_User_List_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -492,15 +483,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="first_name">First_Name</h3>
-<p>First_Name</p>
-<p>First name of the user.</p>
 <p>First name of the user.</p>
 <table>
 <thead>
@@ -540,15 +529,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#first_name">First_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -640,8 +625,6 @@
 </tbody>
 </table>
 <h3 id="last_name">Last_Name</h3>
-<p>Last_Name</p>
-<p>Last name of the user.</p>
 <p>Last name of the user.</p>
 <table>
 <thead>
@@ -681,15 +664,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#last_name">Last_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -781,8 +760,6 @@
 </tbody>
 </table>
 <h3 id="password_algorithm">Password_Algorithm</h3>
-<p>Password_Algorithm</p>
-<p>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'.</p>
 <p>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'.</p>
 <table>
 <thead>
@@ -822,15 +799,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#password_algorithm">Password_Algorithm</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -922,8 +895,6 @@
 </tbody>
 </table>
 <h3 id="password_hash">Password_Hash</h3>
-<p>Password_Hash</p>
-<p>Actual password storage. The format of the contents is determined by Password Algorithm.</p>
 <p>Actual password storage. The format of the contents is determined by Password Algorithm.</p>
 <table>
 <thead>
@@ -963,15 +934,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#password_hash">Password_Hash</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1063,8 +1030,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Specifies whether the user account is active and access should be allowed.</p>
 <p>Specifies whether the user account is active and access should be allowed.</p>
 <table>
 <thead>
@@ -1100,15 +1065,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1193,15 +1154,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="email">Email</h3>
-<p>Email</p>
-<p>The primary email of the user. Used for notifications and password restore.</p>
 <p>The primary email of the user. Used for notifications and password restore.</p>
 <table>
 <thead>
@@ -1241,15 +1200,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#email">Email</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1341,8 +1296,6 @@
 </tbody>
 </table>
 <h3 id="alternate_email">Alternate_Email</h3>
-<p>Alternate_Email</p>
-<p>Alternate email of the user. Can be used for backup email for password restore.</p>
 <p>Alternate email of the user. Can be used for backup email for password restore.</p>
 <table>
 <thead>
@@ -1382,15 +1335,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#alternate_email">Alternate_Email</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1482,8 +1431,6 @@
 </tbody>
 </table>
 <h3 id="country">Country</h3>
-<p>Country</p>
-<p>The country of residence of the user, with latin letters.</p>
 <p>The country of residence of the user, with latin letters.</p>
 <table>
 <thead>
@@ -1523,15 +1470,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#country">Country</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1623,8 +1566,6 @@
 </tbody>
 </table>
 <h3 id="state">State</h3>
-<p>State</p>
-<p>The state of residence of the user within the country. Can be specified with latin or local characters.</p>
 <p>The state of residence of the user within the country. Can be specified with latin or local characters.</p>
 <table>
 <thead>
@@ -1664,15 +1605,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#state">State</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1764,8 +1701,6 @@
 </tbody>
 </table>
 <h3 id="city">City</h3>
-<p>City</p>
-<p>The state of residence of the user. Can be specified with latin or local letters.</p>
 <p>The state of residence of the user. Can be specified with latin or local letters.</p>
 <table>
 <thead>
@@ -1805,15 +1740,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#city">City</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1905,8 +1836,6 @@
 </tbody>
 </table>
 <h3 id="address">Address</h3>
-<p>Address</p>
-<p>The primary address of the user. Can be specified with latin or local characters.</p>
 <p>The primary address of the user. Can be specified with latin or local characters.</p>
 <table>
 <thead>
@@ -1946,15 +1875,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#address">Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2046,8 +1971,6 @@
 </tbody>
 </table>
 <h3 id="postal_code">Postal_Code</h3>
-<p>Postal_Code</p>
-<p>The postal code of the default address of the user.</p>
 <p>The postal code of the default address of the user.</p>
 <table>
 <thead>
@@ -2087,15 +2010,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#postal_code">Postal_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2187,8 +2106,6 @@
 </tbody>
 </table>
 <h3 id="phone_number">Phone_Number</h3>
-<p>Phone_Number</p>
-<p>The primary phone number of the user.</p>
 <p>The primary phone number of the user.</p>
 <table>
 <thead>
@@ -2228,15 +2145,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#phone_number">Phone_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2328,8 +2241,6 @@
 </tbody>
 </table>
 <h3 id="company_name">Company_Name</h3>
-<p>Company_Name</p>
-<p>The name of the company, for which the user works, as specified by the user.</p>
 <p>The name of the company, for which the user works, as specified by the user.</p>
 <table>
 <thead>
@@ -2369,15 +2280,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#company_name">Company_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2469,8 +2376,6 @@
 </tbody>
 </table>
 <h3 id="company_id">Company_Id</h3>
-<p>Company_Id</p>
-<p>Link to an internal company record, specified by internal employee.</p>
 <p>Link to an internal company record, specified by internal employee.</p>
 <table>
 <thead>
@@ -2510,15 +2415,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#company_id">Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2603,15 +2504,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="person_id">Person_Id</h3>
-<p>Person_Id</p>
-<p>Link to an internal person record. Usually specified by internal employee, but can also be an automated process.</p>
 <p>Link to an internal person record. Usually specified by internal employee, but can also be an automated process.</p>
 <table>
 <thead>
@@ -2651,15 +2550,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#person_id">Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2744,14 +2639,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2762,7 +2656,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2790,15 +2684,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2871,8 +2761,6 @@
 </tbody>
 </table>
 <h3 id="profile_picture">Profile_Picture</h3>
-<p>Profile_Picture</p>
-<p>Profile picture of the user.</p>
 <p>Profile picture of the user.</p>
 <table>
 <thead>
@@ -2908,15 +2796,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#profile_picture">Profile_Picture</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2989,8 +2873,6 @@
 </tbody>
 </table>
 <h3 id="about_me_text">About_Me_Text</h3>
-<p>About_Me_Text</p>
-<p>About me text, written by the user.</p>
 <p>About me text, written by the user.</p>
 <table>
 <thead>
@@ -3030,15 +2912,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#about_me_text">About_Me_Text</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3111,8 +2989,6 @@
 </tbody>
 </table>
 <h3 id="created_on">Created_On</h3>
-<p>Created_On</p>
-<p>The date and time when the user was created.</p>
 <p>The date and time when the user was created.</p>
 <table>
 <thead>
@@ -3152,15 +3028,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#created_on">Created_On</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3233,7 +3105,6 @@
 </tbody>
 </table>
 <h3 id="password_recovery_code">Password_Recovery_Code</h3>
-<p>Password_Recovery_Code</p>
 <table>
 <thead>
 <tr>
@@ -3268,15 +3139,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#password_recovery_code">Password_Recovery_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3361,14 +3228,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="password_recovery_creation_time">Password_Recovery_Creation_Time</h3>
-<p>Password_Recovery_Creation_Time</p>
 <table>
 <thead>
 <tr>
@@ -3407,15 +3273,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#password_recovery_creation_time">Password_Recovery_Creation_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3488,7 +3350,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -3523,15 +3384,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Ext_Public_Users.html">Ext_Public_Users</a>.<a href="Ext_Public_Users.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

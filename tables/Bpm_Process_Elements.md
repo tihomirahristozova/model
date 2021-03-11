@@ -1,5 +1,10 @@
 # Table Bpm_Process_Elements
 
+
+## Entity
+
+Entity: [Systems.Bpm.ProcessElements](~/entities/Systems.Bpm.ProcessElements.md)
+
 Contains the flow elements of the process model. Entity: Bpm_Process_Elements
 
 ## Owner Tables Hierarchy
@@ -17,15 +22,12 @@ Contains the flow elements of the process model. Entity: Bpm_Process_Elements
 |[Process_Element_Name](#process_element_name)|`nvarchar(512)` `ML`|Multilanguage process name.|
 |[Element_Type](#element_type)|`nvarchar(1)` Allowed: `A`, `E`, `G`, `C`|Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact.|
 |[Element_Subtype](#element_subtype)|`nvarchar(3)` Allowed: `ATU`, `ATM`, `ATV`, `ATC`, `ATB`, `ATS`, `ATR`, `ES1`, `ES2`, `ES4`, `EE1`, `EE2`, `EE5`, `EE9`, `EI1`, `EI2`, `EI3`, `EI4`, `GEX`, `GIN`, `CAT`, `CGP`|Subtype of the element. Each type allows only certain types of sub-types.|
-|[Instructions_Html](#instructions_html)|`nvarchar(2147483647)` |Detailed instructions to the executor in HTML format.|
+|[Instructions_Html](#instructions_html)|`nvarchar(max)` |Detailed instructions to the executor in HTML format.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Process_Element_Id
-
-
-Process_Element_Id
 
 | Property | Value |
 | - | - |
@@ -36,9 +38,8 @@ Process_Element_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Process_Element_Id](Bpm_Process_Elements.md#process_element_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Process_Element_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Id
-
-
-Process_Id
-
-
-The process, to which this element belongs.
 
 
 The process, to which this element belongs.
@@ -83,9 +78,8 @@ The process, to which this element belongs.
 |Referenced Table|[Bpm_Processes](Bpm_Processes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Process_Id](Bpm_Process_Elements.md#process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The process, to which this element belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Lane_Id
-
-
-Process_Lane_Id
-
-
-The process lane to which this element belongs.
 
 
 The process lane to which this element belongs.
@@ -130,9 +118,8 @@ The process lane to which this element belongs.
 |Referenced Table|[Bpm_Process_Lanes](Bpm_Process_Lanes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Process_Lane_Id](Bpm_Process_Elements.md#process_lane_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,15 +142,9 @@ The process lane to which this element belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Element_Code
-
-
-Process_Element_Code
-
-
-Element code, unique within the process. Used as ID for XML serialization purposes.
 
 
 Element code, unique within the process. Used as ID for XML serialization purposes.
@@ -177,9 +158,8 @@ Element code, unique within the process. Used as ID for XML serialization purpos
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Process_Element_Code](Bpm_Process_Elements.md#process_element_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,16 +182,10 @@ Element code, unique within the process. Used as ID for XML serialization purpos
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Process_Element_Name
-
-
-Process_Element_Name
-
-
-Multilanguage process name.
 
 
 Multilanguage process name.
@@ -225,9 +199,8 @@ Multilanguage process name.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Process_Element_Name](Bpm_Process_Elements.md#process_element_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -250,16 +223,10 @@ Multilanguage process name.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Element_Type
-
-
-Element_Type
-
-
-Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact.
 
 
 Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact.
@@ -273,10 +240,9 @@ Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `E`, `G`, `C`|
 |Default Value|None|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Element_Type](Bpm_Process_Elements.md#element_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -299,16 +265,10 @@ Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Element_Subtype
-
-
-Element_Subtype
-
-
-Subtype of the element. Each type allows only certain types of sub-types.
 
 
 Subtype of the element. Each type allows only certain types of sub-types.
@@ -322,10 +282,9 @@ Subtype of the element. Each type allows only certain types of sub-types.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`ATU`, `ATM`, `ATV`, `ATC`, `ATB`, `ATS`, `ATR`, `ES1`, `ES2`, `ES4`, `EE1`, `EE2`, `EE5`, `EE9`, `EI1`, `EI2`, `EI3`, `EI4`, `GEX`, `GIN`, `CAT`, `CGP`|
 |Default Value|None|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Element_Subtype](Bpm_Process_Elements.md#element_subtype)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -348,32 +307,25 @@ Subtype of the element. Each type allows only certain types of sub-types.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Instructions_Html
-
-
-Instructions_Html
-
-
-Detailed instructions to the executor in HTML format.
 
 
 Detailed instructions to the executor in HTML format.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Instructions_Html](Bpm_Process_Elements.md#instructions_html)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -396,13 +348,10 @@ Detailed instructions to the executor in HTML format.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -412,9 +361,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Elements](Bpm_Process_Elements.md).[Row_Version](Bpm_Process_Elements.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cm_activities">Table Cm_Activities</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Contacts.Activities.html">General.Contacts.Activities</a></p>
 <p>Generic activity. Provides task management functionality. Activity can be one of Task, Communication or Meeting. Entity: Cm_Activities</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -198,8 +200,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="system_type">System_Type</h3>
-<p>System_Type</p>
-<p>T=Task; C=Communication; M=Meeting</p>
 <p>T=Task; C=Communication; M=Meeting</p>
 <table>
 <thead>
@@ -239,7 +239,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -248,10 +248,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#system_type">System_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -324,8 +320,6 @@
 </tbody>
 </table>
 <h3 id="subject">Subject</h3>
-<p>Subject</p>
-<p>Task primary subject (required)</p>
 <p>Task primary subject (required)</p>
 <table>
 <thead>
@@ -365,15 +359,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#subject">Subject</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -458,7 +448,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -471,7 +461,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -510,15 +499,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -591,8 +576,6 @@
 </tbody>
 </table>
 <h3 id="target_party_id">Target_Party_Id</h3>
-<p>Target_Party_Id</p>
-<p>External participant or target of the task</p>
 <p>External participant or target of the task</p>
 <table>
 <thead>
@@ -632,15 +615,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#target_party_id">Target_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -725,15 +704,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="responsible_party_id">Responsible_Party_Id</h3>
-<p>Responsible_Party_Id</p>
-<p>Who is responsible for executing the task. Initially this is the owner of the task</p>
 <p>Who is responsible for executing the task. Initially this is the owner of the task</p>
 <table>
 <thead>
@@ -773,15 +750,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#responsible_party_id">Responsible_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -866,15 +839,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="owner_party_id">Owner_Party_Id</h3>
-<p>Owner_Party_Id</p>
-<p>The party that owns the task. Initially this is the party that has created the task</p>
 <p>The party that owns the task. Initially this is the party that has created the task</p>
 <table>
 <thead>
@@ -914,15 +885,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#owner_party_id">Owner_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1007,15 +974,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="priority">Priority</h3>
-<p>Priority</p>
-<p>Priority on the scale from 1 (least important) to 5 (very important)</p>
 <p>Priority on the scale from 1 (least important) to 5 (very important)</p>
 <table>
 <thead>
@@ -1051,7 +1016,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1060,10 +1025,6 @@
 <tr>
 <td>Default Value</td>
 <td>3</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#priority">Priority</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1136,8 +1097,6 @@
 </tbody>
 </table>
 <h3 id="private">Private</h3>
-<p>Private</p>
-<p>1 if the task is visible only to its owner; 0 if this is publicly visible task</p>
 <p>1 if the task is visible only to its owner; 0 if this is publicly visible task</p>
 <table>
 <thead>
@@ -1173,15 +1132,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#private">Private</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1254,8 +1209,6 @@
 </tbody>
 </table>
 <h3 id="start_time">Start_Time</h3>
-<p>Start_Time</p>
-<p>Currently planned starting time of the task</p>
 <p>Currently planned starting time of the task</p>
 <table>
 <thead>
@@ -1295,15 +1248,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#start_time">Start_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1395,8 +1344,6 @@
 </tbody>
 </table>
 <h3 id="end_time">End_Time</h3>
-<p>End_Time</p>
-<p>Currently planned ending time of the task</p>
 <p>Currently planned ending time of the task</p>
 <table>
 <thead>
@@ -1436,15 +1383,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#end_time">End_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1536,8 +1479,6 @@
 </tbody>
 </table>
 <h3 id="reminder_time">Reminder_Time</h3>
-<p>Reminder_Time</p>
-<p>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.</p>
 <p>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.</p>
 <table>
 <thead>
@@ -1577,15 +1518,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#reminder_time">Reminder_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1658,8 +1595,6 @@
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1695,15 +1630,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1788,15 +1719,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_task_id">Project_Task_Id</h3>
-<p>Project_Task_Id</p>
-<p>The project task for which the work is performed. NULL when the activity is not related to a project task.</p>
 <p>The project task for which the work is performed. NULL when the activity is not related to a project task.</p>
 <table>
 <thead>
@@ -1836,15 +1765,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#project_task_id">Project_Task_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1929,15 +1854,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="planned_duration_minutes">Planned_Duration_Minutes</h3>
-<p>Planned_Duration_Minutes</p>
-<p>Total planned duration of the activity, regardless of the current execution status</p>
 <p>Total planned duration of the activity, regardless of the current execution status</p>
 <table>
 <thead>
@@ -1973,15 +1896,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#planned_duration_minutes">Planned_Duration_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2073,7 +1992,6 @@
 </tbody>
 </table>
 <h3 id="activity_id">Activity_Id</h3>
-<p>Activity_Id</p>
 <table>
 <thead>
 <tr>
@@ -2112,15 +2030,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#activity_id">Activity_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2205,15 +2119,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="deadline_time">Deadline_Time</h3>
-<p>Deadline_Time</p>
-<p>The deadline for the task. NULL if there is no deadline</p>
 <p>The deadline for the task. NULL if there is no deadline</p>
 <table>
 <thead>
@@ -2253,15 +2165,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#deadline_time">Deadline_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2353,8 +2261,6 @@
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -2390,15 +2296,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2483,15 +2385,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
-<p>The task's document (for entry date, task type, status)</p>
 <p>The task's document (for entry date, task type, status)</p>
 <table>
 <thead>
@@ -2531,15 +2431,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2624,15 +2520,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="contact_person_id">Contact_Person_Id</h3>
-<p>Contact_Person_Id</p>
-<p>The contact person, from the side of the Target Party.</p>
 <p>The contact person, from the side of the Target Party.</p>
 <table>
 <thead>
@@ -2672,15 +2566,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#contact_person_id">Contact_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2765,14 +2655,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2807,15 +2696,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cm_Activities.html">Cm_Activities</a>.<a href="Cm_Activities.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

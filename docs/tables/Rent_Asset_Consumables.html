@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-rent_asset_consumables">Table Rent_Asset_Consumables</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Rental.AssetConsumables.html">Applications.Rental.AssetConsumables</a></p>
 <p>Consumables are products, which are usually sold accompanying an asset rental. Entity: Rent_Asset_Consumables</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="asset_consumable_id">Asset_Consumable_Id</h3>
-<p>Asset_Consumable_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Consumables.html">Rent_Asset_Consumables</a>.<a href="Rent_Asset_Consumables.html#asset_consumable_id">Asset_Consumable_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,15 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rental_asset_id">Rental_Asset_Id</h3>
-<p>Rental_Asset_Id</p>
-<p>The rental asset for which the consumable would be offered.</p>
 <p>The rental asset for which the consumable would be offered.</p>
 <table>
 <thead>
@@ -319,15 +314,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Consumables.html">Rent_Asset_Consumables</a>.<a href="Rent_Asset_Consumables.html#rental_asset_id">Rental_Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -412,15 +403,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The consumable which is offered accompanying the asset rental.</p>
 <p>The consumable which is offered accompanying the asset rental.</p>
 <table>
 <thead>
@@ -460,15 +449,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Consumables.html">Rent_Asset_Consumables</a>.<a href="Rent_Asset_Consumables.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -553,15 +538,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="consumable_quantity">Consumable_Quantity</h3>
-<p>Consumable_Quantity</p>
-<p>Specifies what quantity of the consumable should be offered for each rented asset.</p>
 <p>Specifies what quantity of the consumable should be offered for each rented asset.</p>
 <table>
 <thead>
@@ -597,15 +580,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Consumables.html">Rent_Asset_Consumables</a>.<a href="Rent_Asset_Consumables.html#consumable_quantity">Consumable_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -678,8 +657,6 @@
 </tbody>
 </table>
 <h3 id="consumable_quantity_unit_id">Consumable_Quantity_Unit_Id</h3>
-<p>Consumable_Quantity_Unit_Id</p>
-<p>The measurement unit of Consumable Quantity.</p>
 <p>The measurement unit of Consumable Quantity.</p>
 <table>
 <thead>
@@ -719,15 +696,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Consumables.html">Rent_Asset_Consumables</a>.<a href="Rent_Asset_Consumables.html#consumable_quantity_unit_id">Consumable_Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -812,15 +785,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
-<p>Store_Id</p>
-<p>The store which contains the consumable.</p>
 <p>The store which contains the consumable.</p>
 <table>
 <thead>
@@ -860,15 +831,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Consumables.html">Rent_Asset_Consumables</a>.<a href="Rent_Asset_Consumables.html#store_id">Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -953,14 +920,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -971,7 +937,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -999,15 +965,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Consumables.html">Rent_Asset_Consumables</a>.<a href="Rent_Asset_Consumables.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1080,7 +1042,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1115,15 +1076,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Rent_Asset_Consumables.html">Rent_Asset_Consumables</a>.<a href="Rent_Asset_Consumables.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

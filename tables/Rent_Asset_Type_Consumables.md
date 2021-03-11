@@ -1,5 +1,10 @@
 # Table Rent_Asset_Type_Consumables
 
+
+## Entity
+
+Entity: [Applications.Rental.AssetTypeConsumables](~/entities/Applications.Rental.AssetTypeConsumables.md)
+
 Consumables are products, which are usually sold accompanying an asset rental. Entity: Rent_Asset_Type_Consumables
 
 ## Owner Tables Hierarchy
@@ -16,15 +21,12 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 |[Consumable_Quantity](#consumable_quantity)|`decimal(12, 3)` |Specifies what quantity of the consumable should be offered for each rented asset.|
 |[Consumable_Quantity_Unit_Id](#consumable_quantity_unit_id)|`uniqueidentifier` |The measurement unit of Consumable Quantity.|
 |[Store_Id](#store_id)|`uniqueidentifier` |The store which contains the consumable.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Asset_Type_Consumable_Id
-
-
-Asset_Type_Consumable_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Asset_Type_Consumable_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Rent_Asset_Type_Consumables](Rent_Asset_Type_Consumables.md).[Asset_Type_Consumable_Id](Rent_Asset_Type_Consumables.md#asset_type_consumable_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Asset_Type_Consumable_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Rental_Asset_Type_Id
-
-
-Rental_Asset_Type_Id
-
-
-The rental asset type for which the consumable would be offered.
 
 
 The rental asset type for which the consumable would be offered.
@@ -82,9 +77,8 @@ The rental asset type for which the consumable would be offered.
 |Referenced Table|[Rent_Asset_Types](Rent_Asset_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Consumables](Rent_Asset_Type_Consumables.md).[Rental_Asset_Type_Id](Rent_Asset_Type_Consumables.md#rental_asset_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The rental asset type for which the consumable would be offered.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The consumable which is offered accompanying the asset rental.
 
 
 The consumable which is offered accompanying the asset rental.
@@ -129,9 +117,8 @@ The consumable which is offered accompanying the asset rental.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Consumables](Rent_Asset_Type_Consumables.md).[Product_Id](Rent_Asset_Type_Consumables.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ The consumable which is offered accompanying the asset rental.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Consumable_Quantity
-
-
-Consumable_Quantity
-
-
-Specifies what quantity of the consumable should be offered for each rented asset.
 
 
 Specifies what quantity of the consumable should be offered for each rented asset.
@@ -175,9 +156,8 @@ Specifies what quantity of the consumable should be offered for each rented asse
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Consumables](Rent_Asset_Type_Consumables.md).[Consumable_Quantity](Rent_Asset_Type_Consumables.md#consumable_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +179,6 @@ Specifies what quantity of the consumable should be offered for each rented asse
 ### Consumable_Quantity_Unit_Id
 
 
-Consumable_Quantity_Unit_Id
-
-
-The measurement unit of Consumable Quantity.
-
-
 The measurement unit of Consumable Quantity.
 
 | Property | Value |
@@ -216,9 +190,8 @@ The measurement unit of Consumable Quantity.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Consumables](Rent_Asset_Type_Consumables.md).[Consumable_Quantity_Unit_Id](Rent_Asset_Type_Consumables.md#consumable_quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,15 +214,9 @@ The measurement unit of Consumable Quantity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store which contains the consumable.
 
 
 The store which contains the consumable.
@@ -263,9 +230,8 @@ The store which contains the consumable.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Consumables](Rent_Asset_Type_Consumables.md).[Store_Id](Rent_Asset_Type_Consumables.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,25 +254,21 @@ The store which contains the consumable.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Consumables](Rent_Asset_Type_Consumables.md).[Notes](Rent_Asset_Type_Consumables.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -327,9 +289,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -338,9 +297,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Rent_Asset_Type_Consumables](Rent_Asset_Type_Consumables.md).[Row_Version](Rent_Asset_Type_Consumables.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

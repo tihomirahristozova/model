@@ -1,5 +1,10 @@
 # Table Fleet_Vehicle_Equipment
 
+
+## Entity
+
+Entity: [Applications.Fleet.VehicleEquipment](~/entities/Applications.Fleet.VehicleEquipment.md)
+
 Contains the actual and history of equipment, installed on the vehicles. Entity: Fleet_Vehicle_Equipment
 
 ## Owner Tables Hierarchy
@@ -16,15 +21,12 @@ Contains the actual and history of equipment, installed on the vehicles. Entity:
 |[Quantity](#quantity)|`int` |Quantity of the equipment|
 |[Start_Date](#start_date)|`date` |The installation date of the equipment|
 |[End_Date](#end_date)|`date` |The date when the equipment was removed. NULL when the equipment is still installed on the vehicle|
-|[Notes](#notes)|`nvarchar(2147483647)` |Notes for the installed equipment|
+|[Notes](#notes)|`nvarchar(max)` |Notes for the installed equipment|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Vehicle_Equipment_Id
-
-
-Vehicle_Equipment_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Vehicle_Equipment_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Vehicle_Equipment](Fleet_Vehicle_Equipment.md).[Vehicle_Equipment_Id](Fleet_Vehicle_Equipment.md#vehicle_equipment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Vehicle_Equipment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Vehicle_Id
-
-
-Vehicle_Id
-
-
-The vehicle that is holding the equipment
 
 
 The vehicle that is holding the equipment
@@ -82,9 +77,8 @@ The vehicle that is holding the equipment
 |Referenced Table|[Fleet_Vehicles](Fleet_Vehicles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Equipment](Fleet_Vehicle_Equipment.md).[Vehicle_Id](Fleet_Vehicle_Equipment.md#vehicle_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The vehicle that is holding the equipment
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Equipment_Type_Id
-
-
-Equipment_Type_Id
-
-
-The type of equipment installed on the vehicle
 
 
 The type of equipment installed on the vehicle
@@ -129,9 +117,8 @@ The type of equipment installed on the vehicle
 |Referenced Table|[Fleet_Equipment_Types](Fleet_Equipment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Equipment](Fleet_Vehicle_Equipment.md).[Equipment_Type_Id](Fleet_Vehicle_Equipment.md#equipment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ The type of equipment installed on the vehicle
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-Quantity of the equipment
 
 
 Quantity of the equipment
@@ -175,9 +156,8 @@ Quantity of the equipment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Fleet_Vehicle_Equipment](Fleet_Vehicle_Equipment.md).[Quantity](Fleet_Vehicle_Equipment.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,12 +185,6 @@ Quantity of the equipment
 ### Start_Date
 
 
-Start_Date
-
-
-The installation date of the equipment
-
-
 The installation date of the equipment
 
 | Property | Value |
@@ -222,9 +196,8 @@ The installation date of the equipment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Equipment](Fleet_Vehicle_Equipment.md).[Start_Date](Fleet_Vehicle_Equipment.md#start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -252,12 +225,6 @@ The installation date of the equipment
 ### End_Date
 
 
-End_Date
-
-
-The date when the equipment was removed. NULL when the equipment is still installed on the vehicle
-
-
 The date when the equipment was removed. NULL when the equipment is still installed on the vehicle
 
 | Property | Value |
@@ -269,9 +236,8 @@ The date when the equipment was removed. NULL when the equipment is still instal
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Equipment](Fleet_Vehicle_Equipment.md).[End_Date](Fleet_Vehicle_Equipment.md#end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -299,26 +265,19 @@ The date when the equipment was removed. NULL when the equipment is still instal
 ### Notes
 
 
-Notes
-
-
-Notes for the installed equipment
-
-
 Notes for the installed equipment
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Equipment](Fleet_Vehicle_Equipment.md).[Notes](Fleet_Vehicle_Equipment.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -339,9 +298,6 @@ Notes for the installed equipment
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -350,9 +306,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Equipment](Fleet_Vehicle_Equipment.md).[Row_Version](Fleet_Vehicle_Equipment.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

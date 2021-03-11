@@ -1,5 +1,10 @@
 # Table Prj_Project_Task_Participants
 
+
+## Entity
+
+Entity: [Projects.ProjectTaskParticipants](~/entities/Projects.ProjectTaskParticipants.md)
+
 Contains the participants in the project tasks. Entity: Prj_Project_Task_Participants
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains the participants in the project tasks. Entity: Prj_Project_Task_Partici
 
 ### Project_Task_Participant_Id
 
-
-Project_Task_Participant_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Project_Task_Participant_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Project_Task_Participants](Prj_Project_Task_Participants.md).[Project_Task_Participant_Id](Prj_Project_Task_Participants.md#project_task_participant_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Project_Task_Participant_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Task_Id
-
-
-Project_Task_Id
-
-
-The project task for which the participant is planned.
 
 
 The project task for which the participant is planned.
@@ -81,9 +76,8 @@ The project task for which the participant is planned.
 |Referenced Table|[Prj_Project_Tasks](Prj_Project_Tasks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Participants](Prj_Project_Task_Participants.md).[Project_Task_Id](Prj_Project_Task_Participants.md#project_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The project task for which the participant is planned.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Participant_Person_Id
-
-
-Participant_Person_Id
-
-
-The person, who is planned to participate in the project task
 
 
 The person, who is planned to participate in the project task
@@ -128,9 +116,8 @@ The person, who is planned to participate in the project task
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Participants](Prj_Project_Task_Participants.md).[Participant_Person_Id](Prj_Project_Task_Participants.md#participant_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,15 +140,9 @@ The person, who is planned to participate in the project task
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Load_Percent
-
-
-Work_Load_Percent
-
-
-The planned work load (in percents) of the participant for this task.
 
 
 The planned work load (in percents) of the participant for this task.
@@ -174,9 +155,8 @@ The planned work load (in percents) of the participant for this task.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|1|
-|Derived From|[Prj_Project_Task_Participants](Prj_Project_Task_Participants.md).[Work_Load_Percent](Prj_Project_Task_Participants.md#work_load_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +179,9 @@ The planned work load (in percents) of the participant for this task.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -215,9 +192,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Participants](Prj_Project_Task_Participants.md).[Notes](Prj_Project_Task_Participants.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,12 +215,6 @@ Notes
 ### Notify_On_Status_Change
 
 
-Notify_On_Status_Change
-
-
-Specifies whether the participant should be notified on task status changes.
-
-
 Specifies whether the participant should be notified on task status changes.
 
 | Property | Value |
@@ -255,9 +225,8 @@ Specifies whether the participant should be notified on task status changes.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Prj_Project_Task_Participants](Prj_Project_Task_Participants.md).[Notify_On_Status_Change](Prj_Project_Task_Participants.md#notify_on_status_change)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -278,9 +247,6 @@ Specifies whether the participant should be notified on task status changes.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -289,9 +255,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Task_Participants](Prj_Project_Task_Participants.md).[Row_Version](Prj_Project_Task_Participants.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

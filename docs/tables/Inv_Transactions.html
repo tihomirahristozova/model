@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-inv_transactions">Table Inv_Transactions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a></p>
 <p>Executed store-receipts(in) and store-issues(out). Store-issues are recorded with minus quantity. Entity: Inv_Transactions</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -173,7 +175,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="transaction_id">Transaction_Id</h3>
-<p>Transaction_Id</p>
 <table>
 <thead>
 <tr>
@@ -212,15 +213,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#transaction_id">Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -305,15 +302,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
-<p>The main document data of the transaction</p>
 <p>The main document data of the transaction</p>
 <table>
 <thead>
@@ -353,15 +348,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -446,15 +437,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="parent_store_order_id">Parent_Store_Order_Id</h3>
-<p>Parent_Store_Order_Id</p>
-<p>The parent (generating) store order. Deprecated, use the Parent Document reference.</p>
 <p>The parent (generating) store order. Deprecated, use the Parent Document reference.</p>
 <table>
 <thead>
@@ -494,15 +483,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#parent_store_order_id">Parent_Store_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -587,15 +572,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_scrap">Is_Scrap</h3>
-<p>Is_Scrap</p>
-<p>0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.</p>
 <p>0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.</p>
 <table>
 <thead>
@@ -631,15 +614,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#is_scrap">Is_Scrap</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -724,15 +703,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="scrap_type_id">Scrap_Type_Id</h3>
-<p>Scrap_Type_Id</p>
-<p>Type of scrap (scrap reason). NULL if the transaction is not scrap</p>
 <p>Type of scrap (scrap reason). NULL if the transaction is not scrap</p>
 <table>
 <thead>
@@ -772,15 +749,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#scrap_type_id">Scrap_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -865,15 +838,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
-<p>Store_Id</p>
-<p>The store from which the goods are received or issued.</p>
 <p>The store from which the goods are received or issued.</p>
 <table>
 <thead>
@@ -913,15 +884,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#store_id">Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1006,15 +973,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="issuing_person_id">Issuing_Person_Id</h3>
-<p>Issuing_Person_Id</p>
-<p>The person, responsible for the issuing of the document.</p>
 <p>The person, responsible for the issuing of the document.</p>
 <table>
 <thead>
@@ -1054,15 +1019,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#issuing_person_id">Issuing_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1147,15 +1108,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="receiving_person_id">Receiving_Person_Id</h3>
-<p>Receiving_Person_Id</p>
-<p>The person, to which the document was sent.</p>
 <p>The person, to which the document was sent.</p>
 <table>
 <thead>
@@ -1195,15 +1154,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#receiving_person_id">Receiving_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1288,15 +1243,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="movement_type">Movement_Type</h3>
-<p>Movement_Type</p>
-<p>Transaction movement type. R=RECEIPT, I=ISSUE</p>
 <p>Transaction movement type. R=RECEIPT, I=ISSUE</p>
 <table>
 <thead>
@@ -1336,7 +1289,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1345,10 +1298,6 @@
 <tr>
 <td>Default Value</td>
 <td>R</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#movement_type">Movement_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1433,15 +1382,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_currency_id">Document_Currency_Id</h3>
-<p>Document_Currency_Id</p>
-<p>The currency in which the document amounts are recorded.</p>
 <p>The currency in which the document amounts are recorded.</p>
 <table>
 <thead>
@@ -1481,15 +1428,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#document_currency_id">Document_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1574,15 +1517,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="cost_source">Cost_Source</h3>
-<p>Cost_Source</p>
-<p>Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document</p>
 <p>Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document</p>
 <table>
 <thead>
@@ -1622,7 +1563,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1631,10 +1572,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#cost_source">Cost_Source</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1707,8 +1644,6 @@
 </tbody>
 </table>
 <h3 id="isvalid">IsValid</h3>
-<p>IsValid</p>
-<p>Managed by the system and used only for integrity purposes. Do not use.</p>
 <p>Managed by the system and used only for integrity purposes. Do not use.</p>
 <table>
 <thead>
@@ -1744,15 +1679,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#isvalid">IsValid</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1825,8 +1756,6 @@
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1862,15 +1791,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1955,15 +1880,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -1999,15 +1922,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2092,14 +2011,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2134,15 +2052,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transactions.html">Inv_Transactions</a>.<a href="Inv_Transactions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

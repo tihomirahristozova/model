@@ -1,5 +1,10 @@
 # Table Gen_Resource_Availability
 
+
+## Entity
+
+Entity: [General.Resources.ResourceAvailability](~/entities/General.Resources.ResourceAvailability.md)
+
 Contains the resources availability for the different periods. Each period is a separate record. The availability of a resource for any given date is determined by the sum of all availability periods that include it. Entity: Gen_Resource_Availability
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains the resources availability for the different periods. Each period is a 
 
 ### Resource_Availability_Id
 
-
-Resource_Availability_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Resource_Availability_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Resource_Availability](Gen_Resource_Availability.md).[Resource_Availability_Id](Gen_Resource_Availability.md#resource_availability_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Resource_Availability_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Id
-
-
-Resource_Id
-
-
-The resource, for which we provide availability.
 
 
 The resource, for which we provide availability.
@@ -81,9 +76,8 @@ The resource, for which we provide availability.
 |Referenced Table|[Gen_Resources](Gen_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Availability](Gen_Resource_Availability.md).[Resource_Id](Gen_Resource_Availability.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The resource, for which we provide availability.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Date
-
-
-From_Date
-
-
-The date from which availability starts.
 
 
 The date from which availability starts.
@@ -128,9 +116,8 @@ The date from which availability starts.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Availability](Gen_Resource_Availability.md).[From_Date](Gen_Resource_Availability.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,12 +139,6 @@ The date from which availability starts.
 ### To_Date
 
 
-To_Date
-
-
-The date to which the availability continues. When NULL, the availability continues infinitely.
-
-
 The date to which the availability continues. When NULL, the availability continues infinitely.
 
 | Property | Value |
@@ -169,9 +150,8 @@ The date to which the availability continues. When NULL, the availability contin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Availability](Gen_Resource_Availability.md).[To_Date](Gen_Resource_Availability.md#to_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +173,6 @@ The date to which the availability continues. When NULL, the availability contin
 ### Available_Resources
 
 
-Available_Resources
-
-
-The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.
-
-
 The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.
 
 | Property | Value |
@@ -209,9 +183,8 @@ The quantity of the resource, available for the specified period. For non-discre
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Resource_Availability](Gen_Resource_Availability.md).[Available_Resources](Gen_Resource_Availability.md#available_resources)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,9 +205,6 @@ The quantity of the resource, available for the specified period. For non-discre
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -243,9 +213,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resource_Availability](Gen_Resource_Availability.md).[Row_Version](Gen_Resource_Availability.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Enterprise_Companies
 
+
+## Entity
+
+Entity: [General.EnterpriseCompanies](~/entities/General.EnterpriseCompanies.md)
+
 The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Companies
 
 ## Summary
@@ -28,9 +33,6 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 
 ### Enterprise_Company_Id
 
-
-Enterprise_Company_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -40,9 +42,8 @@ Enterprise_Company_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Enterprise_Company_Id](Gen_Enterprise_Companies.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,15 +66,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Company_Id
-
-
-Company_Id
-
-
-Contains the base company data on which this enterprise company is based.
 
 
 Contains the base company data on which this enterprise company is based.
@@ -87,9 +82,8 @@ Contains the base company data on which this enterprise company is based.
 |Referenced Table|[Cm_Companies](Cm_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Company_Id](Gen_Enterprise_Companies.md#company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,15 +106,9 @@ Contains the base company data on which this enterprise company is based.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Base_Currency_Id
-
-
-Base_Currency_Id
-
-
-The base currency for summary reporting for this company.
 
 
 The base currency for summary reporting for this company.
@@ -134,9 +122,8 @@ The base currency for summary reporting for this company.
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Base_Currency_Id](Gen_Enterprise_Companies.md#base_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,15 +146,9 @@ The base currency for summary reporting for this company.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Default_Language
-
-
-Default_Language
-
-
-The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).
 
 
 The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).
@@ -181,10 +162,9 @@ The default language for multi-language names in the definitions (like Customer_
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`bg`, `en`|
 |Default Value|en|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Default_Language](Gen_Enterprise_Companies.md#default_language)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -206,12 +186,6 @@ The default language for multi-language names in the definitions (like Customer_
 ### Default_Costing_Method
 
 
-Default_Costing_Method
-
-
-Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost
-
-
 Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost
 
 | Property | Value |
@@ -223,10 +197,9 @@ Default method for cost evaluation (if not specified in the product). Currently 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`AVG`, `EXP`, `BLD`|
 |Default Value|AVG|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Default_Costing_Method](Gen_Enterprise_Companies.md#default_costing_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,12 +221,6 @@ Default method for cost evaluation (if not specified in the product). Currently 
 ### Exchange_Difference_Debit_Account_Id
 
 
-Exchange_Difference_Debit_Account_Id
-
-
-Account for balancing accounting vouchers with debit difference due to currency exchanges
-
-
 Account for balancing accounting vouchers with debit difference due to currency exchanges
 
 | Property | Value |
@@ -265,9 +232,8 @@ Account for balancing accounting vouchers with debit difference due to currency 
 |Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Exchange_Difference_Debit_Account_Id](Gen_Enterprise_Companies.md#exchange_difference_debit_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -290,15 +256,9 @@ Account for balancing accounting vouchers with debit difference due to currency 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Exchange_Difference_Credit_Account_Id
-
-
-Exchange_Difference_Credit_Account_Id
-
-
-Account for balancing accounting vouchers with credit difference due to currency exchanges
 
 
 Account for balancing accounting vouchers with credit difference due to currency exchanges
@@ -312,9 +272,8 @@ Account for balancing accounting vouchers with credit difference due to currency
 |Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Exchange_Difference_Credit_Account_Id](Gen_Enterprise_Companies.md#exchange_difference_credit_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -337,15 +296,9 @@ Account for balancing accounting vouchers with credit difference due to currency
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Advance_Product_Id
-
-
-Advance_Product_Id
-
-
-Product that is used for handling advances in trade documents.
 
 
 Product that is used for handling advances in trade documents.
@@ -359,9 +312,8 @@ Product that is used for handling advances in trade documents.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Advance_Product_Id](Gen_Enterprise_Companies.md#advance_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -384,15 +336,9 @@ Product that is used for handling advances in trade documents.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### VAT_Document_Amount_Type_Id
-
-
-VAT_Document_Amount_Type_Id
-
-
-The document amount that is used to determine the amount of the VAT entries when they are generated.
 
 
 The document amount that is used to determine the amount of the VAT entries when they are generated.
@@ -406,9 +352,8 @@ The document amount that is used to determine the amount of the VAT entries when
 |Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[VAT_Document_Amount_Type_Id](Gen_Enterprise_Companies.md#vat_document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -431,15 +376,9 @@ The document amount that is used to determine the amount of the VAT entries when
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### UI_Base_Color
-
-
-UI_Base_Color
-
-
-When not NULL, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format.
 
 
 When not NULL, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format.
@@ -452,9 +391,8 @@ When not NULL, specifies the background color to use for visualization of the UI
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[UI_Base_Color](Gen_Enterprise_Companies.md#ui_base_color)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -476,12 +414,6 @@ When not NULL, specifies the background color to use for visualization of the UI
 ### BI_Start_Date
 
 
-BI_Start_Date
-
-
-Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date"
-
-
 Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date"
 
 | Property | Value |
@@ -493,9 +425,8 @@ Defines the period for which BI extracts data. BI includes documents with "Docum
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[BI_Start_Date](Gen_Enterprise_Companies.md#bi_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -518,12 +449,9 @@ Defines the period for which BI extracts data. BI includes documents with "Docum
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -533,9 +461,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Row_Version](Gen_Enterprise_Companies.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -556,9 +483,6 @@ Row_Version
 
 ### Access_Key_Id
 
-
-Access_Key_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -568,9 +492,8 @@ Access_Key_Id
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Access_Key_Id](Gen_Enterprise_Companies.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -593,15 +516,9 @@ Access_Key_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Edit_Period_Start_Date
-
-
-Edit_Period_Start_Date
-
-
-Start date of the priod when the documents can be edited
 
 
 Start date of the priod when the documents can be edited
@@ -615,9 +532,8 @@ Start date of the priod when the documents can be edited
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Edit_Period_Start_Date](Gen_Enterprise_Companies.md#edit_period_start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -639,12 +555,6 @@ Start date of the priod when the documents can be edited
 ### Is_Active
 
 
-Is_Active
-
-
-Indicates whether the current Enterprise company  is active.
-
-
 Indicates whether the current Enterprise company  is active.
 
 | Property | Value |
@@ -655,9 +565,8 @@ Indicates whether the current Enterprise company  is active.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Is_Active](Gen_Enterprise_Companies.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -680,12 +589,9 @@ Indicates whether the current Enterprise company  is active.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Customer_Credit_Limit_Base
-
-
-Default_Customer_Credit_Limit_Base
 
 | Property | Value |
 | - | - |
@@ -695,9 +601,8 @@ Default_Customer_Credit_Limit_Base
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Default_Customer_Credit_Limit_Base](Gen_Enterprise_Companies.md#default_customer_credit_limit_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -720,16 +625,10 @@ Default_Customer_Credit_Limit_Base
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Print_Images_Retention_Months
-
-
-Print_Images_Retention_Months
-
-
-A period of months for which the printed images of the documents will be kept.
 
 
 A period of months for which the printed images of the documents will be kept.
@@ -742,9 +641,8 @@ A period of months for which the printed images of the documents will be kept.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|60|
-|Derived From|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md).[Print_Images_Retention_Months](Gen_Enterprise_Companies.md#print_images_retention_months)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -767,7 +665,7 @@ A period of months for which the printed images of the documents will be kept.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 

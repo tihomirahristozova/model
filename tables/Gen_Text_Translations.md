@@ -1,5 +1,10 @@
 # Table Gen_Text_Translations
 
+
+## Entity
+
+Entity: [Systems.Core.TextTranslations](~/entities/Systems.Core.TextTranslations.md)
+
 Obsolete. Not used. Entity: Gen_Text_Translations
 
 ## Summary
@@ -18,9 +23,6 @@ Obsolete. Not used. Entity: Gen_Text_Translations
 
 ### Text_Translation_Id
 
-
-Text_Translation_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -30,9 +32,8 @@ Text_Translation_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Text_Translations](Gen_Text_Translations.md).[Text_Translation_Id](Gen_Text_Translations.md#text_translation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Text_Translation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Table_Name
-
-
-Table_Name
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -77,9 +72,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Text_Translations](Gen_Text_Translations.md).[Table_Name](Gen_Text_Translations.md#table_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +96,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Id
-
-
-Row_Id
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -123,9 +111,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Text_Translations](Gen_Text_Translations.md).[Row_Id](Gen_Text_Translations.md#row_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +135,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Column_Name
-
-
-Column_Name
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -170,9 +151,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Text_Translations](Gen_Text_Translations.md).[Column_Name](Gen_Text_Translations.md#column_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,15 +175,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Language
-
-
-Language
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -217,9 +191,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Text_Translations](Gen_Text_Translations.md).[Language](Gen_Text_Translations.md#language)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,15 +215,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Translated_Text
-
-
-Translated_Text
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -264,9 +231,8 @@ Obsolete. Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Text_Translations](Gen_Text_Translations.md).[Translated_Text](Gen_Text_Translations.md#translated_text)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,12 +255,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -304,9 +267,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Text_Translations](Gen_Text_Translations.md).[Row_Version](Gen_Text_Translations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

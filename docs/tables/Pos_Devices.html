@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-pos_devices">Table Pos_Devices</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Pos.Devices.html">Crm.Pos.Devices</a></p>
 <p>Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#settings_json">Settings_Json</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.</td>
 </tr>
 <tr>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="pos_device_id">Pos_Device_Id</h3>
-<p>Pos_Device_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#pos_device_id">Pos_Device_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,15 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="pos_terminal_id">Pos_Terminal_Id</h3>
-<p>Pos_Terminal_Id</p>
-<p>The POS terminal, to which this device is attached.</p>
 <p>The POS terminal, to which this device is attached.</p>
 <table>
 <thead>
@@ -323,15 +318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#pos_terminal_id">Pos_Terminal_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -416,15 +407,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="device_type">Device_Type</h3>
-<p>Device_Type</p>
-<p>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.</p>
 <p>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.</p>
 <table>
 <thead>
@@ -464,7 +453,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -473,10 +462,6 @@
 <tr>
 <td>Default Value</td>
 <td>OTH</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#device_type">Device_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -561,15 +546,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="device_registration_no">Device_Registration_No</h3>
-<p>Device_Registration_No</p>
-<p>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.</p>
 <p>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.</p>
 <table>
 <thead>
@@ -609,15 +592,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#device_registration_no">Device_Registration_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -702,7 +681,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -715,8 +694,6 @@
 </tbody>
 </table>
 <h3 id="protocol_name">Protocol_Name</h3>
-<p>Protocol_Name</p>
-<p>The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.</p>
 <p>The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.</p>
 <table>
 <thead>
@@ -756,7 +733,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -765,10 +742,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#protocol_name">Protocol_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -841,8 +814,6 @@
 </tbody>
 </table>
 <h3 id="electronic_address">Electronic_Address</h3>
-<p>Electronic_Address</p>
-<p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.<p>
 <p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.<p>
 <table>
 <thead>
@@ -882,15 +853,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#electronic_address">Electronic_Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -975,7 +942,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -988,8 +955,6 @@
 </tbody>
 </table>
 <h3 id="settings_json">Settings_Json</h3>
-<p>Settings_Json</p>
-<p>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.</p>
 <p>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.</p>
 <table>
 <thead>
@@ -1001,7 +966,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1029,15 +994,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#settings_json">Settings_Json</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1110,8 +1071,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>Indicates whether the device is currently active and can be choosen from drop-downs in new records.</p>
 <p>Indicates whether the device is currently active and can be choosen from drop-downs in new records.</p>
 <table>
 <thead>
@@ -1147,15 +1106,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1240,14 +1195,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1282,15 +1236,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Devices.html">Pos_Devices</a>.<a href="Pos_Devices.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1362,7 +1312,7 @@
 </tr>
 </tbody>
 </table>
-</addr></addr></article>
+</addr></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

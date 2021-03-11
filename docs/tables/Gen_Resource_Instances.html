@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_resource_instances">Table Gen_Resource_Instances</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Resources.ResourceInstances.html">General.Resources.ResourceInstances</a></p>
 <p>Represents concrete instances of resources. Entity: Gen_Resource_Instances</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#resource_instance_name">Resource_Instance_Name</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Multilanguage resource instance name.</td>
 </tr>
 <tr>
@@ -117,7 +119,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="resource_instance_id">Resource_Instance_Id</h3>
-<p>Resource_Instance_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Instances.html">Gen_Resource_Instances</a>.<a href="Gen_Resource_Instances.html#resource_instance_id">Resource_Instance_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,15 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_id">Resource_Id</h3>
-<p>Resource_Id</p>
-<p>The resource of which this is instance.</p>
 <p>The resource of which this is instance.</p>
 <table>
 <thead>
@@ -319,15 +314,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Instances.html">Gen_Resource_Instances</a>.<a href="Gen_Resource_Instances.html#resource_id">Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -412,15 +403,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resource_instance_name">Resource_Instance_Name</h3>
-<p>Resource_Instance_Name</p>
-<p>Multilanguage resource instance name.</p>
 <p>Multilanguage resource instance name.</p>
 <table>
 <thead>
@@ -432,7 +421,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -460,15 +449,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Instances.html">Gen_Resource_Instances</a>.<a href="Gen_Resource_Instances.html#resource_instance_name">Resource_Instance_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -553,7 +538,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -566,8 +551,6 @@
 </tbody>
 </table>
 <h3 id="resource_instance_code">Resource_Instance_Code</h3>
-<p>Resource_Instance_Code</p>
-<p>Code of the instance, unique within the resource.</p>
 <p>Code of the instance, unique within the resource.</p>
 <table>
 <thead>
@@ -607,15 +590,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Instances.html">Gen_Resource_Instances</a>.<a href="Gen_Resource_Instances.html#resource_instance_code">Resource_Instance_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -700,7 +679,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -713,7 +692,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -724,7 +702,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -752,15 +730,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Instances.html">Gen_Resource_Instances</a>.<a href="Gen_Resource_Instances.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -833,8 +807,6 @@
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party_Id</p>
-<p>The party, which is represented by this resource instance. NULL, when the resource instance is not a party.</p>
 <p>The party, which is represented by this resource instance. NULL, when the resource instance is not a party.</p>
 <table>
 <thead>
@@ -874,15 +846,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Instances.html">Gen_Resource_Instances</a>.<a href="Gen_Resource_Instances.html#party_id">Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -967,15 +935,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="asset_id">Asset_Id</h3>
-<p>Asset_Id</p>
-<p>The asset, which is represented by this resource instance. NULL, when the resource instance is not an asset.</p>
 <p>The asset, which is represented by this resource instance. NULL, when the resource instance is not an asset.</p>
 <table>
 <thead>
@@ -1015,15 +981,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Instances.html">Gen_Resource_Instances</a>.<a href="Gen_Resource_Instances.html#asset_id">Asset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1108,14 +1070,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1150,15 +1111,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Resource_Instances.html">Gen_Resource_Instances</a>.<a href="Gen_Resource_Instances.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

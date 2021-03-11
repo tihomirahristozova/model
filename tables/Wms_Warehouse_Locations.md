@@ -1,5 +1,10 @@
 # Table Wms_Warehouse_Locations
 
+
+## Entity
+
+Entity: [Logistics.Wms.WarehouseLocations](~/entities/Logistics.Wms.WarehouseLocations.md)
+
 One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1)
 
 ## Owner Tables Hierarchy
@@ -14,15 +19,12 @@ One physical location within a warehouse. Locations are the leaf elements of the
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse containing the location.|
 |[Warehouse_Zone_Id](#warehouse_zone_id)|`uniqueidentifier` |The zone, which contains the location.|
 |[Location_Address](#location_address)|`nvarchar(32)` |The address of the location. Should be unique within the warehouse.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Warehouse_Location_Id
-
-
-Warehouse_Location_Id
 
 | Property | Value |
 | - | - |
@@ -33,9 +35,8 @@ Warehouse_Location_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wms_Warehouse_Locations](Wms_Warehouse_Locations.md).[Warehouse_Location_Id](Wms_Warehouse_Locations.md#warehouse_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Warehouse_Location_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Id
-
-
-Warehouse_Id
-
-
-The warehouse containing the location.
 
 
 The warehouse containing the location.
@@ -80,9 +75,8 @@ The warehouse containing the location.
 |Referenced Table|[Wms_Warehouses](Wms_Warehouses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Locations](Wms_Warehouse_Locations.md).[Warehouse_Id](Wms_Warehouse_Locations.md#warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The warehouse containing the location.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Zone_Id
-
-
-Warehouse_Zone_Id
-
-
-The zone, which contains the location.
 
 
 The zone, which contains the location.
@@ -127,9 +115,8 @@ The zone, which contains the location.
 |Referenced Table|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Locations](Wms_Warehouse_Locations.md).[Warehouse_Zone_Id](Wms_Warehouse_Locations.md#warehouse_zone_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The zone, which contains the location.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Location_Address
-
-
-Location_Address
-
-
-The address of the location. Should be unique within the warehouse.
 
 
 The address of the location. Should be unique within the warehouse.
@@ -174,9 +155,8 @@ The address of the location. Should be unique within the warehouse.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Locations](Wms_Warehouse_Locations.md).[Location_Address](Wms_Warehouse_Locations.md#location_address)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,26 +179,22 @@ The address of the location. Should be unique within the warehouse.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Locations](Wms_Warehouse_Locations.md).[Notes](Wms_Warehouse_Locations.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,9 +215,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -250,9 +223,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Locations](Wms_Warehouse_Locations.md).[Row_Version](Wms_Warehouse_Locations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

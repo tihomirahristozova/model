@@ -1,5 +1,10 @@
 # Table Cash_Payment_Accounts
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentAccounts](~/entities/Finance.Payments.PaymentAccounts.md)
+
 Payment accounts are cash, bank and other accounts, which are used in payments. Payment accounts are frequently used as analytical dimensions (properties) for general ledger accounts. Entity: Cash_Payment_Accounts
 
 ## Summary
@@ -22,9 +27,6 @@ Payment accounts are cash, bank and other accounts, which are used in payments. 
 
 ### Payment_Account_Name
 
-
-Payment_Account_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(50)|
@@ -34,9 +36,8 @@ Payment_Account_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Payment_Account_Name](Cash_Payment_Accounts.md#payment_account_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,12 +65,6 @@ Payment_Account_Name
 ### Currency_Id
 
 
-Currency_Id
-
-
-The currency in which the movements for this payment account will be recorded.
-
-
 The currency in which the movements for this payment account will be recorded.
 
 | Property | Value |
@@ -81,9 +76,8 @@ The currency in which the movements for this payment account will be recorded.
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Currency_Id](Cash_Payment_Accounts.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,12 +100,9 @@ The currency in which the movements for this payment account will be recorded.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Account_Id
-
-
-Payment_Account_Id
 
 | Property | Value |
 | - | - |
@@ -122,9 +113,8 @@ Payment_Account_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Payment_Account_Id](Cash_Payment_Accounts.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,12 +137,9 @@ Payment_Account_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Payment_Account_Code
-
-
-Payment_Account_Code
 
 | Property | Value |
 | - | - |
@@ -163,9 +150,8 @@ Payment_Account_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Payment_Account_Code](Cash_Payment_Accounts.md#payment_account_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -188,13 +174,10 @@ Payment_Account_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -205,9 +188,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Enterprise_Company_Id](Cash_Payment_Accounts.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,15 +212,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Bank_Account_Id
-
-
-Bank_Account_Id
-
-
-The bank account, which is represented by this payment account.
 
 
 The bank account, which is represented by this payment account.
@@ -252,9 +228,8 @@ The bank account, which is represented by this payment account.
 |Referenced Table|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Bank_Account_Id](Cash_Payment_Accounts.md#bank_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -277,15 +252,9 @@ The bank account, which is represented by this payment account.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Indicates wheather the payment account is currently used (active).
 
 
 Indicates wheather the payment account is currently used (active).
@@ -298,9 +267,8 @@ Indicates wheather the payment account is currently used (active).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Is_Active](Cash_Payment_Accounts.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -323,12 +291,9 @@ Indicates wheather the payment account is currently used (active).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Access_Key_Id
-
-
-Access_Key_Id
 
 | Property | Value |
 | - | - |
@@ -339,9 +304,8 @@ Access_Key_Id
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Access_Key_Id](Cash_Payment_Accounts.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -364,12 +328,9 @@ Access_Key_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Location_Id
-
-
-Enterprise_Company_Location_Id
 
 | Property | Value |
 | - | - |
@@ -380,9 +341,8 @@ Enterprise_Company_Location_Id
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Enterprise_Company_Location_Id](Cash_Payment_Accounts.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -405,15 +365,9 @@ Enterprise_Company_Location_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Type_Id
-
-
-Payment_Type_Id
-
-
-Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.
 
 
 Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.
@@ -427,9 +381,8 @@ Specifies the payment type used to pay, when using this payment account. NULL wh
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Payment_Type_Id](Cash_Payment_Accounts.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -452,12 +405,9 @@ Specifies the payment type used to pay, when using this payment account. NULL wh
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -467,9 +417,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Accounts](Cash_Payment_Accounts.md).[Row_Version](Cash_Payment_Accounts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

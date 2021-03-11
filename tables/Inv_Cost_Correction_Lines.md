@@ -1,5 +1,10 @@
 # Table Inv_Cost_Correction_Lines
 
+
+## Entity
+
+Entity: [Logistics.Inventory.CostCorrectionLines](~/entities/Logistics.Inventory.CostCorrectionLines.md)
+
 Cost correction detail lines. One line is created for each corrected transaction line. Entity: Inv_Cost_Correction_Lines
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Cost correction detail lines. One line is created for each corrected transaction
 
 ### Cost_Correction_Line_Id
 
-
-Cost_Correction_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Cost_Correction_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md).[Cost_Correction_Line_Id](Inv_Cost_Correction_Lines.md#cost_correction_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,12 +62,9 @@ Cost_Correction_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Correction_Id
-
-
-Cost_Correction_Id
 
 | Property | Value |
 | - | - |
@@ -77,9 +75,8 @@ Cost_Correction_Id
 |Referenced Table|[Inv_Cost_Corrections](Inv_Cost_Corrections.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md).[Cost_Correction_Id](Inv_Cost_Correction_Lines.md#cost_correction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +99,9 @@ Cost_Correction_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transaction_Line_Id
-
-
-Transaction_Line_Id
-
-
-The transaction line, which is corrected.
 
 
 The transaction line, which is corrected.
@@ -124,9 +115,8 @@ The transaction line, which is corrected.
 |Referenced Table|[Inv_Transaction_Lines](Inv_Transaction_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md).[Transaction_Line_Id](Inv_Cost_Correction_Lines.md#transaction_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,15 +139,9 @@ The transaction line, which is corrected.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Correction_Amount
-
-
-Cost_Correction_Amount
-
-
-The amount of correction (plus or minus) for the Amount field of the transaction line.
 
 
 The amount of correction (plus or minus) for the Amount field of the transaction line.
@@ -170,9 +154,8 @@ The amount of correction (plus or minus) for the Amount field of the transaction
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md).[Cost_Correction_Amount](Inv_Cost_Correction_Lines.md#cost_correction_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,12 +177,6 @@ The amount of correction (plus or minus) for the Amount field of the transaction
 ### Product_Cost_Adjustment
 
 
-Product_Cost_Adjustment
-
-
-The amount of correction (plus or minus) for the Product Cost field of the transaction line.
-
-
 The amount of correction (plus or minus) for the Product Cost field of the transaction line.
 
 | Property | Value |
@@ -210,9 +187,8 @@ The amount of correction (plus or minus) for the Product Cost field of the trans
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md).[Product_Cost_Adjustment](Inv_Cost_Correction_Lines.md#product_cost_adjustment)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,12 +210,6 @@ The amount of correction (plus or minus) for the Product Cost field of the trans
 ### Store_Cost_Adjustment
 
 
-Store_Cost_Adjustment
-
-
-The amount of correction (plus or minus) for the Store Cost field of the transaction line.
-
-
 The amount of correction (plus or minus) for the Store Cost field of the transaction line.
 
 | Property | Value |
@@ -250,9 +220,8 @@ The amount of correction (plus or minus) for the Store Cost field of the transac
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md).[Store_Cost_Adjustment](Inv_Cost_Correction_Lines.md#store_cost_adjustment)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -274,12 +243,6 @@ The amount of correction (plus or minus) for the Store Cost field of the transac
 ### Base_Cost_Adjustment
 
 
-Base_Cost_Adjustment
-
-
-The amount of correction (plus or minus) for the Base Cost field of the transaction line.
-
-
 The amount of correction (plus or minus) for the Base Cost field of the transaction line.
 
 | Property | Value |
@@ -290,9 +253,8 @@ The amount of correction (plus or minus) for the Base Cost field of the transact
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md).[Base_Cost_Adjustment](Inv_Cost_Correction_Lines.md#base_cost_adjustment)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -313,9 +275,6 @@ The amount of correction (plus or minus) for the Base Cost field of the transact
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -324,9 +283,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md).[Row_Version](Inv_Cost_Correction_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

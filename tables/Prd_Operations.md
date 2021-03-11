@@ -1,5 +1,10 @@
 # Table Prd_Operations
 
+
+## Entity
+
+Entity: [Production.Resources.Operations](~/entities/Production.Resources.Operations.md)
+
 The different steps performed to create products. Entity: Prd_Operations
 
 ## Owner Tables Hierarchy
@@ -21,7 +26,7 @@ The different steps performed to create products. Entity: Prd_Operations
 |[Wait_Time_Minutes](#wait_time_minutes)|`int` |The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.|
 |[Move_Time_Minutes](#move_time_minutes)|`int` |The time required for the product to move to the next operation. During this time no resource is allocated.|
 |[Scrap_Rate](#scrap_rate)|`decimal(7, 6)` |The percentage (0..1) of scrap usually occurring during the production operation. NULL means that the scrap rate cannot be generally calculated.|
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Tooling](#tooling)|`nvarchar(254)` |Short description of the needed instruments for the operation.|
 |[Operation_Instructions_Id](#operation_instructions_id)|`uniqueidentifier` |Full instructions for the operation.|
 |[Standard_Price_Per_Hour](#standard_price_per_hour)|`decimal(18, 6)` |Standard price for 1 hour work for this operation.|
@@ -30,9 +35,6 @@ The different steps performed to create products. Entity: Prd_Operations
 ## Columns
 
 ### Id
-
-
-Id
 
 | Property | Value |
 | - | - |
@@ -43,9 +45,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Id](Prd_Operations.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -68,12 +69,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Operation_Group_Id
-
-
-Operation_Group_Id
 
 | Property | Value |
 | - | - |
@@ -84,9 +82,8 @@ Operation_Group_Id
 |Referenced Table|[Prd_Operation_Groups](Prd_Operation_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Operation_Group_Id](Prd_Operations.md#operation_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,12 +106,9 @@ Operation_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Operation_Name
-
-
-Operation_Name
 
 | Property | Value |
 | - | - |
@@ -125,9 +119,8 @@ Operation_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Operation_Name](Prd_Operations.md#operation_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,12 +148,6 @@ Operation_Name
 ### Workgroup_Resource_Id
 
 
-Workgroup_Resource_Id
-
-
-When not NULL, specifies the Workgroup Resource, which is required by the operation.
-
-
 When not NULL, specifies the Workgroup Resource, which is required by the operation.
 
 | Property | Value |
@@ -172,9 +159,8 @@ When not NULL, specifies the Workgroup Resource, which is required by the operat
 |Referenced Table|[Prd_Workgroup_Resources](Prd_Workgroup_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Workgroup_Resource_Id](Prd_Operations.md#workgroup_resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,15 +183,9 @@ When not NULL, specifies the Workgroup Resource, which is required by the operat
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Use_Quantity_Base
-
-
-Use_Quantity_Base
-
-
-Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource
 
 
 Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource
@@ -218,9 +198,8 @@ Quantity of the resource that need to be allocated for the operation, in base me
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Use_Quantity_Base](Prd_Operations.md#use_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,12 +221,6 @@ Quantity of the resource that need to be allocated for the operation, in base me
 ### Minimum_Concurrent_Start_Time_Minutes
 
 
-Minimum_Concurrent_Start_Time_Minutes
-
-
-How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting
-
-
 How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting
 
 | Property | Value |
@@ -258,9 +231,8 @@ How many minutes after the start of this operation can the next operation start.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Minimum_Concurrent_Start_Time_Minutes](Prd_Operations.md#minimum_concurrent_start_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -282,12 +254,6 @@ How many minutes after the start of this operation can the next operation start.
 ### Setup_Time_Minutes
 
 
-Setup_Time_Minutes
-
-
-The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.
-
-
 The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.
 
 | Property | Value |
@@ -298,9 +264,8 @@ The time required to setup the operation. The setup is incurred only once, regar
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Setup_Time_Minutes](Prd_Operations.md#setup_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -322,12 +287,6 @@ The time required to setup the operation. The setup is incurred only once, regar
 ### Run_Time_Minutes
 
 
-Run_Time_Minutes
-
-
-The time required to process one product lot. The run time is calculated for each produced lot.
-
-
 The time required to process one product lot. The run time is calculated for each produced lot.
 
 | Property | Value |
@@ -338,9 +297,8 @@ The time required to process one product lot. The run time is calculated for eac
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Run_Time_Minutes](Prd_Operations.md#run_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -362,12 +320,6 @@ The time required to process one product lot. The run time is calculated for eac
 ### Wait_Time_Minutes
 
 
-Wait_Time_Minutes
-
-
-The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.
-
-
 The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.
 
 | Property | Value |
@@ -378,9 +330,8 @@ The time required to wait after completing the operation. During this time, the 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Wait_Time_Minutes](Prd_Operations.md#wait_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -402,12 +353,6 @@ The time required to wait after completing the operation. During this time, the 
 ### Move_Time_Minutes
 
 
-Move_Time_Minutes
-
-
-The time required for the product to move to the next operation. During this time no resource is allocated.
-
-
 The time required for the product to move to the next operation. During this time no resource is allocated.
 
 | Property | Value |
@@ -418,9 +363,8 @@ The time required for the product to move to the next operation. During this tim
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Move_Time_Minutes](Prd_Operations.md#move_time_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -442,12 +386,6 @@ The time required for the product to move to the next operation. During this tim
 ### Scrap_Rate
 
 
-Scrap_Rate
-
-
-The percentage (0..1) of scrap usually occurring during the production operation. NULL means that the scrap rate cannot be generally calculated.
-
-
 The percentage (0..1) of scrap usually occurring during the production operation. NULL means that the scrap rate cannot be generally calculated.
 
 | Property | Value |
@@ -458,9 +396,8 @@ The percentage (0..1) of scrap usually occurring during the production operation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Scrap_Rate](Prd_Operations.md#scrap_rate)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -481,21 +418,17 @@ The percentage (0..1) of scrap usually occurring during the production operation
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Description](Prd_Operations.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -517,12 +450,6 @@ Description
 ### Tooling
 
 
-Tooling
-
-
-Short description of the needed instruments for the operation.
-
-
 Short description of the needed instruments for the operation.
 
 | Property | Value |
@@ -534,9 +461,8 @@ Short description of the needed instruments for the operation.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Tooling](Prd_Operations.md#tooling)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -558,12 +484,6 @@ Short description of the needed instruments for the operation.
 ### Operation_Instructions_Id
 
 
-Operation_Instructions_Id
-
-
-Full instructions for the operation.
-
-
 Full instructions for the operation.
 
 | Property | Value |
@@ -575,9 +495,8 @@ Full instructions for the operation.
 |Referenced Table|[Prd_Operation_Instructions](Prd_Operation_Instructions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Operation_Instructions_Id](Prd_Operations.md#operation_instructions_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -600,15 +519,9 @@ Full instructions for the operation.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Standard_Price_Per_Hour
-
-
-Standard_Price_Per_Hour
-
-
-Standard price for 1 hour work for this operation.
 
 
 Standard price for 1 hour work for this operation.
@@ -621,9 +534,8 @@ Standard price for 1 hour work for this operation.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Standard_Price_Per_Hour](Prd_Operations.md#standard_price_per_hour)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -644,9 +556,6 @@ Standard price for 1 hour work for this operation.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -655,9 +564,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operations](Prd_Operations.md).[Row_Version](Prd_Operations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

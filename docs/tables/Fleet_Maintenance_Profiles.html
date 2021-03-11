@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-fleet_maintenance_profiles">Table Fleet_Maintenance_Profiles</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Fleet.MaintenanceProfiles.html">Applications.Fleet.MaintenanceProfiles</a></p>
 <p>Profiles contain multiple maintenance plans and can be assigned directly to a vehicle. Entity: Fleet_Maintenance_Profiles</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -119,7 +121,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="maintenance_profile_id">Maintenance_Profile_Id</h3>
-<p>Maintenance_Profile_Id</p>
 <table>
 <thead>
 <tr>
@@ -158,15 +159,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profiles.html">Fleet_Maintenance_Profiles</a>.<a href="Fleet_Maintenance_Profiles.html#maintenance_profile_id">Maintenance_Profile_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -251,14 +248,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_profile_code">Maintenance_Profile_Code</h3>
-<p>Maintenance_Profile_Code</p>
 <table>
 <thead>
 <tr>
@@ -297,15 +293,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profiles.html">Fleet_Maintenance_Profiles</a>.<a href="Fleet_Maintenance_Profiles.html#maintenance_profile_code">Maintenance_Profile_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -378,8 +370,6 @@
 </tbody>
 </table>
 <h3 id="maintenance_profile_name">Maintenance_Profile_Name</h3>
-<p>Maintenance_Profile_Name</p>
-<p>Name of the maintenance profile (Multilanguage).</p>
 <p>Name of the maintenance profile (Multilanguage).</p>
 <table>
 <thead>
@@ -419,15 +409,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profiles.html">Fleet_Maintenance_Profiles</a>.<a href="Fleet_Maintenance_Profiles.html#maintenance_profile_name">Maintenance_Profile_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -500,7 +486,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -511,7 +496,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -539,15 +524,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profiles.html">Fleet_Maintenance_Profiles</a>.<a href="Fleet_Maintenance_Profiles.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -620,8 +601,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated.</p>
 <p>1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated.</p>
 <table>
 <thead>
@@ -657,15 +636,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profiles.html">Fleet_Maintenance_Profiles</a>.<a href="Fleet_Maintenance_Profiles.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>

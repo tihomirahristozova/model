@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prd_workgroup_shifts">Table Prd_Workgroup_Shifts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Production.Resources.WorkgroupShifts.html">Production.Resources.WorkgroupShifts</a></p>
 <p>Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -133,8 +135,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
-<p>Unique workgroup shift Id</p>
 <p>Unique workgroup shift Id</p>
 <table>
 <thead>
@@ -174,15 +174,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Workgroup_Shifts.html">Prd_Workgroup_Shifts</a>.<a href="Prd_Workgroup_Shifts.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -267,14 +263,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="workgroup_id">Workgroup_Id</h3>
-<p>Workgroup_Id</p>
 <table>
 <thead>
 <tr>
@@ -313,15 +308,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Workgroup_Shifts.html">Prd_Workgroup_Shifts</a>.<a href="Prd_Workgroup_Shifts.html#workgroup_id">Workgroup_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -406,15 +397,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="shift_name">Shift_Name</h3>
-<p>Shift_Name</p>
-<p>The name of the workgroup shift.</p>
 <p>The name of the workgroup shift.</p>
 <table>
 <thead>
@@ -454,15 +443,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Workgroup_Shifts.html">Prd_Workgroup_Shifts</a>.<a href="Prd_Workgroup_Shifts.html#shift_name">Shift_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -554,8 +539,6 @@
 </tbody>
 </table>
 <h3 id="establishment_date">Establishment_Date</h3>
-<p>Establishment_Date</p>
-<p>When the workgroup shift was established. Used as minimum date when generating calendar</p>
 <p>When the workgroup shift was established. Used as minimum date when generating calendar</p>
 <table>
 <thead>
@@ -595,15 +578,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDate</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Workgroup_Shifts.html">Prd_Workgroup_Shifts</a>.<a href="Prd_Workgroup_Shifts.html#establishment_date">Establishment_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -695,8 +674,6 @@
 </tbody>
 </table>
 <h3 id="work_schedule_id">Work_Schedule_Id</h3>
-<p>Work_Schedule_Id</p>
-<p>The work schedule used to calculate the working time for the shift.</p>
 <p>The work schedule used to calculate the working time for the shift.</p>
 <table>
 <thead>
@@ -736,15 +713,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Workgroup_Shifts.html">Prd_Workgroup_Shifts</a>.<a href="Prd_Workgroup_Shifts.html#work_schedule_id">Work_Schedule_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -829,15 +802,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="efficiency_factor_percent">Efficiency_Factor_Percent</h3>
-<p>Efficiency_Factor_Percent</p>
-<p>Efficiency factor of the routing steps for this shift, expressed as percentage</p>
 <p>Efficiency factor of the routing steps for this shift, expressed as percentage</p>
 <table>
 <thead>
@@ -873,15 +844,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Workgroup_Shifts.html">Prd_Workgroup_Shifts</a>.<a href="Prd_Workgroup_Shifts.html#efficiency_factor_percent">Efficiency_Factor_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -954,7 +921,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -989,15 +955,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Workgroup_Shifts.html">Prd_Workgroup_Shifts</a>.<a href="Prd_Workgroup_Shifts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

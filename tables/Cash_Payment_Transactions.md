@@ -1,5 +1,10 @@
 # Table Cash_Payment_Transactions
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentTransactions](~/entities/Finance.Payments.PaymentTransactions.md)
+
 Represents actual payments, which increase or decrease the balance of a payment account. Entity: Cash_Payment_Transactions
 
 ## Owner Tables Hierarchy
@@ -38,12 +43,6 @@ Represents actual payments, which increase or decrease the balance of a payment 
 ### Party_Id
 
 
-Party_Id
-
-
-The party that is paying or receiving the money
-
-
 The party that is paying or receiving the money
 
 | Property | Value |
@@ -55,9 +54,8 @@ The party that is paying or receiving the money
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Party_Id](Cash_Payment_Transactions.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -80,15 +78,9 @@ The party that is paying or receiving the money
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Account_Id
-
-
-Payment_Account_Id
-
-
-The account towards which the payment was effected
 
 
 The account towards which the payment was effected
@@ -102,9 +94,8 @@ The account towards which the payment was effected
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Payment_Account_Id](Cash_Payment_Transactions.md#payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -127,15 +118,9 @@ The account towards which the payment was effected
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Direction
-
-
-Direction
-
-
-I for Payment issue, R for payment receipt
 
 
 I for Payment issue, R for payment receipt
@@ -149,10 +134,9 @@ I for Payment issue, R for payment receipt
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `R`|
 |Default Value|R|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Direction](Cash_Payment_Transactions.md#direction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -175,15 +159,9 @@ I for Payment issue, R for payment receipt
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Total_Amount
-
-
-Total_Amount
-
-
-The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines
 
 
 The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines
@@ -196,9 +174,8 @@ The total amount payed. The distribution of the amount among source orders is sp
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Total_Amount](Cash_Payment_Transactions.md#total_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -220,12 +197,6 @@ The total amount payed. The distribution of the amount among source orders is sp
 ### Total_Amount_Currency_Id
 
 
-Total_Amount_Currency_Id
-
-
-The currency of the total amount
-
-
 The currency of the total amount
 
 | Property | Value |
@@ -237,9 +208,8 @@ The currency of the total amount
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Total_Amount_Currency_Id](Cash_Payment_Transactions.md#total_amount_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -262,15 +232,9 @@ The currency of the total amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Requires_Allocation
-
-
-Requires_Allocation
-
-
-1=The total amount should be allocated to payment orders; 0=Payment orders are not required
 
 
 1=The total amount should be allocated to payment orders; 0=Payment orders are not required
@@ -283,9 +247,8 @@ Requires_Allocation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Requires_Allocation](Cash_Payment_Transactions.md#requires_allocation)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -308,15 +271,9 @@ Requires_Allocation
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Slip_No
-
-
-Payment_Slip_No
-
-
-The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips
 
 
 The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips
@@ -330,9 +287,8 @@ The number of the payment slip. Can be used to directly indicate the number with
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Payment_Slip_No](Cash_Payment_Transactions.md#payment_slip_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -355,15 +311,9 @@ The number of the payment slip. Can be used to directly indicate the number with
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Slip_Id
-
-
-Payment_Slip_Id
-
-
-When not NULL specifies that this payment was part of a payment slip
 
 
 When not NULL specifies that this payment was part of a payment slip
@@ -377,9 +327,8 @@ When not NULL specifies that this payment was part of a payment slip
 |Referenced Table|[Cash_Payment_Slips](Cash_Payment_Slips.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Payment_Slip_Id](Cash_Payment_Transactions.md#payment_slip_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -402,12 +351,9 @@ When not NULL specifies that this payment was part of a payment slip
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -418,9 +364,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Notes](Cash_Payment_Transactions.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -441,9 +386,6 @@ Notes
 
 ### Payment_Transaction_Id
 
-
-Payment_Transaction_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -453,9 +395,8 @@ Payment_Transaction_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Payment_Transaction_Id](Cash_Payment_Transactions.md#payment_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -478,15 +419,9 @@ Payment_Transaction_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The document data of the payment transaction
 
 
 The document data of the payment transaction
@@ -500,9 +435,8 @@ The document data of the payment transaction
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Document_Id](Cash_Payment_Transactions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -525,15 +459,9 @@ The document data of the payment transaction
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Original_Payment_Transaction_Id
-
-
-Original_Payment_Transaction_Id
-
-
-Original Payment Transaction
 
 
 Original Payment Transaction
@@ -547,9 +475,8 @@ Original Payment Transaction
 |Referenced Table|[Cash_Payment_Transactions](Cash_Payment_Transactions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Original_Payment_Transaction_Id](Cash_Payment_Transactions.md#original_payment_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -572,15 +499,9 @@ Original Payment Transaction
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Payment_Reason_Id
-
-
-Payment_Reason_Id
-
-
-The payment reason, as defined in Payment Reasons.
 
 
 The payment reason, as defined in Payment Reasons.
@@ -594,9 +515,8 @@ The payment reason, as defined in Payment Reasons.
 |Referenced Table|[Cash_Payment_Reasons](Cash_Payment_Reasons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Payment_Reason_Id](Cash_Payment_Transactions.md#payment_reason_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -619,17 +539,11 @@ The payment reason, as defined in Payment Reasons.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -640,9 +554,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Is_Single_Execution](Cash_Payment_Transactions.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -665,17 +578,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -686,9 +593,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Is_Released](Cash_Payment_Transactions.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -711,12 +617,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -726,9 +629,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Row_Version](Cash_Payment_Transactions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -750,12 +652,6 @@ Row_Version
 ### Payment_Type_Id
 
 
-Payment_Type_Id
-
-
-Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.
-
-
 Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.
 
 | Property | Value |
@@ -767,9 +663,8 @@ Specifies the payment type used to pay, when using this payment account. NULL wh
 |Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Payment_Type_Id](Cash_Payment_Transactions.md#payment_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -792,15 +687,9 @@ Specifies the payment type used to pay, when using this payment account. NULL wh
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Fiscal_Printer_Pos_Device_Id
-
-
-Fiscal_Printer_Pos_Device_Id
-
-
-For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.
 
 
 For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.
@@ -814,9 +703,8 @@ For POS Sales Order payments. Specifies the POS Device from fiscal printer type 
 |Referenced Table|[Pos_Devices](Pos_Devices.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Fiscal_Printer_Pos_Device_Id](Cash_Payment_Transactions.md#fiscal_printer_pos_device_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -839,15 +727,9 @@ For POS Sales Order payments. Specifies the POS Device from fiscal printer type 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Parent_Payment_Slip_Amount_Id
-
-
-Parent_Payment_Slip_Amount_Id
-
-
-The Payment Slip Amount, which the current payment transaction fulfills . NULL when the current document does not execute any Payment Slip Amount.
 
 
 The Payment Slip Amount, which the current payment transaction fulfills . NULL when the current document does not execute any Payment Slip Amount.
@@ -861,9 +743,8 @@ The Payment Slip Amount, which the current payment transaction fulfills . NULL w
 |Referenced Table|[Cash_Payment_Slip_Amounts](Cash_Payment_Slip_Amounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Parent_Payment_Slip_Amount_Id](Cash_Payment_Transactions.md#parent_payment_slip_amount_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -886,15 +767,9 @@ The Payment Slip Amount, which the current payment transaction fulfills . NULL w
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Pos_Location_Id
-
-
-Pos_Location_Id
-
-
-For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order.
 
 
 For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order.
@@ -908,9 +783,8 @@ For POS Sales Order payments. Specifies the POS Location, in which the payment i
 |Referenced Table|[Pos_Locations](Pos_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Pos_Location_Id](Cash_Payment_Transactions.md#pos_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -933,15 +807,9 @@ For POS Sales Order payments. Specifies the POS Location, in which the payment i
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Pos_Operator_Id
-
-
-Pos_Operator_Id
-
-
-For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order.
 
 
 For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order.
@@ -955,9 +823,8 @@ For POS Sales Order payments. Specifies the POS Operator, who created the paymen
 |Referenced Table|[Pos_Operators](Pos_Operators.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Pos_Operator_Id](Cash_Payment_Transactions.md#pos_operator_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -980,15 +847,9 @@ For POS Sales Order payments. Specifies the POS Operator, who created the paymen
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Reversal_Reason
-
-
-Reversal_Reason
-
-
-The reason for the reversal of the payment.
 
 
 The reason for the reversal of the payment.
@@ -1002,10 +863,9 @@ The reason for the reversal of the payment.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`OPE`, `TBR`, `REF`|
 |Default Value|None|
-|Derived From|[Cash_Payment_Transactions](Cash_Payment_Transactions.md).[Reversal_Reason](Cash_Payment_Transactions.md#reversal_reason)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

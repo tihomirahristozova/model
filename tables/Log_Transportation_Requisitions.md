@@ -1,5 +1,10 @@
 # Table Log_Transportation_Requisitions
 
+
+## Entity
+
+Entity: [Logistics.Shipment.TransportationRequisitions](~/entities/Logistics.Shipment.TransportationRequisitions.md)
+
 Client requisition for transportation. Entity: Log_Transportation_Requisitions
 
 ## Owner Tables Hierarchy
@@ -28,9 +33,6 @@ Client requisition for transportation. Entity: Log_Transportation_Requisitions
 
 ### Transportation_Requisition_Id
 
-
-Transportation_Requisition_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -40,9 +42,8 @@ Transportation_Requisition_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Transportation_Requisition_Id](Log_Transportation_Requisitions.md#transportation_requisition_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,12 +66,9 @@ Transportation_Requisition_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -81,9 +79,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Document_Id](Log_Transportation_Requisitions.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +103,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Requested_Departure_Date
-
-
-Requested_Departure_Date
-
-
-Requested date of departure. NULL when no specific date is requested.
 
 
 Requested date of departure. NULL when no specific date is requested.
@@ -128,9 +119,8 @@ Requested date of departure. NULL when no specific date is requested.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Requested_Departure_Date](Log_Transportation_Requisitions.md#requested_departure_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,12 +148,6 @@ Requested date of departure. NULL when no specific date is requested.
 ### Requested_Departure_Time
 
 
-Requested_Departure_Time
-
-
-Requested time of departure. NULL when no specific time is requested.
-
-
 Requested time of departure. NULL when no specific time is requested.
 
 | Property | Value |
@@ -175,9 +159,8 @@ Requested time of departure. NULL when no specific time is requested.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Requested_Departure_Time](Log_Transportation_Requisitions.md#requested_departure_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,12 +188,6 @@ Requested time of departure. NULL when no specific time is requested.
 ### Requested_Arrival_Date
 
 
-Requested_Arrival_Date
-
-
-Requested arrival date. NULL when no specific date is requested.
-
-
 Requested arrival date. NULL when no specific date is requested.
 
 | Property | Value |
@@ -222,9 +199,8 @@ Requested arrival date. NULL when no specific date is requested.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Requested_Arrival_Date](Log_Transportation_Requisitions.md#requested_arrival_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -252,12 +228,6 @@ Requested arrival date. NULL when no specific date is requested.
 ### Requested_Arrival_Time
 
 
-Requested_Arrival_Time
-
-
-Requested arrival time. NULL when no specific time is requested.
-
-
 Requested arrival time. NULL when no specific time is requested.
 
 | Property | Value |
@@ -269,9 +239,8 @@ Requested arrival time. NULL when no specific time is requested.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Requested_Arrival_Time](Log_Transportation_Requisitions.md#requested_arrival_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -299,12 +268,6 @@ Requested arrival time. NULL when no specific time is requested.
 ### Transport_From_Party_Id
 
 
-Transport_From_Party_Id
-
-
-Shipping party.
-
-
 Shipping party.
 
 | Property | Value |
@@ -316,9 +279,8 @@ Shipping party.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Transport_From_Party_Id](Log_Transportation_Requisitions.md#transport_from_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -341,17 +303,11 @@ Shipping party.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transport_From_Party_Contact_Mechanism_Id
 
 
-Transport_From_Party_Contact_Mechanism_Id
-
-
-Loading address.
-
-
 Loading address.
 
 | Property | Value |
@@ -363,9 +319,8 @@ Loading address.
 |Referenced Table|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Transport_From_Party_Contact_Mechanism_Id](Log_Transportation_Requisitions.md#transport_from_party_contact_mechanism_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -388,15 +343,9 @@ Loading address.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transport_From_Geo_Point_Id
-
-
-Transport_From_Geo_Point_Id
-
-
-Geographical location of the loading, if available.
 
 
 Geographical location of the loading, if available.
@@ -410,9 +359,8 @@ Geographical location of the loading, if available.
 |Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Transport_From_Geo_Point_Id](Log_Transportation_Requisitions.md#transport_from_geo_point_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -435,15 +383,9 @@ Geographical location of the loading, if available.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Transport_To_Party_Id
-
-
-Transport_To_Party_Id
-
-
-Receiving party.
 
 
 Receiving party.
@@ -457,9 +399,8 @@ Receiving party.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Transport_To_Party_Id](Log_Transportation_Requisitions.md#transport_to_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -482,15 +423,9 @@ Receiving party.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transport_To_Party_Contact_Mechanism_Id
-
-
-Transport_To_Party_Contact_Mechanism_Id
-
-
-Unload address.
 
 
 Unload address.
@@ -504,9 +439,8 @@ Unload address.
 |Referenced Table|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Transport_To_Party_Contact_Mechanism_Id](Log_Transportation_Requisitions.md#transport_to_party_contact_mechanism_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -529,15 +463,9 @@ Unload address.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Transport_To_Geo_Point_Id
-
-
-Transport_To_Geo_Point_Id
-
-
-Geographical location of the unloading, if available.
 
 
 Geographical location of the unloading, if available.
@@ -551,9 +479,8 @@ Geographical location of the unloading, if available.
 |Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Transport_To_Geo_Point_Id](Log_Transportation_Requisitions.md#transport_to_geo_point_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -576,12 +503,9 @@ Geographical location of the unloading, if available.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -591,9 +515,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Transportation_Requisitions](Log_Transportation_Requisitions.md).[Row_Version](Log_Transportation_Requisitions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

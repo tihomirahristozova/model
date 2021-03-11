@@ -1,5 +1,10 @@
 # Table Prj_Project_Tasks
 
+
+## Entity
+
+Entity: [Projects.ProjectTasks](~/entities/Projects.ProjectTasks.md)
+
 Represents one task of a project. Entity: Prj_Project_Tasks
 
 ## Summary
@@ -10,7 +15,7 @@ Represents one task of a project. Entity: Prj_Project_Tasks
 |[Project_Id](#project_id)|`uniqueidentifier` |The project, to which this task belongs.|
 |[Project_Work_Element_Id](#project_work_element_id)|`uniqueidentifier` |The work element under which the task is filed.|
 |[Task_Name](#task_name)|`nvarchar(254)` |The short name of the task. It is best practice to contain the target of the task.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Resource_Id](#resource_id)|`uniqueidentifier` |The resource, which is required for the task. NULL means - do not plan any resource|
 |[Start_Date_Time](#start_date_time)|`datetime` |The date and time when the task is planned to start.|
 |[Finish_Date_Time](#finish_date_time)|`datetime` |The date and time when the task is planned to finish.|
@@ -27,9 +32,6 @@ Represents one task of a project. Entity: Prj_Project_Tasks
 
 ### Project_Task_Id
 
-
-Project_Task_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -39,9 +41,8 @@ Project_Task_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Project_Task_Id](Prj_Project_Tasks.md#project_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,15 +65,9 @@ Project_Task_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Project_Id
-
-
-Project_Id
-
-
-The project, to which this task belongs.
 
 
 The project, to which this task belongs.
@@ -86,9 +81,8 @@ The project, to which this task belongs.
 |Referenced Table|[Prj_Projects](Prj_Projects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Project_Id](Prj_Project_Tasks.md#project_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -111,15 +105,9 @@ The project, to which this task belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Work_Element_Id
-
-
-Project_Work_Element_Id
-
-
-The work element under which the task is filed.
 
 
 The work element under which the task is filed.
@@ -133,9 +121,8 @@ The work element under which the task is filed.
 |Referenced Table|[Prj_Project_Work_Elements](Prj_Project_Work_Elements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Project_Work_Element_Id](Prj_Project_Tasks.md#project_work_element_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,15 +145,9 @@ The work element under which the task is filed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Task_Name
-
-
-Task_Name
-
-
-The short name of the task. It is best practice to contain the target of the task.
 
 
 The short name of the task. It is best practice to contain the target of the task.
@@ -180,9 +161,8 @@ The short name of the task. It is best practice to contain the target of the tas
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Task_Name](Prj_Project_Tasks.md#task_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,26 +185,22 @@ The short name of the task. It is best practice to contain the target of the tas
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Notes](Prj_Project_Tasks.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,12 +222,6 @@ Notes
 ### Resource_Id
 
 
-Resource_Id
-
-
-The resource, which is required for the task. NULL means - do not plan any resource
-
-
 The resource, which is required for the task. NULL means - do not plan any resource
 
 | Property | Value |
@@ -263,9 +233,8 @@ The resource, which is required for the task. NULL means - do not plan any resou
 |Referenced Table|[Prj_Resources](Prj_Resources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Resource_Id](Prj_Project_Tasks.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,15 +257,9 @@ The resource, which is required for the task. NULL means - do not plan any resou
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Start_Date_Time
-
-
-Start_Date_Time
-
-
-The date and time when the task is planned to start.
 
 
 The date and time when the task is planned to start.
@@ -310,9 +273,8 @@ The date and time when the task is planned to start.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Start_Date_Time](Prj_Project_Tasks.md#start_date_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -335,18 +297,12 @@ The date and time when the task is planned to start.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Finish_Date_Time
 
 
-Finish_Date_Time
-
-
-The date and time when the task is planned to finish.
-
-
 The date and time when the task is planned to finish.
 
 | Property | Value |
@@ -358,9 +314,8 @@ The date and time when the task is planned to finish.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Finish_Date_Time](Prj_Project_Tasks.md#finish_date_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -383,16 +338,10 @@ The date and time when the task is planned to finish.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Work_Type_Id
-
-
-Work_Type_Id
-
-
-Type of work to be done. NULL means that type of work is undetermined yet.
 
 
 Type of work to be done. NULL means that type of work is undetermined yet.
@@ -406,9 +355,8 @@ Type of work to be done. NULL means that type of work is undetermined yet.
 |Referenced Table|[Prj_Type_Work_Types](Prj_Type_Work_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Work_Type_Id](Prj_Project_Tasks.md#work_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -431,15 +379,9 @@ Type of work to be done. NULL means that type of work is undetermined yet.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Planned_Duration_Hours
-
-
-Planned_Duration_Hours
-
-
-Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.
 
 
 Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.
@@ -452,9 +394,8 @@ Planned duration of the task in hours. The hours are allocated in the time inter
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Planned_Duration_Hours](Prj_Project_Tasks.md#planned_duration_hours)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -476,12 +417,6 @@ Planned duration of the task in hours. The hours are allocated in the time inter
 ### Budget_Labor_Amount
 
 
-Budget_Labor_Amount
-
-
-Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated
-
-
 Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated
 
 | Property | Value |
@@ -492,9 +427,8 @@ Budgeted amount for the labor for the task in the currency of the project. The m
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Budget_Labor_Amount](Prj_Project_Tasks.md#budget_labor_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -516,12 +450,6 @@ Budgeted amount for the labor for the task in the currency of the project. The m
 ### Responsible_Party_Id
 
 
-Responsible_Party_Id
-
-
-The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined
-
-
 The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined
 
 | Property | Value |
@@ -533,9 +461,8 @@ The responsible party. Usually a person and usually one of the project participa
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Responsible_Party_Id](Prj_Project_Tasks.md#responsible_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -558,15 +485,9 @@ The responsible party. Usually a person and usually one of the project participa
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Activity_Id
-
-
-Activity_Id
-
-
-The Id of the Cm_Activity created for this task. NULL means that activity is still not created
 
 
 The Id of the Cm_Activity created for this task. NULL means that activity is still not created
@@ -580,9 +501,8 @@ The Id of the Cm_Activity created for this task. NULL means that activity is sti
 |Referenced Table|[Cm_Activities](Cm_Activities.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Activity_Id](Prj_Project_Tasks.md#activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -605,15 +525,9 @@ The Id of the Cm_Activity created for this task. NULL means that activity is sti
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Project_Task_No
-
-
-Project_Task_No
-
-
-Consecutive task number, unique within the project.
 
 
 Consecutive task number, unique within the project.
@@ -626,10 +540,9 @@ Consecutive task number, unique within the project.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Project_Task_No](Prj_Project_Tasks.md#project_task_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -651,12 +564,6 @@ Consecutive task number, unique within the project.
 ### Task_Type_Id
 
 
-Task_Type_Id
-
-
-The type of the task. Determines the work type of the tasks, default billing rules, etc.
-
-
 The type of the task. Determines the work type of the tasks, default billing rules, etc.
 
 | Property | Value |
@@ -668,9 +575,8 @@ The type of the task. Determines the work type of the tasks, default billing rul
 |Referenced Table|[Prj_Task_Types](Prj_Task_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Task_Type_Id](Prj_Project_Tasks.md#task_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -693,12 +599,9 @@ The type of the task. Determines the work type of the tasks, default billing rul
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -708,9 +611,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Project_Tasks](Prj_Project_Tasks.md).[Row_Version](Prj_Project_Tasks.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

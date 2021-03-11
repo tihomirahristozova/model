@@ -1,5 +1,10 @@
 # Table Wf_Processes
 
+
+## Entity
+
+Entity: [Systems.Workflow.Processes](~/entities/Systems.Workflow.Processes.md)
+
 Contains the business process diagrams. Entity: Wf_Processes
 
 ## Summary
@@ -8,7 +13,7 @@ Contains the business process diagrams. Entity: Wf_Processes
 | - | - | --- |
 |[Process_Id](#process_id)|`uniqueidentifier` `PK`||
 |[Process_Name](#process_name)|`nvarchar(128)` `ML`||
-|[Schema_Layout](#schema_layout)|`nvarchar(2147483647)` |Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.|
+|[Schema_Layout](#schema_layout)|`nvarchar(max)` |Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.|
 |[Schema_Format](#schema_format)|`nvarchar(1)` |Application specific format of the Schema Layout.|
 |[Thumbnail](#thumbnail)|`varbinary` |Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.|
 |[Creation_Time](#creation_time)|`datetime` Readonly||
@@ -25,9 +30,6 @@ Contains the business process diagrams. Entity: Wf_Processes
 
 ### Process_Id
 
-
-Process_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +39,8 @@ Process_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Process_Id](Wf_Processes.md#process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,12 +63,9 @@ Process_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Process_Name
-
-
-Process_Name
 
 | Property | Value |
 | - | - |
@@ -78,9 +76,8 @@ Process_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Process_Name](Wf_Processes.md#process_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,32 +100,25 @@ Process_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Schema_Layout
-
-
-Schema_Layout
-
-
-Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.
 
 
 Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|no|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Schema_Layout](Wf_Processes.md#schema_layout)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,12 +140,6 @@ Contains the actual presentation layout of the business process. The layout is s
 ### Schema_Format
 
 
-Schema_Format
-
-
-Application specific format of the Schema Layout.
-
-
 Application specific format of the Schema Layout.
 
 | Property | Value |
@@ -167,9 +151,8 @@ Application specific format of the Schema Layout.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|D|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Schema_Format](Wf_Processes.md#schema_format)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,12 +174,6 @@ Application specific format of the Schema Layout.
 ### Thumbnail
 
 
-Thumbnail
-
-
-Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.
-
-
 Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.
 
 | Property | Value |
@@ -207,9 +184,8 @@ Contains the visual thumbnail of the presentation of the business process. It is
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Thumbnail](Wf_Processes.md#thumbnail)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,9 +206,6 @@ Contains the visual thumbnail of the presentation of the business process. It is
 
 ### Creation_Time
 
-
-Creation_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -242,9 +215,8 @@ Creation_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Creation_Time](Wf_Processes.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -265,9 +237,6 @@ Creation_Time
 
 ### Creation_User
 
-
-Creation_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -277,9 +246,8 @@ Creation_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Creation_User](Wf_Processes.md#creation_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -300,9 +268,6 @@ Creation_User
 
 ### Update_Time
 
-
-Update_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -312,9 +277,8 @@ Update_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Update_Time](Wf_Processes.md#update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -335,9 +299,6 @@ Update_Time
 
 ### Update_User
 
-
-Update_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -347,9 +308,8 @@ Update_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Update_User](Wf_Processes.md#update_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -370,9 +330,6 @@ Update_User
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(2000)|
@@ -382,9 +339,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Notes](Wf_Processes.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -406,12 +362,6 @@ Notes
 ### Is_Landscape
 
 
-Is_Landscape
-
-
-Specifies whether the process diagram is intended to be viewed in landscape mode.
-
-
 Specifies whether the process diagram is intended to be viewed in landscape mode.
 
 | Property | Value |
@@ -422,9 +372,8 @@ Specifies whether the process diagram is intended to be viewed in landscape mode
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Is_Landscape](Wf_Processes.md#is_landscape)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -446,12 +395,6 @@ Specifies whether the process diagram is intended to be viewed in landscape mode
 ### Start_Event
 
 
-Start_Event
-
-
-USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process
-
-
 USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process
 
 | Property | Value |
@@ -463,9 +406,8 @@ USR=User created; EML=Email receive (still not supported). NULL means that there
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Start_Event](Wf_Processes.md#start_event)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -487,12 +429,6 @@ USR=User created; EML=Email receive (still not supported). NULL means that there
 ### Start_Role_Id
 
 
-Start_Role_Id
-
-
-When Start_Event='USR' then specifies the role which the user must play in order to start the process. NULL when Start_Event<>'USR'
-
-
 When Start_Event='USR' then specifies the role which the user must play in order to start the process. NULL when Start_Event<>'USR'
 
 | Property | Value |
@@ -503,9 +439,8 @@ When Start_Event='USR' then specifies the role which the user must play in order
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Start_Role_Id](Wf_Processes.md#start_role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -528,12 +463,9 @@ When Start_Event='USR' then specifies the role which the user must play in order
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -543,9 +475,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wf_Processes](Wf_Processes.md).[Row_Version](Wf_Processes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

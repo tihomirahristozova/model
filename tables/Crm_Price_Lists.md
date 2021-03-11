@@ -1,5 +1,10 @@
 # Table Crm_Price_Lists
 
+
+## Entity
+
+Entity: [Crm.PriceLists](~/entities/Crm.PriceLists.md)
+
 Price Lists are used to manage multiple price records, assign to customers, etc. Entity: Crm_Price_Lists
 
 ## Summary
@@ -11,15 +16,12 @@ Price Lists are used to manage multiple price records, assign to customers, etc.
 |[From_Date](#from_date)|`datetime` |Starting validity of the price list|
 |[Thru_Date](#thru_date)|`datetime` |Ending validity of the price list|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Price_List_Id
-
-
-Price_List_Id
 
 | Property | Value |
 | - | - |
@@ -30,9 +32,8 @@ Price_List_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Price_Lists](Crm_Price_Lists.md).[Price_List_Id](Crm_Price_Lists.md#price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,12 +56,9 @@ Price_List_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Price_List_Name
-
-
-Price_List_Name
 
 | Property | Value |
 | - | - |
@@ -71,9 +69,8 @@ Price_List_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Price_Lists](Crm_Price_Lists.md).[Price_List_Name](Crm_Price_Lists.md#price_list_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -96,18 +93,12 @@ Price_List_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### From_Date
 
 
-From_Date
-
-
-Starting validity of the price list
-
-
 Starting validity of the price list
 
 | Property | Value |
@@ -119,9 +110,8 @@ Starting validity of the price list
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Price_Lists](Crm_Price_Lists.md).[From_Date](Crm_Price_Lists.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,18 +134,12 @@ Starting validity of the price list
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Thru_Date
 
 
-Thru_Date
-
-
-Ending validity of the price list
-
-
 Ending validity of the price list
 
 | Property | Value |
@@ -167,9 +151,8 @@ Ending validity of the price list
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Price_Lists](Crm_Price_Lists.md).[Thru_Date](Crm_Price_Lists.md#thru_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,13 +175,10 @@ Ending validity of the price list
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -209,9 +189,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Price_Lists](Crm_Price_Lists.md).[Enterprise_Company_Id](Crm_Price_Lists.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,25 +213,21 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Price_Lists](Crm_Price_Lists.md).[Description](Crm_Price_Lists.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -273,9 +248,6 @@ Description
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -284,9 +256,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Price_Lists](Crm_Price_Lists.md).[Row_Version](Crm_Price_Lists.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Log_Logistic_Units
 
+
+## Entity
+
+Entity: [Logistics.LogisticUnits](~/entities/Logistics.LogisticUnits.md)
+
 Composition of products established for transport and/or storage which needs to be managed through the supply chain. Entity: Log_Logistic_Units (Introduced in version 21.1.0.77)
 
 ## Summary
@@ -12,16 +17,13 @@ Composition of products established for transport and/or storage which needs to 
 |[Expected_Weight](#expected_weight)|`decimal(12, 3)` |Expected weight in KG. Used for planning purposes. NULL means unknown.|
 |[Measured_Weight](#measured_weight)|`decimal(12, 3)` |Actual measured weight of the unit in KG. NULL means unknown.|
 |[Cargo_Type_Id](#cargo_type_id)|`uniqueidentifier` |General type of the cargo of the logistic unit. NULL means unknown or N/A.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Represented_As_Product_Id](#represented_as_product_id)|`uniqueidentifier` |When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Logistic_Unit_Id
-
-
-Logistic_Unit_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Logistic_Unit_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Logistic_Unit_Id](Log_Logistic_Units.md#logistic_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Logistic_Unit_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Serial_Code
-
-
-Serial_Code
-
-
-Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.
 
 
 Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.
@@ -79,9 +74,8 @@ Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Serial_Code](Log_Logistic_Units.md#serial_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,16 +98,10 @@ Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Logistic_Unit_Type_Id
-
-
-Logistic_Unit_Type_Id
-
-
-The type of the logistic unit. NULL means the type is currently unknown.
 
 
 The type of the logistic unit. NULL means the type is currently unknown.
@@ -127,9 +115,8 @@ The type of the logistic unit. NULL means the type is currently unknown.
 |Referenced Table|[Log_Logistic_Unit_Types](Log_Logistic_Unit_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Logistic_Unit_Type_Id](Log_Logistic_Units.md#logistic_unit_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The type of the logistic unit. NULL means the type is currently unknown.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Expected_Weight
-
-
-Expected_Weight
-
-
-Expected weight in KG. Used for planning purposes. NULL means unknown.
 
 
 Expected weight in KG. Used for planning purposes. NULL means unknown.
@@ -173,9 +154,8 @@ Expected weight in KG. Used for planning purposes. NULL means unknown.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Expected_Weight](Log_Logistic_Units.md#expected_weight)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,18 +178,12 @@ Expected weight in KG. Used for planning purposes. NULL means unknown.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|yes|
 
 ### Measured_Weight
 
 
-Measured_Weight
-
-
-Actual measured weight of the unit in KG. NULL means unknown.
-
-
 Actual measured weight of the unit in KG. NULL means unknown.
 
 | Property | Value |
@@ -220,9 +194,8 @@ Actual measured weight of the unit in KG. NULL means unknown.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Measured_Weight](Log_Logistic_Units.md#measured_weight)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -245,16 +218,10 @@ Actual measured weight of the unit in KG. NULL means unknown.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|yes|
 
 ### Cargo_Type_Id
-
-
-Cargo_Type_Id
-
-
-General type of the cargo of the logistic unit. NULL means unknown or N/A.
 
 
 General type of the cargo of the logistic unit. NULL means unknown or N/A.
@@ -268,9 +235,8 @@ General type of the cargo of the logistic unit. NULL means unknown or N/A.
 |Referenced Table|[Log_Cargo_Types](Log_Cargo_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Cargo_Type_Id](Log_Logistic_Units.md#cargo_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,25 +259,21 @@ General type of the cargo of the logistic unit. NULL means unknown or N/A.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Notes](Log_Logistic_Units.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -339,12 +301,6 @@ Notes
 ### Represented_As_Product_Id
 
 
-Represented_As_Product_Id
-
-
-When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item.
-
-
 When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item.
 
 | Property | Value |
@@ -356,9 +312,8 @@ When the logistic unit is also a tradeable item, specifies the product used to t
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Represented_As_Product_Id](Log_Logistic_Units.md#represented_as_product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -381,12 +336,9 @@ When the logistic unit is also a tradeable item, specifies the product used to t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -396,9 +348,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Units](Log_Logistic_Units.md).[Row_Version](Log_Logistic_Units.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

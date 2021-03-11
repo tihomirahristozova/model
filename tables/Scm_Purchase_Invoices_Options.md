@@ -1,5 +1,10 @@
 # Table Scm_Purchase_Invoices_Options
 
+
+## Entity
+
+Entity: [Logistics.Procurement.PurchaseInvoicesOptions](~/entities/Logistics.Procurement.PurchaseInvoicesOptions.md)
+
 Contains purchase invoice specific options for the different document types. Entity: Scm_Purchase_Invoices_Options
 
 ## Summary
@@ -16,9 +21,6 @@ Contains purchase invoice specific options for the different document types. Ent
 
 ### Purchese_Invoices_Option_Id
 
-
-Purchese_Invoices_Option_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Purchese_Invoices_Option_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Scm_Purchase_Invoices_Options](Scm_Purchase_Invoices_Options.md).[Purchese_Invoices_Option_Id](Scm_Purchase_Invoices_Options.md#purchese_invoices_option_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Purchese_Invoices_Option_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type, for which the options are specified.
 
 
 The document type, for which the options are specified.
@@ -75,9 +70,8 @@ The document type, for which the options are specified.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices_Options](Scm_Purchase_Invoices_Options.md).[Document_Type_Id](Scm_Purchase_Invoices_Options.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +94,9 @@ The document type, for which the options are specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Sign_Restriction
-
-
-Sign_Restriction
-
-
-This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type.
 
 
 This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type.
@@ -121,10 +109,9 @@ This option can restrict the sign of the Line Amounts for each detail line in pu
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`-1`, `0`, `1`|
 |Default Value|0|
-|Derived From|[Scm_Purchase_Invoices_Options](Scm_Purchase_Invoices_Options.md).[Sign_Restriction](Scm_Purchase_Invoices_Options.md#sign_restriction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +133,6 @@ This option can restrict the sign of the Line Amounts for each detail line in pu
 ### Total_Amount_Sign_Restriction
 
 
-Total_Amount_Sign_Restriction
-
-
-This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release.
-
-
 This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release.
 
 | Property | Value |
@@ -162,10 +143,9 @@ This option can restrict the sign of the Total Amounts of the purchase invoices 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`-1`, `0`, `1`|
 |Default Value|0|
-|Derived From|[Scm_Purchase_Invoices_Options](Scm_Purchase_Invoices_Options.md).[Total_Amount_Sign_Restriction](Scm_Purchase_Invoices_Options.md#total_amount_sign_restriction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,9 +166,6 @@ This option can restrict the sign of the Total Amounts of the purchase invoices 
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -197,9 +174,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Scm_Purchase_Invoices_Options](Scm_Purchase_Invoices_Options.md).[Row_Version](Scm_Purchase_Invoices_Options.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

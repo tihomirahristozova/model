@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_report_queries">Table Gen_Report_Queries</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.ReportQueries.html">General.ReportQueries</a></p>
 <p>Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#filter_xml">Filter_Xml</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Filter for the loaded table</td>
 </tr>
 <tr>
@@ -141,7 +143,7 @@
 </tr>
 <tr>
 <td><a href="#extensions_list">Extensions_List</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>A comma separated list of report extension names. An extension is set of additional fields that participate in the query</td>
 </tr>
 <tr>
@@ -153,7 +155,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="report_query_id">Report_Query_Id</h3>
-<p>Report_Query_Id</p>
 <table>
 <thead>
 <tr>
@@ -192,15 +193,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#report_query_id">Report_Query_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -285,14 +282,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="report_id">Report_Id</h3>
-<p>Report_Id</p>
 <table>
 <thead>
 <tr>
@@ -331,15 +327,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#report_id">Report_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -424,15 +416,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="reference_path">Reference_Path</h3>
-<p>Reference_Path</p>
-<p>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document.</p>
 <p>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document.</p>
 <table>
 <thead>
@@ -472,15 +462,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#reference_path">Reference_Path</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -553,8 +539,6 @@
 </tbody>
 </table>
 <h3 id="unique_name">Unique_Name</h3>
-<p>Unique_Name</p>
-<p>The name of the data table in the printout datasource. If NULL the Reference_Path is used.</p>
 <p>The name of the data table in the printout datasource. If NULL the Reference_Path is used.</p>
 <table>
 <thead>
@@ -594,15 +578,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#unique_name">Unique_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -675,8 +655,6 @@
 </tbody>
 </table>
 <h3 id="show_text_columns">Show_Text_Columns</h3>
-<p>Show_Text_Columns</p>
-<p>True to include text descriptions for certain columns.</p>
 <p>True to include text descriptions for certain columns.</p>
 <table>
 <thead>
@@ -712,15 +690,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#show_text_columns">Show_Text_Columns</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -793,8 +767,6 @@
 </tbody>
 </table>
 <h3 id="show_custom_properties">Show_Custom_Properties</h3>
-<p>Show_Custom_Properties</p>
-<p>True to include the custom properties.</p>
 <p>True to include the custom properties.</p>
 <table>
 <thead>
@@ -830,15 +802,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#show_custom_properties">Show_Custom_Properties</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -911,8 +879,6 @@
 </tbody>
 </table>
 <h3 id="filter_xml">Filter_Xml</h3>
-<p>Filter_Xml</p>
-<p>Filter for the loaded table</p>
 <p>Filter for the loaded table</p>
 <table>
 <thead>
@@ -924,7 +890,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -952,15 +918,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#filter_xml">Filter_Xml</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1033,8 +995,6 @@
 </tbody>
 </table>
 <h3 id="table_name">Table_Name</h3>
-<p>Table_Name</p>
-<p>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.</p>
 <p>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.</p>
 <table>
 <thead>
@@ -1074,15 +1034,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#table_name">Table_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1155,8 +1111,6 @@
 </tbody>
 </table>
 <h3 id="depends_on_child_rows">Depends_On_Child_Rows</h3>
-<p>Depends_On_Child_Rows</p>
-<p>If True the data in the current report table contains only the rows that have child rows in sub-tables.</p>
 <p>If True the data in the current report table contains only the rows that have child rows in sub-tables.</p>
 <table>
 <thead>
@@ -1192,15 +1146,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#depends_on_child_rows">Depends_On_Child_Rows</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1273,8 +1223,6 @@
 </tbody>
 </table>
 <h3 id="extensions_list">Extensions_List</h3>
-<p>Extensions_List</p>
-<p>A comma separated list of report extension names. An extension is set of additional fields that participate in the query</p>
 <p>A comma separated list of report extension names. An extension is set of additional fields that participate in the query</p>
 <table>
 <thead>
@@ -1286,7 +1234,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1314,15 +1262,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#extensions_list">Extensions_List</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1395,7 +1339,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1430,15 +1373,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Report_Queries.html">Gen_Report_Queries</a>.<a href="Gen_Report_Queries.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

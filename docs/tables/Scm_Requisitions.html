@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-scm_requisitions">Table Scm_Requisitions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Procurement.Requisitions.html">Logistics.Procurement.Requisitions</a></p>
 <p>Contains the internal requisitions for products. Requisitions are consolidated by the purchase department into purchase orders. Entity: Scm_Requisitions</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="requisition_id">Requisition_Id</h3>
-<p>Requisition_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisitions.html">Scm_Requisitions</a>.<a href="Scm_Requisitions.html#requisition_id">Requisition_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,14 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -321,15 +317,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisitions.html">Scm_Requisitions</a>.<a href="Scm_Requisitions.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -414,15 +406,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="store_id">Store_Id</h3>
-<p>Store_Id</p>
-<p>The store in which the products are needed.</p>
 <p>The store in which the products are needed.</p>
 <table>
 <thead>
@@ -462,15 +452,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisitions.html">Scm_Requisitions</a>.<a href="Scm_Requisitions.html#store_id">Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -555,15 +541,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="requested_by_party_id">Requested_By_Party_Id</h3>
-<p>Requested_By_Party_Id</p>
-<p>The party, which is requesting the purchase order.</p>
 <p>The party, which is requesting the purchase order.</p>
 <table>
 <thead>
@@ -603,15 +587,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisitions.html">Scm_Requisitions</a>.<a href="Scm_Requisitions.html#requested_by_party_id">Requested_By_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -696,15 +676,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="required_delivery_date">Required_Delivery_Date</h3>
-<p>Required_Delivery_Date</p>
-<p>When not null, specifies the required delivery date for all lines.</p>
 <p>When not null, specifies the required delivery date for all lines.</p>
 <table>
 <thead>
@@ -744,15 +722,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisitions.html">Scm_Requisitions</a>.<a href="Scm_Requisitions.html#required_delivery_date">Required_Delivery_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -844,7 +818,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -883,15 +856,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Documents.html">Gen_Documents</a>.<a href="Gen_Documents.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -964,8 +933,6 @@
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1001,15 +968,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisitions.html">Scm_Requisitions</a>.<a href="Scm_Requisitions.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1094,15 +1057,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -1138,15 +1099,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisitions.html">Scm_Requisitions</a>.<a href="Scm_Requisitions.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1231,14 +1188,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1273,15 +1229,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisitions.html">Scm_Requisitions</a>.<a href="Scm_Requisitions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

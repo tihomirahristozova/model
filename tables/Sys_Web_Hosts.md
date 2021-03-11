@@ -1,5 +1,10 @@
 # Table Sys_Web_Hosts
 
+
+## Entity
+
+Entity: [Systems.Core.WebHosts](~/entities/Systems.Core.WebHosts.md)
+
 Contains the names and https certificates of the different host names used to host sites. Entity: Sys_Web_Hosts (Introduced in version 19.1)
 
 ## Summary
@@ -7,21 +12,18 @@ Contains the names and https certificates of the different host names used to ho
 | Name | Type | Description |
 | - | - | --- |
 |[Web_Host_Id](#web_host_id)|`uniqueidentifier` `PK`||
-|[Web_Host_Name](#web_host_name)|`nvarchar(2147483647)` |The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.|
+|[Web_Host_Name](#web_host_name)|`nvarchar(max)` |The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.|
 |[Certificate_Type](#certificate_type)|`nvarchar(3)` |The type of certificate uploaded. Currently, only PFX is supported.|
 |[Certificate_Original_Filename](#certificate_original_filename)|`nvarchar(254)` |The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.|
 |[Certificate_Contents](#certificate_contents)|`varbinary` |The contents of the web host certificate. NULL means to use the server system certificate.|
-|[Certificate_Password](#certificate_password)|`nvarchar(2147483647)` |The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.|
+|[Certificate_Password](#certificate_password)|`nvarchar(max)` |The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.|
 |[Certificate_Expiry_Date](#certificate_expiry_date)|`date` |The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Web_Host_Id
-
-
-Web_Host_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Web_Host_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Web_Host_Id](Sys_Web_Hosts.md#web_host_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,31 +58,24 @@ Web_Host_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Web_Host_Name
-
-
-Web_Host_Name
-
-
-The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.
 
 
 The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|no|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Web_Host_Name](Sys_Web_Hosts.md#web_host_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,16 +98,10 @@ The unique Internet name of the host. Should NOT include protocol name and shoul
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Certificate_Type
-
-
-Certificate_Type
-
-
-The type of certificate uploaded. Currently, only PFX is supported.
 
 
 The type of certificate uploaded. Currently, only PFX is supported.
@@ -127,9 +115,8 @@ The type of certificate uploaded. Currently, only PFX is supported.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|PFX|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Certificate_Type](Sys_Web_Hosts.md#certificate_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The type of certificate uploaded. Currently, only PFX is supported.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Certificate_Original_Filename
-
-
-Certificate_Original_Filename
-
-
-The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.
 
 
 The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.
@@ -174,9 +155,8 @@ The original name of the file, used to upload the certificate. Used only for ref
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Certificate_Original_Filename](Sys_Web_Hosts.md#certificate_original_filename)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,16 +179,10 @@ The original name of the file, used to upload the certificate. Used only for ref
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Certificate_Contents
-
-
-Certificate_Contents
-
-
-The contents of the web host certificate. NULL means to use the server system certificate.
 
 
 The contents of the web host certificate. NULL means to use the server system certificate.
@@ -221,9 +195,8 @@ The contents of the web host certificate. NULL means to use the server system ce
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Certificate_Contents](Sys_Web_Hosts.md#certificate_contents)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -245,26 +218,19 @@ The contents of the web host certificate. NULL means to use the server system ce
 ### Certificate_Password
 
 
-Certificate_Password
-
-
-The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.
-
-
 The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Certificate_Password](Sys_Web_Hosts.md#certificate_password)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,12 +252,6 @@ The password, which should be used to decrypt the certificate. NULL when the cer
 ### Certificate_Expiry_Date
 
 
-Certificate_Expiry_Date
-
-
-The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.
-
-
 The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.
 
 | Property | Value |
@@ -303,9 +263,8 @@ The expiry date of the certificate. Can be used to track the expiration of the w
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Certificate_Expiry_Date](Sys_Web_Hosts.md#certificate_expiry_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -328,25 +287,21 @@ The expiry date of the certificate. Can be used to track the expiration of the w
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Notes](Sys_Web_Hosts.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -367,9 +322,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -378,9 +330,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Hosts](Sys_Web_Hosts.md).[Row_Version](Sys_Web_Hosts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

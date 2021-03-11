@@ -9,19 +9,13 @@
 |[Operation_System_User](#operation_system_user)|`nvarchar(256)` `PK`|Not used.|
 |[Operation_Time](#operation_time)|`datetime` `PK`|Not used.|
 |[Operation_Type](#operation_type)|`nvarchar(10)` `PK`|The type of operation - I=INSERT, D=DELETE, U=UPDATE|
-|[Old_Values_XML](#old_values_xml)|`nvarchar(2147483647)` |Values of the document columns (without BLOBs) before the operation |
-|[New_Values_XML](#new_values_xml)|`nvarchar(2147483647)` |The new values of the columns|
+|[Old_Values_XML](#old_values_xml)|`nvarchar(max)` |Values of the document columns (without BLOBs) before the operation |
+|[New_Values_XML](#new_values_xml)|`nvarchar(max)` |The new values of the columns|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Object_Id
-
-
-Object_Id
-
-
-The Id of the affected object
 
 
 The Id of the affected object
@@ -35,9 +29,8 @@ The Id of the affected object
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log](Sys_Audit_Log.md).[Object_Id](Sys_Audit_Log.md#object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +53,9 @@ The Id of the affected object
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Operation_System_User
-
-
-Operation_System_User
-
-
-Not used.
 
 
 Not used.
@@ -83,9 +70,8 @@ Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log](Sys_Audit_Log.md).[Operation_System_User](Sys_Audit_Log.md#operation_system_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +94,9 @@ Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Operation_Time
-
-
-Operation_Time
-
-
-Not used.
 
 
 Not used.
@@ -131,9 +111,8 @@ Not used.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Sys_Audit_Log](Sys_Audit_Log.md).[Operation_Time](Sys_Audit_Log.md#operation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,12 +134,6 @@ Not used.
 ### Operation_Type
 
 
-Operation_Type
-
-
-The type of operation - I=INSERT, D=DELETE, U=UPDATE
-
-
 The type of operation - I=INSERT, D=DELETE, U=UPDATE
 
 | Property | Value |
@@ -173,9 +146,8 @@ The type of operation - I=INSERT, D=DELETE, U=UPDATE
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log](Sys_Audit_Log.md).[Operation_Type](Sys_Audit_Log.md#operation_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -197,26 +169,19 @@ The type of operation - I=INSERT, D=DELETE, U=UPDATE
 ### Old_Values_XML
 
 
-Old_Values_XML
-
-
-Values of the document columns (without BLOBs) before the operation 
-
-
 Values of the document columns (without BLOBs) before the operation 
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log](Sys_Audit_Log.md).[Old_Values_XML](Sys_Audit_Log.md#old_values_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,26 +203,19 @@ Values of the document columns (without BLOBs) before the operation
 ### New_Values_XML
 
 
-New_Values_XML
-
-
-The new values of the columns
-
-
 The new values of the columns
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log](Sys_Audit_Log.md).[New_Values_XML](Sys_Audit_Log.md#new_values_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -278,9 +236,6 @@ The new values of the columns
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -289,9 +244,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Audit_Log](Sys_Audit_Log.md).[Row_Version](Sys_Audit_Log.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

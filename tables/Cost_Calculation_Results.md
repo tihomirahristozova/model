@@ -1,5 +1,10 @@
 # Table Cost_Calculation_Results
 
+
+## Entity
+
+Entity: [Finance.Cost.CalculationResults](~/entities/Finance.Cost.CalculationResults.md)
+
 Contains the results of cost calculations. Entity: Cost_Calculation_Results
 
 ## Owner Tables Hierarchy
@@ -29,12 +34,6 @@ Contains the results of cost calculations. Entity: Cost_Calculation_Results
 ### Line_No
 
 
-Line_No
-
-
-Consecutive number of the line within the calculation
-
-
 Consecutive number of the line within the calculation
 
 | Property | Value |
@@ -45,10 +44,9 @@ Consecutive number of the line within the calculation
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Line_No](Cost_Calculation_Results.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -69,9 +67,6 @@ Consecutive number of the line within the calculation
 
 ### Calculation_Result_Id
 
-
-Calculation_Result_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -81,9 +76,8 @@ Calculation_Result_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Calculation_Result_Id](Cost_Calculation_Results.md#calculation_result_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,12 +100,9 @@ Calculation_Result_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Calculation_Id
-
-
-Calculation_Id
 
 | Property | Value |
 | - | - |
@@ -122,9 +113,8 @@ Calculation_Id
 |Referenced Table|[Cost_Calculations](Cost_Calculations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Calculation_Id](Cost_Calculation_Results.md#calculation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ Calculation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Id
-
-
-Project_Id
-
-
-The Project to which the cost was allocated. When NULL, the cost was not allocated to any specific Project.
 
 
 The Project to which the cost was allocated. When NULL, the cost was not allocated to any specific Project.
@@ -168,9 +152,8 @@ The Project to which the cost was allocated. When NULL, the cost was not allocat
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Project_Id](Cost_Calculation_Results.md#project_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,15 +176,9 @@ The Project to which the cost was allocated. When NULL, the cost was not allocat
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sales_Order_Id
-
-
-Sales_Order_Id
-
-
-The Sales Order to which the cost was allocated. When NULL, the cost was not allocated to any specific Sales Order.
 
 
 The Sales Order to which the cost was allocated. When NULL, the cost was not allocated to any specific Sales Order.
@@ -215,9 +192,8 @@ The Sales Order to which the cost was allocated. When NULL, the cost was not all
 |Referenced Table|[Crm_Sales_Orders](Crm_Sales_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Sales_Order_Id](Cost_Calculation_Results.md#sales_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -240,15 +216,9 @@ The Sales Order to which the cost was allocated. When NULL, the cost was not all
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The Product to which the cost was allocated. When NULL, the cost was not allocated to any specific Product.
 
 
 The Product to which the cost was allocated. When NULL, the cost was not allocated to any specific Product.
@@ -262,9 +232,8 @@ The Product to which the cost was allocated. When NULL, the cost was not allocat
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Product_Id](Cost_Calculation_Results.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -287,15 +256,9 @@ The Product to which the cost was allocated. When NULL, the cost was not allocat
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Lot_Id
-
-
-Lot_Id
-
-
-The Lot to which the cost was allocated. When NULL, the cost was not allocated to any specific Lot.
 
 
 The Lot to which the cost was allocated. When NULL, the cost was not allocated to any specific Lot.
@@ -309,9 +272,8 @@ The Lot to which the cost was allocated. When NULL, the cost was not allocated t
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Lot_Id](Cost_Calculation_Results.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,15 +296,9 @@ The Lot to which the cost was allocated. When NULL, the cost was not allocated t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Profit_Center_Id
-
-
-Profit_Center_Id
-
-
-The Profit Center to which the cost was allocated. When NULL, the cost was not allocated to any specific Profit Center.
 
 
 The Profit Center to which the cost was allocated. When NULL, the cost was not allocated to any specific Profit Center.
@@ -356,9 +312,8 @@ The Profit Center to which the cost was allocated. When NULL, the cost was not a
 |Referenced Table|[Acc_Profit_Centers](Acc_Profit_Centers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Profit_Center_Id](Cost_Calculation_Results.md#profit_center_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -381,15 +336,9 @@ The Profit Center to which the cost was allocated. When NULL, the cost was not a
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Workgroup_Id
-
-
-Workgroup_Id
-
-
-The Workgroup to which the cost was allocated. When NULL, the cost was not allocated to any specific Workgroup.
 
 
 The Workgroup to which the cost was allocated. When NULL, the cost was not allocated to any specific Workgroup.
@@ -403,9 +352,8 @@ The Workgroup to which the cost was allocated. When NULL, the cost was not alloc
 |Referenced Table|[Prd_Workgroups](Prd_Workgroups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Workgroup_Id](Cost_Calculation_Results.md#workgroup_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -428,15 +376,9 @@ The Workgroup to which the cost was allocated. When NULL, the cost was not alloc
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The quantity of the product
 
 
 The quantity of the product
@@ -449,9 +391,8 @@ The quantity of the product
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Quantity](Cost_Calculation_Results.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -473,12 +414,6 @@ The quantity of the product
 ### Full_Cost
 
 
-Full_Cost
-
-
-The full cost of the specified quantity
-
-
 The full cost of the specified quantity
 
 | Property | Value |
@@ -489,9 +424,8 @@ The full cost of the specified quantity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Full_Cost](Cost_Calculation_Results.md#full_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -512,9 +446,6 @@ The full cost of the specified quantity
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -523,9 +454,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Calculation_Results](Cost_Calculation_Results.md).[Row_Version](Cost_Calculation_Results.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

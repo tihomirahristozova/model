@@ -1,5 +1,10 @@
 # Table Crm_Campaigns
 
+
+## Entity
+
+Entity: [Crm.Marketing.Campaigns](~/entities/Crm.Marketing.Campaigns.md)
+
 Marketing campaigns. Used to treat target groups with marketing messages, plan budgets and marketing activities. Entity: Crm_Campaigns
 
 ## Summary
@@ -18,9 +23,6 @@ Marketing campaigns. Used to treat target groups with marketing messages, plan b
 
 ### Campaign_Id
 
-
-Campaign_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -30,9 +32,8 @@ Campaign_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Campaigns](Crm_Campaigns.md).[Campaign_Id](Crm_Campaigns.md#campaign_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Campaign_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Campaign_Name
-
-
-Campaign_Name
-
-
-Short name of the campaign
 
 
 Short name of the campaign
@@ -77,9 +72,8 @@ Short name of the campaign
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Campaigns](Crm_Campaigns.md).[Campaign_Name](Crm_Campaigns.md#campaign_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,12 +101,6 @@ Short name of the campaign
 ### Description
 
 
-Description
-
-
-Campaign description
-
-
 Campaign description
 
 | Property | Value |
@@ -124,9 +112,8 @@ Campaign description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Campaigns](Crm_Campaigns.md).[Description](Crm_Campaigns.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,12 +135,6 @@ Campaign description
 ### Start_Date
 
 
-Start_Date
-
-
-Starting date of the campaign
-
-
 Starting date of the campaign
 
 | Property | Value |
@@ -165,9 +146,8 @@ Starting date of the campaign
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Crm_Campaigns](Crm_Campaigns.md).[Start_Date](Crm_Campaigns.md#start_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -189,12 +169,6 @@ Starting date of the campaign
 ### End_Date
 
 
-End_Date
-
-
-End date of the campaign. NULL means that the end date is still unknown
-
-
 End date of the campaign. NULL means that the end date is still unknown
 
 | Property | Value |
@@ -206,9 +180,8 @@ End date of the campaign. NULL means that the end date is still unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Campaigns](Crm_Campaigns.md).[End_Date](Crm_Campaigns.md#end_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,12 +203,6 @@ End date of the campaign. NULL means that the end date is still unknown
 ### Forecasted_Cost
 
 
-Forecasted_Cost
-
-
-Forecasted total cost of the campaign
-
-
 Forecasted total cost of the campaign
 
 | Property | Value |
@@ -246,9 +213,8 @@ Forecasted total cost of the campaign
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Campaigns](Crm_Campaigns.md).[Forecasted_Cost](Crm_Campaigns.md#forecasted_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -269,9 +235,6 @@ Forecasted total cost of the campaign
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -280,9 +243,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Campaigns](Crm_Campaigns.md).[Row_Version](Crm_Campaigns.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

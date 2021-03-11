@@ -1,5 +1,10 @@
 # Table Ast_Depreciation_Plan_Templates
 
+
+## Entity
+
+Entity: [Finance.Assets.DepreciationPlanTemplates](~/entities/Finance.Assets.DepreciationPlanTemplates.md)
+
 Specifies the default depreciation methods for the asset categories. Different methods can be specified for each valuation model. Entity: Ast_Depreciation_Plan_Templates
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Specifies the default depreciation methods for the asset categories. Different m
 
 ### Depreciation_Plan_Template_Id
 
-
-Depreciation_Plan_Template_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Depreciation_Plan_Template_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Ast_Depreciation_Plan_Templates](Ast_Depreciation_Plan_Templates.md).[Depreciation_Plan_Template_Id](Ast_Depreciation_Plan_Templates.md#depreciation_plan_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Depreciation_Plan_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Asset_Category_Id
-
-
-Asset_Category_Id
-
-
-Asset category for which this template is defined
 
 
 Asset category for which this template is defined
@@ -80,9 +75,8 @@ Asset category for which this template is defined
 |Referenced Table|[Ast_Asset_Categories](Ast_Asset_Categories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Templates](Ast_Depreciation_Plan_Templates.md).[Asset_Category_Id](Ast_Depreciation_Plan_Templates.md#asset_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ Asset category for which this template is defined
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Valuation_Model_Id
-
-
-Valuation_Model_Id
-
-
-Valuation model for which this template is defined
 
 
 Valuation model for which this template is defined
@@ -127,9 +115,8 @@ Valuation model for which this template is defined
 |Referenced Table|[Ast_Valuation_Models](Ast_Valuation_Models.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Templates](Ast_Depreciation_Plan_Templates.md).[Valuation_Model_Id](Ast_Depreciation_Plan_Templates.md#valuation_model_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ Valuation model for which this template is defined
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Depreciation_Method_Id
-
-
-Depreciation_Method_Id
-
-
-Depreciation method by default for the depreciation plans created by this template
 
 
 Depreciation method by default for the depreciation plans created by this template
@@ -174,9 +155,8 @@ Depreciation method by default for the depreciation plans created by this templa
 |Referenced Table|[Ast_Depreciation_Methods](Ast_Depreciation_Methods.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Templates](Ast_Depreciation_Plan_Templates.md).[Depreciation_Method_Id](Ast_Depreciation_Plan_Templates.md#depreciation_method_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,15 +179,9 @@ Depreciation method by default for the depreciation plans created by this templa
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Asset_Life
-
-
-Asset_Life
-
-
-Asset life in months by default for the depreciation plans created by this template. NULL means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).
 
 
 Asset life in months by default for the depreciation plans created by this template. NULL means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).
@@ -220,9 +194,8 @@ Asset life in months by default for the depreciation plans created by this templ
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Templates](Ast_Depreciation_Plan_Templates.md).[Asset_Life](Ast_Depreciation_Plan_Templates.md#asset_life)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,9 +216,6 @@ Asset life in months by default for the depreciation plans created by this templ
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -254,9 +224,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Ast_Depreciation_Plan_Templates](Ast_Depreciation_Plan_Templates.md).[Row_Version](Ast_Depreciation_Plan_Templates.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

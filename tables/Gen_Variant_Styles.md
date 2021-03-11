@@ -1,5 +1,10 @@
 # Table Gen_Variant_Styles
 
+
+## Entity
+
+Entity: [General.Products.VariantStyles](~/entities/General.Products.VariantStyles.md)
+
 Contains the different styles, which can be assigned to product variants. Entity: Gen_Variant_Styles
 
 ## Summary
@@ -15,9 +20,6 @@ Contains the different styles, which can be assigned to product variants. Entity
 
 ### Variant_Style_Id
 
-
-Variant_Style_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Variant_Style_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Variant_Styles](Gen_Variant_Styles.md).[Variant_Style_Id](Gen_Variant_Styles.md#variant_style_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Variant_Style_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Variant_Style_Code
-
-
-Variant_Style_Code
-
-
-Unique code of the style. Used to generate parts of bar-codes and in other coding schemes.
 
 
 Unique code of the style. Used to generate parts of bar-codes and in other coding schemes.
@@ -74,9 +69,8 @@ Unique code of the style. Used to generate parts of bar-codes and in other codin
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Styles](Gen_Variant_Styles.md).[Variant_Style_Code](Gen_Variant_Styles.md#variant_style_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,13 +93,10 @@ Unique code of the style. Used to generate parts of bar-codes and in other codin
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Variant_Style_Name
-
-
-Variant_Style_Name
 
 | Property | Value |
 | - | - |
@@ -116,9 +107,8 @@ Variant_Style_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Styles](Gen_Variant_Styles.md).[Variant_Style_Name](Gen_Variant_Styles.md#variant_style_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -141,13 +131,10 @@ Variant_Style_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -157,9 +144,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Variant_Styles](Gen_Variant_Styles.md).[Row_Version](Gen_Variant_Styles.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Products
 
+
+## Entity
+
+Entity: [General.Products.Products](~/entities/General.Products.Products.md)
+
 Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products
 
 ## Summary
@@ -11,7 +16,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 |[Product_Group_Id](#product_group_id)|`uniqueidentifier` |The product group, under which the product is categorized.|
 |[Product_Name](#product_name)|`nvarchar(254)` `ML`|Name of the item|
 |[Short_Name](#short_name)|`nvarchar(128)` `ML`|Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.|
-|[Description](#description)|`nvarchar(2147483647)` `ML`|The description of the product|
+|[Description](#description)|`nvarchar(max)` `ML`|The description of the product|
 |[Base_Measurement_Category_Id](#base_measurement_category_id)|`uniqueidentifier` |The base measurement category for quantities of this product.|
 |[Measurement_Unit_Id](#measurement_unit_id)|`uniqueidentifier` |Default measurement unit, when creating new documents with this product.|
 |[Product_Type_Id](#product_type_id)|`uniqueidentifier` |The type of the product. This also defines whether the product is stocked. NULL=no specific product type and the product is stocked|
@@ -23,7 +28,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 |[Minimal_Sales_Price_Per_Lot](#minimal_sales_price_per_lot)|`decimal(18, 4)` |Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.|
 |[Minimal_Sales_Quantity_Base](#minimal_sales_quantity_base)|`decimal(18, 3)` |Minimal base quantity of this product that has to be specified in any sale.|
 |[Show_In_Catalog](#show_in_catalog)|`bit` |Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.|
-|[Catalog_Description_Html](#catalog_description_html)|`nvarchar(2147483647)` |Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.|
+|[Catalog_Description_Html](#catalog_description_html)|`nvarchar(max)` |Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.|
 |[Planning_Demand_Time_Fence_Days](#planning_demand_time_fence_days)|`int` |Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days)|
 |[Planning_Time_Fence_Days](#planning_time_fence_days)|`int` |Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days)|
 |[Planning_Horizon_Days](#planning_horizon_days)|`int` |Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days)|
@@ -58,12 +63,6 @@ Products are the different items in the enterprise, which can be purchased, stor
 ### Id
 
 
-Id
-
-
-Unique id of the item
-
-
 Unique id of the item
 
 | Property | Value |
@@ -75,9 +74,8 @@ Unique id of the item
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Products](Gen_Products.md).[Id](Gen_Products.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +98,9 @@ Unique id of the item
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Part_Number
-
-
-Part_Number
-
-
-Unique part number of the product
 
 
 Unique part number of the product
@@ -122,9 +114,8 @@ Unique part number of the product
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Part_Number](Gen_Products.md#part_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,16 +138,10 @@ Unique part number of the product
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|yes|
 
 ### Product_Group_Id
-
-
-Product_Group_Id
-
-
-The product group, under which the product is categorized.
 
 
 The product group, under which the product is categorized.
@@ -170,9 +155,8 @@ The product group, under which the product is categorized.
 |Referenced Table|[Gen_Product_Groups](Gen_Product_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Product_Group_Id](Gen_Products.md#product_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,15 +179,9 @@ The product group, under which the product is categorized.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Name
-
-
-Product_Name
-
-
-Name of the item
 
 
 Name of the item
@@ -217,9 +195,8 @@ Name of the item
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Product_Name](Gen_Products.md#product_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,16 +219,10 @@ Name of the item
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Short_Name
-
-
-Short_Name
-
-
-Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.
 
 
 Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.
@@ -265,9 +236,8 @@ Short name of the product. Used for space-constrained devices, like mobile phone
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Short_Name](Gen_Products.md#short_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -290,32 +260,25 @@ Short name of the product. Used for space-constrained devices, like mobile phone
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Description
-
-
-Description
-
-
-The description of the product
 
 
 The description of the product
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|yes|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Description](Gen_Products.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -337,12 +300,6 @@ The description of the product
 ### Base_Measurement_Category_Id
 
 
-Base_Measurement_Category_Id
-
-
-The base measurement category for quantities of this product.
-
-
 The base measurement category for quantities of this product.
 
 | Property | Value |
@@ -354,9 +311,8 @@ The base measurement category for quantities of this product.
 |Referenced Table|[Gen_Measurement_Categories](Gen_Measurement_Categories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Base_Measurement_Category_Id](Gen_Products.md#base_measurement_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -379,15 +335,9 @@ The base measurement category for quantities of this product.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Measurement_Unit_Id
-
-
-Measurement_Unit_Id
-
-
-Default measurement unit, when creating new documents with this product.
 
 
 Default measurement unit, when creating new documents with this product.
@@ -401,9 +351,8 @@ Default measurement unit, when creating new documents with this product.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Measurement_Unit_Id](Gen_Products.md#measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -426,15 +375,9 @@ Default measurement unit, when creating new documents with this product.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Type_Id
-
-
-Product_Type_Id
-
-
-The type of the product. This also defines whether the product is stocked. NULL=no specific product type and the product is stocked
 
 
 The type of the product. This also defines whether the product is stocked. NULL=no specific product type and the product is stocked
@@ -448,9 +391,8 @@ The type of the product. This also defines whether the product is stocked. NULL=
 |Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Product_Type_Id](Gen_Products.md#product_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -473,15 +415,9 @@ The type of the product. This also defines whether the product is stocked. NULL=
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Serialized
-
-
-Is_Serialized
-
-
-1 if the parts use/require serial numbers
 
 
 1 if the parts use/require serial numbers
@@ -494,9 +430,8 @@ Is_Serialized
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Products](Gen_Products.md).[Is_Serialized](Gen_Products.md#is_serialized)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -519,12 +454,9 @@ Is_Serialized
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Featured
-
-
-Is_Featured
 
 | Property | Value |
 | - | - |
@@ -534,9 +466,8 @@ Is_Featured
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Products](Gen_Products.md).[Is_Featured](Gen_Products.md#is_featured)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -559,15 +490,9 @@ Is_Featured
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Standard_Price_Per_Lot
-
-
-Standard_Price_Per_Lot
-
-
-Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id
 
 
 Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id
@@ -580,9 +505,8 @@ Standard sales price (used if no special price is defined) for one standard lot 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Products](Gen_Products.md).[Standard_Price_Per_Lot](Gen_Products.md#standard_price_per_lot)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -604,12 +528,6 @@ Standard sales price (used if no special price is defined) for one standard lot 
 ### Standard_Cost_Per_Lot
 
 
-Standard_Cost_Per_Lot
-
-
-Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id
-
-
 Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id
 
 | Property | Value |
@@ -620,9 +538,8 @@ Standard cost for one standard lot of the product in the currency, specified by 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Products](Gen_Products.md).[Standard_Cost_Per_Lot](Gen_Products.md#standard_cost_per_lot)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -644,12 +561,6 @@ Standard cost for one standard lot of the product in the currency, specified by 
 ### Standard_Lot_Size_Base
 
 
-Standard_Lot_Size_Base
-
-
-The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price
-
-
 The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price
 
 | Property | Value |
@@ -660,9 +571,8 @@ The size of a standard lot, expressed in the base measurement unit of the produc
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Products](Gen_Products.md).[Standard_Lot_Size_Base](Gen_Products.md#standard_lot_size_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -684,12 +594,6 @@ The size of a standard lot, expressed in the base measurement unit of the produc
 ### Minimal_Sales_Price_Per_Lot
 
 
-Minimal_Sales_Price_Per_Lot
-
-
-Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.
-
-
 Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.
 
 | Property | Value |
@@ -700,9 +604,8 @@ Minimal allowed price for sales of this product. The price is for one standard l
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Minimal_Sales_Price_Per_Lot](Gen_Products.md#minimal_sales_price_per_lot)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -724,12 +627,6 @@ Minimal allowed price for sales of this product. The price is for one standard l
 ### Minimal_Sales_Quantity_Base
 
 
-Minimal_Sales_Quantity_Base
-
-
-Minimal base quantity of this product that has to be specified in any sale.
-
-
 Minimal base quantity of this product that has to be specified in any sale.
 
 | Property | Value |
@@ -740,9 +637,8 @@ Minimal base quantity of this product that has to be specified in any sale.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Minimal_Sales_Quantity_Base](Gen_Products.md#minimal_sales_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -764,12 +660,6 @@ Minimal base quantity of this product that has to be specified in any sale.
 ### Show_In_Catalog
 
 
-Show_In_Catalog
-
-
-Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.
-
-
 Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.
 
 | Property | Value |
@@ -780,9 +670,8 @@ Specifies whether to show the product in catalogs, referring to the product grou
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Products](Gen_Products.md).[Show_In_Catalog](Gen_Products.md#show_in_catalog)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -805,31 +694,24 @@ Specifies whether to show the product in catalogs, referring to the product grou
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Catalog_Description_Html
-
-
-Catalog_Description_Html
-
-
-Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.
 
 
 Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Catalog_Description_Html](Gen_Products.md#catalog_description_html)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -851,12 +733,6 @@ Full HTML description of the product. Usually used for display on product catalo
 ### Planning_Demand_Time_Fence_Days
 
 
-Planning_Demand_Time_Fence_Days
-
-
-Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days)
-
-
 Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days)
 
 | Property | Value |
@@ -867,9 +743,8 @@ Period in the future, in which changes to the MPS are not accepted due to the hi
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Planning_Demand_Time_Fence_Days](Gen_Products.md#planning_demand_time_fence_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -891,12 +766,6 @@ Period in the future, in which changes to the MPS are not accepted due to the hi
 ### Planning_Time_Fence_Days
 
 
-Planning_Time_Fence_Days
-
-
-Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days)
-
-
 Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days)
 
 | Property | Value |
@@ -907,9 +776,8 @@ Period in the future inside of which changes to the MPS are carefully evaluated 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Planning_Time_Fence_Days](Gen_Products.md#planning_time_fence_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -931,12 +799,6 @@ Period in the future inside of which changes to the MPS are carefully evaluated 
 ### Planning_Horizon_Days
 
 
-Planning_Horizon_Days
-
-
-Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days)
-
-
 Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days)
 
 | Property | Value |
@@ -947,9 +809,8 @@ Number of days in the future for which to plan the demand and supply (NULL = Def
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Planning_Horizon_Days](Gen_Products.md#planning_horizon_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -971,12 +832,6 @@ Number of days in the future for which to plan the demand and supply (NULL = Def
 ### Flushing_Method
 
 
-Flushing_Method
-
-
-Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)
-
-
 Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)
 
 | Property | Value |
@@ -988,10 +843,9 @@ Consumption method for work orders. M=Manual, using Consuption Journals, F=Forwa
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`B`, `F`, `M`|
 |Default Value|M|
-|Derived From|[Gen_Products](Gen_Products.md).[Flushing_Method](Gen_Products.md#flushing_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1013,12 +867,6 @@ Consumption method for work orders. M=Manual, using Consuption Journals, F=Forwa
 ### Manufacturing_Policy
 
 
-Manufacturing_Policy
-
-
-Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order
-
-
 Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order
 
 | Property | Value |
@@ -1030,9 +878,8 @@ Manufacturing policy controls the procurement planing system actions for this pr
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|MTS|
-|Derived From|[Gen_Products](Gen_Products.md).[Manufacturing_Policy](Gen_Products.md#manufacturing_policy)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1054,12 +901,6 @@ Manufacturing policy controls the procurement planing system actions for this pr
 ### ABC_Class
 
 
-ABC_Class
-
-
-Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.
-
-
 Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.
 
 | Property | Value |
@@ -1071,10 +912,9 @@ Product importance classification, where A are the most important and C - the le
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A `, `B `, `C `|
 |Default Value|B |
-|Derived From|[Gen_Products](Gen_Products.md).[ABC_Class](Gen_Products.md#abc_class)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1097,15 +937,9 @@ Product importance classification, where A are the most important and C - the le
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Supply_Schema_Id
-
-
-Supply_Schema_Id
-
-
-The supply schema to use for the distribution of the product among warehouses
 
 
 The supply schema to use for the distribution of the product among warehouses
@@ -1118,9 +952,8 @@ The supply schema to use for the distribution of the product among warehouses
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Supply_Schema_Id](Gen_Products.md#supply_schema_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1143,15 +976,9 @@ The supply schema to use for the distribution of the product among warehouses
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Scrap_Rate
-
-
-Scrap_Rate
-
-
-Default scrap rate for the recipe, when this product is used as ingredient
 
 
 Default scrap rate for the recipe, when this product is used as ingredient
@@ -1164,9 +991,8 @@ Default scrap rate for the recipe, when this product is used as ingredient
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|0|
-|Derived From|[Gen_Products](Gen_Products.md).[Scrap_Rate](Gen_Products.md#scrap_rate)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1188,12 +1014,6 @@ Default scrap rate for the recipe, when this product is used as ingredient
 ### Costing_Method
 
 
-Costing_Method
-
-
-Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost
-
-
 Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost
 
 | Property | Value |
@@ -1205,10 +1025,9 @@ Specifies the costing method for the product. NULL means to use the Enterprise C
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`AVG`, `EXP`, `BLD`|
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Costing_Method](Gen_Products.md#costing_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1230,12 +1049,6 @@ Specifies the costing method for the product. NULL means to use the Enterprise C
 ### Costing_Currency_Id
 
 
-Costing_Currency_Id
-
-
-Specifies the currency to use for cost calculations for the product. When NULL, the base currency for the enterprise company should be used
-
-
 Specifies the currency to use for cost calculations for the product. When NULL, the base currency for the enterprise company should be used
 
 | Property | Value |
@@ -1247,9 +1060,8 @@ Specifies the currency to use for cost calculations for the product. When NULL, 
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Costing_Currency_Id](Gen_Products.md#costing_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1272,15 +1084,9 @@ Specifies the currency to use for cost calculations for the product. When NULL, 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Active
-
-
-Active
-
-
-1 if the product is active, 0 - not to list in combo boxes for choosing in new documents
 
 
 1 if the product is active, 0 - not to list in combo boxes for choosing in new documents
@@ -1293,9 +1099,8 @@ Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Products](Gen_Products.md).[Active](Gen_Products.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1318,15 +1123,9 @@ Active
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Guarantee_Period_Days
-
-
-Guarantee_Period_Days
-
-
-Default guarantee period length in days. 0 means no guarantee. Should be non-NULL for serviced products and NULL for the others
 
 
 Default guarantee period length in days. 0 means no guarantee. Should be non-NULL for serviced products and NULL for the others
@@ -1339,9 +1138,8 @@ Default guarantee period length in days. 0 means no guarantee. Should be non-NUL
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Guarantee_Period_Days](Gen_Products.md#guarantee_period_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1362,9 +1160,6 @@ Default guarantee period length in days. 0 means no guarantee. Should be non-NUL
 
 ### Creation_Time
 
-
-Creation_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -1374,9 +1169,8 @@ Creation_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Creation_Time](Gen_Products.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1403,9 +1197,6 @@ Creation_Time
 
 ### Creation_User
 
-
-Creation_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -1415,9 +1206,8 @@ Creation_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Creation_User](Gen_Products.md#creation_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1444,9 +1234,6 @@ Creation_User
 
 ### Update_Time
 
-
-Update_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -1456,9 +1243,8 @@ Update_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Update_Time](Gen_Products.md#update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1485,9 +1271,6 @@ Update_Time
 
 ### Update_User
 
-
-Update_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -1497,9 +1280,8 @@ Update_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Update_User](Gen_Products.md#update_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1527,12 +1309,6 @@ Update_User
 ### Purchase_Measurement_Unit_Id
 
 
-Purchase_Measurement_Unit_Id
-
-
-Default measurement unit to use, when creating new purchase documents with this product.
-
-
 Default measurement unit to use, when creating new purchase documents with this product.
 
 | Property | Value |
@@ -1544,9 +1320,8 @@ Default measurement unit to use, when creating new purchase documents with this 
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Purchase_Measurement_Unit_Id](Gen_Products.md#purchase_measurement_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1569,15 +1344,9 @@ Default measurement unit to use, when creating new purchase documents with this 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Valuation_Group_Id
-
-
-Valuation_Group_Id
-
-
-Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect.
 
 
 Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect.
@@ -1591,9 +1360,8 @@ Valuation group of the product. Used in reconciliations when compensating pluses
 |Referenced Table|[Inv_Product_Valuation_Groups](Inv_Product_Valuation_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Valuation_Group_Id](Gen_Products.md#valuation_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1616,15 +1384,9 @@ Valuation group of the product. Used in reconciliations when compensating pluses
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Origin_Country_Id
-
-
-Origin_Country_Id
-
-
-Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting.
 
 
 Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting.
@@ -1638,9 +1400,8 @@ Country from which the product originates (in which the product is produced/cult
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Origin_Country_Id](Gen_Products.md#origin_country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1663,12 +1424,9 @@ Country from which the product originates (in which the product is produced/cult
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Intrastat_Commodity_Code_Id
-
-
-Intrastat_Commodity_Code_Id
 
 | Property | Value |
 | - | - |
@@ -1679,9 +1437,8 @@ Intrastat_Commodity_Code_Id
 |Referenced Table|[Its_Commodity_Codes](Its_Commodity_Codes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Commodity_Codes](Its_Commodity_Codes.md).[Intrastat_Commodity_Code_Id](Its_Commodity_Codes.md#intrastat_commodity_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1704,12 +1461,9 @@ Intrastat_Commodity_Code_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Intrastat_Supplementary_Unit_Id
-
-
-Intrastat_Supplementary_Unit_Id
 
 | Property | Value |
 | - | - |
@@ -1720,9 +1474,9 @@ Intrastat_Supplementary_Unit_Id
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Measurement_Units](Gen_Measurement_Units.md).[Id](Gen_Measurement_Units.md#id)|
+|Base Table.Column|[Gen_Measurement_Units](Gen_Measurement_Units.md).[Id](Gen_Measurement_Units.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1745,15 +1499,9 @@ Intrastat_Supplementary_Unit_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Use_Lots
-
-
-Use_Lots
-
-
-Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.
 
 
 Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.
@@ -1767,10 +1515,9 @@ Specifies whether the use of lots for this product in store documents is require
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `N`, `R`|
 |Default Value|A|
-|Derived From|[Gen_Products](Gen_Products.md).[Use_Lots](Gen_Products.md#use_lots)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1792,12 +1539,6 @@ Specifies whether the use of lots for this product in store documents is require
 ### Lots_Issue
 
 
-Lots_Issue
-
-
-Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).
-
-
 Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).
 
 | Property | Value |
@@ -1809,10 +1550,9 @@ Determines the method by which the lots are automatically issued. The method det
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`FIFO`, `FEFO`, `LIFO`|
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Lots_Issue](Gen_Products.md#lots_issue)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1834,12 +1574,6 @@ Determines the method by which the lots are automatically issued. The method det
 ### Expiry_Period_Days
 
 
-Expiry_Period_Days
-
-
-Total default expiry period for the product (in days) from the date of production to the date of expiry
-
-
 Total default expiry period for the product (in days) from the date of production to the date of expiry
 
 | Property | Value |
@@ -1850,9 +1584,8 @@ Total default expiry period for the product (in days) from the date of productio
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Expiry_Period_Days](Gen_Products.md#expiry_period_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1874,12 +1607,6 @@ Total default expiry period for the product (in days) from the date of productio
 ### Enterprise_Company_Id
 
 
-Enterprise_Company_Id
-
-
-When not NULL, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company.
-
-
 When not NULL, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company.
 
 | Property | Value |
@@ -1891,9 +1618,8 @@ When not NULL, specifies that the product is specific to a given enterprise comp
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Enterprise_Company_Id](Gen_Products.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1916,15 +1642,9 @@ When not NULL, specifies that the product is specific to a given enterprise comp
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Allow_Variable_Measurement_Ratios
-
-
-Allow_Variable_Measurement_Ratios
-
-
-Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit.
 
 
 Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit.
@@ -1937,9 +1657,8 @@ Allow variable (dynamic) measurement ratios for each transaction. If specified, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Products](Gen_Products.md).[Allow_Variable_Measurement_Ratios](Gen_Products.md#allow_variable_measurement_ratios)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1962,12 +1681,9 @@ Allow variable (dynamic) measurement ratios for each transaction. If specified, 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -1977,9 +1693,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Row_Version](Gen_Products.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -2001,12 +1716,6 @@ Row_Version
 ### Cargo_Type_Id
 
 
-Cargo_Type_Id
-
-
-Specifies what type of cargo this product is. Required when generating transportation requisitions. NULL means unspecified.
-
-
 Specifies what type of cargo this product is. Required when generating transportation requisitions. NULL means unspecified.
 
 | Property | Value |
@@ -2018,9 +1727,8 @@ Specifies what type of cargo this product is. Required when generating transport
 |Referenced Table|[Log_Cargo_Types](Log_Cargo_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Products](Gen_Products.md).[Cargo_Type_Id](Gen_Products.md#cargo_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -2043,6 +1751,6 @@ Specifies what type of cargo this product is. Required when generating transport
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

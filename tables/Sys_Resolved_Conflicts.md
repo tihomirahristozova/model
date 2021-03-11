@@ -1,5 +1,10 @@
 # Table Sys_Resolved_Conflicts
 
+
+## Entity
+
+Entity: [Systems.Core.ResolvedConflicts](~/entities/Systems.Core.ResolvedConflicts.md)
+
 Contains records of conflicts, which were automatically resolved by update procedures. Entity: Sys_Resolved_Conflicts
 
 ## Summary
@@ -22,12 +27,6 @@ Contains records of conflicts, which were automatically resolved by update proce
 ### Resolved_Conflict_Id
 
 
-Resolved_Conflict_Id
-
-
-Unique identification of the resolved conflict.
-
-
 Unique identification of the resolved conflict.
 
 | Property | Value |
@@ -39,9 +38,8 @@ Unique identification of the resolved conflict.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Resolved_Conflict_Id](Sys_Resolved_Conflicts.md#resolved_conflict_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -64,15 +62,9 @@ Unique identification of the resolved conflict.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### URL
-
-
-URL
-
-
-URL of the item (the row) for which the conflict occurred.
 
 
 URL of the item (the row) for which the conflict occurred.
@@ -86,9 +78,8 @@ URL of the item (the row) for which the conflict occurred.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[URL](Sys_Resolved_Conflicts.md#url)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,12 +101,6 @@ URL of the item (the row) for which the conflict occurred.
 ### Table_Name
 
 
-Table_Name
-
-
-Name of the table in which the conflict has occurred.
-
-
 Name of the table in which the conflict has occurred.
 
 | Property | Value |
@@ -127,9 +112,8 @@ Name of the table in which the conflict has occurred.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Table_Name](Sys_Resolved_Conflicts.md#table_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -157,12 +141,6 @@ Name of the table in which the conflict has occurred.
 ### Conflict_Description
 
 
-Conflict_Description
-
-
-Description of the conflict.
-
-
 Description of the conflict.
 
 | Property | Value |
@@ -174,9 +152,8 @@ Description of the conflict.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Conflict_Description](Sys_Resolved_Conflicts.md#conflict_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,12 +175,6 @@ Description of the conflict.
 ### Resolve_Description
 
 
-Resolve_Description
-
-
-Description of the resolution of the conflict.
-
-
 Description of the resolution of the conflict.
 
 | Property | Value |
@@ -215,9 +186,8 @@ Description of the resolution of the conflict.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Resolve_Description](Sys_Resolved_Conflicts.md#resolve_description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -239,12 +209,6 @@ Description of the resolution of the conflict.
 ### Resolved_Time
 
 
-Resolved_Time
-
-
-Time when the resolution of the conflict was made.
-
-
 Time when the resolution of the conflict was made.
 
 | Property | Value |
@@ -256,9 +220,8 @@ Time when the resolution of the conflict was made.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Resolved_Time](Sys_Resolved_Conflicts.md#resolved_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -280,12 +243,6 @@ Time when the resolution of the conflict was made.
 ### Revised_By_User
 
 
-Revised_By_User
-
-
-True, when the conflict resolution was revised (reviewed) manually by user.
-
-
 True, when the conflict resolution was revised (reviewed) manually by user.
 
 | Property | Value |
@@ -296,9 +253,8 @@ True, when the conflict resolution was revised (reviewed) manually by user.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Revised_By_User](Sys_Resolved_Conflicts.md#revised_by_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -321,15 +277,9 @@ True, when the conflict resolution was revised (reviewed) manually by user.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resolve_Confirmed_By_User
-
-
-Resolve_Confirmed_By_User
-
-
-True, when the conflict resolution was manually confirmed by user.
 
 
 True, when the conflict resolution was manually confirmed by user.
@@ -342,9 +292,8 @@ True, when the conflict resolution was manually confirmed by user.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Resolve_Confirmed_By_User](Sys_Resolved_Conflicts.md#resolve_confirmed_by_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -367,15 +316,9 @@ True, when the conflict resolution was manually confirmed by user.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resolve_Confirmed_Time
-
-
-Resolve_Confirmed_Time
-
-
-Time when the conflict resolution was confirmed by the user.
 
 
 Time when the conflict resolution was confirmed by the user.
@@ -389,9 +332,8 @@ Time when the conflict resolution was confirmed by the user.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Resolve_Confirmed_Time](Sys_Resolved_Conflicts.md#resolve_confirmed_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -412,9 +354,6 @@ Time when the conflict resolution was confirmed by the user.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -423,9 +362,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md).[Row_Version](Sys_Resolved_Conflicts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

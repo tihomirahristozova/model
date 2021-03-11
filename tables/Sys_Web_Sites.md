@@ -1,5 +1,10 @@
 # Table Sys_Web_Sites
 
+
+## Entity
+
+Entity: [Systems.Core.WebSites](~/entities/Systems.Core.WebSites.md)
+
 Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1)
 
 ## Summary
@@ -11,7 +16,7 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 |[Web_Site_Type](#web_site_type)|`nvarchar(3)` Allowed: `API`, `CC`, `ID`, `EC`, `LEG`, `SI`, `DM`, `PFL`, `APP`, `TAP`, `DAP`, `WMS`|The type of web site - Api, Client Center, Id, etc.|
 |[Web_Host_Id](#web_host_id)|`uniqueidentifier` |The web host in which to host the site.|
 |[Relative_Url](#relative_url)|`nvarchar(254)` |The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Is_Active](#is_active)|`bit` |Indicates whether the web site is active and will be instantiated upon next web server restart.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Trusted_Application_Id](#trusted_application_id)|`uniqueidentifier` |The trusted application related to this web site|
@@ -19,9 +24,6 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 ## Columns
 
 ### Web_Site_Id
-
-
-Web_Site_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Web_Site_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Web_Site_Id](Sys_Web_Sites.md#web_site_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Web_Site_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company, for which is the site. NULL means, that the web site should not be enterprise company specific.
 
 
 The enterprise company, for which is the site. NULL means, that the web site should not be enterprise company specific.
@@ -79,9 +74,8 @@ The enterprise company, for which is the site. NULL means, that the web site sho
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Enterprise_Company_Id](Sys_Web_Sites.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The enterprise company, for which is the site. NULL means, that the web site sho
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Web_Site_Type
-
-
-Web_Site_Type
-
-
-The type of web site - Api, Client Center, Id, etc.
 
 
 The type of web site - Api, Client Center, Id, etc.
@@ -126,10 +114,9 @@ The type of web site - Api, Client Center, Id, etc.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`API`, `CC`, `ID`, `EC`, `LEG`, `SI`, `DM`, `PFL`, `APP`, `TAP`, `DAP`, `WMS`|
 |Default Value|None|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Web_Site_Type](Sys_Web_Sites.md#web_site_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The type of web site - Api, Client Center, Id, etc.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Web_Host_Id
-
-
-Web_Host_Id
-
-
-The web host in which to host the site.
 
 
 The web host in which to host the site.
@@ -174,9 +155,8 @@ The web host in which to host the site.
 |Referenced Table|[Sys_Web_Hosts](Sys_Web_Hosts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Web_Host_Id](Sys_Web_Sites.md#web_host_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,15 +179,9 @@ The web host in which to host the site.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Relative_Url
-
-
-Relative_Url
-
-
-The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.
 
 
 The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.
@@ -221,9 +195,8 @@ The relative Url of the site. This is the text after the first slash after the p
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Relative_Url](Sys_Web_Sites.md#relative_url)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,21 +217,17 @@ The relative Url of the site. This is the text after the first slash after the p
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Notes](Sys_Web_Sites.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -280,12 +249,6 @@ Notes
 ### Is_Active
 
 
-Is_Active
-
-
-Indicates whether the web site is active and will be instantiated upon next web server restart.
-
-
 Indicates whether the web site is active and will be instantiated upon next web server restart.
 
 | Property | Value |
@@ -296,9 +259,8 @@ Indicates whether the web site is active and will be instantiated upon next web 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Is_Active](Sys_Web_Sites.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -321,12 +283,9 @@ Indicates whether the web site is active and will be instantiated upon next web 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -336,9 +295,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Row_Version](Sys_Web_Sites.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -360,12 +318,6 @@ Row_Version
 ### Trusted_Application_Id
 
 
-Trusted_Application_Id
-
-
-The trusted application related to this web site
-
-
 The trusted application related to this web site
 
 | Property | Value |
@@ -377,9 +329,8 @@ The trusted application related to this web site
 |Referenced Table|[Sec_Trusted_Applications](Sec_Trusted_Applications.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Web_Sites](Sys_Web_Sites.md).[Trusted_Application_Id](Sys_Web_Sites.md#trusted_application_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -402,6 +353,6 @@ The trusted application related to this web site
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

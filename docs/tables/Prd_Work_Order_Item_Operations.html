@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prd_work_order_item_operations">Table Prd_Work_Order_Item_Operations</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Production.ShopFloor.WorkOrderItemOperations.html">Production.ShopFloor.WorkOrderItemOperations</a></p>
 <p>The operations that are performed to produce the product. Entity: Prd_Work_Order_Item_Operations</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -108,7 +110,7 @@
 </tr>
 <tr>
 <td><a href="#operation_description">Operation_Description</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The short description of the operation.</td>
 </tr>
 <tr>
@@ -128,7 +130,7 @@
 </tr>
 <tr>
 <td><a href="#tooling">Tooling</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The tools needed for the routing step</td>
 </tr>
 <tr>
@@ -200,8 +202,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_ord">Line_Ord</h3>
-<p>Line_Ord</p>
-<p>Order of the line within the work order routing</p>
 <p>Order of the line within the work order routing</p>
 <table>
 <thead>
@@ -237,7 +237,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -246,10 +246,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#line_ord">Line_Ord</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -334,7 +330,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -347,8 +343,6 @@
 </tbody>
 </table>
 <h3 id="operation_id">Operation_Id</h3>
-<p>Operation_Id</p>
-<p>The performed operation.</p>
 <p>The performed operation.</p>
 <table>
 <thead>
@@ -388,15 +382,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#operation_id">Operation_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -481,15 +471,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="operation_description">Operation_Description</h3>
-<p>Operation_Description</p>
-<p>The short description of the operation.</p>
 <p>The short description of the operation.</p>
 <table>
 <thead>
@@ -501,7 +489,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -529,15 +517,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#operation_description">Operation_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -610,8 +594,6 @@
 </tbody>
 </table>
 <h3 id="workgroup_resource_id">Workgroup_Resource_Id</h3>
-<p>Workgroup_Resource_Id</p>
-<p>The resource that will be used for the operation. NULL means that no resource will be locked for the operation</p>
 <p>The resource that will be used for the operation. NULL means that no resource will be locked for the operation</p>
 <table>
 <thead>
@@ -651,15 +633,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#workgroup_resource_id">Workgroup_Resource_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -744,15 +722,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="use_quantity">Use_Quantity</h3>
-<p>Use_Quantity</p>
-<p>Quantity of the resource, that should be allocated for the operation</p>
 <p>Quantity of the resource, that should be allocated for the operation</p>
 <table>
 <thead>
@@ -788,15 +764,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#use_quantity">Use_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -869,7 +841,6 @@
 </tbody>
 </table>
 <h3 id="id">Id</h3>
-<p>Id</p>
 <table>
 <thead>
 <tr>
@@ -908,15 +879,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1001,15 +968,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="tooling">Tooling</h3>
-<p>Tooling</p>
-<p>The tools needed for the routing step</p>
 <p>The tools needed for the routing step</p>
 <table>
 <thead>
@@ -1021,7 +986,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1049,15 +1014,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#tooling">Tooling</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1130,8 +1091,6 @@
 </tbody>
 </table>
 <h3 id="actual_end_date_time">Actual_End_Date_Time</h3>
-<p>Actual_End_Date_Time</p>
-<p>The date/time when the operation has completed. NULL means that the operation is not completed.</p>
 <p>The date/time when the operation has completed. NULL means that the operation is not completed.</p>
 <table>
 <thead>
@@ -1171,15 +1130,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#actual_end_date_time">Actual_End_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1252,8 +1207,6 @@
 </tbody>
 </table>
 <h3 id="actual_start_date_time">Actual_Start_Date_Time</h3>
-<p>Actual_Start_Date_Time</p>
-<p>The date/time when the operation has started. NULL means that the has not started yet</p>
 <p>The date/time when the operation has started. NULL means that the has not started yet</p>
 <table>
 <thead>
@@ -1293,15 +1246,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#actual_start_date_time">Actual_Start_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1374,8 +1323,6 @@
 </tbody>
 </table>
 <h3 id="scrap_rate">Scrap_Rate</h3>
-<p>Scrap_Rate</p>
-<p>Projected scrap rate of the operation</p>
 <p>Projected scrap rate of the operation</p>
 <table>
 <thead>
@@ -1411,15 +1358,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#scrap_rate">Scrap_Rate</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1492,8 +1435,6 @@
 </tbody>
 </table>
 <h3 id="move_time_minutes">Move_Time_Minutes</h3>
-<p>Move_Time_Minutes</p>
-<p>Time to move the lot to the next operation in minutes</p>
 <p>Time to move the lot to the next operation in minutes</p>
 <table>
 <thead>
@@ -1529,15 +1470,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#move_time_minutes">Move_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1610,8 +1547,6 @@
 </tbody>
 </table>
 <h3 id="setup_time_minutes">Setup_Time_Minutes</h3>
-<p>Setup_Time_Minutes</p>
-<p>Time needed to setup the equipment in minutes</p>
 <p>Time needed to setup the equipment in minutes</p>
 <table>
 <thead>
@@ -1647,15 +1582,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#setup_time_minutes">Setup_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1728,8 +1659,6 @@
 </tbody>
 </table>
 <h3 id="run_time_minutes">Run_Time_Minutes</h3>
-<p>Run_Time_Minutes</p>
-<p>Time for production of one lot of the produced item in minutes</p>
 <p>Time for production of one lot of the produced item in minutes</p>
 <table>
 <thead>
@@ -1765,15 +1694,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#run_time_minutes">Run_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1846,7 +1771,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1885,15 +1809,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1966,8 +1886,6 @@
 </tbody>
 </table>
 <h3 id="minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</h3>
-<p>Minimum_Concurrent_Start_Time_Minutes</p>
-<p>How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting</p>
 <p>How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting</p>
 <table>
 <thead>
@@ -2003,15 +1921,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#minimum_concurrent_start_time_minutes">Minimum_Concurrent_Start_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2084,8 +1998,6 @@
 </tbody>
 </table>
 <h3 id="scheduled_end_date_time">Scheduled_End_Date_Time</h3>
-<p>Scheduled_End_Date_Time</p>
-<p>The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)</p>
 <p>The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)</p>
 <table>
 <thead>
@@ -2125,15 +2037,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#scheduled_end_date_time">Scheduled_End_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2206,8 +2114,6 @@
 </tbody>
 </table>
 <h3 id="scheduled_start_date_time">Scheduled_Start_Date_Time</h3>
-<p>Scheduled_Start_Date_Time</p>
-<p>The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)</p>
 <p>The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)</p>
 <table>
 <thead>
@@ -2247,15 +2153,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#scheduled_start_date_time">Scheduled_Start_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2328,8 +2230,6 @@
 </tbody>
 </table>
 <h3 id="work_order_item_id">Work_Order_Item_Id</h3>
-<p>Work_Order_Item_Id</p>
-<p>The work order item, containing the line.</p>
 <p>The work order item, containing the line.</p>
 <table>
 <thead>
@@ -2369,15 +2269,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#work_order_item_id">Work_Order_Item_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2462,15 +2358,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="wait_time_minutes">Wait_Time_Minutes</h3>
-<p>Wait_Time_Minutes</p>
-<p>Wait time (drying, cooling, etc.) after the operation in minutes</p>
 <p>Wait time (drying, cooling, etc.) after the operation in minutes</p>
 <table>
 <thead>
@@ -2506,15 +2400,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#wait_time_minutes">Wait_Time_Minutes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2587,7 +2477,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2622,15 +2511,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Order_Item_Operations.html">Prd_Work_Order_Item_Operations</a>.<a href="Prd_Work_Order_Item_Operations.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

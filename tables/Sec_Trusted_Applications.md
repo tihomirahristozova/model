@@ -1,5 +1,10 @@
 # Table Sec_Trusted_Applications
 
+
+## Entity
+
+Entity: [Systems.Security.TrustedApplications](~/entities/Systems.Security.TrustedApplications.md)
+
 Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applications (Introduced in version 19.1)
 
 ## Summary
@@ -19,18 +24,15 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 |[Impersonate_Login_Url](#impersonate_login_url)|`nvarchar(254)` |The login Url used when an application is impersonated as (usually community) user.|
 |[Impersonate_Logout_Url](#impersonate_logout_url)|`nvarchar(254)` |The logout Url used when an application is impersonated as (usually community) user.|
 |[Basic_Authentication_Allowed](#basic_authentication_allowed)|`bit` |Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Client_Type](#client_type)|`nvarchar(1)` Allowed: `C`, `P`|Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).|
-|[Scope](#scope)|`nvarchar(2147483647)` |The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).|
+|[Scope](#scope)|`nvarchar(max)` |The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).|
 |[Application_Secret_Hash](#application_secret_hash)|`nvarchar(250)` |Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.|
 
 ## Columns
 
 ### Trusted_Application_Id
-
-
-Trusted_Application_Id
 
 | Property | Value |
 | - | - |
@@ -41,9 +43,8 @@ Trusted_Application_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Trusted_Application_Id](Sec_Trusted_Applications.md#trusted_application_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,15 +67,9 @@ Trusted_Application_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Trusted_Application_Name
-
-
-Trusted_Application_Name
-
-
-The multi-language name of the application.
 
 
 The multi-language name of the application.
@@ -88,9 +83,8 @@ The multi-language name of the application.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Trusted_Application_Name](Sec_Trusted_Applications.md#trusted_application_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,18 +107,12 @@ The multi-language name of the application.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Application_Uri
 
 
-Application_Uri
-
-
-Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app".
-
-
 Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app".
 
 | Property | Value |
@@ -136,9 +124,8 @@ Application globally unique Uri in reverse host name format. For example: "com.m
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Application_Uri](Sec_Trusted_Applications.md#application_uri)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -161,15 +148,9 @@ Application globally unique Uri in reverse host name format. For example: "com.m
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Enabled
-
-
-Is_Enabled
-
-
-Specifies whether the application is enabled for login.
 
 
 Specifies whether the application is enabled for login.
@@ -182,9 +163,8 @@ Specifies whether the application is enabled for login.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Is_Enabled](Sec_Trusted_Applications.md#is_enabled)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -207,15 +187,9 @@ Specifies whether the application is enabled for login.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Creation_Time_Utc
-
-
-Creation_Time_Utc
-
-
-Date and time (in UTC) when the application was registered.
 
 
 Date and time (in UTC) when the application was registered.
@@ -229,9 +203,8 @@ Date and time (in UTC) when the application was registered.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTimeUtc|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Creation_Time_Utc](Sec_Trusted_Applications.md#creation_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -254,16 +227,10 @@ Date and time (in UTC) when the application was registered.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### System_User_Allowed
-
-
-System_User_Allowed
-
-
-Allows this application to logon as a service.
 
 
 Allows this application to logon as a service.
@@ -276,9 +243,8 @@ Allows this application to logon as a service.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[System_User_Allowed](Sec_Trusted_Applications.md#system_user_allowed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -301,15 +267,9 @@ Allows this application to logon as a service.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### System_User_Login_Url
-
-
-System_User_Login_Url
-
-
-The URL, which will be used by the login process, when the application logs in as a service.
 
 
 The URL, which will be used by the login process, when the application logs in as a service.
@@ -323,9 +283,8 @@ The URL, which will be used by the login process, when the application logs in a
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[System_User_Login_Url](Sec_Trusted_Applications.md#system_user_login_url)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -347,12 +306,6 @@ The URL, which will be used by the login process, when the application logs in a
 ### System_User_Id
 
 
-System_User_Id
-
-
-The user, which will be used when the application logins as a service.
-
-
 The user, which will be used when the application logins as a service.
 
 | Property | Value |
@@ -364,9 +317,8 @@ The user, which will be used when the application logins as a service.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[System_User_Id](Sec_Trusted_Applications.md#system_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -389,17 +341,11 @@ The user, which will be used when the application logins as a service.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Impersonate_As_Community_User_Allowed
 
 
-Impersonate_As_Community_User_Allowed
-
-
-Allows the application to request login from external users and operate on their behalf.
-
-
 Allows the application to request login from external users and operate on their behalf.
 
 | Property | Value |
@@ -410,9 +356,8 @@ Allows the application to request login from external users and operate on their
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Impersonate_As_Community_User_Allowed](Sec_Trusted_Applications.md#impersonate_as_community_user_allowed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -435,17 +380,11 @@ Allows the application to request login from external users and operate on their
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Impersonate_As_Internal_User_Allowed
 
 
-Impersonate_As_Internal_User_Allowed
-
-
-Allows the application to request login from internal users and operate on their behalf.
-
-
 Allows the application to request login from internal users and operate on their behalf.
 
 | Property | Value |
@@ -456,9 +395,8 @@ Allows the application to request login from internal users and operate on their
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Impersonate_As_Internal_User_Allowed](Sec_Trusted_Applications.md#impersonate_as_internal_user_allowed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -481,15 +419,9 @@ Allows the application to request login from internal users and operate on their
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Impersonate_Login_Url
-
-
-Impersonate_Login_Url
-
-
-The login Url used when an application is impersonated as (usually community) user.
 
 
 The login Url used when an application is impersonated as (usually community) user.
@@ -503,9 +435,8 @@ The login Url used when an application is impersonated as (usually community) us
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Impersonate_Login_Url](Sec_Trusted_Applications.md#impersonate_login_url)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -527,12 +458,6 @@ The login Url used when an application is impersonated as (usually community) us
 ### Impersonate_Logout_Url
 
 
-Impersonate_Logout_Url
-
-
-The logout Url used when an application is impersonated as (usually community) user.
-
-
 The logout Url used when an application is impersonated as (usually community) user.
 
 | Property | Value |
@@ -544,9 +469,8 @@ The logout Url used when an application is impersonated as (usually community) u
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Impersonate_Logout_Url](Sec_Trusted_Applications.md#impersonate_logout_url)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -568,12 +492,6 @@ The logout Url used when an application is impersonated as (usually community) u
 ### Basic_Authentication_Allowed
 
 
-Basic_Authentication_Allowed
-
-
-Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user.
-
-
 Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user.
 
 | Property | Value |
@@ -584,9 +502,8 @@ Even if only one application has this turned ON, it allows the basic authenticat
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Basic_Authentication_Allowed](Sec_Trusted_Applications.md#basic_authentication_allowed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -609,25 +526,21 @@ Even if only one application has this turned ON, it allows the basic authenticat
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Notes](Sec_Trusted_Applications.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -648,9 +561,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -659,9 +569,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Row_Version](Sec_Trusted_Applications.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -683,12 +592,6 @@ Row_Version
 ### Client_Type
 
 
-Client_Type
-
-
-Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).
-
-
 Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).
 
 | Property | Value |
@@ -700,10 +603,9 @@ Specifies the client type, according to RFC 6749, e.g. the confidentiality of th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`C`, `P`|
 |Default Value|C|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Client_Type](Sec_Trusted_Applications.md#client_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -725,26 +627,19 @@ Specifies the client type, according to RFC 6749, e.g. the confidentiality of th
 ### Scope
 
 
-Scope
-
-
-The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).
-
-
 The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Scope](Sec_Trusted_Applications.md#scope)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -766,12 +661,6 @@ The scope (according to RFC 6749) for which the application was trusted. The sco
 ### Application_Secret_Hash
 
 
-Application_Secret_Hash
-
-
-Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.
-
-
 Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.
 
 | Property | Value |
@@ -783,9 +672,8 @@ Hash of the secret of the client application. The secret is used when the client
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Trusted_Applications](Sec_Trusted_Applications.md).[Application_Secret_Hash](Sec_Trusted_Applications.md#application_secret_hash)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_pricing_model_costs">Table Crm_Pricing_Model_Costs</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Pricing.PricingModelCosts.html">Crm.Pricing.PricingModelCosts</a></p>
 <p>List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -138,8 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="pricing_model_cost_id">Pricing_Model_Cost_Id</h3>
-<p>Pricing_Model_Cost_Id</p>
-<p>Pricing Model Cost</p>
 <p>Pricing Model Cost</p>
 <table>
 <thead>
@@ -179,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Pricing_Model_Costs.html">Crm_Pricing_Model_Costs</a>.<a href="Crm_Pricing_Model_Costs.html#pricing_model_cost_id">Pricing_Model_Cost_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -272,15 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="pricing_model_id">Pricing_Model_Id</h3>
-<p>Pricing_Model_Id</p>
-<p>Pricing model, for which the cost is defined</p>
 <p>Pricing model, for which the cost is defined</p>
 <table>
 <thead>
@@ -320,15 +314,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Pricing_Model_Costs.html">Crm_Pricing_Model_Costs</a>.<a href="Crm_Pricing_Model_Costs.html#pricing_model_id">Pricing_Model_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -413,15 +403,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>The consequtive number of the cost within the pricing model</p>
 <p>The consequtive number of the cost within the pricing model</p>
 <table>
 <thead>
@@ -457,7 +445,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -466,10 +454,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Pricing_Model_Costs.html">Crm_Pricing_Model_Costs</a>.<a href="Crm_Pricing_Model_Costs.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -542,8 +526,6 @@
 </tbody>
 </table>
 <h3 id="cost_type_id">Cost_Type_Id</h3>
-<p>Cost_Type_Id</p>
-<p>The cost type, which is listed for the pricing model</p>
 <p>The cost type, which is listed for the pricing model</p>
 <table>
 <thead>
@@ -583,15 +565,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Pricing_Model_Costs.html">Crm_Pricing_Model_Costs</a>.<a href="Crm_Pricing_Model_Costs.html#cost_type_id">Cost_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -676,15 +654,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="amount_percent">Amount_Percent</h3>
-<p>Amount_Percent</p>
-<p>Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way</p>
 <p>Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way</p>
 <table>
 <thead>
@@ -720,15 +696,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsPercent</td>
+<td>IsPercent</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Pricing_Model_Costs.html">Crm_Pricing_Model_Costs</a>.<a href="Crm_Pricing_Model_Costs.html#amount_percent">Amount_Percent</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -801,8 +773,6 @@
 </tbody>
 </table>
 <h3 id="amount_per_unit">Amount_Per_Unit</h3>
-<p>Amount_Per_Unit</p>
-<p>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. NULL when the cost is calculated in a different way</p>
 <p>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. NULL when the cost is calculated in a different way</p>
 <table>
 <thead>
@@ -838,15 +808,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Pricing_Model_Costs.html">Crm_Pricing_Model_Costs</a>.<a href="Crm_Pricing_Model_Costs.html#amount_per_unit">Amount_Per_Unit</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -919,8 +885,6 @@
 </tbody>
 </table>
 <h3 id="measurement_unit_id">Measurement_Unit_Id</h3>
-<p>Measurement_Unit_Id</p>
-<p>The measurement unit for which the Amount_Per_Unit is defined. NULL when the cost is calculated in a different way</p>
 <p>The measurement unit for which the Amount_Per_Unit is defined. NULL when the cost is calculated in a different way</p>
 <table>
 <thead>
@@ -960,15 +924,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Pricing_Model_Costs.html">Crm_Pricing_Model_Costs</a>.<a href="Crm_Pricing_Model_Costs.html#measurement_unit_id">Measurement_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1053,14 +1013,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1095,15 +1054,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Pricing_Model_Costs.html">Crm_Pricing_Model_Costs</a>.<a href="Crm_Pricing_Model_Costs.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

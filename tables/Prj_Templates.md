@@ -1,5 +1,10 @@
 # Table Prj_Templates
 
+
+## Entity
+
+Entity: [Projects.Templates](~/entities/Projects.Templates.md)
+
 Contains templates for creating new projects. Entity: Prj_Templates
 
 ## Summary
@@ -8,15 +13,12 @@ Contains templates for creating new projects. Entity: Prj_Templates
 | - | - | --- |
 |[Project_Template_Id](#project_template_id)|`uniqueidentifier` `PK`||
 |[Project_Template_Name](#project_template_name)|`nvarchar(254)` |The name of the project template.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Project_Template_Id
-
-
-Project_Template_Id
 
 | Property | Value |
 | - | - |
@@ -27,9 +29,8 @@ Project_Template_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Templates](Prj_Templates.md).[Project_Template_Id](Prj_Templates.md#project_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Project_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Template_Name
-
-
-Project_Template_Name
-
-
-The name of the project template.
 
 
 The name of the project template.
@@ -74,9 +69,8 @@ The name of the project template.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Templates](Prj_Templates.md).[Project_Template_Name](Prj_Templates.md#project_template_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -97,21 +91,17 @@ The name of the project template.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Templates](Prj_Templates.md).[Notes](Prj_Templates.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -132,9 +122,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -143,9 +130,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Templates](Prj_Templates.md).[Row_Version](Prj_Templates.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

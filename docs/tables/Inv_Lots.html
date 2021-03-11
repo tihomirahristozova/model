@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-inv_lots">Table Inv_Lots</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a></p>
 <p>Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots</p>
 <h2 id="summary">Summary</h2>
 <p>| Name | Type | Description |
@@ -105,7 +107,6 @@
 |<a href="#excise_measuring_transaction_id">Excise_Measuring_Transaction_Id</a>|<code>uniqueidentifier</code> |When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.|</p>
 <h2 id="columns">Columns</h2>
 <h3 id="lot_id">Lot_Id</h3>
-<p>Lot_Id</p>
 <table>
 <thead>
 <tr>
@@ -144,15 +145,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#lot_id">Lot_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -237,14 +234,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="lot_number">Lot_Number</h3>
-<p>Lot_Number</p>
 <table>
 <thead>
 <tr>
@@ -283,15 +279,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#lot_number">Lot_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -376,7 +368,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -389,8 +381,6 @@
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The product to which the lot is bound</p>
 <p>The product to which the lot is bound</p>
 <table>
 <thead>
@@ -430,15 +420,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -523,15 +509,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="receipt_store_transaction_id">Receipt_Store_Transaction_Id</h3>
-<p>Receipt_Store_Transaction_Id</p>
-<p>The store receipt transaction, which created the lot. NULL if the lot is manually created</p>
 <p>The store receipt transaction, which created the lot. NULL if the lot is manually created</p>
 <table>
 <thead>
@@ -571,15 +555,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#receipt_store_transaction_id">Receipt_Store_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -664,15 +644,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="production_batch_id">Production_Batch_Id</h3>
-<p>Production_Batch_Id</p>
-<p>Non-NULL if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods</p>
 <p>Non-NULL if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods</p>
 <table>
 <thead>
@@ -708,15 +686,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#production_batch_id">Production_Batch_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -801,19 +775,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="status">Status</h3>
-<p>Status</p>
-<p>Status of the warehouse lot. Minus statuses describe blocked conditions.
--3 blocked for document (sales or service order)
--2 blocked for party
--1 blocked for inspection
-0 free to use</p>
 <p>Status of the warehouse lot. Minus statuses describe blocked conditions.
 -3 blocked for document (sales or service order)
 -2 blocked for party
@@ -853,7 +821,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -862,10 +830,6 @@
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#status">Status</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -950,15 +914,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="blocked_for_party_id">Blocked_For_Party_Id</h3>
-<p>Blocked_For_Party_Id</p>
-<p>Non-NULL when the warehouse lot is blocked specifically for some party</p>
 <p>Non-NULL when the warehouse lot is blocked specifically for some party</p>
 <table>
 <thead>
@@ -998,15 +960,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#blocked_for_party_id">Blocked_For_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1091,15 +1049,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="blocked_for_document_id">Blocked_For_Document_Id</h3>
-<p>Blocked_For_Document_Id</p>
-<p>If non-null, contains the document for which the lot is blocked</p>
 <p>If non-null, contains the document for which the lot is blocked</p>
 <table>
 <thead>
@@ -1139,15 +1095,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#blocked_for_document_id">Blocked_For_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1232,14 +1184,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="expiry_date">Expiry_Date</h3>
-<p>Expiry_Date</p>
 <table>
 <thead>
 <tr>
@@ -1278,15 +1229,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#expiry_date">Expiry_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1359,8 +1306,6 @@
 </tbody>
 </table>
 <h3 id="license_no">License_No</h3>
-<p>License_No</p>
-<p>The license number for this lot. Null when license number is N/A or unknown.</p>
 <p>The license number for this lot. Null when license number is N/A or unknown.</p>
 <table>
 <thead>
@@ -1400,15 +1345,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#license_no">License_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1481,7 +1422,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
 <table>
 <thead>
 <tr>
@@ -1520,15 +1460,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1601,8 +1537,6 @@
 </tbody>
 </table>
 <h3 id="purchase_lot_number">Purchase_Lot_Number</h3>
-<p>Purchase_Lot_Number</p>
-<p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.</p>
 <p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.</p>
 <table>
 <thead>
@@ -1642,15 +1576,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#purchase_lot_number">Purchase_Lot_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1742,8 +1672,6 @@
 </tbody>
 </table>
 <h3 id="receipt_date">Receipt_Date</h3>
-<p>Receipt_Date</p>
-<p>The date of the first receipt of products in this lot.</p>
 <p>The date of the first receipt of products in this lot.</p>
 <table>
 <thead>
@@ -1783,15 +1711,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#receipt_date">Receipt_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1864,7 +1788,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1899,15 +1822,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1980,7 +1899,6 @@
 </tbody>
 </table>
 <h3 id="certificate_document_id">Certificate_Document_Id</h3>
-<p>Certificate_Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -2019,15 +1937,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#certificate_document_id">Certificate_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2112,15 +2026,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="excise_measuring_transaction_id">Excise_Measuring_Transaction_Id</h3>
-<p>Excise_Measuring_Transaction_Id</p>
-<p>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.</p>
 <p>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.</p>
 <table>
 <thead>
@@ -2160,15 +2072,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Lots.html">Inv_Lots</a>.<a href="Inv_Lots.html#excise_measuring_transaction_id">Excise_Measuring_Transaction_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2253,7 +2161,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

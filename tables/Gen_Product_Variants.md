@@ -1,5 +1,10 @@
 # Table Gen_Product_Variants
 
+
+## Entity
+
+Entity: [General.ProductVariants](~/entities/General.ProductVariants.md)
+
 Contains definitions of different variants of a product. The variants are differentiated by color, size and style. Entity: Gen_Product_Variants
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Contains definitions of different variants of a product. The variants are differ
 
 ### Product_Variant_Id
 
-
-Product_Variant_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Product_Variant_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Product_Variant_Id](Gen_Product_Variants.md#product_variant_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,15 +62,9 @@ Product_Variant_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product for which this variant is defined.
 
 
 The product for which this variant is defined.
@@ -83,9 +78,8 @@ The product for which this variant is defined.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Product_Id](Gen_Product_Variants.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,15 +102,9 @@ The product for which this variant is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Variant_Code
-
-
-Product_Variant_Code
-
-
-The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.
 
 
 The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.
@@ -130,9 +118,8 @@ The code of the variant. The code is unique within the Product. It is the concat
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Product_Variant_Code](Gen_Product_Variants.md#product_variant_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,16 +142,10 @@ The code of the variant. The code is unique within the Product. It is the concat
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Variant_Color_Id
-
-
-Variant_Color_Id
-
-
-The color of the variant. NULL means that the variant does not have a specific color.
 
 
 The color of the variant. NULL means that the variant does not have a specific color.
@@ -178,9 +159,8 @@ The color of the variant. NULL means that the variant does not have a specific c
 |Referenced Table|[Gen_Variant_Colors](Gen_Variant_Colors.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Variant_Color_Id](Gen_Product_Variants.md#variant_color_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,15 +183,9 @@ The color of the variant. NULL means that the variant does not have a specific c
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Variant_Size_Id
-
-
-Variant_Size_Id
-
-
-The size of the variant. NULL means that the variant does not have a specific size.
 
 
 The size of the variant. NULL means that the variant does not have a specific size.
@@ -225,9 +199,8 @@ The size of the variant. NULL means that the variant does not have a specific si
 |Referenced Table|[Gen_Variant_Sizes](Gen_Variant_Sizes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Variant_Size_Id](Gen_Product_Variants.md#variant_size_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -250,15 +223,9 @@ The size of the variant. NULL means that the variant does not have a specific si
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Variant_Style_Id
-
-
-Variant_Style_Id
-
-
-The style of the variant. NULL means that the variant does not have a specific style.
 
 
 The style of the variant. NULL means that the variant does not have a specific style.
@@ -272,9 +239,8 @@ The style of the variant. NULL means that the variant does not have a specific s
 |Referenced Table|[Gen_Variant_Styles](Gen_Variant_Styles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Variant_Style_Id](Gen_Product_Variants.md#variant_style_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -297,15 +263,9 @@ The style of the variant. NULL means that the variant does not have a specific s
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Bar_Code
-
-
-Bar_Code
-
-
-When specified, it contains a bar code which uniquely identifies the product variant.
 
 
 When specified, it contains a bar code which uniquely identifies the product variant.
@@ -319,9 +279,8 @@ When specified, it contains a bar code which uniquely identifies the product var
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Bar_Code](Gen_Product_Variants.md#bar_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -344,16 +303,10 @@ When specified, it contains a bar code which uniquely identifies the product var
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Product_Variant_Name
-
-
-Product_Variant_Name
-
-
-Product variant name. It is the concatenation of the names of the color, size and style.
 
 
 Product variant name. It is the concatenation of the names of the color, size and style.
@@ -367,9 +320,8 @@ Product variant name. It is the concatenation of the names of the color, size an
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Product_Variant_Name](Gen_Product_Variants.md#product_variant_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -390,9 +342,6 @@ Product variant name. It is the concatenation of the names of the color, size an
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -401,9 +350,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Variants](Gen_Product_Variants.md).[Row_Version](Gen_Product_Variants.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

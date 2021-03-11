@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cash_transfers">Table Cash_Transfers</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Payments.Transfers.html">Finance.Payments.Transfers</a></p>
 <p>Represents one fund transfer from one payment account to another. Entity: Cash_Transfers</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -143,7 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="transfer_id">Transfer_Id</h3>
-<p>Transfer_Id</p>
 <table>
 <thead>
 <tr>
@@ -182,15 +183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#transfer_id">Transfer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -275,14 +272,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -321,15 +317,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -414,15 +406,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="source_payment_account_id">Source_Payment_Account_Id</h3>
-<p>Source_Payment_Account_Id</p>
-<p>The account from which to deduct the amount</p>
 <p>The account from which to deduct the amount</p>
 <table>
 <thead>
@@ -462,15 +452,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#source_payment_account_id">Source_Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -555,15 +541,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="destination_payment_account_id">Destination_Payment_Account_Id</h3>
-<p>Destination_Payment_Account_Id</p>
-<p>The account to which to transfer the amount</p>
 <p>The account to which to transfer the amount</p>
 <table>
 <thead>
@@ -603,15 +587,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#destination_payment_account_id">Destination_Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -696,15 +676,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="source_amount">Source_Amount</h3>
-<p>Source_Amount</p>
-<p>The amount to transfer in the source currency</p>
 <p>The amount to transfer in the source currency</p>
 <table>
 <thead>
@@ -740,15 +718,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#source_amount">Source_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -821,8 +795,6 @@
 </tbody>
 </table>
 <h3 id="destination_amount">Destination_Amount</h3>
-<p>Destination_Amount</p>
-<p>The amount in the currency of the destination account</p>
 <p>The amount in the currency of the destination account</p>
 <table>
 <thead>
@@ -858,15 +830,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#destination_amount">Destination_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -939,8 +907,6 @@
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -976,15 +942,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1069,15 +1031,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -1113,15 +1073,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1206,14 +1162,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1248,15 +1203,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Transfers.html">Cash_Transfers</a>.<a href="Cash_Transfers.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

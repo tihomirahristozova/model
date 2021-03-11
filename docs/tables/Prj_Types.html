@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_types">Table Prj_Types</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.ProjectTypes.html">Projects.ProjectTypes</a></p>
 <p>Contains the types of projects, which can be executed by the enterprise company. Entity: Prj_Types</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -119,7 +121,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="project_type_id">Project_Type_Id</h3>
-<p>Project_Type_Id</p>
 <table>
 <thead>
 <tr>
@@ -158,15 +159,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Types.html">Prj_Types</a>.<a href="Prj_Types.html#project_type_id">Project_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -251,15 +248,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>When not NULL means that the project type is specific to the enterprise company</p>
 <p>When not NULL means that the project type is specific to the enterprise company</p>
 <table>
 <thead>
@@ -299,15 +294,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Types.html">Prj_Types</a>.<a href="Prj_Types.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -392,15 +383,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_type_name">Project_Type_Name</h3>
-<p>Project_Type_Name</p>
-<p>The name of the project type.</p>
 <p>The name of the project type.</p>
 <table>
 <thead>
@@ -440,15 +429,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Types.html">Prj_Types</a>.<a href="Prj_Types.html#project_type_name">Project_Type_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -533,7 +518,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -546,7 +531,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -557,7 +541,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -585,15 +569,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Types.html">Prj_Types</a>.<a href="Prj_Types.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -666,7 +646,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -701,15 +680,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Types.html">Prj_Types</a>.<a href="Prj_Types.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

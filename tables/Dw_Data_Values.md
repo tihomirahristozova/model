@@ -1,5 +1,10 @@
 # Table Dw_Data_Values
 
+
+## Entity
+
+Entity: [Applications.DataWarehouse.DataValues](~/entities/Applications.DataWarehouse.DataValues.md)
+
 The actual values in the general data warehouse. Entity: Dw_Data_Values (Introduced in version 18.2)
 
 ## Summary
@@ -17,9 +22,6 @@ The actual values in the general data warehouse. Entity: Dw_Data_Values (Introdu
 
 ### Data_Value_Id
 
-
-Data_Value_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Data_Value_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Dw_Data_Values](Dw_Data_Values.md).[Data_Value_Id](Dw_Data_Values.md#data_value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Data_Value_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Data_Measure_Id
-
-
-Data_Measure_Id
-
-
-The measure for which the data is recorded.
 
 
 The measure for which the data is recorded.
@@ -76,9 +71,8 @@ The measure for which the data is recorded.
 |Referenced Table|[Dw_Data_Measures](Dw_Data_Measures.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Dw_Data_Values](Dw_Data_Values.md).[Data_Measure_Id](Dw_Data_Values.md#data_measure_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +95,9 @@ The measure for which the data is recorded.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The Enterprise Company for which the data is recorded.
 
 
 The Enterprise Company for which the data is recorded.
@@ -123,9 +111,8 @@ The Enterprise Company for which the data is recorded.
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Dw_Data_Values](Dw_Data_Values.md).[Enterprise_Company_Id](Dw_Data_Values.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +135,9 @@ The Enterprise Company for which the data is recorded.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Date
-
-
-Date
-
-
-The date for which the measure is recorded. All records with dates within each period are summed.
 
 
 The date for which the measure is recorded. All records with dates within each period are summed.
@@ -170,9 +151,8 @@ The date for which the measure is recorded. All records with dates within each p
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Dw_Data_Values](Dw_Data_Values.md).[Date](Dw_Data_Values.md#date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,18 +175,12 @@ The date for which the measure is recorded. All records with dates within each p
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Target_Value
 
 
-Target_Value
-
-
-Accumulates target value for the measure.
-
-
 Accumulates target value for the measure.
 
 | Property | Value |
@@ -217,9 +191,8 @@ Accumulates target value for the measure.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Dw_Data_Values](Dw_Data_Values.md).[Target_Value](Dw_Data_Values.md#target_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,17 +215,11 @@ Accumulates target value for the measure.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Actual_Value
 
 
-Actual_Value
-
-
-Accumulates actual value for the measure.
-
-
 Accumulates actual value for the measure.
 
 | Property | Value |
@@ -263,9 +230,8 @@ Accumulates actual value for the measure.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Dw_Data_Values](Dw_Data_Values.md).[Actual_Value](Dw_Data_Values.md#actual_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,6 +254,6 @@ Accumulates actual value for the measure.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 

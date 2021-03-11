@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_printout_layouts">Table Gen_Printout_Layouts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.PrintoutLayouts.html">General.PrintoutLayouts</a></p>
 <p>Contains design layouts for document printouts. Entity: Gen_Printout_Layouts</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#layout">Layout</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout</td>
 </tr>
 <tr>
@@ -139,7 +141,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="printout_layout_id">Printout_Layout_Id</h3>
-<p>Printout_Layout_Id</p>
 <table>
 <thead>
 <tr>
@@ -178,15 +179,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#printout_layout_id">Printout_Layout_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -271,14 +268,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="printout_layout_name">Printout_Layout_Name</h3>
-<p>Printout_Layout_Name</p>
 <table>
 <thead>
 <tr>
@@ -317,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#printout_layout_name">Printout_Layout_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -410,7 +402,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -423,8 +415,6 @@
 </tbody>
 </table>
 <h3 id="document_entity_name">Document_Entity_Name</h3>
-<p>Document_Entity_Name</p>
-<p>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc.</p>
 <p>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc.</p>
 <table>
 <thead>
@@ -464,15 +454,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#document_entity_name">Document_Entity_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -557,15 +543,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="data_source_id">Data_Source_Id</h3>
-<p>Data_Source_Id</p>
-<p>The data source for the printout</p>
 <p>The data source for the printout</p>
 <table>
 <thead>
@@ -605,15 +589,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#data_source_id">Data_Source_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -698,15 +678,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="layout">Layout</h3>
-<p>Layout</p>
-<p>The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout</p>
 <p>The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout</p>
 <table>
 <thead>
@@ -718,7 +696,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -746,15 +724,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#layout">Layout</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -827,8 +801,6 @@
 </tbody>
 </table>
 <h3 id="layout_format">Layout_Format</h3>
-<p>Layout_Format</p>
-<p>Format specifier of the layout. Recognized by the application</p>
 <p>Format specifier of the layout. Recognized by the application</p>
 <table>
 <thead>
@@ -868,15 +840,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#layout_format">Layout_Format</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -961,14 +929,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1007,15 +974,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1088,8 +1051,6 @@
 </tbody>
 </table>
 <h3 id="binary_layout">Binary_Layout</h3>
-<p>Binary_Layout</p>
-<p>The printout layout, when the format requires binary storage. Alternative to Layout</p>
 <p>The printout layout, when the format requires binary storage. Alternative to Layout</p>
 <table>
 <thead>
@@ -1125,15 +1086,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#binary_layout">Binary_Layout</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1206,7 +1163,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1241,15 +1197,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Printout_Layouts.html">Gen_Printout_Layouts</a>.<a href="Gen_Printout_Layouts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

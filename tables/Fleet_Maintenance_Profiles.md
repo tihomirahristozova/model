@@ -1,5 +1,10 @@
 # Table Fleet_Maintenance_Profiles
 
+
+## Entity
+
+Entity: [Applications.Fleet.MaintenanceProfiles](~/entities/Applications.Fleet.MaintenanceProfiles.md)
+
 Profiles contain multiple maintenance plans and can be assigned directly to a vehicle. Entity: Fleet_Maintenance_Profiles
 
 ## Summary
@@ -9,15 +14,12 @@ Profiles contain multiple maintenance plans and can be assigned directly to a ve
 |[Maintenance_Profile_Id](#maintenance_profile_id)|`uniqueidentifier` `PK`||
 |[Maintenance_Profile_Code](#maintenance_profile_code)|`nvarchar(16)` ||
 |[Maintenance_Profile_Name](#maintenance_profile_name)|`nvarchar(254)` |Name of the maintenance profile (Multilanguage).|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Is_Active](#is_active)|`bit` |1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated.|
 
 ## Columns
 
 ### Maintenance_Profile_Id
-
-
-Maintenance_Profile_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Maintenance_Profile_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Maintenance_Profiles](Fleet_Maintenance_Profiles.md).[Maintenance_Profile_Id](Fleet_Maintenance_Profiles.md#maintenance_profile_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Maintenance_Profile_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Profile_Code
-
-
-Maintenance_Profile_Code
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Maintenance_Profile_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Profiles](Fleet_Maintenance_Profiles.md).[Maintenance_Profile_Code](Fleet_Maintenance_Profiles.md#maintenance_profile_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -93,12 +90,6 @@ Maintenance_Profile_Code
 ### Maintenance_Profile_Name
 
 
-Maintenance_Profile_Name
-
-
-Name of the maintenance profile (Multilanguage).
-
-
 Name of the maintenance profile (Multilanguage).
 
 | Property | Value |
@@ -110,9 +101,8 @@ Name of the maintenance profile (Multilanguage).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Profiles](Fleet_Maintenance_Profiles.md).[Maintenance_Profile_Name](Fleet_Maintenance_Profiles.md#maintenance_profile_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -133,21 +123,17 @@ Name of the maintenance profile (Multilanguage).
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Maintenance_Profiles](Fleet_Maintenance_Profiles.md).[Notes](Fleet_Maintenance_Profiles.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -169,12 +155,6 @@ Notes
 ### Is_Active
 
 
-Is_Active
-
-
-1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated.
-
-
 1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated.
 
 | Property | Value |
@@ -185,9 +165,8 @@ Is_Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Fleet_Maintenance_Profiles](Fleet_Maintenance_Profiles.md).[Is_Active](Fleet_Maintenance_Profiles.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

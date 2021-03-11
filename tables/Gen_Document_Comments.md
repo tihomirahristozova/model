@@ -1,5 +1,10 @@
 # Table Gen_Document_Comments
 
+
+## Entity
+
+Entity: [General.DocumentComments](~/entities/General.DocumentComments.md)
+
 Contains user comments for documents. Entity: Gen_Document_Comments
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains user comments for documents. Entity: Gen_Document_Comments
 
 ### Document_Comment_Id
 
-
-Document_Comment_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Document_Comment_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Comments](Gen_Document_Comments.md).[Document_Comment_Id](Gen_Document_Comments.md#document_comment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Document_Comment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The document to which to attach the comment
 
 
 The document to which to attach the comment
@@ -81,9 +76,8 @@ The document to which to attach the comment
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Comments](Gen_Document_Comments.md).[Document_Id](Gen_Document_Comments.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The document to which to attach the comment
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Comment_Timestamp
-
-
-Comment_Timestamp
-
-
-The exact timestamp of the comment
 
 
 The exact timestamp of the comment
@@ -128,9 +116,8 @@ The exact timestamp of the comment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Gen_Document_Comments](Gen_Document_Comments.md).[Comment_Timestamp](Gen_Document_Comments.md#comment_timestamp)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,12 +139,6 @@ The exact timestamp of the comment
 ### User_Id
 
 
-User_Id
-
-
-The user, who created the comment
-
-
 The user, who created the comment
 
 | Property | Value |
@@ -169,9 +150,8 @@ The user, who created the comment
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Comments](Gen_Document_Comments.md).[User_Id](Gen_Document_Comments.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,15 +174,9 @@ The user, who created the comment
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Comment
-
-
-Comment
-
-
-The user comment.
 
 
 The user comment.
@@ -216,9 +190,8 @@ The user comment.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Comments](Gen_Document_Comments.md).[Comment](Gen_Document_Comments.md#comment)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -240,12 +213,6 @@ The user comment.
 ### Assign_To_User_Id
 
 
-Assign_To_User_Id
-
-
-When not NULL means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user
-
-
 When not NULL means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user
 
 | Property | Value |
@@ -257,9 +224,8 @@ When not NULL means that the comment is also an assignment of the document to an
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Comments](Gen_Document_Comments.md).[Assign_To_User_Id](Gen_Document_Comments.md#assign_to_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -282,12 +248,9 @@ When not NULL means that the comment is also an assignment of the document to an
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -297,9 +260,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Comments](Gen_Document_Comments.md).[Row_Version](Gen_Document_Comments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

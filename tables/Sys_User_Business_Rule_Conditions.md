@@ -1,5 +1,10 @@
 # Table Sys_User_Business_Rule_Conditions
 
+
+## Entity
+
+Entity: [Systems.Bpm.UserBusinessRuleConditions](~/entities/Systems.Bpm.UserBusinessRuleConditions.md)
+
 Represents one condition for the execution of a business rule. Entity: Sys_User_Business_Rule_Conditions
 
 ## Owner Tables Hierarchy
@@ -17,17 +22,11 @@ Represents one condition for the execution of a business rule. Entity: Sys_User_
 |[Value](#value)|`nvarchar(254)` |The value against which the data attribute will be tested.|
 |[User_Business_Rule_Condition_Id](#user_business_rule_condition_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 
 ## Columns
 
 ### User_Business_Rule_Id
-
-
-User_Business_Rule_Id
-
-
-The business rule, for which the condition is defined.
 
 
 The business rule, for which the condition is defined.
@@ -41,9 +40,8 @@ The business rule, for which the condition is defined.
 |Referenced Table|[Sys_User_Business_Rules](Sys_User_Business_Rules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Conditions](Sys_User_Business_Rule_Conditions.md).[User_Business_Rule_Id](Sys_User_Business_Rule_Conditions.md#user_business_rule_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,15 +64,9 @@ The business rule, for which the condition is defined.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Condition_No
-
-
-Condition_No
-
-
-Unique consecutive number of the condition within the business rule.
 
 
 Unique consecutive number of the condition within the business rule.
@@ -87,10 +79,9 @@ Unique consecutive number of the condition within the business rule.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Sys_User_Business_Rule_Conditions](Sys_User_Business_Rule_Conditions.md).[Condition_No](Sys_User_Business_Rule_Conditions.md#condition_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,12 +103,6 @@ Unique consecutive number of the condition within the business rule.
 ### Attribute_Name
 
 
-Attribute_Name
-
-
-The attribute, which will be tested.
-
-
 The attribute, which will be tested.
 
 | Property | Value |
@@ -129,9 +114,8 @@ The attribute, which will be tested.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Conditions](Sys_User_Business_Rule_Conditions.md).[Attribute_Name](Sys_User_Business_Rule_Conditions.md#attribute_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,12 +137,6 @@ The attribute, which will be tested.
 ### Comparison_Type
 
 
-Comparison_Type
-
-
-How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value.
-
-
 How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value.
 
 | Property | Value |
@@ -170,10 +148,9 @@ How to compare the attribute and the value of the condition - e.g. Attribute-Com
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`Equals`, `Greater_Than`, `Less_Than`, `Like`, `IsNull`, `Not_Equals`|
 |Default Value|Equals|
-|Derived From|[Sys_User_Business_Rule_Conditions](Sys_User_Business_Rule_Conditions.md).[Comparison_Type](Sys_User_Business_Rule_Conditions.md#comparison_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -195,12 +172,6 @@ How to compare the attribute and the value of the condition - e.g. Attribute-Com
 ### Value
 
 
-Value
-
-
-The value against which the data attribute will be tested.
-
-
 The value against which the data attribute will be tested.
 
 | Property | Value |
@@ -212,9 +183,8 @@ The value against which the data attribute will be tested.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Conditions](Sys_User_Business_Rule_Conditions.md).[Value](Sys_User_Business_Rule_Conditions.md#value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -235,9 +205,6 @@ The value against which the data attribute will be tested.
 
 ### User_Business_Rule_Condition_Id
 
-
-User_Business_Rule_Condition_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -247,9 +214,8 @@ User_Business_Rule_Condition_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_User_Business_Rule_Conditions](Sys_User_Business_Rule_Conditions.md).[User_Business_Rule_Condition_Id](Sys_User_Business_Rule_Conditions.md#user_business_rule_condition_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -272,12 +238,9 @@ User_Business_Rule_Condition_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -287,9 +250,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Conditions](Sys_User_Business_Rule_Conditions.md).[Row_Version](Sys_User_Business_Rule_Conditions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -310,21 +272,17 @@ Row_Version
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_User_Business_Rule_Conditions](Sys_User_Business_Rule_Conditions.md).[Notes](Sys_User_Business_Rule_Conditions.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

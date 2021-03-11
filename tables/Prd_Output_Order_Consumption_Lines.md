@@ -1,5 +1,10 @@
 # Table Prd_Output_Order_Consumption_Lines
 
+
+## Entity
+
+Entity: [Production.ShopFloor.OutputOrderConsumptionLines](~/entities/Production.ShopFloor.OutputOrderConsumptionLines.md)
+
 The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders. Entity: Prd_Output_Order_Consumption_Lines
 
 ## Owner Tables Hierarchy
@@ -23,15 +28,12 @@ The internal production consumption of materials. Used only for control purposes
 |[Consumed_Quantity_For_Scrap](#consumed_quantity_for_scrap)|`decimal(18, 3)` |The scrapped quantity of the material for this operation.|
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit for the consumed quantity for setup, run and scrap.|
 |[Scrap_Type_Id](#scrap_type_id)|`uniqueidentifier` |When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Output_Order_Consumption_Line_Id
-
-
-Output_Order_Consumption_Line_Id
 
 | Property | Value |
 | - | - |
@@ -42,9 +44,8 @@ Output_Order_Consumption_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Output_Order_Consumption_Line_Id](Prd_Output_Order_Consumption_Lines.md#output_order_consumption_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -67,12 +68,9 @@ Output_Order_Consumption_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Output_Order_Id
-
-
-Output_Order_Id
 
 | Property | Value |
 | - | - |
@@ -83,9 +81,8 @@ Output_Order_Id
 |Referenced Table|[Prd_Output_Orders](Prd_Output_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Output_Order_Id](Prd_Output_Order_Consumption_Lines.md#output_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -108,12 +105,9 @@ Output_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
 
 | Property | Value |
 | - | - |
@@ -123,10 +117,9 @@ Line_No
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Line_No](Prd_Output_Order_Consumption_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,12 +141,6 @@ Line_No
 ### Line_Work_Order_Id
 
 
-Line_Work_Order_Id
-
-
-Work order for the line. Initially copied from the header (if there work order is not null)
-
-
 Work order for the line. Initially copied from the header (if there work order is not null)
 
 | Property | Value |
@@ -165,9 +152,8 @@ Work order for the line. Initially copied from the header (if there work order i
 |Referenced Table|[Prd_Work_Orders](Prd_Work_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Line_Work_Order_Id](Prd_Output_Order_Consumption_Lines.md#line_work_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,15 +176,9 @@ Work order for the line. Initially copied from the header (if there work order i
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Order_Item_Id
-
-
-Work_Order_Item_Id
-
-
-The work order item, for which the consumption is recorded.
 
 
 The work order item, for which the consumption is recorded.
@@ -212,9 +192,8 @@ The work order item, for which the consumption is recorded.
 |Referenced Table|[Prd_Work_Order_Items](Prd_Work_Order_Items.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Work_Order_Item_Id](Prd_Output_Order_Consumption_Lines.md#work_order_item_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -237,15 +216,9 @@ The work order item, for which the consumption is recorded.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Order_Item_Operation_Id
-
-
-Work_Order_Item_Operation_Id
-
-
-The operation in which the material was consumed. NULL = unknown
 
 
 The operation in which the material was consumed. NULL = unknown
@@ -259,9 +232,8 @@ The operation in which the material was consumed. NULL = unknown
 |Referenced Table|[Prd_Work_Order_Item_Operations](Prd_Work_Order_Item_Operations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Work_Order_Item_Operation_Id](Prd_Output_Order_Consumption_Lines.md#work_order_item_operation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,15 +256,9 @@ The operation in which the material was consumed. NULL = unknown
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Material_Id
-
-
-Material_Id
-
-
-The consumed material
 
 
 The consumed material
@@ -306,9 +272,8 @@ The consumed material
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Material_Id](Prd_Output_Order_Consumption_Lines.md#material_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -331,15 +296,9 @@ The consumed material
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Consumed_Quantity_For_Setup
-
-
-Consumed_Quantity_For_Setup
-
-
-The consumed quantity of the material while setting up the operation.
 
 
 The consumed quantity of the material while setting up the operation.
@@ -352,9 +311,8 @@ The consumed quantity of the material while setting up the operation.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Consumed_Quantity_For_Setup](Prd_Output_Order_Consumption_Lines.md#consumed_quantity_for_setup)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -376,12 +334,6 @@ The consumed quantity of the material while setting up the operation.
 ### Consumed_Quantity_For_Run
 
 
-Consumed_Quantity_For_Run
-
-
-The consumed quantity of the material for the operation.
-
-
 The consumed quantity of the material for the operation.
 
 | Property | Value |
@@ -392,9 +344,8 @@ The consumed quantity of the material for the operation.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Consumed_Quantity_For_Run](Prd_Output_Order_Consumption_Lines.md#consumed_quantity_for_run)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -416,12 +367,6 @@ The consumed quantity of the material for the operation.
 ### Consumed_Quantity_For_Scrap
 
 
-Consumed_Quantity_For_Scrap
-
-
-The scrapped quantity of the material for this operation.
-
-
 The scrapped quantity of the material for this operation.
 
 | Property | Value |
@@ -432,9 +377,8 @@ The scrapped quantity of the material for this operation.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Consumed_Quantity_For_Scrap](Prd_Output_Order_Consumption_Lines.md#consumed_quantity_for_scrap)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -456,12 +400,6 @@ The scrapped quantity of the material for this operation.
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit for the consumed quantity for setup, run and scrap.
-
-
 The measurement unit for the consumed quantity for setup, run and scrap.
 
 | Property | Value |
@@ -473,9 +411,8 @@ The measurement unit for the consumed quantity for setup, run and scrap.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Quantity_Unit_Id](Prd_Output_Order_Consumption_Lines.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -498,15 +435,9 @@ The measurement unit for the consumed quantity for setup, run and scrap.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Scrap_Type_Id
-
-
-Scrap_Type_Id
-
-
-When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap
 
 
 When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap
@@ -520,9 +451,8 @@ When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap
 |Referenced Table|[Inv_Scrap_Types](Inv_Scrap_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Scrap_Type_Id](Prd_Output_Order_Consumption_Lines.md#scrap_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -545,25 +475,21 @@ When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Notes](Prd_Output_Order_Consumption_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -584,9 +510,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -595,9 +518,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Consumption_Lines](Prd_Output_Order_Consumption_Lines.md).[Row_Version](Prd_Output_Order_Consumption_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

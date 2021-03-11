@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-crm_product_prices">Table Crm_Product_Prices</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.ProductPrices.html">Crm.ProductPrices</a></p>
 <p>Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -199,8 +201,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="price_list_id">Price_List_Id</h3>
-<p>Price_List_Id</p>
-<p>When not NULL, specifies that the sales document must have the specified price list.</p>
 <p>When not NULL, specifies that the sales document must have the specified price list.</p>
 <table>
 <thead>
@@ -240,15 +240,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#price_list_id">Price_List_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -333,15 +329,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="price">Price</h3>
-<p>Price</p>
-<p>Price in the specified currency and for the specified quantity</p>
 <p>Price in the specified currency and for the specified quantity</p>
 <table>
 <thead>
@@ -377,15 +371,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#price">Price</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -470,7 +460,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -483,8 +473,6 @@
 </tbody>
 </table>
 <h3 id="currency_id">Currency_Id</h3>
-<p>Currency_Id</p>
-<p>The currency of the price</p>
 <p>The currency of the price</p>
 <table>
 <thead>
@@ -524,15 +512,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#currency_id">Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -617,15 +601,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="price_quantity_measurement_unit_id">Price_Quantity_Measurement_Unit_Id</h3>
-<p>Price_Quantity_Measurement_Unit_Id</p>
-<p>The measurement unit of Price_Quantity</p>
 <p>The measurement unit of Price_Quantity</p>
 <table>
 <thead>
@@ -665,15 +647,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#price_quantity_measurement_unit_id">Price_Quantity_Measurement_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -758,15 +736,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="customer_id">Customer_Id</h3>
-<p>Customer_Id</p>
-<p>When not NULL, specifies that the customer of the sales document must be the specified customer.</p>
 <p>When not NULL, specifies that the customer of the sales document must be the specified customer.</p>
 <table>
 <thead>
@@ -806,15 +782,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#customer_id">Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -899,15 +871,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>When not NULL, specifies that the sales document must be in the specified enterprise company.</p>
 <p>When not NULL, specifies that the sales document must be in the specified enterprise company.</p>
 <table>
 <thead>
@@ -947,15 +917,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1040,15 +1006,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="priority">Priority</h3>
-<p>Priority</p>
-<p>Priority of the price comparative to other prices. Only the highest priority price is applied.</p>
 <p>Priority of the price comparative to other prices. Only the highest priority price is applied.</p>
 <table>
 <thead>
@@ -1084,7 +1048,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1093,10 +1057,6 @@
 <tr>
 <td>Default Value</td>
 <td>2</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#priority">Priority</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1181,14 +1141,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1227,15 +1186,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1308,8 +1263,6 @@
 </tbody>
 </table>
 <h3 id="min_quantity">Min_Quantity</h3>
-<p>Min_Quantity</p>
-<p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)</p>
 <p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)</p>
 <table>
 <thead>
@@ -1345,15 +1298,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#min_quantity">Min_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1438,7 +1387,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1451,8 +1400,6 @@
 </tbody>
 </table>
 <h3 id="max_quantity">Max_Quantity</h3>
-<p>Max_Quantity</p>
-<p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit</p>
 <p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit</p>
 <table>
 <thead>
@@ -1488,15 +1435,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#max_quantity">Max_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1581,7 +1524,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1594,8 +1537,6 @@
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>From_Date</p>
-<p>Starting date of validity of the price</p>
 <p>Starting date of validity of the price</p>
 <table>
 <thead>
@@ -1635,15 +1576,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#from_date">From_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1728,7 +1665,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1741,8 +1678,6 @@
 </tbody>
 </table>
 <h3 id="thru_date">Thru_Date</h3>
-<p>Thru_Date</p>
-<p>Ending date (inclusive) of the validity of the price</p>
 <p>Ending date (inclusive) of the validity of the price</p>
 <table>
 <thead>
@@ -1782,15 +1717,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#thru_date">Thru_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1875,7 +1806,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -1888,8 +1819,6 @@
 </tbody>
 </table>
 <h3 id="target_group_id">Target_Group_Id</h3>
-<p>Target_Group_Id</p>
-<p>When not NULL, specifies a criteria, which is matched only when the customer of the sales document is included in the group.</p>
 <p>When not NULL, specifies a criteria, which is matched only when the customer of the sales document is included in the group.</p>
 <table>
 <thead>
@@ -1929,15 +1858,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#target_group_id">Target_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2022,15 +1947,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="price_type_id">Price_Type_Id</h3>
-<p>Price_Type_Id</p>
-<p>Price type of the current product price. The price types are used to set additional priority condition for the prices.</p>
 <p>Price type of the current product price. The price types are used to set additional priority condition for the prices.</p>
 <table>
 <thead>
@@ -2070,15 +1993,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#price_type_id">Price_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2163,15 +2082,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
-<p>Enterprise_Company_Location_Id</p>
-<p>When set, specifies that the sales document must be of the specified enterprise company location.</p>
 <p>When set, specifies that the sales document must be of the specified enterprise company location.</p>
 <table>
 <thead>
@@ -2211,15 +2128,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2304,15 +2217,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="distribution_channel_id">Distribution_Channel_Id</h3>
-<p>Distribution_Channel_Id</p>
-<p>Use the price only when selling through the specified channel</p>
 <p>Use the price only when selling through the specified channel</p>
 <table>
 <thead>
@@ -2352,15 +2263,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#distribution_channel_id">Distribution_Channel_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2445,14 +2352,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_price_id">Product_Price_Id</h3>
-<p>Product_Price_Id</p>
 <table>
 <thead>
 <tr>
@@ -2491,15 +2397,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#product_price_id">Product_Price_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2584,15 +2486,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="price_quantity">Price_Quantity</h3>
-<p>Price_Quantity</p>
-<p>The quantity of the product for which the price is specified</p>
 <p>The quantity of the product for which the price is specified</p>
 <table>
 <thead>
@@ -2628,15 +2528,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#price_quantity">Price_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2728,8 +2624,6 @@
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The product for which a price will be defined</p>
 <p>The product for which a price will be defined</p>
 <table>
 <thead>
@@ -2769,15 +2663,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2862,15 +2752,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="ship_to_customer_id">Ship_To_Customer_Id</h3>
-<p>Ship_To_Customer_Id</p>
-<p>When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer.</p>
 <p>When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer.</p>
 <table>
 <thead>
@@ -2910,15 +2798,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#ship_to_customer_id">Ship_To_Customer_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3003,14 +2887,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -3045,15 +2928,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Crm_Product_Prices.html">Crm_Product_Prices</a>.<a href="Crm_Product_Prices.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

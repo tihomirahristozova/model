@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-acc_voucher_lines">Table Acc_Voucher_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Accounting.AccountingVoucherLines.html">Finance.Accounting.AccountingVoucherLines</a></p>
 <p>Contains one debit or credit posting within an accounting voucher. Entity: Acc_Voucher_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -189,8 +191,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>Consecutive number of the line within the voucher</p>
 <p>Consecutive number of the line within the voucher</p>
 <table>
 <thead>
@@ -226,7 +226,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -235,10 +235,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -311,8 +307,6 @@
 </tbody>
 </table>
 <h3 id="account_id">Account_Id</h3>
-<p>Account_Id</p>
-<p>The account being debited or credited</p>
 <p>The account being debited or credited</p>
 <table>
 <thead>
@@ -352,15 +346,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#account_id">Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -445,15 +435,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="item_key">Item_Key</h3>
-<p>Item_Key</p>
-<p>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.</p>
 <p>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.</p>
 <table>
 <thead>
@@ -493,15 +481,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#item_key">Item_Key</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -586,7 +570,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
@@ -599,8 +583,6 @@
 </tbody>
 </table>
 <h3 id="currency_id">Currency_Id</h3>
-<p>Currency_Id</p>
-<p>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field.</p>
 <p>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field.</p>
 <table>
 <thead>
@@ -640,15 +622,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#currency_id">Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -733,15 +711,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="debit">Debit</h3>
-<p>Debit</p>
-<p>The amount of the debit in the currency of the account. 0 means that the account is not debited</p>
 <p>The amount of the debit in the currency of the account. 0 means that the account is not debited</p>
 <table>
 <thead>
@@ -777,15 +753,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#debit">Debit</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -858,8 +830,6 @@
 </tbody>
 </table>
 <h3 id="debit_base">Debit_Base</h3>
-<p>Debit_Base</p>
-<p>The amount of debit in base currency</p>
 <p>The amount of debit in base currency</p>
 <table>
 <thead>
@@ -895,15 +865,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#debit_base">Debit_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -976,8 +942,6 @@
 </tbody>
 </table>
 <h3 id="credit">Credit</h3>
-<p>Credit</p>
-<p>The amount of the credit in the currency of the account. 0 means that the account is not credited</p>
 <p>The amount of the credit in the currency of the account. 0 means that the account is not credited</p>
 <table>
 <thead>
@@ -1013,15 +977,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#credit">Credit</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1094,8 +1054,6 @@
 </tbody>
 </table>
 <h3 id="credit_base">Credit_Base</h3>
-<p>Credit_Base</p>
-<p>The amount of credit in base currency</p>
 <p>The amount of credit in base currency</p>
 <table>
 <thead>
@@ -1131,15 +1089,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#credit_base">Credit_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1212,8 +1166,6 @@
 </tbody>
 </table>
 <h3 id="referenced_document_id">Referenced_Document_Id</h3>
-<p>Referenced_Document_Id</p>
-<p>The document which is referenced by the line. By default, this is the document of the voucher</p>
 <p>The document which is referenced by the line. By default, this is the document of the voucher</p>
 <table>
 <thead>
@@ -1253,15 +1205,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#referenced_document_id">Referenced_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1346,15 +1294,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="rate_multiplier">Rate_Multiplier</h3>
-<p>Rate_Multiplier</p>
-<p>The multiplier for conversion from Debit/Credit to base currency</p>
 <p>The multiplier for conversion from Debit/Credit to base currency</p>
 <table>
 <thead>
@@ -1390,15 +1336,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#rate_multiplier">Rate_Multiplier</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1471,8 +1413,6 @@
 </tbody>
 </table>
 <h3 id="rate_divisor">Rate_Divisor</h3>
-<p>Rate_Divisor</p>
-<p>The divisor for conversion from Debit/Credit to base currency</p>
 <p>The divisor for conversion from Debit/Credit to base currency</p>
 <table>
 <thead>
@@ -1508,15 +1448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#rate_divisor">Rate_Divisor</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1589,8 +1525,6 @@
 </tbody>
 </table>
 <h3 id="cost_center_id">Cost_Center_Id</h3>
-<p>Cost_Center_Id</p>
-<p>The cost center to which this cost is related</p>
 <p>The cost center to which this cost is related</p>
 <table>
 <thead>
@@ -1630,15 +1564,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#cost_center_id">Cost_Center_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1723,15 +1653,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="profit_center_id">Profit_Center_Id</h3>
-<p>Profit_Center_Id</p>
-<p>The profit center to which this revenue is related</p>
 <p>The profit center to which this revenue is related</p>
 <table>
 <thead>
@@ -1771,15 +1699,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#profit_center_id">Profit_Center_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1864,15 +1788,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="correspondance_no">Correspondance_No</h3>
-<p>Correspondance_No</p>
-<p>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits</p>
 <p>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits</p>
 <table>
 <thead>
@@ -1908,15 +1830,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#correspondance_no">Correspondance_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1989,8 +1907,6 @@
 </tbody>
 </table>
 <h3 id="correspondant_amount">Correspondant_Amount</h3>
-<p>Correspondant_Amount</p>
-<p>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).</p>
 <p>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).</p>
 <table>
 <thead>
@@ -2026,15 +1942,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#correspondant_amount">Correspondant_Amount</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2107,7 +2019,6 @@
 </tbody>
 </table>
 <h3 id="voucher_line_id">Voucher_Line_Id</h3>
-<p>Voucher_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -2146,15 +2057,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#voucher_line_id">Voucher_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2239,15 +2146,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="voucher_id">Voucher_Id</h3>
-<p>Voucher_Id</p>
-<p>The voucher to which this line is attached</p>
 <p>The voucher to which this line is attached</p>
 <table>
 <thead>
@@ -2287,15 +2192,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#voucher_id">Voucher_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2380,14 +2281,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2422,15 +2322,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Acc_Voucher_Lines.html">Acc_Voucher_Lines</a>.<a href="Acc_Voucher_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

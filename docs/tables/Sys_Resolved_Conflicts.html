@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_resolved_conflicts">Table Sys_Resolved_Conflicts</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Core.ResolvedConflicts.html">Systems.Core.ResolvedConflicts</a></p>
 <p>Contains records of conflicts, which were automatically resolved by update procedures. Entity: Sys_Resolved_Conflicts</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -144,8 +146,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="resolved_conflict_id">Resolved_Conflict_Id</h3>
-<p>Resolved_Conflict_Id</p>
-<p>Unique identification of the resolved conflict.</p>
 <p>Unique identification of the resolved conflict.</p>
 <table>
 <thead>
@@ -185,15 +185,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#resolved_conflict_id">Resolved_Conflict_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -278,15 +274,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="url">URL</h3>
-<p>URL</p>
-<p>URL of the item (the row) for which the conflict occurred.</p>
 <p>URL of the item (the row) for which the conflict occurred.</p>
 <table>
 <thead>
@@ -326,15 +320,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#url">URL</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -407,8 +397,6 @@
 </tbody>
 </table>
 <h3 id="table_name">Table_Name</h3>
-<p>Table_Name</p>
-<p>Name of the table in which the conflict has occurred.</p>
 <p>Name of the table in which the conflict has occurred.</p>
 <table>
 <thead>
@@ -448,15 +436,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#table_name">Table_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -548,8 +532,6 @@
 </tbody>
 </table>
 <h3 id="conflict_description">Conflict_Description</h3>
-<p>Conflict_Description</p>
-<p>Description of the conflict.</p>
 <p>Description of the conflict.</p>
 <table>
 <thead>
@@ -589,15 +571,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#conflict_description">Conflict_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -670,8 +648,6 @@
 </tbody>
 </table>
 <h3 id="resolve_description">Resolve_Description</h3>
-<p>Resolve_Description</p>
-<p>Description of the resolution of the conflict.</p>
 <p>Description of the resolution of the conflict.</p>
 <table>
 <thead>
@@ -711,15 +687,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#resolve_description">Resolve_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -792,8 +764,6 @@
 </tbody>
 </table>
 <h3 id="resolved_time">Resolved_Time</h3>
-<p>Resolved_Time</p>
-<p>Time when the resolution of the conflict was made.</p>
 <p>Time when the resolution of the conflict was made.</p>
 <table>
 <thead>
@@ -833,15 +803,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#resolved_time">Resolved_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -914,8 +880,6 @@
 </tbody>
 </table>
 <h3 id="revised_by_user">Revised_By_User</h3>
-<p>Revised_By_User</p>
-<p>True, when the conflict resolution was revised (reviewed) manually by user.</p>
 <p>True, when the conflict resolution was revised (reviewed) manually by user.</p>
 <table>
 <thead>
@@ -951,15 +915,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#revised_by_user">Revised_By_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1044,15 +1004,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resolve_confirmed_by_user">Resolve_Confirmed_By_User</h3>
-<p>Resolve_Confirmed_By_User</p>
-<p>True, when the conflict resolution was manually confirmed by user.</p>
 <p>True, when the conflict resolution was manually confirmed by user.</p>
 <table>
 <thead>
@@ -1088,15 +1046,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#resolve_confirmed_by_user">Resolve_Confirmed_By_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1181,15 +1135,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resolve_confirmed_time">Resolve_Confirmed_Time</h3>
-<p>Resolve_Confirmed_Time</p>
-<p>Time when the conflict resolution was confirmed by the user.</p>
 <p>Time when the conflict resolution was confirmed by the user.</p>
 <table>
 <thead>
@@ -1229,15 +1181,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#resolve_confirmed_time">Resolve_Confirmed_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1310,7 +1258,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1345,15 +1292,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Resolved_Conflicts.html">Sys_Resolved_Conflicts</a>.<a href="Sys_Resolved_Conflicts.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

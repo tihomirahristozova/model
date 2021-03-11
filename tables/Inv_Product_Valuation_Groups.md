@@ -1,5 +1,10 @@
 # Table Inv_Product_Valuation_Groups
 
+
+## Entity
+
+Entity: [Logistics.Inventory.ProductValuationGroups](~/entities/Logistics.Inventory.ProductValuationGroups.md)
+
 Contains the available valuation groups for products. They are used in reconciliations, where all pluses and minuses within a valuation group are allowed to balance each other without fiscal effects. Without valuation groups, each product is balanced for itself and taxes are calculated for each surplus. Entity: Inv_Product_Valuation_Groups
 
 ## Summary
@@ -16,9 +21,6 @@ Contains the available valuation groups for products. They are used in reconcili
 
 ### Valuation_Group_Id
 
-
-Valuation_Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Valuation_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Product_Valuation_Groups](Inv_Product_Valuation_Groups.md).[Valuation_Group_Id](Inv_Product_Valuation_Groups.md#valuation_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Valuation_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Valuation_Group_Code
-
-
-Valuation_Group_Code
-
-
-The unique code of the product valuation group.
 
 
 The unique code of the product valuation group.
@@ -75,9 +70,8 @@ The unique code of the product valuation group.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Product_Valuation_Groups](Inv_Product_Valuation_Groups.md).[Valuation_Group_Code](Inv_Product_Valuation_Groups.md#valuation_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,16 +94,10 @@ The unique code of the product valuation group.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Valuation_Group_Name
-
-
-Valuation_Group_Name
-
-
-The name of the product valuation group.
 
 
 The name of the product valuation group.
@@ -123,9 +111,8 @@ The name of the product valuation group.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Product_Valuation_Groups](Inv_Product_Valuation_Groups.md).[Valuation_Group_Name](Inv_Product_Valuation_Groups.md#valuation_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,13 +135,10 @@ The name of the product valuation group.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Description
-
-
-Description
 
 | Property | Value |
 | - | - |
@@ -165,9 +149,8 @@ Description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Inv_Product_Valuation_Groups](Inv_Product_Valuation_Groups.md).[Description](Inv_Product_Valuation_Groups.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,9 +177,6 @@ Description
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -205,9 +185,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Product_Valuation_Groups](Inv_Product_Valuation_Groups.md).[Row_Version](Inv_Product_Valuation_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

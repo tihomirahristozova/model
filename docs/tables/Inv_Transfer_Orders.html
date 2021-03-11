@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-inv_transfer_orders">Table Inv_Transfer_Orders</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.TransferOrders.html">Logistics.Inventory.TransferOrders</a></p>
 <p>Orders for stock transfers between stores. Entity: Inv_Transfer_Orders</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -153,7 +155,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="transfer_order_id">Transfer_Order_Id</h3>
-<p>Transfer_Order_Id</p>
 <table>
 <thead>
 <tr>
@@ -192,15 +193,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#transfer_order_id">Transfer_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -285,15 +282,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
-<p>The unique stock transfer order id, as per documents table</p>
 <p>The unique stock transfer order id, as per documents table</p>
 <table>
 <thead>
@@ -333,15 +328,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -426,15 +417,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_due_date_out">Default_Due_Date_Out</h3>
-<p>Default_Due_Date_Out</p>
-<p>When the transfer is scheduled to issue the goods from the source warehouse</p>
 <p>When the transfer is scheduled to issue the goods from the source warehouse</p>
 <table>
 <thead>
@@ -474,15 +463,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDate</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#default_due_date_out">Default_Due_Date_Out</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -574,8 +559,6 @@
 </tbody>
 </table>
 <h3 id="default_due_date_in">Default_Due_Date_In</h3>
-<p>Default_Due_Date_In</p>
-<p>The date, when the goods are expected to be received in the destination warehouse</p>
 <p>The date, when the goods are expected to be received in the destination warehouse</p>
 <table>
 <thead>
@@ -615,15 +598,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDate</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#default_due_date_in">Default_Due_Date_In</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -715,8 +694,6 @@
 </tbody>
 </table>
 <h3 id="from_store_id">From_Store_Id</h3>
-<p>From_Store_Id</p>
-<p>Specifies the store, from which the goods will be issued.</p>
 <p>Specifies the store, from which the goods will be issued.</p>
 <table>
 <thead>
@@ -756,15 +733,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#from_store_id">From_Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -849,15 +822,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="to_store_id">To_Store_Id</h3>
-<p>To_Store_Id</p>
-<p>Specifies the store, in which the goods will be received.</p>
 <p>Specifies the store, in which the goods will be received.</p>
 <table>
 <thead>
@@ -897,15 +868,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#to_store_id">To_Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -990,14 +957,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1008,7 +974,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1036,15 +1002,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1117,8 +1079,6 @@
 </tbody>
 </table>
 <h3 id="status">Status</h3>
-<p>Status</p>
-<p>Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released)</p>
 <p>Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released)</p>
 <table>
 <thead>
@@ -1154,7 +1114,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1163,10 +1123,6 @@
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#status">Status</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1239,8 +1195,6 @@
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1276,15 +1230,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1369,15 +1319,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -1413,15 +1361,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1506,14 +1450,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1548,15 +1491,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Inv_Transfer_Orders.html">Inv_Transfer_Orders</a>.<a href="Inv_Transfer_Orders.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

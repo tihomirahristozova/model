@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-scm_requisition_lines">Table Scm_Requisition_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Procurement.RequisitionLines.html">Logistics.Procurement.RequisitionLines</a></p>
 <p>Detail lines of Requistions. Entity: Scm_Requisition_Lines</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -169,7 +171,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="requisition_line_id">Requisition_Line_Id</h3>
-<p>Requisition_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -208,15 +209,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#requisition_line_id">Requisition_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -301,14 +298,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="requisition_id">Requisition_Id</h3>
-<p>Requisition_Id</p>
 <table>
 <thead>
 <tr>
@@ -347,15 +343,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#requisition_id">Requisition_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -440,14 +432,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
 <table>
 <thead>
 <tr>
@@ -482,7 +473,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
@@ -491,10 +482,6 @@
 <tr>
 <td>Autoincrement</td>
 <td>10</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -567,8 +554,6 @@
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department.</p>
 <p>The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department.</p>
 <table>
 <thead>
@@ -608,15 +593,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -701,15 +682,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_description">Product_Description</h3>
-<p>Product_Description</p>
-<p>The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.</p>
 <p>The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.</p>
 <table>
 <thead>
@@ -749,15 +728,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#product_description">Product_Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -830,8 +805,6 @@
 </tbody>
 </table>
 <h3 id="suggested_supplier_id">Suggested_Supplier_Id</h3>
-<p>Suggested_Supplier_Id</p>
-<p>When the requisitor knows the supplier or has a supplier preference it is denoted in this field.</p>
 <p>When the requisitor knows the supplier or has a supplier preference it is denoted in this field.</p>
 <table>
 <thead>
@@ -871,15 +844,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#suggested_supplier_id">Suggested_Supplier_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -964,15 +933,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity</p>
-<p>The required quantity of the product.</p>
 <p>The required quantity of the product.</p>
 <table>
 <thead>
@@ -1008,15 +975,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#quantity">Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1108,8 +1071,6 @@
 </tbody>
 </table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
-<p>Quantity_Unit_Id</p>
-<p>The measurement unit of Quantity.</p>
 <p>The measurement unit of Quantity.</p>
 <table>
 <thead>
@@ -1149,15 +1110,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#quantity_unit_id">Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1242,15 +1199,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="required_delivery_date">Required_Delivery_Date</h3>
-<p>Required_Delivery_Date</p>
-<p>The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time.</p>
 <p>The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time.</p>
 <table>
 <thead>
@@ -1290,15 +1245,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#required_delivery_date">Required_Delivery_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1390,7 +1341,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1429,15 +1379,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1510,8 +1456,6 @@
 </tbody>
 </table>
 <h3 id="quantity_base">Quantity_Base</h3>
-<p>Quantity_Base</p>
-<p>The equivalence of Quantity in the base measurement category of the product.</p>
 <p>The equivalence of Quantity in the base measurement category of the product.</p>
 <table>
 <thead>
@@ -1547,15 +1491,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#quantity_base">Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1628,8 +1568,6 @@
 </tbody>
 </table>
 <h3 id="lot_id">Lot_Id</h3>
-<p>Lot_Id</p>
-<p>When not null, indicates a specific lot should be purchased.</p>
 <p>When not null, indicates a specific lot should be purchased.</p>
 <table>
 <thead>
@@ -1669,15 +1607,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#lot_id">Lot_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1762,14 +1696,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1804,15 +1737,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1885,8 +1814,6 @@
 </tbody>
 </table>
 <h3 id="standard_quantity_base">Standard_Quantity_Base</h3>
-<p>Standard_Quantity_Base</p>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <table>
 <thead>
@@ -1922,15 +1849,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Requisition_Lines.html">Scm_Requisition_Lines</a>.<a href="Scm_Requisition_Lines.html#standard_quantity_base">Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>

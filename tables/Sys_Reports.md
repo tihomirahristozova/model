@@ -1,5 +1,10 @@
 # Table Sys_Reports
 
+
+## Entity
+
+Entity: [Systems.Reporting.Reports](~/entities/Systems.Reporting.Reports.md)
+
 User-defined reports. Reports retrieve data from data sources and present it in a user-defined layout. Entity: Sys_Reports
 
 ## Summary
@@ -10,8 +15,8 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 |[Report_Name](#report_name)|`nvarchar(254)` |Multi-language report name|
 |[Query_Name](#query_name)|`nvarchar(128)` |The query on which the report is based|
 |[Data_Source_Id](#data_source_id)|`uniqueidentifier` |Report data source. If specified should be based on the query in Query_Name. NULL means that the report is based directly on the query|
-|[Report_Layout](#report_layout)|`nvarchar(2147483647)` |The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout|
-|[Template_Filter_Xml](#template_filter_xml)|`nvarchar(2147483647)` |Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.|
+|[Report_Layout](#report_layout)|`nvarchar(max)` |The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout|
+|[Template_Filter_Xml](#template_filter_xml)|`nvarchar(max)` |Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.|
 |[Template_Priority](#template_priority)|`int` |Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.|
 |[One_Row](#one_row)|`bit` |True means that report can be used for one-row forms only. False means that the report can be used for navigators only.|
 |[Notes](#notes)|`nvarchar(512)` ||
@@ -23,9 +28,6 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 
 ### Report_Id
 
-
-Report_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Report_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Report_Id](Sys_Reports.md#report_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Report_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Report_Name
-
-
-Report_Name
-
-
-Multi-language report name
 
 
 Multi-language report name
@@ -82,9 +77,8 @@ Multi-language report name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Report_Name](Sys_Reports.md#report_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,16 +101,10 @@ Multi-language report name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Query_Name
-
-
-Query_Name
-
-
-The query on which the report is based
 
 
 The query on which the report is based
@@ -130,9 +118,8 @@ The query on which the report is based
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Query_Name](Sys_Reports.md#query_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -155,15 +142,9 @@ The query on which the report is based
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Data_Source_Id
-
-
-Data_Source_Id
-
-
-Report data source. If specified should be based on the query in Query_Name. NULL means that the report is based directly on the query
 
 
 Report data source. If specified should be based on the query in Query_Name. NULL means that the report is based directly on the query
@@ -177,9 +158,8 @@ Report data source. If specified should be based on the query in Query_Name. NUL
 |Referenced Table|[Sys_Data_Sources](Sys_Data_Sources.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Data_Source_Id](Sys_Reports.md#data_source_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,31 +182,24 @@ Report data source. If specified should be based on the query in Query_Name. NUL
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Report_Layout
-
-
-Report_Layout
-
-
-The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout
 
 
 The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Report_Layout](Sys_Reports.md#report_layout)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,26 +221,19 @@ The textual representation of the printout layout, when the format requires text
 ### Template_Filter_Xml
 
 
-Template_Filter_Xml
-
-
-Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.
-
-
 Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Template_Filter_Xml](Sys_Reports.md#template_filter_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,12 +255,6 @@ Specifies the filter condition, which must be satisfied in order for this report
 ### Template_Priority
 
 
-Template_Priority
-
-
-Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.
-
-
 Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.
 
 | Property | Value |
@@ -305,9 +265,8 @@ Specifies the priority of the current report, relative to other reports. Used on
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Template_Priority](Sys_Reports.md#template_priority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -329,12 +288,6 @@ Specifies the priority of the current report, relative to other reports. Used on
 ### One_Row
 
 
-One_Row
-
-
-True means that report can be used for one-row forms only. False means that the report can be used for navigators only.
-
-
 True means that report can be used for one-row forms only. False means that the report can be used for navigators only.
 
 | Property | Value |
@@ -345,9 +298,8 @@ True means that report can be used for one-row forms only. False means that the 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sys_Reports](Sys_Reports.md).[One_Row](Sys_Reports.md#one_row)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -368,9 +320,6 @@ True means that report can be used for one-row forms only. False means that the 
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(512)|
@@ -380,9 +329,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Notes](Sys_Reports.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -404,12 +352,6 @@ Notes
 ### Layout_Format
 
 
-Layout_Format
-
-
-Format specifier of the layout. Recognized by the application
-
-
 Format specifier of the layout. Recognized by the application
 
 | Property | Value |
@@ -421,9 +363,8 @@ Format specifier of the layout. Recognized by the application
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Layout_Format](Sys_Reports.md#layout_format)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -446,15 +387,9 @@ Format specifier of the layout. Recognized by the application
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Report_Binary_Layout
-
-
-Report_Binary_Layout
-
-
-The printout layout, when the format requires binary storage. Alternative to Report_Layout
 
 
 The printout layout, when the format requires binary storage. Alternative to Report_Layout
@@ -467,9 +402,8 @@ The printout layout, when the format requires binary storage. Alternative to Rep
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Report_Binary_Layout](Sys_Reports.md#report_binary_layout)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -490,9 +424,6 @@ The printout layout, when the format requires binary storage. Alternative to Rep
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -501,9 +432,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Reports](Sys_Reports.md).[Row_Version](Sys_Reports.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

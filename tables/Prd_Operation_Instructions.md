@@ -1,5 +1,10 @@
 # Table Prd_Operation_Instructions
 
+
+## Entity
+
+Entity: [Production.Resources.OperationInstructions](~/entities/Production.Resources.OperationInstructions.md)
+
 Long (full) instructions for performing an operation. The operations point to the instructions and one instruction can be used for different operations. Entity: Prd_Operation_Instructions
 
 ## Summary
@@ -15,9 +20,6 @@ Long (full) instructions for performing an operation. The operations point to th
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operation_Instructions](Prd_Operation_Instructions.md).[Id](Prd_Operation_Instructions.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Instructions
-
-
-Instructions
-
-
-The operation instructions in OLE format
 
 
 The operation instructions in OLE format
@@ -73,9 +68,8 @@ The operation instructions in OLE format
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operation_Instructions](Prd_Operation_Instructions.md).[Instructions](Prd_Operation_Instructions.md#instructions)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -97,12 +91,6 @@ The operation instructions in OLE format
 ### Description
 
 
-Description
-
-
-Short description or notes for the instructions.
-
-
 Short description or notes for the instructions.
 
 | Property | Value |
@@ -114,9 +102,8 @@ Short description or notes for the instructions.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operation_Instructions](Prd_Operation_Instructions.md).[Description](Prd_Operation_Instructions.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -143,9 +130,6 @@ Short description or notes for the instructions.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -154,9 +138,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Operation_Instructions](Prd_Operation_Instructions.md).[Row_Version](Prd_Operation_Instructions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

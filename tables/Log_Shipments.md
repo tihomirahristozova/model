@@ -1,5 +1,10 @@
 # Table Log_Shipments
 
+
+## Entity
+
+Entity: [Logistics.Shipment.Shipments](~/entities/Logistics.Shipment.Shipments.md)
+
 Represents shipments of sales orders to customers. Entity: Log_Shipments
 
 ## Owner Tables Hierarchy
@@ -25,9 +30,6 @@ Represents shipments of sales orders to customers. Entity: Log_Shipments
 
 ### Shipment_Id
 
-
-Shipment_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -37,9 +39,8 @@ Shipment_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Shipment_Id](Log_Shipments.md#shipment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -62,12 +63,9 @@ Shipment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -78,9 +76,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Document_Id](Log_Shipments.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,15 +100,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Ship_To_Party_Contact_Mechanism_Id
-
-
-Ship_To_Party_Contact_Mechanism_Id
-
-
-Destination address where the goods should be shipped
 
 
 Destination address where the goods should be shipped
@@ -125,9 +116,8 @@ Destination address where the goods should be shipped
 |Referenced Table|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Ship_To_Party_Contact_Mechanism_Id](Log_Shipments.md#ship_to_party_contact_mechanism_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -150,15 +140,9 @@ Destination address where the goods should be shipped
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Required_Delivery_Date
-
-
-Required_Delivery_Date
-
-
-Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When NULL means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines)
 
 
 Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When NULL means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines)
@@ -172,9 +156,8 @@ Required delivery date. Depending on the shipment route travel time, the shipmen
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Required_Delivery_Date](Log_Shipments.md#required_delivery_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -202,12 +185,6 @@ Required delivery date. Depending on the shipment route travel time, the shipmen
 ### Ship_From_Store_Id
 
 
-Ship_From_Store_Id
-
-
-The store from which the shipment should be effected
-
-
 The store from which the shipment should be effected
 
 | Property | Value |
@@ -219,9 +196,8 @@ The store from which the shipment should be effected
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Ship_From_Store_Id](Log_Shipments.md#ship_from_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -244,17 +220,11 @@ The store from which the shipment should be effected
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Issued_By_Person_Id
 
 
-Issued_By_Person_Id
-
-
-The person who signed for the shipment
-
-
 The person who signed for the shipment
 
 | Property | Value |
@@ -266,9 +236,8 @@ The person who signed for the shipment
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Issued_By_Person_Id](Log_Shipments.md#issued_by_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -291,17 +260,11 @@ The person who signed for the shipment
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Received_By_Person_Id
 
 
-Received_By_Person_Id
-
-
-The person who received the goods for/from the shipment 
-
-
 The person who received the goods for/from the shipment 
 
 | Property | Value |
@@ -313,9 +276,8 @@ The person who received the goods for/from the shipment
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Received_By_Person_Id](Log_Shipments.md#received_by_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -338,17 +300,11 @@ The person who received the goods for/from the shipment
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -359,9 +315,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Is_Single_Execution](Log_Shipments.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -384,17 +339,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -405,9 +354,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Is_Released](Log_Shipments.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -430,12 +378,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -445,9 +390,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Shipments](Log_Shipments.md).[Row_Version](Log_Shipments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

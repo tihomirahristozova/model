@@ -1,5 +1,10 @@
 # Table Prj_Template_Work_Elements
 
+
+## Entity
+
+Entity: [Projects.TemplateWorkElements](~/entities/Projects.TemplateWorkElements.md)
+
 Contains project work elements, which shall be copied to projects, based on the specified template. Entity: Prj_Template_Work_Elements
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ Contains project work elements, which shall be copied to projects, based on the 
 
 ### Project_Template_Work_Element_Id
 
-
-Project_Template_Work_Element_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ Project_Template_Work_Element_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Template_Work_Elements](Prj_Template_Work_Elements.md).[Project_Template_Work_Element_Id](Prj_Template_Work_Elements.md#project_template_work_element_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,12 +57,9 @@ Project_Template_Work_Element_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Template_Id
-
-
-Project_Template_Id
 
 | Property | Value |
 | - | - |
@@ -72,9 +70,8 @@ Project_Template_Id
 |Referenced Table|[Prj_Templates](Prj_Templates.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Template_Work_Elements](Prj_Template_Work_Elements.md).[Project_Template_Id](Prj_Template_Work_Elements.md#project_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -97,15 +94,9 @@ Project_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Project_Type_Work_Element_Id
-
-
-Project_Type_Work_Element_Id
-
-
-The work element from the project type, which shall be copied as work element in new projects, based on this template.
 
 
 The work element from the project type, which shall be copied as work element in new projects, based on this template.
@@ -119,9 +110,8 @@ The work element from the project type, which shall be copied as work element in
 |Referenced Table|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Template_Work_Elements](Prj_Template_Work_Elements.md).[Project_Type_Work_Element_Id](Prj_Template_Work_Elements.md#project_type_work_element_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,12 +134,9 @@ The work element from the project type, which shall be copied as work element in
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -159,9 +146,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Template_Work_Elements](Prj_Template_Work_Elements.md).[Row_Version](Prj_Template_Work_Elements.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

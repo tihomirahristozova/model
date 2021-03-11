@@ -1,5 +1,10 @@
 # Table Sys_Default_Values
 
+
+## Entity
+
+Entity: [Systems.Core.DataEntryDefaultValues](~/entities/Systems.Core.DataEntryDefaultValues.md)
+
 Contains user-specified default values for columns in data entry forms. Entity: Sys_Default_Values
 
 ## Summary
@@ -24,12 +29,6 @@ Contains user-specified default values for columns in data entry forms. Entity: 
 ### Default_Value_Id
 
 
-Default_Value_Id
-
-
-Unique id of this default
-
-
 Unique id of this default
 
 | Property | Value |
@@ -41,9 +40,8 @@ Unique id of this default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Default_Value_Id](Sys_Default_Values.md#default_value_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,15 +64,9 @@ Unique id of this default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Condition_User_Login
-
-
-Condition_User_Login
-
-
-If not NULL specifies that the default should be applied only if User_Login equals this value
 
 
 If not NULL specifies that the default should be applied only if User_Login equals this value
@@ -88,9 +80,8 @@ If not NULL specifies that the default should be applied only if User_Login equa
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Condition_User_Login](Sys_Default_Values.md#condition_user_login)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,15 +104,9 @@ If not NULL specifies that the default should be applied only if User_Login equa
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Condition_User_Machine
-
-
-Condition_User_Machine
-
-
-If not NULL specifies that the default should be applied only if User_Machine equals this value
 
 
 If not NULL specifies that the default should be applied only if User_Machine equals this value
@@ -135,9 +120,8 @@ If not NULL specifies that the default should be applied only if User_Machine eq
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Condition_User_Machine](Sys_Default_Values.md#condition_user_machine)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -160,15 +144,9 @@ If not NULL specifies that the default should be applied only if User_Machine eq
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Condition_Enterprise_Company_Id
-
-
-Condition_Enterprise_Company_Id
-
-
-If not NULL specifies that the default should be applied only if Enterprise_Company_Id equals this value
 
 
 If not NULL specifies that the default should be applied only if Enterprise_Company_Id equals this value
@@ -182,9 +160,8 @@ If not NULL specifies that the default should be applied only if Enterprise_Comp
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Condition_Enterprise_Company_Id](Sys_Default_Values.md#condition_enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -207,15 +184,9 @@ If not NULL specifies that the default should be applied only if Enterprise_Comp
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Condition_Document_Type_Id
-
-
-Condition_Document_Type_Id
-
-
-If not NULL specifies that the default should be applied only if Document_Type_Id equals this value
 
 
 If not NULL specifies that the default should be applied only if Document_Type_Id equals this value
@@ -229,9 +200,8 @@ If not NULL specifies that the default should be applied only if Document_Type_I
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Condition_Document_Type_Id](Sys_Default_Values.md#condition_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -254,15 +224,9 @@ If not NULL specifies that the default should be applied only if Document_Type_I
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Condition_Form_Name
-
-
-Condition_Form_Name
-
-
-If not NULL specifies that the default should be applied only if Form_Name equals the specified value
 
 
 If not NULL specifies that the default should be applied only if Form_Name equals the specified value
@@ -276,9 +240,8 @@ If not NULL specifies that the default should be applied only if Form_Name equal
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Condition_Form_Name](Sys_Default_Values.md#condition_form_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -301,15 +264,9 @@ If not NULL specifies that the default should be applied only if Form_Name equal
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Panel_Name
-
-
-Panel_Name
-
-
-When not null, specifies the panel for which the default value applies.
 
 
 When not null, specifies the panel for which the default value applies.
@@ -323,9 +280,8 @@ When not null, specifies the panel for which the default value applies.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Panel_Name](Sys_Default_Values.md#panel_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -348,18 +304,12 @@ When not null, specifies the panel for which the default value applies.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Table_Name
 
 
-Table_Name
-
-
-The table, containing the column for which the default value is specified.
-
-
 The table, containing the column for which the default value is specified.
 
 | Property | Value |
@@ -371,9 +321,8 @@ The table, containing the column for which the default value is specified.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Table_Name](Sys_Default_Values.md#table_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -396,15 +345,9 @@ The table, containing the column for which the default value is specified.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Column_Name
-
-
-Column_Name
-
-
-The column for which the default is specified
 
 
 The column for which the default is specified
@@ -418,9 +361,8 @@ The column for which the default is specified
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Column_Name](Sys_Default_Values.md#column_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -443,15 +385,9 @@ The column for which the default is specified
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Value
-
-
-Default_Value
-
-
-The default value for Column_Name. Should be applied only if the other conditions are met. NULL specifies NULL default
 
 
 The default value for Column_Name. Should be applied only if the other conditions are met. NULL specifies NULL default
@@ -465,9 +401,8 @@ The default value for Column_Name. Should be applied only if the other condition
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Default_Value](Sys_Default_Values.md#default_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -489,12 +424,6 @@ The default value for Column_Name. Should be applied only if the other condition
 ### Condition_Role_Id
 
 
-Condition_Role_Id
-
-
-When not null, specifies that the default value should be applied only when the user plays the specified role.
-
-
 When not null, specifies that the default value should be applied only when the user plays the specified role.
 
 | Property | Value |
@@ -506,9 +435,8 @@ When not null, specifies that the default value should be applied only when the 
 |Referenced Table|[Wf_Roles](Wf_Roles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Condition_Role_Id](Sys_Default_Values.md#condition_role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -531,12 +459,9 @@ When not null, specifies that the default value should be applied only when the 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -546,9 +471,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Default_Values](Sys_Default_Values.md).[Row_Version](Sys_Default_Values.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

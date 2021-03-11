@@ -1,5 +1,10 @@
 # Table Prd_Functions
 
+
+## Entity
+
+Entity: [Production.Resources.Functions](~/entities/Production.Resources.Functions.md)
+
 Definition of the functions that the resources can perform. Entity: Prd_Functions
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Definition of the functions that the resources can perform. Entity: Prd_Function
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Functions](Prd_Functions.md).[Id](Prd_Functions.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Function_Group_Id
-
-
-Function_Group_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Function_Group_Id
 |Referenced Table|[Prd_Function_Groups](Prd_Function_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Functions](Prd_Functions.md).[Function_Group_Id](Prd_Functions.md#function_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,12 +96,9 @@ Function_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Function_Name
-
-
-Function_Name
 
 | Property | Value |
 | - | - |
@@ -115,9 +109,8 @@ Function_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Functions](Prd_Functions.md).[Function_Name](Prd_Functions.md#function_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,12 +138,6 @@ Function_Name
 ### Primary_Unit
 
 
-Primary_Unit
-
-
-Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit
-
-
 Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit
 
 | Property | Value |
@@ -162,9 +149,8 @@ Primary measurement unit for measuring workload of the function. Resources that 
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Functions](Prd_Functions.md).[Primary_Unit](Prd_Functions.md#primary_unit)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,15 +173,9 @@ Primary measurement unit for measuring workload of the function. Resources that 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
-
-
-User comments on the function
 
 
 User comments on the function
@@ -209,9 +189,8 @@ User comments on the function
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prd_Functions](Prd_Functions.md).[Notes](Prd_Functions.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -232,9 +211,6 @@ User comments on the function
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -243,9 +219,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Functions](Prd_Functions.md).[Row_Version](Prd_Functions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

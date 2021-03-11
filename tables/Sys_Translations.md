@@ -1,5 +1,10 @@
 # Table Sys_Translations
 
+
+## Entity
+
+Entity: [Systems.Core.Translations](~/entities/Systems.Core.Translations.md)
+
 Contains user-defined translations for non-english languages of the user interface and program messages. Entity: Sys_Translations
 
 ## Summary
@@ -11,7 +16,7 @@ Contains user-defined translations for non-english languages of the user interfa
 |[Language](#language)|`nvarchar(8)` |The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us"|
 |[Resource_Type](#resource_type)|`nvarchar(1)` Allowed: `T`, `C`, `H`, `R`, `E`, `M`, `S`|T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String|
 |[Resource_Id](#resource_id)|`nvarchar(800)` |The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code|
-|[Translation](#translation)|`nvarchar(2147483647)` |The translated text|
+|[Translation](#translation)|`nvarchar(max)` |The translated text|
 |[Creation_Time](#creation_time)|`datetime` Readonly|Timestamp when the translation was first created|
 |[Update_Time](#update_time)|`datetime` Readonly|When the translation was last updated|
 |[Active](#active)|`bit` |True when the translation is verified and activated.|
@@ -20,9 +25,6 @@ Contains user-defined translations for non-english languages of the user interfa
 ## Columns
 
 ### Translation_Id
-
-
-Translation_Id
 
 | Property | Value |
 | - | - |
@@ -33,9 +35,8 @@ Translation_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Translation_Id](Sys_Translations.md#translation_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Translation_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Application_Name
-
-
-Application_Name
-
-
-The application, containing the resource. For base resource types (T,C,H), this is NULL
 
 
 The application, containing the resource. For base resource types (T,C,H), this is NULL
@@ -80,9 +75,8 @@ The application, containing the resource. For base resource types (T,C,H), this 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Application_Name](Sys_Translations.md#application_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The application, containing the resource. For base resource types (T,C,H), this 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Language
-
-
-Language
-
-
-The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us"
 
 
 The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us"
@@ -127,9 +115,8 @@ The code of the language or language-culture pair. Standard Windows codes are us
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|en|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Language](Sys_Translations.md#language)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The code of the language or language-culture pair. Standard Windows codes are us
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Type
-
-
-Resource_Type
-
-
-T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String
 
 
 T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String
@@ -174,10 +155,9 @@ T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`T`, `C`, `H`, `R`, `E`, `M`, `S`|
 |Default Value|S|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Resource_Type](Sys_Translations.md#resource_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,15 +180,9 @@ T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Id
-
-
-Resource_Id
-
-
-The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code
 
 
 The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code
@@ -222,9 +196,8 @@ The unique identifier of the translated resource. Should use ASCII/English chars
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Resource_Id](Sys_Translations.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,32 +220,25 @@ The unique identifier of the translated resource. Should use ASCII/English chars
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Translation
-
-
-Translation
-
-
-The translated text
 
 
 The translated text
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|no|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Translation](Sys_Translations.md#translation)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -294,12 +260,6 @@ The translated text
 ### Creation_Time
 
 
-Creation_Time
-
-
-Timestamp when the translation was first created
-
-
 Timestamp when the translation was first created
 
 | Property | Value |
@@ -311,9 +271,8 @@ Timestamp when the translation was first created
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Creation_Time](Sys_Translations.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -341,12 +300,6 @@ Timestamp when the translation was first created
 ### Update_Time
 
 
-Update_Time
-
-
-When the translation was last updated
-
-
 When the translation was last updated
 
 | Property | Value |
@@ -358,9 +311,8 @@ When the translation was last updated
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Update_Time](Sys_Translations.md#update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -382,12 +334,6 @@ When the translation was last updated
 ### Active
 
 
-Active
-
-
-True when the translation is verified and activated.
-
-
 True when the translation is verified and activated.
 
 | Property | Value |
@@ -398,9 +344,8 @@ True when the translation is verified and activated.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Active](Sys_Translations.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -423,12 +368,9 @@ True when the translation is verified and activated.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -438,9 +380,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Translations](Sys_Translations.md).[Row_Version](Sys_Translations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

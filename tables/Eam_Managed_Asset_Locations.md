@@ -1,5 +1,10 @@
 # Table Eam_Managed_Asset_Locations
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.ManagedAssetLocations](~/entities/Applications.AssetManagement.ManagedAssetLocations.md)
+
 Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -15,15 +20,12 @@ Contains the locations to which the assets are assigned at various moments in ti
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |The enterprise company location, where the asset is assigned.|
 |[From_Date](#from_date)|`date` |The date on which the asset is assigned to the location.|
 |[Responsible_Person_Id](#responsible_person_id)|`uniqueidentifier` |The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person.|
-|[Notes](#notes)|`nvarchar(2147483647)` |Might contain additional notes for the exact location of the asset within the enterprise company location.|
+|[Notes](#notes)|`nvarchar(max)` |Might contain additional notes for the exact location of the asset within the enterprise company location.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Managed_Asset_Location_Id
-
-
-Managed_Asset_Location_Id
 
 | Property | Value |
 | - | - |
@@ -34,9 +36,8 @@ Managed_Asset_Location_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Managed_Asset_Locations](Eam_Managed_Asset_Locations.md).[Managed_Asset_Location_Id](Eam_Managed_Asset_Locations.md#managed_asset_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Managed_Asset_Location_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Id
-
-
-Managed_Asset_Id
-
-
-The asset, whose location is recorded.
 
 
 The asset, whose location is recorded.
@@ -81,9 +76,8 @@ The asset, whose location is recorded.
 |Referenced Table|[Eam_Managed_Assets](Eam_Managed_Assets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Locations](Eam_Managed_Asset_Locations.md).[Managed_Asset_Id](Eam_Managed_Asset_Locations.md#managed_asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The asset, whose location is recorded.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Location_Id
-
-
-Enterprise_Company_Location_Id
-
-
-The enterprise company location, where the asset is assigned.
 
 
 The enterprise company location, where the asset is assigned.
@@ -128,9 +116,8 @@ The enterprise company location, where the asset is assigned.
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Locations](Eam_Managed_Asset_Locations.md).[Enterprise_Company_Location_Id](Eam_Managed_Asset_Locations.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,15 +140,9 @@ The enterprise company location, where the asset is assigned.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### From_Date
-
-
-From_Date
-
-
-The date on which the asset is assigned to the location.
 
 
 The date on which the asset is assigned to the location.
@@ -175,9 +156,8 @@ The date on which the asset is assigned to the location.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Eam_Managed_Asset_Locations](Eam_Managed_Asset_Locations.md).[From_Date](Eam_Managed_Asset_Locations.md#from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +179,6 @@ The date on which the asset is assigned to the location.
 ### Responsible_Person_Id
 
 
-Responsible_Person_Id
-
-
-The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person.
-
-
 The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person.
 
 | Property | Value |
@@ -216,9 +190,8 @@ The responsible person, to which the asset is assigned. NULL when the asset is n
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Locations](Eam_Managed_Asset_Locations.md).[Responsible_Person_Id](Eam_Managed_Asset_Locations.md#responsible_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,31 +214,24 @@ The responsible person, to which the asset is assigned. NULL when the asset is n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Notes
-
-
-Notes
-
-
-Might contain additional notes for the exact location of the asset within the enterprise company location.
 
 
 Might contain additional notes for the exact location of the asset within the enterprise company location.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Locations](Eam_Managed_Asset_Locations.md).[Notes](Eam_Managed_Asset_Locations.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,9 +252,6 @@ Might contain additional notes for the exact location of the asset within the en
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -297,9 +260,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Locations](Eam_Managed_Asset_Locations.md).[Row_Version](Eam_Managed_Asset_Locations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Cm_Activities
 
+
+## Entity
+
+Entity: [General.Contacts.Activities](~/entities/General.Contacts.Activities.md)
+
 Generic activity. Provides task management functionality. Activity can be one of Task, Communication or Meeting. Entity: Cm_Activities
 
 ## Owner Tables Hierarchy
@@ -36,12 +41,6 @@ Generic activity. Provides task management functionality. Activity can be one of
 ### System_Type
 
 
-System_Type
-
-
-T=Task; C=Communication; M=Meeting
-
-
 T=Task; C=Communication; M=Meeting
 
 | Property | Value |
@@ -53,10 +52,9 @@ T=Task; C=Communication; M=Meeting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`C`, `M`, `T`|
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[System_Type](Cm_Activities.md#system_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -78,12 +76,6 @@ T=Task; C=Communication; M=Meeting
 ### Subject
 
 
-Subject
-
-
-Task primary subject (required)
-
-
 Task primary subject (required)
 
 | Property | Value |
@@ -95,9 +87,8 @@ Task primary subject (required)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Subject](Cm_Activities.md#subject)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -120,13 +111,10 @@ Task primary subject (required)
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -137,9 +125,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Notes](Cm_Activities.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -161,12 +148,6 @@ Notes
 ### Target_Party_Id
 
 
-Target_Party_Id
-
-
-External participant or target of the task
-
-
 External participant or target of the task
 
 | Property | Value |
@@ -178,9 +159,8 @@ External participant or target of the task
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Target_Party_Id](Cm_Activities.md#target_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,15 +183,9 @@ External participant or target of the task
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Responsible_Party_Id
-
-
-Responsible_Party_Id
-
-
-Who is responsible for executing the task. Initially this is the owner of the task
 
 
 Who is responsible for executing the task. Initially this is the owner of the task
@@ -225,9 +199,8 @@ Who is responsible for executing the task. Initially this is the owner of the ta
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Responsible_Party_Id](Cm_Activities.md#responsible_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -250,15 +223,9 @@ Who is responsible for executing the task. Initially this is the owner of the ta
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Owner_Party_Id
-
-
-Owner_Party_Id
-
-
-The party that owns the task. Initially this is the party that has created the task
 
 
 The party that owns the task. Initially this is the party that has created the task
@@ -272,9 +239,8 @@ The party that owns the task. Initially this is the party that has created the t
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Owner_Party_Id](Cm_Activities.md#owner_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -297,15 +263,9 @@ The party that owns the task. Initially this is the party that has created the t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Priority
-
-
-Priority
-
-
-Priority on the scale from 1 (least important) to 5 (very important)
 
 
 Priority on the scale from 1 (least important) to 5 (very important)
@@ -318,10 +278,9 @@ Priority on the scale from 1 (least important) to 5 (very important)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`|
 |Default Value|3|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Priority](Cm_Activities.md#priority)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -343,12 +302,6 @@ Priority on the scale from 1 (least important) to 5 (very important)
 ### Private
 
 
-Private
-
-
-1 if the task is visible only to its owner; 0 if this is publicly visible task
-
-
 1 if the task is visible only to its owner; 0 if this is publicly visible task
 
 | Property | Value |
@@ -359,9 +312,8 @@ Private
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Private](Cm_Activities.md#private)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -383,12 +335,6 @@ Private
 ### Start_Time
 
 
-Start_Time
-
-
-Currently planned starting time of the task
-
-
 Currently planned starting time of the task
 
 | Property | Value |
@@ -400,9 +346,8 @@ Currently planned starting time of the task
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Start_Time](Cm_Activities.md#start_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -430,12 +375,6 @@ Currently planned starting time of the task
 ### End_Time
 
 
-End_Time
-
-
-Currently planned ending time of the task
-
-
 Currently planned ending time of the task
 
 | Property | Value |
@@ -447,9 +386,8 @@ Currently planned ending time of the task
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[End_Time](Cm_Activities.md#end_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -477,12 +415,6 @@ Currently planned ending time of the task
 ### Reminder_Time
 
 
-Reminder_Time
-
-
-When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.
-
-
 When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.
 
 | Property | Value |
@@ -494,9 +426,8 @@ When to snooze to the owner to remind him for the task. This default reminder is
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Reminder_Time](Cm_Activities.md#reminder_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -518,12 +449,6 @@ When to snooze to the owner to remind him for the task. This default reminder is
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -534,9 +459,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Is_Single_Execution](Cm_Activities.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -559,15 +483,9 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Project_Task_Id
-
-
-Project_Task_Id
-
-
-The project task for which the work is performed. NULL when the activity is not related to a project task.
 
 
 The project task for which the work is performed. NULL when the activity is not related to a project task.
@@ -581,9 +499,8 @@ The project task for which the work is performed. NULL when the activity is not 
 |Referenced Table|[Prj_Project_Tasks](Prj_Project_Tasks.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Project_Task_Id](Cm_Activities.md#project_task_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -606,15 +523,9 @@ The project task for which the work is performed. NULL when the activity is not 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Planned_Duration_Minutes
-
-
-Planned_Duration_Minutes
-
-
-Total planned duration of the activity, regardless of the current execution status
 
 
 Total planned duration of the activity, regardless of the current execution status
@@ -627,9 +538,8 @@ Total planned duration of the activity, regardless of the current execution stat
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Planned_Duration_Minutes](Cm_Activities.md#planned_duration_minutes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -656,9 +566,6 @@ Total planned duration of the activity, regardless of the current execution stat
 
 ### Activity_Id
 
-
-Activity_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -668,9 +575,8 @@ Activity_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Activity_Id](Cm_Activities.md#activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -693,15 +599,9 @@ Activity_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Deadline_Time
-
-
-Deadline_Time
-
-
-The deadline for the task. NULL if there is no deadline
 
 
 The deadline for the task. NULL if there is no deadline
@@ -715,9 +615,8 @@ The deadline for the task. NULL if there is no deadline
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Deadline_Time](Cm_Activities.md#deadline_time)|
 |Format|g|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -745,12 +644,6 @@ The deadline for the task. NULL if there is no deadline
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -761,9 +654,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Is_Released](Cm_Activities.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -786,15 +678,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
-
-
-The task's document (for entry date, task type, status)
 
 
 The task's document (for entry date, task type, status)
@@ -808,9 +694,8 @@ The task's document (for entry date, task type, status)
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Document_Id](Cm_Activities.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -833,15 +718,9 @@ The task's document (for entry date, task type, status)
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Contact_Person_Id
-
-
-Contact_Person_Id
-
-
-The contact person, from the side of the Target Party.
 
 
 The contact person, from the side of the Target Party.
@@ -855,9 +734,8 @@ The contact person, from the side of the Target Party.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Contact_Person_Id](Cm_Activities.md#contact_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -880,12 +758,9 @@ The contact person, from the side of the Target Party.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -895,9 +770,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activities](Cm_Activities.md).[Row_Version](Cm_Activities.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

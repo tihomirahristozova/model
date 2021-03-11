@@ -1,5 +1,10 @@
 # Table Bpm_Process_Node_Timer_Events
 
+
+## Entity
+
+Entity: [Systems.Bpm.ProcessNodeTimerEvents](~/entities/Systems.Bpm.ProcessNodeTimerEvents.md)
+
 Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Events
 
 ## Summary
@@ -17,9 +22,6 @@ Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Eve
 
 ### Process_Node_Timer_Event_Id
 
-
-Process_Node_Timer_Event_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Process_Node_Timer_Event_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Bpm_Process_Node_Timer_Events](Bpm_Process_Node_Timer_Events.md).[Process_Node_Timer_Event_Id](Bpm_Process_Node_Timer_Events.md#process_node_timer_event_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Process_Node_Timer_Event_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Process_Node_Event_Id
-
-
-Process_Node_Event_Id
-
-
-The process node event, which this timer defines.
 
 
 The process node event, which this timer defines.
@@ -75,9 +70,8 @@ The process node event, which this timer defines.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Node_Timer_Events](Bpm_Process_Node_Timer_Events.md).[Process_Node_Event_Id](Bpm_Process_Node_Timer_Events.md#process_node_event_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +94,9 @@ The process node event, which this timer defines.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Time_Date
-
-
-Time_Date
-
-
-Non-null when the timer is for specific single date and time. Mutually exclusive with the other Time fields.
 
 
 Non-null when the timer is for specific single date and time. Mutually exclusive with the other Time fields.
@@ -122,9 +110,8 @@ Non-null when the timer is for specific single date and time. Mutually exclusive
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Node_Timer_Events](Bpm_Process_Node_Timer_Events.md).[Time_Date](Bpm_Process_Node_Timer_Events.md#time_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,12 +133,6 @@ Non-null when the timer is for specific single date and time. Mutually exclusive
 ### Time_Cycle
 
 
-Time_Cycle
-
-
-Non-null when the timer is recurring. The value conforms to the ISO-8601 format for recurring time intervals. Mutually exclusive with the other Time fields.
-
-
 Non-null when the timer is recurring. The value conforms to the ISO-8601 format for recurring time intervals. Mutually exclusive with the other Time fields.
 
 | Property | Value |
@@ -163,9 +144,8 @@ Non-null when the timer is recurring. The value conforms to the ISO-8601 format 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Node_Timer_Events](Bpm_Process_Node_Timer_Events.md).[Time_Cycle](Bpm_Process_Node_Timer_Events.md#time_cycle)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,12 +167,6 @@ Non-null when the timer is recurring. The value conforms to the ISO-8601 format 
 ### Time_Duration
 
 
-Time_Duration
-
-
-Non-null when the timer event is for time duration. The value conforms to the ISO-8601 format for time interval representations. Mutually exclusive with the other Time fields.
-
-
 Non-null when the timer event is for time duration. The value conforms to the ISO-8601 format for time interval representations. Mutually exclusive with the other Time fields.
 
 | Property | Value |
@@ -204,9 +178,8 @@ Non-null when the timer event is for time duration. The value conforms to the IS
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Node_Timer_Events](Bpm_Process_Node_Timer_Events.md).[Time_Duration](Bpm_Process_Node_Timer_Events.md#time_duration)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -227,9 +200,6 @@ Non-null when the timer event is for time duration. The value conforms to the IS
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -238,9 +208,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Bpm_Process_Node_Timer_Events](Bpm_Process_Node_Timer_Events.md).[Row_Version](Bpm_Process_Node_Timer_Events.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

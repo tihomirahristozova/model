@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sec_trusted_applications">Table Sec_Trusted_Applications</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a></p>
 <p>Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applications (Introduced in version 19.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -157,7 +159,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -172,7 +174,7 @@
 </tr>
 <tr>
 <td><a href="#scope">Scope</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).</td>
 </tr>
 <tr>
@@ -184,7 +186,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="trusted_application_id">Trusted_Application_Id</h3>
-<p>Trusted_Application_Id</p>
 <table>
 <thead>
 <tr>
@@ -223,15 +224,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#trusted_application_id">Trusted_Application_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -316,15 +313,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="trusted_application_name">Trusted_Application_Name</h3>
-<p>Trusted_Application_Name</p>
-<p>The multi-language name of the application.</p>
 <p>The multi-language name of the application.</p>
 <table>
 <thead>
@@ -364,15 +359,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#trusted_application_name">Trusted_Application_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -457,7 +448,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -470,8 +461,6 @@
 </tbody>
 </table>
 <h3 id="application_uri">Application_Uri</h3>
-<p>Application_Uri</p>
-<p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;.</p>
 <p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;.</p>
 <table>
 <thead>
@@ -511,15 +500,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#application_uri">Application_Uri</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -604,15 +589,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_enabled">Is_Enabled</h3>
-<p>Is_Enabled</p>
-<p>Specifies whether the application is enabled for login.</p>
 <p>Specifies whether the application is enabled for login.</p>
 <table>
 <thead>
@@ -648,15 +631,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#is_enabled">Is_Enabled</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -741,15 +720,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="creation_time_utc">Creation_Time_Utc</h3>
-<p>Creation_Time_Utc</p>
-<p>Date and time (in UTC) when the application was registered.</p>
 <p>Date and time (in UTC) when the application was registered.</p>
 <table>
 <thead>
@@ -789,15 +766,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTimeUtc</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#creation_time_utc">Creation_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -882,7 +855,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -895,8 +868,6 @@
 </tbody>
 </table>
 <h3 id="system_user_allowed">System_User_Allowed</h3>
-<p>System_User_Allowed</p>
-<p>Allows this application to logon as a service.</p>
 <p>Allows this application to logon as a service.</p>
 <table>
 <thead>
@@ -932,15 +903,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#system_user_allowed">System_User_Allowed</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1025,15 +992,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="system_user_login_url">System_User_Login_Url</h3>
-<p>System_User_Login_Url</p>
-<p>The URL, which will be used by the login process, when the application logs in as a service.</p>
 <p>The URL, which will be used by the login process, when the application logs in as a service.</p>
 <table>
 <thead>
@@ -1073,15 +1038,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#system_user_login_url">System_User_Login_Url</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1154,8 +1115,6 @@
 </tbody>
 </table>
 <h3 id="system_user_id">System_User_Id</h3>
-<p>System_User_Id</p>
-<p>The user, which will be used when the application logins as a service.</p>
 <p>The user, which will be used when the application logins as a service.</p>
 <table>
 <thead>
@@ -1195,15 +1154,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#system_user_id">System_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1288,15 +1243,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="impersonate_as_community_user_allowed">Impersonate_As_Community_User_Allowed</h3>
-<p>Impersonate_As_Community_User_Allowed</p>
-<p>Allows the application to request login from external users and operate on their behalf.</p>
 <p>Allows the application to request login from external users and operate on their behalf.</p>
 <table>
 <thead>
@@ -1332,15 +1285,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#impersonate_as_community_user_allowed">Impersonate_As_Community_User_Allowed</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1425,15 +1374,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="impersonate_as_internal_user_allowed">Impersonate_As_Internal_User_Allowed</h3>
-<p>Impersonate_As_Internal_User_Allowed</p>
-<p>Allows the application to request login from internal users and operate on their behalf.</p>
 <p>Allows the application to request login from internal users and operate on their behalf.</p>
 <table>
 <thead>
@@ -1469,15 +1416,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#impersonate_as_internal_user_allowed">Impersonate_As_Internal_User_Allowed</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1562,15 +1505,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="impersonate_login_url">Impersonate_Login_Url</h3>
-<p>Impersonate_Login_Url</p>
-<p>The login Url used when an application is impersonated as (usually community) user.</p>
 <p>The login Url used when an application is impersonated as (usually community) user.</p>
 <table>
 <thead>
@@ -1610,15 +1551,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#impersonate_login_url">Impersonate_Login_Url</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1691,8 +1628,6 @@
 </tbody>
 </table>
 <h3 id="impersonate_logout_url">Impersonate_Logout_Url</h3>
-<p>Impersonate_Logout_Url</p>
-<p>The logout Url used when an application is impersonated as (usually community) user.</p>
 <p>The logout Url used when an application is impersonated as (usually community) user.</p>
 <table>
 <thead>
@@ -1732,15 +1667,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#impersonate_logout_url">Impersonate_Logout_Url</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1813,8 +1744,6 @@
 </tbody>
 </table>
 <h3 id="basic_authentication_allowed">Basic_Authentication_Allowed</h3>
-<p>Basic_Authentication_Allowed</p>
-<p>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user.</p>
 <p>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user.</p>
 <table>
 <thead>
@@ -1850,15 +1779,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#basic_authentication_allowed">Basic_Authentication_Allowed</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1943,14 +1868,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -1961,7 +1885,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1989,15 +1913,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2070,7 +1990,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2105,15 +2024,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2186,8 +2101,6 @@
 </tbody>
 </table>
 <h3 id="client_type">Client_Type</h3>
-<p>Client_Type</p>
-<p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).</p>
 <p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).</p>
 <table>
 <thead>
@@ -2227,7 +2140,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2236,10 +2149,6 @@
 <tr>
 <td>Default Value</td>
 <td>C</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#client_type">Client_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2312,8 +2221,6 @@
 </tbody>
 </table>
 <h3 id="scope">Scope</h3>
-<p>Scope</p>
-<p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).</p>
 <p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).</p>
 <table>
 <thead>
@@ -2325,7 +2232,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2353,15 +2260,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#scope">Scope</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2434,8 +2337,6 @@
 </tbody>
 </table>
 <h3 id="application_secret_hash">Application_Secret_Hash</h3>
-<p>Application_Secret_Hash</p>
-<p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.</p>
 <p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.</p>
 <table>
 <thead>
@@ -2475,15 +2376,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sec_Trusted_Applications.html">Sec_Trusted_Applications</a>.<a href="Sec_Trusted_Applications.html#application_secret_hash">Application_Secret_Hash</a></td>
 </tr>
 <tr>
 <td>Format</td>

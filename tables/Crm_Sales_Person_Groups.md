@@ -1,5 +1,10 @@
 # Table Crm_Sales_Person_Groups
 
+
+## Entity
+
+Entity: [Crm.Distribution.SalesPersonGroups](~/entities/Crm.Distribution.SalesPersonGroups.md)
+
 Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 
 ## Summary
@@ -18,9 +23,6 @@ Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 
 ### Sales_Person_Group_Id
 
-
-Sales_Person_Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -30,9 +32,8 @@ Sales_Person_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md).[Sales_Person_Group_Id](Crm_Sales_Person_Groups.md#sales_person_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,12 +56,9 @@ Sales_Person_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Sales_Person_Group_Name
-
-
-Sales_Person_Group_Name
 
 | Property | Value |
 | - | - |
@@ -71,9 +69,8 @@ Sales_Person_Group_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md).[Sales_Person_Group_Name](Crm_Sales_Person_Groups.md#sales_person_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -96,13 +93,10 @@ Sales_Person_Group_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Sales_Person_Group_Code
-
-
-Sales_Person_Group_Code
 
 | Property | Value |
 | - | - |
@@ -113,9 +107,8 @@ Sales_Person_Group_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md).[Sales_Person_Group_Code](Crm_Sales_Person_Groups.md#sales_person_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -138,16 +131,10 @@ Sales_Person_Group_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Parent_Sales_Person_Group_Id
-
-
-Parent_Sales_Person_Group_Id
-
-
-The parent sales person group in the hierarchy.
 
 
 The parent sales person group in the hierarchy.
@@ -161,9 +148,8 @@ The parent sales person group in the hierarchy.
 |Referenced Table|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md).[Parent_Sales_Person_Group_Id](Crm_Sales_Person_Groups.md#parent_sales_person_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -186,15 +172,9 @@ The parent sales person group in the hierarchy.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Full_Path
-
-
-Full_Path
-
-
-Full path to this item in the form /root/child1/../leaf/
 
 
 Full path to this item in the form /root/child1/../leaf/
@@ -208,9 +188,8 @@ Full path to this item in the form /root/child1/../leaf/
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md).[Full_Path](Crm_Sales_Person_Groups.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -233,16 +212,10 @@ Full path to this item in the form /root/child1/../leaf/
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|yes|
 
 ### Manager_Person_Id
-
-
-Manager_Person_Id
-
-
-The manager of the group. NULL when there is no manager.
 
 
 The manager of the group. NULL when there is no manager.
@@ -256,9 +229,8 @@ The manager of the group. NULL when there is no manager.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md).[Manager_Person_Id](Crm_Sales_Person_Groups.md#manager_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -281,12 +253,9 @@ The manager of the group. NULL when there is no manager.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -296,9 +265,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Sales_Person_Groups](Crm_Sales_Person_Groups.md).[Row_Version](Crm_Sales_Person_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Eam_Managed_Assets
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.ManagedAssets](~/entities/Applications.AssetManagement.ManagedAssets.md)
+
 Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1)
 
 ## Summary
@@ -13,15 +18,12 @@ Contains the managed assets. The management of assets include maintenance planni
 |[Managed_Asset_Type_Id](#managed_asset_type_id)|`uniqueidentifier` |The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc.|
 |[Managed_Asset_Group_Id](#managed_asset_group_id)|`uniqueidentifier` |The organizational group of the asset. Used for organizational purposes only.|
 |[Registration_Number](#registration_number)|`nvarchar(32)` |Registration number of the asset with the national registration authorities. NULL means the registation number is unknown or N/A.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Managed_Asset_Id
-
-
-Managed_Asset_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Managed_Asset_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Managed_Asset_Id](Eam_Managed_Assets.md#managed_asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Managed_Asset_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company to which the managed asset belongs.
 
 
 The enterprise company to which the managed asset belongs.
@@ -79,9 +74,8 @@ The enterprise company to which the managed asset belongs.
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Enterprise_Company_Id](Eam_Managed_Assets.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The enterprise company to which the managed asset belongs.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Code
-
-
-Managed_Asset_Code
-
-
-Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.
 
 
 Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.
@@ -126,9 +114,8 @@ Unique code of the managed asset. The code is unique among all managed assets in
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Managed_Asset_Code](Eam_Managed_Assets.md#managed_asset_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,16 +138,10 @@ Unique code of the managed asset. The code is unique among all managed assets in
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Managed_Asset_Name
-
-
-Managed_Asset_Name
-
-
-Name of the managed asset (multi-language).
 
 
 Name of the managed asset (multi-language).
@@ -174,9 +155,8 @@ Name of the managed asset (multi-language).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Managed_Asset_Name](Eam_Managed_Assets.md#managed_asset_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,16 +179,10 @@ Name of the managed asset (multi-language).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Managed_Asset_Type_Id
-
-
-Managed_Asset_Type_Id
-
-
-The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc.
 
 
 The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc.
@@ -222,9 +196,8 @@ The type of the asset. Determines the tracked parameters for the asset, the appl
 |Referenced Table|[Eam_Managed_Asset_Types](Eam_Managed_Asset_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Managed_Asset_Type_Id](Eam_Managed_Assets.md#managed_asset_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,15 +220,9 @@ The type of the asset. Determines the tracked parameters for the asset, the appl
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Group_Id
-
-
-Managed_Asset_Group_Id
-
-
-The organizational group of the asset. Used for organizational purposes only.
 
 
 The organizational group of the asset. Used for organizational purposes only.
@@ -269,9 +236,8 @@ The organizational group of the asset. Used for organizational purposes only.
 |Referenced Table|[Eam_Managed_Asset_Groups](Eam_Managed_Asset_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Managed_Asset_Group_Id](Eam_Managed_Assets.md#managed_asset_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -294,15 +260,9 @@ The organizational group of the asset. Used for organizational purposes only.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Registration_Number
-
-
-Registration_Number
-
-
-Registration number of the asset with the national registration authorities. NULL means the registation number is unknown or N/A.
 
 
 Registration number of the asset with the national registration authorities. NULL means the registation number is unknown or N/A.
@@ -316,9 +276,8 @@ Registration number of the asset with the national registration authorities. NUL
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Registration_Number](Eam_Managed_Assets.md#registration_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -341,26 +300,22 @@ Registration number of the asset with the national registration authorities. NUL
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Notes](Eam_Managed_Assets.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -381,9 +336,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -392,9 +344,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Assets](Eam_Managed_Assets.md).[Row_Version](Eam_Managed_Assets.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Work_Schedule_Working_Time
 
+
+## Entity
+
+Entity: [General.Resources.WorkScheduleWorkingTime](~/entities/General.Resources.WorkScheduleWorkingTime.md)
+
 Contains the different working time periods within the work schedule. Entity: Gen_Work_Schedule_Working_Time
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Contains the different working time periods within the work schedule. Entity: Ge
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Work_Schedule_Working_Time](Gen_Work_Schedule_Working_Time.md).[Id](Gen_Work_Schedule_Working_Time.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Schedule_Id
-
-
-Work_Schedule_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Work_Schedule_Id
 |Referenced Table|[Gen_Work_Schedules](Gen_Work_Schedules.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Work_Schedule_Working_Time](Gen_Work_Schedule_Working_Time.md).[Work_Schedule_Id](Gen_Work_Schedule_Working_Time.md#work_schedule_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +96,9 @@ Work_Schedule_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Day_No
-
-
-Day_No
-
-
-Consequtive day in the work schedule recurrence, starting at 1
 
 
 Consequtive day in the work schedule recurrence, starting at 1
@@ -120,9 +111,8 @@ Consequtive day in the work schedule recurrence, starting at 1
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Work_Schedule_Working_Time](Gen_Work_Schedule_Working_Time.md).[Day_No](Gen_Work_Schedule_Working_Time.md#day_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,12 +134,6 @@ Consequtive day in the work schedule recurrence, starting at 1
 ### Start_Time
 
 
-Start_Time
-
-
-Start of working time period on the day, specified by Day_No
-
-
 Start of working time period on the day, specified by Day_No
 
 | Property | Value |
@@ -161,9 +145,8 @@ Start of working time period on the day, specified by Day_No
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Work_Schedule_Working_Time](Gen_Work_Schedule_Working_Time.md).[Start_Time](Gen_Work_Schedule_Working_Time.md#start_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -185,12 +168,6 @@ Start of working time period on the day, specified by Day_No
 ### End_Time
 
 
-End_Time
-
-
-End of working time period
-
-
 End of working time period
 
 | Property | Value |
@@ -202,9 +179,8 @@ End of working time period
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Work_Schedule_Working_Time](Gen_Work_Schedule_Working_Time.md).[End_Time](Gen_Work_Schedule_Working_Time.md#end_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -225,9 +201,6 @@ End of working time period
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -236,9 +209,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Work_Schedule_Working_Time](Gen_Work_Schedule_Working_Time.md).[Row_Version](Gen_Work_Schedule_Working_Time.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Log_Logistic_Unit_Specifications
 
+
+## Entity
+
+Entity: [Logistics.LogisticUnitSpecifications](~/entities/Logistics.LogisticUnitSpecifications.md)
+
 Specification of a logistic unit. The database can contain any kind of specification, but most client applications and integrated methods process GS1 specifications (application codes). Entity: Log_Logistic_Unit_Specifications (Introduced in version 21.1.0.77)
 
 ## Owner Tables Hierarchy
@@ -15,15 +20,12 @@ Specification of a logistic unit. The database can contain any kind of specifica
 |[Code](#code)|`nvarchar(32)` |The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.|
 |[Name](#name)|`nvarchar(254)` `ML`|Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).|
 |[Value](#value)|`nvarchar(254)` |Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Logistic_Unit_Specification_Id
-
-
-Logistic_Unit_Specification_Id
 
 | Property | Value |
 | - | - |
@@ -34,9 +36,8 @@ Logistic_Unit_Specification_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Logistic_Unit_Specifications](Log_Logistic_Unit_Specifications.md).[Logistic_Unit_Specification_Id](Log_Logistic_Unit_Specifications.md#logistic_unit_specification_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Logistic_Unit_Specification_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Logistic_Unit_Id
-
-
-Logistic_Unit_Id
-
-
-The logistic unit, which is detailed by this specification.
 
 
 The logistic unit, which is detailed by this specification.
@@ -81,9 +76,8 @@ The logistic unit, which is detailed by this specification.
 |Referenced Table|[Log_Logistic_Units](Log_Logistic_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Specifications](Log_Logistic_Unit_Specifications.md).[Logistic_Unit_Id](Log_Logistic_Unit_Specifications.md#logistic_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The logistic unit, which is detailed by this specification.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Code
-
-
-Code
-
-
-The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.
 
 
 The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.
@@ -128,9 +116,8 @@ The code of the specification, unique within the logistic unit. It can contain o
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Specifications](Log_Logistic_Unit_Specifications.md).[Code](Log_Logistic_Unit_Specifications.md#code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,16 +140,10 @@ The code of the specification, unique within the logistic unit. It can contain o
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Name
-
-
-Name
-
-
-Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).
 
 
 Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).
@@ -176,9 +157,8 @@ Multi-language name of the specification. For some processing purposes, the name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Specifications](Log_Logistic_Unit_Specifications.md).[Name](Log_Logistic_Unit_Specifications.md#name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,16 +181,10 @@ Multi-language name of the specification. For some processing purposes, the name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Value
-
-
-Value
-
-
-Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.
 
 
 Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.
@@ -224,9 +198,8 @@ Text value of the specification. If this is GS1 specification, it can contain on
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Specifications](Log_Logistic_Unit_Specifications.md).[Value](Log_Logistic_Unit_Specifications.md#value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -249,26 +222,22 @@ Text value of the specification. If this is GS1 specification, it can contain on
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Specifications](Log_Logistic_Unit_Specifications.md).[Notes](Log_Logistic_Unit_Specifications.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -289,9 +258,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -300,9 +266,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Logistic_Unit_Specifications](Log_Logistic_Unit_Specifications.md).[Row_Version](Log_Logistic_Unit_Specifications.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

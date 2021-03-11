@@ -1,5 +1,10 @@
 # Table Sec_Group_Access_Keys
 
+
+## Entity
+
+Entity: [Systems.Security.GroupAccessKeys](~/entities/Systems.Security.GroupAccessKeys.md)
+
 Specifies the access keys for which the user groups have permissions. The existance of a record grants read permission. Additional permissions are granted through specialized fields. Entity: Sec_Group_Access_Keys
 
 ## Owner Tables Hierarchy
@@ -32,9 +37,6 @@ Specifies the access keys for which the user groups have permissions. The exista
 
 ### Group_Access_Key_Id
 
-
-Group_Access_Key_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -44,9 +46,8 @@ Group_Access_Key_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Group_Access_Key_Id](Sec_Group_Access_Keys.md#group_access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -69,15 +70,9 @@ Group_Access_Key_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Access_Key_Id
-
-
-Access_Key_Id
-
-
-This access key, to which we are granting access permissions.
 
 
 This access key, to which we are granting access permissions.
@@ -91,9 +86,8 @@ This access key, to which we are granting access permissions.
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Access_Key_Id](Sec_Group_Access_Keys.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -116,15 +110,9 @@ This access key, to which we are granting access permissions.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Group_Id
-
-
-Group_Id
-
-
-The group, which is granted with access permission.
 
 
 The group, which is granted with access permission.
@@ -138,9 +126,8 @@ The group, which is granted with access permission.
 |Referenced Table|[Sec_Groups](Sec_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Group_Id](Sec_Group_Access_Keys.md#group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -163,15 +150,9 @@ The group, which is granted with access permission.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Can_Update
-
-
-Can_Update
-
-
-When true, the group is granted with update permission for the entity, protected by the access key.
 
 
 When true, the group is granted with update permission for the entity, protected by the access key.
@@ -184,9 +165,8 @@ When true, the group is granted with update permission for the entity, protected
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Can_Update](Sec_Group_Access_Keys.md#can_update)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -208,12 +188,6 @@ When true, the group is granted with update permission for the entity, protected
 ### Can_Delete
 
 
-Can_Delete
-
-
-When true, the group is granted with delete permission for the entity, protected by the access key.
-
-
 When true, the group is granted with delete permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -224,9 +198,8 @@ When true, the group is granted with delete permission for the entity, protected
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Can_Delete](Sec_Group_Access_Keys.md#can_delete)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,12 +221,6 @@ When true, the group is granted with delete permission for the entity, protected
 ### Permission1
 
 
-Permission1
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -264,9 +231,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission1](Sec_Group_Access_Keys.md#permission1)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,12 +254,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission2
 
 
-Permission2
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -304,9 +264,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission2](Sec_Group_Access_Keys.md#permission2)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -328,12 +287,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission3
 
 
-Permission3
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -344,9 +297,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission3](Sec_Group_Access_Keys.md#permission3)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -368,12 +320,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission4
 
 
-Permission4
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -384,9 +330,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission4](Sec_Group_Access_Keys.md#permission4)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -408,12 +353,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission5
 
 
-Permission5
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -424,9 +363,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission5](Sec_Group_Access_Keys.md#permission5)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -448,12 +386,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission6
 
 
-Permission6
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -464,9 +396,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission6](Sec_Group_Access_Keys.md#permission6)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -488,12 +419,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission7
 
 
-Permission7
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -504,9 +429,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission7](Sec_Group_Access_Keys.md#permission7)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -528,12 +452,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission8
 
 
-Permission8
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -544,9 +462,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission8](Sec_Group_Access_Keys.md#permission8)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -568,12 +485,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission9
 
 
-Permission9
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -584,9 +495,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission9](Sec_Group_Access_Keys.md#permission9)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -608,12 +518,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Permission10
 
 
-Permission10
-
-
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.
-
-
 When true, the group is granted with entity-specific permission for the entity, protected by the access key.
 
 | Property | Value |
@@ -624,9 +528,8 @@ When true, the group is granted with entity-specific permission for the entity, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Permission10](Sec_Group_Access_Keys.md#permission10)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -648,12 +551,6 @@ When true, the group is granted with entity-specific permission for the entity, 
 ### Can_Administer
 
 
-Can_Administer
-
-
-When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key.
-
-
 When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key.
 
 | Property | Value |
@@ -664,9 +561,8 @@ When true, the group is granted with administrative permission (allowance to cha
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Can_Administer](Sec_Group_Access_Keys.md#can_administer)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -687,9 +583,6 @@ When true, the group is granted with administrative permission (allowance to cha
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -698,9 +591,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Group_Access_Keys](Sec_Group_Access_Keys.md).[Row_Version](Sec_Group_Access_Keys.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

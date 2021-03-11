@@ -1,5 +1,10 @@
 # Table Acc_Template_Lines
 
+
+## Entity
+
+Entity: [Finance.Accounting.TemplateLines](~/entities/Finance.Accounting.TemplateLines.md)
+
 Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines
 
 ## Owner Tables Hierarchy
@@ -35,12 +40,6 @@ Each template line contains the posting to a single set of debit and credit acco
 ### Line_No
 
 
-Line_No
-
-
-Consecutive number of the line within the template. Determines the order of execution of the template lines.
-
-
 Consecutive number of the line within the template. Determines the order of execution of the template lines.
 
 | Property | Value |
@@ -51,10 +50,9 @@ Consecutive number of the line within the template. Determines the order of exec
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Line_No](Acc_Template_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -76,12 +74,6 @@ Consecutive number of the line within the template. Determines the order of exec
 ### Filter_XML
 
 
-Filter_XML
-
-
-The line is accounted only when the filter is satisfied compared with the source document header
-
-
 The line is accounted only when the filter is satisfied compared with the source document header
 
 | Property | Value |
@@ -93,9 +85,8 @@ The line is accounted only when the filter is satisfied compared with the source
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Filter_XML](Acc_Template_Lines.md#filter_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -117,12 +108,6 @@ The line is accounted only when the filter is satisfied compared with the source
 ### Debit_Account_Id
 
 
-Debit_Account_Id
-
-
-The account which should be debited
-
-
 The account which should be debited
 
 | Property | Value |
@@ -134,9 +119,8 @@ The account which should be debited
 |Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Debit_Account_Id](Acc_Template_Lines.md#debit_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -159,15 +143,9 @@ The account which should be debited
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Credit_Account_Id
-
-
-Credit_Account_Id
-
-
-The account which should be credited
 
 
 The account which should be credited
@@ -181,9 +159,8 @@ The account which should be credited
 |Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Credit_Account_Id](Acc_Template_Lines.md#credit_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -206,15 +183,9 @@ The account which should be credited
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Amount_Source_Name
-
-
-Amount_Source_Name
-
-
-The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.
 
 
 The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.
@@ -228,9 +199,8 @@ The source rowset for the amount. For example: DocLines, DocHeader, Additional A
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Amount_Source_Name](Acc_Template_Lines.md#amount_source_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -252,12 +222,6 @@ The source rowset for the amount. For example: DocLines, DocHeader, Additional A
 ### Amount_Row_Id
 
 
-Amount_Row_Id
-
-
-The id of the row from the amount rowset where the amount is located. NULL means to account one by one for all rows within the rowset
-
-
 The id of the row from the amount rowset where the amount is located. NULL means to account one by one for all rows within the rowset
 
 | Property | Value |
@@ -268,9 +232,8 @@ The id of the row from the amount rowset where the amount is located. NULL means
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Amount_Row_Id](Acc_Template_Lines.md#amount_row_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -293,15 +256,9 @@ The id of the row from the amount rowset where the amount is located. NULL means
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Amount_Row_Name
-
-
-Amount_Row_Name
-
-
-The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Row_Id is specified or there is no name
 
 
 The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Row_Id is specified or there is no name
@@ -315,9 +272,8 @@ The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Ro
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Amount_Row_Name](Acc_Template_Lines.md#amount_row_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -339,12 +295,6 @@ The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Ro
 ### Amount_Source_Filter
 
 
-Amount_Source_Filter
-
-
-Filter that further specifies which rows from the amount rowset determine the amount
-
-
 Filter that further specifies which rows from the amount rowset determine the amount
 
 | Property | Value |
@@ -356,9 +306,8 @@ Filter that further specifies which rows from the amount rowset determine the am
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Amount_Source_Filter](Acc_Template_Lines.md#amount_source_filter)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -380,12 +329,6 @@ Filter that further specifies which rows from the amount rowset determine the am
 ### Amount_Column_Name
 
 
-Amount_Column_Name
-
-
-The name of the column within the amount rowset where the amount is located
-
-
 The name of the column within the amount rowset where the amount is located
 
 | Property | Value |
@@ -397,9 +340,8 @@ The name of the column within the amount rowset where the amount is located
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Amount_Column_Name](Acc_Template_Lines.md#amount_column_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -421,12 +363,6 @@ The name of the column within the amount rowset where the amount is located
 ### Multiplier
 
 
-Multiplier
-
-
-Factor by which the amount from the source will be multiplied
-
-
 Factor by which the amount from the source will be multiplied
 
 | Property | Value |
@@ -437,9 +373,8 @@ Factor by which the amount from the source will be multiplied
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Multiplier](Acc_Template_Lines.md#multiplier)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -461,12 +396,6 @@ Factor by which the amount from the source will be multiplied
 ### Valid_From_Date
 
 
-Valid_From_Date
-
-
-Start date from which the accounting template line is valid
-
-
 Start date from which the accounting template line is valid
 
 | Property | Value |
@@ -478,9 +407,8 @@ Start date from which the accounting template line is valid
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Valid_From_Date](Acc_Template_Lines.md#valid_from_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -503,16 +431,10 @@ Start date from which the accounting template line is valid
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Amount_Condition
-
-
-Amount_Condition
-
-
-Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.
 
 
 Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.
@@ -526,10 +448,9 @@ Condition for the amount. The line is accounted only when the condition is match
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`+`, `-`|
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Amount_Condition](Acc_Template_Lines.md#amount_condition)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -550,9 +471,6 @@ Condition for the amount. The line is accounted only when the condition is match
 
 ### Template_Line_Id
 
-
-Template_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -562,9 +480,8 @@ Template_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Template_Line_Id](Acc_Template_Lines.md#template_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -587,15 +504,9 @@ Template_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Valid_To_Date
-
-
-Valid_To_Date
-
-
-End date to which the accounting template line is valid
 
 
 End date to which the accounting template line is valid
@@ -609,9 +520,8 @@ End date to which the accounting template line is valid
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Valid_To_Date](Acc_Template_Lines.md#valid_to_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -634,13 +544,10 @@ End date to which the accounting template line is valid
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Template_Id
-
-
-Template_Id
 
 | Property | Value |
 | - | - |
@@ -651,9 +558,8 @@ Template_Id
 |Referenced Table|[Acc_Templates](Acc_Templates.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Template_Id](Acc_Template_Lines.md#template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -676,12 +582,9 @@ Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -692,9 +595,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Notes](Acc_Template_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -715,9 +617,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -726,9 +625,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Template_Lines](Acc_Template_Lines.md).[Row_Version](Acc_Template_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

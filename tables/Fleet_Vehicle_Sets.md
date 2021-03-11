@@ -1,5 +1,10 @@
 # Table Fleet_Vehicle_Sets
 
+
+## Entity
+
+Entity: [Applications.Fleet.VehicleSets](~/entities/Applications.Fleet.VehicleSets.md)
+
 Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Sets
 
 ## Owner Tables Hierarchy
@@ -21,12 +26,6 @@ Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Se
 ### Vehicle_Set_Id
 
 
-Vehicle_Set_Id
-
-
-Id of the vehicle set (composition of vehicles, used together)
-
-
 Id of the vehicle set (composition of vehicles, used together)
 
 | Property | Value |
@@ -38,9 +37,8 @@ Id of the vehicle set (composition of vehicles, used together)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Vehicle_Sets](Fleet_Vehicle_Sets.md).[Vehicle_Set_Id](Fleet_Vehicle_Sets.md#vehicle_set_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -63,15 +61,9 @@ Id of the vehicle set (composition of vehicles, used together)
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Vehicle_Set_Name
-
-
-Vehicle_Set_Name
-
-
-Name of the vehicle set (Multilanguage)
 
 
 Name of the vehicle set (Multilanguage)
@@ -85,9 +77,8 @@ Name of the vehicle set (Multilanguage)
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Sets](Fleet_Vehicle_Sets.md).[Vehicle_Set_Name](Fleet_Vehicle_Sets.md#vehicle_set_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -110,16 +101,10 @@ Name of the vehicle set (Multilanguage)
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company operating the vehicle set
 
 
 The enterprise company operating the vehicle set
@@ -133,9 +118,8 @@ The enterprise company operating the vehicle set
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Sets](Fleet_Vehicle_Sets.md).[Enterprise_Company_Id](Fleet_Vehicle_Sets.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,15 +142,9 @@ The enterprise company operating the vehicle set
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Active
-
-
-Active
-
-
-1 if the vehicle set is active for choosing; 0 - otherwise
 
 
 1 if the vehicle set is active for choosing; 0 - otherwise
@@ -179,9 +157,8 @@ Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Fleet_Vehicle_Sets](Fleet_Vehicle_Sets.md).[Active](Fleet_Vehicle_Sets.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -204,12 +181,9 @@ Active
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -219,9 +193,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Sets](Fleet_Vehicle_Sets.md).[Row_Version](Fleet_Vehicle_Sets.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

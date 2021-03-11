@@ -1,5 +1,10 @@
 # Table Gen_Resources
 
+
+## Entity
+
+Entity: [General.Resources.Resources](~/entities/General.Resources.Resources.md)
+
 Enterprise resources, categorized by groups. Entity: Gen_Resources
 
 ## Owner Tables Hierarchy
@@ -13,16 +18,13 @@ Enterprise resources, categorized by groups. Entity: Gen_Resources
 |[Resource_Id](#resource_id)|`uniqueidentifier` `PK`||
 |[Resource_Name](#resource_name)|`nvarchar(254)` `ML`|Resource name. Unique within the resource group|
 |[Resource_Group_Id](#resource_group_id)|`uniqueidentifier` ||
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Costing_Currency_Id](#costing_currency_id)|`uniqueidentifier` |The currency in which resource costs are specified. Required only if resource costs will be specified.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Resource_Id
-
-
-Resource_Id
 
 | Property | Value |
 | - | - |
@@ -33,9 +35,8 @@ Resource_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Resources](Gen_Resources.md).[Resource_Id](Gen_Resources.md#resource_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Resource_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Resource_Name
-
-
-Resource_Name
-
-
-Resource name. Unique within the resource group
 
 
 Resource name. Unique within the resource group
@@ -80,9 +75,8 @@ Resource name. Unique within the resource group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resources](Gen_Resources.md).[Resource_Name](Gen_Resources.md#resource_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,13 +99,10 @@ Resource name. Unique within the resource group
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Resource_Group_Id
-
-
-Resource_Group_Id
 
 | Property | Value |
 | - | - |
@@ -122,9 +113,8 @@ Resource_Group_Id
 |Referenced Table|[Gen_Resource_Groups](Gen_Resource_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resources](Gen_Resources.md).[Resource_Group_Id](Gen_Resources.md#resource_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,25 +137,21 @@ Resource_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resources](Gen_Resources.md).[Notes](Gen_Resources.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,12 +173,6 @@ Notes
 ### Costing_Currency_Id
 
 
-Costing_Currency_Id
-
-
-The currency in which resource costs are specified. Required only if resource costs will be specified.
-
-
 The currency in which resource costs are specified. Required only if resource costs will be specified.
 
 | Property | Value |
@@ -204,9 +184,8 @@ The currency in which resource costs are specified. Required only if resource co
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resources](Gen_Resources.md).[Costing_Currency_Id](Gen_Resources.md#costing_currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -229,12 +208,9 @@ The currency in which resource costs are specified. Required only if resource co
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -244,9 +220,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Resources](Gen_Resources.md).[Row_Version](Gen_Resources.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

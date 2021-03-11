@@ -1,5 +1,10 @@
 # Table Fleet_Vehicle_Set_Vehicles
 
+
+## Entity
+
+Entity: [Applications.Fleet.VehicleSetVehicles](~/entities/Applications.Fleet.VehicleSetVehicles.md)
+
 Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicles
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicl
 
 ### Vehicle_Set_Vehicle_Id
 
-
-Vehicle_Set_Vehicle_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Vehicle_Set_Vehicle_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Fleet_Vehicle_Set_Vehicles](Fleet_Vehicle_Set_Vehicles.md).[Vehicle_Set_Vehicle_Id](Fleet_Vehicle_Set_Vehicles.md#vehicle_set_vehicle_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Vehicle_Set_Vehicle_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Vehicle_Set_Id
-
-
-Vehicle_Set_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Vehicle_Set_Id
 |Referenced Table|[Fleet_Vehicle_Sets](Fleet_Vehicle_Sets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Set_Vehicles](Fleet_Vehicle_Set_Vehicles.md).[Vehicle_Set_Id](Fleet_Vehicle_Set_Vehicles.md#vehicle_set_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Vehicle_Set_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Vehicle_Id
-
-
-Vehicle_Id
-
-
-The Vehicle which is part of the vehicle set
 
 
 The Vehicle which is part of the vehicle set
@@ -122,9 +113,8 @@ The Vehicle which is part of the vehicle set
 |Referenced Table|[Fleet_Vehicles](Fleet_Vehicles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Set_Vehicles](Fleet_Vehicle_Set_Vehicles.md).[Vehicle_Id](Fleet_Vehicle_Set_Vehicles.md#vehicle_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,12 +137,9 @@ The Vehicle which is part of the vehicle set
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -163,9 +150,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Set_Vehicles](Fleet_Vehicle_Set_Vehicles.md).[Notes](Fleet_Vehicle_Set_Vehicles.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,12 +179,6 @@ Notes
 ### Ordinal_Pos
 
 
-Ordinal_Pos
-
-
-Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle
-
-
 Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle
 
 | Property | Value |
@@ -209,9 +189,8 @@ Ordinal position of the vehicle within the vehicle set. Position 0 has special m
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Set_Vehicles](Fleet_Vehicle_Set_Vehicles.md).[Ordinal_Pos](Fleet_Vehicle_Set_Vehicles.md#ordinal_pos)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,9 +217,6 @@ Ordinal position of the vehicle within the vehicle set. Position 0 has special m
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -249,9 +225,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Fleet_Vehicle_Set_Vehicles](Fleet_Vehicle_Set_Vehicles.md).[Row_Version](Fleet_Vehicle_Set_Vehicles.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

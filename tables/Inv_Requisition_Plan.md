@@ -1,5 +1,10 @@
 # Table Inv_Requisition_Plan
 
+
+## Entity
+
+Entity: [Logistics.Inventory.RequisitionPlan](~/entities/Logistics.Inventory.RequisitionPlan.md)
+
 The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan
 
 ## Summary
@@ -17,7 +22,7 @@ The current requisition (MRP) plan. The data is deleted and re-created upon each
 |[Planned_Order_Releases](#planned_order_releases)|`decimal(18, 3)` |The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date.|
 |[Projected_Available_Balance](#projected_available_balance)|`decimal(18, 3)` |Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions.|
 |[Net_Requirements](#net_requirements)|`decimal(18, 3)` |The net requirements for the date, which are in shortage for the calendar date.|
-|[Explanation_Message](#explanation_message)|`nvarchar(2147483647)` |A message that explains why the program has generated the planned orders for this row|
+|[Explanation_Message](#explanation_message)|`nvarchar(max)` |A message that explains why the program has generated the planned orders for this row|
 |[Confirm_Action](#confirm_action)|`bit` |1 - generate firm planned orders for the current row; 0- do not generate;|
 |[Quantity](#quantity)|`decimal(18, 3)` |The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;|
 |[Supplier_Id](#supplier_id)|`uniqueidentifier` |The default supplier in the default product supply for current store, if any|
@@ -34,12 +39,6 @@ The current requisition (MRP) plan. The data is deleted and re-created upon each
 ### Store_Id
 
 
-Store_Id
-
-
-The store, which is planned.
-
-
 The store, which is planned.
 
 | Property | Value |
@@ -51,9 +50,8 @@ The store, which is planned.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Store_Id](Inv_Requisition_Plan.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -76,15 +74,9 @@ The store, which is planned.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product, for which we are planning.
 
 
 The product, for which we are planning.
@@ -98,9 +90,8 @@ The product, for which we are planning.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Product_Id](Inv_Requisition_Plan.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -123,15 +114,9 @@ The product, for which we are planning.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Calendar_Date
-
-
-Calendar_Date
-
-
-The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning.
 
 
 The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning.
@@ -145,9 +130,8 @@ The date for which we are planning. A record is created for each calendar date, 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Calendar_Date](Inv_Requisition_Plan.md#calendar_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -175,12 +159,6 @@ The date for which we are planning. A record is created for each calendar date, 
 ### Gross_Requirements
 
 
-Gross_Requirements
-
-
-The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date.
-
-
 The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date.
 
 | Property | Value |
@@ -191,9 +169,8 @@ The gross requirements of the product on the specified calendar date. This is ca
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Gross_Requirements](Inv_Requisition_Plan.md#gross_requirements)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -215,12 +192,6 @@ The gross requirements of the product on the specified calendar date. This is ca
 ### Scheduled_Receipts
 
 
-Scheduled_Receipts
-
-
-The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.
-
-
 The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.
 
 | Property | Value |
@@ -231,9 +202,8 @@ The scheduled receipts of the product on the specified calendar date. This is ca
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Scheduled_Receipts](Inv_Requisition_Plan.md#scheduled_receipts)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -255,12 +225,6 @@ The scheduled receipts of the product on the specified calendar date. This is ca
 ### Firm_Planned_Order_Receipts
 
 
-Firm_Planned_Order_Receipts
-
-
-The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date.
-
-
 The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date.
 
 | Property | Value |
@@ -271,9 +235,8 @@ The quantity, which is expected to be received on the calendar date. The quantit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Firm_Planned_Order_Receipts](Inv_Requisition_Plan.md#firm_planned_order_receipts)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,12 +258,6 @@ The quantity, which is expected to be received on the calendar date. The quantit
 ### Firm_Planned_Order_Releases
 
 
-Firm_Planned_Order_Releases
-
-
-The order releases which were manually confirmed for release on the specified calendar date.
-
-
 The order releases which were manually confirmed for release on the specified calendar date.
 
 | Property | Value |
@@ -311,9 +268,8 @@ The order releases which were manually confirmed for release on the specified ca
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Firm_Planned_Order_Releases](Inv_Requisition_Plan.md#firm_planned_order_releases)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -335,12 +291,6 @@ The order releases which were manually confirmed for release on the specified ca
 ### Planned_Order_Receipts
 
 
-Planned_Order_Receipts
-
-
-The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date.
-
-
 The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date.
 
 | Property | Value |
@@ -351,9 +301,8 @@ The planned by the calculation process order receipts on the calendar date. This
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Planned_Order_Receipts](Inv_Requisition_Plan.md#planned_order_receipts)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -375,12 +324,6 @@ The planned by the calculation process order receipts on the calendar date. This
 ### Planned_Order_Releases
 
 
-Planned_Order_Releases
-
-
-The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date.
-
-
 The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date.
 
 | Property | Value |
@@ -391,9 +334,8 @@ The planned by the calculation process order releases on the specified calendar 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Planned_Order_Releases](Inv_Requisition_Plan.md#planned_order_releases)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -415,12 +357,6 @@ The planned by the calculation process order releases on the specified calendar 
 ### Projected_Available_Balance
 
 
-Projected_Available_Balance
-
-
-Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions.
-
-
 Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions.
 
 | Property | Value |
@@ -431,9 +367,8 @@ Expected balance of the product for the calendar date. This is a calculation, ba
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Projected_Available_Balance](Inv_Requisition_Plan.md#projected_available_balance)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -455,12 +390,6 @@ Expected balance of the product for the calendar date. This is a calculation, ba
 ### Net_Requirements
 
 
-Net_Requirements
-
-
-The net requirements for the date, which are in shortage for the calendar date.
-
-
 The net requirements for the date, which are in shortage for the calendar date.
 
 | Property | Value |
@@ -471,9 +400,8 @@ The net requirements for the date, which are in shortage for the calendar date.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Net_Requirements](Inv_Requisition_Plan.md#net_requirements)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -495,26 +423,19 @@ The net requirements for the date, which are in shortage for the calendar date.
 ### Explanation_Message
 
 
-Explanation_Message
-
-
-A message that explains why the program has generated the planned orders for this row
-
-
 A message that explains why the program has generated the planned orders for this row
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Explanation_Message](Inv_Requisition_Plan.md#explanation_message)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -536,12 +457,6 @@ A message that explains why the program has generated the planned orders for thi
 ### Confirm_Action
 
 
-Confirm_Action
-
-
-1 - generate firm planned orders for the current row; 0- do not generate;
-
-
 1 - generate firm planned orders for the current row; 0- do not generate;
 
 | Property | Value |
@@ -552,9 +467,8 @@ Confirm_Action
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Confirm_Action](Inv_Requisition_Plan.md#confirm_action)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -577,15 +491,9 @@ Confirm_Action
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;
 
 
 The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;
@@ -598,9 +506,8 @@ The Quantity of the purchase orders the program shall generate; the suggested va
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Quantity](Inv_Requisition_Plan.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -622,12 +529,6 @@ The Quantity of the purchase orders the program shall generate; the suggested va
 ### Supplier_Id
 
 
-Supplier_Id
-
-
-The default supplier in the default product supply for current store, if any
-
-
 The default supplier in the default product supply for current store, if any
 
 | Property | Value |
@@ -639,9 +540,8 @@ The default supplier in the default product supply for current store, if any
 |Referenced Table|[Scm_Suppliers](Scm_Suppliers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Supplier_Id](Inv_Requisition_Plan.md#supplier_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -664,15 +564,9 @@ The default supplier in the default product supply for current store, if any
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Release_Date
-
-
-Release_Date
-
-
-The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated
 
 
 The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated
@@ -686,9 +580,8 @@ The suggested by the program value equals Calendar_Date; the release date of the
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Release_Date](Inv_Requisition_Plan.md#release_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -710,12 +603,6 @@ The suggested by the program value equals Calendar_Date; the release date of the
 ### Completion_Date
 
 
-Completion_Date
-
-
-The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated
-
-
 The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated
 
 | Property | Value |
@@ -727,9 +614,8 @@ The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Day
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Completion_Date](Inv_Requisition_Plan.md#completion_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -751,12 +637,6 @@ The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Day
 ### From_Store_Id
 
 
-From_Store_Id
-
-
-When the order is for transfer, this is the store from which we shall transfer the product.
-
-
 When the order is for transfer, this is the store from which we shall transfer the product.
 
 | Property | Value |
@@ -768,9 +648,8 @@ When the order is for transfer, this is the store from which we shall transfer t
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[From_Store_Id](Inv_Requisition_Plan.md#from_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -793,15 +672,9 @@ When the order is for transfer, this is the store from which we shall transfer t
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Generation_Date
-
-
-Generation_Date
-
-
-Indicates the date on which the plan is generated
 
 
 Indicates the date on which the plan is generated
@@ -815,9 +688,8 @@ Indicates the date on which the plan is generated
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Generation_Date](Inv_Requisition_Plan.md#generation_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -838,9 +710,6 @@ Indicates the date on which the plan is generated
 
 ### Requisition_Plan_Item_Id
 
-
-Requisition_Plan_Item_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -850,9 +719,8 @@ Requisition_Plan_Item_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Requisition_Plan_Item_Id](Inv_Requisition_Plan.md#requisition_plan_item_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -875,12 +743,9 @@ Requisition_Plan_Item_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -891,9 +756,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Enterprise_Company_Id](Inv_Requisition_Plan.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -916,12 +780,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -931,9 +792,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Requisition_Plan](Inv_Requisition_Plan.md).[Row_Version](Inv_Requisition_Plan.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

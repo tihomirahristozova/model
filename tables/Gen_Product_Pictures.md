@@ -1,5 +1,10 @@
 # Table Gen_Product_Pictures
 
+
+## Entity
+
+Entity: [General.Products.ProductPictures](~/entities/General.Products.ProductPictures.md)
+
 Pictures of products. Entity: Gen_Product_Pictures
 
 ## Owner Tables Hierarchy
@@ -25,12 +30,6 @@ Pictures of products. Entity: Gen_Product_Pictures
 ### Picture_No
 
 
-Picture_No
-
-
-Unique picture number within the product. Also used for sorting
-
-
 Unique picture number within the product. Also used for sorting
 
 | Property | Value |
@@ -41,10 +40,9 @@ Unique picture number within the product. Also used for sorting
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Picture_No](Gen_Product_Pictures.md#picture_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -67,13 +65,10 @@ Unique picture number within the product. Also used for sorting
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|yes|
 
 ### Product_Id
-
-
-Product_Id
 
 | Property | Value |
 | - | - |
@@ -84,9 +79,8 @@ Product_Id
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Product_Id](Gen_Product_Pictures.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -109,12 +103,9 @@ Product_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Comments
-
-
-Comments
 
 | Property | Value |
 | - | - |
@@ -125,9 +116,8 @@ Comments
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Comments](Gen_Product_Pictures.md#comments)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,12 +139,6 @@ Comments
 ### Is_Default
 
 
-Is_Default
-
-
-1=This is the default picture for the product and the size class; 0=otherwise
-
-
 1=This is the default picture for the product and the size class; 0=otherwise
 
 | Property | Value |
@@ -165,9 +149,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Is_Default](Gen_Product_Pictures.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,15 +173,9 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Picture
-
-
-Picture
-
-
-The actual product picture. Can be NULL if we insert only some comments
 
 
 The actual product picture. Can be NULL if we insert only some comments
@@ -211,9 +188,8 @@ The actual product picture. Can be NULL if we insert only some comments
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Picture](Gen_Product_Pictures.md#picture)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -234,9 +210,6 @@ The actual product picture. Can be NULL if we insert only some comments
 
 ### Product_Picture_Id
 
-
-Product_Picture_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -246,9 +219,8 @@ Product_Picture_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Product_Picture_Id](Gen_Product_Pictures.md#product_picture_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -271,15 +243,9 @@ Product_Picture_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Picture_Size_Class
-
-
-Picture_Size_Class
-
-
-Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified.
 
 
 Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified.
@@ -293,10 +259,9 @@ Specifies the relative picture size and usage. S=Small picture (thumbnail), L=La
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`S`, `L`|
 |Default Value|None|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Picture_Size_Class](Gen_Product_Pictures.md#picture_size_class)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -318,12 +283,6 @@ Specifies the relative picture size and usage. S=Small picture (thumbnail), L=La
 ### Last_Update_Time
 
 
-Last_Update_Time
-
-
-The exact server time, when the picture was last updated. Set automatically.
-
-
 The exact server time, when the picture was last updated. Set automatically.
 
 | Property | Value |
@@ -335,9 +294,8 @@ The exact server time, when the picture was last updated. Set automatically.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Last_Update_Time](Gen_Product_Pictures.md#last_update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -364,9 +322,6 @@ The exact server time, when the picture was last updated. Set automatically.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -375,9 +330,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Pictures](Gen_Product_Pictures.md).[Row_Version](Gen_Product_Pictures.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

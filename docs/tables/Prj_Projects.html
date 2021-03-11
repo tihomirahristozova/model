@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_projects">Table Prj_Projects</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.Projects.html">Projects.Projects</a></p>
 <p>Contains the planned, running and completed projects of the enterprises. Entity: Prj_Projects</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -159,7 +161,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="project_id">Project_Id</h3>
-<p>Project_Id</p>
 <table>
 <thead>
 <tr>
@@ -198,15 +199,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#project_id">Project_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -291,14 +288,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
 <table>
 <thead>
 <tr>
@@ -337,15 +333,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -430,14 +422,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_name">Project_Name</h3>
-<p>Project_Name</p>
 <table>
 <thead>
 <tr>
@@ -476,15 +467,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#project_name">Project_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -569,7 +556,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -582,8 +569,6 @@
 </tbody>
 </table>
 <h3 id="project_type_id">Project_Type_Id</h3>
-<p>Project_Type_Id</p>
-<p>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects</p>
 <p>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects</p>
 <table>
 <thead>
@@ -623,15 +608,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#project_type_id">Project_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -716,14 +697,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -734,7 +714,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -762,15 +742,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -843,8 +819,6 @@
 </tbody>
 </table>
 <h3 id="start_date">Start_Date</h3>
-<p>Start_Date</p>
-<p>Expected date, when the execution of the tasks will start. NULL means that the start date is still unknown</p>
 <p>Expected date, when the execution of the tasks will start. NULL means that the start date is still unknown</p>
 <table>
 <thead>
@@ -884,15 +858,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#start_date">Start_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -977,15 +947,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="finish_date">Finish_Date</h3>
-<p>Finish_Date</p>
-<p>The drop dead date of the project, e.g. the date when the project should be finished. NULL means that the finish date is unknown.</p>
 <p>The drop dead date of the project, e.g. the date when the project should be finished. NULL means that the finish date is unknown.</p>
 <table>
 <thead>
@@ -1025,15 +993,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#finish_date">Finish_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1118,15 +1082,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_manager_person_id">Project_Manager_Person_Id</h3>
-<p>Project_Manager_Person_Id</p>
-<p>The project manager</p>
 <p>The project manager</p>
 <table>
 <thead>
@@ -1166,15 +1128,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#project_manager_person_id">Project_Manager_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1259,15 +1217,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="client_party_id">Client_Party_Id</h3>
-<p>Client_Party_Id</p>
-<p>The external or internal client of the project</p>
 <p>The external or internal client of the project</p>
 <table>
 <thead>
@@ -1307,15 +1263,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#client_party_id">Client_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1400,15 +1352,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_status">Project_Status</h3>
-<p>Project_Status</p>
-<p>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled)</p>
 <p>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled)</p>
 <table>
 <thead>
@@ -1444,7 +1394,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1453,10 +1403,6 @@
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#project_status">Project_Status</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1541,15 +1487,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="budgeting_currency_id">Budgeting_Currency_Id</h3>
-<p>Budgeting_Currency_Id</p>
-<p>The currency in which the project budget is calculated</p>
 <p>The currency in which the project budget is calculated</p>
 <table>
 <thead>
@@ -1589,15 +1533,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#budgeting_currency_id">Budgeting_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1682,15 +1622,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_code">Project_Code</h3>
-<p>Project_Code</p>
-<p>Short code for identification of projects.</p>
 <p>Short code for identification of projects.</p>
 <table>
 <thead>
@@ -1730,15 +1668,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#project_code">Project_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1823,7 +1757,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1836,7 +1770,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1871,15 +1804,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Projects.html">Prj_Projects</a>.<a href="Prj_Projects.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

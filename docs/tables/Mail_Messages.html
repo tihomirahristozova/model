@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-mail_messages">Table Mail_Messages</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Mail.Messages.html">Applications.Mail.Messages</a></p>
 <p>Represents email messages. Entity: Mail_Messages</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -127,7 +129,7 @@
 </tr>
 <tr>
 <td><a href="#body">Body</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The body of the message</td>
 </tr>
 <tr>
@@ -174,7 +176,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="mail_message_id">Mail_Message_Id</h3>
-<p>Mail_Message_Id</p>
 <table>
 <thead>
 <tr>
@@ -213,15 +214,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#mail_message_id">Mail_Message_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -306,14 +303,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="mail_box_folder_id">Mail_Box_Folder_Id</h3>
-<p>Mail_Box_Folder_Id</p>
 <table>
 <thead>
 <tr>
@@ -352,15 +348,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#mail_box_folder_id">Mail_Box_Folder_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -445,15 +437,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="from_email_address">From_Email_Address</h3>
-<p>From_Email_Address</p>
-<p>Sending email address</p>
 <p>Sending email address</p>
 <table>
 <thead>
@@ -493,15 +483,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#from_email_address">From_Email_Address</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -593,8 +579,6 @@
 </tbody>
 </table>
 <h3 id="to_email_address_list">To_Email_Address_List</h3>
-<p>To_Email_Address_List</p>
-<p>Semicolon-separated list of receiving email addresses</p>
 <p>Semicolon-separated list of receiving email addresses</p>
 <table>
 <thead>
@@ -634,15 +618,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#to_email_address_list">To_Email_Address_List</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -734,8 +714,6 @@
 </tbody>
 </table>
 <h3 id="cc_email_address_list">Cc_Email_Address_List</h3>
-<p>Cc_Email_Address_List</p>
-<p>Semicolon-separated list of Cc email addresses</p>
 <p>Semicolon-separated list of Cc email addresses</p>
 <table>
 <thead>
@@ -775,15 +753,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#cc_email_address_list">Cc_Email_Address_List</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -875,8 +849,6 @@
 </tbody>
 </table>
 <h3 id="subject">Subject</h3>
-<p>Subject</p>
-<p>The message subject</p>
 <p>The message subject</p>
 <table>
 <thead>
@@ -916,15 +888,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#subject">Subject</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1016,8 +984,6 @@
 </tbody>
 </table>
 <h3 id="body">Body</h3>
-<p>Body</p>
-<p>The body of the message</p>
 <p>The body of the message</p>
 <table>
 <thead>
@@ -1029,7 +995,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1057,15 +1023,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#body">Body</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1138,8 +1100,6 @@
 </tbody>
 </table>
 <h3 id="is_read">Is_Read</h3>
-<p>Is_Read</p>
-<p>1 when the message was read by the user</p>
 <p>1 when the message was read by the user</p>
 <table>
 <thead>
@@ -1175,15 +1135,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#is_read">Is_Read</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1268,15 +1224,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="server_message_id">Server_Message_ID</h3>
-<p>Server_Message_ID</p>
-<p>Message ID as it appears on the mail server</p>
 <p>Message ID as it appears on the mail server</p>
 <table>
 <thead>
@@ -1316,15 +1270,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#server_message_id">Server_Message_ID</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1409,15 +1359,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="creation_date_time">Creation_Date_Time</h3>
-<p>Creation_Date_Time</p>
-<p>Date and time when the message was created</p>
 <p>Date and time when the message was created</p>
 <table>
 <thead>
@@ -1457,15 +1405,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#creation_date_time">Creation_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1557,8 +1501,6 @@
 </tbody>
 </table>
 <h3 id="sent_date_time">Sent_Date_Time</h3>
-<p>Sent_Date_Time</p>
-<p>Date and time when the message was sent</p>
 <p>Date and time when the message was sent</p>
 <table>
 <thead>
@@ -1598,15 +1540,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#sent_date_time">Sent_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1698,8 +1636,6 @@
 </tbody>
 </table>
 <h3 id="received_date_time">Received_Date_Time</h3>
-<p>Received_Date_Time</p>
-<p>Date and time when the message was received</p>
 <p>Date and time when the message was received</p>
 <table>
 <thead>
@@ -1739,15 +1675,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#received_date_time">Received_Date_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1839,8 +1771,6 @@
 </tbody>
 </table>
 <h3 id="related_to_party_id">Related_To_Party_Id</h3>
-<p>Related_To_Party_Id</p>
-<p>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. NULL means that the email is still not related to any specific party</p>
 <p>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. NULL means that the email is still not related to any specific party</p>
 <table>
 <thead>
@@ -1880,15 +1810,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#related_to_party_id">Related_To_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1973,15 +1899,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_encrypted">Is_Encrypted</h3>
-<p>Is_Encrypted</p>
-<p>1 when the message is stored in encrypted format</p>
 <p>1 when the message is stored in encrypted format</p>
 <table>
 <thead>
@@ -2017,15 +1941,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#is_encrypted">Is_Encrypted</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2110,14 +2030,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2152,15 +2071,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Mail_Messages.html">Mail_Messages</a>.<a href="Mail_Messages.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

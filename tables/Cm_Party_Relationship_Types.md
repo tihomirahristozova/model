@@ -1,5 +1,10 @@
 # Table Cm_Party_Relationship_Types
 
+
+## Entity
+
+Entity: [General.Contacts.PartyRelationshipTypes](~/entities/General.Contacts.PartyRelationshipTypes.md)
+
 Defines the types of relationships possible between the parties. Entity: Cm_Party_Relationship_Types
 
 ## Summary
@@ -15,9 +20,6 @@ Defines the types of relationships possible between the parties. Entity: Cm_Part
 
 ### Relationship_Type_Id
 
-
-Relationship_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -27,9 +29,8 @@ Relationship_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Party_Relationship_Types](Cm_Party_Relationship_Types.md).[Relationship_Type_Id](Cm_Party_Relationship_Types.md#relationship_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -52,15 +53,9 @@ Relationship_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Relationship_Type_Name
-
-
-Relationship_Type_Name
-
-
-The name of the relationship type
 
 
 The name of the relationship type
@@ -74,9 +69,8 @@ The name of the relationship type
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Relationship_Types](Cm_Party_Relationship_Types.md).[Relationship_Type_Name](Cm_Party_Relationship_Types.md#relationship_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,9 +97,6 @@ The name of the relationship type
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -115,9 +106,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Party_Relationship_Types](Cm_Party_Relationship_Types.md).[Notes](Cm_Party_Relationship_Types.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -138,9 +128,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -149,9 +136,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Party_Relationship_Types](Cm_Party_Relationship_Types.md).[Row_Version](Cm_Party_Relationship_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

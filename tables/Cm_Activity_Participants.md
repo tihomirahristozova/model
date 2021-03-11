@@ -1,5 +1,10 @@
 # Table Cm_Activity_Participants
 
+
+## Entity
+
+Entity: [General.Contacts.ActivityParticipants](~/entities/General.Contacts.ActivityParticipants.md)
+
 Contains the additional participants in the activities. These are the participating users, besides the user to which the activitiy is assigned. Entity: Cm_Activity_Participants
 
 ## Owner Tables Hierarchy
@@ -22,9 +27,6 @@ Contains the additional participants in the activities. These are the participat
 
 ### Activity_Participant_Id
 
-
-Activity_Participant_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Activity_Participant_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Activity_Participants](Cm_Activity_Participants.md).[Activity_Participant_Id](Cm_Activity_Participants.md#activity_participant_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +60,9 @@ Activity_Participant_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Activity_Id
-
-
-Activity_Id
 
 | Property | Value |
 | - | - |
@@ -75,9 +73,8 @@ Activity_Id
 |Referenced Table|[Cm_Activities](Cm_Activities.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Participants](Cm_Activity_Participants.md).[Activity_Id](Cm_Activity_Participants.md#activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +97,9 @@ Activity_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Participant_Person_Id
-
-
-Participant_Person_Id
-
-
-The person, participating in an activity
 
 
 The person, participating in an activity
@@ -122,9 +113,8 @@ The person, participating in an activity
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Participants](Cm_Activity_Participants.md).[Participant_Person_Id](Cm_Activity_Participants.md#participant_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,15 +137,9 @@ The person, participating in an activity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Load_Percent
-
-
-Work_Load_Percent
-
-
-The planned work load of the participant for this activity.
 
 
 The planned work load of the participant for this activity.
@@ -168,9 +152,8 @@ The planned work load of the participant for this activity.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|1|
-|Derived From|[Cm_Activity_Participants](Cm_Activity_Participants.md).[Work_Load_Percent](Cm_Activity_Participants.md#work_load_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,9 +174,6 @@ The planned work load of the participant for this activity.
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(255)|
@@ -203,9 +183,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Activity_Participants](Cm_Activity_Participants.md).[Notes](Cm_Activity_Participants.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -226,9 +205,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -237,9 +213,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Participants](Cm_Activity_Participants.md).[Row_Version](Cm_Activity_Participants.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

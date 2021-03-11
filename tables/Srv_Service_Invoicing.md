@@ -1,5 +1,10 @@
 # Table Srv_Service_Invoicing
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceInvoicing](~/entities/Applications.Service.ServiceInvoicing.md)
+
 Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 
 ### Service_Invoicing_Id
 
-
-Service_Invoicing_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Service_Invoicing_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Invoicing](Srv_Service_Invoicing.md).[Service_Invoicing_Id](Srv_Service_Invoicing.md#service_invoicing_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Service_Invoicing_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Id
-
-
-Service_Id
-
-
-The service for which the invoicing instructions are
 
 
 The service for which the invoicing instructions are
@@ -80,9 +75,8 @@ The service for which the invoicing instructions are
 |Referenced Table|[Srv_Services](Srv_Services.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Invoicing](Srv_Service_Invoicing.md).[Service_Id](Srv_Service_Invoicing.md#service_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The service for which the invoicing instructions are
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity_Of_Service
-
-
-Quantity_Of_Service
-
-
-The quantity of service for which the invoicing is specified
 
 
 The quantity of service for which the invoicing is specified
@@ -126,9 +114,8 @@ The quantity of service for which the invoicing is specified
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Srv_Service_Invoicing](Srv_Service_Invoicing.md).[Quantity_Of_Service](Srv_Service_Invoicing.md#quantity_of_service)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,12 +143,6 @@ The quantity of service for which the invoicing is specified
 ### Product_Id
 
 
-Product_Id
-
-
-The product that should be invoiced
-
-
 The product that should be invoiced
 
 | Property | Value |
@@ -173,9 +154,8 @@ The product that should be invoiced
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Invoicing](Srv_Service_Invoicing.md).[Product_Id](Srv_Service_Invoicing.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -198,15 +178,9 @@ The product that should be invoiced
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity_Of_Product
-
-
-Quantity_Of_Product
-
-
-The quantity to invoice
 
 
 The quantity to invoice
@@ -219,9 +193,8 @@ The quantity to invoice
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Srv_Service_Invoicing](Srv_Service_Invoicing.md).[Quantity_Of_Product](Srv_Service_Invoicing.md#quantity_of_product)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,9 +221,6 @@ The quantity to invoice
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -259,9 +229,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Invoicing](Srv_Service_Invoicing.md).[Row_Version](Srv_Service_Invoicing.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

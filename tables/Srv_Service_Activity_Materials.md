@@ -1,5 +1,10 @@
 # Table Srv_Service_Activity_Materials
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceActivityMaterials](~/entities/Applications.Service.ServiceActivityMaterials.md)
+
 Contains the materials, which were actually used during the service activity (repair). Entity: Srv_Service_Activity_Materials
 
 ## Owner Tables Hierarchy
@@ -30,12 +35,6 @@ Contains the materials, which were actually used during the service activity (re
 ### Line_No
 
 
-Line_No
-
-
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
-
-
 Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 | Property | Value |
@@ -46,10 +45,9 @@ Consecutive line number, unique within the document. Usually is increasing in st
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Line_No](Srv_Service_Activity_Materials.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -71,12 +69,6 @@ Consecutive line number, unique within the document. Usually is increasing in st
 ### Product_Id
 
 
-Product_Id
-
-
-The product, which was used as material.
-
-
 The product, which was used as material.
 
 | Property | Value |
@@ -88,9 +80,8 @@ The product, which was used as material.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Product_Id](Srv_Service_Activity_Materials.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,15 +104,9 @@ The product, which was used as material.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-Quantity of the product, that was used
 
 
 Quantity of the product, that was used
@@ -134,9 +119,8 @@ Quantity of the product, that was used
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Quantity](Srv_Service_Activity_Materials.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,12 +142,6 @@ Quantity of the product, that was used
 ### Quantity_Unit_Id
 
 
-Quantity_Unit_Id
-
-
-The measurement unit of Quantity. Initially is set to the default unit for the product
-
-
 The measurement unit of Quantity. Initially is set to the default unit for the product
 
 | Property | Value |
@@ -175,9 +153,8 @@ The measurement unit of Quantity. Initially is set to the default unit for the p
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Quantity_Unit_Id](Srv_Service_Activity_Materials.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,15 +177,9 @@ The measurement unit of Quantity. Initially is set to the default unit for the p
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_Store_Id
-
-
-Line_Store_Id
-
-
-The store from which the product was taken. NULL = use the store from the header
 
 
 The store from which the product was taken. NULL = use the store from the header
@@ -222,9 +193,8 @@ The store from which the product was taken. NULL = use the store from the header
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Line_Store_Id](Srv_Service_Activity_Materials.md#line_store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,12 +217,9 @@ The store from which the product was taken. NULL = use the store from the header
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Service_Activity_Material_Id
-
-
-Service_Activity_Material_Id
 
 | Property | Value |
 | - | - |
@@ -263,9 +230,8 @@ Service_Activity_Material_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Service_Activity_Material_Id](Srv_Service_Activity_Materials.md#service_activity_material_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -288,12 +254,9 @@ Service_Activity_Material_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Activity_Id
-
-
-Service_Activity_Id
 
 | Property | Value |
 | - | - |
@@ -304,9 +267,8 @@ Service_Activity_Id
 |Referenced Table|[Srv_Service_Activities](Srv_Service_Activities.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Service_Activity_Id](Srv_Service_Activity_Materials.md#service_activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -329,15 +291,9 @@ Service_Activity_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Object_Id
-
-
-Service_Object_Id
-
-
-The service object for which the material is used. NULL means unkown object or N/A
 
 
 The service object for which the material is used. NULL means unkown object or N/A
@@ -351,9 +307,8 @@ The service object for which the material is used. NULL means unkown object or N
 |Referenced Table|[Srv_Service_Objects](Srv_Service_Objects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Service_Object_Id](Srv_Service_Activity_Materials.md#service_object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -376,15 +331,9 @@ The service object for which the material is used. NULL means unkown object or N
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Covered_By_Guarantee
-
-
-Covered_By_Guarantee
-
-
-True when the used material is covered by the guarantee.
 
 
 True when the used material is covered by the guarantee.
@@ -397,9 +346,8 @@ True when the used material is covered by the guarantee.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Covered_By_Guarantee](Srv_Service_Activity_Materials.md#covered_by_guarantee)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -421,12 +369,6 @@ True when the used material is covered by the guarantee.
 ### Quantity_Base
 
 
-Quantity_Base
-
-
-The equivalence of Quantity in the base measurement category of the product.
-
-
 The equivalence of Quantity in the base measurement category of the product.
 
 | Property | Value |
@@ -437,9 +379,8 @@ The equivalence of Quantity in the base measurement category of the product.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Quantity_Base](Srv_Service_Activity_Materials.md#quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -460,9 +401,6 @@ The equivalence of Quantity in the base measurement category of the product.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -471,9 +409,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Row_Version](Srv_Service_Activity_Materials.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -495,12 +432,6 @@ Row_Version
 ### Standard_Quantity_Base
 
 
-Standard_Quantity_Base
-
-
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
-
-
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 | Property | Value |
@@ -511,9 +442,8 @@ The theoretical quantity in base measurement unit according to the current measu
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Materials](Srv_Service_Activity_Materials.md).[Standard_Quantity_Base](Srv_Service_Activity_Materials.md#standard_quantity_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

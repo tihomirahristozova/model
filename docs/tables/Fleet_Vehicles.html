@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-fleet_vehicles">Table Fleet_Vehicles</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Fleet.Vehicles.html">Applications.Fleet.Vehicles</a></p>
 <p>Contains vehicle definitions. Entity: Fleet_Vehicles</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -212,7 +214,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -254,8 +256,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="vehicle_id">Vehicle_Id</h3>
-<p>Vehicle_Id</p>
-<p>Unique vehicle id</p>
 <p>Unique vehicle id</p>
 <table>
 <thead>
@@ -295,15 +295,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#vehicle_id">Vehicle_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -388,15 +384,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="vehicle_type">Vehicle_Type</h3>
-<p>Vehicle_Type</p>
-<p>Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown</p>
 <p>Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown</p>
 <table>
 <thead>
@@ -436,15 +430,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#vehicle_type">Vehicle_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -529,7 +519,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -542,8 +532,6 @@
 </tbody>
 </table>
 <h3 id="make">Make</h3>
-<p>Make</p>
-<p>The name of the manufacturer of the vehicle. NULL means that the value is unknown</p>
 <p>The name of the manufacturer of the vehicle. NULL means that the value is unknown</p>
 <table>
 <thead>
@@ -583,15 +571,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#make">Make</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -676,7 +660,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -689,8 +673,6 @@
 </tbody>
 </table>
 <h3 id="model">Model</h3>
-<p>Model</p>
-<p>The model of the vehicle</p>
 <p>The model of the vehicle</p>
 <table>
 <thead>
@@ -730,15 +712,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#model">Model</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -823,7 +801,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -836,8 +814,6 @@
 </tbody>
 </table>
 <h3 id="vehicle_registration_number">Vehicle_Registration_Number</h3>
-<p>Vehicle_Registration_Number</p>
-<p>The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority</p>
 <p>The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority</p>
 <table>
 <thead>
@@ -877,15 +853,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#vehicle_registration_number">Vehicle_Registration_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -970,7 +942,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -983,8 +955,6 @@
 </tbody>
 </table>
 <h3 id="issuing_authority">Issuing_Authority</h3>
-<p>Issuing_Authority</p>
-<p>The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable</p>
 <p>The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable</p>
 <table>
 <thead>
@@ -1024,15 +994,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#issuing_authority">Issuing_Authority</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1117,7 +1083,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1130,8 +1096,6 @@
 </tbody>
 </table>
 <h3 id="primary_color">Primary_Color</h3>
-<p>Primary_Color</p>
-<p>The primary color of the vehicle. NULL means that the value is unknown or not applicable</p>
 <p>The primary color of the vehicle. NULL means that the value is unknown or not applicable</p>
 <table>
 <thead>
@@ -1171,15 +1135,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#primary_color">Primary_Color</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1264,7 +1224,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1277,8 +1237,6 @@
 </tbody>
 </table>
 <h3 id="manufacture_year">Manufacture_Year</h3>
-<p>Manufacture_Year</p>
-<p>The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown</p>
 <p>The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown</p>
 <table>
 <thead>
@@ -1314,15 +1272,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#manufacture_year">Manufacture_Year</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1407,7 +1361,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1420,8 +1374,6 @@
 </tbody>
 </table>
 <h3 id="engine_size_cc">Engine_Size_cc</h3>
-<p>Engine_Size_cc</p>
-<p>Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)</p>
 <p>Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)</p>
 <table>
 <thead>
@@ -1457,15 +1409,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#engine_size_cc">Engine_Size_cc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1550,7 +1498,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1563,8 +1511,6 @@
 </tbody>
 </table>
 <h3 id="engine_power_hp">Engine_Power_hp</h3>
-<p>Engine_Power_hp</p>
-<p>Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine</p>
 <p>Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine</p>
 <table>
 <thead>
@@ -1600,15 +1546,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#engine_power_hp">Engine_Power_hp</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1693,7 +1635,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1706,8 +1648,6 @@
 </tbody>
 </table>
 <h3 id="engine_identification_number">Engine_Identification_Number</h3>
-<p>Engine_Identification_Number</p>
-<p>Engine identification number</p>
 <p>Engine identification number</p>
 <table>
 <thead>
@@ -1747,15 +1687,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#engine_identification_number">Engine_Identification_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1840,7 +1776,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1853,8 +1789,6 @@
 </tbody>
 </table>
 <h3 id="vehicle_identification_number">Vehicle_Identification_Number</h3>
-<p>Vehicle_Identification_Number</p>
-<p>VIN, aka Chassis number</p>
 <p>VIN, aka Chassis number</p>
 <table>
 <thead>
@@ -1894,15 +1828,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#vehicle_identification_number">Vehicle_Identification_Number</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1987,7 +1917,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2000,8 +1930,6 @@
 </tbody>
 </table>
 <h3 id="seating_places_count">Seating_Places_Count</h3>
-<p>Seating_Places_Count</p>
-<p>Number of seating places, excluding driver</p>
 <p>Number of seating places, excluding driver</p>
 <table>
 <thead>
@@ -2037,15 +1965,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#seating_places_count">Seating_Places_Count</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2130,7 +2054,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2143,8 +2067,6 @@
 </tbody>
 </table>
 <h3 id="crew_count">Crew_Count</h3>
-<p>Crew_Count</p>
-<p>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts</p>
 <p>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts</p>
 <table>
 <thead>
@@ -2180,15 +2102,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#crew_count">Crew_Count</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2273,7 +2191,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2286,8 +2204,6 @@
 </tbody>
 </table>
 <h3 id="standing_places_count">Standing_Places_Count</h3>
-<p>Standing_Places_Count</p>
-<p>Number of standing places, if applicable</p>
 <p>Number of standing places, if applicable</p>
 <table>
 <thead>
@@ -2323,15 +2239,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#standing_places_count">Standing_Places_Count</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2404,8 +2316,6 @@
 </tbody>
 </table>
 <h3 id="vehicle_mass_kg">Vehicle_Mass_Kg</h3>
-<p>Vehicle_Mass_Kg</p>
-<p>Vehicle own mass in kg</p>
 <p>Vehicle own mass in kg</p>
 <table>
 <thead>
@@ -2441,15 +2351,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#vehicle_mass_kg">Vehicle_Mass_Kg</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2522,8 +2428,6 @@
 </tbody>
 </table>
 <h3 id="technical_maximum_laden_mass_kg">Technical_Maximum_Laden_Mass_Kg</h3>
-<p>Technical_Maximum_Laden_Mass_Kg</p>
-<p>Maximum technically permissible laden mass in kg</p>
 <p>Maximum technically permissible laden mass in kg</p>
 <table>
 <thead>
@@ -2559,15 +2463,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#technical_maximum_laden_mass_kg">Technical_Maximum_Laden_Mass_Kg</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2640,8 +2540,6 @@
 </tbody>
 </table>
 <h3 id="authority_maximum_laden_mass_kg">Authority_Maximum_Laden_Mass_Kg</h3>
-<p>Authority_Maximum_Laden_Mass_Kg</p>
-<p>Maximum permissible laden mass, as determined by the registration authority</p>
 <p>Maximum permissible laden mass, as determined by the registration authority</p>
 <table>
 <thead>
@@ -2677,15 +2575,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#authority_maximum_laden_mass_kg">Authority_Maximum_Laden_Mass_Kg</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2758,8 +2652,6 @@
 </tbody>
 </table>
 <h3 id="trainset_maximum_laden_mass_kg">Trainset_Maximum_Laden_Mass_Kg</h3>
-<p>Trainset_Maximum_Laden_Mass_Kg</p>
-<p>Maximum permissible laden mass of a whole trainset, including the vehicle</p>
 <p>Maximum permissible laden mass of a whole trainset, including the vehicle</p>
 <table>
 <thead>
@@ -2795,15 +2687,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#trainset_maximum_laden_mass_kg">Trainset_Maximum_Laden_Mass_Kg</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2876,8 +2764,6 @@
 </tbody>
 </table>
 <h3 id="fuel_type">Fuel_Type</h3>
-<p>Fuel_Type</p>
-<p>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.</p>
 <p>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.</p>
 <table>
 <thead>
@@ -2917,15 +2803,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#fuel_type">Fuel_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3010,7 +2892,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -3023,8 +2905,6 @@
 </tbody>
 </table>
 <h3 id="fuel_capacity">Fuel_Capacity</h3>
-<p>Fuel_Capacity</p>
-<p>Maximum fuel capacity of the engine or the battery in the fuel measurement unit</p>
 <p>Maximum fuel capacity of the engine or the battery in the fuel measurement unit</p>
 <table>
 <thead>
@@ -3060,15 +2940,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#fuel_capacity">Fuel_Capacity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3141,8 +3017,6 @@
 </tbody>
 </table>
 <h3 id="fuel_compsumption">Fuel_Compsumption</h3>
-<p>Fuel_Compsumption</p>
-<p>Average fuel consumption in the fuel measurement unit for 1 operational unit</p>
 <p>Average fuel consumption in the fuel measurement unit for 1 operational unit</p>
 <table>
 <thead>
@@ -3178,15 +3052,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#fuel_compsumption">Fuel_Compsumption</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3259,8 +3129,6 @@
 </tbody>
 </table>
 <h3 id="maximum_speed_kmh">Maximum_Speed_KmH</h3>
-<p>Maximum_Speed_KmH</p>
-<p>Maximum speed in km/h</p>
 <p>Maximum speed in km/h</p>
 <table>
 <thead>
@@ -3296,15 +3164,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#maximum_speed_kmh">Maximum_Speed_KmH</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3377,8 +3241,6 @@
 </tbody>
 </table>
 <h3 id="owner_party_id">Owner_Party_Id</h3>
-<p>Owner_Party_Id</p>
-<p>Vehicle owner</p>
 <p>Vehicle owner</p>
 <table>
 <thead>
@@ -3418,15 +3280,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#owner_party_id">Owner_Party_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3511,14 +3369,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -3529,7 +3386,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -3557,15 +3414,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3638,8 +3491,6 @@
 </tbody>
 </table>
 <h3 id="operational_measurement_unit_id">Operational_Measurement_Unit_Id</h3>
-<p>Operational_Measurement_Unit_Id</p>
-<p>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. NULL means that the unit is unknown</p>
 <p>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. NULL means that the unit is unknown</p>
 <table>
 <thead>
@@ -3679,15 +3530,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#operational_measurement_unit_id">Operational_Measurement_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3772,15 +3619,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="fuel_measurement_unit_id">Fuel_Measurement_Unit_Id</h3>
-<p>Fuel_Measurement_Unit_Id</p>
-<p>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown</p>
 <p>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown</p>
 <table>
 <thead>
@@ -3820,15 +3665,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#fuel_measurement_unit_id">Fuel_Measurement_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3913,14 +3754,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -3955,15 +3795,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4036,8 +3872,6 @@
 </tbody>
 </table>
 <h3 id="maintenance_profile_id">Maintenance_Profile_Id</h3>
-<p>Maintenance_Profile_Id</p>
-<p>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.</p>
 <p>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.</p>
 <table>
 <thead>
@@ -4077,15 +3911,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#maintenance_profile_id">Maintenance_Profile_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4170,15 +4000,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>True if the vehicle is still owned and managed by the enterprise.</p>
 <p>True if the vehicle is still owned and managed by the enterprise.</p>
 <table>
 <thead>
@@ -4214,15 +4042,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4295,8 +4119,6 @@
 </tbody>
 </table>
 <h3 id="active_from">Active_From</h3>
-<p>Active_From</p>
-<p>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.</p>
 <p>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.</p>
 <table>
 <thead>
@@ -4336,15 +4158,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#active_from">Active_From</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -4417,8 +4235,6 @@
 </tbody>
 </table>
 <h3 id="active_till">Active_Till</h3>
-<p>Active_Till</p>
-<p>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.</p>
 <p>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.</p>
 <table>
 <thead>
@@ -4458,15 +4274,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Vehicles.html">Fleet_Vehicles</a>.<a href="Fleet_Vehicles.html#active_till">Active_Till</a></td>
 </tr>
 <tr>
 <td>Format</td>

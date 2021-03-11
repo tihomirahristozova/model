@@ -1,5 +1,10 @@
 # Table Crm_Forecast_Items
 
+
+## Entity
+
+Entity: [Crm.Marketing.ForecastItems](~/entities/Crm.Marketing.ForecastItems.md)
+
 Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
 ## Summary
@@ -21,9 +26,6 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
 ### Forecast_Item_Id
 
-
-Forecast_Item_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Forecast_Item_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Forecast_Item_Id](Crm_Forecast_Items.md#forecast_item_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Forecast_Item_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Country_Id
-
-
-Country_Id
-
-
-The country for which the forecast is made. When NULL, the forecast is country neutral.
 
 
 The country for which the forecast is made. When NULL, the forecast is country neutral.
@@ -80,9 +75,8 @@ The country for which the forecast is made. When NULL, the forecast is country n
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Country_Id](Crm_Forecast_Items.md#country_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The country for which the forecast is made. When NULL, the forecast is country n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Dealer_Id
-
-
-Dealer_Id
-
-
-The dealer for which the forecast is made. When NULL, the forecast is not for any specfic dealer.
 
 
 The dealer for which the forecast is made. When NULL, the forecast is not for any specfic dealer.
@@ -127,9 +115,8 @@ The dealer for which the forecast is made. When NULL, the forecast is not for an
 |Referenced Table|[Crm_Dealers](Crm_Dealers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Dealer_Id](Crm_Forecast_Items.md#dealer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The dealer for which the forecast is made. When NULL, the forecast is not for an
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sales_Person_Id
-
-
-Sales_Person_Id
-
-
-The sales person for which the forecast is made. When NULL, the forecast is not for any specfic sales person.
 
 
 The sales person for which the forecast is made. When NULL, the forecast is not for any specfic sales person.
@@ -174,9 +155,8 @@ The sales person for which the forecast is made. When NULL, the forecast is not 
 |Referenced Table|[Crm_Sales_Persons](Crm_Sales_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Sales_Person_Id](Crm_Forecast_Items.md#sales_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,15 +179,9 @@ The sales person for which the forecast is made. When NULL, the forecast is not 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Customer_Id
-
-
-Customer_Id
-
-
-The customer for which the forecast is made. When NULL, the forecast is not for any specfic customer.
 
 
 The customer for which the forecast is made. When NULL, the forecast is not for any specfic customer.
@@ -221,9 +195,8 @@ The customer for which the forecast is made. When NULL, the forecast is not for 
 |Referenced Table|[Crm_Customers](Crm_Customers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Customer_Id](Crm_Forecast_Items.md#customer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,15 +219,9 @@ The customer for which the forecast is made. When NULL, the forecast is not for 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Date
-
-
-Date
-
-
-The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period
 
 
 The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period
@@ -268,9 +235,8 @@ The date for which the sales is forecasted. When forecasting for a period, this 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Date](Crm_Forecast_Items.md#date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -298,12 +264,6 @@ The date for which the sales is forecasted. When forecasting for a period, this 
 ### Product_Id
 
 
-Product_Id
-
-
-The product for which the forecast is made.
-
-
 The product for which the forecast is made.
 
 | Property | Value |
@@ -315,9 +275,8 @@ The product for which the forecast is made.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Product_Id](Crm_Forecast_Items.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -340,15 +299,9 @@ The product for which the forecast is made.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Store_Id
-
-
-Store_Id
-
-
-The store which is expected to sell the products.
 
 
 The store which is expected to sell the products.
@@ -362,9 +315,8 @@ The store which is expected to sell the products.
 |Referenced Table|[Inv_Stores](Inv_Stores.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Store_Id](Crm_Forecast_Items.md#store_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -387,15 +339,9 @@ The store which is expected to sell the products.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The forecasted sales quantity in the base measurement category of the product
 
 
 The forecasted sales quantity in the base measurement category of the product
@@ -408,9 +354,8 @@ The forecasted sales quantity in the base measurement category of the product
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Quantity](Crm_Forecast_Items.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -437,9 +382,6 @@ The forecasted sales quantity in the base measurement category of the product
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -448,9 +390,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Forecast_Items](Crm_Forecast_Items.md).[Row_Version](Crm_Forecast_Items.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

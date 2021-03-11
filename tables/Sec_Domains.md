@@ -1,5 +1,10 @@
 # Table Sec_Domains
 
+
+## Entity
+
+Entity: [Systems.Security.Domains](~/entities/Systems.Security.Domains.md)
+
 Represents one user domain. The users in a domain have different emails. But one user can use the same email to register in different domains. Entity: Sec_Domains (Introduced in version 20.1)
 
 ## Summary
@@ -17,9 +22,6 @@ Represents one user domain. The users in a domain have different emails. But one
 
 ### Domain_Id
 
-
-Domain_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Domain_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_Domains](Sec_Domains.md).[Domain_Id](Sec_Domains.md#domain_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Domain_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Domain_Name
-
-
-Domain_Name
-
-
-The name of the domain (restricted for URL usage).
 
 
 The name of the domain (restricted for URL usage).
@@ -76,9 +71,8 @@ The name of the domain (restricted for URL usage).
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Domains](Sec_Domains.md).[Domain_Name](Sec_Domains.md#domain_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,16 +95,10 @@ The name of the domain (restricted for URL usage).
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Description
-
-
-Description
-
-
-Multi-language description of the domain.
 
 
 Multi-language description of the domain.
@@ -124,9 +112,8 @@ Multi-language description of the domain.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Domains](Sec_Domains.md).[Description](Sec_Domains.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,9 +134,6 @@ Multi-language description of the domain.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -158,9 +142,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Domains](Sec_Domains.md).[Row_Version](Sec_Domains.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -182,12 +165,6 @@ Row_Version
 ### Is_Default
 
 
-Is_Default
-
-
-Specifies whether this is the default domain for the database.
-
-
 Specifies whether this is the default domain for the database.
 
 | Property | Value |
@@ -198,9 +175,8 @@ Specifies whether this is the default domain for the database.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Sec_Domains](Sec_Domains.md).[Is_Default](Sec_Domains.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -223,15 +199,9 @@ Specifies whether this is the default domain for the database.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Allow_Local_Accounts
-
-
-Allow_Local_Accounts
-
-
-Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended).
 
 
 Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended).
@@ -244,9 +214,8 @@ Specifies whether users can have local accounts with locally stored passwords in
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Sec_Domains](Sec_Domains.md).[Allow_Local_Accounts](Sec_Domains.md#allow_local_accounts)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

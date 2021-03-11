@@ -1,5 +1,10 @@
 # Table Prj_Type_Work_Elements
 
+
+## Entity
+
+Entity: [Projects.TypeWorkElements](~/entities/Projects.TypeWorkElements.md)
+
 The work elements of the work breakdown structure of each project type. Entity: Prj_Type_Work_Elements
 
 ## Owner Tables Hierarchy
@@ -15,16 +20,13 @@ The work elements of the work breakdown structure of each project type. Entity: 
 |[Parent_Full_Path](#parent_full_path)|`nvarchar(25)` |The full path of the parent work element in this project type. NULL when this is root element.|
 |[Work_Element_Code](#work_element_code)|`nvarchar(3)` |The code of the work element, unique among the sibling elements within the parent work element.|
 |[Work_Element_Name](#work_element_name)|`nvarchar(254)` |The name of the work element, unique among the sibling elements within the parent work element.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Full_Path](#full_path)|`nvarchar(25)` Readonly|The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Project_Type_Work_Element_Id
-
-
-Project_Type_Work_Element_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Project_Type_Work_Element_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md).[Project_Type_Work_Element_Id](Prj_Type_Work_Elements.md#project_type_work_element_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,12 +61,9 @@ Project_Type_Work_Element_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Project_Type_Id
-
-
-Project_Type_Id
 
 | Property | Value |
 | - | - |
@@ -76,9 +74,8 @@ Project_Type_Id
 |Referenced Table|[Prj_Types](Prj_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md).[Project_Type_Id](Prj_Type_Work_Elements.md#project_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,15 +98,9 @@ Project_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent_Full_Path
-
-
-Parent_Full_Path
-
-
-The full path of the parent work element in this project type. NULL when this is root element.
 
 
 The full path of the parent work element in this project type. NULL when this is root element.
@@ -123,9 +114,8 @@ The full path of the parent work element in this project type. NULL when this is
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md).[Parent_Full_Path](Prj_Type_Work_Elements.md#parent_full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,16 +138,10 @@ The full path of the parent work element in this project type. NULL when this is
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Work_Element_Code
-
-
-Work_Element_Code
-
-
-The code of the work element, unique among the sibling elements within the parent work element.
 
 
 The code of the work element, unique among the sibling elements within the parent work element.
@@ -171,9 +155,8 @@ The code of the work element, unique among the sibling elements within the paren
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md).[Work_Element_Code](Prj_Type_Work_Elements.md#work_element_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,15 +179,9 @@ The code of the work element, unique among the sibling elements within the paren
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Element_Name
-
-
-Work_Element_Name
-
-
-The name of the work element, unique among the sibling elements within the parent work element.
 
 
 The name of the work element, unique among the sibling elements within the parent work element.
@@ -218,9 +195,8 @@ The name of the work element, unique among the sibling elements within the paren
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md).[Work_Element_Name](Prj_Type_Work_Elements.md#work_element_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -243,25 +219,21 @@ The name of the work element, unique among the sibling elements within the paren
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md).[Notes](Prj_Type_Work_Elements.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -283,12 +255,6 @@ Notes
 ### Full_Path
 
 
-Full_Path
-
-
-The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.
-
-
 The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.
 
 | Property | Value |
@@ -300,9 +266,8 @@ The full path of the node in the format of dot-delimited, dot-terminated codes o
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md).[Full_Path](Prj_Type_Work_Elements.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -325,13 +290,10 @@ The full path of the node in the format of dot-delimited, dot-terminated codes o
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -341,9 +303,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prj_Type_Work_Elements](Prj_Type_Work_Elements.md).[Row_Version](Prj_Type_Work_Elements.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

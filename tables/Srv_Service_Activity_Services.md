@@ -1,5 +1,10 @@
 # Table Srv_Service_Activity_Services
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceActivityServices](~/entities/Applications.Service.ServiceActivityServices.md)
+
 Contains the services, which were actually performed during the service activity (repair). Entity: Srv_Service_Activity_Services
 
 ## Owner Tables Hierarchy
@@ -29,12 +34,6 @@ Contains the services, which were actually performed during the service activity
 ### Line_No
 
 
-Line_No
-
-
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
-
-
 Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 | Property | Value |
@@ -45,10 +44,9 @@ Consecutive line number, unique within the document. Usually is increasing in st
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Line_No](Srv_Service_Activity_Services.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -70,12 +68,6 @@ Consecutive line number, unique within the document. Usually is increasing in st
 ### Service_Id
 
 
-Service_Id
-
-
-The type of service that is conducted
-
-
 The type of service that is conducted
 
 | Property | Value |
@@ -87,9 +79,8 @@ The type of service that is conducted
 |Referenced Table|[Srv_Services](Srv_Services.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Service_Id](Srv_Service_Activity_Services.md#service_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,15 +103,9 @@ The type of service that is conducted
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Name
-
-
-Service_Name
-
-
-Description of the conducted service. The description may vary (contain additional information) from the standart name of the service.
 
 
 Description of the conducted service. The description may vary (contain additional information) from the standart name of the service.
@@ -134,9 +119,8 @@ Description of the conducted service. The description may vary (contain addition
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Service_Name](Srv_Service_Activity_Services.md#service_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -164,12 +148,6 @@ Description of the conducted service. The description may vary (contain addition
 ### Notes
 
 
-Notes
-
-
-Short notes for the service
-
-
 Short notes for the service
 
 | Property | Value |
@@ -181,9 +159,8 @@ Short notes for the service
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Notes](Srv_Service_Activity_Services.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,12 +182,6 @@ Short notes for the service
 ### Quantity
 
 
-Quantity
-
-
-The quantity of the service in the measurement unit of the service
-
-
 The quantity of the service in the measurement unit of the service
 
 | Property | Value |
@@ -221,9 +192,8 @@ The quantity of the service in the measurement unit of the service
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Quantity](Srv_Service_Activity_Services.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -245,12 +215,6 @@ The quantity of the service in the measurement unit of the service
 ### Performed_By_Person_Id
 
 
-Performed_By_Person_Id
-
-
-The id of the person from the enterprise company that actually performed the work
-
-
 The id of the person from the enterprise company that actually performed the work
 
 | Property | Value |
@@ -262,9 +226,8 @@ The id of the person from the enterprise company that actually performed the wor
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Performed_By_Person_Id](Srv_Service_Activity_Services.md#performed_by_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -287,12 +250,9 @@ The id of the person from the enterprise company that actually performed the wor
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Service_Activity_Service_Id
-
-
-Service_Activity_Service_Id
 
 | Property | Value |
 | - | - |
@@ -303,9 +263,8 @@ Service_Activity_Service_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Service_Activity_Service_Id](Srv_Service_Activity_Services.md#service_activity_service_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -328,12 +287,9 @@ Service_Activity_Service_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Service_Activity_Id
-
-
-Service_Activity_Id
 
 | Property | Value |
 | - | - |
@@ -344,9 +300,8 @@ Service_Activity_Id
 |Referenced Table|[Srv_Service_Activities](Srv_Service_Activities.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Service_Activity_Id](Srv_Service_Activity_Services.md#service_activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -369,15 +324,9 @@ Service_Activity_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Object_Id
-
-
-Service_Object_Id
-
-
-The service object that was serviced. NULL means that it is unknown or N/A
 
 
 The service object that was serviced. NULL means that it is unknown or N/A
@@ -391,9 +340,8 @@ The service object that was serviced. NULL means that it is unknown or N/A
 |Referenced Table|[Srv_Service_Objects](Srv_Service_Objects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Service_Object_Id](Srv_Service_Activity_Services.md#service_object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -416,15 +364,9 @@ The service object that was serviced. NULL means that it is unknown or N/A
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Covered_By_Guarantee
-
-
-Covered_By_Guarantee
-
-
-True when the performed service is covered by the guarantee.
 
 
 True when the performed service is covered by the guarantee.
@@ -437,9 +379,8 @@ True when the performed service is covered by the guarantee.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Covered_By_Guarantee](Srv_Service_Activity_Services.md#covered_by_guarantee)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -460,9 +401,6 @@ True when the performed service is covered by the guarantee.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -471,9 +409,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Activity_Services](Srv_Service_Activity_Services.md).[Row_Version](Srv_Service_Activity_Services.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

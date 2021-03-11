@@ -1,5 +1,10 @@
 # Table Log_Cargo_Types
 
+
+## Entity
+
+Entity: [Logistics.Shipment.CargoTypes](~/entities/Logistics.Shipment.CargoTypes.md)
+
 Represents a cargo type. Different cargo types might require different types of vehicles or modes of transportartion. Entity: Log_Cargo_Types
 
 ## Summary
@@ -9,15 +14,12 @@ Represents a cargo type. Different cargo types might require different types of 
 |[Cargo_Type_Id](#cargo_type_id)|`uniqueidentifier` `PK`||
 |[Cargo_Type_Code](#cargo_type_code)|`nvarchar(16)` ||
 |[Cargo_Type_Name](#cargo_type_name)|`nvarchar(256)` ||
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Cargo_Type_Id
-
-
-Cargo_Type_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Cargo_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Log_Cargo_Types](Log_Cargo_Types.md).[Cargo_Type_Id](Log_Cargo_Types.md#cargo_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Cargo_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cargo_Type_Code
-
-
-Cargo_Type_Code
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Cargo_Type_Code
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Cargo_Types](Log_Cargo_Types.md).[Cargo_Type_Code](Log_Cargo_Types.md#cargo_type_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -94,13 +91,10 @@ Cargo_Type_Code
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Cargo_Type_Name
-
-
-Cargo_Type_Name
 
 | Property | Value |
 | - | - |
@@ -111,9 +105,8 @@ Cargo_Type_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Cargo_Types](Log_Cargo_Types.md).[Cargo_Type_Name](Log_Cargo_Types.md#cargo_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -136,26 +129,22 @@ Cargo_Type_Name
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Cargo_Types](Log_Cargo_Types.md).[Notes](Log_Cargo_Types.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -176,9 +165,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -187,9 +173,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Log_Cargo_Types](Log_Cargo_Types.md).[Row_Version](Log_Cargo_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

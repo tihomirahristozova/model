@@ -1,5 +1,10 @@
 # Table Wms_Warehouse_Zones
 
+
+## Entity
+
+Entity: [Logistics.Wms.WarehouseZones](~/entities/Logistics.Wms.WarehouseZones.md)
+
 One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 20.1)
 
 ## Owner Tables Hierarchy
@@ -13,7 +18,7 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 |[Warehouse_Zone_Id](#warehouse_zone_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse in which the zone is located.|
 |[Warehouse_Zone_Name](#warehouse_zone_name)|`nvarchar(254)` `ML`|Multi-language name of the zone.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Parent_Warehouse_Zone_Id](#parent_warehouse_zone_id)|`uniqueidentifier` |The parent Warehouse Zone of the current Warehouse Zone.|
 |[Warehouse_Zone_Code](#warehouse_zone_code)|`nvarchar(32)` |Zone code, unique within the warehouse.|
@@ -21,9 +26,6 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 ## Columns
 
 ### Warehouse_Zone_Id
-
-
-Warehouse_Zone_Id
 
 | Property | Value |
 | - | - |
@@ -34,9 +36,8 @@ Warehouse_Zone_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md).[Warehouse_Zone_Id](Wms_Warehouse_Zones.md#warehouse_zone_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Warehouse_Zone_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Id
-
-
-Warehouse_Id
-
-
-The warehouse in which the zone is located.
 
 
 The warehouse in which the zone is located.
@@ -81,9 +76,8 @@ The warehouse in which the zone is located.
 |Referenced Table|[Wms_Warehouses](Wms_Warehouses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md).[Warehouse_Id](Wms_Warehouse_Zones.md#warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The warehouse in which the zone is located.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Zone_Name
-
-
-Warehouse_Zone_Name
-
-
-Multi-language name of the zone.
 
 
 Multi-language name of the zone.
@@ -128,9 +116,8 @@ Multi-language name of the zone.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md).[Warehouse_Zone_Name](Wms_Warehouse_Zones.md#warehouse_zone_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -153,26 +140,22 @@ Multi-language name of the zone.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md).[Notes](Wms_Warehouse_Zones.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -193,9 +176,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -204,9 +184,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md).[Row_Version](Wms_Warehouse_Zones.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -228,12 +207,6 @@ Row_Version
 ### Parent_Warehouse_Zone_Id
 
 
-Parent_Warehouse_Zone_Id
-
-
-The parent Warehouse Zone of the current Warehouse Zone.
-
-
 The parent Warehouse Zone of the current Warehouse Zone.
 
 | Property | Value |
@@ -245,9 +218,8 @@ The parent Warehouse Zone of the current Warehouse Zone.
 |Referenced Table|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md).[Parent_Warehouse_Zone_Id](Wms_Warehouse_Zones.md#parent_warehouse_zone_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -270,15 +242,9 @@ The parent Warehouse Zone of the current Warehouse Zone.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Warehouse_Zone_Code
-
-
-Warehouse_Zone_Code
-
-
-Zone code, unique within the warehouse.
 
 
 Zone code, unique within the warehouse.
@@ -292,9 +258,8 @@ Zone code, unique within the warehouse.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md).[Warehouse_Zone_Code](Wms_Warehouse_Zones.md#warehouse_zone_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -317,6 +282,6 @@ Zone code, unique within the warehouse.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 

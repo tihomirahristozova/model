@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_properties">Table Gen_Properties</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.CustomProperties.html">General.CustomProperties</a></p>
 <p>User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -162,19 +164,18 @@
 </tr>
 <tr>
 <td><a href="#hint">Hint</a></td>
-<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td><code>nvarchar(max)</code> <code>ML</code></td>
 <td>The hint, which is displayed alongside the property.</td>
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="property_id">Property_Id</h3>
-<p>Property_Id</p>
 <table>
 <thead>
 <tr>
@@ -213,15 +214,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#property_id">Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -306,15 +303,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="property_code">Property_Code</h3>
-<p>Property_Code</p>
-<p>Unique property code.</p>
 <p>Unique property code.</p>
 <table>
 <thead>
@@ -354,15 +349,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#property_code">Property_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -447,7 +438,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -460,7 +451,6 @@
 </tbody>
 </table>
 <h3 id="property_name">Property_Name</h3>
-<p>Property_Name</p>
 <table>
 <thead>
 <tr>
@@ -499,15 +489,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#property_name">Property_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -599,8 +585,6 @@
 </tbody>
 </table>
 <h3 id="entity_name">Entity_Name</h3>
-<p>Entity_Name</p>
-<p>The entity for which the property is applicable.</p>
 <p>The entity for which the property is applicable.</p>
 <table>
 <thead>
@@ -640,15 +624,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#entity_name">Entity_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -733,15 +713,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="allowed_values_entity_name">Allowed_Values_Entity_Name</h3>
-<p>Allowed_Values_Entity_Name</p>
-<p>When not NULL, specifies that the allowed values are retrieved from the specified entity</p>
 <p>When not NULL, specifies that the allowed values are retrieved from the specified entity</p>
 <table>
 <thead>
@@ -781,15 +759,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#allowed_values_entity_name">Allowed_Values_Entity_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -874,15 +848,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="allowed_values_filter_xml">Allowed_Values_Filter_XML</h3>
-<p>Allowed_Values_Filter_XML</p>
-<p>When not NULL specifies the filter to apply when extracting allowed values from entity</p>
 <p>When not NULL specifies the filter to apply when extracting allowed values from entity</p>
 <table>
 <thead>
@@ -922,15 +894,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#allowed_values_filter_xml">Allowed_Values_Filter_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1003,8 +971,6 @@
 </tbody>
 </table>
 <h3 id="limit_to_allowed_values">Limit_To_Allowed_Values</h3>
-<p>Limit_To_Allowed_Values</p>
-<p>When true, allows the property to be set only to allowed value. When false, the property can have any value.</p>
 <p>When true, allows the property to be set only to allowed value. When false, the property can have any value.</p>
 <table>
 <thead>
@@ -1040,15 +1006,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#limit_to_allowed_values">Limit_To_Allowed_Values</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1133,15 +1095,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="mask_length">Mask_Length</h3>
-<p>Mask_Length</p>
-<p>Limits te length of the property value to the specified number of characters. Null means no limitation</p>
 <p>Limits te length of the property value to the specified number of characters. Null means no limitation</p>
 <table>
 <thead>
@@ -1177,15 +1137,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#mask_length">Mask_Length</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1258,8 +1214,6 @@
 </tbody>
 </table>
 <h3 id="allowed_values_property_id">Allowed_Values_Property_Id</h3>
-<p>Allowed_Values_Property_Id</p>
-<p>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.</p>
 <p>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.</p>
 <table>
 <thead>
@@ -1299,15 +1253,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#allowed_values_property_id">Allowed_Values_Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1392,15 +1342,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="properties_category_id">Properties_Category_Id</h3>
-<p>Properties_Category_Id</p>
-<p>When not null, categorizes the property under a category.</p>
 <p>When not null, categorizes the property under a category.</p>
 <table>
 <thead>
@@ -1440,15 +1388,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#properties_category_id">Properties_Category_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1533,15 +1477,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="property_type">Property_Type</h3>
-<p>Property_Type</p>
-<p>Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.</p>
 <p>Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.</p>
 <table>
 <thead>
@@ -1581,7 +1523,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1590,10 +1532,6 @@
 <tr>
 <td>Default Value</td>
 <td>T</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#property_type">Property_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1666,8 +1604,6 @@
 </tbody>
 </table>
 <h3 id="key_order">Key_Order</h3>
-<p>Key_Order</p>
-<p>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis</p>
 <p>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis</p>
 <table>
 <thead>
@@ -1703,15 +1639,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#key_order">Key_Order</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1784,8 +1716,6 @@
 </tbody>
 </table>
 <h3 id="allowed_values_parent_property_id">Allowed_Values_Parent_Property_Id</h3>
-<p>Allowed_Values_Parent_Property_Id</p>
-<p>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property</p>
 <p>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property</p>
 <table>
 <thead>
@@ -1825,15 +1755,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#allowed_values_parent_property_id">Allowed_Values_Parent_Property_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1918,14 +1844,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1960,15 +1885,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2041,8 +1962,6 @@
 </tbody>
 </table>
 <h3 id="hint">Hint</h3>
-<p>Hint</p>
-<p>The hint, which is displayed alongside the property.</p>
 <p>The hint, which is displayed alongside the property.</p>
 <table>
 <thead>
@@ -2054,7 +1973,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2082,15 +2001,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#hint">Hint</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2175,7 +2090,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2188,7 +2103,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2199,7 +2113,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2227,15 +2141,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Properties.html">Gen_Properties</a>.<a href="Gen_Properties.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Gen_Product_Dimensions
 
+
+## Entity
+
+Entity: [General.Products.ProductDimensions](~/entities/General.Products.ProductDimensions.md)
+
 Contains convertion ratios between the supported measument categories for each product. Does not contain a record for the default category of the products, for which the convertion ratio is defined as equal to 1. Entity: Gen_Product_Dimensions
 
 ## Owner Tables Hierarchy
@@ -26,12 +31,6 @@ Contains convertion ratios between the supported measument categories for each p
 ### Source_Quantity_Unit_Id
 
 
-Source_Quantity_Unit_Id
-
-
-The non-base measurement unit for which we specify convertion ratio
-
-
 The non-base measurement unit for which we specify convertion ratio
 
 | Property | Value |
@@ -43,9 +42,8 @@ The non-base measurement unit for which we specify convertion ratio
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Source_Quantity_Unit_Id](Gen_Product_Dimensions.md#source_quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -68,15 +66,9 @@ The non-base measurement unit for which we specify convertion ratio
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Dest_Quantity_Unit_Id
-
-
-Dest_Quantity_Unit_Id
-
-
-The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product
 
 
 The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product
@@ -90,9 +82,8 @@ The measurement unit of Dest_Quantity. Should be one of the units of the base me
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Dest_Quantity_Unit_Id](Gen_Product_Dimensions.md#dest_quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -115,12 +106,9 @@ The measurement unit of Dest_Quantity. Should be one of the units of the base me
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Dimension_Id
-
-
-Product_Dimension_Id
 
 | Property | Value |
 | - | - |
@@ -131,9 +119,8 @@ Product_Dimension_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Product_Dimension_Id](Gen_Product_Dimensions.md#product_dimension_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -156,15 +143,9 @@ Product_Dimension_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product for which we specify conversion ratios
 
 
 The product for which we specify conversion ratios
@@ -178,9 +159,8 @@ The product for which we specify conversion ratios
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Product_Id](Gen_Product_Dimensions.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -203,15 +183,9 @@ The product for which we specify conversion ratios
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Source_Quantity
-
-
-Source_Quantity
-
-
-The quantity in the non-base unit
 
 
 The quantity in the non-base unit
@@ -224,9 +198,8 @@ The quantity in the non-base unit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Source_Quantity](Gen_Product_Dimensions.md#source_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,12 +221,6 @@ The quantity in the non-base unit
 ### Measurement_Category_Id
 
 
-Measurement_Category_Id
-
-
-The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category.
-
-
 The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category.
 
 | Property | Value |
@@ -265,9 +232,8 @@ The measurement category of Source Quantity Unit. For each product, only one con
 |Referenced Table|[Gen_Measurement_Categories](Gen_Measurement_Categories.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Measurement_Category_Id](Gen_Product_Dimensions.md#measurement_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -290,15 +256,9 @@ The measurement category of Source Quantity Unit. For each product, only one con
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Dest_Quantity
-
-
-Dest_Quantity
-
-
-Quantity in some of the base units, that equals Source_Quantity
 
 
 Quantity in some of the base units, that equals Source_Quantity
@@ -311,9 +271,8 @@ Quantity in some of the base units, that equals Source_Quantity
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Dest_Quantity](Gen_Product_Dimensions.md#dest_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -335,12 +294,6 @@ Quantity in some of the base units, that equals Source_Quantity
 ### Convert_To_Base_Multiplier
 
 
-Convert_To_Base_Multiplier
-
-
-This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.
-
-
 This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.
 
 | Property | Value |
@@ -351,9 +304,8 @@ This was intended to be the multiplier, but due to a historical bug actually con
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Convert_To_Base_Multiplier](Gen_Product_Dimensions.md#convert_to_base_multiplier)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -375,12 +327,6 @@ This was intended to be the multiplier, but due to a historical bug actually con
 ### Convert_To_Base_Divisor
 
 
-Convert_To_Base_Divisor
-
-
-This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.
-
-
 This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.
 
 | Property | Value |
@@ -391,9 +337,8 @@ This was intended to be the divisor, but due to a historical bug actually contai
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Convert_To_Base_Divisor](Gen_Product_Dimensions.md#convert_to_base_divisor)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -414,9 +359,6 @@ This was intended to be the divisor, but due to a historical bug actually contai
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -425,9 +367,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Dimensions](Gen_Product_Dimensions.md).[Row_Version](Gen_Product_Dimensions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

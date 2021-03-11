@@ -1,5 +1,10 @@
 # Table Inv_Transaction_Entry_Templates
 
+
+## Entity
+
+Entity: [Logistics.Inventory.TransactionEntryTemplates](~/entities/Logistics.Inventory.TransactionEntryTemplates.md)
+
 Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
 ## Summary
@@ -9,15 +14,12 @@ Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 |[Transaction_Entry_Template_Id](#transaction_entry_template_id)|`uniqueidentifier` `PK`||
 |[Route_Id](#route_id)|`uniqueidentifier` |Obsolete. Not used.|
 |[Deal_Type_Id](#deal_type_id)|`uniqueidentifier` |Obsolete. Not used.|
-|[Document_Notes_Fixed_Text](#document_notes_fixed_text)|`nvarchar(2147483647)` |Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.|
+|[Document_Notes_Fixed_Text](#document_notes_fixed_text)|`nvarchar(max)` |Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Transaction_Entry_Template_Id
-
-
-Transaction_Entry_Template_Id
 
 | Property | Value |
 | - | - |
@@ -28,9 +30,8 @@ Transaction_Entry_Template_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Inv_Transaction_Entry_Templates](Inv_Transaction_Entry_Templates.md).[Transaction_Entry_Template_Id](Inv_Transaction_Entry_Templates.md#transaction_entry_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Transaction_Entry_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Route_Id
-
-
-Route_Id
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -75,9 +70,8 @@ Obsolete. Not used.
 |Referenced Table|[Wf_Routes](Wf_Routes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Entry_Templates](Inv_Transaction_Entry_Templates.md).[Route_Id](Inv_Transaction_Entry_Templates.md#route_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +94,9 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Deal_Type_Id
-
-
-Deal_Type_Id
-
-
-Obsolete. Not used.
 
 
 Obsolete. Not used.
@@ -122,9 +110,8 @@ Obsolete. Not used.
 |Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Entry_Templates](Inv_Transaction_Entry_Templates.md).[Deal_Type_Id](Inv_Transaction_Entry_Templates.md#deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,31 +134,24 @@ Obsolete. Not used.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Notes_Fixed_Text
-
-
-Document_Notes_Fixed_Text
-
-
-Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.
 
 
 Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Entry_Templates](Inv_Transaction_Entry_Templates.md).[Document_Notes_Fixed_Text](Inv_Transaction_Entry_Templates.md#document_notes_fixed_text)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,9 +172,6 @@ Specifies the text for the document notes in the created entry in the VAT ledger
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -203,9 +180,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Inv_Transaction_Entry_Templates](Inv_Transaction_Entry_Templates.md).[Row_Version](Inv_Transaction_Entry_Templates.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

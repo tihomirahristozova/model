@@ -1,5 +1,10 @@
 # Table Cash_Payment_Transaction_Lines
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentTransactionLines](~/entities/Finance.Payments.PaymentTransactionLines.md)
+
 Contains the distibution of the payments' amounts among the source payment orders. Entity: Cash_Payment_Transaction_Lines
 
 ## Owner Tables Hierarchy
@@ -25,12 +30,6 @@ Contains the distibution of the payments' amounts among the source payment order
 ### Amount
 
 
-Amount
-
-
-The part of the total payed amount by the transaction, that is distributed to the specified payment order
-
-
 The part of the total payed amount by the transaction, that is distributed to the specified payment order
 
 | Property | Value |
@@ -41,9 +40,8 @@ The part of the total payed amount by the transaction, that is distributed to th
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Payment_Transaction_Lines](Cash_Payment_Transaction_Lines.md).[Amount](Cash_Payment_Transaction_Lines.md#amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,12 +63,6 @@ The part of the total payed amount by the transaction, that is distributed to th
 ### Covered_Order_Amount
 
 
-Covered_Order_Amount
-
-
-The part of the original payment order amount, that is covered by this transaction line
-
-
 The part of the original payment order amount, that is covered by this transaction line
 
 | Property | Value |
@@ -81,9 +73,8 @@ The part of the original payment order amount, that is covered by this transacti
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Payment_Transaction_Lines](Cash_Payment_Transaction_Lines.md).[Covered_Order_Amount](Cash_Payment_Transaction_Lines.md#covered_order_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,12 +96,6 @@ The part of the original payment order amount, that is covered by this transacti
 ### Payment_Order_Id
 
 
-Payment_Order_Id
-
-
-The payment order, that is covered by this transaction amount distribution (tr.line)
-
-
 The payment order, that is covered by this transaction amount distribution (tr.line)
 
 | Property | Value |
@@ -122,9 +107,8 @@ The payment order, that is covered by this transaction amount distribution (tr.l
 |Referenced Table|[Cash_Payment_Orders](Cash_Payment_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transaction_Lines](Cash_Payment_Transaction_Lines.md).[Payment_Order_Id](Cash_Payment_Transaction_Lines.md#payment_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,12 +131,9 @@ The payment order, that is covered by this transaction amount distribution (tr.l
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Transaction_Line_Id
-
-
-Payment_Transaction_Line_Id
 
 | Property | Value |
 | - | - |
@@ -163,9 +144,8 @@ Payment_Transaction_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Payment_Transaction_Lines](Cash_Payment_Transaction_Lines.md).[Payment_Transaction_Line_Id](Cash_Payment_Transaction_Lines.md#payment_transaction_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -188,12 +168,9 @@ Payment_Transaction_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Payment_Transaction_Id
-
-
-Payment_Transaction_Id
 
 | Property | Value |
 | - | - |
@@ -204,9 +181,8 @@ Payment_Transaction_Id
 |Referenced Table|[Cash_Payment_Transactions](Cash_Payment_Transactions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transaction_Lines](Cash_Payment_Transaction_Lines.md).[Payment_Transaction_Id](Cash_Payment_Transaction_Lines.md#payment_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -229,12 +205,9 @@ Payment_Transaction_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
-
-
-Notes
 
 | Property | Value |
 | - | - |
@@ -245,9 +218,8 @@ Notes
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transaction_Lines](Cash_Payment_Transaction_Lines.md).[Notes](Cash_Payment_Transaction_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -269,12 +241,6 @@ Notes
 ### Allow_Overpayment
 
 
-Allow_Overpayment
-
-
-1-Allows overpayment for the payment order; 0=Does not allow (default)
-
-
 1-Allows overpayment for the payment order; 0=Does not allow (default)
 
 | Property | Value |
@@ -285,9 +251,8 @@ Allow_Overpayment
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Payment_Transaction_Lines](Cash_Payment_Transaction_Lines.md).[Allow_Overpayment](Cash_Payment_Transaction_Lines.md#allow_overpayment)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -308,9 +273,6 @@ Allow_Overpayment
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -319,9 +281,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Transaction_Lines](Cash_Payment_Transaction_Lines.md).[Row_Version](Cash_Payment_Transaction_Lines.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

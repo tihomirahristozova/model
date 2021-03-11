@@ -1,5 +1,10 @@
 # Table Crm_Invoices_Options
 
+
+## Entity
+
+Entity: [Crm.Invoicing.InvoicesOptions](~/entities/Crm.Invoicing.InvoicesOptions.md)
+
 Default options for user document types for Invoices. Entity: Crm_Invoices_Options
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Default options for user document types for Invoices. Entity: Crm_Invoices_Optio
 
 ### Invoices_Option_Id
 
-
-Invoices_Option_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Invoices_Option_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Invoices_Options](Crm_Invoices_Options.md).[Invoices_Option_Id](Crm_Invoices_Options.md#invoices_option_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Invoices_Option_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The document type for which the invoice option applies.
 
 
 The document type for which the invoice option applies.
@@ -82,9 +77,8 @@ The document type for which the invoice option applies.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices_Options](Crm_Invoices_Options.md).[Document_Type_Id](Crm_Invoices_Options.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The document type for which the invoice option applies.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Deal_Type_Id
-
-
-Default_Deal_Type_Id
-
-
-When not NULL, specifies default VAT deal type.
 
 
 When not NULL, specifies default VAT deal type.
@@ -129,9 +117,8 @@ When not NULL, specifies default VAT deal type.
 |Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices_Options](Crm_Invoices_Options.md).[Default_Deal_Type_Id](Crm_Invoices_Options.md#default_deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ When not NULL, specifies default VAT deal type.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sign_Restriction
-
-
-Sign_Restriction
-
-
-Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts
 
 
 Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts
@@ -175,10 +156,9 @@ Restricts the sign of the line amounts of the invoices. -1 =allow only negative,
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`-1`, `0`, `1`|
 |Default Value|0|
-|Derived From|[Crm_Invoices_Options](Crm_Invoices_Options.md).[Sign_Restriction](Crm_Invoices_Options.md#sign_restriction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,12 +180,6 @@ Restricts the sign of the line amounts of the invoices. -1 =allow only negative,
 ### Total_Amount_Sign_Restriction
 
 
-Total_Amount_Sign_Restriction
-
-
-Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts
-
-
 Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts
 
 | Property | Value |
@@ -216,10 +190,9 @@ Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allo
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`-1`, `0`, `1`|
 |Default Value|0|
-|Derived From|[Crm_Invoices_Options](Crm_Invoices_Options.md).[Total_Amount_Sign_Restriction](Crm_Invoices_Options.md#total_amount_sign_restriction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,12 +214,6 @@ Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allo
 ### VAT_Deviation_Document_Amount_Type_Id
 
 
-VAT_Deviation_Document_Amount_Type_Id
-
-
-Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT
-
-
 Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT
 
 | Property | Value |
@@ -258,9 +225,8 @@ Document amount that contains the difference between the total amount of the inv
 |Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices_Options](Crm_Invoices_Options.md).[VAT_Deviation_Document_Amount_Type_Id](Crm_Invoices_Options.md#vat_deviation_document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -283,15 +249,9 @@ Document amount that contains the difference between the total amount of the inv
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Creates_VAT_Entries
-
-
-Creates_VAT_Entries
-
-
-Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided.
 
 
 Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided.
@@ -304,9 +264,8 @@ Specifies whether the invoices of the current type create entries in the VAT led
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Crm_Invoices_Options](Crm_Invoices_Options.md).[Creates_VAT_Entries](Crm_Invoices_Options.md#creates_vat_entries)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -327,9 +286,6 @@ Specifies whether the invoices of the current type create entries in the VAT led
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -338,9 +294,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Invoices_Options](Crm_Invoices_Options.md).[Row_Version](Crm_Invoices_Options.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

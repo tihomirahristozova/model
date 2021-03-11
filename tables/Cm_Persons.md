@@ -1,5 +1,10 @@
 # Table Cm_Persons
 
+
+## Entity
+
+Entity: [General.Contacts.Persons](~/entities/General.Contacts.Persons.md)
+
 Personal records. Requires related party record. Entity: Cm_Persons
 
 ## Owner Tables Hierarchy
@@ -35,12 +40,6 @@ Personal records. Requires related party record. Entity: Cm_Persons
 ### Person_Id
 
 
-Person_Id
-
-
-Unique person Id
-
-
 Unique person Id
 
 | Property | Value |
@@ -52,9 +51,8 @@ Unique person Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Person_Id](Cm_Persons.md#person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -77,15 +75,9 @@ Unique person Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### First_Name
-
-
-First_Name
-
-
-First name of the person.
 
 
 First name of the person.
@@ -99,9 +91,8 @@ First name of the person.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[First_Name](Cm_Persons.md#first_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -124,16 +115,10 @@ First name of the person.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Middle_Name
-
-
-Middle_Name
-
-
-Middle name of the person.
 
 
 Middle name of the person.
@@ -147,9 +132,8 @@ Middle name of the person.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Middle_Name](Cm_Persons.md#middle_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -172,16 +156,10 @@ Middle name of the person.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Last_Name
-
-
-Last_Name
-
-
-Last name of the person.
 
 
 Last name of the person.
@@ -195,9 +173,8 @@ Last name of the person.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Last_Name](Cm_Persons.md#last_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -220,16 +197,10 @@ Last name of the person.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Title
-
-
-Title
-
-
-The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.
 
 
 The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.
@@ -243,9 +214,8 @@ The persons title. It may be one of the standard titles - Mr., Mrs., etc., but i
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Title](Cm_Persons.md#title)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|yes|
@@ -267,12 +237,6 @@ The persons title. It may be one of the standard titles - Mr., Mrs., etc., but i
 ### Gender
 
 
-Gender
-
-
-Person gender. M=Male;F=Female;NULL=not known/not provided
-
-
 Person gender. M=Male;F=Female;NULL=not known/not provided
 
 | Property | Value |
@@ -284,10 +248,9 @@ Person gender. M=Male;F=Female;NULL=not known/not provided
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`F`, `M`|
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Gender](Cm_Persons.md#gender)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -310,15 +273,9 @@ Person gender. M=Male;F=Female;NULL=not known/not provided
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Birth_Date
-
-
-Birth_Date
-
-
-Birth date. NULL means unknown
 
 
 Birth date. NULL means unknown
@@ -332,9 +289,8 @@ Birth date. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Birth_Date](Cm_Persons.md#birth_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -362,12 +318,6 @@ Birth date. NULL means unknown
 ### Nationality
 
 
-Nationality
-
-
-Person's nationality. NULL means the default (same as enterprise) nationality
-
-
 Person's nationality. NULL means the default (same as enterprise) nationality
 
 | Property | Value |
@@ -379,9 +329,8 @@ Person's nationality. NULL means the default (same as enterprise) nationality
 |Referenced Table|[Gen_Countries](Gen_Countries.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Nationality](Cm_Persons.md#nationality)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -404,15 +353,9 @@ Person's nationality. NULL means the default (same as enterprise) nationality
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### National_Number
-
-
-National_Number
-
-
-Government assigned unique personal number. NULL means unknown
 
 
 Government assigned unique personal number. NULL means unknown
@@ -426,9 +369,8 @@ Government assigned unique personal number. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[National_Number](Cm_Persons.md#national_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -451,16 +393,10 @@ Government assigned unique personal number. NULL means unknown
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Passport_Number
-
-
-Passport_Number
-
-
-Current passport number. NULL means unknown
 
 
 Current passport number. NULL means unknown
@@ -474,9 +410,8 @@ Current passport number. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Passport_Number](Cm_Persons.md#passport_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -499,15 +434,9 @@ Current passport number. NULL means unknown
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Passport_Issuing_Date
-
-
-Passport_Issuing_Date
-
-
-Date of issuing the passport. NULL means unknown
 
 
 Date of issuing the passport. NULL means unknown
@@ -521,9 +450,8 @@ Date of issuing the passport. NULL means unknown
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Passport_Issuing_Date](Cm_Persons.md#passport_issuing_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -551,12 +479,6 @@ Date of issuing the passport. NULL means unknown
 ### City
 
 
-City
-
-
-City from the legal registration address for the person
-
-
 City from the legal registration address for the person
 
 | Property | Value |
@@ -568,9 +490,8 @@ City from the legal registration address for the person
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[City](Cm_Persons.md#city)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -598,12 +519,6 @@ City from the legal registration address for the person
 ### Notes
 
 
-Notes
-
-
-Internal notes for the person
-
-
 Internal notes for the person
 
 | Property | Value |
@@ -615,9 +530,8 @@ Internal notes for the person
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Notes](Cm_Persons.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -638,9 +552,6 @@ Internal notes for the person
 
 ### Update_User
 
-
-Update_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -650,9 +561,8 @@ Update_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Update_User](Cm_Persons.md#update_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -679,9 +589,6 @@ Update_User
 
 ### Creation_Time
 
-
-Creation_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -691,9 +598,8 @@ Creation_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Creation_Time](Cm_Persons.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -720,9 +626,6 @@ Creation_Time
 
 ### Creation_User
 
-
-Creation_User
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(64)|
@@ -732,9 +635,8 @@ Creation_User
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Creation_User](Cm_Persons.md#creation_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -761,9 +663,6 @@ Creation_User
 
 ### Update_Time
 
-
-Update_Time
-
 | Property | Value |
 | - | - |
 |Type|datetime|
@@ -773,9 +672,8 @@ Update_Time
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Update_Time](Cm_Persons.md#update_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -803,12 +701,6 @@ Update_Time
 ### Party_Id
 
 
-Party_Id
-
-
-The Id of the party record for this person. The party stores the person's full name
-
-
 The Id of the party record for this person. The party stores the person's full name
 
 | Property | Value |
@@ -820,9 +712,8 @@ The Id of the party record for this person. The party stores the person's full n
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Party_Id](Cm_Persons.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -845,12 +736,9 @@ The Id of the party record for this person. The party stores the person's full n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -860,9 +748,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Persons](Cm_Persons.md).[Row_Version](Cm_Persons.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

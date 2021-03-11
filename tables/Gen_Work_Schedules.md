@@ -1,5 +1,10 @@
 # Table Gen_Work_Schedules
 
+
+## Entity
+
+Entity: [General.Resources.WorkSchedules](~/entities/General.Resources.WorkSchedules.md)
+
 Represents the different working schedules, used by the employees and resources. Entity: Gen_Work_Schedules
 
 ## Summary
@@ -17,12 +22,6 @@ Represents the different working schedules, used by the employees and resources.
 ### Id
 
 
-Id
-
-
-work schedule id
-
-
 work schedule id
 
 | Property | Value |
@@ -34,9 +33,8 @@ work schedule id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Work_Schedules](Gen_Work_Schedules.md).[Id](Gen_Work_Schedules.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,12 +57,9 @@ work schedule id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Work_Schedule_Name
-
-
-Work_Schedule_Name
 
 | Property | Value |
 | - | - |
@@ -75,9 +70,8 @@ Work_Schedule_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Work_Schedules](Gen_Work_Schedules.md).[Work_Schedule_Name](Gen_Work_Schedules.md#work_schedule_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,12 +99,6 @@ Work_Schedule_Name
 ### Recurrence_Type
 
 
-Recurrence_Type
-
-
-D=recurring each X days; W=recurring each week; M=recurring each month
-
-
 D=recurring each X days; W=recurring each week; M=recurring each month
 
 | Property | Value |
@@ -122,10 +110,9 @@ D=recurring each X days; W=recurring each week; M=recurring each month
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`D`, `M`, `W`|
 |Default Value|None|
-|Derived From|[Gen_Work_Schedules](Gen_Work_Schedules.md).[Recurrence_Type](Gen_Work_Schedules.md#recurrence_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,15 +135,9 @@ D=recurring each X days; W=recurring each week; M=recurring each month
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Number_Of_Days
-
-
-Number_Of_Days
-
-
-Number of days in a recurring period. Valid only when Recurrence_Type=D
 
 
 Number of days in a recurring period. Valid only when Recurrence_Type=D
@@ -169,9 +150,8 @@ Number of days in a recurring period. Valid only when Recurrence_Type=D
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Work_Schedules](Gen_Work_Schedules.md).[Number_Of_Days](Gen_Work_Schedules.md#number_of_days)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,9 +172,6 @@ Number of days in a recurring period. Valid only when Recurrence_Type=D
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -203,9 +180,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Work_Schedules](Gen_Work_Schedules.md).[Row_Version](Gen_Work_Schedules.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

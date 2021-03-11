@@ -1,5 +1,10 @@
 # Table Gen_Document_Amount_Types
 
+
+## Entity
+
+Entity: [General.DocumentAmountTypes](~/entities/General.DocumentAmountTypes.md)
+
 Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types
 
 ## Summary
@@ -28,9 +33,6 @@ Represents the different types of additional amounts which are calculated for th
 
 ### Document_Amount_Type_Id
 
-
-Document_Amount_Type_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -40,9 +42,8 @@ Document_Amount_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Document_Amount_Type_Id](Gen_Document_Amount_Types.md#document_amount_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -65,15 +66,9 @@ Document_Amount_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Amount_Type_Code
-
-
-Amount_Type_Code
-
-
-A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes
 
 
 A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes
@@ -87,9 +82,8 @@ A code that can be used to uniquely identify the additional amount. Can also be 
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Amount_Type_Code](Gen_Document_Amount_Types.md#amount_type_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -112,15 +106,9 @@ A code that can be used to uniquely identify the additional amount. Can also be 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Amount_Type_Name
-
-
-Amount_Type_Name
-
-
-The name of the amount type.
 
 
 The name of the amount type.
@@ -134,9 +122,8 @@ The name of the amount type.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Amount_Type_Name](Gen_Document_Amount_Types.md#amount_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -163,9 +150,6 @@ The name of the amount type.
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -175,9 +159,8 @@ Description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Description](Gen_Document_Amount_Types.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +182,6 @@ Description
 ### Amount_Input_Allowed
 
 
-Amount_Input_Allowed
-
-
-1 when the user is allowed to input fixed amount for distribution
-
-
 1 when the user is allowed to input fixed amount for distribution
 
 | Property | Value |
@@ -215,9 +192,8 @@ Amount_Input_Allowed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Amount_Input_Allowed](Gen_Document_Amount_Types.md#amount_input_allowed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -240,17 +216,11 @@ Amount_Input_Allowed
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Percent_Input_Allowed
 
 
-Percent_Input_Allowed
-
-
-1 when the user is allowed to input percent of total for distribution
-
-
 1 when the user is allowed to input percent of total for distribution
 
 | Property | Value |
@@ -261,9 +231,8 @@ Percent_Input_Allowed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Percent_Input_Allowed](Gen_Document_Amount_Types.md#percent_input_allowed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -286,15 +255,9 @@ Percent_Input_Allowed
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Distribute_By
-
-
-Distribute_By
-
-
-Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION')
 
 
 Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION')
@@ -308,10 +271,9 @@ Specifies how the amount will be distributed among the document lines. Valid val
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`AMOUNT`, `MEASUREMENT`, `PRODUCT DEFINITION`|
 |Default Value|AMOUNT|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Distribute_By](Gen_Document_Amount_Types.md#distribute_by)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,15 +296,9 @@ Specifies how the amount will be distributed among the document lines. Valid val
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Percent
-
-
-Default_Percent
-
-
-Default percent for amounts for which percent input is allowed; NULL otherwise
 
 
 Default percent for amounts for which percent input is allowed; NULL otherwise
@@ -355,9 +311,8 @@ Default percent for amounts for which percent input is allowed; NULL otherwise
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Default_Percent](Gen_Document_Amount_Types.md#default_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -379,12 +334,6 @@ Default percent for amounts for which percent input is allowed; NULL otherwise
 ### Distribute_By_Measurement_Category_Id
 
 
-Distribute_By_Measurement_Category_Id
-
-
-Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'
-
-
 Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'
 
 | Property | Value |
@@ -396,9 +345,8 @@ Specifies the measurement category to be used for distribution, when the Distrib
 |Referenced Table|[Gen_Measurement_Categories](Gen_Measurement_Categories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Distribute_By_Measurement_Category_Id](Gen_Document_Amount_Types.md#distribute_by_measurement_category_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -421,15 +369,9 @@ Specifies the measurement category to be used for distribution, when the Distrib
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Add_To_Customer
-
-
-Add_To_Customer
-
-
-1 means that the amount will be charged to the primary customer of the document
 
 
 1 means that the amount will be charged to the primary customer of the document
@@ -442,9 +384,8 @@ Add_To_Customer
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Add_To_Customer](Gen_Document_Amount_Types.md#add_to_customer)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -466,12 +407,6 @@ Add_To_Customer
 ### Add_To_Line
 
 
-Add_To_Line
-
-
-1 means that the resulting amount will be added to the amount of each respective line
-
-
 1 means that the resulting amount will be added to the amount of each respective line
 
 | Property | Value |
@@ -482,9 +417,8 @@ Add_To_Line
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Add_To_Line](Gen_Document_Amount_Types.md#add_to_line)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -506,12 +440,6 @@ Add_To_Line
 ### Base_On_Lines
 
 
-Base_On_Lines
-
-
-1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts
-
-
 1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts
 
 | Property | Value |
@@ -522,9 +450,8 @@ Base_On_Lines
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Base_On_Lines](Gen_Document_Amount_Types.md#base_on_lines)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -546,12 +473,6 @@ Base_On_Lines
 ### Round_Scale
 
 
-Round_Scale
-
-
-The amounts should be rounded with the specified number of digits after the decimal point. NULL means to use the currency default
-
-
 The amounts should be rounded with the specified number of digits after the decimal point. NULL means to use the currency default
 
 | Property | Value |
@@ -562,9 +483,8 @@ The amounts should be rounded with the specified number of digits after the deci
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Round_Scale](Gen_Document_Amount_Types.md#round_scale)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -586,12 +506,6 @@ The amounts should be rounded with the specified number of digits after the deci
 ### Is_Active
 
 
-Is_Active
-
-
-1 when the amount type is active for new records; 0 - otherwise
-
-
 1 when the amount type is active for new records; 0 - otherwise
 
 | Property | Value |
@@ -602,9 +516,8 @@ Is_Active
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Is_Active](Gen_Document_Amount_Types.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -627,15 +540,9 @@ Is_Active
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Allowed_Directions
-
-
-Allowed_Directions
-
-
-Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.
 
 
 Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.
@@ -648,10 +555,9 @@ Specifies condition for the sign of the allowed values for input percent or amou
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`-1`, `0`, `1`|
 |Default Value|0|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Allowed_Directions](Gen_Document_Amount_Types.md#allowed_directions)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -673,12 +579,6 @@ Specifies condition for the sign of the allowed values for input percent or amou
 ### Unit_Amount_Input_Allowed
 
 
-Unit_Amount_Input_Allowed
-
-
-Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.
-
-
 Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.
 
 | Property | Value |
@@ -689,9 +589,8 @@ Specifies whether the user is allowed to input fixed unit amount for the calcula
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Unit_Amount_Input_Allowed](Gen_Document_Amount_Types.md#unit_amount_input_allowed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -714,12 +613,9 @@ Specifies whether the user is allowed to input fixed unit amount for the calcula
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -729,9 +625,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md).[Row_Version](Gen_Document_Amount_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

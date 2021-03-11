@@ -1,5 +1,10 @@
 # Table Gen_Product_Codes
 
+
+## Entity
+
+Entity: [General.Products.ProductCodes](~/entities/General.Products.ProductCodes.md)
+
 Additional product codes, categorized by coding systems. Entity: Gen_Product_Codes
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Additional product codes, categorized by coding systems. Entity: Gen_Product_Cod
 
 ### Product_Code_Id
 
-
-Product_Code_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Product_Code_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Product_Codes](Gen_Product_Codes.md).[Product_Code_Id](Gen_Product_Codes.md#product_code_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Product_Code_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product for which the code is specified
 
 
 The product for which the code is specified
@@ -80,9 +75,8 @@ The product for which the code is specified
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Codes](Gen_Product_Codes.md).[Product_Id](Gen_Product_Codes.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The product for which the code is specified
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Coding_System_Id
-
-
-Coding_System_Id
-
-
-The coding system in which the product code is specified
 
 
 The coding system in which the product code is specified
@@ -127,9 +115,8 @@ The coding system in which the product code is specified
 |Referenced Table|[Gen_Coding_Systems](Gen_Coding_Systems.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Codes](Gen_Product_Codes.md).[Coding_System_Id](Gen_Product_Codes.md#coding_system_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,15 +139,9 @@ The coding system in which the product code is specified
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Code
-
-
-Product_Code
-
-
-The code of the product in the specified coding system
 
 
 The code of the product in the specified coding system
@@ -174,9 +155,8 @@ The code of the product in the specified coding system
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Codes](Gen_Product_Codes.md).[Product_Code](Gen_Product_Codes.md#product_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,16 +179,10 @@ The code of the product in the specified coding system
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Active
-
-
-Active
-
-
-True when the code is active and can be selected in new documents.
 
 
 True when the code is active and can be selected in new documents.
@@ -221,9 +195,8 @@ True when the code is active and can be selected in new documents.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Gen_Product_Codes](Gen_Product_Codes.md).[Active](Gen_Product_Codes.md#active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,12 +219,9 @@ True when the code is active and can be selected in new documents.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -261,9 +231,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Product_Codes](Gen_Product_Codes.md).[Row_Version](Gen_Product_Codes.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

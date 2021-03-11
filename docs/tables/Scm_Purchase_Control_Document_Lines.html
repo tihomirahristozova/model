@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-scm_purchase_control_document_lines">Table Scm_Purchase_Control_Document_Lines</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Procurement.PurchaseControlDocumentLines.html">Logistics.Procurement.PurchaseControlDocumentLines</a></p>
 <p>The detail line of purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Document_Lines (Introduced in version 18.2)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -207,14 +209,13 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="purchase_control_document_line_id">Purchase_Control_Document_Line_Id</h3>
-<p>Purchase_Control_Document_Line_Id</p>
 <table>
 <thead>
 <tr>
@@ -253,15 +254,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_control_document_line_id">Purchase_Control_Document_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -346,14 +343,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purchase_control_document_id">Purchase_Control_Document_Id</h3>
-<p>Purchase_Control_Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -392,15 +388,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_control_document_id">Purchase_Control_Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -485,15 +477,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="line_no">Line_No</h3>
-<p>Line_No</p>
-<p>The consecutive line number within the control document.</p>
 <p>The consecutive line number within the control document.</p>
 <table>
 <thead>
@@ -529,15 +519,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#line_no">Line_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -610,8 +596,6 @@
 </tbody>
 </table>
 <h3 id="purchase_operation_type_id">Purchase_Operation_Type_Id</h3>
-<p>Purchase_Operation_Type_Id</p>
-<p>The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. NULL when the operation type was not specified by the user.</p>
 <p>The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. NULL when the operation type was not specified by the user.</p>
 <table>
 <thead>
@@ -651,15 +635,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_operation_type_id">Purchase_Operation_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -744,15 +724,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="requested_standard_quantity_base">Requested_Standard_Quantity_Base</h3>
-<p>Requested_Standard_Quantity_Base</p>
-<p>The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.</p>
 <p>The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.</p>
 <table>
 <thead>
@@ -788,15 +766,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#requested_standard_quantity_base">Requested_Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -869,8 +843,6 @@
 </tbody>
 </table>
 <h3 id="ordered_standard_quantity_base">Ordered_Standard_Quantity_Base</h3>
-<p>Ordered_Standard_Quantity_Base</p>
-<p>The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items.</p>
 <p>The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items.</p>
 <table>
 <thead>
@@ -906,15 +878,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#ordered_standard_quantity_base">Ordered_Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -987,8 +955,6 @@
 </tbody>
 </table>
 <h3 id="confirmed_standard_quantity_base">Confirmed_Standard_Quantity_Base</h3>
-<p>Confirmed_Standard_Quantity_Base</p>
-<p>The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.</p>
 <p>The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.</p>
 <table>
 <thead>
@@ -1024,15 +990,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#confirmed_standard_quantity_base">Confirmed_Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1105,8 +1067,6 @@
 </tbody>
 </table>
 <h3 id="received_standard_quantity_base">Received_Standard_Quantity_Base</h3>
-<p>Received_Standard_Quantity_Base</p>
-<p>The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items.</p>
 <p>The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items.</p>
 <table>
 <thead>
@@ -1142,15 +1102,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#received_standard_quantity_base">Received_Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1223,8 +1179,6 @@
 </tbody>
 </table>
 <h3 id="invoiced_standard_quantity_base">Invoiced_Standard_Quantity_Base</h3>
-<p>Invoiced_Standard_Quantity_Base</p>
-<p>The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.</p>
 <p>The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.</p>
 <table>
 <thead>
@@ -1260,15 +1214,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#invoiced_standard_quantity_base">Invoiced_Standard_Quantity_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1341,8 +1291,6 @@
 </tbody>
 </table>
 <h3 id="requested_amount_base">Requested_Amount_Base</h3>
-<p>Requested_Amount_Base</p>
-<p>The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items.</p>
 <p>The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items.</p>
 <table>
 <thead>
@@ -1378,15 +1326,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#requested_amount_base">Requested_Amount_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1459,8 +1403,6 @@
 </tbody>
 </table>
 <h3 id="ordered_amount_base">Ordered_Amount_Base</h3>
-<p>Ordered_Amount_Base</p>
-<p>The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.</p>
 <p>The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.</p>
 <table>
 <thead>
@@ -1496,15 +1438,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#ordered_amount_base">Ordered_Amount_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1577,8 +1515,6 @@
 </tbody>
 </table>
 <h3 id="confirmed_amount_base">Confirmed_Amount_Base</h3>
-<p>Confirmed_Amount_Base</p>
-<p>The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.</p>
 <p>The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.</p>
 <table>
 <thead>
@@ -1614,15 +1550,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#confirmed_amount_base">Confirmed_Amount_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1695,8 +1627,6 @@
 </tbody>
 </table>
 <h3 id="received_amount_base">Received_Amount_Base</h3>
-<p>Received_Amount_Base</p>
-<p>The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.</p>
 <p>The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.</p>
 <table>
 <thead>
@@ -1732,15 +1662,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#received_amount_base">Received_Amount_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1813,8 +1739,6 @@
 </tbody>
 </table>
 <h3 id="invoiced_amount_base">Invoiced_Amount_Base</h3>
-<p>Invoiced_Amount_Base</p>
-<p>The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.</p>
 <p>The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.</p>
 <table>
 <thead>
@@ -1850,15 +1774,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#invoiced_amount_base">Invoiced_Amount_Base</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1931,8 +1851,6 @@
 </tbody>
 </table>
 <h3 id="purchase_requisition_id">Purchase_Requisition_Id</h3>
-<p>Purchase_Requisition_Id</p>
-<p>The purchase requisition which is to be or was executed. Null when the data is unknown.</p>
 <p>The purchase requisition which is to be or was executed. Null when the data is unknown.</p>
 <table>
 <thead>
@@ -1972,15 +1890,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_requisition_id">Purchase_Requisition_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2065,15 +1979,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purchase_requisition_line_id">Purchase_Requisition_Line_Id</h3>
-<p>Purchase_Requisition_Line_Id</p>
-<p>The purchase requisition line which is to be or was executed. Null when the data is unknown.</p>
 <p>The purchase requisition line which is to be or was executed. Null when the data is unknown.</p>
 <table>
 <thead>
@@ -2113,15 +2025,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_requisition_line_id">Purchase_Requisition_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2206,15 +2114,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purchase_order_id">Purchase_Order_Id</h3>
-<p>Purchase_Order_Id</p>
-<p>The purchase order which is to be or was executed. Null when the data is unknown.</p>
 <p>The purchase order which is to be or was executed. Null when the data is unknown.</p>
 <table>
 <thead>
@@ -2254,15 +2160,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_order_id">Purchase_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2347,15 +2249,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purchase_order_line_id">Purchase_Order_Line_Id</h3>
-<p>Purchase_Order_Line_Id</p>
-<p>The purchase order line which is to be or was executed. Null when the data is unknown.</p>
 <p>The purchase order line which is to be or was executed. Null when the data is unknown.</p>
 <table>
 <thead>
@@ -2395,15 +2295,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_order_line_id">Purchase_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2488,15 +2384,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="receiving_order_id">Receiving_Order_Id</h3>
-<p>Receiving_Order_Id</p>
-<p>The receiving order which is to be or was executed. Null when the data is unknown.</p>
 <p>The receiving order which is to be or was executed. Null when the data is unknown.</p>
 <table>
 <thead>
@@ -2536,15 +2430,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#receiving_order_id">Receiving_Order_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2629,15 +2519,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="receiving_order_line_id">Receiving_Order_Line_Id</h3>
-<p>Receiving_Order_Line_Id</p>
-<p>The receiving order line which is to be or was executed. Null when the data is unknown.</p>
 <p>The receiving order line which is to be or was executed. Null when the data is unknown.</p>
 <table>
 <thead>
@@ -2677,15 +2565,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#receiving_order_line_id">Receiving_Order_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2770,15 +2654,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purchase_invoice_id">Purchase_Invoice_Id</h3>
-<p>Purchase_Invoice_Id</p>
-<p>The purchase invoice which is to be or was executed. Null when the data is unknown.</p>
 <p>The purchase invoice which is to be or was executed. Null when the data is unknown.</p>
 <table>
 <thead>
@@ -2818,15 +2700,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_invoice_id">Purchase_Invoice_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2911,15 +2789,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purchase_invoice_line_id">Purchase_Invoice_Line_Id</h3>
-<p>Purchase_Invoice_Line_Id</p>
-<p>The purchase invoice line which is to be or was executed. Null when the data is unknown.</p>
 <p>The purchase invoice line which is to be or was executed. Null when the data is unknown.</p>
 <table>
 <thead>
@@ -2959,15 +2835,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#purchase_invoice_line_id">Purchase_Invoice_Line_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3052,14 +2924,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -3070,7 +2941,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -3098,15 +2969,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Scm_Purchase_Control_Document_Lines.html">Scm_Purchase_Control_Document_Lines</a>.<a href="Scm_Purchase_Control_Document_Lines.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -1,5 +1,10 @@
 # Table Crm_Activities
 
+
+## Entity
+
+Entity: [Crm.Marketing.MarketingActivities](~/entities/Crm.Marketing.MarketingActivities.md)
+
 Marketing activity, part of a marketing campaign. Entity: Crm_Activities
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Marketing activity, part of a marketing campaign. Entity: Crm_Activities
 
 ### Crm_Activity_Id
 
-
-Crm_Activity_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Crm_Activity_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Activities](Crm_Activities.md).[Crm_Activity_Id](Crm_Activities.md#crm_activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Crm_Activity_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Activity_Id
-
-
-Activity_Id
-
-
-The Activity, on which the current marketing activity is based
 
 
 The Activity, on which the current marketing activity is based
@@ -82,9 +77,8 @@ The Activity, on which the current marketing activity is based
 |Referenced Table|[Cm_Activities](Cm_Activities.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Activities](Crm_Activities.md).[Activity_Id](Crm_Activities.md#activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The Activity, on which the current marketing activity is based
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Campaign_Id
-
-
-Campaign_Id
-
-
-The marketing campaing, to which this activity belongs
 
 
 The marketing campaing, to which this activity belongs
@@ -129,9 +117,8 @@ The marketing campaing, to which this activity belongs
 |Referenced Table|[Crm_Campaigns](Crm_Campaigns.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Activities](Crm_Activities.md).[Campaign_Id](Crm_Activities.md#campaign_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ The marketing campaing, to which this activity belongs
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Target_Group_Id
-
-
-Target_Group_Id
-
-
-The target group of parties to be treated by this activity
 
 
 The target group of parties to be treated by this activity
@@ -176,9 +157,8 @@ The target group of parties to be treated by this activity
 |Referenced Table|[Crm_Target_Groups](Crm_Target_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Activities](Crm_Activities.md).[Target_Group_Id](Crm_Activities.md#target_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,15 +181,9 @@ The target group of parties to be treated by this activity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Forecasted_Cost
-
-
-Forecasted_Cost
-
-
-Forecasted cost of the activity in base currency
 
 
 Forecasted cost of the activity in base currency
@@ -222,9 +196,8 @@ Forecasted cost of the activity in base currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Crm_Activities](Crm_Activities.md).[Forecasted_Cost](Crm_Activities.md#forecasted_cost)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -246,12 +219,6 @@ Forecasted cost of the activity in base currency
 ### Activities_Created
 
 
-Activities_Created
-
-
-1 if the related activites are already created. Related activity can be created for each member of the target group.
-
-
 1 if the related activites are already created. Related activity can be created for each member of the target group.
 
 | Property | Value |
@@ -262,9 +229,8 @@ Activities_Created
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Crm_Activities](Crm_Activities.md).[Activities_Created](Crm_Activities.md#activities_created)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -285,9 +251,6 @@ Activities_Created
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -296,9 +259,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Activities](Crm_Activities.md).[Row_Version](Crm_Activities.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

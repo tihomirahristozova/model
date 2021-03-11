@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_document_prints">Table Gen_Document_Prints</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.DocumentPrints.html">General.DocumentPrints</a></p>
 <p>Contains the history of each document print or export. Entity: Gen_Document_Prints</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -146,14 +148,13 @@
 </tr>
 <tr>
 <td><a href="#additional_data">Additional_Data</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Contains additional data about the printout. The format of the data is dependent on the Printout Type.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="document_print_id">Document_Print_Id</h3>
-<p>Document_Print_Id</p>
 <table>
 <thead>
 <tr>
@@ -192,15 +193,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#document_print_id">Document_Print_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -285,15 +282,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
-<p>The document which was printed or exported.</p>
 <p>The document which was printed or exported.</p>
 <table>
 <thead>
@@ -333,15 +328,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -426,15 +417,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="print_time">Print_Time</h3>
-<p>Print_Time</p>
-<p>The time when the document was printed or exported.</p>
 <p>The time when the document was printed or exported.</p>
 <table>
 <thead>
@@ -474,15 +463,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#print_time">Print_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -574,8 +559,6 @@
 </tbody>
 </table>
 <h3 id="print_user">Print_User</h3>
-<p>Print_User</p>
-<p>The user, which printed or exported the document.</p>
 <p>The user, which printed or exported the document.</p>
 <table>
 <thead>
@@ -615,15 +598,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#print_user">Print_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -696,8 +675,6 @@
 </tbody>
 </table>
 <h3 id="is_original">Is_Original</h3>
-<p>Is_Original</p>
-<p>True when the printout is the first printout (the original printout).</p>
 <p>True when the printout is the first printout (the original printout).</p>
 <table>
 <thead>
@@ -733,15 +710,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#is_original">Is_Original</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -826,15 +799,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_print_image_id">Document_Print_Image_Id</h3>
-<p>Document_Print_Image_Id</p>
-<p>Points to the actual contents of the printed document.</p>
 <p>Points to the actual contents of the printed document.</p>
 <table>
 <thead>
@@ -874,15 +845,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#document_print_image_id">Document_Print_Image_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -967,14 +934,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
 <table>
 <thead>
 <tr>
@@ -1013,15 +979,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1094,7 +1056,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1129,15 +1090,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1210,8 +1167,6 @@
 </tbody>
 </table>
 <h3 id="reference_no">Reference_No</h3>
-<p>Reference_No</p>
-<p>Used only when the printout reflects export to external system/device. In this case, it can store the reference number, generated by the other system/device.</p>
 <p>Used only when the printout reflects export to external system/device. In this case, it can store the reference number, generated by the other system/device.</p>
 <table>
 <thead>
@@ -1251,15 +1206,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#reference_no">Reference_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1344,15 +1295,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="printout_type">Printout_Type</h3>
-<p>Printout_Type</p>
-<p>Specifies the type of the printout: PPP - Phisycal Printer Printout; FPP - Fiscal Printer Printout; EXP - Export.</p>
 <p>Specifies the type of the printout: PPP - Phisycal Printer Printout; FPP - Fiscal Printer Printout; EXP - Export.</p>
 <table>
 <thead>
@@ -1392,7 +1341,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1401,10 +1350,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#printout_type">Printout_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1489,15 +1434,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="additional_data">Additional_Data</h3>
-<p>Additional_Data</p>
-<p>Contains additional data about the printout. The format of the data is dependent on the Printout Type.</p>
 <p>Contains additional data about the printout. The format of the data is dependent on the Printout Type.</p>
 <table>
 <thead>
@@ -1509,7 +1452,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1537,15 +1480,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Prints.html">Gen_Document_Prints</a>.<a href="Gen_Document_Prints.html#additional_data">Additional_Data</a></td>
 </tr>
 <tr>
 <td>Format</td>

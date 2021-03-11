@@ -1,5 +1,10 @@
 # Table Acc_Accounts
 
+
+## Entity
+
+Entity: [Finance.Accounting.Accounts](~/entities/Finance.Accounting.Accounts.md)
+
 Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 
 ## Summary
@@ -22,9 +27,6 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 
 ### Account_Id
 
-
-Account_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -34,9 +36,8 @@ Account_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Account_Id](Acc_Accounts.md#account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -59,15 +60,9 @@ Account_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Account_Group_Id
-
-
-Account_Group_Id
-
-
-The account group to which this account belongs
 
 
 The account group to which this account belongs
@@ -81,9 +76,8 @@ The account group to which this account belongs
 |Referenced Table|[Acc_Account_Groups](Acc_Account_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Account_Group_Id](Acc_Accounts.md#account_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -106,15 +100,9 @@ The account group to which this account belongs
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Account_Number
-
-
-Account_Number
-
-
-The number of the account, unique within the account group
 
 
 The number of the account, unique within the account group
@@ -128,9 +116,8 @@ The number of the account, unique within the account group
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Account_Number](Acc_Accounts.md#account_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -158,12 +145,6 @@ The number of the account, unique within the account group
 ### Account_Full_Number
 
 
-Account_Full_Number
-
-
-The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number
-
-
 The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number
 
 | Property | Value |
@@ -175,9 +156,8 @@ The full number of the account, unique among all accounts. It consists of the gr
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Account_Full_Number](Acc_Accounts.md#account_full_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -205,12 +185,6 @@ The full number of the account, unique among all accounts. It consists of the gr
 ### Account_Name
 
 
-Account_Name
-
-
-The account name
-
-
 The account name
 
 | Property | Value |
@@ -222,9 +196,8 @@ The account name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Account_Name](Acc_Accounts.md#account_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -251,9 +224,6 @@ The account name
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -263,9 +233,8 @@ Description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Description](Acc_Accounts.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -287,12 +256,6 @@ Description
 ### Currency_Id
 
 
-Currency_Id
-
-
-The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed
-
-
 The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed
 
 | Property | Value |
@@ -304,9 +267,8 @@ The primary currency of the account. All movements on the account are stored in 
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Currency_Id](Acc_Accounts.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -329,15 +291,9 @@ The primary currency of the account. All movements on the account are stored in 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Discontinued
-
-
-Discontinued
-
-
-1 means that the account won't be used any more and should not appear in combo boxes
 
 
 1 means that the account won't be used any more and should not appear in combo boxes
@@ -350,9 +306,8 @@ Discontinued
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Discontinued](Acc_Accounts.md#discontinued)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -375,12 +330,9 @@ Discontinued
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
 
 | Property | Value |
 | - | - |
@@ -391,9 +343,8 @@ Enterprise_Company_Id
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Enterprise_Company_Id](Acc_Accounts.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -416,15 +367,9 @@ Enterprise_Company_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Currency_Valuation_Method
-
-
-Currency_Valuation_Method
-
-
-Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document
 
 
 Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document
@@ -438,10 +383,9 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`ACB`, `DCD`, `BRD`|
 |Default Value|ACB|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Currency_Valuation_Method](Acc_Accounts.md#currency_valuation_method)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -462,9 +406,6 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -473,9 +414,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Acc_Accounts](Acc_Accounts.md).[Row_Version](Acc_Accounts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

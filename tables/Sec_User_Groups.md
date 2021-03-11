@@ -1,5 +1,10 @@
 # Table Sec_User_Groups
 
+
+## Entity
+
+Entity: [Systems.Security.UserGroups](~/entities/Systems.Security.UserGroups.md)
+
 Contains the user group members. Entity: Sec_User_Groups
 
 ## Owner Tables Hierarchy
@@ -19,9 +24,6 @@ Contains the user group members. Entity: Sec_User_Groups
 
 ### User_Group_Id
 
-
-User_Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -31,9 +33,8 @@ User_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_User_Groups](Sec_User_Groups.md).[User_Group_Id](Sec_User_Groups.md#user_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,12 +57,9 @@ User_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### User_Id
-
-
-User_Id
 
 | Property | Value |
 | - | - |
@@ -72,9 +70,8 @@ User_Id
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_User_Groups](Sec_User_Groups.md).[User_Id](Sec_User_Groups.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -97,12 +94,9 @@ User_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Group_Id
-
-
-Group_Id
 
 | Property | Value |
 | - | - |
@@ -113,9 +107,8 @@ Group_Id
 |Referenced Table|[Sec_Groups](Sec_Groups.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_User_Groups](Sec_User_Groups.md).[Group_Id](Sec_User_Groups.md#group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -138,12 +131,9 @@ Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -153,9 +143,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_User_Groups](Sec_User_Groups.md).[Row_Version](Sec_User_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Gen_Property_Enterprise_Company_Filters
 
+
+## Entity
+
+Entity: [General.PropertyEnterpriseCompanyFilters](~/entities/General.PropertyEnterpriseCompanyFilters.md)
+
 Provides a way to apply different filtering of the property allowed values for the different enterprise companies. Entity: Gen_Property_Enterprise_Company_Filters
 
 ## Owner Tables Hierarchy
@@ -13,15 +18,12 @@ Provides a way to apply different filtering of the property allowed values for t
 |[Property_Enterprise_Company_Filter_Id](#property_enterprise_company_filter_id)|`uniqueidentifier` `PK`||
 |[Property_Id](#property_id)|`uniqueidentifier` ||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company for which the current filter is specifed.|
-|[Filter_Xml](#filter_xml)|`nvarchar(2147483647)` |When not null, specifies a filter for the allowed values of the property for the specified enterprise company.|
+|[Filter_Xml](#filter_xml)|`nvarchar(max)` |When not null, specifies a filter for the allowed values of the property for the specified enterprise company.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Property_Enterprise_Company_Filter_Id
-
-
-Property_Enterprise_Company_Filter_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Property_Enterprise_Company_Filter_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Property_Enterprise_Company_Filters](Gen_Property_Enterprise_Company_Filters.md).[Property_Enterprise_Company_Filter_Id](Gen_Property_Enterprise_Company_Filters.md#property_enterprise_company_filter_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,12 +58,9 @@ Property_Enterprise_Company_Filter_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Property_Id
-
-
-Property_Id
 
 | Property | Value |
 | - | - |
@@ -73,9 +71,8 @@ Property_Id
 |Referenced Table|[Gen_Properties](Gen_Properties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Enterprise_Company_Filters](Gen_Property_Enterprise_Company_Filters.md).[Property_Id](Gen_Property_Enterprise_Company_Filters.md#property_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,15 +95,9 @@ Property_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
-
-
-Enterprise_Company_Id
-
-
-The enterprise company for which the current filter is specifed.
 
 
 The enterprise company for which the current filter is specifed.
@@ -120,9 +111,8 @@ The enterprise company for which the current filter is specifed.
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Enterprise_Company_Filters](Gen_Property_Enterprise_Company_Filters.md).[Enterprise_Company_Id](Gen_Property_Enterprise_Company_Filters.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,31 +135,24 @@ The enterprise company for which the current filter is specifed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Filter_Xml
-
-
-Filter_Xml
-
-
-When not null, specifies a filter for the allowed values of the property for the specified enterprise company.
 
 
 When not null, specifies a filter for the allowed values of the property for the specified enterprise company.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Property_Enterprise_Company_Filters](Gen_Property_Enterprise_Company_Filters.md).[Filter_Xml](Gen_Property_Enterprise_Company_Filters.md#filter_xml)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,9 +173,6 @@ When not null, specifies a filter for the allowed values of the property for the
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -201,9 +181,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Property_Enterprise_Company_Filters](Gen_Property_Enterprise_Company_Filters.md).[Row_Version](Gen_Property_Enterprise_Company_Filters.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

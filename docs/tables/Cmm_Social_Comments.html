@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cmm_social_comments">Table Cmm_Social_Comments</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Communities.SocialComments.html">Communities.SocialComments</a></p>
 <p>User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#comment_text">Comment_Text</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The comment contents in clear text.</td>
 </tr>
 <tr>
@@ -129,7 +131,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="social_comment_id">Social_Comment_Id</h3>
-<p>Social_Comment_Id</p>
 <table>
 <thead>
 <tr>
@@ -168,15 +169,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Comments.html">Cmm_Social_Comments</a>.<a href="Cmm_Social_Comments.html#social_comment_id">Social_Comment_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -261,15 +258,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="data_object_id">Data_Object_Id</h3>
-<p>Data_Object_Id</p>
-<p>The root data object (post, marketplace product, document, etc), for which the comment is made.</p>
 <p>The root data object (post, marketplace product, document, etc), for which the comment is made.</p>
 <table>
 <thead>
@@ -309,15 +304,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Comments.html">Cmm_Social_Comments</a>.<a href="Cmm_Social_Comments.html#data_object_id">Data_Object_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -402,15 +393,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="reply_to_comment_id">Reply_To_Comment_Id</h3>
-<p>Reply_To_Comment_Id</p>
-<p>When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object.</p>
 <p>When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object.</p>
 <table>
 <thead>
@@ -450,15 +439,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Comments.html">Cmm_Social_Comments</a>.<a href="Cmm_Social_Comments.html#reply_to_comment_id">Reply_To_Comment_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -543,15 +528,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="user_id">User_Id</h3>
-<p>User_Id</p>
-<p>The user, who made the comment.</p>
 <p>The user, who made the comment.</p>
 <table>
 <thead>
@@ -591,15 +574,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Comments.html">Cmm_Social_Comments</a>.<a href="Cmm_Social_Comments.html#user_id">User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -684,15 +663,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="comment_text">Comment_Text</h3>
-<p>Comment_Text</p>
-<p>The comment contents in clear text.</p>
 <p>The comment contents in clear text.</p>
 <table>
 <thead>
@@ -704,7 +681,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -732,15 +709,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Comments.html">Cmm_Social_Comments</a>.<a href="Cmm_Social_Comments.html#comment_text">Comment_Text</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -813,8 +786,6 @@
 </tbody>
 </table>
 <h3 id="creation_time_utc">Creation_Time_Utc</h3>
-<p>Creation_Time_Utc</p>
-<p>The exact server time (in UTC), when the comment was created.</p>
 <p>The exact server time (in UTC), when the comment was created.</p>
 <table>
 <thead>
@@ -854,15 +825,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Comments.html">Cmm_Social_Comments</a>.<a href="Cmm_Social_Comments.html#creation_time_utc">Creation_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -935,7 +902,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -970,15 +936,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cmm_Social_Comments.html">Cmm_Social_Comments</a>.<a href="Cmm_Social_Comments.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

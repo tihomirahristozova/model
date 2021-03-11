@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prd_work_orders">Table Prd_Work_Orders</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Production.ShopFloor.WorkOrders.html">Production.ShopFloor.WorkOrders</a></p>
 <p>Scheduled and released production orders. Each order can contain the production of many items. Entity: Prd_Work_Orders</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -131,7 +133,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>User notes for the production order</td>
 </tr>
 <tr>
@@ -168,7 +170,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="id">Id</h3>
-<p>Id</p>
 <table>
 <thead>
 <tr>
@@ -207,15 +208,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#id">Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -300,15 +297,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
-<p>Document Id for the released production orders. NULL for orders that are not yet released</p>
 <p>Document Id for the released production orders. NULL for orders that are not yet released</p>
 <table>
 <thead>
@@ -348,15 +343,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -441,15 +432,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="workgroup_id">Workgroup_Id</h3>
-<p>Workgroup_Id</p>
-<p>The workgroup which performs the operations</p>
 <p>The workgroup which performs the operations</p>
 <table>
 <thead>
@@ -489,15 +478,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#workgroup_id">Workgroup_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -582,15 +567,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="due_date">Due_Date</h3>
-<p>Due_Date</p>
-<p>The final due date, when the production should be ready.</p>
 <p>The final due date, when the production should be ready.</p>
 <table>
 <thead>
@@ -630,15 +613,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#due_date">Due_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -711,8 +690,6 @@
 </tbody>
 </table>
 <h3 id="release_date">Release_Date</h3>
-<p>Release_Date</p>
-<p>Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order.</p>
 <p>Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order.</p>
 <table>
 <thead>
@@ -752,15 +729,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#release_date">Release_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -833,8 +806,6 @@
 </tbody>
 </table>
 <h3 id="completion_date">Completion_Date</h3>
-<p>Completion_Date</p>
-<p>Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.</p>
 <p>Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.</p>
 <table>
 <thead>
@@ -874,15 +845,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#completion_date">Completion_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -955,8 +922,6 @@
 </tbody>
 </table>
 <h3 id="duration_hour">Duration_Hour</h3>
-<p>Duration_Hour</p>
-<p>The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)</p>
 <p>The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)</p>
 <table>
 <thead>
@@ -992,15 +957,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#duration_hour">Duration_Hour</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1073,8 +1034,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
-<p>User notes for the production order</p>
 <p>User notes for the production order</p>
 <table>
 <thead>
@@ -1086,7 +1045,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1114,15 +1073,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1195,8 +1150,6 @@
 </tbody>
 </table>
 <h3 id="priority">Priority</h3>
-<p>Priority</p>
-<p>Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest</p>
 <p>Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest</p>
 <table>
 <thead>
@@ -1232,7 +1185,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1241,10 +1194,6 @@
 <tr>
 <td>Default Value</td>
 <td>3</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#priority">Priority</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1336,8 +1285,6 @@
 </tbody>
 </table>
 <h3 id="default_output_store_id">Default_Output_Store_Id</h3>
-<p>Default_Output_Store_Id</p>
-<p>Default output store for the finished products</p>
 <p>Default output store for the finished products</p>
 <table>
 <thead>
@@ -1377,15 +1324,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#default_output_store_id">Default_Output_Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1470,15 +1413,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_materials_store_id">Default_Materials_Store_Id</h3>
-<p>Default_Materials_Store_Id</p>
-<p>Default materials store for the ingredients</p>
 <p>Default materials store for the ingredients</p>
 <table>
 <thead>
@@ -1518,15 +1459,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#default_materials_store_id">Default_Materials_Store_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1611,15 +1548,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -1655,15 +1590,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1748,15 +1679,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -1792,15 +1721,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1885,14 +1810,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1927,15 +1851,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prd_Work_Orders.html">Prd_Work_Orders</a>.<a href="Prd_Work_Orders.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-eam_maintenance_types">Table Eam_Maintenance_Types</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></p>
 <p>Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -112,7 +114,7 @@
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
-<td><code>nvarchar(2147483647)</code> <code>ML</code></td>
+<td><code>nvarchar(max)</code> <code>ML</code></td>
 <td>Detailed description of the maintenance (multilanguage).</td>
 </tr>
 <tr>
@@ -144,7 +146,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="maintenance_type_id">Maintenance_Type_Id</h3>
-<p>Maintenance_Type_Id</p>
 <table>
 <thead>
 <tr>
@@ -183,15 +184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#maintenance_type_id">Maintenance_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -276,15 +273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_type_code">Maintenance_Type_Code</h3>
-<p>Maintenance_Type_Code</p>
-<p>Unique code of the maintenance type.</p>
 <p>Unique code of the maintenance type.</p>
 <table>
 <thead>
@@ -324,15 +319,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#maintenance_type_code">Maintenance_Type_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -417,7 +408,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -430,8 +421,6 @@
 </tbody>
 </table>
 <h3 id="maintenance_type_group_id">Maintenance_Type_Group_Id</h3>
-<p>Maintenance_Type_Group_Id</p>
-<p>The group, to which this maintenance type belongs.</p>
 <p>The group, to which this maintenance type belongs.</p>
 <table>
 <thead>
@@ -471,15 +460,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#maintenance_type_group_id">Maintenance_Type_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -564,15 +549,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_type_name">Maintenance_Type_Name</h3>
-<p>Maintenance_Type_Name</p>
-<p>Multilanguage name of the maintenance type.</p>
 <p>Multilanguage name of the maintenance type.</p>
 <table>
 <thead>
@@ -612,15 +595,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#maintenance_type_name">Maintenance_Type_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -705,7 +684,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -718,8 +697,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
-<p>Detailed description of the maintenance (multilanguage).</p>
 <p>Detailed description of the maintenance (multilanguage).</p>
 <table>
 <thead>
@@ -731,7 +708,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -759,15 +736,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -840,8 +813,6 @@
 </tbody>
 </table>
 <h3 id="default_schedule_months">Default_Schedule_Months</h3>
-<p>Default_Schedule_Months</p>
-<p>Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.</p>
 <p>Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.</p>
 <table>
 <thead>
@@ -877,15 +848,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#default_schedule_months">Default_Schedule_Months</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -958,8 +925,6 @@
 </tbody>
 </table>
 <h3 id="default_schedule_days">Default_Schedule_Days</h3>
-<p>Default_Schedule_Days</p>
-<p>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.</p>
 <p>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.</p>
 <table>
 <thead>
@@ -995,15 +960,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#default_schedule_days">Default_Schedule_Days</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1076,8 +1037,6 @@
 </tbody>
 </table>
 <h3 id="tracked_parameter_id">Tracked_Parameter_Id</h3>
-<p>Tracked_Parameter_Id</p>
-<p>Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.</p>
 <p>Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.</p>
 <table>
 <thead>
@@ -1117,15 +1076,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#tracked_parameter_id">Tracked_Parameter_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1210,15 +1165,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="default_parameter_change">Default_Parameter_Change</h3>
-<p>Default_Parameter_Change</p>
-<p>Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change.</p>
 <p>Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change.</p>
 <table>
 <thead>
@@ -1254,15 +1207,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#default_parameter_change">Default_Parameter_Change</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1335,7 +1284,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1370,15 +1318,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Eam_Maintenance_Types.html">Eam_Maintenance_Types</a>.<a href="Eam_Maintenance_Types.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

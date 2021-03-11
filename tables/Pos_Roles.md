@@ -1,5 +1,10 @@
 # Table Pos_Roles
 
+
+## Entity
+
+Entity: [Crm.Pos.Roles](~/entities/Crm.Pos.Roles.md)
+
 Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1)
 
 ## Summary
@@ -17,9 +22,6 @@ Represents a role, which can be assigned to POS operators (like Cashier, Manager
 
 ### Pos_Role_Id
 
-
-Pos_Role_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -29,9 +31,8 @@ Pos_Role_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pos_Roles](Pos_Roles.md).[Pos_Role_Id](Pos_Roles.md#pos_role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -54,15 +55,9 @@ Pos_Role_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Role_Code
-
-
-Pos_Role_Code
-
-
-Unique role code.
 
 
 Unique role code.
@@ -76,9 +71,8 @@ Unique role code.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Roles](Pos_Roles.md).[Pos_Role_Code](Pos_Roles.md#pos_role_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -101,16 +95,10 @@ Unique role code.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Pos_Role_Name
-
-
-Pos_Role_Name
-
-
-Multi-language name of the POS role.
 
 
 Multi-language name of the POS role.
@@ -124,9 +112,8 @@ Multi-language name of the POS role.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Roles](Pos_Roles.md).[Pos_Role_Name](Pos_Roles.md#pos_role_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,18 +136,12 @@ Multi-language name of the POS role.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Can_Void_Sales
 
 
-Can_Void_Sales
-
-
-Indicates whether this role can void sales orders.
-
-
 Indicates whether this role can void sales orders.
 
 | Property | Value |
@@ -171,9 +152,8 @@ Indicates whether this role can void sales orders.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Pos_Roles](Pos_Roles.md).[Can_Void_Sales](Pos_Roles.md#can_void_sales)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,17 +176,11 @@ Indicates whether this role can void sales orders.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Can_Process_Minus_Sales
 
 
-Can_Process_Minus_Sales
-
-
-Indicates whether the role is allowed to process minus (qty and/or value) sales.
-
-
 Indicates whether the role is allowed to process minus (qty and/or value) sales.
 
 | Property | Value |
@@ -217,9 +191,8 @@ Indicates whether the role is allowed to process minus (qty and/or value) sales.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Pos_Roles](Pos_Roles.md).[Can_Process_Minus_Sales](Pos_Roles.md#can_process_minus_sales)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,12 +215,9 @@ Indicates whether the role is allowed to process minus (qty and/or value) sales.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -257,9 +227,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Roles](Pos_Roles.md).[Row_Version](Pos_Roles.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

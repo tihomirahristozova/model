@@ -1,5 +1,10 @@
 # Table Srv_Service_Types
 
+
+## Entity
+
+Entity: [Applications.Service.ServiceTypes](~/entities/Applications.Service.ServiceTypes.md)
+
 Service levels. Entity: Srv_Service_Types
 
 ## Summary
@@ -10,7 +15,7 @@ Service levels. Entity: Srv_Service_Types
 |[Service_Object_Type_Id](#service_object_type_id)|`uniqueidentifier` |The service object type to which this service type is applicable|
 |[Service_Type_Name](#service_type_name)|`nvarchar(254)` ||
 |[Is_Default](#is_default)|`bit` |1 when this is the default service type for the service object type. 0 otherwise|
-|[Description](#description)|`nvarchar(2147483647)` ||
+|[Description](#description)|`nvarchar(max)` ||
 |[Price_List_Id](#price_list_id)|`uniqueidentifier` |When not NULL, specifies the price list that should be applied when invoicing service activities|
 |[Is_Active](#is_active)|`bit` |True when the service type is currently active and selectable in new documents.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -18,9 +23,6 @@ Service levels. Entity: Srv_Service_Types
 ## Columns
 
 ### Service_Type_Id
-
-
-Service_Type_Id
 
 | Property | Value |
 | - | - |
@@ -31,9 +33,8 @@ Service_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Srv_Service_Types](Srv_Service_Types.md).[Service_Type_Id](Srv_Service_Types.md#service_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -56,15 +57,9 @@ Service_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Service_Object_Type_Id
-
-
-Service_Object_Type_Id
-
-
-The service object type to which this service type is applicable
 
 
 The service object type to which this service type is applicable
@@ -78,9 +73,8 @@ The service object type to which this service type is applicable
 |Referenced Table|[Srv_Service_Object_Types](Srv_Service_Object_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Types](Srv_Service_Types.md).[Service_Object_Type_Id](Srv_Service_Types.md#service_object_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,12 +97,9 @@ The service object type to which this service type is applicable
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Service_Type_Name
-
-
-Service_Type_Name
 
 | Property | Value |
 | - | - |
@@ -119,9 +110,8 @@ Service_Type_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Types](Srv_Service_Types.md).[Service_Type_Name](Srv_Service_Types.md#service_type_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,12 +139,6 @@ Service_Type_Name
 ### Is_Default
 
 
-Is_Default
-
-
-1 when this is the default service type for the service object type. 0 otherwise
-
-
 1 when this is the default service type for the service object type. 0 otherwise
 
 | Property | Value |
@@ -165,9 +149,8 @@ Is_Default
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Srv_Service_Types](Srv_Service_Types.md).[Is_Default](Srv_Service_Types.md#is_default)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,25 +173,21 @@ Is_Default
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Types](Srv_Service_Types.md).[Description](Srv_Service_Types.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -230,12 +209,6 @@ Description
 ### Price_List_Id
 
 
-Price_List_Id
-
-
-When not NULL, specifies the price list that should be applied when invoicing service activities
-
-
 When not NULL, specifies the price list that should be applied when invoicing service activities
 
 | Property | Value |
@@ -247,9 +220,8 @@ When not NULL, specifies the price list that should be applied when invoicing se
 |Referenced Table|[Crm_Price_Lists](Crm_Price_Lists.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Types](Srv_Service_Types.md).[Price_List_Id](Srv_Service_Types.md#price_list_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -272,15 +244,9 @@ When not NULL, specifies the price list that should be applied when invoicing se
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-True when the service type is currently active and selectable in new documents.
 
 
 True when the service type is currently active and selectable in new documents.
@@ -293,9 +259,8 @@ True when the service type is currently active and selectable in new documents.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Srv_Service_Types](Srv_Service_Types.md).[Is_Active](Srv_Service_Types.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -318,12 +283,9 @@ True when the service type is currently active and selectable in new documents.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -333,9 +295,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Srv_Service_Types](Srv_Service_Types.md).[Row_Version](Srv_Service_Types.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

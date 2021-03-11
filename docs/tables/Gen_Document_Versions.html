@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_document_versions">Table Gen_Document_Versions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.DocumentVersions.html">General.DocumentVersions</a></p>
 <p>History of each saved version of each document. Entity: Gen_Document_Versions</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -111,7 +113,7 @@
 </tr>
 <tr>
 <td><a href="#document_data_xml">Document_Data_XML</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).</td>
 </tr>
 <tr>
@@ -148,7 +150,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="document_version_id">Document_Version_Id</h3>
-<p>Document_Version_Id</p>
 <table>
 <thead>
 <tr>
@@ -187,15 +188,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#document_version_id">Document_Version_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -280,15 +277,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
-<p>The document whoose version is stored in this row</p>
 <p>The document whoose version is stored in this row</p>
 <table>
 <thead>
@@ -328,15 +323,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -421,15 +412,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="version">Version</h3>
-<p>Version</p>
-<p>The version number that is stored in this row</p>
 <p>The version number that is stored in this row</p>
 <table>
 <thead>
@@ -465,15 +454,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#version">Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -558,7 +543,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
@@ -571,8 +556,6 @@
 </tbody>
 </table>
 <h3 id="document_data_xml">Document_Data_XML</h3>
-<p>Document_Data_XML</p>
-<p>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).</p>
 <p>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).</p>
 <table>
 <thead>
@@ -584,7 +567,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -612,15 +595,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#document_data_xml">Document_Data_XML</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -693,8 +672,6 @@
 </tbody>
 </table>
 <h3 id="update_time">Update_Time</h3>
-<p>Update_Time</p>
-<p>The date and time when this version was saved</p>
 <p>The date and time when this version was saved</p>
 <table>
 <thead>
@@ -734,15 +711,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#update_time">Update_Time</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -834,8 +807,6 @@
 </tbody>
 </table>
 <h3 id="update_user">Update_User</h3>
-<p>Update_User</p>
-<p>The login name of the user that saved this version</p>
 <p>The login name of the user that saved this version</p>
 <table>
 <thead>
@@ -875,15 +846,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#update_user">Update_User</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -968,7 +935,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -981,8 +948,6 @@
 </tbody>
 </table>
 <h3 id="state">State</h3>
-<p>State</p>
-<p>The state of the document by the time it was saved</p>
 <p>The state of the document by the time it was saved</p>
 <table>
 <thead>
@@ -1018,7 +983,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1027,10 +992,6 @@
 <tr>
 <td>Default Value</td>
 <td>0</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#state">State</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1115,15 +1076,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_data_format">Document_Data_Format</h3>
-<p>Document_Data_Format</p>
-<p>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.</p>
 <p>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.</p>
 <table>
 <thead>
@@ -1163,15 +1122,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>U</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#document_data_format">Document_Data_Format</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1244,8 +1199,6 @@
 </tbody>
 </table>
 <h3 id="document_data">Document_Data</h3>
-<p>Document_Data</p>
-<p>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).</p>
 <p>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).</p>
 <table>
 <thead>
@@ -1281,15 +1234,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#document_data">Document_Data</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1362,7 +1311,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1397,15 +1345,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Document_Versions.html">Gen_Document_Versions</a>.<a href="Gen_Document_Versions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

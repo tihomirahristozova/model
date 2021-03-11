@@ -1,5 +1,10 @@
 # Table Cmm_Social_Comments
 
+
+## Entity
+
+Entity: [Communities.SocialComments](~/entities/Communities.SocialComments.md)
+
 User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1)
 
 ## Summary
@@ -10,16 +15,13 @@ User comment to any object in the system. Entity: Cmm_Social_Comments (Introduce
 |[Data_Object_Id](#data_object_id)|`uniqueidentifier` |The root data object (post, marketplace product, document, etc), for which the comment is made.|
 |[Reply_To_Comment_Id](#reply_to_comment_id)|`uniqueidentifier` |When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object.|
 |[User_Id](#user_id)|`uniqueidentifier` |The user, who made the comment.|
-|[Comment_Text](#comment_text)|`nvarchar(2147483647)` |The comment contents in clear text.|
+|[Comment_Text](#comment_text)|`nvarchar(max)` |The comment contents in clear text.|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |The exact server time (in UTC), when the comment was created.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Social_Comment_Id
-
-
-Social_Comment_Id
 
 | Property | Value |
 | - | - |
@@ -30,9 +32,8 @@ Social_Comment_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cmm_Social_Comments](Cmm_Social_Comments.md).[Social_Comment_Id](Cmm_Social_Comments.md#social_comment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -55,15 +56,9 @@ Social_Comment_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Data_Object_Id
-
-
-Data_Object_Id
-
-
-The root data object (post, marketplace product, document, etc), for which the comment is made.
 
 
 The root data object (post, marketplace product, document, etc), for which the comment is made.
@@ -77,9 +72,8 @@ The root data object (post, marketplace product, document, etc), for which the c
 |Referenced Table|[Sys_Objects](Sys_Objects.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Comments](Cmm_Social_Comments.md).[Data_Object_Id](Cmm_Social_Comments.md#data_object_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,15 +96,9 @@ The root data object (post, marketplace product, document, etc), for which the c
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Reply_To_Comment_Id
-
-
-Reply_To_Comment_Id
-
-
-When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object.
 
 
 When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object.
@@ -124,9 +112,8 @@ When not null, means that the comment is a reply to the specified comment. The c
 |Referenced Table|[Cmm_Social_Comments](Cmm_Social_Comments.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Comments](Cmm_Social_Comments.md).[Reply_To_Comment_Id](Cmm_Social_Comments.md#reply_to_comment_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,15 +136,9 @@ When not null, means that the comment is a reply to the specified comment. The c
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### User_Id
-
-
-User_Id
-
-
-The user, who made the comment.
 
 
 The user, who made the comment.
@@ -171,9 +152,8 @@ The user, who made the comment.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Comments](Cmm_Social_Comments.md).[User_Id](Cmm_Social_Comments.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,31 +176,24 @@ The user, who made the comment.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Comment_Text
-
-
-Comment_Text
-
-
-The comment contents in clear text.
 
 
 The comment contents in clear text.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|no|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Comments](Cmm_Social_Comments.md).[Comment_Text](Cmm_Social_Comments.md#comment_text)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -242,12 +215,6 @@ The comment contents in clear text.
 ### Creation_Time_Utc
 
 
-Creation_Time_Utc
-
-
-The exact server time (in UTC), when the comment was created.
-
-
 The exact server time (in UTC), when the comment was created.
 
 | Property | Value |
@@ -259,9 +226,8 @@ The exact server time (in UTC), when the comment was created.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Comments](Cmm_Social_Comments.md).[Creation_Time_Utc](Cmm_Social_Comments.md#creation_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -282,9 +248,6 @@ The exact server time (in UTC), when the comment was created.
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -293,9 +256,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cmm_Social_Comments](Cmm_Social_Comments.md).[Row_Version](Cmm_Social_Comments.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

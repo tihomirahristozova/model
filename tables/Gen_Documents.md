@@ -1,5 +1,10 @@
 # Table Gen_Documents
 
+
+## Entity
+
+Entity: [General.Documents](~/entities/General.Documents.md)
+
 Contains all documents issued by and to the enterprise. Entity: Gen_Documents
 
 ## Summary
@@ -12,7 +17,7 @@ Contains all documents issued by and to the enterprise. Entity: Gen_Documents
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.|
 |[Document_No](#document_no)|`nvarchar(20)` |Document number, unique within Document_Type_Id|
 |[To_Party_Id](#to_party_id)|`uniqueidentifier` |The party which should receive the document|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[To_Company_Division_Id](#to_company_division_id)|`uniqueidentifier` |The division of the company, receiving the document. NULL when the document is not received by any specific division|
 |[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` |The user to which this document is assigned for handling. NULL means that the document is not assigned to specific user|
 |[User_Status_Id](#user_status_id)|`uniqueidentifier` Readonly|The user status of this document if applicable for this document type. NULL means unknown or not yet set|
@@ -54,12 +59,6 @@ Contains all documents issued by and to the enterprise. Entity: Gen_Documents
 ### Enterprise_Company_Id
 
 
-Enterprise_Company_Id
-
-
-The enterprise company which issued the document
-
-
 The enterprise company which issued the document
 
 | Property | Value |
@@ -71,9 +70,8 @@ The enterprise company which issued the document
 |Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Enterprise_Company_Id](Gen_Documents.md#enterprise_company_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -96,15 +94,9 @@ The enterprise company which issued the document
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### From_Party_Id
-
-
-From_Party_Id
-
-
-The party which issued the document
 
 
 The party which issued the document
@@ -118,9 +110,8 @@ The party which issued the document
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[From_Party_Id](Gen_Documents.md#from_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -143,15 +134,9 @@ The party which issued the document
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Date
-
-
-Document_Date
-
-
-The date on which the document was issued
 
 
 The date on which the document was issued
@@ -165,9 +150,8 @@ The date on which the document was issued
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Document_Date](Gen_Documents.md#document_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,16 +174,10 @@ The date on which the document was issued
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Document_Type_Id
-
-
-Document_Type_Id
-
-
-The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.
 
 
 The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.
@@ -213,9 +191,8 @@ The user defined type of the document. Determines document behaviour, properties
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Document_Type_Id](Gen_Documents.md#document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,15 +215,9 @@ The user defined type of the document. Determines document behaviour, properties
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_No
-
-
-Document_No
-
-
-Document number, unique within Document_Type_Id
 
 
 Document number, unique within Document_Type_Id
@@ -260,9 +231,8 @@ Document number, unique within Document_Type_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Document_No](Gen_Documents.md#document_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -285,16 +255,10 @@ Document number, unique within Document_Type_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### To_Party_Id
-
-
-To_Party_Id
-
-
-The party which should receive the document
 
 
 The party which should receive the document
@@ -308,9 +272,8 @@ The party which should receive the document
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[To_Party_Id](Gen_Documents.md#to_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -333,25 +296,21 @@ The party which should receive the document
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Notes](Gen_Documents.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -373,12 +332,6 @@ Notes
 ### To_Company_Division_Id
 
 
-To_Company_Division_Id
-
-
-The division of the company, receiving the document. NULL when the document is not received by any specific division
-
-
 The division of the company, receiving the document. NULL when the document is not received by any specific division
 
 | Property | Value |
@@ -390,9 +343,8 @@ The division of the company, receiving the document. NULL when the document is n
 |Referenced Table|[Cm_Company_Divisions](Cm_Company_Divisions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[To_Company_Division_Id](Gen_Documents.md#to_company_division_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -415,15 +367,9 @@ The division of the company, receiving the document. NULL when the document is n
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Assigned_To_User_Id
-
-
-Assigned_To_User_Id
-
-
-The user to which this document is assigned for handling. NULL means that the document is not assigned to specific user
 
 
 The user to which this document is assigned for handling. NULL means that the document is not assigned to specific user
@@ -437,9 +383,8 @@ The user to which this document is assigned for handling. NULL means that the do
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Assigned_To_User_Id](Gen_Documents.md#assigned_to_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -462,15 +407,9 @@ The user to which this document is assigned for handling. NULL means that the do
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### User_Status_Id
-
-
-User_Status_Id
-
-
-The user status of this document if applicable for this document type. NULL means unknown or not yet set
 
 
 The user status of this document if applicable for this document type. NULL means unknown or not yet set
@@ -484,9 +423,8 @@ The user status of this document if applicable for this document type. NULL mean
 |Referenced Table|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[User_Status_Id](Gen_Documents.md#user_status_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -509,15 +447,9 @@ The user status of this document if applicable for this document type. NULL mean
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Reference_Document_No
-
-
-Reference_Document_No
-
-
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents
 
 
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents
@@ -531,9 +463,8 @@ The number of the document (issued by the other party), which was the reason for
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Reference_Document_No](Gen_Documents.md#reference_document_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -556,16 +487,10 @@ The number of the document (issued by the other party), which was the reason for
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
 ### Document_Version
-
-
-Document_Version
-
-
-Consecutive version number, starting with 1. Each update produces a new version of the document.
 
 
 Consecutive version number, starting with 1. Each update produces a new version of the document.
@@ -578,9 +503,8 @@ Consecutive version number, starting with 1. Each update produces a new version 
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Document_Version](Gen_Documents.md#document_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -603,16 +527,10 @@ Consecutive version number, starting with 1. Each update produces a new version 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 |GreaterThanOrLessThan|None|yes|yes|
 
 ### Parent_Document_Relationship_Type
-
-
-Parent_Document_Relationship_Type
-
-
-Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
 
 Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
@@ -626,10 +544,9 @@ Type of relationship between the current document and the parent document(s). Af
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`S`, `N`|
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Parent_Document_Relationship_Type](Gen_Documents.md#parent_document_relationship_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -651,12 +568,6 @@ Type of relationship between the current document and the parent document(s). Af
 ### Complete_Time
 
 
-Complete_Time
-
-
-Date and time when the document was completed (State set to Completed).
-
-
 Date and time when the document was completed (State set to Completed).
 
 | Property | Value |
@@ -668,9 +579,8 @@ Date and time when the document was completed (State set to Completed).
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Complete_Time](Gen_Documents.md#complete_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -698,12 +608,6 @@ Date and time when the document was completed (State set to Completed).
 ### Release_Time
 
 
-Release_Time
-
-
-Date and time when the document was released (State set to Released).
-
-
 Date and time when the document was released (State set to Released).
 
 | Property | Value |
@@ -715,9 +619,8 @@ Date and time when the document was released (State set to Released).
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Release_Time](Gen_Documents.md#release_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -745,12 +648,6 @@ Date and time when the document was released (State set to Released).
 ### Prime_Cause_Document_Id
 
 
-Prime_Cause_Document_Id
-
-
-The document that is the prime cause for creation of the current document
-
-
 The document that is the prime cause for creation of the current document
 
 | Property | Value |
@@ -762,9 +659,8 @@ The document that is the prime cause for creation of the current document
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Prime_Cause_Document_Id](Gen_Documents.md#prime_cause_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -787,15 +683,9 @@ The document that is the prime cause for creation of the current document
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Planning_Only
-
-
-Planning_Only
-
-
-Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)
 
 
 Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)
@@ -808,9 +698,8 @@ Indicates that the document is used only for planning (and as consequence its st
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Planning_Only](Gen_Documents.md#planning_only)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -832,12 +721,6 @@ Indicates that the document is used only for planning (and as consequence its st
 ### Enterprise_Company_Location_Id
 
 
-Enterprise_Company_Location_Id
-
-
-The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used
-
-
 The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used
 
 | Property | Value |
@@ -849,9 +732,8 @@ The enterprise company location which issued the document. NULL means that there
 |Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Enterprise_Company_Location_Id](Gen_Documents.md#enterprise_company_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -874,15 +756,9 @@ The enterprise company location which issued the document. NULL means that there
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Reverse_Of_Document_Id
-
-
-Reverse_Of_Document_Id
-
-
-The document which the current document is reverse of
 
 
 The document which the current document is reverse of
@@ -896,9 +772,8 @@ The document which the current document is reverse of
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Reverse_Of_Document_Id](Gen_Documents.md#reverse_of_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -921,15 +796,9 @@ The document which the current document is reverse of
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Void_Reason
-
-
-Void_Reason
-
-
-Reason for voiding the document, entered by the user
 
 
 Reason for voiding the document, entered by the user
@@ -943,9 +812,8 @@ Reason for voiding the document, entered by the user
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Void_Reason](Gen_Documents.md#void_reason)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -967,12 +835,6 @@ Reason for voiding the document, entered by the user
 ### Responsible_Person_Id
 
 
-Responsible_Person_Id
-
-
-The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
-
-
 The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
 | Property | Value |
@@ -984,9 +846,8 @@ The person that is responsible for this order or transaction. It could be the sa
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Responsible_Person_Id](Gen_Documents.md#responsible_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1009,15 +870,9 @@ The person that is responsible for this order or transaction. It could be the sa
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### From_Company_Division_Id
-
-
-From_Company_Division_Id
-
-
-The division of the company, issuing the document. NULL when the document is not issued by any specific division
 
 
 The division of the company, issuing the document. NULL when the document is not issued by any specific division
@@ -1031,9 +886,8 @@ The division of the company, issuing the document. NULL when the document is not
 |Referenced Table|[Cm_Company_Divisions](Cm_Company_Divisions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[From_Company_Division_Id](Gen_Documents.md#from_company_division_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1056,12 +910,9 @@ The division of the company, issuing the document. NULL when the document is not
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Id
-
-
-Id
 
 | Property | Value |
 | - | - |
@@ -1072,9 +923,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Id](Gen_Documents.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1097,15 +947,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Void_User
-
-
-Void_User
-
-
-The user who voided the document
 
 
 The user who voided the document
@@ -1119,9 +963,8 @@ The user who voided the document
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Void_User](Gen_Documents.md#void_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1143,12 +986,6 @@ The user who voided the document
 ### Adjustment_User
 
 
-Adjustment_User
-
-
-The user who adjusted the document
-
-
 The user who adjusted the document
 
 | Property | Value |
@@ -1160,9 +997,8 @@ The user who adjusted the document
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Adjustment_User](Gen_Documents.md#adjustment_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1184,12 +1020,6 @@ The user who adjusted the document
 ### Access_Key_Id
 
 
-Access_Key_Id
-
-
-The access key, containing the user permissions for this document. NULL means that all users have unlimited permissions
-
-
 The access key, containing the user permissions for this document. NULL means that all users have unlimited permissions
 
 | Property | Value |
@@ -1201,9 +1031,8 @@ The access key, containing the user permissions for this document. NULL means th
 |Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Access_Key_Id](Gen_Documents.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1226,15 +1055,9 @@ The access key, containing the user permissions for this document. NULL means th
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Sequence_Id
-
-
-Sequence_Id
-
-
-The sequence that will be used to give new numbers to the documents of this type
 
 
 The sequence that will be used to give new numbers to the documents of this type
@@ -1248,9 +1071,8 @@ The sequence that will be used to give new numbers to the documents of this type
 |Referenced Table|[Gen_Sequences](Gen_Sequences.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Sequence_Id](Gen_Documents.md#sequence_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1273,15 +1095,9 @@ The sequence that will be used to give new numbers to the documents of this type
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Reference_Date
-
-
-Reference_Date
-
-
-The date to which this document refers, i.e. when the action really occurred. If NULL, Document_Date is taken
 
 
 The date to which this document refers, i.e. when the action really occurred. If NULL, Document_Date is taken
@@ -1295,9 +1111,8 @@ The date to which this document refers, i.e. when the action really occurred. If
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDate|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Reference_Date](Gen_Documents.md#reference_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1325,12 +1140,6 @@ The date to which this document refers, i.e. when the action really occurred. If
 ### State
 
 
-State
-
-
-The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed.
-
-
 The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed.
 
 | Property | Value |
@@ -1341,10 +1150,9 @@ The current system state of the document. Allowed values: 0=New;5=Corrective;10=
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`0`, `5`, `10`, `20`, `30`, `40`, `50`|
 |Default Value|0|
-|Derived From|[Gen_Documents](Gen_Documents.md).[State](Gen_Documents.md#state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1367,16 +1175,10 @@ The current system state of the document. Allowed values: 0=New;5=Corrective;10=
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|yes|yes|
 
 ### Void
-
-
-Void
-
-
-1 if the document is null and void
 
 
 1 if the document is null and void
@@ -1389,9 +1191,8 @@ Void
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Void](Gen_Documents.md#void)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1414,15 +1215,9 @@ Void
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|False|no|no|
+|Equals|`False`|no|no|
 
 ### Currency_Directory_Id
-
-
-Currency_Directory_Id
-
-
-The currency directory, containing all the convertion rates, used by the document. NULL means that the document does not need currency convertions
 
 
 The currency directory, containing all the convertion rates, used by the document. NULL means that the document does not need currency convertions
@@ -1436,9 +1231,8 @@ The currency directory, containing all the convertion rates, used by the documen
 |Referenced Table|[Gen_Currency_Directories](Gen_Currency_Directories.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Currency_Directory_Id](Gen_Documents.md#currency_directory_id)|
 |Format||
 |Ignore for Insert Order|yes|
 |Auto Complete|no|
@@ -1461,15 +1255,9 @@ The currency directory, containing all the convertion rates, used by the documen
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Master_Document_Id
-
-
-Master_Document_Id
-
-
-In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id
 
 
 In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id
@@ -1483,9 +1271,8 @@ In a multi-document tree, this is the root document, that created the whole tree
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Master_Document_Id](Gen_Documents.md#master_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1508,15 +1295,9 @@ In a multi-document tree, this is the root document, that created the whole tree
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Parent_Document_Id
-
-
-Parent_Document_Id
-
-
-In a multi-document tree, this is the direct parent document. If this is the root it is NULL
 
 
 In a multi-document tree, this is the direct parent document. If this is the root it is NULL
@@ -1530,9 +1311,8 @@ In a multi-document tree, this is the direct parent document. If this is the roo
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Parent_Document_Id](Gen_Documents.md#parent_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1555,15 +1335,9 @@ In a multi-document tree, this is the direct parent document. If this is the roo
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Adjusted_Document_Id
-
-
-Adjusted_Document_Id
-
-
-The primary document, which the current document adjusts. NULL when this is not an adjustment document
 
 
 The primary document, which the current document adjusts. NULL when this is not an adjustment document
@@ -1577,9 +1351,8 @@ The primary document, which the current document adjusts. NULL when this is not 
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Adjusted_Document_Id](Gen_Documents.md#adjusted_document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1602,15 +1375,9 @@ The primary document, which the current document adjusts. NULL when this is not 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|yes|
+|Equals|`NULL`|yes|yes|
 
 ### Adjustment_Number
-
-
-Adjustment_Number
-
-
-Consecutive number of the correction that this document is applying to the adjusted document.
 
 
 Consecutive number of the correction that this document is applying to the adjusted document.
@@ -1623,9 +1390,8 @@ Consecutive number of the correction that this document is applying to the adjus
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Adjustment_Number](Gen_Documents.md#adjustment_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1647,12 +1413,6 @@ Consecutive number of the correction that this document is applying to the adjus
 ### Creation_Time
 
 
-Creation_Time
-
-
-Date/Time when the document was created
-
-
 Date/Time when the document was created
 
 | Property | Value |
@@ -1664,9 +1424,8 @@ Date/Time when the document was created
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTime|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Creation_Time](Gen_Documents.md#creation_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1694,12 +1453,6 @@ Date/Time when the document was created
 ### Creation_User
 
 
-Creation_User
-
-
-The login name of the user, who created the document
-
-
 The login name of the user, who created the document
 
 | Property | Value |
@@ -1711,9 +1464,8 @@ The login name of the user, who created the document
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Creation_User](Gen_Documents.md#creation_user)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1741,12 +1493,6 @@ The login name of the user, who created the document
 ### Void_Time
 
 
-Void_Time
-
-
-Date/time when the document has become void
-
-
 Date/time when the document has become void
 
 | Property | Value |
@@ -1758,9 +1504,8 @@ Date/time when the document has become void
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Void_Time](Gen_Documents.md#void_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1782,12 +1527,6 @@ Date/time when the document has become void
 ### Entity_Name
 
 
-Entity_Name
-
-
-The entity name of the document header.
-
-
 The entity name of the document header.
 
 | Property | Value |
@@ -1799,9 +1538,8 @@ The entity name of the document header.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Entity_Name](Gen_Documents.md#entity_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1824,15 +1562,9 @@ The entity name of the document header.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Adjustment_Time
-
-
-Adjustment_Time
-
-
-Date/time when the document last has been adjusted by corrective document
 
 
 Date/time when the document last has been adjusted by corrective document
@@ -1846,9 +1578,8 @@ Date/time when the document last has been adjusted by corrective document
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Adjustment_Time](Gen_Documents.md#adjustment_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1870,12 +1601,6 @@ Date/time when the document last has been adjusted by corrective document
 ### Read_Only
 
 
-Read_Only
-
-
-1 - the document is read only; 0 - the document is not read only
-
-
 1 - the document is read only; 0 - the document is not read only
 
 | Property | Value |
@@ -1886,9 +1611,8 @@ Read_Only
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Read_Only](Gen_Documents.md#read_only)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -1909,9 +1633,6 @@ Read_Only
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -1920,9 +1641,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Gen_Documents](Gen_Documents.md).[Row_Version](Gen_Documents.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

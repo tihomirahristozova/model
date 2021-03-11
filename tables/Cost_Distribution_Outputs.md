@@ -1,5 +1,10 @@
 # Table Cost_Distribution_Outputs
 
+
+## Entity
+
+Entity: [Finance.Cost.DistributionOutputs](~/entities/Finance.Cost.DistributionOutputs.md)
+
 Contains the output data for the specified period. This is the output on which cost is distributed. Entity: Cost_Distribution_Outputs
 
 ## Owner Tables Hierarchy
@@ -21,9 +26,6 @@ Contains the output data for the specified period. This is the output on which c
 
 ### Cost_Distribution_Output_Id
 
-
-Cost_Distribution_Output_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Cost_Distribution_Output_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Distribution_Outputs](Cost_Distribution_Outputs.md).[Cost_Distribution_Output_Id](Cost_Distribution_Outputs.md#cost_distribution_output_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,12 +59,9 @@ Cost_Distribution_Output_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Distribution_Id
-
-
-Cost_Distribution_Id
 
 | Property | Value |
 | - | - |
@@ -74,9 +72,8 @@ Cost_Distribution_Id
 |Referenced Table|[Cost_Distributions](Cost_Distributions.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Outputs](Cost_Distribution_Outputs.md).[Cost_Distribution_Id](Cost_Distribution_Outputs.md#cost_distribution_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -99,15 +96,9 @@ Cost_Distribution_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Line_No
-
-
-Line_No
-
-
-Unique (within the document), consecutive line number of the output.
 
 
 Unique (within the document), consecutive line number of the output.
@@ -120,10 +111,9 @@ Unique (within the document), consecutive line number of the output.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|10|
-|Derived From|[Cost_Distribution_Outputs](Cost_Distribution_Outputs.md).[Line_No](Cost_Distribution_Outputs.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -145,12 +135,6 @@ Unique (within the document), consecutive line number of the output.
 ### Store_Transaction_Line_Id
 
 
-Store_Transaction_Line_Id
-
-
-The store transaction line, for which costs will be distributed.
-
-
 The store transaction line, for which costs will be distributed.
 
 | Property | Value |
@@ -162,9 +146,8 @@ The store transaction line, for which costs will be distributed.
 |Referenced Table|[Inv_Transaction_Lines](Inv_Transaction_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Distribution_Outputs](Cost_Distribution_Outputs.md).[Store_Transaction_Line_Id](Cost_Distribution_Outputs.md#store_transaction_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -187,15 +170,9 @@ The store transaction line, for which costs will be distributed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Weight_Coefficient
-
-
-Weight_Coefficient
-
-
-The weight coefficient for prorate distribution of cost over the current line.
 
 
 The weight coefficient for prorate distribution of cost over the current line.
@@ -208,9 +185,8 @@ The weight coefficient for prorate distribution of cost over the current line.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|1|
-|Derived From|[Cost_Distribution_Outputs](Cost_Distribution_Outputs.md).[Weight_Coefficient](Cost_Distribution_Outputs.md#weight_coefficient)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

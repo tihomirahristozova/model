@@ -1,5 +1,10 @@
 # Table Its_Declarations
 
+
+## Entity
+
+Entity: [Finance.Intrastat.Declarations](~/entities/Finance.Intrastat.Declarations.md)
+
 Contains the headers of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declarations
 
 ## Owner Tables Hierarchy
@@ -29,12 +34,6 @@ Contains the headers of the Intrastat declarations, issued by the enterprise com
 ### Intrastat_Declaration_Id
 
 
-Intrastat_Declaration_Id
-
-
-Intrastat declaration id
-
-
 Intrastat declaration id
 
 | Property | Value |
@@ -46,9 +45,8 @@ Intrastat declaration id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Intrastat_Declaration_Id](Its_Declarations.md#intrastat_declaration_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -71,15 +69,9 @@ Intrastat declaration id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Reference_Year
-
-
-Reference_Year
-
-
-Year, for which the declaration is prepared
 
 
 Year, for which the declaration is prepared
@@ -92,9 +84,8 @@ Year, for which the declaration is prepared
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Reference_Year](Its_Declarations.md#reference_year)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -117,15 +108,9 @@ Year, for which the declaration is prepared
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Reference_Month
-
-
-Reference_Month
-
-
-Month, for which the declaration is prepared
 
 
 Month, for which the declaration is prepared
@@ -138,10 +123,9 @@ Month, for which the declaration is prepared
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`|
 |Default Value|None|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Reference_Month](Its_Declarations.md#reference_month)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -164,15 +148,9 @@ Month, for which the declaration is prepared
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Goods_Flow_Direction
-
-
-Goods_Flow_Direction
-
-
-The flow direction of the goods. A=Arrival, D=Dispatch
 
 
 The flow direction of the goods. A=Arrival, D=Dispatch
@@ -186,10 +164,9 @@ The flow direction of the goods. A=Arrival, D=Dispatch
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`A`, `D`|
 |Default Value|None|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Goods_Flow_Direction](Its_Declarations.md#goods_flow_direction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -212,15 +189,9 @@ The flow direction of the goods. A=Arrival, D=Dispatch
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Declaration_Function
-
-
-Declaration_Function
-
-
-Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective
 
 
 Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective
@@ -234,10 +205,9 @@ Specifies whether this is a regular or corrective declaration. R=Regular, C=Corr
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`R`, `C`|
 |Default Value|R|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Declaration_Function](Its_Declarations.md#declaration_function)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -260,15 +230,9 @@ Specifies whether this is a regular or corrective declaration. R=Regular, C=Corr
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Declare_Statistical_Values
-
-
-Declare_Statistical_Values
-
-
-Does the declaration contain statistical values? 1=Yes; 0=No
 
 
 Does the declaration contain statistical values? 1=Yes; 0=No
@@ -281,9 +245,8 @@ Does the declaration contain statistical values? 1=Yes; 0=No
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Declare_Statistical_Values](Its_Declarations.md#declare_statistical_values)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -306,12 +269,9 @@ Does the declaration contain statistical values? 1=Yes; 0=No
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -322,9 +282,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Document_Id](Its_Declarations.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -347,15 +306,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Postal_Code
-
-
-Postal_Code
-
-
-This field contains the postal code part of the submitter’s address
 
 
 This field contains the postal code part of the submitter’s address
@@ -369,9 +322,8 @@ This field contains the postal code part of the submitter’s address
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Postal_Code](Its_Declarations.md#postal_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -393,12 +345,6 @@ This field contains the postal code part of the submitter’s address
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -409,9 +355,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Is_Single_Execution](Its_Declarations.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -434,17 +379,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -455,9 +394,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Is_Released](Its_Declarations.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -480,12 +418,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -495,9 +430,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Row_Version](Its_Declarations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -519,12 +453,6 @@ Row_Version
 ### Third_Declaring_Party_Id
 
 
-Third_Declaring_Party_Id
-
-
-Third declaring party, which holds the electronic signature. This is the company which submits the declaration.
-
-
 Third declaring party, which holds the electronic signature. This is the company which submits the declaration.
 
 | Property | Value |
@@ -536,9 +464,8 @@ Third declaring party, which holds the electronic signature. This is the company
 |Referenced Table|[Cm_Companies](Cm_Companies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Third_Declaring_Party_Id](Its_Declarations.md#third_declaring_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -561,15 +488,9 @@ Third declaring party, which holds the electronic signature. This is the company
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Authorized_Person_Id
-
-
-Authorized_Person_Id
-
-
-The authorized person who submits the intrastat declaration.
 
 
 The authorized person who submits the intrastat declaration.
@@ -583,9 +504,8 @@ The authorized person who submits the intrastat declaration.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Its_Declarations](Its_Declarations.md).[Authorized_Person_Id](Its_Declarations.md#authorized_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -608,6 +528,6 @@ The authorized person who submits the intrastat declaration.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 

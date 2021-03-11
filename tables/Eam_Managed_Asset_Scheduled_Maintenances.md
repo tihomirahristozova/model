@@ -1,5 +1,10 @@
 # Table Eam_Managed_Asset_Scheduled_Maintenances
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.ManagedAssetScheduledMaintenances](~/entities/Applications.AssetManagement.ManagedAssetScheduledMaintenances.md)
+
 Contains the scheduled maintenances for the managed assets. Each maintenance can be planned based on date, parameter value or both. Past maintenance plans are kept only for reference and can be deleted at any time. Entity: Eam_Managed_Asset_Scheduled_Maintenances (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -16,15 +21,12 @@ Contains the scheduled maintenances for the managed assets. Each maintenance can
 |[Date](#date)|`date` |The date, when the maintenance is planned. NULL means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.|
 |[Tracked_Parameter_Value](#tracked_parameter_value)|`int` |The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. NULL means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.|
 |[Is_Dismissed](#is_dismissed)|`bit` |Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Managed_Asset_Scheduled_Maintenance_Id
-
-
-Managed_Asset_Scheduled_Maintenance_Id
 
 | Property | Value |
 | - | - |
@@ -35,9 +37,8 @@ Managed_Asset_Scheduled_Maintenance_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Managed_Asset_Scheduled_Maintenances](Eam_Managed_Asset_Scheduled_Maintenances.md).[Managed_Asset_Scheduled_Maintenance_Id](Eam_Managed_Asset_Scheduled_Maintenances.md#managed_asset_scheduled_maintenance_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Managed_Asset_Scheduled_Maintenance_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Id
-
-
-Managed_Asset_Id
-
-
-The asset, which will be maintained.
 
 
 The asset, which will be maintained.
@@ -82,9 +77,8 @@ The asset, which will be maintained.
 |Referenced Table|[Eam_Managed_Assets](Eam_Managed_Assets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Scheduled_Maintenances](Eam_Managed_Asset_Scheduled_Maintenances.md).[Managed_Asset_Id](Eam_Managed_Asset_Scheduled_Maintenances.md#managed_asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The asset, which will be maintained.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Type_Id
-
-
-Maintenance_Type_Id
-
-
-The type of maintenance, which will be performed.
 
 
 The type of maintenance, which will be performed.
@@ -129,9 +117,8 @@ The type of maintenance, which will be performed.
 |Referenced Table|[Eam_Maintenance_Types](Eam_Maintenance_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Scheduled_Maintenances](Eam_Managed_Asset_Scheduled_Maintenances.md).[Maintenance_Type_Id](Eam_Managed_Asset_Scheduled_Maintenances.md#maintenance_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ The type of maintenance, which will be performed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Date
-
-
-Date
-
-
-The date, when the maintenance is planned. NULL means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.
 
 
 The date, when the maintenance is planned. NULL means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.
@@ -176,9 +157,8 @@ The date, when the maintenance is planned. NULL means, that the plan is not rela
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Scheduled_Maintenances](Eam_Managed_Asset_Scheduled_Maintenances.md).[Date](Eam_Managed_Asset_Scheduled_Maintenances.md#date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -201,16 +181,10 @@ The date, when the maintenance is planned. NULL means, that the plan is not rela
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Tracked_Parameter_Value
-
-
-Tracked_Parameter_Value
-
-
-The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. NULL means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.
 
 
 The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. NULL means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.
@@ -223,9 +197,8 @@ The value of the tracked parameter (as specified in the maintenance type) at whi
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Scheduled_Maintenances](Eam_Managed_Asset_Scheduled_Maintenances.md).[Tracked_Parameter_Value](Eam_Managed_Asset_Scheduled_Maintenances.md#tracked_parameter_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -248,16 +221,10 @@ The value of the tracked parameter (as specified in the maintenance type) at whi
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Is_Dismissed
-
-
-Is_Dismissed
-
-
-Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action.
 
 
 Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action.
@@ -270,9 +237,8 @@ Specifies whether the notification for the maintenance is dismissed and the plan
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Eam_Managed_Asset_Scheduled_Maintenances](Eam_Managed_Asset_Scheduled_Maintenances.md).[Is_Dismissed](Eam_Managed_Asset_Scheduled_Maintenances.md#is_dismissed)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -295,25 +261,21 @@ Specifies whether the notification for the maintenance is dismissed and the plan
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Scheduled_Maintenances](Eam_Managed_Asset_Scheduled_Maintenances.md).[Notes](Eam_Managed_Asset_Scheduled_Maintenances.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -334,9 +296,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -345,9 +304,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Managed_Asset_Scheduled_Maintenances](Eam_Managed_Asset_Scheduled_Maintenances.md).[Row_Version](Eam_Managed_Asset_Scheduled_Maintenances.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

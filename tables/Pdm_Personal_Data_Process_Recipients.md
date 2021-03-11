@@ -1,5 +1,10 @@
 # Table Pdm_Personal_Data_Process_Recipients
 
+
+## Entity
+
+Entity: [Applications.PersonalData.PersonalDataProcessRecipients](~/entities/Applications.PersonalData.PersonalDataProcessRecipients.md)
+
 Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_Data_Process_Recipients (Introduced in version 18.2)
 
 ## Owner Tables Hierarchy
@@ -13,15 +18,12 @@ Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_D
 |[Personal_Data_Process_Recipient_Id](#personal_data_process_recipient_id)|`uniqueidentifier` `PK`||
 |[Personal_Data_Process_Id](#personal_data_process_id)|`uniqueidentifier` |The process, whose data is disclosed to the recipient.|
 |[Recipient_Party_Id](#recipient_party_id)|`uniqueidentifier` |The recipient, to whom the data is disclosed.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Personal_Data_Process_Recipient_Id
-
-
-Personal_Data_Process_Recipient_Id
 
 | Property | Value |
 | - | - |
@@ -32,9 +34,8 @@ Personal_Data_Process_Recipient_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pdm_Personal_Data_Process_Recipients](Pdm_Personal_Data_Process_Recipients.md).[Personal_Data_Process_Recipient_Id](Pdm_Personal_Data_Process_Recipients.md#personal_data_process_recipient_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -57,15 +58,9 @@ Personal_Data_Process_Recipient_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Personal_Data_Process_Id
-
-
-Personal_Data_Process_Id
-
-
-The process, whose data is disclosed to the recipient.
 
 
 The process, whose data is disclosed to the recipient.
@@ -79,9 +74,8 @@ The process, whose data is disclosed to the recipient.
 |Referenced Table|[Pdm_Personal_Data_Processes](Pdm_Personal_Data_Processes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Personal_Data_Process_Recipients](Pdm_Personal_Data_Process_Recipients.md).[Personal_Data_Process_Id](Pdm_Personal_Data_Process_Recipients.md#personal_data_process_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -104,15 +98,9 @@ The process, whose data is disclosed to the recipient.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Recipient_Party_Id
-
-
-Recipient_Party_Id
-
-
-The recipient, to whom the data is disclosed.
 
 
 The recipient, to whom the data is disclosed.
@@ -126,9 +114,8 @@ The recipient, to whom the data is disclosed.
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Personal_Data_Process_Recipients](Pdm_Personal_Data_Process_Recipients.md).[Recipient_Party_Id](Pdm_Personal_Data_Process_Recipients.md#recipient_party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -151,25 +138,21 @@ The recipient, to whom the data is disclosed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Personal_Data_Process_Recipients](Pdm_Personal_Data_Process_Recipients.md).[Notes](Pdm_Personal_Data_Process_Recipients.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -190,9 +173,6 @@ Notes
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -201,9 +181,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pdm_Personal_Data_Process_Recipients](Pdm_Personal_Data_Process_Recipients.md).[Row_Version](Pdm_Personal_Data_Process_Recipients.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

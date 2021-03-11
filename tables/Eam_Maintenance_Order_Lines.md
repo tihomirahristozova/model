@@ -1,5 +1,10 @@
 # Table Eam_Maintenance_Order_Lines
 
+
+## Entity
+
+Entity: [Applications.AssetManagement.MaintenanceOrderLines](~/entities/Applications.AssetManagement.MaintenanceOrderLines.md)
+
 Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1)
 
 ## Owner Tables Hierarchy
@@ -19,17 +24,11 @@ Contains the types of maintenance and maintained assets in the maintenance order
 |[Maintenance_Type_Id](#maintenance_type_id)|`uniqueidentifier` |The type of maintenance performed.|
 |[Next_Service_Date](#next_service_date)|`date` |Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.|
 |[Next_Service_Tracked_Parameter_Value](#next_service_tracked_parameter_value)|`int` |Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used.|
-|[Notes](#notes)|`nvarchar(2147483647)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 
 ## Columns
 
 ### Line_No
-
-
-Line_No
-
-
-Consecutive line number, unique within the maintenance order.
 
 
 Consecutive line number, unique within the maintenance order.
@@ -42,10 +41,9 @@ Consecutive line number, unique within the maintenance order.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
 |Autoincrement|1|
-|Derived From|[Eam_Maintenance_Order_Lines](Eam_Maintenance_Order_Lines.md).[Line_No](Eam_Maintenance_Order_Lines.md#line_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,9 +64,6 @@ Consecutive line number, unique within the maintenance order.
 
 ### Maintenance_Order_Line_Id
 
-
-Maintenance_Order_Line_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -78,9 +73,8 @@ Maintenance_Order_Line_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Eam_Maintenance_Order_Lines](Eam_Maintenance_Order_Lines.md).[Maintenance_Order_Line_Id](Eam_Maintenance_Order_Lines.md#maintenance_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -103,12 +97,9 @@ Maintenance_Order_Line_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Order_Id
-
-
-Maintenance_Order_Id
 
 | Property | Value |
 | - | - |
@@ -119,9 +110,8 @@ Maintenance_Order_Id
 |Referenced Table|[Eam_Maintenance_Orders](Eam_Maintenance_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Order_Lines](Eam_Maintenance_Order_Lines.md).[Maintenance_Order_Id](Eam_Maintenance_Order_Lines.md#maintenance_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -144,15 +134,9 @@ Maintenance_Order_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Id
-
-
-Managed_Asset_Id
-
-
-The maintained asset.
 
 
 The maintained asset.
@@ -166,9 +150,8 @@ The maintained asset.
 |Referenced Table|[Eam_Managed_Assets](Eam_Managed_Assets.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Order_Lines](Eam_Maintenance_Order_Lines.md).[Managed_Asset_Id](Eam_Maintenance_Order_Lines.md#managed_asset_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -191,15 +174,9 @@ The maintained asset.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Maintenance_Type_Id
-
-
-Maintenance_Type_Id
-
-
-The type of maintenance performed.
 
 
 The type of maintenance performed.
@@ -213,9 +190,8 @@ The type of maintenance performed.
 |Referenced Table|[Eam_Maintenance_Types](Eam_Maintenance_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Order_Lines](Eam_Maintenance_Order_Lines.md).[Maintenance_Type_Id](Eam_Maintenance_Order_Lines.md#maintenance_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,15 +214,9 @@ The type of maintenance performed.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Next_Service_Date
-
-
-Next_Service_Date
-
-
-Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.
 
 
 Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.
@@ -260,9 +230,8 @@ Specifies, that the maintenance required a specific date for the next maintenanc
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Order_Lines](Eam_Maintenance_Order_Lines.md).[Next_Service_Date](Eam_Maintenance_Order_Lines.md#next_service_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -284,12 +253,6 @@ Specifies, that the maintenance required a specific date for the next maintenanc
 ### Next_Service_Tracked_Parameter_Value
 
 
-Next_Service_Tracked_Parameter_Value
-
-
-Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used.
-
-
 Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used.
 
 | Property | Value |
@@ -300,9 +263,8 @@ Specifies, that the maintenance required the next maintenance to be performed on
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Order_Lines](Eam_Maintenance_Order_Lines.md).[Next_Service_Tracked_Parameter_Value](Eam_Maintenance_Order_Lines.md#next_service_tracked_parameter_value)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -323,21 +285,17 @@ Specifies, that the maintenance required the next maintenance to be performed on
 
 ### Notes
 
-
-Notes
-
 | Property | Value |
 | - | - |
-|Type|nvarchar(2147483647)|
+|Type|nvarchar(max)|
 |Is Mulitlanguage|no|
 |`NULL`|yes|
 |Primary Key|no|
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Eam_Maintenance_Order_Lines](Eam_Maintenance_Order_Lines.md).[Notes](Eam_Maintenance_Order_Lines.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

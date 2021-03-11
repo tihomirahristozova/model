@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-cash_payment_slips">Table Cash_Payment_Slips</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Payments.PaymentSlips.html">Finance.Payments.PaymentSlips</a></p>
 <p>Represents mass payment document (payment slip). Entity: Cash_Payment_Slips</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -143,8 +145,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="payment_account_id">Payment_Account_Id</h3>
-<p>Payment_Account_Id</p>
-<p>The account towards which the payments was effected</p>
 <p>The account towards which the payments was effected</p>
 <table>
 <thead>
@@ -184,15 +184,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#payment_account_id">Payment_Account_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -277,15 +273,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_currency_id">Document_Currency_Id</h3>
-<p>Document_Currency_Id</p>
-<p>The currency of the amounts in this document</p>
 <p>The currency of the amounts in this document</p>
 <table>
 <thead>
@@ -325,15 +319,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#document_currency_id">Document_Currency_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -418,15 +408,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="payment_slip_no">Payment_Slip_No</h3>
-<p>Payment_Slip_No</p>
-<p>When not null, contains the number of the slip, as issued by the banking institution.</p>
 <p>When not null, contains the number of the slip, as issued by the banking institution.</p>
 <table>
 <thead>
@@ -466,15 +454,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#payment_slip_no">Payment_Slip_No</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -547,7 +531,6 @@
 </tbody>
 </table>
 <h3 id="payment_slip_id">Payment_Slip_Id</h3>
-<p>Payment_Slip_Id</p>
 <table>
 <thead>
 <tr>
@@ -586,15 +569,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#payment_slip_id">Payment_Slip_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -679,14 +658,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -725,15 +703,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -818,15 +792,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -862,15 +834,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -955,15 +923,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -999,15 +965,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1092,14 +1054,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1134,15 +1095,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1215,8 +1172,6 @@
 </tbody>
 </table>
 <h3 id="payment_type_id">Payment_Type_Id</h3>
-<p>Payment_Type_Id</p>
-<p>When not NULL specifies the payment type for the sales order</p>
 <p>When not NULL specifies the payment type for the sales order</p>
 <table>
 <thead>
@@ -1256,15 +1211,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Cash_Payment_Slips.html">Cash_Payment_Slips</a>.<a href="Cash_Payment_Slips.html#payment_type_id">Payment_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1349,7 +1300,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

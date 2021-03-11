@@ -1,5 +1,10 @@
 # Table Cash_Payment_Slip_Payment_Transactions_Templates
 
+
+## Entity
+
+Entity: [Finance.Payments.PaymentSlipPaymentTransactionsTemplates](~/entities/Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md)
+
 Contains options for generation of payment transactions. Each option set is assigned to specific generation route. Entity: Cash_Payment_Slip_Payment_Transactions_Templates (Introduced in version 19.1)
 
 ## Summary
@@ -16,9 +21,6 @@ Contains options for generation of payment transactions. Each option set is assi
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Payment_Transactions_Templates](Cash_Payment_Slip_Payment_Transactions_Templates.md).[Id](Cash_Payment_Slip_Payment_Transactions_Templates.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Route_Id
-
-
-Route_Id
-
-
-The route to which the current option set is assigned.
 
 
 The route to which the current option set is assigned.
@@ -75,9 +70,8 @@ The route to which the current option set is assigned.
 |Referenced Table|[Wf_Routes](Wf_Routes.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Payment_Transactions_Templates](Cash_Payment_Slip_Payment_Transactions_Templates.md).[Route_Id](Cash_Payment_Slip_Payment_Transactions_Templates.md#route_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,17 +94,11 @@ The route to which the current option set is assigned.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### CreateIncomePayments
 
 
-CreateIncomePayments
-
-
-True if the generation creates payment transactions for Payment Slip Amounts with direction Income.
-
-
 True if the generation creates payment transactions for Payment Slip Amounts with direction Income.
 
 | Property | Value |
@@ -121,9 +109,8 @@ True if the generation creates payment transactions for Payment Slip Amounts wit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Payment_Transactions_Templates](Cash_Payment_Slip_Payment_Transactions_Templates.md).[CreateIncomePayments](Cash_Payment_Slip_Payment_Transactions_Templates.md#createincomepayments)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -146,17 +133,11 @@ True if the generation creates payment transactions for Payment Slip Amounts wit
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### CreateExpensePayments
 
 
-CreateExpensePayments
-
-
-True if the generation creates payment transactions for Payment Slip Amounts with direction Expense.
-
-
 True if the generation creates payment transactions for Payment Slip Amounts with direction Expense.
 
 | Property | Value |
@@ -167,9 +148,8 @@ True if the generation creates payment transactions for Payment Slip Amounts wit
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Payment_Transactions_Templates](Cash_Payment_Slip_Payment_Transactions_Templates.md).[CreateExpensePayments](Cash_Payment_Slip_Payment_Transactions_Templates.md#createexpensepayments)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -192,12 +172,9 @@ True if the generation creates payment transactions for Payment Slip Amounts wit
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -207,9 +184,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Payment_Slip_Payment_Transactions_Templates](Cash_Payment_Slip_Payment_Transactions_Templates.md).[Row_Version](Cash_Payment_Slip_Payment_Transactions_Templates.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

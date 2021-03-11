@@ -1,5 +1,10 @@
 # Table Sec_Access_Keys
 
+
+## Entity
+
+Entity: [Systems.Security.AccessKeys](~/entities/Systems.Security.AccessKeys.md)
+
 Access keys provide the basic locking mechanism for data security. Each record can be secured by specifying an access key. Then the users are given access to access keys through groups. Entity: Sec_Access_Keys
 
 ## Summary
@@ -16,9 +21,6 @@ Access keys provide the basic locking mechanism for data security. Each record c
 
 ### Access_Key_Id
 
-
-Access_Key_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Access_Key_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Sec_Access_Keys](Sec_Access_Keys.md).[Access_Key_Id](Sec_Access_Keys.md#access_key_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Access_Key_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Entity_Name
-
-
-Entity_Name
-
-
-What entitity the key secures. Can be null for private, legacy keys
 
 
 What entitity the key secures. Can be null for private, legacy keys
@@ -75,9 +70,8 @@ What entitity the key secures. Can be null for private, legacy keys
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Access_Keys](Sec_Access_Keys.md).[Entity_Name](Sec_Access_Keys.md#entity_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,16 +94,10 @@ What entitity the key secures. Can be null for private, legacy keys
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Access_Key_Code
-
-
-Access_Key_Code
-
-
-Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries
 
 
 Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries
@@ -123,9 +111,8 @@ Unique code for the access key. The codes can be null for legacy keys or entitie
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Access_Keys](Sec_Access_Keys.md).[Access_Key_Code](Sec_Access_Keys.md#access_key_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -148,16 +135,10 @@ Unique code for the access key. The codes can be null for legacy keys or entitie
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Access_Key_Name
-
-
-Access_Key_Name
-
-
-Multilanguage descriptive name of the security key. Can be null for legacy keys
 
 
 Multilanguage descriptive name of the security key. Can be null for legacy keys
@@ -171,9 +152,8 @@ Multilanguage descriptive name of the security key. Can be null for legacy keys
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Access_Keys](Sec_Access_Keys.md).[Access_Key_Name](Sec_Access_Keys.md#access_key_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,13 +176,10 @@ Multilanguage descriptive name of the security key. Can be null for legacy keys
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -212,9 +189,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sec_Access_Keys](Sec_Access_Keys.md).[Row_Version](Sec_Access_Keys.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

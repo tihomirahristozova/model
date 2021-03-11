@@ -1,5 +1,10 @@
 # Table Cash_Transfers
 
+
+## Entity
+
+Entity: [Finance.Payments.Transfers](~/entities/Finance.Payments.Transfers.md)
+
 Represents one fund transfer from one payment account to another. Entity: Cash_Transfers
 
 ## Owner Tables Hierarchy
@@ -24,9 +29,6 @@ Represents one fund transfer from one payment account to another. Entity: Cash_T
 
 ### Transfer_Id
 
-
-Transfer_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -36,9 +38,8 @@ Transfer_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Transfer_Id](Cash_Transfers.md#transfer_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -61,12 +62,9 @@ Transfer_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -77,9 +75,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Document_Id](Cash_Transfers.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -102,17 +99,11 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Source_Payment_Account_Id
 
 
-Source_Payment_Account_Id
-
-
-The account from which to deduct the amount
-
-
 The account from which to deduct the amount
 
 | Property | Value |
@@ -124,9 +115,8 @@ The account from which to deduct the amount
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Source_Payment_Account_Id](Cash_Transfers.md#source_payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -149,17 +139,11 @@ The account from which to deduct the amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Destination_Payment_Account_Id
 
 
-Destination_Payment_Account_Id
-
-
-The account to which to transfer the amount
-
-
 The account to which to transfer the amount
 
 | Property | Value |
@@ -171,9 +155,8 @@ The account to which to transfer the amount
 |Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Destination_Payment_Account_Id](Cash_Transfers.md#destination_payment_account_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -196,15 +179,9 @@ The account to which to transfer the amount
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Source_Amount
-
-
-Source_Amount
-
-
-The amount to transfer in the source currency
 
 
 The amount to transfer in the source currency
@@ -217,9 +194,8 @@ The amount to transfer in the source currency
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Source_Amount](Cash_Transfers.md#source_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -241,12 +217,6 @@ The amount to transfer in the source currency
 ### Destination_Amount
 
 
-Destination_Amount
-
-
-The amount in the currency of the destination account
-
-
 The amount in the currency of the destination account
 
 | Property | Value |
@@ -257,9 +227,8 @@ The amount in the currency of the destination account
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Destination_Amount](Cash_Transfers.md#destination_amount)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -281,12 +250,6 @@ The amount in the currency of the destination account
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -297,9 +260,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Is_Single_Execution](Cash_Transfers.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -322,17 +284,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -343,9 +299,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Is_Released](Cash_Transfers.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -368,12 +323,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -383,9 +335,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cash_Transfers](Cash_Transfers.md).[Row_Version](Cash_Transfers.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

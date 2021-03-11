@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_object_files">Table Sys_Object_Files</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Core.ObjectFiles.html">Systems.Core.ObjectFiles</a></p>
 <p>Contains files attached to objects. Entity: Sys_Object_Files</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>User notes for the file attachment</td>
 </tr>
 <tr>
@@ -183,8 +185,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="object_file_id">Object_File_Id</h3>
-<p>Object_File_Id</p>
-<p>.</p>
 <p>.</p>
 <table>
 <thead>
@@ -224,15 +224,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#object_file_id">Object_File_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -317,15 +313,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="object_id">Object_Id</h3>
-<p>Object_Id</p>
-<p>The object to which the file is attached</p>
 <p>The object to which the file is attached</p>
 <table>
 <thead>
@@ -365,15 +359,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#object_id">Object_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -458,15 +448,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="purpose_code">Purpose_Code</h3>
-<p>Purpose_Code</p>
-<p>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.</p>
 <p>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.</p>
 <table>
 <thead>
@@ -506,15 +494,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#purpose_code">Purpose_Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -599,15 +583,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="embedded_file_contents">Embedded_File_Contents</h3>
-<p>Embedded_File_Contents</p>
-<p>Contains the contents of the file, when it is embedded in the database. NULL for linked files</p>
 <p>Contains the contents of the file, when it is embedded in the database. NULL for linked files</p>
 <table>
 <thead>
@@ -643,15 +625,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#embedded_file_contents">Embedded_File_Contents</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -724,8 +702,6 @@
 </tbody>
 </table>
 <h3 id="linked_file_path">Linked_File_Path</h3>
-<p>Linked_File_Path</p>
-<p>When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files</p>
 <p>When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files</p>
 <table>
 <thead>
@@ -765,15 +741,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#linked_file_path">Linked_File_Path</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -858,7 +830,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -871,8 +843,6 @@
 </tbody>
 </table>
 <h3 id="file_name">File_Name</h3>
-<p>File_Name</p>
-<p>The file name of the linked or embedded file</p>
 <p>The file name of the linked or embedded file</p>
 <table>
 <thead>
@@ -912,15 +882,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#file_name">File_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1005,7 +971,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1018,8 +984,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
-<p>User notes for the file attachment</p>
 <p>User notes for the file attachment</p>
 <table>
 <thead>
@@ -1031,7 +995,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1059,15 +1023,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1140,7 +1100,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1175,15 +1134,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1256,8 +1211,6 @@
 </tbody>
 </table>
 <h3 id="content_location">Content_Location</h3>
-<p>Content_Location</p>
-<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.</p>
 <p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.</p>
 <table>
 <thead>
@@ -1297,7 +1250,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1306,10 +1259,6 @@
 <tr>
 <td>Default Value</td>
 <td>EMB</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#content_location">Content_Location</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1394,15 +1343,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="media_type">Media_Type</h3>
-<p>Media_Type</p>
-<p>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.</p>
 <p>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.</p>
 <table>
 <thead>
@@ -1442,15 +1389,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#media_type">Media_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1523,8 +1466,6 @@
 </tbody>
 </table>
 <h3 id="media_width">Media_Width</h3>
-<p>Media_Width</p>
-<p>Used (non-null) only for media files. Specifies the width for displaying the media.</p>
 <p>Used (non-null) only for media files. Specifies the width for displaying the media.</p>
 <table>
 <thead>
@@ -1560,15 +1501,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#media_width">Media_Width</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1641,8 +1578,6 @@
 </tbody>
 </table>
 <h3 id="media_height">Media_Height</h3>
-<p>Media_Height</p>
-<p>Used (non-null) only for media files. Specifies the width for displaying the media.</p>
 <p>Used (non-null) only for media files. Specifies the width for displaying the media.</p>
 <table>
 <thead>
@@ -1678,15 +1613,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#media_height">Media_Height</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1759,8 +1690,6 @@
 </tbody>
 </table>
 <h3 id="creation_time_utc">Creation_Time_Utc</h3>
-<p>Creation_Time_Utc</p>
-<p>Time (in UTC), when the file was created.</p>
 <p>Time (in UTC), when the file was created.</p>
 <table>
 <thead>
@@ -1800,15 +1729,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTimeUtc</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#creation_time_utc">Creation_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1881,8 +1806,6 @@
 </tbody>
 </table>
 <h3 id="last_update_time_utc">Last_Update_Time_Utc</h3>
-<p>Last_Update_Time_Utc</p>
-<p>Time (in UTC), when the file was last updated.</p>
 <p>Time (in UTC), when the file was last updated.</p>
 <table>
 <thead>
@@ -1922,15 +1845,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTimeUtc</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#last_update_time_utc">Last_Update_Time_Utc</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2003,8 +1922,6 @@
 </tbody>
 </table>
 <h3 id="creation_user_id">Creation_User_Id</h3>
-<p>Creation_User_Id</p>
-<p>The user, who created the file record. NULL if it is unknown.</p>
 <p>The user, who created the file record. NULL if it is unknown.</p>
 <table>
 <thead>
@@ -2044,15 +1961,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#creation_user_id">Creation_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2137,15 +2050,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="last_update_user_id">Last_Update_User_Id</h3>
-<p>Last_Update_User_Id</p>
-<p>The user, who performed the last update to the file record. NULL if it is unknown.</p>
 <p>The user, who performed the last update to the file record. NULL if it is unknown.</p>
 <table>
 <thead>
@@ -2185,15 +2096,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#last_update_user_id">Last_Update_User_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2278,15 +2185,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="section">Section</h3>
-<p>Section</p>
-<p>A section name used to group files</p>
 <p>A section name used to group files</p>
 <table>
 <thead>
@@ -2326,15 +2231,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Files.html">Sys_Object_Files</a>.<a href="Sys_Object_Files.html#section">Section</a></td>
 </tr>
 <tr>
 <td>Format</td>

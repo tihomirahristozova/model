@@ -1,5 +1,10 @@
 # Table VAT_Entries
 
+
+## Entity
+
+Entity: [Finance.Vat.Entries](~/entities/Finance.Vat.Entries.md)
+
 Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 
 ## Owner Tables Hierarchy
@@ -32,12 +37,6 @@ Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 ### Entry_Id
 
 
-Entry_Id
-
-
-Unique identification number of this VAT entry.
-
-
 Unique identification number of this VAT entry.
 
 | Property | Value |
@@ -49,9 +48,8 @@ Unique identification number of this VAT entry.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Entry_Id](VAT_Entries.md#entry_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -74,12 +72,9 @@ Unique identification number of this VAT entry.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -90,9 +85,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Document_Id](VAT_Entries.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -115,15 +109,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Entry_Type
-
-
-Entry_Type
-
-
-Type of the VAT entry. S=Sales, P=Purchases.
 
 
 Type of the VAT entry. S=Sales, P=Purchases.
@@ -137,10 +125,9 @@ Type of the VAT entry. S=Sales, P=Purchases.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`P`, `S`|
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Entry_Type](VAT_Entries.md#entry_type)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -163,15 +150,9 @@ Type of the VAT entry. S=Sales, P=Purchases.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Deal_Type_Id
-
-
-Deal_Type_Id
-
-
-Deal type that caused this entry.
 
 
 Deal type that caused this entry.
@@ -185,9 +166,8 @@ Deal type that caused this entry.
 |Referenced Table|[VAT_Deal_Types](VAT_Deal_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Deal_Type_Id](VAT_Entries.md#deal_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -210,15 +190,9 @@ Deal type that caused this entry.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The corresponding party that is involved in the operation that caused this entry.
 
 
 The corresponding party that is involved in the operation that caused this entry.
@@ -232,9 +206,8 @@ The corresponding party that is involved in the operation that caused this entry
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Party_Id](VAT_Entries.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -257,15 +230,9 @@ The corresponding party that is involved in the operation that caused this entry
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Registration_VAT_Number
-
-
-Registration_VAT_Number
-
-
-VAT number by registration (or national number) for the party specified by Party_Id.
 
 
 VAT number by registration (or national number) for the party specified by Party_Id.
@@ -279,9 +246,8 @@ VAT number by registration (or national number) for the party specified by Party
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Registration_VAT_Number](VAT_Entries.md#registration_vat_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -304,15 +270,9 @@ VAT number by registration (or national number) for the party specified by Party
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Registration_Number
-
-
-Registration_Number
-
-
-Identification code (IC) for the party specified by Party_Id.
 
 
 Identification code (IC) for the party specified by Party_Id.
@@ -326,9 +286,8 @@ Identification code (IC) for the party specified by Party_Id.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Registration_Number](VAT_Entries.md#registration_number)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -350,12 +309,6 @@ Identification code (IC) for the party specified by Party_Id.
 ### Referenced_Document_Type_Id
 
 
-Referenced_Document_Type_Id
-
-
-Type of the document that represents the operation that caused this entry.
-
-
 Type of the document that represents the operation that caused this entry.
 
 | Property | Value |
@@ -367,9 +320,8 @@ Type of the document that represents the operation that caused this entry.
 |Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Referenced_Document_Type_Id](VAT_Entries.md#referenced_document_type_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -392,15 +344,9 @@ Type of the document that represents the operation that caused this entry.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Referenced_Document_No
-
-
-Referenced_Document_No
-
-
-Number of the document that represents the operation that caused this entry.
 
 
 Number of the document that represents the operation that caused this entry.
@@ -414,9 +360,8 @@ Number of the document that represents the operation that caused this entry.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Referenced_Document_No](VAT_Entries.md#referenced_document_no)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -439,15 +384,9 @@ Number of the document that represents the operation that caused this entry.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Amount_Base
-
-
-Amount_Base
-
-
-Amount of the operation without the tax in base currency.
 
 
 Amount of the operation without the tax in base currency.
@@ -460,9 +399,8 @@ Amount of the operation without the tax in base currency.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Amount_Base](VAT_Entries.md#amount_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -484,12 +422,6 @@ Amount of the operation without the tax in base currency.
 ### VAT_Amount_Base
 
 
-VAT_Amount_Base
-
-
-The amount of the tax for the operation in base currency.
-
-
 The amount of the tax for the operation in base currency.
 
 | Property | Value |
@@ -500,9 +432,8 @@ The amount of the tax for the operation in base currency.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[VAT_Amount_Base](VAT_Entries.md#vat_amount_base)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -524,12 +455,6 @@ The amount of the tax for the operation in base currency.
 ### Apply_Date
 
 
-Apply_Date
-
-
-Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period
-
-
 Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period
 
 | Property | Value |
@@ -541,9 +466,8 @@ Specifies the date on which the entry should be applied in the reporting. Usuall
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Apply_Date](VAT_Entries.md#apply_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -571,12 +495,6 @@ Specifies the date on which the entry should be applied in the reporting. Usuall
 ### Cash_Reporting_Mode
 
 
-Cash_Reporting_Mode
-
-
-When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.
-
-
 When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.
 
 | Property | Value |
@@ -587,9 +505,8 @@ When true, specifies, that the special cash reporting mode should be used for VA
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Cash_Reporting_Mode](VAT_Entries.md#cash_reporting_mode)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -611,12 +528,6 @@ When true, specifies, that the special cash reporting mode should be used for VA
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -627,9 +538,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Is_Single_Execution](VAT_Entries.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -652,17 +562,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -673,9 +577,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Is_Released](VAT_Entries.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -698,12 +601,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -713,9 +613,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[VAT_Entries](VAT_Entries.md).[Row_Version](VAT_Entries.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

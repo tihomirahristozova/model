@@ -1,5 +1,10 @@
 # Table Cost_Templates
 
+
+## Entity
+
+Entity: [Finance.Cost.Templates](~/entities/Finance.Cost.Templates.md)
+
 Cost templates specify how to calculate and allocate costs. Entity: Cost_Templates
 
 ## Summary
@@ -16,9 +21,6 @@ Cost templates specify how to calculate and allocate costs. Entity: Cost_Templat
 
 ### Cost_Template_Id
 
-
-Cost_Template_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Cost_Template_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cost_Templates](Cost_Templates.md).[Cost_Template_Id](Cost_Templates.md#cost_template_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Cost_Template_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Template_Code
-
-
-Cost_Template_Code
-
-
-Unique code of the cost template.
 
 
 Unique code of the cost template.
@@ -75,9 +70,8 @@ Unique code of the cost template.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Templates](Cost_Templates.md).[Cost_Template_Code](Cost_Templates.md#cost_template_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,15 +94,9 @@ Unique code of the cost template.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Cost_Template_Name
-
-
-Cost_Template_Name
-
-
-Name of the cost template.
 
 
 Name of the cost template.
@@ -122,9 +110,8 @@ Name of the cost template.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Templates](Cost_Templates.md).[Cost_Template_Name](Cost_Templates.md#cost_template_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,12 +139,6 @@ Name of the cost template.
 ### Currency_Id
 
 
-Currency_Id
-
-
-The currency of the calculations, based on the template
-
-
 The currency of the calculations, based on the template
 
 | Property | Value |
@@ -169,9 +150,8 @@ The currency of the calculations, based on the template
 |Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Templates](Cost_Templates.md).[Currency_Id](Cost_Templates.md#currency_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -194,12 +174,9 @@ The currency of the calculations, based on the template
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -209,9 +186,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cost_Templates](Cost_Templates.md).[Row_Version](Cost_Templates.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

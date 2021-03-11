@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-pos_product_type_tax_groups">Table Pos_Product_Type_Tax_Groups</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Pos.ProductTypeTaxGroups.html">Crm.Pos.ProductTypeTaxGroups</a></p>
 <p>Contains the tax group codes for the product types. The tax group codes are used when sales documents are printed to fiscal printers or exported to fiscal authorities. Entity: Pos_Product_Type_Tax_Groups (Introduced in version 19.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -116,7 +118,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -128,7 +130,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="product_type_tax_group_id">Product_Type_Tax_Group_Id</h3>
-<p>Product_Type_Tax_Group_Id</p>
 <table>
 <thead>
 <tr>
@@ -167,15 +168,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Product_Type_Tax_Groups.html">Pos_Product_Type_Tax_Groups</a>.<a href="Pos_Product_Type_Tax_Groups.html#product_type_tax_group_id">Product_Type_Tax_Group_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -260,15 +257,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_type_id">Product_Type_Id</h3>
-<p>Product_Type_Id</p>
-<p>The product type for which the tax group is specified.</p>
 <p>The product type for which the tax group is specified.</p>
 <table>
 <thead>
@@ -308,15 +303,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Product_Type_Tax_Groups.html">Pos_Product_Type_Tax_Groups</a>.<a href="Pos_Product_Type_Tax_Groups.html#product_type_id">Product_Type_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -401,15 +392,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="applicable_legislation">Applicable_Legislation</h3>
-<p>Applicable_Legislation</p>
-<p>The legislation, for which the tax group is applicable.</p>
 <p>The legislation, for which the tax group is applicable.</p>
 <table>
 <thead>
@@ -449,7 +438,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -458,10 +447,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Product_Type_Tax_Groups.html">Pos_Product_Type_Tax_Groups</a>.<a href="Pos_Product_Type_Tax_Groups.html#applicable_legislation">Applicable_Legislation</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -546,15 +531,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="tax_group">Tax_Group</h3>
-<p>Tax_Group</p>
-<p>The tax group of the product type within the specified applicable legislation.</p>
 <p>The tax group of the product type within the specified applicable legislation.</p>
 <table>
 <thead>
@@ -590,7 +573,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -599,10 +582,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Product_Type_Tax_Groups.html">Pos_Product_Type_Tax_Groups</a>.<a href="Pos_Product_Type_Tax_Groups.html#tax_group">Tax_Group</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -687,14 +666,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -705,7 +683,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -733,15 +711,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None, IsLongString</td>
+<td>IsLongString</td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Product_Type_Tax_Groups.html">Pos_Product_Type_Tax_Groups</a>.<a href="Pos_Product_Type_Tax_Groups.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -826,7 +800,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -839,7 +813,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -874,15 +847,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pos_Product_Type_Tax_Groups.html">Pos_Product_Type_Tax_Groups</a>.<a href="Pos_Product_Type_Tax_Groups.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

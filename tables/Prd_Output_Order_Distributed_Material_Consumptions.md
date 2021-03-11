@@ -1,5 +1,10 @@
 # Table Prd_Output_Order_Distributed_Material_Consumptions
 
+
+## Entity
+
+Entity: [Production.ShopFloor.OutputOrderDistributedMaterialConsumptions](~/entities/Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md)
+
 Contains the quantity of materials distributed over the output order lines. Entity: Prd_Output_Order_Distributed_Material_Consumptions
 
 ## Owner Tables Hierarchy
@@ -23,9 +28,6 @@ Contains the quantity of materials distributed over the output order lines. Enti
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -35,9 +37,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Output_Order_Distributed_Material_Consumptions](Prd_Output_Order_Distributed_Material_Consumptions.md).[Id](Prd_Output_Order_Distributed_Material_Consumptions.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -60,15 +61,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Output_Order_Line_Id
-
-
-Output_Order_Line_Id
-
-
-The output order line for which the distribution is recorded.
 
 
 The output order line for which the distribution is recorded.
@@ -82,9 +77,8 @@ The output order line for which the distribution is recorded.
 |Referenced Table|[Prd_Output_Order_Lines](Prd_Output_Order_Lines.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Distributed_Material_Consumptions](Prd_Output_Order_Distributed_Material_Consumptions.md).[Output_Order_Line_Id](Prd_Output_Order_Distributed_Material_Consumptions.md#output_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -107,15 +101,9 @@ The output order line for which the distribution is recorded.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Consumption_Order_Line_Id
-
-
-Consumption_Order_Line_Id
-
-
-Consumption order line which requested the Consumed_Quantity
 
 
 Consumption order line which requested the Consumed_Quantity
@@ -129,9 +117,8 @@ Consumption order line which requested the Consumed_Quantity
 |Referenced Table|[Prd_Consumption_Order_Lines](Prd_Consumption_Order_Lines.md)|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Distributed_Material_Consumptions](Prd_Output_Order_Distributed_Material_Consumptions.md).[Consumption_Order_Line_Id](Prd_Output_Order_Distributed_Material_Consumptions.md#consumption_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -154,15 +141,9 @@ Consumption order line which requested the Consumed_Quantity
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Consumed_Quantity
-
-
-Consumed_Quantity
-
-
-Part of the quantity in the consumption order line which was used for the product in the output order line
 
 
 Part of the quantity in the consumption order line which was used for the product in the output order line
@@ -175,9 +156,8 @@ Part of the quantity in the consumption order line which was used for the produc
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Output_Order_Distributed_Material_Consumptions](Prd_Output_Order_Distributed_Material_Consumptions.md).[Consumed_Quantity](Prd_Output_Order_Distributed_Material_Consumptions.md#consumed_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -199,12 +179,6 @@ Part of the quantity in the consumption order line which was used for the produc
 ### Consumed_Cost
 
 
-Consumed_Cost
-
-
-Cost of the actually issued Consumed_Quantity
-
-
 Cost of the actually issued Consumed_Quantity
 
 | Property | Value |
@@ -215,9 +189,8 @@ Cost of the actually issued Consumed_Quantity
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Prd_Output_Order_Distributed_Material_Consumptions](Prd_Output_Order_Distributed_Material_Consumptions.md).[Consumed_Cost](Prd_Output_Order_Distributed_Material_Consumptions.md#consumed_cost)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -238,9 +211,6 @@ Cost of the actually issued Consumed_Quantity
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -249,9 +219,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Output_Order_Distributed_Material_Consumptions](Prd_Output_Order_Distributed_Material_Consumptions.md).[Row_Version](Prd_Output_Order_Distributed_Material_Consumptions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

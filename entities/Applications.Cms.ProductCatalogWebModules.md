@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **[ModuleType](Applications.Cms.ProductCatalogWebModules.md#moduletype)**  
-Allowed values for the `ModuleType`(Applications.Cms.WebModules.md#moduletype) data attribute  
+Allowed values for the ModuleType data attribute  
 _Allowed Values (Applications.Cms.WebModulesRepository.ModuleType Enum Members)_  
 
 | Value | Description |

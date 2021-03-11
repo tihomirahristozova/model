@@ -1,5 +1,10 @@
 # Table Pos_Operators
 
+
+## Entity
+
+Entity: [Crm.Pos.Operators](~/entities/Crm.Pos.Operators.md)
+
 Represents one operator (person) in one POS location. Entity: Pos_Operators (Introduced in version 19.1)
 
 ## Summary
@@ -21,9 +26,6 @@ Represents one operator (person) in one POS location. Entity: Pos_Operators (Int
 
 ### Pos_Operator_Id
 
-
-Pos_Operator_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -33,9 +35,8 @@ Pos_Operator_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Pos_Operator_Id](Pos_Operators.md#pos_operator_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -58,15 +59,9 @@ Pos_Operator_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Location_Id
-
-
-Pos_Location_Id
-
-
-The POS location where this operator works.
 
 
 The POS location where this operator works.
@@ -80,9 +75,8 @@ The POS location where this operator works.
 |Referenced Table|[Pos_Locations](Pos_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Pos_Location_Id](Pos_Operators.md#pos_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -105,15 +99,9 @@ The POS location where this operator works.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Operator_Code
-
-
-Pos_Operator_Code
-
-
-Operator code. Unique within the Pos Location.
 
 
 Operator code. Unique within the Pos Location.
@@ -127,9 +115,8 @@ Operator code. Unique within the Pos Location.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Pos_Operator_Code](Pos_Operators.md#pos_operator_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -152,16 +139,10 @@ Operator code. Unique within the Pos Location.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### User_Id
-
-
-User_Id
-
-
-The login user for this POS operator.
 
 
 The login user for this POS operator.
@@ -175,9 +156,8 @@ The login user for this POS operator.
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Operators](Pos_Operators.md).[User_Id](Pos_Operators.md#user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -200,15 +180,9 @@ The login user for this POS operator.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Pos_Role_Id
-
-
-Pos_Role_Id
-
-
-The role, assigned to the operator. The role indicates the permissions of the operator for this POS location.
 
 
 The role, assigned to the operator. The role indicates the permissions of the operator for this POS location.
@@ -222,9 +196,8 @@ The role, assigned to the operator. The role indicates the permissions of the op
 |Referenced Table|[Pos_Roles](Pos_Roles.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Pos_Role_Id](Pos_Operators.md#pos_role_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -247,15 +220,9 @@ The role, assigned to the operator. The role indicates the permissions of the op
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Default_Pos_Terminal_Id
-
-
-Default_Pos_Terminal_Id
-
-
-The default POS terminal for this opertor. NULL when there is no default.
 
 
 The default POS terminal for this opertor. NULL when there is no default.
@@ -269,9 +236,8 @@ The default POS terminal for this opertor. NULL when there is no default.
 |Referenced Table|[Pos_Terminals](Pos_Terminals.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Default_Pos_Terminal_Id](Pos_Operators.md#default_pos_terminal_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -294,15 +260,9 @@ The default POS terminal for this opertor. NULL when there is no default.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Starting_Date
-
-
-Starting_Date
-
-
-The first date, when the operator has started working for this POS location.
 
 
 The first date, when the operator has started working for this POS location.
@@ -316,9 +276,8 @@ The first date, when the operator has started working for this POS location.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Starting_Date](Pos_Operators.md#starting_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -341,16 +300,10 @@ The first date, when the operator has started working for this POS location.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Termination_Date
-
-
-Termination_Date
-
-
-The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.
 
 
 The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.
@@ -364,9 +317,8 @@ The date, when the operator has ceased working in this POS location. NULL means,
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Termination_Date](Pos_Operators.md#termination_date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -389,16 +341,10 @@ The date, when the operator has ceased working in this POS location. NULL means,
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Is_Active
-
-
-Is_Active
-
-
-Indicates whether this operator is active and can be chosen for new records.
 
 
 Indicates whether this operator is active and can be chosen for new records.
@@ -411,9 +357,8 @@ Indicates whether this operator is active and can be chosen for new records.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|True|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Is_Active](Pos_Operators.md#is_active)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -436,12 +381,9 @@ Indicates whether this operator is active and can be chosen for new records.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -451,9 +393,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Pos_Operators](Pos_Operators.md).[Row_Version](Pos_Operators.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

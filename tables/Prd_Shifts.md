@@ -13,9 +13,6 @@
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -25,9 +22,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Shifts](Prd_Shifts.md).[Id](Prd_Shifts.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -50,12 +46,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Shift_Name
-
-
-Shift_Name
 
 | Property | Value |
 | - | - |
@@ -66,9 +59,8 @@ Shift_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Shifts](Prd_Shifts.md).[Shift_Name](Prd_Shifts.md#shift_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -95,9 +87,6 @@ Shift_Name
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -106,9 +95,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Shifts](Prd_Shifts.md).[Row_Version](Prd_Shifts.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

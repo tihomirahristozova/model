@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-pdm_personal_data_processes">Table Pdm_Personal_Data_Processes</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a></p>
 <p>Represents processes, which process personal data, regulated by GDPR and other applicable laws. Entity: Pdm_Personal_Data_Processes (Introduced in version 18.2)</p>
 <h2 id="summary">Summary</h2>
 <table>
@@ -107,7 +109,7 @@
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Description of the process.</td>
 </tr>
 <tr>
@@ -182,7 +184,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -204,8 +206,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="personal_data_process_id">Personal_Data_Process_Id</h3>
-<p>Personal_Data_Process_Id</p>
-<p>Personal Data Management Process</p>
 <p>Personal Data Management Process</p>
 <table>
 <thead>
@@ -245,15 +245,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#personal_data_process_id">Personal_Data_Process_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -338,15 +334,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="code">Code</h3>
-<p>Code</p>
-<p>Unique process code.</p>
 <p>Unique process code.</p>
 <table>
 <thead>
@@ -386,15 +380,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#code">Code</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -479,7 +469,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -492,8 +482,6 @@
 </tbody>
 </table>
 <h3 id="name">Name</h3>
-<p>Name</p>
-<p>Name of the process (Multilanguage).</p>
 <p>Name of the process (Multilanguage).</p>
 <table>
 <thead>
@@ -533,15 +521,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#name">Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -626,7 +610,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -639,8 +623,6 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description</p>
-<p>Description of the process.</p>
 <p>Description of the process.</p>
 <table>
 <thead>
@@ -652,7 +634,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -680,15 +662,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#description">Description</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -761,8 +739,6 @@
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
-<p>Enterprise_Company_Id</p>
-<p>The enterprise company, which owns the process.</p>
 <p>The enterprise company, which owns the process.</p>
 <table>
 <thead>
@@ -802,15 +778,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#enterprise_company_id">Enterprise_Company_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -895,15 +867,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="processing_role">Processing_Role</h3>
-<p>Processing_Role</p>
-<p>The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor.</p>
 <p>The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor.</p>
 <table>
 <thead>
@@ -943,7 +913,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -952,10 +922,6 @@
 <tr>
 <td>Default Value</td>
 <td>C</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#processing_role">Processing_Role</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1040,15 +1006,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="retention_period_months">Retention_Period_Months</h3>
-<p>Retention_Period_Months</p>
-<p>The period in months, for which the data is kept. Null when the period is unknown or N/A.</p>
 <p>The period in months, for which the data is kept. Null when the period is unknown or N/A.</p>
 <table>
 <thead>
@@ -1084,15 +1048,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#retention_period_months">Retention_Period_Months</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1177,15 +1137,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="list_of_used_software">List_Of_Used_Software</h3>
-<p>List_Of_Used_Software</p>
-<p>Comma-separated list of the names of the software products used to process the data.</p>
 <p>Comma-separated list of the names of the software products used to process the data.</p>
 <table>
 <thead>
@@ -1225,15 +1183,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#list_of_used_software">List_Of_Used_Software</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1318,7 +1272,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -1331,8 +1285,6 @@
 </tbody>
 </table>
 <h3 id="process_owner_person_id">Process_Owner_Person_Id</h3>
-<p>Process_Owner_Person_Id</p>
-<p>The owner and responsible person for the process.</p>
 <p>The owner and responsible person for the process.</p>
 <table>
 <thead>
@@ -1372,15 +1324,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#process_owner_person_id">Process_Owner_Person_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1465,15 +1413,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="list_of_technical_measures">List_Of_Technical_Measures</h3>
-<p>List_Of_Technical_Measures</p>
-<p>Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc.</p>
 <p>Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc.</p>
 <table>
 <thead>
@@ -1513,15 +1459,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#list_of_technical_measures">List_Of_Technical_Measures</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1606,15 +1548,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="data_subject_category">Data_Subject_Category</h3>
-<p>Data_Subject_Category</p>
-<p>The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other.</p>
 <p>The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other.</p>
 <table>
 <thead>
@@ -1654,7 +1594,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -1663,10 +1603,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#data_subject_category">Data_Subject_Category</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1739,8 +1675,6 @@
 </tbody>
 </table>
 <h3 id="contains_sensitive_data">Contains_Sensitive_Data</h3>
-<p>Contains_Sensitive_Data</p>
-<p>True if sensitive personal data is processed (racial, political, criminal, biometric, etc).</p>
 <p>True if sensitive personal data is processed (racial, political, criminal, biometric, etc).</p>
 <table>
 <thead>
@@ -1776,15 +1710,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#contains_sensitive_data">Contains_Sensitive_Data</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1869,15 +1799,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="list_of_data_categories">List_Of_Data_Categories</h3>
-<p>List_Of_Data_Categories</p>
-<p>Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc.</p>
 <p>Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc.</p>
 <table>
 <thead>
@@ -1917,15 +1845,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#list_of_data_categories">List_Of_Data_Categories</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2010,15 +1934,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="legal_basis_for_processing">Legal_Basis_For_Processing</h3>
-<p>Legal_Basis_For_Processing</p>
-<p>The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;</p>
 <p>The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;</p>
 <table>
 <thead>
@@ -2058,7 +1980,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -2067,10 +1989,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#legal_basis_for_processing">Legal_Basis_For_Processing</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2155,15 +2073,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="list_of_data_recipient_categories">List_Of_Data_Recipient_Categories</h3>
-<p>List_Of_Data_Recipient_Categories</p>
-<p>Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc.</p>
 <p>Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc.</p>
 <table>
 <thead>
@@ -2203,15 +2119,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#list_of_data_recipient_categories">List_Of_Data_Recipient_Categories</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2296,7 +2208,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2309,8 +2221,6 @@
 </tbody>
 </table>
 <h3 id="list_of_processing_purposes">List_Of_Processing_Purposes</h3>
-<p>List_Of_Processing_Purposes</p>
-<p>Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc.</p>
 <p>Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc.</p>
 <table>
 <thead>
@@ -2350,15 +2260,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#list_of_processing_purposes">List_Of_Processing_Purposes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2443,7 +2349,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2456,8 +2362,6 @@
 </tbody>
 </table>
 <h3 id="list_of_transfers_to_third_countries">List_Of_Transfers_To_Third_Countries</h3>
-<p>List_Of_Transfers_To_Third_Countries</p>
-<p>Comma-separated list of third countries, to which data is sent.</p>
 <p>Comma-separated list of third countries, to which data is sent.</p>
 <table>
 <thead>
@@ -2497,15 +2401,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#list_of_transfers_to_third_countries">List_Of_Transfers_To_Third_Countries</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2590,7 +2490,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2603,8 +2503,6 @@
 </tbody>
 </table>
 <h3 id="third_country_transfers_safeguards">Third_Country_Transfers_Safeguards</h3>
-<p>Third_Country_Transfers_Safeguards</p>
-<p>Description of safeguards, taken to protect personal data in case of third country transfers.</p>
 <p>Description of safeguards, taken to protect personal data in case of third country transfers.</p>
 <table>
 <thead>
@@ -2644,15 +2542,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#third_country_transfers_safeguards">Third_Country_Transfers_Safeguards</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2737,7 +2631,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
@@ -2750,7 +2644,6 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -2761,7 +2654,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -2789,15 +2682,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2870,7 +2759,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -2905,15 +2793,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -2986,8 +2870,6 @@
 </tbody>
 </table>
 <h3 id="establish_date">Establish_Date</h3>
-<p>Establish_Date</p>
-<p>The data on which the process was established and started functioning.</p>
 <p>The data on which the process was established and started functioning.</p>
 <table>
 <thead>
@@ -3027,15 +2909,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>CurrentDateTime</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#establish_date">Establish_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3120,7 +2998,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -3133,8 +3011,6 @@
 </tbody>
 </table>
 <h3 id="discontinuation_date">Discontinuation_Date</h3>
-<p>Discontinuation_Date</p>
-<p>The date on which the process was discontinued. Null if the process is still active.</p>
 <p>The date on which the process was discontinued. Null if the process is still active.</p>
 <table>
 <thead>
@@ -3174,15 +3050,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Pdm_Personal_Data_Processes.html">Pdm_Personal_Data_Processes</a>.<a href="Pdm_Personal_Data_Processes.html#discontinuation_date">Discontinuation_Date</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -3267,7 +3139,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>

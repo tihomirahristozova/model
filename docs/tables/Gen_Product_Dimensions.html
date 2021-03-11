@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-gen_product_dimensions">Table Gen_Product_Dimensions</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/General.Products.ProductDimensions.html">General.Products.ProductDimensions</a></p>
 <p>Contains convertion ratios between the supported measument categories for each product. Does not contain a record for the default category of the products, for which the convertion ratio is defined as equal to 1. Entity: Gen_Product_Dimensions</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -148,8 +150,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="source_quantity_unit_id">Source_Quantity_Unit_Id</h3>
-<p>Source_Quantity_Unit_Id</p>
-<p>The non-base measurement unit for which we specify convertion ratio</p>
 <p>The non-base measurement unit for which we specify convertion ratio</p>
 <table>
 <thead>
@@ -189,15 +189,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#source_quantity_unit_id">Source_Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -282,15 +278,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="dest_quantity_unit_id">Dest_Quantity_Unit_Id</h3>
-<p>Dest_Quantity_Unit_Id</p>
-<p>The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product</p>
 <p>The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product</p>
 <table>
 <thead>
@@ -330,15 +324,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#dest_quantity_unit_id">Dest_Quantity_Unit_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -423,14 +413,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_dimension_id">Product_Dimension_Id</h3>
-<p>Product_Dimension_Id</p>
 <table>
 <thead>
 <tr>
@@ -469,15 +458,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#product_dimension_id">Product_Dimension_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -562,15 +547,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="product_id">Product_Id</h3>
-<p>Product_Id</p>
-<p>The product for which we specify conversion ratios</p>
 <p>The product for which we specify conversion ratios</p>
 <table>
 <thead>
@@ -610,15 +593,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#product_id">Product_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -703,15 +682,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="source_quantity">Source_Quantity</h3>
-<p>Source_Quantity</p>
-<p>The quantity in the non-base unit</p>
 <p>The quantity in the non-base unit</p>
 <table>
 <thead>
@@ -747,15 +724,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#source_quantity">Source_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -828,8 +801,6 @@
 </tbody>
 </table>
 <h3 id="measurement_category_id">Measurement_Category_Id</h3>
-<p>Measurement_Category_Id</p>
-<p>The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category.</p>
 <p>The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category.</p>
 <table>
 <thead>
@@ -869,15 +840,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#measurement_category_id">Measurement_Category_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -962,15 +929,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="dest_quantity">Dest_Quantity</h3>
-<p>Dest_Quantity</p>
-<p>Quantity in some of the base units, that equals Source_Quantity</p>
 <p>Quantity in some of the base units, that equals Source_Quantity</p>
 <table>
 <thead>
@@ -1006,15 +971,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#dest_quantity">Dest_Quantity</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1087,8 +1048,6 @@
 </tbody>
 </table>
 <h3 id="convert_to_base_multiplier">Convert_To_Base_Multiplier</h3>
-<p>Convert_To_Base_Multiplier</p>
-<p>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.</p>
 <p>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.</p>
 <table>
 <thead>
@@ -1124,15 +1083,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#convert_to_base_multiplier">Convert_To_Base_Multiplier</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1205,8 +1160,6 @@
 </tbody>
 </table>
 <h3 id="convert_to_base_divisor">Convert_To_Base_Divisor</h3>
-<p>Convert_To_Base_Divisor</p>
-<p>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.</p>
 <p>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.</p>
 <table>
 <thead>
@@ -1242,15 +1195,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#convert_to_base_divisor">Convert_To_Base_Divisor</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1323,7 +1272,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1358,15 +1306,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Gen_Product_Dimensions.html">Gen_Product_Dimensions</a>.<a href="Gen_Product_Dimensions.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

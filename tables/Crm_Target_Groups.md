@@ -1,5 +1,10 @@
 # Table Crm_Target_Groups
 
+
+## Entity
+
+Entity: [Crm.Marketing.TargetGroups](~/entities/Crm.Marketing.TargetGroups.md)
+
 Marketing target group, containing a fixed list of parties. Entity: Crm_Target_Groups
 
 ## Summary
@@ -16,9 +21,6 @@ Marketing target group, containing a fixed list of parties. Entity: Crm_Target_G
 
 ### Target_Group_Id
 
-
-Target_Group_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Target_Group_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Crm_Target_Groups](Crm_Target_Groups.md).[Target_Group_Id](Crm_Target_Groups.md#target_group_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,12 +54,9 @@ Target_Group_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Target_Group_Name
-
-
-Target_Group_Name
 
 | Property | Value |
 | - | - |
@@ -69,9 +67,8 @@ Target_Group_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Target_Groups](Crm_Target_Groups.md).[Target_Group_Name](Crm_Target_Groups.md#target_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -98,9 +95,6 @@ Target_Group_Name
 
 ### Description
 
-
-Description
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(254)|
@@ -110,9 +104,8 @@ Description
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Crm_Target_Groups](Crm_Target_Groups.md).[Description](Crm_Target_Groups.md#description)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -134,12 +127,6 @@ Description
 ### Target_Group_Code
 
 
-Target_Group_Code
-
-
-Short code for identification of target groups.
-
-
 Short code for identification of target groups.
 
 | Property | Value |
@@ -151,9 +138,8 @@ Short code for identification of target groups.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Target_Groups](Crm_Target_Groups.md).[Target_Group_Code](Crm_Target_Groups.md#target_group_code)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -176,13 +162,10 @@ Short code for identification of target groups.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -192,9 +175,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Crm_Target_Groups](Crm_Target_Groups.md).[Row_Version](Crm_Target_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

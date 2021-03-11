@@ -1,5 +1,10 @@
 # Table Nat_BG_VAT_Declarations
 
+
+## Entity
+
+Entity: [Finance.Vat.BGVATDeclarations](~/entities/Finance.Vat.BGVATDeclarations.md)
+
 National data: Contains the VAT declarations, issued by the enterprise company, according to the Bulgarian legislation. Entity: Nat_BG_VAT_Declarations
 
 ## Owner Tables Hierarchy
@@ -32,12 +37,6 @@ National data: Contains the VAT declarations, issued by the enterprise company, 
 ### VAT_Declaration_Id
 
 
-VAT_Declaration_Id
-
-
-Unique identification of the VAT declaration.
-
-
 Unique identification of the VAT declaration.
 
 | Property | Value |
@@ -49,9 +48,8 @@ Unique identification of the VAT declaration.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[VAT_Declaration_Id](Nat_BG_VAT_Declarations.md#vat_declaration_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -74,12 +72,9 @@ Unique identification of the VAT declaration.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Document_Id
-
-
-Document_Id
 
 | Property | Value |
 | - | - |
@@ -90,9 +85,8 @@ Document_Id
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[Document_Id](Nat_BG_VAT_Declarations.md#document_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -115,15 +109,9 @@ Document_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### VAT_Period_Start
-
-
-VAT_Period_Start
-
-
-Start date of the period fot which the VAT declaration is made.
 
 
 Start date of the period fot which the VAT declaration is made.
@@ -137,9 +125,8 @@ Start date of the period fot which the VAT declaration is made.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[VAT_Period_Start](Nat_BG_VAT_Declarations.md#vat_period_start)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -167,12 +154,6 @@ Start date of the period fot which the VAT declaration is made.
 ### VAT_Period_End
 
 
-VAT_Period_End
-
-
-End date of the period fot which the VAT declaration is made.
-
-
 End date of the period fot which the VAT declaration is made.
 
 | Property | Value |
@@ -184,9 +165,8 @@ End date of the period fot which the VAT declaration is made.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[VAT_Period_End](Nat_BG_VAT_Declarations.md#vat_period_end)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -214,12 +194,6 @@ End date of the period fot which the VAT declaration is made.
 ### Declaring_Person_Id
 
 
-Declaring_Person_Id
-
-
-Specific declaring person for this declaration. If the declaring person isn't specified then the default declaring person for the enterprise company is used
-
-
 Specific declaring person for this declaration. If the declaring person isn't specified then the default declaring person for the enterprise company is used
 
 | Property | Value |
@@ -231,9 +205,8 @@ Specific declaring person for this declaration. If the declaring person isn't sp
 |Referenced Table|[Nat_BG_VAT_Declaring_Persons](Nat_BG_VAT_Declaring_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[Declaring_Person_Id](Nat_BG_VAT_Declarations.md#declaring_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -256,15 +229,9 @@ Specific declaring person for this declaration. If the declaring person isn't sp
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Coefficient_VATL_Article_73
-
-
-Coefficient_VATL_Article_73
-
-
-Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.
 
 
 Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.
@@ -277,9 +244,8 @@ Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[Coefficient_VATL_Article_73](Nat_BG_VAT_Declarations.md#coefficient_vatl_article_73)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -301,12 +267,6 @@ Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.
 ### Deducted_VAT_Amount_Article_92_Paragraph_1
 
 
-Deducted_VAT_Amount_Article_92_Paragraph_1
-
-
-Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00.
-
-
 Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00.
 
 | Property | Value |
@@ -317,9 +277,8 @@ Field 01 - 70 from the declaration. Amounts are in base currency. Must be greate
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[Deducted_VAT_Amount_Article_92_Paragraph_1](Nat_BG_VAT_Declarations.md#deducted_vat_amount_article_92_paragraph_1)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -341,12 +300,6 @@ Field 01 - 70 from the declaration. Amounts are in base currency. Must be greate
 ### Deposited_VAT_Amount
 
 
-Deposited_VAT_Amount
-
-
-Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00.
-
-
 Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00.
 
 | Property | Value |
@@ -357,9 +310,8 @@ Field 01 - 71 from the declaration. Amounts are in base currency. Must be greate
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[Deposited_VAT_Amount](Nat_BG_VAT_Declarations.md#deposited_vat_amount)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -381,12 +333,6 @@ Field 01 - 71 from the declaration. Amounts are in base currency. Must be greate
 ### VAT_Amount_To_Recoup_Article_92_Paragraph_1
 
 
-VAT_Amount_To_Recoup_Article_92_Paragraph_1
-
-
-Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00.
-
-
 Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00.
 
 | Property | Value |
@@ -397,9 +343,8 @@ Field 01 - 80 from the declaration. Amounts are in base currency. Must be greate
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[VAT_Amount_To_Recoup_Article_92_Paragraph_1](Nat_BG_VAT_Declarations.md#vat_amount_to_recoup_article_92_paragraph_1)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -421,12 +366,6 @@ Field 01 - 80 from the declaration. Amounts are in base currency. Must be greate
 ### VAT_Amount_To_Recoup_Article_92_Paragraph_3
 
 
-VAT_Amount_To_Recoup_Article_92_Paragraph_3
-
-
-Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00.
-
-
 Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00.
 
 | Property | Value |
@@ -437,9 +376,8 @@ Field 01 - 81 from the declaration. Amounts are in base currency. Must be greate
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[VAT_Amount_To_Recoup_Article_92_Paragraph_3](Nat_BG_VAT_Declarations.md#vat_amount_to_recoup_article_92_paragraph_3)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -461,12 +399,6 @@ Field 01 - 81 from the declaration. Amounts are in base currency. Must be greate
 ### VAT_Amount_To_Recoup_Article_92_Paragraph_4
 
 
-VAT_Amount_To_Recoup_Article_92_Paragraph_4
-
-
-Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00.
-
-
 Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00.
 
 | Property | Value |
@@ -477,9 +409,8 @@ Field 01 - 82 from the declaration. Amounts are in base currency. Must be greate
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[VAT_Amount_To_Recoup_Article_92_Paragraph_4](Nat_BG_VAT_Declarations.md#vat_amount_to_recoup_article_92_paragraph_4)|
 |Format|N2|
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -501,12 +432,6 @@ Field 01 - 82 from the declaration. Amounts are in base currency. Must be greate
 ### VAT_Declaration_Representing_Person_Id
 
 
-VAT_Declaration_Representing_Person_Id
-
-
-Representing person for the purposes of submitting of VAT declarations.
-
-
 Representing person for the purposes of submitting of VAT declarations.
 
 | Property | Value |
@@ -518,9 +443,8 @@ Representing person for the purposes of submitting of VAT declarations.
 |Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[VAT_Declaration_Representing_Person_Id](Nat_BG_VAT_Declarations.md#vat_declaration_representing_person_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -543,15 +467,9 @@ Representing person for the purposes of submitting of VAT declarations.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### VAT_Declaration_Representing_Person_Position
-
-
-VAT_Declaration_Representing_Person_Position
-
-
-Position of the representing person for the purposes of submitting of VAT declarations.
 
 
 Position of the representing person for the purposes of submitting of VAT declarations.
@@ -565,9 +483,8 @@ Position of the representing person for the purposes of submitting of VAT declar
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[VAT_Declaration_Representing_Person_Position](Nat_BG_VAT_Declarations.md#vat_declaration_representing_person_position)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -589,12 +506,6 @@ Position of the representing person for the purposes of submitting of VAT declar
 ### Is_Single_Execution
 
 
-Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-
 Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
@@ -605,9 +516,8 @@ Specifies whether the document is a single execution of its order document.
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[Is_Single_Execution](Nat_BG_VAT_Declarations.md#is_single_execution)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -630,17 +540,11 @@ Specifies whether the document is a single execution of its order document.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
 
-Is_Released
-
-
-True if the document is not void and its state is released or greater
-
-
 True if the document is not void and its state is released or greater
 
 | Property | Value |
@@ -651,9 +555,8 @@ True if the document is not void and its state is released or greater
 |Ownership Reference|no|
 |Readonly|yes|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|False|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[Is_Released](Nat_BG_VAT_Declarations.md#is_released)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -676,12 +579,9 @@ True if the document is not void and its state is released or greater
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|yes|
+|Equals|`NULL`|no|yes|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -691,9 +591,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Nat_BG_VAT_Declarations](Nat_BG_VAT_Declarations.md).[Row_Version](Nat_BG_VAT_Declarations.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

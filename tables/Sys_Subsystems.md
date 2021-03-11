@@ -13,9 +13,6 @@
 
 ### Subsystem_Prefix
 
-
-Subsystem_Prefix
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(5)|
@@ -26,9 +23,8 @@ Subsystem_Prefix
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Subsystems](Sys_Subsystems.md).[Subsystem_Prefix](Sys_Subsystems.md#subsystem_prefix)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -49,9 +45,6 @@ Subsystem_Prefix
 
 ### Subsystem_Name
 
-
-Subsystem_Name
-
 | Property | Value |
 | - | - |
 |Type|nvarchar(255)|
@@ -61,9 +54,8 @@ Subsystem_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Subsystems](Sys_Subsystems.md).[Subsystem_Name](Sys_Subsystems.md#subsystem_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -84,9 +76,6 @@ Subsystem_Name
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -95,9 +84,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Sys_Subsystems](Sys_Subsystems.md).[Row_Version](Sys_Subsystems.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

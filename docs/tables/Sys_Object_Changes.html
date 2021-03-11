@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-sys_object_changes">Table Sys_Object_Changes</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Core.ObjectChanges.html">Systems.Core.ObjectChanges</a></p>
 <p>Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in version 19.1)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -126,7 +128,7 @@
 </tr>
 <tr>
 <td><a href="#old_values_json">Old_Values_Json</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td>Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.</td>
 </tr>
 <tr>
@@ -138,7 +140,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="object_change_id">Object_Change_Id</h3>
-<p>Object_Change_Id</p>
 <table>
 <thead>
 <tr>
@@ -177,15 +178,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Changes.html">Sys_Object_Changes</a>.<a href="Sys_Object_Changes.html#object_change_id">Object_Change_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -270,15 +267,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="object_changeset_id">Object_Changeset_Id</h3>
-<p>Object_Changeset_Id</p>
-<p>The changeset containing this change.</p>
 <p>The changeset containing this change.</p>
 <table>
 <thead>
@@ -318,15 +313,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Changes.html">Sys_Object_Changes</a>.<a href="Sys_Object_Changes.html#object_changeset_id">Object_Changeset_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -411,15 +402,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="root_object_id">Root_Object_Id</h3>
-<p>Root_Object_Id</p>
-<p>The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level.</p>
 <p>The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level.</p>
 <table>
 <thead>
@@ -459,15 +448,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Changes.html">Sys_Object_Changes</a>.<a href="Sys_Object_Changes.html#root_object_id">Root_Object_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -552,15 +537,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="repository_name">Repository_Name</h3>
-<p>Repository_Name</p>
-<p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.</p>
 <p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.</p>
 <table>
 <thead>
@@ -600,15 +583,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Changes.html">Sys_Object_Changes</a>.<a href="Sys_Object_Changes.html#repository_name">Repository_Name</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -693,7 +672,7 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -706,8 +685,6 @@
 </tbody>
 </table>
 <h3 id="entity_item_id">Entity_Item_Id</h3>
-<p>Entity_Item_Id</p>
-<p>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.</p>
 <p>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.</p>
 <table>
 <thead>
@@ -743,15 +720,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Changes.html">Sys_Object_Changes</a>.<a href="Sys_Object_Changes.html#entity_item_id">Entity_Item_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -836,15 +809,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="change_type">Change_Type</h3>
-<p>Change_Type</p>
-<p>Type of change - Create, Update or Delete.</p>
 <p>Type of change - Create, Update or Delete.</p>
 <table>
 <thead>
@@ -884,7 +855,7 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Allowed Values</td>
@@ -893,10 +864,6 @@
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Changes.html">Sys_Object_Changes</a>.<a href="Sys_Object_Changes.html#change_type">Change_Type</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -969,8 +936,6 @@
 </tbody>
 </table>
 <h3 id="old_values_json">Old_Values_Json</h3>
-<p>Old_Values_Json</p>
-<p>Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.</p>
 <p>Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.</p>
 <table>
 <thead>
@@ -982,7 +947,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -1010,15 +975,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Changes.html">Sys_Object_Changes</a>.<a href="Sys_Object_Changes.html#old_values_json">Old_Values_Json</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -1091,7 +1052,6 @@
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1126,15 +1086,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Sys_Object_Changes.html">Sys_Object_Changes</a>.<a href="Sys_Object_Changes.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

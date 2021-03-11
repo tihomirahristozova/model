@@ -1,5 +1,10 @@
 # Table Prd_Function_Groups
 
+
+## Entity
+
+Entity: [Production.Resources.FunctionGroups](~/entities/Production.Resources.FunctionGroups.md)
+
 Represents the hierarchy of the function groups. They group the multitude of resource functions in logical, user-defined groups. Entity: Prd_Function_Groups
 
 ## Summary
@@ -16,9 +21,6 @@ Represents the hierarchy of the function groups. They group the multitude of res
 
 ### Id
 
-
-Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -28,9 +30,8 @@ Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Prd_Function_Groups](Prd_Function_Groups.md).[Id](Prd_Function_Groups.md#id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -53,15 +54,9 @@ Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Parent
-
-
-Parent
-
-
-The path of the parent item.
 
 
 The path of the parent item.
@@ -75,9 +70,8 @@ The path of the parent item.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|yes|
-|Attributes|None|
+|Attributes||
 |Default Value|/|
-|Derived From|[Prd_Function_Groups](Prd_Function_Groups.md).[Parent](Prd_Function_Groups.md#parent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -100,13 +94,10 @@ The path of the parent item.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Function_Group_Name
-
-
-Function_Group_Name
 
 | Property | Value |
 | - | - |
@@ -117,9 +108,8 @@ Function_Group_Name
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Function_Groups](Prd_Function_Groups.md).[Function_Group_Name](Prd_Function_Groups.md#function_group_name)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -147,12 +137,6 @@ Function_Group_Name
 ### Full_Path
 
 
-Full_Path
-
-
-The full path of the item.
-
-
 The full path of the item.
 
 | Property | Value |
@@ -164,9 +148,8 @@ The full path of the item.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value||
-|Derived From|[Prd_Function_Groups](Prd_Function_Groups.md).[Full_Path](Prd_Function_Groups.md#full_path)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -189,13 +172,10 @@ The full path of the item.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -205,9 +185,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Prd_Function_Groups](Prd_Function_Groups.md).[Row_Version](Prd_Function_Groups.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

@@ -1,5 +1,10 @@
 # Table Wms_Warehouse_Transactions
 
+
+## Entity
+
+Entity: [Logistics.Wms.WarehouseTransactions](~/entities/Logistics.Wms.WarehouseTransactions.md)
+
 Represents increase or decrease in the quantity available in a warehouse location. Entity: Wms_Warehouse_Transactions (Introduced in version 21.1.1.26)
 
 ## Summary
@@ -29,9 +34,6 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 
 ### Warehouse_Transaction_Id
 
-
-Warehouse_Transaction_Id
-
 | Property | Value |
 | - | - |
 |Type|uniqueidentifier|
@@ -41,9 +43,8 @@ Warehouse_Transaction_Id
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Warehouse_Transaction_Id](Wms_Warehouse_Transactions.md#warehouse_transaction_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -66,15 +67,9 @@ Warehouse_Transaction_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Order_Id
-
-
-Warehouse_Order_Id
-
-
-The order which created this transaction. NULL when this transaction was not based on order.
 
 
 The order which created this transaction. NULL when this transaction was not based on order.
@@ -88,9 +83,8 @@ The order which created this transaction. NULL when this transaction was not bas
 |Referenced Table|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Warehouse_Order_Id](Wms_Warehouse_Transactions.md#warehouse_order_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -113,15 +107,9 @@ The order which created this transaction. NULL when this transaction was not bas
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Warehouse_Order_Line_Id
-
-
-Warehouse_Order_Line_Id
-
-
-The order line which created this transaction. NULL when this transaction was not based on order line.
 
 
 The order line which created this transaction. NULL when this transaction was not based on order line.
@@ -135,9 +123,8 @@ The order line which created this transaction. NULL when this transaction was no
 |Referenced Table|[Wms_Warehouse_Order_Lines](Wms_Warehouse_Order_Lines.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Warehouse_Order_Line_Id](Wms_Warehouse_Transactions.md#warehouse_order_line_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -160,15 +147,9 @@ The order line which created this transaction. NULL when this transaction was no
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Warehouse_Id
-
-
-Warehouse_Id
-
-
-The warehouse in which the transaction occurred.
 
 
 The warehouse in which the transaction occurred.
@@ -182,9 +163,8 @@ The warehouse in which the transaction occurred.
 |Referenced Table|[Wms_Warehouses](Wms_Warehouses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Warehouse_Id](Wms_Warehouse_Transactions.md#warehouse_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -207,15 +187,9 @@ The warehouse in which the transaction occurred.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Location_Id
-
-
-Warehouse_Location_Id
-
-
-The warehouse location, where the transaction occurred.
 
 
 The warehouse location, where the transaction occurred.
@@ -229,9 +203,8 @@ The warehouse location, where the transaction occurred.
 |Referenced Table|[Wms_Warehouse_Locations](Wms_Warehouse_Locations.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Warehouse_Location_Id](Wms_Warehouse_Transactions.md#warehouse_location_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -254,15 +227,9 @@ The warehouse location, where the transaction occurred.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Logistic_Unit_Id
-
-
-Logistic_Unit_Id
-
-
-Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.
 
 
 Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.
@@ -276,9 +243,8 @@ Logistic unit, which was transacted. NULL when the transaction was not for a log
 |Referenced Table|[Log_Logistic_Units](Log_Logistic_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Logistic_Unit_Id](Wms_Warehouse_Transactions.md#logistic_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -301,15 +267,9 @@ Logistic unit, which was transacted. NULL when the transaction was not for a log
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
-
-
-Product_Id
-
-
-The product, which was transacted.
 
 
 The product, which was transacted.
@@ -323,9 +283,8 @@ The product, which was transacted.
 |Referenced Table|[Gen_Products](Gen_Products.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Product_Id](Wms_Warehouse_Transactions.md#product_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -348,15 +307,9 @@ The product, which was transacted.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Product_Variant_Id
-
-
-Product_Variant_Id
-
-
-The product variant, which was transacted. NULL when the transaction was not for a product variant.
 
 
 The product variant, which was transacted. NULL when the transaction was not for a product variant.
@@ -370,9 +323,8 @@ The product variant, which was transacted. NULL when the transaction was not for
 |Referenced Table|[Gen_Product_Variants](Gen_Product_Variants.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Product_Variant_Id](Wms_Warehouse_Transactions.md#product_variant_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -395,15 +347,9 @@ The product variant, which was transacted. NULL when the transaction was not for
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Lot_Id
-
-
-Lot_Id
-
-
-The lot which was transacted. NULL when the transaction was not for a specific lot.
 
 
 The lot which was transacted. NULL when the transaction was not for a specific lot.
@@ -417,9 +363,8 @@ The lot which was transacted. NULL when the transaction was not for a specific l
 |Referenced Table|[Inv_Lots](Inv_Lots.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Lot_Id](Wms_Warehouse_Transactions.md#lot_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -442,15 +387,9 @@ The lot which was transacted. NULL when the transaction was not for a specific l
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Serial_Number_Id
-
-
-Serial_Number_Id
-
-
-The serial number which was transacted. NULL when the transaction was not for a specific serial number.
 
 
 The serial number which was transacted. NULL when the transaction was not for a specific serial number.
@@ -464,9 +403,8 @@ The serial number which was transacted. NULL when the transaction was not for a 
 |Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Serial_Number_Id](Wms_Warehouse_Transactions.md#serial_number_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -489,15 +427,9 @@ The serial number which was transacted. NULL when the transaction was not for a 
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Direction
-
-
-Direction
-
-
-Direction of the transaction - I=IN, O=OUT.
 
 
 Direction of the transaction - I=IN, O=OUT.
@@ -511,10 +443,9 @@ Direction of the transaction - I=IN, O=OUT.
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`I`, `O`|
 |Default Value|I|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Direction](Wms_Warehouse_Transactions.md#direction)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -537,15 +468,9 @@ Direction of the transaction - I=IN, O=OUT.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Quantity
-
-
-Quantity
-
-
-The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.
 
 
 The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.
@@ -558,9 +483,8 @@ The transacted net change in quantity. Positive values indicate transactions. Ne
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|0|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Quantity](Wms_Warehouse_Transactions.md#quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -583,16 +507,10 @@ The transacted net change in quantity. Positive values indicate transactions. Ne
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Quantity_Unit_Id
-
-
-Quantity_Unit_Id
-
-
-The measurement unit of quantity.
 
 
 The measurement unit of quantity.
@@ -606,9 +524,8 @@ The measurement unit of quantity.
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Quantity_Unit_Id](Wms_Warehouse_Transactions.md#quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -631,15 +548,9 @@ The measurement unit of quantity.
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Catch_Quantity
-
-
-Catch_Quantity
-
-
-Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.
 
 
 Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.
@@ -652,9 +563,8 @@ Catch (measured) quantity for the transaction. Positive values indicate transact
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Catch_Quantity](Wms_Warehouse_Transactions.md#catch_quantity)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -677,16 +587,10 @@ Catch (measured) quantity for the transaction. Positive values indicate transact
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
 ### Catch_Quantity_Unit_Id
-
-
-Catch_Quantity_Unit_Id
-
-
-The measurement unit of the catch quantity. NULL when catch measurement is not configured for the product.
 
 
 The measurement unit of the catch quantity. NULL when catch measurement is not configured for the product.
@@ -700,9 +604,8 @@ The measurement unit of the catch quantity. NULL when catch measurement is not c
 |Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Catch_Quantity_Unit_Id](Wms_Warehouse_Transactions.md#catch_quantity_unit_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -725,12 +628,9 @@ The measurement unit of the catch quantity. NULL when catch measurement is not c
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Creation_User_Id
-
-
-Creation_User_Id
 
 | Property | Value |
 | - | - |
@@ -741,9 +641,8 @@ Creation_User_Id
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Creation_User_Id](Wms_Warehouse_Transactions.md#creation_user_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -766,12 +665,9 @@ Creation_User_Id
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Creation_Time_Utc
-
-
-Creation_Time_Utc
 
 | Property | Value |
 | - | - |
@@ -782,9 +678,8 @@ Creation_Time_Utc
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|CurrentDateTimeUtc|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Creation_Time_Utc](Wms_Warehouse_Transactions.md#creation_time_utc)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -805,9 +700,6 @@ Creation_Time_Utc
 
 ### Row_Version
 
-
-Row_Version
-
 | Property | Value |
 | - | - |
 |Type|timestamp|
@@ -816,9 +708,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md).[Row_Version](Wms_Warehouse_Transactions.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

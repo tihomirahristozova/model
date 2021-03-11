@@ -1,5 +1,10 @@
 # Table Cm_Activity_Time_Intervals
 
+
+## Entity
+
+Entity: [General.Contacts.ActivityTimeIntervals](~/entities/General.Contacts.ActivityTimeIntervals.md)
+
 History of work efforts for executing activities (timesheet). Entity: Cm_Activity_Time_Intervals
 
 ## Owner Tables Hierarchy
@@ -27,12 +32,6 @@ History of work efforts for executing activities (timesheet). Entity: Cm_Activit
 ### Activity_Time_Interval_Id
 
 
-Activity_Time_Interval_Id
-
-
-The id of the time interval
-
-
 The id of the time interval
 
 | Property | Value |
@@ -44,9 +43,8 @@ The id of the time interval
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|NewGuid|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[Activity_Time_Interval_Id](Cm_Activity_Time_Intervals.md#activity_time_interval_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -69,15 +67,9 @@ The id of the time interval
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Activity_Id
-
-
-Activity_Id
-
-
-The activity for which the time interval is recorded
 
 
 The activity for which the time interval is recorded
@@ -91,9 +83,8 @@ The activity for which the time interval is recorded
 |Referenced Table|[Cm_Activities](Cm_Activities.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[Activity_Id](Cm_Activity_Time_Intervals.md#activity_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -116,15 +107,9 @@ The activity for which the time interval is recorded
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Party_Id
-
-
-Party_Id
-
-
-The party for which the time interval is recorded
 
 
 The party for which the time interval is recorded
@@ -138,9 +123,8 @@ The party for which the time interval is recorded
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[Party_Id](Cm_Activity_Time_Intervals.md#party_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -163,15 +147,9 @@ The party for which the time interval is recorded
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 
 ### Date
-
-
-Date
-
-
-The date on which the work was performed
 
 
 The date on which the work was performed
@@ -185,9 +163,8 @@ The date on which the work was performed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[Date](Cm_Activity_Time_Intervals.md#date)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -210,16 +187,10 @@ The date on which the work was performed
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|no|no|
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Start_Time
-
-
-Start_Time
-
-
-The starting time of the time interval within 'Date'
 
 
 The starting time of the time interval within 'Date'
@@ -233,9 +204,8 @@ The starting time of the time interval within 'Date'
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[Start_Time](Cm_Activity_Time_Intervals.md#start_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -263,12 +233,6 @@ The starting time of the time interval within 'Date'
 ### End_Time
 
 
-End_Time
-
-
-The ending time of the time interval within 'Date'
-
-
 The ending time of the time interval within 'Date'
 
 | Property | Value |
@@ -280,9 +244,8 @@ The ending time of the time interval within 'Date'
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[End_Time](Cm_Activity_Time_Intervals.md#end_time)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -310,12 +273,6 @@ The ending time of the time interval within 'Date'
 ### Notes
 
 
-Notes
-
-
-Notes for the time interval
-
-
 Notes for the time interval
 
 | Property | Value |
@@ -327,9 +284,8 @@ Notes for the time interval
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsLongString|
+|Attributes|IsLongString|
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[Notes](Cm_Activity_Time_Intervals.md#notes)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -351,12 +307,6 @@ Notes for the time interval
 ### Execution_Complete_Percent
 
 
-Execution_Complete_Percent
-
-
-Percent of task completed
-
-
 Percent of task completed
 
 | Property | Value |
@@ -367,9 +317,8 @@ Percent of task completed
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None, IsPercent|
+|Attributes|IsPercent|
 |Default Value|0|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[Execution_Complete_Percent](Cm_Activity_Time_Intervals.md#execution_complete_percent)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -397,12 +346,6 @@ Percent of task completed
 ### State
 
 
-State
-
-
-The state of the primary activity in the moment the time interval was created. NULL when the state is unknown.
-
-
 The state of the primary activity in the moment the time interval was created. NULL when the state is unknown.
 
 | Property | Value |
@@ -413,10 +356,9 @@ The state of the primary activity in the moment the time interval was created. N
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Allowed Values|`0`, `5`, `10`, `20`, `30`, `40`, `50`|
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[State](Cm_Activity_Time_Intervals.md#state)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -438,12 +380,6 @@ The state of the primary activity in the moment the time interval was created. N
 ### User_Status_Id
 
 
-User_Status_Id
-
-
-The user status of the primary activity in the moment the time interval was created. NULL when the user status is unknown.
-
-
 The user status of the primary activity in the moment the time interval was created. NULL when the user status is unknown.
 
 | Property | Value |
@@ -455,9 +391,8 @@ The user status of the primary activity in the moment the time interval was crea
 |Referenced Table|[Gen_Document_Type_User_Statuses](Gen_Document_Type_User_Statuses.md)|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[User_Status_Id](Cm_Activity_Time_Intervals.md#user_status_id)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|
@@ -480,12 +415,9 @@ The user status of the primary activity in the moment the time interval was crea
 
 | Filter Type | Default |Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|NULL|yes|no|
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
-
-
-Row_Version
 
 | Property | Value |
 | - | - |
@@ -495,9 +427,8 @@ Row_Version
 |Ownership Reference|no|
 |Readonly|no|
 |Sortable|no|
-|Attributes|None|
+|Attributes||
 |Default Value|None|
-|Derived From|[Cm_Activity_Time_Intervals](Cm_Activity_Time_Intervals.md).[Row_Version](Cm_Activity_Time_Intervals.md#row_version)|
 |Format||
 |Ignore for Insert Order|no|
 |Auto Complete|no|

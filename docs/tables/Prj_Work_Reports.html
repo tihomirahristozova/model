@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-prj_work_reports">Table Prj_Work_Reports</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Projects.WorkReports.html">Projects.WorkReports</a></p>
 <p>Contains project work report documents. Each work report contains consumed materials and resources. Entity: Prj_Work_Reports</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -133,7 +135,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="work_report_id">Work_Report_Id</h3>
-<p>Work_Report_Id</p>
 <table>
 <thead>
 <tr>
@@ -172,15 +173,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Reports.html">Prj_Work_Reports</a>.<a href="Prj_Work_Reports.html#work_report_id">Work_Report_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -265,14 +262,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="document_id">Document_Id</h3>
-<p>Document_Id</p>
 <table>
 <thead>
 <tr>
@@ -311,15 +307,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Reports.html">Prj_Work_Reports</a>.<a href="Prj_Work_Reports.html#document_id">Document_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -404,15 +396,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_id">Project_Id</h3>
-<p>Project_Id</p>
-<p>The project for which the work report is recorded.</p>
 <p>The project for which the work report is recorded.</p>
 <table>
 <thead>
@@ -452,15 +442,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Reports.html">Prj_Work_Reports</a>.<a href="Prj_Work_Reports.html#project_id">Project_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -545,15 +531,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="project_task_id">Project_Task_Id</h3>
-<p>Project_Task_Id</p>
-<p>The project task for which the work report is recorded. NULL means that the report contains entries for many project tasks.</p>
 <p>The project task for which the work report is recorded. NULL means that the report contains entries for many project tasks.</p>
 <table>
 <thead>
@@ -593,15 +577,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Reports.html">Prj_Work_Reports</a>.<a href="Prj_Work_Reports.html#project_task_id">Project_Task_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -686,15 +666,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_single_execution">Is_Single_Execution</h3>
-<p>Is_Single_Execution</p>
-<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Specifies whether the document is a single execution of its order document.</p>
 <table>
 <thead>
@@ -730,15 +708,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Reports.html">Prj_Work_Reports</a>.<a href="Prj_Work_Reports.html#is_single_execution">Is_Single_Execution</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -823,15 +797,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="is_released">Is_Released</h3>
-<p>Is_Released</p>
-<p>True if the document is not void and its state is released or greater</p>
 <p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
@@ -867,15 +839,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>False</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Reports.html">Prj_Work_Reports</a>.<a href="Prj_Work_Reports.html#is_released">Is_Released</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -960,14 +928,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="row_version">Row_Version</h3>
-<p>Row_Version</p>
 <table>
 <thead>
 <tr>
@@ -1002,15 +969,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Prj_Work_Reports.html">Prj_Work_Reports</a>.<a href="Prj_Work_Reports.html#row_version">Row_Version</a></td>
 </tr>
 <tr>
 <td>Format</td>

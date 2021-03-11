@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-fleet_maintenance_profile_plans">Table Fleet_Maintenance_Profile_Plans</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Applications.Fleet.MaintenanceProfilePlans.html">Applications.Fleet.MaintenanceProfilePlans</a></p>
 <p>Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenance_Profile_Plans</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -111,7 +113,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(2147483647)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -123,7 +125,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="maintenance_profile_plan_id">Maintenance_Profile_Plan_Id</h3>
-<p>Maintenance_Profile_Plan_Id</p>
 <table>
 <thead>
 <tr>
@@ -162,15 +163,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>NewGuid</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profile_Plans.html">Fleet_Maintenance_Profile_Plans</a>.<a href="Fleet_Maintenance_Profile_Plans.html#maintenance_profile_plan_id">Maintenance_Profile_Plan_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -255,15 +252,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_profile_id">Maintenance_Profile_Id</h3>
-<p>Maintenance_Profile_Id</p>
-<p>The maintenance profile, which includes the plan.</p>
 <p>The maintenance profile, which includes the plan.</p>
 <table>
 <thead>
@@ -303,15 +298,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profile_Plans.html">Fleet_Maintenance_Profile_Plans</a>.<a href="Fleet_Maintenance_Profile_Plans.html#maintenance_profile_id">Maintenance_Profile_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -396,15 +387,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="maintenance_plan_id">Maintenance_Plan_Id</h3>
-<p>Maintenance_Plan_Id</p>
-<p>The maintenance plan, which is included in the profile.</p>
 <p>The maintenance plan, which is included in the profile.</p>
 <table>
 <thead>
@@ -444,15 +433,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profile_Plans.html">Fleet_Maintenance_Profile_Plans</a>.<a href="Fleet_Maintenance_Profile_Plans.html#maintenance_plan_id">Maintenance_Plan_Id</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -537,14 +522,13 @@
 <tbody>
 <tr>
 <td>Equals</td>
-<td>NULL</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -555,7 +539,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(2147483647)</td>
+<td>nvarchar(max)</td>
 </tr>
 <tr>
 <td>Is Mulitlanguage</td>
@@ -583,15 +567,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profile_Plans.html">Fleet_Maintenance_Profile_Plans</a>.<a href="Fleet_Maintenance_Profile_Plans.html#notes">Notes</a></td>
 </tr>
 <tr>
 <td>Format</td>
@@ -664,8 +644,6 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Is_Active</p>
-<p>1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.</p>
 <p>1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.</p>
 <table>
 <thead>
@@ -701,15 +679,11 @@
 </tr>
 <tr>
 <td>Attributes</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Default Value</td>
 <td>True</td>
-</tr>
-<tr>
-<td>Derived From</td>
-<td><a href="Fleet_Maintenance_Profile_Plans.html">Fleet_Maintenance_Profile_Plans</a>.<a href="Fleet_Maintenance_Profile_Plans.html#is_active">Is_Active</a></td>
 </tr>
 <tr>
 <td>Format</td>
