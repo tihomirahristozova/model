@@ -1,4 +1,4 @@
-- name: Entities
+- name: Domain Model
   href: entities/
-- name: Tables
+- name: Table Model
   href: tables/
