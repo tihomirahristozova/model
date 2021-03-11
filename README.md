@@ -1,4 +1,4 @@
-# Welcome to the ERP.net Domain Model
+# Welcome to the ERP.net Data Model Reference
 
 The documentation uses a custom, internal ERP.net version of DocFX to build:
 https://github.com/ErpNetDocs/docfx
