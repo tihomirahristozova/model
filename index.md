@@ -1,11 +1,15 @@
-# Welcome to the ERP.net Domain Model
+# Welcome to the ERP.net Data Model Reference Documentation
 
-The Domain Model includes full documentation of the object model and business logic of ERP.net.
+The data model is targeted towards advanced implementation consultants and developers.
 
-It is targeted towards advanced implementation consultants and developers.
 
-See the Domain Model [Entities](entities/).
 
-## Table API
+ERP.net includes two data models:
 
-You can also execute [Table API](tables/index.md)
+* The object-oriented application [**Domain model**](entities/).
+The Domain model includes the full documentation of the application object model and business logic.
+It is accessible through the [Domain API](https://docs.erp.net/dev/topics/domain-api/index.html).
+
+* The database-oriented base [**Table model**](tables/).
+This table model includes the full documentation of the tables in the database.
+It is accessible through the [Table API](https://docs.erp.net/dev/topics/table-api/index.html).
