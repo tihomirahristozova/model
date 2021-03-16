@@ -93,89 +93,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#vehicle_id">Vehicle_Id</a></td>
-<td><code>uniqueidentifier</code> <code>PK</code></td>
-<td>Unique vehicle id</td>
+<td><a href="#active_from">Active_From</a></td>
+<td><code>datetime</code></td>
+<td>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.</td>
 </tr>
 <tr>
-<td><a href="#vehicle_type">Vehicle_Type</a></td>
-<td><code>nvarchar(64)</code> <code>ML</code></td>
-<td>Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown</td>
-</tr>
-<tr>
-<td><a href="#make">Make</a></td>
-<td><code>nvarchar(64)</code> <code>ML</code></td>
-<td>The name of the manufacturer of the vehicle. NULL means that the value is unknown</td>
-</tr>
-<tr>
-<td><a href="#model">Model</a></td>
-<td><code>nvarchar(64)</code> <code>ML</code></td>
-<td>The model of the vehicle</td>
-</tr>
-<tr>
-<td><a href="#vehicle_registration_number">Vehicle_Registration_Number</a></td>
-<td><code>nvarchar(16)</code></td>
-<td>The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority</td>
-</tr>
-<tr>
-<td><a href="#issuing_authority">Issuing_Authority</a></td>
-<td><code>nvarchar(64)</code> <code>ML</code></td>
-<td>The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable</td>
-</tr>
-<tr>
-<td><a href="#primary_color">Primary_Color</a></td>
-<td><code>nvarchar(64)</code> <code>ML</code></td>
-<td>The primary color of the vehicle. NULL means that the value is unknown or not applicable</td>
-</tr>
-<tr>
-<td><a href="#manufacture_year">Manufacture_Year</a></td>
-<td><code>int</code></td>
-<td>The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown</td>
-</tr>
-<tr>
-<td><a href="#engine_size_cc">Engine_Size_cc</a></td>
-<td><code>int</code></td>
-<td>Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)</td>
-</tr>
-<tr>
-<td><a href="#engine_power_hp">Engine_Power_hp</a></td>
-<td><code>int</code></td>
-<td>Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine</td>
-</tr>
-<tr>
-<td><a href="#engine_identification_number">Engine_Identification_Number</a></td>
-<td><code>nvarchar(20)</code></td>
-<td>Engine identification number</td>
-</tr>
-<tr>
-<td><a href="#vehicle_identification_number">Vehicle_Identification_Number</a></td>
-<td><code>nvarchar(20)</code></td>
-<td>VIN, aka Chassis number</td>
-</tr>
-<tr>
-<td><a href="#seating_places_count">Seating_Places_Count</a></td>
-<td><code>int</code></td>
-<td>Number of seating places, excluding driver</td>
-</tr>
-<tr>
-<td><a href="#crew_count">Crew_Count</a></td>
-<td><code>int</code></td>
-<td>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts</td>
-</tr>
-<tr>
-<td><a href="#standing_places_count">Standing_Places_Count</a></td>
-<td><code>int</code></td>
-<td>Number of standing places, if applicable</td>
-</tr>
-<tr>
-<td><a href="#vehicle_mass_kg">Vehicle_Mass_Kg</a></td>
-<td><code>int</code></td>
-<td>Vehicle own mass in kg</td>
-</tr>
-<tr>
-<td><a href="#technical_maximum_laden_mass_kg">Technical_Maximum_Laden_Mass_Kg</a></td>
-<td><code>int</code></td>
-<td>Maximum technically permissible laden mass in kg</td>
+<td><a href="#active_till">Active_Till</a></td>
+<td><code>datetime</code></td>
+<td>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.</td>
 </tr>
 <tr>
 <td><a href="#authority_maximum_laden_mass_kg">Authority_Maximum_Laden_Mass_Kg</a></td>
@@ -183,14 +108,24 @@
 <td>Maximum permissible laden mass, as determined by the registration authority</td>
 </tr>
 <tr>
-<td><a href="#trainset_maximum_laden_mass_kg">Trainset_Maximum_Laden_Mass_Kg</a></td>
+<td><a href="#crew_count">Crew_Count</a></td>
 <td><code>int</code></td>
-<td>Maximum permissible laden mass of a whole trainset, including the vehicle</td>
+<td>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts</td>
 </tr>
 <tr>
-<td><a href="#fuel_type">Fuel_Type</a></td>
-<td><code>nvarchar(64)</code></td>
-<td>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.</td>
+<td><a href="#engine_identification_number">Engine_Identification_Number</a></td>
+<td><code>nvarchar(20)</code></td>
+<td>Engine identification number</td>
+</tr>
+<tr>
+<td><a href="#engine_power_hp">Engine_Power_hp</a></td>
+<td><code>int</code></td>
+<td>Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine</td>
+</tr>
+<tr>
+<td><a href="#engine_size_cc">Engine_Size_cc</a></td>
+<td><code>int</code></td>
+<td>Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)</td>
 </tr>
 <tr>
 <td><a href="#fuel_capacity">Fuel_Capacity</a></td>
@@ -203,14 +138,49 @@
 <td>Average fuel consumption in the fuel measurement unit for 1 operational unit</td>
 </tr>
 <tr>
+<td><a href="#fuel_measurement_unit_id">Fuel_Measurement_Unit_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown</td>
+</tr>
+<tr>
+<td><a href="#fuel_type">Fuel_Type</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.</td>
+</tr>
+<tr>
+<td><a href="#is_active">Is_Active</a></td>
+<td><code>bit</code></td>
+<td>True if the vehicle is still owned and managed by the enterprise.</td>
+</tr>
+<tr>
+<td><a href="#issuing_authority">Issuing_Authority</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable</td>
+</tr>
+<tr>
+<td><a href="#maintenance_profile_id">Maintenance_Profile_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.</td>
+</tr>
+<tr>
+<td><a href="#make">Make</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>The name of the manufacturer of the vehicle. NULL means that the value is unknown</td>
+</tr>
+<tr>
+<td><a href="#manufacture_year">Manufacture_Year</a></td>
+<td><code>int</code></td>
+<td>The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown</td>
+</tr>
+<tr>
 <td><a href="#maximum_speed_kmh">Maximum_Speed_KmH</a></td>
 <td><code>int</code></td>
 <td>Maximum speed in km/h</td>
 </tr>
 <tr>
-<td><a href="#owner_party_id">Owner_Party_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>Vehicle owner</td>
+<td><a href="#model">Model</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>The model of the vehicle</td>
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
@@ -223,9 +193,14 @@
 <td>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. NULL means that the unit is unknown</td>
 </tr>
 <tr>
-<td><a href="#fuel_measurement_unit_id">Fuel_Measurement_Unit_Id</a></td>
+<td><a href="#owner_party_id">Owner_Party_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown</td>
+<td>Vehicle owner</td>
+</tr>
+<tr>
+<td><a href="#primary_color">Primary_Color</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>The primary color of the vehicle. NULL means that the value is unknown or not applicable</td>
 </tr>
 <tr>
 <td><a href="#row_version">Row_Version</a></td>
@@ -233,30 +208,55 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="#maintenance_profile_id">Maintenance_Profile_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.</td>
+<td><a href="#seating_places_count">Seating_Places_Count</a></td>
+<td><code>int</code></td>
+<td>Number of seating places, excluding driver</td>
 </tr>
 <tr>
-<td><a href="#is_active">Is_Active</a></td>
-<td><code>bit</code></td>
-<td>True if the vehicle is still owned and managed by the enterprise.</td>
+<td><a href="#standing_places_count">Standing_Places_Count</a></td>
+<td><code>int</code></td>
+<td>Number of standing places, if applicable</td>
 </tr>
 <tr>
-<td><a href="#active_from">Active_From</a></td>
-<td><code>datetime</code></td>
-<td>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.</td>
+<td><a href="#technical_maximum_laden_mass_kg">Technical_Maximum_Laden_Mass_Kg</a></td>
+<td><code>int</code></td>
+<td>Maximum technically permissible laden mass in kg</td>
 </tr>
 <tr>
-<td><a href="#active_till">Active_Till</a></td>
-<td><code>datetime</code></td>
-<td>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.</td>
+<td><a href="#trainset_maximum_laden_mass_kg">Trainset_Maximum_Laden_Mass_Kg</a></td>
+<td><code>int</code></td>
+<td>Maximum permissible laden mass of a whole trainset, including the vehicle</td>
+</tr>
+<tr>
+<td><a href="#vehicle_id">Vehicle_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>Unique vehicle id</td>
+</tr>
+<tr>
+<td><a href="#vehicle_identification_number">Vehicle_Identification_Number</a></td>
+<td><code>nvarchar(20)</code></td>
+<td>VIN, aka Chassis number</td>
+</tr>
+<tr>
+<td><a href="#vehicle_mass_kg">Vehicle_Mass_Kg</a></td>
+<td><code>int</code></td>
+<td>Vehicle own mass in kg</td>
+</tr>
+<tr>
+<td><a href="#vehicle_registration_number">Vehicle_Registration_Number</a></td>
+<td><code>nvarchar(16)</code></td>
+<td>The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority</td>
+</tr>
+<tr>
+<td><a href="#vehicle_type">Vehicle_Type</a></td>
+<td><code>nvarchar(64)</code> <code>ML</code></td>
+<td>Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
-<h3 id="vehicle_id">Vehicle_Id</h3>
-<p>Unique vehicle id</p>
+<h3 id="active_from">Active_From</h3>
+<p>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.</p>
 <table>
 <thead>
 <tr>
@@ -266,83 +266,327 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
+<td>Auto Complete</td>
+<td>no</td>
 </tr>
 <tr>
-<td><code>NULL</code></td>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
 <td>no</td>
 </tr>
 <tr>
 <td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active_till">Active_Till</h3>
+<p>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
-<td>Order in Primary Key</td>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="authority_maximum_laden_mass_kg">Authority_Maximum_Laden_Mass_Kg</h3>
+<p>Maximum permissible laden mass, as determined by the registration authority</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crew_count">Crew_Count</h3>
+<p>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
 <td>1</td>
 </tr>
 <tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>NewGuid</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
+<td>Enter Stop</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Ignore for Insert Order</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
 <td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
 <td>no</td>
 </tr>
 <tr>
@@ -354,485 +598,15 @@
 <td>2147483647</td>
 </tr>
 <tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vehicle_type">Vehicle_Type</h3>
-<p>Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Ownership Reference</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Readonly</td>
+<td>Pasword</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-1">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Like</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="make">Make</h3>
-<p>The name of the manufacturer of the vehicle. NULL means that the value is unknown</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-2">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Like</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="model">Model</h3>
-<p>The model of the vehicle</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-3">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Like</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vehicle_registration_number">Vehicle_Registration_Number</h3>
-<p>The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(16)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
+<td>Picture</td>
 <td>no</td>
 </tr>
 <tr>
@@ -840,11 +614,11 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Ownership Reference</td>
+<td>Readonly</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Readonly</td>
+<td>RTF</td>
 <td>no</td>
 </tr>
 <tr>
@@ -852,209 +626,16 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>16</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
 <td>Summary Type</td>
 <td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
 </tr>
 <tr>
 <td>Supports EQUALS_IN</td>
 <td>no</td>
 </tr>
-</tbody>
-</table>
-<h4 id="supported-filters-4">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Like</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="issuing_authority">Issuing_Authority</h3>
-<p>The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
+<td>int (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1065,564 +646,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-5">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Like</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="primary_color">Primary_Color</h3>
-<p>The primary color of the vehicle. NULL means that the value is unknown or not applicable</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
+<td>User Login</td>
 <td>no</td>
 </tr>
 <tr>
 <td>Visible</td>
 <td>yes</td>
 </tr>
-<tr>
-<td>Max Length</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
 </tbody>
 </table>
-<h4 id="supported-filters-6">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Like</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="manufacture_year">Manufacture_Year</h3>
-<p>The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-7">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>GreaterThanOrLessThan</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="engine_size_cc">Engine_Size_cc</h3>
-<p>Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-8">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>GreaterThanOrLessThan</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="engine_power_hp">Engine_Power_hp</h3>
-<p>Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-9">Supported Filters</h4>
+<h4 id="crew_count---supported-filters">Crew_Count - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -1658,50 +691,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(20)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -1710,32 +699,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -1746,8 +723,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(20) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1758,12 +771,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-10">Supported Filters</h4>
+<h4 id="engine_identification_number---supported-filters">Engine_Identification_Number - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -1788,8 +805,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="vehicle_identification_number">Vehicle_Identification_Number</h3>
-<p>VIN, aka Chassis number</p>
+<h3 id="engine_power_hp">Engine_Power_hp</h3>
+<p>Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine</p>
 <table>
 <thead>
 <tr>
@@ -1799,50 +816,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(20)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -1851,169 +824,20 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>20</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-11">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Like</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="seating_places_count">Seating_Places_Count</h3>
-<p>Number of seating places, excluding driver</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
 <td>Default Value</td>
 <td>None</td>
 </tr>
 <tr>
-<td>Format</td>
-<td></td>
+<td>Enter Stop</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Ignore for Insert Order</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -2024,8 +848,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2036,12 +896,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-12">Supported Filters</h4>
+<h4 id="engine_power_hp---supported-filters">Engine_Power_hp - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -2066,8 +930,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="crew_count">Crew_Count</h3>
-<p>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts</p>
+<h3 id="engine_size_cc">Engine_Size_cc</h3>
+<p>Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)</p>
 <table>
 <thead>
 <tr>
@@ -2077,46 +941,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -2125,32 +949,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -2161,8 +973,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2173,12 +1021,1981 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="engine_size_cc---supported-filters">Engine_Size_cc - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-13">Supported Filters</h4>
+<h3 id="fuel_capacity">Fuel_Capacity</h3>
+<p>Maximum fuel capacity of the engine or the battery in the fuel measurement unit</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fuel_compsumption">Fuel_Compsumption</h3>
+<p>Average fuel consumption in the fuel measurement unit for 1 operational unit</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(7, 1) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fuel_measurement_unit_id">Fuel_Measurement_Unit_Id</h3>
+<p>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fuel_measurement_unit_id---supported-filters">Fuel_Measurement_Unit_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fuel_type">Fuel_Type</h3>
+<p>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fuel_type---supported-filters">Fuel_Type - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_active">Is_Active</h3>
+<p>True if the vehicle is still owned and managed by the enterprise.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="issuing_authority">Issuing_Authority</h3>
+<p>The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (MultiLanguage) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="issuing_authority---supported-filters">Issuing_Authority - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance_profile_id">Maintenance_Profile_Id</h3>
+<p>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Fleet_Maintenance_Profiles.html">Fleet_Maintenance_Profiles</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="maintenance_profile_id---supported-filters">Maintenance_Profile_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="make">Make</h3>
+<p>The name of the manufacturer of the vehicle. NULL means that the value is unknown</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (MultiLanguage) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="make---supported-filters">Make - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="manufacture_year">Manufacture_Year</h3>
+<p>The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="manufacture_year---supported-filters">Manufacture_Year - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maximum_speed_kmh">Maximum_Speed_KmH</h3>
+<p>Maximum speed in km/h</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="model">Model</h3>
+<p>The model of the vehicle</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (MultiLanguage) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="model---supported-filters">Model - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(max) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operational_measurement_unit_id">Operational_Measurement_Unit_Id</h3>
+<p>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. NULL means that the unit is unknown</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="operational_measurement_unit_id---supported-filters">Operational_Measurement_Unit_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="owner_party_id">Owner_Party_Id</h3>
+<p>Vehicle owner</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Parties.html">Gen_Parties</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="owner_party_id---supported-filters">Owner_Party_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="primary_color">Primary_Color</h3>
+<p>The primary color of the vehicle. NULL means that the value is unknown or not applicable</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (MultiLanguage) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="primary_color---supported-filters">Primary_Color - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="seating_places_count">Seating_Places_Count</h3>
+<p>Number of seating places, excluding driver</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="seating_places_count---supported-filters">Seating_Places_Count - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -2214,46 +3031,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -2262,32 +3039,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -2298,47 +3063,19 @@
 <td>2147483647</td>
 </tr>
 <tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
+<td>Ownership Reference</td>
 <td>no</td>
 </tr>
 <tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
+<td>Pasword</td>
 <td>no</td>
 </tr>
-</tbody>
-</table>
-<h3 id="vehicle_mass_kg">Vehicle_Mass_Kg</h3>
-<p>Vehicle own mass in kg</p>
-<table>
-<thead>
 <tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
+<td>Picture</td>
+<td>no</td>
 </tr>
 <tr>
 <td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
 <td>no</td>
 </tr>
 <tr>
@@ -2346,72 +3083,24 @@
 <td>no</td>
 </tr>
 <tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Sortable</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2422,8 +3111,12 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -2438,46 +3131,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -2486,32 +3139,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -2522,47 +3163,19 @@
 <td>2147483647</td>
 </tr>
 <tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
+<td>Ownership Reference</td>
 <td>no</td>
 </tr>
 <tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
+<td>Pasword</td>
 <td>no</td>
 </tr>
-</tbody>
-</table>
-<h3 id="authority_maximum_laden_mass_kg">Authority_Maximum_Laden_Mass_Kg</h3>
-<p>Maximum permissible laden mass, as determined by the registration authority</p>
-<table>
-<thead>
 <tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
+<td>Picture</td>
+<td>no</td>
 </tr>
 <tr>
 <td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
 <td>no</td>
 </tr>
 <tr>
@@ -2570,72 +3183,24 @@
 <td>no</td>
 </tr>
 <tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Sortable</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2646,8 +3211,12 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -2662,46 +3231,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -2710,32 +3239,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -2746,8 +3263,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2758,13 +3311,17 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h3 id="fuel_type">Fuel_Type</h3>
-<p>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.</p>
+<h3 id="vehicle_id">Vehicle_Id</h3>
+<p>Unique vehicle id</p>
 <table>
 <thead>
 <tr>
@@ -2774,27 +3331,59 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
+<td>Auto Complete</td>
 <td>no</td>
 </tr>
 <tr>
-<td><code>NULL</code></td>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
-<td>Primary Key</td>
+<td>Ignore for Insert Order</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
 <td>no</td>
 </tr>
 <tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
 <td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
 <td>no</td>
 </tr>
 <tr>
@@ -2802,68 +3391,16 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2874,12 +3411,135 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-14">Supported Filters</h4>
+<h4 id="vehicle_id---supported-filters">Vehicle_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_identification_number">Vehicle_Identification_Number</h3>
+<p>VIN, aka Chassis number</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(20) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vehicle_identification_number---supported-filters">Vehicle_Identification_Number - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -2904,8 +3564,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="fuel_capacity">Fuel_Capacity</h3>
-<p>Maximum fuel capacity of the engine or the battery in the fuel measurement unit</p>
+<h3 id="vehicle_mass_kg">Vehicle_Mass_Kg</h3>
+<p>Vehicle own mass in kg</p>
 <table>
 <thead>
 <tr>
@@ -2915,46 +3575,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -2963,32 +3583,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -2999,8 +3607,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -3011,13 +3655,17 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h3 id="fuel_compsumption">Fuel_Compsumption</h3>
-<p>Average fuel consumption in the fuel measurement unit for 1 operational unit</p>
+<h3 id="vehicle_registration_number">Vehicle_Registration_Number</h3>
+<p>The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority</p>
 <table>
 <thead>
 <tr>
@@ -3027,46 +3675,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>decimal(7, 1)</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -3075,44 +3683,68 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
 </tr>
 <tr>
 <td>Is Entity Name</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
 <td>Max Length</td>
-<td>-1</td>
+<td>16</td>
 </tr>
 <tr>
 <td>Order</td>
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -3123,13 +3755,42 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vehicle_registration_number---supported-filters">Vehicle_Registration_Number - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<h3 id="maximum_speed_kmh">Maximum_Speed_KmH</h3>
-<p>Maximum speed in km/h</p>
+<h3 id="vehicle_type">Vehicle_Type</h3>
+<p>Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown</p>
 <table>
 <thead>
 <tr>
@@ -3139,19 +3800,51 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
+<td>Auto Complete</td>
 <td>yes</td>
 </tr>
 <tr>
-<td>Primary Key</td>
+<td>Data Filter</td>
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
 <td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
 <td>no</td>
 </tr>
 <tr>
@@ -3159,72 +3852,24 @@
 <td>no</td>
 </tr>
 <tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Sortable</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (MultiLanguage) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -3235,128 +3880,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="owner_party_id">Owner_Party_Id</h3>
-<p>Vehicle owner</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Gen_Parties.html">Gen_Parties</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
+<td>User Login</td>
 <td>no</td>
 </tr>
 <tr>
 <td>Visible</td>
 <td>yes</td>
 </tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
 </tbody>
 </table>
-<h4 id="supported-filters-15">Supported Filters</h4>
+<h4 id="vehicle_type---supported-filters">Vehicle_Type - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -3373,979 +3906,10 @@
 <td>yes</td>
 <td>no</td>
 </tr>
-</tbody>
-</table>
-<h3 id="notes">Notes</h3>
-<table>
-<thead>
 <tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(max)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
+<td>Like</td>
 <td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="operational_measurement_unit_id">Operational_Measurement_Unit_Id</h3>
-<p>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. NULL means that the unit is unknown</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-16">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="fuel_measurement_unit_id">Fuel_Measurement_Unit_Id</h3>
-<p>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Gen_Measurement_Units.html">Gen_Measurement_Units</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-17">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="row_version">Row_Version</h3>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>timestamp</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="maintenance_profile_id">Maintenance_Profile_Id</h3>
-<p>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Fleet_Maintenance_Profiles.html">Fleet_Maintenance_Profiles</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-18">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="is_active">Is_Active</h3>
-<p>True if the vehicle is still owned and managed by the enterprise.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>bit</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>True</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="active_from">Active_From</h3>
-<p>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td>DateTime Format</td>
-<td>DateTime</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="active_till">Active_Till</h3>
-<p>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td>DateTime Format</td>
-<td>DateTime</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
 <td>no</td>
 </tr>
 </tbody>

@@ -93,11 +93,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#data_measure_id">Data_Measure_Id</a></td>
-<td><code>uniqueidentifier</code> <code>PK</code></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="#data_measure_code">Data_Measure_Code</a></td>
 <td><code>nvarchar(16)</code></td>
 <td>Unique measure code.</td>
@@ -108,14 +103,14 @@
 <td>The group to which this measure belongs.</td>
 </tr>
 <tr>
+<td><a href="#data_measure_id">Data_Measure_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="#data_measure_name">Data_Measure_Name</a></td>
 <td><code>nvarchar(254)</code></td>
 <td>The name of the measure (multilanguage).</td>
-</tr>
-<tr>
-<td><a href="#period">Period</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>D</code>, <code>M</code>, <code>Q</code>, <code>Y</code></td>
-<td>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</td>
 </tr>
 <tr>
 <td><a href="#green_zone_spread_percent">Green_Zone_Spread_Percent</a></td>
@@ -132,143 +127,14 @@
 <td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
+<tr>
+<td><a href="#period">Period</a></td>
+<td><code>nvarchar(1)</code> Allowed: <code>D</code>, <code>M</code>, <code>Q</code>, <code>Y</code></td>
+<td>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
-<h3 id="data_measure_id">Data_Measure_Id</h3>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Order in Primary Key</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>NewGuid</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <h3 id="data_measure_code">Data_Measure_Code</h3>
 <p>Unique measure code.</p>
 <table>
@@ -280,50 +146,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(16)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -332,32 +154,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -368,8 +178,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>yes</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(16)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -380,12 +226,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-1">Supported Filters</h4>
+<h4 id="data_measure_code---supported-filters">Data_Measure_Code - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -421,50 +271,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Dw_Data_Measure_Groups.html">Dw_Data_Measure_Groups</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -473,32 +279,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -509,8 +303,48 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Dw_Data_Measure_Groups.html">Dw_Data_Measure_Groups</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -521,12 +355,134 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-2">Supported Filters</h4>
+<h4 id="data_measure_group_id---supported-filters">Data_Measure_Group_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_measure_id">Data_Measure_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="data_measure_id---supported-filters">Data_Measure_Id - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -556,50 +512,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(254)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -608,32 +520,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -644,8 +544,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(254)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -656,12 +592,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-3">Supported Filters</h4>
+<h4 id="data_measure_name---supported-filters">Data_Measure_Name - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -686,145 +626,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="period">Period</h3>
-<p>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(1)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Allowed Values</td>
-<td><code>D</code>, <code>M</code>, <code>Q</code>, <code>Y</code></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>Q</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-4">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <h3 id="green_zone_spread_percent">Green_Zone_Spread_Percent</h3>
 <p>The plus or minus percent, by which the goal can be missed, but still considered achieved.</p>
 <table>
@@ -836,46 +637,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>decimal(3, 2)</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>0.2</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -884,32 +645,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>0.2</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -920,8 +669,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(3, 2)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -932,12 +717,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-5">Supported Filters</h4>
+<h4 id="green_zone_spread_percent---supported-filters">Green_Zone_Spread_Percent - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -967,46 +756,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>decimal(3, 2)</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>0.01</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -1015,32 +764,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>0.01</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -1051,8 +788,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(3, 2)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1063,12 +836,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-6">Supported Filters</h4>
+<h4 id="horizontal_trend_spread_percent---supported-filters">Horizontal_Trend_Spread_Percent - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -1097,50 +874,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(max)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -1149,32 +882,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -1185,8 +906,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(max) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1197,7 +954,134 @@
 <td>Medium</td>
 </tr>
 <tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="period">Period</h3>
+<p>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>D</code>, <code>M</code>, <code>Q</code>, <code>Y</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>Q</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="period---supported-filters">Period - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
 <td>no</td>
 </tr>
 </tbody>

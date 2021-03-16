@@ -15,57 +15,17 @@ Represents mass payment document (payment slip). Entity: Cash_Payment_Slips
 
 | Name | Type | Description |
 | - | - | --- |
-|[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` |The account towards which the payments was effected|
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency of the amounts in this document|
-|[Payment_Slip_No](#payment_slip_no)|`nvarchar(20)` |When not null, contains the number of the slip, as issued by the banking institution.|
-|[Payment_Slip_Id](#payment_slip_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
-|[Row_Version](#row_version)|`timestamp` ||
+|[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
+|[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` |The account towards which the payments was effected|
+|[Payment_Slip_Id](#payment_slip_id)|`uniqueidentifier` `PK`||
+|[Payment_Slip_No](#payment_slip_no)|`nvarchar(20)` |When not null, contains the number of the slip, as issued by the banking institution.|
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |When not NULL specifies the payment type for the sales order|
+|[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### Payment_Account_Id
-
-
-The account towards which the payments was effected
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|1|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### Document_Currency_Id
 
@@ -74,185 +34,69 @@ The currency of the amounts in this document
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Short|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Document_Currency_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
-
-### Payment_Slip_No
-
-
-When not null, contains the number of the slip, as issued by the banking institution.
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(20)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|20|
-|Order|3|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Payment_Slip_Id
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 ### Document_Id
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|yes|
-|Referenced Table|[Gen_Documents](Gen_Documents.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|yes|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Documents](Gen_Documents.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Document_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-
-### Is_Single_Execution
-
-
-Specifies whether the document is a single execution of its order document.
-
-| Property | Value |
-| - | - |
-|Type|bit|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|False|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|yes|
 
 ### Is_Released
 
@@ -261,67 +105,170 @@ True if the document is not void and its state is released or greater
 
 | Property | Value |
 | - | - |
-|Type|bit|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|False|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|False|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Is_Released - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
 
-### Row_Version
+### Is_Single_Execution
+
+
+Specifies whether the document is a single execution of its order document.
 
 | Property | Value |
 | - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|False|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
 |UI Memo Editor|no|
 |UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Is_Single_Execution - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|yes|
+
+### Payment_Account_Id
+
+
+The account towards which the payments was effected
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|1|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Payment_Account_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Payment_Slip_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NewGuid|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Payment_Slip_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Payment_Slip_No
+
+
+When not null, contains the number of the slip, as issued by the banking institution.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|20|
+|Order|3|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
 |Supports EQUALS_IN|no|
+|Type|nvarchar(20) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Payment_Type_Id
 
@@ -330,37 +277,61 @@ When not NULL specifies the payment type for the sales order
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Payment_Type_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 

@@ -11,25 +11,238 @@ Contains base data for different kind of parties - companies, persons, departmen
 
 | Name | Type | Description |
 | - | - | --- |
-|[Id](#id)|`uniqueidentifier` `PK`|Unique party id|
-|[Party_Name](#party_name)|`nvarchar(254)` `ML`|The name of the party|
-|[Party_Type](#party_type)|`nvarchar(1)` Allowed: `C`, `L`, `P`, `S`, `V`|Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division|
-|[Party_Code](#party_code)|`nvarchar(16)` Readonly|The unique code of the party|
-|[Notes](#notes)|`nvarchar(254)` ||
-|[Parent_Party_Id](#parent_party_id)|`uniqueidentifier` |Organizational unit (branch from the hierarchy of all parties) to which this party is referred to|
-|[Party_Unique_Number](#party_unique_number)|`nvarchar(16)` Readonly|Unique number of the party (National number for persons, Registration number for companies)|
+|[Administrative_Region_Id](#administrative_region_id)|`uniqueidentifier` |The administrative region in which the party is situated.|
+|[Area_Id](#area_id)|`uniqueidentifier` |The area in which the party is situated.|
 |[Creation_Time](#creation_time)|`datetime` Readonly||
 |[Creation_User](#creation_user)|`nvarchar(64)` Readonly||
+|[Default_Product_Coding_System_Id](#default_product_coding_system_id)|`uniqueidentifier` |When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.|
+|[GLN](#gln)|`nvarchar(13)` |Global Location Number used by EDI systems|
+|[Id](#id)|`uniqueidentifier` `PK`|Unique party id|
+|[Is_Active](#is_active)|`bit` |Specifies whether the current party is active in the system or not.|
+|[Notes](#notes)|`nvarchar(254)` ||
+|[Parent_Party_Id](#parent_party_id)|`uniqueidentifier` |Organizational unit (branch from the hierarchy of all parties) to which this party is referred to|
+|[Party_Code](#party_code)|`nvarchar(16)` Readonly|The unique code of the party|
+|[Party_Name](#party_name)|`nvarchar(254)` `ML`|The name of the party|
+|[Party_Type](#party_type)|`nvarchar(1)` Allowed: `C`, `L`, `P`, `S`, `V`|Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division|
+|[Party_Unique_Number](#party_unique_number)|`nvarchar(16)` Readonly|Unique number of the party (National number for persons, Registration number for companies)|
+|[Row_Version](#row_version)|`timestamp` ||
 |[Update_Time](#update_time)|`datetime` Readonly||
 |[Update_User](#update_user)|`nvarchar(64)` Readonly||
-|[GLN](#gln)|`nvarchar(13)` |Global Location Number used by EDI systems|
-|[Area_Id](#area_id)|`uniqueidentifier` |The area in which the party is situated.|
-|[Default_Product_Coding_System_Id](#default_product_coding_system_id)|`uniqueidentifier` |When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.|
-|[Administrative_Region_Id](#administrative_region_id)|`uniqueidentifier` |The administrative region in which the party is situated.|
-|[Is_Active](#is_active)|`bit` |Specifies whether the current party is active in the system or not.|
-|[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### Administrative_Region_Id
+
+
+The administrative region in which the party is situated.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Administrative_Regions](Gen_Administrative_Regions.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Administrative_Region_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Area_Id
+
+
+The area in which the party is situated.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Areas](Gen_Areas.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Area_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
+
+### Creation_Time
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|no|
+|Visible|no|
+
+#### Creation_Time - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|yes|yes|
+
+### Creation_User
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|yes|
+|Visible|no|
+
+#### Creation_User - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|yes|
+
+### Default_Product_Coding_System_Id
+
+
+When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Coding_Systems](Gen_Coding_Systems.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Default_Product_Coding_System_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### GLN
+
+
+Global Location Number used by EDI systems
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|13|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|yes|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(13) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|no|
+|Visible|yes|
+
+#### GLN - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
 
 ### Id
 
@@ -38,38 +251,172 @@ Unique party id
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|NewGuid|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Is_Active
+
+
+Specifies whether the current party is active in the system or not.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|True|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Notes
+
+| Property | Value |
+| - | - |
+|Attributes|IsLongString|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|254|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(254) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Parent_Party_Id
+
+
+Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Parties](Gen_Parties.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Long|
+|User Login|no|
+|Visible|yes|
+
+#### Parent_Party_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Party_Code
+
+
+The unique code of the party
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|16|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|yes|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(16)|
+|UI Memo Editor|no|
+|UI Width|120|
+|User Login|no|
+|Visible|yes|
+
+#### Party_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|yes|
+|Like|None|no|no|
 
 ### Party_Name
 
@@ -78,36 +425,32 @@ The name of the party
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(254)|
-|Is Mulitlanguage|yes|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|yes|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|254|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|yes|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Long|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Party_Name - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
@@ -119,151 +462,35 @@ Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company L
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(1)|
-|Is Mulitlanguage|no|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
 |Allowed Values|`C`, `L`, `P`, `S`, `V`|
-|Default Value|P|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|P|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Party_Type - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-
-### Party_Code
-
-
-The unique code of the party
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(16)|
-|Is Mulitlanguage|no|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|yes|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|16|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|120|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|yes|
-|Like|None|no|no|
-
-### Notes
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(254)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes|IsLongString|
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|254|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Parent_Party_Id
-
-
-Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Parties](Gen_Parties.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Long|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### Party_Unique_Number
 
@@ -272,148 +499,93 @@ Unique number of the party (National number for persons, Registration number for
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(16)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|16|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(16) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Party_Unique_Number - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|yes|
 |Like|None|no|no|
 
-### Creation_Time
+### Row_Version
 
 | Property | Value |
 | - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
-|Enter Stop|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|GreaterThanOrLessThan|None|yes|yes|
-
-### Creation_User
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(64)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
 |Ownership Reference|no|
-|Readonly|yes|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
 |Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|yes|
-|Visible|no|
-|Max Length|64|
-|Order|2147483647|
 |Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
 |Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Like|None|no|yes|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Update_Time
 
 | Property | Value |
 | - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Update_Time - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|yes|yes|
 
@@ -421,266 +593,33 @@ Unique number of the party (National number for persons, Registration number for
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(64)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|yes|
-|Visible|no|
 |Max Length|64|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|no|
+|User Login|yes|
+|Visible|no|
 
-#### Supported Filters
+#### Update_User - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Like|None|no|yes|
-
-### GLN
-
-
-Global Location Number used by EDI systems
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(13)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|yes|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|13|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|yes|
-
-### Area_Id
-
-
-The area in which the party is situated.
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Areas](Gen_Areas.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|yes|
-
-### Default_Product_Coding_System_Id
-
-
-When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Coding_Systems](Gen_Coding_Systems.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
-
-### Administrative_Region_Id
-
-
-The administrative region in which the party is situated.
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Administrative_Regions](Gen_Administrative_Regions.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
-
-### Is_Active
-
-
-Specifies whether the current party is active in the system or not.
-
-| Property | Value |
-| - | - |
-|Type|bit|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|True|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Row_Version
-
-| Property | Value |
-| - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
 
 

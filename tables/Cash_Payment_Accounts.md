@@ -11,206 +11,51 @@ Payment accounts are cash, bank and other accounts, which are used in payments. 
 
 | Name | Type | Description |
 | - | - | --- |
-|[Payment_Account_Name](#payment_account_name)|`nvarchar(50)` `ML`||
-|[Currency_Id](#currency_id)|`uniqueidentifier` |The currency in which the movements for this payment account will be recorded.|
-|[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` `PK`||
-|[Payment_Account_Code](#payment_account_code)|`nvarchar(16)` ||
-|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
-|[Bank_Account_Id](#bank_account_id)|`uniqueidentifier` |The bank account, which is represented by this payment account.|
-|[Is_Active](#is_active)|`bit` |Indicates wheather the payment account is currently used (active).|
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` ||
+|[Bank_Account_Id](#bank_account_id)|`uniqueidentifier` |The bank account, which is represented by this payment account.|
+|[Currency_Id](#currency_id)|`uniqueidentifier` |The currency in which the movements for this payment account will be recorded.|
+|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` ||
+|[Is_Active](#is_active)|`bit` |Indicates wheather the payment account is currently used (active).|
+|[Payment_Account_Code](#payment_account_code)|`nvarchar(16)` ||
+|[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` `PK`||
+|[Payment_Account_Name](#payment_account_name)|`nvarchar(50)` `ML`||
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
-### Payment_Account_Name
+### Access_Key_Id
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(50)|
-|Is Mulitlanguage|yes|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
+|Auto Complete|no|
+|Data Filter|no|
 |Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
 |Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|50|
-|Order|0|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Long|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Like|None|no|no|
-
-### Currency_Id
-
-
-The currency in which the movements for this payment account will be recorded.
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
 |Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|1|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Short|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Payment_Account_Id
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Access_Key_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|yes|
-
-### Payment_Account_Code
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(16)|
-|Is Mulitlanguage|no|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|yes|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|16|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-|Like|None|no|no|
-
-### Enterprise_Company_Id
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
@@ -221,36 +66,138 @@ The bank account, which is represented by this payment account.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Party_Bank_Accounts](Gen_Party_Bank_Accounts.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
+|User Login|no|
+|Visible|yes|
+
+#### Bank_Account_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Currency_Id
+
+
+The currency in which the movements for this payment account will be recorded.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|1|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
 |Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Short|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Currency_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Enterprise_Company_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Enterprise_Companies](Gen_Enterprise_Companies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|no|
+|Visible|yes|
+
+#### Enterprise_Company_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Enterprise_Company_Location_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Enterprise_Company_Location_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
@@ -261,111 +208,134 @@ Indicates wheather the payment account is currently used (active).
 
 | Property | Value |
 | - | - |
-|Type|bit|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|True|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|True|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
 |UI Memo Editor|no|
 |UI Width|Short|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Is_Active - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Access_Key_Id
+### Payment_Account_Code
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
+|Max Length|16|
 |Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
-
-### Enterprise_Company_Location_Id
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
 |Ownership Reference|no|
-|Referenced Table|[Cm_Company_Locations](Cm_Company_Locations.md)|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
 |Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
+|RTF|no|
+|Sortable|yes|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(16)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|no|
 |Visible|yes|
+
+#### Payment_Account_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
+### Payment_Account_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NewGuid|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Payment_Account_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|yes|
+
+### Payment_Account_Name
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|50|
+|Order|0|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(50) (MultiLanguage)|
+|UI Memo Editor|no|
+|UI Width|Long|
+|User Login|no|
+|Visible|yes|
+
+#### Payment_Account_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Payment_Type_Id
 
@@ -374,36 +344,33 @@ Specifies the payment type used to pay, when using this payment account. NULL wh
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cash_Payment_Types](Cash_Payment_Types.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Payment_Type_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
@@ -411,30 +378,27 @@ Specifies the payment type used to pay, when using this payment account. NULL wh
 
 | Property | Value |
 | - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|no|
 
 

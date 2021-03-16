@@ -97,29 +97,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#event_type">Event_Type</a></td>
-<td><code>nvarchar(64)</code> Allowed: <code>AGGREGATECLIENTCOMMIT</code>, <code>ATTRIBUTECHANGED</code>, <code>ATTRIBUTECHANGING</code>, <code>CLIENTCOMMIT</code>, <code>COMMIT</code>, <code>STATECHANGED</code>, <code>STATECHANGING</code>, <code>VOIDING</code></td>
-<td>The event for which to register the business rule.</td>
-</tr>
-<tr>
 <td><a href="#event_parameter">Event_Parameter</a></td>
 <td><code>nvarchar(128)</code></td>
 <td>Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.</td>
 </tr>
 <tr>
+<td><a href="#event_type">Event_Type</a></td>
+<td><code>nvarchar(64)</code> Allowed: <code>AGGREGATECLIENTCOMMIT</code>, <code>ATTRIBUTECHANGED</code>, <code>ATTRIBUTECHANGING</code>, <code>CLIENTCOMMIT</code>, <code>COMMIT</code>, <code>STATECHANGED</code>, <code>STATECHANGING</code>, <code>VOIDING</code></td>
+<td>The event for which to register the business rule.</td>
+</tr>
+<tr>
 <td><a href="#execution_priority">Execution_Priority</a></td>
 <td><code>int</code> Allowed: <code>30</code>, <code>50</code>, <code>70</code></td>
 <td>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.</td>
-</tr>
-<tr>
-<td><a href="#user_business_rule_event_id">User_Business_Rule_Event_Id</a></td>
-<td><code>uniqueidentifier</code> <code>PK</code></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="#user_business_rule_id">User_Business_Rule_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>The rule, which will be registered for the event.</td>
 </tr>
 <tr>
 <td><a href="#layer">Layer</a></td>
@@ -131,129 +121,19 @@
 <td><code>timestamp</code></td>
 <td></td>
 </tr>
+<tr>
+<td><a href="#user_business_rule_event_id">User_Business_Rule_Event_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#user_business_rule_id">User_Business_Rule_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The rule, which will be registered for the event.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
-<h3 id="event_type">Event_Type</h3>
-<p>The event for which to register the business rule.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Allowed Values</td>
-<td><code>AGGREGATECLIENTCOMMIT</code>, <code>ATTRIBUTECHANGED</code>, <code>ATTRIBUTECHANGING</code>, <code>CLIENTCOMMIT</code>, <code>COMMIT</code>, <code>STATECHANGED</code>, <code>STATECHANGING</code>, <code>VOIDING</code></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <h3 id="event_parameter">Event_Parameter</h3>
 <p>Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.</p>
 <table>
@@ -265,50 +145,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(128)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -317,32 +153,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -353,8 +177,44 @@
 <td>2</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(128) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -365,8 +225,116 @@
 <td>Medium</td>
 </tr>
 <tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="event_type">Event_Type</h3>
+<p>The event for which to register the business rule.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>AGGREGATECLIENTCOMMIT</code>, <code>ATTRIBUTECHANGED</code>, <code>ATTRIBUTECHANGING</code>, <code>CLIENTCOMMIT</code>, <code>COMMIT</code>, <code>STATECHANGED</code>, <code>STATECHANGING</code>, <code>VOIDING</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Supports EQUALS_IN</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -381,48 +349,8 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
 <td>Allowed Values</td>
 <td><code>30</code>, <code>50</code>, <code>70</code></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
 </tr>
 <tr>
 <td>Auto Complete</td>
@@ -433,32 +361,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>50</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -469,8 +385,44 @@
 <td>3</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -481,7 +433,214 @@
 <td>Medium</td>
 </tr>
 <tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layer">Layer</h3>
+<p>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>FTE</code>, <code>BKE</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>BKE</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -496,50 +655,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Order in Primary Key</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>NewGuid</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -548,31 +663,19 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
 <td>no</td>
 </tr>
 <tr>
@@ -584,8 +687,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -596,12 +735,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters">Supported Filters</h4>
+<h4 id="user_business_rule_event_id---supported-filters">User_Business_Rule_Event_Id - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -631,50 +774,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -683,31 +782,19 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
 <td>no</td>
 </tr>
 <tr>
@@ -719,8 +806,48 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Sys_User_Business_Rules.html">Sys_User_Business_Rules</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -731,12 +858,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-1">Supported Filters</h4>
+<h4 id="user_business_rule_id---supported-filters">User_Business_Rule_Id - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -751,237 +882,6 @@
 <td>Equals</td>
 <td><code>NULL</code></td>
 <td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="layer">Layer</h3>
-<p>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(3)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Allowed Values</td>
-<td><code>FTE</code>, <code>BKE</code></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>BKE</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>3</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="row_version">Row_Version</h3>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>timestamp</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
 <td>no</td>
 </tr>
 </tbody>

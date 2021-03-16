@@ -97,9 +97,9 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#store_order_id">Store_Order_Id</a></td>
-<td><code>uniqueidentifier</code> <code>PK</code></td>
-<td></td>
+<td><a href="#document_currency_id">Document_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency in which the document amounts are expessed.</td>
 </tr>
 <tr>
 <td><a href="#document_id">Document_Id</a></td>
@@ -107,9 +107,9 @@
 <td>The Id of the store order document entry</td>
 </tr>
 <tr>
-<td><a href="#store_id">Store_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>The designated warehouse for the operation</td>
+<td><a href="#driver_name">Driver_Name</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>The name of the driver, who will deliver the stocks.</td>
 </tr>
 <tr>
 <td><a href="#due_date">Due_Date</a></td>
@@ -117,19 +117,29 @@
 <td>The final date, when the store transaction should occur.</td>
 </tr>
 <tr>
+<td><a href="#is_released">Is_Released</a></td>
+<td><code>bit</code> Readonly</td>
+<td>True if the document is not void and its state is released or greater</td>
+</tr>
+<tr>
+<td><a href="#is_single_execution">Is_Single_Execution</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Specifies whether the document is a single execution of its order document.</td>
+</tr>
+<tr>
+<td><a href="#issued_by_party_id">Issued_By_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party, which issued the goods.</td>
+</tr>
+<tr>
 <td><a href="#movement_type">Movement_Type</a></td>
 <td><code>nvarchar(1)</code> Allowed: <code>I</code>, <code>R</code></td>
 <td>Store order movement type. R=RECEIPT, I=ISSUE</td>
 </tr>
 <tr>
-<td><a href="#status">Status</a></td>
-<td><code>nvarchar(1)</code></td>
-<td>P=Planned; F=Firm planned; R=Released; C=Completed</td>
-</tr>
-<tr>
-<td><a href="#planned_release_date">Planned_Release_Date</a></td>
-<td><code>datetime</code></td>
-<td>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.</td>
+<td><a href="#ordering_person_id">Ordering_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The person, which ordered the operation.</td>
 </tr>
 <tr>
 <td><a href="#planned_completion_date">Planned_Completion_Date</a></td>
@@ -137,9 +147,34 @@
 <td>Date, when the quantities are expected to be completely issued/received</td>
 </tr>
 <tr>
-<td><a href="#driver_name">Driver_Name</a></td>
-<td><code>nvarchar(64)</code></td>
-<td>The name of the driver, who will deliver the stocks.</td>
+<td><a href="#planned_release_date">Planned_Release_Date</a></td>
+<td><code>datetime</code></td>
+<td>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.</td>
+</tr>
+<tr>
+<td><a href="#received_by_party_id">Received_By_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The party, which received the goods.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#status">Status</a></td>
+<td><code>nvarchar(1)</code></td>
+<td>P=Planned; F=Firm planned; R=Released; C=Completed</td>
+</tr>
+<tr>
+<td><a href="#store_id">Store_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The designated warehouse for the operation</td>
+</tr>
+<tr>
+<td><a href="#store_order_id">Store_Order_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="#temp_transport_company_name">Temp_Transport_Company_Name</a></td>
@@ -151,45 +186,11 @@
 <td><code>nvarchar(32)</code></td>
 <td>Obsolete. Not used.</td>
 </tr>
-<tr>
-<td><a href="#ordering_person_id">Ordering_Person_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>The person, which ordered the operation.</td>
-</tr>
-<tr>
-<td><a href="#issued_by_party_id">Issued_By_Party_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>The party, which issued the goods.</td>
-</tr>
-<tr>
-<td><a href="#received_by_party_id">Received_By_Party_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>The party, which received the goods.</td>
-</tr>
-<tr>
-<td><a href="#document_currency_id">Document_Currency_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>The currency in which the document amounts are expessed.</td>
-</tr>
-<tr>
-<td><a href="#is_single_execution">Is_Single_Execution</a></td>
-<td><code>bit</code> Readonly</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
-</tr>
-<tr>
-<td><a href="#is_released">Is_Released</a></td>
-<td><code>bit</code> Readonly</td>
-<td>True if the document is not void and its state is released or greater</td>
-</tr>
-<tr>
-<td><a href="#row_version">Row_Version</a></td>
-<td><code>timestamp</code></td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
-<h3 id="store_order_id">Store_Order_Id</h3>
+<h3 id="document_currency_id">Document_Currency_Id</h3>
+<p>The currency in which the document amounts are expessed.</p>
 <table>
 <thead>
 <tr>
@@ -199,50 +200,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Order in Primary Key</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>NewGuid</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -251,31 +208,19 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
 <td>no</td>
 </tr>
 <tr>
@@ -287,8 +232,48 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Currencies.html">Gen_Currencies</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -296,15 +281,19 @@
 </tr>
 <tr>
 <td>UI Width</td>
-<td>Medium</td>
+<td>100</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters">Supported Filters</h4>
+<h4 id="document_currency_id---supported-filters">Document_Currency_Id - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -319,7 +308,7 @@
 <td>Equals</td>
 <td><code>NULL</code></td>
 <td>no</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -334,11 +323,47 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
+<td>Auto Complete</td>
+<td>no</td>
 </tr>
 <tr>
-<td><code>NULL</code></td>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
 <td>no</td>
 </tr>
 <tr>
@@ -346,15 +371,15 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Ownership Reference</td>
-<td>yes</td>
+<td>Readonly</td>
+<td>no</td>
 </tr>
 <tr>
 <td>Referenced Table</td>
 <td><a href="Gen_Documents.html">Gen_Documents</a></td>
 </tr>
 <tr>
-<td>Readonly</td>
+<td>RTF</td>
 <td>no</td>
 </tr>
 <tr>
@@ -362,219 +387,36 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
 <td>Summary Type</td>
 <td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
 </tr>
 <tr>
 <td>Supports EQUALS_IN</td>
 <td>yes</td>
 </tr>
-</tbody>
-</table>
-<h4 id="supported-filters-1">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="store_id">Store_Id</h3>
-<p>The designated warehouse for the operation</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td>Type</td>
 <td>uniqueidentifier</td>
 </tr>
 <tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Inv_Stores.html">Inv_Stores</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
 <td>UI Memo Editor</td>
 <td>no</td>
 </tr>
 <tr>
 <td>UI Width</td>
-<td>Long</td>
+<td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-2">Supported Filters</h4>
+<h4 id="document_id---supported-filters">Document_Id - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -589,667 +431,7 @@
 <td>Equals</td>
 <td><code>NULL</code></td>
 <td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="due_date">Due_Date</h3>
-<p>The final date, when the store transaction should occur.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td>DateTime Format</td>
-<td>DateTime</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
 <td>yes</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>CurrentDate</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-3">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GreaterThanOrLessThan</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="movement_type">Movement_Type</h3>
-<p>Store order movement type. R=RECEIPT, I=ISSUE</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(1)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Allowed Values</td>
-<td><code>I</code>, <code>R</code></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>R</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-4">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="status">Status</h3>
-<p>P=Planned; F=Firm planned; R=Released; C=Completed</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(1)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>P</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="planned_release_date">Planned_Release_Date</h3>
-<p>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td>DateTime Format</td>
-<td>DateTime</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-5">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GreaterThanOrLessThan</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="planned_completion_date">Planned_Completion_Date</h3>
-<p>Date, when the quantities are expected to be completely issued/received</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td>DateTime Format</td>
-<td>DateTime</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-6">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GreaterThanOrLessThan</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -1264,50 +446,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -1316,32 +454,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
 <td>no</td>
 </tr>
 <tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -1352,8 +478,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1364,13 +526,17 @@
 <td>Long</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h3 id="temp_transport_company_name">Temp_Transport_Company_Name</h3>
-<p>Obsolete. Not used.</p>
+<h3 id="due_date">Due_Date</h3>
+<p>The final date, when the store transaction should occur.</p>
 <table>
 <thead>
 <tr>
@@ -1380,50 +546,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>nvarchar(64)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -1432,264 +554,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>CurrentDate</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>64</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vehicle_reg_number">Vehicle_Reg_Number</h3>
-<p>Obsolete. Not used.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>nvarchar(32)</td>
-</tr>
-<tr>
-<td>Is Mulitlanguage</td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
 </tr>
 <tr>
 <td>Ignore for Insert Order</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>32</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="ordering_person_id">Ordering_Person_Id</h3>
-<p>The person, which ordered the operation.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Cm_Persons.html">Cm_Persons</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -1700,8 +578,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>yes</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1712,12 +626,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
 <td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-7">Supported Filters</h4>
+<h4 id="due_date---supported-filters">Due_Date - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -1729,15 +647,15 @@
 </thead>
 <tbody>
 <tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<h3 id="issued_by_party_id">Issued_By_Party_Id</h3>
-<p>The party, which issued the goods.</p>
+<h3 id="is_released">Is_Released</h3>
+<p>True if the document is not void and its state is released or greater</p>
 <table>
 <thead>
 <tr>
@@ -1747,50 +665,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Gen_Parties.html">Gen_Parties</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -1799,32 +673,20 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
 <td>no</td>
 </tr>
 <tr>
 <td>Is Entity Name</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -1835,8 +697,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1847,282 +745,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-8">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="received_by_party_id">Received_By_Party_Id</h3>
-<p>The party, which received the goods.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Gen_Parties.html">Gen_Parties</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
+<td>User Login</td>
 <td>no</td>
 </tr>
 <tr>
 <td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-9">Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<h3 id="document_currency_id">Document_Currency_Id</h3>
-<p>The currency in which the document amounts are expessed.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Gen_Currencies.html">Gen_Currencies</a></td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="supported-filters-10">Supported Filters</h4>
+<h4 id="is_released---supported-filters">Is_Released - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -2152,46 +784,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>bit</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>False</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -2200,31 +792,19 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
 <td>no</td>
 </tr>
 <tr>
@@ -2236,8 +816,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2248,12 +864,16 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-11">Supported Filters</h4>
+<h4 id="is_single_execution---supported-filters">Is_Single_Execution - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -2272,8 +892,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="is_released">Is_Released</h3>
-<p>True if the document is not void and its state is released or greater</p>
+<h3 id="issued_by_party_id">Issued_By_Party_Id</h3>
+<p>The party, which issued the goods.</p>
 <table>
 <thead>
 <tr>
@@ -2283,46 +903,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>bit</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>False</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -2331,31 +911,19 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
-<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
 </tr>
 <tr>
 <td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
 <td>no</td>
 </tr>
 <tr>
@@ -2367,8 +935,48 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Parties.html">Gen_Parties</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2379,12 +987,139 @@
 <td>Medium</td>
 </tr>
 <tr>
-<td>Supports EQUALS_IN</td>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="issued_by_party_id---supported-filters">Issued_By_Party_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<h4 id="supported-filters-12">Supported Filters</h4>
+<h3 id="movement_type">Movement_Type</h3>
+<p>Store order movement type. R=RECEIPT, I=ISSUE</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>I</code>, <code>R</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="movement_type---supported-filters">Movement_Type - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -2399,7 +1134,491 @@
 <td>Equals</td>
 <td><code>NULL</code></td>
 <td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ordering_person_id">Ordering_Person_Id</h3>
+<p>The person, which ordered the operation.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Cm_Persons.html">Cm_Persons</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
 <td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ordering_person_id---supported-filters">Ordering_Person_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planned_completion_date">Planned_Completion_Date</h3>
+<p>Date, when the quantities are expected to be completely issued/received</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="planned_completion_date---supported-filters">Planned_Completion_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planned_release_date">Planned_Release_Date</h3>
+<p>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="planned_release_date---supported-filters">Planned_Release_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="received_by_party_id">Received_By_Party_Id</h3>
+<p>The party, which received the goods.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Parties.html">Gen_Parties</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="received_by_party_id---supported-filters">Received_By_Party_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -2413,46 +1632,6 @@
 </thead>
 <tbody>
 <tr>
-<td>Type</td>
-<td>timestamp</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td></td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -2461,31 +1640,19 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
 <tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
 <td>no</td>
 </tr>
 <tr>
@@ -2497,8 +1664,44 @@
 <td>2147483647</td>
 </tr>
 <tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
 <td>Summary Type</td>
 <td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2509,8 +1712,553 @@
 <td>Medium</td>
 </tr>
 <tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="status">Status</h3>
+<p>P=Planned; F=Firm planned; R=Released; C=Completed</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>P</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
 <td>Supports EQUALS_IN</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(1)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_id">Store_Id</h3>
+<p>The designated warehouse for the operation</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Inv_Stores.html">Inv_Stores</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="store_id---supported-filters">Store_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store_order_id">Store_Order_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="store_order_id---supported-filters">Store_Order_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="temp_transport_company_name">Temp_Transport_Company_Name</h3>
+<p>Obsolete. Not used.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle_reg_number">Vehicle_Reg_Number</h3>
+<p>Obsolete. Not used.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(32) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>

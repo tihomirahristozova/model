@@ -15,175 +15,55 @@ Client requisition for transportation. Entity: Log_Transportation_Requisitions
 
 | Name | Type | Description |
 | - | - | --- |
-|[Transportation_Requisition_Id](#transportation_requisition_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Requested_Departure_Date](#requested_departure_date)|`date` |Requested date of departure. NULL when no specific date is requested.|
-|[Requested_Departure_Time](#requested_departure_time)|`time` |Requested time of departure. NULL when no specific time is requested.|
 |[Requested_Arrival_Date](#requested_arrival_date)|`date` |Requested arrival date. NULL when no specific date is requested.|
 |[Requested_Arrival_Time](#requested_arrival_time)|`time` |Requested arrival time. NULL when no specific time is requested.|
-|[Transport_From_Party_Id](#transport_from_party_id)|`uniqueidentifier` |Shipping party.|
-|[Transport_From_Party_Contact_Mechanism_Id](#transport_from_party_contact_mechanism_id)|`uniqueidentifier` |Loading address.|
-|[Transport_From_Geo_Point_Id](#transport_from_geo_point_id)|`uniqueidentifier` |Geographical location of the loading, if available.|
-|[Transport_To_Party_Id](#transport_to_party_id)|`uniqueidentifier` |Receiving party.|
-|[Transport_To_Party_Contact_Mechanism_Id](#transport_to_party_contact_mechanism_id)|`uniqueidentifier` |Unload address.|
-|[Transport_To_Geo_Point_Id](#transport_to_geo_point_id)|`uniqueidentifier` |Geographical location of the unloading, if available.|
+|[Requested_Departure_Date](#requested_departure_date)|`date` |Requested date of departure. NULL when no specific date is requested.|
+|[Requested_Departure_Time](#requested_departure_time)|`time` |Requested time of departure. NULL when no specific time is requested.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Transport_From_Geo_Point_Id](#transport_from_geo_point_id)|`uniqueidentifier` |Geographical location of the loading, if available.|
+|[Transport_From_Party_Contact_Mechanism_Id](#transport_from_party_contact_mechanism_id)|`uniqueidentifier` |Loading address.|
+|[Transport_From_Party_Id](#transport_from_party_id)|`uniqueidentifier` |Shipping party.|
+|[Transport_To_Geo_Point_Id](#transport_to_geo_point_id)|`uniqueidentifier` |Geographical location of the unloading, if available.|
+|[Transport_To_Party_Contact_Mechanism_Id](#transport_to_party_contact_mechanism_id)|`uniqueidentifier` |Unload address.|
+|[Transport_To_Party_Id](#transport_to_party_id)|`uniqueidentifier` |Receiving party.|
+|[Transportation_Requisition_Id](#transportation_requisition_id)|`uniqueidentifier` `PK`||
 
 ## Columns
-
-### Transportation_Requisition_Id
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 ### Document_Id
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|yes|
-|Referenced Table|[Gen_Documents](Gen_Documents.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|yes|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Documents](Gen_Documents.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Document_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-
-### Requested_Departure_Date
-
-
-Requested date of departure. NULL when no specific date is requested.
-
-| Property | Value |
-| - | - |
-|Type|date|
-|DateTime Format|Date|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|GreaterThanOrLessThan|None|no|no|
-
-### Requested_Departure_Time
-
-
-Requested time of departure. NULL when no specific time is requested.
-
-| Property | Value |
-| - | - |
-|Type|time|
-|DateTime Format|Time|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|GreaterThanOrLessThan|None|no|no|
 
 ### Requested_Arrival_Date
 
@@ -192,36 +72,32 @@ Requested arrival date. NULL when no specific date is requested.
 
 | Property | Value |
 | - | - |
-|Type|date|
-|DateTime Format|Date|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Requested_Arrival_Date - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
@@ -232,118 +108,133 @@ Requested arrival time. NULL when no specific time is requested.
 
 | Property | Value |
 | - | - |
-|Type|time|
-|DateTime Format|Time|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|time (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Requested_Arrival_Time - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
-### Transport_From_Party_Id
+### Requested_Departure_Date
 
 
-Shipping party.
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Parties](Gen_Parties.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Transport_From_Party_Contact_Mechanism_Id
-
-
-Loading address.
+Requested date of departure. NULL when no specific date is requested.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Requested_Departure_Date - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
+### Requested_Departure_Time
+
+
+Requested time of departure. NULL when no specific time is requested.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|time (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Requested_Departure_Time - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Transport_From_Geo_Point_Id
 
@@ -352,116 +243,107 @@ Geographical location of the loading, if available.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Transport_From_Geo_Point_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
-### Transport_To_Party_Id
+### Transport_From_Party_Contact_Mechanism_Id
 
 
-Receiving party.
+Loading address.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Parties](Gen_Parties.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Transport_From_Party_Contact_Mechanism_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Transport_To_Party_Contact_Mechanism_Id
+### Transport_From_Party_Id
 
 
-Unload address.
+Shipping party.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Parties](Gen_Parties.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Transport_From_Party_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
@@ -472,67 +354,141 @@ Geographical location of the unloading, if available.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Geo_Points](Gen_Geo_Points.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Transport_To_Geo_Point_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
-### Row_Version
+### Transport_To_Party_Contact_Mechanism_Id
+
+
+Unload address.
 
 | Property | Value |
 | - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
+
+#### Transport_To_Party_Contact_Mechanism_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Transport_To_Party_Id
+
+
+Receiving party.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Parties](Gen_Parties.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Transport_To_Party_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Transportation_Requisition_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NewGuid|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Transportation_Requisition_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 

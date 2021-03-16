@@ -11,166 +11,15 @@ Represents the different types of tasks, which can be included in the projects. 
 
 | Name | Type | Description |
 | - | - | --- |
-|[Task_Type_Id](#task_type_id)|`uniqueidentifier` `PK`||
-|[Project_Type_Id](#project_type_id)|`uniqueidentifier` |When not NULL, specifies that this task type can be used only for projects of the specified type.|
-|[Task_Type_Name](#task_type_name)|`nvarchar(max)` `ML`|The multilanguage task type name.|
-|[Icon](#icon)|`varbinary` |Icon representing the task type. Preferrably 32x32 pixels.|
 |[Description](#description)|`nvarchar(max)` `ML`|Multilanguage description of the task type.|
 |[Display_Order](#display_order)|`int` |Display order position of the task. Lowest numbers are shown first (on top).|
+|[Icon](#icon)|`varbinary` |Icon representing the task type. Preferrably 32x32 pixels.|
+|[Project_Type_Id](#project_type_id)|`uniqueidentifier` |When not NULL, specifies that this task type can be used only for projects of the specified type.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Task_Type_Id](#task_type_id)|`uniqueidentifier` `PK`||
+|[Task_Type_Name](#task_type_name)|`nvarchar(max)` `ML`|The multilanguage task type name.|
 
 ## Columns
-
-### Task_Type_Id
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|yes|
-
-### Project_Type_Id
-
-
-When not NULL, specifies that this task type can be used only for projects of the specified type.
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Prj_Types](Prj_Types.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
-
-### Task_Type_Name
-
-
-The multilanguage task type name.
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(max)|
-|Is Mulitlanguage|yes|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|2147483647|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|yes|
-|Like|None|no|no|
-
-### Icon
-
-
-Icon representing the task type. Preferrably 32x32 pixels.
-
-| Property | Value |
-| - | - |
-|Type|varbinary|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|yes|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
 
 ### Description
 
@@ -179,32 +28,28 @@ Multilanguage description of the task type.
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(max)|
-|Is Mulitlanguage|yes|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|2147483647|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
 ### Display_Order
 
@@ -213,60 +58,191 @@ Display order position of the task. Lowest numbers are shown first (on top).
 
 | Property | Value |
 | - | - |
-|Type|int|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|1|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|1|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int|
 |UI Memo Editor|no|
 |UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Icon
+
+
+Icon representing the task type. Preferrably 32x32 pixels.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|yes|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
 |Supports EQUALS_IN|no|
+|Type|varbinary (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Project_Type_Id
+
+
+When not NULL, specifies that this task type can be used only for projects of the specified type.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Prj_Types](Prj_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Project_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Row_Version
 
 | Property | Value |
 | - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|no|
+
+### Task_Type_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NewGuid|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Task_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|yes|
+
+### Task_Type_Name
+
+
+The multilanguage task type name.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(max) (MultiLanguage)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Task_Type_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|yes|
+|Like|None|no|no|
 
 

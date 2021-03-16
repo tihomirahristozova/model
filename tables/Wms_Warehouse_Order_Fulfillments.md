@@ -11,51 +11,201 @@ Fulfillment of a warehouse order line. Entity: Wms_Warehouse_Order_Fulfillments 
 
 | Name | Type | Description |
 | - | - | --- |
+|[Creation_Time_Utc](#creation_time_utc)|`datetime` |The exact time in UTC, when the fulfillment was created in the system.|
+|[Creation_User_Id](#creation_user_id)|`uniqueidentifier` |The user, who created the record.|
+|[Is_Final](#is_final)|`bit` |Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities.|
+|[Quantity](#quantity)|`decimal(12, 3)` |Fulfilled quantity in the measurement unit of the warehouse order line.|
+|[Row_Version](#row_version)|`timestamp` ||
 |[Warehouse_Order_Fulfillment_Id](#warehouse_order_fulfillment_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` |The warehouse order, which is fulfilled.|
 |[Warehouse_Order_Line_Id](#warehouse_order_line_id)|`uniqueidentifier` |The line for which we record fulfillment.|
-|[Quantity](#quantity)|`decimal(12, 3)` |Fulfilled quantity in the measurement unit of the warehouse order line.|
-|[Is_Final](#is_final)|`bit` |Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities.|
-|[Creation_User_Id](#creation_user_id)|`uniqueidentifier` |The user, who created the record.|
-|[Creation_Time_Utc](#creation_time_utc)|`datetime` |The exact time in UTC, when the fulfillment was created in the system.|
-|[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### Creation_Time_Utc
+
+
+The exact time in UTC, when the fulfillment was created in the system.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Creation_User_Id
+
+
+The user, who created the record.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Creation_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Is_Final
+
+
+Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Quantity
+
+
+Fulfilled quantity in the measurement unit of the warehouse order line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Warehouse_Order_Fulfillment_Id
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|NewGuid|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Warehouse_Order_Fulfillment_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
@@ -66,36 +216,33 @@ The warehouse order, which is fulfilled.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Warehouse_Order_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
@@ -106,207 +253,34 @@ The line for which we record fulfillment.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
 |Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
 |Referenced Table|[Wms_Warehouse_Order_Lines](Wms_Warehouse_Order_Lines.md)|
-|Readonly|no|
+|RTF|no|
 |Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
 |Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
 |Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Quantity
-
-
-Fulfilled quantity in the measurement unit of the warehouse order line.
-
-| Property | Value |
-| - | - |
-|Type|decimal(12, 3)|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Is_Final
-
-
-Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities.
-
-| Property | Value |
-| - | - |
-|Type|bit|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Creation_User_Id
-
-
-The user, who created the record.
-
-| Property | Value |
-| - | - |
 |Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Sec_Users](Sec_Users.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Warehouse_Order_Line_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-
-### Creation_Time_Utc
-
-
-The exact time in UTC, when the fulfillment was created in the system.
-
-| Property | Value |
-| - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Row_Version
-
-| Property | Value |
-| - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
 
 

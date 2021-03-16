@@ -15,53 +15,13 @@ Defines the parameters, which are tracked for the assets of the different types.
 
 | Name | Type | Description |
 | - | - | --- |
-|[Managed_Asset_Type_Tracked_Parameter_Id](#managed_asset_type_tracked_parameter_id)|`uniqueidentifier` `PK`|Defines the parameters, which are tracked for the assets of the different types.|
 |[Managed_Asset_Type_Id](#managed_asset_type_id)|`uniqueidentifier` |The asset type for which the tracked parameter is defined.|
-|[Tracked_Parameter_Id](#tracked_parameter_id)|`uniqueidentifier` |The parameter, which will be tracked for assets of the specified type.|
+|[Managed_Asset_Type_Tracked_Parameter_Id](#managed_asset_type_tracked_parameter_id)|`uniqueidentifier` `PK`|Defines the parameters, which are tracked for the assets of the different types.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
+|[Tracked_Parameter_Id](#tracked_parameter_id)|`uniqueidentifier` |The parameter, which will be tracked for assets of the specified type.|
 
 ## Columns
-
-### Managed_Asset_Type_Tracked_Parameter_Id
-
-
-Defines the parameters, which are tracked for the assets of the different types.
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 ### Managed_Asset_Type_Id
 
@@ -70,38 +30,125 @@ The asset type for which the tracked parameter is defined.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|yes|
-|Referenced Table|[Eam_Managed_Asset_Types](Eam_Managed_Asset_Types.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|yes|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Eam_Managed_Asset_Types](Eam_Managed_Asset_Types.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Managed_Asset_Type_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Managed_Asset_Type_Tracked_Parameter_Id
+
+
+Defines the parameters, which are tracked for the assets of the different types.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NewGuid|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Managed_Asset_Type_Tracked_Parameter_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Notes
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|yes|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Tracked_Parameter_Id
 
@@ -110,98 +157,34 @@ The parameter, which will be tracked for assets of the specified type.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Eam_Tracked_Parameters](Eam_Tracked_Parameters.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Tracked_Parameter_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-
-### Notes
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(max)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|2147483647|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|yes|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Row_Version
-
-| Property | Value |
-| - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
 
 

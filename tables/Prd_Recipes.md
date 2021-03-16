@@ -11,108 +11,94 @@ Contains the characteristics of operations used to create products. Entity: Prd_
 
 | Name | Type | Description |
 | - | - | --- |
-|[Recipe_Name](#recipe_name)|`nvarchar(64)` |The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.|
-|[Id](#id)|`uniqueidentifier` `PK`|Unique recipe Id|
-|[Currency_Directory_Id](#currency_directory_id)|`uniqueidentifier` |Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product.|
-|[Update_User](#update_user)|`nvarchar(64)` Readonly||
-|[Update_Time](#update_time)|`datetime` Readonly||
-|[Creation_User](#creation_user)|`nvarchar(64)` Readonly||
 |[Creation_Time](#creation_time)|`datetime` Readonly||
+|[Creation_User](#creation_user)|`nvarchar(64)` Readonly||
+|[Currency_Directory_Id](#currency_directory_id)|`uniqueidentifier` |Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product.|
+|[Expiry_Date](#expiry_date)|`datetime` |The last date, when the recipe should be used. NULL means that the recipe might still be in use|
+|[Id](#id)|`uniqueidentifier` `PK`|Unique recipe Id|
 |[Is_Default](#is_default)|`bit` |Default for period: Release_Date - Expiry_Date|
 |[Notes](#notes)|`nvarchar(254)` |User comments for the recipe|
-|[Price_Per_Lot](#price_per_lot)|`decimal(18, 4)` |Price for one lot of the product (according to Lot_Size_Quantity_Base)|
 |[Price](#price)|`decimal(18, 4)` |The price for the specified Produce_Quantity|
-|[Scrap_Rate](#scrap_rate)|`decimal(7, 6)` |The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe|
-|[Routing_Id](#routing_id)|`uniqueidentifier` |The routing used to create the product. NULL means that workorders might not use routing.|
-|[Produce_Quantity](#produce_quantity)|`decimal(18, 3)` |Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id|
-|[Expiry_Date](#expiry_date)|`datetime` |The last date, when the recipe should be used. NULL means that the recipe might still be in use|
-|[Release_Date](#release_date)|`datetime` |The date, when the recipe was released to production|
-|[Product_Id](#product_id)|`uniqueidentifier` |The Id of the produced product|
+|[Price_Per_Lot](#price_per_lot)|`decimal(18, 4)` |Price for one lot of the product (according to Lot_Size_Quantity_Base)|
 |[Principal_Recipe_Id](#principal_recipe_id)|`uniqueidentifier` |The prinicipal recipe, used to create this recipe. NULL means that this recipe was created without the help of principal recipe|
-|[Store_Id](#store_id)|`uniqueidentifier` |The store for which this technology is valid. The store is matched with the output store specified in the production order. When NULL, the technology is valid for all stores.|
+|[Produce_Quantity](#produce_quantity)|`decimal(18, 3)` |Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id|
+|[Product_Id](#product_id)|`uniqueidentifier` |The Id of the produced product|
+|[Recipe_Name](#recipe_name)|`nvarchar(64)` |The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.|
+|[Release_Date](#release_date)|`datetime` |The date, when the recipe was released to production|
+|[Routing_Id](#routing_id)|`uniqueidentifier` |The routing used to create the product. NULL means that workorders might not use routing.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Scrap_Rate](#scrap_rate)|`decimal(7, 6)` |The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe|
+|[Store_Id](#store_id)|`uniqueidentifier` |The store for which this technology is valid. The store is matched with the output store specified in the production order. When NULL, the technology is valid for all stores.|
+|[Update_Time](#update_time)|`datetime` Readonly||
+|[Update_User](#update_user)|`nvarchar(64)` Readonly||
 
 ## Columns
 
-### Recipe_Name
-
-
-The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.
+### Creation_Time
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(64)|
-|Is Mulitlanguage|no|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
+|Auto Complete|no|
+|Data Filter|no|
 |Default Value|None|
-|Format||
+|Enter Stop|no|
 |Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|64|
-|Order|1|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Like|None|no|no|
-
-### Id
-
-
-Unique recipe Id
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
 |UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|UI Width|100|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Creation_Time - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|yes|yes|
+
+### Creation_User
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|yes|
+|Visible|no|
+
+#### Creation_User - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|yes|
 
 ### Currency_Directory_Id
 
@@ -121,186 +107,107 @@ Currency directory, which is used to convert the costs and prices of materials, 
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Currency_Directories](Gen_Currency_Directories.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currency_Directories](Gen_Currency_Directories.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Currency_Directory_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
-### Update_User
+### Expiry_Date
+
+
+The last date, when the recipe should be used. NULL means that the recipe might still be in use
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(64)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|yes|
-|Visible|no|
-|Max Length|64|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Like|None|no|yes|
-
-### Update_Time
-
-| Property | Value |
-| - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
 |Default Value|None|
-|Format||
+|Enter Stop|yes|
 |Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Expiry_Date - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|GreaterThanOrLessThan|None|yes|yes|
+|GreaterThanOrLessThan|None|yes|no|
 
-### Creation_User
+### Id
+
+
+Unique recipe Id
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(64)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|yes|
-|Visible|no|
-|Max Length|64|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Like|None|no|yes|
-
-### Creation_Time
-
-| Property | Value |
-| - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
+|Default Value|NewGuid|
+|Enter Stop|yes|
 |Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|GreaterThanOrLessThan|None|yes|yes|
+|Equals|`NULL`|no|no|
 
 ### Is_Default
 
@@ -309,35 +216,32 @@ Default for period: Release_Date - Expiry_Date
 
 | Property | Value |
 | - | - |
-|Type|bit|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|False|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|False|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Is_Default - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
@@ -348,65 +252,29 @@ User comments for the recipe
 
 | Property | Value |
 | - | - |
-|Type|nvarchar(254)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
 |Attributes|IsLongString|
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|254|
 |Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
-
-### Price_Per_Lot
-
-
-Price for one lot of the product (according to Lot_Size_Quantity_Base)
-
-| Property | Value |
-| - | - |
-|Type|decimal(18, 4)|
-|`NULL`|no|
-|Primary Key|no|
 |Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
 |Readonly|no|
+|RTF|no|
 |Sortable|no|
-|Attributes||
-|Default Value|0|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(254) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
 ### Price
 
@@ -415,102 +283,93 @@ The price for the specified Produce_Quantity
 
 | Property | Value |
 | - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|0|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
 |Type|decimal(18, 4)|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|0|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-### Scrap_Rate
+### Price_Per_Lot
 
 
-The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe
+Price for one lot of the product (according to Lot_Size_Quantity_Base)
 
 | Property | Value |
 | - | - |
-|Type|decimal(7, 6)|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes|IsPercent|
-|Default Value|0|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|0|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(18, 4)|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|no|
+|User Login|no|
+|Visible|yes|
 
-### Routing_Id
+### Principal_Recipe_Id
 
 
-The routing used to create the product. NULL means that workorders might not use routing.
+The prinicipal recipe, used to create this recipe. NULL means that this recipe was created without the help of principal recipe
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Prd_Routings](Prd_Routings.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
+|Auto Complete|no|
+|Data Filter|no|
 |Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Prd_Principal_Recipes](Prd_Principal_Recipes.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
 |Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Principal_Recipe_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
@@ -521,111 +380,28 @@ Lot size. This is the produced quantity in one production run. The quantity is m
 
 | Property | Value |
 | - | - |
-|Type|decimal(18, 3)|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
+|Auto Complete|no|
+|Data Filter|no|
 |Default Value|1|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
-
-### Expiry_Date
-
-
-The last date, when the recipe should be used. NULL means that the recipe might still be in use
-
-| Property | Value |
-| - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|yes|
-|Primary Key|no|
 |Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|100|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|GreaterThanOrLessThan|None|yes|no|
-
-### Release_Date
-
-
-The date, when the recipe was released to production
-
-| Property | Value |
-| - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|no|
+|Pasword|no|
+|Picture|no|
 |Primary Key|no|
-|Ownership Reference|no|
 |Readonly|no|
+|RTF|no|
 |Sortable|no|
-|Attributes||
-|Default Value|CurrentDate|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(18, 3)|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|GreaterThanOrLessThan|None|yes|no|
+|User Login|no|
+|Visible|yes|
 
 ### Product_Id
 
@@ -634,78 +410,202 @@ The Id of the produced product
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Products](Gen_Products.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Products](Gen_Products.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Product_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
-### Principal_Recipe_Id
+### Recipe_Name
 
 
-The prinicipal recipe, used to create this recipe. NULL means that this recipe was created without the help of principal recipe
+The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Prd_Principal_Recipes](Prd_Principal_Recipes.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
+|Max Length|64|
+|Order|1|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64)|
 |UI Memo Editor|no|
 |UI Width|100|
+|User Login|no|
+|Visible|yes|
+
+#### Recipe_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
+### Release_Date
+
+
+The date, when the recipe was released to production
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|CurrentDate|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|no|
+|Visible|yes|
+
+#### Release_Date - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|yes|no|
+
+### Routing_Id
+
+
+The routing used to create the product. NULL means that workorders might not use routing.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Prd_Routings](Prd_Routings.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
 |Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Routing_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+### Scrap_Rate
+
+
+The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe
+
+| Property | Value |
+| - | - |
+|Attributes|IsPercent|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|0|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(7, 6)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|no|
+|Visible|yes|
 
 ### Store_Id
 
@@ -714,67 +614,100 @@ The store for which this technology is valid. The store is matched with the outp
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Inv_Stores](Inv_Stores.md)|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Inv_Stores](Inv_Stores.md)|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Store_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
-### Row_Version
+### Update_Time
 
 | Property | Value |
 | - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
-|Enter Stop|yes|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
 |Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|no|
+|Visible|no|
+
+#### Update_Time - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|yes|yes|
+
+### Update_User
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|100|
+|User Login|yes|
+|Visible|no|
+
+#### Update_User - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|yes|
 
 

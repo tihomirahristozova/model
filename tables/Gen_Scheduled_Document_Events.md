@@ -11,54 +11,304 @@ Contains postponed events, which will be executed later. Usually these are large
 
 | Name | Type | Description |
 | - | - | --- |
-|[Scheduled_Document_Event_Id](#scheduled_document_event_id)|`uniqueidentifier` `PK`||
-|[Source_Document_Id](#source_document_id)|`uniqueidentifier` Readonly|The document that has caused this event to be scheduled|
+|[Cancelled](#cancelled)|`bit` |When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.|
+|[Creation_Time](#creation_time)|`datetime` Readonly||
 |[Document_Event](#document_event)|`nvarchar(254)` Readonly|The type of the document event that is scheduled to be processed|
 |[Document_Id](#document_id)|`uniqueidentifier` Readonly|The document for which the event will be processed|
-|[State](#state)|`smallint` Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly|The state of the document for which the event will be processed|
-|[Processed](#processed)|`bit` Readonly|Indicates wheather the event is already processed or not|
-|[Last_Process_Time](#last_process_time)|`datetime` Readonly|The time of the last attempt to process the event|
 |[Last_Process_Status](#last_process_status)|`nvarchar(max)` Readonly|Status/information of the last attemp to process the event. Usually shows the cause in case of failure.|
-|[Creation_Time](#creation_time)|`datetime` Readonly||
-|[Cancelled](#cancelled)|`bit` |When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.|
+|[Last_Process_Time](#last_process_time)|`datetime` Readonly|The time of the last attempt to process the event|
+|[Processed](#processed)|`bit` Readonly|Indicates wheather the event is already processed or not|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Scheduled_Document_Event_Id](#scheduled_document_event_id)|`uniqueidentifier` `PK`||
+|[Source_Document_Id](#source_document_id)|`uniqueidentifier` Readonly|The document that has caused this event to be scheduled|
+|[State](#state)|`smallint` Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly|The state of the document for which the event will be processed|
 
 ## Columns
+
+### Cancelled
+
+
+When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Cancelled - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Creation_Time
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|CurrentDateTime|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+### Document_Event
+
+
+The type of the document event that is scheduled to be processed
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|254|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(254)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Document_Id
+
+
+The document for which the event will be processed
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Gen_Documents](Gen_Documents.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Document_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Last_Process_Status
+
+
+Status/information of the last attemp to process the event. Usually shows the cause in case of failure.
+
+| Property | Value |
+| - | - |
+|Attributes|IsLongString|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Long|
+|User Login|no|
+|Visible|yes|
+
+### Last_Process_Time
+
+
+The time of the last attempt to process the event
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Processed
+
+
+Indicates wheather the event is already processed or not
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Short|
+|User Login|no|
+|Visible|yes|
+
+#### Processed - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Scheduled_Document_Event_Id
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|yes|
-|Order in Primary Key|1|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|NewGuid|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|NewGuid|
 |Enter Stop|yes|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
 |Max Length|-1|
 |Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|no|
 
-#### Supported Filters
+#### Scheduled_Document_Event_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
 
@@ -69,110 +319,33 @@ The document that has caused this event to be scheduled
 
 | Property | Value |
 | - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Referenced Table|[Gen_Documents](Gen_Documents.md)|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
 |Auto Complete|no|
 |Data Filter|no|
+|Default Value|None|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|yes|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Document_Event
-
-
-The type of the document event that is scheduled to be processed
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(254)|
-|Is Mulitlanguage|no|
-|`NULL`|no|
-|Primary Key|no|
 |Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
 |Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|254|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Document_Id
-
-
-The document for which the event will be processed
-
-| Property | Value |
-| - | - |
-|Type|uniqueidentifier|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
-|Readonly|yes|
+|RTF|no|
 |Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
 |Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|yes|
+|User Login|no|
+|Visible|yes|
 
-#### Supported Filters
+#### Source_Document_Id - Supported Filters
 
-| Filter Type | Default |Include Nulls | Hidden by Default |
+| Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
@@ -183,238 +356,28 @@ The state of the document for which the event will be processed
 
 | Property | Value |
 | - | - |
-|Type|smallint|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
 |Allowed Values|`0`, `5`, `10`, `20`, `30`, `40`, `50`|
+|Auto Complete|no|
+|Data Filter|no|
 |Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
 |Enter Stop|no|
+|Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
 |Max Length|-1|
 |Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Processed
-
-
-Indicates wheather the event is already processed or not
-
-| Property | Value |
-| - | - |
-|Type|bit|
-|`NULL`|no|
-|Primary Key|no|
 |Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
 |Readonly|yes|
+|RTF|no|
 |Sortable|no|
-|Attributes||
-|Default Value|False|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
 |Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Short|
 |Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Last_Process_Time
-
-
-The time of the last attempt to process the event
-
-| Property | Value |
-| - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
+|Type|smallint|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Last_Process_Status
-
-
-Status/information of the last attemp to process the event. Usually shows the cause in case of failure.
-
-| Property | Value |
-| - | - |
-|Type|nvarchar(max)|
-|Is Mulitlanguage|no|
-|`NULL`|yes|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes|IsLongString|
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
+|User Login|no|
 |Visible|yes|
-|Max Length|2147483647|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Long|
-|Supports EQUALS_IN|no|
-
-### Creation_Time
-
-| Property | Value |
-| - | - |
-|Type|datetime|
-|DateTime Format|DateTime|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|yes|
-|Sortable|no|
-|Attributes||
-|Default Value|CurrentDateTime|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|no|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-### Cancelled
-
-
-When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.
-
-| Property | Value |
-| - | - |
-|Type|bit|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|False|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|yes|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
-
-#### Supported Filters
-
-| Filter Type | Default |Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Row_Version
-
-| Property | Value |
-| - | - |
-|Type|timestamp|
-|`NULL`|no|
-|Primary Key|no|
-|Ownership Reference|no|
-|Readonly|no|
-|Sortable|no|
-|Attributes||
-|Default Value|None|
-|Format||
-|Ignore for Insert Order|no|
-|Auto Complete|no|
-|Data Filter|no|
-|Enter Stop|yes|
-|Is Entity Name|no|
-|Password|no|
-|Is Picture|no|
-|Is RTF|no|
-|Is User Login|no|
-|Visible|no|
-|Max Length|-1|
-|Order|2147483647|
-|Summary Type|None|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|Supports EQUALS_IN|no|
 
 
