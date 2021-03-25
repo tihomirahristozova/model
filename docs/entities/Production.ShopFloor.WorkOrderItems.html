@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this WorkOrderItem.</td>
 </tr>
 <tr>
@@ -292,9 +292,10 @@ Aggregate Root:<br>
 <code>IIF( ( ( obj.Recipe != null) AndAlso ( obj.ProducedQuantityUnit != null)), obj.Recipe.ProduceQuantity, obj.ProducedQuantity)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WorkOrderItem.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="parentlineid">ParentLineId</h3>
 <p>If not null contains the Id of the line of the parent document, that created the current row. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>

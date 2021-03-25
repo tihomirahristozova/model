@@ -28,7 +28,7 @@ Aggregate Root:
 | [Date](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#date) | date (nullable) | The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. `Filter(multi eq;ge;le)` 
 | [Id](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#id) | guid |  
 | [IsDismissed](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#isdismissed) | boolean | Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. `Required` `Default(false)` `Filter(multi eq)` 
-| [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#notes) | string (nullable) | Notes for this ManagedAssetScheduled<br />Maintenance. 
+| [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#notes) | string(2147483647) (nullable) | Notes for this ManagedAssetScheduled<br />Maintenance. 
 | [TrackedParameterValue](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#trackedparametervalue) | int32 (nullable) | The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. `Filter(multi eq;ge;le)` 
 
 ## References
@@ -69,9 +69,10 @@ _Default Value_: **False**
 
 Notes for this ManagedAssetScheduledMaintenance.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### TrackedParameterValue
 

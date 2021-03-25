@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPercent](General.DocumentTypeAmounts.md#defaultpercent) | decimal (nullable) | Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type. 
+| [DefaultPercent](General.DocumentTypeAmounts.md#defaultpercent) | decimal(7, 6) (nullable) | Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type. 
 | [Id](General.DocumentTypeAmounts.md#id) | guid |  
 | [RequiredFromDate](General.DocumentTypeAmounts.md#requiredfromdate) | date (nullable) | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
 | [RequiredThruDate](General.DocumentTypeAmounts.md#requiredthrudate) | date (nullable) | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
@@ -45,7 +45,7 @@ Aggregate Root:
 
 Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(7, 6) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

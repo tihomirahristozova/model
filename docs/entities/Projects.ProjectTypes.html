@@ -115,12 +115,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTypes.html#name">Name</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The name of the project type. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTypes.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes.</td>
 </tr>
 </tbody>
@@ -177,14 +177,16 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of the project type. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>When not null means that the project type is specific to the enterprise company. <code>Filter(multi eq)</code></p>

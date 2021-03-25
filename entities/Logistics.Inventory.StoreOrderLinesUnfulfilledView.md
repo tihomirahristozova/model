@@ -26,8 +26,8 @@ Aggregate Tree
 | [DocumentDate](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#documentdate) | datetime | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `Inherited from Gen_Documents_Table.Document_Date` 
 | [IsFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isfulfilled) | int32 | Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. `Required` `Filter(multi eq)` 
 | [IsQuantityFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isquantityfulfilled) | int32 | Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. `Required` `Filter(multi eq)` 
-| [OrderRemainingLineCost](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremaininglinecost) | decimal | The remaining (unfulfilled) line cost of the order line. `Required` `Filter(multi eq;ge;le)` 
-| [OrderRemainingQuantityBase](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremainingquantitybase) | decimal | The remaining (unfulfilled) quantity of the order line in base measurement unit. `Required` `Filter(multi eq;ge;le)` 
+| [OrderRemainingLineCost](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremaininglinecost) | decimal(38, 2) | The remaining (unfulfilled) line cost of the order line. `Required` `Filter(multi eq;ge;le)` 
+| [OrderRemainingQuantityBase](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremainingquantitybase) | decimal(38, 3) | The remaining (unfulfilled) quantity of the order line in base measurement unit. `Required` `Filter(multi eq;ge;le)` 
 
 ## References
 
@@ -74,7 +74,7 @@ _Supports Order By_: **False**
 
 The remaining (unfulfilled) line cost of the order line. `Required` `Filter(multi eq;ge;le)`
 
-_Type_: **decimal**  
+_Type_: **decimal(38, 2)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 The remaining (unfulfilled) quantity of the order line in base measurement unit. `Required` `Filter(multi eq;ge;le)`
 
-_Type_: **decimal**  
+_Type_: **decimal(38, 3)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 

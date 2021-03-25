@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommodityCodeField](Finance.Intrastat.CommodityCodes.md#commoditycodefield) | string | Product code from the Intrastat Combined nomenclature. `Required` `Filter(eq;like)` `ORD` 
+| [CommodityCodeField](Finance.Intrastat.CommodityCodes.md#commoditycodefield) | string(8) | Product code from the Intrastat Combined nomenclature. `Required` `Filter(eq;like)` `ORD` 
 | [Description](Finance.Intrastat.CommodityCodes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature. `Required` `Filter(like)` 
 | [Id](Finance.Intrastat.CommodityCodes.md#id) | guid |  
-| [SupplementaryUnit](Finance.Intrastat.CommodityCodes.md#supplementaryunit) | string | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. `Required` 
+| [SupplementaryUnit](Finance.Intrastat.CommodityCodes.md#supplementaryunit) | string(16) | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. `Required` 
 | [ValidFrom](Finance.Intrastat.CommodityCodes.md#validfrom) | date (nullable) | The starting date of validity of this code. `Filter(ge;le)` 
 | [ValidTo](Finance.Intrastat.CommodityCodes.md#validto) | date (nullable) | The ending date of validity of this code. `Filter(ge;le)` 
 
@@ -37,10 +37,11 @@ Aggregate Tree
 
 Product code from the Intrastat Combined nomenclature. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(8)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **8**  
 
 ### Description
 
@@ -61,9 +62,10 @@ _Default Value_: **NewGuid**
 
 If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. `Required`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### ValidFrom
 

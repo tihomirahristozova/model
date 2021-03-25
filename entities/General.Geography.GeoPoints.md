@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Address](General.Geography.GeoPoints.md#address) | string (nullable) | The descriptive physical address, related to this geo point. `Filter(eq;like)` 
+| [Address](General.Geography.GeoPoints.md#address) | string(128) (nullable) | The descriptive physical address, related to this geo point. `Filter(eq;like)` 
 | [Id](General.Geography.GeoPoints.md#id) | guid |  
-| [Latitude](General.Geography.GeoPoints.md#latitude) | decimal | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)` `Filter(eq;ge;le)` 
-| [Longitude](General.Geography.GeoPoints.md#longitude) | decimal | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [Latitude](General.Geography.GeoPoints.md#latitude) | decimal(10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [Longitude](General.Geography.GeoPoints.md#longitude) | decimal(10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Name](General.Geography.GeoPoints.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Geo point short name (Multilanguage). `Required` `Filter(eq;like)` 
 
 ## References
@@ -42,9 +42,10 @@ Aggregate Tree
 
 The descriptive physical address, related to this geo point. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(128) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### Id
 
@@ -57,7 +58,7 @@ _Default Value_: **NewGuid**
 
 Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)` `Filter(eq;ge;le)`
 
-_Type_: **decimal**  
+_Type_: **decimal(10, 7)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -66,7 +67,7 @@ _Default Value_: **0**
 
 Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)` `Filter(eq;ge;le)`
 
-_Type_: **decimal**  
+_Type_: **decimal(10, 7)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

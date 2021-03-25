@@ -24,10 +24,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string | The full path of the item. `Required` `Default("")` `Filter(eq;like)` 
+| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string(254) | The full path of the item. `Required` `Default("")` `Filter(eq;like)` 
 | [Id](Production.Resources.FunctionGroups.md#id) | guid |  
-| [Name](Production.Resources.FunctionGroups.md#name) | string | The name of this FunctionGroup. `Required` `Filter(like)` 
-| [Parent](Production.Resources.FunctionGroups.md#parent) | string | The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD` 
+| [Name](Production.Resources.FunctionGroups.md#name) | string(64) | The name of this FunctionGroup. `Required` `Filter(like)` 
+| [Parent](Production.Resources.FunctionGroups.md#parent) | string(254) | The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD` 
 
 ## Child Collections
 
@@ -42,9 +42,10 @@ Aggregate Tree
 
 The full path of the item. `Required` `Default("")` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 _Default Value_: ****  
 
 ### Id
@@ -58,18 +59,20 @@ _Default Value_: **NewGuid**
 
 The name of this FunctionGroup. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Parent
 
 The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **254**  
 _Default Value_: **/**  
 
 

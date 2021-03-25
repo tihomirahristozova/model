@@ -29,11 +29,11 @@ Aggregate Root:
 | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | Specifies the type of action to perform. `Required` 
 | [Id](Systems.Bpm.UserBusinessRuleActions.md#id) | guid |  
 | [Parameter1Type](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter1Value](Systems.Bpm.UserBusinessRuleActions.md#parameter1value) | string (nullable) | The actual value of the parameter. 
+| [Parameter1Value](Systems.Bpm.UserBusinessRuleActions.md#parameter1value) | string(256) (nullable) | The actual value of the parameter. 
 | [Parameter2Type](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter2Value](Systems.Bpm.UserBusinessRuleActions.md#parameter2value) | string (nullable) | The actual value of the parameter. 
+| [Parameter2Value](Systems.Bpm.UserBusinessRuleActions.md#parameter2value) | string(256) (nullable) | The actual value of the parameter. 
 | [Parameter3Type](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter3Value](Systems.Bpm.UserBusinessRuleActions.md#parameter3value) | string (nullable) | The actual value of the parameter. 
+| [Parameter3Value](Systems.Bpm.UserBusinessRuleActions.md#parameter3value) | string(256) (nullable) | The actual value of the parameter. 
 
 ## References
 
@@ -106,9 +106,10 @@ _Supports Order By_: **False**
 
 The actual value of the parameter.
 
-_Type_: **string (nullable)**  
+_Type_: **string(256) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **256**  
 
 ### Parameter2Type
 
@@ -133,9 +134,10 @@ _Supports Order By_: **False**
 
 The actual value of the parameter.
 
-_Type_: **string (nullable)**  
+_Type_: **string(256) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **256**  
 
 ### Parameter3Type
 
@@ -160,9 +162,10 @@ _Supports Order By_: **False**
 
 The actual value of the parameter.
 
-_Type_: **string (nullable)**  
+_Type_: **string(256) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **256**  
 
 
 ## Reference Details

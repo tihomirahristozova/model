@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Payments.PaymentTypes.md#code) | string | The payment type unique code. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Finance.Payments.PaymentTypes.md#code) | string(16) | The payment type unique code. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Finance.Payments.PaymentTypes.md#id) | guid |  
 | [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
 | [Name](Finance.Payments.PaymentTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentType. `Required` `Filter(like)` `ORD` 
@@ -43,10 +43,11 @@ Aggregate Tree
 
 The payment type unique code. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### Id
 

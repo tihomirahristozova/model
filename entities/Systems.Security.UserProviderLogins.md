@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Security.UserProviderLogins.md#id) | guid |  
-| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string | The key, which the provider provided for logging the user. `Required` `Filter(multi eq)` 
+| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string(450) | The key, which the provider provided for logging the user. `Required` `Filter(multi eq)` 
 | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. `Required` `Filter(eq)` `Introduced in version 20.1` 
 
 ## References
@@ -49,9 +49,10 @@ _Default Value_: **NewGuid**
 
 The key, which the provider provided for logging the user. `Required` `Filter(multi eq)`
 
-_Type_: **string**  
+_Type_: **string(450)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **450**  
 
 ### ProviderName
 

@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal | The allocated amount of costs in the currency of the calculation. `Required` `Default(0)` 
+| [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal(14, 2) | The allocated amount of costs in the currency of the calculation. `Required` `Default(0)` 
 | [Id](Finance.Cost.CalculationCosts.md#id) | guid |  
 | [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
 | [ProjectId](Finance.Cost.CalculationCosts.md#projectid) | guid (nullable) | The Project, which absorbed the cost. `Filter(multi eq)` 
@@ -49,7 +49,7 @@ Aggregate Root:
 
 The allocated amount of costs in the currency of the calculation. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(14, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

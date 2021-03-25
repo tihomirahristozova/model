@@ -29,7 +29,7 @@ Aggregate Root:
 | [Finished](Production.ShopFloor.OutputOrderLines.md#finished) | boolean | True if this output entry completes the operation. false if there might be more entries. `Required` `Default(false)` `Filter(eq)` 
 | [Id](Production.ShopFloor.OutputOrderLines.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.OutputOrderLines.md#lineord) | int32 | Line number within the order. `Required` 
-| [Notes](Production.ShopFloor.OutputOrderLines.md#notes) | string (nullable) | Notes for this OutputOrderLine. 
+| [Notes](Production.ShopFloor.OutputOrderLines.md#notes) | string(2147483647) (nullable) | Notes for this OutputOrderLine. 
 | [ProducedQuantity](Production.ShopFloor.OutputOrderLines.md#producedquantity) | [Quantity](../data-types.md#quantity) | The processed quantity of the end product. `Unit: ProducedQuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
 | [ProducedQuantityBase](Production.ShopFloor.OutputOrderLines.md#producedquantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
 | [ProducedStandard<br />QuantityBase](Production.ShopFloor.OutputOrderLines.md#producedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
@@ -106,9 +106,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this OutputOrderLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ProducedQuantity
 

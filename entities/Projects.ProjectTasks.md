@@ -30,11 +30,11 @@ Aggregate Tree
 | [BudgetLaborAmount](Projects.ProjectTasks.md#budgetlaboramount) | [Amount](../data-types.md#amount) (nullable) | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. `Currency: Project.BudgetingCurrency` 
 | [FinishDateTime](Projects.ProjectTasks.md#finishdatetime) | datetime | The date and time when the task is planned to finish. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [Id](Projects.ProjectTasks.md#id) | guid |  
-| [Notes](Projects.ProjectTasks.md#notes) | string (nullable) | Notes for this ProjectTask. 
-| [PlannedDurationHours](Projects.ProjectTasks.md#planneddurationhours) | decimal | Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. `Required` `Default(0)` 
+| [Notes](Projects.ProjectTasks.md#notes) | string(2147483647) (nullable) | Notes for this ProjectTask. 
+| [PlannedDurationHours](Projects.ProjectTasks.md#planneddurationhours) | decimal(8, 2) | Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. `Required` `Default(0)` 
 | [ProjectTaskNo](Projects.ProjectTasks.md#projecttaskno) | int32 | Consecutive task number, unique within the project. `Required` 
 | [StartDateTime](Projects.ProjectTasks.md#startdatetime) | datetime | The date and time when the task is planned to start. `Required` `Default(Now)` `Filter(eq;ge;le)` 
-| [TaskName](Projects.ProjectTasks.md#taskname) | string | The short name of the task. It is best practice to contain the target of the task. `Required` `Filter(multi eq;like)` 
+| [TaskName](Projects.ProjectTasks.md#taskname) | string(254) | The short name of the task. It is best practice to contain the target of the task. `Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -90,15 +90,16 @@ _Default Value_: **NewGuid**
 
 Notes for this ProjectTask.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### PlannedDurationHours
 
 Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(8, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -124,9 +125,10 @@ _Default Value_: **CurrentDateTime**
 
 The short name of the task. It is best practice to contain the target of the task. `Required` `Filter(multi eq;like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

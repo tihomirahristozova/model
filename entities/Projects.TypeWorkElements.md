@@ -25,12 +25,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Projects.TypeWorkElements.md#fullpath) | string (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `Filter(eq;like)` `ReadOnly` 
+| [FullPath](Projects.TypeWorkElements.md#fullpath) | string(25) (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `Filter(eq;like)` `ReadOnly` 
 | [Id](Projects.TypeWorkElements.md#id) | guid |  
-| [Notes](Projects.TypeWorkElements.md#notes) | string (nullable) | Notes for this TypeWorkElement. 
-| [ParentFullPath](Projects.TypeWorkElements.md#parentfullpath) | string (nullable) | The full path of the parent work element in this project type. null when this is root element. `Filter(eq;like)` 
-| [WorkElementCode](Projects.TypeWorkElements.md#workelementcode) | string | The code of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)` 
-| [WorkElementName](Projects.TypeWorkElements.md#workelementname) | string | The name of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)` 
+| [Notes](Projects.TypeWorkElements.md#notes) | string(2147483647) (nullable) | Notes for this TypeWorkElement. 
+| [ParentFullPath](Projects.TypeWorkElements.md#parentfullpath) | string(25) (nullable) | The full path of the parent work element in this project type. null when this is root element. `Filter(eq;like)` 
+| [WorkElementCode](Projects.TypeWorkElements.md#workelementcode) | string(3) | The code of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)` 
+| [WorkElementName](Projects.TypeWorkElements.md#workelementname) | string(254) | The name of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)` 
 
 ## References
 
@@ -45,9 +45,10 @@ Aggregate Root:
 
 The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `Filter(eq;like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(25) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **25**  
 
 ### Id
 
@@ -60,33 +61,37 @@ _Default Value_: **NewGuid**
 
 Notes for this TypeWorkElement.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ParentFullPath
 
 The full path of the parent work element in this project type. null when this is root element. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(25) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **25**  
 
 ### WorkElementCode
 
 The code of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)`
 
-_Type_: **string**  
+_Type_: **string(3)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **3**  
 
 ### WorkElementName
 
 The name of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

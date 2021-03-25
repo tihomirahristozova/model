@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [FromDate](General.Contacts.PartyRelationships.md#fromdate) | datetime (nullable) | The starting date of the relationship. null means the date is the begining of the time. `Filter(ge;le)` 
 | [Id](General.Contacts.PartyRelationships.md#id) | guid |  
-| [Notes](General.Contacts.PartyRelationships.md#notes) | string (nullable) | Notes for this PartyRelationship. 
+| [Notes](General.Contacts.PartyRelationships.md#notes) | string(254) (nullable) | Notes for this PartyRelationship. 
 | [ToDate](General.Contacts.PartyRelationships.md#todate) | datetime (nullable) | The ending date of the relationship. null means the relationship is still active. `Filter(ge;le)` 
 
 ## References
@@ -58,9 +58,10 @@ _Default Value_: **NewGuid**
 
 Notes for this PartyRelationship.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ToDate
 

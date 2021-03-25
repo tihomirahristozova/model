@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ConsumableQuantity](Applications.Rental.AssetTypeConsumables.md#consumablequantity) | [Quantity](../data-types.md#quantity) | Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required` 
 | [Id](Applications.Rental.AssetTypeConsumables.md#id) | guid |  
-| [Notes](Applications.Rental.AssetTypeConsumables.md#notes) | string (nullable) | Notes for this AssetTypeConsumable. 
+| [Notes](Applications.Rental.AssetTypeConsumables.md#notes) | string(2147483647) (nullable) | Notes for this AssetTypeConsumable. 
 
 ## References
 
@@ -60,9 +60,10 @@ _Default Value_: **NewGuid**
 
 Notes for this AssetTypeConsumable.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

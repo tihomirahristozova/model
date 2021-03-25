@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for the installed equipment.</td>
 </tr>
 <tr>
@@ -164,9 +164,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for the installed equipment.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>Quantity of the equipment. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>

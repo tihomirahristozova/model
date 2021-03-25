@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this CalculatedAttribute<br>Expression.</td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter1value">Parameter1Value</a></td>
-<td>string (nullable)</td>
+<td>string(256) (nullable)</td>
 <td>The actual value of parameter 1.</td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter2value">Parameter2Value</a></td>
-<td>string (nullable)</td>
+<td>string(256) (nullable)</td>
 <td>The actual value of the parameter.</td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter3value">Parameter3Value</a></td>
-<td>string (nullable)</td>
+<td>string(256) (nullable)</td>
 <td>The actual value of the parameter.</td>
 </tr>
 </tbody>
@@ -188,9 +188,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this CalculatedAttributeExpression.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="operator">Operator</h3>
 <p>The exprssion operator. Available operators are limited to a pre-selected list of operators. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#operator">ExpressionOperator</a></strong><br>
@@ -439,9 +440,10 @@ Generic enum type for ExpressionParameterType properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parameter1value">Parameter1Value</h3>
 <p>The actual value of parameter 1.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(256) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>256</strong></p>
 <h3 id="parameter2type">Parameter2Type</h3>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter2type">ExpressionParameterType</a> (nullable)</strong><br>
@@ -493,9 +495,10 @@ Generic enum type for ExpressionParameterType properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parameter2value">Parameter2Value</h3>
 <p>The actual value of the parameter.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(256) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>256</strong></p>
 <h3 id="parameter3type">Parameter3Type</h3>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter3type">ExpressionParameterType</a> (nullable)</strong><br>
@@ -547,9 +550,10 @@ Generic enum type for ExpressionParameterType properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parameter3value">Parameter3Value</h3>
 <p>The actual value of the parameter.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(256) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>256</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculatedattribute">CalculatedAttribute</h3>
 <p>The <code>CalculatedAttribute</code>(Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

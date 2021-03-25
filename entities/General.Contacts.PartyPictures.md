@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comments](General.Contacts.PartyPictures.md#comments) | string (nullable) | Notes for this party picture. 
+| [Comments](General.Contacts.PartyPictures.md#comments) | string(254) (nullable) | Notes for this party picture. 
 | [Id](General.Contacts.PartyPictures.md#id) | guid |  
 | [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | True=This is the default picture for the party; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. `Required` `Default(false)` `Filter(eq)` 
@@ -45,9 +45,10 @@ Aggregate Root:
 
 Notes for this party picture.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 

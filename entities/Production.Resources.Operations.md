@@ -25,16 +25,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Production.Resources.Operations.md#description) | string (nullable) | The description of this Operation. 
+| [Description](Production.Resources.Operations.md#description) | string(2147483647) (nullable) | The description of this Operation. 
 | [Id](Production.Resources.Operations.md#id) | guid |  
 | [MinimumConcurrent<br />StartTimeMinutes](Production.Resources.Operations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
 | [MoveTimeMinutes](Production.Resources.Operations.md#movetimeminutes) | int32 | The time required for the product to move to the next operation. During this time no resource is allocated. `Required` `Default(0)` 
-| [Name](Production.Resources.Operations.md#name) | string | The name of this Operation. `Required` `Filter(like)` 
+| [Name](Production.Resources.Operations.md#name) | string(50) | The name of this Operation. `Required` `Filter(like)` 
 | [RunTimeMinutes](Production.Resources.Operations.md#runtimeminutes) | int32 | The time required to process one product lot. The run time is calculated for each produced lot. `Required` `Default(0)` 
-| [ScrapRate](Production.Resources.Operations.md#scraprate) | decimal (nullable) | The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated. 
+| [ScrapRate](Production.Resources.Operations.md#scraprate) | decimal(7, 6) (nullable) | The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated. 
 | [SetupTimeMinutes](Production.Resources.Operations.md#setuptimeminutes) | int32 | The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. `Required` `Default(0)` 
-| [StandardPricePerHour](Production.Resources.Operations.md#standardpriceperhour) | decimal | Standard price for 1 hour work for this operation. `Required` `Default(0)` 
-| [Tooling](Production.Resources.Operations.md#tooling) | string (nullable) | Short description of the needed instruments for the operation. 
+| [StandardPricePerHour](Production.Resources.Operations.md#standardpriceperhour) | decimal(18, 6) | Standard price for 1 hour work for this operation. `Required` `Default(0)` 
+| [Tooling](Production.Resources.Operations.md#tooling) | string(254) (nullable) | Short description of the needed instruments for the operation. 
 | [UseQuantityBase](Production.Resources.Operations.md#usequantitybase) | [Quantity](../data-types.md#quantity) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
 | [WaitTimeMinutes](Production.Resources.Operations.md#waittimeminutes) | int32 | The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. `Required` `Default(0)` 
 
@@ -53,9 +53,10 @@ Aggregate Root:
 
 The description of this Operation.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 
@@ -85,9 +86,10 @@ _Default Value_: **0**
 
 The name of this Operation. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(50)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **50**  
 
 ### RunTimeMinutes
 
@@ -102,7 +104,7 @@ _Default Value_: **0**
 
 The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(7, 6) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -119,7 +121,7 @@ _Default Value_: **0**
 
 Standard price for 1 hour work for this operation. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(18, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -128,9 +130,10 @@ _Default Value_: **0**
 
 Short description of the needed instruments for the operation.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### UseQuantityBase
 

@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountPercent](Crm.Sales.DefaultSalesOrderPaymentPlans.md#amountpercent) | decimal (nullable) | Percent of the sales order amount to be payed. 
+| [AmountPercent](Crm.Sales.DefaultSalesOrderPaymentPlans.md#amountpercent) | decimal(7, 6) (nullable) | Percent of the sales order amount to be payed. 
 | [DueDateFormMethod](Crm.Sales.DefaultSalesOrderPaymentPlans.md#duedateformmethod) | [PaymentPlanDueDateSource](Crm.Sales.DefaultSalesOrderPaymentPlans.md#duedateformmethod) | Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. `Required` 
 | [Id](Crm.Sales.DefaultSalesOrderPaymentPlans.md#id) | guid |  
 | [InstallmentNumber](Crm.Sales.DefaultSalesOrderPaymentPlans.md#installmentnumber) | int32 | Consequtive installment number. Used for identifying different payments generated according this payment plan. `Required` 
@@ -49,7 +49,7 @@ Aggregate Root:
 
 Percent of the sales order amount to be payed.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(7, 6) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

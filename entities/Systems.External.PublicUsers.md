@@ -23,27 +23,27 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AboutMeText](Systems.External.PublicUsers.md#aboutmetext) | string (nullable) | About me text, written by the user. 
-| [Address](Systems.External.PublicUsers.md#address) | string (nullable) | The primary address of the user. Can be specified with latin or local characters. `Filter(like)` 
-| [AlternateEmail](Systems.External.PublicUsers.md#alternateemail) | string (nullable) | Alternate email of the user. Can be used for backup email for password restore. `Filter(like)` 
-| [City](Systems.External.PublicUsers.md#city) | string (nullable) | The state of residence of the user. Can be specified with latin or local letters. `Filter(like)` 
-| [CompanyName](Systems.External.PublicUsers.md#companyname) | string (nullable) | The name of the company, for which the user works, as specified by the user. `Filter(like)` 
-| [Country](Systems.External.PublicUsers.md#country) | string (nullable) | The country of residence of the user, with latin letters. `Filter(like)` 
+| [AboutMeText](Systems.External.PublicUsers.md#aboutmetext) | string(1024) (nullable) | About me text, written by the user. 
+| [Address](Systems.External.PublicUsers.md#address) | string(128) (nullable) | The primary address of the user. Can be specified with latin or local characters. `Filter(like)` 
+| [AlternateEmail](Systems.External.PublicUsers.md#alternateemail) | string(64) (nullable) | Alternate email of the user. Can be used for backup email for password restore. `Filter(like)` 
+| [City](Systems.External.PublicUsers.md#city) | string(64) (nullable) | The state of residence of the user. Can be specified with latin or local letters. `Filter(like)` 
+| [CompanyName](Systems.External.PublicUsers.md#companyname) | string(64) (nullable) | The name of the company, for which the user works, as specified by the user. `Filter(like)` 
+| [Country](Systems.External.PublicUsers.md#country) | string(64) (nullable) | The country of residence of the user, with latin letters. `Filter(like)` 
 | [CreatedOn](Systems.External.PublicUsers.md#createdon) | datetime (nullable) | The date and time when the user was created. `Default(Now)` 
-| [Email](Systems.External.PublicUsers.md#email) | string | The primary email of the user. Used for notifications and password restore. `Required` `Filter(like)` 
-| [FirstName](Systems.External.PublicUsers.md#firstname) | string | First name of the user. `Required` `Filter(like)` 
+| [Email](Systems.External.PublicUsers.md#email) | string(64) | The primary email of the user. Used for notifications and password restore. `Required` `Filter(like)` 
+| [FirstName](Systems.External.PublicUsers.md#firstname) | string(64) | First name of the user. `Required` `Filter(like)` 
 | [Id](Systems.External.PublicUsers.md#id) | guid |  
 | [IsActive](Systems.External.PublicUsers.md#isactive) | boolean | Specifies whether the user account is active and access should be allowed. `Required` `Default(true)` `Filter(eq)` 
-| [LastName](Systems.External.PublicUsers.md#lastname) | string | Last name of the user. `Required` `Filter(like)` 
-| [Notes](Systems.External.PublicUsers.md#notes) | string (nullable) | Notes for this PublicUser. 
-| [PasswordAlgorithm](Systems.External.PublicUsers.md#passwordalgorithm) | string | Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. `Required` `Filter(like)` 
-| [PasswordHash](Systems.External.PublicUsers.md#passwordhash) | string | Actual password storage. The format of the contents is determined by Password Algorithm. `Required` `Filter(like)` 
+| [LastName](Systems.External.PublicUsers.md#lastname) | string(64) | Last name of the user. `Required` `Filter(like)` 
+| [Notes](Systems.External.PublicUsers.md#notes) | string(2147483647) (nullable) | Notes for this PublicUser. 
+| [PasswordAlgorithm](Systems.External.PublicUsers.md#passwordalgorithm) | string(16) | Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. `Required` `Filter(like)` 
+| [PasswordHash](Systems.External.PublicUsers.md#passwordhash) | string(128) | Actual password storage. The format of the contents is determined by Password Algorithm. `Required` `Filter(like)` 
 | [PasswordRecoveryCode](Systems.External.PublicUsers.md#passwordrecoverycode) | guid (nullable) | Automatically generated unique code for the last password recovery attempt. `Filter(multi eq)` `ReadOnly` 
 | [PasswordRecovery<br />CreationTime](Systems.External.PublicUsers.md#passwordrecoverycreationtime) | datetime (nullable) | Date and time when the last password recovery code was created. `ReadOnly` 
-| [PhoneNumber](Systems.External.PublicUsers.md#phonenumber) | string (nullable) | The primary phone number of the user. `Filter(like)` 
-| [PostalCode](Systems.External.PublicUsers.md#postalcode) | string (nullable) | The postal code of the default address of the user. `Filter(like)` 
+| [PhoneNumber](Systems.External.PublicUsers.md#phonenumber) | string(16) (nullable) | The primary phone number of the user. `Filter(like)` 
+| [PostalCode](Systems.External.PublicUsers.md#postalcode) | string(16) (nullable) | The postal code of the default address of the user. `Filter(like)` 
 | [ProfilePicture](Systems.External.PublicUsers.md#profilepicture) | byte[] (nullable) | Profile picture of the user. 
-| [State](Systems.External.PublicUsers.md#state) | string (nullable) | The state of residence of the user within the country. Can be specified with latin or local characters. `Filter(like)` 
+| [State](Systems.External.PublicUsers.md#state) | string(64) (nullable) | The state of residence of the user within the country. Can be specified with latin or local characters. `Filter(like)` 
 
 ## References
 
@@ -60,49 +60,55 @@ Aggregate Tree
 
 About me text, written by the user.
 
-_Type_: **string (nullable)**  
+_Type_: **string(1024) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1024**  
 
 ### Address
 
 The primary address of the user. Can be specified with latin or local characters. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(128) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### AlternateEmail
 
 Alternate email of the user. Can be used for backup email for password restore. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### City
 
 The state of residence of the user. Can be specified with latin or local letters. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### CompanyName
 
 The name of the company, for which the user works, as specified by the user. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Country
 
 The country of residence of the user, with latin letters. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### CreatedOn
 
@@ -117,17 +123,19 @@ _Default Value_: **CurrentDateTime**
 
 The primary email of the user. Used for notifications and password restore. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### FirstName
 
 First name of the user. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Id
 
@@ -149,33 +157,37 @@ _Default Value_: **True**
 
 Last name of the user. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Notes
 
 Notes for this PublicUser.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### PasswordAlgorithm
 
 Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### PasswordHash
 
 Actual password storage. The format of the contents is determined by Password Algorithm. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(128)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### PasswordRecoveryCode
 
@@ -196,17 +208,19 @@ _Supports Order By_: **False**
 
 The primary phone number of the user. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### PostalCode
 
 The postal code of the default address of the user. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### ProfilePicture
 
@@ -220,9 +234,10 @@ _Supports Order By_: **False**
 
 The state of residence of the user within the country. Can be specified with latin or local characters. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 
 ## Reference Details

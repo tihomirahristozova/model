@@ -31,7 +31,7 @@ Aggregate Root:
 | [IsDefault](General.Contacts.PartyContactMechanisms.md#isdefault) | boolean | True - when this is the default contact mechanism for this party; false - otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [LineOrd](General.Contacts.PartyContactMechanisms.md#lineord) | int32 | Consecutive number of the contact information. The number is unique within the party. `Required` 
 | [NonSolicitation](General.Contacts.PartyContactMechanisms.md#nonsolicitation) | boolean | If true then Don't use the mechanism for solicitation purposes. `Required` `Default(false)` `Filter(eq)` 
-| [Notes](General.Contacts.PartyContactMechanisms.md#notes) | string (nullable) | Notes for this PartyContactMechanism. 
+| [Notes](General.Contacts.PartyContactMechanisms.md#notes) | string(254) (nullable) | Notes for this PartyContactMechanism. 
 | [ThruDate](General.Contacts.PartyContactMechanisms.md#thrudate) | datetime (nullable) | The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. `Filter(eq;ge;le)` 
 
 ## References
@@ -106,9 +106,10 @@ _Default Value_: **False**
 
 Notes for this PartyContactMechanism.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ThruDate
 

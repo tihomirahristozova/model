@@ -29,12 +29,12 @@ Aggregate Tree
 | [ActiveTill](Applications.Fleet.Vehicles.md#activetill) | datetime (nullable) | The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. `Introduced in version 18.2` 
 | [AuthorityMaximum<br />LadenMassKg](Applications.Fleet.Vehicles.md#authoritymaximumladenmasskg) | int32 (nullable) | Maximum permissible laden mass, as determined by the registration authority. 
 | [CrewCount](Applications.Fleet.Vehicles.md#crewcount) | int32 (nullable) | Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts. `Default(1)` `Filter(eq;ge;le)` 
-| [EngineIdentificationNumber](Applications.Fleet.Vehicles.md#engineidentificationnumber) | string (nullable) | Engine identification number. `Filter(eq;like)` 
+| [EngineIdentificationNumber](Applications.Fleet.Vehicles.md#engineidentificationnumber) | string(20) (nullable) | Engine identification number. `Filter(eq;like)` 
 | [EnginePowerhp](Applications.Fleet.Vehicles.md#enginepowerhp) | int32 (nullable) | Engine output power in horse power. null means that the value is unknown or not applicable for this type of engine. `Filter(eq;ge;le)` 
 | [EngineSizecc](Applications.Fleet.Vehicles.md#enginesizecc) | int32 (nullable) | Engine size in cubic centimeters (cm3). null means that the value is unknown or not applicable for this type of engine (e.g. electric motors). `Filter(eq;ge;le)` 
 | [FuelCapacity](Applications.Fleet.Vehicles.md#fuelcapacity) | int32 (nullable) | Maximum fuel capacity of the engine or the battery in the fuel measurement unit. 
-| [FuelCompsumption](Applications.Fleet.Vehicles.md#fuelcompsumption) | decimal (nullable) | Average fuel consumption in the fuel measurement unit for 1 operational unit. 
-| [FuelType](Applications.Fleet.Vehicles.md#fueltype) | string (nullable) | Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. `Filter(eq;like)` 
+| [FuelCompsumption](Applications.Fleet.Vehicles.md#fuelcompsumption) | decimal(7, 1) (nullable) | Average fuel consumption in the fuel measurement unit for 1 operational unit. 
+| [FuelType](Applications.Fleet.Vehicles.md#fueltype) | string(64) (nullable) | Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. `Filter(eq;like)` 
 | [Id](Applications.Fleet.Vehicles.md#id) | guid |  
 | [IsActive](Applications.Fleet.Vehicles.md#isactive) | boolean | True if the vehicle is still owned and managed by the enterprise. `Required` `Default(true)` `Introduced in version 18.2` 
 | [IssuingAuthority](Applications.Fleet.Vehicles.md#issuingauthority) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. `Filter(eq;like)` 
@@ -42,15 +42,15 @@ Aggregate Tree
 | [ManufactureYear](Applications.Fleet.Vehicles.md#manufactureyear) | int32 (nullable) | The year when the vehicle was manufactured or first registered - whichever is known. null means that the value is unknown. `Filter(eq;ge;le)` 
 | [MaximumSpeedKmH](Applications.Fleet.Vehicles.md#maximumspeedkmh) | int32 (nullable) | Maximum speed in km/h. 
 | [Model](Applications.Fleet.Vehicles.md#model) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The model of the vehicle. `Filter(eq;like)` 
-| [Notes](Applications.Fleet.Vehicles.md#notes) | string (nullable) | Notes for this Vehicle. 
+| [Notes](Applications.Fleet.Vehicles.md#notes) | string(2147483647) (nullable) | Notes for this Vehicle. 
 | [PrimaryColor](Applications.Fleet.Vehicles.md#primarycolor) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The primary color of the vehicle. null means that the value is unknown or not applicable. `Filter(eq;like)` 
 | [SeatingPlacesCount](Applications.Fleet.Vehicles.md#seatingplacescount) | int32 (nullable) | Number of seating places, excluding driver. `Filter(eq;ge;le)` 
 | [StandingPlacesCount](Applications.Fleet.Vehicles.md#standingplacescount) | int32 (nullable) | Number of standing places, if applicable. 
 | [TechnicalMaximum<br />LadenMassKg](Applications.Fleet.Vehicles.md#technicalmaximumladenmasskg) | int32 (nullable) | Maximum technically permissible laden mass in kg. 
 | [TrainsetMaximumLadenMassKg](Applications.Fleet.Vehicles.md#trainsetmaximumladenmasskg) | int32 (nullable) | Maximum permissible laden mass of a whole trainset, including the vehicle. 
-| [VehicleIdentification<br />Number](Applications.Fleet.Vehicles.md#vehicleidentificationnumber) | string (nullable) | VIN, aka Chassis number. `Filter(eq;like)` 
+| [VehicleIdentification<br />Number](Applications.Fleet.Vehicles.md#vehicleidentificationnumber) | string(20) (nullable) | VIN, aka Chassis number. `Filter(eq;like)` 
 | [VehicleMassKg](Applications.Fleet.Vehicles.md#vehiclemasskg) | int32 (nullable) | Vehicle own mass in kg. 
-| [VehicleRegistrationNumber](Applications.Fleet.Vehicles.md#vehicleregistrationnumber) | string | The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. `Required` `Filter(eq;like)` 
+| [VehicleRegistrationNumber](Applications.Fleet.Vehicles.md#vehicleregistrationnumber) | string(16) | The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. `Required` `Filter(eq;like)` 
 | [VehicleType](Applications.Fleet.Vehicles.md#vehicletype) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. `Filter(eq;like)` 
 
 ## References
@@ -109,9 +109,10 @@ _Default Value_: **1**
 
 Engine identification number. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(20) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **20**  
 
 ### EnginePowerhp
 
@@ -141,7 +142,7 @@ _Supports Order By_: **False**
 
 Average fuel consumption in the fuel measurement unit for 1 operational unit.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(7, 1) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -149,9 +150,10 @@ _Supports Order By_: **False**
 
 Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Id
 
@@ -213,9 +215,10 @@ _Supports Order By_: **False**
 
 Notes for this Vehicle.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### PrimaryColor
 
@@ -261,9 +264,10 @@ _Supports Order By_: **False**
 
 VIN, aka Chassis number. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(20) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **20**  
 
 ### VehicleMassKg
 
@@ -277,9 +281,10 @@ _Supports Order By_: **False**
 
 The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### VehicleType
 

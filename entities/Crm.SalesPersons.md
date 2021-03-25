@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommissionPercent](Crm.SalesPersons.md#commissionpercent) | decimal (nullable) | The percentage (0..1) of commission percent. null means that there is no commission percent. 
+| [CommissionPercent](Crm.SalesPersons.md#commissionpercent) | decimal(7, 6) (nullable) | The percentage (0..1) of commission percent. null means that there is no commission percent. 
 | [CommissionPolicyId](Crm.SalesPersons.md#commissionpolicyid) | guid (nullable) | Current commission policy for the sales person. null means there is no commission policy. `Filter(multi eq)` 
 | [ContractEndDate](Crm.SalesPersons.md#contractenddate) | datetime (nullable) | The ending date of the contract with the sales person. null when the sales person is still active. `Filter(ge;le)` 
 | [ContractStartDate](Crm.SalesPersons.md#contractstartdate) | datetime (nullable) | The starting date of the contract with the sales person. null when it is unknown. `Filter(ge;le)` 
@@ -48,7 +48,7 @@ Aggregate Root:
 
 The percentage (0..1) of commission percent. null means that there is no commission percent.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(7, 6) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

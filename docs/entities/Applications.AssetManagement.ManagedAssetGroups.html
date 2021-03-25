@@ -104,7 +104,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetGroups.html#code">Code</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>Unique (within all groups) code of the asset group. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetGroups.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this ManagedAssetGroup.</td>
 </tr>
 </tbody>
@@ -144,10 +144,11 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>Unique (within all groups) code of the asset group. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -160,9 +161,10 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ManagedAssetGroup.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
 <p>The parent asset group in the hierarchy. null means this is a root group. <code>Filter(multi eq)</code></p>

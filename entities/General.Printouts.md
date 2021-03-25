@@ -26,15 +26,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AllowPrintingOnState](General.Printouts.md#allowprintingonstate) | [AllowPrintingOnState](General.Printouts.md#allowprintingonstate) | The user can print documents only with state equal or greater than Allow_Printing_On_State. `Required` `Default(0)` 
-| [ApplicationName](General.Printouts.md#applicationname) | string | The application which stored and uses the printout. `Required` 
+| [ApplicationName](General.Printouts.md#applicationname) | string(64) | The application which stored and uses the printout. `Required` 
 | [BackwardCompatibility](General.Printouts.md#backwardcompatibility) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 | [Copies](General.Printouts.md#copies) | int32 | Number of copies that should be printed when using direct printing. `Required` `Default(1)` 
-| [Definition](General.Printouts.md#definition) | string (nullable) | Obsolete. Not used. 
-| [DefinitionFormat](General.Printouts.md#definitionformat) | string (nullable) | Obsolete. Not used. `Default("default")` 
+| [Definition](General.Printouts.md#definition) | string(1073741823) (nullable) | Obsolete. Not used. 
+| [DefinitionFormat](General.Printouts.md#definitionformat) | string(16) (nullable) | Obsolete. Not used. `Default("default")` 
 | [Id](General.Printouts.md#id) | guid |  
 | [IsDefault](General.Printouts.md#isdefault) | boolean | True if this is the default printout for the application form. `Required` `Default(false)` `Filter(eq)` 
-| [Name](General.Printouts.md#name) | string | The name of the printout. Unique within the application form. `Required` `Filter(like)` 
-| [Notes](General.Printouts.md#notes) | string (nullable) | Notes for this Printout. 
+| [Name](General.Printouts.md#name) | string(64) | The name of the printout. Unique within the application form. `Required` `Filter(like)` 
+| [Notes](General.Printouts.md#notes) | string(512) (nullable) | Notes for this Printout. 
 | [Ord](General.Printouts.md#ord) | int32 | Order in the list of printouts when using direct printing. `Required` `Default(0)` 
 | [OrdFilterXml](General.Printouts.md#ordfilterxml) | dataaccessfilter (nullable) | The condition, required to be matched in order for the printout to be executed upon "Print All" command. 
 | [OrdPriority](General.Printouts.md#ordpriority) | int32 (nullable) | Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command. `Default(0)` 
@@ -76,9 +76,10 @@ _Default Value_: **0**
 
 The application which stored and uses the printout. `Required`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### BackwardCompatibility
 
@@ -102,17 +103,19 @@ _Default Value_: **1**
 
 Obsolete. Not used.
 
-_Type_: **string (nullable)**  
+_Type_: **string(1073741823) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1073741823**  
 
 ### DefinitionFormat
 
 Obsolete. Not used. `Default("default")`
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 _Default Value_: **default**  
 
 ### Id
@@ -135,17 +138,19 @@ _Default Value_: **False**
 
 The name of the printout. Unique within the application form. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Notes
 
 Notes for this Printout.
 
-_Type_: **string (nullable)**  
+_Type_: **string(512) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **512**  
 
 ### Ord
 

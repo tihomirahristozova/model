@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCodes.html#productcodefield">ProductCodeField</a></td>
-<td>string</td>
+<td>string(32)</td>
 <td>The code of the product in the specified coding system. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
@@ -155,9 +155,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="productcodefield">ProductCodeField</h3>
 <p>The code of the product in the specified coding system. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(32)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>32</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="codingsystem">CodingSystem</h3>
 <p>The coding system in which the product code is specified. <code>Required</code> <code>Filter(multi eq)</code></p>

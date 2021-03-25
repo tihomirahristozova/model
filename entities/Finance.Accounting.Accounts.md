@@ -24,13 +24,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. `Required` `Filter(like)` `ReadOnly` 
+| [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string(30) | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. `Required` `Filter(like)` `ReadOnly` 
 | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br />Directory, BRD=Balance_Reference_<br />Document. `Required` `Default("ACB")` 
-| [Description](Finance.Accounting.Accounts.md#description) | string (nullable) | The description of this Account. 
+| [Description](Finance.Accounting.Accounts.md#description) | string(254) (nullable) | The description of this Account. 
 | [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | True means that the account won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)` 
 | [Id](Finance.Accounting.Accounts.md#id) | guid |  
 | [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The account name. `Required` `Filter(like)` 
-| [Number](Finance.Accounting.Accounts.md#number) | string | The number of the account, unique within the account group. `Required` `Filter(like)` 
+| [Number](Finance.Accounting.Accounts.md#number) | string(30) | The number of the account, unique within the account group. `Required` `Filter(like)` 
 
 ## References
 
@@ -53,9 +53,10 @@ Aggregate Tree
 
 The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. `Required` `Filter(like)` `ReadOnly`
 
-_Type_: **string**  
+_Type_: **string(30)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **30**  
 
 ### CurrencyValuationMethod
 
@@ -79,9 +80,10 @@ _Default Value_: **AccountCurrentBalance**
 
 The description of this Account.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Discontinued
 
@@ -111,9 +113,10 @@ _Supports Order By_: **False**
 
 The number of the account, unique within the account group. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(30)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **30**  
 
 
 ## Reference Details

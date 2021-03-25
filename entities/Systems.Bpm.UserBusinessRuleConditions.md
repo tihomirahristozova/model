@@ -25,12 +25,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#attributename) | string | The attribute, which will be tested. `Required` 
+| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#attributename) | string(64) | The attribute, which will be tested. `Required` 
 | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. `Required` `Default("Equals")` 
 | [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. `Required` 
 | [Id](Systems.Bpm.UserBusinessRuleConditions.md#id) | guid |  
-| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (nullable) | Notes for this UserBusinessRuleCondition. `Introduced in version 20.1` 
-| [Value](Systems.Bpm.UserBusinessRuleConditions.md#value) | string (nullable) | The value against which the data attribute will be tested. 
+| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string(2147483647) (nullable) | Notes for this UserBusinessRuleCondition. `Introduced in version 20.1` 
+| [Value](Systems.Bpm.UserBusinessRuleConditions.md#value) | string(254) (nullable) | The value against which the data attribute will be tested. 
 
 ## References
 
@@ -45,9 +45,10 @@ Aggregate Root:
 
 The attribute, which will be tested. `Required`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### ComparisonType
 
@@ -94,17 +95,19 @@ _Default Value_: **NewGuid**
 
 Notes for this UserBusinessRuleCondition. `Introduced in version 20.1`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Value
 
 The value against which the data attribute will be tested.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

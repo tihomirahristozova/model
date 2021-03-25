@@ -104,12 +104,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Crm.LineDiscounts.html#description">Description</a></td>
-<td>string (nullable)</td>
+<td>string(50) (nullable)</td>
 <td>The description of the discount that is shown to the operator when he/she should choose between different discounts. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.LineDiscounts.html#discountpercent">DiscountPercent</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>The discount percent that should be applied if all the matching criteria are met. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -204,12 +204,13 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
 <p>The description of the discount that is shown to the operator when he/she should choose between different discounts. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(50) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>50</strong></p>
 <h3 id="discountpercent">DiscountPercent</h3>
 <p>The discount percent that should be applied if all the matching criteria are met. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>

@@ -114,7 +114,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Crm.DiscountTypes.html#code">Code</a></td>
-<td>string</td>
+<td>string(32)</td>
 <td>The unique code of the DiscountType. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -129,12 +129,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Crm.DiscountTypes.html#name">Name</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The name of this DiscountType. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.DiscountTypes.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this DiscountType.</td>
 </tr>
 <tr>
@@ -206,9 +206,10 @@ Allowed values for the <code>CalculationMethod</code>(Crm.DiscountTypes.md#calcu
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="code">Code</h3>
 <p>The unique code of the DiscountType. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(32)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -222,14 +223,16 @@ Allowed values for the <code>CalculationMethod</code>(Crm.DiscountTypes.md#calcu
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this DiscountType. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this DiscountType.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="ord">Ord</h3>
 <p>Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>

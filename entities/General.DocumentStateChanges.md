@@ -29,7 +29,7 @@ Aggregate Root:
 | [NewState](General.DocumentStateChanges.md#newstate) | [NewState](General.DocumentStateChanges.md#newstate) | The new state after the change. `Required` `Filter(eq)` 
 | [SystemInitiated](General.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action. `Required` `Default(false)` `ReadOnly` 
 | [UpdateTime](General.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect. `Required` `Filter(ge;le)` `ORD` 
-| [UpdateUser](General.DocumentStateChanges.md#updateuser) | string | The login name of the user, who made the status change. `Required` `Filter(eq)` 
+| [UpdateUser](General.DocumentStateChanges.md#updateuser) | string(64) | The login name of the user, who made the status change. `Required` `Filter(eq)` 
 | [Void](General.DocumentStateChanges.md#void) | boolean | True if the document is voided with this change. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1` 
 
 ## References
@@ -91,9 +91,10 @@ _Supports Order By_: **True**
 
 The login name of the user, who made the status change. `Required` `Filter(eq)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Void
 

@@ -129,7 +129,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessInstances.html#subject">Subject</a></td>
-<td>string</td>
+<td>string(512)</td>
 <td>The multilanguage subject (or title) of this process instance. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
@@ -210,9 +210,10 @@ Allowed values for the <code>State</code>(Systems.Bpm.ProcessInstances.md#state)
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="subject">Subject</h3>
 <p>The multilanguage subject (or title) of this process instance. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(512)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>512</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="process">Process</h3>
 <p>The process on which this instance is based. <code>Required</code> <code>Filter(multi eq)</code></p>

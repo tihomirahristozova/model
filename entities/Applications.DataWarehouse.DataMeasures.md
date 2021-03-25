@@ -23,12 +23,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.DataWarehouse.DataMeasures.md#code) | string | Unique measure code. `Required` `Filter(eq;like)` `ORD` 
-| [GreenZoneSpreadPercent](Applications.DataWarehouse.DataMeasures.md#greenzonespreadpercent) | decimal | The plus or minus percent, by which the goal can be missed, but still considered achieved. `Required` `Default(0.2)` `Filter(eq)` 
-| [HorizontalTrend<br />SpreadPercent](Applications.DataWarehouse.DataMeasures.md#horizontaltrendspreadpercent) | decimal | The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. `Required` `Default(0.01)` `Filter(eq)` 
+| [Code](Applications.DataWarehouse.DataMeasures.md#code) | string(16) | Unique measure code. `Required` `Filter(eq;like)` `ORD` 
+| [GreenZoneSpreadPercent](Applications.DataWarehouse.DataMeasures.md#greenzonespreadpercent) | decimal(3, 2) | The plus or minus percent, by which the goal can be missed, but still considered achieved. `Required` `Default(0.2)` `Filter(eq)` 
+| [HorizontalTrend<br />SpreadPercent](Applications.DataWarehouse.DataMeasures.md#horizontaltrendspreadpercent) | decimal(3, 2) | The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. `Required` `Default(0.01)` `Filter(eq)` 
 | [Id](Applications.DataWarehouse.DataMeasures.md#id) | guid |  
-| [Name](Applications.DataWarehouse.DataMeasures.md#name) | string | The name of the measure (multilanguage). `Required` `Filter(eq;like)` 
-| [Notes](Applications.DataWarehouse.DataMeasures.md#notes) | string (nullable) | Notes for this DataMeasure. 
+| [Name](Applications.DataWarehouse.DataMeasures.md#name) | string(254) | The name of the measure (multilanguage). `Required` `Filter(eq;like)` 
+| [Notes](Applications.DataWarehouse.DataMeasures.md#notes) | string(2147483647) (nullable) | Notes for this DataMeasure. 
 | [Period](Applications.DataWarehouse.DataMeasures.md#period) | [Period](Applications.DataWarehouse.DataMeasures.md#period) | The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. `Required` `Default("Q")` `Filter(eq)` 
 
 ## References
@@ -44,16 +44,17 @@ Aggregate Tree
 
 Unique measure code. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### GreenZoneSpreadPercent
 
 The plus or minus percent, by which the goal can be missed, but still considered achieved. `Required` `Default(0.2)` `Filter(eq)`
 
-_Type_: **decimal**  
+_Type_: **decimal(3, 2)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0.2**  
@@ -62,7 +63,7 @@ _Default Value_: **0.2**
 
 The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. `Required` `Default(0.01)` `Filter(eq)`
 
-_Type_: **decimal**  
+_Type_: **decimal(3, 2)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0.01**  
@@ -78,17 +79,19 @@ _Default Value_: **NewGuid**
 
 The name of the measure (multilanguage). `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Notes
 
 Notes for this DataMeasure.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Period
 

@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#creationuser">CreationUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who created the Customer. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#number">Number</a></td>
-<td>string (nullable)</td>
+<td>string(16) (nullable)</td>
 <td>Unique customer number. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#updateuser">UpdateUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who last updated the Customer. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
@@ -299,9 +299,10 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>Login name of the user, who created the Customer. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="creditlimit">CreditLimit</h3>
 <p>Total credit limit for the customer in the customers' default currency. null means there is no limit. <code>Currency: DefaultCurrency</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
@@ -348,10 +349,11 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="number">Number</h3>
 <p>Unique customer number. <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(16) (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="persistsalesorderslots">PersistSalesOrdersLots</h3>
 <p>If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -370,9 +372,10 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>Login name of the user, who last updated the Customer. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="collectionsresponsibleemployee">CollectionsResponsibleEmployee</h3>
 <p>The employee, who is responsible for the collections from the customer. <code>Filter(multi eq)</code></p>

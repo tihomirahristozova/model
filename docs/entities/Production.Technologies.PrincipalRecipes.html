@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipes.html#durationhour">DurationHour</a></td>
-<td>decimal</td>
+<td>decimal(10, 0)</td>
 <td>The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -119,12 +119,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipes.html#name">Name</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>Name of the principal recipe. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipes.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>User comments for the principal recipe.</td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipes.html#scraprate">ScrapRate</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="durationhour">DurationHour</h3>
 <p>The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(10, 0)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -207,14 +207,16 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>Name of the principal recipe. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="notes">Notes</h3>
 <p>User comments for the principal recipe.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="producequantity">ProduceQuantity</h3>
 <p>Suggested quantity to produce. Usually it is equal to 1. <code>Unit: ProduceUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
@@ -229,7 +231,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>

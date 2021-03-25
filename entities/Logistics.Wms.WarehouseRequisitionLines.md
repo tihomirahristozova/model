@@ -27,10 +27,10 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Logistics.Wms.WarehouseRequisitionLines.md#id) | guid |  
 | [LineNo](Logistics.Wms.WarehouseRequisitionLines.md#lineno) | int32 | The unique, consecutive line number within the requisition. `Required` 
-| [Notes](Logistics.Wms.WarehouseRequisitionLines.md#notes) | string (nullable) | Notes for this WarehouseRequisitionLine. 
+| [Notes](Logistics.Wms.WarehouseRequisitionLines.md#notes) | string(2147483647) (nullable) | Notes for this WarehouseRequisitionLine. 
 | [ParentLineNo](Logistics.Wms.WarehouseRequisitionLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
 | [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
-| [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | decimal | Quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
+| [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | decimal(12, 3) | Quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
 
 ## References
 
@@ -71,9 +71,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this WarehouseRequisitionLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ParentLineNo
 
@@ -95,7 +96,7 @@ _Supports Order By_: **False**
 
 Quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
 
-_Type_: **decimal**  
+_Type_: **decimal(12, 3)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 

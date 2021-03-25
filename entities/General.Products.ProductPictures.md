@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comments](General.Products.ProductPictures.md#comments) | string (nullable) | Comments for this ProductPicture. 
+| [Comments](General.Products.ProductPictures.md#comments) | string(254) (nullable) | Comments for this ProductPicture. 
 | [Id](General.Products.ProductPictures.md#id) | guid |  
 | [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | True=This is the default picture for the product and the size class; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime (nullable) | The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly` 
@@ -46,9 +46,10 @@ Aggregate Root:
 
 Comments for this ProductPicture.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 

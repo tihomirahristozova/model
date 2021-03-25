@@ -109,7 +109,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#creationuser">CreationUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who created the Supplier. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#number">Number</a></td>
-<td>string (nullable)</td>
+<td>string(16) (nullable)</td>
 <td>The unique supplier number. <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#updateuser">UpdateUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who last updated the Supplier. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
@@ -219,9 +219,10 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>Login name of the user, who created the Supplier. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="defaultdeliverytermdays">DefaultDeliveryTermDays</h3>
 <p>Default term in days for goods delivery, starting at the day of sending the purchase order. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -258,10 +259,11 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="number">Number</h3>
 <p>The unique supplier number. <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(16) (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="thrudate">ThruDate</h3>
 <p>The date (inclusive) on which this party ceased to be a supplier. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -274,9 +276,10 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>Login name of the user, who last updated the Supplier. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultcurrency">DefaultCurrency</h3>
 <p>The default currency for purchases from this supplier. null means there is no default. <code>Filter(multi eq)</code></p>

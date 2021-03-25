@@ -25,8 +25,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string | Unique code of the cost template. `Required` `Filter(eq)` 
-| [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string | Name of the cost template. `Required` `Filter(like)` 
+| [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string(16) | Unique code of the cost template. `Required` `Filter(eq)` 
+| [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string(254) | Name of the cost template. `Required` `Filter(like)` 
 | [Id](Finance.Cost.Templates.md#id) | guid |  
 
 ## References
@@ -49,17 +49,19 @@ Aggregate Tree
 
 Unique code of the cost template. `Required` `Filter(eq)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### CostTemplateName
 
 Name of the cost template. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 

@@ -28,7 +28,7 @@ Aggregate Tree
 | [Id](Systems.Bpm.ProcessInstances.md#id) | guid |  
 | [StartTime](Systems.Bpm.ProcessInstances.md#starttime) | datetime | The date and time, when the process instance was started. `Required` `Default(Now)` `Filter(eq)` `ReadOnly` 
 | [State](Systems.Bpm.ProcessInstances.md#state) | [State](Systems.Bpm.ProcessInstances.md#state) | Instance state. 0=Created; 60=Completed. `Required` `Default(0)` `Filter(eq)` `ReadOnly` 
-| [Subject](Systems.Bpm.ProcessInstances.md#subject) | string | The multilanguage subject (or title) of this process instance. `Required` `Filter(eq;like)` 
+| [Subject](Systems.Bpm.ProcessInstances.md#subject) | string(512) | The multilanguage subject (or title) of this process instance. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -95,9 +95,10 @@ _Default Value_: **0**
 
 The multilanguage subject (or title) of this process instance. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(512)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **512**  
 
 
 ## Reference Details

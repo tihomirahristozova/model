@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.WorkReportMaterials.md#id) | guid |  
-| [Quantity](Projects.WorkReportMaterials.md#quantity) | decimal | The consumed quantity of the material. `Required` `Default(0)` `Filter(eq;like)` 
-| [QuantityBase](Projects.WorkReportMaterials.md#quantitybase) | decimal | The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `Filter(eq;like)` `ReadOnly` 
+| [Quantity](Projects.WorkReportMaterials.md#quantity) | decimal(9, 3) | The consumed quantity of the material. `Required` `Default(0)` `Filter(eq;like)` 
+| [QuantityBase](Projects.WorkReportMaterials.md#quantitybase) | decimal(9, 3) | The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `Filter(eq;like)` `ReadOnly` 
 
 ## References
 
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 The consumed quantity of the material. `Required` `Default(0)` `Filter(eq;like)`
 
-_Type_: **decimal**  
+_Type_: **decimal(9, 3)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -61,7 +61,7 @@ _Default Value_: **0**
 
 The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `Filter(eq;like)` `ReadOnly`
 
-_Type_: **decimal**  
+_Type_: **decimal(9, 3)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

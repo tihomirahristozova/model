@@ -29,7 +29,7 @@ Aggregate Root:
 | [Amount](Finance.Payments.PaymentTransactionLines.md#amount) | [Amount](../data-types.md#amount) | The part of the total payed amount by the transaction, that is distributed to the specified payment order. `Currency: PaymentTransaction.TotalAmountCurrency` `Required` `Default(0)` 
 | [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#coveredorderamount) | [Amount](../data-types.md#amount) | The part of the original payment order amount, that is covered by this transaction line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
 | [Id](Finance.Payments.PaymentTransactionLines.md#id) | guid |  
-| [Notes](Finance.Payments.PaymentTransactionLines.md#notes) | string (nullable) | Notes for this PaymentTransactionLine. 
+| [Notes](Finance.Payments.PaymentTransactionLines.md#notes) | string(254) (nullable) | Notes for this PaymentTransactionLine. 
 
 ## References
 
@@ -84,9 +84,10 @@ _Default Value_: **NewGuid**
 
 Notes for this PaymentTransactionLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [FromDate](Applications.AssetManagement.ManagedAssetLocations.md#fromdate) | date | The date on which the asset is assigned to the location. `Required` `Default(Now)` 
 | [Id](Applications.AssetManagement.ManagedAssetLocations.md#id) | guid |  
-| [Notes](Applications.AssetManagement.ManagedAssetLocations.md#notes) | string (nullable) | Might contain additional notes for the exact location of the asset within the enterprise company location. 
+| [Notes](Applications.AssetManagement.ManagedAssetLocations.md#notes) | string(2147483647) (nullable) | Might contain additional notes for the exact location of the asset within the enterprise company location. 
 
 ## References
 
@@ -60,9 +60,10 @@ _Default Value_: **NewGuid**
 
 Might contain additional notes for the exact location of the asset within the enterprise company location.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

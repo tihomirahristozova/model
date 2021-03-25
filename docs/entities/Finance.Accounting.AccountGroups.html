@@ -114,7 +114,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountGroups.html#fullpath">FullPath</a></td>
-<td>string (nullable)</td>
+<td>string(256) (nullable)</td>
 <td>Full path to the group. Contains delimited list of group numbers of parent groups. <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountGroups.html#number">Number</a></td>
-<td>string</td>
+<td>string(30)</td>
 <td>Unique account group number. May contain characters, if required. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
 </tr>
 </tbody>
@@ -165,9 +165,10 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="fullpath">FullPath</h3>
 <p>Full path to the group. Contains delimited list of group numbers of parent groups. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(256) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>256</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -180,10 +181,11 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="number">Number</h3>
 <p>Unique account group number. May contain characters, if required. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(30)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>30</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
 <p>Parent account group. null if this is root group. <code>Filter(multi eq)</code></p>

@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Production.Resources.OperationInstructions.md#description) | string (nullable) | Short description or notes for the instructions. `Filter(like)` 
+| [Description](Production.Resources.OperationInstructions.md#description) | string(254) (nullable) | Short description or notes for the instructions. `Filter(like)` 
 | [Id](Production.Resources.OperationInstructions.md#id) | guid |  
 | [Instructions](Production.Resources.OperationInstructions.md#instructions) | byte[] (nullable) | The operation instructions in OLE format. 
 
@@ -34,9 +34,10 @@ Aggregate Tree
 
 Short description or notes for the instructions. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 

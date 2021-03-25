@@ -25,9 +25,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](Crm.PromotionalPackages.md#active) | boolean | Package status: true = the offer is available for new documents; false = otherwise. `Required` `Default(true)` `Filter(eq)` 
-| [Code](Crm.PromotionalPackages.md#code) | string | Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Crm.PromotionalPackages.md#code) | string(20) | Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Crm.PromotionalPackages.md#id) | guid |  
-| [Name](Crm.PromotionalPackages.md#name) | string | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
+| [Name](Crm.PromotionalPackages.md#name) | string(254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
 | [ValidForCustomerFilterXML](Crm.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter (nullable) | When not null, the package is valid only for the customers, that match the filter. 
 | [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter (nullable) | When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. 
 | [ValidForShipTo<br />CustomerFilter<br />XML](Crm.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter (nullable) | When not null, specifies validity condition for the Ship To Customer of the sales document. 
@@ -68,10 +68,11 @@ _Default Value_: **True**
 
 Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **20**  
 
 ### Id
 
@@ -84,10 +85,11 @@ _Default Value_: **NewGuid**
 
 The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **254**  
 
 ### ValidForCustomerFilterXML
 

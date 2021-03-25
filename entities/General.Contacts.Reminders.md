@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](General.Contacts.Reminders.md#id) | guid |  
 | [IsDefault](General.Contacts.Reminders.md#isdefault) | boolean | True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. `Required` `Default(false)` `Filter(eq)` 
 | [IsDismissed](General.Contacts.Reminders.md#isdismissed) | boolean | When true the reminder was dismissed by the user; the initial value is false. `Required` `Default(false)` `Filter(eq)` 
-| [Notes](General.Contacts.Reminders.md#notes) | string (nullable) | Notes that describe this specific reminder for the task. 
+| [Notes](General.Contacts.Reminders.md#notes) | string(2147483647) (nullable) | Notes that describe this specific reminder for the task. 
 | [ReminderTime](General.Contacts.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user. `Required` `Filter(ge;le)` 
 
 ## References
@@ -69,9 +69,10 @@ _Default Value_: **False**
 
 Notes that describe this specific reminder for the task.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ReminderTime
 

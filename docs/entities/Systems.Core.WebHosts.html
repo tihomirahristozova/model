@@ -114,17 +114,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebHosts.html#certificateoriginalfilename">CertificateOriginal<br>Filename</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebHosts.html#certificatepassword">CertificatePassword</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebHosts.html#certificatetype">CertificateType</a></td>
-<td>string</td>
+<td>string(3)</td>
 <td>The type of certificate uploaded. Currently, only PFX is supported. <code>Required</code> <code>Default(&quot;PFX&quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -134,12 +134,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebHosts.html#name">Name</a></td>
-<td>string</td>
+<td>string(2147483647)</td>
 <td>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebHosts.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this WebHost.</td>
 </tr>
 </tbody>
@@ -157,19 +157,22 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="certificateoriginalfilename">CertificateOriginalFilename</h3>
 <p>The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="certificatepassword">CertificatePassword</h3>
 <p>The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="certificatetype">CertificateType</h3>
 <p>The type of certificate uploaded. Currently, only PFX is supported. <code>Required</code> <code>Default(&quot;PFX&quot;)</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(3)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>3</strong><br>
 <em>Default Value</em>: <strong>PFX</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
@@ -178,17 +181,19 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. <code>Required</code> <code>Filter(multi eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(2147483647)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WebHost.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
-<li><a href="../business-rules/R31836.html"> R31836 WebHosts - Name Cannot Be Defined In My Erp Net</a></li>
+<li><a href="../business-rules/R31836.html">R31836 WebHosts - Name Cannot Be Defined In My Erp Net</a></li>
 </ul>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <p>None</p>

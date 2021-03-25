@@ -128,7 +128,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.Groups.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Notes for this Group.</td>
 </tr>
 </tbody>
@@ -219,9 +219,10 @@ Allowed values for the <code>GroupType</code>(Systems.Security.Groups.md#groupty
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Group.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="groupforuser">GroupForUser</h3>
 <p>When Group_Type=U, contains the user for which the group is defined, null otherwise. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>

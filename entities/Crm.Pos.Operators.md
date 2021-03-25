@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Crm.Pos.Operators.md#id) | guid |  
 | [IsActive](Crm.Pos.Operators.md#isactive) | boolean | Indicates whether this operator is active and can be chosen for new records. `Required` `Default(true)` `Filter(multi eq)` 
-| [PosOperatorCode](Crm.Pos.Operators.md#posoperatorcode) | string | Operator code. Unique within the Pos Location. `Required` `Filter(multi eq;like)` `ORD` 
+| [PosOperatorCode](Crm.Pos.Operators.md#posoperatorcode) | string(16) | Operator code. Unique within the Pos Location. `Required` `Filter(multi eq;like)` `ORD` 
 | [StartingDate](Crm.Pos.Operators.md#startingdate) | date | The first date, when the operator has started working for this POS location. `Required` `Filter(multi eq;ge;le)` 
 | [TerminationDate](Crm.Pos.Operators.md#terminationdate) | date (nullable) | The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. `Filter(multi eq;ge;le)` 
 
@@ -61,9 +61,10 @@ _Default Value_: **True**
 
 Operator code. Unique within the Pos Location. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### StartingDate
 

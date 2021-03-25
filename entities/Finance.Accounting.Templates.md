@@ -26,9 +26,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.Templates.md#id) | guid |  
-| [Name](Finance.Accounting.Templates.md#name) | string | The name of this Template. `Required` `Filter(like)` 
-| [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (nullable) | Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual. 
-| [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (nullable) | Template voucher description. Can use field substitutes, surrounded with square brackets. 
+| [Name](Finance.Accounting.Templates.md#name) | string(254) | The name of this Template. `Required` `Filter(like)` 
+| [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string(2000) (nullable) | Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual. 
+| [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string(2147483647) (nullable) | Template voucher description. Can use field substitutes, surrounded with square brackets. 
 
 ## References
 
@@ -56,25 +56,28 @@ _Default Value_: **NewGuid**
 
 The name of this Template. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### VoucherDateSource
 
 Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2000) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2000**  
 
 ### VoucherDescriptionMask
 
 Template voucher description. Can use field substitutes, surrounded with square brackets.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

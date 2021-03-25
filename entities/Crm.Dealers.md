@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [FromDate](Crm.Dealers.md#fromdate) | datetime (nullable) | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
 | [Id](Crm.Dealers.md#id) | guid |  
-| [Notes](Crm.Dealers.md#notes) | string (nullable) | Notes for this Dealer. 
+| [Notes](Crm.Dealers.md#notes) | string(254) (nullable) | Notes for this Dealer. 
 | [ThruDate](Crm.Dealers.md#thrudate) | datetime (nullable) | Termination date of the dealership. null for active dealers. `Filter(ge;le)` 
 
 ## References
@@ -60,9 +60,10 @@ _Default Value_: **NewGuid**
 
 Notes for this Dealer.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ThruDate
 

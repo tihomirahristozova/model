@@ -29,7 +29,7 @@ Aggregate Tree
 | [LogReadById](Systems.Core.EntitySettings.md#logreadbyid) | boolean | Specifies whether to log every load by Id for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
 | [LogReadMany](Systems.Core.EntitySettings.md#logreadmany) | boolean | Specifies whether to log every load of many records for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
 | [LogUpdate](Systems.Core.EntitySettings.md#logupdate) | boolean | Specifies whether to log every update for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
-| [Name](Systems.Core.EntitySettings.md#name) | string | The system name of the entity, which is being secured. `Required` `Filter(eq;like)` `ORD` 
+| [Name](Systems.Core.EntitySettings.md#name) | string(64) | The system name of the entity, which is being secured. `Required` `Filter(eq;like)` `ORD` 
 | [TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel) | [TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel) | The track changes level for the entity. `Required` `Default(0)` `Filter(multi eq)` `Introduced in version 19.1` 
 
 ## References
@@ -97,10 +97,11 @@ _Default Value_: **False**
 
 The system name of the entity, which is being secured. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### TrackChangesLevel
 

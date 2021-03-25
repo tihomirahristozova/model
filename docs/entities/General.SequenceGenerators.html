@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.SequenceGenerators.html#nextvalue">NextValue</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>The next number that will be issued by the sequence. <code>Required</code> <code>Default(&quot;0000000001&quot;)</code></td>
 </tr>
 <tr>
@@ -170,9 +170,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="nextvalue">NextValue</h3>
 <p>The next number that will be issued by the sequence. <code>Required</code> <code>Default(&quot;0000000001&quot;)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>16</strong><br>
 <em>Default Value</em>: <strong>0000000001</strong></p>
 <h3 id="sequencepriority">SequencePriority</h3>
 <p>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. <code>Required</code> <code>Default(1)</code></p>

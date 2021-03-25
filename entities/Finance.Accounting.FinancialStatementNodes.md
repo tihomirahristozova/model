@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Accounting.FinancialStatementNodes.md#code) | string | Identifying code of the financial statement node. Unique within the parent financial statement node. `Required` `Filter(eq;like)` 
-| [FullPath](Finance.Accounting.FinancialStatementNodes.md#fullpath) | string (nullable) | Full identification path of the financial statement node. `Filter(like)` `ReadOnly` 
+| [Code](Finance.Accounting.FinancialStatementNodes.md#code) | string(3) | Identifying code of the financial statement node. Unique within the parent financial statement node. `Required` `Filter(eq;like)` 
+| [FullPath](Finance.Accounting.FinancialStatementNodes.md#fullpath) | string(25) (nullable) | Full identification path of the financial statement node. `Filter(like)` `ReadOnly` 
 | [Id](Finance.Accounting.FinancialStatementNodes.md#id) | guid |  
 | [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement node. `Required` `Filter(like)` 
-| [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string (nullable) | Parent financial statement node specified through its full identification path. `Filter(like)` 
+| [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string(25) (nullable) | Parent financial statement node specified through its full identification path. `Filter(like)` 
 
 ## References
 
@@ -50,17 +50,19 @@ Aggregate Root:
 
 Identifying code of the financial statement node. Unique within the parent financial statement node. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(3)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **3**  
 
 ### FullPath
 
 Full identification path of the financial statement node. `Filter(like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(25) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **25**  
 
 ### Id
 
@@ -81,9 +83,10 @@ _Supports Order By_: **False**
 
 Parent financial statement node specified through its full identification path. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(25) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **25**  
 
 
 ## Reference Details

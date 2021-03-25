@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#historicaldatajson">HistoricalDataJson</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. <code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linecustomdiscountpercent">LineCustomDiscountPercent</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>User-defined discount for the line. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linestandarddiscountpercent">LineStandardDiscount<br>Percent</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>Standard discount for the line. This is automatically computed according to discount conditions. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this SalesOrderLine.</td>
 </tr>
 <tr>
@@ -415,9 +415,10 @@ Generic enum type for DeliveryTerms properties<br>
 <code>IIF( ( obj.Product != null), obj.Product.GuaranteePeriodDays, obj.GuaranteePeriodDays)</code></p>
 <h3 id="historicaldatajson">HistoricalDataJson</h3>
 <p>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. <code>Introduced in version 19.1</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="historicalunitcost">HistoricalUnitCost</h3>
 <p>Used for returning of goods that are sold before the exploitation of the system. <code>Currency: SalesOrder.DocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
@@ -590,7 +591,7 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.UnitPrice == null)) OrElse ( ( obj.Quantity.Value == 0) AndAlso ( obj.UnitPrice.Value == 0))), obj.LineAmount, ( ( ( obj.Quantity.Value * obj.UnitPrice) * ( 1 - obj.LineStandardDiscountPercent)) * ( 1 - obj.LineCustomDiscountPercent)).Round( ))</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
 <p>User-defined discount for the line. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -614,7 +615,7 @@ Generic enum type for TransportMode properties<br>
 <code>( obj.SalesOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
 <p>Standard discount for the line. This is automatically computed according to discount conditions. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -633,9 +634,10 @@ Generic enum type for TransportMode properties<br>
 <code>obj.SalesOrder.ToDate</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this SalesOrderLine.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>

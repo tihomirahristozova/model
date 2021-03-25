@@ -24,7 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.SerialNumbers.md#id) | guid |  
-| [SerialNumberField](Logistics.Inventory.SerialNumbers.md#serialnumberfield) | string | The serial number text. `Required` `Filter(multi eq;like)` 
+| [SerialNumberField](Logistics.Inventory.SerialNumbers.md#serialnumberfield) | string(40) | The serial number text. `Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -46,9 +46,10 @@ _Default Value_: **NewGuid**
 
 The serial number text. `Required` `Filter(multi eq;like)`
 
-_Type_: **string**  
+_Type_: **string(40)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **40**  
 
 
 ## Reference Details

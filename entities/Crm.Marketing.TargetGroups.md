@@ -24,10 +24,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Marketing.TargetGroups.md#code) | string | Short code for identification of target groups. `Required` `Filter(eq;like)` `ORD` 
-| [Description](Crm.Marketing.TargetGroups.md#description) | string (nullable) | The description of this TargetGroup. 
+| [Code](Crm.Marketing.TargetGroups.md#code) | string(16) | Short code for identification of target groups. `Required` `Filter(eq;like)` `ORD` 
+| [Description](Crm.Marketing.TargetGroups.md#description) | string(254) (nullable) | The description of this TargetGroup. 
 | [Id](Crm.Marketing.TargetGroups.md#id) | guid |  
-| [Name](Crm.Marketing.TargetGroups.md#name) | string | The name of this TargetGroup. `Required` `Filter(like)` 
+| [Name](Crm.Marketing.TargetGroups.md#name) | string(64) | The name of this TargetGroup. `Required` `Filter(like)` 
 
 ## Child Collections
 
@@ -42,18 +42,20 @@ Aggregate Tree
 
 Short code for identification of target groups. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### Description
 
 The description of this TargetGroup.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 
@@ -66,9 +68,10 @@ _Default Value_: **NewGuid**
 
 The name of this TargetGroup. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 
 

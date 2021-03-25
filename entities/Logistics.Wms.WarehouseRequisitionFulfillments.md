@@ -24,10 +24,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Logistics.Wms.WarehouseRequisitionFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` 
-| [FulfillmentType](Logistics.Wms.WarehouseRequisitionFulfillments.md#fulfillmenttype) | string | Type of fulfillment: P=Plan created; C=Requisition completed. `Required` 
+| [FulfillmentType](Logistics.Wms.WarehouseRequisitionFulfillments.md#fulfillmenttype) | string(1) | Type of fulfillment: P=Plan created; C=Requisition completed. `Required` 
 | [Id](Logistics.Wms.WarehouseRequisitionFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseRequisitionFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. `Required` 
-| [Quantity](Logistics.Wms.WarehouseRequisitionFulfillments.md#quantity) | decimal | Quantity fulfilled (in the measurement unit of the requisition line). `Required` 
+| [Quantity](Logistics.Wms.WarehouseRequisitionFulfillments.md#quantity) | decimal(12, 3) | Quantity fulfilled (in the measurement unit of the requisition line). `Required` 
 
 ## References
 
@@ -52,9 +52,10 @@ _Supports Order By_: **False**
 
 Type of fulfillment: P=Plan created; C=Requisition completed. `Required`
 
-_Type_: **string**  
+_Type_: **string(1)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1**  
 
 ### Id
 
@@ -75,7 +76,7 @@ _Supports Order By_: **False**
 
 Quantity fulfilled (in the measurement unit of the requisition line). `Required`
 
-_Type_: **decimal**  
+_Type_: **decimal(12, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -30,8 +30,8 @@ Aggregate Root:
 | [Id](Logistics.Inventory.StoreOrderLines.md#id) | guid |  
 | [LineCost](Logistics.Inventory.StoreOrderLines.md#linecost) | [Amount](../data-types.md#amount) (nullable) | Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost. `Currency: StoreOrder.DocumentCurrency` 
 | [LineNo](Logistics.Inventory.StoreOrderLines.md#lineno) | int32 | Line number within the store order. `Required` `Filter(eq)` 
-| [LotNumber](Logistics.Inventory.StoreOrderLines.md#lotnumber) | string (nullable) | Obsolete. Not used. 
-| [Notes](Logistics.Inventory.StoreOrderLines.md#notes) | string (nullable) | Notes for this StoreOrderLine. 
+| [LotNumber](Logistics.Inventory.StoreOrderLines.md#lotnumber) | string(16) (nullable) | Obsolete. Not used. 
+| [Notes](Logistics.Inventory.StoreOrderLines.md#notes) | string(254) (nullable) | Notes for this StoreOrderLine. 
 | [ParentLineId](Logistics.Inventory.StoreOrderLines.md#parentlineid) | guid (nullable) | Id of the line of the parent document, which generated the store order. null for user-entered store orders or if not applicable. `Filter(multi eq)` 
 | [ParentLineNo](Logistics.Inventory.StoreOrderLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)` 
 | [PersistLot](Logistics.Inventory.StoreOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)` 
@@ -110,17 +110,19 @@ _Front-End Recalc Expressions:_
 
 Obsolete. Not used.
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### Notes
 
 Notes for this StoreOrderLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ParentLineId
 

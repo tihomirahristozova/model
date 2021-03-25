@@ -23,14 +23,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Address](Systems.Core.ExternalApplications.md#address) | string | The address (path) to the application. The address is platform-dependant. `Required` 
+| [Address](Systems.Core.ExternalApplications.md#address) | string(2147483647) | The address (path) to the application. The address is platform-dependant. `Required` 
 | [AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode) | [AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. `Required` `Default("SINGLE")` `Filter(eq)` 
-| [EntityName](Systems.Core.ExternalApplications.md#entityname) | string | The entity, for which the application is defined. `Required` `Filter(eq)` `ORD` 
+| [EntityName](Systems.Core.ExternalApplications.md#entityname) | string(64) | The entity, for which the application is defined. `Required` `Filter(eq)` `ORD` 
 | [ExecuteForAllObjects](Systems.Core.ExternalApplications.md#executeforallobjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. `Required` `Default(true)` `Filter(eq)` 
 | [Id](Systems.Core.ExternalApplications.md#id) | guid |  
 | [IsActive](Systems.Core.ExternalApplications.md#isactive) | boolean (nullable) | Specifies whether the external application is currently used. `Default(true)` `Filter(eq)` 
 | [Name](Systems.Core.ExternalApplications.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the external application. `Required` `Filter(eq;like)` 
-| [Notes](Systems.Core.ExternalApplications.md#notes) | string (nullable) | Notes for this ExternalApplication. 
+| [Notes](Systems.Core.ExternalApplications.md#notes) | string(2147483647) (nullable) | Notes for this ExternalApplication. 
 | [Platform](Systems.Core.ExternalApplications.md#platform) | [Platform](Systems.Core.ExternalApplications.md#platform) | The execution platform of the application. `Required` `Filter(eq)` 
 | [RefreshAfterFinish](Systems.Core.ExternalApplications.md#refreshafterfinish) | boolean | Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. `Required` `Default(true)` `Filter(eq)` 
 | [SaveBeforeStart](Systems.Core.ExternalApplications.md#savebeforestart) | boolean | Whether to save the form data to the server before starting the application. `Required` `Default(true)` `Filter(eq)` 
@@ -48,9 +48,10 @@ Aggregate Tree
 
 The address (path) to the application. The address is platform-dependant. `Required`
 
-_Type_: **string**  
+_Type_: **string(2147483647)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### AvailableInMode
 
@@ -74,10 +75,11 @@ _Default Value_: **SINGLE**
 
 The entity, for which the application is defined. `Required` `Filter(eq)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### ExecuteForAllObjects
 
@@ -116,9 +118,10 @@ _Supports Order By_: **False**
 
 Notes for this ExternalApplication.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Platform
 

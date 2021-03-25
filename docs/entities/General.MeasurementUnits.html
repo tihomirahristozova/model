@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="General.MeasurementUnits.html#code">Code</a></td>
-<td>string (nullable)</td>
+<td>string(16) (nullable)</td>
 <td>When not null, contains unique measurement unit code. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.MeasurementUnits.html#divisor">Divisor</a></td>
-<td>decimal</td>
+<td>decimal(9, 3)</td>
 <td>Divisor of the relative value of the measurement unit against other units (divisor when converting to base). <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.MeasurementUnits.html#multiplier">Multiplier</a></td>
-<td>decimal</td>
+<td>decimal(9, 3)</td>
 <td>Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
@@ -164,10 +164,11 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>When not null, contains unique measurement unit code. <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(16) (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="description">Description</h3>
 <p>Full multi-language description of the measurement unit.</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
@@ -175,7 +176,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="divisor">Divisor</h3>
 <p>Divisor of the relative value of the measurement unit against other units (divisor when converting to base). <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(9, 3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
@@ -192,7 +193,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="multiplier">Multiplier</h3>
 <p>Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(9, 3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>

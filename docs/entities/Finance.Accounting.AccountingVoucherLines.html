@@ -109,7 +109,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#correspondantamount">CorrespondantAmount</a></td>
-<td>decimal (nullable)</td>
+<td>decimal(18, 2) (nullable)</td>
 <td>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#itemkey">ItemKey</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -149,12 +149,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#ratedivisor">RateDivisor</a></td>
-<td>decimal</td>
+<td>decimal(18, 6)</td>
 <td>The divisor for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#ratemultiplier">RateMultiplier</a></td>
-<td>decimal</td>
+<td>decimal(18, 6)</td>
 <td>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
@@ -215,7 +215,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="correspondantamount">CorrespondantAmount</h3>
 <p>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal(18, 2) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="credit">Credit</h3>
@@ -249,9 +249,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="itemkey">ItemKey</h3>
 <p>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="lineno">LineNo</h3>
 <p>Consecutive number of the line within the voucher. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -263,13 +264,13 @@ Aggregate Root:<br>
 <code>( obj.Voucher.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="ratedivisor">RateDivisor</h3>
 <p>The divisor for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(18, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="ratemultiplier">RateMultiplier</h3>
 <p>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(18, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>

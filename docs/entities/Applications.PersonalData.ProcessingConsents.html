@@ -119,7 +119,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#allowotherdata">AllowOtherData</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Comma-separated list of other types of data, which was allowed for processing with this consent. <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#consenttext">ConsentText</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The actual text of the consent. <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -164,22 +164,22 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this ProcessingConsent.</td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#parentemail">ParentEmail</a></td>
-<td>string (nullable)</td>
+<td>string(50) (nullable)</td>
 <td>When a parental rights holder gives a consent for a child, contains the email of the parent. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#parentname">ParentName</a></td>
-<td>string (nullable)</td>
+<td>string(50) (nullable)</td>
 <td>When a parental rights holder gives a consent for a child, contains the name of the parent. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#parentphone">ParentPhone</a></td>
-<td>string (nullable)</td>
+<td>string(50) (nullable)</td>
 <td>When a parental rights holder gives a consent for a child, contains the phone number of the parent. <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -237,9 +237,10 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="allowotherdata">AllowOtherData</h3>
 <p>Comma-separated list of other types of data, which was allowed for processing with this consent. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="allowphone">AllowPhone</h3>
 <p>Allows the processing of the telephone number. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -253,9 +254,10 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="consenttext">ConsentText</h3>
 <p>The actual text of the consent. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="consenttype">ConsentType</h3>
 <p>The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.ProcessingConsents.html#consenttype">ConsentType</a></strong><br>
@@ -321,24 +323,28 @@ Allowed values for the <code>ConsentType</code>(Applications.PersonalData.Proces
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ProcessingConsent.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="parentemail">ParentEmail</h3>
 <p>When a parental rights holder gives a consent for a child, contains the email of the parent. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(50) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>50</strong></p>
 <h3 id="parentname">ParentName</h3>
 <p>When a parental rights holder gives a consent for a child, contains the name of the parent. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(50) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>50</strong></p>
 <h3 id="parentphone">ParentPhone</h3>
 <p>When a parental rights holder gives a consent for a child, contains the phone number of the parent. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(50) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>50</strong></p>
 <h3 id="retractedonutc">RetractedOnUtc</h3>
 <p>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>

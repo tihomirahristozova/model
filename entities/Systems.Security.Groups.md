@@ -28,7 +28,7 @@ Aggregate Tree
 | [GroupType](Systems.Security.Groups.md#grouptype) | [GroupType](Systems.Security.Groups.md#grouptype) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. `Required` `Default("G")` `ReadOnly` 
 | [Id](Systems.Security.Groups.md#id) | guid |  
 | [Name](Systems.Security.Groups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Group. `Required` `Filter(like)` `ORD` 
-| [Notes](Systems.Security.Groups.md#notes) | string (nullable) | Notes for this Group. 
+| [Notes](Systems.Security.Groups.md#notes) | string(254) (nullable) | Notes for this Group. 
 
 ## References
 
@@ -91,9 +91,10 @@ _Supports Order By_: **True**
 
 Notes for this Group.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

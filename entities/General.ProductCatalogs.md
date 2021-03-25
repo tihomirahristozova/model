@@ -28,13 +28,13 @@ Aggregate Tree
 | [BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right. `Required` `Default("L")` 
 | [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom. `Required` `Default("T")` 
 | [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. `Required` `Default("R")` 
-| [Code](General.ProductCatalogs.md#code) | string | Unique catalog code. `Required` 
-| [FooterHtml](General.ProductCatalogs.md#footerhtml) | string (nullable) | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer. 
-| [HeaderHtml](General.ProductCatalogs.md#headerhtml) | string (nullable) | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header. 
+| [Code](General.ProductCatalogs.md#code) | string(16) | Unique catalog code. `Required` 
+| [FooterHtml](General.ProductCatalogs.md#footerhtml) | string(2147483647) (nullable) | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer. 
+| [HeaderHtml](General.ProductCatalogs.md#headerhtml) | string(2147483647) (nullable) | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header. 
 | [Id](General.ProductCatalogs.md#id) | guid |  
 | [Logo](General.ProductCatalogs.md#logo) | byte[] (nullable) | The logo of the product catalog. Used for web and other visualization of the catalog. 
 | [Name](General.ProductCatalogs.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). `Required` 
-| [Notes](General.ProductCatalogs.md#notes) | string (nullable) | Notes for this ProductCatalog. 
+| [Notes](General.ProductCatalogs.md#notes) | string(2147483647) (nullable) | Notes for this ProductCatalog. 
 
 ## References
 
@@ -121,25 +121,28 @@ _Default Value_: **RepeatBothVerticallyAndHorizontally**
 
 Unique catalog code. `Required`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### FooterHtml
 
 The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### HeaderHtml
 
 The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 
@@ -168,9 +171,10 @@ _Supports Order By_: **False**
 
 Notes for this ProductCatalog.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

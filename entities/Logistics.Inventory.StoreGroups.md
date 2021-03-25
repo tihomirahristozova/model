@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Inventory.StoreGroups.md#code) | string | The unique code of the StoreGroup. `Required` `Filter(eq;like)` 
-| [FullPath](Logistics.Inventory.StoreGroups.md#fullpath) | string (nullable) | The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. `Filter(eq;like)` `ORD` `ReadOnly` 
+| [Code](Logistics.Inventory.StoreGroups.md#code) | string(16) | The unique code of the StoreGroup. `Required` `Filter(eq;like)` 
+| [FullPath](Logistics.Inventory.StoreGroups.md#fullpath) | string(25) (nullable) | The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. `Filter(eq;like)` `ORD` `ReadOnly` 
 | [Id](Logistics.Inventory.StoreGroups.md#id) | guid |  
 | [Name](Logistics.Inventory.StoreGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this StoreGroup. `Required` `Filter(like)` 
-| [ParentFullPath](Logistics.Inventory.StoreGroups.md#parentfullpath) | string (nullable) | The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. `Filter(eq;like)` 
+| [ParentFullPath](Logistics.Inventory.StoreGroups.md#parentfullpath) | string(25) (nullable) | The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. `Filter(eq;like)` 
 
 ## References
 
@@ -43,18 +43,20 @@ Aggregate Tree
 
 The unique code of the StoreGroup. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### FullPath
 
 The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. `Filter(eq;like)` `ORD` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(25) (nullable)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **25**  
 
 ### Id
 
@@ -75,9 +77,10 @@ _Supports Order By_: **False**
 
 The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(25) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **25**  
 
 
 ## Reference Details

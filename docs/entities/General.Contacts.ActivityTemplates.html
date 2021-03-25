@@ -104,7 +104,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="General.Contacts.ActivityTemplates.html#activitysubjectmask">ActivitySubjectMask</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.</td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.ActivityTemplates.html#sourcedatefield">SourceDateField</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. <code>Required</code></td>
 </tr>
 <tr>
@@ -159,9 +159,10 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activitysubjectmask">ActivitySubjectMask</h3>
 <p>A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="additionaldays">AdditionalDays</h3>
 <p>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -180,9 +181,10 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="sourcedatefield">SourceDateField</h3>
 <p>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="starttime">StartTime</h3>
 <p>The time of the day when the activity starts. <code>Required</code></p>
 <p><em>Type</em>: <strong>time</strong><br>

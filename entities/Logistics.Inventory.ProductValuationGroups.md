@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Logistics.Inventory.ProductValuationGroups.md#description) | string (nullable) | The description of this ProductValuationGroup. `Filter(like)` 
+| [Description](Logistics.Inventory.ProductValuationGroups.md#description) | string(254) (nullable) | The description of this ProductValuationGroup. `Filter(like)` 
 | [Id](Logistics.Inventory.ProductValuationGroups.md#id) | guid |  
-| [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#valuationgroupcode) | string | The unique code of the product valuation group. `Required` `Filter(eq;like)` `ORD` 
+| [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#valuationgroupcode) | string(64) | The unique code of the product valuation group. `Required` `Filter(eq;like)` `ORD` 
 | [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#valuationgroupname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the product valuation group. `Required` `Filter(eq;like)` 
 
 
@@ -35,9 +35,10 @@ Aggregate Tree
 
 The description of this ProductValuationGroup. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 
@@ -50,10 +51,11 @@ _Default Value_: **NewGuid**
 
 The unique code of the product valuation group. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### ValuationGroupName
 

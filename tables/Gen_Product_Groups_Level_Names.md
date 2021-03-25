@@ -1,6 +1,11 @@
 # View Gen_Product_Groups_Level_Names
 
 
+## Entity
+
+Entity: [General.ProductGroupsLevelNames](~/entities/General.ProductGroupsLevelNames.md)
+
+
 ## Summary
 
 | Name | Type | Description |

@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Finance.Cost.DistributionOutputs.md#id) | guid |  
 | [LineNo](Finance.Cost.DistributionOutputs.md#lineno) | int32 | Unique (within the document), consecutive line number of the output. `Required` 
-| [WeightCoefficient](Finance.Cost.DistributionOutputs.md#weightcoefficient) | decimal | The weight coefficient for prorate distribution of cost over the current line. `Required` `Default(1)` 
+| [WeightCoefficient](Finance.Cost.DistributionOutputs.md#weightcoefficient) | decimal(12, 5) | The weight coefficient for prorate distribution of cost over the current line. `Required` `Default(1)` 
 
 ## References
 
@@ -63,7 +63,7 @@ _Front-End Recalc Expressions:_
 
 The weight coefficient for prorate distribution of cost over the current line. `Required` `Default(1)`
 
-_Type_: **decimal**  
+_Type_: **decimal(12, 5)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

@@ -36,10 +36,10 @@ Aggregate Root:
 | [DestinationState](Systems.Workflow.Routes.md#destinationstate) | [DocumentState](Systems.Workflow.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` 
 | [Id](Systems.Workflow.Routes.md#id) | guid |  
 | [NegativeConditionFilterXml](Systems.Workflow.Routes.md#negativeconditionfilterxml) | dataaccessfilter (nullable) | The negative condition should NOT be matched by the document in order to execute the route. 
-| [Notes](Systems.Workflow.Routes.md#notes) | string (nullable) | Notes for this Route. 
+| [Notes](Systems.Workflow.Routes.md#notes) | string(254) (nullable) | Notes for this Route. 
 | [ParentDocument<br />RelationshipType](Systems.Workflow.Routes.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Systems.Workflow.Routes.md#parentdocumentrelationshiptype) | Determines the default relationship type between the generated document and the parent document. `Required` `Default("S")` 
-| [ProcedureName](Systems.Workflow.Routes.md#procedurename) | string | The system name of the generation procedure, which must be executed by the route. `Required` 
-| [ProcessEvent](Systems.Workflow.Routes.md#processevent) | string | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required` 
+| [ProcedureName](Systems.Workflow.Routes.md#procedurename) | string(254) | The system name of the generation procedure, which must be executed by the route. `Required` 
+| [ProcessEvent](Systems.Workflow.Routes.md#processevent) | string(254) | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required` 
 | [ReadOnly](Systems.Workflow.Routes.md#readonly) | boolean | Indicates wheather the destination document shoul be read only. true - the destination document is read only. `Required` `Default(false)` 
 
 ## References
@@ -206,9 +206,10 @@ _Supports Order By_: **False**
 
 Notes for this Route.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ParentDocumentRelationshipType
 
@@ -231,17 +232,19 @@ _Default Value_: **Subtask**
 
 The system name of the generation procedure, which must be executed by the route. `Required`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ProcessEvent
 
 Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ReadOnly
 

@@ -36,22 +36,22 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AdjustmentNumber](Crm.Invoicing.InvoiceOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentTime](Crm.Invoicing.InvoiceOrders.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentUser](Crm.Invoicing.InvoiceOrders.md#adjustmentuser) | string (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentUser](Crm.Invoicing.InvoiceOrders.md#adjustmentuser) | string(64) (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ApplyDate](Crm.Invoicing.InvoiceOrders.md#applydate) | datetime (nullable) | Apply date to be passed to the invoice. When not null specifies that the VAT entry should be applied for a different period than that specified by the document date. 
 | [CompleteTime](Crm.Invoicing.InvoiceOrders.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationTime](Crm.Invoicing.InvoiceOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [CreationUser](Crm.Invoicing.InvoiceOrders.md#creationuser) | string | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [CreditNoteDescription](Crm.Invoicing.InvoiceOrders.md#creditnotedescription) | string (nullable) | Descriptions/reason for the credit note. 
+| [CreationUser](Crm.Invoicing.InvoiceOrders.md#creationuser) | string(64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CreditNoteDescription](Crm.Invoicing.InvoiceOrders.md#creditnotedescription) | string(254) (nullable) | Descriptions/reason for the credit note. 
 | [DeliveryDate](Crm.Invoicing.InvoiceOrders.md#deliverydate) | datetime (nullable) | Date, when the delivery was effected. When null = document date. 
 | [DocumentDate](Crm.Invoicing.InvoiceOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNo](Crm.Invoicing.InvoiceOrders.md#documentno) | string | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNotes](Crm.Invoicing.InvoiceOrders.md#documentnotes) | string (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNo](Crm.Invoicing.InvoiceOrders.md#documentno) | string(20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNotes](Crm.Invoicing.InvoiceOrders.md#documentnotes) | string(2147483647) (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
 | [DocumentVersion](Crm.Invoicing.InvoiceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [EntityName](Crm.Invoicing.InvoiceOrders.md#entityname) | string | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [EntityName](Crm.Invoicing.InvoiceOrders.md#entityname) | string(64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Crm.Invoicing.InvoiceOrders.md#id) | guid |  
 | [IsReleased](Crm.Invoicing.InvoiceOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Crm.Invoicing.InvoiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [Notes](Crm.Invoicing.InvoiceOrders.md#notes) | string (nullable) | Notes for this InvoiceOrder. 
+| [Notes](Crm.Invoicing.InvoiceOrders.md#notes) | string(254) (nullable) | Notes for this InvoiceOrder. 
 | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PaymentDueDate](Crm.Invoicing.InvoiceOrders.md#paymentduedate) | datetime (nullable) | When not null specifies due date for the payment. 
 | [PaymentDueStartDate](Crm.Invoicing.InvoiceOrders.md#paymentduestartdate) | datetime (nullable) | The date when the payment becomes due for documents with one installment. 
@@ -59,13 +59,13 @@ Aggregate Tree
 | [PlanningOnly](Crm.Invoicing.InvoiceOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Crm.Invoicing.InvoiceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReferenceDate](Crm.Invoicing.InvoiceOrders.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
-| [ReferenceDocumentNo](Crm.Invoicing.InvoiceOrders.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDocumentNo](Crm.Invoicing.InvoiceOrders.md#referencedocumentno) | string(20) (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Crm.Invoicing.InvoiceOrders.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Crm.Invoicing.InvoiceOrders.md#state) | [DocumentState](Crm.Invoicing.InvoiceOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Void](Crm.Invoicing.InvoiceOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidReason](Crm.Invoicing.InvoiceOrders.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidReason](Crm.Invoicing.InvoiceOrders.md#voidreason) | string(254) (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidTime](Crm.Invoicing.InvoiceOrders.md#voidtime) | datetime (nullable) | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidUser](Crm.Invoicing.InvoiceOrders.md#voiduser) | string (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidUser](Crm.Invoicing.InvoiceOrders.md#voiduser) | string(64) (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 
 ## References
 
@@ -136,9 +136,10 @@ _Supports Order By_: **False**
 
 The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### ApplyDate
 
@@ -169,17 +170,19 @@ _Default Value_: **CurrentDateTime**
 
 The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### CreditNoteDescription
 
 Descriptions/reason for the credit note.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### DeliveryDate
 
@@ -203,18 +206,20 @@ _Default Value_: **CurrentDate**
 
 Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **20**  
 
 ### DocumentNotes
 
 Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### DocumentVersion
 
@@ -229,10 +234,11 @@ _Default Value_: **1**
 
 The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### Id
 
@@ -263,9 +269,10 @@ _Default Value_: **False**
 
 Notes for this InvoiceOrder.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ParentDocumentRelationshipType
 
@@ -344,9 +351,10 @@ _Default Value_: **CurrentDate**
 
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(20) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **20**  
 
 ### ReleaseTime
 
@@ -392,9 +400,10 @@ _Default Value_: **False**
 
 Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### VoidTime
 
@@ -408,9 +417,10 @@ _Supports Order By_: **False**
 
 The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 
 ## Reference Details

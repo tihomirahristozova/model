@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BarCode](General.ProductVariants.md#barcode) | string (nullable) | When specified, it contains a bar code which uniquely identifies the product variant. `Filter(eq;like)` `ORD` 
-| [Code](General.ProductVariants.md#code) | string | The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. `Required` `Filter(eq;like)` `ReadOnly` 
+| [BarCode](General.ProductVariants.md#barcode) | string(16) (nullable) | When specified, it contains a bar code which uniquely identifies the product variant. `Filter(eq;like)` `ORD` 
+| [Code](General.ProductVariants.md#code) | string(16) | The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. `Required` `Filter(eq;like)` `ReadOnly` 
 | [Id](General.ProductVariants.md#id) | guid |  
 | [Name](General.ProductVariants.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Product variant name. It is the concatenation of the names of the color, size and style. `ReadOnly` 
 
@@ -46,18 +46,20 @@ Aggregate Root:
 
 When specified, it contains a bar code which uniquely identifies the product variant. `Filter(eq;like)` `ORD`
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### Code
 
 The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. `Required` `Filter(eq;like)` `ReadOnly`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### Id
 

@@ -25,9 +25,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.ProcessNodes.md#code) | string | Node code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)` 
+| [Code](Systems.Bpm.ProcessNodes.md#code) | string(16) | Node code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)` 
 | [Id](Systems.Bpm.ProcessNodes.md#id) | guid |  
-| [InstructionsHtml](Systems.Bpm.ProcessNodes.md#instructionshtml) | string (nullable) | Detailed instructions to the executor in HTML format. `Filter(eq;like)` 
+| [InstructionsHtml](Systems.Bpm.ProcessNodes.md#instructionshtml) | string(2147483647) (nullable) | Detailed instructions to the executor in HTML format. `Filter(eq;like)` 
 | [Name](Systems.Bpm.ProcessNodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process name. `Required` `Filter(eq;like)` 
 | [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) | [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) | Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. `Required` `Filter(eq;like)` 
 
@@ -45,9 +45,10 @@ Aggregate Root:
 
 Node code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### Id
 
@@ -60,9 +61,10 @@ _Default Value_: **NewGuid**
 
 Detailed instructions to the executor in HTML format. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Name
 

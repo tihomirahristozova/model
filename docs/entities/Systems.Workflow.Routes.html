@@ -159,7 +159,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Notes for this Route.</td>
 </tr>
 <tr>
@@ -169,12 +169,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#procedurename">ProcedureName</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The system name of the generation procedure, which must be executed by the route. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#processevent">ProcessEvent</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. <code>Required</code></td>
 </tr>
 <tr>
@@ -450,9 +450,10 @@ Enumeration of document system states<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Route.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
 <p>Determines the default relationship type between the generated document and the parent document. <code>Required</code> <code>Default(&quot;S&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></strong><br>
@@ -481,14 +482,16 @@ Relationship between parent and child documents<br>
 <em>Default Value</em>: <strong>Subtask</strong></p>
 <h3 id="procedurename">ProcedureName</h3>
 <p>The system name of the generation procedure, which must be executed by the route. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="processevent">ProcessEvent</h3>
 <p>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="readonly">ReadOnly</h3>
 <p>Indicates wheather the destination document shoul be read only. true - the destination document is read only. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

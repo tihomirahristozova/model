@@ -31,8 +31,8 @@ Aggregate Root:
 | [PeriodYear](Crm.Distribution.SalesPersonTargetLines.md#periodyear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)` 
 | [TargetAmount](Crm.Distribution.SalesPersonTargetLines.md#targetamount) | [Amount](../data-types.md#amount) (nullable) | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. `Currency: TargetAmountCurrency` 
 | [TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype) | [TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. `Required` `Default("SALES")` `Filter(multi eq)` 
-| [TargetValue](Crm.Distribution.SalesPersonTargetLines.md#targetvalue) | decimal | Value of target. Meaning depends on target type. `Required` `Default(0)` 
-| [TargetWeight](Crm.Distribution.SalesPersonTargetLines.md#targetweight) | decimal | Relative weight of target, comparatively to other targets. `Required` `Default(1)` 
+| [TargetValue](Crm.Distribution.SalesPersonTargetLines.md#targetvalue) | decimal(9, 2) | Value of target. Meaning depends on target type. `Required` `Default(0)` 
+| [TargetWeight](Crm.Distribution.SalesPersonTargetLines.md#targetweight) | decimal(5, 2) | Relative weight of target, comparatively to other targets. `Required` `Default(1)` 
 
 ## References
 
@@ -110,7 +110,7 @@ _Default Value_: **SalesAmount**
 
 Value of target. Meaning depends on target type. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(9, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -119,7 +119,7 @@ _Default Value_: **0**
 
 Relative weight of target, comparatively to other targets. `Required` `Default(1)`
 
-_Type_: **decimal**  
+_Type_: **decimal(5, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

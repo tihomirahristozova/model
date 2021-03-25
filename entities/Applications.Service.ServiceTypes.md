@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Applications.Service.ServiceTypes.md#description) | string (nullable) | The description of this ServiceType. 
+| [Description](Applications.Service.ServiceTypes.md#description) | string(2147483647) (nullable) | The description of this ServiceType. 
 | [Id](Applications.Service.ServiceTypes.md#id) | guid |  
 | [IsActive](Applications.Service.ServiceTypes.md#isactive) | boolean | True when the service type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [IsDefault](Applications.Service.ServiceTypes.md#isdefault) | boolean | True when this is the default service type for the service object type. false otherwise. `Required` `Default(false)` `Filter(eq)` 
-| [Name](Applications.Service.ServiceTypes.md#name) | string | The name of this ServiceType. `Required` `Filter(like)` 
+| [Name](Applications.Service.ServiceTypes.md#name) | string(254) | The name of this ServiceType. `Required` `Filter(like)` 
 
 ## References
 
@@ -43,9 +43,10 @@ Aggregate Tree
 
 The description of this ServiceType.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 
@@ -76,9 +77,10 @@ _Default Value_: **False**
 
 The name of this ServiceType. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

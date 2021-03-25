@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderConsumptionLines.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this OutputOrderConsumptionLine.</td>
 </tr>
 </tbody>
@@ -221,9 +221,10 @@ Aggregate Root:<br>
 <code>( obj.OutputOrder.ConsumptionLines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this OutputOrderConsumptionLine.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
 <p>The <code>OutputOrder</code>(Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) to which this OutputOrderConsumptionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>

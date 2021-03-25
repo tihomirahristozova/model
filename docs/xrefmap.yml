@@ -922,6 +922,9 @@ references:
 - uid: General.ProductCatalogs
   name: General.ProductCatalogs Entity
   href: entities/General.ProductCatalogs.html
+- uid: General.ProductGroupsLevelNames
+  name: General.ProductGroupsLevelNames View
+  href: entities/General.ProductGroupsLevelNames.html
 - uid: General.Products
   name: General.Products Namespace
   href: entities/General.Products.html

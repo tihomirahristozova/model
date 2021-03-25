@@ -124,7 +124,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#code">Code</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>The unique code of the Store. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#creationuser">CreationUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who created the Store. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#gln">GLN</a></td>
-<td>string (nullable)</td>
+<td>string(13) (nullable)</td>
 <td>Global Location Number used by EDI systems. <code>Filter(multi eq)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#partycode">PartyCode</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>The unique code of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -179,7 +179,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#partycreationuser">PartyCreationUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who created the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#partynotes">PartyNotes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Notes for this Party. (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -199,7 +199,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#partyuniquenumber">PartyUniqueNumber</a></td>
-<td>string (nullable)</td>
+<td>string(16) (nullable)</td>
 <td>Unique number of the party (National number for persons, Registration number for companies). <code>Filter(eq;like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -209,12 +209,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#partyupdateuser">PartyUpdateUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who last updated the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#schemaxml">SchemaXML</a></td>
-<td>string (nullable)</td>
+<td>string(1073741823) (nullable)</td>
 <td>Obsolete. Not used.</td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#updateuser">UpdateUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who last updated the Store. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
@@ -386,10 +386,11 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>The unique code of the Store. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="creationtime">CreationTime</h3>
 <p>Date and time when the Store was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -397,19 +398,21 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>Login name of the user, who created the Store. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="defaultsupplystoreid">DefaultSupplyStoreId</h3>
 <p>The store from which goods are usually supplied to this store. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="gln">GLN</h3>
 <p>Global Location Number used by EDI systems. <code>Filter(multi eq)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(13) (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>13</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -434,10 +437,11 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="partycode">PartyCode</h3>
 <p>The unique code of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="partycreationtime">PartyCreationTime</h3>
 <p>Date and time when the Party was created. <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -445,9 +449,10 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partycreationuser">PartyCreationUser</h3>
 <p>Login name of the user, who created the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="partyname">PartyName</h3>
 <p>The name of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
@@ -456,9 +461,10 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partynotes">PartyNotes</h3>
 <p>Notes for this Party. (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="partytype">PartyType</h3>
 <p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html#partytype">PartyType</a></strong><br>
@@ -499,9 +505,10 @@ Allowed values for the PartyType data attribute<br>
 <em>Default Value</em>: <strong>Person</strong></p>
 <h3 id="partyuniquenumber">PartyUniqueNumber</h3>
 <p>Unique number of the party (National number for persons, Registration number for companies). <code>Filter(eq;like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(16) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="partyupdatetime">PartyUpdateTime</h3>
 <p>Date and time when the Party was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -509,14 +516,16 @@ Allowed values for the PartyType data attribute<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdateuser">PartyUpdateUser</h3>
 <p>Login name of the user, who last updated the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="schemaxml">SchemaXML</h3>
 <p>Obsolete. Not used.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(1073741823) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>1073741823</strong></p>
 <h3 id="unmanaged">Unmanaged</h3>
 <p>If false the system will expect the user to process the store transactions. If true the system will auto-generate them. <code>Required</code> <code>Default(true)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -530,9 +539,10 @@ Allowed values for the PartyType data attribute<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>Login name of the user, who last updated the Store. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <p>The access key, containing the user permissions for this Store. Null means that all users have unlimited permissions. <code>Filter(multi eq)</code></p>

@@ -27,22 +27,22 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [BoxCount](Logistics.Shipment.ShipmentOrderLines.md#boxcount) | int32 (nullable) | The count of boxes in which the goods are packaged. null means unknown. 
 | [Finished](Logistics.Shipment.ShipmentOrderLines.md#finished) | boolean | True if this shipment should prohibit further shipments for the sales order line. `Required` `Default(false)` `Filter(eq)` 
-| [GrossWeightkg](Logistics.Shipment.ShipmentOrderLines.md#grossweightkg) | decimal (nullable) | The gross weight of the whole line in kilogramms. null means unknown. 
+| [GrossWeightkg](Logistics.Shipment.ShipmentOrderLines.md#grossweightkg) | decimal(12, 3) (nullable) | The gross weight of the whole line in kilogramms. null means unknown. 
 | [GuaranteePeriodDays](Logistics.Shipment.ShipmentOrderLines.md#guaranteeperioddays) | int32 (nullable) | Guarantee period in days for the offered product. null for non-serviced products. 
-| [Heightm](Logistics.Shipment.ShipmentOrderLines.md#heightm) | decimal (nullable) | The height of the package in meters. null means unknown. 
+| [Heightm](Logistics.Shipment.ShipmentOrderLines.md#heightm) | decimal(12, 3) (nullable) | The height of the package in meters. null means unknown. 
 | [Id](Logistics.Shipment.ShipmentOrderLines.md#id) | guid |  
-| [Lengthm](Logistics.Shipment.ShipmentOrderLines.md#lengthm) | decimal (nullable) | The length of the package in meters. null means unknown. 
+| [Lengthm](Logistics.Shipment.ShipmentOrderLines.md#lengthm) | decimal(12, 3) (nullable) | The length of the package in meters. null means unknown. 
 | [LineNo](Logistics.Shipment.ShipmentOrderLines.md#lineno) | int32 | Line number, unique for the shipment. `Required` 
-| [NetWeightkg](Logistics.Shipment.ShipmentOrderLines.md#netweightkg) | decimal (nullable) | The net weight of the entire batch of goods in kilograms. null means unknown. 
-| [Notes](Logistics.Shipment.ShipmentOrderLines.md#notes) | string (nullable) | Specific notes for this line. 
+| [NetWeightkg](Logistics.Shipment.ShipmentOrderLines.md#netweightkg) | decimal(12, 3) (nullable) | The net weight of the entire batch of goods in kilograms. null means unknown. 
+| [Notes](Logistics.Shipment.ShipmentOrderLines.md#notes) | string(2147483647) (nullable) | Specific notes for this line. 
 | [PalletNo](Logistics.Shipment.ShipmentOrderLines.md#palletno) | int32 (nullable) | The number of the pallet in which the goods are packaged. null means unknown. 
 | [ParentLineNo](Logistics.Shipment.ShipmentOrderLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. 
 | [PersistLot](Logistics.Shipment.ShipmentOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)` 
 | [Quantity](Logistics.Shipment.ShipmentOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity to be shipped. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Logistics.Shipment.ShipmentOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` 
 | [StandardQuantityBase](Logistics.Shipment.ShipmentOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [Volumel](Logistics.Shipment.ShipmentOrderLines.md#volumel) | decimal (nullable) | The volume in litres of the whole batch. null means unknown. 
-| [Widthm](Logistics.Shipment.ShipmentOrderLines.md#widthm) | decimal (nullable) | The width of the package in meters. null means unknown. 
+| [Volumel](Logistics.Shipment.ShipmentOrderLines.md#volumel) | decimal(12, 3) (nullable) | The volume in litres of the whole batch. null means unknown. 
+| [Widthm](Logistics.Shipment.ShipmentOrderLines.md#widthm) | decimal(12, 3) (nullable) | The width of the package in meters. null means unknown. 
 
 ## References
 
@@ -81,7 +81,7 @@ _Default Value_: **False**
 
 The gross weight of the whole line in kilogramms. null means unknown.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(12, 3) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -99,7 +99,7 @@ _Front-End Recalc Expressions:_
 
 The height of the package in meters. null means unknown.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(12, 3) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -114,7 +114,7 @@ _Default Value_: **NewGuid**
 
 The length of the package in meters. null means unknown.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(12, 3) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -135,7 +135,7 @@ _Front-End Recalc Expressions:_
 
 The net weight of the entire batch of goods in kilograms. null means unknown.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(12, 3) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -143,9 +143,10 @@ _Supports Order By_: **False**
 
 Specific notes for this line.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### PalletNo
 
@@ -213,7 +214,7 @@ _Front-End Recalc Expressions:_
 
 The volume in litres of the whole batch. null means unknown.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(12, 3) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -221,7 +222,7 @@ _Supports Order By_: **False**
 
 The width of the package in meters. null means unknown.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(12, 3) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConvertToBaseDivisor](General.Products.ProductDimensions.md#converttobasedivisor) | decimal | This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. `Required` 
-| [ConvertToBaseMultiplier](General.Products.ProductDimensions.md#converttobasemultiplier) | decimal | This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. `Required` 
+| [ConvertToBaseDivisor](General.Products.ProductDimensions.md#converttobasedivisor) | decimal(9, 3) | This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. `Required` 
+| [ConvertToBaseMultiplier](General.Products.ProductDimensions.md#converttobasemultiplier) | decimal(9, 3) | This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. `Required` 
 | [DestQuantity](General.Products.ProductDimensions.md#destquantity) | [Quantity](../data-types.md#quantity) | Quantity in some of the base units, that equals Source_Quantity. `Unit: DestQuantityUnit` `Required` `Default(1)` 
 | [Id](General.Products.ProductDimensions.md#id) | guid |  
 | [SourceQuantity](General.Products.ProductDimensions.md#sourcequantity) | [Quantity](../data-types.md#quantity) | The quantity in the non-base unit. `Unit: SourceQuantityUnit` `Required` `Default(1)` 
@@ -47,7 +47,7 @@ Aggregate Root:
 
 This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. `Required`
 
-_Type_: **decimal**  
+_Type_: **decimal(9, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -60,7 +60,7 @@ _Front-End Recalc Expressions:_
 
 This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. `Required`
 
-_Type_: **decimal**  
+_Type_: **decimal(9, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

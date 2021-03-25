@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.LogisticUnitTypes.md#code) | string | Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. `Required` `Filter(multi eq;like)` 
+| [Code](Logistics.LogisticUnitTypes.md#code) | string(16) | Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. `Required` `Filter(multi eq;like)` 
 | [Id](Logistics.LogisticUnitTypes.md#id) | guid |  
 | [Name](Logistics.LogisticUnitTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the logistic unit type. `Required` `Filter(eq;like)` 
-| [Notes](Logistics.LogisticUnitTypes.md#notes) | string (nullable) | Notes for this LogisticUnitType. `Filter(like)` 
+| [Notes](Logistics.LogisticUnitTypes.md#notes) | string(2147483647) (nullable) | Notes for this LogisticUnitType. `Filter(like)` 
 
 
 ## Attribute Details
@@ -35,9 +35,10 @@ Aggregate Tree
 
 Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. `Required` `Filter(multi eq;like)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### Id
 
@@ -58,9 +59,10 @@ _Supports Order By_: **False**
 
 Notes for this LogisticUnitType. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 

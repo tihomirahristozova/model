@@ -37,28 +37,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Inventory.Stores.md#code) | string | The unique code of the Store. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Logistics.Inventory.Stores.md#code) | string(16) | The unique code of the Store. `Required` `Filter(eq;like)` `ORD` 
 | [CreationTime](Logistics.Inventory.Stores.md#creationtime) | datetime (nullable) | Date and time when the Store was created. `Filter(ge;le)` `ReadOnly` 
-| [CreationUser](Logistics.Inventory.Stores.md#creationuser) | string (nullable) | Login name of the user, who created the Store. `Filter(like)` `ReadOnly` 
+| [CreationUser](Logistics.Inventory.Stores.md#creationuser) | string(64) (nullable) | Login name of the user, who created the Store. `Filter(like)` `ReadOnly` 
 | [DefaultSupplyStoreId](Logistics.Inventory.Stores.md#defaultsupplystoreid) | guid (nullable) | The store from which goods are usually supplied to this store. `Filter(multi eq)` 
-| [GLN](Logistics.Inventory.Stores.md#gln) | string (nullable) | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [GLN](Logistics.Inventory.Stores.md#gln) | string(13) (nullable) | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [Id](Logistics.Inventory.Stores.md#id) | guid |  
 | [IsActive](Logistics.Inventory.Stores.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [Name](Logistics.Inventory.Stores.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the store. `Required` `Filter(like)` 
 | [NumberOfDimensions](Logistics.Inventory.Stores.md#numberofdimensions) | int32 | Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. `Required` `Default(0)` `Filter(eq)` 
-| [PartyCode](Logistics.Inventory.Stores.md#partycode) | string | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyCode](Logistics.Inventory.Stores.md#partycode) | string(16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](Logistics.Inventory.Stores.md#partycreationtime) | datetime (nullable) | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyCreationUser](Logistics.Inventory.Stores.md#partycreationuser) | string (nullable) | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyCreationUser](Logistics.Inventory.Stores.md#partycreationuser) | string(64) (nullable) | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyName](Logistics.Inventory.Stores.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyNotes](Logistics.Inventory.Stores.md#partynotes) | string (nullable) | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyNotes](Logistics.Inventory.Stores.md#partynotes) | string(254) (nullable) | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyType](Logistics.Inventory.Stores.md#partytype) | [PartyType](Logistics.Inventory.Stores.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyUniqueNumber](Logistics.Inventory.Stores.md#partyuniquenumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyUniqueNumber](Logistics.Inventory.Stores.md#partyuniquenumber) | string(16) (nullable) | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateTime](Logistics.Inventory.Stores.md#partyupdatetime) | datetime (nullable) | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyUpdateUser](Logistics.Inventory.Stores.md#partyupdateuser) | string (nullable) | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [SchemaXML](Logistics.Inventory.Stores.md#schemaxml) | string (nullable) | Obsolete. Not used. 
+| [PartyUpdateUser](Logistics.Inventory.Stores.md#partyupdateuser) | string(64) (nullable) | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [SchemaXML](Logistics.Inventory.Stores.md#schemaxml) | string(1073741823) (nullable) | Obsolete. Not used. 
 | [Unmanaged](Logistics.Inventory.Stores.md#unmanaged) | boolean | If false the system will expect the user to process the store transactions. If true the system will auto-generate them. `Required` `Default(true)` 
 | [UpdateTime](Logistics.Inventory.Stores.md#updatetime) | datetime (nullable) | Date and time when the Store was last updated. `Filter(ge;le)` `ReadOnly` 
-| [UpdateUser](Logistics.Inventory.Stores.md#updateuser) | string (nullable) | Login name of the user, who last updated the Store. `Filter(like)` `ReadOnly` 
+| [UpdateUser](Logistics.Inventory.Stores.md#updateuser) | string(64) (nullable) | Login name of the user, who last updated the Store. `Filter(like)` `ReadOnly` 
 
 ## References
 
@@ -102,10 +102,11 @@ Aggregate Tree
 
 The unique code of the Store. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### CreationTime
 
@@ -119,9 +120,10 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Store. `Filter(like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### DefaultSupplyStoreId
 
@@ -134,10 +136,11 @@ _Supported Filters_: **Equals, EqualsIn**
 
 Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(13) (nullable)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
+_Maximum Length_: **13**  
 
 ### Id
 
@@ -176,10 +179,11 @@ _Default Value_: **0**
 
 The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### PartyCreationTime
 
@@ -193,9 +197,10 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### PartyName
 
@@ -210,9 +215,10 @@ _Supports Order By_: **True**
 
 Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### PartyType
 
@@ -238,9 +244,10 @@ _Default Value_: **Person**
 
 Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### PartyUpdateTime
 
@@ -254,17 +261,19 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### SchemaXML
 
 Obsolete. Not used.
 
-_Type_: **string (nullable)**  
+_Type_: **string(1073741823) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1073741823**  
 
 ### Unmanaged
 
@@ -287,9 +296,10 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Store. `Filter(like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 
 ## Reference Details

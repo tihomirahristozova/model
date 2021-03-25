@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPropertyValue](General.DocumentTypeProperties.md#defaultpropertyvalue) | string (nullable) | The default value of the property when creating new documents. 
+| [DefaultPropertyValue](General.DocumentTypeProperties.md#defaultpropertyvalue) | string(254) (nullable) | The default value of the property when creating new documents. 
 | [DefaultProperty<br />ValueDescription](General.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Default description value of the property when creating new documents. 
 | [DefaultValueId](General.DocumentTypeProperties.md#defaultvalueid) | guid (nullable) | Internal Id of the default value of the property. `Filter(multi eq)` 
 | [Id](General.DocumentTypeProperties.md#id) | guid |  
@@ -49,9 +49,10 @@ Aggregate Root:
 
 The default value of the property when creating new documents.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### DefaultPropertyValueDescription
 

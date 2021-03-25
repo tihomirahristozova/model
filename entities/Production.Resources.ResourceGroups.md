@@ -25,10 +25,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.ResourceGroups.md#fullpath) | string | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)` 
+| [FullPath](Production.Resources.ResourceGroups.md#fullpath) | string(254) | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)` 
 | [Id](Production.Resources.ResourceGroups.md#id) | guid |  
-| [Name](Production.Resources.ResourceGroups.md#name) | string | Name of resource group. `Required` `Filter(like)` 
-| [Parent](Production.Resources.ResourceGroups.md#parent) | string | Dot-separated list of parent groups. It also contains leading and trailing dot. `Required` `Default("/")` `Filter(like)` `ORD` 
+| [Name](Production.Resources.ResourceGroups.md#name) | string(64) | Name of resource group. `Required` `Filter(like)` 
+| [Parent](Production.Resources.ResourceGroups.md#parent) | string(254) | Dot-separated list of parent groups. It also contains leading and trailing dot. `Required` `Default("/")` `Filter(like)` `ORD` 
 
 ## Child Collections
 
@@ -43,9 +43,10 @@ Aggregate Tree
 
 The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 _Default Value_: ****  
 
 ### Id
@@ -59,18 +60,20 @@ _Default Value_: **NewGuid**
 
 Name of resource group. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Parent
 
 Dot-separated list of parent groups. It also contains leading and trailing dot. `Required` `Default("/")` `Filter(like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **254**  
 _Default Value_: **/**  
 
 

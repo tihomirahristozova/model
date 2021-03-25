@@ -27,7 +27,7 @@ Aggregate Tree
 | [EntityItemId](General.PropertyValues.md#entityitemid) | guid | The Id of the actual entity for which the value is specified. `Required` `Filter(multi eq)` 
 | [Id](General.PropertyValues.md#id) | guid |  
 | [Picture](General.PropertyValues.md#picture) | byte[] (nullable) | The actual picture of the property for the specified entity (the entity with the specified Id). 
-| [PropertyValueField](General.PropertyValues.md#propertyvaluefield) | string (nullable) | The actual value of the property for the specified entity (the entity with the specified Id). 
+| [PropertyValueField](General.PropertyValues.md#propertyvaluefield) | string(254) (nullable) | The actual value of the property for the specified entity (the entity with the specified Id). 
 | [ValueId](General.PropertyValues.md#valueid) | guid (nullable) | The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. `Filter(multi eq)` 
 
 ## References
@@ -73,9 +73,10 @@ _Supports Order By_: **False**
 
 The actual value of the property for the specified entity (the entity with the specified Id).
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ValueId
 

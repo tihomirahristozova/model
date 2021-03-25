@@ -134,12 +134,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Notes for this WorkOrderItemOperation.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#operationdescription">OperationDescription</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The short description of the operation.</td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scraprate">ScrapRate</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>Projected scrap rate of the operation. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#tooling">Tooling</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The tools needed for the routing step.</td>
 </tr>
 <tr>
@@ -266,14 +266,16 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WorkOrderItemOperation.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="operationdescription">OperationDescription</h3>
 <p>The short description of the operation.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Operation.Name</code></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
@@ -294,7 +296,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>Projected scrap rate of the operation. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -306,9 +308,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="tooling">Tooling</h3>
 <p>The tools needed for the routing step.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="usequantity">UseQuantity</h3>
 <p>Quantity of the resource, that should be allocated for the operation. <code>Unit: WorkgroupResource.Resource.PrimaryUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>

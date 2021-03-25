@@ -36,15 +36,15 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AdjustmentNumber](Applications.Service.ServiceOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentTime](Applications.Service.ServiceOrders.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentUser](Applications.Service.ServiceOrders.md#adjustmentuser) | string (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentUser](Applications.Service.ServiceOrders.md#adjustmentuser) | string(64) (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CompleteTime](Applications.Service.ServiceOrders.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationTime](Applications.Service.ServiceOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [CreationUser](Applications.Service.ServiceOrders.md#creationuser) | string | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CreationUser](Applications.Service.ServiceOrders.md#creationuser) | string(64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentDate](Applications.Service.ServiceOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNo](Applications.Service.ServiceOrders.md#documentno) | string | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNotes](Applications.Service.ServiceOrders.md#documentnotes) | string (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNo](Applications.Service.ServiceOrders.md#documentno) | string(20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNotes](Applications.Service.ServiceOrders.md#documentnotes) | string(2147483647) (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
 | [DocumentVersion](Applications.Service.ServiceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [EntityName](Applications.Service.ServiceOrders.md#entityname) | string | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [EntityName](Applications.Service.ServiceOrders.md#entityname) | string(64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Applications.Service.ServiceOrders.md#id) | guid |  
 | [IsReleased](Applications.Service.ServiceOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Applications.Service.ServiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
@@ -52,13 +52,13 @@ Aggregate Tree
 | [PlanningOnly](Applications.Service.ServiceOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Applications.Service.ServiceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReferenceDate](Applications.Service.ServiceOrders.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
-| [ReferenceDocumentNo](Applications.Service.ServiceOrders.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDocumentNo](Applications.Service.ServiceOrders.md#referencedocumentno) | string(20) (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Applications.Service.ServiceOrders.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Applications.Service.ServiceOrders.md#state) | [DocumentState](Applications.Service.ServiceOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Void](Applications.Service.ServiceOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidReason](Applications.Service.ServiceOrders.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidReason](Applications.Service.ServiceOrders.md#voidreason) | string(254) (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidTime](Applications.Service.ServiceOrders.md#voidtime) | datetime (nullable) | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidUser](Applications.Service.ServiceOrders.md#voiduser) | string (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidUser](Applications.Service.ServiceOrders.md#voiduser) | string(64) (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 
 ## References
 
@@ -125,9 +125,10 @@ _Supports Order By_: **False**
 
 The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### CompleteTime
 
@@ -150,9 +151,10 @@ _Default Value_: **CurrentDateTime**
 
 The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### DocumentDate
 
@@ -168,18 +170,20 @@ _Default Value_: **CurrentDate**
 
 Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **20**  
 
 ### DocumentNotes
 
 Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### DocumentVersion
 
@@ -194,10 +198,11 @@ _Default Value_: **1**
 
 The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### Id
 
@@ -271,9 +276,10 @@ _Default Value_: **CurrentDate**
 
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(20) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **20**  
 
 ### ReleaseTime
 
@@ -319,9 +325,10 @@ _Default Value_: **False**
 
 Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### VoidTime
 
@@ -335,9 +342,10 @@ _Supports Order By_: **False**
 
 The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 
 ## Reference Details

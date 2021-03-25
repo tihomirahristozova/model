@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationExecutionLines.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this Transportation<br>ExecutionLine.</td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationExecutionLines.html#palletnumber">PalletNumber</a></td>
-<td>string (nullable)</td>
+<td>string(32) (nullable)</td>
 <td>Pallet number, when applicable. null when unknown or not applicable.</td>
 </tr>
 <tr>
@@ -221,9 +221,10 @@ Aggregate Root:<br>
 <code>( obj.TransportationExecution.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this TransportationExecutionLine.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="operationtype">OperationType</h3>
 <p>The type of operation being executed. L=Loading; U=Unloading; O=Other. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutionLines.html#operationtype">OperationType</a></strong><br>
@@ -255,9 +256,10 @@ Allowed values for the <code>OperationType</code>(Logistics.Shipment.Transportat
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="palletnumber">PalletNumber</h3>
 <p>Pallet number, when applicable. null when unknown or not applicable.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(32) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="palletscount">PalletsCount</h3>
 <p>Number of pallets affected by this operation. null when unknown or N/A.</p>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>

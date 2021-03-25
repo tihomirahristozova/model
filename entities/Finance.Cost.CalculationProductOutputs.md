@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Finance.Cost.CalculationProductOutputs.md#id) | guid |  
 | [LineNo](Finance.Cost.CalculationProductOutputs.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
 | [ProjectId](Finance.Cost.CalculationProductOutputs.md#projectid) | guid (nullable) | The Project, which absorbed the cost. `Filter(multi eq)` 
-| [Quantity](Finance.Cost.CalculationProductOutputs.md#quantity) | decimal | The quantity produced. `Required` `Default(0)` 
+| [Quantity](Finance.Cost.CalculationProductOutputs.md#quantity) | decimal(18, 3) | The quantity produced. `Required` `Default(0)` 
 
 ## References
 
@@ -77,7 +77,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The quantity produced. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(18, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

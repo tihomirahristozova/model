@@ -30,7 +30,7 @@ Aggregate Root:
 | [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforsetup) | [Quantity](../data-types.md#quantity) | The consumed quantity of the material while setting up the operation. `Unit: QuantityUnit` `Required` `Default(0)` 
 | [Id](Production.ShopFloor.OutputOrderConsumptionLines.md#id) | guid |  
 | [LineNo](Production.ShopFloor.OutputOrderConsumptionLines.md#lineno) | int32 | Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). `Required` 
-| [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#notes) | string (nullable) | Notes for this OutputOrderConsumptionLine. 
+| [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#notes) | string(2147483647) (nullable) | Notes for this OutputOrderConsumptionLine. 
 
 ## References
 
@@ -99,9 +99,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this OutputOrderConsumptionLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

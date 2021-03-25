@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this ConsumptionOrderLine.</td>
 </tr>
 <tr>
@@ -270,9 +270,10 @@ Allowed values for the <code>ConsumptionType</code>(Production.ShopFloor.Consump
 <code>( obj.ConsumptionOrder.Lines.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ConsumptionOrderLine.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="scheduleddatetime">ScheduledDateTime</h3>
 <p>The scheduled date, when the material is needed. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>

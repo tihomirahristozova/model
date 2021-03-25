@@ -31,7 +31,7 @@ Aggregate Root:
 | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). `Required` `Filter(eq)` `ReadOnly` 
 | [Id](Production.ShopFloor.ConsumptionOrderLines.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.ConsumptionOrderLines.md#lineord) | int32 | Non-unique line number within the order. `Required` 
-| [Notes](Production.ShopFloor.ConsumptionOrderLines.md#notes) | string (nullable) | Notes for this ConsumptionOrderLine. 
+| [Notes](Production.ShopFloor.ConsumptionOrderLines.md#notes) | string(2147483647) (nullable) | Notes for this ConsumptionOrderLine. 
 | [ScheduledDateTime](Production.ShopFloor.ConsumptionOrderLines.md#scheduleddatetime) | datetime (nullable) | The scheduled date, when the material is needed. `Filter(ge;le)` 
 
 ## References
@@ -129,9 +129,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this ConsumptionOrderLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ScheduledDateTime
 

@@ -114,17 +114,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Assets.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this Asset.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Assets.html#rentalassetcode">RentalAssetCode</a></td>
-<td>string</td>
+<td>string(20)</td>
 <td>Unique rental asset code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Assets.html#rentalassetname">RentalAssetName</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The name of the rental asset. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -227,20 +227,23 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Asset.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="rentalassetcode">RentalAssetCode</h3>
 <p>Unique rental asset code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(20)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>20</strong></p>
 <h3 id="rentalassetname">RentalAssetName</h3>
 <p>The name of the rental asset. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="standardguaranteeamount">StandardGuaranteeAmount</h3>
 <p>Standard default amount of the guarantee that is set for this asset when leased. <code>Currency: StandardGuaranteeAmountCurrency</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>

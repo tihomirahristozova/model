@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BuyerName](General.Products.ProductSupply.md#buyername) | string (nullable) | The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy. 
+| [BuyerName](General.Products.ProductSupply.md#buyername) | string(64) (nullable) | The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy. 
 | [FixedOrderQuantityBase](General.Products.ProductSupply.md#fixedorderquantitybase) | [Quantity](../data-types.md#quantity) | Fixed order quantity under the FOQ & EOQ replenishment system. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [Id](General.Products.ProductSupply.md#id) | guid |  
 | [IsActive](General.Products.ProductSupply.md#isactive) | boolean | True if this product supply is active. `Required` `Default(true)` `Filter(eq)` 
@@ -38,7 +38,7 @@ Aggregate Tree
 | [OrderPeriodStartDate](General.Products.ProductSupply.md#orderperiodstartdate) | datetime (nullable) | Start date of the first period under fixed period replenishment system. null - not yet specified. 
 | [OrderPointQuantityBase](General.Products.ProductSupply.md#orderpointquantitybase) | [Quantity](../data-types.md#quantity) | Order point quantity under the OP replenishment system. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [OrderPolicy](General.Products.ProductSupply.md#orderpolicy) | [OrderPolicy](General.Products.ProductSupply.md#orderpolicy) | Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. `Required` `Default("OPS")` 
-| [PlanningAnnual<br />CarryingCostPercent](General.Products.ProductSupply.md#planningannualcarryingcostpercent) | decimal (nullable) | The expected carrying cost as percentage of inventory cost. null means unknown. 
+| [PlanningAnnual<br />CarryingCostPercent](General.Products.ProductSupply.md#planningannualcarryingcostpercent) | decimal(5, 4) (nullable) | The expected carrying cost as percentage of inventory cost. null means unknown. 
 | [PlanningAnnual<br />UsageQuantityBase](General.Products.ProductSupply.md#planningannualusagequantitybase) | [Quantity](../data-types.md#quantity) (nullable) | Average usage of the product for 1 year. NUL means unknown. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
 | [PlanningHorizonDays](General.Products.ProductSupply.md#planninghorizondays) | int32 | Number of days in the future for which to plan the demand and supply. `Required` `Default(0)` 
 | [PlanningLeadTimeDays](General.Products.ProductSupply.md#planningleadtimedays) | int32 | The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. `Required` `Default(0)` 
@@ -71,9 +71,10 @@ Aggregate Tree
 
 The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### FixedOrderQuantityBase
 
@@ -232,7 +233,7 @@ _Default Value_: **OrderPointSystem**
 
 The expected carrying cost as percentage of inventory cost. null means unknown.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(5, 4) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

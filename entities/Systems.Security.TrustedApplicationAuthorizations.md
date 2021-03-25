@@ -28,7 +28,7 @@ Aggregate Root:
 | [GrantTimeUtc](Systems.Security.TrustedApplicationAuthorizations.md#granttimeutc) | datetime | The time (in UTC) when the authorization was granted. `Required` `Default(NowUtc)` 
 | [Id](Systems.Security.TrustedApplicationAuthorizations.md#id) | guid |  
 | [IsRevoked](Systems.Security.TrustedApplicationAuthorizations.md#isrevoked) | boolean | Specifies whether the grant is explicitly revoked. `Required` `Default(false)` 
-| [Notes](Systems.Security.TrustedApplicationAuthorizations.md#notes) | string (nullable) | Notes for this TrustedApplication<br />Authorization. 
+| [Notes](Systems.Security.TrustedApplicationAuthorizations.md#notes) | string(2147483647) (nullable) | Notes for this TrustedApplication<br />Authorization. 
 | [ValidFromUtc](Systems.Security.TrustedApplicationAuthorizations.md#validfromutc) | datetime (nullable) | The start of the validitiy of the authorization. null means that there is no restriction. 
 | [ValidUntilUtc](Systems.Security.TrustedApplicationAuthorizations.md#validuntilutc) | datetime (nullable) | The time (in UTC) when the grant expires. null means that there is no time restriction. 
 
@@ -72,9 +72,10 @@ _Default Value_: **False**
 
 Notes for this TrustedApplicationAuthorization.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ValidFromUtc
 

@@ -24,8 +24,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Contacts.PartyRelationshipTypes.md#id) | guid |  
-| [Notes](General.Contacts.PartyRelationshipTypes.md#notes) | string (nullable) | Notes for this PartyRelationshipType. 
-| [RelationshipTypeName](General.Contacts.PartyRelationshipTypes.md#relationshiptypename) | string | The name of the relationship type. `Required` `Filter(like)` 
+| [Notes](General.Contacts.PartyRelationshipTypes.md#notes) | string(254) (nullable) | Notes for this PartyRelationshipType. 
+| [RelationshipTypeName](General.Contacts.PartyRelationshipTypes.md#relationshiptypename) | string(50) | The name of the relationship type. `Required` `Filter(like)` 
 
 
 ## Attribute Details
@@ -41,17 +41,19 @@ _Default Value_: **NewGuid**
 
 Notes for this PartyRelationshipType.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### RelationshipTypeName
 
 The name of the relationship type. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(50)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **50**  
 
 
 

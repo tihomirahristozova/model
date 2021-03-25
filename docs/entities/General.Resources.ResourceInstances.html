@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#code">Code</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>Code of the instance, unique within the resource. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -114,12 +114,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#name">Name</a></td>
-<td>string</td>
+<td>string(2147483647)</td>
 <td>Multilanguage resource instance name. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceInstances.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this ResourceInstance.</td>
 </tr>
 </tbody>
@@ -154,9 +154,10 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>Code of the instance, unique within the resource. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -164,14 +165,16 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>Multilanguage resource instance name. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(2147483647)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ResourceInstance.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
 <p>The asset, which is represented by this resource instance. null, when the resource instance is not an asset. <code>Filter(multi eq)</code></p>

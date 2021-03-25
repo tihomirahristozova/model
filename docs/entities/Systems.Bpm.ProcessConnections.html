@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Bpm.ProcessConnections.html#code">Code</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>Connection code, unique within the process. Used as ID for XML serialization purposes. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -159,9 +159,10 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>Connection code, unique within the process. Used as ID for XML serialization purposes. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="conditionfilterxml">ConditionFilterXml</h3>
 <p>When not null, specifies that the flow will be followed only if the condition is matched by the current values in the process instance. <code>Filter(eq;like)</code></p>

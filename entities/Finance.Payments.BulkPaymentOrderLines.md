@@ -32,12 +32,12 @@ Aggregate Root:
 | [InstallmentNumber](Finance.Payments.BulkPaymentOrderLines.md#installmentnumber) | int32 (nullable) | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. 
 | [InvoiceAmount](Finance.Payments.BulkPaymentOrderLines.md#invoiceamount) | [Amount](../data-types.md#amount) (nullable) | The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency` 
 | [IsAmountWithVAT](Finance.Payments.BulkPaymentOrderLines.md#isamountwithvat) | boolean | Is_Amount_With_VAT=true if the requested amount includes VAT. `Required` `Default(true)` `Filter(eq)` 
-| [Notes](Finance.Payments.BulkPaymentOrderLines.md#notes) | string (nullable) | Notes for this BulkPaymentOrderLine. 
+| [Notes](Finance.Payments.BulkPaymentOrderLines.md#notes) | string(254) (nullable) | Notes for this BulkPaymentOrderLine. 
 | [RefDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refdocumentdate) | datetime (nullable) | The date of the base document. null means that it is unknown. 
-| [RefDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refdocumentno) | string | The number of the document which is the basis for the payment. `Required` 
+| [RefDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refdocumentno) | string(20) | The number of the document which is the basis for the payment. `Required` 
 | [RefInvoiceApplyDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoiceapplydate) | datetime (nullable) | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. 
 | [RefInvoiceDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentdate) | datetime (nullable) | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. 
-| [RefInvoiceDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentno) | string (nullable) | The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. 
+| [RefInvoiceDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentno) | string(20) (nullable) | The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. 
 | [TotalAmount](Finance.Payments.BulkPaymentOrderLines.md#totalamount) | [Amount](../data-types.md#amount) | Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
 
 ## References
@@ -134,9 +134,10 @@ _Default Value_: **True**
 
 Notes for this BulkPaymentOrderLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### RefDocumentDate
 
@@ -150,9 +151,10 @@ _Supports Order By_: **False**
 
 The number of the document which is the basis for the payment. `Required`
 
-_Type_: **string**  
+_Type_: **string(20)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **20**  
 
 ### RefInvoiceApplyDate
 
@@ -174,9 +176,10 @@ _Supports Order By_: **False**
 
 The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice.
 
-_Type_: **string (nullable)**  
+_Type_: **string(20) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **20**  
 
 ### TotalAmount
 

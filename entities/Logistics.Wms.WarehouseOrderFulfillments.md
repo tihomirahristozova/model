@@ -26,7 +26,7 @@ Aggregate Tree
 | [CreationTimeUtc](Logistics.Wms.WarehouseOrderFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` 
 | [Id](Logistics.Wms.WarehouseOrderFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseOrderFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. `Required` 
-| [Quantity](Logistics.Wms.WarehouseOrderFulfillments.md#quantity) | decimal | Fulfilled quantity in the measurement unit of the warehouse order line. `Required` 
+| [Quantity](Logistics.Wms.WarehouseOrderFulfillments.md#quantity) | decimal(12, 3) | Fulfilled quantity in the measurement unit of the warehouse order line. `Required` 
 
 ## References
 
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 Fulfilled quantity in the measurement unit of the warehouse order line. `Required`
 
-_Type_: **decimal**  
+_Type_: **decimal(12, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

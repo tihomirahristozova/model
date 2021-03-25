@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](General.Products.CodingSystems.md#description) | string (nullable) | The description of this CodingSystem. 
+| [Description](General.Products.CodingSystems.md#description) | string(2147483647) (nullable) | The description of this CodingSystem. 
 | [Id](General.Products.CodingSystems.md#id) | guid |  
 | [IsUnique](General.Products.CodingSystems.md#isunique) | boolean | True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. `Required` `Default(true)` `Filter(eq)` 
 | [Name](General.Products.CodingSystems.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CodingSystem. `Required` `Filter(eq;like)` 
@@ -41,9 +41,10 @@ Aggregate Tree
 
 The description of this CodingSystem.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 

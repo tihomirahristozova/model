@@ -125,7 +125,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentJobs.html#name">Name</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The name of the job. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
 </tr>
 <tr>
@@ -135,7 +135,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentJobs.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this Job. (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
 </tr>
 <tr>
@@ -219,10 +219,11 @@ Allowed values for the <code>JobType</code>(Systems.Core.Jobs.md#jobtype) data a
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of the job. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="newstate">NewState</h3>
 <p>Specifies the state, which should be set to the documents, matching the filter. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentJobs.html#newstate">DocumentState</a></strong><br>
@@ -270,9 +271,10 @@ Enumeration of document system states<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Job. (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="runonidle">RunOnIdle</h3>
 <p>Specifies whether to automatically run the job when the server is idle. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>

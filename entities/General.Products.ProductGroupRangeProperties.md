@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromPropertyValue](General.Products.ProductGroupRangeProperties.md#frompropertyvalue) | string (nullable) | Starting value of the range of alternative values. Used only when Rage Type = R (range). 
+| [FromPropertyValue](General.Products.ProductGroupRangeProperties.md#frompropertyvalue) | string(254) (nullable) | Starting value of the range of alternative values. Used only when Rage Type = R (range). 
 | [Id](General.Products.ProductGroupRangeProperties.md#id) | guid |  
-| [PropertyValuesList](General.Products.ProductGroupRangeProperties.md#propertyvalueslist) | string (nullable) | Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio). 
+| [PropertyValuesList](General.Products.ProductGroupRangeProperties.md#propertyvalueslist) | string(2147483647) (nullable) | Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio). 
 | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. `Required` `Default("R")` 
-| [ToPropertyValue](General.Products.ProductGroupRangeProperties.md#topropertyvalue) | string (nullable) | Ending value of the range of alternative values. Used only when Rage Type = R (range). 
+| [ToPropertyValue](General.Products.ProductGroupRangeProperties.md#topropertyvalue) | string(254) (nullable) | Ending value of the range of alternative values. Used only when Rage Type = R (range). 
 
 ## References
 
@@ -45,9 +45,10 @@ Aggregate Root:
 
 Starting value of the range of alternative values. Used only when Rage Type = R (range).
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 
@@ -60,9 +61,10 @@ _Default Value_: **NewGuid**
 
 Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### RangeType
 
@@ -85,9 +87,10 @@ _Default Value_: **Range**
 
 Ending value of the range of alternative values. Used only when Rage Type = R (range).
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

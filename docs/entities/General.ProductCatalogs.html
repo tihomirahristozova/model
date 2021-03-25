@@ -129,17 +129,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#code">Code</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>Unique catalog code. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#footerhtml">FooterHtml</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.</td>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#headerhtml">HeaderHtml</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.</td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this ProductCatalog.</td>
 </tr>
 </tbody>
@@ -293,19 +293,22 @@ Allowed values for the <code>BackgroundRepeat</code>(General.ProductCatalogs.md#
 <em>Default Value</em>: <strong>RepeatBothVerticallyAndHorizontally</strong></p>
 <h3 id="code">Code</h3>
 <p>Unique catalog code. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="footerhtml">FooterHtml</h3>
 <p>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="headerhtml">HeaderHtml</h3>
 <p>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -323,9 +326,10 @@ Allowed values for the <code>BackgroundRepeat</code>(General.ProductCatalogs.md#
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ProductCatalog.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="rootproductgroup">RootProductGroup</h3>
 <p>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. <code>Required</code> <code>Filter(multi eq)</code></p>

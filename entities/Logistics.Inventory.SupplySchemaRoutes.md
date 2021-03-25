@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.SupplySchemaRoutes.md#id) | guid |  
-| [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string (nullable) | Notes for this SupplySchemaRoute. 
-| [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (nullable) | Obsolete. Not used. (Used by the schematic control). 
+| [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string(254) (nullable) | Notes for this SupplySchemaRoute. 
+| [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string(1073741823) (nullable) | Obsolete. Not used. (Used by the schematic control). 
 | [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route). `Required` `Default(0)` 
 
 ## References
@@ -52,17 +52,19 @@ _Default Value_: **NewGuid**
 
 Notes for this SupplySchemaRoute.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### SchemaXML
 
 Obsolete. Not used. (Used by the schematic control).
 
-_Type_: **string (nullable)**  
+_Type_: **string(1073741823) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1073741823**  
 
 ### TransitTimeDays
 

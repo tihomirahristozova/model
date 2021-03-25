@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. `Required` `Default(0)` 
+| [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal(7, 6) | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. `Required` `Default(0)` 
 | [Id](Crm.Distributors.md#id) | guid |  
 
 ## References
@@ -41,7 +41,7 @@ Aggregate Root:
 
 Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

@@ -25,10 +25,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Description](Finance.Accounting.AccountGroups.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The description of this AccountGroup. 
 | [Discontinued](Finance.Accounting.AccountGroups.md#discontinued) | boolean | True means that the account group won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)` 
-| [FullPath](Finance.Accounting.AccountGroups.md#fullpath) | string (nullable) | Full path to the group. Contains delimited list of group numbers of parent groups. `Filter(like)` 
+| [FullPath](Finance.Accounting.AccountGroups.md#fullpath) | string(256) (nullable) | Full path to the group. Contains delimited list of group numbers of parent groups. `Filter(like)` 
 | [Id](Finance.Accounting.AccountGroups.md#id) | guid |  
 | [Name](Finance.Accounting.AccountGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Account group name, required. Must be unique within the parent group. `Required` `Filter(like)` 
-| [Number](Finance.Accounting.AccountGroups.md#number) | string | Unique account group number. May contain characters, if required. `Required` `Filter(like)` `ORD` 
+| [Number](Finance.Accounting.AccountGroups.md#number) | string(30) | Unique account group number. May contain characters, if required. `Required` `Filter(like)` `ORD` 
 
 ## References
 
@@ -60,9 +60,10 @@ _Default Value_: **False**
 
 Full path to the group. Contains delimited list of group numbers of parent groups. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(256) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **256**  
 
 ### Id
 
@@ -83,10 +84,11 @@ _Supports Order By_: **False**
 
 Unique account group number. May contain characters, if required. `Required` `Filter(like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(30)**  
 _Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **30**  
 
 
 ## Reference Details

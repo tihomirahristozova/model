@@ -33,10 +33,10 @@ Aggregate Tree
 | [ABCClass](General.Products.Products.md#abcclass) | [ABCClass](General.Products.Products.md#abcclass) | Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. `Required` `Default("B ")` `Filter(eq)` 
 | [Active](General.Products.Products.md#active) | boolean | True if the product is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [AllowVariableMeasurement<br />Ratios](General.Products.Products.md#allowvariablemeasurementratios) | boolean | Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. `Required` `Default(false)` `Filter(eq)` 
-| [CatalogDescriptionHtml](General.Products.Products.md#catalogdescriptionhtml) | string (nullable) | Full HTML description of the product. Usually used for display on product catalogs, web pages, etc. 
+| [CatalogDescriptionHtml](General.Products.Products.md#catalogdescriptionhtml) | string(2147483647) (nullable) | Full HTML description of the product. Usually used for display on product catalogs, web pages, etc. 
 | [CostingMethod](General.Products.Products.md#costingmethod) | [CostingMethod](General.Products.Products.md#costingmethod) (nullable) | Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost. 
 | [CreationTime](General.Products.Products.md#creationtime) | datetime (nullable) | Date and time when the Product was created. `Filter(ge;le)` `ReadOnly` 
-| [CreationUser](General.Products.Products.md#creationuser) | string (nullable) | Login name of the user, who created the Product. `Filter(like)` `ReadOnly` 
+| [CreationUser](General.Products.Products.md#creationuser) | string(64) (nullable) | Login name of the user, who created the Product. `Filter(like)` `ReadOnly` 
 | [Description](General.Products.Products.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The description of the product. 
 | [ExpiryPeriodDays](General.Products.Products.md#expiryperioddays) | int32 (nullable) | Total default expiry period for the product (in days) from the date of production to the date of expiry. 
 | [FlushingMethod](General.Products.Products.md#flushingmethod) | [FlushingMethod](General.Products.Products.md#flushingmethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). `Required` `Default("M")` 
@@ -45,15 +45,15 @@ Aggregate Tree
 | [IsFeatured](General.Products.Products.md#isfeatured) | boolean | Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. `Required` `Default(false)` `Filter(eq)` 
 | [IsSerialized](General.Products.Products.md#isserialized) | boolean | True if the parts use/require serial numbers. `Required` `Default(false)` `Filter(eq)` 
 | [LotsIssue](General.Products.Products.md#lotsissue) | [LotsIssue](General.Products.Products.md#lotsissue) (nullable) | Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO). 
-| [ManufacturingPolicy](General.Products.Products.md#manufacturingpolicy) | string | Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. `Required` `Default("MTS")` 
+| [ManufacturingPolicy](General.Products.Products.md#manufacturingpolicy) | string(3) | Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. `Required` `Default("MTS")` 
 | [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount](../data-types.md#amount) (nullable) | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency` 
-| [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal (nullable) | Minimal base quantity of this product that has to be specified in any sale. 
+| [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal(18, 3) (nullable) | Minimal base quantity of this product that has to be specified in any sale. 
 | [Name](General.Products.Products.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the item. `Required` `Filter(eq;like)` 
-| [PartNumber](General.Products.Products.md#partnumber) | string | Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD` 
+| [PartNumber](General.Products.Products.md#partnumber) | string(32) | Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD` 
 | [PlanningDemand<br />TimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 (nullable) | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days). 
 | [PlanningHorizonDays](General.Products.Products.md#planninghorizondays) | int32 (nullable) | Number of days in the future for which to plan the demand and supply (null = Default of 180 days). 
 | [PlanningTimeFenceDays](General.Products.Products.md#planningtimefencedays) | int32 (nullable) | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days). 
-| [ScrapRate](General.Products.Products.md#scraprate) | decimal | Default scrap rate for the recipe, when this product is used as ingredient. `Required` `Default(0)` 
+| [ScrapRate](General.Products.Products.md#scraprate) | decimal(7, 6) | Default scrap rate for the recipe, when this product is used as ingredient. `Required` `Default(0)` 
 | [ShortName](General.Products.Products.md#shortname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. `Filter(eq;like)` 
 | [ShowInCatalog](General.Products.Products.md#showincatalog) | boolean | Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. `Required` `Default(false)` `Filter(multi eq)` 
 | [StandardCostPerLot](General.Products.Products.md#standardcostperlot) | [Amount](../data-types.md#amount) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)` 
@@ -61,7 +61,7 @@ Aggregate Tree
 | [StandardPricePerLot](General.Products.Products.md#standardpriceperlot) | [Amount](../data-types.md#amount) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)` 
 | [SupplySchemaId](General.Products.Products.md#supplyschemaid) | guid (nullable) | The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)` 
 | [UpdateTime](General.Products.Products.md#updatetime) | datetime (nullable) | Date and time when the Product was last updated. `Filter(ge;le)` `ReadOnly` 
-| [UpdateUser](General.Products.Products.md#updateuser) | string (nullable) | Login name of the user, who last updated the Product. `Filter(like)` `ReadOnly` 
+| [UpdateUser](General.Products.Products.md#updateuser) | string(64) (nullable) | Login name of the user, who last updated the Product. `Filter(like)` `ReadOnly` 
 | [UseLots](General.Products.Products.md#uselots) | [UseLots](General.Products.Products.md#uselots) | Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. `Required` `Default("A")` 
 
 ## References
@@ -141,9 +141,10 @@ _Default Value_: **False**
 
 Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### CostingMethod
 
@@ -174,9 +175,10 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Product. `Filter(like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Description
 
@@ -266,9 +268,10 @@ _Supports Order By_: **False**
 
 Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. `Required` `Default("MTS")`
 
-_Type_: **string**  
+_Type_: **string(3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **3**  
 _Default Value_: **MTS**  
 
 ### MinimalSalesPricePerLot
@@ -283,7 +286,7 @@ _Supports Order By_: **False**
 
 Minimal base quantity of this product that has to be specified in any sale.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(18, 3) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -299,10 +302,11 @@ _Supports Order By_: **False**
 
 Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(32)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
+_Maximum Length_: **32**  
 
 ### PlanningDemandTimeFenceDays
 
@@ -332,7 +336,7 @@ _Supports Order By_: **False**
 
 Default scrap rate for the recipe, when this product is used as ingredient. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -400,9 +404,10 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Product. `Filter(like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### UseLots
 

@@ -25,12 +25,12 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CheckDays](Applications.Fleet.MaintenancePlans.md#checkdays) | int32 (nullable) | When not null, specifies the number of days between maintenances. 
 | [CheckMonths](Applications.Fleet.MaintenancePlans.md#checkmonths) | int32 (nullable) | When not null, specifies the number of months between maintenances. 
-| [Code](Applications.Fleet.MaintenancePlans.md#code) | string | The unique code of the MaintenancePlan. `Required` 
+| [Code](Applications.Fleet.MaintenancePlans.md#code) | string(16) | The unique code of the MaintenancePlan. `Required` 
 | [Id](Applications.Fleet.MaintenancePlans.md#id) | guid |  
 | [IsActive](Applications.Fleet.MaintenancePlans.md#isactive) | boolean | True if the plan is active and can be selected from drop-downs. `Required` `Default(true)` `Introduced in version 18.2` 
 | [MileageKm](Applications.Fleet.MaintenancePlans.md#mileagekm) | int32 (nullable) | When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur. 
-| [Name](Applications.Fleet.MaintenancePlans.md#name) | string | Maintenance plan name (Multilanguage). `Required` 
-| [Notes](Applications.Fleet.MaintenancePlans.md#notes) | string (nullable) | Notes for this MaintenancePlan. 
+| [Name](Applications.Fleet.MaintenancePlans.md#name) | string(254) | Maintenance plan name (Multilanguage). `Required` 
+| [Notes](Applications.Fleet.MaintenancePlans.md#notes) | string(2147483647) (nullable) | Notes for this MaintenancePlan. 
 | [TripCount](Applications.Fleet.MaintenancePlans.md#tripcount) | int32 (nullable) | When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur. 
 
 
@@ -56,9 +56,10 @@ _Supports Order By_: **False**
 
 The unique code of the MaintenancePlan. `Required`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### Id
 
@@ -88,17 +89,19 @@ _Supports Order By_: **False**
 
 Maintenance plan name (Multilanguage). `Required`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Notes
 
 Notes for this MaintenancePlan.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### TripCount
 

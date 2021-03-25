@@ -29,9 +29,9 @@ Aggregate Root:
 | [ExecutionTime](Logistics.Shipment.TransportationExecutionLines.md#executiontime) | time | The time when the operation was executed. `Required` 
 | [Id](Logistics.Shipment.TransportationExecutionLines.md#id) | guid |  
 | [LineNo](Logistics.Shipment.TransportationExecutionLines.md#lineno) | int32 | Consecutive line number within this execution. `Required` 
-| [Notes](Logistics.Shipment.TransportationExecutionLines.md#notes) | string (nullable) | Notes for this Transportation<br />ExecutionLine. 
+| [Notes](Logistics.Shipment.TransportationExecutionLines.md#notes) | string(2147483647) (nullable) | Notes for this Transportation<br />ExecutionLine. 
 | [OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype) | [OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype) | The type of operation being executed. L=Loading; U=Unloading; O=Other. `Required` 
-| [PalletNumber](Logistics.Shipment.TransportationExecutionLines.md#palletnumber) | string (nullable) | Pallet number, when applicable. null when unknown or not applicable. 
+| [PalletNumber](Logistics.Shipment.TransportationExecutionLines.md#palletnumber) | string(32) (nullable) | Pallet number, when applicable. null when unknown or not applicable. 
 | [PalletsCount](Logistics.Shipment.TransportationExecutionLines.md#palletscount) | int32 (nullable) | Number of pallets affected by this operation. null when unknown or N/A. 
 | [VolumeCbm](Logistics.Shipment.TransportationExecutionLines.md#volumecbm) | int32 (nullable) | Cargo volume in cubic meters, affected by this operation. null when unknown or N/A. 
 | [WeightKg](Logistics.Shipment.TransportationExecutionLines.md#weightkg) | int32 (nullable) | Cargo weight in kg, affected by this operation. null when unknown or N/A. 
@@ -98,9 +98,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this TransportationExecutionLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### OperationType
 
@@ -123,9 +124,10 @@ _Supports Order By_: **False**
 
 Pallet number, when applicable. null when unknown or not applicable.
 
-_Type_: **string (nullable)**  
+_Type_: **string(32) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **32**  
 
 ### PalletsCount
 

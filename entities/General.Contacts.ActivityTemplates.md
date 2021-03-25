@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActivitySubjectMask](General.Contacts.ActivityTemplates.md#activitysubjectmask) | string (nullable) | A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity. 
+| [ActivitySubjectMask](General.Contacts.ActivityTemplates.md#activitysubjectmask) | string(2147483647) (nullable) | A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity. 
 | [AdditionalDays](General.Contacts.ActivityTemplates.md#additionaldays) | int32 | The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. `Required` `Default(0)` 
 | [Id](General.Contacts.ActivityTemplates.md#id) | guid |  
 | [ReminderTime](General.Contacts.ActivityTemplates.md#remindertime) | time (nullable) | Time of the day for the reminder. 
-| [SourceDateField](General.Contacts.ActivityTemplates.md#sourcedatefield) | string | A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required` 
+| [SourceDateField](General.Contacts.ActivityTemplates.md#sourcedatefield) | string(64) | A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required` 
 | [StartTime](General.Contacts.ActivityTemplates.md#starttime) | time | The time of the day when the activity starts. `Required` 
 
 ## References
@@ -44,9 +44,10 @@ Aggregate Tree
 
 A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### AdditionalDays
 
@@ -76,9 +77,10 @@ _Supports Order By_: **False**
 
 A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### StartTime
 

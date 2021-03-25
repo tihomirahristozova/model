@@ -27,8 +27,8 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Cms.WebSiteLanguages.md#id) | guid |  
 | [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. `Required` `Default(false)` 
-| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string | Two letter ISO language code. Sub-tags are currently not supported. `Required` 
-| [Notes](Applications.Cms.WebSiteLanguages.md#notes) | string (nullable) | Notes for this WebSiteLanguage. 
+| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string(2) | Two letter ISO language code. Sub-tags are currently not supported. `Required` 
+| [Notes](Applications.Cms.WebSiteLanguages.md#notes) | string(2147483647) (nullable) | Notes for this WebSiteLanguage. 
 
 ## References
 
@@ -59,17 +59,19 @@ _Default Value_: **False**
 
 Two letter ISO language code. Sub-tags are currently not supported. `Required`
 
-_Type_: **string**  
+_Type_: **string(2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2**  
 
 ### Notes
 
 Notes for this WebSiteLanguage.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

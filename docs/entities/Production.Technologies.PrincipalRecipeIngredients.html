@@ -109,7 +109,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#conditionalpropertyvalue">ConditionalPropertyValue</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>The desired value of Conditional Property in order for the template line to match.</td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#ingredientname">IngredientName</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The principal name of the ingredient. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#scraprate">ScrapRate</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#usagequantityformula">UsageQuantityFormula</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Specifies formula for the usage quantity. The formula can reference properties in <code>&lt;Prop_Name&gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</td>
 </tr>
 </tbody>
@@ -214,9 +214,10 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionalpropertyvalue">ConditionalPropertyValue</h3>
 <p>The desired value of Conditional Property in order for the template line to match.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="fixedscrapquantity">FixedScrapQuantity</h3>
 <p>Fixed scrap quantity for setup. <code>Unit: UsageUnit</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
@@ -230,9 +231,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ingredientname">IngredientName</h3>
 <p>The principal name of the ingredient. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.DefaultMaterial.Name</code></p>
 <h3 id="lineord">LineOrd</h3>
@@ -246,7 +248,7 @@ Aggregate Root:<br>
 <code>( obj.PrincipalRecipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -260,9 +262,10 @@ Aggregate Root:<br>
 <code>IIF( ( obj.UsageQuantityFormula != null), null, obj.UsageQuantity)</code></p>
 <h3 id="usagequantityformula">UsageQuantityFormula</h3>
 <p>Specifies formula for the usage quantity. The formula can reference properties in <code>&lt;Prop_Name&gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.UsageQuantity != null), null, obj.UsageQuantityFormula)</code></p>
 <h2 id="reference-details">Reference Details</h2>

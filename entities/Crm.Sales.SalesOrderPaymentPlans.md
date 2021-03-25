@@ -26,13 +26,13 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Amount](Crm.Sales.SalesOrderPaymentPlans.md#amount) | [Amount](../data-types.md#amount) | Amount to be payed. `Currency: SalesOrder.DocumentCurrency` `Required` 
-| [AmountPercent](Crm.Sales.SalesOrderPaymentPlans.md#amountpercent) | decimal (nullable) | Percent of the sales order amount to be payed. 
+| [AmountPercent](Crm.Sales.SalesOrderPaymentPlans.md#amountpercent) | decimal(7, 6) (nullable) | Percent of the sales order amount to be payed. 
 | [DueDateFormMethod](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | [PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. `Required` 
 | [ExplicitPaymentDueDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduedate) | datetime (nullable) | Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'. 
 | [ExplicitPayment<br />DueStartDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduestartdate) | date (nullable) | Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'. 
 | [Id](Crm.Sales.SalesOrderPaymentPlans.md#id) | guid |  
 | [InstallmentNumber](Crm.Sales.SalesOrderPaymentPlans.md#installmentnumber) | int32 | Consequtive installment number. Used for identifying different payments generated according this payment plan. `Required` 
-| [Notes](Crm.Sales.SalesOrderPaymentPlans.md#notes) | string (nullable) | Notes for this SalesOrderPaymentPlan. 
+| [Notes](Crm.Sales.SalesOrderPaymentPlans.md#notes) | string(254) (nullable) | Notes for this SalesOrderPaymentPlan. 
 | [PaymentStartDays](Crm.Sales.SalesOrderPaymentPlans.md#paymentstartdays) | int32 | Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. `Required` `Default(0)` 
 | [PaymentTermDays](Crm.Sales.SalesOrderPaymentPlans.md#paymenttermdays) | int32 | Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. `Required` `Default(0)` 
 | [Remainder](Crm.Sales.SalesOrderPaymentPlans.md#remainder) | boolean | Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). `Required` `Default(false)` 
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 Percent of the sales order amount to be payed.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(7, 6) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -127,9 +127,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this SalesOrderPaymentPlan.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### PaymentStartDays
 

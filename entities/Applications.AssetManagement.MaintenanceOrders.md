@@ -39,21 +39,21 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AdjustmentNumber](Applications.AssetManagement.MaintenanceOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentTime](Applications.AssetManagement.MaintenanceOrders.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentUser](Applications.AssetManagement.MaintenanceOrders.md#adjustmentuser) | string (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentUser](Applications.AssetManagement.MaintenanceOrders.md#adjustmentuser) | string(64) (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CompleteTime](Applications.AssetManagement.MaintenanceOrders.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationTime](Applications.AssetManagement.MaintenanceOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [CreationUser](Applications.AssetManagement.MaintenanceOrders.md#creationuser) | string | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CreationUser](Applications.AssetManagement.MaintenanceOrders.md#creationuser) | string(64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DeadlineTime](Applications.AssetManagement.MaintenanceOrders.md#deadlinetime) | datetime (nullable) | The deadline for the task. null if there is no deadline. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [DocumentDate](Applications.AssetManagement.MaintenanceOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNo](Applications.AssetManagement.MaintenanceOrders.md#documentno) | string | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNotes](Applications.AssetManagement.MaintenanceOrders.md#documentnotes) | string (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNo](Applications.AssetManagement.MaintenanceOrders.md#documentno) | string(20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNotes](Applications.AssetManagement.MaintenanceOrders.md#documentnotes) | string(2147483647) (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
 | [DocumentVersion](Applications.AssetManagement.MaintenanceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EndTime](Applications.AssetManagement.MaintenanceOrders.md#endtime) | datetime (nullable) | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [EntityName](Applications.AssetManagement.MaintenanceOrders.md#entityname) | string | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [EntityName](Applications.AssetManagement.MaintenanceOrders.md#entityname) | string(64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Applications.AssetManagement.MaintenanceOrders.md#id) | guid |  
 | [IsReleased](Applications.AssetManagement.MaintenanceOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [IsSingleExecution](Applications.AssetManagement.MaintenanceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [Notes](Applications.AssetManagement.MaintenanceOrders.md#notes) | string (nullable) | Notes for this Activity. (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [Notes](Applications.AssetManagement.MaintenanceOrders.md#notes) | string(254) (nullable) | Notes for this Activity. (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [ParentDocument<br />RelationshipType](Applications.AssetManagement.MaintenanceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Applications.AssetManagement.MaintenanceOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PlannedDurationMinutes](Applications.AssetManagement.MaintenanceOrders.md#planneddurationminutes) | int32 (nullable) | Total planned duration of the activity, regardless of the current execution status. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [PlanningOnly](Applications.AssetManagement.MaintenanceOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -61,17 +61,17 @@ Aggregate Tree
 | [Private](Applications.AssetManagement.MaintenanceOrders.md#private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. `Required` `Default(false)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [ReadOnly](Applications.AssetManagement.MaintenanceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReferenceDate](Applications.AssetManagement.MaintenanceOrders.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
-| [ReferenceDocumentNo](Applications.AssetManagement.MaintenanceOrders.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDocumentNo](Applications.AssetManagement.MaintenanceOrders.md#referencedocumentno) | string(20) (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Applications.AssetManagement.MaintenanceOrders.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReminderTime](Applications.AssetManagement.MaintenanceOrders.md#remindertime) | datetime (nullable) | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [StartTime](Applications.AssetManagement.MaintenanceOrders.md#starttime) | datetime | Currently planned starting time of the task. `Required` `Default(Now)` `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [State](Applications.AssetManagement.MaintenanceOrders.md#state) | [DocumentState](Applications.AssetManagement.MaintenanceOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [Subject](Applications.AssetManagement.MaintenanceOrders.md#subject) | string | Task primary subject (required). `Required` `Filter(eq;like)` (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [Subject](Applications.AssetManagement.MaintenanceOrders.md#subject) | string(254) | Task primary subject (required). `Required` `Filter(eq;like)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [SystemType](Applications.AssetManagement.MaintenanceOrders.md#systemtype) | [SystemType](Applications.AssetManagement.MaintenanceOrders.md#systemtype) | T=Task; C=Communication; M=Meeting. `Required` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [Void](Applications.AssetManagement.MaintenanceOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidReason](Applications.AssetManagement.MaintenanceOrders.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidReason](Applications.AssetManagement.MaintenanceOrders.md#voidreason) | string(254) (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidTime](Applications.AssetManagement.MaintenanceOrders.md#voidtime) | datetime (nullable) | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidUser](Applications.AssetManagement.MaintenanceOrders.md#voiduser) | string (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidUser](Applications.AssetManagement.MaintenanceOrders.md#voiduser) | string(64) (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 
 ## References
 
@@ -145,9 +145,10 @@ _Supports Order By_: **False**
 
 The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### CompleteTime
 
@@ -170,9 +171,10 @@ _Default Value_: **CurrentDateTime**
 
 The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### DeadlineTime
 
@@ -196,18 +198,20 @@ _Default Value_: **CurrentDate**
 
 Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **20**  
 
 ### DocumentNotes
 
 Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### DocumentVersion
 
@@ -230,10 +234,11 @@ _Supports Order By_: **False**
 
 The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### Id
 
@@ -264,9 +269,10 @@ _Default Value_: **False**
 
 Notes for this Activity. (Inherited from [Activities](General.Contacts.Activities.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ParentDocumentRelationshipType
 
@@ -352,9 +358,10 @@ _Default Value_: **CurrentDate**
 
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(20) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **20**  
 
 ### ReleaseTime
 
@@ -407,9 +414,10 @@ _Default Value_: **0**
 
 Task primary subject (required). `Required` `Filter(eq;like)` (Inherited from [Activities](General.Contacts.Activities.md))
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 _Back-End Default Expression:_  
 `GetSystemSubject( obj.SystemType, obj.TargetParty)`
@@ -445,9 +453,10 @@ _Default Value_: **False**
 
 Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### VoidTime
 
@@ -461,9 +470,10 @@ _Supports Order By_: **False**
 
 The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 
 ## Reference Details

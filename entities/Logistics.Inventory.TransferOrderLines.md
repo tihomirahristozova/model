@@ -29,7 +29,7 @@ Aggregate Root:
 | [DueDateOut](Logistics.Inventory.TransferOrderLines.md#duedateout) | datetime | When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header. `Required` `Filter(ge;le)` 
 | [Id](Logistics.Inventory.TransferOrderLines.md#id) | guid |  
 | [LineOrd](Logistics.Inventory.TransferOrderLines.md#lineord) | int32 | Line ordinal position within the transaction. Duplicates are allowed, but not advised. `Required` 
-| [Notes](Logistics.Inventory.TransferOrderLines.md#notes) | string (nullable) | Notes for this TransferOrderLine. 
+| [Notes](Logistics.Inventory.TransferOrderLines.md#notes) | string(254) (nullable) | Notes for this TransferOrderLine. 
 | [Quantity](Logistics.Inventory.TransferOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity ordered for transfer. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [QuantityBase](Logistics.Inventory.TransferOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` 
 | [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
@@ -103,9 +103,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this TransferOrderLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Quantity
 

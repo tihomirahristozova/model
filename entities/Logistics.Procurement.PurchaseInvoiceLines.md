@@ -32,7 +32,7 @@ Aggregate Root:
 | [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) (nullable) | Transport mode; used for Intrastat reporting. 
 | [LineAmount](Logistics.Procurement.PurchaseInvoiceLines.md#lineamount) | [Amount](../data-types.md#amount) | The total invoiced amount for this line in the document currency of the invoice. `Currency: PurchaseInvoice.DocumentCurrency` `Required` `Default(0)` 
 | [LineNo](Logistics.Procurement.PurchaseInvoiceLines.md#lineno) | int32 | Consecutive line number within the invoice. `Required` 
-| [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#notes) | string (nullable) | Notes for this PurchaseInvoiceLine. 
+| [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#notes) | string(254) (nullable) | Notes for this PurchaseInvoiceLine. 
 | [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#productname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. `Required` 
 | [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#quantity) | [Quantity](../data-types.md#quantity) | The invoiced quantity. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
@@ -197,9 +197,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this PurchaseInvoiceLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ProductName
 

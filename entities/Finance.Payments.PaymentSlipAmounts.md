@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Finance.Payments.PaymentSlipAmounts.md#description) | string (nullable) | Description of the payed amount. The numbers of the documents which are payed for example. 
+| [Description](Finance.Payments.PaymentSlipAmounts.md#description) | string(254) (nullable) | Description of the payed amount. The numbers of the documents which are payed for example. 
 | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | 'I' for Payment issue, 'R' for payment receipt. `Required` `Filter(eq)` 
 | [Id](Finance.Payments.PaymentSlipAmounts.md#id) | guid |  
 | [IsPartyPayment](Finance.Payments.PaymentSlipAmounts.md#ispartypayment) | boolean | Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). `Required` `Default(true)` 
@@ -55,9 +55,10 @@ Aggregate Root:
 
 Description of the payed amount. The numbers of the documents which are payed for example.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Direction
 

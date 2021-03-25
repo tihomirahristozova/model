@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CatchQuantity](Logistics.Wms.WarehouseTransactions.md#catchquantity) | decimal (nullable) | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)` 
+| [CatchQuantity](Logistics.Wms.WarehouseTransactions.md#catchquantity) | decimal(12, 3) (nullable) | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)` 
 | [CreationTimeUtc](Logistics.Wms.WarehouseTransactions.md#creationtimeutc) | datetime |  
 | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)` 
 | [Id](Logistics.Wms.WarehouseTransactions.md#id) | guid |  
-| [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
+| [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal(12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
 
 ## References
 
@@ -53,7 +53,7 @@ Aggregate Tree
 
 Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)`
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(12, 3) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -92,7 +92,7 @@ _Default Value_: **NewGuid**
 
 The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)`
 
-_Type_: **decimal**  
+_Type_: **decimal(12, 3)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

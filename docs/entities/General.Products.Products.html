@@ -129,7 +129,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#catalogdescriptionhtml">CatalogDescriptionHtml</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.</td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#creationuser">CreationUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who created the Product. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#manufacturingpolicy">ManufacturingPolicy</a></td>
-<td>string</td>
+<td>string(3)</td>
 <td>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. <code>Required</code> <code>Default(&quot;MTS&quot;)</code></td>
 </tr>
 <tr>
@@ -199,7 +199,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#minimalsalesquantitybase">MinimalSalesQuantityBase</a></td>
-<td>decimal (nullable)</td>
+<td>decimal(18, 3) (nullable)</td>
 <td>Minimal base quantity of this product that has to be specified in any sale.</td>
 </tr>
 <tr>
@@ -209,7 +209,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#partnumber">PartNumber</a></td>
-<td>string</td>
+<td>string(32)</td>
 <td>Unique part number of the product. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#scraprate">ScrapRate</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>Default scrap rate for the recipe, when this product is used as ingredient. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -269,7 +269,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#updateuser">UpdateUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who last updated the Product. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -468,9 +468,10 @@ Allowed values for the <code>ABCClass</code>(General.Products.Products.md#abccla
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="catalogdescriptionhtml">CatalogDescriptionHtml</h3>
 <p>Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="costingmethod">CostingMethod</h3>
 <p>Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost.</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html#costingmethod">CostingMethod</a> (nullable)</strong><br>
@@ -507,9 +508,10 @@ Allowed values for the <code>CostingMethod</code>(General.Products.Products.md#c
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>Login name of the user, who created the Product. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="description">Description</h3>
 <p>The description of the product.</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
@@ -603,9 +605,10 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="manufacturingpolicy">ManufacturingPolicy</h3>
 <p>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. <code>Required</code> <code>Default(&quot;MTS&quot;)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>3</strong><br>
 <em>Default Value</em>: <strong>MTS</strong></p>
 <h3 id="minimalsalespriceperlot">MinimalSalesPricePerLot</h3>
 <p>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. <code>Currency: CostingCurrency</code></p>
@@ -614,7 +617,7 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minimalsalesquantitybase">MinimalSalesQuantityBase</h3>
 <p>Minimal base quantity of this product that has to be specified in any sale.</p>
-<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal(18, 3) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
@@ -624,10 +627,11 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partnumber">PartNumber</h3>
 <p>Unique part number of the product. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(32)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="planningdemandtimefencedays">PlanningDemandTimeFenceDays</h3>
 <p>Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days).</p>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
@@ -645,7 +649,7 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>Default scrap rate for the recipe, when this product is used as ingredient. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -689,9 +693,10 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>Login name of the user, who last updated the Product. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="uselots">UseLots</h3>
 <p>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. <code>Required</code> <code>Default(&quot;A&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html#uselots">UseLots</a></strong><br>

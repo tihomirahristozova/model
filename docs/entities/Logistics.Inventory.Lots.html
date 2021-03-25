@@ -119,12 +119,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#licenseno">LicenseNo</a></td>
-<td>string (nullable)</td>
+<td>string(50) (nullable)</td>
 <td>The license number for this lot. Null when license number is N/A or unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#number">Number</a></td>
-<td>string</td>
+<td>string(30)</td>
 <td>The unique number of the Lot. May contain characters, if required. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#purchaselotnumber">PurchaseLotNumber</a></td>
-<td>string (nullable)</td>
+<td>string(30) (nullable)</td>
 <td>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -209,23 +209,26 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="licenseno">LicenseNo</h3>
 <p>The license number for this lot. Null when license number is N/A or unknown.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(50) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>50</strong></p>
 <h3 id="number">Number</h3>
 <p>The unique number of the Lot. May contain characters, if required. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(30)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>30</strong></p>
 <h3 id="productionbatchid">ProductionBatchId</h3>
 <p>Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaselotnumber">PurchaseLotNumber</h3>
 <p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(30) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>30</strong></p>
 <h3 id="receiptdate">ReceiptDate</h3>
 <p>The date of the first receipt of products in this lot. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>

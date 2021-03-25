@@ -124,12 +124,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Notes for this RecipeOperation.</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#operationdescription">OperationDescription</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The description of the operation.</td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#scraprate">ScrapRate</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>Standard rate of scrap during the operation. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#tooling">Tooling</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The tools needed for the routing step.</td>
 </tr>
 <tr>
@@ -239,14 +239,16 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this RecipeOperation.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="operationdescription">OperationDescription</h3>
 <p>The description of the operation.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
 <p>Duration of the operation for standard lot of the product. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -255,7 +257,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>Standard rate of scrap during the operation. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -278,9 +280,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="tooling">Tooling</h3>
 <p>The tools needed for the routing step.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="usequantity">UseQuantity</h3>
 <p>Quantity of the workgroup resource that should be allocated for the operation. <code>Unit: UseQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>

@@ -26,7 +26,7 @@ Aggregate Tree
 | [CalendarDate](Logistics.Inventory.RequisitionPlan.md#calendardate) | datetime | The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning. `Required` `Filter(ge;le)` 
 | [CompletionDate](Logistics.Inventory.RequisitionPlan.md#completiondate) | datetime (nullable) | The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated. 
 | [ConfirmAction](Logistics.Inventory.RequisitionPlan.md#confirmaction) | boolean | True - generate firm planned orders for the current row; false- do not generate;. `Required` `Default(false)` `Filter(eq)` 
-| [ExplanationMessage](Logistics.Inventory.RequisitionPlan.md#explanationmessage) | string (nullable) | A message that explains why the program has generated the planned orders for this row. 
+| [ExplanationMessage](Logistics.Inventory.RequisitionPlan.md#explanationmessage) | string(2147483647) (nullable) | A message that explains why the program has generated the planned orders for this row. 
 | [FirmPlannedOrderReceipts](Logistics.Inventory.RequisitionPlan.md#firmplannedorderreceipts) | [Quantity](../data-types.md#quantity) | The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [FirmPlannedOrderReleases](Logistics.Inventory.RequisitionPlan.md#firmplannedorderreleases) | [Quantity](../data-types.md#quantity) | The order releases which were manually confirmed for release on the specified calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [GenerationDate](Logistics.Inventory.RequisitionPlan.md#generationdate) | datetime | Indicates the date on which the plan is generated. `Required` `Default(Now)` 
@@ -82,9 +82,10 @@ _Default Value_: **False**
 
 A message that explains why the program has generated the planned orders for this row.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### FirmPlannedOrderReceipts
 

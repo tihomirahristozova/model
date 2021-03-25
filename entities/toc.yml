@@ -640,6 +640,8 @@
     href: General.Printouts.md
   - name: ProductCatalogs
     href: General.ProductCatalogs.md
+  - name: ProductGroupsLevelNames
+    href: General.ProductGroupsLevelNames.md
   - name: Products
     href: General.Products.md
     items:

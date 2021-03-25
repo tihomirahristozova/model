@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](Crm.ProductPrices.md#id) | guid |  
 | [MaxQuantity](Crm.ProductPrices.md#maxquantity) | [Quantity](../data-types.md#quantity) (nullable) | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
 | [MinQuantity](Crm.ProductPrices.md#minquantity) | [Quantity](../data-types.md#quantity) (nullable) | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
-| [Notes](Crm.ProductPrices.md#notes) | string (nullable) | Notes for this ProductPrice. 
+| [Notes](Crm.ProductPrices.md#notes) | string(254) (nullable) | Notes for this ProductPrice. 
 | [Price](Crm.ProductPrices.md#price) | [Amount](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [PriceQuantity](Crm.ProductPrices.md#pricequantity) | [Quantity](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` 
 | [Priority](Crm.ProductPrices.md#priority) | [Priority](Crm.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied. `Required` `Default(2)` `Filter(multi eq)` 
@@ -87,9 +87,10 @@ _Supports Order By_: **False**
 
 Notes for this ProductPrice.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Price
 

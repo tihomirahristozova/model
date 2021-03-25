@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](General.Resources.Resources.md#id) | guid |  
 | [Name](General.Resources.Resources.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Resource name. Unique within the resource group. `Required` `Filter(eq;like)` 
-| [Notes](General.Resources.Resources.md#notes) | string (nullable) | Notes for this Resource. 
+| [Notes](General.Resources.Resources.md#notes) | string(2147483647) (nullable) | Notes for this Resource. 
 
 ## References
 
@@ -66,9 +66,10 @@ _Supports Order By_: **False**
 
 Notes for this Resource.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ArticleTextHtml](Applications.Cms.NewsWebModuleArticles.md#articletexthtml) | string (nullable) | The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code. 
+| [ArticleTextHtml](Applications.Cms.NewsWebModuleArticles.md#articletexthtml) | string(2147483647) (nullable) | The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code. 
 | [Id](Applications.Cms.NewsWebModuleArticles.md#id) | guid |  
 | [IsPublished](Applications.Cms.NewsWebModuleArticles.md#ispublished) | boolean | Specifies whether the article is published for display on web. `Required` `Default(false)` 
-| [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string | The language code of the article text. `Required` 
+| [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string(8) | The language code of the article text. `Required` 
 | [PublishDate](Applications.Cms.NewsWebModuleArticles.md#publishdate) | datetime | The date and time when the news article should appear to be published. `Required` `Default(Now)` 
 
 ## References
@@ -43,9 +43,10 @@ Aggregate Tree
 
 The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 
@@ -67,9 +68,10 @@ _Default Value_: **False**
 
 The language code of the article text. `Required`
 
-_Type_: **string**  
+_Type_: **string(8)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **8**  
 
 ### PublishDate
 

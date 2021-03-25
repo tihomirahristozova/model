@@ -104,12 +104,12 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#converttobasedivisor">ConvertToBaseDivisor</a></td>
-<td>decimal</td>
+<td>decimal(9, 3)</td>
 <td>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#converttobasemultiplier">ConvertToBaseMultiplier</a></td>
-<td>decimal</td>
+<td>decimal(9, 3)</td>
 <td>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. <code>Required</code></td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="converttobasedivisor">ConvertToBaseDivisor</h3>
 <p>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(9, 3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -173,7 +173,7 @@ Aggregate Root:<br>
 <code>( ( obj.DestQuantity.Value * obj.DestQuantityUnit.Multiplier) * obj.SourceQuantityUnit.Divisor)</code></p>
 <h3 id="converttobasemultiplier">ConvertToBaseMultiplier</h3>
 <p>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(9, 3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>

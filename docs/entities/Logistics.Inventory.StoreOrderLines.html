@@ -129,12 +129,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLines.html#lotnumber">LotNumber</a></td>
-<td>string (nullable)</td>
+<td>string(16) (nullable)</td>
 <td>Obsolete. Not used.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLines.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Notes for this StoreOrderLine.</td>
 </tr>
 <tr>
@@ -276,14 +276,16 @@ Aggregate Root:<br>
 <code>( obj.StoreOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="lotnumber">LotNumber</h3>
 <p>Obsolete. Not used.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(16) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this StoreOrderLine.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="parentlineid">ParentLineId</h3>
 <p>Id of the line of the parent document, which generated the store order. null for user-entered store orders or if not applicable. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>

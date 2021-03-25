@@ -26,9 +26,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Resources.Resources.md#id) | guid |  
-| [Name](Production.Resources.Resources.md#name) | string | Name of the resource. `Required` `Filter(like)` 
-| [Notes](Production.Resources.Resources.md#notes) | string (nullable) | User notes for the resource. 
-| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal | The usual duration of setup when changing production. `Required` `Default(0)` 
+| [Name](Production.Resources.Resources.md#name) | string(64) | Name of the resource. `Required` `Filter(like)` 
+| [Notes](Production.Resources.Resources.md#notes) | string(254) (nullable) | User notes for the resource. 
+| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal(6, 2) | The usual duration of setup when changing production. `Required` `Default(0)` 
 | [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. . `Unit: SetupScrapUnit` `Required` `Default(0)` 
 | [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount](../data-types.md#amount) (nullable) | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
 | [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount](../data-types.md#amount) (nullable) | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
@@ -62,23 +62,25 @@ _Default Value_: **NewGuid**
 
 Name of the resource. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Notes
 
 User notes for the resource.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### SetupDurationHours
 
 The usual duration of setup when changing production. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(6, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

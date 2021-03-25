@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.CrewMembers.md#id) | guid |  
-| [Notes](Applications.Fleet.CrewMembers.md#notes) | string (nullable) | Notes for this CrewMember. 
+| [Notes](Applications.Fleet.CrewMembers.md#notes) | string(254) (nullable) | Notes for this CrewMember. 
 | [OrdinalPos](Applications.Fleet.CrewMembers.md#ordinalpos) | int32 (nullable) | Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader. 
 
 ## References
@@ -50,9 +50,10 @@ _Default Value_: **NewGuid**
 
 Notes for this CrewMember.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### OrdinalPos
 

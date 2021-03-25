@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.StoreBins.md#id) | guid |  
 | [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store. `Required` `Default(false)` 
-| [Name](Logistics.Inventory.StoreBins.md#name) | string | Name of the store bin. `Required` `Filter(like)` 
+| [Name](Logistics.Inventory.StoreBins.md#name) | string(254) | Name of the store bin. `Required` `Filter(like)` 
 
 ## References
 
@@ -59,9 +59,10 @@ _Default Value_: **False**
 
 Name of the store bin. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

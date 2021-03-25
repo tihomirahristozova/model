@@ -24,7 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Procurement.SupplierTypes.md#id) | guid |  
-| [Name](Logistics.Procurement.SupplierTypes.md#name) | string | The name of this SupplierType. `Required` `Filter(eq;like)` 
+| [Name](Logistics.Procurement.SupplierTypes.md#name) | string(254) | The name of this SupplierType. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -46,9 +46,10 @@ _Default Value_: **NewGuid**
 
 The name of this SupplierType. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

@@ -25,13 +25,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeviceRegistrationNo](Crm.Pos.Devices.md#deviceregistrationno) | string (nullable) | The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. `Filter(multi eq;like)` 
+| [DeviceRegistrationNo](Crm.Pos.Devices.md#deviceregistrationno) | string(32) (nullable) | The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. `Filter(multi eq;like)` 
 | [DeviceType](Crm.Pos.Devices.md#devicetype) | [DeviceType](Crm.Pos.Devices.md#devicetype) | Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. `Required` `Default("OTH")` `Filter(multi eq)` 
-| [ElectronicAddress](Crm.Pos.Devices.md#electronicaddress) | string (nullable) | The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc. `Filter(multi eq;like)` 
+| [ElectronicAddress](Crm.Pos.Devices.md#electronicaddress) | string(254) (nullable) | The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc. `Filter(multi eq;like)` 
 | [Id](Crm.Pos.Devices.md#id) | guid |  
 | [IsActive](Crm.Pos.Devices.md#isactive) | boolean | Indicates whether the device is currently active and can be choosen from drop-downs in new records. `Required` `Default(true)` `Filter(multi eq)` 
 | [ProtocolName](Crm.Pos.Devices.md#protocolname) | [ProtocolName](Crm.Pos.Devices.md#protocolname) (nullable) | The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed. 
-| [SettingsJson](Crm.Pos.Devices.md#settingsjson) | string (nullable) | Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device. 
+| [SettingsJson](Crm.Pos.Devices.md#settingsjson) | string(2147483647) (nullable) | Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device. 
 
 ## References
 
@@ -46,9 +46,10 @@ Aggregate Root:
 
 The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. `Filter(multi eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(32) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **32**  
 
 ### DeviceType
 
@@ -73,9 +74,10 @@ _Default Value_: **Other**
 
 The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc. `Filter(multi eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 
@@ -112,9 +114,10 @@ _Supports Order By_: **False**
 
 Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

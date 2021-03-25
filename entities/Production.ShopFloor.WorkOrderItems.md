@@ -29,7 +29,7 @@ Aggregate Root:
 | [Id](Production.ShopFloor.WorkOrderItems.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.WorkOrderItems.md#lineord) | int32 | The order of the line within the work order. `Required` `Filter(eq;like)` 
 | [LotSize](Production.ShopFloor.WorkOrderItems.md#lotsize) | [Quantity](../data-types.md#quantity) | Quantity produced in one production run. `Unit: ProducedQuantityUnit` `Required` `Default(1)` 
-| [Notes](Production.ShopFloor.WorkOrderItems.md#notes) | string (nullable) | Notes for this WorkOrderItem. 
+| [Notes](Production.ShopFloor.WorkOrderItems.md#notes) | string(2147483647) (nullable) | Notes for this WorkOrderItem. 
 | [ParentLineId](Production.ShopFloor.WorkOrderItems.md#parentlineid) | guid (nullable) | If not null contains the Id of the line of the parent document, that created the current row. `Filter(multi eq)` 
 | [ParentLineNo](Production.ShopFloor.WorkOrderItems.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)` 
 | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. `Required` `Default(3)` 
@@ -113,9 +113,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this WorkOrderItem.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ParentLineId
 

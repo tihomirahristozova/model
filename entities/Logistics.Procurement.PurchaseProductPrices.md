@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](Logistics.Procurement.PurchaseProductPrices.md#id) | guid |  
 | [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#maxquantity) | [Quantity](../data-types.md#quantity) (nullable) | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq)` 
 | [MinQuantity](Logistics.Procurement.PurchaseProductPrices.md#minquantity) | [Quantity](../data-types.md#quantity) (nullable) | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq)` 
-| [Notes](Logistics.Procurement.PurchaseProductPrices.md#notes) | string (nullable) | Notes for this PurchaseProductPrice. 
+| [Notes](Logistics.Procurement.PurchaseProductPrices.md#notes) | string(254) (nullable) | Notes for this PurchaseProductPrice. 
 | [Price](Logistics.Procurement.PurchaseProductPrices.md#price) | [Amount](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` 
 | [PriceQuantity](Logistics.Procurement.PurchaseProductPrices.md#pricequantity) | [Quantity](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` 
 | [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | Priority of the price comparative to other prices. `Required` `Default(2)` `Filter(multi eq)` 
@@ -82,9 +82,10 @@ _Supports Order By_: **False**
 
 Notes for this PurchaseProductPrice.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Price
 

@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelPriceLists.html#marginpercent">MarginPercent</a></td>
-<td>decimal (nullable)</td>
+<td>decimal(6, 5) (nullable)</td>
 <td>Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.</td>
 </tr>
 </tbody>
@@ -158,7 +158,7 @@ Aggregate Root:<br>
 <code>( obj.PricingModel.PriceLists.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="marginpercent">MarginPercent</h3>
 <p>Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.</p>
-<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal(6, 5) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DurationHour](Production.Technologies.PrincipalRecipes.md#durationhour) | decimal | The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. `Required` `Default(0)` 
+| [DurationHour](Production.Technologies.PrincipalRecipes.md#durationhour) | decimal(10, 0) | The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. `Required` `Default(0)` 
 | [ExpiryDate](Production.Technologies.PrincipalRecipes.md#expirydate) | datetime (nullable) | The last date, when the recipe should be used. null means that there is no expiry date yet and the recipe model is still active. `Filter(ge;le)` 
 | [Id](Production.Technologies.PrincipalRecipes.md#id) | guid |  
-| [Name](Production.Technologies.PrincipalRecipes.md#name) | string | Name of the principal recipe. `Required` `Filter(like)` 
-| [Notes](Production.Technologies.PrincipalRecipes.md#notes) | string (nullable) | User comments for the principal recipe. 
+| [Name](Production.Technologies.PrincipalRecipes.md#name) | string(64) | Name of the principal recipe. `Required` `Filter(like)` 
+| [Notes](Production.Technologies.PrincipalRecipes.md#notes) | string(254) (nullable) | User comments for the principal recipe. 
 | [ProduceQuantity](Production.Technologies.PrincipalRecipes.md#producequantity) | [Quantity](../data-types.md#quantity) | Suggested quantity to produce. Usually it is equal to 1. `Unit: ProduceUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [ReleaseDate](Production.Technologies.PrincipalRecipes.md#releasedate) | datetime | The date, when the recipe model is released for use. `Required` `Default(Today)` `Filter(ge;le)` 
-| [ScrapRate](Production.Technologies.PrincipalRecipes.md#scraprate) | decimal | The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. `Required` `Default(0)` 
+| [ScrapRate](Production.Technologies.PrincipalRecipes.md#scraprate) | decimal(7, 6) | The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. `Required` `Default(0)` 
 
 ## References
 
@@ -55,7 +55,7 @@ Aggregate Root:
 
 The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(10, 0)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -79,17 +79,19 @@ _Default Value_: **NewGuid**
 
 Name of the principal recipe. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Notes
 
 User comments for the principal recipe.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ProduceQuantity
 
@@ -113,7 +115,7 @@ _Default Value_: **CurrentDate**
 
 The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.ManagedAssetGroups.md#code) | string | Unique (within all groups) code of the asset group. `Required` `Filter(multi eq;like)` `ORD` 
+| [Code](Applications.AssetManagement.ManagedAssetGroups.md#code) | string(16) | Unique (within all groups) code of the asset group. `Required` `Filter(multi eq;like)` `ORD` 
 | [Id](Applications.AssetManagement.ManagedAssetGroups.md#id) | guid |  
 | [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the asset group (multi-language). `Required` `Filter(eq;like)` 
-| [Notes](Applications.AssetManagement.ManagedAssetGroups.md#notes) | string (nullable) | Notes for this ManagedAssetGroup. 
+| [Notes](Applications.AssetManagement.ManagedAssetGroups.md#notes) | string(2147483647) (nullable) | Notes for this ManagedAssetGroup. 
 
 ## References
 
@@ -41,10 +41,11 @@ Aggregate Tree
 
 Unique (within all groups) code of the asset group. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### Id
 
@@ -65,9 +66,10 @@ _Supports Order By_: **False**
 
 Notes for this ManagedAssetGroup.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

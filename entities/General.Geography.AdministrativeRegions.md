@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Geography.AdministrativeRegions.md#code) | string | Administrative code of country territorial subdivision. `Required` `Filter(eq;like)` 
-| [FullPath](General.Geography.AdministrativeRegions.md#fullpath) | string (nullable) | Full identification path of the current country territorial subdivision. `Filter(eq;like)` 
+| [Code](General.Geography.AdministrativeRegions.md#code) | string(16) | Administrative code of country territorial subdivision. `Required` `Filter(eq;like)` 
+| [FullPath](General.Geography.AdministrativeRegions.md#fullpath) | string(254) (nullable) | Full identification path of the current country territorial subdivision. `Filter(eq;like)` 
 | [Id](General.Geography.AdministrativeRegions.md#id) | guid |  
 | [Name](General.Geography.AdministrativeRegions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of country territorial subdivision. `Required` `Filter(like)` 
-| [ParentFullPath](General.Geography.AdministrativeRegions.md#parentfullpath) | string (nullable) | Parent region of the current territorial subdivision. `Filter(eq;like)` 
+| [ParentFullPath](General.Geography.AdministrativeRegions.md#parentfullpath) | string(254) (nullable) | Parent region of the current territorial subdivision. `Filter(eq;like)` 
 | [ValidFrom](General.Geography.AdministrativeRegions.md#validfrom) | date (nullable) | Start date of validity of this administrative division. null when the starting date is unknown in the past. `Filter(ge;le)` 
 | [ValidTo](General.Geography.AdministrativeRegions.md#validto) | date (nullable) | End date of validity of this administative division. null when the division is still active or ending date is unknown. `Filter(ge;le)` 
 
@@ -44,17 +44,19 @@ Aggregate Tree
 
 Administrative code of country territorial subdivision. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### FullPath
 
 Full identification path of the current country territorial subdivision. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 
@@ -75,9 +77,10 @@ _Supports Order By_: **False**
 
 Parent region of the current territorial subdivision. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ValidFrom
 

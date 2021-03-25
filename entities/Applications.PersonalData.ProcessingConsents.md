@@ -26,19 +26,19 @@ Aggregate Tree
 | [AllowAddress](Applications.PersonalData.ProcessingConsents.md#allowaddress) | boolean | Allows the processing of the physical address. `Required` `Default(false)` `Filter(eq)` 
 | [AllowBasicData](Applications.PersonalData.ProcessingConsents.md#allowbasicdata) | boolean | Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. `Required` `Default(false)` `Filter(eq)` 
 | [AllowEmail](Applications.PersonalData.ProcessingConsents.md#allowemail) | boolean | Allows the processing of the email address. `Required` `Default(false)` `Filter(eq)` 
-| [AllowOtherData](Applications.PersonalData.ProcessingConsents.md#allowotherdata) | string (nullable) | Comma-separated list of other types of data, which was allowed for processing with this consent. `Filter(eq)` 
+| [AllowOtherData](Applications.PersonalData.ProcessingConsents.md#allowotherdata) | string(2147483647) (nullable) | Comma-separated list of other types of data, which was allowed for processing with this consent. `Filter(eq)` 
 | [AllowPhone](Applications.PersonalData.ProcessingConsents.md#allowphone) | boolean | Allows the processing of the telephone number. `Required` `Default(false)` `Filter(eq)` 
 | [ConsentImage](Applications.PersonalData.ProcessingConsents.md#consentimage) | byte[] (nullable) | If not null, it is a graphical image, containing additional information for the consent. 
-| [ConsentText](Applications.PersonalData.ProcessingConsents.md#consenttext) | string (nullable) | The actual text of the consent. `Filter(like)` 
+| [ConsentText](Applications.PersonalData.ProcessingConsents.md#consenttext) | string(2147483647) (nullable) | The actual text of the consent. `Filter(like)` 
 | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). `Required` `Filter(eq)` 
 | [GivenOnUtc](Applications.PersonalData.ProcessingConsents.md#givenonutc) | datetime | The date and time (in Utc), when the consent was given. `Required` `Filter(ge;le)` 
 | [Id](Applications.PersonalData.ProcessingConsents.md#id) | guid |  
 | [IsActive](Applications.PersonalData.ProcessingConsents.md#isactive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. `Required` `Default(true)` `Filter(eq)` 
 | [IsChild](Applications.PersonalData.ProcessingConsents.md#ischild) | boolean | Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. `Required` `Default(false)` `Filter(eq)` 
-| [Notes](Applications.PersonalData.ProcessingConsents.md#notes) | string (nullable) | Notes for this ProcessingConsent. 
-| [ParentEmail](Applications.PersonalData.ProcessingConsents.md#parentemail) | string (nullable) | When a parental rights holder gives a consent for a child, contains the email of the parent. `Filter(like)` 
-| [ParentName](Applications.PersonalData.ProcessingConsents.md#parentname) | string (nullable) | When a parental rights holder gives a consent for a child, contains the name of the parent. `Filter(eq;like)` 
-| [ParentPhone](Applications.PersonalData.ProcessingConsents.md#parentphone) | string (nullable) | When a parental rights holder gives a consent for a child, contains the phone number of the parent. `Filter(like)` 
+| [Notes](Applications.PersonalData.ProcessingConsents.md#notes) | string(2147483647) (nullable) | Notes for this ProcessingConsent. 
+| [ParentEmail](Applications.PersonalData.ProcessingConsents.md#parentemail) | string(50) (nullable) | When a parental rights holder gives a consent for a child, contains the email of the parent. `Filter(like)` 
+| [ParentName](Applications.PersonalData.ProcessingConsents.md#parentname) | string(50) (nullable) | When a parental rights holder gives a consent for a child, contains the name of the parent. `Filter(eq;like)` 
+| [ParentPhone](Applications.PersonalData.ProcessingConsents.md#parentphone) | string(50) (nullable) | When a parental rights holder gives a consent for a child, contains the phone number of the parent. `Filter(like)` 
 | [RetractedOnUtc](Applications.PersonalData.ProcessingConsents.md#retractedonutc) | datetime (nullable) | The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. `Filter(ge;le)` 
 
 ## References
@@ -83,9 +83,10 @@ _Default Value_: **False**
 
 Comma-separated list of other types of data, which was allowed for processing with this consent. `Filter(eq)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### AllowPhone
 
@@ -108,9 +109,10 @@ _Supports Order By_: **False**
 
 The actual text of the consent. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ConsentType
 
@@ -169,33 +171,37 @@ _Default Value_: **False**
 
 Notes for this ProcessingConsent.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ParentEmail
 
 When a parental rights holder gives a consent for a child, contains the email of the parent. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(50) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **50**  
 
 ### ParentName
 
 When a parental rights holder gives a consent for a child, contains the name of the parent. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(50) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **50**  
 
 ### ParentPhone
 
 When a parental rights holder gives a consent for a child, contains the phone number of the parent. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(50) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **50**  
 
 ### RetractedOnUtc
 

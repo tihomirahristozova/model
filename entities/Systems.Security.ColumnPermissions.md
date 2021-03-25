@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string | The name of the secured column. `Required` `Filter(eq)` 
+| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string(128) | The name of the secured column. `Required` `Filter(eq)` 
 | [Id](Systems.Security.ColumnPermissions.md#id) | guid |  
-| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string | The table in which is the secured column. `Required` `Filter(eq)` `ORD` 
+| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string(128) | The table in which is the secured column. `Required` `Filter(eq)` `ORD` 
 
 ## References
 
@@ -40,9 +40,10 @@ Aggregate Tree
 
 The name of the secured column. `Required` `Filter(eq)`
 
-_Type_: **string**  
+_Type_: **string(128)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### Id
 
@@ -55,10 +56,11 @@ _Default Value_: **NewGuid**
 
 The table in which is the secured column. `Required` `Filter(eq)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(128)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+_Maximum Length_: **128**  
 
 
 ## Reference Details

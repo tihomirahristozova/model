@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlertType](Applications.Fleet.VehicleAlerts.md#alerttype) | string | The type of the alert. The type is specfic to the Source. `Required` 
-| [Description](Applications.Fleet.VehicleAlerts.md#description) | string | Description of the alert (Multilanguage). `Required` 
+| [AlertType](Applications.Fleet.VehicleAlerts.md#alerttype) | string(3) | The type of the alert. The type is specfic to the Source. `Required` 
+| [Description](Applications.Fleet.VehicleAlerts.md#description) | string(254) | Description of the alert (Multilanguage). `Required` 
 | [Id](Applications.Fleet.VehicleAlerts.md#id) | guid |  
 | [IsHidden](Applications.Fleet.VehicleAlerts.md#ishidden) | boolean | Specifies, whether the alert is hidden (e.g. managed by the responsible person). `Required` `Default(false)` 
-| [Source](Applications.Fleet.VehicleAlerts.md#source) | string | The source of the alert. G=GPS, O=OBD, M=Maintenance. `Required` 
+| [Source](Applications.Fleet.VehicleAlerts.md#source) | string(1) | The source of the alert. G=GPS, O=OBD, M=Maintenance. `Required` 
 | [Time](Applications.Fleet.VehicleAlerts.md#time) | datetime | The time of the alert. `Required` `ORD` 
 
 ## References
@@ -43,17 +43,19 @@ Aggregate Tree
 
 The type of the alert. The type is specfic to the Source. `Required`
 
-_Type_: **string**  
+_Type_: **string(3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **3**  
 
 ### Description
 
 Description of the alert (Multilanguage). `Required`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 
@@ -75,9 +77,10 @@ _Default Value_: **False**
 
 The source of the alert. G=GPS, O=OBD, M=Maintenance. `Required`
 
-_Type_: **string**  
+_Type_: **string(1)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1**  
 
 ### Time
 

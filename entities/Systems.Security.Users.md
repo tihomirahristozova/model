@@ -30,23 +30,23 @@ Aggregate Tree
 | [AccessFailedCount](Systems.Security.Users.md#accessfailedcount) | int32 | Indicates how many times the user has failed to login. May be used for locking out the user. `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 18.2` 
 | [Active](Systems.Security.Users.md#active) | boolean | True when the login is currently active and the user can log in. `Required` `Default(true)` `Filter(eq)` 
 | [CreationTimeUtc](Systems.Security.Users.md#creationtimeutc) | datetime | The date and time (in UTC), when the user was created. `Required` `Default(Now)` `ReadOnly` `Introduced in version 18.2` 
-| [DefaultCulture](Systems.Security.Users.md#defaultculture) | string (nullable) | The preferred default culture of the user for UI, notifications, etc. null means "en-US". `Introduced in version 20.1` 
-| [Email](Systems.Security.Users.md#email) | string (nullable) | Unique email of the user. Can be null because there may be login providers that don't use emails. `Filter(multi eq;like)` `ORD` `Introduced in version 18.2` 
+| [DefaultCulture](Systems.Security.Users.md#defaultculture) | string(15) (nullable) | The preferred default culture of the user for UI, notifications, etc. null means "en-US". `Introduced in version 20.1` 
+| [Email](Systems.Security.Users.md#email) | string(254) (nullable) | Unique email of the user. Can be null because there may be login providers that don't use emails. `Filter(multi eq;like)` `ORD` `Introduced in version 18.2` 
 | [EmailConfirmed](Systems.Security.Users.md#emailconfirmed) | boolean | Indicates whether the email address for the specified user has been verified. `Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` 
 | [Id](Systems.Security.Users.md#id) | guid |  
 | [IsAdmin](Systems.Security.Users.md#isadmin) | boolean | True if the user is administrator, otherwise false. `Required` `Default(false)` `Filter(eq)` 
 | [LockoutEndUtc](Systems.Security.Users.md#lockoutendutc) | datetime (nullable) | Contains the date and time (in UTC) until the user is locked. null when the user is not locked. `Filter(eq;ge;le;like)` `Introduced in version 18.2` 
-| [Login](Systems.Security.Users.md#login) | string | The login name of the user, which is usually the email. `Required` `Filter(multi eq;like)` `ORD` 
+| [Login](Systems.Security.Users.md#login) | string(64) | The login name of the user, which is usually the email. `Required` `Filter(multi eq;like)` `ORD` 
 | [Name](Systems.Security.Users.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The full name of the user. `Required` `Filter(like)` 
-| [Notes](Systems.Security.Users.md#notes) | string (nullable) | Notes for this User. 
-| [Password](Systems.Security.Users.md#password) | string (nullable) | The password hash of the user, stored in the format, specified in Password Format. 
+| [Notes](Systems.Security.Users.md#notes) | string(254) (nullable) | Notes for this User. 
+| [Password](Systems.Security.Users.md#password) | string(64) (nullable) | The password hash of the user, stored in the format, specified in Password Format. 
 | [PasswordFormat](Systems.Security.Users.md#passwordformat) | [PasswordFormat](Systems.Security.Users.md#passwordformat) | The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. `Required` `Default("MD5")` `Filter(eq)` `Introduced in version 18.2` 
-| [PhoneNumber](Systems.Security.Users.md#phonenumber) | string (nullable) | Used only for two-factor authentication. null when phone-based two-factor is not used. `Filter(eq;like)` `Introduced in version 18.2` 
+| [PhoneNumber](Systems.Security.Users.md#phonenumber) | string(64) (nullable) | Used only for two-factor authentication. null when phone-based two-factor is not used. `Filter(eq;like)` `Introduced in version 18.2` 
 | [PhoneNumberConfirmed](Systems.Security.Users.md#phonenumberconfirmed) | boolean | Indicates whether the Phone Number has been verified. `Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` 
 | [TwoFactorEnabled](Systems.Security.Users.md#twofactorenabled) | boolean | Indicates whether two-factor authentication has been enabled. `Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` 
 | [UserType](Systems.Security.Users.md#usertype) | [UserType](Systems.Security.Users.md#usertype) | Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. `Required` `Default("INT")` `Filter(multi eq)` `Introduced in version 18.2` 
-| [VoiceExtensionNumbers](Systems.Security.Users.md#voiceextensionnumbers) | string (nullable) | Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration. 
-| [WindowsUserName](Systems.Security.Users.md#windowsusername) | string (nullable) | The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user. 
+| [VoiceExtensionNumbers](Systems.Security.Users.md#voiceextensionnumbers) | string(254) (nullable) | Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration. 
+| [WindowsUserName](Systems.Security.Users.md#windowsusername) | string(128) (nullable) | The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user. 
 
 ## References
 
@@ -98,18 +98,20 @@ _Default Value_: **CurrentDateTime**
 
 The preferred default culture of the user for UI, notifications, etc. null means "en-US". `Introduced in version 20.1`
 
-_Type_: **string (nullable)**  
+_Type_: **string(15) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **15**  
 
 ### Email
 
 Unique email of the user. Can be null because there may be login providers that don't use emails. `Filter(multi eq;like)` `ORD` `Introduced in version 18.2`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
+_Maximum Length_: **254**  
 
 ### EmailConfirmed
 
@@ -148,10 +150,11 @@ _Supports Order By_: **False**
 
 The login name of the user, which is usually the email. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### Name
 
@@ -165,17 +168,19 @@ _Supports Order By_: **False**
 
 Notes for this User.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Password
 
 The password hash of the user, stored in the format, specified in Password Format.
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### PasswordFormat
 
@@ -198,9 +203,10 @@ _Default Value_: **MD5**
 
 Used only for two-factor authentication. null when phone-based two-factor is not used. `Filter(eq;like)` `Introduced in version 18.2`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### PhoneNumberConfirmed
 
@@ -244,17 +250,19 @@ _Default Value_: **InternalUser**
 
 Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### WindowsUserName
 
 The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.
 
-_Type_: **string (nullable)**  
+_Type_: **string(128) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 
 ## Reference Details

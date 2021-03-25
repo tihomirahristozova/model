@@ -24,10 +24,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Communities.SocialGroups.md#code) | string | Unique code of the group. Also used as group slug for Internet URL purposes. `Required` `ORD` 
+| [Code](Communities.SocialGroups.md#code) | string(32) | Unique code of the group. Also used as group slug for Internet URL purposes. `Required` `ORD` 
 | [Id](Communities.SocialGroups.md#id) | guid |  
-| [Name](Communities.SocialGroups.md#name) | string | Multilanguage name of the group. `Required` 
-| [Notes](Communities.SocialGroups.md#notes) | string (nullable) | Notes for this SocialGroup. 
+| [Name](Communities.SocialGroups.md#name) | string(256) | Multilanguage name of the group. `Required` 
+| [Notes](Communities.SocialGroups.md#notes) | string(2147483647) (nullable) | Notes for this SocialGroup. 
 
 ## Child Collections
 
@@ -42,10 +42,11 @@ Aggregate Tree
 
 Unique code of the group. Also used as group slug for Internet URL purposes. `Required` `ORD`
 
-_Type_: **string**  
+_Type_: **string(32)**  
 _Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
+_Maximum Length_: **32**  
 
 ### Id
 
@@ -58,17 +59,19 @@ _Default Value_: **NewGuid**
 
 Multilanguage name of the group. `Required`
 
-_Type_: **string**  
+_Type_: **string(256)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **256**  
 
 ### Notes
 
 Notes for this SocialGroup.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 

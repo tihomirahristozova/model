@@ -111,12 +111,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#code">Code</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>Unique process code. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#description">Description</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The description of this Process. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -141,7 +141,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#name">Name</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The name of this Process. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
@@ -198,15 +198,17 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>Unique process code. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="description">Description</h3>
 <p>The description of this Process. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -260,9 +262,10 @@ Generic enum type for Locality properties<br>
 <em>Default Value</em>: <strong>Location</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this Process. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="processgroup">ProcessGroup</h3>
 <p>The process group, to which this process belongs. <code>Required</code> <code>Filter(multi eq)</code></p>

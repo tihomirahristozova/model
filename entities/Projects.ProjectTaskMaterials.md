@@ -29,7 +29,7 @@ Aggregate Root:
 | [Id](Projects.ProjectTaskMaterials.md#id) | guid |  
 | [LineNumber](Projects.ProjectTaskMaterials.md#linenumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes. `Required` `Default(0)` 
 | [Quantity](Projects.ProjectTaskMaterials.md#quantity) | [Quantity](../data-types.md#quantity) | The required quantity of the material. `Unit: QuantityUnit` `Required` `Default(1)` 
-| [QuantityBase](Projects.ProjectTaskMaterials.md#quantitybase) | decimal | The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `ReadOnly` 
+| [QuantityBase](Projects.ProjectTaskMaterials.md#quantitybase) | decimal(9, 3) | The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `ReadOnly` 
 
 ## References
 
@@ -86,7 +86,7 @@ _Default Value_: **Constant**
 
 The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `ReadOnly`
 
-_Type_: **decimal**  
+_Type_: **decimal(9, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

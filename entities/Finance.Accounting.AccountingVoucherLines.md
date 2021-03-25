@@ -26,16 +26,16 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CorrespondanceNo](Finance.Accounting.AccountingVoucherLines.md#correspondanceno) | int32 | The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits. `Required` `Default(0)` 
-| [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#correspondantamount) | decimal (nullable) | The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). `ReadOnly` 
+| [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#correspondantamount) | decimal(18, 2) (nullable) | The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). `ReadOnly` 
 | [Credit](Finance.Accounting.AccountingVoucherLines.md#credit) | [Amount](../data-types.md#amount) | The amount of the credit in the currency of the account. 0 means that the account is not credited. `Currency: Currency` `Required` `Default(0)` 
 | [CreditBase](Finance.Accounting.AccountingVoucherLines.md#creditbase) | [Amount](../data-types.md#amount) | The amount of credit in base currency. `Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [Debit](Finance.Accounting.AccountingVoucherLines.md#debit) | [Amount](../data-types.md#amount) | The amount of the debit in the currency of the account. 0 means that the account is not debited. `Currency: Currency` `Required` `Default(0)` 
 | [DebitBase](Finance.Accounting.AccountingVoucherLines.md#debitbase) | [Amount](../data-types.md#amount) | The amount of debit in base currency. `Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [Id](Finance.Accounting.AccountingVoucherLines.md#id) | guid |  
-| [ItemKey](Finance.Accounting.AccountingVoucherLines.md#itemkey) | string (nullable) | The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. `Filter(eq;like)` 
+| [ItemKey](Finance.Accounting.AccountingVoucherLines.md#itemkey) | string(64) (nullable) | The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. `Filter(eq;like)` 
 | [LineNo](Finance.Accounting.AccountingVoucherLines.md#lineno) | int32 | Consecutive number of the line within the voucher. `Required` 
-| [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#ratedivisor) | decimal | The divisor for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
-| [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#ratemultiplier) | decimal | The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
+| [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#ratedivisor) | decimal(18, 6) | The divisor for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
+| [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#ratemultiplier) | decimal(18, 6) | The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
 
 ## References
 
@@ -65,7 +65,7 @@ _Default Value_: **0**
 
 The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). `ReadOnly`
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(18, 2) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -116,9 +116,10 @@ _Default Value_: **NewGuid**
 
 The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### LineNo
 
@@ -137,7 +138,7 @@ _Front-End Recalc Expressions:_
 
 The divisor for conversion from Debit/Credit to base currency. `Required` `Default(1)`
 
-_Type_: **decimal**  
+_Type_: **decimal(18, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -146,7 +147,7 @@ _Default Value_: **1**
 
 The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)`
 
-_Type_: **decimal**  
+_Type_: **decimal(18, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

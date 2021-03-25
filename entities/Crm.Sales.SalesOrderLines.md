@@ -27,18 +27,18 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DeliveryTermsCode](Crm.Sales.SalesOrderLines.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrderLines.md#deliverytermscode) (nullable) | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
 | [GuaranteePeriodDays](Crm.Sales.SalesOrderLines.md#guaranteeperioddays) | int32 (nullable) | Guarantee period in days for the offered product. null for non-serviced products. 
-| [HistoricalDataJson](Crm.Sales.SalesOrderLines.md#historicaldatajson) | string (nullable) | Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. `Introduced in version 19.1` 
+| [HistoricalDataJson](Crm.Sales.SalesOrderLines.md#historicaldatajson) | string(2147483647) (nullable) | Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. `Introduced in version 19.1` 
 | [HistoricalUnitCost](Crm.Sales.SalesOrderLines.md#historicalunitcost) | [Amount](../data-types.md#amount) (nullable) | Used for returning of goods that are sold before the exploitation of the system. `Currency: SalesOrder.DocumentCurrency` `Filter(eq;ge;le)` 
 | [Id](Crm.Sales.SalesOrderLines.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrderLines.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrderLines.md#intrastattransactionnaturecode) (nullable) | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Sales.SalesOrderLines.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrderLines.md#intrastattransportmodecode) (nullable) | Transport mode; used for Intrastat reporting. 
 | [LineAmount](Crm.Sales.SalesOrderLines.md#lineamount) | [Amount](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Unit_Price, less the discounts. `Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)` 
-| [LineCustomDiscountPercent](Crm.Sales.SalesOrderLines.md#linecustomdiscountpercent) | decimal | User-defined discount for the line. `Required` `Default(0)` `Filter(ge;le)` 
+| [LineCustomDiscountPercent](Crm.Sales.SalesOrderLines.md#linecustomdiscountpercent) | decimal(7, 6) | User-defined discount for the line. `Required` `Default(0)` `Filter(ge;le)` 
 | [LineFromDate](Crm.Sales.SalesOrderLines.md#linefromdate) | date (nullable) | When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. `Introduced in version 20.1` 
 | [LineNo](Crm.Sales.SalesOrderLines.md#lineno) | int32 | Consecutive number of the line within the sales order. `Required` `Filter(eq)` `ORD` 
-| [LineStandardDiscount<br />Percent](Crm.Sales.SalesOrderLines.md#linestandarddiscountpercent) | decimal | Standard discount for the line. This is automatically computed according to discount conditions. `Required` `Default(0)` `ReadOnly` 
+| [LineStandardDiscount<br />Percent](Crm.Sales.SalesOrderLines.md#linestandarddiscountpercent) | decimal(7, 6) | Standard discount for the line. This is automatically computed according to discount conditions. `Required` `Default(0)` `ReadOnly` 
 | [LineToDate](Crm.Sales.SalesOrderLines.md#linetodate) | date (nullable) | When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. `Introduced in version 20.1` 
-| [Notes](Crm.Sales.SalesOrderLines.md#notes) | string (nullable) | Notes for this SalesOrderLine. 
+| [Notes](Crm.Sales.SalesOrderLines.md#notes) | string(2147483647) (nullable) | Notes for this SalesOrderLine. 
 | [ParentLineNo](Crm.Sales.SalesOrderLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)` 
 | [PersistLot](Crm.Sales.SalesOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)` 
 | [ProductDescription](Crm.Sales.SalesOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the sold product at the time the sale was made. `Required` `Filter(like)` 
@@ -123,9 +123,10 @@ _Front-End Recalc Expressions:_
 
 Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. `Introduced in version 19.1`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### HistoricalUnitCost
 
@@ -225,7 +226,7 @@ _Front-End Recalc Expressions:_
 
 User-defined discount for the line. `Required` `Default(0)` `Filter(ge;le)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -260,7 +261,7 @@ _Front-End Recalc Expressions:_
 
 Standard discount for the line. This is automatically computed according to discount conditions. `Required` `Default(0)` `ReadOnly`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -287,9 +288,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this SalesOrderLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ParentLineNo
 

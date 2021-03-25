@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPropertyValue](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvalue) | string (nullable) | When not null, specifies the default value of the property, for new products in the group. 
-| [DefaultProperty<br />ValueDescription](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvaluedescription) | string (nullable) | When not null, specifies the default description value of the property, for new products in the group. 
+| [DefaultPropertyValue](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvalue) | string(254) (nullable) | When not null, specifies the default value of the property, for new products in the group. 
+| [DefaultProperty<br />ValueDescription](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvaluedescription) | string(254) (nullable) | When not null, specifies the default description value of the property, for new products in the group. 
 | [DefaultValueId](General.Products.ProductGroupRequiredProperties.md#defaultvalueid) | guid (nullable) | When not null, specifies the default internal Id value of the property, for new products in the group. `Filter(multi eq)` 
 | [Id](General.Products.ProductGroupRequiredProperties.md#id) | guid |  
 | [PropertyNo](General.Products.ProductGroupRequiredProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. `Required` `Default(0)` 
@@ -46,17 +46,19 @@ Aggregate Root:
 
 When not null, specifies the default value of the property, for new products in the group.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### DefaultPropertyValueDescription
 
 When not null, specifies the default description value of the property, for new products in the group.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### DefaultValueId
 

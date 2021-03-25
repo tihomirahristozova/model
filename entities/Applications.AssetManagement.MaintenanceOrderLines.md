@@ -29,7 +29,7 @@ Aggregate Root:
 | [LineNo](Applications.AssetManagement.MaintenanceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the maintenance order. `Required` 
 | [NextServiceDate](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicedate) | date (nullable) | Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used. 
 | [NextServiceTracked<br />ParameterValue](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicetrackedparametervalue) | int32 (nullable) | Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used. 
-| [Notes](Applications.AssetManagement.MaintenanceOrderLines.md#notes) | string (nullable) | Notes for this MaintenanceOrderLine. 
+| [Notes](Applications.AssetManagement.MaintenanceOrderLines.md#notes) | string(2147483647) (nullable) | Notes for this MaintenanceOrderLine. 
 
 ## References
 
@@ -83,9 +83,10 @@ _Supports Order By_: **False**
 
 Notes for this MaintenanceOrderLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.DataWarehouse.DataMeasureGroups.md#code) | string | Unique group code. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Applications.DataWarehouse.DataMeasureGroups.md#code) | string(16) | Unique group code. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Applications.DataWarehouse.DataMeasureGroups.md#id) | guid |  
-| [Name](Applications.DataWarehouse.DataMeasureGroups.md#name) | string | Group name (multilanguage). `Required` `Filter(eq;like)` 
-| [Notes](Applications.DataWarehouse.DataMeasureGroups.md#notes) | string (nullable) | Notes for this DataMeasureGroup. 
+| [Name](Applications.DataWarehouse.DataMeasureGroups.md#name) | string(254) | Group name (multilanguage). `Required` `Filter(eq;like)` 
+| [Notes](Applications.DataWarehouse.DataMeasureGroups.md#notes) | string(2147483647) (nullable) | Notes for this DataMeasureGroup. 
 
 ## References
 
@@ -41,10 +41,11 @@ Aggregate Tree
 
 Unique group code. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### Id
 
@@ -57,17 +58,19 @@ _Default Value_: **NewGuid**
 
 Group name (multilanguage). `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Notes
 
 Notes for this DataMeasureGroup.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

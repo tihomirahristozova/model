@@ -129,7 +129,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#amounttypecode">AmountTypeCode</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -144,12 +144,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#defaultpercent">DefaultPercent</a></td>
-<td>decimal (nullable)</td>
+<td>decimal(7, 6) (nullable)</td>
 <td>Default percent for amounts for which percent input is allowed; null otherwise.</td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#description">Description</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>The description of this DocumentAmountType.</td>
 </tr>
 <tr>
@@ -274,10 +274,11 @@ Allowed values for the <code>AllowedDirections</code>(General.DocumentAmountType
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="amounttypecode">AmountTypeCode</h3>
 <p>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="amounttypename">AmountTypeName</h3>
 <p>The name of the amount type. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
@@ -292,16 +293,17 @@ Allowed values for the <code>AllowedDirections</code>(General.DocumentAmountType
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="defaultpercent">DefaultPercent</h3>
 <p>Default percent for amounts for which percent input is allowed; null otherwise.</p>
-<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( Not( obj.PercentInputAllowed), null, obj.DefaultPercent)</code></p>
 <h3 id="description">Description</h3>
 <p>The description of this DocumentAmountType.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="distributeby">DistributeBy</h3>
 <p>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). <code>Required</code> <code>Default(&quot;AMOUNT&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a></strong><br>

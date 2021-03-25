@@ -29,8 +29,8 @@ Aggregate Tree
 | [Id](General.DocumentFulfillments.md#id) | guid |  
 | [IsFinal](General.DocumentFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. `Required` `Filter(eq)` 
 | [LineNo](General.DocumentFulfillments.md#lineno) | int32 (nullable) | Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26` 
-| [LineType](General.DocumentFulfillments.md#linetype) | string | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
-| [QuantityBase](General.DocumentFulfillments.md#quantitybase) | decimal | Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
+| [LineType](General.DocumentFulfillments.md#linetype) | string(1) | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
+| [QuantityBase](General.DocumentFulfillments.md#quantitybase) | decimal(12, 3) | Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
 
 ## References
 
@@ -102,16 +102,17 @@ _Supports Order By_: **False**
 
 Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26`
 
-_Type_: **string**  
+_Type_: **string(1)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1**  
 _Default Value_: **L**  
 
 ### QuantityBase
 
 Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
 
-_Type_: **decimal**  
+_Type_: **decimal(12, 3)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 

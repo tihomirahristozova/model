@@ -104,7 +104,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Security.ColumnPermissions.html#columnname">ColumnName</a></td>
-<td>string</td>
+<td>string(128)</td>
 <td>The name of the secured column. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.ColumnPermissions.html#tablename">TableName</a></td>
-<td>string</td>
+<td>string(128)</td>
 <td>The table in which is the secured column. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 </tbody>
@@ -139,9 +139,10 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="columnname">ColumnName</h3>
 <p>The name of the secured column. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(128)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -149,10 +150,11 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="tablename">TableName</h3>
 <p>The table in which is the secured column. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(128)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <p>The required access key for accessing the column. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>

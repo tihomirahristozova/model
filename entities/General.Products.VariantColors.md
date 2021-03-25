@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.VariantColors.md#code) | string | Unique code of the color. Used to generate parts of bar-codes and in other coding schemes. `Required` `Filter(eq;like)` `ORD` 
+| [Code](General.Products.VariantColors.md#code) | string(8) | Unique code of the color. Used to generate parts of bar-codes and in other coding schemes. `Required` `Filter(eq;like)` `ORD` 
 | [Id](General.Products.VariantColors.md#id) | guid |  
 | [Name](General.Products.VariantColors.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this VariantColor. `Required` `Filter(eq;like)` `ORD` 
 
@@ -34,10 +34,11 @@ Aggregate Tree
 
 Unique code of the color. Used to generate parts of bar-codes and in other coding schemes. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(8)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **8**  
 
 ### Id
 

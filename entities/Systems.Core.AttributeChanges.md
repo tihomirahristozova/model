@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string | The attribute name. `Required` `Filter(eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name` 
-| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (nullable) | The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` 
+| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string(64) | The attribute name. `Required` `Filter(eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name` 
+| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string(2147483647) (nullable) | The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` 
 
 ## References
 
@@ -41,19 +41,21 @@ Aggregate Root:
 
 The attribute name. `Required` `Filter(eq)` `Inherited from Sys_Attribute_Changes_Table.Attribute_Name`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Inherited From_: **Sys_Attribute_Changes_Table.Attribute_Name**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### NewValue
 
 The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_Changes_Table.New_Value`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Inherited From_: **Sys_Attribute_Changes_Table.New_Value**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

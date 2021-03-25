@@ -25,17 +25,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountColumnName](Finance.Accounting.TemplateLines.md#amountcolumnname) | string | The name of the column within the amount rowset where the amount is located. `Required` 
+| [AmountColumnName](Finance.Accounting.TemplateLines.md#amountcolumnname) | string(64) | The name of the column within the amount rowset where the amount is located. `Required` 
 | [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) | [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) (nullable) | Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier. 
 | [AmountRowId](Finance.Accounting.TemplateLines.md#amountrowid) | guid (nullable) | The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)` 
-| [AmountRowName](Finance.Accounting.TemplateLines.md#amountrowname) | string (nullable) | The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name. 
+| [AmountRowName](Finance.Accounting.TemplateLines.md#amountrowname) | string(254) (nullable) | The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name. 
 | [AmountSourceFilter](Finance.Accounting.TemplateLines.md#amountsourcefilter) | dataaccessfilter (nullable) | Filter that further specifies which rows from the amount rowset determine the amount. 
-| [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required` 
+| [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string(64) | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required` 
 | [FilterXML](Finance.Accounting.TemplateLines.md#filterxml) | dataaccessfilter (nullable) | The line is accounted only when the filter is satisfied compared with the source document header. 
 | [Id](Finance.Accounting.TemplateLines.md#id) | guid |  
 | [LineNo](Finance.Accounting.TemplateLines.md#lineno) | int32 | Consecutive number of the line within the template. Determines the order of execution of the template lines. `Required` 
-| [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal | Factor by which the amount from the source will be multiplied. `Required` `Default(1)` 
-| [Notes](Finance.Accounting.TemplateLines.md#notes) | string (nullable) | Notes for this TemplateLine. 
+| [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal(18, 6) | Factor by which the amount from the source will be multiplied. `Required` `Default(1)` 
+| [Notes](Finance.Accounting.TemplateLines.md#notes) | string(254) (nullable) | Notes for this TemplateLine. 
 | [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime (nullable) | Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)` 
 | [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime (nullable) | End date to which the accounting template line is valid. `Filter(multi eq;ge;le)` 
 
@@ -60,9 +60,10 @@ Aggregate Root:
 
 The name of the column within the amount rowset where the amount is located. `Required`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### AmountCondition
 
@@ -91,9 +92,10 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### AmountSourceFilter
 
@@ -107,9 +109,10 @@ _Supports Order By_: **False**
 
 The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### FilterXML
 
@@ -143,7 +146,7 @@ _Front-End Recalc Expressions:_
 
 Factor by which the amount from the source will be multiplied. `Required` `Default(1)`
 
-_Type_: **decimal**  
+_Type_: **decimal(18, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -152,9 +155,10 @@ _Default Value_: **1**
 
 Notes for this TemplateLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### ValidFromDate
 

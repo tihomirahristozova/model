@@ -24,9 +24,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.CostCenters.md#id) | guid |  
-| [Name](Finance.Accounting.CostCenters.md#name) | string | The name of this CostCenter. `Required` `Filter(like)` 
-| [Notes](Finance.Accounting.CostCenters.md#notes) | string (nullable) | Notes for this CostCenter. 
-| [RelativeWeight](Finance.Accounting.CostCenters.md#relativeweight) | decimal | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)` 
+| [Name](Finance.Accounting.CostCenters.md#name) | string(254) | The name of this CostCenter. `Required` `Filter(like)` 
+| [Notes](Finance.Accounting.CostCenters.md#notes) | string(254) (nullable) | Notes for this CostCenter. 
+| [RelativeWeight](Finance.Accounting.CostCenters.md#relativeweight) | decimal(18, 4) | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)` 
 
 ## References
 
@@ -49,23 +49,25 @@ _Default Value_: **NewGuid**
 
 The name of this CostCenter. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Notes
 
 Notes for this CostCenter.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### RelativeWeight
 
 The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)`
 
-_Type_: **decimal**  
+_Type_: **decimal(18, 4)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

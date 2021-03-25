@@ -25,9 +25,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Core.ObjectChangesets.md#applicationname) | string (nullable) | The application which requested the change. null when it is unknown. `Filter(eq)` 
+| [ApplicationName](Systems.Core.ObjectChangesets.md#applicationname) | string(2147483647) (nullable) | The application which requested the change. null when it is unknown. `Filter(eq)` 
 | [Id](Systems.Core.ObjectChangesets.md#id) | guid |  
-| [ServerVersion](Systems.Core.ObjectChangesets.md#serverversion) | string | The version of the application server at the time of the change. `Required` 
+| [ServerVersion](Systems.Core.ObjectChangesets.md#serverversion) | string(16) | The version of the application server at the time of the change. `Required` 
 | [TimeUtc](Systems.Core.ObjectChangesets.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` 
 
 ## References
@@ -49,9 +49,10 @@ Aggregate Tree
 
 The application which requested the change. null when it is unknown. `Filter(eq)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 
@@ -64,9 +65,10 @@ _Default Value_: **NewGuid**
 
 The version of the application server at the time of the change. `Required`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### TimeUtc
 

@@ -109,12 +109,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Folders.html#name">Name</a></td>
-<td>string</td>
+<td>string(128)</td>
 <td>Name of the folder. Unique within its parent folder. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Folders.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this Folder.</td>
 </tr>
 </tbody>
@@ -149,14 +149,16 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>Name of the folder. Unique within its parent folder. <code>Required</code> <code>Filter(multi eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(128)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Folder.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <p>The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. <code>Filter(multi eq)</code></p>

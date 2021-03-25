@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Resources.ResourceInstances.md#code) | string | Code of the instance, unique within the resource. `Required` `Filter(eq;like)` 
+| [Code](General.Resources.ResourceInstances.md#code) | string(16) | Code of the instance, unique within the resource. `Required` `Filter(eq;like)` 
 | [Id](General.Resources.ResourceInstances.md#id) | guid |  
-| [Name](General.Resources.ResourceInstances.md#name) | string | Multilanguage resource instance name. `Required` `Filter(eq;like)` 
-| [Notes](General.Resources.ResourceInstances.md#notes) | string (nullable) | Notes for this ResourceInstance. 
+| [Name](General.Resources.ResourceInstances.md#name) | string(2147483647) | Multilanguage resource instance name. `Required` `Filter(eq;like)` 
+| [Notes](General.Resources.ResourceInstances.md#notes) | string(2147483647) (nullable) | Notes for this ResourceInstance. 
 
 ## References
 
@@ -45,9 +45,10 @@ Aggregate Root:
 
 Code of the instance, unique within the resource. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### Id
 
@@ -60,17 +61,19 @@ _Default Value_: **NewGuid**
 
 Multilanguage resource instance name. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(2147483647)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Notes
 
 Notes for this ResourceInstance.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

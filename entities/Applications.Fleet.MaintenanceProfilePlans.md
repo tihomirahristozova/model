@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.MaintenanceProfilePlans.md#id) | guid |  
 | [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. `Required` `Default(true)` `Introduced in version 18.2` 
-| [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string (nullable) | Notes for this MaintenanceProfilePlan. 
+| [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string(2147483647) (nullable) | Notes for this MaintenanceProfilePlan. 
 
 ## References
 
@@ -59,9 +59,10 @@ _Default Value_: **True**
 
 Notes for this MaintenanceProfilePlan.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

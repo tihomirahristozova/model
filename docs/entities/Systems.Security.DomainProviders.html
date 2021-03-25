@@ -104,12 +104,12 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Security.DomainProviders.html#clientid">ClientID</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>This is the Client_ID of our registration within the provider.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.DomainProviders.html#clientsecret">ClientSecret</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>This is the password, which we, as a client app, use to access the authentication provider.</td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.DomainProviders.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this DomainProvider.</td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.DomainProviders.html#tenantid">TenantID</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.</td>
 </tr>
 </tbody>
@@ -164,14 +164,16 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="clientid">ClientID</h3>
 <p>This is the Client_ID of our registration within the provider.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="clientsecret">ClientSecret</h3>
 <p>This is the password, which we, as a client app, use to access the authentication provider.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="displayname">DisplayName</h3>
 <p>Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
@@ -190,9 +192,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this DomainProvider.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="providername">ProviderName</h3>
 <p>The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.DomainProviders.html#providername">ProviderName</a></strong><br>
@@ -228,9 +231,10 @@ Allowed values for the <code>ProviderName</code>(Systems.Security.DomainProvider
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tenantid">TenantID</h3>
 <p>When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="domain">Domain</h3>
 <p>The domain for which the provider is setup. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

@@ -28,7 +28,7 @@ Aggregate Root:
 | [BaseAmount](General.DocumentAmounts.md#baseamount) | [Amount](../data-types.md#amount) (nullable) | The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. `Currency: LogisticsDocument.DocumentCurrency` `ReadOnly` 
 | [Id](General.DocumentAmounts.md#id) | guid |  
 | [InputAmount](General.DocumentAmounts.md#inputamount) | [Amount](../data-types.md#amount) (nullable) | When not null, specifies directly the amount of the additional amount. `Currency: GetInputAmountCurrency()` `Filter(ge;le)` 
-| [InputPercent](General.DocumentAmounts.md#inputpercent) | decimal (nullable) | When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). `Filter(ge;le)` 
+| [InputPercent](General.DocumentAmounts.md#inputpercent) | decimal(7, 6) (nullable) | When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). `Filter(ge;le)` 
 | [InputUnitAmount](General.DocumentAmounts.md#inputunitamount) | [Amount](../data-types.md#amount) (nullable) | Input unit amount for the calculation of the current amount. `Currency: GetInputAmountCurrency()` `Filter(eq;ge;le)` 
 | [TotalDistributedAmount](General.DocumentAmounts.md#totaldistributedamount) | [Amount](../data-types.md#amount) (nullable) | The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. `Currency: LogisticsDocument.DocumentCurrency` `ReadOnly` 
 | [UserCanChangeInput](General.DocumentAmounts.md#usercanchangeinput) | boolean | True if the user, entering the document is allowed to change the default input percent. `Required` `Default(true)` 
@@ -80,7 +80,7 @@ _Front-End Recalc Expressions:_
 
 When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). `Filter(ge;le)`
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(7, 6) (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

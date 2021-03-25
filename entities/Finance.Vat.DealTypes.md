@@ -26,7 +26,7 @@ Aggregate Tree
 | [EntryType](Finance.Vat.DealTypes.md#entrytype) | [EntryType](Finance.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. `Required` `Filter(eq)` 
 | [Id](Finance.Vat.DealTypes.md#id) | guid |  
 | [IsSystem](Finance.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [Name](Finance.Vat.DealTypes.md#name) | string | Description of the deal type. `Required` `Filter(eq;like)` 
+| [Name](Finance.Vat.DealTypes.md#name) | string(254) | Description of the deal type. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -73,9 +73,10 @@ _Default Value_: **False**
 
 Description of the deal type. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

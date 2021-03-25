@@ -108,7 +108,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Production.Resources.OperationGroups.html#fullpath">FullPath</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The full path to the operation group. The full path starts with, ends with and is delimited by the &quot;/&quot; (forward slash) character. <code>Required</code> <code>Default(&quot;&quot;)</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -118,12 +118,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Production.Resources.OperationGroups.html#name">Name</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>The name of this OperationGroup. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.OperationGroups.html#parent">Parent</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>Path of parent group. <code>Required</code> <code>Default(&quot;/&quot;)</code> <code>Filter(like)</code> <code>ORD</code></td>
 </tr>
 </tbody>
@@ -148,9 +148,10 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fullpath">FullPath</h3>
 <p>The full path to the operation group. The full path starts with, ends with and is delimited by the &quot;/&quot; (forward slash) character. <code>Required</code> <code>Default(&quot;&quot;)</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong><br>
 <em>Default Value</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
@@ -159,15 +160,17 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this OperationGroup. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="parent">Parent</h3>
 <p>Path of parent group. <code>Required</code> <code>Default(&quot;/&quot;)</code> <code>Filter(like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>254</strong><br>
 <em>Default Value</em>: <strong>/</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

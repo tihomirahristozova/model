@@ -24,8 +24,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BoundaryOfProcessNodeId](Systems.Bpm.ProcessNodeEvents.md#boundaryofprocessnodeid) | guid (nullable) | When the event is boundary, contains the node to which the event is bound. Otherwise contains null. `Filter(multi eq)` 
-| [EventKey](Systems.Bpm.ProcessNodeEvents.md#eventkey) | string | The unique event key, which is thrown or caught. `Required` 
-| [EventType](Systems.Bpm.ProcessNodeEvents.md#eventtype) | string | Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. `Required` 
+| [EventKey](Systems.Bpm.ProcessNodeEvents.md#eventkey) | string(128) | The unique event key, which is thrown or caught. `Required` 
+| [EventType](Systems.Bpm.ProcessNodeEvents.md#eventtype) | string(1) | Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. `Required` 
 | [Id](Systems.Bpm.ProcessNodeEvents.md#id) | guid |  
 | [IsCancel](Systems.Bpm.ProcessNodeEvents.md#iscancel) | boolean | True if this is cancel event. `Required` 
 | [IsCompensation](Systems.Bpm.ProcessNodeEvents.md#iscompensation) | boolean | True if this is compensation event. `Required` 
@@ -50,17 +50,19 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The unique event key, which is thrown or caught. `Required`
 
-_Type_: **string**  
+_Type_: **string(128)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### EventType
 
 Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. `Required`
 
-_Type_: **string**  
+_Type_: **string(1)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1**  
 
 ### Id
 

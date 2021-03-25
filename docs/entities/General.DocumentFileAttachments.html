@@ -109,7 +109,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentFileAttachments.html#filename">FileName</a></td>
-<td>string</td>
+<td>string(128)</td>
 <td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. <code>Required</code></td>
 </tr>
 <tr>
@@ -124,12 +124,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentFileAttachments.html#linkedfilepath">LinkedFilePath</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Path to the linked file. null when the file is embedded.</td>
 </tr>
 <tr>
 <td><a href="General.DocumentFileAttachments.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this DocumentFileAttachment.</td>
 </tr>
 </tbody>
@@ -159,9 +159,10 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="filename">FileName</h3>
 <p>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(128)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -175,14 +176,16 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="linkedfilepath">LinkedFilePath</h3>
 <p>Path to the linked file. null when the file is embedded.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this DocumentFileAttachment.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
 <p>The <code>Document</code>(General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

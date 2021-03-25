@@ -28,9 +28,9 @@ Aggregate Root:
 | [BusinessReason](Crm.Invoicing.InvoiceOrderLines.md#businessreason) | [InvoicingBusinessReason](Crm.Invoicing.InvoiceOrderLines.md#businessreason) | Business reason for invoicing of this product or service. S=Shipment, P=Payment. `Required` `Default("S")` 
 | [Id](Crm.Invoicing.InvoiceOrderLines.md#id) | guid |  
 | [LineAmount](Crm.Invoicing.InvoiceOrderLines.md#lineamount) | [Amount](../data-types.md#amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. `Currency: InvoiceOrder.DocumentCurrency` `Required` `Default(0)` 
-| [LineCustomDiscountPercent](Crm.Invoicing.InvoiceOrderLines.md#linecustomdiscountpercent) | decimal | User-defined discount for the line. `Required` `Default(0)` 
+| [LineCustomDiscountPercent](Crm.Invoicing.InvoiceOrderLines.md#linecustomdiscountpercent) | decimal(7, 6) | User-defined discount for the line. `Required` `Default(0)` 
 | [LineNo](Crm.Invoicing.InvoiceOrderLines.md#lineno) | int32 | Line number, unique within the InvoiceOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the InvoiceOrder (in order to allow insertions with adjustment documents). `Required` 
-| [LineStandardDiscount<br />Percent](Crm.Invoicing.InvoiceOrderLines.md#linestandarddiscountpercent) | decimal | Standard discount for the line. This is automatically computed according to discount conditions. `Required` `Default(0)` 
+| [LineStandardDiscount<br />Percent](Crm.Invoicing.InvoiceOrderLines.md#linestandarddiscountpercent) | decimal(7, 6) | Standard discount for the line. This is automatically computed according to discount conditions. `Required` `Default(0)` 
 | [ProductDescription](Crm.Invoicing.InvoiceOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of Product. Initially copied from the name of the Product or from the generating document. `Required` 
 | [Quantity](Crm.Invoicing.InvoiceOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product to invoice. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [QuantityBase](Crm.Invoicing.InvoiceOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
@@ -95,7 +95,7 @@ _Front-End Recalc Expressions:_
 
 User-defined discount for the line. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -117,7 +117,7 @@ _Front-End Recalc Expressions:_
 
 Standard discount for the line. This is automatically computed according to discount conditions. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Distribution.SalesPersonGroups.md#code) | string | The unique code of the SalesPersonGroup. `Required` `Filter(eq;like)` `ORD` 
-| [FullPath](Crm.Distribution.SalesPersonGroups.md#fullpath) | string (nullable) | Full path to this item in the form /root/child1/../leaf/. `Filter(eq;like)` `ReadOnly` 
+| [Code](Crm.Distribution.SalesPersonGroups.md#code) | string(64) | The unique code of the SalesPersonGroup. `Required` `Filter(eq;like)` `ORD` 
+| [FullPath](Crm.Distribution.SalesPersonGroups.md#fullpath) | string(4000) (nullable) | Full path to this item in the form /root/child1/../leaf/. `Filter(eq;like)` `ReadOnly` 
 | [Id](Crm.Distribution.SalesPersonGroups.md#id) | guid |  
-| [Name](Crm.Distribution.SalesPersonGroups.md#name) | string | The name of this SalesPersonGroup. `Required` `Filter(eq;like)` 
+| [Name](Crm.Distribution.SalesPersonGroups.md#name) | string(128) | The name of this SalesPersonGroup. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -42,18 +42,20 @@ Aggregate Tree
 
 The unique code of the SalesPersonGroup. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### FullPath
 
 Full path to this item in the form /root/child1/../leaf/. `Filter(eq;like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(4000) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **4000**  
 
 ### Id
 
@@ -66,9 +68,10 @@ _Default Value_: **NewGuid**
 
 The name of this SalesPersonGroup. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(128)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 
 ## Reference Details

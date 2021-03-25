@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date (nullable) | The date when the equipment was removed. null when the equipment is still installed on the vehicle. `Filter(ge;le)` 
 | [Id](Applications.Fleet.VehicleEquipment.md#id) | guid |  
-| [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string (nullable) | Notes for the installed equipment. 
+| [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string(2147483647) (nullable) | Notes for the installed equipment. 
 | [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment. `Required` `Default(1)` `Filter(ge;le)` 
 | [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment. `Required` `Filter(ge;le)` 
 
@@ -60,9 +60,10 @@ _Default Value_: **NewGuid**
 
 Notes for the installed equipment.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Quantity
 

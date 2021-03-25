@@ -26,14 +26,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreateDate](Projects.ProjectRisks.md#createdate) | date | The creation date of the project risk. `Required` `Default(Now)` `Filter(eq)` 
-| [Description](Projects.ProjectRisks.md#description) | string (nullable) | The description of this ProjectRisk. `Filter(like)` 
+| [Description](Projects.ProjectRisks.md#description) | string(2147483647) (nullable) | The description of this ProjectRisk. `Filter(like)` 
 | [Id](Projects.ProjectRisks.md#id) | guid |  
-| [ImpactPercent](Projects.ProjectRisks.md#impactpercent) | decimal | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
-| [ProbabilityPercent](Projects.ProjectRisks.md#probabilitypercent) | decimal | The probability of the risk occurring. `Required` `Default(0)` 
-| [ResolutionStrategy](Projects.ProjectRisks.md#resolutionstrategy) | string (nullable) | The strategy chosen to handle the risk. `Filter(eq)` 
+| [ImpactPercent](Projects.ProjectRisks.md#impactpercent) | decimal(3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
+| [ProbabilityPercent](Projects.ProjectRisks.md#probabilitypercent) | decimal(3, 2) | The probability of the risk occurring. `Required` `Default(0)` 
+| [ResolutionStrategy](Projects.ProjectRisks.md#resolutionstrategy) | string(2147483647) (nullable) | The strategy chosen to handle the risk. `Filter(eq)` 
 | [Resolved](Projects.ProjectRisks.md#resolved) | boolean | True if the risk is resolved. `Required` `Default(false)` `Filter(eq)` 
 | [ResolveDate](Projects.ProjectRisks.md#resolvedate) | date (nullable) | The date on which the risk is resolved. `Filter(eq)` 
-| [RiskName](Projects.ProjectRisks.md#riskname) | string | The short name of the risk. `Required` `Filter(multi eq)` 
+| [RiskName](Projects.ProjectRisks.md#riskname) | string(254) | The short name of the risk. `Required` `Filter(multi eq)` 
 
 ## References
 
@@ -64,9 +64,10 @@ _Default Value_: **CurrentDateTime**
 
 The description of this ProjectRisk. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 
@@ -79,7 +80,7 @@ _Default Value_: **NewGuid**
 
 The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(3, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -88,7 +89,7 @@ _Default Value_: **0**
 
 The probability of the risk occurring. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(3, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -97,9 +98,10 @@ _Default Value_: **0**
 
 The strategy chosen to handle the risk. `Filter(eq)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Resolved
 
@@ -122,9 +124,10 @@ _Supports Order By_: **False**
 
 The short name of the risk. `Required` `Filter(multi eq)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

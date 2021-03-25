@@ -26,11 +26,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.Workgroups.md#fullpath) | string (nullable) | The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. `Default("")` 
+| [FullPath](Production.Resources.Workgroups.md#fullpath) | string(254) (nullable) | The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. `Default("")` 
 | [Id](Production.Resources.Workgroups.md#id) | guid |  
-| [Name](Production.Resources.Workgroups.md#name) | string | Name of the workgroup. `Required` `Filter(like)` 
-| [Notes](Production.Resources.Workgroups.md#notes) | string (nullable) | User notes for the workgroup. 
-| [Parent](Production.Resources.Workgroups.md#parent) | string | Path-like parent workgroup name. `Required` `Default("/")` `Filter(like)` `ORD` 
+| [Name](Production.Resources.Workgroups.md#name) | string(64) | Name of the workgroup. `Required` `Filter(like)` 
+| [Notes](Production.Resources.Workgroups.md#notes) | string(254) (nullable) | User notes for the workgroup. 
+| [Parent](Production.Resources.Workgroups.md#parent) | string(255) | Path-like parent workgroup name. `Required` `Default("/")` `Filter(like)` `ORD` 
 
 ## Child Collections
 
@@ -46,9 +46,10 @@ Aggregate Tree
 
 The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. `Default("")`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 _Default Value_: ****  
 
 ### Id
@@ -62,26 +63,29 @@ _Default Value_: **NewGuid**
 
 Name of the workgroup. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Notes
 
 User notes for the workgroup.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Parent
 
 Path-like parent workgroup name. `Required` `Default("/")` `Filter(like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(255)**  
 _Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **255**  
 _Default Value_: **/**  
 
 

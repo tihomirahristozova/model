@@ -108,12 +108,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationsecrethash">ApplicationSecretHash</a></td>
-<td>string (nullable)</td>
+<td>string(250) (nullable)</td>
 <td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationuri">ApplicationUri</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -148,12 +148,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonateloginurl">ImpersonateLoginUrl</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>The login Url used when an application is impersonated as (usually community) user.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonatelogouturl">ImpersonateLogoutUrl</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>The logout Url used when an application is impersonated as (usually community) user.</td>
 </tr>
 <tr>
@@ -163,17 +163,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#name">Name</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>The multi-language name of the application. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this TrustedApplication.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#scope">Scope</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
@@ -183,7 +183,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#systemuserloginurl">SystemUserLoginUrl</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>The URL, which will be used by the login process, when the application logs in as a service.</td>
 </tr>
 </tbody>
@@ -225,14 +225,16 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationsecrethash">ApplicationSecretHash</h3>
 <p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(250) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>250</strong></p>
 <h3 id="applicationuri">ApplicationUri</h3>
 <p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="basicauthenticationallowed">BasicAuthenticationAllowed</h3>
 <p>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -290,14 +292,16 @@ Allowed values for the <code>ClientType</code>(Systems.Security.TrustedApplicati
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="impersonateloginurl">ImpersonateLoginUrl</h3>
 <p>The login Url used when an application is impersonated as (usually community) user.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="impersonatelogouturl">ImpersonateLogoutUrl</h3>
 <p>The logout Url used when an application is impersonated as (usually community) user.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="isenabled">IsEnabled</h3>
 <p>Specifies whether the application is enabled for login. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -306,19 +310,22 @@ Allowed values for the <code>ClientType</code>(Systems.Security.TrustedApplicati
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
 <p>The multi-language name of the application. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this TrustedApplication.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="scope">Scope</h3>
 <p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="systemuserallowed">SystemUserAllowed</h3>
 <p>Allows this application to logon as a service. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -327,9 +334,10 @@ Allowed values for the <code>ClientType</code>(Systems.Security.TrustedApplicati
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="systemuserloginurl">SystemUserLoginUrl</h3>
 <p>The URL, which will be used by the login process, when the application logs in as a service.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="systemuser">SystemUser</h3>
 <p>The user, which will be used when the application logins as a service. <code>Filter(multi eq)</code></p>

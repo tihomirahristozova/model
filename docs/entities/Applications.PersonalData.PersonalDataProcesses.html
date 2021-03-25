@@ -109,7 +109,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#code">Code</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>Unique process code. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#description">Description</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Description of the process.</td>
 </tr>
 <tr>
@@ -149,32 +149,32 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#listofdatacategories">ListOfDataCategories</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#listofdatarecipientcategories">ListOfDataRecipient<br>Categories</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#listofprocessingpurposes">ListOfProcessingPurposes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#listoftechnicalmeasures">ListOfTechnicalMeasures</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#listoftransferstothirdcountries">ListOfTransfers<br>ToThirdCountries</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Comma-separated list of third countries, to which data is sent. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#listofusedsoftware">ListOfUsedSoftware</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Comma-separated list of the names of the software products used to process the data. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this PersonalDataProcess.</td>
 </tr>
 <tr>
@@ -199,7 +199,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#thirdcountrytransferssafeguards">ThirdCountryTransfers<br>Safeguards</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Description of safeguards, taken to protect personal data in case of third country transfers. <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
@@ -251,9 +251,10 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>Unique process code. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="containssensitivedata">ContainsSensitiveData</h3>
 <p>True if sensitive personal data is processed (racial, political, criminal, biometric, etc). <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -306,9 +307,10 @@ Allowed values for the <code>DataSubjectCategory</code>(Applications.PersonalDat
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="description">Description</h3>
 <p>Description of the process.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="discontinuationdate">DiscontinuationDate</h3>
 <p>The date on which the process was discontinued. Null if the process is still active. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
@@ -368,34 +370,40 @@ Allowed values for the <code>LegalBasisForProcessing</code>(Applications.Persona
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="listofdatacategories">ListOfDataCategories</h3>
 <p>Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="listofdatarecipientcategories">ListOfDataRecipientCategories</h3>
 <p>Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="listofprocessingpurposes">ListOfProcessingPurposes</h3>
 <p>Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="listoftechnicalmeasures">ListOfTechnicalMeasures</h3>
 <p>Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="listoftransferstothirdcountries">ListOfTransfersToThirdCountries</h3>
 <p>Comma-separated list of third countries, to which data is sent. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="listofusedsoftware">ListOfUsedSoftware</h3>
 <p>Comma-separated list of the names of the software products used to process the data. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="name">Name</h3>
 <p>Name of the process (Multilanguage). <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
@@ -403,9 +411,10 @@ Allowed values for the <code>LegalBasisForProcessing</code>(Applications.Persona
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this PersonalDataProcess.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="processingrole">ProcessingRole</h3>
 <p>The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#processingrole">ProcessingRole</a></strong><br>
@@ -439,9 +448,10 @@ Allowed values for the <code>ProcessingRole</code>(Applications.PersonalData.Per
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thirdcountrytransferssafeguards">ThirdCountryTransfersSafeguards</h3>
 <p>Description of safeguards, taken to protect personal data in case of third country transfers. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company, which owns the process. <code>Required</code> <code>Filter(multi eq)</code></p>

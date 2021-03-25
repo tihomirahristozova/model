@@ -30,7 +30,7 @@ Aggregate Root:
 | [Id](Logistics.Wms.WarehouseWorkers.md#id) | guid |  
 | [IsActive](Logistics.Wms.WarehouseWorkers.md#isactive) | boolean | Specifies whether the worker is active and can execute new warehouse tasks. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Logistics.Wms.WarehouseWorkers.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the worker (multi-language). `Required` `Filter(multi eq;like)` 
-| [Notes](Logistics.Wms.WarehouseWorkers.md#notes) | string (nullable) | Notes for this WarehouseWorker. 
+| [Notes](Logistics.Wms.WarehouseWorkers.md#notes) | string(2147483647) (nullable) | Notes for this WarehouseWorker. 
 
 ## References
 
@@ -87,9 +87,10 @@ _Supports Order By_: **False**
 
 Notes for this WarehouseWorker.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

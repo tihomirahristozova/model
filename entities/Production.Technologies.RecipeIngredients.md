@@ -29,9 +29,9 @@ Aggregate Root:
 | [FixedScrapQuantity](Production.Technologies.RecipeIngredients.md#fixedscrapquantity) | [Quantity](../data-types.md#quantity) | Fixed scrap quantity of the material, needed for setup. `Unit: UsageUnit` `Required` `Default(0)` 
 | [Id](Production.Technologies.RecipeIngredients.md#id) | guid |  
 | [LineOrd](Production.Technologies.RecipeIngredients.md#lineord) | int32 | The order of this line in the recipe. `Required` 
-| [Notes](Production.Technologies.RecipeIngredients.md#notes) | string (nullable) | Notes for this RecipeIngredient. 
+| [Notes](Production.Technologies.RecipeIngredients.md#notes) | string(254) (nullable) | Notes for this RecipeIngredient. 
 | [Price](Production.Technologies.RecipeIngredients.md#price) | [Amount](../data-types.md#amount) | Total price of the ingredient. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)` 
-| [ScrapRate](Production.Technologies.RecipeIngredients.md#scraprate) | decimal | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` 
+| [ScrapRate](Production.Technologies.RecipeIngredients.md#scraprate) | decimal(7, 6) | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` 
 | [UnitCost](Production.Technologies.RecipeIngredients.md#unitcost) | [Amount](../data-types.md#amount) | Cost of 1 of Usage_Unit_Id. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)` 
 | [UnitPrice](Production.Technologies.RecipeIngredients.md#unitprice) | [Amount](../data-types.md#amount) | Price for 1 of Usage_Unit_Id. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)` 
 | [UsageQuantity](Production.Technologies.RecipeIngredients.md#usagequantity) | [Quantity](../data-types.md#quantity) (nullable) | Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. `Unit: UsageUnit` `Default(1.000)` `Filter(ge;le)` 
@@ -92,9 +92,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this RecipeIngredient.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Price
 
@@ -109,7 +110,7 @@ _Default Value_: **Constant**
 
 The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

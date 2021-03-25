@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Might contain additional notes for the exact location of the asset within the enterprise company location.</td>
 </tr>
 </tbody>
@@ -160,9 +160,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Might contain additional notes for the exact location of the asset within the enterprise company location.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <p>The enterprise company location, where the asset is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>

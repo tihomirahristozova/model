@@ -32,7 +32,7 @@ Aggregate Root:
 | [Id](Logistics.Procurement.ReceivingOrderLines.md#id) | guid |  
 | [LineAmount](Logistics.Procurement.ReceivingOrderLines.md#lineamount) | [Amount](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Price_Per_Unit. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)` 
 | [LineNo](Logistics.Procurement.ReceivingOrderLines.md#lineno) | int32 | Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). `Required` 
-| [Notes](Logistics.Procurement.ReceivingOrderLines.md#notes) | string (nullable) | Notes for this ReceivingOrderLine. 
+| [Notes](Logistics.Procurement.ReceivingOrderLines.md#notes) | string(254) (nullable) | Notes for this ReceivingOrderLine. 
 | [PricePerUnit](Logistics.Procurement.ReceivingOrderLines.md#priceperunit) | [Amount](../data-types.md#amount) | The unit price of the received products, in the documents currency. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)` 
 | [ProductDescription](Logistics.Procurement.ReceivingOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. `Required` 
 | [Quantity](Logistics.Procurement.ReceivingOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The received quantity. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
@@ -134,9 +134,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this ReceivingOrderLine.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### PricePerUnit
 

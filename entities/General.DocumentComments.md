@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comment](General.DocumentComments.md#comment) | string | The user comment. `Required` 
+| [Comment](General.DocumentComments.md#comment) | string(254) | The user comment. `Required` 
 | [CommentTimestamp](General.DocumentComments.md#commenttimestamp) | datetime | The exact timestamp of the comment. `Required` `Default(Now)` 
 | [Id](General.DocumentComments.md#id) | guid |  
 
@@ -44,9 +44,10 @@ Aggregate Root:
 
 The user comment. `Required`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### CommentTimestamp
 

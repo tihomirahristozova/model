@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Products.ProductDocumentAmounts.md#id) | guid |  
-| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal | The custom percent for the current product and amount type. `Required` `Default(0)` 
+| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal(14, 3) | The custom percent for the current product and amount type. `Required` `Default(0)` 
 
 ## References
 
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 The custom percent for the current product and amount type. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(14, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

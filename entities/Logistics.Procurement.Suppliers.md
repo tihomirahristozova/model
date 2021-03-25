@@ -26,17 +26,17 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTime](Logistics.Procurement.Suppliers.md#creationtime) | datetime (nullable) | Date and time when the Supplier was created. `Filter(ge;le)` `ReadOnly` 
-| [CreationUser](Logistics.Procurement.Suppliers.md#creationuser) | string (nullable) | Login name of the user, who created the Supplier. `Filter(like)` `ReadOnly` 
+| [CreationUser](Logistics.Procurement.Suppliers.md#creationuser) | string(64) (nullable) | Login name of the user, who created the Supplier. `Filter(like)` `ReadOnly` 
 | [DefaultDeliveryTermDays](Logistics.Procurement.Suppliers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sending the purchase order. `Required` `Default(0)` 
 | [DefaultPaymentStartDays](Logistics.Procurement.Suppliers.md#defaultpaymentstartdays) | int32 | Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. `Required` `Default(0)` 
 | [DefaultPaymentTermDays](Logistics.Procurement.Suppliers.md#defaultpaymenttermdays) | int32 | Default payment term in days, starting from the date of receiving the invoice. `Required` `Default(0)` 
 | [FromDate](Logistics.Procurement.Suppliers.md#fromdate) | datetime (nullable) | The date on which this party became a supplier or the date, when the supplier contract was signed. `Filter(ge;le)` 
 | [Id](Logistics.Procurement.Suppliers.md#id) | guid |  
 | [IsActive](Logistics.Procurement.Suppliers.md#isactive) | boolean | Indicates whether the current supplier is active. `Required` `Default(true)` `Filter(eq)` 
-| [Number](Logistics.Procurement.Suppliers.md#number) | string (nullable) | The unique supplier number. `Filter(eq)` `ORD` 
+| [Number](Logistics.Procurement.Suppliers.md#number) | string(16) (nullable) | The unique supplier number. `Filter(eq)` `ORD` 
 | [ThruDate](Logistics.Procurement.Suppliers.md#thrudate) | datetime (nullable) | The date (inclusive) on which this party ceased to be a supplier. `Filter(ge;le)` 
 | [UpdateTime](Logistics.Procurement.Suppliers.md#updatetime) | datetime (nullable) | Date and time when the Supplier was last updated. `Filter(ge;le)` `ReadOnly` 
-| [UpdateUser](Logistics.Procurement.Suppliers.md#updateuser) | string (nullable) | Login name of the user, who last updated the Supplier. `Filter(like)` `ReadOnly` 
+| [UpdateUser](Logistics.Procurement.Suppliers.md#updateuser) | string(64) (nullable) | Login name of the user, who last updated the Supplier. `Filter(like)` `ReadOnly` 
 
 ## References
 
@@ -65,9 +65,10 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Supplier. `Filter(like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### DefaultDeliveryTermDays
 
@@ -124,10 +125,11 @@ _Default Value_: **True**
 
 The unique supplier number. `Filter(eq)` `ORD`
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### ThruDate
 
@@ -149,9 +151,10 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Supplier. `Filter(like)` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 
 ## Reference Details

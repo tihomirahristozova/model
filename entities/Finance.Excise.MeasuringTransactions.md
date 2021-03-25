@@ -29,11 +29,11 @@ Aggregate Tree
 | [Direction](Finance.Excise.MeasuringTransactions.md#direction) | [Direction](Finance.Excise.MeasuringTransactions.md#direction) | The direction of the transaction - IN/OUT. `Required` 
 | [EndTimeUtc](Finance.Excise.MeasuringTransactions.md#endtimeutc) | datetime | Ending time of the transaction (in UTC time). `Required` `Filter(eq;ge;le)` 
 | [Id](Finance.Excise.MeasuringTransactions.md#id) | guid |  
-| [MeasuringDeviceCode](Finance.Excise.MeasuringTransactions.md#measuringdevicecode) | string | The code of the measuring device, used to measure the transaction. `Required` `Filter(multi eq;like)` `ORD` 
-| [Notes](Finance.Excise.MeasuringTransactions.md#notes) | string (nullable) | Notes for this MeasuringTransaction. 
+| [MeasuringDeviceCode](Finance.Excise.MeasuringTransactions.md#measuringdevicecode) | string(32) | The code of the measuring device, used to measure the transaction. `Required` `Filter(multi eq;like)` `ORD` 
+| [Notes](Finance.Excise.MeasuringTransactions.md#notes) | string(2147483647) (nullable) | Notes for this MeasuringTransaction. 
 | [Quantity](Finance.Excise.MeasuringTransactions.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product, measured with this transaction. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
 | [StartTimeUtc](Finance.Excise.MeasuringTransactions.md#starttimeutc) | datetime | Starting time of the transaction (in UTC time). `Required` `Filter(eq;ge;le)` 
-| [TransactionNumber](Finance.Excise.MeasuringTransactions.md#transactionnumber) | string | Transaction number, unique for the measuring device. `Required` `Filter(multi eq;like)` 
+| [TransactionNumber](Finance.Excise.MeasuringTransactions.md#transactionnumber) | string(32) | Transaction number, unique for the measuring device. `Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -105,18 +105,20 @@ _Default Value_: **NewGuid**
 
 The code of the measuring device, used to measure the transaction. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(32)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
+_Maximum Length_: **32**  
 
 ### Notes
 
 Notes for this MeasuringTransaction.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Quantity
 
@@ -138,9 +140,10 @@ _Supports Order By_: **False**
 
 Transaction number, unique for the measuring device. `Required` `Filter(multi eq;like)`
 
-_Type_: **string**  
+_Type_: **string(32)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **32**  
 
 
 ## Reference Details

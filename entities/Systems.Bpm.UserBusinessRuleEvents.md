@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EventParameter](Systems.Bpm.UserBusinessRuleEvents.md#eventparameter) | string (nullable) | Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc. 
+| [EventParameter](Systems.Bpm.UserBusinessRuleEvents.md#eventparameter) | string(128) (nullable) | Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc. 
 | [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | The event for which to register the business rule. `Required` 
 | [ExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | [RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. `Required` `Default(50)` 
 | [Id](Systems.Bpm.UserBusinessRuleEvents.md#id) | guid |  
@@ -44,9 +44,10 @@ Aggregate Root:
 
 Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.
 
-_Type_: **string (nullable)**  
+_Type_: **string(128) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### EventType
 

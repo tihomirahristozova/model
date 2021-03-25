@@ -25,8 +25,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Systems.Core.WebSites.md#id) | guid |  
 | [IsActive](Systems.Core.WebSites.md#isactive) | boolean | Indicates whether the web site is active and will be instantiated upon next web server restart. `Required` `Default(true)` `Filter(eq)` 
-| [Notes](Systems.Core.WebSites.md#notes) | string (nullable) | Notes for this WebSite. 
-| [RelativeUrl](Systems.Core.WebSites.md#relativeurl) | string (nullable) | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. 
+| [Notes](Systems.Core.WebSites.md#notes) | string(2147483647) (nullable) | Notes for this WebSite. 
+| [RelativeUrl](Systems.Core.WebSites.md#relativeurl) | string(254) (nullable) | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. 
 | [WebSiteType](Systems.Core.WebSites.md#websitetype) | [WebSiteType](Systems.Core.WebSites.md#websitetype) | The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)` 
 
 ## References
@@ -60,17 +60,19 @@ _Default Value_: **True**
 
 Notes for this WebSite.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### RelativeUrl
 
 The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### WebSiteType
 

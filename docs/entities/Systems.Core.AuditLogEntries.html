@@ -104,12 +104,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Core.AuditLogEntries.html#applicationname">ApplicationName</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>The client application that triggered the event. Null when unknown or N/A. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AuditLogEntries.html#details">Details</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Detailed contents of the event. Contents depend on the Event Type and Event Name.</td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Core.AuditLogEntries.html#entityname">EntityName</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>The entity, which is being referenced by the event. Null when unknown or N/A. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Core.AuditLogEntries.html#eventname">EventName</a></td>
-<td>string (nullable)</td>
+<td>string(128) (nullable)</td>
 <td>Specific event or method name. Contents depend on the Event Type. Null when N/A. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -174,23 +174,26 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationname">ApplicationName</h3>
 <p>The client application that triggered the event. Null when unknown or N/A. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="details">Details</h3>
 <p>Detailed contents of the event. Contents depend on the Event Type and Event Name.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
 <p>The Id of the record, which is referenced by the event. Null when unknown or N/A. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="entityname">EntityName</h3>
 <p>The entity, which is being referenced by the event. Null when unknown or N/A. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="eventclass">EventClass</h3>
 <p>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.AuditLogEntries.html#eventclass">EventClass</a></strong><br>
@@ -222,9 +225,10 @@ Allowed values for the <code>EventClass</code>(Systems.Core.AuditLogEntries.md#e
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="eventname">EventName</h3>
 <p>Specific event or method name. Contents depend on the Event Type. Null when N/A. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(128) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="eventtimeutc">EventTimeUtc</h3>
 <p>The exact date and time (in Utc) when the event occurred. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>

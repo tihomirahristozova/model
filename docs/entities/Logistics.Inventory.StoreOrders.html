@@ -131,7 +131,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#adjustmentuser">AdjustmentUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>The user who adjusted the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -146,7 +146,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#creationuser">CreationUser</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -156,12 +156,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#documentno">DocumentNo</a></td>
-<td>string</td>
+<td>string(20)</td>
 <td>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#documentnotes">DocumentNotes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this Document. (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -171,7 +171,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#drivername">DriverName</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>The name of the driver, who will deliver the stocks.</td>
 </tr>
 <tr>
@@ -181,7 +181,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#entityname">EntityName</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -236,7 +236,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#referencedocumentno">ReferenceDocumentNo</a></td>
-<td>string (nullable)</td>
+<td>string(20) (nullable)</td>
 <td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -251,17 +251,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#status">Status</a></td>
-<td>string</td>
+<td>string(1)</td>
 <td>P=Planned; F=Firm planned; R=Released; C=Completed. <code>Required</code> <code>Default(&quot;P&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#temptransportcompanyname">TempTransportCompanyName</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Obsolete. Not used.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#vehicleregnumber">VehicleRegNumber</a></td>
-<td>string (nullable)</td>
+<td>string(32) (nullable)</td>
 <td>Obsolete. Not used.</td>
 </tr>
 <tr>
@@ -271,7 +271,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#voidreason">VoidReason</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Reason for voiding the document, entered by the user. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -281,7 +281,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#voiduser">VoidUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>The user who voided the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 </tbody>
@@ -484,9 +484,10 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="adjustmentuser">AdjustmentUser</h3>
 <p>The user who adjusted the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="completetime">CompleteTime</h3>
 <p>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -500,9 +501,10 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="documentdate">DocumentDate</h3>
 <p>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>date</strong><br>
@@ -512,15 +514,17 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="documentno">DocumentNo</h3>
 <p>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(20)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>20</strong></p>
 <h3 id="documentnotes">DocumentNotes</h3>
 <p>Notes for this Document. (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
 <p>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -529,9 +533,10 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="drivername">DriverName</h3>
 <p>The name of the driver, who will deliver the stocks.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="duedate">DueDate</h3>
 <p>The final date, when the store transaction should occur. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
@@ -541,10 +546,11 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="entityname">EntityName</h3>
 <p>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -643,9 +649,10 @@ Relationship between parent and child documents<br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="referencedocumentno">ReferenceDocumentNo</h3>
 <p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(20) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>20</strong></p>
 <h3 id="releasetime">ReleaseTime</h3>
 <p>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -699,20 +706,23 @@ Enumeration of document system states<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="status">Status</h3>
 <p>P=Planned; F=Firm planned; R=Released; C=Completed. <code>Required</code> <code>Default(&quot;P&quot;)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(1)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>1</strong><br>
 <em>Default Value</em>: <strong>P</strong></p>
 <h3 id="temptransportcompanyname">TempTransportCompanyName</h3>
 <p>Obsolete. Not used.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="vehicleregnumber">VehicleRegNumber</h3>
 <p>Obsolete. Not used.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(32) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="void">Void</h3>
 <p>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -722,9 +732,10 @@ Enumeration of document system states<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="voidreason">VoidReason</h3>
 <p>Reason for voiding the document, entered by the user. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="voidtime">VoidTime</h3>
 <p>Date/time when the document has become void. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -732,9 +743,10 @@ Enumeration of document system states<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="voiduser">VoidUser</h3>
 <p>The user who voided the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>

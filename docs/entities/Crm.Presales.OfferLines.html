@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#choicegroupname">ChoiceGroupName</a></td>
-<td>string (nullable)</td>
+<td>string(60) (nullable)</td>
 <td>Name of a group of alternative lines, only one of which can be selected for ordering. Lines are grouped based on the exact name of the Choice Group.</td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#linecustomdiscountpercent">LineCustomDiscountPercent</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>Operator defined discount percentage, specified for this line. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -144,12 +144,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#linestandarddiscountpercent">LineStandardDiscount<br>Percent</a></td>
-<td>decimal</td>
+<td>decimal(7, 6)</td>
 <td>The discount percentage, applied through the standard discount policy. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Notes for this OfferLine.</td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#variant">Variant</a></td>
-<td>string (nullable)</td>
+<td>string(60) (nullable)</td>
 <td>Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together.</td>
 </tr>
 </tbody>
@@ -239,9 +239,10 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="choicegroupname">ChoiceGroupName</h3>
 <p>Name of a group of alternative lines, only one of which can be selected for ordering. Lines are grouped based on the exact name of the Choice Group.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(60) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>60</strong></p>
 <h3 id="deliverytermdays">DeliveryTermDays</h3>
 <p>Delivery term in days. When Required Delivery Date is specified (not null), it takes precedence and this is ignored. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -278,7 +279,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.UnitPrice == null)) OrElse ( ( obj.Quantity.Value == 0) AndAlso ( obj.UnitPrice.Value == 0))), obj.LineAmount, ( ( ( obj.Quantity.Value * obj.UnitPrice) * ( 1 - obj.LineStandardDiscountPercent)) * ( 1 - obj.LineCustomDiscountPercent)).Round( ))</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
 <p>Operator defined discount percentage, specified for this line. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -293,7 +294,7 @@ Aggregate Root:<br>
 <code>( obj.Offer.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
 <p>The discount percentage, applied through the standard discount policy. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -303,9 +304,10 @@ Aggregate Root:<br>
 <code>IIF( ( obj.LineDiscount == null), 0, obj.LineDiscount.DiscountPercent)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this OfferLine.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="productdescription">ProductDescription</h3>
 <p>The description of the offered product. Initially copied from the name of the offered product. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
@@ -361,9 +363,10 @@ Aggregate Root:<br>
 <code>obj.CalculateUnitPrice( obj.Product, obj.ProductPrice, obj.QuantityUnit, obj.Offer)</code></p>
 <h3 id="variant">Variant</h3>
 <p>Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(60) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>60</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
 <p>The <code>Offer</code>(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>

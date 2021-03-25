@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.ProcessConnections.md#code) | string | Connection code, unique within the process. Used as ID for XML serialization purposes. `Required` `Default(New Guid)` `Filter(eq;like)` 
+| [Code](Systems.Bpm.ProcessConnections.md#code) | string(64) | Connection code, unique within the process. Used as ID for XML serialization purposes. `Required` `Default(New Guid)` `Filter(eq;like)` 
 | [ConditionFilterXml](Systems.Bpm.ProcessConnections.md#conditionfilterxml) | dataaccessfilter (nullable) | When not null, specifies that the flow will be followed only if the condition is matched by the current values in the process instance. `Filter(eq;like)` 
 | [Id](Systems.Bpm.ProcessConnections.md#id) | guid |  
 | [IsDefault](Systems.Bpm.ProcessConnections.md#isdefault) | boolean | Denotes this flow as the default sequence flow. It is taken only when all other flows are not valid. For example, gateways usually are followed by several conditional flows and one default flow. `Required` `Default(false)` `Filter(eq)` 
@@ -46,9 +46,10 @@ Aggregate Root:
 
 Connection code, unique within the process. Used as ID for XML serialization purposes. `Required` `Default(New Guid)` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 _Default Value_: **NewGuid**  
 
 ### ConditionFilterXml

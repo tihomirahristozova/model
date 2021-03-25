@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string | Multilanguage allocation model name. `Required` 
+| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string(254) | Multilanguage allocation model name. `Required` 
 | [Id](Finance.Cost.AllocationModels.md#id) | guid |  
 
 ## References
@@ -39,9 +39,10 @@ Aggregate Tree
 
 Multilanguage allocation model name. `Required`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 

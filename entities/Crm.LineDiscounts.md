@@ -23,8 +23,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Crm.LineDiscounts.md#description) | string (nullable) | The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)` 
-| [DiscountPercent](Crm.LineDiscounts.md#discountpercent) | decimal | The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)` 
+| [Description](Crm.LineDiscounts.md#description) | string(50) (nullable) | The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)` 
+| [DiscountPercent](Crm.LineDiscounts.md#discountpercent) | decimal(7, 6) | The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)` 
 | [FromDate](Crm.LineDiscounts.md#fromdate) | datetime (nullable) | Starting date of validity of the discount. null means no from date restriction. `Filter(eq;ge;le)` 
 | [Id](Crm.LineDiscounts.md#id) | guid |  
 | [MaxQuantity](Crm.LineDiscounts.md#maxquantity) | [Quantity](../data-types.md#quantity) (nullable) | Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
@@ -53,15 +53,16 @@ Aggregate Tree
 
 The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(50) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **50**  
 
 ### DiscountPercent
 
 The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

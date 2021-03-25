@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string | Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string(16) | Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD` 
 | [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 (nullable) | Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change. 
 | [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 (nullable) | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days. 
 | [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 (nullable) | Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months. 
@@ -45,10 +45,11 @@ Aggregate Tree
 
 Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### DefaultParameterChange
 

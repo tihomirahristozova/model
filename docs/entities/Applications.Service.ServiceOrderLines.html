@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#symptomdescription">SymptomDescription</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Description or synopsis of the symptoms of the failed object. <code>Filter(like)</code></td>
 </tr>
 </tbody>
@@ -158,9 +158,10 @@ Aggregate Root:<br>
 <code>( obj.ServiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="symptomdescription">SymptomDescription</h3>
 <p>Description or synopsis of the symptoms of the failed object. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceobject">ServiceObject</h3>
 <p>The service object, which is experiencing the symptoms and needs repair. <code>Required</code> <code>Filter(multi eq)</code></p>

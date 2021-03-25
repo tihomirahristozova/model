@@ -23,8 +23,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Marketing.DistributionChannels.md#code) | string | Unique distribution channel code. `Required` `Filter(eq;like)` 
-| [Description](Crm.Marketing.DistributionChannels.md#description) | string (nullable) | Full description of the distribution channel. 
+| [Code](Crm.Marketing.DistributionChannels.md#code) | string(10) | Unique distribution channel code. `Required` `Filter(eq;like)` 
+| [Description](Crm.Marketing.DistributionChannels.md#description) | string(2147483647) (nullable) | Full description of the distribution channel. 
 | [Id](Crm.Marketing.DistributionChannels.md#id) | guid |  
 | [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel. `Required` `Filter(eq;like)` 
@@ -36,17 +36,19 @@ Aggregate Tree
 
 Unique distribution channel code. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(10)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **10**  
 
 ### Description
 
 Full description of the distribution channel.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 

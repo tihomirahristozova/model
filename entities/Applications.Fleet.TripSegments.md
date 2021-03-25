@@ -27,8 +27,8 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [EndingTimestamp](Applications.Fleet.TripSegments.md#endingtimestamp) | datetime (nullable) | The ending date and time of the travel on the segment. 
 | [Id](Applications.Fleet.TripSegments.md#id) | guid |  
-| [Mileage](Applications.Fleet.TripSegments.md#mileage) | decimal (nullable) | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage. 
-| [Notes](Applications.Fleet.TripSegments.md#notes) | string (nullable) | Notes for the segment. 
+| [Mileage](Applications.Fleet.TripSegments.md#mileage) | decimal(9, 0) (nullable) | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage. 
+| [Notes](Applications.Fleet.TripSegments.md#notes) | string(254) (nullable) | Notes for the segment. 
 | [StartingTimestamp](Applications.Fleet.TripSegments.md#startingtimestamp) | datetime | The starting date and time of the travel on the segment. `Required` 
 
 ## References
@@ -61,7 +61,7 @@ _Default Value_: **NewGuid**
 
 Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(9, 0) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -69,9 +69,10 @@ _Supports Order By_: **False**
 
 Notes for the segment.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### StartingTimestamp
 

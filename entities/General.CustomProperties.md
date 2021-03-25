@@ -25,17 +25,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowedValuesEntityName](General.CustomProperties.md#allowedvaluesentityname) | string (nullable) | When not null, specifies that the allowed values are retrieved from the specified entity. `Filter(eq)` 
-| [AllowedValuesFilterXML](General.CustomProperties.md#allowedvaluesfilterxml) | string (nullable) | When not null specifies the filter to apply when extracting allowed values from entity. 
-| [Code](General.CustomProperties.md#code) | string | Unique property code. `Required` `Filter(multi eq;like)` `ORD` 
-| [EntityName](General.CustomProperties.md#entityname) | string | The entity for which the property is applicable. `Required` `Filter(eq)` `ORD` 
+| [AllowedValuesEntityName](General.CustomProperties.md#allowedvaluesentityname) | string(64) (nullable) | When not null, specifies that the allowed values are retrieved from the specified entity. `Filter(eq)` 
+| [AllowedValuesFilterXML](General.CustomProperties.md#allowedvaluesfilterxml) | string(1073741823) (nullable) | When not null specifies the filter to apply when extracting allowed values from entity. 
+| [Code](General.CustomProperties.md#code) | string(40) | Unique property code. `Required` `Filter(multi eq;like)` `ORD` 
+| [EntityName](General.CustomProperties.md#entityname) | string(64) | The entity for which the property is applicable. `Required` `Filter(eq)` `ORD` 
 | [Hint](General.CustomProperties.md#hint) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The hint, which is displayed alongside the property. `Filter(multi eq;like)` `Introduced in version 20.1` 
 | [Id](General.CustomProperties.md#id) | guid |  
 | [KeyOrder](General.CustomProperties.md#keyorder) | byte (nullable) | When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis. 
 | [LimitToAllowedValues](General.CustomProperties.md#limittoallowedvalues) | boolean | When true, allows the property to be set only to allowed value. When false, the property can have any value. `Required` `Default(false)` `Filter(eq)` 
 | [MaskLength](General.CustomProperties.md#masklength) | int16 (nullable) | Limits te length of the property value to the specified number of characters. Null means no limitation. 
 | [Name](General.CustomProperties.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CustomProperty. `Required` `Filter(like)` `ORD` 
-| [Notes](General.CustomProperties.md#notes) | string (nullable) | Notes for this CustomProperty. `Introduced in version 20.1` 
+| [Notes](General.CustomProperties.md#notes) | string(2147483647) (nullable) | Notes for this CustomProperty. `Introduced in version 20.1` 
 | [PropertyType](General.CustomProperties.md#propertytype) | [PropertyType](General.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. `Required` `Default("T")` 
 
 ## References
@@ -60,35 +60,39 @@ Aggregate Tree
 
 When not null, specifies that the allowed values are retrieved from the specified entity. `Filter(eq)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### AllowedValuesFilterXML
 
 When not null specifies the filter to apply when extracting allowed values from entity.
 
-_Type_: **string (nullable)**  
+_Type_: **string(1073741823) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **1073741823**  
 
 ### Code
 
 Unique property code. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(40)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
+_Maximum Length_: **40**  
 
 ### EntityName
 
 The entity for which the property is applicable. `Required` `Filter(eq)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### Hint
 
@@ -143,9 +147,10 @@ _Supports Order By_: **True**
 
 Notes for this CustomProperty. `Introduced in version 20.1`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### PropertyType
 

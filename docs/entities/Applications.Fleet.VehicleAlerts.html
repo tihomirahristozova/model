@@ -104,12 +104,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#alerttype">AlertType</a></td>
-<td>string</td>
+<td>string(3)</td>
 <td>The type of the alert. The type is specfic to the Source. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#description">Description</a></td>
-<td>string</td>
+<td>string(254)</td>
 <td>Description of the alert (Multilanguage). <code>Required</code></td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#source">Source</a></td>
-<td>string</td>
+<td>string(1)</td>
 <td>The source of the alert. G=GPS, O=OBD, M=Maintenance. <code>Required</code></td>
 </tr>
 <tr>
@@ -154,14 +154,16 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="alerttype">AlertType</h3>
 <p>The type of the alert. The type is specfic to the Source. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>3</strong></p>
 <h3 id="description">Description</h3>
 <p>Description of the alert (Multilanguage). <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(254)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -175,9 +177,10 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="source">Source</h3>
 <p>The source of the alert. G=GPS, O=OBD, M=Maintenance. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(1)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>1</strong></p>
 <h3 id="time">Time</h3>
 <p>The time of the alert. <code>Required</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>

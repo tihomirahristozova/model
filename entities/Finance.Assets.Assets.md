@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Assets.Assets.md#code) | string | The unique code of the Asset. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Finance.Assets.Assets.md#code) | string(20) | The unique code of the Asset. `Required` `Filter(eq;like)` `ORD` 
 | [DeploymentDate](Finance.Assets.Assets.md#deploymentdate) | datetime (nullable) | Date, when the asset is first deployed. Null if the asset is not deployed yet. 
 | [Id](Finance.Assets.Assets.md#id) | guid |  
 | [IsActive](Finance.Assets.Assets.md#isactive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Assets.Assets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Asset. `Required` `Filter(like)` 
-| [Notes](Finance.Assets.Assets.md#notes) | string (nullable) | Notes for this Asset. 
+| [Notes](Finance.Assets.Assets.md#notes) | string(254) (nullable) | Notes for this Asset. 
 | [PurchaseDate](Finance.Assets.Assets.md#purchasedate) | datetime | Original purchase date of the asset. `Required` 
-| [SerialNumber](Finance.Assets.Assets.md#serialnumber) | string (nullable) | Serial number of the asset. `Filter(eq)` 
+| [SerialNumber](Finance.Assets.Assets.md#serialnumber) | string(30) (nullable) | Serial number of the asset. `Filter(eq)` 
 
 ## References
 
@@ -51,10 +51,11 @@ Aggregate Root:
 
 The unique code of the Asset. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **20**  
 
 ### DeploymentDate
 
@@ -92,9 +93,10 @@ _Supports Order By_: **False**
 
 Notes for this Asset.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### PurchaseDate
 
@@ -108,9 +110,10 @@ _Supports Order By_: **False**
 
 Serial number of the asset. `Filter(eq)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(30) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **30**  
 
 
 ## Reference Details

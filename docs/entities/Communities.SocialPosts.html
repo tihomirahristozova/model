@@ -119,7 +119,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Communities.SocialPosts.html#posttext">PostText</a></td>
-<td>string</td>
+<td>string(2147483647)</td>
 <td>The post contents in clear text. <code>Required</code></td>
 </tr>
 </tbody>
@@ -164,9 +164,10 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="posttext">PostText</h3>
 <p>The post contents in clear text. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(2147483647)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="socialgroup">SocialGroup</h3>
 <p>The group in which the post is made. <code>Required</code> <code>Filter(multi eq)</code></p>

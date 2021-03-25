@@ -27,7 +27,7 @@ Aggregate Tree
 | [IsActive](Applications.Fleet.VehicleMaintenancePlanAssignments.md#isactive) | boolean | Specifies whether the plan is active. `Required` `Default(true)` 
 | [LastMaintenanceMileageKm](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancemileagekm) | int32 (nullable) | The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check. 
 | [LastMaintenanceTripCount](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancetripcount) | int32 (nullable) | The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check. 
-| [Notes](Applications.Fleet.VehicleMaintenancePlanAssignments.md#notes) | string (nullable) | Notes for this VehicleMaintenance<br />PlanAssignment. 
+| [Notes](Applications.Fleet.VehicleMaintenancePlanAssignments.md#notes) | string(2147483647) (nullable) | Notes for this VehicleMaintenance<br />PlanAssignment. 
 | [StartingDate](Applications.Fleet.VehicleMaintenancePlanAssignments.md#startingdate) | date | The date on which the periodic maintenance should start. `Required` 
 
 ## References
@@ -76,9 +76,10 @@ _Supports Order By_: **False**
 
 Notes for this VehicleMaintenancePlanAssignment.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### StartingDate
 

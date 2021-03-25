@@ -25,7 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.ProductTypes.md#code) | string | The unique code of the ProductType. `Required` `Filter(eq)` 
+| [Code](General.Products.ProductTypes.md#code) | string(16) | The unique code of the ProductType. `Required` `Filter(eq)` 
 | [Id](General.Products.ProductTypes.md#id) | guid |  
 | [IsDefault](General.Products.ProductTypes.md#isdefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups. `Required` `Default(false)` `Filter(eq)` 
 | [IsFixedAsset](General.Products.ProductTypes.md#isfixedasset) | boolean | True when assets are acquired or retired when products from this type are purchased or sold. `Required` `Default(false)` `Filter(eq)` 
@@ -50,9 +50,10 @@ Aggregate Tree
 
 The unique code of the ProductType. `Required` `Filter(eq)`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### Id
 

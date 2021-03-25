@@ -25,9 +25,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.TypeRoles.md#description) | string (nullable) | Description of the participant role. 
+| [Description](Projects.TypeRoles.md#description) | string(2147483647) (nullable) | Description of the participant role. 
 | [Id](Projects.TypeRoles.md#id) | guid |  
-| [RoleName](Projects.TypeRoles.md#rolename) | string | The name of the participant role. `Required` `Filter(multi eq;like)` 
+| [RoleName](Projects.TypeRoles.md#rolename) | string(255) | The name of the participant role. `Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -42,9 +42,10 @@ Aggregate Root:
 
 Description of the participant role.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 
@@ -57,9 +58,10 @@ _Default Value_: **NewGuid**
 
 The name of the participant role. `Required` `Filter(multi eq;like)`
 
-_Type_: **string**  
+_Type_: **string(255)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **255**  
 
 
 ## Reference Details

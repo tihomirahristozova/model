@@ -139,7 +139,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refdocumentno">RefDocumentNo</a></td>
-<td>string</td>
+<td>string(20)</td>
 <td>The number of the document which has created the payment order and is the basis for the payment. <code>Required</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_No</code></td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocumentno">RefInvoiceDocumentNo</a></td>
-<td>string (nullable)</td>
+<td>string(20) (nullable)</td>
 <td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></td>
 </tr>
 </tbody>
@@ -280,10 +280,11 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <code>obj.RefDocument.DocumentDate</code></p>
 <h3 id="refdocumentno">RefDocumentNo</h3>
 <p>The number of the document which has created the payment order and is the basis for the payment. <code>Required</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_No</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(20)</strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_No</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>20</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.RefDocument.DocumentNo</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -300,10 +301,11 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <code>obj.RefInvoiceDocument.DocumentDate</code></p>
 <h3 id="refinvoicedocumentno">RefInvoiceDocumentNo</h3>
 <p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(20) (nullable)</strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_No</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>20</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.RefInvoiceDocument.DocumentNo</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>

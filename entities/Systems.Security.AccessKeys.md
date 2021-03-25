@@ -23,8 +23,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Security.AccessKeys.md#code) | string (nullable) | Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. `Filter(eq;like)` 
-| [EntityName](Systems.Security.AccessKeys.md#entityname) | string (nullable) | What entitity the key secures. Can be null for private, legacy keys. `Filter(eq;like)` `ORD` 
+| [Code](Systems.Security.AccessKeys.md#code) | string(16) (nullable) | Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. `Filter(eq;like)` 
+| [EntityName](Systems.Security.AccessKeys.md#entityname) | string(64) (nullable) | What entitity the key secures. Can be null for private, legacy keys. `Filter(eq;like)` `ORD` 
 | [Id](Systems.Security.AccessKeys.md#id) | guid |  
 | [Name](Systems.Security.AccessKeys.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Multilanguage descriptive name of the security key. Can be null for legacy keys. `Filter(eq;like)` 
 
@@ -35,18 +35,20 @@ Aggregate Tree
 
 Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### EntityName
 
 What entitity the key secures. Can be null for private, legacy keys. `Filter(eq;like)` `ORD`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **64**  
 
 ### Id
 

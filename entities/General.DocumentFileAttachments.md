@@ -26,11 +26,11 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EmbeddedFileContents](General.DocumentFileAttachments.md#embeddedfilecontents) | byte[] (nullable) | The contents of the embedded file. null when the file is linked. 
-| [FileName](General.DocumentFileAttachments.md#filename) | string | The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. `Required` 
+| [FileName](General.DocumentFileAttachments.md#filename) | string(128) | The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. `Required` 
 | [Id](General.DocumentFileAttachments.md#id) | guid |  
 | [IsLinked](General.DocumentFileAttachments.md#islinked) | boolean | True when the document is linked (ony file name is kept). false when the document is embedded. `Required` `Default(false)` `Filter(eq)` 
-| [LinkedFilePath](General.DocumentFileAttachments.md#linkedfilepath) | string (nullable) | Path to the linked file. null when the file is embedded. 
-| [Notes](General.DocumentFileAttachments.md#notes) | string (nullable) | Notes for this DocumentFileAttachment. 
+| [LinkedFilePath](General.DocumentFileAttachments.md#linkedfilepath) | string(254) (nullable) | Path to the linked file. null when the file is embedded. 
+| [Notes](General.DocumentFileAttachments.md#notes) | string(2147483647) (nullable) | Notes for this DocumentFileAttachment. 
 
 ## References
 
@@ -53,9 +53,10 @@ _Supports Order By_: **False**
 
 The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. `Required`
 
-_Type_: **string**  
+_Type_: **string(128)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### Id
 
@@ -77,17 +78,19 @@ _Default Value_: **False**
 
 Path to the linked file. null when the file is embedded.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Notes
 
 Notes for this DocumentFileAttachment.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

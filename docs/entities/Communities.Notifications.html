@@ -119,12 +119,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Communities.Notifications.html#notificationclass">NotificationClass</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>The class of the notification from a predefined list of system classes. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Notifications.html#subject">Subject</a></td>
-<td>string (nullable)</td>
+<td>string(256) (nullable)</td>
 <td>The short subject of the notification (in the Default Culture of the user). <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
@@ -171,14 +171,16 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="notificationclass">NotificationClass</h3>
 <p>The class of the notification from a predefined list of system classes. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="subject">Subject</h3>
 <p>The short subject of the notification (in the Default Culture of the user). <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(256) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>256</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
 <p>The data object about which the notification is created. Null means that the notification is not about any specific data object. <code>Filter(multi eq)</code></p>

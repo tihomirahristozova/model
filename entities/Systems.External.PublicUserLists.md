@@ -24,8 +24,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.External.PublicUserLists.md#id) | guid |  
-| [Name](Systems.External.PublicUserLists.md#name) | string | The name of this PublicUserList. `Required` `Filter(like)` 
-| [Notes](Systems.External.PublicUserLists.md#notes) | string (nullable) | Notes for this PublicUserList. 
+| [Name](Systems.External.PublicUserLists.md#name) | string(64) | The name of this PublicUserList. `Required` `Filter(like)` 
+| [Notes](Systems.External.PublicUserLists.md#notes) | string(2147483647) (nullable) | Notes for this PublicUserList. 
 
 ## References
 
@@ -47,17 +47,19 @@ _Default Value_: **NewGuid**
 
 The name of this PublicUserList. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Notes
 
 Notes for this PublicUserList.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

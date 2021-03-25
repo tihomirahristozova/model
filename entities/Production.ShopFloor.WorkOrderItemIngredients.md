@@ -29,7 +29,7 @@ Aggregate Root:
 | [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#fixedscrapquantity) | [Quantity](../data-types.md#quantity) | The quantity of the material, which will be used for setup. `Unit: UsedQuantityUnit` `Required` `Default(0)` 
 | [Id](Production.ShopFloor.WorkOrderItemIngredients.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#lineord) | int32 | The order of the line within the item. `Required` `Filter(eq;like)` 
-| [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string (nullable) | Notes for this WorkOrderItemIngredient. 
+| [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string(254) (nullable) | Notes for this WorkOrderItemIngredient. 
 | [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantity) | [Quantity](../data-types.md#quantity) | The quantity of the material consumed in the operation. `Unit: UsedQuantityUnit` `Required` `Default(1)` 
 | [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Used Quantity in the base measurement category of the material. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
@@ -107,9 +107,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this WorkOrderItemIngredient.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### UsedQuantity
 

@@ -30,8 +30,8 @@ Aggregate Root:
 | [InvoicedValueAmountBase](Finance.Intrastat.DeclarationLines.md#invoicedvalueamountbase) | [Amount](../data-types.md#amount) | Invoiced value of the goods in the base currency. `Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency` `Required` 
 | [LineAction](Finance.Intrastat.DeclarationLines.md#lineaction) | [LineAction](Finance.Intrastat.DeclarationLines.md#lineaction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. `Required` `Default("NEW")` 
 | [LineNo](Finance.Intrastat.DeclarationLines.md#lineno) | int32 | Consequtive line number within the intrastat declaration. `Required` `Filter(eq)` 
-| [NetMassKg](Finance.Intrastat.DeclarationLines.md#netmasskg) | decimal | Net mass of the goods in kg. `Required` `Filter(multi eq)` 
-| [QuantitySupplementaryUnit](Finance.Intrastat.DeclarationLines.md#quantitysupplementaryunit) | decimal (nullable) | Quantity of the goods in the supplementary unit. null when no supplementary unit is specified. 
+| [NetMassKg](Finance.Intrastat.DeclarationLines.md#netmasskg) | decimal(14, 3) | Net mass of the goods in kg. `Required` `Filter(multi eq)` 
+| [QuantitySupplementaryUnit](Finance.Intrastat.DeclarationLines.md#quantitysupplementaryunit) | decimal(10, 0) (nullable) | Quantity of the goods in the supplementary unit. null when no supplementary unit is specified. 
 | [StatisticalValueAmountBase](Finance.Intrastat.DeclarationLines.md#statisticalvalueamountbase) | [Amount](../data-types.md#amount) (nullable) | Statistical value of the goods in the base currency. `Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency` 
 | [TransactionNature](Finance.Intrastat.DeclarationLines.md#transactionnature) | [TransactionNature](Finance.Intrastat.DeclarationLines.md#transactionnature) | Transaction nature, according to the Intrastat classification. `Required` 
 | [TransportMode](Finance.Intrastat.DeclarationLines.md#transportmode) | [TransportMode](Finance.Intrastat.DeclarationLines.md#transportmode) | Transportation mode - type of transportation used. `Required` 
@@ -127,7 +127,7 @@ _Front-End Recalc Expressions:_
 
 Net mass of the goods in kg. `Required` `Filter(multi eq)`
 
-_Type_: **decimal**  
+_Type_: **decimal(14, 3)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -135,7 +135,7 @@ _Supports Order By_: **False**
 
 Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(10, 0) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

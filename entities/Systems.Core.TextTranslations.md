@@ -23,12 +23,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ColumnName](Systems.Core.TextTranslations.md#columnname) | string | Obsolete. Not used. `Required` `Filter(eq)` 
+| [ColumnName](Systems.Core.TextTranslations.md#columnname) | string(128) | Obsolete. Not used. `Required` `Filter(eq)` 
 | [Id](Systems.Core.TextTranslations.md#id) | guid |  
-| [Language](Systems.Core.TextTranslations.md#language) | string | Obsolete. Not used. `Required` `Filter(eq)` 
+| [Language](Systems.Core.TextTranslations.md#language) | string(50) | Obsolete. Not used. `Required` `Filter(eq)` 
 | [RowId](Systems.Core.TextTranslations.md#rowid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
-| [TableName](Systems.Core.TextTranslations.md#tablename) | string | Obsolete. Not used. `Required` `Filter(eq)` `ORD` `ReadOnly` 
-| [TranslatedText](Systems.Core.TextTranslations.md#translatedtext) | string (nullable) | Obsolete. Not used. `Filter(eq)` 
+| [TableName](Systems.Core.TextTranslations.md#tablename) | string(128) | Obsolete. Not used. `Required` `Filter(eq)` `ORD` `ReadOnly` 
+| [TranslatedText](Systems.Core.TextTranslations.md#translatedtext) | string(254) (nullable) | Obsolete. Not used. `Filter(eq)` 
 
 
 ## Attribute Details
@@ -37,9 +37,10 @@ Aggregate Tree
 
 Obsolete. Not used. `Required` `Filter(eq)`
 
-_Type_: **string**  
+_Type_: **string(128)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### Id
 
@@ -52,9 +53,10 @@ _Default Value_: **NewGuid**
 
 Obsolete. Not used. `Required` `Filter(eq)`
 
-_Type_: **string**  
+_Type_: **string(50)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **50**  
 
 ### RowId
 
@@ -67,18 +69,20 @@ _Supported Filters_: **Equals, EqualsIn**
 
 Obsolete. Not used. `Required` `Filter(eq)` `ORD` `ReadOnly`
 
-_Type_: **string**  
+_Type_: **string(128)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+_Maximum Length_: **128**  
 
 ### TranslatedText
 
 Obsolete. Not used. `Filter(eq)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 

@@ -25,12 +25,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Applications.Rental.AssetGroups.md#fullpath) | string (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `ORD` `ReadOnly` 
+| [FullPath](Applications.Rental.AssetGroups.md#fullpath) | string(25) (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `ORD` `ReadOnly` 
 | [Id](Applications.Rental.AssetGroups.md#id) | guid |  
-| [Notes](Applications.Rental.AssetGroups.md#notes) | string (nullable) | Notes for this AssetGroup. 
-| [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (nullable) | The full path of the parent node. `Filter(eq)` 
-| [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string | Asset group code, unique within the parent node. `Required` `Filter(eq;like)` 
-| [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string | Asset group name, unique within the parent node. `Required` `Filter(eq;like)` 
+| [Notes](Applications.Rental.AssetGroups.md#notes) | string(2147483647) (nullable) | Notes for this AssetGroup. 
+| [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string(25) (nullable) | The full path of the parent node. `Filter(eq)` 
+| [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string(3) | Asset group code, unique within the parent node. `Required` `Filter(eq;like)` 
+| [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string(254) | Asset group name, unique within the parent node. `Required` `Filter(eq;like)` 
 
 ## Child Collections
 
@@ -45,10 +45,11 @@ Aggregate Tree
 
 The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `ORD` `ReadOnly`
 
-_Type_: **string (nullable)**  
+_Type_: **string(25) (nullable)**  
 _Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
+_Maximum Length_: **25**  
 
 ### Id
 
@@ -61,33 +62,37 @@ _Default Value_: **NewGuid**
 
 Notes for this AssetGroup.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### ParentFullPath
 
 The full path of the parent node. `Filter(eq)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(25) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Maximum Length_: **25**  
 
 ### RentalAssetGroupCode
 
 Asset group code, unique within the parent node. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(3)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **3**  
 
 ### RentalAssetGroupName
 
 Asset group name, unique within the parent node. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 

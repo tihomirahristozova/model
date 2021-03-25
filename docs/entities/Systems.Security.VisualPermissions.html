@@ -104,17 +104,17 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Security.VisualPermissions.html#applicationname">ApplicationName</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>The application for which the permission is specified. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.VisualPermissions.html#elementname">ElementName</a></td>
-<td>string (nullable)</td>
+<td>string(4000) (nullable)</td>
 <td>Optionally, the element from the panel which will be secured. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.VisualPermissions.html#formname">FormName</a></td>
-<td>string (nullable)</td>
+<td>string(128) (nullable)</td>
 <td>Optionally, the form which will be secured. <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -124,12 +124,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.VisualPermissions.html#operationname">OperationName</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Optionally, the operation on the element which will be secured. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.VisualPermissions.html#panelname">PanelName</a></td>
-<td>string (nullable)</td>
+<td>string(128) (nullable)</td>
 <td>Optionally, the panel from the form which will be secured. <code>Filter(eq)</code></td>
 </tr>
 </tbody>
@@ -154,19 +154,22 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationname">ApplicationName</h3>
 <p>The application for which the permission is specified. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="elementname">ElementName</h3>
 <p>Optionally, the element from the panel which will be secured. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(4000) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>4000</strong></p>
 <h3 id="formname">FormName</h3>
 <p>Optionally, the form which will be secured. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(128) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -174,14 +177,16 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="operationname">OperationName</h3>
 <p>Optionally, the operation on the element which will be secured. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="panelname">PanelName</h3>
 <p>Optionally, the panel from the form which will be secured. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(128) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <p>The security access key which controls the access to the visual permission. <code>Filter(multi eq)</code></p>

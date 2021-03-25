@@ -139,7 +139,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#creationuser">CreationUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who created the Person. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -154,7 +154,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#gln">GLN</a></td>
-<td>string (nullable)</td>
+<td>string(13) (nullable)</td>
 <td>Global Location Number used by EDI systems. <code>Filter(multi eq)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -179,17 +179,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#nationalnumber">NationalNumber</a></td>
-<td>string (nullable)</td>
+<td>string(14) (nullable)</td>
 <td>Government assigned unique personal number. null means unknown. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Internal notes for the person.</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#partycode">PartyCode</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>The unique code of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -199,7 +199,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#partycreationuser">PartyCreationUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who created the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -209,7 +209,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#partynotes">PartyNotes</a></td>
-<td>string (nullable)</td>
+<td>string(254) (nullable)</td>
 <td>Notes for this Party. (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -219,7 +219,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#partyuniquenumber">PartyUniqueNumber</a></td>
-<td>string (nullable)</td>
+<td>string(16) (nullable)</td>
 <td>Unique number of the party (National number for persons, Registration number for companies). <code>Filter(eq;like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#partyupdateuser">PartyUpdateUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who last updated the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -239,7 +239,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#passportnumber">PassportNumber</a></td>
-<td>string (nullable)</td>
+<td>string(14) (nullable)</td>
 <td>Current passport number. null means unknown. <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -254,7 +254,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#updateuser">UpdateUser</a></td>
-<td>string (nullable)</td>
+<td>string(64) (nullable)</td>
 <td>Login name of the user, who last updated the Person. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
@@ -386,9 +386,10 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>Login name of the user, who created the Person. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="firstname">FirstName</h3>
 <p>First name of the person. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
@@ -421,10 +422,11 @@ Allowed values for the <code>Gender</code>(General.Contacts.Persons.md#gender) d
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="gln">GLN</h3>
 <p>Global Location Number used by EDI systems. <code>Filter(multi eq)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(13) (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>13</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -448,20 +450,23 @@ Allowed values for the <code>Gender</code>(General.Contacts.Persons.md#gender) d
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="nationalnumber">NationalNumber</h3>
 <p>Government assigned unique personal number. null means unknown. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(14) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>14</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Internal notes for the person.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="partycode">PartyCode</h3>
 <p>The unique code of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="partycreationtime">PartyCreationTime</h3>
 <p>Date and time when the Party was created. <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -469,9 +474,10 @@ Allowed values for the <code>Gender</code>(General.Contacts.Persons.md#gender) d
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partycreationuser">PartyCreationUser</h3>
 <p>Login name of the user, who created the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="partyname">PartyName</h3>
 <p>The name of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
@@ -480,9 +486,10 @@ Allowed values for the <code>Gender</code>(General.Contacts.Persons.md#gender) d
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partynotes">PartyNotes</h3>
 <p>Notes for this Party. (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="partytype">PartyType</h3>
 <p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html#partytype">PartyType</a></strong><br>
@@ -523,9 +530,10 @@ Allowed values for the PartyType data attribute<br>
 <em>Default Value</em>: <strong>Person</strong></p>
 <h3 id="partyuniquenumber">PartyUniqueNumber</h3>
 <p>Unique number of the party (National number for persons, Registration number for companies). <code>Filter(eq;like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(16) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="partyupdatetime">PartyUpdateTime</h3>
 <p>Date and time when the Party was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -533,9 +541,10 @@ Allowed values for the PartyType data attribute<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdateuser">PartyUpdateUser</h3>
 <p>Login name of the user, who last updated the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="passportissuingdate">PassportIssuingDate</h3>
 <p>Date of issuing the passport. null means unknown. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -543,9 +552,10 @@ Allowed values for the PartyType data attribute<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="passportnumber">PassportNumber</h3>
 <p>Current passport number. null means unknown. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(14) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>14</strong></p>
 <h3 id="title">Title</h3>
 <p>The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
@@ -558,9 +568,10 @@ Allowed values for the PartyType data attribute<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>Login name of the user, who last updated the Person. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
 <p>The administrative region in which the party is situated. <code>Filter(multi eq)</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>

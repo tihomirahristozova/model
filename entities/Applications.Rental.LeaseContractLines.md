@@ -29,7 +29,7 @@ Aggregate Root:
 | [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount](../data-types.md#amount) (nullable) | Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency` 
 | [Id](Applications.Rental.LeaseContractLines.md#id) | guid |  
 | [LineNo](Applications.Rental.LeaseContractLines.md#lineno) | int32 | Consecutive number of the line within the lease contract. `Required` `Filter(eq;ge;le)` 
-| [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string (nullable) | Notes for this line. 
+| [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string(2147483647) (nullable) | Notes for this line. 
 | [StartDate](Applications.Rental.LeaseContractLines.md#startdate) | date | Starting date of lease for this asset. `Required` `Filter(multi eq;ge;le)` 
 
 ## References
@@ -93,9 +93,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this line.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### StartDate
 

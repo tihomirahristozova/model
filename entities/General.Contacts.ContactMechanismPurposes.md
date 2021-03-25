@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Contacts.ContactMechanismPurposes.md#code) | string | The unique code of the ContactMechanismPurpos. `Required` `Filter(eq;like)` `ORD` 
+| [Code](General.Contacts.ContactMechanismPurposes.md#code) | string(16) | The unique code of the ContactMechanismPurpos. `Required` `Filter(eq;like)` `ORD` 
 | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) (nullable) | When specified, allows the purpose to be specified only for contact mechanisms of the specified type. `Filter(multi eq)` 
-| [Description](General.Contacts.ContactMechanismPurposes.md#description) | string (nullable) | The description of this ContactMechanismPurpos. `Filter(like)` 
+| [Description](General.Contacts.ContactMechanismPurposes.md#description) | string(2147483647) (nullable) | The description of this ContactMechanismPurpos. `Filter(like)` 
 | [Id](General.Contacts.ContactMechanismPurposes.md#id) | guid |  
 | [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)` 
 
@@ -36,10 +36,11 @@ Aggregate Tree
 
 The unique code of the ContactMechanismPurpos. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### ContactMechanismType
 
@@ -66,9 +67,10 @@ _Supports Order By_: **False**
 
 The description of this ContactMechanismPurpos. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 

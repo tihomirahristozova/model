@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.VehicleSetVehicles.md#id) | guid |  
-| [Notes](Applications.Fleet.VehicleSetVehicles.md#notes) | string (nullable) | Notes for this VehicleSetVehicle. `Filter(like)` 
+| [Notes](Applications.Fleet.VehicleSetVehicles.md#notes) | string(254) (nullable) | Notes for this VehicleSetVehicle. `Filter(like)` 
 | [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#ordinalpos) | int32 (nullable) | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. `Filter(ge;le)` 
 
 ## References
@@ -50,9 +50,10 @@ _Default Value_: **NewGuid**
 
 Notes for this VehicleSetVehicle. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### OrdinalPos
 

@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. `Unit: Resource.PrimaryUnit` `Required` `Default(0)` 
 | [Id](Production.Resources.WorkgroupResources.md#id) | guid |  
-| [Notes](Production.Resources.WorkgroupResources.md#notes) | string (nullable) | User notes for the workgroup resource. 
+| [Notes](Production.Resources.WorkgroupResources.md#notes) | string(254) (nullable) | User notes for the workgroup resource. 
 
 ## References
 
@@ -65,9 +65,10 @@ _Default Value_: **NewGuid**
 
 User notes for the workgroup resource.
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.TemplateRisks.md#description) | string (nullable) | The description of this TemplateRisk. 
+| [Description](Projects.TemplateRisks.md#description) | string(2147483647) (nullable) | The description of this TemplateRisk. 
 | [Id](Projects.TemplateRisks.md#id) | guid |  
-| [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
-| [ProbabilityPercent](Projects.TemplateRisks.md#probabilitypercent) | decimal | The probability of the risk occurring. `Required` `Default(0)` 
-| [RiskName](Projects.TemplateRisks.md#riskname) | string | The name of the risk. `Required` 
+| [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal(3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
+| [ProbabilityPercent](Projects.TemplateRisks.md#probabilitypercent) | decimal(3, 2) | The probability of the risk occurring. `Required` `Default(0)` 
+| [RiskName](Projects.TemplateRisks.md#riskname) | string(254) | The name of the risk. `Required` 
 
 ## References
 
@@ -44,9 +44,10 @@ Aggregate Root:
 
 The description of this TemplateRisk.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Id
 
@@ -59,7 +60,7 @@ _Default Value_: **NewGuid**
 
 The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(3, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -68,7 +69,7 @@ _Default Value_: **0**
 
 The probability of the risk occurring. `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(3, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -77,9 +78,10 @@ _Default Value_: **0**
 
 The name of the risk. `Required`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 
 ## Reference Details

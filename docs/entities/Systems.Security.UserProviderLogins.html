@@ -109,7 +109,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserProviderLogins.html#providerkey">ProviderKey</a></td>
-<td>string</td>
+<td>string(450)</td>
 <td>The key, which the provider provided for logging the user. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -144,9 +144,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="providerkey">ProviderKey</h3>
 <p>The key, which the provider provided for logging the user. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(450)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>450</strong></p>
 <h3 id="providername">ProviderName</h3>
 <p>The system name of the authentication provider. It should be already registered for the domain. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.UserProviderLogins.html#providername">ProviderName</a></strong><br>

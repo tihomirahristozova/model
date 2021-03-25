@@ -26,8 +26,8 @@ Aggregate Tree
 | [CreationTimeUtc](Communities.Notifications.md#creationtimeutc) | datetime | The exact server time (in UTC), when the notification was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` 
 | [Id](Communities.Notifications.md#id) | guid |  
 | [IsRead](Communities.Notifications.md#isread) | boolean | Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. `Required` `Default(false)` `Filter(eq)` 
-| [NotificationClass](Communities.Notifications.md#notificationclass) | string | The class of the notification from a predefined list of system classes. `Required` `Filter(multi eq)` 
-| [Subject](Communities.Notifications.md#subject) | string (nullable) | The short subject of the notification (in the Default Culture of the user). `Filter(eq;like)` 
+| [NotificationClass](Communities.Notifications.md#notificationclass) | string(64) | The class of the notification from a predefined list of system classes. `Required` `Filter(multi eq)` 
+| [Subject](Communities.Notifications.md#subject) | string(256) (nullable) | The short subject of the notification (in the Default Culture of the user). `Filter(eq;like)` 
 
 ## References
 
@@ -68,17 +68,19 @@ _Default Value_: **False**
 
 The class of the notification from a predefined list of system classes. `Required` `Filter(multi eq)`
 
-_Type_: **string**  
+_Type_: **string(64)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Subject
 
 The short subject of the notification (in the Default Culture of the user). `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(256) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **256**  
 
 
 ## Reference Details

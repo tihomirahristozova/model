@@ -27,9 +27,9 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Rental.Assets.md#id) | guid |  
 | [IsActive](Applications.Rental.Assets.md#isactive) | boolean | True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports. `Required` `Default(true)` `Filter(eq)` 
-| [Notes](Applications.Rental.Assets.md#notes) | string (nullable) | Notes for this Asset. 
-| [RentalAssetCode](Applications.Rental.Assets.md#rentalassetcode) | string | Unique rental asset code. `Required` `Filter(eq;like)` `ORD` 
-| [RentalAssetName](Applications.Rental.Assets.md#rentalassetname) | string | The name of the rental asset. `Required` `Filter(like)` 
+| [Notes](Applications.Rental.Assets.md#notes) | string(2147483647) (nullable) | Notes for this Asset. 
+| [RentalAssetCode](Applications.Rental.Assets.md#rentalassetcode) | string(20) | Unique rental asset code. `Required` `Filter(eq;like)` `ORD` 
+| [RentalAssetName](Applications.Rental.Assets.md#rentalassetname) | string(254) | The name of the rental asset. `Required` `Filter(like)` 
 | [StandardGuaranteeAmount](Applications.Rental.Assets.md#standardguaranteeamount) | [Amount](../data-types.md#amount) (nullable) | Standard default amount of the guarantee that is set for this asset when leased. `Currency: StandardGuarantee<br />AmountCurrency` `Filter(multi eq)` 
 | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) (nullable) | Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. `Filter(multi eq)` 
 
@@ -76,26 +76,29 @@ _Default Value_: **True**
 
 Notes for this Asset.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### RentalAssetCode
 
 Unique rental asset code. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string**  
+_Type_: **string(20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **20**  
 
 ### RentalAssetName
 
 The name of the rental asset. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### StandardGuaranteeAmount
 

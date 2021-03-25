@@ -114,7 +114,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#posoperatorcode">PosOperatorCode</a></td>
-<td>string</td>
+<td>string(16)</td>
 <td>Operator code. Unique within the Pos Location. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -175,9 +175,10 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="posoperatorcode">PosOperatorCode</h3>
 <p>Operator code. Unique within the Pos Location. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(16)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="startingdate">StartingDate</h3>
 <p>The first date, when the operator has started working for this POS location. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>

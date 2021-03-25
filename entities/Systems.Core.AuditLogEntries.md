@@ -23,12 +23,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Core.AuditLogEntries.md#applicationname) | string (nullable) | The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)` 
-| [Details](Systems.Core.AuditLogEntries.md#details) | string (nullable) | Detailed contents of the event. Contents depend on the Event Type and Event Name. 
+| [ApplicationName](Systems.Core.AuditLogEntries.md#applicationname) | string(64) (nullable) | The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)` 
+| [Details](Systems.Core.AuditLogEntries.md#details) | string(2147483647) (nullable) | Detailed contents of the event. Contents depend on the Event Type and Event Name. 
 | [EntityItemId](Systems.Core.AuditLogEntries.md#entityitemid) | guid (nullable) | The Id of the record, which is referenced by the event. Null when unknown or N/A. `Filter(multi eq)` 
-| [EntityName](Systems.Core.AuditLogEntries.md#entityname) | string (nullable) | The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)` 
+| [EntityName](Systems.Core.AuditLogEntries.md#entityname) | string(64) (nullable) | The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)` 
 | [EventClass](Systems.Core.AuditLogEntries.md#eventclass) | [EventClass](Systems.Core.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. `Required` `Filter(multi eq)` 
-| [EventName](Systems.Core.AuditLogEntries.md#eventname) | string (nullable) | Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)` 
+| [EventName](Systems.Core.AuditLogEntries.md#eventname) | string(128) (nullable) | Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)` 
 | [EventTimeUtc](Systems.Core.AuditLogEntries.md#eventtimeutc) | datetime | The exact date and time (in Utc) when the event occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` 
 | [EventType](Systems.Core.AuditLogEntries.md#eventtype) | [EventType](Systems.Core.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. `Required` `Filter(multi eq)` 
 | [Id](Systems.Core.AuditLogEntries.md#id) | guid |  
@@ -47,17 +47,19 @@ Aggregate Tree
 
 The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### Details
 
 Detailed contents of the event. Contents depend on the Event Type and Event Name.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### EntityItemId
 
@@ -70,9 +72,10 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(64) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **64**  
 
 ### EventClass
 
@@ -95,9 +98,10 @@ _Supports Order By_: **False**
 
 Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(128) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### EventTimeUtc
 

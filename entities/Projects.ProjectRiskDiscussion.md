@@ -28,7 +28,7 @@ Aggregate Root:
 | [ContributionTime](Projects.ProjectRiskDiscussion.md#contributiontime) | datetime | The time, when the message was contributed. `Required` `Default(Now)` `Filter(eq)` `ReadOnly` 
 | [Id](Projects.ProjectRiskDiscussion.md#id) | guid |  
 | [LastEditTime](Projects.ProjectRiskDiscussion.md#lastedittime) | datetime (nullable) | Contains the last edit time of the message. null if the message was never edited. `Filter(eq)` `ReadOnly` 
-| [Message](Projects.ProjectRiskDiscussion.md#message) | string | The contents of the message. `Required` 
+| [Message](Projects.ProjectRiskDiscussion.md#message) | string(2147483647) | The contents of the message. `Required` 
 
 ## References
 
@@ -68,9 +68,10 @@ _Supports Order By_: **False**
 
 The contents of the message. `Required`
 
-_Type_: **string**  
+_Type_: **string(2147483647)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

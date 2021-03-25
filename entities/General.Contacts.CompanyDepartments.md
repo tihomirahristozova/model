@@ -25,9 +25,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string | The name of the department. `Required` `Filter(like)` 
+| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string(254) | The name of the department. `Required` `Filter(like)` 
 | [Id](General.Contacts.CompanyDepartments.md#id) | guid |  
-| [Notes](General.Contacts.CompanyDepartments.md#notes) | string (nullable) | Notes for this CompanyDepartment. 
+| [Notes](General.Contacts.CompanyDepartments.md#notes) | string(2147483647) (nullable) | Notes for this CompanyDepartment. 
 
 ## References
 
@@ -43,9 +43,10 @@ Aggregate Root:
 
 The name of the department. `Required` `Filter(like)`
 
-_Type_: **string**  
+_Type_: **string(254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### Id
 
@@ -58,9 +59,10 @@ _Default Value_: **NewGuid**
 
 Notes for this CompanyDepartment.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

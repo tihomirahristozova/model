@@ -26,10 +26,10 @@ Aggregate Tree
 | [Description](Logistics.Inventory.Lots.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The description of this Lot. 
 | [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime (nullable) | Expiry date for this lot. 
 | [Id](Logistics.Inventory.Lots.md#id) | guid |  
-| [LicenseNo](Logistics.Inventory.Lots.md#licenseno) | string (nullable) | The license number for this lot. Null when license number is N/A or unknown. 
-| [Number](Logistics.Inventory.Lots.md#number) | string | The unique number of the Lot. May contain characters, if required. `Required` `Filter(eq;like)` 
+| [LicenseNo](Logistics.Inventory.Lots.md#licenseno) | string(50) (nullable) | The license number for this lot. Null when license number is N/A or unknown. 
+| [Number](Logistics.Inventory.Lots.md#number) | string(30) | The unique number of the Lot. May contain characters, if required. `Required` `Filter(eq;like)` 
 | [ProductionBatchId](Logistics.Inventory.Lots.md#productionbatchid) | guid (nullable) | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. `Filter(multi eq)` 
-| [PurchaseLotNumber](Logistics.Inventory.Lots.md#purchaselotnumber) | string (nullable) | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. `Filter(like)` 
+| [PurchaseLotNumber](Logistics.Inventory.Lots.md#purchaselotnumber) | string(30) (nullable) | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. `Filter(like)` 
 | [ReceiptDate](Logistics.Inventory.Lots.md#receiptdate) | date (nullable) | The date of the first receipt of products in this lot. `ReadOnly` 
 | [Status](Logistics.Inventory.Lots.md#status) | [Status](Logistics.Inventory.Lots.md#status) | Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. `Required` `Default(0)` `Filter(multi eq)` 
 
@@ -74,17 +74,19 @@ _Default Value_: **NewGuid**
 
 The license number for this lot. Null when license number is N/A or unknown.
 
-_Type_: **string (nullable)**  
+_Type_: **string(50) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **50**  
 
 ### Number
 
 The unique number of the Lot. May contain characters, if required. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(30)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **30**  
 
 ### ProductionBatchId
 
@@ -97,9 +99,10 @@ _Supported Filters_: **Equals, EqualsIn**
 
 Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. `Filter(like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(30) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **30**  
 
 ### ReceiptDate
 

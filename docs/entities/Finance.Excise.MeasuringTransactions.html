@@ -134,12 +134,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#measuringdevicecode">MeasuringDeviceCode</a></td>
-<td>string</td>
+<td>string(32)</td>
 <td>The code of the measuring device, used to measure the transaction. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this MeasuringTransaction.</td>
 </tr>
 <tr>
@@ -154,7 +154,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#transactionnumber">TransactionNumber</a></td>
-<td>string</td>
+<td>string(32)</td>
 <td>Transaction number, unique for the measuring device. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
@@ -239,15 +239,17 @@ Allowed values for the <code>Direction</code>(Finance.Excise.MeasuringTransactio
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="measuringdevicecode">MeasuringDeviceCode</h3>
 <p>The code of the measuring device, used to measure the transaction. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(32)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this MeasuringTransaction.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity of the product, measured with this transaction. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
@@ -260,9 +262,10 @@ Allowed values for the <code>Direction</code>(Finance.Excise.MeasuringTransactio
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="transactionnumber">TransactionNumber</h3>
 <p>Transaction number, unique for the measuring device. <code>Required</code> <code>Filter(multi eq;like)</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(32)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>32</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
 <p>The product, which was being measured. <code>Required</code> <code>Filter(multi eq)</code></p>

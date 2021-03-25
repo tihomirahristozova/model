@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActualValue](Applications.DataWarehouse.DataValues.md#actualvalue) | decimal | Accumulates actual value for the measure. `Required` `Default(0)` `Filter(eq)` 
+| [ActualValue](Applications.DataWarehouse.DataValues.md#actualvalue) | decimal(17, 5) | Accumulates actual value for the measure. `Required` `Default(0)` `Filter(eq)` 
 | [Date](Applications.DataWarehouse.DataValues.md#date) | date | The date for which the measure is recorded. All records with dates within each period are summed. `Required` `Filter(eq;ge;le)` 
 | [Id](Applications.DataWarehouse.DataValues.md#id) | guid |  
-| [TargetValue](Applications.DataWarehouse.DataValues.md#targetvalue) | decimal | Accumulates target value for the measure. `Required` `Default(0)` `Filter(eq)` 
+| [TargetValue](Applications.DataWarehouse.DataValues.md#targetvalue) | decimal(17, 5) | Accumulates target value for the measure. `Required` `Default(0)` `Filter(eq)` 
 
 ## References
 
@@ -42,7 +42,7 @@ Aggregate Tree
 
 Accumulates actual value for the measure. `Required` `Default(0)` `Filter(eq)`
 
-_Type_: **decimal**  
+_Type_: **decimal(17, 5)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -66,7 +66,7 @@ _Default Value_: **NewGuid**
 
 Accumulates target value for the measure. `Required` `Default(0)` `Filter(eq)`
 
-_Type_: **decimal**  
+_Type_: **decimal(17, 5)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

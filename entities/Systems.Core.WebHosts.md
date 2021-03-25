@@ -25,12 +25,12 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CertificateContents](Systems.Core.WebHosts.md#certificatecontents) | byte[] (nullable) | The contents of the web host certificate. null means to use the server system certificate. 
 | [CertificateExpiryDate](Systems.Core.WebHosts.md#certificateexpirydate) | date (nullable) | The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When null, the expiry date was not provided by the user, when uploading the certificate. `Filter(multi eq)` 
-| [CertificateOriginal<br />Filename](Systems.Core.WebHosts.md#certificateoriginalfilename) | string (nullable) | The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. `Filter(eq;like)` 
-| [CertificatePassword](Systems.Core.WebHosts.md#certificatepassword) | string (nullable) | The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used. 
-| [CertificateType](Systems.Core.WebHosts.md#certificatetype) | string | The type of certificate uploaded. Currently, only PFX is supported. `Required` `Default("PFX")` `Filter(multi eq)` 
+| [CertificateOriginal<br />Filename](Systems.Core.WebHosts.md#certificateoriginalfilename) | string(254) (nullable) | The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. `Filter(eq;like)` 
+| [CertificatePassword](Systems.Core.WebHosts.md#certificatepassword) | string(2147483647) (nullable) | The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used. 
+| [CertificateType](Systems.Core.WebHosts.md#certificatetype) | string(3) | The type of certificate uploaded. Currently, only PFX is supported. `Required` `Default("PFX")` `Filter(multi eq)` 
 | [Id](Systems.Core.WebHosts.md#id) | guid |  
-| [Name](Systems.Core.WebHosts.md#name) | string | The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. `Required` `Filter(multi eq;like)` 
-| [Notes](Systems.Core.WebHosts.md#notes) | string (nullable) | Notes for this WebHost. 
+| [Name](Systems.Core.WebHosts.md#name) | string(2147483647) | The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. `Required` `Filter(multi eq;like)` 
+| [Notes](Systems.Core.WebHosts.md#notes) | string(2147483647) (nullable) | Notes for this WebHost. 
 
 
 ## Attribute Details
@@ -55,25 +55,28 @@ _Supports Order By_: **False**
 
 The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. `Filter(eq;like)`
 
-_Type_: **string (nullable)**  
+_Type_: **string(254) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **254**  
 
 ### CertificatePassword
 
 The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### CertificateType
 
 The type of certificate uploaded. Currently, only PFX is supported. `Required` `Default("PFX")` `Filter(multi eq)`
 
-_Type_: **string**  
+_Type_: **string(3)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **3**  
 _Default Value_: **PFX**  
 
 ### Id
@@ -87,17 +90,19 @@ _Default Value_: **NewGuid**
 
 The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. `Required` `Filter(multi eq;like)`
 
-_Type_: **string**  
+_Type_: **string(2147483647)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 ### Notes
 
 Notes for this WebHost.
 
-_Type_: **string (nullable)**  
+_Type_: **string(2147483647) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 

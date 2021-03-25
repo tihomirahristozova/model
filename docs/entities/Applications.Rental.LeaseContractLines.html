@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#linenotes">LineNotes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this line.</td>
 </tr>
 <tr>
@@ -204,9 +204,10 @@ Aggregate Root:<br>
 <code>( obj.LeaseContract.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linenotes">LineNotes</h3>
 <p>Notes for this line.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="startdate">StartDate</h3>
 <p>Starting date of lease for this asset. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>

@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AllowExplicitNumbering](General.SequenceGenerators.md#allowexplicitnumbering) | boolean | Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). `Required` `Default(false)` 
 | [Id](General.SequenceGenerators.md#id) | guid |  
-| [NextValue](General.SequenceGenerators.md#nextvalue) | string | The next number that will be issued by the sequence. `Required` `Default("0000000001")` 
+| [NextValue](General.SequenceGenerators.md#nextvalue) | string(16) | The next number that will be issued by the sequence. `Required` `Default("0000000001")` 
 | [SequencePriority](General.SequenceGenerators.md#sequencepriority) | int32 | The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. `Required` `Default(1)` 
 
 ## References
@@ -62,9 +62,10 @@ _Default Value_: **NewGuid**
 
 The next number that will be issued by the sequence. `Required` `Default("0000000001")`
 
-_Type_: **string**  
+_Type_: **string(16)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+_Maximum Length_: **16**  
 _Default Value_: **0000000001**  
 
 ### SequencePriority

@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [Id](General.Products.ProductCodes.md#id) | guid |  
-| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string | The code of the product in the specified coding system. `Required` `Filter(eq;like)` 
+| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string(32) | The code of the product in the specified coding system. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -59,9 +59,10 @@ _Default Value_: **NewGuid**
 
 The code of the product in the specified coding system. `Required` `Filter(eq;like)`
 
-_Type_: **string**  
+_Type_: **string(32)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **32**  
 
 
 ## Reference Details

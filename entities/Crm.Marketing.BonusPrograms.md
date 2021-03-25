@@ -26,8 +26,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Active](Crm.Marketing.BonusPrograms.md#active) | boolean (nullable) | General condition if the bonus is active. The other conditions are verified only for active bonus programs. `Default(true)` `Filter(eq)` 
 | [BonusAction](Crm.Marketing.BonusPrograms.md#bonusaction) | [BonusAction](Crm.Marketing.BonusPrograms.md#bonusaction) | Bonus action: P-Add product to the order, A-Add amount, D-Give discount. `Required` `Default("D")` `Filter(multi eq)` 
-| [BonusDocumentAmountPercent](Crm.Marketing.BonusPrograms.md#bonusdocumentamountpercent) | decimal (nullable) | The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null. 
-| [BonusLineDiscountPercent](Crm.Marketing.BonusPrograms.md#bonuslinediscountpercent) | decimal | The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). `Required` `Default(0)` 
+| [BonusDocumentAmountPercent](Crm.Marketing.BonusPrograms.md#bonusdocumentamountpercent) | decimal(7, 6) (nullable) | The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null. 
+| [BonusLineDiscountPercent](Crm.Marketing.BonusPrograms.md#bonuslinediscountpercent) | decimal(7, 6) | The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). `Required` `Default(0)` 
 | [BonusProductQuantity](Crm.Marketing.BonusPrograms.md#bonusproductquantity) | [Quantity](../data-types.md#quantity) (nullable) | The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Unit: BonusProductQuantityUnit` 
 | [BonusProductQuantity<br />MultiplierForEach<br />LotSize](Crm.Marketing.BonusPrograms.md#bonusproductquantitymultiplierforeachlotsize) | [Quantity](../data-types.md#quantity) (nullable) | When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` 
 | [ConditionCustomerFilterXML](Crm.Marketing.BonusPrograms.md#conditioncustomerfilterxml) | dataaccessfilter (nullable) | When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. 
@@ -100,7 +100,7 @@ _Default Value_: **Discount**
 
 The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null.
 
-_Type_: **decimal (nullable)**  
+_Type_: **decimal(7, 6) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -108,7 +108,7 @@ _Supports Order By_: **False**
 
 The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). `Required` `Default(0)`
 
-_Type_: **decimal**  
+_Type_: **decimal(7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

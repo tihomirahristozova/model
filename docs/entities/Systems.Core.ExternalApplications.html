@@ -104,7 +104,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#address">Address</a></td>
-<td>string</td>
+<td>string(2147483647)</td>
 <td>The address (path) to the application. The address is platform-dependant. <code>Required</code></td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#entityname">EntityName</a></td>
-<td>string</td>
+<td>string(64)</td>
 <td>The entity, for which the application is defined. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExternalApplications.html#notes">Notes</a></td>
-<td>string (nullable)</td>
+<td>string(2147483647) (nullable)</td>
 <td>Notes for this ExternalApplication.</td>
 </tr>
 <tr>
@@ -179,9 +179,10 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="address">Address</h3>
 <p>The address (path) to the application. The address is platform-dependant. <code>Required</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(2147483647)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="availableinmode">AvailableInMode</h3>
 <p>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. <code>Required</code> <code>Default(&quot;SINGLE&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a></strong><br>
@@ -214,10 +215,11 @@ Allowed values for the <code>AvailableInMode</code>(Systems.Core.ExternalApplica
 <em>Default Value</em>: <strong>SINGLE</strong></p>
 <h3 id="entityname">EntityName</h3>
 <p>The entity, for which the application is defined. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string</strong><br>
+<p><em>Type</em>: <strong>string(64)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="executeforallobjects">ExecuteForAllObjects</h3>
 <p>Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -242,9 +244,10 @@ Allowed values for the <code>AvailableInMode</code>(Systems.Core.ExternalApplica
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ExternalApplication.</p>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="platform">Platform</h3>
 <p>The execution platform of the application. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExternalApplications.html#platform">Platform</a></strong><br>

@@ -25,12 +25,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.MeasurementUnits.md#code) | string (nullable) | When not null, contains unique measurement unit code. `Filter(eq;like)` `ORD` 
+| [Code](General.MeasurementUnits.md#code) | string(16) (nullable) | When not null, contains unique measurement unit code. `Filter(eq;like)` `ORD` 
 | [Description](General.MeasurementUnits.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Full multi-language description of the measurement unit. 
-| [Divisor](General.MeasurementUnits.md#divisor) | decimal | Divisor of the relative value of the measurement unit against other units (divisor when converting to base). `Required` `Default(1)` 
+| [Divisor](General.MeasurementUnits.md#divisor) | decimal(9, 3) | Divisor of the relative value of the measurement unit against other units (divisor when converting to base). `Required` `Default(1)` 
 | [Id](General.MeasurementUnits.md#id) | guid |  
 | [IsDefaultUnit](General.MeasurementUnits.md#isdefaultunit) | boolean | True if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category. `Required` `Default(false)` `Filter(eq)` 
-| [Multiplier](General.MeasurementUnits.md#multiplier) | decimal | Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). `Required` `Default(1)` 
+| [Multiplier](General.MeasurementUnits.md#multiplier) | decimal(9, 3) | Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). `Required` `Default(1)` 
 | [Name](General.MeasurementUnits.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the measurement unit. `Required` `Filter(eq;like)` `ORD` 
 | [SystemUnit](General.MeasurementUnits.md#systemunit) | [SystemUnit](General.MeasurementUnits.md#systemunit) (nullable) | Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. `Filter(eq;like)` 
 
@@ -47,10 +47,11 @@ Aggregate Root:
 
 When not null, contains unique measurement unit code. `Filter(eq;like)` `ORD`
 
-_Type_: **string (nullable)**  
+_Type_: **string(16) (nullable)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+_Maximum Length_: **16**  
 
 ### Description
 
@@ -64,7 +65,7 @@ _Supports Order By_: **False**
 
 Divisor of the relative value of the measurement unit against other units (divisor when converting to base). `Required` `Default(1)`
 
-_Type_: **decimal**  
+_Type_: **decimal(9, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -89,7 +90,7 @@ _Default Value_: **False**
 
 Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). `Required` `Default(1)`
 
-_Type_: **decimal**  
+_Type_: **decimal(9, 3)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
