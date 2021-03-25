@@ -28,10 +28,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseUrl](Applications.Cms.WebSites.md#baseurl) | string(256) (nullable) | The base url (address) of the web site. `Filter(like)` 
+| [BaseUrl](Applications.Cms.WebSites.md#baseurl) | string (256) __nullable__ | The base url (address) of the web site. `Filter(like)` 
 | [Id](Applications.Cms.WebSites.md#id) | guid |  
 | [IsPublished](Applications.Cms.WebSites.md#ispublished) | boolean | Specifies whether the site is published for public Internet access. `Required` `Default(false)` `Filter(eq)` 
-| [Name](Applications.Cms.WebSites.md#name) | string(256) | Multilanguage web site name. `Required` `Filter(like)` 
+| [Name](Applications.Cms.WebSites.md#name) | string (256) | Multilanguage web site name. `Required` `Filter(like)` 
 
 ## References
 
@@ -54,7 +54,7 @@ Aggregate Tree
 
 The base url (address) of the web site. `Filter(like)`
 
-_Type_: **string(256) (nullable)**  
+_Type_: **string (256) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -79,7 +79,7 @@ _Default Value_: **False**
 
 Multilanguage web site name. `Required` `Filter(like)`
 
-_Type_: **string(256)**  
+_Type_: **string (256)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  

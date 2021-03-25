@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Bpm.ProcessNodes.html#code">Code</a></td>
-<td>string(16)</td>
+<td>string (16)</td>
 <td>Node code, unique within the process. Used as ID for XML serialization purposes. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.ProcessNodes.html#instructionshtml">InstructionsHtml</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Detailed instructions to the executor in HTML format. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -154,7 +154,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>Node code, unique within the process. Used as ID for XML serialization purposes. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(16)</strong><br>
+<p><em>Type</em>: <strong>string (16)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
@@ -165,7 +165,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="instructionshtml">InstructionsHtml</h3>
 <p>Detailed instructions to the executor in HTML format. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

@@ -25,14 +25,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](Crm.PromotionalPackages.md#active) | boolean | Package status: true = the offer is available for new documents; false = otherwise. `Required` `Default(true)` `Filter(eq)` 
-| [Code](Crm.PromotionalPackages.md#code) | string(20) | Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Crm.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Crm.PromotionalPackages.md#id) | guid |  
-| [Name](Crm.PromotionalPackages.md#name) | string(254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
-| [ValidForCustomerFilterXML](Crm.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter (nullable) | When not null, the package is valid only for the customers, that match the filter. 
-| [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter (nullable) | When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. 
-| [ValidForShipTo<br />CustomerFilter<br />XML](Crm.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter (nullable) | When not null, specifies validity condition for the Ship To Customer of the sales document. 
-| [ValidFromDate](Crm.PromotionalPackages.md#validfromdate) | date (nullable) | When not null specifies the first date when the package is valid for offering. The date is compared against the document date. `Filter(eq;ge;le)` 
-| [ValidToDate](Crm.PromotionalPackages.md#validtodate) | date (nullable) | When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. `Filter(eq;ge;le)` 
+| [Name](Crm.PromotionalPackages.md#name) | string (254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
+| [ValidForCustomerFilterXML](Crm.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | When not null, the package is valid only for the customers, that match the filter. 
+| [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. 
+| [ValidForShipTo<br />CustomerFilter<br />XML](Crm.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies validity condition for the Ship To Customer of the sales document. 
+| [ValidFromDate](Crm.PromotionalPackages.md#validfromdate) | date __nullable__ | When not null specifies the first date when the package is valid for offering. The date is compared against the document date. `Filter(eq;ge;le)` 
+| [ValidToDate](Crm.PromotionalPackages.md#validtodate) | date __nullable__ | When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. `Filter(eq;ge;le)` 
 
 ## References
 
@@ -68,7 +68,7 @@ _Default Value_: **True**
 
 Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(20)**  
+_Type_: **string (20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -85,7 +85,7 @@ _Default Value_: **NewGuid**
 
 The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -95,7 +95,7 @@ _Maximum Length_: **254**
 
 When not null, the package is valid only for the customers, that match the filter.
 
-_Type_: **dataaccessfilter (nullable)**  
+_Type_: **dataaccessfilter __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -103,7 +103,7 @@ _Supports Order By_: **False**
 
 When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.
 
-_Type_: **dataaccessfilter (nullable)**  
+_Type_: **dataaccessfilter __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -111,7 +111,7 @@ _Supports Order By_: **False**
 
 When not null, specifies validity condition for the Ship To Customer of the sales document.
 
-_Type_: **dataaccessfilter (nullable)**  
+_Type_: **dataaccessfilter __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -119,7 +119,7 @@ _Supports Order By_: **False**
 
 When not null specifies the first date when the package is valid for offering. The date is compared against the document date. `Filter(eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -127,7 +127,7 @@ _Supports Order By_: **False**
 
 When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. `Filter(eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

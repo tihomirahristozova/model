@@ -27,8 +27,8 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Logistics.Procurement.RequisitionLines.md#id) | guid |  
 | [LineNo](Logistics.Procurement.RequisitionLines.md#lineno) | int32 | Line number, unique within the Requisition. Usually is increasing number like 10, 20, 30, ... when initially entering the Requisition (in order to allow insertions with adjustment documents). `Required` 
-| [Notes](Logistics.Procurement.RequisitionLines.md#notes) | string(254) (nullable) | Notes for this RequisitionLine. 
-| [ProductDescription](Logistics.Procurement.RequisitionLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product. 
+| [Notes](Logistics.Procurement.RequisitionLines.md#notes) | string (254) __nullable__ | Notes for this RequisitionLine. 
+| [ProductDescription](Logistics.Procurement.RequisitionLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product. 
 | [Quantity](Logistics.Procurement.RequisitionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The required quantity of the product. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
 | [QuantityBase](Logistics.Procurement.RequisitionLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
 | [RequiredDeliveryDate](Logistics.Procurement.RequisitionLines.md#requireddeliverydate) | datetime | The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. `Required` `Filter(ge;le)` 
@@ -72,7 +72,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this RequisitionLine.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -81,7 +81,7 @@ _Maximum Length_: **254**
 
 The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

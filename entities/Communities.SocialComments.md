@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommentText](Communities.SocialComments.md#commenttext) | string(2147483647) | The comment contents in clear text. `Required` 
+| [CommentText](Communities.SocialComments.md#commenttext) | string (max) | The comment contents in clear text. `Required` 
 | [CreationTimeUtc](Communities.SocialComments.md#creationtimeutc) | datetime | The exact server time (in UTC), when the comment was created. `Required` `ORD` 
 | [Id](Communities.SocialComments.md#id) | guid |  
 
@@ -42,7 +42,7 @@ Aggregate Tree
 
 The comment contents in clear text. `Required`
 
-_Type_: **string(2147483647)**  
+_Type_: **string (max)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

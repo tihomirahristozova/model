@@ -26,11 +26,11 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ActiveFrom](Logistics.Wms.WarehouseWorkers.md#activefrom) | date | The date, from which the worker record has become active in the warehouse. `Required` `Default(Today)` `Filter(eq;ge;le)` 
-| [ActiveTo](Logistics.Wms.WarehouseWorkers.md#activeto) | date (nullable) | The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. `Filter(eq;ge;le)` 
+| [ActiveTo](Logistics.Wms.WarehouseWorkers.md#activeto) | date __nullable__ | The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. `Filter(eq;ge;le)` 
 | [Id](Logistics.Wms.WarehouseWorkers.md#id) | guid |  
 | [IsActive](Logistics.Wms.WarehouseWorkers.md#isactive) | boolean | Specifies whether the worker is active and can execute new warehouse tasks. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Logistics.Wms.WarehouseWorkers.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the worker (multi-language). `Required` `Filter(multi eq;like)` 
-| [Notes](Logistics.Wms.WarehouseWorkers.md#notes) | string(2147483647) (nullable) | Notes for this WarehouseWorker. 
+| [Notes](Logistics.Wms.WarehouseWorkers.md#notes) | string (max) __nullable__ | Notes for this WarehouseWorker. 
 
 ## References
 
@@ -55,7 +55,7 @@ _Default Value_: **CurrentDate**
 
 The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. `Filter(eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 Notes for this WarehouseWorker.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

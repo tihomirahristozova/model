@@ -25,9 +25,9 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ExecuteTime](Systems.Core.UpdateProcedureExecutes.md#executetime) | datetime | The time, when the update procedure was executed. `Required` `Default(Now)` 
 | [Id](Systems.Core.UpdateProcedureExecutes.md#id) | guid |  
-| [ResultMessage](Systems.Core.UpdateProcedureExecutes.md#resultmessage) | string(1024) (nullable) | Error or success message. 
+| [ResultMessage](Systems.Core.UpdateProcedureExecutes.md#resultmessage) | string (1024) __nullable__ | Error or success message. 
 | [Successful](Systems.Core.UpdateProcedureExecutes.md#successful) | boolean | True when the execution was successfull. `Required` `Default(true)` 
-| [UpdateProcedure](Systems.Core.UpdateProcedureExecutes.md#updateprocedure) | string(128) | The system name of the executed update procedure. `Required` 
+| [UpdateProcedure](Systems.Core.UpdateProcedureExecutes.md#updateprocedure) | string (128) | The system name of the executed update procedure. `Required` 
 
 
 ## Attribute Details
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 Error or success message.
 
-_Type_: **string(1024) (nullable)**  
+_Type_: **string (1024) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1024**  
@@ -70,7 +70,7 @@ _Default Value_: **True**
 
 The system name of the executed update procedure. `Required`
 
-_Type_: **string(128)**  
+_Type_: **string (128)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  

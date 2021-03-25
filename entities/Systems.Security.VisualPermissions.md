@@ -23,12 +23,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Security.VisualPermissions.md#applicationname) | string(64) | The application for which the permission is specified. `Required` `Filter(eq)` 
-| [ElementName](Systems.Security.VisualPermissions.md#elementname) | string(4000) (nullable) | Optionally, the element from the panel which will be secured. `Filter(eq)` 
-| [FormName](Systems.Security.VisualPermissions.md#formname) | string(128) (nullable) | Optionally, the form which will be secured. `Filter(eq)` 
+| [ApplicationName](Systems.Security.VisualPermissions.md#applicationname) | string (64) | The application for which the permission is specified. `Required` `Filter(eq)` 
+| [ElementName](Systems.Security.VisualPermissions.md#elementname) | string (4000) __nullable__ | Optionally, the element from the panel which will be secured. `Filter(eq)` 
+| [FormName](Systems.Security.VisualPermissions.md#formname) | string (128) __nullable__ | Optionally, the form which will be secured. `Filter(eq)` 
 | [Id](Systems.Security.VisualPermissions.md#id) | guid |  
-| [OperationName](Systems.Security.VisualPermissions.md#operationname) | string(64) (nullable) | Optionally, the operation on the element which will be secured. `Filter(eq)` 
-| [PanelName](Systems.Security.VisualPermissions.md#panelname) | string(128) (nullable) | Optionally, the panel from the form which will be secured. `Filter(eq)` 
+| [OperationName](Systems.Security.VisualPermissions.md#operationname) | string (64) __nullable__ | Optionally, the operation on the element which will be secured. `Filter(eq)` 
+| [PanelName](Systems.Security.VisualPermissions.md#panelname) | string (128) __nullable__ | Optionally, the panel from the form which will be secured. `Filter(eq)` 
 
 ## References
 
@@ -43,7 +43,7 @@ Aggregate Tree
 
 The application for which the permission is specified. `Required` `Filter(eq)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -52,7 +52,7 @@ _Maximum Length_: **64**
 
 Optionally, the element from the panel which will be secured. `Filter(eq)`
 
-_Type_: **string(4000) (nullable)**  
+_Type_: **string (4000) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **4000**  
@@ -61,7 +61,7 @@ _Maximum Length_: **4000**
 
 Optionally, the form which will be secured. `Filter(eq)`
 
-_Type_: **string(128) (nullable)**  
+_Type_: **string (128) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -77,7 +77,7 @@ _Default Value_: **NewGuid**
 
 Optionally, the operation on the element which will be secured. `Filter(eq)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -86,7 +86,7 @@ _Maximum Length_: **64**
 
 Optionally, the panel from the form which will be secured. `Filter(eq)`
 
-_Type_: **string(128) (nullable)**  
+_Type_: **string (128) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  

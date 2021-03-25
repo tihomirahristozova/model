@@ -104,22 +104,22 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#deliverytermscode">DeliveryTermsCode</a></td>
-<td><a href="Crm.Sales.SalesOrderLines.html#deliverytermscode">DeliveryTerms</a> (nullable)</td>
+<td><a href="Crm.Sales.SalesOrderLines.html#deliverytermscode">DeliveryTerms</a> <strong>nullable</strong></td>
 <td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>Guarantee period in days for the offered product. null for non-serviced products.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#historicaldatajson">HistoricalDataJson</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. <code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#historicalunitcost">HistoricalUnitCost</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>Used for returning of goods that are sold before the exploitation of the system. <code>Currency: SalesOrder.DocumentCurrency</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
@@ -129,12 +129,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#intrastattransactionnaturecode">IntrastatTransaction<br>NatureCode</a></td>
-<td><a href="Crm.Sales.SalesOrderLines.html#intrastattransactionnaturecode">TransactionNature</a> (nullable)</td>
+<td><a href="Crm.Sales.SalesOrderLines.html#intrastattransactionnaturecode">TransactionNature</a> <strong>nullable</strong></td>
 <td>Transaction nature; used for Intrastat reporting.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#intrastattransportmodecode">IntrastatTransportModeCode</a></td>
-<td><a href="Crm.Sales.SalesOrderLines.html#intrastattransportmodecode">TransportMode</a> (nullable)</td>
+<td><a href="Crm.Sales.SalesOrderLines.html#intrastattransportmodecode">TransportMode</a> <strong>nullable</strong></td>
 <td>Transport mode; used for Intrastat reporting.</td>
 </tr>
 <tr>
@@ -144,12 +144,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linecustomdiscountpercent">LineCustomDiscountPercent</a></td>
-<td>decimal(7, 6)</td>
+<td>decimal (7, 6)</td>
 <td>User-defined discount for the line. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linefromdate">LineFromDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
@@ -159,22 +159,22 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linestandarddiscountpercent">LineStandardDiscount<br>Percent</a></td>
-<td>decimal(7, 6)</td>
+<td>decimal (7, 6)</td>
 <td>Standard discount for the line. This is automatically computed according to discount conditions. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linetodate">LineToDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this SalesOrderLine.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#parentlineno">ParentLineNo</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -199,12 +199,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#requestedquantity">RequestedQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>Quantity requested by customer. <code>Unit: QuantityUnit</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#requireddeliverydate">RequiredDeliveryDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>The required (contracted) delivery date for the line. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -214,7 +214,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#standardunitprice">StandardUnitPrice</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>Standard unit price of the product during the creation of the sales order line. <code>Currency: SalesOrder.DocumentCurrency</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -339,7 +339,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="deliverytermscode">DeliveryTermsCode</h3>
 <p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</p>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html#deliverytermscode">DeliveryTerms</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html#deliverytermscode">DeliveryTerms</a> <strong>nullable</strong></strong><br>
 Generic enum type for DeliveryTerms properties<br>
 <em>Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)</em></p>
 <table>
@@ -408,20 +408,20 @@ Generic enum type for DeliveryTerms properties<br>
 <code>obj.SalesOrder.DeliveryTermsCode</code></p>
 <h3 id="guaranteeperioddays">GuaranteePeriodDays</h3>
 <p>Guarantee period in days for the offered product. null for non-serviced products.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.Product != null), obj.Product.GuaranteePeriodDays, obj.GuaranteePeriodDays)</code></p>
 <h3 id="historicaldatajson">HistoricalDataJson</h3>
 <p>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. <code>Introduced in version 19.1</code></p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="historicalunitcost">HistoricalUnitCost</h3>
 <p>Used for returning of goods that are sold before the exploitation of the system. <code>Currency: SalesOrder.DocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -431,7 +431,7 @@ Generic enum type for DeliveryTerms properties<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
 <p>Transaction nature; used for Intrastat reporting.</p>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html#intrastattransactionnaturecode">TransactionNature</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html#intrastattransactionnaturecode">TransactionNature</a> <strong>nullable</strong></strong><br>
 Generic enum type for TransactionNature properties<br>
 <em>Allowed Values (Finance.Intrastat.TransactionNature Enum Members)</em></p>
 <table>
@@ -528,7 +528,7 @@ Generic enum type for TransactionNature properties<br>
 <code>obj.SalesOrder.IntrastatTransactionNatureCode</code></p>
 <h3 id="intrastattransportmodecode">IntrastatTransportModeCode</h3>
 <p>Transport mode; used for Intrastat reporting.</p>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html#intrastattransportmodecode">TransportMode</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html#intrastattransportmodecode">TransportMode</a> <strong>nullable</strong></strong><br>
 Generic enum type for TransportMode properties<br>
 <em>Allowed Values (Finance.Intrastat.TransportMode Enum Members)</em></p>
 <table>
@@ -591,13 +591,13 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.UnitPrice == null)) OrElse ( ( obj.Quantity.Value == 0) AndAlso ( obj.UnitPrice.Value == 0))), obj.LineAmount, ( ( ( obj.Quantity.Value * obj.UnitPrice) * ( 1 - obj.LineStandardDiscountPercent)) * ( 1 - obj.LineCustomDiscountPercent)).Round( ))</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
 <p>User-defined discount for the line. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="linefromdate">LineFromDate</h3>
 <p>When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -615,7 +615,7 @@ Generic enum type for TransportMode properties<br>
 <code>( obj.SalesOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
 <p>Standard discount for the line. This is automatically computed according to discount conditions. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -625,7 +625,7 @@ Generic enum type for TransportMode properties<br>
 <code>obj.DetermineLineStandardDiscountPercent( obj.Product, obj.LineDiscount, obj.BonusProgram, obj.PromotionalPackage, obj.ReturnForSalesOrderLine)</code></p>
 <h3 id="linetodate">LineToDate</h3>
 <p>When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -634,13 +634,13 @@ Generic enum type for TransportMode properties<br>
 <code>obj.SalesOrder.ToDate</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this SalesOrderLine.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="persistlot">PersistLot</h3>
@@ -679,12 +679,12 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="requestedquantity">RequestedQuantity</h3>
 <p>Quantity requested by customer. <code>Unit: QuantityUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
 <p>The required (contracted) delivery date for the line. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -702,7 +702,7 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardunitprice">StandardUnitPrice</h3>
 <p>Standard unit price of the product during the creation of the sales order line. <code>Currency: SalesOrder.DocumentCurrency</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>

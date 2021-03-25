@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPropertyValue](General.DocumentTypeProperties.md#defaultpropertyvalue) | string(254) (nullable) | The default value of the property when creating new documents. 
-| [DefaultProperty<br />ValueDescription](General.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Default description value of the property when creating new documents. 
-| [DefaultValueId](General.DocumentTypeProperties.md#defaultvalueid) | guid (nullable) | Internal Id of the default value of the property. `Filter(multi eq)` 
+| [DefaultPropertyValue](General.DocumentTypeProperties.md#defaultpropertyvalue) | string (254) __nullable__ | The default value of the property when creating new documents. 
+| [DefaultProperty<br />ValueDescription](General.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Default description value of the property when creating new documents. 
+| [DefaultValueId](General.DocumentTypeProperties.md#defaultvalueid) | guid __nullable__ | Internal Id of the default value of the property. `Filter(multi eq)` 
 | [Id](General.DocumentTypeProperties.md#id) | guid |  
 | [LineNo](General.DocumentTypeProperties.md#lineno) | int32 | Line number, unique within the document type. `Required` `Filter(ge;le)` `ORD` 
 | [Required](General.DocumentTypeProperties.md#required) | boolean | True if the property is required when creating documents of this type. `Required` `Default(false)` `Filter(eq)` 
-| [RequiredFromDate](General.DocumentTypeProperties.md#requiredfromdate) | datetime (nullable) | When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
-| [RequiredThruDate](General.DocumentTypeProperties.md#requiredthrudate) | datetime (nullable) | When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
+| [RequiredFromDate](General.DocumentTypeProperties.md#requiredfromdate) | datetime __nullable__ | When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
+| [RequiredThruDate](General.DocumentTypeProperties.md#requiredthrudate) | datetime __nullable__ | When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
 
 ## References
 
@@ -49,7 +49,7 @@ Aggregate Root:
 
 The default value of the property when creating new documents.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -58,7 +58,7 @@ _Maximum Length_: **254**
 
 Default description value of the property when creating new documents.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 Internal Id of the default value of the property. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Id
@@ -102,7 +102,7 @@ _Default Value_: **False**
 
 When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -110,7 +110,7 @@ _Supports Order By_: **False**
 
 When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

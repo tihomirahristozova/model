@@ -27,13 +27,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Projects.Projects.md#code) | string(16) | Short code for identification of projects. `Required` `Filter(eq;like)` `ORD` 
-| [FinishDate](Projects.Projects.md#finishdate) | date (nullable) | The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. `Filter(eq)` 
+| [Code](Projects.Projects.md#code) | string (16) | Short code for identification of projects. `Required` `Filter(eq;like)` `ORD` 
+| [FinishDate](Projects.Projects.md#finishdate) | date __nullable__ | The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. `Filter(eq)` 
 | [Id](Projects.Projects.md#id) | guid |  
-| [Name](Projects.Projects.md#name) | string(254) | The name of this Project. `Required` `Filter(eq;like)` 
-| [Notes](Projects.Projects.md#notes) | string(2147483647) (nullable) | Notes for this Project. 
+| [Name](Projects.Projects.md#name) | string (254) | The name of this Project. `Required` `Filter(eq;like)` 
+| [Notes](Projects.Projects.md#notes) | string (max) __nullable__ | Notes for this Project. 
 | [ProjectStatus](Projects.Projects.md#projectstatus) | [ProjectStatus](Projects.Projects.md#projectstatus) | Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). `Required` `Default(0)` `Filter(multi eq)` 
-| [StartDate](Projects.Projects.md#startdate) | date (nullable) | Expected date, when the execution of the tasks will start. null means that the start date is still unknown. `Filter(eq)` 
+| [StartDate](Projects.Projects.md#startdate) | date __nullable__ | Expected date, when the execution of the tasks will start. null means that the start date is still unknown. `Filter(eq)` 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Tree
 
 Short code for identification of projects. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -70,7 +70,7 @@ _Maximum Length_: **16**
 
 The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. `Filter(eq)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -85,7 +85,7 @@ _Default Value_: **NewGuid**
 
 The name of this Project. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -94,7 +94,7 @@ _Maximum Length_: **254**
 
 Notes for this Project.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -126,7 +126,7 @@ _Default Value_: **0**
 
 Expected date, when the execution of the tasks will start. null means that the start date is still unknown. `Filter(eq)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 

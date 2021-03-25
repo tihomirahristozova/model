@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable. `Required` `Filter(multi eq)` 
 | [Id](Crm.Pos.ProductTypeTaxGroups.md#id) | guid |  
-| [Notes](Crm.Pos.ProductTypeTaxGroups.md#notes) | string(2147483647) (nullable) | Notes for this ProductTypeTaxGroup. `Filter(eq;like)` 
+| [Notes](Crm.Pos.ProductTypeTaxGroups.md#notes) | string (max) __nullable__ | Notes for this ProductTypeTaxGroup. `Filter(eq;like)` 
 | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | The tax group of the product type within the specified applicable legislation. `Required` `Filter(multi eq)` 
 
 ## References
@@ -89,7 +89,7 @@ _Default Value_: **NewGuid**
 
 Notes for this ProductTypeTaxGroup. `Filter(eq;like)`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

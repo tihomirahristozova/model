@@ -25,9 +25,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Workflow.Roles.md#id) | guid |  
-| [Name](Systems.Workflow.Roles.md#name) | string(254) | The name of this Role. `Required` `Filter(eq;like)` `ORD` 
-| [RoleDescription](Systems.Workflow.Roles.md#roledescription) | string(2147483647) (nullable) | Description of the role. 
-| [VisualStyle](Systems.Workflow.Roles.md#visualstyle) | string(64) (nullable) | The default visual style for the user interface. 
+| [Name](Systems.Workflow.Roles.md#name) | string (254) | The name of this Role. `Required` `Filter(eq;like)` `ORD` 
+| [RoleDescription](Systems.Workflow.Roles.md#roledescription) | string (max) __nullable__ | Description of the role. 
+| [VisualStyle](Systems.Workflow.Roles.md#visualstyle) | string (64) __nullable__ | The default visual style for the user interface. 
 
 ## Child Collections
 
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 The name of this Role. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -59,7 +59,7 @@ _Maximum Length_: **254**
 
 Description of the role.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -68,7 +68,7 @@ _Maximum Length_: **2147483647**
 
 The default visual style for the user interface.
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

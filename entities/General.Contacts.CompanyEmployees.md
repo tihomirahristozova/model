@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string(16) (nullable) | Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq)` 
-| [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime (nullable) | End date of the employee contract, null if the contract is still valid. `Filter(ge;le)` 
-| [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime (nullable) | Start date of the employee contract. Null if it is unkown. `Filter(ge;le)` 
+| [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string (16) __nullable__ | Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq)` 
+| [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime __nullable__ | End date of the employee contract, null if the contract is still valid. `Filter(ge;le)` 
+| [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime __nullable__ | Start date of the employee contract. Null if it is unkown. `Filter(ge;le)` 
 | [Id](General.Contacts.CompanyEmployees.md#id) | guid |  
-| [Notes](General.Contacts.CompanyEmployees.md#notes) | string(254) (nullable) | Notes for this CompanyEmployee. 
+| [Notes](General.Contacts.CompanyEmployees.md#notes) | string (254) __nullable__ | Notes for this CompanyEmployee. 
 
 ## References
 
@@ -46,7 +46,7 @@ Aggregate Root:
 
 Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq)`
 
-_Type_: **string(16) (nullable)**  
+_Type_: **string (16) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -55,7 +55,7 @@ _Maximum Length_: **16**
 
 End date of the employee contract, null if the contract is still valid. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 Start date of the employee contract. Null if it is unkown. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -78,7 +78,7 @@ _Default Value_: **NewGuid**
 
 Notes for this CompanyEmployee.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

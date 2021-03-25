@@ -28,9 +28,9 @@ Aggregate Root:
 | [GrantTimeUtc](Systems.Security.TrustedApplicationAuthorizations.md#granttimeutc) | datetime | The time (in UTC) when the authorization was granted. `Required` `Default(NowUtc)` 
 | [Id](Systems.Security.TrustedApplicationAuthorizations.md#id) | guid |  
 | [IsRevoked](Systems.Security.TrustedApplicationAuthorizations.md#isrevoked) | boolean | Specifies whether the grant is explicitly revoked. `Required` `Default(false)` 
-| [Notes](Systems.Security.TrustedApplicationAuthorizations.md#notes) | string(2147483647) (nullable) | Notes for this TrustedApplication<br />Authorization. 
-| [ValidFromUtc](Systems.Security.TrustedApplicationAuthorizations.md#validfromutc) | datetime (nullable) | The start of the validitiy of the authorization. null means that there is no restriction. 
-| [ValidUntilUtc](Systems.Security.TrustedApplicationAuthorizations.md#validuntilutc) | datetime (nullable) | The time (in UTC) when the grant expires. null means that there is no time restriction. 
+| [Notes](Systems.Security.TrustedApplicationAuthorizations.md#notes) | string (max) __nullable__ | Notes for this TrustedApplication<br />Authorization. 
+| [ValidFromUtc](Systems.Security.TrustedApplicationAuthorizations.md#validfromutc) | datetime __nullable__ | The start of the validitiy of the authorization. null means that there is no restriction. 
+| [ValidUntilUtc](Systems.Security.TrustedApplicationAuthorizations.md#validuntilutc) | datetime __nullable__ | The time (in UTC) when the grant expires. null means that there is no time restriction. 
 
 ## References
 
@@ -72,7 +72,7 @@ _Default Value_: **False**
 
 Notes for this TrustedApplicationAuthorization.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -81,7 +81,7 @@ _Maximum Length_: **2147483647**
 
 The start of the validitiy of the authorization. null means that there is no restriction.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 The time (in UTC) when the grant expires. null means that there is no time restriction.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

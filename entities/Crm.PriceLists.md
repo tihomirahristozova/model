@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Crm.PriceLists.md#description) | string(2147483647) (nullable) | The description of this PriceList. 
-| [FromDate](Crm.PriceLists.md#fromdate) | datetime (nullable) | Starting validity of the price list. `Filter(eq;ge;le)` 
+| [Description](Crm.PriceLists.md#description) | string (max) __nullable__ | The description of this PriceList. 
+| [FromDate](Crm.PriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list. `Filter(eq;ge;le)` 
 | [Id](Crm.PriceLists.md#id) | guid |  
-| [Name](Crm.PriceLists.md#name) | string(50) | The name of this PriceList. `Required` `Filter(eq;like)` `ORD` 
-| [ThruDate](Crm.PriceLists.md#thrudate) | datetime (nullable) | Ending validity of the price list. `Filter(eq;ge;le)` 
+| [Name](Crm.PriceLists.md#name) | string (50) | The name of this PriceList. `Required` `Filter(eq;like)` `ORD` 
+| [ThruDate](Crm.PriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list. `Filter(eq;ge;le)` 
 
 ## References
 
@@ -42,7 +42,7 @@ Aggregate Tree
 
 The description of this PriceList.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -51,7 +51,7 @@ _Maximum Length_: **2147483647**
 
 Starting validity of the price list. `Filter(eq;ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -66,7 +66,7 @@ _Default Value_: **NewGuid**
 
 The name of this PriceList. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(50)**  
+_Type_: **string (50)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -76,7 +76,7 @@ _Maximum Length_: **50**
 
 Ending validity of the price list. `Filter(eq;ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

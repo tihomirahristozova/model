@@ -25,8 +25,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Crm.Pos.Sequences.md#id) | guid |  
 | [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. `Required` `Default(true)` `Filter(multi eq)` 
-| [MaxNo](Crm.Pos.Sequences.md#maxno) | string(16) (nullable) | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)` 
-| [NextNo](Crm.Pos.Sequences.md#nextno) | string(16) | The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)` 
+| [MaxNo](Crm.Pos.Sequences.md#maxno) | string (16) __nullable__ | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)` 
+| [NextNo](Crm.Pos.Sequences.md#nextno) | string (16) | The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)` 
 
 ## References
 
@@ -57,7 +57,7 @@ _Default Value_: **True**
 
 Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)`
 
-_Type_: **string(16) (nullable)**  
+_Type_: **string (16) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -66,7 +66,7 @@ _Maximum Length_: **16**
 
 The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  

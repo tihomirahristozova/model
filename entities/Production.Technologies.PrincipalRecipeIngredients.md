@@ -25,15 +25,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The desired description of Conditional Property in order for the template line to match. 
-| [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyvalue) | string(254) (nullable) | The desired value of Conditional Property in order for the template line to match. 
+| [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The desired description of Conditional Property in order for the template line to match. 
+| [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyvalue) | string (254) __nullable__ | The desired value of Conditional Property in order for the template line to match. 
 | [FixedScrapQuantity](Production.Technologies.PrincipalRecipeIngredients.md#fixedscrapquantity) | [Quantity](../data-types.md#quantity) | Fixed scrap quantity for setup. `Unit: UsageUnit` `Required` `Default(0)` 
 | [Id](Production.Technologies.PrincipalRecipeIngredients.md#id) | guid |  
-| [IngredientName](Production.Technologies.PrincipalRecipeIngredients.md#ingredientname) | string(254) | The principal name of the ingredient. `Required` `Filter(like)` 
+| [IngredientName](Production.Technologies.PrincipalRecipeIngredients.md#ingredientname) | string (254) | The principal name of the ingredient. `Required` `Filter(like)` 
 | [LineOrd](Production.Technologies.PrincipalRecipeIngredients.md#lineord) | int32 | The position of the line in the recipe model. `Required` 
-| [ScrapRate](Production.Technologies.PrincipalRecipeIngredients.md#scraprate) | decimal(7, 6) | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` `Filter(ge;le)` 
-| [UsageQuantity](Production.Technologies.PrincipalRecipeIngredients.md#usagequantity) | [Quantity](../data-types.md#quantity) (nullable) | Quantity to be consumed from the material. null means that the quantity is specified with formula. `Unit: UsageUnit` `Default(1)` `Filter(ge;le)` 
-| [UsageQuantityFormula](Production.Technologies.PrincipalRecipeIngredients.md#usagequantityformula) | string(2147483647) (nullable) | Specifies formula for the usage quantity. The formula can reference properties in `<Prop_Name>` style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity. 
+| [ScrapRate](Production.Technologies.PrincipalRecipeIngredients.md#scraprate) | decimal (7, 6) | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` `Filter(ge;le)` 
+| [UsageQuantity](Production.Technologies.PrincipalRecipeIngredients.md#usagequantity) | [Quantity](../data-types.md#quantity) __nullable__ | Quantity to be consumed from the material. null means that the quantity is specified with formula. `Unit: UsageUnit` `Default(1)` `Filter(ge;le)` 
+| [UsageQuantityFormula](Production.Technologies.PrincipalRecipeIngredients.md#usagequantityformula) | string (max) __nullable__ | Specifies formula for the usage quantity. The formula can reference properties in `<Prop_Name>` style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity. 
 
 ## References
 
@@ -56,7 +56,7 @@ Aggregate Root:
 
 The desired description of Conditional Property in order for the template line to match.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 The desired value of Conditional Property in order for the template line to match.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -89,7 +89,7 @@ _Default Value_: **NewGuid**
 
 The principal name of the ingredient. `Required` `Filter(like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -113,7 +113,7 @@ _Front-End Recalc Expressions:_
 
 The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` `Filter(ge;le)`
 
-_Type_: **decimal(7, 6)**  
+_Type_: **decimal (7, 6)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -122,7 +122,7 @@ _Default Value_: **0**
 
 Quantity to be consumed from the material. null means that the quantity is specified with formula. `Unit: UsageUnit` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -133,7 +133,7 @@ _Front-End Recalc Expressions:_
 
 Specifies formula for the usage quantity. The formula can reference properties in `<Prop_Name>` style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

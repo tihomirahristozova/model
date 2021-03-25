@@ -113,7 +113,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#code">Code</a></td>
-<td>string(20)</td>
+<td>string (20)</td>
 <td>Unique code of the promotional package. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -123,32 +123,32 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#name">Name</a></td>
-<td>string(254)</td>
+<td>string (254)</td>
 <td>The name of this PromotionalPackage. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validforcustomerfilterxml">ValidForCustomerFilterXML</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>When not null, the package is valid only for the customers, that match the filter.</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validfordistributionchannelfilterxml">ValidForDistribution<br>ChannelFilterX<br>ML</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validforshiptocustomerfilterxml">ValidForShipTo<br>CustomerFilter<br>XML</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>When not null, specifies validity condition for the Ship To Customer of the sales document.</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validfromdate">ValidFromDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>When not null specifies the first date when the package is valid for offering. The date is compared against the document date. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validtodate">ValidToDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
@@ -226,7 +226,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="code">Code</h3>
 <p>Unique code of the promotional package. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(20)</strong><br>
+<p><em>Type</em>: <strong>string (20)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -238,34 +238,34 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this PromotionalPackage. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(254)</strong><br>
+<p><em>Type</em>: <strong>string (254)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="validforcustomerfilterxml">ValidForCustomerFilterXML</h3>
 <p>When not null, the package is valid only for the customers, that match the filter.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validfordistributionchannelfilterxml">ValidForDistributionChannelFilterXML</h3>
 <p>When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validforshiptocustomerfilterxml">ValidForShipToCustomerFilterXML</h3>
 <p>When not null, specifies validity condition for the Ship To Customer of the sales document.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validfromdate">ValidFromDate</h3>
 <p>When not null specifies the first date when the package is valid for offering. The date is compared against the document date. <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validtodate">ValidToDate</h3>
 <p>When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

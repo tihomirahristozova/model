@@ -26,9 +26,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.ProjectTaskParticipants.md#id) | guid |  
-| [Notes](Projects.ProjectTaskParticipants.md#notes) | string(254) (nullable) | Notes for this ProjectTaskParticipant. 
+| [Notes](Projects.ProjectTaskParticipants.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskParticipant. 
 | [NotifyOnStatusChange](Projects.ProjectTaskParticipants.md#notifyonstatuschange) | boolean | Specifies whether the participant should be notified on task status changes. `Required` `Default(true)` 
-| [WorkLoadPercent](Projects.ProjectTaskParticipants.md#workloadpercent) | decimal(3, 2) | The planned work load (in percents) of the participant for this task. `Required` `Default(1)` `Filter(eq)` 
+| [WorkLoadPercent](Projects.ProjectTaskParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load (in percents) of the participant for this task. `Required` `Default(1)` `Filter(eq)` 
 
 ## References
 
@@ -51,7 +51,7 @@ _Default Value_: **NewGuid**
 
 Notes for this ProjectTaskParticipant.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -69,7 +69,7 @@ _Default Value_: **True**
 
 The planned work load (in percents) of the participant for this task. `Required` `Default(1)` `Filter(eq)`
 
-_Type_: **decimal(3, 2)**  
+_Type_: **decimal (3, 2)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

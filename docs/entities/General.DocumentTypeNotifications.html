@@ -104,12 +104,12 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="General.DocumentTypeNotifications.html#documentevent">DocumentEvent</a></td>
-<td>string(254)</td>
+<td>string (254)</td>
 <td>The event which will trigger the notification. <code>Required</code> <code>Default(&quot;StateChanging&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeNotifications.html#filterxml">FilterXML</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Filtering condition for the document. Only documents which match the filter will trigger the event.</td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeNotifications.html#toemailaddresslist">ToEmailAddressList</a></td>
-<td>string(2048)</td>
+<td>string (2048)</td>
 <td>List of email addressess to be notified. <code>Required</code></td>
 </tr>
 </tbody>
@@ -159,14 +159,14 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentevent">DocumentEvent</h3>
 <p>The event which will trigger the notification. <code>Required</code> <code>Default(&quot;StateChanging&quot;)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string(254)</strong><br>
+<p><em>Type</em>: <strong>string (254)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong><br>
 <em>Default Value</em>: <strong>StateChanging</strong></p>
 <h3 id="filterxml">FilterXML</h3>
 <p>Filtering condition for the document. Only documents which match the filter will trigger the event.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -217,7 +217,7 @@ Allowed values for the <code>StatusChangeDirection</code>(General.DocumentTypeNo
 <em>Default Value</em>: <strong>AnyChange</strong></p>
 <h3 id="toemailaddresslist">ToEmailAddressList</h3>
 <p>List of email addressess to be notified. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(2048)</strong><br>
+<p><em>Type</em>: <strong>string (2048)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2048</strong></p>

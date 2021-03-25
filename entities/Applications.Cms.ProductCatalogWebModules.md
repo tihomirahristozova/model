@@ -28,10 +28,10 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Cms.ProductCatalogWebModules.md#id) | guid |  
 | [IsPublished](Applications.Cms.ProductCatalogWebModules.md#ispublished) | boolean | Specifies whether the module is published and will be showed in the web site. `Required` `Default(false)` `Filter(eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
-| [LocalUrl](Applications.Cms.ProductCatalogWebModules.md#localurl) | string(128) (nullable) | The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
-| [ModulePicture](Applications.Cms.ProductCatalogWebModules.md#modulepicture) | byte[] (nullable) | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
+| [LocalUrl](Applications.Cms.ProductCatalogWebModules.md#localurl) | string (128) __nullable__ | The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
+| [ModulePicture](Applications.Cms.ProductCatalogWebModules.md#modulepicture) | byte[] __nullable__ | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 | [ModuleType](Applications.Cms.ProductCatalogWebModules.md#moduletype) | [ModuleType](Applications.Cms.ProductCatalogWebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
-| [Name](Applications.Cms.ProductCatalogWebModules.md#name) | string(512) | Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
+| [Name](Applications.Cms.ProductCatalogWebModules.md#name) | string (512) | Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 
 ## References
 
@@ -64,7 +64,7 @@ _Default Value_: **False**
 
 The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
-_Type_: **string(128) (nullable)**  
+_Type_: **string (128) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -73,7 +73,7 @@ _Maximum Length_: **128**
 
 Default picture. Used for picture links, small module icons, etc. PNG format is suggested. (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -98,7 +98,7 @@ _Supports Order By_: **False**
 
 Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
-_Type_: **string(512)**  
+_Type_: **string (512)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  

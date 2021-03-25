@@ -104,12 +104,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#calledpartynumber">CalledPartyNumber</a></td>
-<td>string(80)</td>
+<td>string (80)</td>
 <td>The voice number of the party, which received the call. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#callingpartynumber">CallingPartyNumber</a></td>
-<td>string(80)</td>
+<td>string (80)</td>
 <td>The voice number of the originating party of the call. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#calluniqueid">CallUniqueId</a></td>
-<td>string(32) (nullable)</td>
+<td>string (32) <strong>nullable</strong></td>
 <td>The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.</td>
 </tr>
 <tr>
@@ -174,13 +174,13 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="calledpartynumber">CalledPartyNumber</h3>
 <p>The voice number of the party, which received the call. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(80)</strong><br>
+<p><em>Type</em>: <strong>string (80)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>80</strong></p>
 <h3 id="callingpartynumber">CallingPartyNumber</h3>
 <p>The voice number of the originating party of the call. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(80)</strong><br>
+<p><em>Type</em>: <strong>string (80)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>80</strong></p>
@@ -216,7 +216,7 @@ Allowed values for the <code>CallType</code>(Applications.Telephony.CallDetails.
 <em>Default Value</em>: <strong>Phone</strong></p>
 <h3 id="calluniqueid">CallUniqueId</h3>
 <p>The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.</p>
-<p><em>Type</em>: <strong>string(32) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (32) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>

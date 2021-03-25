@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) | [DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) (nullable) | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
+| [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) | [DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
 | [Id](Logistics.Procurement.PurchaseInvoiceLines.md#id) | guid |  
-| [IntrastatApplyDate](Logistics.Procurement.PurchaseInvoiceLines.md#intrastatapplydate) | datetime (nullable) | Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used. 
-| [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) (nullable) | Transaction nature; used for Intrastat reporting. 
-| [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) (nullable) | Transport mode; used for Intrastat reporting. 
+| [IntrastatApplyDate](Logistics.Procurement.PurchaseInvoiceLines.md#intrastatapplydate) | datetime __nullable__ | Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used. 
+| [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
+| [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
 | [LineAmount](Logistics.Procurement.PurchaseInvoiceLines.md#lineamount) | [Amount](../data-types.md#amount) | The total invoiced amount for this line in the document currency of the invoice. `Currency: PurchaseInvoice.DocumentCurrency` `Required` `Default(0)` 
 | [LineNo](Logistics.Procurement.PurchaseInvoiceLines.md#lineno) | int32 | Consecutive line number within the invoice. `Required` 
-| [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#notes) | string(254) (nullable) | Notes for this PurchaseInvoiceLine. 
+| [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#notes) | string (254) __nullable__ | Notes for this PurchaseInvoiceLine. 
 | [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#productname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. `Required` 
 | [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#quantity) | [Quantity](../data-types.md#quantity) | The invoiced quantity. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
 
-_Type_: **[DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) (nullable)**  
+_Type_: **[DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) __nullable__**  
 Generic enum type for DeliveryTerms properties  
 _Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_  
 
@@ -100,7 +100,7 @@ _Default Value_: **NewGuid**
 
 Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -108,7 +108,7 @@ _Supports Order By_: **False**
 
 Transaction nature; used for Intrastat reporting.
 
-_Type_: **[TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) (nullable)**  
+_Type_: **[TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) __nullable__**  
 Generic enum type for TransactionNature properties  
 _Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_  
 
@@ -146,7 +146,7 @@ _Front-End Recalc Expressions:_
 
 Transport mode; used for Intrastat reporting.
 
-_Type_: **[TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) (nullable)**  
+_Type_: **[TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) __nullable__**  
 Generic enum type for TransportMode properties  
 _Allowed Values (Finance.Intrastat.TransportMode Enum Members)_  
 
@@ -197,7 +197,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this PurchaseInvoiceLine.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

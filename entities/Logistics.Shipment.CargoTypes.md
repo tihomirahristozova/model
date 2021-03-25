@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Shipment.CargoTypes.md#code) | string(16) | The unique code of the CargoType. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Logistics.Shipment.CargoTypes.md#code) | string (16) | The unique code of the CargoType. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Logistics.Shipment.CargoTypes.md#id) | guid |  
-| [Name](Logistics.Shipment.CargoTypes.md#name) | string(256) | The name of this CargoType. `Required` `Filter(eq;like)` 
-| [Notes](Logistics.Shipment.CargoTypes.md#notes) | string(2147483647) (nullable) | Notes for this CargoType. 
+| [Name](Logistics.Shipment.CargoTypes.md#name) | string (256) | The name of this CargoType. `Required` `Filter(eq;like)` 
+| [Notes](Logistics.Shipment.CargoTypes.md#notes) | string (max) __nullable__ | Notes for this CargoType. 
 
 
 ## Attribute Details
@@ -35,7 +35,7 @@ Aggregate Tree
 
 The unique code of the CargoType. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 The name of this CargoType. `Required` `Filter(eq;like)`
 
-_Type_: **string(256)**  
+_Type_: **string (256)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -61,7 +61,7 @@ _Maximum Length_: **256**
 
 Notes for this CargoType.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

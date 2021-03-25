@@ -24,10 +24,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.OperationGroups.md#fullpath) | string(254) | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)` 
+| [FullPath](Production.Resources.OperationGroups.md#fullpath) | string (254) | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)` 
 | [Id](Production.Resources.OperationGroups.md#id) | guid |  
-| [Name](Production.Resources.OperationGroups.md#name) | string(64) | The name of this OperationGroup. `Required` `Filter(like)` 
-| [Parent](Production.Resources.OperationGroups.md#parent) | string(254) | Path of parent group. `Required` `Default("/")` `Filter(like)` `ORD` 
+| [Name](Production.Resources.OperationGroups.md#name) | string (64) | The name of this OperationGroup. `Required` `Filter(like)` 
+| [Parent](Production.Resources.OperationGroups.md#parent) | string (254) | Path of parent group. `Required` `Default("/")` `Filter(like)` `ORD` 
 
 ## Child Collections
 
@@ -42,7 +42,7 @@ Aggregate Tree
 
 The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 The name of this OperationGroup. `Required` `Filter(like)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -68,7 +68,7 @@ _Maximum Length_: **64**
 
 Path of parent group. `Required` `Default("/")` `Filter(like)` `ORD`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  

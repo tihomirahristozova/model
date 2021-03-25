@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EfficiencyFactorPercent](Production.Resources.WorkgroupShifts.md#efficiencyfactorpercent) | decimal(3, 2) | Efficiency factor of the routing steps for this shift, expressed as percentage. `Required` `Default(1)` 
+| [EfficiencyFactorPercent](Production.Resources.WorkgroupShifts.md#efficiencyfactorpercent) | decimal (3, 2) | Efficiency factor of the routing steps for this shift, expressed as percentage. `Required` `Default(1)` 
 | [EstablishmentDate](Production.Resources.WorkgroupShifts.md#establishmentdate) | datetime | When the workgroup shift was established. Used as minimum date when generating calendar. `Required` `Default(Today)` `Filter(ge;le)` 
 | [Id](Production.Resources.WorkgroupShifts.md#id) | guid |  
-| [ShiftName](Production.Resources.WorkgroupShifts.md#shiftname) | string(254) | The name of the workgroup shift. `Required` `Filter(like)` 
+| [ShiftName](Production.Resources.WorkgroupShifts.md#shiftname) | string (254) | The name of the workgroup shift. `Required` `Filter(like)` 
 
 ## References
 
@@ -44,7 +44,7 @@ Aggregate Root:
 
 Efficiency factor of the routing steps for this shift, expressed as percentage. `Required` `Default(1)`
 
-_Type_: **decimal(3, 2)**  
+_Type_: **decimal (3, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -69,7 +69,7 @@ _Default Value_: **NewGuid**
 
 The name of the workgroup shift. `Required` `Filter(like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

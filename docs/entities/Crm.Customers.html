@@ -119,17 +119,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#creationtime">CreationTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the Customer was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#creationuser">CreationUser</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>Login name of the user, who created the Customer. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#creditlimit">CreditLimit</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>Total credit limit for the customer in the customers' default currency. null means there is no limit. <code>Currency: DefaultCurrency</code></td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#fromdate">FromDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Start date of the customer relationship. <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#number">Number</a></td>
-<td>string(16) (nullable)</td>
+<td>string (16) <strong>nullable</strong></td>
 <td>Unique customer number. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -174,17 +174,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#thrudate">ThruDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date of customer relationship termination. null for active customers. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#updatetime">UpdateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the Customer was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#updateuser">UpdateUser</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>Login name of the user, who last updated the Customer. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
@@ -294,18 +294,18 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="creationtime">CreationTime</h3>
 <p>Date and time when the Customer was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>Login name of the user, who created the Customer. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="creditlimit">CreditLimit</h3>
 <p>Total credit limit for the customer in the customers' default currency. null means there is no limit. <code>Currency: DefaultCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -332,7 +332,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="fromdate">FromDate</h3>
 <p>Start date of the customer relationship. <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
@@ -349,7 +349,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="number">Number</h3>
 <p>Unique customer number. <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(16) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (16) <strong>nullable</strong></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -362,17 +362,17 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
 <p>The date of customer relationship termination. null for active customers. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
 <p>Date and time when the Customer was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>Login name of the user, who last updated the Customer. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>

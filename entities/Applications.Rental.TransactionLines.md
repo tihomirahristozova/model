@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Rental.TransactionLines.md#id) | guid |  
-| [Notes](Applications.Rental.TransactionLines.md#notes) | string(2147483647) (nullable) | Notes. 
+| [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes. 
 | [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Transaction Timestamp. `Required` `Filter(multi eq;ge;le)` 
 | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction Type. `Required` `Filter(eq;like)` 
 
@@ -53,7 +53,7 @@ _Default Value_: **NewGuid**
 
 Notes.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

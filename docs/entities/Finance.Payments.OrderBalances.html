@@ -109,12 +109,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#duedate">DueDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The due date of the payment. null means there is no due date. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#duestartdate">DueStartDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>The date at which the payment becomes executable. null means the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></td>
 </tr>
 <tr>
@@ -134,22 +134,22 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refdocumentdate">RefDocumentDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date of the original document. null means that it is unknown. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refdocumentno">RefDocumentNo</a></td>
-<td>string(20)</td>
+<td>string (20)</td>
 <td>The number of the document which has created the payment order and is the basis for the payment. <code>Required</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_No</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocumentdate">RefInvoiceDocumentDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocumentno">RefInvoiceDocumentNo</a></td>
-<td>string(20) (nullable)</td>
+<td>string (20) <strong>nullable</strong></td>
 <td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></td>
 </tr>
 </tbody>
@@ -241,13 +241,13 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Default Value</em>: <strong>Expense</strong></p>
 <h3 id="duedate">DueDate</h3>
 <p>The due date of the payment. null means there is no due date. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Due_Date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="duestartdate">DueStartDate</h3>
 <p>The date at which the payment becomes executable. null means the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Due_Start_Date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -270,7 +270,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>
 <p>The date of the original document. null means that it is unknown. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_Date</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -280,7 +280,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <code>obj.RefDocument.DocumentDate</code></p>
 <h3 id="refdocumentno">RefDocumentNo</h3>
 <p>The number of the document which has created the payment order and is the basis for the payment. <code>Required</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_No</code></p>
-<p><em>Type</em>: <strong>string(20)</strong><br>
+<p><em>Type</em>: <strong>string (20)</strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_No</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -291,7 +291,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <code>obj.RefDocument.DocumentNo</code></p>
 <h3 id="refinvoicedocumentdate">RefInvoiceDocumentDate</h3>
 <p>The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -301,7 +301,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <code>obj.RefInvoiceDocument.DocumentDate</code></p>
 <h3 id="refinvoicedocumentno">RefInvoiceDocumentNo</h3>
 <p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></p>
-<p><em>Type</em>: <strong>string(20) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (20) <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_No</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>

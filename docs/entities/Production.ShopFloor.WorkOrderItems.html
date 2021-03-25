@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#completiondate">CompletionDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date, when the item should be completed. null means that there is no constraint for completion date.</td>
 </tr>
 <tr>
@@ -124,17 +124,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this WorkOrderItem.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#parentlineid">ParentLineId</a></td>
-<td>guid (nullable)</td>
+<td>guid <strong>nullable</strong></td>
 <td>If not null contains the Id of the line of the parent document, that created the current row. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#parentlineno">ParentLineNo</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -159,17 +159,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#releasedate">ReleaseDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date, when the item is released to production. null means that still there is no plan when the item will be released to production.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#scheduledenddatetime">ScheduledEndDateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the production of this item is scheduled to end.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#scheduledstartdatetime">ScheduledStartDateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the production of this item is scheduled to begin.</td>
 </tr>
 </tbody>
@@ -261,7 +261,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completiondate">CompletionDate</h3>
 <p>The date, when the item should be completed. null means that there is no constraint for completion date.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -292,17 +292,17 @@ Aggregate Root:<br>
 <code>IIF( ( ( obj.Recipe != null) AndAlso ( obj.ProducedQuantityUnit != null)), obj.Recipe.ProduceQuantity, obj.ProducedQuantity)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WorkOrderItem.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="parentlineid">ParentLineId</h3>
 <p>If not null contains the Id of the line of the parent document, that created the current row. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="priority">Priority</h3>
@@ -371,7 +371,7 @@ Allowed values for the <code>Priority</code>(Production.ShopFloor.WorkOrderItems
 <code>IIF( ( ( ( obj.ProducedQuantity != null) AndAlso ( obj.ProducedQuantityUnit != null)) AndAlso ( obj.Product != null)), obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.ProducedStandardQuantityBase)</code></p>
 <h3 id="releasedate">ReleaseDate</h3>
 <p>The date, when the item is released to production. null means that still there is no plan when the item will be released to production.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -380,12 +380,12 @@ Allowed values for the <code>Priority</code>(Production.ShopFloor.WorkOrderItems
 <code>obj.WorkOrder.ReleaseDate</code></p>
 <h3 id="scheduledenddatetime">ScheduledEndDateTime</h3>
 <p>Date and time when the production of this item is scheduled to end.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduledstartdatetime">ScheduledStartDateTime</h3>
 <p>Date and time when the production of this item is scheduled to begin.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

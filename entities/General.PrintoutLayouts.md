@@ -24,13 +24,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BinaryLayout](General.PrintoutLayouts.md#binarylayout) | byte[] (nullable) | The printout layout, when the format requires binary storage. Alternative to Layout. 
-| [DocumentEntityName](General.PrintoutLayouts.md#documententityname) | string(64) | The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)` 
+| [BinaryLayout](General.PrintoutLayouts.md#binarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Layout. 
+| [DocumentEntityName](General.PrintoutLayouts.md#documententityname) | string (64) | The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)` 
 | [Id](General.PrintoutLayouts.md#id) | guid |  
-| [Layout](General.PrintoutLayouts.md#layout) | string(2147483647) (nullable) | The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout. 
-| [LayoutFormat](General.PrintoutLayouts.md#layoutformat) | string(32) | Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)` 
-| [Name](General.PrintoutLayouts.md#name) | string(64) | The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD` 
-| [Notes](General.PrintoutLayouts.md#notes) | string(254) (nullable) | Notes for this PrintoutLayout. 
+| [Layout](General.PrintoutLayouts.md#layout) | string (max) __nullable__ | The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout. 
+| [LayoutFormat](General.PrintoutLayouts.md#layoutformat) | string (32) | Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)` 
+| [Name](General.PrintoutLayouts.md#name) | string (64) | The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD` 
+| [Notes](General.PrintoutLayouts.md#notes) | string (254) __nullable__ | Notes for this PrintoutLayout. 
 
 ## References
 
@@ -51,7 +51,7 @@ Aggregate Tree
 
 The printout layout, when the format requires binary storage. Alternative to Layout.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -84,7 +84,7 @@ _Maximum Length_: **2147483647**
 
 Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)`
 
-_Type_: **string(32)**  
+_Type_: **string (32)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -93,7 +93,7 @@ _Maximum Length_: **32**
 
 The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -103,7 +103,7 @@ _Maximum Length_: **64**
 
 Notes for this PrintoutLayout.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

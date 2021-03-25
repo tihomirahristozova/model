@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Contacts.ActivityParticipants.md#id) | guid |  
-| [Notes](General.Contacts.ActivityParticipants.md#notes) | string(255) (nullable) | Notes for this ActivityParticipant. 
-| [WorkLoadPercent](General.Contacts.ActivityParticipants.md#workloadpercent) | decimal(3, 2) | The planned work load of the participant for this activity. `Required` `Default(1)` 
+| [Notes](General.Contacts.ActivityParticipants.md#notes) | string (255) __nullable__ | Notes for this ActivityParticipant. 
+| [WorkLoadPercent](General.Contacts.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity. `Required` `Default(1)` 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 Notes for this ActivityParticipant.
 
-_Type_: **string(255) (nullable)**  
+_Type_: **string (255) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **255**  
@@ -59,7 +59,7 @@ _Maximum Length_: **255**
 
 The planned work load of the participant for this activity. `Required` `Default(1)`
 
-_Type_: **decimal(3, 2)**  
+_Type_: **decimal (3, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

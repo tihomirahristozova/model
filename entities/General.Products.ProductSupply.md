@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BuyerName](General.Products.ProductSupply.md#buyername) | string(64) (nullable) | The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy. 
+| [BuyerName](General.Products.ProductSupply.md#buyername) | string (64) __nullable__ | The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy. 
 | [FixedOrderQuantityBase](General.Products.ProductSupply.md#fixedorderquantitybase) | [Quantity](../data-types.md#quantity) | Fixed order quantity under the FOQ & EOQ replenishment system. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [Id](General.Products.ProductSupply.md#id) | guid |  
 | [IsActive](General.Products.ProductSupply.md#isactive) | boolean | True if this product supply is active. `Required` `Default(true)` `Filter(eq)` 
@@ -31,25 +31,25 @@ Aggregate Tree
 | [ManufacturingPolicy](General.Products.ProductSupply.md#manufacturingpolicy) | [ManufacturingPolicy](General.Products.ProductSupply.md#manufacturingpolicy) | MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. `Required` `Default("MTS")` 
 | [OrderLotSizeQuantityBase](General.Products.ProductSupply.md#orderlotsizequantitybase) | [Quantity](../data-types.md#quantity) | The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` 
 | [OrderLotSizingMethod](General.Products.ProductSupply.md#orderlotsizingmethod) | [OrderLotSizingMethod](General.Products.ProductSupply.md#orderlotsizingmethod) | LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. `Required` `Default("ROP")` 
-| [OrderMaximum](General.Products.ProductSupply.md#ordermaximum) | [Quantity](../data-types.md#quantity) (nullable) | Order maximum when buying or making. null means no maximum. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
+| [OrderMaximum](General.Products.ProductSupply.md#ordermaximum) | [Quantity](../data-types.md#quantity) __nullable__ | Order maximum when buying or making. null means no maximum. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
 | [OrderMinimum](General.Products.ProductSupply.md#orderminimum) | [Quantity](../data-types.md#quantity) | Minimum order quantity both for buying and making. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [OrderMultiple](General.Products.ProductSupply.md#ordermultiple) | boolean | True if the order qty should be multiple of lot size when buying or making. `Required` `Default(false)` 
-| [OrderPeriodPlanningDays](General.Products.ProductSupply.md#orderperiodplanningdays) | int32 (nullable) | For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified. 
-| [OrderPeriodStartDate](General.Products.ProductSupply.md#orderperiodstartdate) | datetime (nullable) | Start date of the first period under fixed period replenishment system. null - not yet specified. 
+| [OrderPeriodPlanningDays](General.Products.ProductSupply.md#orderperiodplanningdays) | int32 __nullable__ | For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified. 
+| [OrderPeriodStartDate](General.Products.ProductSupply.md#orderperiodstartdate) | datetime __nullable__ | Start date of the first period under fixed period replenishment system. null - not yet specified. 
 | [OrderPointQuantityBase](General.Products.ProductSupply.md#orderpointquantitybase) | [Quantity](../data-types.md#quantity) | Order point quantity under the OP replenishment system. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [OrderPolicy](General.Products.ProductSupply.md#orderpolicy) | [OrderPolicy](General.Products.ProductSupply.md#orderpolicy) | Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. `Required` `Default("OPS")` 
-| [PlanningAnnual<br />CarryingCostPercent](General.Products.ProductSupply.md#planningannualcarryingcostpercent) | decimal(5, 4) (nullable) | The expected carrying cost as percentage of inventory cost. null means unknown. 
-| [PlanningAnnual<br />UsageQuantityBase](General.Products.ProductSupply.md#planningannualusagequantitybase) | [Quantity](../data-types.md#quantity) (nullable) | Average usage of the product for 1 year. NUL means unknown. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
+| [PlanningAnnual<br />CarryingCostPercent](General.Products.ProductSupply.md#planningannualcarryingcostpercent) | decimal (5, 4) __nullable__ | The expected carrying cost as percentage of inventory cost. null means unknown. 
+| [PlanningAnnual<br />UsageQuantityBase](General.Products.ProductSupply.md#planningannualusagequantitybase) | [Quantity](../data-types.md#quantity) __nullable__ | Average usage of the product for 1 year. NUL means unknown. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
 | [PlanningHorizonDays](General.Products.ProductSupply.md#planninghorizondays) | int32 | Number of days in the future for which to plan the demand and supply. `Required` `Default(0)` 
 | [PlanningLeadTimeDays](General.Products.ProductSupply.md#planningleadtimedays) | int32 | The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. `Required` `Default(0)` 
-| [PlanningMaximum<br />InventoryQuantity<br />Base](General.Products.ProductSupply.md#planningmaximuminventoryquantitybase) | [Quantity](../data-types.md#quantity) (nullable) | Maximum inventory. null if N/A. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
-| [PlanningOrderCost<br />BaseCurrency](General.Products.ProductSupply.md#planningordercostbasecurrency) | [Amount](../data-types.md#amount) (nullable) | Projected cost to place an order and set-up equipment. `Currency: EnterpriseCompany.BaseCurrency` 
-| [PlanningOrderCycleDays](General.Products.ProductSupply.md#planningordercycledays) | int32 (nullable) | Number of days in one period under fixed period replenishment system. null - not yet specified. 
+| [PlanningMaximum<br />InventoryQuantity<br />Base](General.Products.ProductSupply.md#planningmaximuminventoryquantitybase) | [Quantity](../data-types.md#quantity) __nullable__ | Maximum inventory. null if N/A. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
+| [PlanningOrderCost<br />BaseCurrency](General.Products.ProductSupply.md#planningordercostbasecurrency) | [Amount](../data-types.md#amount) __nullable__ | Projected cost to place an order and set-up equipment. `Currency: EnterpriseCompany.BaseCurrency` 
+| [PlanningOrderCycleDays](General.Products.ProductSupply.md#planningordercycledays) | int32 __nullable__ | Number of days in one period under fixed period replenishment system. null - not yet specified. 
 | [PlanningSafety<br />StockQuantityBase](General.Products.ProductSupply.md#planningsafetystockquantitybase) | [Quantity](../data-types.md#quantity) | Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [PlanningTimeFenceDays](General.Products.ProductSupply.md#planningtimefencedays) | int32 | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. `Required` `Default(1)` 
 | [ProcurementType](General.Products.ProductSupply.md#procurementtype) | [ProcurementType](General.Products.ProductSupply.md#procurementtype) | M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. `Required` `Default("B")` 
 | [StandardCostPerLot](General.Products.ProductSupply.md#standardcostperlot) | [Amount](../data-types.md#amount) | Standard cost for one lot of the product. `Currency: Product.CostingCurrency` `Required` `Default(0)` 
-| [SupplySchemaId](General.Products.ProductSupply.md#supplyschemaid) | guid (nullable) | The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)` 
+| [SupplySchemaId](General.Products.ProductSupply.md#supplyschemaid) | guid __nullable__ | The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Tree
 
 The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -163,7 +163,7 @@ _Default Value_: **ReorderPoint**
 
 Order maximum when buying or making. null means no maximum. `Unit: Product.BaseMeasurementCategory.BaseUnit`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -189,7 +189,7 @@ _Default Value_: **False**
 
 For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -197,7 +197,7 @@ _Supports Order By_: **False**
 
 Start date of the first period under fixed period replenishment system. null - not yet specified.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -233,7 +233,7 @@ _Default Value_: **OrderPointSystem**
 
 The expected carrying cost as percentage of inventory cost. null means unknown.
 
-_Type_: **decimal(5, 4) (nullable)**  
+_Type_: **decimal (5, 4) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -241,7 +241,7 @@ _Supports Order By_: **False**
 
 Average usage of the product for 1 year. NUL means unknown. `Unit: Product.BaseMeasurementCategory.BaseUnit`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -269,7 +269,7 @@ _Front-End Recalc Expressions:_
 
 Maximum inventory. null if N/A. `Unit: Product.BaseMeasurementCategory.BaseUnit`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -277,7 +277,7 @@ _Supports Order By_: **False**
 
 Projected cost to place an order and set-up equipment. `Currency: EnterpriseCompany.BaseCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -285,7 +285,7 @@ _Supports Order By_: **False**
 
 Number of days in one period under fixed period replenishment system. null - not yet specified.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -338,7 +338,7 @@ _Default Value_: **Constant**
 
 The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

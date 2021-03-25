@@ -104,12 +104,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.UI.FormLayouts.html#applicationname">ApplicationName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The application, which consumes the layout. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.UI.FormLayouts.html#formname">FormName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The form, for which the layout is applied. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.UI.FormLayouts.html#layout">Layout</a></td>
-<td>byte[] (nullable)</td>
+<td>byte[] <strong>nullable</strong></td>
 <td>The byte storage of the layout.</td>
 </tr>
 <tr>
@@ -129,17 +129,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.UI.FormLayouts.html#layoutname">LayoutName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The name of a named layout. Standard layouts have empty string names. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.UI.FormLayouts.html#panelname">PanelName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The visual panel, for which the layout is applied. <code>Required</code> <code>Default(&quot;Form&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.UI.FormLayouts.html#username">UserName</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>The user for which the layout is applied. null means that the layout is applied for all users. <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
@@ -169,14 +169,14 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationname">ApplicationName</h3>
 <p>The application, which consumes the layout. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="formname">FormName</h3>
 <p>The form, for which the layout is applied. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
@@ -187,7 +187,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="layout">Layout</h3>
 <p>The byte storage of the layout.</p>
-<p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="layoutformat">LayoutFormat</h3>
@@ -222,20 +222,20 @@ Allowed values for the <code>LayoutFormat</code>(Systems.UI.FormLayouts.md#layou
 <em>Default Value</em>: <strong>Uncompressed</strong></p>
 <h3 id="layoutname">LayoutName</h3>
 <p>The name of a named layout. Standard layouts have empty string names. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="panelname">PanelName</h3>
 <p>The visual panel, for which the layout is applied. <code>Required</code> <code>Default(&quot;Form&quot;)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong><br>
 <em>Default Value</em>: <strong>Form</strong></p>
 <h3 id="username">UserName</h3>
 <p>The user for which the layout is applied. null means that the layout is applied for all users. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>

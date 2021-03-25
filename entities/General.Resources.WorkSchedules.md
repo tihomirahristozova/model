@@ -25,8 +25,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Resources.WorkSchedules.md#id) | guid |  
-| [Name](General.Resources.WorkSchedules.md#name) | string(64) | The name of this WorkSchedule. `Required` `Filter(like)` 
-| [NumberOfDays](General.Resources.WorkSchedules.md#numberofdays) | int16 (nullable) | Number of days in a recurring period. Valid only when Recurrence_Type=D. 
+| [Name](General.Resources.WorkSchedules.md#name) | string (64) | The name of this WorkSchedule. `Required` `Filter(like)` 
+| [NumberOfDays](General.Resources.WorkSchedules.md#numberofdays) | int16 __nullable__ | Number of days in a recurring period. Valid only when Recurrence_Type=D. 
 | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month. `Required` `Filter(multi eq)` 
 
 ## Child Collections
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 The name of this WorkSchedule. `Required` `Filter(like)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -58,7 +58,7 @@ _Maximum Length_: **64**
 
 Number of days in a recurring period. Valid only when Recurrence_Type=D.
 
-_Type_: **int16 (nullable)**  
+_Type_: **int16 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this RecipeIngredient.</td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#scraprate">ScrapRate</a></td>
-<td>decimal(7, 6)</td>
+<td>decimal (7, 6)</td>
 <td>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#usagequantity">UsageQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. <code>Unit: UsageUnit</code> <code>Default(1.000)</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
@@ -225,7 +225,7 @@ Aggregate Root:<br>
 <code>( obj.Recipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this RecipeIngredient.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -237,7 +237,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -255,7 +255,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="usagequantity">UsageQuantity</h3>
 <p>Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. <code>Unit: UsageUnit</code> <code>Default(1.000)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

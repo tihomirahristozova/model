@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrentSpeedKmH](Applications.Fleet.VehicleLocationHistoryRecords.md#currentspeedkmh) | int32 (nullable) | The current speed of the vehicle in km/h. null means the speed is unknown. `Introduced in version 19.1` 
+| [CurrentSpeedKmH](Applications.Fleet.VehicleLocationHistoryRecords.md#currentspeedkmh) | int32 __nullable__ | The current speed of the vehicle in km/h. null means the speed is unknown. `Introduced in version 19.1` 
 | [Id](Applications.Fleet.VehicleLocationHistoryRecords.md#id) | guid |  
-| [Latitude](Applications.Fleet.VehicleLocationHistoryRecords.md#latitude) | decimal(10, 7) | Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` 
-| [Longitude](Applications.Fleet.VehicleLocationHistoryRecords.md#longitude) | decimal(10, 7) | Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` 
+| [Latitude](Applications.Fleet.VehicleLocationHistoryRecords.md#latitude) | decimal (10, 7) | Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` 
+| [Longitude](Applications.Fleet.VehicleLocationHistoryRecords.md#longitude) | decimal (10, 7) | Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` 
 | [Time](Applications.Fleet.VehicleLocationHistoryRecords.md#time) | datetime | The time, for which the location is stored. `Required` 
 
 ## References
@@ -42,7 +42,7 @@ Aggregate Tree
 
 The current speed of the vehicle in km/h. null means the speed is unknown. `Introduced in version 19.1`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -57,7 +57,7 @@ _Default Value_: **NewGuid**
 
 Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required`
 
-_Type_: **decimal(10, 7)**  
+_Type_: **decimal (10, 7)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required`
 
-_Type_: **decimal(10, 7)**  
+_Type_: **decimal (10, 7)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

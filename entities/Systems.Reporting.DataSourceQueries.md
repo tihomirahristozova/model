@@ -26,13 +26,13 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DependsOnChildRows](Systems.Reporting.DataSourceQueries.md#dependsonchildrows) | [DependsOnChildRows](Systems.Reporting.DataSourceQueries.md#dependsonchildrows) | Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. `Required` `Default(0)` 
-| [ExtensionsList](Systems.Reporting.DataSourceQueries.md#extensionslist) | string(2147483647) (nullable) | A comma separated list of report extension names. An extension is set of additional fields that participate in the query. 
-| [FilterXml](Systems.Reporting.DataSourceQueries.md#filterxml) | dataaccessfilter (nullable) | Filter for the loaded table. 
+| [ExtensionsList](Systems.Reporting.DataSourceQueries.md#extensionslist) | string (max) __nullable__ | A comma separated list of report extension names. An extension is set of additional fields that participate in the query. 
+| [FilterXml](Systems.Reporting.DataSourceQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the loaded table. 
 | [FirstRow](Systems.Reporting.DataSourceQueries.md#firstrow) | boolean | Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. `Required` `Default(false)` 
 | [Id](Systems.Reporting.DataSourceQueries.md#id) | guid |  
-| [ReferencePath](Systems.Reporting.DataSourceQueries.md#referencepath) | string(2147483647) | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required` 
-| [TableName](Systems.Reporting.DataSourceQueries.md#tablename) | string(64) (nullable) | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
-| [UniqueName](Systems.Reporting.DataSourceQueries.md#uniquename) | string(64) (nullable) | The name of the data table in the printout datasource. If null the Reference_Path is used. 
+| [ReferencePath](Systems.Reporting.DataSourceQueries.md#referencepath) | string (max) | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required` 
+| [TableName](Systems.Reporting.DataSourceQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
+| [UniqueName](Systems.Reporting.DataSourceQueries.md#uniquename) | string (64) __nullable__ | The name of the data table in the printout datasource. If null the Reference_Path is used. 
 
 ## References
 
@@ -65,7 +65,7 @@ _Default Value_: **0**
 
 A comma separated list of report extension names. An extension is set of additional fields that participate in the query.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -74,7 +74,7 @@ _Maximum Length_: **2147483647**
 
 Filter for the loaded table.
 
-_Type_: **dataaccessfilter (nullable)**  
+_Type_: **dataaccessfilter __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -98,7 +98,7 @@ _Default Value_: **NewGuid**
 
 A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required`
 
-_Type_: **string(2147483647)**  
+_Type_: **string (max)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -107,7 +107,7 @@ _Maximum Length_: **2147483647**
 
 The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -116,7 +116,7 @@ _Maximum Length_: **64**
 
 The name of the data table in the printout datasource. If null the Reference_Path is used.
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

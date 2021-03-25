@@ -26,9 +26,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Security.UserProviderTokens.md#id) | guid |  
-| [LoginProviderName](Systems.Security.UserProviderTokens.md#loginprovidername) | string(450) | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. `Required` `Filter(eq)` 
-| [TokenName](Systems.Security.UserProviderTokens.md#tokenname) | string(450) | What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). `Required` `Filter(eq)` 
-| [TokenValue](Systems.Security.UserProviderTokens.md#tokenvalue) | string(2147483647) (nullable) | Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers. 
+| [LoginProviderName](Systems.Security.UserProviderTokens.md#loginprovidername) | string (450) | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. `Required` `Filter(eq)` 
+| [TokenName](Systems.Security.UserProviderTokens.md#tokenname) | string (450) | What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). `Required` `Filter(eq)` 
+| [TokenValue](Systems.Security.UserProviderTokens.md#tokenvalue) | string (max) __nullable__ | Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers. 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. `Required` `Filter(eq)`
 
-_Type_: **string(450)**  
+_Type_: **string (450)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **450**  
@@ -59,7 +59,7 @@ _Maximum Length_: **450**
 
 What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). `Required` `Filter(eq)`
 
-_Type_: **string(450)**  
+_Type_: **string (450)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **450**  
@@ -68,7 +68,7 @@ _Maximum Length_: **450**
 
 Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

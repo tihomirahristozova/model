@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalledPartyNumber](Applications.Telephony.CallDetails.md#calledpartynumber) | string(80) | The voice number of the party, which received the call. `Required` `Filter(eq;like)` 
-| [CallingPartyNumber](Applications.Telephony.CallDetails.md#callingpartynumber) | string(80) | The voice number of the originating party of the call. `Required` `Filter(eq;like)` 
+| [CalledPartyNumber](Applications.Telephony.CallDetails.md#calledpartynumber) | string (80) | The voice number of the party, which received the call. `Required` `Filter(eq;like)` 
+| [CallingPartyNumber](Applications.Telephony.CallDetails.md#callingpartynumber) | string (80) | The voice number of the originating party of the call. `Required` `Filter(eq;like)` 
 | [CallType](Applications.Telephony.CallDetails.md#calltype) | [CallType](Applications.Telephony.CallDetails.md#calltype) | P=Phone; V=Video; M=Message/SMS. `Required` `Default("P")` `Filter(eq)` 
-| [CallUniqueId](Applications.Telephony.CallDetails.md#calluniqueid) | string(32) (nullable) | The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes. 
+| [CallUniqueId](Applications.Telephony.CallDetails.md#calluniqueid) | string (32) __nullable__ | The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes. 
 | [DurationSeconds](Applications.Telephony.CallDetails.md#durationseconds) | int32 | The duration of the call (in seconds). `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](Applications.Telephony.CallDetails.md#id) | guid |  
 | [StartTime](Applications.Telephony.CallDetails.md#starttime) | datetime | The starting date and time of the call. `Required` `Filter(ge;le)` 
@@ -47,7 +47,7 @@ Aggregate Tree
 
 The voice number of the party, which received the call. `Required` `Filter(eq;like)`
 
-_Type_: **string(80)**  
+_Type_: **string (80)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **80**  
@@ -56,7 +56,7 @@ _Maximum Length_: **80**
 
 The voice number of the originating party of the call. `Required` `Filter(eq;like)`
 
-_Type_: **string(80)**  
+_Type_: **string (80)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **80**  
@@ -83,7 +83,7 @@ _Default Value_: **Phone**
 
 The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.
 
-_Type_: **string(32) (nullable)**  
+_Type_: **string (32) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  

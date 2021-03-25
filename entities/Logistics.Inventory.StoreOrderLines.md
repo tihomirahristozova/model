@@ -26,20 +26,20 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ForOrdering](Logistics.Inventory.StoreOrderLines.md#forordering) | boolean | Specifies that the quantity of the product can be less than free to use quantity, because the product will be supplied . `Required` `Default(false)` 
-| [GuaranteePeriodDays](Logistics.Inventory.StoreOrderLines.md#guaranteeperioddays) | int32 (nullable) | Guarantee period in days for the offered product. null for non-serviced products. 
+| [GuaranteePeriodDays](Logistics.Inventory.StoreOrderLines.md#guaranteeperioddays) | int32 __nullable__ | Guarantee period in days for the offered product. null for non-serviced products. 
 | [Id](Logistics.Inventory.StoreOrderLines.md#id) | guid |  
-| [LineCost](Logistics.Inventory.StoreOrderLines.md#linecost) | [Amount](../data-types.md#amount) (nullable) | Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost. `Currency: StoreOrder.DocumentCurrency` 
+| [LineCost](Logistics.Inventory.StoreOrderLines.md#linecost) | [Amount](../data-types.md#amount) __nullable__ | Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost. `Currency: StoreOrder.DocumentCurrency` 
 | [LineNo](Logistics.Inventory.StoreOrderLines.md#lineno) | int32 | Line number within the store order. `Required` `Filter(eq)` 
-| [LotNumber](Logistics.Inventory.StoreOrderLines.md#lotnumber) | string(16) (nullable) | Obsolete. Not used. 
-| [Notes](Logistics.Inventory.StoreOrderLines.md#notes) | string(254) (nullable) | Notes for this StoreOrderLine. 
-| [ParentLineId](Logistics.Inventory.StoreOrderLines.md#parentlineid) | guid (nullable) | Id of the line of the parent document, which generated the store order. null for user-entered store orders or if not applicable. `Filter(multi eq)` 
-| [ParentLineNo](Logistics.Inventory.StoreOrderLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)` 
+| [LotNumber](Logistics.Inventory.StoreOrderLines.md#lotnumber) | string (16) __nullable__ | Obsolete. Not used. 
+| [Notes](Logistics.Inventory.StoreOrderLines.md#notes) | string (254) __nullable__ | Notes for this StoreOrderLine. 
+| [ParentLineId](Logistics.Inventory.StoreOrderLines.md#parentlineid) | guid __nullable__ | Id of the line of the parent document, which generated the store order. null for user-entered store orders or if not applicable. `Filter(multi eq)` 
+| [ParentLineNo](Logistics.Inventory.StoreOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)` 
 | [PersistLot](Logistics.Inventory.StoreOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)` 
 | [Quantity](Logistics.Inventory.StoreOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity ordered for receipt/issue. `Unit: QuantityUnit` `Required` `Default(0)` 
 | [QuantityBase](Logistics.Inventory.StoreOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
 | [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [TransactionTimestamp](Logistics.Inventory.StoreOrderLines.md#transactiontimestamp) | datetime (nullable) | Exact time when the transaction for this store order line changes the cost of the product. `ReadOnly` 
-| [UnitCost](Logistics.Inventory.StoreOrderLines.md#unitcost) | [Amount](../data-types.md#amount) (nullable) | Cost for 1 unit of measure in the currency of the document. `Currency: StoreOrder.DocumentCurrency` 
+| [TransactionTimestamp](Logistics.Inventory.StoreOrderLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction for this store order line changes the cost of the product. `ReadOnly` 
+| [UnitCost](Logistics.Inventory.StoreOrderLines.md#unitcost) | [Amount](../data-types.md#amount) __nullable__ | Cost for 1 unit of measure in the currency of the document. `Currency: StoreOrder.DocumentCurrency` 
 
 ## References
 
@@ -72,7 +72,7 @@ _Default Value_: **False**
 
 Guarantee period in days for the offered product. null for non-serviced products.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -89,7 +89,7 @@ _Default Value_: **NewGuid**
 
 Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost. `Currency: StoreOrder.DocumentCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -110,7 +110,7 @@ _Front-End Recalc Expressions:_
 
 Obsolete. Not used.
 
-_Type_: **string(16) (nullable)**  
+_Type_: **string (16) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -119,7 +119,7 @@ _Maximum Length_: **16**
 
 Notes for this StoreOrderLine.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -128,7 +128,7 @@ _Maximum Length_: **254**
 
 Id of the line of the parent document, which generated the store order. null for user-entered store orders or if not applicable. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
@@ -136,7 +136,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -189,7 +189,7 @@ _Front-End Recalc Expressions:_
 
 Exact time when the transaction for this store order line changes the cost of the product. `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -197,7 +197,7 @@ _Supports Order By_: **False**
 
 Cost for 1 unit of measure in the currency of the document. `Currency: StoreOrder.DocumentCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

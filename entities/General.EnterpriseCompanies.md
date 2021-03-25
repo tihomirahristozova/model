@@ -31,15 +31,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime (nullable) | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". `Filter(eq)` `Introduced in version 18.2` 
+| [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime __nullable__ | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". `Filter(eq)` `Introduced in version 18.2` 
 | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. `Required` `Default("AVG")` 
-| [DefaultCustomer<br />CreditLimitBase](General.EnterpriseCompanies.md#defaultcustomercreditlimitbase) | [Amount](../data-types.md#amount) (nullable) | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. `Currency: BaseCurrency` `Filter(eq;like)` 
-| [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) (nullable) | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")` 
-| [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime (nullable) | Start date of the priod when the documents can be edited. 
+| [DefaultCustomer<br />CreditLimitBase](General.EnterpriseCompanies.md#defaultcustomercreditlimitbase) | [Amount](../data-types.md#amount) __nullable__ | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. `Currency: BaseCurrency` `Filter(eq;like)` 
+| [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__ | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")` 
+| [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime __nullable__ | Start date of the priod when the documents can be edited. 
 | [Id](General.EnterpriseCompanies.md#id) | guid |  
 | [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. `Required` `Default(true)` `Filter(multi eq)` `Introduced in version 20.1` 
 | [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1` 
-| [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 (nullable) | When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2` 
+| [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 __nullable__ | When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Tree
 
 Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". `Filter(eq)` `Introduced in version 18.2`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -97,7 +97,7 @@ _Default Value_: **AverageCost**
 
 Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. `Currency: BaseCurrency` `Filter(eq;like)`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")`
 
-_Type_: **[DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) (nullable)**  
+_Type_: **[DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__**  
 Allowed values for the `DefaultLanguage`(General.EnterpriseCompanies.md#defaultlanguage) data attribute  
 _Allowed Values (General.EnterpriseCompaniesRepository.DefaultLanguage Enum Members)_  
 
@@ -122,7 +122,7 @@ _Default Value_: **English**
 
 Start date of the priod when the documents can be edited.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -155,7 +155,7 @@ _Default Value_: **60**
 
 When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

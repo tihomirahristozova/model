@@ -24,9 +24,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceObjects.md#id) | guid |  
-| [Name](Applications.Service.ServiceObjects.md#name) | string(254) | The name of this ServiceObject. `Required` `Filter(eq;like)` 
-| [Notes](Applications.Service.ServiceObjects.md#notes) | string(254) (nullable) | Notes for this ServiceObject. 
-| [SerialNumber](Applications.Service.ServiceObjects.md#serialnumber) | string(32) (nullable) | The serial number of the item, that is being serviced. `Filter(like)` 
+| [Name](Applications.Service.ServiceObjects.md#name) | string (254) | The name of this ServiceObject. `Required` `Filter(eq;like)` 
+| [Notes](Applications.Service.ServiceObjects.md#notes) | string (254) __nullable__ | Notes for this ServiceObject. 
+| [SerialNumber](Applications.Service.ServiceObjects.md#serialnumber) | string (32) __nullable__ | The serial number of the item, that is being serviced. `Filter(like)` 
 
 ## References
 
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 The name of this ServiceObject. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -63,7 +63,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this ServiceObject.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -72,7 +72,7 @@ _Maximum Length_: **254**
 
 The serial number of the item, that is being serviced. `Filter(like)`
 
-_Type_: **string(32) (nullable)**  
+_Type_: **string (32) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  

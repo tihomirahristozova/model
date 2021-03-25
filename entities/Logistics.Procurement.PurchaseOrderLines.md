@@ -25,16 +25,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConfirmedPricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#confirmedpriceperunit) | [Amount](../data-types.md#amount) (nullable) | The unit price that is confirmed by the supplier. null if there was no order confirmation. `Currency: PurchaseOrder.DocumentCurrency` 
-| [ConfirmedQuantity](Logistics.Procurement.PurchaseOrderLines.md#confirmedquantity) | [Quantity](../data-types.md#quantity) (nullable) | The quantity that is confirmed by the supplier. null if there was no order confirmation. `Unit: QuantityUnit` `Filter(ge;le)` 
-| [ConfirmedQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#confirmedquantitybase) | [Quantity](../data-types.md#quantity) (nullable) | The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` 
-| [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.PurchaseOrderLines.md#confirmedstandardquantitybase) | [Quantity](../data-types.md#quantity) (nullable) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2` 
+| [ConfirmedPricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#confirmedpriceperunit) | [Amount](../data-types.md#amount) __nullable__ | The unit price that is confirmed by the supplier. null if there was no order confirmation. `Currency: PurchaseOrder.DocumentCurrency` 
+| [ConfirmedQuantity](Logistics.Procurement.PurchaseOrderLines.md#confirmedquantity) | [Quantity](../data-types.md#quantity) __nullable__ | The quantity that is confirmed by the supplier. null if there was no order confirmation. `Unit: QuantityUnit` `Filter(ge;le)` 
+| [ConfirmedQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#confirmedquantitybase) | [Quantity](../data-types.md#quantity) __nullable__ | The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` 
+| [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.PurchaseOrderLines.md#confirmedstandardquantitybase) | [Quantity](../data-types.md#quantity) __nullable__ | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2` 
 | [Id](Logistics.Procurement.PurchaseOrderLines.md#id) | guid |  
 | [LineNo](Logistics.Procurement.PurchaseOrderLines.md#lineno) | int32 | Line number, unique within the PurchaseOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the PurchaseOrder (in order to allow insertions with adjustment documents). `Required` 
-| [Notes](Logistics.Procurement.PurchaseOrderLines.md#notes) | string(254) (nullable) | Notes for this PurchaseOrderLine. 
-| [ParentLineNo](Logistics.Procurement.PurchaseOrderLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Filter(eq)` `Introduced in version 18.2` 
+| [Notes](Logistics.Procurement.PurchaseOrderLines.md#notes) | string (254) __nullable__ | Notes for this PurchaseOrderLine. 
+| [ParentLineNo](Logistics.Procurement.PurchaseOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Filter(eq)` `Introduced in version 18.2` 
 | [PlannedDeliveryDate](Logistics.Procurement.PurchaseOrderLines.md#planneddeliverydate) | datetime | The planned delivery date for this line. `Required` `Filter(ge;le)` 
-| [PricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#priceperunit) | [Amount](../data-types.md#amount) (nullable) | The expected unit price of the ordered products, in the document currency. `Currency: PurchaseOrder.DocumentCurrency` 
+| [PricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#priceperunit) | [Amount](../data-types.md#amount) __nullable__ | The expected unit price of the ordered products, in the document currency. `Currency: PurchaseOrder.DocumentCurrency` 
 | [ProductDescription](Logistics.Procurement.PurchaseOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. `Required` `Filter(like)` 
 | [Quantity](Logistics.Procurement.PurchaseOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity ordered. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
 | [QuantityBase](Logistics.Procurement.PurchaseOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 The unit price that is confirmed by the supplier. null if there was no order confirmation. `Currency: PurchaseOrder.DocumentCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 The quantity that is confirmed by the supplier. null if there was no order confirmation. `Unit: QuantityUnit` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -88,7 +88,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -118,7 +118,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this PurchaseOrderLine.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -127,7 +127,7 @@ _Maximum Length_: **254**
 
 The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Filter(eq)` `Introduced in version 18.2`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -148,7 +148,7 @@ _Front-End Recalc Expressions:_
 
 The expected unit price of the ordered products, in the document currency. `Currency: PurchaseOrder.DocumentCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

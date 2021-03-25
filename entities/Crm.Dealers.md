@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Dealers.md#fromdate) | datetime (nullable) | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
+| [FromDate](Crm.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
 | [Id](Crm.Dealers.md#id) | guid |  
-| [Notes](Crm.Dealers.md#notes) | string(254) (nullable) | Notes for this Dealer. 
-| [ThruDate](Crm.Dealers.md#thrudate) | datetime (nullable) | Termination date of the dealership. null for active dealers. `Filter(ge;le)` 
+| [Notes](Crm.Dealers.md#notes) | string (254) __nullable__ | Notes for this Dealer. 
+| [ThruDate](Crm.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. null for active dealers. `Filter(ge;le)` 
 
 ## References
 
@@ -44,7 +44,7 @@ Aggregate Root:
 
 Start of the dealer relationship. `Default(Today)` `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 Notes for this Dealer.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -69,7 +69,7 @@ _Maximum Length_: **254**
 
 Termination date of the dealership. null for active dealers. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

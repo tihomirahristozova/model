@@ -125,22 +125,22 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#adjustmenttime">AdjustmentTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date/time when the document last has been adjusted by corrective document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#adjustmentuser">AdjustmentUser</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>The user who adjusted the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#coefficientvatlarticle73">CoefficientVATLArticle73</a></td>
-<td>decimal(3, 2)</td>
+<td>decimal (3, 2)</td>
 <td>Field 01 - 33 from the declaration. Must be between 0.00 and 1.00. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#completetime">CompleteTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -150,7 +150,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#creationuser">CreationUser</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -170,12 +170,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#documentno">DocumentNo</a></td>
-<td>string(20)</td>
+<td>string (20)</td>
 <td>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#documentnotes">DocumentNotes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this Document. (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -185,7 +185,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#entityname">EntityName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -205,7 +205,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
-<td><a href="Finance.Vat.BGVATDeclarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</td>
+<td><a href="Finance.Vat.BGVATDeclarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> <strong>nullable</strong></td>
 <td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -220,17 +220,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#referencedate">ReferenceDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. <code>Default(Today)</code> <code>Filter(ge;le)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#referencedocumentno">ReferenceDocumentNo</a></td>
-<td>string(20) (nullable)</td>
+<td>string (20) <strong>nullable</strong></td>
 <td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#releasetime">ReleaseTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -255,7 +255,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#vatdeclarationrepresentingpersonposition">VATDeclaration<br>RepresentingPerson<br>Position</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>Position of the representing person for the purposes of submitting of VAT declarations.</td>
 </tr>
 <tr>
@@ -275,17 +275,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#voidreason">VoidReason</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Reason for voiding the document, entered by the user. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#voidtime">VoidTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date/time when the document has become void. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#voiduser">VoidUser</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>The user who voided the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 </tbody>
@@ -463,24 +463,24 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="adjustmenttime">AdjustmentTime</h3>
 <p>Date/time when the document last has been adjusted by corrective document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="adjustmentuser">AdjustmentUser</h3>
 <p>The user who adjusted the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="coefficientvatlarticle73">CoefficientVATLArticle73</h3>
 <p>Field 01 - 33 from the declaration. Must be between 0.00 and 1.00. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(3, 2)</strong><br>
+<p><em>Type</em>: <strong>decimal (3, 2)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="completetime">CompleteTime</h3>
 <p>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationtime">CreationTime</h3>
@@ -491,7 +491,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
@@ -516,14 +516,14 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="documentno">DocumentNo</h3>
 <p>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string(20)</strong><br>
+<p><em>Type</em>: <strong>string (20)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>20</strong></p>
 <h3 id="documentnotes">DocumentNotes</h3>
 <p>Notes for this Document. (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -535,7 +535,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="entityname">EntityName</h3>
 <p>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -559,7 +559,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
 <p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong><a href="Finance.Vat.BGVATDeclarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Vat.BGVATDeclarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> <strong>nullable</strong></strong><br>
 Relationship between parent and child documents<br>
 <em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
 <table>
@@ -596,19 +596,19 @@ Relationship between parent and child documents<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="referencedate">ReferenceDate</h3>
 <p>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. <code>Default(Today)</code> <code>Filter(ge;le)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="referencedocumentno">ReferenceDocumentNo</h3>
 <p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string(20) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (20) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>20</strong></p>
 <h3 id="releasetime">ReleaseTime</h3>
 <p>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>
@@ -677,7 +677,7 @@ Enumeration of document system states<br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="vatdeclarationrepresentingpersonposition">VATDeclarationRepresentingPersonPosition</h3>
 <p>Position of the representing person for the purposes of submitting of VAT declarations.</p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
@@ -700,18 +700,18 @@ Enumeration of document system states<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="voidreason">VoidReason</h3>
 <p>Reason for voiding the document, entered by the user. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="voidtime">VoidTime</h3>
 <p>Date/time when the document has become void. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="voiduser">VoidUser</h3>
 <p>The user who voided the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>

@@ -24,11 +24,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EditPeriodDays](Systems.Security.Groups.md#editperioddays) | int32 (nullable) | The number of days before which the documents can not be corrected, released or voided. 
+| [EditPeriodDays](Systems.Security.Groups.md#editperioddays) | int32 __nullable__ | The number of days before which the documents can not be corrected, released or voided. 
 | [GroupType](Systems.Security.Groups.md#grouptype) | [GroupType](Systems.Security.Groups.md#grouptype) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. `Required` `Default("G")` `ReadOnly` 
 | [Id](Systems.Security.Groups.md#id) | guid |  
 | [Name](Systems.Security.Groups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Group. `Required` `Filter(like)` `ORD` 
-| [Notes](Systems.Security.Groups.md#notes) | string(254) (nullable) | Notes for this Group. 
+| [Notes](Systems.Security.Groups.md#notes) | string (254) __nullable__ | Notes for this Group. 
 
 ## References
 
@@ -49,7 +49,7 @@ Aggregate Tree
 
 The number of days before which the documents can not be corrected, released or voided.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -91,7 +91,7 @@ _Supports Order By_: **True**
 
 Notes for this Group.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

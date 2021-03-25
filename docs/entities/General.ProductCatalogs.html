@@ -104,12 +104,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="General.ProductCatalogs.html#backgroundcolor">BackgroundColor</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</td>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#backgroundimage">BackgroundImage</a></td>
-<td>byte[] (nullable)</td>
+<td>byte[] <strong>nullable</strong></td>
 <td>The background image to be used for web visualization of the catalog. null means that background image won't be displayed.</td>
 </tr>
 <tr>
@@ -129,17 +129,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#code">Code</a></td>
-<td>string(16)</td>
+<td>string (16)</td>
 <td>Unique catalog code. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#footerhtml">FooterHtml</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.</td>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#headerhtml">HeaderHtml</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.</td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#logo">Logo</a></td>
-<td>byte[] (nullable)</td>
+<td>byte[] <strong>nullable</strong></td>
 <td>The logo of the product catalog. Used for web and other visualization of the catalog.</td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this ProductCatalog.</td>
 </tr>
 </tbody>
@@ -189,12 +189,12 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="backgroundcolor">BackgroundColor</h3>
 <p>When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="backgroundimage">BackgroundImage</h3>
 <p>The background image to be used for web visualization of the catalog. null means that background image won't be displayed.</p>
-<p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="backgroundpositionhorizontal">BackgroundPositionHorizontal</h3>
@@ -293,19 +293,19 @@ Allowed values for the <code>BackgroundRepeat</code>(General.ProductCatalogs.md#
 <em>Default Value</em>: <strong>RepeatBothVerticallyAndHorizontally</strong></p>
 <h3 id="code">Code</h3>
 <p>Unique catalog code. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(16)</strong><br>
+<p><em>Type</em>: <strong>string (16)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="footerhtml">FooterHtml</h3>
 <p>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="headerhtml">HeaderHtml</h3>
 <p>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -316,7 +316,7 @@ Allowed values for the <code>BackgroundRepeat</code>(General.ProductCatalogs.md#
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="logo">Logo</h3>
 <p>The logo of the product catalog. Used for web and other visualization of the catalog.</p>
-<p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
@@ -326,7 +326,7 @@ Allowed values for the <code>BackgroundRepeat</code>(General.ProductCatalogs.md#
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ProductCatalog.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

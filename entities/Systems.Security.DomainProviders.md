@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ClientID](Systems.Security.DomainProviders.md#clientid) | string(254) (nullable) | This is the Client_ID of our registration within the provider. 
-| [ClientSecret](Systems.Security.DomainProviders.md#clientsecret) | string(254) (nullable) | This is the password, which we, as a client app, use to access the authentication provider. 
-| [DisplayName](Systems.Security.DomainProviders.md#displayname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
+| [ClientID](Systems.Security.DomainProviders.md#clientid) | string (254) __nullable__ | This is the Client_ID of our registration within the provider. 
+| [ClientSecret](Systems.Security.DomainProviders.md#clientsecret) | string (254) __nullable__ | This is the password, which we, as a client app, use to access the authentication provider. 
+| [DisplayName](Systems.Security.DomainProviders.md#displayname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
 | [Id](Systems.Security.DomainProviders.md#id) | guid |  
 | [IsActive](Systems.Security.DomainProviders.md#isactive) | boolean | Specifies whether the provider is currently active for the domain. `Required` `Default(true)` `Filter(eq)` 
-| [Notes](Systems.Security.DomainProviders.md#notes) | string(2147483647) (nullable) | Notes for this DomainProvider. 
+| [Notes](Systems.Security.DomainProviders.md#notes) | string (max) __nullable__ | Notes for this DomainProvider. 
 | [ProviderName](Systems.Security.DomainProviders.md#providername) | [ProviderName](Systems.Security.DomainProviders.md#providername) | The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. `Required` `Filter(eq)` 
-| [TenantID](Systems.Security.DomainProviders.md#tenantid) | string(254) (nullable) | When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant. 
+| [TenantID](Systems.Security.DomainProviders.md#tenantid) | string (254) __nullable__ | When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant. 
 
 ## References
 
@@ -47,7 +47,7 @@ Aggregate Root:
 
 This is the Client_ID of our registration within the provider.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -56,7 +56,7 @@ _Maximum Length_: **254**
 
 This is the password, which we, as a client app, use to access the authentication provider.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -65,7 +65,7 @@ _Maximum Length_: **254**
 
 Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -89,7 +89,7 @@ _Default Value_: **True**
 
 Notes for this DomainProvider.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -116,7 +116,7 @@ _Supports Order By_: **False**
 
 When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

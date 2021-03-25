@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Payments.PaymentAccounts.md#code) | string(16) | The unique code of the PaymentAccount. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Finance.Payments.PaymentAccounts.md#code) | string (16) | The unique code of the PaymentAccount. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Finance.Payments.PaymentAccounts.md#id) | guid |  
 | [IsActive](Finance.Payments.PaymentAccounts.md#isactive) | boolean | Indicates wheather the payment account is currently used (active). `Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Payments.PaymentAccounts.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentAccount. `Required` `Filter(like)` 
@@ -46,7 +46,7 @@ Aggregate Tree
 
 The unique code of the PaymentAccount. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  

@@ -24,9 +24,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Assets.AssetCategories.md#code) | string(20) | The unique code of the AssetCategory. `Required` `Filter(eq)` `ORD` 
+| [Code](Finance.Assets.AssetCategories.md#code) | string (20) | The unique code of the AssetCategory. `Required` `Filter(eq)` `ORD` 
 | [Id](Finance.Assets.AssetCategories.md#id) | guid |  
-| [Name](Finance.Assets.AssetCategories.md#name) | string(254) | The name of this AssetCategory. `Required` `Filter(like)` 
+| [Name](Finance.Assets.AssetCategories.md#name) | string (254) | The name of this AssetCategory. `Required` `Filter(like)` 
 
 ## References
 
@@ -47,7 +47,7 @@ Aggregate Tree
 
 The unique code of the AssetCategory. `Required` `Filter(eq)` `ORD`
 
-_Type_: **string(20)**  
+_Type_: **string (20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -64,7 +64,7 @@ _Default Value_: **NewGuid**
 
 The name of this AssetCategory. `Required` `Filter(like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

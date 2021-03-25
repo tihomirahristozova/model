@@ -23,12 +23,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](General.PropertyValues.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The actual description value of the property for the specified entity (the entity with the specified Id). 
+| [Description](General.PropertyValues.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The actual description value of the property for the specified entity (the entity with the specified Id). 
 | [EntityItemId](General.PropertyValues.md#entityitemid) | guid | The Id of the actual entity for which the value is specified. `Required` `Filter(multi eq)` 
 | [Id](General.PropertyValues.md#id) | guid |  
-| [Picture](General.PropertyValues.md#picture) | byte[] (nullable) | The actual picture of the property for the specified entity (the entity with the specified Id). 
-| [PropertyValueField](General.PropertyValues.md#propertyvaluefield) | string(254) (nullable) | The actual value of the property for the specified entity (the entity with the specified Id). 
-| [ValueId](General.PropertyValues.md#valueid) | guid (nullable) | The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. `Filter(multi eq)` 
+| [Picture](General.PropertyValues.md#picture) | byte[] __nullable__ | The actual picture of the property for the specified entity (the entity with the specified Id). 
+| [PropertyValueField](General.PropertyValues.md#propertyvaluefield) | string (254) __nullable__ | The actual value of the property for the specified entity (the entity with the specified Id). 
+| [ValueId](General.PropertyValues.md#valueid) | guid __nullable__ | The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. `Filter(multi eq)` 
 
 ## References
 
@@ -43,7 +43,7 @@ Aggregate Tree
 
 The actual description value of the property for the specified entity (the entity with the specified Id).
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 The actual picture of the property for the specified entity (the entity with the specified Id).
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 The actual value of the property for the specified entity (the entity with the specified Id).
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -82,7 +82,7 @@ _Maximum Length_: **254**
 
 The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

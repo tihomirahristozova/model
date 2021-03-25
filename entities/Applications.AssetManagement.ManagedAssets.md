@@ -27,11 +27,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.ManagedAssets.md#code) | string(16) | Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. `Required` `Filter(eq;like)` 
+| [Code](Applications.AssetManagement.ManagedAssets.md#code) | string (16) | Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. `Required` `Filter(eq;like)` 
 | [Id](Applications.AssetManagement.ManagedAssets.md#id) | guid |  
 | [Name](Applications.AssetManagement.ManagedAssets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the managed asset (multi-language). `Required` `Filter(eq;like)` 
-| [Notes](Applications.AssetManagement.ManagedAssets.md#notes) | string(2147483647) (nullable) | Notes for this ManagedAsset. 
-| [RegistrationNumber](Applications.AssetManagement.ManagedAssets.md#registrationnumber) | string(32) (nullable) | Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. `Filter(eq;like)` 
+| [Notes](Applications.AssetManagement.ManagedAssets.md#notes) | string (max) __nullable__ | Notes for this ManagedAsset. 
+| [RegistrationNumber](Applications.AssetManagement.ManagedAssets.md#registrationnumber) | string (32) __nullable__ | Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. `Filter(eq;like)` 
 
 ## References
 
@@ -57,7 +57,7 @@ Aggregate Tree
 
 Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. `Required` `Filter(eq;like)`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 Notes for this ManagedAsset.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -90,7 +90,7 @@ _Maximum Length_: **2147483647**
 
 Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. `Filter(eq;like)`
 
-_Type_: **string(32) (nullable)**  
+_Type_: **string (32) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  

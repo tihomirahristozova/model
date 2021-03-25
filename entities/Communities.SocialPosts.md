@@ -26,7 +26,7 @@ Aggregate Tree
 | [CreationTimeUtc](Communities.SocialPosts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. `Required` 
 | [Id](Communities.SocialPosts.md#id) | guid |  
 | [LastInteractionTimeUtc](Communities.SocialPosts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required` 
-| [PostText](Communities.SocialPosts.md#posttext) | string(2147483647) | The post contents in clear text. `Required` 
+| [PostText](Communities.SocialPosts.md#posttext) | string (max) | The post contents in clear text. `Required` 
 
 ## References
 
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 The post contents in clear text. `Required`
 
-_Type_: **string(2147483647)**  
+_Type_: **string (max)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

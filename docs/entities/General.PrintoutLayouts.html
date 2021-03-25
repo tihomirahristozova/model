@@ -108,12 +108,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="General.PrintoutLayouts.html#binarylayout">BinaryLayout</a></td>
-<td>byte[] (nullable)</td>
+<td>byte[] <strong>nullable</strong></td>
 <td>The printout layout, when the format requires binary storage. Alternative to Layout.</td>
 </tr>
 <tr>
 <td><a href="General.PrintoutLayouts.html#documententityname">DocumentEntityName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -123,22 +123,22 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.PrintoutLayouts.html#layout">Layout</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout.</td>
 </tr>
 <tr>
 <td><a href="General.PrintoutLayouts.html#layoutformat">LayoutFormat</a></td>
-<td>string(32)</td>
+<td>string (32)</td>
 <td>Format specifier of the layout. Recognized by the application. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.PrintoutLayouts.html#name">Name</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The name of this PrintoutLayout. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.PrintoutLayouts.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this PrintoutLayout.</td>
 </tr>
 </tbody>
@@ -180,12 +180,12 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="binarylayout">BinaryLayout</h3>
 <p>The printout layout, when the format requires binary storage. Alternative to Layout.</p>
-<p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documententityname">DocumentEntityName</h3>
 <p>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
@@ -196,26 +196,26 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="layout">Layout</h3>
 <p>The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="layoutformat">LayoutFormat</h3>
 <p>Format specifier of the layout. Recognized by the application. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>string(32)</strong><br>
+<p><em>Type</em>: <strong>string (32)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this PrintoutLayout. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this PrintoutLayout.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>

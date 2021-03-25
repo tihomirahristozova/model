@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](General.Contacts.PartyContactMechanisms.md#fromdate) | datetime (nullable) | The first date when the contact mechanism was valid. null means unknown date. `Default(Today)` `Filter(eq;ge;le)` 
+| [FromDate](General.Contacts.PartyContactMechanisms.md#fromdate) | datetime __nullable__ | The first date when the contact mechanism was valid. null means unknown date. `Default(Today)` `Filter(eq;ge;le)` 
 | [Id](General.Contacts.PartyContactMechanisms.md#id) | guid |  
 | [IsActive](General.Contacts.PartyContactMechanisms.md#isactive) | boolean | True if the contact mechanism is currently active and can be used to contact the party. `Required` `Default(true)` `Filter(eq)` 
 | [IsDefault](General.Contacts.PartyContactMechanisms.md#isdefault) | boolean | True - when this is the default contact mechanism for this party; false - otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [LineOrd](General.Contacts.PartyContactMechanisms.md#lineord) | int32 | Consecutive number of the contact information. The number is unique within the party. `Required` 
 | [NonSolicitation](General.Contacts.PartyContactMechanisms.md#nonsolicitation) | boolean | If true then Don't use the mechanism for solicitation purposes. `Required` `Default(false)` `Filter(eq)` 
-| [Notes](General.Contacts.PartyContactMechanisms.md#notes) | string(254) (nullable) | Notes for this PartyContactMechanism. 
-| [ThruDate](General.Contacts.PartyContactMechanisms.md#thrudate) | datetime (nullable) | The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. `Filter(eq;ge;le)` 
+| [Notes](General.Contacts.PartyContactMechanisms.md#notes) | string (254) __nullable__ | Notes for this PartyContactMechanism. 
+| [ThruDate](General.Contacts.PartyContactMechanisms.md#thrudate) | datetime __nullable__ | The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. `Filter(eq;ge;le)` 
 
 ## References
 
@@ -50,7 +50,7 @@ Aggregate Root:
 
 The first date when the contact mechanism was valid. null means unknown date. `Default(Today)` `Filter(eq;ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -106,7 +106,7 @@ _Default Value_: **False**
 
 Notes for this PartyContactMechanism.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -115,7 +115,7 @@ _Maximum Length_: **254**
 
 The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. `Filter(eq;ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

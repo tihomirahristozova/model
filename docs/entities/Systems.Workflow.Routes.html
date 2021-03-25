@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#conditionfilterxml">ConditionFilterXML</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>Contains filter condition, which the document must match in order to execute the route.</td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#deactivationdate">DeactivationDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -154,12 +154,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#negativeconditionfilterxml">NegativeConditionFilterXml</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>The negative condition should NOT be matched by the document in order to execute the route.</td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this Route.</td>
 </tr>
 <tr>
@@ -169,12 +169,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#procedurename">ProcedureName</a></td>
-<td>string(254)</td>
+<td>string (254)</td>
 <td>The system name of the generation procedure, which must be executed by the route. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#processevent">ProcessEvent</a></td>
-<td>string(254)</td>
+<td>string (254)</td>
 <td>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. <code>Required</code></td>
 </tr>
 <tr>
@@ -309,7 +309,7 @@ Allowed values for the <code>AllowedGenerationTypes</code>(Systems.Workflow.Rout
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="conditionfilterxml">ConditionFilterXML</h3>
 <p>Contains filter condition, which the document must match in order to execute the route.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionstatesbitmask">ConditionStatesBitMask</h3>
@@ -390,7 +390,7 @@ Allowed values for the <code>ConnectedPartyCondition</code>(Systems.Workflow.Rou
 <em>Default Value</em>: <strong>AnyParty</strong></p>
 <h3 id="deactivationdate">DeactivationDate</h3>
 <p>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="destinationstate">DestinationState</h3>
@@ -445,12 +445,12 @@ Enumeration of document system states<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="negativeconditionfilterxml">NegativeConditionFilterXml</h3>
 <p>The negative condition should NOT be matched by the document in order to execute the route.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Route.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -482,13 +482,13 @@ Relationship between parent and child documents<br>
 <em>Default Value</em>: <strong>Subtask</strong></p>
 <h3 id="procedurename">ProcedureName</h3>
 <p>The system name of the generation procedure, which must be executed by the route. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(254)</strong><br>
+<p><em>Type</em>: <strong>string (254)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="processevent">ProcessEvent</h3>
 <p>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(254)</strong><br>
+<p><em>Type</em>: <strong>string (254)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>

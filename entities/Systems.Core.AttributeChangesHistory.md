@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Core.AttributeChangesHistory.md#attributename) | string(64) |  
+| [AttributeName](Systems.Core.AttributeChangesHistory.md#attributename) | string (64) |  
 | [EntityItemId](Systems.Core.AttributeChangesHistory.md#entityitemid) | guid | The id of the actual changed object, described by this change. `Required` `Filter(multi eq)` `Inherited from Sys_Object_Changes_Table.Entity_Item_Id` 
-| [NewValue](Systems.Core.AttributeChangesHistory.md#newvalue) | string(2147483647) (nullable) | The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` 
-| [PreviousValue](Systems.Core.AttributeChangesHistory.md#previousvalue) | string(2147483647) | The previous value. `Required` `Filter(eq)` 
-| [RepositoryName](Systems.Core.AttributeChangesHistory.md#repositoryname) | string(64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` `Inherited from Sys_Object_Changes_Table.Repository_Name` 
+| [NewValue](Systems.Core.AttributeChangesHistory.md#newvalue) | string (max) __nullable__ | The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` 
+| [PreviousValue](Systems.Core.AttributeChangesHistory.md#previousvalue) | string (max) | The previous value. `Required` `Filter(eq)` 
+| [RepositoryName](Systems.Core.AttributeChangesHistory.md#repositoryname) | string (64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` `Inherited from Sys_Object_Changes_Table.Repository_Name` 
 | [TimeUtc](Systems.Core.AttributeChangesHistory.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `Inherited from Sys_Object_Changesets_<br />Table.Time_Utc` 
 
 ## References
@@ -41,7 +41,7 @@ Aggregate Tree
 
 ### AttributeName
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Inherited From_: **Sys_Attribute_Changes_Table.Attribute_Name**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
@@ -59,7 +59,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_Changes_Table.New_Value`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Inherited From_: **Sys_Attribute_Changes_Table.New_Value**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
@@ -69,7 +69,7 @@ _Maximum Length_: **2147483647**
 
 The previous value. `Required` `Filter(eq)`
 
-_Type_: **string(2147483647)**  
+_Type_: **string (max)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -78,7 +78,7 @@ _Maximum Length_: **2147483647**
 
 The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` `Inherited from Sys_Object_Changes_Table.Repository_Name`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Inherited From_: **Sys_Object_Changes_Table.Repository_Name**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  

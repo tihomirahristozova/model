@@ -31,8 +31,8 @@ Aggregate Root:
 | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). `Required` `Filter(eq)` `ReadOnly` 
 | [Id](Production.ShopFloor.ConsumptionOrderLines.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.ConsumptionOrderLines.md#lineord) | int32 | Non-unique line number within the order. `Required` 
-| [Notes](Production.ShopFloor.ConsumptionOrderLines.md#notes) | string(2147483647) (nullable) | Notes for this ConsumptionOrderLine. 
-| [ScheduledDateTime](Production.ShopFloor.ConsumptionOrderLines.md#scheduleddatetime) | datetime (nullable) | The scheduled date, when the material is needed. `Filter(ge;le)` 
+| [Notes](Production.ShopFloor.ConsumptionOrderLines.md#notes) | string (max) __nullable__ | Notes for this ConsumptionOrderLine. 
+| [ScheduledDateTime](Production.ShopFloor.ConsumptionOrderLines.md#scheduleddatetime) | datetime __nullable__ | The scheduled date, when the material is needed. `Filter(ge;le)` 
 
 ## References
 
@@ -129,7 +129,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this ConsumptionOrderLine.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -138,7 +138,7 @@ _Maximum Length_: **2147483647**
 
 The scheduled date, when the material is needed. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

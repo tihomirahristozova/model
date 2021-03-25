@@ -104,22 +104,22 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Crm.SalesPersons.html#commissionpercent">CommissionPercent</a></td>
-<td>decimal(7, 6) (nullable)</td>
+<td>decimal (7, 6) <strong>nullable</strong></td>
 <td>The percentage (0..1) of commission percent. null means that there is no commission percent.</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#commissionpolicyid">CommissionPolicyId</a></td>
-<td>guid (nullable)</td>
+<td>guid <strong>nullable</strong></td>
 <td>Current commission policy for the sales person. null means there is no commission policy. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#contractenddate">ContractEndDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The ending date of the contract with the sales person. null when the sales person is still active. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesPersons.html#contractstartdate">ContractStartDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The starting date of the contract with the sales person. null when it is unknown. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -169,21 +169,21 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="commissionpercent">CommissionPercent</h3>
 <p>The percentage (0..1) of commission percent. null means that there is no commission percent.</p>
-<p><em>Type</em>: <strong>decimal(7, 6) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="commissionpolicyid">CommissionPolicyId</h3>
 <p>Current commission policy for the sales person. null means there is no commission policy. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="contractenddate">ContractEndDate</h3>
 <p>The ending date of the contract with the sales person. null when the sales person is still active. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="contractstartdate">ContractStartDate</h3>
 <p>The starting date of the contract with the sales person. null when it is unknown. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>

@@ -109,17 +109,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#name">Name</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>Name of the resource. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>User notes for the resource.</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#setupdurationhours">SetupDurationHours</a></td>
-<td>decimal(6, 2)</td>
+<td>decimal (6, 2)</td>
 <td>The usual duration of setup when changing production. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -129,12 +129,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#standardcostperhour">StandardCostPerHour</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. <code>Currency: ResourceCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#standardpriceperhour">StandardPricePerHour</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. <code>Currency: ResourceCurrency</code></td>
 </tr>
 </tbody>
@@ -196,19 +196,19 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>Name of the resource. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="notes">Notes</h3>
 <p>User notes for the resource.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="setupdurationhours">SetupDurationHours</h3>
 <p>The usual duration of setup when changing production. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(6, 2)</strong><br>
+<p><em>Type</em>: <strong>decimal (6, 2)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -220,12 +220,12 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="standardcostperhour">StandardCostPerHour</h3>
 <p>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. <code>Currency: ResourceCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
 <p>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. <code>Currency: ResourceCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

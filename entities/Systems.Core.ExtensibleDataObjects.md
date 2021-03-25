@@ -25,12 +25,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Systems.Core.ExtensibleDataObjects.md#creationtimeutc) | datetime (nullable) | The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1` 
+| [CreationTimeUtc](Systems.Core.ExtensibleDataObjects.md#creationtimeutc) | datetime __nullable__ | The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1` 
 | [EntityItemId](Systems.Core.ExtensibleDataObjects.md#entityitemid) | guid | The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` 
-| [EntityType](Systems.Core.ExtensibleDataObjects.md#entitytype) | string(64) | The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(eq)` `ORD` 
+| [EntityType](Systems.Core.ExtensibleDataObjects.md#entitytype) | string (64) | The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(eq)` `ORD` 
 | [Id](Systems.Core.ExtensibleDataObjects.md#id) | guid |  
 | [IsDeleted](Systems.Core.ExtensibleDataObjects.md#isdeleted) | boolean | Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1` 
-| [LastUpdateTimeUtc](Systems.Core.ExtensibleDataObjects.md#lastupdatetimeutc) | datetime (nullable) | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1` 
+| [LastUpdateTimeUtc](Systems.Core.ExtensibleDataObjects.md#lastupdatetimeutc) | datetime __nullable__ | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1` 
 | [LatestVersion](Systems.Core.ExtensibleDataObjects.md#latestversion) | int32 | The latest saved version of the object. Starts from 1 and increments with 1 for each new version. `Required` `Default(1)` 
 
 ## References
@@ -54,7 +54,7 @@ Aggregate Tree
 
 The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -69,7 +69,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(eq)` `ORD`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -96,7 +96,7 @@ _Default Value_: **False**
 
 The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

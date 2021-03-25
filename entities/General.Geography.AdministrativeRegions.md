@@ -23,13 +23,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Geography.AdministrativeRegions.md#code) | string(16) | Administrative code of country territorial subdivision. `Required` `Filter(eq;like)` 
-| [FullPath](General.Geography.AdministrativeRegions.md#fullpath) | string(254) (nullable) | Full identification path of the current country territorial subdivision. `Filter(eq;like)` 
+| [Code](General.Geography.AdministrativeRegions.md#code) | string (16) | Administrative code of country territorial subdivision. `Required` `Filter(eq;like)` 
+| [FullPath](General.Geography.AdministrativeRegions.md#fullpath) | string (254) __nullable__ | Full identification path of the current country territorial subdivision. `Filter(eq;like)` 
 | [Id](General.Geography.AdministrativeRegions.md#id) | guid |  
 | [Name](General.Geography.AdministrativeRegions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of country territorial subdivision. `Required` `Filter(like)` 
-| [ParentFullPath](General.Geography.AdministrativeRegions.md#parentfullpath) | string(254) (nullable) | Parent region of the current territorial subdivision. `Filter(eq;like)` 
-| [ValidFrom](General.Geography.AdministrativeRegions.md#validfrom) | date (nullable) | Start date of validity of this administrative division. null when the starting date is unknown in the past. `Filter(ge;le)` 
-| [ValidTo](General.Geography.AdministrativeRegions.md#validto) | date (nullable) | End date of validity of this administative division. null when the division is still active or ending date is unknown. `Filter(ge;le)` 
+| [ParentFullPath](General.Geography.AdministrativeRegions.md#parentfullpath) | string (254) __nullable__ | Parent region of the current territorial subdivision. `Filter(eq;like)` 
+| [ValidFrom](General.Geography.AdministrativeRegions.md#validfrom) | date __nullable__ | Start date of validity of this administrative division. null when the starting date is unknown in the past. `Filter(ge;le)` 
+| [ValidTo](General.Geography.AdministrativeRegions.md#validto) | date __nullable__ | End date of validity of this administative division. null when the division is still active or ending date is unknown. `Filter(ge;le)` 
 
 ## References
 
@@ -44,7 +44,7 @@ Aggregate Tree
 
 Administrative code of country territorial subdivision. `Required` `Filter(eq;like)`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -53,7 +53,7 @@ _Maximum Length_: **16**
 
 Full identification path of the current country territorial subdivision. `Filter(eq;like)`
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -77,7 +77,7 @@ _Supports Order By_: **False**
 
 Parent region of the current territorial subdivision. `Filter(eq;like)`
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -86,7 +86,7 @@ _Maximum Length_: **254**
 
 Start date of validity of this administrative division. null when the starting date is unknown in the past. `Filter(ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 End date of validity of this administative division. null when the division is still active or ending date is unknown. `Filter(ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

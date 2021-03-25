@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) (nullable) | Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price. 
+| [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__ | Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price. 
 | [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#fixedscrapquantity) | [Quantity](../data-types.md#quantity) | The quantity of the material, which will be used for setup. `Unit: UsedQuantityUnit` `Required` `Default(0)` 
 | [Id](Production.ShopFloor.WorkOrderItemIngredients.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#lineord) | int32 | The order of the line within the item. `Required` `Filter(eq;like)` 
-| [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string(254) (nullable) | Notes for this WorkOrderItemIngredient. 
+| [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string (254) __nullable__ | Notes for this WorkOrderItemIngredient. 
 | [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantity) | [Quantity](../data-types.md#quantity) | The quantity of the material consumed in the operation. `Unit: UsedQuantityUnit` `Required` `Default(1)` 
 | [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Used Quantity in the base measurement category of the material. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price.
 
-_Type_: **[DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) (nullable)**  
+_Type_: **[DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__**  
 Allowed values for the `DistributeBy`(Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) data attribute  
 _Allowed Values (Production.ShopFloor.WorkOrderItemIngredientsRepository.DistributeBy Enum Members)_  
 
@@ -107,7 +107,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this WorkOrderItemIngredient.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

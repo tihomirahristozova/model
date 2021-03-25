@@ -126,12 +126,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#defaultculture">DefaultCulture</a></td>
-<td>string(15) (nullable)</td>
+<td>string (15) <strong>nullable</strong></td>
 <td>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#email">Email</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Filter(multi eq;like)</code> <code>ORD</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
@@ -151,12 +151,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#lockoutendutc">LockoutEndUtc</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. <code>Filter(eq;ge;le;like)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#login">Login</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The login name of the user, which is usually the email. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -166,12 +166,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this User.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#password">Password</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>The password hash of the user, stored in the format, specified in Password Format.</td>
 </tr>
 <tr>
@@ -181,7 +181,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#phonenumber">PhoneNumber</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>Used only for two-factor authentication. null when phone-based two-factor is not used. <code>Filter(eq;like)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
@@ -201,12 +201,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#voiceextensionnumbers">VoiceExtensionNumbers</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#windowsusername">WindowsUserName</a></td>
-<td>string(128) (nullable)</td>
+<td>string (128) <strong>nullable</strong></td>
 <td>The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.</td>
 </tr>
 </tbody>
@@ -286,13 +286,13 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="defaultculture">DefaultCulture</h3>
 <p>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong>string(15) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (15) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>15</strong></p>
 <h3 id="email">Email</h3>
 <p>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Filter(multi eq;like)</code> <code>ORD</code> <code>Introduced in version 18.2</code></p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -316,12 +316,12 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="lockoutendutc">LockoutEndUtc</h3>
 <p>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. <code>Filter(eq;ge;le;like)</code> <code>Introduced in version 18.2</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="login">Login</h3>
 <p>The login name of the user, which is usually the email. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -333,13 +333,13 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this User.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="password">Password</h3>
 <p>The password hash of the user, stored in the format, specified in Password Format.</p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
@@ -371,7 +371,7 @@ Allowed values for the <code>PasswordFormat</code>(Systems.Security.Users.md#pas
 <em>Default Value</em>: <strong>MD5</strong></p>
 <h3 id="phonenumber">PhoneNumber</h3>
 <p>Used only for two-factor authentication. null when phone-based two-factor is not used. <code>Filter(eq;like)</code> <code>Introduced in version 18.2</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
@@ -427,13 +427,13 @@ Allowed values for the <code>UserType</code>(Systems.Security.Users.md#usertype)
 <em>Default Value</em>: <strong>InternalUser</strong></p>
 <h3 id="voiceextensionnumbers">VoiceExtensionNumbers</h3>
 <p>Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="windowsusername">WindowsUserName</h3>
 <p>The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.</p>
-<p><em>Type</em>: <strong>string(128) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (128) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>128</strong></p>

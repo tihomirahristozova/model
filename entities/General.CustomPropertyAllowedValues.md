@@ -26,12 +26,12 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](General.CustomPropertyAllowedValues.md#active) | boolean | Specifies whether the allowed value is active and can be used when selecting property values. `Required` `Default(true)` `Filter(eq)` 
-| [Description](General.CustomPropertyAllowedValues.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. `Filter(eq;like)` 
+| [Description](General.CustomPropertyAllowedValues.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. `Filter(eq;like)` 
 | [Id](General.CustomPropertyAllowedValues.md#id) | guid |  
-| [LongDescription](General.CustomPropertyAllowedValues.md#longdescription) | string(2147483647) (nullable) | When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value. 
-| [ParentAllowedValueId](General.CustomPropertyAllowedValues.md#parentallowedvalueid) | guid (nullable) | The value of the parent property, for which this allowed value is valid. `Filter(multi eq)` 
-| [Picture](General.CustomPropertyAllowedValues.md#picture) | byte[] (nullable) | When not null, specifies a picture representation of the allowed value. 
-| [PropertyAllowedValueField](General.CustomPropertyAllowedValues.md#propertyallowedvaluefield) | string(254) | The actual allowed value. `Required` `Filter(eq;like)` 
+| [LongDescription](General.CustomPropertyAllowedValues.md#longdescription) | string (max) __nullable__ | When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value. 
+| [ParentAllowedValueId](General.CustomPropertyAllowedValues.md#parentallowedvalueid) | guid __nullable__ | The value of the parent property, for which this allowed value is valid. `Filter(multi eq)` 
+| [Picture](General.CustomPropertyAllowedValues.md#picture) | byte[] __nullable__ | When not null, specifies a picture representation of the allowed value. 
+| [PropertyAllowedValueField](General.CustomPropertyAllowedValues.md#propertyallowedvaluefield) | string (254) | The actual allowed value. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -56,7 +56,7 @@ _Default Value_: **True**
 
 The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -71,7 +71,7 @@ _Default Value_: **NewGuid**
 
 When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -80,14 +80,14 @@ _Maximum Length_: **2147483647**
 
 The value of the parent property, for which this allowed value is valid. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Picture
 
 When not null, specifies a picture representation of the allowed value.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -95,7 +95,7 @@ _Supports Order By_: **False**
 
 The actual allowed value. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

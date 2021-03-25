@@ -109,17 +109,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#loginprovidername">LoginProviderName</a></td>
-<td>string(450)</td>
+<td>string (450)</td>
 <td>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#tokenname">TokenName</a></td>
-<td>string(450)</td>
+<td>string (450)</td>
 <td>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#tokenvalue">TokenValue</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.</td>
 </tr>
 </tbody>
@@ -149,19 +149,19 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="loginprovidername">LoginProviderName</h3>
 <p>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string(450)</strong><br>
+<p><em>Type</em>: <strong>string (450)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>450</strong></p>
 <h3 id="tokenname">TokenName</h3>
 <p>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string(450)</strong><br>
+<p><em>Type</em>: <strong>string (450)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>450</strong></p>
 <h3 id="tokenvalue">TokenValue</h3>
 <p>Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

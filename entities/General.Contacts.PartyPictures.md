@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comments](General.Contacts.PartyPictures.md#comments) | string(254) (nullable) | Notes for this party picture. 
+| [Comments](General.Contacts.PartyPictures.md#comments) | string (254) __nullable__ | Notes for this party picture. 
 | [Id](General.Contacts.PartyPictures.md#id) | guid |  
 | [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | True=This is the default picture for the party; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. `Required` `Default(false)` `Filter(eq)` 
-| [Picture](General.Contacts.PartyPictures.md#picture) | byte[] (nullable) | The actual party picture data. Can be null if we insert only some comments. 
+| [Picture](General.Contacts.PartyPictures.md#picture) | byte[] __nullable__ | The actual party picture data. Can be null if we insert only some comments. 
 | [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting. `Required` `Filter(eq)` 
 
 ## References
@@ -45,7 +45,7 @@ Aggregate Root:
 
 Notes for this party picture.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -81,7 +81,7 @@ _Default Value_: **False**
 
 The actual party picture data. Can be null if we insert only some comments.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

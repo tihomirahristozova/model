@@ -27,16 +27,16 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Production.Technologies.RecipeOperations.md#id) | guid |  
 | [LineOrd](Production.Technologies.RecipeOperations.md#lineord) | int32 | Order of the operation within the recipe. `Required` 
-| [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.RecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.RecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
 | [MoveTimeMinutes](Production.Technologies.RecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` 
-| [Notes](Production.Technologies.RecipeOperations.md#notes) | string(254) (nullable) | Notes for this RecipeOperation. 
-| [OperationDescription](Production.Technologies.RecipeOperations.md#operationdescription) | string(2147483647) (nullable) | The description of the operation. 
+| [Notes](Production.Technologies.RecipeOperations.md#notes) | string (254) __nullable__ | Notes for this RecipeOperation. 
+| [OperationDescription](Production.Technologies.RecipeOperations.md#operationdescription) | string (max) __nullable__ | The description of the operation. 
 | [RunTimeMinutes](Production.Technologies.RecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for standard lot of the product. `Required` `Default(0)` 
-| [ScrapRate](Production.Technologies.RecipeOperations.md#scraprate) | decimal(7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
+| [ScrapRate](Production.Technologies.RecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
 | [SetupTimeMinutes](Production.Technologies.RecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. `Required` `Default(0)` 
-| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#standardcostperhour) | [Amount](../data-types.md#amount) (nullable) | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency` 
+| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#standardcostperhour) | [Amount](../data-types.md#amount) __nullable__ | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency` 
 | [StandardPricePerHour](Production.Technologies.RecipeOperations.md#standardpriceperhour) | [Amount](../data-types.md#amount) | Standard price for 1 hour work. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` 
-| [Tooling](Production.Technologies.RecipeOperations.md#tooling) | string(2147483647) (nullable) | The tools needed for the routing step. 
+| [Tooling](Production.Technologies.RecipeOperations.md#tooling) | string (max) __nullable__ | The tools needed for the routing step. 
 | [UseQuantity](Production.Technologies.RecipeOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` 
 | [WaitTimeMinutes](Production.Technologies.RecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` 
 
@@ -77,7 +77,7 @@ _Front-End Recalc Expressions:_
 
 How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -94,7 +94,7 @@ _Default Value_: **0**
 
 Notes for this RecipeOperation.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -103,7 +103,7 @@ _Maximum Length_: **254**
 
 The description of the operation.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -121,7 +121,7 @@ _Default Value_: **0**
 
 Standard rate of scrap during the operation. `Required` `Default(0)`
 
-_Type_: **decimal(7, 6)**  
+_Type_: **decimal (7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -139,7 +139,7 @@ _Default Value_: **0**
 
 Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -156,7 +156,7 @@ _Default Value_: **Constant**
 
 The tools needed for the routing step.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

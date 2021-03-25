@@ -23,18 +23,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BackgroundColor](General.ProductCatalogs.md#backgroundcolor) | int32 (nullable) | When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format. 
-| [BackgroundImage](General.ProductCatalogs.md#backgroundimage) | byte[] (nullable) | The background image to be used for web visualization of the catalog. null means that background image won't be displayed. 
+| [BackgroundColor](General.ProductCatalogs.md#backgroundcolor) | int32 __nullable__ | When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format. 
+| [BackgroundImage](General.ProductCatalogs.md#backgroundimage) | byte[] __nullable__ | The background image to be used for web visualization of the catalog. null means that background image won't be displayed. 
 | [BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right. `Required` `Default("L")` 
 | [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom. `Required` `Default("T")` 
 | [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. `Required` `Default("R")` 
-| [Code](General.ProductCatalogs.md#code) | string(16) | Unique catalog code. `Required` 
-| [FooterHtml](General.ProductCatalogs.md#footerhtml) | string(2147483647) (nullable) | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer. 
-| [HeaderHtml](General.ProductCatalogs.md#headerhtml) | string(2147483647) (nullable) | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header. 
+| [Code](General.ProductCatalogs.md#code) | string (16) | Unique catalog code. `Required` 
+| [FooterHtml](General.ProductCatalogs.md#footerhtml) | string (max) __nullable__ | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer. 
+| [HeaderHtml](General.ProductCatalogs.md#headerhtml) | string (max) __nullable__ | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header. 
 | [Id](General.ProductCatalogs.md#id) | guid |  
-| [Logo](General.ProductCatalogs.md#logo) | byte[] (nullable) | The logo of the product catalog. Used for web and other visualization of the catalog. 
+| [Logo](General.ProductCatalogs.md#logo) | byte[] __nullable__ | The logo of the product catalog. Used for web and other visualization of the catalog. 
 | [Name](General.ProductCatalogs.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). `Required` 
-| [Notes](General.ProductCatalogs.md#notes) | string(2147483647) (nullable) | Notes for this ProductCatalog. 
+| [Notes](General.ProductCatalogs.md#notes) | string (max) __nullable__ | Notes for this ProductCatalog. 
 
 ## References
 
@@ -50,7 +50,7 @@ Aggregate Tree
 
 When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 The background image to be used for web visualization of the catalog. null means that background image won't be displayed.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -121,7 +121,7 @@ _Default Value_: **RepeatBothVerticallyAndHorizontally**
 
 Unique catalog code. `Required`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -130,7 +130,7 @@ _Maximum Length_: **16**
 
 The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -139,7 +139,7 @@ _Maximum Length_: **2147483647**
 
 The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -155,7 +155,7 @@ _Default Value_: **NewGuid**
 
 The logo of the product catalog. Used for web and other visualization of the catalog.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -171,7 +171,7 @@ _Supports Order By_: **False**
 
 Notes for this ProductCatalog.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

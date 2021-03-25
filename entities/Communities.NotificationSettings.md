@@ -24,7 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Communities.NotificationSettings.md#id) | guid |  
-| [NotificationClass](Communities.NotificationSettings.md#notificationclass) | string(64) (nullable) | The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. `Filter(multi eq)` 
+| [NotificationClass](Communities.NotificationSettings.md#notificationclass) | string (64) __nullable__ | The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. `Filter(multi eq)` 
 | [ReceiveMail](Communities.NotificationSettings.md#receivemail) | boolean | True if the user should receive mail. `Required` `Default(false)` `Filter(eq)` 
 | [ReceiveNotification](Communities.NotificationSettings.md#receivenotification) | boolean | True if the user should receive internal notification. `Required` `Default(true)` `Filter(eq)` 
 | [ReceiveSms](Communities.NotificationSettings.md#receivesms) | boolean | True if the user should receive SMS. `Required` `Default(false)` `Filter(eq)` 
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. `Filter(multi eq)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

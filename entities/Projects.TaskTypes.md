@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.TaskTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Multilanguage description of the task type. 
+| [Description](Projects.TaskTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Multilanguage description of the task type. 
 | [DisplayOrder](Projects.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). `Required` `Default(1)` 
-| [Icon](Projects.TaskTypes.md#icon) | byte[] (nullable) | Icon representing the task type. Preferrably 32x32 pixels. 
+| [Icon](Projects.TaskTypes.md#icon) | byte[] __nullable__ | Icon representing the task type. Preferrably 32x32 pixels. 
 | [Id](Projects.TaskTypes.md#id) | guid |  
 | [Name](Projects.TaskTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The multilanguage task type name. `Required` `Filter(multi eq;like)` 
 
@@ -42,7 +42,7 @@ Aggregate Tree
 
 Multilanguage description of the task type.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -59,7 +59,7 @@ _Default Value_: **1**
 
 Icon representing the task type. Preferrably 32x32 pixels.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Resources.Functions.md#id) | guid |  
-| [Name](Production.Resources.Functions.md#name) | string(64) | The name of this Function. `Required` `Filter(like)` 
-| [Notes](Production.Resources.Functions.md#notes) | string(254) (nullable) | User comments on the function. 
+| [Name](Production.Resources.Functions.md#name) | string (64) | The name of this Function. `Required` `Filter(like)` 
+| [Notes](Production.Resources.Functions.md#notes) | string (254) __nullable__ | User comments on the function. 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 The name of this Function. `Required` `Filter(like)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -59,7 +59,7 @@ _Maximum Length_: **64**
 
 User comments on the function.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

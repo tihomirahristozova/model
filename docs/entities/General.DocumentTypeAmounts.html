@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="General.DocumentTypeAmounts.html#defaultpercent">DefaultPercent</a></td>
-<td>decimal(7, 6) (nullable)</td>
+<td>decimal (7, 6) <strong>nullable</strong></td>
 <td>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type.</td>
 </tr>
 <tr>
@@ -114,12 +114,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeAmounts.html#requiredfromdate">RequiredFromDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeAmounts.html#requiredthrudate">RequiredThruDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -154,7 +154,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="defaultpercent">DefaultPercent</h3>
 <p>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type.</p>
-<p><em>Type</em>: <strong>decimal(7, 6) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -164,12 +164,12 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="requiredfromdate">RequiredFromDate</h3>
 <p>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="requiredthrudate">RequiredThruDate</h3>
 <p>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="usercanchangeinput">UserCanChangeInput</h3>

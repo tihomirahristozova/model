@@ -25,10 +25,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Cancelled](General.ScheduledDocumentEvents.md#cancelled) | boolean | When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. `Required` `Default(false)` `Filter(eq)` 
 | [CreationTime](General.ScheduledDocumentEvents.md#creationtime) | datetime | Date and time when the ScheduledDocumentEvent was created. `Required` `Default(Now)` `ReadOnly` 
-| [DocumentEvent](General.ScheduledDocumentEvents.md#documentevent) | string(254) | The type of the document event that is scheduled to be processed. `Required` `ReadOnly` 
+| [DocumentEvent](General.ScheduledDocumentEvents.md#documentevent) | string (254) | The type of the document event that is scheduled to be processed. `Required` `ReadOnly` 
 | [Id](General.ScheduledDocumentEvents.md#id) | guid |  
-| [LastProcessStatus](General.ScheduledDocumentEvents.md#lastprocessstatus) | string(2147483647) (nullable) | Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly` 
-| [LastProcessTime](General.ScheduledDocumentEvents.md#lastprocesstime) | datetime (nullable) | The time of the last attempt to process the event. `ReadOnly` 
+| [LastProcessStatus](General.ScheduledDocumentEvents.md#lastprocessstatus) | string (max) __nullable__ | Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly` 
+| [LastProcessTime](General.ScheduledDocumentEvents.md#lastprocesstime) | datetime __nullable__ | The time of the last attempt to process the event. `ReadOnly` 
 | [Processed](General.ScheduledDocumentEvents.md#processed) | boolean | Indicates wheather the event is already processed or not. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [State](General.ScheduledDocumentEvents.md#state) | [State](General.ScheduledDocumentEvents.md#state) | The state of the document for which the event will be processed. `Required` `ReadOnly` 
 
@@ -64,7 +64,7 @@ _Default Value_: **CurrentDateTime**
 
 The type of the document event that is scheduled to be processed. `Required` `ReadOnly`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -80,7 +80,7 @@ _Default Value_: **NewGuid**
 
 Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -89,7 +89,7 @@ _Maximum Length_: **2147483647**
 
 The time of the last attempt to process the event. `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

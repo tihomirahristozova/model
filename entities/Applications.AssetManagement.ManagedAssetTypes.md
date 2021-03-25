@@ -25,11 +25,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.ManagedAssetTypes.md#code) | string(16) | Unique code of the asset type. `Required` `Filter(multi eq;like)` `ORD` 
+| [Code](Applications.AssetManagement.ManagedAssetTypes.md#code) | string (16) | Unique code of the asset type. `Required` `Filter(multi eq;like)` `ORD` 
 | [Id](Applications.AssetManagement.ManagedAssetTypes.md#id) | guid |  
 | [IsActive](Applications.AssetManagement.ManagedAssetTypes.md#isactive) | boolean | Specifies whether the asset type is active for choosing in drop-down choices. `Required` `Default(true)` 
 | [Name](Applications.AssetManagement.ManagedAssetTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset type. `Required` `Filter(multi eq;like)` 
-| [Notes](Applications.AssetManagement.ManagedAssetTypes.md#notes) | string(2147483647) (nullable) | Notes for this ManagedAssetType. 
+| [Notes](Applications.AssetManagement.ManagedAssetTypes.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType. 
 
 ## Child Collections
 
@@ -45,7 +45,7 @@ Aggregate Tree
 
 Unique code of the asset type. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
@@ -79,7 +79,7 @@ _Supports Order By_: **False**
 
 Notes for this ManagedAssetType.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

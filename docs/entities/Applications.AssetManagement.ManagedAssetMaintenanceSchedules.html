@@ -109,22 +109,22 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this ManagedAssetMaintenance<br>Schedule.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#parameterchangedelta">ParameterChangeDelta</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#scheduledays">ScheduleDays</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>Number of days between planned maintenances. null means that the schedule is not planned based on days.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#schedulemonths">ScheduleMonths</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>Number of months between planned maintenances. null means that the schedule is not planned based on months.</td>
 </tr>
 </tbody>
@@ -159,23 +159,23 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ManagedAssetMaintenanceSchedule.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="parameterchangedelta">ParameterChangeDelta</h3>
 <p>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. <code>Filter(multi eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduledays">ScheduleDays</h3>
 <p>Number of days between planned maintenances. null means that the schedule is not planned based on days.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="schedulemonths">ScheduleMonths</h3>
 <p>Number of months between planned maintenances. null means that the schedule is not planned based on months.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

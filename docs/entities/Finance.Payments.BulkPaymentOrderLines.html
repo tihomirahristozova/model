@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#billto">BillTo</a></td>
-<td><a href="Finance.Payments.BulkPaymentOrderLines.html#billto">BillTo</a> (nullable)</td>
+<td><a href="Finance.Payments.BulkPaymentOrderLines.html#billto">BillTo</a> <strong>nullable</strong></td>
 <td>If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified.</td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#duedate">DueDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The due date of the payment. null means there is no due date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -124,12 +124,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#installmentnumber">InstallmentNumber</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan.</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#invoiceamount">InvoiceAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). <code>Currency: InvoiceAmountCurrency</code></td>
 </tr>
 <tr>
@@ -139,32 +139,32 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this BulkPaymentOrderLine.</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refdocumentdate">RefDocumentDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date of the base document. null means that it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refdocumentno">RefDocumentNo</a></td>
-<td>string(20)</td>
+<td>string (20)</td>
 <td>The number of the document which is the basis for the payment. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refinvoiceapplydate">RefInvoiceApplyDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refinvoicedocumentdate">RefInvoiceDocumentDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown.</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refinvoicedocumentno">RefInvoiceDocumentNo</a></td>
-<td>string(20) (nullable)</td>
+<td>string (20) <strong>nullable</strong></td>
 <td>The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice.</td>
 </tr>
 <tr>
@@ -234,7 +234,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="billto">BillTo</h3>
 <p>If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified.</p>
-<p><em>Type</em>: <strong><a href="Finance.Payments.BulkPaymentOrderLines.html#billto">BillTo</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.BulkPaymentOrderLines.html#billto">BillTo</a> <strong>nullable</strong></strong><br>
 Allowed values for the <code>BillTo</code>(Finance.Payments.BulkPaymentOrderLines.md#billto) data attribute<br>
 <em>Allowed Values (Finance.Payments.BulkPaymentOrderLinesRepository.BillTo Enum Members)</em></p>
 <table>
@@ -285,7 +285,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderL
 <em>Default Value</em>: <strong>Expense</strong></p>
 <h3 id="duedate">DueDate</h3>
 <p>The due date of the payment. null means there is no due date. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -295,12 +295,12 @@ Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderL
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="installmentnumber">InstallmentNumber</h3>
 <p>Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="invoiceamount">InvoiceAmount</h3>
 <p>The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). <code>Currency: InvoiceAmountCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isamountwithvat">IsAmountWithVAT</h3>
@@ -311,34 +311,34 @@ Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderL
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this BulkPaymentOrderLine.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>
 <p>The date of the base document. null means that it is unknown.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="refdocumentno">RefDocumentNo</h3>
 <p>The number of the document which is the basis for the payment. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(20)</strong><br>
+<p><em>Type</em>: <strong>string (20)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>20</strong></p>
 <h3 id="refinvoiceapplydate">RefInvoiceApplyDate</h3>
 <p>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="refinvoicedocumentdate">RefInvoiceDocumentDate</h3>
 <p>The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="refinvoicedocumentno">RefInvoiceDocumentNo</h3>
 <p>The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice.</p>
-<p><em>Type</em>: <strong>string(20) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (20) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>20</strong></p>

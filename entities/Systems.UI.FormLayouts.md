@@ -23,14 +23,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.UI.FormLayouts.md#applicationname) | string(64) | The application, which consumes the layout. `Required` `Filter(eq)` `ORD` 
-| [FormName](Systems.UI.FormLayouts.md#formname) | string(64) | The form, for which the layout is applied. `Required` `Filter(eq;like)` 
+| [ApplicationName](Systems.UI.FormLayouts.md#applicationname) | string (64) | The application, which consumes the layout. `Required` `Filter(eq)` `ORD` 
+| [FormName](Systems.UI.FormLayouts.md#formname) | string (64) | The form, for which the layout is applied. `Required` `Filter(eq;like)` 
 | [Id](Systems.UI.FormLayouts.md#id) | guid |  
-| [Layout](Systems.UI.FormLayouts.md#layout) | byte[] (nullable) | The byte storage of the layout. 
+| [Layout](Systems.UI.FormLayouts.md#layout) | byte[] __nullable__ | The byte storage of the layout. 
 | [LayoutFormat](Systems.UI.FormLayouts.md#layoutformat) | [LayoutFormat](Systems.UI.FormLayouts.md#layoutformat) | The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. `Required` `Default("U")` 
-| [LayoutName](Systems.UI.FormLayouts.md#layoutname) | string(64) | The name of a named layout. Standard layouts have empty string names. `Required` `Filter(eq;like)` 
-| [PanelName](Systems.UI.FormLayouts.md#panelname) | string(64) | The visual panel, for which the layout is applied. `Required` `Default("Form")` `Filter(eq)` 
-| [UserName](Systems.UI.FormLayouts.md#username) | string(64) (nullable) | The user for which the layout is applied. null means that the layout is applied for all users. `Filter(eq;like)` 
+| [LayoutName](Systems.UI.FormLayouts.md#layoutname) | string (64) | The name of a named layout. Standard layouts have empty string names. `Required` `Filter(eq;like)` 
+| [PanelName](Systems.UI.FormLayouts.md#panelname) | string (64) | The visual panel, for which the layout is applied. `Required` `Default("Form")` `Filter(eq)` 
+| [UserName](Systems.UI.FormLayouts.md#username) | string (64) __nullable__ | The user for which the layout is applied. null means that the layout is applied for all users. `Filter(eq;like)` 
 
 ## References
 
@@ -46,7 +46,7 @@ Aggregate Tree
 
 The application, which consumes the layout. `Required` `Filter(eq)` `ORD`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -56,7 +56,7 @@ _Maximum Length_: **64**
 
 The form, for which the layout is applied. `Required` `Filter(eq;like)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -72,7 +72,7 @@ _Default Value_: **NewGuid**
 
 The byte storage of the layout.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -98,7 +98,7 @@ _Default Value_: **Uncompressed**
 
 The name of a named layout. Standard layouts have empty string names. `Required` `Filter(eq;like)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -107,7 +107,7 @@ _Maximum Length_: **64**
 
 The visual panel, for which the layout is applied. `Required` `Default("Form")` `Filter(eq)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -117,7 +117,7 @@ _Default Value_: **Form**
 
 The user for which the layout is applied. null means that the layout is applied for all users. `Filter(eq;like)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

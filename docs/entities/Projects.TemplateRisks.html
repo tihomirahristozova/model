@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Projects.TemplateRisks.html#description">Description</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The description of this TemplateRisk.</td>
 </tr>
 <tr>
@@ -114,17 +114,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Projects.TemplateRisks.html#impactpercent">ImpactPercent</a></td>
-<td>decimal(3, 2)</td>
+<td>decimal (3, 2)</td>
 <td>The impact of the risk to the project, expressed as percentage of the total project value. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.TemplateRisks.html#probabilitypercent">ProbabilityPercent</a></td>
-<td>decimal(3, 2)</td>
+<td>decimal (3, 2)</td>
 <td>The probability of the risk occurring. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.TemplateRisks.html#riskname">RiskName</a></td>
-<td>string(254)</td>
+<td>string (254)</td>
 <td>The name of the risk. <code>Required</code></td>
 </tr>
 </tbody>
@@ -149,7 +149,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
 <p>The description of this TemplateRisk.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -160,19 +160,19 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="impactpercent">ImpactPercent</h3>
 <p>The impact of the risk to the project, expressed as percentage of the total project value. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(3, 2)</strong><br>
+<p><em>Type</em>: <strong>decimal (3, 2)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="probabilitypercent">ProbabilityPercent</h3>
 <p>The probability of the risk occurring. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(3, 2)</strong><br>
+<p><em>Type</em>: <strong>decimal (3, 2)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="riskname">RiskName</h3>
 <p>The name of the risk. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(254)</strong><br>
+<p><em>Type</em>: <strong>string (254)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>

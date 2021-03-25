@@ -26,8 +26,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.Templates.md#id) | guid |  
-| [Notes](Projects.Templates.md#notes) | string(2147483647) (nullable) | Notes for this Template. 
-| [ProjectTemplateName](Projects.Templates.md#projecttemplatename) | string(254) | The name of the project template. `Required` 
+| [Notes](Projects.Templates.md#notes) | string (max) __nullable__ | Notes for this Template. 
+| [ProjectTemplateName](Projects.Templates.md#projecttemplatename) | string (254) | The name of the project template. `Required` 
 
 ## Child Collections
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 Notes for this Template.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -59,7 +59,7 @@ _Maximum Length_: **2147483647**
 
 The name of the project template. `Required`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

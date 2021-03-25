@@ -27,17 +27,17 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. `Required` `Default("EMB")` `Filter(multi eq)` `Introduced in version 20.1` 
 | [CreationTimeUtc](Systems.Core.ObjectFiles.md#creationtimeutc) | datetime | Time (in UTC), when the file was created. `Required` `Default(NowUtc)` `Introduced in version 20.1` 
-| [EmbeddedFileContents](Systems.Core.ObjectFiles.md#embeddedfilecontents) | byte[] (nullable) | Contains the contents of the file, when it is embedded in the database. null for linked files. 
-| [FileName](Systems.Core.ObjectFiles.md#filename) | string(254) | The file name of the linked or embedded file. `Required` `Filter(eq;like)` 
+| [EmbeddedFileContents](Systems.Core.ObjectFiles.md#embeddedfilecontents) | byte[] __nullable__ | Contains the contents of the file, when it is embedded in the database. null for linked files. 
+| [FileName](Systems.Core.ObjectFiles.md#filename) | string (254) | The file name of the linked or embedded file. `Required` `Filter(eq;like)` 
 | [Id](Systems.Core.ObjectFiles.md#id) | guid |  
 | [LastUpdateTimeUtc](Systems.Core.ObjectFiles.md#lastupdatetimeutc) | datetime | Time (in UTC), when the file was last updated. `Required` `Default(NowUtc)` `Introduced in version 20.1` 
-| [LinkedFilePath](Systems.Core.ObjectFiles.md#linkedfilepath) | string(1024) (nullable) | When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. `Filter(eq;like)` 
-| [MediaHeight](Systems.Core.ObjectFiles.md#mediaheight) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1` 
-| [MediaType](Systems.Core.ObjectFiles.md#mediatype) | string(128) (nullable) | For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. `Introduced in version 20.1` 
-| [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1` 
-| [Notes](Systems.Core.ObjectFiles.md#notes) | string(2147483647) (nullable) | User notes for the file attachment. 
-| [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string(32) (nullable) | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. `Filter(eq)` 
-| [Section](Systems.Core.ObjectFiles.md#section) | string(64) (nullable) | A section name used to group files. `Introduced in version 21.1.1.84` 
+| [LinkedFilePath](Systems.Core.ObjectFiles.md#linkedfilepath) | string (1024) __nullable__ | When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. `Filter(eq;like)` 
+| [MediaHeight](Systems.Core.ObjectFiles.md#mediaheight) | int32 __nullable__ | Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1` 
+| [MediaType](Systems.Core.ObjectFiles.md#mediatype) | string (128) __nullable__ | For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. `Introduced in version 20.1` 
+| [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 __nullable__ | Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1` 
+| [Notes](Systems.Core.ObjectFiles.md#notes) | string (max) __nullable__ | User notes for the file attachment. 
+| [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string (32) __nullable__ | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. `Filter(eq)` 
+| [Section](Systems.Core.ObjectFiles.md#section) | string (64) __nullable__ | A section name used to group files. `Introduced in version 21.1.1.84` 
 
 ## References
 
@@ -81,7 +81,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 Contains the contents of the file, when it is embedded in the database. null for linked files.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 The file name of the linked or embedded file. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -114,7 +114,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. `Filter(eq;like)`
 
-_Type_: **string(1024) (nullable)**  
+_Type_: **string (1024) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1024**  
@@ -123,7 +123,7 @@ _Maximum Length_: **1024**
 
 Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -131,7 +131,7 @@ _Supports Order By_: **False**
 
 For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. `Introduced in version 20.1`
 
-_Type_: **string(128) (nullable)**  
+_Type_: **string (128) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -140,7 +140,7 @@ _Maximum Length_: **128**
 
 Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -148,7 +148,7 @@ _Supports Order By_: **False**
 
 User notes for the file attachment.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -157,7 +157,7 @@ _Maximum Length_: **2147483647**
 
 Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. `Filter(eq)`
 
-_Type_: **string(32) (nullable)**  
+_Type_: **string (32) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -166,7 +166,7 @@ _Maximum Length_: **32**
 
 A section name used to group files. `Introduced in version 21.1.1.84`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

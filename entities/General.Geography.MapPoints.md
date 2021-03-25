@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Address](General.Geography.MapPoints.md#address) | string(128) (nullable) | The descriptive physical address, related to this map point. 
+| [Address](General.Geography.MapPoints.md#address) | string (128) __nullable__ | The descriptive physical address, related to this map point. 
 | [Id](General.Geography.MapPoints.md#id) | guid |  
-| [Latitude](General.Geography.MapPoints.md#latitude) | decimal(10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)` 
-| [Longitude](General.Geography.MapPoints.md#longitude) | decimal(10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)` 
+| [Latitude](General.Geography.MapPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)` 
+| [Longitude](General.Geography.MapPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)` 
 | [Name](General.Geography.MapPoints.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Map point short name (Multilanguage). `Required` `Filter(eq;like)` 
 
 ## References
@@ -44,7 +44,7 @@ Aggregate Root:
 
 The descriptive physical address, related to this map point.
 
-_Type_: **string(128) (nullable)**  
+_Type_: **string (128) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)`
 
-_Type_: **decimal(10, 7)**  
+_Type_: **decimal (10, 7)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -69,7 +69,7 @@ _Default Value_: **0**
 
 Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)`
 
-_Type_: **decimal(10, 7)**  
+_Type_: **decimal (10, 7)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

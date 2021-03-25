@@ -27,14 +27,14 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ExpressionNo](Systems.Bpm.CalculatedAttributeExpressions.md#expressionno) | int32 | Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. `Required` 
 | [Id](Systems.Bpm.CalculatedAttributeExpressions.md#id) | guid |  
-| [Notes](Systems.Bpm.CalculatedAttributeExpressions.md#notes) | string(2147483647) (nullable) | Notes for this CalculatedAttribute<br />Expression. 
+| [Notes](Systems.Bpm.CalculatedAttributeExpressions.md#notes) | string (max) __nullable__ | Notes for this CalculatedAttribute<br />Expression. 
 | [Operator](Systems.Bpm.CalculatedAttributeExpressions.md#operator) | [ExpressionOperator](Systems.Bpm.CalculatedAttributeExpressions.md#operator) | The exprssion operator. Available operators are limited to a pre-selected list of operators. `Required` 
-| [Parameter1Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter1Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1value) | string(256) (nullable) | The actual value of parameter 1. 
-| [Parameter2Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter2Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2value) | string(256) (nullable) | The actual value of the parameter. 
-| [Parameter3Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter3Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3value) | string(256) (nullable) | The actual value of the parameter. 
+| [Parameter1Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. 
+| [Parameter1Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1value) | string (256) __nullable__ | The actual value of parameter 1. 
+| [Parameter2Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. 
+| [Parameter2Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2value) | string (256) __nullable__ | The actual value of the parameter. 
+| [Parameter3Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. 
+| [Parameter3Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3value) | string (256) __nullable__ | The actual value of the parameter. 
 
 ## References
 
@@ -69,7 +69,7 @@ _Default Value_: **NewGuid**
 
 Notes for this CalculatedAttributeExpression.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -137,7 +137,7 @@ _Supports Order By_: **False**
 
 The type of the parameter specifies how to obtain the parameter value.
 
-_Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) (nullable)**  
+_Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) __nullable__**  
 Generic enum type for ExpressionParameterType properties  
 _Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)_  
 
@@ -159,7 +159,7 @@ _Supports Order By_: **False**
 
 The actual value of parameter 1.
 
-_Type_: **string(256) (nullable)**  
+_Type_: **string (256) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -168,7 +168,7 @@ _Maximum Length_: **256**
 
 The type of the parameter specifies how to obtain the parameter value.
 
-_Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) (nullable)**  
+_Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) __nullable__**  
 Generic enum type for ExpressionParameterType properties  
 _Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)_  
 
@@ -190,7 +190,7 @@ _Supports Order By_: **False**
 
 The actual value of the parameter.
 
-_Type_: **string(256) (nullable)**  
+_Type_: **string (256) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -199,7 +199,7 @@ _Maximum Length_: **256**
 
 The type of the parameter specifies how to obtain the parameter value.
 
-_Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) (nullable)**  
+_Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) __nullable__**  
 Generic enum type for ExpressionParameterType properties  
 _Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)_  
 
@@ -221,7 +221,7 @@ _Supports Order By_: **False**
 
 The actual value of the parameter.
 
-_Type_: **string(256) (nullable)**  
+_Type_: **string (256) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  

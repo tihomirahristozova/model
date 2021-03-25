@@ -25,13 +25,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentData](General.DocumentVersions.md#documentdata) | byte[] (nullable) | Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). `ReadOnly` 
-| [DocumentDataFormat](General.DocumentVersions.md#documentdataformat) | string(1) | The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. `Required` `Default("U")` `ReadOnly` 
-| [DocumentDataXML](General.DocumentVersions.md#documentdataxml) | string(2147483647) (nullable) | The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). `ReadOnly` 
+| [DocumentData](General.DocumentVersions.md#documentdata) | byte[] __nullable__ | Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). `ReadOnly` 
+| [DocumentDataFormat](General.DocumentVersions.md#documentdataformat) | string (1) | The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. `Required` `Default("U")` `ReadOnly` 
+| [DocumentDataXML](General.DocumentVersions.md#documentdataxml) | string (max) __nullable__ | The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). `ReadOnly` 
 | [Id](General.DocumentVersions.md#id) | guid |  
 | [State](General.DocumentVersions.md#state) | [State](General.DocumentVersions.md#state) | The state of the document by the time it was saved. `Required` `Default(0)` `Filter(multi eq)` `ReadOnly` 
 | [UpdateTime](General.DocumentVersions.md#updatetime) | datetime | The date and time when this version was saved. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly` 
-| [UpdateUser](General.DocumentVersions.md#updateuser) | string(64) | The login name of the user that saved this version. `Required` `Filter(eq;like)` `ReadOnly` 
+| [UpdateUser](General.DocumentVersions.md#updateuser) | string (64) | The login name of the user that saved this version. `Required` `Filter(eq;like)` `ReadOnly` 
 | [Version](General.DocumentVersions.md#version) | int32 | The version number that is stored in this row. `Required` `Filter(eq;ge;le)` `ReadOnly` 
 
 ## References
@@ -47,7 +47,7 @@ Aggregate Root:
 
 Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). `ReadOnly`
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. `Required` `Default("U")` `ReadOnly`
 
-_Type_: **string(1)**  
+_Type_: **string (1)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1**  
@@ -65,7 +65,7 @@ _Default Value_: **U**
 
 The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). `ReadOnly`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -113,7 +113,7 @@ _Default Value_: **CurrentDateTime**
 
 The login name of the user that saved this version. `Required` `Filter(eq;like)` `ReadOnly`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

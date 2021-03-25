@@ -27,8 +27,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.ProjectTypes.md#id) | guid |  
-| [Name](Projects.ProjectTypes.md#name) | string(254) | The name of the project type. `Required` `Filter(eq;like)` 
-| [Notes](Projects.ProjectTypes.md#notes) | string(2147483647) (nullable) | Notes. 
+| [Name](Projects.ProjectTypes.md#name) | string (254) | The name of the project type. `Required` `Filter(eq;like)` 
+| [Notes](Projects.ProjectTypes.md#notes) | string (max) __nullable__ | Notes. 
 
 ## References
 
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 The name of the project type. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -67,7 +67,7 @@ _Maximum Length_: **254**
 
 Notes.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

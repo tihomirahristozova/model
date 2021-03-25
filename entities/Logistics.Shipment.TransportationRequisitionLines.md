@@ -25,13 +25,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentsDescription](Logistics.Shipment.TransportationRequisitionLines.md#contentsdescription) | string(128) | Textual description of the cargo contents. `Required` 
+| [ContentsDescription](Logistics.Shipment.TransportationRequisitionLines.md#contentsdescription) | string (128) | Textual description of the cargo contents. `Required` 
 | [Id](Logistics.Shipment.TransportationRequisitionLines.md#id) | guid |  
 | [LineNo](Logistics.Shipment.TransportationRequisitionLines.md#lineno) | int32 | Line number, unique within the TransportationRequisition. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationRequisition (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
-| [PalletsCount](Logistics.Shipment.TransportationRequisitionLines.md#palletscount) | int32 (nullable) | Number of palettes comprising the cargo. null when it is unknown. 
-| [ParentLineNo](Logistics.Shipment.TransportationRequisitionLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)` 
-| [VolumeCbm](Logistics.Shipment.TransportationRequisitionLines.md#volumecbm) | int32 (nullable) | The volume of the cargo, in CBM (cubic meters). null when it is unknown. 
-| [WeightKg](Logistics.Shipment.TransportationRequisitionLines.md#weightkg) | int32 (nullable) | The weight of the cargo, in KG (kilogramms). null when it is unknown. 
+| [PalletsCount](Logistics.Shipment.TransportationRequisitionLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. null when it is unknown. 
+| [ParentLineNo](Logistics.Shipment.TransportationRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)` 
+| [VolumeCbm](Logistics.Shipment.TransportationRequisitionLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). null when it is unknown. 
+| [WeightKg](Logistics.Shipment.TransportationRequisitionLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). null when it is unknown. 
 
 ## References
 
@@ -49,7 +49,7 @@ Aggregate Root:
 
 Textual description of the cargo contents. `Required`
 
-_Type_: **string(128)**  
+_Type_: **string (128)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -78,7 +78,7 @@ _Front-End Recalc Expressions:_
 
 Number of palettes comprising the cargo. null when it is unknown.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 The volume of the cargo, in CBM (cubic meters). null when it is unknown.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -102,7 +102,7 @@ _Supports Order By_: **False**
 
 The weight of the cargo, in KG (kilogramms). null when it is unknown.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

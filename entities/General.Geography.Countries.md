@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Geography.Countries.md#code) | string(2) | Internet suffix code of the country. `Required` `Filter(eq;like)` `ORD` 
+| [Code](General.Geography.Countries.md#code) | string (2) | Internet suffix code of the country. `Required` `Filter(eq;like)` `ORD` 
 | [Id](General.Geography.Countries.md#id) | guid |  
-| [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string(2) (nullable) | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1` 
+| [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (2) __nullable__ | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1` 
 | [Name](General.Geography.Countries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the country. `Required` `Filter(like)` 
 
 
@@ -35,7 +35,7 @@ Aggregate Tree
 
 Internet suffix code of the country. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(2)**  
+_Type_: **string (2)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1`
 
-_Type_: **string(2) (nullable)**  
+_Type_: **string (2) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2**  

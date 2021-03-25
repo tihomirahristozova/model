@@ -25,9 +25,9 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Systems.Bpm.ProcessNodeTimerEvents.md#id) | guid |  
 | [ProcessNodeEventId](Systems.Bpm.ProcessNodeTimerEvents.md#processnodeeventid) | guid | The process node event, which this timer defines. `Required` `Filter(multi eq)` 
-| [TimeCycle](Systems.Bpm.ProcessNodeTimerEvents.md#timecycle) | string(128) (nullable) | Non-null when the timer is recurring. The value conforms to the ISO-8601 format for recurring time intervals. Mutually exclusive with the other Time fields. 
-| [TimeDate](Systems.Bpm.ProcessNodeTimerEvents.md#timedate) | datetime (nullable) | Non-null when the timer is for specific single date and time. Mutually exclusive with the other Time fields. 
-| [TimeDuration](Systems.Bpm.ProcessNodeTimerEvents.md#timeduration) | string(128) (nullable) | Non-null when the timer event is for time duration. The value conforms to the ISO-8601 format for time interval representations. Mutually exclusive with the other Time fields. 
+| [TimeCycle](Systems.Bpm.ProcessNodeTimerEvents.md#timecycle) | string (128) __nullable__ | Non-null when the timer is recurring. The value conforms to the ISO-8601 format for recurring time intervals. Mutually exclusive with the other Time fields. 
+| [TimeDate](Systems.Bpm.ProcessNodeTimerEvents.md#timedate) | datetime __nullable__ | Non-null when the timer is for specific single date and time. Mutually exclusive with the other Time fields. 
+| [TimeDuration](Systems.Bpm.ProcessNodeTimerEvents.md#timeduration) | string (128) __nullable__ | Non-null when the timer event is for time duration. The value conforms to the ISO-8601 format for time interval representations. Mutually exclusive with the other Time fields. 
 
 
 ## Attribute Details
@@ -50,7 +50,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 Non-null when the timer is recurring. The value conforms to the ISO-8601 format for recurring time intervals. Mutually exclusive with the other Time fields.
 
-_Type_: **string(128) (nullable)**  
+_Type_: **string (128) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -59,7 +59,7 @@ _Maximum Length_: **128**
 
 Non-null when the timer is for specific single date and time. Mutually exclusive with the other Time fields.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 Non-null when the timer event is for time duration. The value conforms to the ISO-8601 format for time interval representations. Mutually exclusive with the other Time fields.
 
-_Type_: **string(128) (nullable)**  
+_Type_: **string (128) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  

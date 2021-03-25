@@ -28,11 +28,11 @@ Aggregate Root:
 | [AvailableQuantityBase](Logistics.Inventory.ReconciliationLines.md#availablequantitybase) | [Quantity](../data-types.md#quantity) | Quantity found at the reconciliation, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [Id](Logistics.Inventory.ReconciliationLines.md#id) | guid |  
 | [LineOrd](Logistics.Inventory.ReconciliationLines.md#lineord) | int32 | The ordinal position of the line within the document. Duplicates are allowed, but not suggested. `Required` 
-| [Notes](Logistics.Inventory.ReconciliationLines.md#notes) | string(254) (nullable) | Notes for this ReconciliationLine. 
+| [Notes](Logistics.Inventory.ReconciliationLines.md#notes) | string (254) __nullable__ | Notes for this ReconciliationLine. 
 | [Quantity](Logistics.Inventory.ReconciliationLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity found at the reconciliation, . `Unit: QuantityUnit` `Required` `Filter(ge;le)` 
 | [QuantityBase](Logistics.Inventory.ReconciliationLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | Quantity found at the reconciliation, expressed in base measurement units. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` 
 | [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [TransactionTimestamp](Logistics.Inventory.ReconciliationLines.md#transactiontimestamp) | datetime (nullable) | Exact time when the transaction occurred. 
+| [TransactionTimestamp](Logistics.Inventory.ReconciliationLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction occurred. 
 
 ## References
 
@@ -83,7 +83,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this ReconciliationLine.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -126,7 +126,7 @@ _Front-End Recalc Expressions:_
 
 Exact time when the transaction occurred.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -114,12 +114,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.RequisitionLines.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this RequisitionLine.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.RequisitionLines.html#productdescription">ProductDescription</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.</td>
 </tr>
 <tr>
@@ -203,13 +203,13 @@ Aggregate Root:<br>
 <code>( obj.Requisition.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this RequisitionLine.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="productdescription">ProductDescription</h3>
 <p>The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.</p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>

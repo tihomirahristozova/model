@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Systems.Core.ObjectVersions.md#id) | guid |  
 | [ObjectContents](Systems.Core.ObjectVersions.md#objectcontents) | byte[] | The compressed contents of the object. `Required` 
-| [ServerVersion](Systems.Core.ObjectVersions.md#serverversion) | string(15) (nullable) | The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown. 
+| [ServerVersion](Systems.Core.ObjectVersions.md#serverversion) | string (15) __nullable__ | The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown. 
 | [Version](Systems.Core.ObjectVersions.md#version) | int32 | The version number of the version, stored in the current row, starting from 1. `Required` `Filter(multi eq;ge;le)` 
 | [VersionTime](Systems.Core.ObjectVersions.md#versiontime) | datetime | The timestamp when the version was saved. `Required` `Filter(ge;le)` 
 | [VersionType](Systems.Core.ObjectVersions.md#versiontype) | [VersionType](Systems.Core.ObjectVersions.md#versiontype) | Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. `Required` 
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown.
 
-_Type_: **string(15) (nullable)**  
+_Type_: **string (15) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **15**  

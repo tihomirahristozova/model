@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Assets.AssetGroups.md#code) | string(20) | The unique code of the AssetGroup. `Required` `Filter(eq)` `ORD` 
+| [Code](Finance.Assets.AssetGroups.md#code) | string (20) | The unique code of the AssetGroup. `Required` `Filter(eq)` `ORD` 
 | [Id](Finance.Assets.AssetGroups.md#id) | guid |  
-| [Name](Finance.Assets.AssetGroups.md#name) | string(254) | The name of this AssetGroup. `Required` `Filter(like)` 
+| [Name](Finance.Assets.AssetGroups.md#name) | string (254) | The name of this AssetGroup. `Required` `Filter(like)` 
 
 ## References
 
@@ -41,7 +41,7 @@ Aggregate Tree
 
 The unique code of the AssetGroup. `Required` `Filter(eq)` `ORD`
 
-_Type_: **string(20)**  
+_Type_: **string (20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 The name of this AssetGroup. `Required` `Filter(like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

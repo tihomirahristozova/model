@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#completedonutc) | datetime (nullable) | Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. 
+| [CompletedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#completedonutc) | datetime __nullable__ | Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. 
 | [CreatedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#createdonutc) | datetime | The date and time (in UTC), when the request was created. `Required` `Default(Now)` 
 | [Id](Applications.PersonalData.DataSubjectRightRequests.md#id) | guid |  
-| [Notes](Applications.PersonalData.DataSubjectRightRequests.md#notes) | string(2147483647) (nullable) | This should usually contain detailed implementation notes. 
+| [Notes](Applications.PersonalData.DataSubjectRightRequests.md#notes) | string (max) __nullable__ | This should usually contain detailed implementation notes. 
 | [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. `Required` `Filter(eq)` 
 | [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. `Required` 
 
@@ -46,7 +46,7 @@ Aggregate Tree
 
 Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,7 +70,7 @@ _Default Value_: **NewGuid**
 
 This should usually contain detailed implementation notes.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

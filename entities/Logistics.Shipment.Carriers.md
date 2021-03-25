@@ -23,12 +23,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreementEndDate](Logistics.Shipment.Carriers.md#agreementenddate) | date (nullable) | The ending date of the agreement with this carrier. null for agreements which are still active. `Filter(eq;ge;le)` 
+| [AgreementEndDate](Logistics.Shipment.Carriers.md#agreementenddate) | date __nullable__ | The ending date of the agreement with this carrier. null for agreements which are still active. `Filter(eq;ge;le)` 
 | [AgreementStartDate](Logistics.Shipment.Carriers.md#agreementstartdate) | date | The start date of the agreement with this carrier. `Required` `Default(Today)` `Filter(eq;ge;le)` 
-| [Code](Logistics.Shipment.Carriers.md#code) | string(16) | Unique carrier code (or call sign). The code is unique within all enterprise companies. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Logistics.Shipment.Carriers.md#code) | string (16) | Unique carrier code (or call sign). The code is unique within all enterprise companies. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Logistics.Shipment.Carriers.md#id) | guid |  
 | [IsActive](Logistics.Shipment.Carriers.md#isactive) | boolean | Specifies whether the carrier agreement is active. `Required` `Default(true)` `Filter(eq)` 
-| [Notes](Logistics.Shipment.Carriers.md#notes) | string(2147483647) (nullable) | Notes for this Carrier. 
+| [Notes](Logistics.Shipment.Carriers.md#notes) | string (max) __nullable__ | Notes for this Carrier. 
 
 ## References
 
@@ -44,7 +44,7 @@ Aggregate Tree
 
 The ending date of the agreement with this carrier. null for agreements which are still active. `Filter(eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -61,7 +61,7 @@ _Default Value_: **CurrentDate**
 
 Unique carrier code (or call sign). The code is unique within all enterprise companies. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -87,7 +87,7 @@ _Default Value_: **True**
 
 Notes for this Carrier.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

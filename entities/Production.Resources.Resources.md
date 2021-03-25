@@ -26,12 +26,12 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Resources.Resources.md#id) | guid |  
-| [Name](Production.Resources.Resources.md#name) | string(64) | Name of the resource. `Required` `Filter(like)` 
-| [Notes](Production.Resources.Resources.md#notes) | string(254) (nullable) | User notes for the resource. 
-| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal(6, 2) | The usual duration of setup when changing production. `Required` `Default(0)` 
+| [Name](Production.Resources.Resources.md#name) | string (64) | Name of the resource. `Required` `Filter(like)` 
+| [Notes](Production.Resources.Resources.md#notes) | string (254) __nullable__ | User notes for the resource. 
+| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal (6, 2) | The usual duration of setup when changing production. `Required` `Default(0)` 
 | [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. . `Unit: SetupScrapUnit` `Required` `Default(0)` 
-| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount](../data-types.md#amount) (nullable) | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
-| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount](../data-types.md#amount) (nullable) | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
+| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount](../data-types.md#amount) __nullable__ | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
+| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount](../data-types.md#amount) __nullable__ | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
 
 ## References
 
@@ -62,7 +62,7 @@ _Default Value_: **NewGuid**
 
 Name of the resource. `Required` `Filter(like)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -71,7 +71,7 @@ _Maximum Length_: **64**
 
 User notes for the resource.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -80,7 +80,7 @@ _Maximum Length_: **254**
 
 The usual duration of setup when changing production. `Required` `Default(0)`
 
-_Type_: **decimal(6, 2)**  
+_Type_: **decimal (6, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -98,7 +98,7 @@ _Default Value_: **Constant**
 
 Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. `Currency: ResourceCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -106,7 +106,7 @@ _Supports Order By_: **False**
 
 Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. `Currency: ResourceCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

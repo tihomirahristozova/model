@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.FinancialStatementNodeCorrespondances.md#id) | guid |  
-| [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal(18, 0) | Factor by which the correspondence balance will be multiplied. `Required` `Default(1)` 
+| [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal (18, 0) | Factor by which the correspondence balance will be multiplied. `Required` `Default(1)` 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 Factor by which the correspondence balance will be multiplied. `Required` `Default(1)`
 
-_Type_: **decimal(18, 0)**  
+_Type_: **decimal (18, 0)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

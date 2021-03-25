@@ -25,10 +25,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AllowLocalAccounts](Systems.Security.Domains.md#allowlocalaccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). `Required` `Default(true)` 
-| [Description](Systems.Security.Domains.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Multi-language description of the domain. 
+| [Description](Systems.Security.Domains.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Multi-language description of the domain. 
 | [Id](Systems.Security.Domains.md#id) | guid |  
 | [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Systems.Security.Domains.md#name) | string(64) | The name of the domain (restricted for URL usage). `Required` `Filter(eq;like)` `ORD` 
+| [Name](Systems.Security.Domains.md#name) | string (64) | The name of the domain (restricted for URL usage). `Required` `Filter(eq;like)` `ORD` 
 
 ## Child Collections
 
@@ -52,7 +52,7 @@ _Default Value_: **True**
 
 Multi-language description of the domain.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -76,7 +76,7 @@ _Default Value_: **True**
 
 The name of the domain (restricted for URL usage). `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  

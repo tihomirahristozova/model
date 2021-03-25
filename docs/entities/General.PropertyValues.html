@@ -104,7 +104,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="General.PropertyValues.html#description">Description</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>The actual description value of the property for the specified entity (the entity with the specified Id).</td>
 </tr>
 <tr>
@@ -119,17 +119,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.PropertyValues.html#picture">Picture</a></td>
-<td>byte[] (nullable)</td>
+<td>byte[] <strong>nullable</strong></td>
 <td>The actual picture of the property for the specified entity (the entity with the specified Id).</td>
 </tr>
 <tr>
 <td><a href="General.PropertyValues.html#propertyvaluefield">PropertyValueField</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>The actual value of the property for the specified entity (the entity with the specified Id).</td>
 </tr>
 <tr>
 <td><a href="General.PropertyValues.html#valueid">ValueId</a></td>
-<td>guid (nullable)</td>
+<td>guid <strong>nullable</strong></td>
 <td>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
@@ -154,7 +154,7 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
 <p>The actual description value of the property for the specified entity (the entity with the specified Id).</p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
@@ -168,18 +168,18 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="picture">Picture</h3>
 <p>The actual picture of the property for the specified entity (the entity with the specified Id).</p>
-<p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyvaluefield">PropertyValueField</h3>
 <p>The actual value of the property for the specified entity (the entity with the specified Id).</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="valueid">ValueId</h3>
 <p>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>

@@ -104,17 +104,17 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#alcoholdegree">AlcoholDegree</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>For alcoholic products, contains the percentage of pure alcohol. null when the transaction is not for alcoholic products. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#alcoholdensity">AlcoholDensity</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. null for non-alcoholic products. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#alcoholtemperature">AlcoholTemperature</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). null for non-alcoholic products. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
@@ -134,12 +134,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#measuringdevicecode">MeasuringDeviceCode</a></td>
-<td>string(32)</td>
+<td>string (32)</td>
 <td>The code of the measuring device, used to measure the transaction. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this MeasuringTransaction.</td>
 </tr>
 <tr>
@@ -154,7 +154,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Excise.MeasuringTransactions.html#transactionnumber">TransactionNumber</a></td>
-<td>string(32)</td>
+<td>string (32)</td>
 <td>Transaction number, unique for the measuring device. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
@@ -189,17 +189,17 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="alcoholdegree">AlcoholDegree</h3>
 <p>For alcoholic products, contains the percentage of pure alcohol. null when the transaction is not for alcoholic products. <code>Filter(multi eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="alcoholdensity">AlcoholDensity</h3>
 <p>For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. null for non-alcoholic products. <code>Filter(multi eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="alcoholtemperature">AlcoholTemperature</h3>
 <p>For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). null for non-alcoholic products. <code>Filter(multi eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="direction">Direction</h3>
@@ -239,14 +239,14 @@ Allowed values for the <code>Direction</code>(Finance.Excise.MeasuringTransactio
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="measuringdevicecode">MeasuringDeviceCode</h3>
 <p>The code of the measuring device, used to measure the transaction. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(32)</strong><br>
+<p><em>Type</em>: <strong>string (32)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this MeasuringTransaction.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -262,7 +262,7 @@ Allowed values for the <code>Direction</code>(Finance.Excise.MeasuringTransactio
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="transactionnumber">TransactionNumber</h3>
 <p>Transaction number, unique for the measuring device. <code>Required</code> <code>Filter(multi eq;like)</code></p>
-<p><em>Type</em>: <strong>string(32)</strong><br>
+<p><em>Type</em>: <strong>string (32)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>

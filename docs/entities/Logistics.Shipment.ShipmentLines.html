@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#boxcount">BoxCount</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>The count of boxes in which the goods are packaged. null means unknown.</td>
 </tr>
 <tr>
@@ -114,17 +114,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#grossweightkg">GrossWeightkg</a></td>
-<td>decimal(12, 3) (nullable)</td>
+<td>decimal (12, 3) <strong>nullable</strong></td>
 <td>The gross weight of the whole line in kilogramms. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>Guarantee period in days for the offered product. null for non-serviced products.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#heightm">Heightm</a></td>
-<td>decimal(12, 3) (nullable)</td>
+<td>decimal (12, 3) <strong>nullable</strong></td>
 <td>The height of the package in meters. null means unknown.</td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#lengthm">Lengthm</a></td>
-<td>decimal(12, 3) (nullable)</td>
+<td>decimal (12, 3) <strong>nullable</strong></td>
 <td>The length of the package in meters. null means unknown.</td>
 </tr>
 <tr>
@@ -144,27 +144,27 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#linerequireddeliverydate">LineRequiredDeliveryDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#netweightkg">NetWeightkg</a></td>
-<td>decimal(12, 3) (nullable)</td>
+<td>decimal (12, 3) <strong>nullable</strong></td>
 <td>The net weight of the entire batch of goods in kilograms. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Specific notes for this line.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#palletno">PalletNo</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>The number of the pallet in which the goods are packaged. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#parentlineno">ParentLineNo</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -184,12 +184,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#volumel">Volumel</a></td>
-<td>decimal(12, 3) (nullable)</td>
+<td>decimal (12, 3) <strong>nullable</strong></td>
 <td>The volume in litres of the whole batch. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#widthm">Widthm</a></td>
-<td>decimal(12, 3) (nullable)</td>
+<td>decimal (12, 3) <strong>nullable</strong></td>
 <td>The width of the package in meters. null means unknown.</td>
 </tr>
 </tbody>
@@ -259,7 +259,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="boxcount">BoxCount</h3>
 <p>The count of boxes in which the goods are packaged. null means unknown.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="finished">Finished</h3>
@@ -270,19 +270,19 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="grossweightkg">GrossWeightkg</h3>
 <p>The gross weight of the whole line in kilogramms. null means unknown.</p>
-<p><em>Type</em>: <strong>decimal(12, 3) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="guaranteeperioddays">GuaranteePeriodDays</h3>
 <p>Guarantee period in days for the offered product. null for non-serviced products.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( obj.ParentSalesOrderLine.Product.ProductType.IsServiced, obj.ParentSalesOrderLine.Product.GuaranteePeriodDays, null)</code></p>
 <h3 id="heightm">Heightm</h3>
 <p>The height of the package in meters. null means unknown.</p>
-<p><em>Type</em>: <strong>decimal(12, 3) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -292,7 +292,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lengthm">Lengthm</h3>
 <p>The length of the package in meters. null means unknown.</p>
-<p><em>Type</em>: <strong>decimal(12, 3) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -306,7 +306,7 @@ Aggregate Root:<br>
 <code>( obj.Shipment.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linerequireddeliverydate">LineRequiredDeliveryDate</h3>
 <p>Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -315,23 +315,23 @@ Aggregate Root:<br>
 <code>obj.Shipment.RequiredDeliveryDate</code></p>
 <h3 id="netweightkg">NetWeightkg</h3>
 <p>The net weight of the entire batch of goods in kilograms. null means unknown.</p>
-<p><em>Type</em>: <strong>decimal(12, 3) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Specific notes for this line.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="palletno">PalletNo</h3>
 <p>The number of the pallet in which the goods are packaged. null means unknown.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
@@ -361,12 +361,12 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="volumel">Volumel</h3>
 <p>The volume in litres of the whole batch. null means unknown.</p>
-<p><em>Type</em>: <strong>decimal(12, 3) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="widthm">Widthm</h3>
 <p>The width of the package in meters. null means unknown.</p>
-<p><em>Type</em>: <strong>decimal(12, 3) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

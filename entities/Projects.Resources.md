@@ -25,9 +25,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.Resources.md#description) | string(2147483647) (nullable) | The description of this Resource. 
+| [Description](Projects.Resources.md#description) | string (max) __nullable__ | The description of this Resource. 
 | [Id](Projects.Resources.md#id) | guid |  
-| [Name](Projects.Resources.md#name) | string(254) | The name of this Resource. `Required` 
+| [Name](Projects.Resources.md#name) | string (254) | The name of this Resource. `Required` 
 
 ## References
 
@@ -42,7 +42,7 @@ Aggregate Root:
 
 The description of this Resource.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 The name of this Resource. `Required`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

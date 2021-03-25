@@ -104,12 +104,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#creationtime">CreationTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the Process was created. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#creationuser">CreationUser</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>Login name of the user, who created the Process. <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -129,42 +129,42 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#notes">Notes</a></td>
-<td>string(2000) (nullable)</td>
+<td>string (2000) <strong>nullable</strong></td>
 <td>Notes for this Process.</td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#schemaformat">SchemaFormat</a></td>
-<td>string(1)</td>
+<td>string (1)</td>
 <td>Application specific format of the Schema Layout. <code>Required</code> <code>Default(&quot;D&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#schemalayout">SchemaLayout</a></td>
-<td>string(2147483647)</td>
+<td>string (max)</td>
 <td>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#startevent">StartEvent</a></td>
-<td>string(3) (nullable)</td>
+<td>string (3) <strong>nullable</strong></td>
 <td>USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.</td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#startroleid">StartRoleId</a></td>
-<td>guid (nullable)</td>
+<td>guid <strong>nullable</strong></td>
 <td>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#thumbnail">Thumbnail</a></td>
-<td>byte[] (nullable)</td>
+<td>byte[] <strong>nullable</strong></td>
 <td>Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.</td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#updatetime">UpdateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the Process was last updated. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Processes.html#updateuser">UpdateUser</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>Login name of the user, who last updated the Process. <code>ReadOnly</code></td>
 </tr>
 </tbody>
@@ -172,12 +172,12 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtime">CreationTime</h3>
 <p>Date and time when the Process was created. <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>Login name of the user, who created the Process. <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
@@ -199,46 +199,46 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Process.</p>
-<p><em>Type</em>: <strong>string(2000) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (2000) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2000</strong></p>
 <h3 id="schemaformat">SchemaFormat</h3>
 <p>Application specific format of the Schema Layout. <code>Required</code> <code>Default(&quot;D&quot;)</code></p>
-<p><em>Type</em>: <strong>string(1)</strong><br>
+<p><em>Type</em>: <strong>string (1)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>1</strong><br>
 <em>Default Value</em>: <strong>D</strong></p>
 <h3 id="schemalayout">SchemaLayout</h3>
 <p>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(2147483647)</strong><br>
+<p><em>Type</em>: <strong>string (max)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="startevent">StartEvent</h3>
 <p>USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.</p>
-<p><em>Type</em>: <strong>string(3) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (3) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>3</strong></p>
 <h3 id="startroleid">StartRoleId</h3>
 <p>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="thumbnail">Thumbnail</h3>
 <p>Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.</p>
-<p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
 <p>Date and time when the Process was last updated. <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>Login name of the user, who last updated the Process. <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>

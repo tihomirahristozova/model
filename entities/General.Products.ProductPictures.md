@@ -25,13 +25,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comments](General.Products.ProductPictures.md#comments) | string(254) (nullable) | Comments for this ProductPicture. 
+| [Comments](General.Products.ProductPictures.md#comments) | string (254) __nullable__ | Comments for this ProductPicture. 
 | [Id](General.Products.ProductPictures.md#id) | guid |  
 | [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | True=This is the default picture for the product and the size class; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
-| [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime (nullable) | The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly` 
-| [Picture](General.Products.ProductPictures.md#picture) | byte[] (nullable) | The actual product picture. Can be null if we insert only some comments. 
+| [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime __nullable__ | The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly` 
+| [Picture](General.Products.ProductPictures.md#picture) | byte[] __nullable__ | The actual product picture. Can be null if we insert only some comments. 
 | [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting. `Required` `Filter(eq;like)` 
-| [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) (nullable) | Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified. 
+| [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) __nullable__ | Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified. 
 
 ## References
 
@@ -46,7 +46,7 @@ Aggregate Root:
 
 Comments for this ProductPicture.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -73,7 +73,7 @@ _Front-End Recalc Expressions:_
 
 The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 The actual product picture. Can be null if we insert only some comments.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -102,7 +102,7 @@ _Front-End Recalc Expressions:_
 
 Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.
 
-_Type_: **[PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) (nullable)**  
+_Type_: **[PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) __nullable__**  
 Allowed values for the `PictureSizeClass`(General.Products.ProductPictures.md#picturesizeclass) data attribute  
 _Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enum Members)_  
 

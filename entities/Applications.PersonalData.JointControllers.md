@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.PersonalData.JointControllers.md#id) | guid |  
-| [Notes](Applications.PersonalData.JointControllers.md#notes) | string(2147483647) (nullable) | Should usually contain a short description of the role of the joint controller. 
+| [Notes](Applications.PersonalData.JointControllers.md#notes) | string (max) __nullable__ | Should usually contain a short description of the role of the joint controller. 
 
 ## References
 
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 Should usually contain a short description of the role of the joint controller.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

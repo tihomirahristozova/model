@@ -129,17 +129,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#lineno">LineNo</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#linetype">LineType</a></td>
-<td>string(1)</td>
+<td>string (1)</td>
 <td>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. <code>Required</code> <code>Default(&quot;L&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#quantitybase">QuantityBase</a></td>
-<td>decimal(12, 3)</td>
+<td>decimal (12, 3)</td>
 <td>Fulfilled quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></td>
 </tr>
 </tbody>
@@ -215,19 +215,19 @@ Allowed values for the <code>FulfillmentType</code>(General.DocumentFulfillments
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="lineno">LineNo</h3>
 <p>Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.26</code></p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="linetype">LineType</h3>
 <p>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. <code>Required</code> <code>Default(&quot;L&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></p>
-<p><em>Type</em>: <strong>string(1)</strong><br>
+<p><em>Type</em>: <strong>string (1)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>1</strong><br>
 <em>Default Value</em>: <strong>L</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <p>Fulfilled quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></p>
-<p><em>Type</em>: <strong>decimal(12, 3)</strong><br>
+<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

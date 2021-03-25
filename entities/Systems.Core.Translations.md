@@ -24,13 +24,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](Systems.Core.Translations.md#active) | boolean | True when the translation is verified and activated. `Required` `Default(true)` `Filter(eq)` 
-| [ApplicationName](Systems.Core.Translations.md#applicationname) | string(50) (nullable) | The application, containing the resource. For base resource types (T,C,H), this is null. `Filter(eq)` `ORD` 
+| [ApplicationName](Systems.Core.Translations.md#applicationname) | string (50) __nullable__ | The application, containing the resource. For base resource types (T,C,H), this is null. `Filter(eq)` `ORD` 
 | [CreationTime](Systems.Core.Translations.md#creationtime) | datetime | Timestamp when the translation was first created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
 | [Id](Systems.Core.Translations.md#id) | guid |  
-| [Language](Systems.Core.Translations.md#language) | string(8) | The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". `Required` `Default("en")` `Filter(eq)` 
-| [ResourceId](Systems.Core.Translations.md#resourceid) | string(800) | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)` 
+| [Language](Systems.Core.Translations.md#language) | string (8) | The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". `Required` `Default("en")` `Filter(eq)` 
+| [ResourceId](Systems.Core.Translations.md#resourceid) | string (800) | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)` 
 | [ResourceType](Systems.Core.Translations.md#resourcetype) | [ResourceType](Systems.Core.Translations.md#resourcetype) | T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. `Required` `Default("S")` `Filter(eq)` 
-| [TranslationField](Systems.Core.Translations.md#translationfield) | string(2147483647) | The translated text. `Required` 
+| [TranslationField](Systems.Core.Translations.md#translationfield) | string (max) | The translated text. `Required` 
 | [UpdateTime](Systems.Core.Translations.md#updatetime) | datetime | When the translation was last updated. `Required` `Default(Now)` `ReadOnly` 
 
 
@@ -51,7 +51,7 @@ _Front-End Recalc Expressions:_
 
 The application, containing the resource. For base resource types (T,C,H), this is null. `Filter(eq)` `ORD`
 
-_Type_: **string(50) (nullable)**  
+_Type_: **string (50) __nullable__**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -77,7 +77,7 @@ _Default Value_: **NewGuid**
 
 The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". `Required` `Default("en")` `Filter(eq)`
 
-_Type_: **string(8)**  
+_Type_: **string (8)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **8**  
@@ -87,7 +87,7 @@ _Default Value_: **en**
 
 The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)`
 
-_Type_: **string(800)**  
+_Type_: **string (800)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **800**  
@@ -118,7 +118,7 @@ _Default Value_: **OtherApplicationSpecific**
 
 The translated text. `Required`
 
-_Type_: **string(2147483647)**  
+_Type_: **string (max)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

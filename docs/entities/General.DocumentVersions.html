@@ -104,17 +104,17 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="General.DocumentVersions.html#documentdata">DocumentData</a></td>
-<td>byte[] (nullable)</td>
+<td>byte[] <strong>nullable</strong></td>
 <td>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#documentdataformat">DocumentDataFormat</a></td>
-<td>string(1)</td>
+<td>string (1)</td>
 <td>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. <code>Required</code> <code>Default(&quot;U&quot;)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#documentdataxml">DocumentDataXML</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentVersions.html#updateuser">UpdateUser</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The login name of the user that saved this version. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -164,19 +164,19 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdata">DocumentData</h3>
 <p>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentdataformat">DocumentDataFormat</h3>
 <p>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. <code>Required</code> <code>Default(&quot;U&quot;)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(1)</strong><br>
+<p><em>Type</em>: <strong>string (1)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>1</strong><br>
 <em>Default Value</em>: <strong>U</strong></p>
 <h3 id="documentdataxml">DocumentDataXML</h3>
 <p>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -240,7 +240,7 @@ Allowed values for the <code>State</code>(General.DocumentVersions.md#state) dat
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>The login name of the user that saved this version. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>

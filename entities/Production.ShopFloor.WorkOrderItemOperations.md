@@ -25,20 +25,20 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActualEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualenddatetime) | datetime (nullable) | The date/time when the operation has completed. null means that the operation is not completed. 
-| [ActualStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualstartdatetime) | datetime (nullable) | The date/time when the operation has started. null means that the has not started yet. 
+| [ActualEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualenddatetime) | datetime __nullable__ | The date/time when the operation has completed. null means that the operation is not completed. 
+| [ActualStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualstartdatetime) | datetime __nullable__ | The date/time when the operation has started. null means that the has not started yet. 
 | [Id](Production.ShopFloor.WorkOrderItemOperations.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.WorkOrderItemOperations.md#lineord) | int32 | Order of the line within the work order routing. `Required` `Filter(eq;like)` 
-| [MinimumConcurrent<br />StartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
 | [MoveTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` 
-| [Notes](Production.ShopFloor.WorkOrderItemOperations.md#notes) | string(254) (nullable) | Notes for this WorkOrderItemOperation. 
-| [OperationDescription](Production.ShopFloor.WorkOrderItemOperations.md#operationdescription) | string(2147483647) (nullable) | The short description of the operation. 
+| [Notes](Production.ShopFloor.WorkOrderItemOperations.md#notes) | string (254) __nullable__ | Notes for this WorkOrderItemOperation. 
+| [OperationDescription](Production.ShopFloor.WorkOrderItemOperations.md#operationdescription) | string (max) __nullable__ | The short description of the operation. 
 | [RunTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#runtimeminutes) | int32 | Time for production of one lot of the produced item in minutes. `Required` `Default(0)` 
-| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledenddatetime) | datetime (nullable) | The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only). 
-| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledstartdatetime) | datetime (nullable) | The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders). 
-| [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#scraprate) | decimal(7, 6) | Projected scrap rate of the operation. `Required` `Default(0)` 
+| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledenddatetime) | datetime __nullable__ | The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only). 
+| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledstartdatetime) | datetime __nullable__ | The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders). 
+| [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#scraprate) | decimal (7, 6) | Projected scrap rate of the operation. `Required` `Default(0)` 
 | [SetupTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment in minutes. `Required` `Default(0)` 
-| [Tooling](Production.ShopFloor.WorkOrderItemOperations.md#tooling) | string(2147483647) (nullable) | The tools needed for the routing step. 
+| [Tooling](Production.ShopFloor.WorkOrderItemOperations.md#tooling) | string (max) __nullable__ | The tools needed for the routing step. 
 | [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the resource, that should be allocated for the operation. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
 | [WaitTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` 
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 The date/time when the operation has completed. null means that the operation is not completed.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 The date/time when the operation has started. null means that the has not started yet.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -99,7 +99,7 @@ _Front-End Recalc Expressions:_
 
 How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -116,7 +116,7 @@ _Default Value_: **0**
 
 Notes for this WorkOrderItemOperation.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -125,7 +125,7 @@ _Maximum Length_: **254**
 
 The short description of the operation.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -145,7 +145,7 @@ _Default Value_: **0**
 
 The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only).
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -153,7 +153,7 @@ _Supports Order By_: **False**
 
 The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders).
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -161,7 +161,7 @@ _Supports Order By_: **False**
 
 Projected scrap rate of the operation. `Required` `Default(0)`
 
-_Type_: **decimal(7, 6)**  
+_Type_: **decimal (7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -179,7 +179,7 @@ _Default Value_: **0**
 
 The tools needed for the routing step.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

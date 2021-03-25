@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceOrderLines.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
-| [SymptomDescription](Applications.Service.ServiceOrderLines.md#symptomdescription) | string(254) (nullable) | Description or synopsis of the symptoms of the failed object. `Filter(like)` 
+| [SymptomDescription](Applications.Service.ServiceOrderLines.md#symptomdescription) | string (254) __nullable__ | Description or synopsis of the symptoms of the failed object. `Filter(like)` 
 
 ## References
 
@@ -63,7 +63,7 @@ _Front-End Recalc Expressions:_
 
 Description or synopsis of the symptoms of the failed object. `Filter(like)`
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

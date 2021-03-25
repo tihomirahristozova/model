@@ -24,15 +24,15 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Reporting.Reports.md#id) | guid |  
-| [LayoutFormat](Systems.Reporting.Reports.md#layoutformat) | string(32) (nullable) | Format specifier of the layout. Recognized by the application. `Filter(multi eq)` 
-| [Name](Systems.Reporting.Reports.md#name) | string(254) | Multi-language report name. `Required` `Filter(eq;like)` 
-| [Notes](Systems.Reporting.Reports.md#notes) | string(512) (nullable) | Notes for this Report. 
+| [LayoutFormat](Systems.Reporting.Reports.md#layoutformat) | string (32) __nullable__ | Format specifier of the layout. Recognized by the application. `Filter(multi eq)` 
+| [Name](Systems.Reporting.Reports.md#name) | string (254) | Multi-language report name. `Required` `Filter(eq;like)` 
+| [Notes](Systems.Reporting.Reports.md#notes) | string (512) __nullable__ | Notes for this Report. 
 | [OneRow](Systems.Reporting.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only. `Required` `Default(false)` 
-| [QueryName](Systems.Reporting.Reports.md#queryname) | string(128) | The query on which the report is based. `Required` `Filter(eq)` 
-| [ReportBinaryLayout](Systems.Reporting.Reports.md#reportbinarylayout) | byte[] (nullable) | The printout layout, when the format requires binary storage. Alternative to Report_Layout. 
-| [ReportLayout](Systems.Reporting.Reports.md#reportlayout) | string(2147483647) (nullable) | The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout. 
-| [TemplateFilterXml](Systems.Reporting.Reports.md#templatefilterxml) | string(2147483647) (nullable) | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report. 
-| [TemplatePriority](Systems.Reporting.Reports.md#templatepriority) | int32 (nullable) | Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise. 
+| [QueryName](Systems.Reporting.Reports.md#queryname) | string (128) | The query on which the report is based. `Required` `Filter(eq)` 
+| [ReportBinaryLayout](Systems.Reporting.Reports.md#reportbinarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Report_Layout. 
+| [ReportLayout](Systems.Reporting.Reports.md#reportlayout) | string (max) __nullable__ | The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout. 
+| [TemplateFilterXml](Systems.Reporting.Reports.md#templatefilterxml) | string (max) __nullable__ | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report. 
+| [TemplatePriority](Systems.Reporting.Reports.md#templatepriority) | int32 __nullable__ | Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise. 
 
 ## References
 
@@ -54,7 +54,7 @@ _Default Value_: **NewGuid**
 
 Format specifier of the layout. Recognized by the application. `Filter(multi eq)`
 
-_Type_: **string(32) (nullable)**  
+_Type_: **string (32) __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -63,7 +63,7 @@ _Maximum Length_: **32**
 
 Multi-language report name. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -72,7 +72,7 @@ _Maximum Length_: **254**
 
 Notes for this Report.
 
-_Type_: **string(512) (nullable)**  
+_Type_: **string (512) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
@@ -90,7 +90,7 @@ _Default Value_: **False**
 
 The query on which the report is based. `Required` `Filter(eq)`
 
-_Type_: **string(128)**  
+_Type_: **string (128)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -99,7 +99,7 @@ _Maximum Length_: **128**
 
 The printout layout, when the format requires binary storage. Alternative to Report_Layout.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -107,7 +107,7 @@ _Supports Order By_: **False**
 
 The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -116,7 +116,7 @@ _Maximum Length_: **2147483647**
 
 Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -125,7 +125,7 @@ _Maximum Length_: **2147483647**
 
 Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

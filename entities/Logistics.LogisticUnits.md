@@ -25,11 +25,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExpectedWeight](Logistics.LogisticUnits.md#expectedweight) | decimal(12, 3) (nullable) | Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)` 
+| [ExpectedWeight](Logistics.LogisticUnits.md#expectedweight) | decimal (12, 3) __nullable__ | Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)` 
 | [Id](Logistics.LogisticUnits.md#id) | guid |  
-| [MeasuredWeight](Logistics.LogisticUnits.md#measuredweight) | decimal(12, 3) (nullable) | Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)` 
-| [Notes](Logistics.LogisticUnits.md#notes) | string(2147483647) (nullable) | Notes for this LogisticUnit. `Filter(like)` 
-| [SerialCode](Logistics.LogisticUnits.md#serialcode) | string(32) | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. `Required` `Filter(multi eq;like)` `ORD` 
+| [MeasuredWeight](Logistics.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)` 
+| [Notes](Logistics.LogisticUnits.md#notes) | string (max) __nullable__ | Notes for this LogisticUnit. `Filter(like)` 
+| [SerialCode](Logistics.LogisticUnits.md#serialcode) | string (32) | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. `Required` `Filter(multi eq;like)` `ORD` 
 
 ## References
 
@@ -53,7 +53,7 @@ Aggregate Tree
 
 Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)`
 
-_Type_: **decimal(12, 3) (nullable)**  
+_Type_: **decimal (12, 3) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -68,7 +68,7 @@ _Default Value_: **NewGuid**
 
 Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)`
 
-_Type_: **decimal(12, 3) (nullable)**  
+_Type_: **decimal (12, 3) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 Notes for this LogisticUnit. `Filter(like)`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -85,7 +85,7 @@ _Maximum Length_: **2147483647**
 
 Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string(32)**  
+_Type_: **string (32)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  

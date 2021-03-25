@@ -104,37 +104,37 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountcolumnname">AmountColumnName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The name of the column within the amount rowset where the amount is located. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a></td>
-<td><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a> (nullable)</td>
+<td><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a> <strong>nullable</strong></td>
 <td>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountrowid">AmountRowId</a></td>
-<td>guid (nullable)</td>
+<td>guid <strong>nullable</strong></td>
 <td>The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountrowname">AmountRowName</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountsourcefilter">AmountSourceFilter</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>Filter that further specifies which rows from the amount rowset determine the amount.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountsourcename">AmountSourceName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#filterxml">FilterXML</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>The line is accounted only when the filter is satisfied compared with the source document header.</td>
 </tr>
 <tr>
@@ -149,22 +149,22 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#multiplier">Multiplier</a></td>
-<td>decimal(18, 6)</td>
+<td>decimal (18, 6)</td>
 <td>Factor by which the amount from the source will be multiplied. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this TemplateLine.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#validfromdate">ValidFromDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Start date from which the accounting template line is valid. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#validtodate">ValidToDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>End date to which the accounting template line is valid. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 </tbody>
@@ -216,13 +216,13 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amountcolumnname">AmountColumnName</h3>
 <p>The name of the column within the amount rowset where the amount is located. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="amountcondition">AmountCondition</h3>
 <p>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</p>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a> <strong>nullable</strong></strong><br>
 Allowed values for the <code>AmountCondition</code>(Finance.Accounting.TemplateLines.md#amountcondition) data attribute<br>
 <em>Allowed Values (Finance.Accounting.TemplateLinesRepository.AmountCondition Enum Members)</em></p>
 <table>
@@ -247,28 +247,28 @@ Allowed values for the <code>AmountCondition</code>(Finance.Accounting.TemplateL
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="amountrowid">AmountRowId</h3>
 <p>The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="amountrowname">AmountRowName</h3>
 <p>The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="amountsourcefilter">AmountSourceFilter</h3>
 <p>Filter that further specifies which rows from the amount rowset determine the amount.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="amountsourcename">AmountSourceName</h3>
 <p>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="filterxml">FilterXML</h3>
 <p>The line is accounted only when the filter is satisfied compared with the source document header.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -287,24 +287,24 @@ Allowed values for the <code>AmountCondition</code>(Finance.Accounting.TemplateL
 <code>( obj.Template.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="multiplier">Multiplier</h3>
 <p>Factor by which the amount from the source will be multiplied. <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong>decimal(18, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (18, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this TemplateLine.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="validfromdate">ValidFromDate</h3>
 <p>Start date from which the accounting template line is valid. <code>Filter(multi eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validtodate">ValidToDate</h3>
 <p>End date to which the accounting template line is valid. <code>Filter(multi eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

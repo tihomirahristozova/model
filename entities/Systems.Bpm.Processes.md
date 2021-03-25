@@ -27,13 +27,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.Processes.md#code) | string(16) | Unique process code. `Required` `Filter(multi eq)` `ORD` 
-| [Description](Systems.Bpm.Processes.md#description) | string(2147483647) (nullable) | The description of this Process. `Filter(eq;like)` 
+| [Code](Systems.Bpm.Processes.md#code) | string (16) | Unique process code. `Required` `Filter(multi eq)` `ORD` 
+| [Description](Systems.Bpm.Processes.md#description) | string (max) __nullable__ | The description of this Process. `Filter(eq;like)` 
 | [Id](Systems.Bpm.Processes.md#id) | guid |  
 | [IsExecutable](Systems.Bpm.Processes.md#isexecutable) | boolean | Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed. `Required` `Default(false)` `Filter(eq)` 
 | [IsPublished](Systems.Bpm.Processes.md#ispublished) | boolean | Specifies whether the process is currently published for new instances. `Required` `Default(false)` `Filter(eq)` 
 | [Locality](Systems.Bpm.Processes.md#locality) | [Locality](Systems.Bpm.Processes.md#locality) | Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. `Required` `Default("L")` `Filter(like)` 
-| [Name](Systems.Bpm.Processes.md#name) | string(254) | The name of this Process. `Required` `Filter(eq;like)` 
+| [Name](Systems.Bpm.Processes.md#name) | string (254) | The name of this Process. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -57,7 +57,7 @@ Aggregate Tree
 
 Unique process code. `Required` `Filter(multi eq)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
@@ -67,7 +67,7 @@ _Maximum Length_: **16**
 
 The description of this Process. `Filter(eq;like)`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -120,7 +120,7 @@ _Default Value_: **Location**
 
 The name of this Process. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

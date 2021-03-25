@@ -104,12 +104,12 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#actualenddatetime">ActualEndDateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date/time when the operation has completed. null means that the operation is not completed.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#actualstartdatetime">ActualStartDateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date/time when the operation has started. null means that the has not started yet.</td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</td>
 </tr>
 <tr>
@@ -134,12 +134,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this WorkOrderItemOperation.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#operationdescription">OperationDescription</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The short description of the operation.</td>
 </tr>
 <tr>
@@ -149,17 +149,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scheduledenddatetime">ScheduledEndDateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only).</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scheduledstartdatetime">ScheduledStartDateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders).</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scraprate">ScrapRate</a></td>
-<td>decimal(7, 6)</td>
+<td>decimal (7, 6)</td>
 <td>Projected scrap rate of the operation. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#tooling">Tooling</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The tools needed for the routing step.</td>
 </tr>
 <tr>
@@ -231,12 +231,12 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actualenddatetime">ActualEndDateTime</h3>
 <p>The date/time when the operation has completed. null means that the operation is not completed.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="actualstartdatetime">ActualStartDateTime</h3>
 <p>The date/time when the operation has started. null means that the has not started yet.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -255,7 +255,7 @@ Aggregate Root:<br>
 <code>( obj.WorkOrderItem.Operations.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</h3>
 <p>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
@@ -266,13 +266,13 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WorkOrderItemOperation.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="operationdescription">OperationDescription</h3>
 <p>The short description of the operation.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -286,17 +286,17 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="scheduledenddatetime">ScheduledEndDateTime</h3>
 <p>The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only).</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduledstartdatetime">ScheduledStartDateTime</h3>
 <p>The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders).</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>Projected scrap rate of the operation. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -308,7 +308,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="tooling">Tooling</h3>
 <p>The tools needed for the routing step.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Crm.Pos.Devices.html#deviceregistrationno">DeviceRegistrationNo</a></td>
-<td>string(32) (nullable)</td>
+<td>string (32) <strong>nullable</strong></td>
 <td>The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#electronicaddress">ElectronicAddress</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc. <code>Filter(multi eq;like)</code></addr></td>
 </tr>
 <tr>
@@ -129,12 +129,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a></td>
-<td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> (nullable)</td>
+<td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> <strong>nullable</strong></td>
 <td>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#settingsjson">SettingsJson</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.</td>
 </tr>
 </tbody>
@@ -159,7 +159,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="deviceregistrationno">DeviceRegistrationNo</h3>
 <p>The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. <code>Filter(multi eq;like)</code></p>
-<p><em>Type</em>: <strong>string(32) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (32) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
@@ -199,7 +199,7 @@ Allowed values for the <code>DeviceType</code>(Crm.Pos.Devices.md#devicetype) da
 <em>Default Value</em>: <strong>Other</strong></p>
 <h3 id="electronicaddress">ElectronicAddress</h3>
 <p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc. <code>Filter(multi eq;like)</code><p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -216,7 +216,7 @@ Allowed values for the <code>DeviceType</code>(Crm.Pos.Devices.md#devicetype) da
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="protocolname">ProtocolName</h3>
 <p>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</p>
-<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> <strong>nullable</strong></strong><br>
 Allowed values for the <code>ProtocolName</code>(Crm.Pos.Devices.md#protocolname) data attribute<br>
 <em>Allowed Values (Crm.Pos.DevicesRepository.ProtocolName Enum Members)</em></p>
 <table>
@@ -237,7 +237,7 @@ Allowed values for the <code>ProtocolName</code>(Crm.Pos.Devices.md#protocolname
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="settingsjson">SettingsJson</h3>
 <p>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

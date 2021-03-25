@@ -104,12 +104,12 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#conditionalpropertydescription">ConditionalProperty<br>Description</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>The desired description of the Conditional Property. .</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#conditionalpropertyvalue">ConditionalPropertyValue</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>The desired value of the Conditional Property. .</td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.</td>
 </tr>
 <tr>
@@ -134,12 +134,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this PrincipalRecipeOperation.</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#operationdescription">OperationDescription</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The description of the operation. Initially copied from the generic operation definition.</td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#scraprate">ScrapRate</a></td>
-<td>decimal(7, 6)</td>
+<td>decimal (7, 6)</td>
 <td>Standard rate of scrap during the operation. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#tooling">Tooling</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>The tools needed for the routing step.</td>
 </tr>
 <tr>
@@ -219,12 +219,12 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="conditionalpropertydescription">ConditionalPropertyDescription</h3>
 <p>The desired description of the Conditional Property. .</p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionalpropertyvalue">ConditionalPropertyValue</h3>
 <p>The desired value of the Conditional Property. .</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -244,7 +244,7 @@ Aggregate Root:<br>
 <code>( obj.PrincipalRecipe.Operations.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</h3>
 <p>How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
@@ -257,13 +257,13 @@ Aggregate Root:<br>
 <code>obj.Operation.MoveTimeMinutes</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this PrincipalRecipeOperation.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="operationdescription">OperationDescription</h3>
 <p>The description of the operation. Initially copied from the generic operation definition.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -279,7 +279,7 @@ Aggregate Root:<br>
 <code>obj.Operation.RunTimeMinutes</code></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>Standard rate of scrap during the operation. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -293,7 +293,7 @@ Aggregate Root:<br>
 <code>obj.Operation.SetupTimeMinutes</code></p>
 <h3 id="tooling">Tooling</h3>
 <p>The tools needed for the routing step.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>

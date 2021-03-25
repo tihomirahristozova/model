@@ -25,11 +25,11 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ActionType](Crm.DiscountTypes.md#actiontype) | [ActionType](Crm.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts. `Required` `Default("A")` `Filter(multi eq)` 
 | [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. `Required` `Filter(multi eq)` 
-| [Code](Crm.DiscountTypes.md#code) | string(32) | The unique code of the DiscountType. `Required` `Filter(eq)` 
+| [Code](Crm.DiscountTypes.md#code) | string (32) | The unique code of the DiscountType. `Required` `Filter(eq)` 
 | [Id](Crm.DiscountTypes.md#id) | guid |  
 | [IsSystem](Crm.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system. `Required` `Default(false)` `Filter(multi eq)` 
-| [Name](Crm.DiscountTypes.md#name) | string(254) | The name of this DiscountType. `Required` `Filter(like)` 
-| [Notes](Crm.DiscountTypes.md#notes) | string(2147483647) (nullable) | Notes for this DiscountType. 
+| [Name](Crm.DiscountTypes.md#name) | string (254) | The name of this DiscountType. `Required` `Filter(like)` 
+| [Notes](Crm.DiscountTypes.md#notes) | string (max) __nullable__ | Notes for this DiscountType. 
 | [Ord](Crm.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. `Required` `Default(1)` `Filter(ge;le)` 
 
 
@@ -74,7 +74,7 @@ _Supports Order By_: **False**
 
 The unique code of the DiscountType. `Required` `Filter(eq)`
 
-_Type_: **string(32)**  
+_Type_: **string (32)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -99,7 +99,7 @@ _Default Value_: **False**
 
 The name of this DiscountType. `Required` `Filter(like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -108,7 +108,7 @@ _Maximum Length_: **254**
 
 Notes for this DiscountType.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

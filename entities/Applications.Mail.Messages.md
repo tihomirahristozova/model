@@ -25,18 +25,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Body](Applications.Mail.Messages.md#body) | string(2147483647) (nullable) | The body of the message. 
-| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string(2048) (nullable) | Semicolon-separated list of Cc email addresses. `Filter(like)` 
+| [Body](Applications.Mail.Messages.md#body) | string (max) __nullable__ | The body of the message. 
+| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of Cc email addresses. `Filter(like)` 
 | [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created. `Required` `Default(Now)` `Filter(ge;le)` 
-| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string(512) | Sending email address. `Required` `Filter(like)` 
+| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string (512) | Sending email address. `Required` `Filter(like)` 
 | [Id](Applications.Mail.Messages.md#id) | guid |  
 | [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | True when the message is stored in encrypted format. `Required` `Default(false)` `Filter(eq)` 
 | [IsRead](Applications.Mail.Messages.md#isread) | boolean | True when the message was read by the user. `Required` `Default(false)` `Filter(eq)` 
-| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime (nullable) | Date and time when the message was received. `Filter(ge;le)` 
-| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime (nullable) | Date and time when the message was sent. `Filter(ge;le)` 
-| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string(256) (nullable) | Message ID as it appears on the mail server. `Filter(eq)` 
-| [Subject](Applications.Mail.Messages.md#subject) | string(1024) (nullable) | The message subject. `Filter(like)` 
-| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string(2048) (nullable) | Semicolon-separated list of receiving email addresses. `Filter(like)` 
+| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received. `Filter(ge;le)` 
+| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent. `Filter(ge;le)` 
+| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server. `Filter(eq)` 
+| [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject. `Filter(like)` 
+| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of receiving email addresses. `Filter(like)` 
 
 ## References
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 The body of the message.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -67,7 +67,7 @@ _Maximum Length_: **2147483647**
 
 Semicolon-separated list of Cc email addresses. `Filter(like)`
 
-_Type_: **string(2048) (nullable)**  
+_Type_: **string (2048) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2048**  
@@ -85,7 +85,7 @@ _Default Value_: **CurrentDateTime**
 
 Sending email address. `Required` `Filter(like)`
 
-_Type_: **string(512)**  
+_Type_: **string (512)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
@@ -119,7 +119,7 @@ _Default Value_: **False**
 
 Date and time when the message was received. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -127,7 +127,7 @@ _Supports Order By_: **False**
 
 Date and time when the message was sent. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -135,7 +135,7 @@ _Supports Order By_: **False**
 
 Message ID as it appears on the mail server. `Filter(eq)`
 
-_Type_: **string(256) (nullable)**  
+_Type_: **string (256) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -144,7 +144,7 @@ _Maximum Length_: **256**
 
 The message subject. `Filter(like)`
 
-_Type_: **string(1024) (nullable)**  
+_Type_: **string (1024) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1024**  
@@ -153,7 +153,7 @@ _Maximum Length_: **1024**
 
 Semicolon-separated list of receiving email addresses. `Filter(like)`
 
-_Type_: **string(2048) (nullable)**  
+_Type_: **string (2048) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2048**  

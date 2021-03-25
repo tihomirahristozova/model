@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#fullcost">FullCost</a></td>
-<td>decimal(14, 2)</td>
+<td>decimal (14, 2)</td>
 <td>The full cost of the specified quantity. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -119,12 +119,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#projectid">ProjectId</a></td>
-<td>guid (nullable)</td>
+<td>guid <strong>nullable</strong></td>
 <td>The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#quantity">Quantity</a></td>
-<td>decimal(14, 3)</td>
+<td>decimal (14, 3)</td>
 <td>The quantity of the product. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
@@ -174,7 +174,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fullcost">FullCost</h3>
 <p>The full cost of the specified quantity. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(14, 2)</strong><br>
+<p><em>Type</em>: <strong>decimal (14, 2)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -194,11 +194,11 @@ Aggregate Root:<br>
 <code>( obj.Calculation.Results.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="projectid">ProjectId</h3>
 <p>The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity of the product. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(14, 3)</strong><br>
+<p><em>Type</em>: <strong>decimal (14, 3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>

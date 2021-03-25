@@ -29,8 +29,8 @@ Aggregate Root:
 | [LineEndDateTime](Applications.Service.ServiceAgreementLines.md#lineenddatetime) | datetime | The ending date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)` 
 | [LineNo](Applications.Service.ServiceAgreementLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
 | [LineStartDateTime](Applications.Service.ServiceAgreementLines.md#linestartdatetime) | datetime | The starting date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)` 
-| [Notes](Applications.Service.ServiceAgreementLines.md#notes) | string(254) (nullable) | Notes for this ServiceAgreementLine. 
-| [Quantity](Applications.Service.ServiceAgreementLines.md#quantity) | decimal(14, 3) | The quantity of the service object that is included in the agreement. `Required` `Default(1)` `Filter(ge;le)` 
+| [Notes](Applications.Service.ServiceAgreementLines.md#notes) | string (254) __nullable__ | Notes for this ServiceAgreementLine. 
+| [Quantity](Applications.Service.ServiceAgreementLines.md#quantity) | decimal (14, 3) | The quantity of the service object that is included in the agreement. `Required` `Default(1)` `Filter(ge;le)` 
 
 ## References
 
@@ -93,7 +93,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this ServiceAgreementLine.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -102,7 +102,7 @@ _Maximum Length_: **254**
 
 The quantity of the service object that is included in the agreement. `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **decimal(14, 3)**  
+_Type_: **decimal (14, 3)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

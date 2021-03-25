@@ -37,33 +37,33 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BirthDate](General.Contacts.Persons.md#birthdate) | datetime (nullable) | Birth date. null means unknown. `Filter(ge;le)` 
-| [City](General.Contacts.Persons.md#city) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | City from the legal registration address for the person. `Filter(like)` 
-| [CreationTime](General.Contacts.Persons.md#creationtime) | datetime (nullable) | Date and time when the Person was created. `Filter(ge;le)` `ReadOnly` 
-| [CreationUser](General.Contacts.Persons.md#creationuser) | string(64) (nullable) | Login name of the user, who created the Person. `Filter(like)` `ReadOnly` 
-| [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | First name of the person. `Filter(eq;like)` 
-| [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) (nullable) | Person gender. M=Male;F=Female;null=not known/not provided. `Filter(eq)` 
-| [GLN](General.Contacts.Persons.md#gln) | string(13) (nullable) | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [BirthDate](General.Contacts.Persons.md#birthdate) | datetime __nullable__ | Birth date. null means unknown. `Filter(ge;le)` 
+| [City](General.Contacts.Persons.md#city) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | City from the legal registration address for the person. `Filter(like)` 
+| [CreationTime](General.Contacts.Persons.md#creationtime) | datetime __nullable__ | Date and time when the Person was created. `Filter(ge;le)` `ReadOnly` 
+| [CreationUser](General.Contacts.Persons.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Person. `Filter(like)` `ReadOnly` 
+| [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | First name of the person. `Filter(eq;like)` 
+| [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) __nullable__ | Person gender. M=Male;F=Female;null=not known/not provided. `Filter(eq)` 
+| [GLN](General.Contacts.Persons.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [Id](General.Contacts.Persons.md#id) | guid |  
 | [IsActive](General.Contacts.Persons.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [LastName](General.Contacts.Persons.md#lastname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Last name of the person. `Filter(eq;like)` 
-| [MiddleName](General.Contacts.Persons.md#middlename) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Middle name of the person. `Filter(eq;like)` 
-| [NationalNumber](General.Contacts.Persons.md#nationalnumber) | string(14) (nullable) | Government assigned unique personal number. null means unknown. `Filter(eq;like)` 
-| [Notes](General.Contacts.Persons.md#notes) | string(254) (nullable) | Internal notes for the person. 
-| [PartyCode](General.Contacts.Persons.md#partycode) | string(16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyCreationTime](General.Contacts.Persons.md#partycreationtime) | datetime (nullable) | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyCreationUser](General.Contacts.Persons.md#partycreationuser) | string(64) (nullable) | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [LastName](General.Contacts.Persons.md#lastname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Last name of the person. `Filter(eq;like)` 
+| [MiddleName](General.Contacts.Persons.md#middlename) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Middle name of the person. `Filter(eq;like)` 
+| [NationalNumber](General.Contacts.Persons.md#nationalnumber) | string (14) __nullable__ | Government assigned unique personal number. null means unknown. `Filter(eq;like)` 
+| [Notes](General.Contacts.Persons.md#notes) | string (254) __nullable__ | Internal notes for the person. 
+| [PartyCode](General.Contacts.Persons.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyCreationTime](General.Contacts.Persons.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyCreationUser](General.Contacts.Persons.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyName](General.Contacts.Persons.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyNotes](General.Contacts.Persons.md#partynotes) | string(254) (nullable) | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyNotes](General.Contacts.Persons.md#partynotes) | string (254) __nullable__ | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyType](General.Contacts.Persons.md#partytype) | [PartyType](General.Contacts.Persons.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyUniqueNumber](General.Contacts.Persons.md#partyuniquenumber) | string(16) (nullable) | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyUpdateTime](General.Contacts.Persons.md#partyupdatetime) | datetime (nullable) | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyUpdateUser](General.Contacts.Persons.md#partyupdateuser) | string(64) (nullable) | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PassportIssuingDate](General.Contacts.Persons.md#passportissuingdate) | datetime (nullable) | Date of issuing the passport. null means unknown. `Filter(ge;le)` 
-| [PassportNumber](General.Contacts.Persons.md#passportnumber) | string(14) (nullable) | Current passport number. null means unknown. `Filter(eq)` 
-| [Title](General.Contacts.Persons.md#title) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification. 
-| [UpdateTime](General.Contacts.Persons.md#updatetime) | datetime (nullable) | Date and time when the Person was last updated. `Filter(ge;le)` `ReadOnly` 
-| [UpdateUser](General.Contacts.Persons.md#updateuser) | string(64) (nullable) | Login name of the user, who last updated the Person. `Filter(like)` `ReadOnly` 
+| [PartyUniqueNumber](General.Contacts.Persons.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyUpdateTime](General.Contacts.Persons.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyUpdateUser](General.Contacts.Persons.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PassportIssuingDate](General.Contacts.Persons.md#passportissuingdate) | datetime __nullable__ | Date of issuing the passport. null means unknown. `Filter(ge;le)` 
+| [PassportNumber](General.Contacts.Persons.md#passportnumber) | string (14) __nullable__ | Current passport number. null means unknown. `Filter(eq)` 
+| [Title](General.Contacts.Persons.md#title) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification. 
+| [UpdateTime](General.Contacts.Persons.md#updatetime) | datetime __nullable__ | Date and time when the Person was last updated. `Filter(ge;le)` `ReadOnly` 
+| [UpdateUser](General.Contacts.Persons.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Person. `Filter(like)` `ReadOnly` 
 
 ## References
 
@@ -99,7 +99,7 @@ Aggregate Tree
 
 Birth date. null means unknown. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -107,7 +107,7 @@ _Supports Order By_: **False**
 
 City from the legal registration address for the person. `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -115,7 +115,7 @@ _Supports Order By_: **False**
 
 Date and time when the Person was created. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -123,7 +123,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Person. `Filter(like)` `ReadOnly`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -132,7 +132,7 @@ _Maximum Length_: **64**
 
 First name of the person. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -140,7 +140,7 @@ _Supports Order By_: **False**
 
 Person gender. M=Male;F=Female;null=not known/not provided. `Filter(eq)`
 
-_Type_: **[Gender](General.Contacts.Persons.md#gender) (nullable)**  
+_Type_: **[Gender](General.Contacts.Persons.md#gender) __nullable__**  
 Allowed values for the `Gender`(General.Contacts.Persons.md#gender) data attribute  
 _Allowed Values (General.Contacts.PersonsRepository.Gender Enum Members)_  
 
@@ -156,7 +156,7 @@ _Supports Order By_: **False**
 
 Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(13) (nullable)**  
+_Type_: **string (13) __nullable__**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
@@ -182,7 +182,7 @@ _Default Value_: **True**
 
 Last name of the person. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -190,7 +190,7 @@ _Supports Order By_: **False**
 
 Middle name of the person. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -198,7 +198,7 @@ _Supports Order By_: **False**
 
 Government assigned unique personal number. null means unknown. `Filter(eq;like)`
 
-_Type_: **string(14) (nullable)**  
+_Type_: **string (14) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **14**  
@@ -207,7 +207,7 @@ _Maximum Length_: **14**
 
 Internal notes for the person.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -216,7 +216,7 @@ _Maximum Length_: **254**
 
 The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -226,7 +226,7 @@ _Maximum Length_: **16**
 
 Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -234,7 +234,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -252,7 +252,7 @@ _Supports Order By_: **True**
 
 Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -281,7 +281,7 @@ _Default Value_: **Person**
 
 Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(16) (nullable)**  
+_Type_: **string (16) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -290,7 +290,7 @@ _Maximum Length_: **16**
 
 Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -298,7 +298,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -307,7 +307,7 @@ _Maximum Length_: **64**
 
 Date of issuing the passport. null means unknown. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -315,7 +315,7 @@ _Supports Order By_: **False**
 
 Current passport number. null means unknown. `Filter(eq)`
 
-_Type_: **string(14) (nullable)**  
+_Type_: **string (14) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **14**  
@@ -324,7 +324,7 @@ _Maximum Length_: **14**
 
 The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -332,7 +332,7 @@ _Supports Order By_: **False**
 
 Date and time when the Person was last updated. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -340,7 +340,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Person. `Filter(like)` `ReadOnly`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

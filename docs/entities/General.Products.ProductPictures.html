@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="General.Products.ProductPictures.html#comments">Comments</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Comments for this ProductPicture.</td>
 </tr>
 <tr>
@@ -119,12 +119,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#lastupdatetime">LastUpdateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The exact server time, when the picture was last updated. Set automatically. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#picture">Picture</a></td>
-<td>byte[] (nullable)</td>
+<td>byte[] <strong>nullable</strong></td>
 <td>The actual product picture. Can be null if we insert only some comments.</td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a></td>
-<td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> (nullable)</td>
+<td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> <strong>nullable</strong></td>
 <td>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</td>
 </tr>
 </tbody>
@@ -159,7 +159,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="comments">Comments</h3>
 <p>Comments for this ProductPicture.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -178,12 +178,12 @@ Aggregate Root:<br>
 <code>( obj.Product.Pictures.Take( 1).Count( ) == 0)</code></p>
 <h3 id="lastupdatetime">LastUpdateTime</h3>
 <p>The exact server time, when the picture was last updated. Set automatically. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="picture">Picture</h3>
 <p>The actual product picture. Can be null if we insert only some comments.</p>
-<p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="pictureno">PictureNo</h3>
@@ -197,7 +197,7 @@ Aggregate Root:<br>
 <code>( obj.Product.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="picturesizeclass">PictureSizeClass</h3>
 <p>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</p>
-<p><em>Type</em>: <strong><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> <strong>nullable</strong></strong><br>
 Allowed values for the <code>PictureSizeClass</code>(General.Products.ProductPictures.md#picturesizeclass) data attribute<br>
 <em>Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enum Members)</em></p>
 <table>

@@ -21,54 +21,54 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [L1Name](General.ProductGroupsLevelNames.md#l1name) | string(180) |  
-| [L2Name](General.ProductGroupsLevelNames.md#l2name) | string(180) |  
-| [L3Name](General.ProductGroupsLevelNames.md#l3name) | string(180) |  
-| [L4Name](General.ProductGroupsLevelNames.md#l4name) | string(180) |  
-| [L5Name](General.ProductGroupsLevelNames.md#l5name) | string(180) |  
-| [L6Name](General.ProductGroupsLevelNames.md#l6name) | string(180) |  
+| [L1Name](General.ProductGroupsLevelNames.md#l1name) | string (180) |  
+| [L2Name](General.ProductGroupsLevelNames.md#l2name) | string (180) |  
+| [L3Name](General.ProductGroupsLevelNames.md#l3name) | string (180) |  
+| [L4Name](General.ProductGroupsLevelNames.md#l4name) | string (180) |  
+| [L5Name](General.ProductGroupsLevelNames.md#l5name) | string (180) |  
+| [L6Name](General.ProductGroupsLevelNames.md#l6name) | string (180) |  
 
 
 ## Attribute Details
 
 ### L1Name
 
-_Type_: **string(180)**  
+_Type_: **string (180)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
 
 ### L2Name
 
-_Type_: **string(180)**  
+_Type_: **string (180)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
 
 ### L3Name
 
-_Type_: **string(180)**  
+_Type_: **string (180)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
 
 ### L4Name
 
-_Type_: **string(180)**  
+_Type_: **string (180)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
 
 ### L5Name
 
-_Type_: **string(180)**  
+_Type_: **string (180)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
 
 ### L6Name
 
-_Type_: **string(180)**  
+_Type_: **string (180)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  

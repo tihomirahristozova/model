@@ -119,7 +119,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a></td>
-<td><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> (nullable)</td>
+<td><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> <strong>nullable</strong></td>
 <td>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#amounttypecode">AmountTypeCode</a></td>
-<td>string(16)</td>
+<td>string (16)</td>
 <td>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -144,12 +144,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#defaultpercent">DefaultPercent</a></td>
-<td>decimal(7, 6) (nullable)</td>
+<td>decimal (7, 6) <strong>nullable</strong></td>
 <td>Default percent for amounts for which percent input is allowed; null otherwise.</td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#description">Description</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>The description of this DocumentAmountType.</td>
 </tr>
 <tr>
@@ -174,7 +174,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#roundscale">RoundScale</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.</td>
 </tr>
 <tr>
@@ -238,7 +238,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="alloweddirections">AllowedDirections</h3>
 <p>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> <strong>nullable</strong></strong><br>
 Allowed values for the <code>AllowedDirections</code>(General.DocumentAmountTypes.md#alloweddirections) data attribute<br>
 <em>Allowed Values (General.DocumentAmountTypesRepository.AllowedDirections Enum Members)</em></p>
 <table>
@@ -274,7 +274,7 @@ Allowed values for the <code>AllowedDirections</code>(General.DocumentAmountType
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="amounttypecode">AmountTypeCode</h3>
 <p>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(16)</strong><br>
+<p><em>Type</em>: <strong>string (16)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -293,14 +293,14 @@ Allowed values for the <code>AllowedDirections</code>(General.DocumentAmountType
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="defaultpercent">DefaultPercent</h3>
 <p>Default percent for amounts for which percent input is allowed; null otherwise.</p>
-<p><em>Type</em>: <strong>decimal(7, 6) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( Not( obj.PercentInputAllowed), null, obj.DefaultPercent)</code></p>
 <h3 id="description">Description</h3>
 <p>The description of this DocumentAmountType.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -353,7 +353,7 @@ Allowed values for the <code>DistributeBy</code>(General.DocumentAmountTypes.md#
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="roundscale">RoundScale</h3>
 <p>The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="unitamountinputallowed">UnitAmountInputAllowed</h3>

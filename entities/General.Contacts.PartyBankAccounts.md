@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BankAccountCode](General.Contacts.PartyBankAccounts.md#bankaccountcode) | string(50) | The code of the account, usually the IBAN code. `Required` `Filter(eq;like)` 
-| [BankAddress](General.Contacts.PartyBankAccounts.md#bankaddress) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments. 
-| [BankBranchName](General.Contacts.PartyBankAccounts.md#bankbranchname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments. 
-| [BankCode](General.Contacts.PartyBankAccounts.md#bankcode) | string(30) (nullable) | The code of the bank, usually the BIC code. `Filter(eq)` 
-| [BankName](General.Contacts.PartyBankAccounts.md#bankname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The full name of the bank. `Filter(like)` 
+| [BankAccountCode](General.Contacts.PartyBankAccounts.md#bankaccountcode) | string (50) | The code of the account, usually the IBAN code. `Required` `Filter(eq;like)` 
+| [BankAddress](General.Contacts.PartyBankAccounts.md#bankaddress) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments. 
+| [BankBranchName](General.Contacts.PartyBankAccounts.md#bankbranchname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments. 
+| [BankCode](General.Contacts.PartyBankAccounts.md#bankcode) | string (30) __nullable__ | The code of the bank, usually the BIC code. `Filter(eq)` 
+| [BankName](General.Contacts.PartyBankAccounts.md#bankname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The full name of the bank. `Filter(like)` 
 | [Id](General.Contacts.PartyBankAccounts.md#id) | guid |  
 | [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | True if the this is the default account for the party. Only one default per party is allowed. `Required` `Default(false)` `Filter(eq)` 
-| [Notes](General.Contacts.PartyBankAccounts.md#notes) | string(254) (nullable) | Notes for this PartyBankAccount. 
+| [Notes](General.Contacts.PartyBankAccounts.md#notes) | string (254) __nullable__ | Notes for this PartyBankAccount. 
 
 ## References
 
@@ -47,7 +47,7 @@ Aggregate Root:
 
 The code of the account, usually the IBAN code. `Required` `Filter(eq;like)`
 
-_Type_: **string(50)**  
+_Type_: **string (50)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -56,7 +56,7 @@ _Maximum Length_: **50**
 
 The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 The code of the bank, usually the BIC code. `Filter(eq)`
 
-_Type_: **string(30) (nullable)**  
+_Type_: **string (30) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
@@ -81,7 +81,7 @@ _Maximum Length_: **30**
 
 The full name of the bank. `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -105,7 +105,7 @@ _Default Value_: **False**
 
 Notes for this PartyBankAccount.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

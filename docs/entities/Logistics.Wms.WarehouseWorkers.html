@@ -109,7 +109,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#activeto">ActiveTo</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this WarehouseWorker.</td>
 </tr>
 </tbody>
@@ -165,7 +165,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="activeto">ActiveTo</h3>
 <p>The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -186,7 +186,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WarehouseWorker.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

@@ -27,18 +27,18 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AddToCustomer](General.DocumentAmountTypes.md#addtocustomer) | boolean | True means that the amount will be charged to the primary customer of the document. `Required` `Default(true)` 
 | [AddToLine](General.DocumentAmountTypes.md#addtoline) | boolean | True means that the resulting amount will be added to the amount of each respective line. `Required` `Default(true)` 
-| [AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) | [AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) (nullable) | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. `Default(0)` 
+| [AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) | [AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) __nullable__ | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. `Default(0)` 
 | [AmountInputAllowed](General.DocumentAmountTypes.md#amountinputallowed) | boolean | True when the user is allowed to input fixed amount for distribution. `Required` `Default(false)` `Filter(eq)` 
-| [AmountTypeCode](General.DocumentAmountTypes.md#amounttypecode) | string(16) | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. `Required` `Filter(multi eq)` `ORD` 
+| [AmountTypeCode](General.DocumentAmountTypes.md#amounttypecode) | string (16) | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. `Required` `Filter(multi eq)` `ORD` 
 | [AmountTypeName](General.DocumentAmountTypes.md#amounttypename) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the amount type. `Required` `Filter(like)` `ORD` 
 | [BaseOnLines](General.DocumentAmountTypes.md#baseonlines) | boolean | True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. `Required` `Default(true)` 
-| [DefaultPercent](General.DocumentAmountTypes.md#defaultpercent) | decimal(7, 6) (nullable) | Default percent for amounts for which percent input is allowed; null otherwise. 
-| [Description](General.DocumentAmountTypes.md#description) | string(254) (nullable) | The description of this DocumentAmountType. 
+| [DefaultPercent](General.DocumentAmountTypes.md#defaultpercent) | decimal (7, 6) __nullable__ | Default percent for amounts for which percent input is allowed; null otherwise. 
+| [Description](General.DocumentAmountTypes.md#description) | string (254) __nullable__ | The description of this DocumentAmountType. 
 | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). `Required` `Default("AMOUNT")` `Filter(eq)` 
 | [Id](General.DocumentAmountTypes.md#id) | guid |  
 | [IsActive](General.DocumentAmountTypes.md#isactive) | boolean | True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [PercentInputAllowed](General.DocumentAmountTypes.md#percentinputallowed) | boolean | True when the user is allowed to input percent of total for distribution. `Required` `Default(true)` `Filter(eq)` 
-| [RoundScale](General.DocumentAmountTypes.md#roundscale) | int32 (nullable) | The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default. 
+| [RoundScale](General.DocumentAmountTypes.md#roundscale) | int32 __nullable__ | The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default. 
 | [UnitAmountInputAllowed](General.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. `Required` `Default(false)` `Filter(eq)` 
 
 ## References
@@ -79,7 +79,7 @@ _Default Value_: **True**
 
 Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. `Default(0)`
 
-_Type_: **[AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) (nullable)**  
+_Type_: **[AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) __nullable__**  
 Allowed values for the `AllowedDirections`(General.DocumentAmountTypes.md#alloweddirections) data attribute  
 _Allowed Values (General.DocumentAmountTypesRepository.AllowedDirections Enum Members)_  
 
@@ -106,7 +106,7 @@ _Default Value_: **False**
 
 A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. `Required` `Filter(multi eq)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
@@ -134,7 +134,7 @@ _Default Value_: **True**
 
 Default percent for amounts for which percent input is allowed; null otherwise.
 
-_Type_: **decimal(7, 6) (nullable)**  
+_Type_: **decimal (7, 6) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -144,7 +144,7 @@ _Front-End Recalc Expressions:_
 
 The description of this DocumentAmountType.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -196,7 +196,7 @@ _Default Value_: **True**
 
 The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

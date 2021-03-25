@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Procurement.PurchaseOperationTypes.md#code) | string(16) | Unique code of the purchase operation type. `Required` `Filter(multi eq;like)` 
+| [Code](Logistics.Procurement.PurchaseOperationTypes.md#code) | string (16) | Unique code of the purchase operation type. `Required` `Filter(multi eq;like)` 
 | [Id](Logistics.Procurement.PurchaseOperationTypes.md#id) | guid |  
 | [Name](Logistics.Procurement.PurchaseOperationTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the purchase operation type (multilanguage). `Required` `Filter(multi eq;like)` 
-| [Notes](Logistics.Procurement.PurchaseOperationTypes.md#notes) | string(2147483647) (nullable) | Notes for this PurchaseOperationType. `Filter(eq;like)` 
+| [Notes](Logistics.Procurement.PurchaseOperationTypes.md#notes) | string (max) __nullable__ | Notes for this PurchaseOperationType. `Filter(eq;like)` 
 
 
 ## Attribute Details
@@ -35,7 +35,7 @@ Aggregate Tree
 
 Unique code of the purchase operation type. `Required` `Filter(multi eq;like)`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 Notes for this PurchaseOperationType. `Filter(eq;like)`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

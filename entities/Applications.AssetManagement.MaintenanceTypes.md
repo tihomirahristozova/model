@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string(16) | Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD` 
-| [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 (nullable) | Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change. 
-| [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 (nullable) | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days. 
-| [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 (nullable) | Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months. 
-| [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Detailed description of the maintenance (multilanguage). 
+| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string (16) | Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD` 
+| [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change. 
+| [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days. 
+| [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months. 
+| [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
 | [Id](Applications.AssetManagement.MaintenanceTypes.md#id) | guid |  
 | [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. `Required` `Filter(eq;like)` 
 
@@ -45,7 +45,7 @@ Aggregate Tree
 
 Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -55,7 +55,7 @@ _Maximum Length_: **16**
 
 Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -79,7 +79,7 @@ _Supports Order By_: **False**
 
 Detailed description of the maintenance (multilanguage).
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

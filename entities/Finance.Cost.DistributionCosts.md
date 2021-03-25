@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AmountBase](Finance.Cost.DistributionCosts.md#amountbase) | [Amount](../data-types.md#amount) | The cost (in base currency) which should be distributed. `Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
 | [Id](Finance.Cost.DistributionCosts.md#id) | guid |  
-| [Notes](Finance.Cost.DistributionCosts.md#notes) | string(2147483647) (nullable) | Notes for this DistributionCost. 
+| [Notes](Finance.Cost.DistributionCosts.md#notes) | string (max) __nullable__ | Notes for this DistributionCost. 
 
 ## References
 
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 Notes for this DistributionCost.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

@@ -24,7 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceObjectTypes.md#id) | guid |  
-| [Name](Applications.Service.ServiceObjectTypes.md#name) | string(254) | The name of this ServiceObjectType. `Required` `Filter(eq;like)` 
+| [Name](Applications.Service.ServiceObjectTypes.md#name) | string (254) | The name of this ServiceObjectType. `Required` `Filter(eq;like)` 
 
 
 ## Attribute Details
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 The name of this ServiceObjectType. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

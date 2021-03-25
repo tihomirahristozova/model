@@ -34,18 +34,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GLN](General.Contacts.Parties.md#gln) | string(13) (nullable) | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` 
+| [GLN](General.Contacts.Parties.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` 
 | [IsActive](General.Contacts.Parties.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` 
-| [PartyCode](General.Contacts.Parties.md#partycode) | string(16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` 
-| [PartyCreationTime](General.Contacts.Parties.md#partycreationtime) | datetime (nullable) | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` 
-| [PartyCreationUser](General.Contacts.Parties.md#partycreationuser) | string(64) (nullable) | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` 
+| [PartyCode](General.Contacts.Parties.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` 
+| [PartyCreationTime](General.Contacts.Parties.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` 
+| [PartyCreationUser](General.Contacts.Parties.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` 
 | [PartyId](General.Contacts.Parties.md#partyid) | guid | Gets the Id of the party row, related to the domain object 
 | [PartyName](General.Contacts.Parties.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ORD` 
-| [PartyNotes](General.Contacts.Parties.md#partynotes) | string(254) (nullable) | Notes for this Party. 
+| [PartyNotes](General.Contacts.Parties.md#partynotes) | string (254) __nullable__ | Notes for this Party. 
 | [PartyType](General.Contacts.Parties.md#partytype) | [PartyType](General.Contacts.Parties.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` 
-| [PartyUniqueNumber](General.Contacts.Parties.md#partyuniquenumber) | string(16) (nullable) | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` 
-| [PartyUpdateTime](General.Contacts.Parties.md#partyupdatetime) | datetime (nullable) | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` 
-| [PartyUpdateUser](General.Contacts.Parties.md#partyupdateuser) | string(64) (nullable) | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` 
+| [PartyUniqueNumber](General.Contacts.Parties.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` 
+| [PartyUpdateTime](General.Contacts.Parties.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` 
+| [PartyUpdateUser](General.Contacts.Parties.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` 
 
 ## References
 
@@ -78,7 +78,7 @@ Aggregate Tree
 
 Global Location Number used by EDI systems. `Filter(multi eq)` `ORD`
 
-_Type_: **string(13) (nullable)**  
+_Type_: **string (13) __nullable__**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
@@ -97,7 +97,7 @@ _Default Value_: **True**
 
 The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -107,7 +107,7 @@ _Maximum Length_: **16**
 
 Date and time when the Party was created. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -115,7 +115,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Party. `Filter(like)` `ReadOnly`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -142,7 +142,7 @@ _Supports Order By_: **True**
 
 Notes for this Party.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -171,7 +171,7 @@ _Default Value_: **Person**
 
 Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly`
 
-_Type_: **string(16) (nullable)**  
+_Type_: **string (16) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -180,7 +180,7 @@ _Maximum Length_: **16**
 
 Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -188,7 +188,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

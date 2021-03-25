@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttachmentContent](Applications.Mail.MessageAttachments.md#attachmentcontent) | byte[] (nullable) | The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason. 
-| [ContentDescriptors](Applications.Mail.MessageAttachments.md#contentdescriptors) | string(4000) (nullable) | Content flags, like "Content-Type: text/plain; charset=utf-8". 
+| [AttachmentContent](Applications.Mail.MessageAttachments.md#attachmentcontent) | byte[] __nullable__ | The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason. 
+| [ContentDescriptors](Applications.Mail.MessageAttachments.md#contentdescriptors) | string (4000) __nullable__ | Content flags, like "Content-Type: text/plain; charset=utf-8". 
 | [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | True when the content is included, false when this is only an empty container. Content should be included when sending mail. `Required` `Default(false)` `Filter(eq)` 
 | [Id](Applications.Mail.MessageAttachments.md#id) | guid |  
-| [Name](Applications.Mail.MessageAttachments.md#name) | string(128) (nullable) | The name of this MessageAttachment. `Filter(eq;like)` 
+| [Name](Applications.Mail.MessageAttachments.md#name) | string (128) __nullable__ | The name of this MessageAttachment. `Filter(eq;like)` 
 
 ## References
 
@@ -44,7 +44,7 @@ Aggregate Root:
 
 The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 Content flags, like "Content-Type: text/plain; charset=utf-8".
 
-_Type_: **string(4000) (nullable)**  
+_Type_: **string (4000) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **4000**  
@@ -77,7 +77,7 @@ _Default Value_: **NewGuid**
 
 The name of this MessageAttachment. `Filter(eq;like)`
 
-_Type_: **string(128) (nullable)**  
+_Type_: **string (128) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  

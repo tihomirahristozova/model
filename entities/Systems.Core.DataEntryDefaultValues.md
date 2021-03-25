@@ -23,14 +23,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ColumnName](Systems.Core.DataEntryDefaultValues.md#columnname) | string(64) | The column for which the default is specified. `Required` `Filter(eq)` 
-| [ConditionFormName](Systems.Core.DataEntryDefaultValues.md#conditionformname) | string(64) (nullable) | If not null specifies that the default should be applied only if Form_Name equals the specified value. `Filter(eq)` `ORD` 
-| [ConditionUserLogin](Systems.Core.DataEntryDefaultValues.md#conditionuserlogin) | string(64) (nullable) | If not null specifies that the default should be applied only if User_Login equals this value. `Filter(eq)` 
-| [ConditionUserMachine](Systems.Core.DataEntryDefaultValues.md#conditionusermachine) | string(64) (nullable) | If not null specifies that the default should be applied only if User_Machine equals this value. `Filter(eq)` 
-| [DefaultValueField](Systems.Core.DataEntryDefaultValues.md#defaultvaluefield) | string(254) (nullable) | The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default. 
+| [ColumnName](Systems.Core.DataEntryDefaultValues.md#columnname) | string (64) | The column for which the default is specified. `Required` `Filter(eq)` 
+| [ConditionFormName](Systems.Core.DataEntryDefaultValues.md#conditionformname) | string (64) __nullable__ | If not null specifies that the default should be applied only if Form_Name equals the specified value. `Filter(eq)` `ORD` 
+| [ConditionUserLogin](Systems.Core.DataEntryDefaultValues.md#conditionuserlogin) | string (64) __nullable__ | If not null specifies that the default should be applied only if User_Login equals this value. `Filter(eq)` 
+| [ConditionUserMachine](Systems.Core.DataEntryDefaultValues.md#conditionusermachine) | string (64) __nullable__ | If not null specifies that the default should be applied only if User_Machine equals this value. `Filter(eq)` 
+| [DefaultValueField](Systems.Core.DataEntryDefaultValues.md#defaultvaluefield) | string (254) __nullable__ | The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default. 
 | [Id](Systems.Core.DataEntryDefaultValues.md#id) | guid |  
-| [PanelName](Systems.Core.DataEntryDefaultValues.md#panelname) | string(64) (nullable) | When not null, specifies the panel for which the default value applies. `Filter(eq;like)` 
-| [TableName](Systems.Core.DataEntryDefaultValues.md#tablename) | string(64) (nullable) | The table, containing the column for which the default value is specified. `Filter(eq)` 
+| [PanelName](Systems.Core.DataEntryDefaultValues.md#panelname) | string (64) __nullable__ | When not null, specifies the panel for which the default value applies. `Filter(eq;like)` 
+| [TableName](Systems.Core.DataEntryDefaultValues.md#tablename) | string (64) __nullable__ | The table, containing the column for which the default value is specified. `Filter(eq)` 
 
 ## References
 
@@ -47,7 +47,7 @@ Aggregate Tree
 
 The column for which the default is specified. `Required` `Filter(eq)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -56,7 +56,7 @@ _Maximum Length_: **64**
 
 If not null specifies that the default should be applied only if Form_Name equals the specified value. `Filter(eq)` `ORD`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -66,7 +66,7 @@ _Maximum Length_: **64**
 
 If not null specifies that the default should be applied only if User_Login equals this value. `Filter(eq)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -75,7 +75,7 @@ _Maximum Length_: **64**
 
 If not null specifies that the default should be applied only if User_Machine equals this value. `Filter(eq)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -84,7 +84,7 @@ _Maximum Length_: **64**
 
 The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -100,7 +100,7 @@ _Default Value_: **NewGuid**
 
 When not null, specifies the panel for which the default value applies. `Filter(eq;like)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -109,7 +109,7 @@ _Maximum Length_: **64**
 
 The table, containing the column for which the default value is specified. `Filter(eq)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

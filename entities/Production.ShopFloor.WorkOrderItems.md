@@ -25,20 +25,20 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletionDate](Production.ShopFloor.WorkOrderItems.md#completiondate) | datetime (nullable) | The date, when the item should be completed. null means that there is no constraint for completion date. 
+| [CompletionDate](Production.ShopFloor.WorkOrderItems.md#completiondate) | datetime __nullable__ | The date, when the item should be completed. null means that there is no constraint for completion date. 
 | [Id](Production.ShopFloor.WorkOrderItems.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.WorkOrderItems.md#lineord) | int32 | The order of the line within the work order. `Required` `Filter(eq;like)` 
 | [LotSize](Production.ShopFloor.WorkOrderItems.md#lotsize) | [Quantity](../data-types.md#quantity) | Quantity produced in one production run. `Unit: ProducedQuantityUnit` `Required` `Default(1)` 
-| [Notes](Production.ShopFloor.WorkOrderItems.md#notes) | string(2147483647) (nullable) | Notes for this WorkOrderItem. 
-| [ParentLineId](Production.ShopFloor.WorkOrderItems.md#parentlineid) | guid (nullable) | If not null contains the Id of the line of the parent document, that created the current row. `Filter(multi eq)` 
-| [ParentLineNo](Production.ShopFloor.WorkOrderItems.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)` 
+| [Notes](Production.ShopFloor.WorkOrderItems.md#notes) | string (max) __nullable__ | Notes for this WorkOrderItem. 
+| [ParentLineId](Production.ShopFloor.WorkOrderItems.md#parentlineid) | guid __nullable__ | If not null contains the Id of the line of the parent document, that created the current row. `Filter(multi eq)` 
+| [ParentLineNo](Production.ShopFloor.WorkOrderItems.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)` 
 | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. `Required` `Default(3)` 
 | [ProducedQuantity](Production.ShopFloor.WorkOrderItems.md#producedquantity) | [Quantity](../data-types.md#quantity) | The quantity produced in the operation. `Unit: ProducedQuantityUnit` `Required` `Default(1)` 
 | [ProducedQuantityBase](Production.ShopFloor.WorkOrderItems.md#producedquantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [ProducedStandard<br />QuantityBase](Production.ShopFloor.WorkOrderItems.md#producedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [ReleaseDate](Production.ShopFloor.WorkOrderItems.md#releasedate) | datetime (nullable) | The date, when the item is released to production. null means that still there is no plan when the item will be released to production. 
-| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledenddatetime) | datetime (nullable) | Date and time when the production of this item is scheduled to end. 
-| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledstartdatetime) | datetime (nullable) | Date and time when the production of this item is scheduled to begin. 
+| [ReleaseDate](Production.ShopFloor.WorkOrderItems.md#releasedate) | datetime __nullable__ | The date, when the item is released to production. null means that still there is no plan when the item will be released to production. 
+| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledenddatetime) | datetime __nullable__ | Date and time when the production of this item is scheduled to end. 
+| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledstartdatetime) | datetime __nullable__ | Date and time when the production of this item is scheduled to begin. 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 The date, when the item should be completed. null means that there is no constraint for completion date.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -113,7 +113,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this WorkOrderItem.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -122,14 +122,14 @@ _Maximum Length_: **2147483647**
 
 If not null contains the Id of the line of the parent document, that created the current row. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentLineNo
 
 The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -194,7 +194,7 @@ _Front-End Recalc Expressions:_
 
 The date, when the item is released to production. null means that still there is no plan when the item will be released to production.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -207,7 +207,7 @@ _Front-End Recalc Expressions:_
 
 Date and time when the production of this item is scheduled to end.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -215,7 +215,7 @@ _Supports Order By_: **False**
 
 Date and time when the production of this item is scheduled to begin.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this TransferOrderLine.</td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#standardunitprice">StandardUnitPrice</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>Standard unit price of the product during the creation of the transfer order line. <code>Currency: TransferOrder.DocumentCurrency</code></td>
 </tr>
 </tbody>
@@ -246,7 +246,7 @@ Aggregate Root:<br>
 <code>( obj.TransferOrder.Lines.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this TransferOrderLine.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -276,7 +276,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardunitprice">StandardUnitPrice</h3>
 <p>Standard unit price of the product during the creation of the transfer order line. <code>Currency: TransferOrder.DocumentCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>

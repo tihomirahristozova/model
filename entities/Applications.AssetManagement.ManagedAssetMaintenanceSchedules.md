@@ -26,10 +26,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#id) | guid |  
-| [Notes](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#notes) | string(2147483647) (nullable) | Notes for this ManagedAssetMaintenance<br />Schedule. 
-| [ParameterChangeDelta](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#parameterchangedelta) | int32 (nullable) | The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. `Filter(multi eq;ge;le)` 
-| [ScheduleDays](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#scheduledays) | int32 (nullable) | Number of days between planned maintenances. null means that the schedule is not planned based on days. 
-| [ScheduleMonths](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#schedulemonths) | int32 (nullable) | Number of months between planned maintenances. null means that the schedule is not planned based on months. 
+| [Notes](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetMaintenance<br />Schedule. 
+| [ParameterChangeDelta](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#parameterchangedelta) | int32 __nullable__ | The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. `Filter(multi eq;ge;le)` 
+| [ScheduleDays](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#scheduledays) | int32 __nullable__ | Number of days between planned maintenances. null means that the schedule is not planned based on days. 
+| [ScheduleMonths](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#schedulemonths) | int32 __nullable__ | Number of months between planned maintenances. null means that the schedule is not planned based on months. 
 
 ## References
 
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 Notes for this ManagedAssetMaintenanceSchedule.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -61,7 +61,7 @@ _Maximum Length_: **2147483647**
 
 The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. `Filter(multi eq;ge;le)`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 Number of days between planned maintenances. null means that the schedule is not planned based on days.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -77,7 +77,7 @@ _Supports Order By_: **False**
 
 Number of months between planned maintenances. null means that the schedule is not planned based on months.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -35,32 +35,32 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AdjustmentNumber](Logistics.Inventory.CostCorrections.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentTime](Logistics.Inventory.CostCorrections.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentUser](Logistics.Inventory.CostCorrections.md#adjustmentuser) | string(64) (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [CompleteTime](Logistics.Inventory.CostCorrections.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentTime](Logistics.Inventory.CostCorrections.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentUser](Logistics.Inventory.CostCorrections.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CompleteTime](Logistics.Inventory.CostCorrections.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationTime](Logistics.Inventory.CostCorrections.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [CreationUser](Logistics.Inventory.CostCorrections.md#creationuser) | string(64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CreationUser](Logistics.Inventory.CostCorrections.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentDate](Logistics.Inventory.CostCorrections.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNo](Logistics.Inventory.CostCorrections.md#documentno) | string(20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNotes](Logistics.Inventory.CostCorrections.md#documentnotes) | string(2147483647) (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNo](Logistics.Inventory.CostCorrections.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNotes](Logistics.Inventory.CostCorrections.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
 | [DocumentVersion](Logistics.Inventory.CostCorrections.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [EntityName](Logistics.Inventory.CostCorrections.md#entityname) | string(64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [EntityName](Logistics.Inventory.CostCorrections.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [FromDate](Logistics.Inventory.CostCorrections.md#fromdate) | datetime | The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is null. `Required` 
 | [Id](Logistics.Inventory.CostCorrections.md#id) | guid |  
 | [IsReleased](Logistics.Inventory.CostCorrections.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Logistics.Inventory.CostCorrections.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.CostCorrections.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.CostCorrections.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [ReferenceDate](Logistics.Inventory.CostCorrections.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
-| [ReferenceDocumentNo](Logistics.Inventory.CostCorrections.md#referencedocumentno) | string(20) (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
-| [ReleaseTime](Logistics.Inventory.CostCorrections.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDate](Logistics.Inventory.CostCorrections.md#referencedate) | datetime __nullable__ | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDocumentNo](Logistics.Inventory.CostCorrections.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
+| [ReleaseTime](Logistics.Inventory.CostCorrections.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Logistics.Inventory.CostCorrections.md#state) | [DocumentState](Logistics.Inventory.CostCorrections.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ThruDate](Logistics.Inventory.CostCorrections.md#thrudate) | datetime | The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is null. `Required` 
 | [Void](Logistics.Inventory.CostCorrections.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidReason](Logistics.Inventory.CostCorrections.md#voidreason) | string(254) (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidTime](Logistics.Inventory.CostCorrections.md#voidtime) | datetime (nullable) | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidUser](Logistics.Inventory.CostCorrections.md#voiduser) | string(64) (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidReason](Logistics.Inventory.CostCorrections.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidTime](Logistics.Inventory.CostCorrections.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidUser](Logistics.Inventory.CostCorrections.md#voiduser) | string (64) __nullable__ | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 
 ## References
 
@@ -117,7 +117,7 @@ _Default Value_: **0**
 
 Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -125,7 +125,7 @@ _Supports Order By_: **False**
 
 The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -134,7 +134,7 @@ _Maximum Length_: **64**
 
 Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -151,7 +151,7 @@ _Default Value_: **CurrentDateTime**
 
 The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -170,7 +170,7 @@ _Default Value_: **CurrentDate**
 
 Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(20)**  
+_Type_: **string (20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -180,7 +180,7 @@ _Maximum Length_: **20**
 
 Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -198,7 +198,7 @@ _Default Value_: **1**
 
 The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -241,7 +241,7 @@ _Default Value_: **False**
 
 Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **[ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) (nullable)**  
+_Type_: **[ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) __nullable__**  
 Relationship between parent and child documents  
 _Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
@@ -275,7 +275,7 @@ _Default Value_: **False**
 
 The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -284,7 +284,7 @@ _Default Value_: **CurrentDate**
 
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(20) (nullable)**  
+_Type_: **string (20) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -293,7 +293,7 @@ _Maximum Length_: **20**
 
 Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -341,7 +341,7 @@ _Default Value_: **False**
 
 Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -350,7 +350,7 @@ _Maximum Length_: **254**
 
 Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -358,7 +358,7 @@ _Supports Order By_: **False**
 
 The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

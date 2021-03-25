@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvailableResources](General.Resources.ResourceAvailability.md#availableresources) | decimal(12, 2) | The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. `Required` `Default(1)` 
+| [AvailableResources](General.Resources.ResourceAvailability.md#availableresources) | decimal (12, 2) | The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. `Required` `Default(1)` 
 | [FromDate](General.Resources.ResourceAvailability.md#fromdate) | date | The date from which availability starts. `Required` 
 | [Id](General.Resources.ResourceAvailability.md#id) | guid |  
-| [ToDate](General.Resources.ResourceAvailability.md#todate) | date (nullable) | The date to which the availability continues. When null, the availability continues infinitely. 
+| [ToDate](General.Resources.ResourceAvailability.md#todate) | date __nullable__ | The date to which the availability continues. When null, the availability continues infinitely. 
 
 ## References
 
@@ -43,7 +43,7 @@ Aggregate Root:
 
 The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. `Required` `Default(1)`
 
-_Type_: **decimal(12, 2)**  
+_Type_: **decimal (12, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -67,7 +67,7 @@ _Default Value_: **NewGuid**
 
 The date to which the availability continues. When null, the availability continues infinitely.
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

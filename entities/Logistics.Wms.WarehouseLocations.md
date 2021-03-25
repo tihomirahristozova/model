@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Wms.WarehouseLocations.md#id) | guid |  
-| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string(32) | The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)` 
-| [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string(2147483647) (nullable) | Notes for this WarehouseLocation. 
+| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)` 
+| [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (max) __nullable__ | Notes for this WarehouseLocation. 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)`
 
-_Type_: **string(32)**  
+_Type_: **string (32)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -59,7 +59,7 @@ _Maximum Length_: **32**
 
 Notes for this WarehouseLocation.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

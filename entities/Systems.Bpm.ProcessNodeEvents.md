@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BoundaryOfProcessNodeId](Systems.Bpm.ProcessNodeEvents.md#boundaryofprocessnodeid) | guid (nullable) | When the event is boundary, contains the node to which the event is bound. Otherwise contains null. `Filter(multi eq)` 
-| [EventKey](Systems.Bpm.ProcessNodeEvents.md#eventkey) | string(128) | The unique event key, which is thrown or caught. `Required` 
-| [EventType](Systems.Bpm.ProcessNodeEvents.md#eventtype) | string(1) | Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. `Required` 
+| [BoundaryOfProcessNodeId](Systems.Bpm.ProcessNodeEvents.md#boundaryofprocessnodeid) | guid __nullable__ | When the event is boundary, contains the node to which the event is bound. Otherwise contains null. `Filter(multi eq)` 
+| [EventKey](Systems.Bpm.ProcessNodeEvents.md#eventkey) | string (128) | The unique event key, which is thrown or caught. `Required` 
+| [EventType](Systems.Bpm.ProcessNodeEvents.md#eventtype) | string (1) | Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. `Required` 
 | [Id](Systems.Bpm.ProcessNodeEvents.md#id) | guid |  
 | [IsCancel](Systems.Bpm.ProcessNodeEvents.md#iscancel) | boolean | True if this is cancel event. `Required` 
 | [IsCompensation](Systems.Bpm.ProcessNodeEvents.md#iscompensation) | boolean | True if this is compensation event. `Required` 
@@ -43,14 +43,14 @@ Aggregate Tree
 
 When the event is boundary, contains the node to which the event is bound. Otherwise contains null. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EventKey
 
 The unique event key, which is thrown or caught. `Required`
 
-_Type_: **string(128)**  
+_Type_: **string (128)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -59,7 +59,7 @@ _Maximum Length_: **128**
 
 Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. `Required`
 
-_Type_: **string(1)**  
+_Type_: **string (1)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1**  

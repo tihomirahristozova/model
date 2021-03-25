@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndingTimestamp](Applications.Fleet.TripSegments.md#endingtimestamp) | datetime (nullable) | The ending date and time of the travel on the segment. 
+| [EndingTimestamp](Applications.Fleet.TripSegments.md#endingtimestamp) | datetime __nullable__ | The ending date and time of the travel on the segment. 
 | [Id](Applications.Fleet.TripSegments.md#id) | guid |  
-| [Mileage](Applications.Fleet.TripSegments.md#mileage) | decimal(9, 0) (nullable) | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage. 
-| [Notes](Applications.Fleet.TripSegments.md#notes) | string(254) (nullable) | Notes for the segment. 
+| [Mileage](Applications.Fleet.TripSegments.md#mileage) | decimal (9, 0) __nullable__ | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage. 
+| [Notes](Applications.Fleet.TripSegments.md#notes) | string (254) __nullable__ | Notes for the segment. 
 | [StartingTimestamp](Applications.Fleet.TripSegments.md#startingtimestamp) | datetime | The starting date and time of the travel on the segment. `Required` 
 
 ## References
@@ -46,7 +46,7 @@ Aggregate Root:
 
 The ending date and time of the travel on the segment.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -61,7 +61,7 @@ _Default Value_: **NewGuid**
 
 Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.
 
-_Type_: **decimal(9, 0) (nullable)**  
+_Type_: **decimal (9, 0) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 Notes for the segment.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

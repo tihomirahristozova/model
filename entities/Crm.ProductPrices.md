@@ -23,15 +23,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.ProductPrices.md#fromdate) | date (nullable) | Starting date of validity of the price. `Filter(eq;ge;le)` 
+| [FromDate](Crm.ProductPrices.md#fromdate) | date __nullable__ | Starting date of validity of the price. `Filter(eq;ge;le)` 
 | [Id](Crm.ProductPrices.md#id) | guid |  
-| [MaxQuantity](Crm.ProductPrices.md#maxquantity) | [Quantity](../data-types.md#quantity) (nullable) | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
-| [MinQuantity](Crm.ProductPrices.md#minquantity) | [Quantity](../data-types.md#quantity) (nullable) | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
-| [Notes](Crm.ProductPrices.md#notes) | string(254) (nullable) | Notes for this ProductPrice. 
+| [MaxQuantity](Crm.ProductPrices.md#maxquantity) | [Quantity](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
+| [MinQuantity](Crm.ProductPrices.md#minquantity) | [Quantity](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
+| [Notes](Crm.ProductPrices.md#notes) | string (254) __nullable__ | Notes for this ProductPrice. 
 | [Price](Crm.ProductPrices.md#price) | [Amount](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [PriceQuantity](Crm.ProductPrices.md#pricequantity) | [Quantity](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` 
 | [Priority](Crm.ProductPrices.md#priority) | [Priority](Crm.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied. `Required` `Default(2)` `Filter(multi eq)` 
-| [ThruDate](Crm.ProductPrices.md#thrudate) | date (nullable) | Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)` 
+| [ThruDate](Crm.ProductPrices.md#thrudate) | date __nullable__ | Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)` 
 
 ## References
 
@@ -56,7 +56,7 @@ Aggregate Tree
 
 Starting date of validity of the price. `Filter(eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -71,7 +71,7 @@ _Default Value_: **NewGuid**
 
 Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. `Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -79,7 +79,7 @@ _Supports Order By_: **False**
 
 Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 Notes for this ProductPrice.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -134,7 +134,7 @@ _Default Value_: **2**
 
 Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

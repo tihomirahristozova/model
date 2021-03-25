@@ -25,15 +25,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseQuantity](Logistics.LogisticUnitContents.md#basequantity) | decimal(12, 3) | The quantity, expressed in the base measurement category of the product. `Required` `Filter(eq;ge;le)` 
-| [ExpirationDate](Logistics.LogisticUnitContents.md#expirationdate) | date (nullable) | Expiration date of the goods. null means unknown or N/A. `Filter(multi eq;ge;le)` 
-| [GrossWeight](Logistics.LogisticUnitContents.md#grossweight) | decimal(12, 3) (nullable) | Gross weight in kilograms (kg). null means unknown. `Filter(eq;ge;le)` 
+| [BaseQuantity](Logistics.LogisticUnitContents.md#basequantity) | decimal (12, 3) | The quantity, expressed in the base measurement category of the product. `Required` `Filter(eq;ge;le)` 
+| [ExpirationDate](Logistics.LogisticUnitContents.md#expirationdate) | date __nullable__ | Expiration date of the goods. null means unknown or N/A. `Filter(multi eq;ge;le)` 
+| [GrossWeight](Logistics.LogisticUnitContents.md#grossweight) | decimal (12, 3) __nullable__ | Gross weight in kilograms (kg). null means unknown. `Filter(eq;ge;le)` 
 | [Id](Logistics.LogisticUnitContents.md#id) | guid |  
 | [LineNo](Logistics.LogisticUnitContents.md#lineno) | int32 | Consecutive position within the logistic unit. `Required` `Filter(multi eq)` 
-| [LotNumber](Logistics.LogisticUnitContents.md#lotnumber) | string(32) (nullable) | The production lot number. null means unknown. `Filter(multi eq;like)` 
-| [Notes](Logistics.LogisticUnitContents.md#notes) | string(2147483647) (nullable) | Notes for this LogisticUnitContent. 
-| [Quantity](Logistics.LogisticUnitContents.md#quantity) | decimal(12, 3) | Quantity of the product in the logistic unit. Expressed in the specified measurement unit. `Required` `Filter(multi eq;ge;le)` 
-| [StandardQuantity](Logistics.LogisticUnitContents.md#standardquantity) | decimal(12, 3) | The quantity, expessed in the standard measurement unit of the product. `Required` `Filter(eq;ge;le)` 
+| [LotNumber](Logistics.LogisticUnitContents.md#lotnumber) | string (32) __nullable__ | The production lot number. null means unknown. `Filter(multi eq;like)` 
+| [Notes](Logistics.LogisticUnitContents.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitContent. 
+| [Quantity](Logistics.LogisticUnitContents.md#quantity) | decimal (12, 3) | Quantity of the product in the logistic unit. Expressed in the specified measurement unit. `Required` `Filter(multi eq;ge;le)` 
+| [StandardQuantity](Logistics.LogisticUnitContents.md#standardquantity) | decimal (12, 3) | The quantity, expessed in the standard measurement unit of the product. `Required` `Filter(eq;ge;le)` 
 
 ## References
 
@@ -50,7 +50,7 @@ Aggregate Root:
 
 The quantity, expressed in the base measurement category of the product. `Required` `Filter(eq;ge;le)`
 
-_Type_: **decimal(12, 3)**  
+_Type_: **decimal (12, 3)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 Expiration date of the goods. null means unknown or N/A. `Filter(multi eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 Gross weight in kilograms (kg). null means unknown. `Filter(eq;ge;le)`
 
-_Type_: **decimal(12, 3) (nullable)**  
+_Type_: **decimal (12, 3) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -94,7 +94,7 @@ _Front-End Recalc Expressions:_
 
 The production lot number. null means unknown. `Filter(multi eq;like)`
 
-_Type_: **string(32) (nullable)**  
+_Type_: **string (32) __nullable__**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -103,7 +103,7 @@ _Maximum Length_: **32**
 
 Notes for this LogisticUnitContent.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -112,7 +112,7 @@ _Maximum Length_: **2147483647**
 
 Quantity of the product in the logistic unit. Expressed in the specified measurement unit. `Required` `Filter(multi eq;ge;le)`
 
-_Type_: **decimal(12, 3)**  
+_Type_: **decimal (12, 3)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -120,7 +120,7 @@ _Supports Order By_: **False**
 
 The quantity, expessed in the standard measurement unit of the product. `Required` `Filter(eq;ge;le)`
 
-_Type_: **decimal(12, 3)**  
+_Type_: **decimal (12, 3)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

@@ -29,21 +29,21 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](General.Products.ProductGroups.md#active) | boolean | True if the product group is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
-| [Code](General.Products.ProductGroups.md#code) | string(16) | The unique code of the ProductGroup. `Required` `Filter(eq;like)` `ORD` 
+| [Code](General.Products.ProductGroups.md#code) | string (16) | The unique code of the ProductGroup. `Required` `Filter(eq;like)` `ORD` 
 | [ConfiguratorCreatesRecipe](General.Products.ProductGroups.md#configuratorcreatesrecipe) | boolean | Whether the product configurator should create one default recipe. true=yes;false=no. `Required` `Default(false)` 
 | [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) | [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) | Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly. `Required` `Default(0)` 
-| [FullPath](General.Products.ProductGroups.md#fullpath) | string(254) | Full tree path in the form /parent/.../leaf/. Contains the group names. `Required` `Default("")` `Filter(eq;like)` `ORD` 
+| [FullPath](General.Products.ProductGroups.md#fullpath) | string (254) | Full tree path in the form /parent/.../leaf/. Contains the group names. `Required` `Default("")` `Filter(eq;like)` `ORD` 
 | [Id](General.Products.ProductGroups.md#id) | guid |  
 | [Name](General.Products.ProductGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Group name should be unique among the other groups within the same parent. `Required` `Filter(eq;like)` 
-| [NextPartNumber](General.Products.ProductGroups.md#nextpartnumber) | string(16) (nullable) | Contains the next part number to be auto-assigned to parts, created in the group or sub-groups. 
-| [NextSerialNumber](General.Products.ProductGroups.md#nextserialnumber) | string(40) (nullable) | When not null, specifies the next serial number, that should be assigned to new produced items. `Filter(eq;like)` 
-| [Notes](General.Products.ProductGroups.md#notes) | string(254) (nullable) | User notes for the item group. 
-| [Parent](General.Products.ProductGroups.md#parent) | string(254) | Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. `Required` `Default("/")` `Filter(eq)` `ORD` 
-| [Picture](General.Products.ProductGroups.md#picture) | byte[] (nullable) | The picture of the product group. 
-| [PictureLastUpdateTime](General.Products.ProductGroups.md#picturelastupdatetime) | datetime (nullable) | Last update time of the Picture. `Filter(ge;le)` `ReadOnly` 
-| [ProductDescriptionMask](General.Products.ProductGroups.md#productdescriptionmask) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
-| [ProductNameMask](General.Products.ProductGroups.md#productnamemask) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
-| [UseLots](General.Products.ProductGroups.md#uselots) | [UseLots](General.Products.ProductGroups.md#uselots) (nullable) | Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required. 
+| [NextPartNumber](General.Products.ProductGroups.md#nextpartnumber) | string (16) __nullable__ | Contains the next part number to be auto-assigned to parts, created in the group or sub-groups. 
+| [NextSerialNumber](General.Products.ProductGroups.md#nextserialnumber) | string (40) __nullable__ | When not null, specifies the next serial number, that should be assigned to new produced items. `Filter(eq;like)` 
+| [Notes](General.Products.ProductGroups.md#notes) | string (254) __nullable__ | User notes for the item group. 
+| [Parent](General.Products.ProductGroups.md#parent) | string (254) | Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. `Required` `Default("/")` `Filter(eq)` `ORD` 
+| [Picture](General.Products.ProductGroups.md#picture) | byte[] __nullable__ | The picture of the product group. 
+| [PictureLastUpdateTime](General.Products.ProductGroups.md#picturelastupdatetime) | datetime __nullable__ | Last update time of the Picture. `Filter(ge;le)` `ReadOnly` 
+| [ProductDescriptionMask](General.Products.ProductGroups.md#productdescriptionmask) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [ProductNameMask](General.Products.ProductGroups.md#productnamemask) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [UseLots](General.Products.ProductGroups.md#uselots) | [UseLots](General.Products.ProductGroups.md#uselots) __nullable__ | Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required. 
 
 ## References
 
@@ -78,7 +78,7 @@ _Default Value_: **True**
 
 The unique code of the ProductGroup. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -115,7 +115,7 @@ _Default Value_: **0**
 
 Full tree path in the form /parent/.../leaf/. Contains the group names. `Required` `Default("")` `Filter(eq;like)` `ORD`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -141,7 +141,7 @@ _Supports Order By_: **False**
 
 Contains the next part number to be auto-assigned to parts, created in the group or sub-groups.
 
-_Type_: **string(16) (nullable)**  
+_Type_: **string (16) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -150,7 +150,7 @@ _Maximum Length_: **16**
 
 When not null, specifies the next serial number, that should be assigned to new produced items. `Filter(eq;like)`
 
-_Type_: **string(40) (nullable)**  
+_Type_: **string (40) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **40**  
@@ -159,7 +159,7 @@ _Maximum Length_: **40**
 
 User notes for the item group.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -168,7 +168,7 @@ _Maximum Length_: **254**
 
 Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. `Required` `Default("/")` `Filter(eq)` `ORD`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -179,7 +179,7 @@ _Default Value_: **/**
 
 The picture of the product group.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -187,7 +187,7 @@ _Supports Order By_: **False**
 
 Last update time of the Picture. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -195,7 +195,7 @@ _Supports Order By_: **False**
 
 When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -203,7 +203,7 @@ _Supports Order By_: **False**
 
 When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -211,7 +211,7 @@ _Supports Order By_: **False**
 
 Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.
 
-_Type_: **[UseLots](General.Products.ProductGroups.md#uselots) (nullable)**  
+_Type_: **[UseLots](General.Products.ProductGroups.md#uselots) __nullable__**  
 Allowed values for the `UseLots`(General.Products.ProductGroups.md#uselots) data attribute  
 _Allowed Values (General.Products.ProductGroupsRepository.UseLots Enum Members)_  
 

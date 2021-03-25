@@ -28,7 +28,7 @@ Aggregate Root:
 | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | Type of change - Create, Update or Delete. `Required` 
 | [EntityItemId](Systems.Core.ObjectChanges.md#entityitemid) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq)` 
 | [Id](Systems.Core.ObjectChanges.md#id) | guid |  
-| [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string(64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` 
+| [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string (64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -76,7 +76,7 @@ _Default Value_: **NewGuid**
 
 The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

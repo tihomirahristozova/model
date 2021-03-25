@@ -30,9 +30,9 @@ Aggregate Root:
 | [IsSystemExecuted](Systems.Bpm.ProcessLanes.md#issystemexecuted) | boolean | When set, specifies that the lane allows only system executed tasks and will never have human user as executor. `Required` `Default(false)` `Filter(eq)` 
 | [Locality](Systems.Bpm.ProcessLanes.md#locality) | [Locality](Systems.Bpm.ProcessLanes.md#locality) | Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. `Required` `Filter(eq;like)` 
 | [Name](Systems.Bpm.ProcessLanes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage lane name. `Required` `Filter(eq;like)` 
-| [Notes](Systems.Bpm.ProcessLanes.md#notes) | string(2147483647) (nullable) | Notes for this ProcessLane. 
+| [Notes](Systems.Bpm.ProcessLanes.md#notes) | string (max) __nullable__ | Notes for this ProcessLane. 
 | [RestrictToSingleUser](Systems.Bpm.ProcessLanes.md#restricttosingleuser) | boolean | Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user. `Required` `Default(false)` `Filter(eq)` 
-| [UserConditionFilterXml](Systems.Bpm.ProcessLanes.md#userconditionfilterxml) | dataaccessfilter (nullable) | User defined filter, used to select possible executors of tasks in the lane. `Filter(eq;like)` 
+| [UserConditionFilterXml](Systems.Bpm.ProcessLanes.md#userconditionfilterxml) | dataaccessfilter __nullable__ | User defined filter, used to select possible executors of tasks in the lane. `Filter(eq;like)` 
 
 ## References
 
@@ -109,7 +109,7 @@ _Supports Order By_: **False**
 
 Notes for this ProcessLane.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -127,7 +127,7 @@ _Default Value_: **False**
 
 User defined filter, used to select possible executors of tasks in the lane. `Filter(eq;like)`
 
-_Type_: **dataaccessfilter (nullable)**  
+_Type_: **dataaccessfilter __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 

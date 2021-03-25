@@ -27,7 +27,7 @@ Aggregate Tree
 | [DocumentId](General.DocumentManualDistributedAmounts.md#documentid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 | [DocumentLineId](General.DocumentManualDistributedAmounts.md#documentlineid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 | [Id](General.DocumentManualDistributedAmounts.md#id) | guid |  
-| [LinePercent](General.DocumentManualDistributedAmounts.md#linepercent) | decimal(7, 6) | Obsolete. Not used. `Required` 
+| [LinePercent](General.DocumentManualDistributedAmounts.md#linepercent) | decimal (7, 6) | Obsolete. Not used. `Required` 
 | [ProductId](General.DocumentManualDistributedAmounts.md#productid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 
 
@@ -64,7 +64,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 Obsolete. Not used. `Required`
 
-_Type_: **decimal(7, 6)**  
+_Type_: **decimal (7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

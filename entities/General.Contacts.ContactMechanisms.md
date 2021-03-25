@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | A=Address; E=e-mail; T=Telephone. `Required` `Default("A")` `Filter(multi eq)` 
 | [Id](General.Contacts.ContactMechanisms.md#id) | guid |  
-| [Name](General.Contacts.ContactMechanisms.md#name) | string(254) | Contact mechanism description. `Required` `Filter(eq;like)` 
+| [Name](General.Contacts.ContactMechanisms.md#name) | string (254) | Contact mechanism description. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -70,7 +70,7 @@ _Default Value_: **NewGuid**
 
 Contact mechanism description. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

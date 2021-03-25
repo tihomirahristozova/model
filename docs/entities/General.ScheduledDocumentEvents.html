@@ -114,7 +114,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.ScheduledDocumentEvents.html#documentevent">DocumentEvent</a></td>
-<td>string(254)</td>
+<td>string (254)</td>
 <td>The type of the document event that is scheduled to be processed. <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -124,12 +124,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.ScheduledDocumentEvents.html#lastprocessstatus">LastProcessStatus</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Status/information of the last attemp to process the event. Usually shows the cause in case of failure. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.ScheduledDocumentEvents.html#lastprocesstime">LastProcessTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The time of the last attempt to process the event. <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -181,7 +181,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="documentevent">DocumentEvent</h3>
 <p>The type of the document event that is scheduled to be processed. <code>Required</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(254)</strong><br>
+<p><em>Type</em>: <strong>string (254)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -192,13 +192,13 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastprocessstatus">LastProcessStatus</h3>
 <p>Status/information of the last attemp to process the event. Usually shows the cause in case of failure. <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="lastprocesstime">LastProcessTime</h3>
 <p>The time of the last attempt to process the event. <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="processed">Processed</h3>

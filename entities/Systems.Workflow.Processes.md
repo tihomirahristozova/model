@@ -23,19 +23,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTime](Systems.Workflow.Processes.md#creationtime) | datetime (nullable) | Date and time when the Process was created. `ReadOnly` 
-| [CreationUser](Systems.Workflow.Processes.md#creationuser) | string(64) (nullable) | Login name of the user, who created the Process. `ReadOnly` 
+| [CreationTime](Systems.Workflow.Processes.md#creationtime) | datetime __nullable__ | Date and time when the Process was created. `ReadOnly` 
+| [CreationUser](Systems.Workflow.Processes.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Process. `ReadOnly` 
 | [Id](Systems.Workflow.Processes.md#id) | guid |  
 | [IsLandscape](Systems.Workflow.Processes.md#islandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode. `Required` `Default(true)` 
 | [Name](Systems.Workflow.Processes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Process. `Required` `Filter(eq;like)` 
-| [Notes](Systems.Workflow.Processes.md#notes) | string(2000) (nullable) | Notes for this Process. 
-| [SchemaFormat](Systems.Workflow.Processes.md#schemaformat) | string(1) | Application specific format of the Schema Layout. `Required` `Default("D")` 
-| [SchemaLayout](Systems.Workflow.Processes.md#schemalayout) | string(2147483647) | Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. `Required` 
-| [StartEvent](Systems.Workflow.Processes.md#startevent) | string(3) (nullable) | USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process. 
-| [StartRoleId](Systems.Workflow.Processes.md#startroleid) | guid (nullable) | When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event<>'USR'. `Filter(multi eq)` 
-| [Thumbnail](Systems.Workflow.Processes.md#thumbnail) | byte[] (nullable) | Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format. 
-| [UpdateTime](Systems.Workflow.Processes.md#updatetime) | datetime (nullable) | Date and time when the Process was last updated. `ReadOnly` 
-| [UpdateUser](Systems.Workflow.Processes.md#updateuser) | string(64) (nullable) | Login name of the user, who last updated the Process. `ReadOnly` 
+| [Notes](Systems.Workflow.Processes.md#notes) | string (2000) __nullable__ | Notes for this Process. 
+| [SchemaFormat](Systems.Workflow.Processes.md#schemaformat) | string (1) | Application specific format of the Schema Layout. `Required` `Default("D")` 
+| [SchemaLayout](Systems.Workflow.Processes.md#schemalayout) | string (max) | Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. `Required` 
+| [StartEvent](Systems.Workflow.Processes.md#startevent) | string (3) __nullable__ | USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process. 
+| [StartRoleId](Systems.Workflow.Processes.md#startroleid) | guid __nullable__ | When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event<>'USR'. `Filter(multi eq)` 
+| [Thumbnail](Systems.Workflow.Processes.md#thumbnail) | byte[] __nullable__ | Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format. 
+| [UpdateTime](Systems.Workflow.Processes.md#updatetime) | datetime __nullable__ | Date and time when the Process was last updated. `ReadOnly` 
+| [UpdateUser](Systems.Workflow.Processes.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Process. `ReadOnly` 
 
 
 ## Attribute Details
@@ -44,7 +44,7 @@ Aggregate Tree
 
 Date and time when the Process was created. `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Process. `ReadOnly`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 Notes for this Process.
 
-_Type_: **string(2000) (nullable)**  
+_Type_: **string (2000) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2000**  
@@ -94,7 +94,7 @@ _Maximum Length_: **2000**
 
 Application specific format of the Schema Layout. `Required` `Default("D")`
 
-_Type_: **string(1)**  
+_Type_: **string (1)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1**  
@@ -104,7 +104,7 @@ _Default Value_: **D**
 
 Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. `Required`
 
-_Type_: **string(2147483647)**  
+_Type_: **string (max)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -113,7 +113,7 @@ _Maximum Length_: **2147483647**
 
 USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.
 
-_Type_: **string(3) (nullable)**  
+_Type_: **string (3) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **3**  
@@ -122,14 +122,14 @@ _Maximum Length_: **3**
 
 When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event<>'USR'. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Thumbnail
 
 Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -137,7 +137,7 @@ _Supports Order By_: **False**
 
 Date and time when the Process was last updated. `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -145,7 +145,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Process. `ReadOnly`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

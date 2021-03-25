@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.ProjectParticipants.md#id) | guid |  
-| [Notes](Projects.ProjectParticipants.md#notes) | string(254) (nullable) | Notes for this ProjectParticipant. 
+| [Notes](Projects.ProjectParticipants.md#notes) | string (254) __nullable__ | Notes for this ProjectParticipant. 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 Notes for this ProjectParticipant.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

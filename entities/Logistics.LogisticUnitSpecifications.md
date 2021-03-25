@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.LogisticUnitSpecifications.md#code) | string(32) | The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces. `Required` `Filter(multi eq;like)` 
+| [Code](Logistics.LogisticUnitSpecifications.md#code) | string (32) | The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces. `Required` `Filter(multi eq;like)` 
 | [Id](Logistics.LogisticUnitSpecifications.md#id) | guid |  
-| [Name](Logistics.LogisticUnitSpecifications.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (null). `Filter(eq;like)` 
-| [Notes](Logistics.LogisticUnitSpecifications.md#notes) | string(2147483647) (nullable) | Notes for this LogisticUnitSpecification. 
-| [Value](Logistics.LogisticUnitSpecifications.md#value) | string(254) (nullable) | Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces. `Filter(eq;like)` 
+| [Name](Logistics.LogisticUnitSpecifications.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (null). `Filter(eq;like)` 
+| [Notes](Logistics.LogisticUnitSpecifications.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitSpecification. 
+| [Value](Logistics.LogisticUnitSpecifications.md#value) | string (254) __nullable__ | Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces. `Filter(eq;like)` 
 
 ## References
 
@@ -44,7 +44,7 @@ Aggregate Root:
 
 The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces. `Required` `Filter(multi eq;like)`
 
-_Type_: **string(32)**  
+_Type_: **string (32)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (null). `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -68,7 +68,7 @@ _Supports Order By_: **False**
 
 Notes for this LogisticUnitSpecification.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -77,7 +77,7 @@ _Maximum Length_: **2147483647**
 
 Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces. `Filter(eq;like)`
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

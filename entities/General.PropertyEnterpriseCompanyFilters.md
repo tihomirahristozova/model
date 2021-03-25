@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FilterXml](General.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter (nullable) | When not null, specifies a filter for the allowed values of the property for the specified enterprise company. 
+| [FilterXml](General.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter __nullable__ | When not null, specifies a filter for the allowed values of the property for the specified enterprise company. 
 | [Id](General.PropertyEnterpriseCompanyFilters.md#id) | guid |  
 
 ## References
@@ -42,7 +42,7 @@ Aggregate Root:
 
 When not null, specifies a filter for the allowed values of the property for the specified enterprise company.
 
-_Type_: **dataaccessfilter (nullable)**  
+_Type_: **dataaccessfilter __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

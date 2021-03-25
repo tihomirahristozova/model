@@ -25,13 +25,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.Service.ServiceAgreementMaterials.md#enddate) | datetime (nullable) | End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
+| [EndDate](Applications.Service.ServiceAgreementMaterials.md#enddate) | datetime __nullable__ | End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
 | [Id](Applications.Service.ServiceAgreementMaterials.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceAgreementMaterials.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
 | [Quantity](Applications.Service.ServiceAgreementMaterials.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity of the agreed material. `Unit: QuantityUnit` `Required` 
 | [QuantityBase](Applications.Service.ServiceAgreementMaterials.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [StandardQuantityBase](Applications.Service.ServiceAgreementMaterials.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [StartDate](Applications.Service.ServiceAgreementMaterials.md#startdate) | datetime (nullable) | Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
+| [StartDate](Applications.Service.ServiceAgreementMaterials.md#startdate) | datetime __nullable__ | Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
 
 ## References
 
@@ -49,7 +49,7 @@ Aggregate Root:
 
 End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -111,7 +111,7 @@ _Front-End Recalc Expressions:_
 
 Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

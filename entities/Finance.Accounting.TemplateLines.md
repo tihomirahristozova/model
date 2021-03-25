@@ -25,19 +25,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountColumnName](Finance.Accounting.TemplateLines.md#amountcolumnname) | string(64) | The name of the column within the amount rowset where the amount is located. `Required` 
-| [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) | [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) (nullable) | Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier. 
-| [AmountRowId](Finance.Accounting.TemplateLines.md#amountrowid) | guid (nullable) | The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)` 
-| [AmountRowName](Finance.Accounting.TemplateLines.md#amountrowname) | string(254) (nullable) | The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name. 
-| [AmountSourceFilter](Finance.Accounting.TemplateLines.md#amountsourcefilter) | dataaccessfilter (nullable) | Filter that further specifies which rows from the amount rowset determine the amount. 
-| [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string(64) | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required` 
-| [FilterXML](Finance.Accounting.TemplateLines.md#filterxml) | dataaccessfilter (nullable) | The line is accounted only when the filter is satisfied compared with the source document header. 
+| [AmountColumnName](Finance.Accounting.TemplateLines.md#amountcolumnname) | string (64) | The name of the column within the amount rowset where the amount is located. `Required` 
+| [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) | [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) __nullable__ | Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier. 
+| [AmountRowId](Finance.Accounting.TemplateLines.md#amountrowid) | guid __nullable__ | The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)` 
+| [AmountRowName](Finance.Accounting.TemplateLines.md#amountrowname) | string (254) __nullable__ | The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name. 
+| [AmountSourceFilter](Finance.Accounting.TemplateLines.md#amountsourcefilter) | dataaccessfilter __nullable__ | Filter that further specifies which rows from the amount rowset determine the amount. 
+| [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string (64) | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required` 
+| [FilterXML](Finance.Accounting.TemplateLines.md#filterxml) | dataaccessfilter __nullable__ | The line is accounted only when the filter is satisfied compared with the source document header. 
 | [Id](Finance.Accounting.TemplateLines.md#id) | guid |  
 | [LineNo](Finance.Accounting.TemplateLines.md#lineno) | int32 | Consecutive number of the line within the template. Determines the order of execution of the template lines. `Required` 
-| [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal(18, 6) | Factor by which the amount from the source will be multiplied. `Required` `Default(1)` 
-| [Notes](Finance.Accounting.TemplateLines.md#notes) | string(254) (nullable) | Notes for this TemplateLine. 
-| [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime (nullable) | Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)` 
-| [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime (nullable) | End date to which the accounting template line is valid. `Filter(multi eq;ge;le)` 
+| [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal (18, 6) | Factor by which the amount from the source will be multiplied. `Required` `Default(1)` 
+| [Notes](Finance.Accounting.TemplateLines.md#notes) | string (254) __nullable__ | Notes for this TemplateLine. 
+| [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime __nullable__ | Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)` 
+| [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime __nullable__ | End date to which the accounting template line is valid. `Filter(multi eq;ge;le)` 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 The name of the column within the amount rowset where the amount is located. `Required`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -69,7 +69,7 @@ _Maximum Length_: **64**
 
 Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.
 
-_Type_: **[AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) (nullable)**  
+_Type_: **[AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) __nullable__**  
 Allowed values for the `AmountCondition`(Finance.Accounting.TemplateLines.md#amountcondition) data attribute  
 _Allowed Values (Finance.Accounting.TemplateLinesRepository.AmountCondition Enum Members)_  
 
@@ -85,14 +85,14 @@ _Supports Order By_: **False**
 
 The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AmountRowName
 
 The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -101,7 +101,7 @@ _Maximum Length_: **254**
 
 Filter that further specifies which rows from the amount rowset determine the amount.
 
-_Type_: **dataaccessfilter (nullable)**  
+_Type_: **dataaccessfilter __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -109,7 +109,7 @@ _Supports Order By_: **False**
 
 The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -118,7 +118,7 @@ _Maximum Length_: **64**
 
 The line is accounted only when the filter is satisfied compared with the source document header.
 
-_Type_: **dataaccessfilter (nullable)**  
+_Type_: **dataaccessfilter __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -146,7 +146,7 @@ _Front-End Recalc Expressions:_
 
 Factor by which the amount from the source will be multiplied. `Required` `Default(1)`
 
-_Type_: **decimal(18, 6)**  
+_Type_: **decimal (18, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -155,7 +155,7 @@ _Default Value_: **1**
 
 Notes for this TemplateLine.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -164,7 +164,7 @@ _Maximum Length_: **254**
 
 Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -172,7 +172,7 @@ _Supports Order By_: **False**
 
 End date to which the accounting template line is valid. `Filter(multi eq;ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 

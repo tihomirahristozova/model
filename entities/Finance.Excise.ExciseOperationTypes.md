@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Excise.ExciseOperationTypes.md#code) | string(16) | The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)` 
+| [Code](Finance.Excise.ExciseOperationTypes.md#code) | string (16) | The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)` 
 | [Id](Finance.Excise.ExciseOperationTypes.md#id) | guid |  
-| [Name](Finance.Excise.ExciseOperationTypes.md#name) | string(254) | The name of this ExciseOperationType. `Required` `Filter(multi eq;like)` 
-| [Notes](Finance.Excise.ExciseOperationTypes.md#notes) | string(2147483647) (nullable) | Notes for this ExciseOperationType. 
+| [Name](Finance.Excise.ExciseOperationTypes.md#name) | string (254) | The name of this ExciseOperationType. `Required` `Filter(multi eq;like)` 
+| [Notes](Finance.Excise.ExciseOperationTypes.md#notes) | string (max) __nullable__ | Notes for this ExciseOperationType. 
 
 
 ## Attribute Details
@@ -35,7 +35,7 @@ Aggregate Tree
 
 The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -51,7 +51,7 @@ _Default Value_: **NewGuid**
 
 The name of this ExciseOperationType. `Required` `Filter(multi eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -60,7 +60,7 @@ _Maximum Length_: **254**
 
 Notes for this ExciseOperationType.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

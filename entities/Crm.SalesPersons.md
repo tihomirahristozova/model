@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommissionPercent](Crm.SalesPersons.md#commissionpercent) | decimal(7, 6) (nullable) | The percentage (0..1) of commission percent. null means that there is no commission percent. 
-| [CommissionPolicyId](Crm.SalesPersons.md#commissionpolicyid) | guid (nullable) | Current commission policy for the sales person. null means there is no commission policy. `Filter(multi eq)` 
-| [ContractEndDate](Crm.SalesPersons.md#contractenddate) | datetime (nullable) | The ending date of the contract with the sales person. null when the sales person is still active. `Filter(ge;le)` 
-| [ContractStartDate](Crm.SalesPersons.md#contractstartdate) | datetime (nullable) | The starting date of the contract with the sales person. null when it is unknown. `Filter(ge;le)` 
+| [CommissionPercent](Crm.SalesPersons.md#commissionpercent) | decimal (7, 6) __nullable__ | The percentage (0..1) of commission percent. null means that there is no commission percent. 
+| [CommissionPolicyId](Crm.SalesPersons.md#commissionpolicyid) | guid __nullable__ | Current commission policy for the sales person. null means there is no commission policy. `Filter(multi eq)` 
+| [ContractEndDate](Crm.SalesPersons.md#contractenddate) | datetime __nullable__ | The ending date of the contract with the sales person. null when the sales person is still active. `Filter(ge;le)` 
+| [ContractStartDate](Crm.SalesPersons.md#contractstartdate) | datetime __nullable__ | The starting date of the contract with the sales person. null when it is unknown. `Filter(ge;le)` 
 | [Id](Crm.SalesPersons.md#id) | guid |  
 | [IsActive](Crm.SalesPersons.md#isactive) | boolean | Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. `Required` `Default(true)` `Filter(eq)` 
 
@@ -48,7 +48,7 @@ Aggregate Root:
 
 The percentage (0..1) of commission percent. null means that there is no commission percent.
 
-_Type_: **decimal(7, 6) (nullable)**  
+_Type_: **decimal (7, 6) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -56,14 +56,14 @@ _Supports Order By_: **False**
 
 Current commission policy for the sales person. null means there is no commission policy. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ContractEndDate
 
 The ending date of the contract with the sales person. null when the sales person is still active. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 The starting date of the contract with the sales person. null when it is unknown. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

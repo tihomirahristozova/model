@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Contacts.ActivityResources.md#id) | guid |  
-| [Notes](General.Contacts.ActivityResources.md#notes) | string(255) (nullable) | Notes for this ActivityResource. 
-| [ResourceUsagePercent](General.Contacts.ActivityResources.md#resourceusagepercent) | decimal(18, 4) | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` 
+| [Notes](General.Contacts.ActivityResources.md#notes) | string (255) __nullable__ | Notes for this ActivityResource. 
+| [ResourceUsagePercent](General.Contacts.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 Notes for this ActivityResource.
 
-_Type_: **string(255) (nullable)**  
+_Type_: **string (255) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **255**  
@@ -59,7 +59,7 @@ _Maximum Length_: **255**
 
 The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)`
 
-_Type_: **decimal(18, 4)**  
+_Type_: **decimal (18, 4)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

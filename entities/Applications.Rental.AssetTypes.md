@@ -26,8 +26,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Rental.AssetTypes.md#id) | guid |  
-| [Notes](Applications.Rental.AssetTypes.md#notes) | string(2147483647) (nullable) | Notes for this AssetType. `Filter(like)` 
-| [RentalAssetTypeName](Applications.Rental.AssetTypes.md#rentalassettypename) | string(254) | The name of the rental asset type. `Required` `Filter(like)` 
+| [Notes](Applications.Rental.AssetTypes.md#notes) | string (max) __nullable__ | Notes for this AssetType. `Filter(like)` 
+| [RentalAssetTypeName](Applications.Rental.AssetTypes.md#rentalassettypename) | string (254) | The name of the rental asset type. `Required` `Filter(like)` 
 
 ## Child Collections
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 Notes for this AssetType. `Filter(like)`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -59,7 +59,7 @@ _Maximum Length_: **2147483647**
 
 The name of the rental asset type. `Required` `Filter(like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

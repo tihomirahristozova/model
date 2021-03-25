@@ -26,7 +26,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Crm.Pos.Terminals.md#id) | guid |  
 | [IsActive](Crm.Pos.Terminals.md#isactive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records. `Required` `Default(true)` `Filter(multi eq)` 
-| [PosTerminalCode](Crm.Pos.Terminals.md#posterminalcode) | string(16) | Unique (within the location) code of the POS terminal. `Required` `Filter(eq;like)` 
+| [PosTerminalCode](Crm.Pos.Terminals.md#posterminalcode) | string (16) | Unique (within the location) code of the POS terminal. `Required` `Filter(eq;like)` 
 | [PosTerminalName](Crm.Pos.Terminals.md#posterminalname) | [MultilanguageString](../data-types.md#multilanguagestring) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. `Required` `Filter(multi eq;like)` 
 
 ## References
@@ -65,7 +65,7 @@ _Default Value_: **True**
 
 Unique (within the location) code of the POS terminal. `Required` `Filter(eq;like)`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  

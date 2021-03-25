@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DurationHour](Production.Technologies.PrincipalRecipes.md#durationhour) | decimal(10, 0) | The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. `Required` `Default(0)` 
-| [ExpiryDate](Production.Technologies.PrincipalRecipes.md#expirydate) | datetime (nullable) | The last date, when the recipe should be used. null means that there is no expiry date yet and the recipe model is still active. `Filter(ge;le)` 
+| [DurationHour](Production.Technologies.PrincipalRecipes.md#durationhour) | decimal (10, 0) | The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. `Required` `Default(0)` 
+| [ExpiryDate](Production.Technologies.PrincipalRecipes.md#expirydate) | datetime __nullable__ | The last date, when the recipe should be used. null means that there is no expiry date yet and the recipe model is still active. `Filter(ge;le)` 
 | [Id](Production.Technologies.PrincipalRecipes.md#id) | guid |  
-| [Name](Production.Technologies.PrincipalRecipes.md#name) | string(64) | Name of the principal recipe. `Required` `Filter(like)` 
-| [Notes](Production.Technologies.PrincipalRecipes.md#notes) | string(254) (nullable) | User comments for the principal recipe. 
+| [Name](Production.Technologies.PrincipalRecipes.md#name) | string (64) | Name of the principal recipe. `Required` `Filter(like)` 
+| [Notes](Production.Technologies.PrincipalRecipes.md#notes) | string (254) __nullable__ | User comments for the principal recipe. 
 | [ProduceQuantity](Production.Technologies.PrincipalRecipes.md#producequantity) | [Quantity](../data-types.md#quantity) | Suggested quantity to produce. Usually it is equal to 1. `Unit: ProduceUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [ReleaseDate](Production.Technologies.PrincipalRecipes.md#releasedate) | datetime | The date, when the recipe model is released for use. `Required` `Default(Today)` `Filter(ge;le)` 
-| [ScrapRate](Production.Technologies.PrincipalRecipes.md#scraprate) | decimal(7, 6) | The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. `Required` `Default(0)` 
+| [ScrapRate](Production.Technologies.PrincipalRecipes.md#scraprate) | decimal (7, 6) | The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. `Required` `Default(0)` 
 
 ## References
 
@@ -55,7 +55,7 @@ Aggregate Root:
 
 The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. `Required` `Default(0)`
 
-_Type_: **decimal(10, 0)**  
+_Type_: **decimal (10, 0)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -64,7 +64,7 @@ _Default Value_: **0**
 
 The last date, when the recipe should be used. null means that there is no expiry date yet and the recipe model is still active. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -79,7 +79,7 @@ _Default Value_: **NewGuid**
 
 Name of the principal recipe. `Required` `Filter(like)`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -88,7 +88,7 @@ _Maximum Length_: **64**
 
 User comments for the principal recipe.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -115,7 +115,7 @@ _Default Value_: **CurrentDate**
 
 The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. `Required` `Default(0)`
 
-_Type_: **decimal(7, 6)**  
+_Type_: **decimal (7, 6)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

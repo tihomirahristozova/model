@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Production.Resources.Operations.html#description">Description</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The description of this Operation.</td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</td>
 </tr>
 <tr>
@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#name">Name</a></td>
-<td>string(50)</td>
+<td>string (50)</td>
 <td>The name of this Operation. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#scraprate">ScrapRate</a></td>
-<td>decimal(7, 6) (nullable)</td>
+<td>decimal (7, 6) <strong>nullable</strong></td>
 <td>The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated.</td>
 </tr>
 <tr>
@@ -144,12 +144,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#standardpriceperhour">StandardPricePerHour</a></td>
-<td>decimal(18, 6)</td>
+<td>decimal (18, 6)</td>
 <td>Standard price for 1 hour work for this operation. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#tooling">Tooling</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Short description of the needed instruments for the operation.</td>
 </tr>
 <tr>
@@ -194,7 +194,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
 <p>The description of this Operation.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -205,7 +205,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</h3>
 <p>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
@@ -216,7 +216,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this Operation. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string(50)</strong><br>
+<p><em>Type</em>: <strong>string (50)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>50</strong></p>
@@ -228,7 +228,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated.</p>
-<p><em>Type</em>: <strong>decimal(7, 6) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="setuptimeminutes">SetupTimeMinutes</h3>
@@ -239,13 +239,13 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
 <p>Standard price for 1 hour work for this operation. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(18, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (18, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="tooling">Tooling</h3>
 <p>Short description of the needed instruments for the operation.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>

@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.ProcessElements.md#code) | string(16) | Element code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)` 
+| [Code](Systems.Bpm.ProcessElements.md#code) | string (16) | Element code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)` 
 | [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) | [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) | Subtype of the element. Each type allows only certain types of sub-types. `Required` `Filter(eq;like)` 
 | [ElementType](Systems.Bpm.ProcessElements.md#elementtype) | [ElementType](Systems.Bpm.ProcessElements.md#elementtype) | Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. `Required` `Filter(eq;like)` 
 | [Id](Systems.Bpm.ProcessElements.md#id) | guid |  
-| [InstructionsHtml](Systems.Bpm.ProcessElements.md#instructionshtml) | string(2147483647) (nullable) | Detailed instructions to the executor in HTML format. `Filter(eq;like)` 
+| [InstructionsHtml](Systems.Bpm.ProcessElements.md#instructionshtml) | string (max) __nullable__ | Detailed instructions to the executor in HTML format. `Filter(eq;like)` 
 | [Name](Systems.Bpm.ProcessElements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process name. `Required` `Filter(eq;like)` 
 
 ## References
@@ -46,7 +46,7 @@ Aggregate Root:
 
 Element code, unique within the process. Used as ID for XML serialization purposes. `Required` `Filter(eq;like)`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -116,7 +116,7 @@ _Default Value_: **NewGuid**
 
 Detailed instructions to the executor in HTML format. `Filter(eq;like)`
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

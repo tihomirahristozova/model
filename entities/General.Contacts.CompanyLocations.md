@@ -35,21 +35,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BillTo](General.Contacts.CompanyLocations.md#billto) | [BillTo](General.Contacts.CompanyLocations.md#billto) (nullable) | If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, null = unidentified. 
-| [GLN](General.Contacts.CompanyLocations.md#gln) | string(13) (nullable) | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [BillTo](General.Contacts.CompanyLocations.md#billto) | [BillTo](General.Contacts.CompanyLocations.md#billto) __nullable__ | If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, null = unidentified. 
+| [GLN](General.Contacts.CompanyLocations.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [Id](General.Contacts.CompanyLocations.md#id) | guid |  
 | [IsActive](General.Contacts.CompanyLocations.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [LocationName](General.Contacts.CompanyLocations.md#locationname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the company location. `Required` `Filter(eq;like)` 
-| [PartyCode](General.Contacts.CompanyLocations.md#partycode) | string(16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyCreationTime](General.Contacts.CompanyLocations.md#partycreationtime) | datetime (nullable) | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyCreationUser](General.Contacts.CompanyLocations.md#partycreationuser) | string(64) (nullable) | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyCode](General.Contacts.CompanyLocations.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyCreationTime](General.Contacts.CompanyLocations.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyCreationUser](General.Contacts.CompanyLocations.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyName](General.Contacts.CompanyLocations.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyNotes](General.Contacts.CompanyLocations.md#partynotes) | string(254) (nullable) | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyNotes](General.Contacts.CompanyLocations.md#partynotes) | string (254) __nullable__ | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyType](General.Contacts.CompanyLocations.md#partytype) | [PartyType](General.Contacts.CompanyLocations.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyUniqueNumber](General.Contacts.CompanyLocations.md#partyuniquenumber) | string(16) (nullable) | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyUpdateTime](General.Contacts.CompanyLocations.md#partyupdatetime) | datetime (nullable) | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyUpdateUser](General.Contacts.CompanyLocations.md#partyupdateuser) | string(64) (nullable) | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [WorkingTime](General.Contacts.CompanyLocations.md#workingtime) | string(254) (nullable) | Textual representation of the working time of the location. 
+| [PartyUniqueNumber](General.Contacts.CompanyLocations.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyUpdateTime](General.Contacts.CompanyLocations.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyUpdateUser](General.Contacts.CompanyLocations.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [WorkingTime](General.Contacts.CompanyLocations.md#workingtime) | string (254) __nullable__ | Textual representation of the working time of the location. 
 
 ## References
 
@@ -84,7 +84,7 @@ Aggregate Tree
 
 If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, null = unidentified.
 
-_Type_: **[BillTo](General.Contacts.CompanyLocations.md#billto) (nullable)**  
+_Type_: **[BillTo](General.Contacts.CompanyLocations.md#billto) __nullable__**  
 Allowed values for the `BillTo`(General.Contacts.CompanyLocations.md#billto) data attribute  
 _Allowed Values (General.Contacts.CompanyLocationsRepository.BillTo Enum Members)_  
 
@@ -100,7 +100,7 @@ _Supports Order By_: **False**
 
 Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(13) (nullable)**  
+_Type_: **string (13) __nullable__**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
@@ -134,7 +134,7 @@ _Supports Order By_: **False**
 
 The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -144,7 +144,7 @@ _Maximum Length_: **16**
 
 Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -152,7 +152,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -170,7 +170,7 @@ _Supports Order By_: **True**
 
 Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -199,7 +199,7 @@ _Default Value_: **Person**
 
 Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(16) (nullable)**  
+_Type_: **string (16) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -208,7 +208,7 @@ _Maximum Length_: **16**
 
 Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -216,7 +216,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -225,7 +225,7 @@ _Maximum Length_: **64**
 
 Textual representation of the working time of the location.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

@@ -25,19 +25,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConfirmedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#confirmedamountbase) | decimal(14, 2) (nullable) | The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items. 
-| [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#confirmedstandardquantitybase) | decimal(12, 3) (nullable) | The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items. 
+| [ConfirmedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#confirmedamountbase) | decimal (14, 2) __nullable__ | The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items. 
+| [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#confirmedstandardquantitybase) | decimal (12, 3) __nullable__ | The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items. 
 | [Id](Logistics.Procurement.PurchaseControlDocumentLines.md#id) | guid |  
-| [InvoicedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#invoicedamountbase) | decimal(14, 2) (nullable) | The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items. 
-| [InvoicedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#invoicedstandardquantitybase) | decimal(12, 3) (nullable) | The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items. 
+| [InvoicedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#invoicedamountbase) | decimal (14, 2) __nullable__ | The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items. 
+| [InvoicedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#invoicedstandardquantitybase) | decimal (12, 3) __nullable__ | The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items. 
 | [LineNo](Logistics.Procurement.PurchaseControlDocumentLines.md#lineno) | int32 | The consecutive line number within the control document. `Required` 
-| [Notes](Logistics.Procurement.PurchaseControlDocumentLines.md#notes) | string(2147483647) (nullable) | Notes for this PurchaseControl<br />DocumentLine. 
-| [OrderedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#orderedamountbase) | decimal(14, 2) (nullable) | The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items. 
-| [OrderedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#orderedstandardquantitybase) | decimal(12, 3) (nullable) | The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items. 
-| [ReceivedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#receivedamountbase) | decimal(14, 2) (nullable) | The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items. 
-| [ReceivedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#receivedstandardquantitybase) | decimal(12, 3) (nullable) | The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items. 
-| [RequestedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#requestedamountbase) | decimal(14, 2) (nullable) | The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items. 
-| [RequestedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#requestedstandardquantitybase) | decimal(12, 3) (nullable) | The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items. 
+| [Notes](Logistics.Procurement.PurchaseControlDocumentLines.md#notes) | string (max) __nullable__ | Notes for this PurchaseControl<br />DocumentLine. 
+| [OrderedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#orderedamountbase) | decimal (14, 2) __nullable__ | The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items. 
+| [OrderedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#orderedstandardquantitybase) | decimal (12, 3) __nullable__ | The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items. 
+| [ReceivedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#receivedamountbase) | decimal (14, 2) __nullable__ | The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items. 
+| [ReceivedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#receivedstandardquantitybase) | decimal (12, 3) __nullable__ | The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items. 
+| [RequestedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#requestedamountbase) | decimal (14, 2) __nullable__ | The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items. 
+| [RequestedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#requestedstandardquantitybase) | decimal (12, 3) __nullable__ | The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items. 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.
 
-_Type_: **decimal(14, 2) (nullable)**  
+_Type_: **decimal (14, 2) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.
 
-_Type_: **decimal(12, 3) (nullable)**  
+_Type_: **decimal (12, 3) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -85,7 +85,7 @@ _Default Value_: **NewGuid**
 
 The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.
 
-_Type_: **decimal(14, 2) (nullable)**  
+_Type_: **decimal (14, 2) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 
 The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.
 
-_Type_: **decimal(12, 3) (nullable)**  
+_Type_: **decimal (12, 3) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -109,7 +109,7 @@ _Supports Order By_: **False**
 
 Notes for this PurchaseControlDocumentLine.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -118,7 +118,7 @@ _Maximum Length_: **2147483647**
 
 The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.
 
-_Type_: **decimal(14, 2) (nullable)**  
+_Type_: **decimal (14, 2) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -126,7 +126,7 @@ _Supports Order By_: **False**
 
 The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items.
 
-_Type_: **decimal(12, 3) (nullable)**  
+_Type_: **decimal (12, 3) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -134,7 +134,7 @@ _Supports Order By_: **False**
 
 The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.
 
-_Type_: **decimal(14, 2) (nullable)**  
+_Type_: **decimal (14, 2) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -142,7 +142,7 @@ _Supports Order By_: **False**
 
 The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items.
 
-_Type_: **decimal(12, 3) (nullable)**  
+_Type_: **decimal (12, 3) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -150,7 +150,7 @@ _Supports Order By_: **False**
 
 The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items.
 
-_Type_: **decimal(14, 2) (nullable)**  
+_Type_: **decimal (14, 2) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -158,7 +158,7 @@ _Supports Order By_: **False**
 
 The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.
 
-_Type_: **decimal(12, 3) (nullable)**  
+_Type_: **decimal (12, 3) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

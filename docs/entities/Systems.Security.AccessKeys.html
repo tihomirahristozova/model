@@ -104,12 +104,12 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Security.AccessKeys.html#code">Code</a></td>
-<td>string(16) (nullable)</td>
+<td>string (16) <strong>nullable</strong></td>
 <td>Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessKeys.html#entityname">EntityName</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>What entitity the key secures. Can be null for private, legacy keys. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessKeys.html#name">Name</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>Multilanguage descriptive name of the security key. Can be null for legacy keys. <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
@@ -127,13 +127,13 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(16) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (16) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="entityname">EntityName</h3>
 <p>What entitity the key secures. Can be null for private, legacy keys. <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -145,7 +145,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>Multilanguage descriptive name of the security key. Can be null for legacy keys. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>

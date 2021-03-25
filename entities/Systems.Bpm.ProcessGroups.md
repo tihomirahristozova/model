@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.ProcessGroups.md#code) | string(5) | Group code, unique within the parent group. `Required` `Filter(eq;like)` 
+| [Code](Systems.Bpm.ProcessGroups.md#code) | string (5) | Group code, unique within the parent group. `Required` `Filter(eq;like)` 
 | [Id](Systems.Bpm.ProcessGroups.md#id) | guid |  
 | [Name](Systems.Bpm.ProcessGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process group name. `Required` `Filter(eq;like)` 
-| [Notes](Systems.Bpm.ProcessGroups.md#notes) | string(2147483647) (nullable) | Notes for this ProcessGroup. 
+| [Notes](Systems.Bpm.ProcessGroups.md#notes) | string (max) __nullable__ | Notes for this ProcessGroup. 
 
 ## References
 
@@ -41,7 +41,7 @@ Aggregate Tree
 
 Group code, unique within the parent group. `Required` `Filter(eq;like)`
 
-_Type_: **string(5)**  
+_Type_: **string (5)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **5**  
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 Notes for this ProcessGroup.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

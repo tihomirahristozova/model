@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.VehicleSetVehicles.md#id) | guid |  
-| [Notes](Applications.Fleet.VehicleSetVehicles.md#notes) | string(254) (nullable) | Notes for this VehicleSetVehicle. `Filter(like)` 
-| [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#ordinalpos) | int32 (nullable) | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. `Filter(ge;le)` 
+| [Notes](Applications.Fleet.VehicleSetVehicles.md#notes) | string (254) __nullable__ | Notes for this VehicleSetVehicle. `Filter(like)` 
+| [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#ordinalpos) | int32 __nullable__ | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. `Filter(ge;le)` 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 Notes for this VehicleSetVehicle. `Filter(like)`
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -59,7 +59,7 @@ _Maximum Length_: **254**
 
 Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. `Filter(ge;le)`
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

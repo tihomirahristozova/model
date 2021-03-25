@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultValue](Applications.Rental.AssetTypeProperties.md#defaultvalue) | string(254) (nullable) | The default value of the property. `Filter(like)` 
-| [DefaultValueId](Applications.Rental.AssetTypeProperties.md#defaultvalueid) | guid (nullable) | The value id of the default value of the property. `Filter(multi eq)` 
+| [DefaultValue](Applications.Rental.AssetTypeProperties.md#defaultvalue) | string (254) __nullable__ | The default value of the property. `Filter(like)` 
+| [DefaultValueId](Applications.Rental.AssetTypeProperties.md#defaultvalueid) | guid __nullable__ | The value id of the default value of the property. `Filter(multi eq)` 
 | [Id](Applications.Rental.AssetTypeProperties.md#id) | guid |  
 
 ## References
@@ -43,7 +43,7 @@ Aggregate Root:
 
 The default value of the property. `Filter(like)`
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -52,7 +52,7 @@ _Maximum Length_: **254**
 
 The value id of the default value of the property. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Id

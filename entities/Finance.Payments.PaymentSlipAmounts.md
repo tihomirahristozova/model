@@ -25,14 +25,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Finance.Payments.PaymentSlipAmounts.md#description) | string(254) (nullable) | Description of the payed amount. The numbers of the documents which are payed for example. 
+| [Description](Finance.Payments.PaymentSlipAmounts.md#description) | string (254) __nullable__ | Description of the payed amount. The numbers of the documents which are payed for example. 
 | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | 'I' for Payment issue, 'R' for payment receipt. `Required` `Filter(eq)` 
 | [Id](Finance.Payments.PaymentSlipAmounts.md#id) | guid |  
 | [IsPartyPayment](Finance.Payments.PaymentSlipAmounts.md#ispartypayment) | boolean | Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). `Required` `Default(true)` 
 | [LineNo](Finance.Payments.PaymentSlipAmounts.md#lineno) | int32 | The number of the line within the payment. `Required` 
-| [PartyName](Finance.Payments.PaymentSlipAmounts.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee). 
+| [PartyName](Finance.Payments.PaymentSlipAmounts.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee). 
 | [PaymentDate](Finance.Payments.PaymentSlipAmounts.md#paymentdate) | datetime | The date on which the payment is done. `Required` `Filter(ge;le)` 
-| [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#totalamount) | [Amount](../data-types.md#amount) (nullable) | The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency` 
+| [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#totalamount) | [Amount](../data-types.md#amount) __nullable__ | The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency` 
 
 ## References
 
@@ -55,7 +55,7 @@ Aggregate Root:
 
 Description of the payed amount. The numbers of the documents which are payed for example.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -109,7 +109,7 @@ _Front-End Recalc Expressions:_
 
 The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -129,7 +129,7 @@ _Front-End Recalc Expressions:_
 
 The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

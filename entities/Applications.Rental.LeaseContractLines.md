@@ -26,10 +26,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EndDate](Applications.Rental.LeaseContractLines.md#enddate) | date | Ending date of lease of this asset. `Required` `Filter(multi eq;ge;le)` 
-| [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount](../data-types.md#amount) (nullable) | Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency` 
+| [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount](../data-types.md#amount) __nullable__ | Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency` 
 | [Id](Applications.Rental.LeaseContractLines.md#id) | guid |  
 | [LineNo](Applications.Rental.LeaseContractLines.md#lineno) | int32 | Consecutive number of the line within the lease contract. `Required` `Filter(eq;ge;le)` 
-| [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string(2147483647) (nullable) | Notes for this line. 
+| [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string (max) __nullable__ | Notes for this line. 
 | [StartDate](Applications.Rental.LeaseContractLines.md#startdate) | date | Starting date of lease for this asset. `Required` `Filter(multi eq;ge;le)` 
 
 ## References
@@ -65,7 +65,7 @@ _Front-End Recalc Expressions:_
 
 Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -93,7 +93,7 @@ _Front-End Recalc Expressions:_
 
 Notes for this line.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

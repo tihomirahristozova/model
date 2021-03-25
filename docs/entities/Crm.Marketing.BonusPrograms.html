@@ -108,7 +108,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#active">Active</a></td>
-<td>boolean (nullable)</td>
+<td>boolean <strong>nullable</strong></td>
 <td>General condition if the bonus is active. The other conditions are verified only for active bonus programs. <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -118,67 +118,67 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusdocumentamountpercent">BonusDocumentAmountPercent</a></td>
-<td>decimal(7, 6) (nullable)</td>
+<td>decimal (7, 6) <strong>nullable</strong></td>
 <td>The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonuslinediscountpercent">BonusLineDiscountPercent</a></td>
-<td>decimal(7, 6)</td>
+<td>decimal (7, 6)</td>
 <td>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusproductquantity">BonusProductQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. <code>Unit: BonusProductQuantityUnit</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#bonusproductquantitymultiplierforeachlotsize">BonusProductQuantity<br>MultiplierForEach<br>LotSize</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditioncustomerfilterxml">ConditionCustomerFilterXML</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditiondistributionchannelfilterxml">ConditionDistribution<br>ChannelFilterX<br>ML</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>When not null, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionfromdate">ConditionFromDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Starting date of the bonus. null means that there is no starting date restriction. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionmaxamount">ConditionMaxAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionmaxquantity">ConditionMaxQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionminamount">ConditionMinAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionminquantity">ConditionMinQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditionshiptocustomerfilterxml">ConditionShipTo<br>CustomerFilter<br>XML</a></td>
-<td>dataaccessfilter (nullable)</td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.BonusPrograms.html#conditiontodate">ConditionToDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Ending date (inclusive) of the bonus. null means that there is no ending date restriction. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
@@ -295,7 +295,7 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
 <p>General condition if the bonus is active. The other conditions are verified only for active bonus programs. <code>Default(true)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean (nullable)</strong><br>
+<p><em>Type</em>: <strong>boolean <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
@@ -327,68 +327,68 @@ Allowed values for the <code>BonusAction</code>(Crm.Marketing.BonusPrograms.md#b
 <em>Default Value</em>: <strong>Discount</strong></p>
 <h3 id="bonusdocumentamountpercent">BonusDocumentAmountPercent</h3>
 <p>The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null.</p>
-<p><em>Type</em>: <strong>decimal(7, 6) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="bonuslinediscountpercent">BonusLineDiscountPercent</h3>
 <p>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="bonusproductquantity">BonusProductQuantity</h3>
 <p>The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. <code>Unit: BonusProductQuantityUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="bonusproductquantitymultiplierforeachlotsize">BonusProductQuantityMultiplierForEachLotSize</h3>
 <p>When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditioncustomerfilterxml">ConditionCustomerFilterXML</h3>
 <p>When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditiondistributionchannelfilterxml">ConditionDistributionChannelFilterXML</h3>
 <p>When not null, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionfromdate">ConditionFromDate</h3>
 <p>Starting date of the bonus. null means that there is no starting date restriction. <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionmaxamount">ConditionMaxAmount</h3>
 <p>If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionmaxquantity">ConditionMaxQuantity</h3>
 <p>When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionminamount">ConditionMinAmount</h3>
 <p>If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionminquantity">ConditionMinQuantity</h3>
 <p>When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionshiptocustomerfilterxml">ConditionShipToCustomerFilterXML</h3>
 <p>When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics.</p>
-<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditiontodate">ConditionToDate</h3>
 <p>Ending date (inclusive) of the bonus. null means that there is no ending date restriction. <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>

@@ -24,10 +24,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.Service.Services.md#code) | string(16) | Unique code of the service. `Required` `Filter(eq;like)` 
+| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service. `Required` `Filter(eq;like)` 
 | [Id](Applications.Service.Services.md#id) | guid |  
 | [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates wheather this service is currently used. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Applications.Service.Services.md#name) | string(254) | The name of the service. `Required` `Filter(eq;like)` 
+| [Name](Applications.Service.Services.md#name) | string (254) | The name of the service. `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -48,7 +48,7 @@ Aggregate Tree
 
 Unique code of the service. `Required` `Filter(eq;like)`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -73,7 +73,7 @@ _Default Value_: **True**
 
 The name of the service. `Required` `Filter(eq;like)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

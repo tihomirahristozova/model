@@ -27,9 +27,9 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [FolderName](Applications.Mail.BoxFolders.md#foldername) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language folder name. `Required` `Filter(eq;like)` 
 | [Id](Applications.Mail.BoxFolders.md#id) | guid |  
-| [ServerFolderID](Applications.Mail.BoxFolders.md#serverfolderid) | string(256) (nullable) | ID of the folder on the mail server in the format of the mail server. `Filter(eq)` 
-| [SyncState](Applications.Mail.BoxFolders.md#syncstate) | string(2147483647) (nullable) | The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState. 
-| [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) | [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) (nullable) | When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. `Filter(eq)` `ReadOnly` 
+| [ServerFolderID](Applications.Mail.BoxFolders.md#serverfolderid) | string (256) __nullable__ | ID of the folder on the mail server in the format of the mail server. `Filter(eq)` 
+| [SyncState](Applications.Mail.BoxFolders.md#syncstate) | string (max) __nullable__ | The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState. 
+| [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) | [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) __nullable__ | When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. `Filter(eq)` `ReadOnly` 
 
 ## References
 
@@ -66,7 +66,7 @@ _Default Value_: **NewGuid**
 
 ID of the folder on the mail server in the format of the mail server. `Filter(eq)`
 
-_Type_: **string(256) (nullable)**  
+_Type_: **string (256) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -75,7 +75,7 @@ _Maximum Length_: **256**
 
 The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -84,7 +84,7 @@ _Maximum Length_: **2147483647**
 
 When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. `Filter(eq)` `ReadOnly`
 
-_Type_: **[SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) (nullable)**  
+_Type_: **[SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) __nullable__**  
 Allowed values for the `SystemPurpose`(Applications.Mail.BoxFolders.md#systempurpose) data attribute  
 _Allowed Values (Applications.Mail.BoxFoldersRepository.SystemPurpose Enum Members)_  
 

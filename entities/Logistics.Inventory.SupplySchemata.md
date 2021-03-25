@@ -25,7 +25,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.SupplySchemata.md#id) | guid |  
-| [Name](Logistics.Inventory.SupplySchemata.md#name) | string(254) | The name of this SupplySchema. `Required` 
+| [Name](Logistics.Inventory.SupplySchemata.md#name) | string (254) | The name of this SupplySchema. `Required` 
 
 ## Child Collections
 
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 The name of this SupplySchema. `Required`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

@@ -104,17 +104,17 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#code">Code</a></td>
-<td>string(16)</td>
+<td>string (16)</td>
 <td>Unique measure code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#greenzonespreadpercent">GreenZoneSpreadPercent</a></td>
-<td>decimal(3, 2)</td>
+<td>decimal (3, 2)</td>
 <td>The plus or minus percent, by which the goal can be missed, but still considered achieved. <code>Required</code> <code>Default(0.2)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#horizontaltrendspreadpercent">HorizontalTrend<br>SpreadPercent</a></td>
-<td>decimal(3, 2)</td>
+<td>decimal (3, 2)</td>
 <td>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. <code>Required</code> <code>Default(0.01)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -124,12 +124,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#name">Name</a></td>
-<td>string(254)</td>
+<td>string (254)</td>
 <td>The name of the measure (multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this DataMeasure.</td>
 </tr>
 <tr>
@@ -159,20 +159,20 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
 <p>Unique measure code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(16)</strong><br>
+<p><em>Type</em>: <strong>string (16)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="greenzonespreadpercent">GreenZoneSpreadPercent</h3>
 <p>The plus or minus percent, by which the goal can be missed, but still considered achieved. <code>Required</code> <code>Default(0.2)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>decimal(3, 2)</strong><br>
+<p><em>Type</em>: <strong>decimal (3, 2)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0.2</strong></p>
 <h3 id="horizontaltrendspreadpercent">HorizontalTrendSpreadPercent</h3>
 <p>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. <code>Required</code> <code>Default(0.01)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>decimal(3, 2)</strong><br>
+<p><em>Type</em>: <strong>decimal (3, 2)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0.01</strong></p>
@@ -183,13 +183,13 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of the measure (multilanguage). <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string(254)</strong><br>
+<p><em>Type</em>: <strong>string (254)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this DataMeasure.</p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

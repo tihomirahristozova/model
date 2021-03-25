@@ -27,11 +27,11 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Date](General.Contacts.ActivityTimeIntervals.md#date) | date | The date on which the work was performed. `Required` `Filter(eq;ge;le)` 
 | [EndTime](General.Contacts.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
-| [ExecutionCompletePercent](General.Contacts.ActivityTimeIntervals.md#executioncompletepercent) | decimal(3, 2) | Percent of task completed. `Required` `Default(0)` `Filter(ge;le)` 
+| [ExecutionCompletePercent](General.Contacts.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed. `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](General.Contacts.ActivityTimeIntervals.md#id) | guid |  
-| [Notes](General.Contacts.ActivityTimeIntervals.md#notes) | string(254) (nullable) | Notes for the time interval. 
+| [Notes](General.Contacts.ActivityTimeIntervals.md#notes) | string (254) __nullable__ | Notes for the time interval. 
 | [StartTime](General.Contacts.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
-| [State](General.Contacts.ActivityTimeIntervals.md#state) | [DocumentState](General.Contacts.ActivityTimeIntervals.md#state) (nullable) | The state of the primary activity in the moment the time interval was created. null when the state is unknown. 
+| [State](General.Contacts.ActivityTimeIntervals.md#state) | [DocumentState](General.Contacts.ActivityTimeIntervals.md#state) __nullable__ | The state of the primary activity in the moment the time interval was created. null when the state is unknown. 
 
 ## References
 
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 Percent of task completed. `Required` `Default(0)` `Filter(ge;le)`
 
-_Type_: **decimal(3, 2)**  
+_Type_: **decimal (3, 2)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -80,7 +80,7 @@ _Default Value_: **NewGuid**
 
 Notes for the time interval.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 The state of the primary activity in the moment the time interval was created. null when the state is unknown.
 
-_Type_: **[DocumentState](General.Contacts.ActivityTimeIntervals.md#state) (nullable)**  
+_Type_: **[DocumentState](General.Contacts.ActivityTimeIntervals.md#state) __nullable__**  
 Enumeration of document system states  
 _Allowed Values (General.DocumentState Enum Members)_  
 

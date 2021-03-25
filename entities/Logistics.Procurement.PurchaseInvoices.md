@@ -35,38 +35,38 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AdjustmentNumber](Logistics.Procurement.PurchaseInvoices.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentTime](Logistics.Procurement.PurchaseInvoices.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [AdjustmentUser](Logistics.Procurement.PurchaseInvoices.md#adjustmentuser) | string(64) (nullable) | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentTime](Logistics.Procurement.PurchaseInvoices.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentUser](Logistics.Procurement.PurchaseInvoices.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ApplyDate](Logistics.Procurement.PurchaseInvoices.md#applydate) | date | Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date. `Required` `Filter(ge;le)` 
-| [CompleteTime](Logistics.Procurement.PurchaseInvoices.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CompleteTime](Logistics.Procurement.PurchaseInvoices.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationTime](Logistics.Procurement.PurchaseInvoices.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [CreationUser](Logistics.Procurement.PurchaseInvoices.md#creationuser) | string(64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [CreditNoteReason](Logistics.Procurement.PurchaseInvoices.md#creditnotereason) | string(254) (nullable) | Reason for the debit/credit note. 
-| [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) | [DeliveryTerms](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) (nullable) | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
+| [CreationUser](Logistics.Procurement.PurchaseInvoices.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [CreditNoteReason](Logistics.Procurement.PurchaseInvoices.md#creditnotereason) | string (254) __nullable__ | Reason for the debit/credit note. 
+| [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) | [DeliveryTerms](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
 | [DocumentDate](Logistics.Procurement.PurchaseInvoices.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNo](Logistics.Procurement.PurchaseInvoices.md#documentno) | string(20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
-| [DocumentNotes](Logistics.Procurement.PurchaseInvoices.md#documentnotes) | string(2147483647) (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNo](Logistics.Procurement.PurchaseInvoices.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNotes](Logistics.Procurement.PurchaseInvoices.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
 | [DocumentVersion](Logistics.Procurement.PurchaseInvoices.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [EntityName](Logistics.Procurement.PurchaseInvoices.md#entityname) | string(64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [EntityName](Logistics.Procurement.PurchaseInvoices.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Logistics.Procurement.PurchaseInvoices.md#id) | guid |  
-| [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) (nullable) | Transaction nature; used for Intrastat reporting. 
-| [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) (nullable) | Transport mode; used for Intrastat reporting. 
+| [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
+| [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
 | [IsReleased](Logistics.Procurement.PurchaseInvoices.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Logistics.Procurement.PurchaseInvoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [PaymentDueDate](Logistics.Procurement.PurchaseInvoices.md#paymentduedate) | datetime (nullable) | Due date for paying the invoice. null means to use the default . `Filter(ge;le)` 
+| [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [PaymentDueDate](Logistics.Procurement.PurchaseInvoices.md#paymentduedate) | datetime __nullable__ | Due date for paying the invoice. null means to use the default . `Filter(ge;le)` 
 | [PlanningOnly](Logistics.Procurement.PurchaseInvoices.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Logistics.Procurement.PurchaseInvoices.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [ReferenceDate](Logistics.Procurement.PurchaseInvoices.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
-| [ReferenceDocumentNo](Logistics.Procurement.PurchaseInvoices.md#referencedocumentno) | string(20) (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
-| [ReleaseTime](Logistics.Procurement.PurchaseInvoices.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDate](Logistics.Procurement.PurchaseInvoices.md#referencedate) | datetime __nullable__ | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDocumentNo](Logistics.Procurement.PurchaseInvoices.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
+| [ReleaseTime](Logistics.Procurement.PurchaseInvoices.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Logistics.Procurement.PurchaseInvoices.md#state) | [DocumentState](Logistics.Procurement.PurchaseInvoices.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VATCashReportingMode](Logistics.Procurement.PurchaseInvoices.md#vatcashreportingmode) | boolean | When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries. `Required` `Default(false)` `Filter(multi eq)` 
-| [VATNotes](Logistics.Procurement.PurchaseInvoices.md#vatnotes) | string(254) (nullable) | Description of the operation that will be entered in the VAT ledgers. 
+| [VATNotes](Logistics.Procurement.PurchaseInvoices.md#vatnotes) | string (254) __nullable__ | Description of the operation that will be entered in the VAT ledgers. 
 | [Void](Logistics.Procurement.PurchaseInvoices.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidReason](Logistics.Procurement.PurchaseInvoices.md#voidreason) | string(254) (nullable) | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidTime](Logistics.Procurement.PurchaseInvoices.md#voidtime) | datetime (nullable) | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VoidUser](Logistics.Procurement.PurchaseInvoices.md#voiduser) | string(64) (nullable) | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidReason](Logistics.Procurement.PurchaseInvoices.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidTime](Logistics.Procurement.PurchaseInvoices.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [VoidUser](Logistics.Procurement.PurchaseInvoices.md#voiduser) | string (64) __nullable__ | The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 
 ## References
 
@@ -134,7 +134,7 @@ _Default Value_: **0**
 
 Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -142,7 +142,7 @@ _Supports Order By_: **False**
 
 The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -161,7 +161,7 @@ _Front-End Recalc Expressions:_
 
 Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -178,7 +178,7 @@ _Default Value_: **CurrentDateTime**
 
 The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -187,7 +187,7 @@ _Maximum Length_: **64**
 
 Reason for the debit/credit note.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -196,7 +196,7 @@ _Maximum Length_: **254**
 
 Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
 
-_Type_: **[DeliveryTerms](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) (nullable)**  
+_Type_: **[DeliveryTerms](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) __nullable__**  
 Generic enum type for DeliveryTerms properties  
 _Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_  
 
@@ -234,7 +234,7 @@ _Default Value_: **CurrentDate**
 
 Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(20)**  
+_Type_: **string (20)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -244,7 +244,7 @@ _Maximum Length_: **20**
 
 Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -262,7 +262,7 @@ _Default Value_: **1**
 
 The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -279,7 +279,7 @@ _Default Value_: **NewGuid**
 
 Transaction nature; used for Intrastat reporting.
 
-_Type_: **[TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) (nullable)**  
+_Type_: **[TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__**  
 Generic enum type for TransactionNature properties  
 _Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_  
 
@@ -314,7 +314,7 @@ _Front-End Recalc Expressions:_
 
 Transport mode; used for Intrastat reporting.
 
-_Type_: **[TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) (nullable)**  
+_Type_: **[TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) __nullable__**  
 Generic enum type for TransportMode properties  
 _Allowed Values (Finance.Intrastat.TransportMode Enum Members)_  
 
@@ -356,7 +356,7 @@ _Default Value_: **False**
 
 Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **[ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) (nullable)**  
+_Type_: **[ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) __nullable__**  
 Relationship between parent and child documents  
 _Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
@@ -372,7 +372,7 @@ _Supports Order By_: **False**
 
 Due date for paying the invoice. null means to use the default . `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -400,7 +400,7 @@ _Default Value_: **False**
 
 The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -409,7 +409,7 @@ _Default Value_: **CurrentDate**
 
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(20) (nullable)**  
+_Type_: **string (20) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -418,7 +418,7 @@ _Maximum Length_: **20**
 
 Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -459,7 +459,7 @@ _Front-End Recalc Expressions:_
 
 Description of the operation that will be entered in the VAT ledgers.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -478,7 +478,7 @@ _Default Value_: **False**
 
 Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -487,7 +487,7 @@ _Maximum Length_: **254**
 
 Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -495,7 +495,7 @@ _Supports Order By_: **False**
 
 The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

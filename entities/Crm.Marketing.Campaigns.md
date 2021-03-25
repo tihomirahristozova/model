@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Crm.Marketing.Campaigns.md#description) | string(254) (nullable) | Campaign description. 
-| [EndDate](Crm.Marketing.Campaigns.md#enddate) | datetime (nullable) | End date of the campaign. null means that the end date is still unknown. 
-| [ForecastedCost](Crm.Marketing.Campaigns.md#forecastedcost) | decimal(18, 0) | Forecasted total cost of the campaign. `Required` `Default(0)` 
+| [Description](Crm.Marketing.Campaigns.md#description) | string (254) __nullable__ | Campaign description. 
+| [EndDate](Crm.Marketing.Campaigns.md#enddate) | datetime __nullable__ | End date of the campaign. null means that the end date is still unknown. 
+| [ForecastedCost](Crm.Marketing.Campaigns.md#forecastedcost) | decimal (18, 0) | Forecasted total cost of the campaign. `Required` `Default(0)` 
 | [Id](Crm.Marketing.Campaigns.md#id) | guid |  
-| [Name](Crm.Marketing.Campaigns.md#name) | string(64) | Short name of the campaign. `Required` `Filter(like)` `ORD` 
+| [Name](Crm.Marketing.Campaigns.md#name) | string (64) | Short name of the campaign. `Required` `Filter(like)` `ORD` 
 | [StartDate](Crm.Marketing.Campaigns.md#startdate) | datetime | Starting date of the campaign. `Required` `Default(Today)` 
 
 
@@ -37,7 +37,7 @@ Aggregate Tree
 
 Campaign description.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -46,7 +46,7 @@ _Maximum Length_: **254**
 
 End date of the campaign. null means that the end date is still unknown.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -54,7 +54,7 @@ _Supports Order By_: **False**
 
 Forecasted total cost of the campaign. `Required` `Default(0)`
 
-_Type_: **decimal(18, 0)**  
+_Type_: **decimal (18, 0)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -70,7 +70,7 @@ _Default Value_: **NewGuid**
 
 Short name of the campaign. `Required` `Filter(like)` `ORD`
 
-_Type_: **string(64)**  
+_Type_: **string (64)**  
 _Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  

@@ -25,9 +25,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPropertyValue](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvalue) | string(254) (nullable) | When not null, specifies the default value of the property, for new products in the group. 
-| [DefaultProperty<br />ValueDescription](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvaluedescription) | string(254) (nullable) | When not null, specifies the default description value of the property, for new products in the group. 
-| [DefaultValueId](General.Products.ProductGroupRequiredProperties.md#defaultvalueid) | guid (nullable) | When not null, specifies the default internal Id value of the property, for new products in the group. `Filter(multi eq)` 
+| [DefaultPropertyValue](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvalue) | string (254) __nullable__ | When not null, specifies the default value of the property, for new products in the group. 
+| [DefaultProperty<br />ValueDescription](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvaluedescription) | string (254) __nullable__ | When not null, specifies the default description value of the property, for new products in the group. 
+| [DefaultValueId](General.Products.ProductGroupRequiredProperties.md#defaultvalueid) | guid __nullable__ | When not null, specifies the default internal Id value of the property, for new products in the group. `Filter(multi eq)` 
 | [Id](General.Products.ProductGroupRequiredProperties.md#id) | guid |  
 | [PropertyNo](General.Products.ProductGroupRequiredProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. `Required` `Default(0)` 
 | [Required](General.Products.ProductGroupRequiredProperties.md#required) | boolean | Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. `Required` `Default(false)` 
@@ -46,7 +46,7 @@ Aggregate Root:
 
 When not null, specifies the default value of the property, for new products in the group.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -55,7 +55,7 @@ _Maximum Length_: **254**
 
 When not null, specifies the default description value of the property, for new products in the group.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -64,7 +64,7 @@ _Maximum Length_: **254**
 
 When not null, specifies the default internal Id value of the property, for new products in the group. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Id

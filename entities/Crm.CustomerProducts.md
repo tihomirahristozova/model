@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.CustomerProducts.md#fromdate) | date (nullable) | The initial date of the listing. null when the initial date is unknown. `Filter(eq;ge;le)` 
+| [FromDate](Crm.CustomerProducts.md#fromdate) | date __nullable__ | The initial date of the listing. null when the initial date is unknown. `Filter(eq;ge;le)` 
 | [Id](Crm.CustomerProducts.md#id) | guid |  
-| [Notes](Crm.CustomerProducts.md#notes) | string(254) (nullable) | Notes for the listing. 
-| [ToDate](Crm.CustomerProducts.md#todate) | date (nullable) | The final date of the listing. null when the final date is unknown. `Filter(eq;ge;le)` 
+| [Notes](Crm.CustomerProducts.md#notes) | string (254) __nullable__ | Notes for the listing. 
+| [ToDate](Crm.CustomerProducts.md#todate) | date __nullable__ | The final date of the listing. null when the final date is unknown. `Filter(eq;ge;le)` 
 
 ## References
 
@@ -46,7 +46,7 @@ Aggregate Root:
 
 The initial date of the listing. null when the initial date is unknown. `Filter(eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -61,7 +61,7 @@ _Default Value_: **NewGuid**
 
 Notes for the listing.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -70,7 +70,7 @@ _Maximum Length_: **254**
 
 The final date of the listing. null when the final date is unknown. `Filter(eq;ge;le)`
 
-_Type_: **date (nullable)**  
+_Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

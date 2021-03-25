@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Wms.WarehouseZones.md#code) | string(32) | Zone code, unique within the warehouse. `Required` `Filter(multi eq)` 
+| [Code](Logistics.Wms.WarehouseZones.md#code) | string (32) | Zone code, unique within the warehouse. `Required` `Filter(multi eq)` 
 | [Id](Logistics.Wms.WarehouseZones.md#id) | guid |  
 | [Name](Logistics.Wms.WarehouseZones.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the zone. `Required` `Filter(eq;like)` 
-| [Notes](Logistics.Wms.WarehouseZones.md#notes) | string(2147483647) (nullable) | Notes for this WarehouseZone. 
+| [Notes](Logistics.Wms.WarehouseZones.md#notes) | string (max) __nullable__ | Notes for this WarehouseZone. 
 
 ## References
 
@@ -44,7 +44,7 @@ Aggregate Root:
 
 Zone code, unique within the warehouse. `Required` `Filter(multi eq)`
 
-_Type_: **string(32)**  
+_Type_: **string (32)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 Notes for this WarehouseZone.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

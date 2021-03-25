@@ -28,20 +28,20 @@ Aggregate Root:
 | [Active](Crm.Customers.md#active) | boolean | True if the customer is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [AllowUseAsPrimaryCustomer](Crm.Customers.md#allowuseasprimarycustomer) | boolean | Specifies whether to allow the customer to be used as primary customer in a sales deal. `Required` `Default(false)` `Filter(eq)` 
 | [AllowUseAsShipToCustomer](Crm.Customers.md#allowuseasshiptocustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal. `Required` `Default(false)` `Filter(eq)` 
-| [CreationTime](Crm.Customers.md#creationtime) | datetime (nullable) | Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly` 
-| [CreationUser](Crm.Customers.md#creationuser) | string(64) (nullable) | Login name of the user, who created the Customer. `Filter(like)` `ReadOnly` 
-| [CreditLimit](Crm.Customers.md#creditlimit) | [Amount](../data-types.md#amount) (nullable) | Total credit limit for the customer in the customers' default currency. null means there is no limit. `Currency: DefaultCurrency` 
+| [CreationTime](Crm.Customers.md#creationtime) | datetime __nullable__ | Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly` 
+| [CreationUser](Crm.Customers.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Customer. `Filter(like)` `ReadOnly` 
+| [CreditLimit](Crm.Customers.md#creditlimit) | [Amount](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the customers' default currency. null means there is no limit. `Currency: DefaultCurrency` 
 | [DefaultDeliveryTermDays](Crm.Customers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sale. `Required` `Default(0)` 
 | [DefaultPaymentStartDays](Crm.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. `Required` `Default(0)` 
 | [DefaultPaymentTermDays](Crm.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer. `Required` `Default(0)` 
-| [FromDate](Crm.Customers.md#fromdate) | datetime (nullable) | Start date of the customer relationship. `Default(Today)` `Filter(ge;le)` 
+| [FromDate](Crm.Customers.md#fromdate) | datetime __nullable__ | Start date of the customer relationship. `Default(Today)` `Filter(ge;le)` 
 | [GracePeriodDays](Crm.Customers.md#graceperioddays) | int32 | Number of days after the payment deadline, during which the system still allows new sales orders for the customer. `Required` `Default(0)` 
 | [Id](Crm.Customers.md#id) | guid |  
-| [Number](Crm.Customers.md#number) | string(16) (nullable) | Unique customer number. `Filter(eq;like)` `ORD` 
+| [Number](Crm.Customers.md#number) | string (16) __nullable__ | Unique customer number. `Filter(eq;like)` `ORD` 
 | [PersistSalesOrdersLots](Crm.Customers.md#persistsalesorderslots) | boolean | If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. `Required` `Default(false)` `Filter(eq)` 
-| [ThruDate](Crm.Customers.md#thrudate) | datetime (nullable) | The date of customer relationship termination. null for active customers. `Filter(ge;le)` 
-| [UpdateTime](Crm.Customers.md#updatetime) | datetime (nullable) | Date and time when the Customer was last updated. `Filter(ge;le)` `ReadOnly` 
-| [UpdateUser](Crm.Customers.md#updateuser) | string(64) (nullable) | Login name of the user, who last updated the Customer. `Filter(like)` `ReadOnly` 
+| [ThruDate](Crm.Customers.md#thrudate) | datetime __nullable__ | The date of customer relationship termination. null for active customers. `Filter(ge;le)` 
+| [UpdateTime](Crm.Customers.md#updatetime) | datetime __nullable__ | Date and time when the Customer was last updated. `Filter(ge;le)` `ReadOnly` 
+| [UpdateUser](Crm.Customers.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Customer. `Filter(like)` `ReadOnly` 
 
 ## References
 
@@ -99,7 +99,7 @@ _Default Value_: **False**
 
 Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -107,7 +107,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who created the Customer. `Filter(like)` `ReadOnly`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -116,7 +116,7 @@ _Maximum Length_: **64**
 
 Total credit limit for the customer in the customers' default currency. null means there is no limit. `Currency: DefaultCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -156,7 +156,7 @@ _Default Value_: **0**
 
 Start date of the customer relationship. `Default(Today)` `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -181,7 +181,7 @@ _Default Value_: **NewGuid**
 
 Unique customer number. `Filter(eq;like)` `ORD`
 
-_Type_: **string(16) (nullable)**  
+_Type_: **string (16) __nullable__**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -200,7 +200,7 @@ _Default Value_: **False**
 
 The date of customer relationship termination. null for active customers. `Filter(ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -208,7 +208,7 @@ _Supports Order By_: **False**
 
 Date and time when the Customer was last updated. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -216,7 +216,7 @@ _Supports Order By_: **False**
 
 Login name of the user, who last updated the Customer. `Filter(like)` `ReadOnly`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

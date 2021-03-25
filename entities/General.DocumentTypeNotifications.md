@@ -25,12 +25,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentEvent](General.DocumentTypeNotifications.md#documentevent) | string(254) | The event which will trigger the notification. `Required` `Default("StateChanging")` `Filter(eq)` 
-| [FilterXML](General.DocumentTypeNotifications.md#filterxml) | string(2147483647) (nullable) | Filtering condition for the document. Only documents which match the filter will trigger the event. 
+| [DocumentEvent](General.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification. `Required` `Default("StateChanging")` `Filter(eq)` 
+| [FilterXML](General.DocumentTypeNotifications.md#filterxml) | string (max) __nullable__ | Filtering condition for the document. Only documents which match the filter will trigger the event. 
 | [Id](General.DocumentTypeNotifications.md#id) | guid |  
 | [StateBitMask](General.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event. `Required` `Default(0)` 
 | [StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. `Required` `Default("*")` 
-| [ToEmailAddressList](General.DocumentTypeNotifications.md#toemailaddresslist) | string(2048) | List of email addressess to be notified. `Required` 
+| [ToEmailAddressList](General.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of email addressess to be notified. `Required` 
 
 ## References
 
@@ -46,7 +46,7 @@ Aggregate Root:
 
 The event which will trigger the notification. `Required` `Default("StateChanging")` `Filter(eq)`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -56,7 +56,7 @@ _Default Value_: **StateChanging**
 
 Filtering condition for the document. Only documents which match the filter will trigger the event.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -100,7 +100,7 @@ _Default Value_: **AnyChange**
 
 List of email addressess to be notified. `Required`
 
-_Type_: **string(2048)**  
+_Type_: **string (2048)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2048**  

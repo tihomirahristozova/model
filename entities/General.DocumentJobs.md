@@ -28,9 +28,9 @@ Aggregate Tree
 | [Id](General.DocumentJobs.md#id) | guid |  
 | [IsActive](General.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 | [JobType](General.DocumentJobs.md#jobtype) | [JobType](General.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
-| [Name](General.DocumentJobs.md#name) | string(254) | The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [Name](General.DocumentJobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 | [NewState](General.DocumentJobs.md#newstate) | [DocumentState](General.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter. `Required` 
-| [Notes](General.DocumentJobs.md#notes) | string(2147483647) (nullable) | Notes for this Job. (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [Notes](General.DocumentJobs.md#notes) | string (max) __nullable__ | Notes for this Job. (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 | [RunOnIdle](General.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 
 ## References
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Core.Jobs.md))
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -120,7 +120,7 @@ _Supports Order By_: **False**
 
 Notes for this Job. (Inherited from [Jobs](Systems.Core.Jobs.md))
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

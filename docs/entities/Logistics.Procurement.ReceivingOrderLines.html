@@ -104,17 +104,17 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedquantity">ConfirmedQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. <code>Unit: QuantityUnit</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedquantitybase">ConfirmedQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedstandardquantitybase">ConfirmedStandard<br>QuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this ReceivingOrderLine.</td>
 </tr>
 <tr>
@@ -244,19 +244,19 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="confirmedquantity">ConfirmedQuantity</h3>
 <p>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. <code>Unit: QuantityUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="confirmedquantitybase">ConfirmedQuantityBase</h3>
 <p>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.ConfirmedQuantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConfirmedQuantityBase, obj.ConfirmedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="confirmedstandardquantitybase">ConfirmedStandardQuantityBase</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -293,7 +293,7 @@ Aggregate Root:<br>
 <code>( obj.ReceivingOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ReceivingOrderLine.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>

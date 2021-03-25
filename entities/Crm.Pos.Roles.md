@@ -26,7 +26,7 @@ Aggregate Tree
 | [CanProcessMinusSales](Crm.Pos.Roles.md#canprocessminussales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. `Required` `Default(false)` `Filter(multi eq)` 
 | [CanVoidSales](Crm.Pos.Roles.md#canvoidsales) | boolean | Indicates whether this role can void sales orders. `Required` `Default(false)` `Filter(multi eq)` 
 | [Id](Crm.Pos.Roles.md#id) | guid |  
-| [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string(16) | Unique role code. `Required` `Filter(multi eq;like)` `ORD` 
+| [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string (16) | Unique role code. `Required` `Filter(multi eq;like)` `ORD` 
 | [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the POS role. `Required` `Filter(multi eq;like)` 
 
 
@@ -61,7 +61,7 @@ _Default Value_: **NewGuid**
 
 Unique role code. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  

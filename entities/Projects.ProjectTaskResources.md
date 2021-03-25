@@ -25,15 +25,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BillingPricePerHour](Projects.ProjectTaskResources.md#billingpriceperhour) | decimal(12, 5) (nullable) | When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. `Filter(eq)` 
-| [BillingTotalAmount](Projects.ProjectTaskResources.md#billingtotalamount) | decimal(14, 2) (nullable) | When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. `Filter(eq)` 
-| [CostPerHour](Projects.ProjectTaskResources.md#costperhour) | decimal(12, 5) | Cost per hour for the resource usage for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)` 
+| [BillingPricePerHour](Projects.ProjectTaskResources.md#billingpriceperhour) | decimal (12, 5) __nullable__ | When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. `Filter(eq)` 
+| [BillingTotalAmount](Projects.ProjectTaskResources.md#billingtotalamount) | decimal (14, 2) __nullable__ | When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. `Filter(eq)` 
+| [CostPerHour](Projects.ProjectTaskResources.md#costperhour) | decimal (12, 5) | Cost per hour for the resource usage for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)` 
 | [Id](Projects.ProjectTaskResources.md#id) | guid |  
-| [Notes](Projects.ProjectTaskResources.md#notes) | string(254) (nullable) | Notes for this ProjectTaskResource. 
-| [PerUseCost](Projects.ProjectTaskResources.md#perusecost) | [Amount](../data-types.md#amount) (nullable) | One time cost for each resource usage, specified in the projects currency. `Currency: ProjectTask.Project.BudgetingCurrency` 
-| [ResourceUsageHours](Projects.ProjectTaskResources.md#resourceusagehours) | decimal(10, 2) | The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. `Required` `Default(0)` `Filter(eq)` 
-| [ResourceUsagePercent](Projects.ProjectTaskResources.md#resourceusagepercent) | decimal(18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` `Filter(eq)` 
-| [TaskTotalCost](Projects.ProjectTaskResources.md#tasktotalcost) | decimal(14, 2) | Total cost for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)` 
+| [Notes](Projects.ProjectTaskResources.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskResource. 
+| [PerUseCost](Projects.ProjectTaskResources.md#perusecost) | [Amount](../data-types.md#amount) __nullable__ | One time cost for each resource usage, specified in the projects currency. `Currency: ProjectTask.Project.BudgetingCurrency` 
+| [ResourceUsageHours](Projects.ProjectTaskResources.md#resourceusagehours) | decimal (10, 2) | The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. `Required` `Default(0)` `Filter(eq)` 
+| [ResourceUsagePercent](Projects.ProjectTaskResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` `Filter(eq)` 
+| [TaskTotalCost](Projects.ProjectTaskResources.md#tasktotalcost) | decimal (14, 2) | Total cost for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)` 
 
 ## References
 
@@ -50,7 +50,7 @@ Aggregate Root:
 
 When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. `Filter(eq)`
 
-_Type_: **decimal(12, 5) (nullable)**  
+_Type_: **decimal (12, 5) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -60,7 +60,7 @@ _Front-End Recalc Expressions:_
 
 When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. `Filter(eq)`
 
-_Type_: **decimal(14, 2) (nullable)**  
+_Type_: **decimal (14, 2) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -70,7 +70,7 @@ _Front-End Recalc Expressions:_
 
 Cost per hour for the resource usage for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)`
 
-_Type_: **decimal(12, 5)**  
+_Type_: **decimal (12, 5)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -88,7 +88,7 @@ _Default Value_: **NewGuid**
 
 Notes for this ProjectTaskResource.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -97,7 +97,7 @@ _Maximum Length_: **254**
 
 One time cost for each resource usage, specified in the projects currency. `Currency: ProjectTask.Project.BudgetingCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. `Required` `Default(0)` `Filter(eq)`
 
-_Type_: **decimal(10, 2)**  
+_Type_: **decimal (10, 2)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -116,7 +116,7 @@ _Front-End Recalc Expressions:_
 
 The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` `Filter(eq)`
 
-_Type_: **decimal(18, 4)**  
+_Type_: **decimal (18, 4)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -127,7 +127,7 @@ _Front-End Recalc Expressions:_
 
 Total cost for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)`
 
-_Type_: **decimal(14, 2)**  
+_Type_: **decimal (14, 2)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

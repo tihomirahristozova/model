@@ -104,7 +104,7 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#enddate">EndDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.</td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementMaterials.html#startdate">StartDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.</td>
 </tr>
 </tbody>
@@ -174,7 +174,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
 <p>End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -216,7 +216,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="startdate">StartDate</h3>
 <p>Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

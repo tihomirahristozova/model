@@ -114,12 +114,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRiskDiscussion.html#lastedittime">LastEditTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Contains the last edit time of the message. null if the message was never edited. <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectRiskDiscussion.html#message">Message</a></td>
-<td>string(2147483647)</td>
+<td>string (max)</td>
 <td>The contents of the message. <code>Required</code></td>
 </tr>
 </tbody>
@@ -160,12 +160,12 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastedittime">LastEditTime</h3>
 <p>Contains the last edit time of the message. null if the message was never edited. <code>Filter(eq)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="message">Message</h3>
 <p>The contents of the message. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(2147483647)</strong><br>
+<p><em>Type</em>: <strong>string (max)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

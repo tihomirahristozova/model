@@ -109,7 +109,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#amountpercent">AmountPercent</a></td>
-<td>decimal(7, 6) (nullable)</td>
+<td>decimal (7, 6) <strong>nullable</strong></td>
 <td>Percent of the sales order amount to be payed.</td>
 </tr>
 <tr>
@@ -119,12 +119,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#explicitpaymentduedate">ExplicitPaymentDueDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#explicitpaymentduestartdate">ExplicitPayment<br>DueStartDate</a></td>
-<td>date (nullable)</td>
+<td>date <strong>nullable</strong></td>
 <td>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>Notes for this SalesOrderPaymentPlan.</td>
 </tr>
 <tr>
@@ -194,7 +194,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="amountpercent">AmountPercent</h3>
 <p>Percent of the sales order amount to be payed.</p>
-<p><em>Type</em>: <strong>decimal(7, 6) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="duedateformmethod">DueDateFormMethod</h3>
@@ -236,14 +236,14 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="explicitpaymentduedate">ExplicitPaymentDueDate</h3>
 <p>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)</code></p>
 <h3 id="explicitpaymentduestartdate">ExplicitPaymentDueStartDate</h3>
 <p>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</p>
-<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -264,7 +264,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <code>( obj.SalesOrder.PaymentPlans.Select( c =&gt; c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this SalesOrderPaymentPlan.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>

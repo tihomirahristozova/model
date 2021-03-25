@@ -26,17 +26,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Bpm.UserBusinessRules.md#code) | string(16) | The unique code of the UserBusinessRule. `Required` `Filter(eq;like)` `ORD` 
-| [Icon](Systems.Bpm.UserBusinessRules.md#icon) | byte[] (nullable) | Visual icon of the rule in .PNG format. 
+| [Code](Systems.Bpm.UserBusinessRules.md#code) | string (16) | The unique code of the UserBusinessRule. `Required` `Filter(eq;like)` `ORD` 
+| [Icon](Systems.Bpm.UserBusinessRules.md#icon) | byte[] __nullable__ | Visual icon of the rule in .PNG format. 
 | [Id](Systems.Bpm.UserBusinessRules.md#id) | guid |  
 | [IsActive](Systems.Bpm.UserBusinessRules.md#isactive) | boolean | Specifies whether the rule is activated. `Required` `Default(false)` `Filter(eq)` 
 | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). `Required` `Default("BKE")` `Filter(multi eq)` 
 | [Name](Systems.Bpm.UserBusinessRules.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this UserBusinessRule. `Required` `Filter(like)` 
-| [Notes](Systems.Bpm.UserBusinessRules.md#notes) | string(2147483647) (nullable) | Notes for this UserBusinessRule. 
-| [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string(128) | The name of the repository, for which this business rule is defined. `Required` `Filter(eq;like)` 
+| [Notes](Systems.Bpm.UserBusinessRules.md#notes) | string (max) __nullable__ | Notes for this UserBusinessRule. 
+| [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string (128) | The name of the repository, for which this business rule is defined. `Required` `Filter(eq;like)` 
 | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | The programming language used to define the rule actions. `Required` `Default("Integrated")` 
-| [ScriptText](Systems.Bpm.UserBusinessRules.md#scripttext) | string(2147483647) (nullable) | The program code used to define the rule actions. 
-| [UserStartable](Systems.Bpm.UserBusinessRules.md#userstartable) | boolean (nullable) | Specifies, that the rule can be manually started by the user. `Default(false)` `Filter(eq)` 
+| [ScriptText](Systems.Bpm.UserBusinessRules.md#scripttext) | string (max) __nullable__ | The program code used to define the rule actions. 
+| [UserStartable](Systems.Bpm.UserBusinessRules.md#userstartable) | boolean __nullable__ | Specifies, that the rule can be manually started by the user. `Default(false)` `Filter(eq)` 
 
 ## Child Collections
 
@@ -53,7 +53,7 @@ Aggregate Tree
 
 The unique code of the UserBusinessRule. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -63,7 +63,7 @@ _Maximum Length_: **16**
 
 Visual icon of the rule in .PNG format.
 
-_Type_: **byte[] (nullable)**  
+_Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -113,7 +113,7 @@ _Supports Order By_: **False**
 
 Notes for this UserBusinessRule.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -122,7 +122,7 @@ _Maximum Length_: **2147483647**
 
 The name of the repository, for which this business rule is defined. `Required` `Filter(eq;like)`
 
-_Type_: **string(128)**  
+_Type_: **string (128)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -148,7 +148,7 @@ _Default Value_: **Integrated**
 
 The program code used to define the rule actions.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -157,7 +157,7 @@ _Maximum Length_: **2147483647**
 
 Specifies, that the rule can be manually started by the user. `Default(false)` `Filter(eq)`
 
-_Type_: **boolean (nullable)**  
+_Type_: **boolean __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  

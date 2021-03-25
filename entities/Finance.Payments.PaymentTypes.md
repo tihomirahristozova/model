@@ -23,11 +23,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Payments.PaymentTypes.md#code) | string(16) | The payment type unique code. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Finance.Payments.PaymentTypes.md#code) | string (16) | The payment type unique code. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Finance.Payments.PaymentTypes.md#id) | guid |  
 | [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
 | [Name](Finance.Payments.PaymentTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentType. `Required` `Filter(like)` `ORD` 
-| [SystemType](Finance.Payments.PaymentTypes.md#systemtype) | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) (nullable) | Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer. 
+| [SystemType](Finance.Payments.PaymentTypes.md#systemtype) | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) __nullable__ | Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer. 
 
 ## References
 
@@ -43,7 +43,7 @@ Aggregate Tree
 
 The payment type unique code. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -78,7 +78,7 @@ _Supports Order By_: **True**
 
 Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer.
 
-_Type_: **[SystemType](Finance.Payments.PaymentTypes.md#systemtype) (nullable)**  
+_Type_: **[SystemType](Finance.Payments.PaymentTypes.md#systemtype) __nullable__**  
 Allowed values for the `SystemType`(Finance.Payments.PaymentTypes.md#systemtype) data attribute  
 _Allowed Values (Finance.Payments.PaymentTypesRepository.SystemType Enum Members)_  
 

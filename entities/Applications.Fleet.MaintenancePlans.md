@@ -23,15 +23,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CheckDays](Applications.Fleet.MaintenancePlans.md#checkdays) | int32 (nullable) | When not null, specifies the number of days between maintenances. 
-| [CheckMonths](Applications.Fleet.MaintenancePlans.md#checkmonths) | int32 (nullable) | When not null, specifies the number of months between maintenances. 
-| [Code](Applications.Fleet.MaintenancePlans.md#code) | string(16) | The unique code of the MaintenancePlan. `Required` 
+| [CheckDays](Applications.Fleet.MaintenancePlans.md#checkdays) | int32 __nullable__ | When not null, specifies the number of days between maintenances. 
+| [CheckMonths](Applications.Fleet.MaintenancePlans.md#checkmonths) | int32 __nullable__ | When not null, specifies the number of months between maintenances. 
+| [Code](Applications.Fleet.MaintenancePlans.md#code) | string (16) | The unique code of the MaintenancePlan. `Required` 
 | [Id](Applications.Fleet.MaintenancePlans.md#id) | guid |  
 | [IsActive](Applications.Fleet.MaintenancePlans.md#isactive) | boolean | True if the plan is active and can be selected from drop-downs. `Required` `Default(true)` `Introduced in version 18.2` 
-| [MileageKm](Applications.Fleet.MaintenancePlans.md#mileagekm) | int32 (nullable) | When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur. 
-| [Name](Applications.Fleet.MaintenancePlans.md#name) | string(254) | Maintenance plan name (Multilanguage). `Required` 
-| [Notes](Applications.Fleet.MaintenancePlans.md#notes) | string(2147483647) (nullable) | Notes for this MaintenancePlan. 
-| [TripCount](Applications.Fleet.MaintenancePlans.md#tripcount) | int32 (nullable) | When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur. 
+| [MileageKm](Applications.Fleet.MaintenancePlans.md#mileagekm) | int32 __nullable__ | When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur. 
+| [Name](Applications.Fleet.MaintenancePlans.md#name) | string (254) | Maintenance plan name (Multilanguage). `Required` 
+| [Notes](Applications.Fleet.MaintenancePlans.md#notes) | string (max) __nullable__ | Notes for this MaintenancePlan. 
+| [TripCount](Applications.Fleet.MaintenancePlans.md#tripcount) | int32 __nullable__ | When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur. 
 
 
 ## Attribute Details
@@ -40,7 +40,7 @@ Aggregate Tree
 
 When not null, specifies the number of days between maintenances.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 When not null, specifies the number of months between maintenances.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 The unique code of the MaintenancePlan. `Required`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -81,7 +81,7 @@ _Default Value_: **True**
 
 When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 Maintenance plan name (Multilanguage). `Required`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -98,7 +98,7 @@ _Maximum Length_: **254**
 
 Notes for this MaintenancePlan.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -107,7 +107,7 @@ _Maximum Length_: **2147483647**
 
 When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.
 
-_Type_: **int32 (nullable)**  
+_Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -109,17 +109,17 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#creationtime">CreationTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the Recipe was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#creationuser">CreationUser</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>Login name of the user, who created the Recipe. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#expirydate">ExpiryDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>The last date, when the recipe should be used. null means that the recipe might still be in use. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -134,12 +134,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#name">Name</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#notes">Notes</a></td>
-<td>string(254) (nullable)</td>
+<td>string (254) <strong>nullable</strong></td>
 <td>User comments for the recipe.</td>
 </tr>
 <tr>
@@ -164,17 +164,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#scraprate">ScrapRate</a></td>
-<td>decimal(7, 6)</td>
+<td>decimal (7, 6)</td>
 <td>The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#updatetime">UpdateTime</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Date and time when the Recipe was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#updateuser">UpdateUser</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>Login name of the user, who last updated the Recipe. <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
@@ -236,18 +236,18 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtime">CreationTime</h3>
 <p>Date and time when the Recipe was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>Login name of the user, who created the Recipe. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="expirydate">ExpiryDate</h3>
 <p>The last date, when the recipe should be used. null means that the recipe might still be in use. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -263,13 +263,13 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="notes">Notes</h3>
 <p>User comments for the recipe.</p>
-<p><em>Type</em>: <strong>string(254) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
@@ -299,18 +299,18 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(7, 6)</strong><br>
+<p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
 <p>Date and time when the Recipe was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
 <p>Login name of the user, who last updated the Recipe. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>

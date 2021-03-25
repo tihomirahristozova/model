@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Resources.ResourceFunctions.md#id) | guid |  
-| [Notes](Production.Resources.ResourceFunctions.md#notes) | string(254) (nullable) | User notes on the resource function. 
+| [Notes](Production.Resources.ResourceFunctions.md#notes) | string (254) __nullable__ | User notes on the resource function. 
 
 ## References
 
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 User notes on the resource function.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  

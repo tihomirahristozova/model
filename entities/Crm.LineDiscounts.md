@@ -23,14 +23,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Crm.LineDiscounts.md#description) | string(50) (nullable) | The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)` 
-| [DiscountPercent](Crm.LineDiscounts.md#discountpercent) | decimal(7, 6) | The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)` 
-| [FromDate](Crm.LineDiscounts.md#fromdate) | datetime (nullable) | Starting date of validity of the discount. null means no from date restriction. `Filter(eq;ge;le)` 
+| [Description](Crm.LineDiscounts.md#description) | string (50) __nullable__ | The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)` 
+| [DiscountPercent](Crm.LineDiscounts.md#discountpercent) | decimal (7, 6) | The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)` 
+| [FromDate](Crm.LineDiscounts.md#fromdate) | datetime __nullable__ | Starting date of validity of the discount. null means no from date restriction. `Filter(eq;ge;le)` 
 | [Id](Crm.LineDiscounts.md#id) | guid |  
-| [MaxQuantity](Crm.LineDiscounts.md#maxquantity) | [Quantity](../data-types.md#quantity) (nullable) | Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
-| [MinQuantity](Crm.LineDiscounts.md#minquantity) | [Quantity](../data-types.md#quantity) (nullable) | Apply the discount only if the quantity sold is equal to or more than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [MaxQuantity](Crm.LineDiscounts.md#maxquantity) | [Quantity](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [MinQuantity](Crm.LineDiscounts.md#minquantity) | [Quantity](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or more than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
 | [Priority](Crm.LineDiscounts.md#priority) | [Priority](Crm.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. `Required` `Default(3)` 
-| [ThruDate](Crm.LineDiscounts.md#thrudate) | datetime (nullable) | Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. `Filter(eq;ge;le)` 
+| [ThruDate](Crm.LineDiscounts.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. `Filter(eq;ge;le)` 
 
 ## References
 
@@ -53,7 +53,7 @@ Aggregate Tree
 
 The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)`
 
-_Type_: **string(50) (nullable)**  
+_Type_: **string (50) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -62,7 +62,7 @@ _Maximum Length_: **50**
 
 The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)`
 
-_Type_: **decimal(7, 6)**  
+_Type_: **decimal (7, 6)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -71,7 +71,7 @@ _Default Value_: **0**
 
 Starting date of validity of the discount. null means no from date restriction. `Filter(eq;ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -86,7 +86,7 @@ _Default Value_: **NewGuid**
 
 Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 Apply the discount only if the quantity sold is equal to or more than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
+_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -122,7 +122,7 @@ _Default Value_: **3**
 
 Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. `Filter(eq;ge;le)`
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

@@ -26,10 +26,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | Type of the declaring person. A=Attorney, R=Representative. `Required` `Filter(eq)` 
-| [DeclaringPersonAddress](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonaddress) | string(150) | Address for correspondation of the declaring person. `Required` 
-| [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#declaringpersoncity) | string(50) | City from the address for correspondation of the declaring person. `Required` 
-| [DeclaringPersonPosition](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonposition) | string(50) (nullable) | Position of the declaring person in the enterprise company. 
-| [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string(4) | Postcode from the address for correspondation of the declaring person. `Required` 
+| [DeclaringPersonAddress](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonaddress) | string (150) | Address for correspondation of the declaring person. `Required` 
+| [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#declaringpersoncity) | string (50) | City from the address for correspondation of the declaring person. `Required` 
+| [DeclaringPersonPosition](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonposition) | string (50) __nullable__ | Position of the declaring person in the enterprise company. 
+| [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string (4) | Postcode from the address for correspondation of the declaring person. `Required` 
 | [Id](Finance.Vat.BGVATDeclaringPersons.md#id) | guid |  
 | [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#isdefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company. `Required` `Default(true)` 
 
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 Address for correspondation of the declaring person. `Required`
 
-_Type_: **string(150)**  
+_Type_: **string (150)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **150**  
@@ -74,7 +74,7 @@ _Front-End Recalc Expressions:_
 
 City from the address for correspondation of the declaring person. `Required`
 
-_Type_: **string(50)**  
+_Type_: **string (50)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -83,7 +83,7 @@ _Maximum Length_: **50**
 
 Position of the declaring person in the enterprise company.
 
-_Type_: **string(50) (nullable)**  
+_Type_: **string (50) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -92,7 +92,7 @@ _Maximum Length_: **50**
 
 Postcode from the address for correspondation of the declaring person. `Required`
 
-_Type_: **string(4)**  
+_Type_: **string (4)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **4**  

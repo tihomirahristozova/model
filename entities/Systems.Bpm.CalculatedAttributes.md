@@ -27,9 +27,9 @@ Aggregate Tree
 | [Caption](Systems.Bpm.CalculatedAttributes.md#caption) | [MultilanguageString](../data-types.md#multilanguagestring) | The multi-language caption, used to display the attribute. `Required` 
 | [Id](Systems.Bpm.CalculatedAttributes.md#id) | guid |  
 | [IsActive](Systems.Bpm.CalculatedAttributes.md#isactive) | boolean | True if the attribute is activated and added to the repository. `Required` `Default(false)` 
-| [Name](Systems.Bpm.CalculatedAttributes.md#name) | string(128) | The unique name of the attribute within the repository. `Required` `Filter(eq;like)` 
-| [Notes](Systems.Bpm.CalculatedAttributes.md#notes) | string(2147483647) (nullable) | Notes for this CalculatedAttribute. 
-| [RepositoryName](Systems.Bpm.CalculatedAttributes.md#repositoryname) | string(128) | The repository, for which the attribute is defined. `Required` `Filter(multi eq)` `ORD` 
+| [Name](Systems.Bpm.CalculatedAttributes.md#name) | string (128) | The unique name of the attribute within the repository. `Required` `Filter(eq;like)` 
+| [Notes](Systems.Bpm.CalculatedAttributes.md#notes) | string (max) __nullable__ | Notes for this CalculatedAttribute. 
+| [RepositoryName](Systems.Bpm.CalculatedAttributes.md#repositoryname) | string (128) | The repository, for which the attribute is defined. `Required` `Filter(multi eq)` `ORD` 
 | [StartingExpressionNo](Systems.Bpm.CalculatedAttributes.md#startingexpressionno) | int32 | The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. `Required` `Default(10)` 
 
 ## Child Collections
@@ -69,7 +69,7 @@ _Default Value_: **False**
 
 The unique name of the attribute within the repository. `Required` `Filter(eq;like)`
 
-_Type_: **string(128)**  
+_Type_: **string (128)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -78,7 +78,7 @@ _Maximum Length_: **128**
 
 Notes for this CalculatedAttribute.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -87,7 +87,7 @@ _Maximum Length_: **2147483647**
 
 The repository, for which the attribute is defined. `Required` `Filter(multi eq)` `ORD`
 
-_Type_: **string(128)**  
+_Type_: **string (128)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  

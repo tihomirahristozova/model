@@ -23,13 +23,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](General.Config.md#description) | string(254) (nullable) | The description of this Config. 
+| [Description](General.Config.md#description) | string (254) __nullable__ | The description of this Config. 
 | [Id](General.Config.md#id) | guid |  
 | [IsActive](General.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
-| [KeyPath](General.Config.md#keypath) | string(128) | Full path of the configuration option. `Required` `Filter(eq)` `ORD` 
-| [KeyValue](General.Config.md#keyvalue) | string(1073741823) (nullable) | The value of the configuration option. 
-| [UserLogin](General.Config.md#userlogin) | string(64) (nullable) | If not null, the configuration option is specific to the user. `Filter(eq)` 
-| [UserMachine](General.Config.md#usermachine) | string(64) (nullable) | If not null, the configuration option is specific to the machine. `Filter(eq)` 
+| [KeyPath](General.Config.md#keypath) | string (128) | Full path of the configuration option. `Required` `Filter(eq)` `ORD` 
+| [KeyValue](General.Config.md#keyvalue) | string (1073741823) __nullable__ | The value of the configuration option. 
+| [UserLogin](General.Config.md#userlogin) | string (64) __nullable__ | If not null, the configuration option is specific to the user. `Filter(eq)` 
+| [UserMachine](General.Config.md#usermachine) | string (64) __nullable__ | If not null, the configuration option is specific to the machine. `Filter(eq)` 
 
 
 ## Attribute Details
@@ -38,7 +38,7 @@ Aggregate Tree
 
 The description of this Config.
 
-_Type_: **string(254) (nullable)**  
+_Type_: **string (254) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -63,7 +63,7 @@ _Default Value_: **True**
 
 Full path of the configuration option. `Required` `Filter(eq)` `ORD`
 
-_Type_: **string(128)**  
+_Type_: **string (128)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -73,7 +73,7 @@ _Maximum Length_: **128**
 
 The value of the configuration option.
 
-_Type_: **string(1073741823) (nullable)**  
+_Type_: **string (1073741823) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1073741823**  
@@ -82,7 +82,7 @@ _Maximum Length_: **1073741823**
 
 If not null, the configuration option is specific to the user. `Filter(eq)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -91,7 +91,7 @@ _Maximum Length_: **64**
 
 If not null, the configuration option is specific to the machine. `Filter(eq)`
 
-_Type_: **string(64) (nullable)**  
+_Type_: **string (64) __nullable__**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

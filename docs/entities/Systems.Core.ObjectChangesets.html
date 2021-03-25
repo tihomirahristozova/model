@@ -112,7 +112,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="Systems.Core.ObjectChangesets.html#applicationname">ApplicationName</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>The application which requested the change. null when it is unknown. <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -122,7 +122,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectChangesets.html#serverversion">ServerVersion</a></td>
-<td>string(16)</td>
+<td>string (16)</td>
 <td>The version of the application server at the time of the change. <code>Required</code></td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationname">ApplicationName</h3>
 <p>The application which requested the change. null when it is unknown. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
@@ -180,7 +180,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="serverversion">ServerVersion</h3>
 <p>The version of the application server at the time of the change. <code>Required</code></p>
-<p><em>Type</em>: <strong>string(16)</strong><br>
+<p><em>Type</em>: <strong>string (16)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>

@@ -24,11 +24,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.Fleet.MaintenanceProfiles.md#code) | string(16) | The unique code of the MaintenanceProfile. `Required` 
+| [Code](Applications.Fleet.MaintenanceProfiles.md#code) | string (16) | The unique code of the MaintenanceProfile. `Required` 
 | [Id](Applications.Fleet.MaintenanceProfiles.md#id) | guid |  
 | [IsActive](Applications.Fleet.MaintenanceProfiles.md#isactive) | boolean | True if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated. `Required` `Default(true)` `Introduced in version 18.2` 
-| [Name](Applications.Fleet.MaintenanceProfiles.md#name) | string(254) | Name of the maintenance profile (Multilanguage). `Required` 
-| [Notes](Applications.Fleet.MaintenanceProfiles.md#notes) | string(2147483647) (nullable) | Notes for this MaintenanceProfile. 
+| [Name](Applications.Fleet.MaintenanceProfiles.md#name) | string (254) | Name of the maintenance profile (Multilanguage). `Required` 
+| [Notes](Applications.Fleet.MaintenanceProfiles.md#notes) | string (max) __nullable__ | Notes for this MaintenanceProfile. 
 
 ## Child Collections
 
@@ -43,7 +43,7 @@ Aggregate Tree
 
 The unique code of the MaintenanceProfile. `Required`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -68,7 +68,7 @@ _Default Value_: **True**
 
 Name of the maintenance profile (Multilanguage). `Required`
 
-_Type_: **string(254)**  
+_Type_: **string (254)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -77,7 +77,7 @@ _Maximum Length_: **254**
 
 Notes for this MaintenanceProfile.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

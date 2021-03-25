@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ManagedAssetParameterValues.md#id) | guid |  
-| [Notes](Applications.AssetManagement.ManagedAssetParameterValues.md#notes) | string(2147483647) (nullable) | Notes for this ManagedAssetParameterValue. 
+| [Notes](Applications.AssetManagement.ManagedAssetParameterValues.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetParameterValue. 
 | [TimeUtc](Applications.AssetManagement.ManagedAssetParameterValues.md#timeutc) | datetime | The date and time for which the parameter value is recorded. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)` 
 | [Value](Applications.AssetManagement.ManagedAssetParameterValues.md#value) | int32 | The value of the parameter for the specified time. `Required` `Filter(multi eq;ge;le)` 
 
@@ -51,7 +51,7 @@ _Default Value_: **NewGuid**
 
 Notes for this ManagedAssetParameterValue.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

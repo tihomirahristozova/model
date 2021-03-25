@@ -104,7 +104,7 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="General.Products.ProductSupply.html#buyername">BuyerName</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.</td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#ordermaximum">OrderMaximum</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>Order maximum when buying or making. null means no maximum. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
@@ -159,12 +159,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#orderperiodplanningdays">OrderPeriodPlanningDays</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#orderperiodstartdate">OrderPeriodStartDate</a></td>
-<td>datetime (nullable)</td>
+<td>datetime <strong>nullable</strong></td>
 <td>Start date of the first period under fixed period replenishment system. null - not yet specified.</td>
 </tr>
 <tr>
@@ -179,12 +179,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningannualcarryingcostpercent">PlanningAnnual<br>CarryingCostPercent</a></td>
-<td>decimal(5, 4) (nullable)</td>
+<td>decimal (5, 4) <strong>nullable</strong></td>
 <td>The expected carrying cost as percentage of inventory cost. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningannualusagequantitybase">PlanningAnnual<br>UsageQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>Average usage of the product for 1 year. NUL means unknown. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
@@ -199,17 +199,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningmaximuminventoryquantitybase">PlanningMaximum<br>InventoryQuantity<br>Base</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
 <td>Maximum inventory. null if N/A. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningordercostbasecurrency">PlanningOrderCost<br>BaseCurrency</a></td>
-<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
 <td>Projected cost to place an order and set-up equipment. <code>Currency: EnterpriseCompany.BaseCurrency</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningordercycledays">PlanningOrderCycleDays</a></td>
-<td>int32 (nullable)</td>
+<td>int32 <strong>nullable</strong></td>
 <td>Number of days in one period under fixed period replenishment system. null - not yet specified.</td>
 </tr>
 <tr>
@@ -234,7 +234,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#supplyschemaid">SupplySchemaId</a></td>
-<td>guid (nullable)</td>
+<td>guid <strong>nullable</strong></td>
 <td>The supply schema to use for the distribution of the product among warehouses. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
@@ -294,7 +294,7 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="buyername">BuyerName</h3>
 <p>The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.</p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
@@ -405,7 +405,7 @@ Allowed values for the <code>OrderLotSizingMethod</code>(General.Products.Produc
 <em>Default Value</em>: <strong>ReorderPoint</strong></p>
 <h3 id="ordermaximum">OrderMaximum</h3>
 <p>Order maximum when buying or making. null means no maximum. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderminimum">OrderMinimum</h3>
@@ -422,12 +422,12 @@ Allowed values for the <code>OrderLotSizingMethod</code>(General.Products.Produc
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="orderperiodplanningdays">OrderPeriodPlanningDays</h3>
 <p>For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderperiodstartdate">OrderPeriodStartDate</h3>
 <p>Start date of the first period under fixed period replenishment system. null - not yet specified.</p>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderpointquantitybase">OrderPointQuantityBase</h3>
@@ -472,12 +472,12 @@ Allowed values for the <code>OrderPolicy</code>(General.Products.ProductSupply.m
 <em>Default Value</em>: <strong>OrderPointSystem</strong></p>
 <h3 id="planningannualcarryingcostpercent">PlanningAnnualCarryingCostPercent</h3>
 <p>The expected carrying cost as percentage of inventory cost. null means unknown.</p>
-<p><em>Type</em>: <strong>decimal(5, 4) (nullable)</strong><br>
+<p><em>Type</em>: <strong>decimal (5, 4) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningannualusagequantitybase">PlanningAnnualUsageQuantityBase</h3>
 <p>Average usage of the product for 1 year. NUL means unknown. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planninghorizondays">PlanningHorizonDays</h3>
@@ -496,17 +496,17 @@ Allowed values for the <code>OrderPolicy</code>(General.Products.ProductSupply.m
 <code>IIF( ( Convert( obj.PreferredSupplier.DefaultDeliveryTermDays, Nullable</code>1) != null), obj.PreferredSupplier.DefaultDeliveryTermDays, obj.PlanningLeadTimeDays)`</p>
 <h3 id="planningmaximuminventoryquantitybase">PlanningMaximumInventoryQuantityBase</h3>
 <p>Maximum inventory. null if N/A. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningordercostbasecurrency">PlanningOrderCostBaseCurrency</h3>
 <p>Projected cost to place an order and set-up equipment. <code>Currency: EnterpriseCompany.BaseCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningordercycledays">PlanningOrderCycleDays</h3>
 <p>Number of days in one period under fixed period replenishment system. null - not yet specified.</p>
-<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningsafetystockquantitybase">PlanningSafetyStockQuantityBase</h3>
@@ -559,7 +559,7 @@ Allowed values for the <code>ProcurementType</code>(General.Products.ProductSupp
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="supplyschemaid">SupplySchemaId</h3>
 <p>The supply schema to use for the distribution of the product among warehouses. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultstorebin">DefaultStoreBin</h3>

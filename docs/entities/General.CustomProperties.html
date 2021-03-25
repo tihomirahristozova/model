@@ -109,27 +109,27 @@ Default Search Member:<br>
 <tbody>
 <tr>
 <td><a href="General.CustomProperties.html#allowedvaluesentityname">AllowedValuesEntityName</a></td>
-<td>string(64) (nullable)</td>
+<td>string (64) <strong>nullable</strong></td>
 <td>When not null, specifies that the allowed values are retrieved from the specified entity. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#allowedvaluesfilterxml">AllowedValuesFilterXML</a></td>
-<td>string(1073741823) (nullable)</td>
+<td>string (1073741823) <strong>nullable</strong></td>
 <td>When not null specifies the filter to apply when extracting allowed values from entity.</td>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#code">Code</a></td>
-<td>string(40)</td>
+<td>string (40)</td>
 <td>Unique property code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#entityname">EntityName</a></td>
-<td>string(64)</td>
+<td>string (64)</td>
 <td>The entity for which the property is applicable. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#hint">Hint</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>The hint, which is displayed alongside the property. <code>Filter(multi eq;like)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#keyorder">KeyOrder</a></td>
-<td>byte (nullable)</td>
+<td>byte <strong>nullable</strong></td>
 <td>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis.</td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#masklength">MaskLength</a></td>
-<td>int16 (nullable)</td>
+<td>int16 <strong>nullable</strong></td>
 <td>Limits te length of the property value to the specified number of characters. Null means no limitation.</td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#notes">Notes</a></td>
-<td>string(2147483647) (nullable)</td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this CustomProperty. <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
@@ -221,33 +221,33 @@ Default Search Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowedvaluesentityname">AllowedValuesEntityName</h3>
 <p>When not null, specifies that the allowed values are retrieved from the specified entity. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string(64) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="allowedvaluesfilterxml">AllowedValuesFilterXML</h3>
 <p>When not null specifies the filter to apply when extracting allowed values from entity.</p>
-<p><em>Type</em>: <strong>string(1073741823) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (1073741823) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>1073741823</strong></p>
 <h3 id="code">Code</h3>
 <p>Unique property code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(40)</strong><br>
+<p><em>Type</em>: <strong>string (40)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>40</strong></p>
 <h3 id="entityname">EntityName</h3>
 <p>The entity for which the property is applicable. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string(64)</strong><br>
+<p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="hint">Hint</h3>
 <p>The hint, which is displayed alongside the property. <code>Filter(multi eq;like)</code> <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -257,7 +257,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="keyorder">KeyOrder</h3>
 <p>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis.</p>
-<p><em>Type</em>: <strong>byte (nullable)</strong><br>
+<p><em>Type</em>: <strong>byte <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="limittoallowedvalues">LimitToAllowedValues</h3>
@@ -268,7 +268,7 @@ Default Search Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="masklength">MaskLength</h3>
 <p>Limits te length of the property value to the specified number of characters. Null means no limitation.</p>
-<p><em>Type</em>: <strong>int16 (nullable)</strong><br>
+<p><em>Type</em>: <strong>int16 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
@@ -279,7 +279,7 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this CustomProperty. <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong>string(2147483647) (nullable)</strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>

@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#code) | string(16) | Unique code of the group. `Required` `Filter(eq;like)` `ORD` 
+| [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#code) | string (16) | Unique code of the group. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Applications.AssetManagement.MaintenanceTypeGroups.md#id) | guid |  
 | [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the group. `Required` `Filter(eq;like)` 
-| [Notes](Applications.AssetManagement.MaintenanceTypeGroups.md#notes) | string(2147483647) (nullable) | Notes for this MaintenanceTypeGroup. 
+| [Notes](Applications.AssetManagement.MaintenanceTypeGroups.md#notes) | string (max) __nullable__ | Notes for this MaintenanceTypeGroup. 
 
 ## References
 
@@ -41,7 +41,7 @@ Aggregate Tree
 
 Unique code of the group. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string(16)**  
+_Type_: **string (16)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 Notes for this MaintenanceTypeGroup.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  

@@ -114,12 +114,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationProductOutputs.html#projectid">ProjectId</a></td>
-<td>guid (nullable)</td>
+<td>guid <strong>nullable</strong></td>
 <td>The Project, which absorbed the cost. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationProductOutputs.html#quantity">Quantity</a></td>
-<td>decimal(18, 3)</td>
+<td>decimal (18, 3)</td>
 <td>The quantity produced. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
@@ -193,11 +193,11 @@ Aggregate Root:<br>
 <code>( obj.Calculation.ProductOutputs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="projectid">ProjectId</h3>
 <p>The Project, which absorbed the cost. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity produced. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal(18, 3)</strong><br>
+<p><em>Type</em>: <strong>decimal (18, 3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>

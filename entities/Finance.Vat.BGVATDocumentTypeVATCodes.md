@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) (nullable) | VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code. 
+| [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) __nullable__ | VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code. 
 | [Id](Finance.Vat.BGVATDocumentTypeVATCodes.md#id) | guid |  
-| [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) (nullable) | VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values. 
+| [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) __nullable__ | VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values. 
 
 ## References
 
@@ -40,7 +40,7 @@ Aggregate Tree
 
 VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.
 
-_Type_: **[CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) (nullable)**  
+_Type_: **[CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) __nullable__**  
 Allowed values for the `CashReportingVATCode`(Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) data attribute  
 _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVATCode Enum Members)_  
 
@@ -77,7 +77,7 @@ _Default Value_: **NewGuid**
 
 VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.
 
-_Type_: **[VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) (nullable)**  
+_Type_: **[VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) __nullable__**  
 Allowed values for the `VATCode`(Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) data attribute  
 _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode Enum Members)_  
 

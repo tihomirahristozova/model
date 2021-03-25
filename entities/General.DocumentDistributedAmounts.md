@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Amount](General.DocumentDistributedAmounts.md#amount) | [Amount](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. `Currency: GetDocumentCurrency()` `Required` `Filter(ge;le)` 
-| [DocumentLineId](General.DocumentDistributedAmounts.md#documentlineid) | guid (nullable) | The Id of the line over which the amount is distributed. `Filter(multi eq)` 
+| [DocumentLineId](General.DocumentDistributedAmounts.md#documentlineid) | guid __nullable__ | The Id of the line over which the amount is distributed. `Filter(multi eq)` 
 | [Id](General.DocumentDistributedAmounts.md#id) | guid |  
 
 ## References
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 The Id of the line over which the amount is distributed. `Filter(multi eq)`
 
-_Type_: **guid (nullable)**  
+_Type_: **guid __nullable__**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 

@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountBase](Finance.Accounting.VoucherCorrespondances.md#amountbase) | decimal(18, 2) | Obsolete. Not used. `Required` `Default(0)` 
-| [CreditAmount](Finance.Accounting.VoucherCorrespondances.md#creditamount) | decimal(18, 2) | Obsolete. Not used. `Required` `Default(0)` 
+| [AmountBase](Finance.Accounting.VoucherCorrespondances.md#amountbase) | decimal (18, 2) | Obsolete. Not used. `Required` `Default(0)` 
+| [CreditAmount](Finance.Accounting.VoucherCorrespondances.md#creditamount) | decimal (18, 2) | Obsolete. Not used. `Required` `Default(0)` 
 | [CreditVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#creditvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the credited account). `Required` `Filter(multi eq)` 
-| [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal(18, 2) | Obsolete. Not used. `Required` `Default(0)` 
+| [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal (18, 2) | Obsolete. Not used. `Required` `Default(0)` 
 | [DebitVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#debitvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the debited account). `Required` `Filter(multi eq)` 
 | [Id](Finance.Accounting.VoucherCorrespondances.md#id) | guid |  
 
@@ -45,7 +45,7 @@ Aggregate Root:
 
 Obsolete. Not used. `Required` `Default(0)`
 
-_Type_: **decimal(18, 2)**  
+_Type_: **decimal (18, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -54,7 +54,7 @@ _Default Value_: **0**
 
 Obsolete. Not used. `Required` `Default(0)`
 
-_Type_: **decimal(18, 2)**  
+_Type_: **decimal (18, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -70,7 +70,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 Obsolete. Not used. `Required` `Default(0)`
 
-_Type_: **decimal(18, 2)**  
+_Type_: **decimal (18, 2)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  

@@ -24,9 +24,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CalendarDate](Logistics.Inventory.RequisitionPlan.md#calendardate) | datetime | The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning. `Required` `Filter(ge;le)` 
-| [CompletionDate](Logistics.Inventory.RequisitionPlan.md#completiondate) | datetime (nullable) | The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated. 
+| [CompletionDate](Logistics.Inventory.RequisitionPlan.md#completiondate) | datetime __nullable__ | The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated. 
 | [ConfirmAction](Logistics.Inventory.RequisitionPlan.md#confirmaction) | boolean | True - generate firm planned orders for the current row; false- do not generate;. `Required` `Default(false)` `Filter(eq)` 
-| [ExplanationMessage](Logistics.Inventory.RequisitionPlan.md#explanationmessage) | string(2147483647) (nullable) | A message that explains why the program has generated the planned orders for this row. 
+| [ExplanationMessage](Logistics.Inventory.RequisitionPlan.md#explanationmessage) | string (max) __nullable__ | A message that explains why the program has generated the planned orders for this row. 
 | [FirmPlannedOrderReceipts](Logistics.Inventory.RequisitionPlan.md#firmplannedorderreceipts) | [Quantity](../data-types.md#quantity) | The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [FirmPlannedOrderReleases](Logistics.Inventory.RequisitionPlan.md#firmplannedorderreleases) | [Quantity](../data-types.md#quantity) | The order releases which were manually confirmed for release on the specified calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [GenerationDate](Logistics.Inventory.RequisitionPlan.md#generationdate) | datetime | Indicates the date on which the plan is generated. `Required` `Default(Now)` 
@@ -37,7 +37,7 @@ Aggregate Tree
 | [PlannedOrderReleases](Logistics.Inventory.RequisitionPlan.md#plannedorderreleases) | [Quantity](../data-types.md#quantity) | The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [ProjectedAvailableBalance](Logistics.Inventory.RequisitionPlan.md#projectedavailablebalance) | [Quantity](../data-types.md#quantity) | Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [Quantity](Logistics.Inventory.RequisitionPlan.md#quantity) | [Quantity](../data-types.md#quantity) | The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
-| [ReleaseDate](Logistics.Inventory.RequisitionPlan.md#releasedate) | datetime (nullable) | The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated. 
+| [ReleaseDate](Logistics.Inventory.RequisitionPlan.md#releasedate) | datetime __nullable__ | The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated. 
 | [ScheduledReceipts](Logistics.Inventory.RequisitionPlan.md#scheduledreceipts) | [Quantity](../data-types.md#quantity) | The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 
 ## References
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -82,7 +82,7 @@ _Default Value_: **False**
 
 A message that explains why the program has generated the planned orders for this row.
 
-_Type_: **string(2147483647) (nullable)**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -178,7 +178,7 @@ _Default Value_: **Constant**
 
 The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated.
 
-_Type_: **datetime (nullable)**  
+_Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

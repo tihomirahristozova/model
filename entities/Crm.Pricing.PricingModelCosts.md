@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountPercent](Crm.Pricing.PricingModelCosts.md#amountpercent) | decimal(6, 5) (nullable) | Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way. 
-| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount](../data-types.md#amount) (nullable) | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency` 
+| [AmountPercent](Crm.Pricing.PricingModelCosts.md#amountpercent) | decimal (6, 5) __nullable__ | Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way. 
+| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount](../data-types.md#amount) __nullable__ | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency` 
 | [Id](Crm.Pricing.PricingModelCosts.md#id) | guid |  
 | [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model. `Required` 
 
@@ -45,7 +45,7 @@ Aggregate Root:
 
 Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.
 
-_Type_: **decimal(6, 5) (nullable)**  
+_Type_: **decimal (6, 5) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency`
 
-_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
