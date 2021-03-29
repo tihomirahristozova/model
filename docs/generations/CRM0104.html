@@ -111,7 +111,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Replaces</td>
-<td>[Obsolete] Create issue Store orders for products that aren't shipped (To be deleted: 9.2021; use CRM0104)</td>
+<td>GenerateStoreOrdersForNonShipped</td>
 </tr>
 <tr>
 <td style="text-align: left;">Orphan Rows</td>
@@ -135,13 +135,20 @@
 <p>This Generation is used to create Store Orders for products from the current Sale Order that <strong>are not shipped</strong> (Product.ProductType.IsShipped = False) and <strong>are stocked</strong> (Product.ProductType.IsStocked = True). For the rest of the products, the Store Orders are created from the Shipment Orders documents. However, products that are not shipped does not participate in the Shipment Orders, for this reason, the current generation procedure needed in order for these products to be issued from the warehouse as well.</p>
 <p>Different lines in the Sales Order may have different Stores or Required Delivery Dates, and for different values in these fields - different Store Orders should be created. Therefore, at the beginning of the generation procedure, all combinations of Store and Required Delivery Date from the Sales Order Lines are determined (but only for the lines that are not used for returning goods according to the classification in topic <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/82608171/Sales+Order+Row+Types">Sales Order Row Types</a> and whose products are not shipped and are stocked).</p>
 <p>For each of these combinations of <strong>Store</strong> and <strong>Required Delivery Date</strong>, a separate Store Order is created. The Store Order’s header is created based on the Sales Order’s header as follows:</p>
-<p>StoreOrder.Store = <strong>Store</strong></p>
-<p>StoreOrder.MovementType = <em><strong>Issue</strong></em></p>
-<p>StoreOrder.DueDate = <strong>RequiredDeliveryDate</strong></p>
-<p>StoreOrder.PlannedReleaseDate = <strong>RequiredDeliveryDate</strong></p>
-<p>StoreOrder.PlannedCompletionDate = <strong>RequiredDeliveryDate</strong></p>
-<p>StoreOrder.IssuedByParty = <strong>Store</strong>.ResponsibleParty</p>
-<p>StoreOrder.DocumentCurrency = SalesOrder.DocumentCurrency</p>
+<pre><code>StoreOrder.Store = **Store**
+
+StoreOrder.MovementType = ***Issue***
+
+StoreOrder.DueDate = **RequiredDeliveryDate**
+
+StoreOrder.PlannedReleaseDate = **RequiredDeliveryDate**
+
+StoreOrder.PlannedCompletionDate = **RequiredDeliveryDate**
+
+StoreOrder.IssuedByParty = **Store**.ResponsibleParty
+
+StoreOrder.DocumentCurrency = SalesOrder.DocumentCurrency
+</code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>the attributes which are not specified here are filled in as described in <a href="https://olddocs.erp.net/tech/standard-document-attributes-221773862.html">Standard Document Attributes</a></p>
@@ -210,26 +217,45 @@
 </table>
 <p>.</p>
 <p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Orders has already been created (for more information, see topic <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/22380546/Discrepancy+System">Discrepancy System</a> and <a href="https://olddocs.erp.net/tech/metrics-246054946.html">Metrics</a>). The new StoreOrderLine is created as follows:</p>
-<p>StoreOrderLine.LineNo = SalesOrderLine.LineNo</p>
-<p>StoreOrderLine.ParentLineId = SalesOrderLine.SalesOrderLineId</p>
-<p>StoreOrderLine.Product = SalesOrderLine.Product</p>
-<p>StoreOrderLine.StoreBin = SalesOrderLine.StoreBin</p>
-<p>StoreOrderLine.SerialNumber = SalesOrderLine.SerialNumber</p>
-<p>StoreOrderLine.Quantity = SalesOrderLine.<strong>REMAINING(MQuantity)</strong></p>
-<p>StoreOrderLine.QuantityUnit = SalesOrderLine.QuantityUnit</p>
-<p>StoreOrderLine.QuantityBase = SalesOrderLine.<strong>REMAINING(MQuantityBase)</strong></p>
-<p>StoreOrderLine.StandardQuantityBase = SalesOrderLine.<em><strong>*REMAINING(MStandardQuantityBase)*</strong></em></p>
-<p>StoreOrderLine.Lot = SalesOrderLine.Lot</p>
-<p>StoreOrderLine.GuaranteePeriodDays =</p>
-<p>​          if SalesOrderLine.GuaranteePeriodDays.HasValue</p>
-<p>​            then SalesOrderLine.GuaranteePeriodDays</p>
-<p>​            else SalesOrderLine.Product.GuaranteePeriodDays</p>
-<p>StoreOrderLine.SalesOrderLine = SalesOrderLine</p>
-<p>StoreOrderLine.Notes = SalesOrderLine.Notes</p>
-<p>StoreOrderLine.PersistLot = SalesOrderLine.PersistLot</p>
-<p>StoreOrderLine.ProductVariant = SalesOrderLine.ProductVariant
-StoreOrderLine.ParentDocument = SalesOrder</p>
-<p>StoreOrderLine.ParentLineNo = SalesOrderLine.LineNo</p>
+<pre><code>StoreOrderLine.LineNo = SalesOrderLine.LineNo
+
+StoreOrderLine.ParentLineId = SalesOrderLine.SalesOrderLineId
+
+StoreOrderLine.Product = SalesOrderLine.Product
+
+StoreOrderLine.StoreBin = SalesOrderLine.StoreBin
+
+StoreOrderLine.SerialNumber = SalesOrderLine.SerialNumber
+
+StoreOrderLine.Quantity = SalesOrderLine.**REMAINING(MQuantity)**
+
+StoreOrderLine.QuantityUnit = SalesOrderLine.QuantityUnit
+
+StoreOrderLine.QuantityBase = SalesOrderLine.**REMAINING(MQuantityBase)**
+
+StoreOrderLine.StandardQuantityBase = SalesOrderLine.***\*REMAINING(MStandardQuantityBase)\****
+
+StoreOrderLine.Lot = SalesOrderLine.Lot
+
+StoreOrderLine.GuaranteePeriodDays =
+
+​          if SalesOrderLine.GuaranteePeriodDays.HasValue
+
+​            then SalesOrderLine.GuaranteePeriodDays
+
+​            else SalesOrderLine.Product.GuaranteePeriodDays
+
+StoreOrderLine.SalesOrderLine = SalesOrderLine
+
+StoreOrderLine.Notes = SalesOrderLine.Notes
+
+StoreOrderLine.PersistLot = SalesOrderLine.PersistLot
+
+StoreOrderLine.ProductVariant = SalesOrderLine.ProductVariant
+StoreOrderLine.ParentDocument = SalesOrder
+
+StoreOrderLine.ParentLineNo = SalesOrderLine.LineNo
+</code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>WARNING: Any of the Shipment Orders created according to the description above is saved then and only when there is at least one line in it.</p>

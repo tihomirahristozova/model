@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CRM0106 Create Shipment Orders | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CRM0106 Create Shipment Orders | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crm0106-create-shipment-orders">CRM0106 Create Shipment Orders</h1>
+
+<h2 id="basic-information">Basic Information</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th>CRM.Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Code</td>
+<td>CRM0106</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent Document</td>
+<td>SalesOrder</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-document</td>
+<td>ShipmentOrder</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full Name</td>
+<td>Create Shipment orders</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status</td>
+<td><a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/215777330/Generation+Procedures+Lifetime+Stages">NEW</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Deterministic/Non-deterministic</td>
+<td>Deterministic</td>
+</tr>
+<tr>
+<td style="text-align: left;">Transitional Documents</td>
+<td>YES</td>
+</tr>
+<tr>
+<td style="text-align: left;">Replace Generation Procedure</td>
+<td>GenerateShipmentOrderV2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Processing Orphan Rows</td>
+<td>Ignore</td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduced In Version</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Suspension</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="used-metrics">Used Metrics</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Metrics</th>
+<th style="text-align: left;">Base Measurement Unit</th>
+<th style="text-align: left;">Quantity For Fulfilment</th>
+<th style="text-align: left;">Fulfilling Quantity</th>
+<th style="text-align: left;">Records Comparison</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Quantity</td>
+<td style="text-align: left;">SalesOrderLine.QuantityUnit</td>
+<td style="text-align: left;">SalesOrderLine.Quantity</td>
+<td style="text-align: left;">ShipmentOrderLine.Quantity</td>
+<td style="text-align: left;"><strong>ShipmentOrderLine.ParentDocument=SalesOrder;</strong> &gt;br <strong>ShipmentOrderLine.ParentLineNo=SalesOrderLine.LineNo</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">QuantityBase</td>
+<td style="text-align: left;">SalesOrderLine.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">SalesOrderLine.QuantityBase</td>
+<td style="text-align: left;">ShipmentOrderLine.QuantityBase</td>
+<td style="text-align: left;"><strong>ShipmentOrderLine.ParentDocument=SalesOrder;</strong> &gt;br <strong>ShipmentOrderLine.ParentLineNo=SalesOrderLine.LineNo</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-logic">Business Logic</h2>
+<p>This Generation is used to create Shipment Orders for the products of the current Sales Order that are shipped (a product &quot;Is Shipped&quot; if it belongs to a Product Type in whose definition &quot;Is Shipped = True&quot;) and which reflect a &quot;normal&quot; Sale (ie there are no return lines, for more information see <a href="https://olddocs.erp.net/tech/sales-order-row-types-82608171.html">Sales Order Row Types</a>). For the rest of the products, no Shipment Orders are created, and the Store Orders and Shipment Orders are created directly from the Sales Order.</p>
+<p>Before the sub-document is created, certain Validations of the data in the current Sales Order are performed.</p>
+<p>Validations assure that the fields Lines Store, Required Delivery Date and Ship To Party Contact Mechanism have values in all lines for which the generation procedure is used. If any of fields SalesOrder.SalesOrderLine.LineStore or SalesOrder.SalesOrderLine.RequiredDeliveryDate or SalesOrder.SalesOrderLine.ShipToPartyContactMechanism is equal to &quot;NULL&quot; in any of those lines an error message is thrown:</p>
+<pre><code>&gt; The field 'Line Store' in line number '{LineNo}' in document '{DocumentText}' must have a value.
+
+or
+
+&gt; The field 'Required Delivery Date' in line number '{LineNo}' in document '{DocumentText}' must have a value.
+
+or
+
+&gt; The field 'Ship To Party Contact Mechanism' in line number '{LineNo}' in document '{DocumentText}' must have a value.
+</code></pre>
+<p>Different lines in the Sales Order may have different Stores or Required Delivery Dates, and for different values in these fields - different Shipment Orders should be created. Therefore, at the beginning of the generation procedure, all combinations of Store and Required Delivery Date from the Sales Order Lines are determined (but only for the lines that are not used for returning goods according to the classification in topic <a href="https://olddocs.erp.net/tech/sales-order-row-types-82608171.html">Sales Order Row Types</a> and whose products are shipped).</p>
+<p>For each of these combinations of <strong>Store</strong> and <strong>Required Delivery Date</strong>, a separate Shipment Order is created. The Shipment Order’s header is created based on the Sales Order’s header as follows:</p>
+<pre><code>ShipmentOrder.Customer = SalesOrder.Customer
+
+ShipmentOrder.ShipToPartyContactMechanism = SalesOrder.ShipToPartyContactMechanism
+
+ShipmentOrder.RequiredDeliveryDate = **RequiredDeliveryDate**
+
+ShipmentOrder.ShipFromStore = **Store**
+
+ShipmentOrder.IssuedByPerson =
+
+  if **Store**.ResponsibleParty is Person
+
+​    then get person for **Store**.ResponsibleParty
+
+​    else **empty**
+
+</code></pre>
+<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Shipment Oders that are already created (for more information, see topic <a href="https://olddocs.erp.net/tech/discrepancy-system-22380546.html">Discrepancy System</a>). For example, for each SalesOrderLine of Sales Order for the current <strong>Store</strong> and <strong>Required Delivery Date</strong> combination, which is not a return line (see topic <a href="https://olddocs.erp.net/tech/sales-order-row-types-82608171.html">Sales Order Row Types</a>), and in which the product Is Shipped, the unfulfilled quantities of <strong>ShipmentOrderRemainingQuantity</strong> and <strong>ShipmentOrderRemainingQuantityBase</strong> are determined. Thus, if at least one of the two values is different from 0, a new line of ShipmentOrderLine is created:</p>
+<pre><code>ShipmentOrderLine.LineNo = SalesOrderLine.LineNo
+
+ShipmentOrderLine.ParentSalesOrderLine = SalesOrderLine
+
+ShipmentOrderLine.Quantity = **ShipmentOrderRemainingQuantity**
+
+ShipmentOrderLine.QuantityUnit = SalesOrderLine.QuantityUnit
+
+ShipmentOrderLine.StoreBin = SalesOrderLine.StoreBin
+
+ShipmentOrderLine.Lot = SalesOrderLine.Lot
+
+ShipmentOrderLine.GuaranteePeriodDays = SalesOrderLine.GuaranteePeriodDays
+
+ShipmentOrderLine.QuantityBase = **ShipmentOrderRemainingQuantityBase**
+
+ShipmentOrderLine.PersistLot = SalesOrderLine.PersistLot
+
+ShipmentOrderLine.SerialNumber = SalesOrderLine.SerialNumber
+
+ShipmentOrderLine.Notes = SalesOrderLine.Notes
+
+ShipmentOrderLine.ParentLineNo = SalesOrderLine.LineNo
+
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>WARNING: Any of the Shipment Orders created according to the description above is saved then and only when there is at least one line in it.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/CRM0106.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
