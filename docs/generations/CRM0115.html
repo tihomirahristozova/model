@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CRM0115 Create Purchase Orders | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CRM0115 Create Purchase Orders | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crm0115-create-purchase-orders">CRM0115 Create Purchase Orders</h1>
+
+<h2 id="basic-information">Basic Information</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th>CRM.Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Code</td>
+<td>CRM0115</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent Document</td>
+<td>SalesOrder</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-document</td>
+<td>PurchaseOrder</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full Name</td>
+<td>Create Purchase Orders (for sale transactions between enterprise companies)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status</td>
+<td><a href="https://olddocs.erp.net/tech/generation-procedures-lifetime-stages-215777330.html">ACTIVE</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Deterministic/Non-deterministic</td>
+<td>Deterministic</td>
+</tr>
+<tr>
+<td style="text-align: left;">Transitional Documents</td>
+<td>No</td>
+</tr>
+<tr>
+<td style="text-align: left;">Replace Generation Procedures</td>
+<td>GeneratePurchaseOrder</td>
+</tr>
+<tr>
+<td style="text-align: left;">Processing Orphan Rows</td>
+<td>Ignore</td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduced In Version</td>
+<td>2019.1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Suspension</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Business Logic</p>
+<p>The generation procedure is designed for purchase and sale between the enterprise companies in the current data base. The Sales Order in the enterprise company selling the products generates purchasing document - Purchase Order - in the buying enterprise company, so the buying enterprise company would have the starting document so they can proceed the receipt of goods.</p>
+<p>In order to provide all the data needed for correct Purchase Order there are few verifications processed:</p>
+<ol>
+<li>validate the customer in the Sales Order. The validation checks if the party of the customer (SalesOrder.Customer.Party) is equal to the party of the Destination Enterprise Company (PurchaseOrder.EnterpriseCompany.Party) (in the document flow specifies the enterprise company of the new sub-document). If both parties are one and the same the generation procedure continues, if not - the generation procedure is stopped. No error message is thrown, no new document created;</li>
+<li>if the validation from p.1 is processed succesfully, the next step is to find the correct supplier. So, supplier must be found with the following parameters:
+<ol>
+<li>Supplier.Party == SalesOrder.EnterpriseCompany.Party;</li>
+<li>Supplier.EnterpriseCompany == PurchaseOrder.EnterpriseCompany;</li>
+<li>Supplier's validity period includes the document date (PurchaseOrder.DocumentDate). That would be:
+<ol>
+<li>IsActive == true;</li>
+<li>FromDate &lt;= PurchaseOrder.DocumentDate || FromDate == null</li>
+<li>ThruDate &gt;= PurchaseOrder.DocumentDate || ThruDate == nul</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>If such supplier is found, this is the <strong>Supplier</strong> value. Otherwise the generation procedure breaks - error message is thrown, no new document created. The error message is:</p>
+<pre><code>The company '{SalesOrder.EnterpriseCompany.Party.PartyName}' is not defined as a supplier for enterprise company '{PurchaseOrder.EnterpriseCompany.Party.PartyName}'.
+
+The Purchase Order document header is created as the Sales Order document header as follows:
+</code></pre>
+<pre><code>PurchaseOrder.Supplier = **Supplier**
+
+PurchaseOrder.DocumentCurrency = SalesOrder.DocumentCurrency
+
+PurchaseOrder.PaymentDueDate = SalesOrder.PaymentDueDate
+
+PurchaseOrder.PlannedDeliveryDate = SalesOrder.RequiredDeliveryDate
+
+PurchaseOrder.PlannedReleaseDate = PurchaseOrder.DocumentDate
+
+PurchaseOrder.PaymentAccount = Supplier.DefaultPaymentAccount
+PurchaseOrder.PurchasePriceList = null
+
+The attributes in the Documents table in the PurchaseOrder header are filled in as follows:
+
+PurchaseOrder.Notes = null
+PurchaseOrder.EnterpriseCompany = the enterprise company from the document route which party is equal to the party of the SalesOrder.Customer
+PurchaseOrder.EnterpriseCompanyLocation = the enterprise company location from the document route
+PurchaseOrder.CurrencyDirectory =
+//CurrencyDirectories(CurrencyDirectory.DocumentDate == PurchaseOrder.DocumentDate; CurrencyDirectory.IsDefault == true; CurrencyDirectory.EnterpriseCompany == PurchaseOrder.EnterpriseCompany; CurrencyDirectory.IsValidField == true; CurrencyDirectory.Void == false; CurrencyDirectory.State &gt;= Released) = list
+     if (list.Count() &gt; 0)
+        than FIRST(list)
+     else null
+PurchaseOrder.DocumentDate = SalesOrder.DocumentDate
+PurchaseOrder.FromCompanyDivision = null
+PurchaseOrder.ToCompanyDivision = null
+PurchaseOrder.FromParty = PurchaseOrder.EnterpriseCompany.Party
+PurchaseOrder.ToParty = PurchaseOrder.Supplier.Party
+PurchaseOrder.ParentDocument = SalesOrder
+PurchaseOrder.PrimeCauseDocument = null
+PurchaseOrder.PaymentAccount = PurchaseOrder.Supplier.DefaultPaymentAccount
+PurchaseOrder.ResponsiblePerson = null
+</code></pre>
+<p>The rest of the document header attributes which are not listed here are filled in as described in <a href="https://olddocs.erp.net/tech/standard-document-attributes-221773862.html">Standard Document Attributes</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The new purchase order is saved only if it has at least one row.</p>
+</div>
+<h2 id="fulfillments">Fulfillments</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th>SalesOrderLineToPurchaseOrderLine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Parent Entity</td>
+<td>SalesOrderLine</td>
+</tr>
+<tr>
+<td style="text-align: left;">Child Entity</td>
+<td>PurchaseOrderLine</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent / Child Relationship</td>
+<td>PurchaseOrderLine.ParentDocument = SalesOrder;PurchaseOrderLine.ParentLineNo =SalesOrder.LineNo</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fulfillment Name</th>
+<th style="text-align: center;">Metric Name</th>
+<th style="text-align: left;">Measurement Unit</th>
+<th style="text-align: center;">Parent Value</th>
+<th style="text-align: left;">Child Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SalesOrderLineToPurchaseOrderLine</td>
+<td style="text-align: center;">Quantity</td>
+<td style="text-align: left;">QuantityUnit</td>
+<td style="text-align: center;">SalesOrderLine.Quantity</td>
+<td style="text-align: left;">PurchaseOrderLine.Quantity</td>
+</tr>
+<tr>
+<td style="text-align: left;">QuantityBase</td>
+<td style="text-align: center;">Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">SalesOrderLine.QuantityBase</td>
+<td style="text-align: center;">PurchaseOrderLine.QuantityBase</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>SalesOrderLineToPurchaseOrderLine</strong> fulfilment creates PurchaseOrderLines as follows:</p>
+<pre><code>PurchaseOrderLine.LineNo = SalesOrderLine.LineNo
+
+PurchaseOrderLine.Product = SalesOrderLine.Product
+
+PurchaseOrderLine.ProductDescription = SalesOrderLine.ProductDescription
+
+PurchaseOrderLine.Quantity = REMAINING(Quantity)
+
+PurchaseOrderLine.ConfirmedQuantity = null
+
+PurchaseOrderLine.QuantityUnit = SalesOrderLine.QuantityUnit
+
+PurchaseOrderLine.Lot = SalesOrderLine.Lot
+
+PurchaseOrderLine.QuantityBase = REMAINING(QuantityBase)
+
+PurchaseOrderLine.ConfirmedQuantityBase = null
+
+PurchaseOrderLine.PricePerUnit = ROUND(SalesOrderLine.LineAmount / SalesOrderLine.Quantity, 5)
+
+PurchaseOrderLine.ConfirmedPricePerUnit = ROUND(SalesOrderLine.LineAmount / SalesOrderLine.Quantity, 5)
+
+PurchaseOrderLine.PlannedDeliveryDate = SalesOrderLine.RequiredDeliveryDate
+
+PurchaseOrderLine.ProductVariant = SalesOrderLine.ProductVariant
+
+PurchaseOrderLine.ParentLineNo = SalesOrderLine.LineNo
+PurchaseOrderLine.ParentDocument = SalesOrder
+PurchaseOrderLine.Notes = null
+
+The rest of the attributes of the Purchase Order Lines must be null.
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/CRM0115.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
