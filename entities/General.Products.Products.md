@@ -46,7 +46,7 @@ Aggregate Tree
 | [IsSerialized](General.Products.Products.md#isserialized) | boolean | True if the parts use/require serial numbers. `Required` `Default(false)` `Filter(eq)` 
 | [LotsIssue](General.Products.Products.md#lotsissue) | [LotsIssue](General.Products.Products.md#lotsissue) __nullable__ | Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO). 
 | [ManufacturingPolicy](General.Products.Products.md#manufacturingpolicy) | string (3) | Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. `Required` `Default("MTS")` 
-| [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency` 
+| [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency` 
 | [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of this product that has to be specified in any sale. 
 | [Name](General.Products.Products.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the item. `Required` `Filter(eq;like)` 
 | [PartNumber](General.Products.Products.md#partnumber) | string (32) | Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD` 
@@ -56,9 +56,9 @@ Aggregate Tree
 | [ScrapRate](General.Products.Products.md#scraprate) | decimal (7, 6) | Default scrap rate for the recipe, when this product is used as ingredient. `Required` `Default(0)` 
 | [ShortName](General.Products.Products.md#shortname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. `Filter(eq;like)` 
 | [ShowInCatalog](General.Products.Products.md#showincatalog) | boolean | Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. `Required` `Default(false)` `Filter(multi eq)` 
-| [StandardCostPerLot](General.Products.Products.md#standardcostperlot) | [Amount](../data-types.md#amount) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)` 
-| [StandardLotSizeBase](General.Products.Products.md#standardlotsizebase) | [Quantity](../data-types.md#quantity) | The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. `Unit: BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` 
-| [StandardPricePerLot](General.Products.Products.md#standardpriceperlot) | [Amount](../data-types.md#amount) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)` 
+| [StandardCostPerLot](General.Products.Products.md#standardcostperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)` 
+| [StandardLotSizeBase](General.Products.Products.md#standardlotsizebase) | [Quantity (18, 3)](../data-types.md#quantity) | The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. `Unit: BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` 
+| [StandardPricePerLot](General.Products.Products.md#standardpriceperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)` 
 | [SupplySchemaId](General.Products.Products.md#supplyschemaid) | guid __nullable__ | The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)` 
 | [UpdateTime](General.Products.Products.md#updatetime) | datetime __nullable__ | Date and time when the Product was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](General.Products.Products.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Product. `Filter(like)` `ReadOnly` 
@@ -278,7 +278,7 @@ _Default Value_: **MTS**
 
 Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -362,7 +362,7 @@ _Default Value_: **False**
 
 Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 4)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -371,7 +371,7 @@ _Default Value_: **Constant**
 
 The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. `Unit: BaseMeasurementCategory.BaseUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -380,7 +380,7 @@ _Default Value_: **Constant**
 
 Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 4)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

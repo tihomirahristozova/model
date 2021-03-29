@@ -29,10 +29,10 @@ Aggregate Root:
 | [LineNo](Logistics.Procurement.RequisitionLines.md#lineno) | int32 | Line number, unique within the Requisition. Usually is increasing number like 10, 20, 30, ... when initially entering the Requisition (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Logistics.Procurement.RequisitionLines.md#notes) | string (254) __nullable__ | Notes for this RequisitionLine. 
 | [ProductDescription](Logistics.Procurement.RequisitionLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product. 
-| [Quantity](Logistics.Procurement.RequisitionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The required quantity of the product. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
-| [QuantityBase](Logistics.Procurement.RequisitionLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
+| [Quantity](Logistics.Procurement.RequisitionLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The required quantity of the product. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
+| [QuantityBase](Logistics.Procurement.RequisitionLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
 | [RequiredDeliveryDate](Logistics.Procurement.RequisitionLines.md#requireddeliverydate) | datetime | The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. `Required` `Filter(ge;le)` 
-| [StandardQuantityBase](Logistics.Procurement.RequisitionLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [StandardQuantityBase](Logistics.Procurement.RequisitionLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 
 ## References
 
@@ -91,7 +91,7 @@ _Front-End Recalc Expressions:_
 
 The required quantity of the product. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -100,7 +100,7 @@ _Default Value_: **Constant**
 
 The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -122,7 +122,7 @@ _Supports Order By_: **False**
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

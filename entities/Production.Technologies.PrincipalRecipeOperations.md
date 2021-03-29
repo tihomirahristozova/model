@@ -37,7 +37,7 @@ Aggregate Root:
 | [ScrapRate](Production.Technologies.PrincipalRecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
 | [SetupTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. `Required` `Default(0)` `Filter(ge;le)` 
 | [Tooling](Production.Technologies.PrincipalRecipeOperations.md#tooling) | string (254) __nullable__ | The tools needed for the routing step. 
-| [UseQuantity](Production.Technologies.PrincipalRecipeOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [UseQuantity](Production.Technologies.PrincipalRecipeOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [WaitTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` `Filter(ge;le)` 
 
 ## References
@@ -174,7 +174,7 @@ _Maximum Length_: **254**
 
 Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

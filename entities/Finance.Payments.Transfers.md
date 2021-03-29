@@ -39,7 +39,7 @@ Aggregate Tree
 | [CompleteTime](Finance.Payments.Transfers.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationTime](Finance.Payments.Transfers.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationUser](Finance.Payments.Transfers.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [DestinationAmount](Finance.Payments.Transfers.md#destinationamount) | [Amount](../data-types.md#amount) | The amount in the currency of the destination account. `Currency: DestinationPaymentAccount.Currency` `Required` `Default(0)` 
+| [DestinationAmount](Finance.Payments.Transfers.md#destinationamount) | [Amount (18, 2)](../data-types.md#amount) | The amount in the currency of the destination account. `Currency: DestinationPaymentAccount.Currency` `Required` `Default(0)` 
 | [DocumentDate](Finance.Payments.Transfers.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Finance.Payments.Transfers.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Finance.Payments.Transfers.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -54,7 +54,7 @@ Aggregate Tree
 | [ReferenceDate](Finance.Payments.Transfers.md#referencedate) | datetime __nullable__ | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
 | [ReferenceDocumentNo](Finance.Payments.Transfers.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Finance.Payments.Transfers.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [SourceAmount](Finance.Payments.Transfers.md#sourceamount) | [Amount](../data-types.md#amount) | The amount to transfer in the source currency. `Currency: SourcePaymentAccount.Currency` `Required` `Default(0)` 
+| [SourceAmount](Finance.Payments.Transfers.md#sourceamount) | [Amount (18, 2)](../data-types.md#amount) | The amount to transfer in the source currency. `Currency: SourcePaymentAccount.Currency` `Required` `Default(0)` 
 | [State](Finance.Payments.Transfers.md#state) | [DocumentState](Finance.Payments.Transfers.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Void](Finance.Payments.Transfers.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Finance.Payments.Transfers.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -158,7 +158,7 @@ _Maximum Length_: **64**
 
 The amount in the currency of the destination account. `Currency: DestinationPaymentAccount.Currency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -300,7 +300,7 @@ _Supports Order By_: **False**
 
 The amount to transfer in the source currency. `Currency: SourcePaymentAccount.Currency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

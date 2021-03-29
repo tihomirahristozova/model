@@ -34,10 +34,10 @@ Aggregate Root:
 | [RunTimeMinutes](Production.Technologies.RecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for standard lot of the product. `Required` `Default(0)` 
 | [ScrapRate](Production.Technologies.RecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
 | [SetupTimeMinutes](Production.Technologies.RecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. `Required` `Default(0)` 
-| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#standardcostperhour) | [Amount](../data-types.md#amount) __nullable__ | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency` 
-| [StandardPricePerHour](Production.Technologies.RecipeOperations.md#standardpriceperhour) | [Amount](../data-types.md#amount) | Standard price for 1 hour work. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` 
+| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency` 
+| [StandardPricePerHour](Production.Technologies.RecipeOperations.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) | Standard price for 1 hour work. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` 
 | [Tooling](Production.Technologies.RecipeOperations.md#tooling) | string (max) __nullable__ | The tools needed for the routing step. 
-| [UseQuantity](Production.Technologies.RecipeOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` 
+| [UseQuantity](Production.Technologies.RecipeOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` 
 | [WaitTimeMinutes](Production.Technologies.RecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` 
 
 ## References
@@ -139,7 +139,7 @@ _Default Value_: **0**
 
 Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (18, 6)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -147,7 +147,7 @@ _Supports Order By_: **False**
 
 Standard price for 1 hour work. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 6)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -165,7 +165,7 @@ _Maximum Length_: **2147483647**
 
 Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

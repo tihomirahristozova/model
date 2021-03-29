@@ -194,7 +194,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#minimalsalespriceperlot">MinimalSalesPricePerLot</a></td>
-<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#amount">Amount (18, 4)</a> <strong>nullable</strong></td>
 <td>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. <code>Currency: CostingCurrency</code></td>
 </tr>
 <tr>
@@ -244,17 +244,17 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardcostperlot">StandardCostPerLot</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (18, 4)</a></td>
 <td>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. <code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardlotsizebase">StandardLotSizeBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. <code>Unit: BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardpriceperlot">StandardPricePerLot</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (18, 4)</a></td>
 <td>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. <code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -612,7 +612,7 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <em>Default Value</em>: <strong>MTS</strong></p>
 <h3 id="minimalsalespriceperlot">MinimalSalesPricePerLot</h3>
 <p>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. <code>Currency: CostingCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 4)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minimalsalesquantitybase">MinimalSalesQuantityBase</h3>
@@ -666,19 +666,19 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="standardcostperlot">StandardCostPerLot</h3>
 <p>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. <code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="standardlotsizebase">StandardLotSizeBase</h3>
 <p>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. <code>Unit: BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="standardpriceperlot">StandardPricePerLot</h3>
 <p>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. <code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

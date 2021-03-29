@@ -28,15 +28,15 @@ Aggregate Tree
 | [BonusAction](Crm.Marketing.BonusPrograms.md#bonusaction) | [BonusAction](Crm.Marketing.BonusPrograms.md#bonusaction) | Bonus action: P-Add product to the order, A-Add amount, D-Give discount. `Required` `Default("D")` `Filter(multi eq)` 
 | [BonusDocumentAmountPercent](Crm.Marketing.BonusPrograms.md#bonusdocumentamountpercent) | decimal (7, 6) __nullable__ | The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null. 
 | [BonusLineDiscountPercent](Crm.Marketing.BonusPrograms.md#bonuslinediscountpercent) | decimal (7, 6) | The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). `Required` `Default(0)` 
-| [BonusProductQuantity](Crm.Marketing.BonusPrograms.md#bonusproductquantity) | [Quantity](../data-types.md#quantity) __nullable__ | The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Unit: BonusProductQuantityUnit` 
-| [BonusProductQuantity<br />MultiplierForEach<br />LotSize](Crm.Marketing.BonusPrograms.md#bonusproductquantitymultiplierforeachlotsize) | [Quantity](../data-types.md#quantity) __nullable__ | When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` 
+| [BonusProductQuantity](Crm.Marketing.BonusPrograms.md#bonusproductquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Unit: BonusProductQuantityUnit` 
+| [BonusProductQuantity<br />MultiplierForEach<br />LotSize](Crm.Marketing.BonusPrograms.md#bonusproductquantitymultiplierforeachlotsize) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` 
 | [ConditionCustomerFilterXML](Crm.Marketing.BonusPrograms.md#conditioncustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. 
 | [ConditionDistribution<br />ChannelFilterX<br />ML](Crm.Marketing.BonusPrograms.md#conditiondistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not null, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics. 
 | [ConditionFromDate](Crm.Marketing.BonusPrograms.md#conditionfromdate) | datetime __nullable__ | Starting date of the bonus. null means that there is no starting date restriction. `Filter(eq;ge;le)` 
-| [ConditionMaxAmount](Crm.Marketing.BonusPrograms.md#conditionmaxamount) | [Amount](../data-types.md#amount) __nullable__ | If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)` 
-| [ConditionMaxQuantity](Crm.Marketing.BonusPrograms.md#conditionmaxquantity) | [Quantity](../data-types.md#quantity) __nullable__ | When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
-| [ConditionMinAmount](Crm.Marketing.BonusPrograms.md#conditionminamount) | [Amount](../data-types.md#amount) __nullable__ | If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)` 
-| [ConditionMinQuantity](Crm.Marketing.BonusPrograms.md#conditionminquantity) | [Quantity](../data-types.md#quantity) __nullable__ | When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [ConditionMaxAmount](Crm.Marketing.BonusPrograms.md#conditionmaxamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)` 
+| [ConditionMaxQuantity](Crm.Marketing.BonusPrograms.md#conditionmaxquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [ConditionMinAmount](Crm.Marketing.BonusPrograms.md#conditionminamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)` 
+| [ConditionMinQuantity](Crm.Marketing.BonusPrograms.md#conditionminquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
 | [ConditionShipTo<br />CustomerFilter<br />XML](Crm.Marketing.BonusPrograms.md#conditionshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. 
 | [ConditionToDate](Crm.Marketing.BonusPrograms.md#conditiontodate) | datetime __nullable__ | Ending date (inclusive) of the bonus. null means that there is no ending date restriction. `Filter(eq;ge;le)` 
 | [Id](Crm.Marketing.BonusPrograms.md#id) | guid |  
@@ -117,7 +117,7 @@ _Default Value_: **0**
 
 The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Unit: BonusProductQuantityUnit`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -125,7 +125,7 @@ _Supports Order By_: **False**
 
 When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -157,7 +157,7 @@ _Supports Order By_: **False**
 
 If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -165,7 +165,7 @@ _Supports Order By_: **False**
 
 When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -173,7 +173,7 @@ _Supports Order By_: **False**
 
 If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -181,7 +181,7 @@ _Supports Order By_: **False**
 
 When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

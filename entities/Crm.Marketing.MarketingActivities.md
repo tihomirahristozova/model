@@ -50,7 +50,7 @@ Aggregate Tree
 | [DocumentVersion](Crm.Marketing.MarketingActivities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EndTime](Crm.Marketing.MarketingActivities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [EntityName](Crm.Marketing.MarketingActivities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [ForecastedCost](Crm.Marketing.MarketingActivities.md#forecastedcost) | [Amount](../data-types.md#amount) | Forecasted cost of the activity in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [ForecastedCost](Crm.Marketing.MarketingActivities.md#forecastedcost) | [Amount (18, 0)](../data-types.md#amount) | Forecasted cost of the activity in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [Id](Crm.Marketing.MarketingActivities.md#id) | guid |  
 | [IsReleased](Crm.Marketing.MarketingActivities.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [IsSingleExecution](Crm.Marketing.MarketingActivities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
@@ -252,7 +252,7 @@ _Maximum Length_: **64**
 
 Forecasted cost of the activity in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 0)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

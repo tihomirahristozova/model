@@ -124,7 +124,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#plandepreciationvalue">PlanDepreciationValue</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
@@ -210,7 +210,7 @@ Aggregate Root:<br>
 <code>( obj.DepreciationPlan.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="plandepreciationvalue">PlanDepreciationValue</h3>
 <p>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

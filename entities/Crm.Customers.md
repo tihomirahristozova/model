@@ -30,7 +30,7 @@ Aggregate Root:
 | [AllowUseAsShipToCustomer](Crm.Customers.md#allowuseasshiptocustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal. `Required` `Default(false)` `Filter(eq)` 
 | [CreationTime](Crm.Customers.md#creationtime) | datetime __nullable__ | Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Crm.Customers.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Customer. `Filter(like)` `ReadOnly` 
-| [CreditLimit](Crm.Customers.md#creditlimit) | [Amount](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the customers' default currency. null means there is no limit. `Currency: DefaultCurrency` 
+| [CreditLimit](Crm.Customers.md#creditlimit) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the customers' default currency. null means there is no limit. `Currency: DefaultCurrency` 
 | [DefaultDeliveryTermDays](Crm.Customers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sale. `Required` `Default(0)` 
 | [DefaultPaymentStartDays](Crm.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. `Required` `Default(0)` 
 | [DefaultPaymentTermDays](Crm.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer. `Required` `Default(0)` 
@@ -116,7 +116,7 @@ _Maximum Length_: **64**
 
 Total credit limit for the customer in the customers' default currency. null means there is no limit. `Currency: DefaultCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

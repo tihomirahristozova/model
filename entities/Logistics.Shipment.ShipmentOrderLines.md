@@ -38,9 +38,9 @@ Aggregate Root:
 | [PalletNo](Logistics.Shipment.ShipmentOrderLines.md#palletno) | int32 __nullable__ | The number of the pallet in which the goods are packaged. null means unknown. 
 | [ParentLineNo](Logistics.Shipment.ShipmentOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. 
 | [PersistLot](Logistics.Shipment.ShipmentOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)` 
-| [Quantity](Logistics.Shipment.ShipmentOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity to be shipped. `Unit: QuantityUnit` `Required` `Default(1)` 
-| [QuantityBase](Logistics.Shipment.ShipmentOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [StandardQuantityBase](Logistics.Shipment.ShipmentOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [Quantity](Logistics.Shipment.ShipmentOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity to be shipped. `Unit: QuantityUnit` `Required` `Default(1)` 
+| [QuantityBase](Logistics.Shipment.ShipmentOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [StandardQuantityBase](Logistics.Shipment.ShipmentOrderLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [Volumel](Logistics.Shipment.ShipmentOrderLines.md#volumel) | decimal (12, 3) __nullable__ | The volume in litres of the whole batch. null means unknown. 
 | [Widthm](Logistics.Shipment.ShipmentOrderLines.md#widthm) | decimal (12, 3) __nullable__ | The width of the package in meters. null means unknown. 
 
@@ -177,7 +177,7 @@ _Default Value_: **False**
 
 The quantity to be shipped. `Unit: QuantityUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -188,7 +188,7 @@ _Front-End Recalc Expressions:_
 
 The equivalence of Quantity in the base measurement category of the product. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -201,7 +201,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

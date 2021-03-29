@@ -25,11 +25,11 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [FromDate](Crm.ProductPrices.md#fromdate) | date __nullable__ | Starting date of validity of the price. `Filter(eq;ge;le)` 
 | [Id](Crm.ProductPrices.md#id) | guid |  
-| [MaxQuantity](Crm.ProductPrices.md#maxquantity) | [Quantity](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
-| [MinQuantity](Crm.ProductPrices.md#minquantity) | [Quantity](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
+| [MaxQuantity](Crm.ProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
+| [MinQuantity](Crm.ProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
 | [Notes](Crm.ProductPrices.md#notes) | string (254) __nullable__ | Notes for this ProductPrice. 
-| [Price](Crm.ProductPrices.md#price) | [Amount](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` 
-| [PriceQuantity](Crm.ProductPrices.md#pricequantity) | [Quantity](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` 
+| [Price](Crm.ProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [PriceQuantity](Crm.ProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` 
 | [Priority](Crm.ProductPrices.md#priority) | [Priority](Crm.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied. `Required` `Default(2)` `Filter(multi eq)` 
 | [ThruDate](Crm.ProductPrices.md#thrudate) | date __nullable__ | Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)` 
 
@@ -71,7 +71,7 @@ _Default Value_: **NewGuid**
 
 Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. `Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -79,7 +79,7 @@ _Supports Order By_: **False**
 
 Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -96,7 +96,7 @@ _Maximum Length_: **254**
 
 Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (13, 5)](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -105,7 +105,7 @@ _Default Value_: **Constant**
 
 The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurementUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (10, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

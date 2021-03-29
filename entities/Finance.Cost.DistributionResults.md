@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributedAmountBase](Finance.Cost.DistributionResults.md#distributedamountbase) | [Amount](../data-types.md#amount) | The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. `Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required` 
+| [DistributedAmountBase](Finance.Cost.DistributionResults.md#distributedamountbase) | [Amount (14, 5)](../data-types.md#amount) | The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. `Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required` 
 | [Id](Finance.Cost.DistributionResults.md#id) | guid |  
 | [LineNo](Finance.Cost.DistributionResults.md#lineno) | int32 | Consecutive line number (within the cost distribution document) of the result. `Required` 
 | [OutputLineNo](Finance.Cost.DistributionResults.md#outputlineno) | int32 | The line number (within the document) of the output over which the cost is distributed. `Required` 
@@ -44,7 +44,7 @@ Aggregate Root:
 
 The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. `Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 5)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

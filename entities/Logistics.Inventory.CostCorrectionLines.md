@@ -25,11 +25,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#basecostadjustment) | [Amount](../data-types.md#amount) | The amount of correction (plus or minus) for the Base Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [CostCorrectionAmount](Logistics.Inventory.CostCorrectionLines.md#costcorrectionamount) | [Amount](../data-types.md#amount) | The amount of correction (plus or minus) for the Amount field of the transaction line. `Currency: TransactionLine.TransactionObj.DocumentCurrency` `Required` `Default(0)` 
+| [BaseCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#basecostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Base Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [CostCorrectionAmount](Logistics.Inventory.CostCorrectionLines.md#costcorrectionamount) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Amount field of the transaction line. `Currency: TransactionLine.TransactionObj.DocumentCurrency` `Required` `Default(0)` 
 | [Id](Logistics.Inventory.CostCorrectionLines.md#id) | guid |  
-| [ProductCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#productcostadjustment) | [Amount](../data-types.md#amount) | The amount of correction (plus or minus) for the Product Cost field of the transaction line. `Currency: TransactionLine.Product.CostingCurrency` `Required` `Default(0)` 
-| [StoreCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#storecostadjustment) | [Amount](../data-types.md#amount) | The amount of correction (plus or minus) for the Store Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.Store.Currency` `Required` `Default(0)` 
+| [ProductCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#productcostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Product Cost field of the transaction line. `Currency: TransactionLine.Product.CostingCurrency` `Required` `Default(0)` 
+| [StoreCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#storecostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Store Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.Store.Currency` `Required` `Default(0)` 
 
 ## References
 
@@ -45,7 +45,7 @@ Aggregate Root:
 
 The amount of correction (plus or minus) for the Base Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -54,7 +54,7 @@ _Default Value_: **Constant**
 
 The amount of correction (plus or minus) for the Amount field of the transaction line. `Currency: TransactionLine.TransactionObj.DocumentCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -70,7 +70,7 @@ _Default Value_: **NewGuid**
 
 The amount of correction (plus or minus) for the Product Cost field of the transaction line. `Currency: TransactionLine.Product.CostingCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -79,7 +79,7 @@ _Default Value_: **Constant**
 
 The amount of correction (plus or minus) for the Store Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.Store.Currency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

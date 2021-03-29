@@ -28,9 +28,9 @@ Aggregate Root:
 | [CoveredByGuarantee](Applications.Service.ServiceActivityMaterials.md#coveredbyguarantee) | boolean | True when the used material is covered by the guarantee. `Required` `Default(false)` 
 | [Id](Applications.Service.ServiceActivityMaterials.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceActivityMaterials.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
-| [Quantity](Applications.Service.ServiceActivityMaterials.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity of the product, that was used. `Unit: QuantityUnit` `Required` 
-| [QuantityBase](Applications.Service.ServiceActivityMaterials.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
-| [StandardQuantityBase](Applications.Service.ServiceActivityMaterials.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [Quantity](Applications.Service.ServiceActivityMaterials.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the product, that was used. `Unit: QuantityUnit` `Required` 
+| [QuantityBase](Applications.Service.ServiceActivityMaterials.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [StandardQuantityBase](Applications.Service.ServiceActivityMaterials.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 
 ## References
 
@@ -85,7 +85,7 @@ _Front-End Recalc Expressions:_
 
 Quantity of the product, that was used. `Unit: QuantityUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 
 The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -106,7 +106,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

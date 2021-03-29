@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Logistics.Wms.WarehouseOrderLines.md#id) | guid |  
 | [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order. `Required` `Filter(eq)` 
 | [Notes](Logistics.Wms.WarehouseOrderLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseOrderLine. 
-| [Quantity](Logistics.Wms.WarehouseOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product, which should be processed. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [Quantity](Logistics.Wms.WarehouseOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, which should be processed. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task. `Required` `Filter(multi eq)` 
 
 ## References
@@ -84,7 +84,7 @@ _Maximum Length_: **2147483647**
 
 The quantity of the product, which should be processed. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

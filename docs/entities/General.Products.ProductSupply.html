@@ -109,7 +109,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#fixedorderquantitybase">FixedOrderQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>Fixed order quantity under the FOQ &amp; EOQ replenishment system. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#orderlotsizequantitybase">OrderLotSizeQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
@@ -144,12 +144,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#ordermaximum">OrderMaximum</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
 <td>Order maximum when buying or making. null means no maximum. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#orderminimum">OrderMinimum</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>Minimum order quantity both for buying and making. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#orderpointquantitybase">OrderPointQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>Order point quantity under the OP replenishment system. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningannualusagequantitybase">PlanningAnnual<br>UsageQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
 <td>Average usage of the product for 1 year. NUL means unknown. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
@@ -199,12 +199,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningmaximuminventoryquantitybase">PlanningMaximum<br>InventoryQuantity<br>Base</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
 <td>Maximum inventory. null if N/A. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningordercostbasecurrency">PlanningOrderCost<br>BaseCurrency</a></td>
-<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#amount">Amount (18, 3)</a> <strong>nullable</strong></td>
 <td>Projected cost to place an order and set-up equipment. <code>Currency: EnterpriseCompany.BaseCurrency</code></td>
 </tr>
 <tr>
@@ -214,7 +214,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#planningsafetystockquantitybase">PlanningSafety<br>StockQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#standardcostperlot">StandardCostPerLot</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (18, 4)</a></td>
 <td>Standard cost for one lot of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -300,7 +300,7 @@ Default Search Member:<br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="fixedorderquantitybase">FixedOrderQuantityBase</h3>
 <p>Fixed order quantity under the FOQ &amp; EOQ replenishment system. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -357,7 +357,7 @@ Allowed values for the <code>ManufacturingPolicy</code>(General.Products.Product
 <em>Default Value</em>: <strong>MakeToStock</strong></p>
 <h3 id="orderlotsizequantitybase">OrderLotSizeQuantityBase</h3>
 <p>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -405,12 +405,12 @@ Allowed values for the <code>OrderLotSizingMethod</code>(General.Products.Produc
 <em>Default Value</em>: <strong>ReorderPoint</strong></p>
 <h3 id="ordermaximum">OrderMaximum</h3>
 <p>Order maximum when buying or making. null means no maximum. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderminimum">OrderMinimum</h3>
 <p>Minimum order quantity both for buying and making. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -432,7 +432,7 @@ Allowed values for the <code>OrderLotSizingMethod</code>(General.Products.Produc
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderpointquantitybase">OrderPointQuantityBase</h3>
 <p>Order point quantity under the OP replenishment system. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -477,7 +477,7 @@ Allowed values for the <code>OrderPolicy</code>(General.Products.ProductSupply.m
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningannualusagequantitybase">PlanningAnnualUsageQuantityBase</h3>
 <p>Average usage of the product for 1 year. NUL means unknown. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planninghorizondays">PlanningHorizonDays</h3>
@@ -496,12 +496,12 @@ Allowed values for the <code>OrderPolicy</code>(General.Products.ProductSupply.m
 <code>IIF( ( Convert( obj.PreferredSupplier.DefaultDeliveryTermDays, Nullable</code>1) != null), obj.PreferredSupplier.DefaultDeliveryTermDays, obj.PlanningLeadTimeDays)`</p>
 <h3 id="planningmaximuminventoryquantitybase">PlanningMaximumInventoryQuantityBase</h3>
 <p>Maximum inventory. null if N/A. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningordercostbasecurrency">PlanningOrderCostBaseCurrency</h3>
 <p>Projected cost to place an order and set-up equipment. <code>Currency: EnterpriseCompany.BaseCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 3)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningordercycledays">PlanningOrderCycleDays</h3>
@@ -511,7 +511,7 @@ Allowed values for the <code>OrderPolicy</code>(General.Products.ProductSupply.m
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningsafetystockquantitybase">PlanningSafetyStockQuantityBase</h3>
 <p>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -553,7 +553,7 @@ Allowed values for the <code>ProcurementType</code>(General.Products.ProductSupp
 <em>Default Value</em>: <strong>Buy</strong></p>
 <h3 id="standardcostperlot">StandardCostPerLot</h3>
 <p>Standard cost for one lot of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. `Currency: DeferredPayment<br />MinimalAmmount<br />Currency` `Required` 
+| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount (14, 2)](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. `Currency: DeferredPayment<br />MinimalAmmount<br />Currency` `Required` 
 | [Id](Crm.Sales.DocumentTypePaymentOptions.md#id) | guid |  
 
 ## References
@@ -41,7 +41,7 @@ Aggregate Tree
 
 The minimal order total amount, which an order must have in order to use deferred payment. `Currency: DeferredPaymentMinimalAmmountCurrency` `Required`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

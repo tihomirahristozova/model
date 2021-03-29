@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedCost](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedcost) | [Amount](../data-types.md#amount) | Cost of the actually issued Consumed_Quantity. `Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly` 
-| [ConsumedQuantity](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedquantity) | [Quantity](../data-types.md#quantity) | Part of the quantity in the consumption order line which was used for the product in the output order line. `Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly` 
+| [ConsumedCost](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedcost) | [Amount (14, 2)](../data-types.md#amount) | Cost of the actually issued Consumed_Quantity. `Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly` 
+| [ConsumedQuantity](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Part of the quantity in the consumption order line which was used for the product in the output order line. `Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly` 
 | [Id](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#id) | guid |  
 
 ## References
@@ -43,7 +43,7 @@ Aggregate Root:
 
 Cost of the actually issued Consumed_Quantity. `Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -52,7 +52,7 @@ _Default Value_: **Constant**
 
 Part of the quantity in the consumption order line which was used for the product in the output order line. `Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

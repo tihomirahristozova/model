@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#consumablequantity) | [Quantity](../data-types.md#quantity) | Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required` 
+| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required` 
 | [Id](Applications.Rental.AssetConsumables.md#id) | guid |  
 | [Notes](Applications.Rental.AssetConsumables.md#notes) | string (max) __nullable__ | Notes for this AssetConsumable. 
 
@@ -45,7 +45,7 @@ Aggregate Root:
 
 Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

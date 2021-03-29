@@ -25,8 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Finance.Payments.PaymentSlipLines.md#amount) | [Amount](../data-types.md#amount) | The part of the total amount in the payment slip amount, that is distributed to the specified payment order. `Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency` `Required` `Default(0)` 
-| [CoveredOrderAmount](Finance.Payments.PaymentSlipLines.md#coveredorderamount) | [Amount](../data-types.md#amount) | The part of the original payment order amount, that is covered by this payment slip line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
+| [Amount](Finance.Payments.PaymentSlipLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | The part of the total amount in the payment slip amount, that is distributed to the specified payment order. `Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency` `Required` `Default(0)` 
+| [CoveredOrderAmount](Finance.Payments.PaymentSlipLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | The part of the original payment order amount, that is covered by this payment slip line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
 | [Id](Finance.Payments.PaymentSlipLines.md#id) | guid |  
 
 ## References
@@ -43,7 +43,7 @@ Aggregate Root:
 
 The part of the total amount in the payment slip amount, that is distributed to the specified payment order. `Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (10, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -54,7 +54,7 @@ _Front-End Recalc Expressions:_
 
 The part of the original payment order amount, that is covered by this payment slip line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (10, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

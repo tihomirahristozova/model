@@ -27,7 +27,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetLaborAmount](Projects.ProjectTasks.md#budgetlaboramount) | [Amount](../data-types.md#amount) __nullable__ | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. `Currency: Project.BudgetingCurrency` 
+| [BudgetLaborAmount](Projects.ProjectTasks.md#budgetlaboramount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. `Currency: Project.BudgetingCurrency` 
 | [FinishDateTime](Projects.ProjectTasks.md#finishdatetime) | datetime | The date and time when the task is planned to finish. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [Id](Projects.ProjectTasks.md#id) | guid |  
 | [Notes](Projects.ProjectTasks.md#notes) | string (max) __nullable__ | Notes for this ProjectTask. 
@@ -64,7 +64,7 @@ Aggregate Tree
 
 Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. `Currency: Project.BudgetingCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

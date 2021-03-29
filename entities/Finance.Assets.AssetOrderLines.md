@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetValue](Finance.Assets.AssetOrderLines.md#assetvalue) | [Amount](../data-types.md#amount) | Value of the acquired or retired asset. `Currency: AssetValueCurrency` `Required` `Default(0)` 
+| [AssetValue](Finance.Assets.AssetOrderLines.md#assetvalue) | [Amount (14, 2)](../data-types.md#amount) | Value of the acquired or retired asset. `Currency: AssetValueCurrency` `Required` `Default(0)` 
 | [Id](Finance.Assets.AssetOrderLines.md#id) | guid |  
 | [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 18.2` 
 | [Quantity](Finance.Assets.AssetOrderLines.md#quantity) | int32 | Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. `Required` `Default(0)` 
@@ -47,7 +47,7 @@ Aggregate Root:
 
 Value of the acquired or retired asset. `Currency: AssetValueCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

@@ -27,10 +27,10 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Crm.PromotionalPackageLines.md#id) | guid |  
 | [LineNumber](Crm.PromotionalPackageLines.md#linenumber) | int32 | Consecutive line number. `Required` 
-| [Quantity](Crm.PromotionalPackageLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product in the package in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [Quantity](Crm.PromotionalPackageLines.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The quantity of the product in the package in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [StandardDiscount<br />AdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace) | [StandardDiscount<br />AdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace) | Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. `Required` `Default("R")` 
 | [StandardDiscount<br />PercentAdjust](Crm.PromotionalPackageLines.md#standarddiscountpercentadjust) | decimal (7, 6) | The value of change (in percents) for the standard discount. `Required` `Default(0)` 
-| [UnitPrice](Crm.PromotionalPackageLines.md#unitprice) | [Amount](../data-types.md#amount) __nullable__ | When not null specifies directly unit price for the product. When null, the package specifies only discount. `Currency: UnitPriceCurrency` 
+| [UnitPrice](Crm.PromotionalPackageLines.md#unitprice) | [Amount (13, 5)](../data-types.md#amount) __nullable__ | When not null specifies directly unit price for the product. When null, the package specifies only discount. `Currency: UnitPriceCurrency` 
 
 ## References
 
@@ -68,7 +68,7 @@ _Front-End Recalc Expressions:_
 
 The quantity of the product in the package in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -104,7 +104,7 @@ _Default Value_: **0**
 
 When not null specifies directly unit price for the product. When null, the package specifies only discount. `Currency: UnitPriceCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (13, 5)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

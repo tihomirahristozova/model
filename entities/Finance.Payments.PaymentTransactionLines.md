@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AllowOverpayment](Finance.Payments.PaymentTransactionLines.md#allowoverpayment) | boolean | True-Allows overpayment for the payment order; false=Does not allow (default). `Required` `Default(false)` 
-| [Amount](Finance.Payments.PaymentTransactionLines.md#amount) | [Amount](../data-types.md#amount) | The part of the total payed amount by the transaction, that is distributed to the specified payment order. `Currency: PaymentTransaction.TotalAmountCurrency` `Required` `Default(0)` 
-| [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#coveredorderamount) | [Amount](../data-types.md#amount) | The part of the original payment order amount, that is covered by this transaction line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
+| [Amount](Finance.Payments.PaymentTransactionLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | The part of the total payed amount by the transaction, that is distributed to the specified payment order. `Currency: PaymentTransaction.TotalAmountCurrency` `Required` `Default(0)` 
+| [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | The part of the original payment order amount, that is covered by this transaction line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
 | [Id](Finance.Payments.PaymentTransactionLines.md#id) | guid |  
 | [Notes](Finance.Payments.PaymentTransactionLines.md#notes) | string (254) __nullable__ | Notes for this PaymentTransactionLine. 
 
@@ -55,7 +55,7 @@ _Default Value_: **False**
 
 The part of the total payed amount by the transaction, that is distributed to the specified payment order. `Currency: PaymentTransaction.TotalAmountCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (10, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -66,7 +66,7 @@ _Front-End Recalc Expressions:_
 
 The part of the original payment order amount, that is covered by this transaction line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (10, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

@@ -104,12 +104,12 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#depreciationvalue">DepreciationValue</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the depreciation value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#depreciationvaluebase">DepreciationValueBase</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the depreciation value of the asset (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -119,12 +119,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#negativereservevalue">NegativeReserveValue</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the value of the negative reserve after asset valuations (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#negativereservevaluebase">NegativeReserveValueBase</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -134,32 +134,32 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#positivereservevalue">PositiveReserveValue</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the value of the positive reserve after asset valuations (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#positivereservevaluebase">PositiveReserveValueBase</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#purchasevalue">PurchaseValue</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the purchase value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#purchasevaluebase">PurchaseValueBase</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the purchase value of the asset (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#salvagevalue">SalvageValue</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the salvage value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#salvagevaluebase">SalvageValueBase</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the salvage value of the asset (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
@@ -194,7 +194,7 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="depreciationvalue">DepreciationValue</h3>
 <p>Change in the depreciation value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -202,7 +202,7 @@ Aggregate Root:<br>
 <code>obj.DepreciationValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
 <h3 id="depreciationvaluebase">DepreciationValueBase</h3>
 <p>Change in the depreciation value of the asset (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -215,7 +215,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="negativereservevalue">NegativeReserveValue</h3>
 <p>Change in the value of the negative reserve after asset valuations (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -223,7 +223,7 @@ Aggregate Root:<br>
 <code>obj.NegativeReserveValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
 <h3 id="negativereservevaluebase">NegativeReserveValueBase</h3>
 <p>Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -269,7 +269,7 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <em>Default Value</em>: <strong>Adjustment</strong></p>
 <h3 id="positivereservevalue">PositiveReserveValue</h3>
 <p>Change in the value of the positive reserve after asset valuations (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -277,7 +277,7 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <code>obj.PositiveReserveValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
 <h3 id="positivereservevaluebase">PositiveReserveValueBase</h3>
 <p>Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -285,7 +285,7 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <code>obj.PositiveReserveValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
 <h3 id="purchasevalue">PurchaseValue</h3>
 <p>Change in the purchase value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -293,7 +293,7 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <code>obj.PurchaseValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
 <h3 id="purchasevaluebase">PurchaseValueBase</h3>
 <p>Change in the purchase value of the asset (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -301,7 +301,7 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <code>obj.PurchaseValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
 <h3 id="salvagevalue">SalvageValue</h3>
 <p>Change in the salvage value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -309,7 +309,7 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <code>obj.SalvageValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
 <h3 id="salvagevaluebase">SalvageValueBase</h3>
 <p>Change in the salvage value of the asset (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

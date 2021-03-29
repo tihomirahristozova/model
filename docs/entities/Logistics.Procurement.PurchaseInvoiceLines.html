@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#lineamount">LineAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>The total invoiced amount for this line in the document currency of the invoice. <code>Currency: PurchaseInvoice.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -149,22 +149,22 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#quantity">Quantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
 <td>The invoiced quantity. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#quantitybase">QuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
 <td>The equivalence of Quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#standardquantitybase">StandardQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#unitprice">UnitPrice</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
 <td>The unit price of the invoiced item in the document currency of the invoice. <code>Currency: PurchaseInvoice.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
@@ -468,7 +468,7 @@ Generic enum type for TransportMode properties<br>
 <code>obj.PurchaseInvoice.IntrastatTransportModeCode</code></p>
 <h3 id="lineamount">LineAmount</h3>
 <p>The total invoiced amount for this line in the document currency of the invoice. <code>Currency: PurchaseInvoice.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -500,7 +500,7 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ProductDescription, obj.Product.Name)</code></p>
 <h3 id="quantity">Quantity</h3>
 <p>The invoiced quantity. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -508,7 +508,7 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ConfirmedQuantity.IfNullThen( obj.ReceivingOrderLine.Quantity), obj.Quantity)</code></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <p>The equivalence of Quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -517,7 +517,7 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -526,7 +526,7 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="unitprice">UnitPrice</h3>
 <p>The unit price of the invoiced item in the document currency of the invoice. <code>Currency: PurchaseInvoice.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -603,7 +603,7 @@ Generic enum type for TransportMode properties<br>
 <code>obj.PurchaseInvoice.SaleDealType</code></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
-<li><a href="../business-rules/R31508-24.html"> R31508-24 Purchase Invoice Line - Set Quantity Base</a></li>
+<li><a href="../business-rules/R31508-24.html">R31508-24 Purchase Invoice Line - Set Quantity Base</a></li>
 </ul>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <p>None</p>

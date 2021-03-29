@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EndDate](Applications.Rental.LeaseContractLines.md#enddate) | date | Ending date of lease of this asset. `Required` `Filter(multi eq;ge;le)` 
-| [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount](../data-types.md#amount) __nullable__ | Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency` 
+| [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency` 
 | [Id](Applications.Rental.LeaseContractLines.md#id) | guid |  
 | [LineNo](Applications.Rental.LeaseContractLines.md#lineno) | int32 | Consecutive number of the line within the lease contract. `Required` `Filter(eq;ge;le)` 
 | [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string (max) __nullable__ | Notes for this line. 
@@ -65,7 +65,7 @@ _Front-End Recalc Expressions:_
 
 Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

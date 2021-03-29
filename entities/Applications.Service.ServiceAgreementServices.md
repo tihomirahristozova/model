@@ -28,7 +28,7 @@ Aggregate Root:
 | [EndDate](Applications.Service.ServiceAgreementServices.md#enddate) | datetime __nullable__ | End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. 
 | [Id](Applications.Service.ServiceAgreementServices.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceAgreementServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
-| [Quantity](Applications.Service.ServiceAgreementServices.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity of the agreed servcice or product. `Unit: QuantityUnit` `Required` 
+| [Quantity](Applications.Service.ServiceAgreementServices.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the agreed servcice or product. `Unit: QuantityUnit` `Required` 
 | [StartDate](Applications.Service.ServiceAgreementServices.md#startdate) | datetime __nullable__ | Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. 
 
 ## References
@@ -75,7 +75,7 @@ _Front-End Recalc Expressions:_
 
 Quantity of the agreed servcice or product. `Unit: QuantityUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

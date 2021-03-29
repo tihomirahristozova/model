@@ -129,17 +129,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantity">ProducedQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The processed quantity of the end product. <code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantitybase">ProducedQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The equivalence of Produced Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedstandardquantitybase">ProducedStandard<br>QuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
@@ -288,13 +288,13 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="producedquantity">ProducedQuantity</h3>
 <p>The processed quantity of the end product. <code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="producedquantitybase">ProducedQuantityBase</h3>
 <p>The equivalence of Produced Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -304,7 +304,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="producedstandardquantitybase">ProducedStandardQuantityBase</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>

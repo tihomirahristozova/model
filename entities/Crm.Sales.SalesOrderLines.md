@@ -28,11 +28,11 @@ Aggregate Root:
 | [DeliveryTermsCode](Crm.Sales.SalesOrderLines.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrderLines.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
 | [GuaranteePeriodDays](Crm.Sales.SalesOrderLines.md#guaranteeperioddays) | int32 __nullable__ | Guarantee period in days for the offered product. null for non-serviced products. 
 | [HistoricalDataJson](Crm.Sales.SalesOrderLines.md#historicaldatajson) | string (max) __nullable__ | Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. `Introduced in version 19.1` 
-| [HistoricalUnitCost](Crm.Sales.SalesOrderLines.md#historicalunitcost) | [Amount](../data-types.md#amount) __nullable__ | Used for returning of goods that are sold before the exploitation of the system. `Currency: SalesOrder.DocumentCurrency` `Filter(eq;ge;le)` 
+| [HistoricalUnitCost](Crm.Sales.SalesOrderLines.md#historicalunitcost) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Used for returning of goods that are sold before the exploitation of the system. `Currency: SalesOrder.DocumentCurrency` `Filter(eq;ge;le)` 
 | [Id](Crm.Sales.SalesOrderLines.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrderLines.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrderLines.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Sales.SalesOrderLines.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrderLines.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
-| [LineAmount](Crm.Sales.SalesOrderLines.md#lineamount) | [Amount](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Unit_Price, less the discounts. `Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)` 
+| [LineAmount](Crm.Sales.SalesOrderLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Unit_Price, less the discounts. `Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)` 
 | [LineCustomDiscountPercent](Crm.Sales.SalesOrderLines.md#linecustomdiscountpercent) | decimal (7, 6) | User-defined discount for the line. `Required` `Default(0)` `Filter(ge;le)` 
 | [LineFromDate](Crm.Sales.SalesOrderLines.md#linefromdate) | date __nullable__ | When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. `Introduced in version 20.1` 
 | [LineNo](Crm.Sales.SalesOrderLines.md#lineno) | int32 | Consecutive number of the line within the sales order. `Required` `Filter(eq)` `ORD` 
@@ -42,13 +42,13 @@ Aggregate Root:
 | [ParentLineNo](Crm.Sales.SalesOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)` 
 | [PersistLot](Crm.Sales.SalesOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)` 
 | [ProductDescription](Crm.Sales.SalesOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the sold product at the time the sale was made. `Required` `Filter(like)` 
-| [Quantity](Crm.Sales.SalesOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity sold. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [QuantityBase](Crm.Sales.SalesOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [RequestedQuantity](Crm.Sales.SalesOrderLines.md#requestedquantity) | [Quantity](../data-types.md#quantity) __nullable__ | Quantity requested by customer. `Unit: QuantityUnit` 
+| [Quantity](Crm.Sales.SalesOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity sold. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityBase](Crm.Sales.SalesOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [RequestedQuantity](Crm.Sales.SalesOrderLines.md#requestedquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | Quantity requested by customer. `Unit: QuantityUnit` 
 | [RequiredDeliveryDate](Crm.Sales.SalesOrderLines.md#requireddeliverydate) | date __nullable__ | The required (contracted) delivery date for the line. `Filter(ge;le)` 
-| [StandardQuantityBase](Crm.Sales.SalesOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [StandardUnitPrice](Crm.Sales.SalesOrderLines.md#standardunitprice) | [Amount](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the sales order line. `Currency: SalesOrder.DocumentCurrency` `ReadOnly` 
-| [UnitPrice](Crm.Sales.SalesOrderLines.md#unitprice) | [Amount](../data-types.md#amount) | Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId. `Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)` 
+| [StandardQuantityBase](Crm.Sales.SalesOrderLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [StandardUnitPrice](Crm.Sales.SalesOrderLines.md#standardunitprice) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the sales order line. `Currency: SalesOrder.DocumentCurrency` `ReadOnly` 
+| [UnitPrice](Crm.Sales.SalesOrderLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId. `Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)` 
 
 ## References
 
@@ -132,7 +132,7 @@ _Maximum Length_: **2147483647**
 
 Used for returning of goods that are sold before the exploitation of the system. `Currency: SalesOrder.DocumentCurrency` `Filter(eq;ge;le)`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -212,7 +212,7 @@ _Front-End Recalc Expressions:_
 
 The total amount for the line. Equals to Quantity * Unit_Price, less the discounts. `Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -332,7 +332,7 @@ _Front-End Recalc Expressions:_
 
 The quantity sold. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -341,7 +341,7 @@ _Default Value_: **Constant**
 
 The equivalent of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -354,7 +354,7 @@ _Front-End Recalc Expressions:_
 
 Quantity requested by customer. `Unit: QuantityUnit`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -375,7 +375,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -388,7 +388,7 @@ _Front-End Recalc Expressions:_
 
 Standard unit price of the product during the creation of the sales order line. `Currency: SalesOrder.DocumentCurrency` `ReadOnly`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -401,7 +401,7 @@ _Front-End Recalc Expressions:_
 
 Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId. `Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 5)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

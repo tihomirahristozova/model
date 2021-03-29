@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Crm.Sales.SalesOrderPaymentPlans.md#amount) | [Amount](../data-types.md#amount) | Amount to be payed. `Currency: SalesOrder.DocumentCurrency` `Required` 
+| [Amount](Crm.Sales.SalesOrderPaymentPlans.md#amount) | [Amount (14, 2)](../data-types.md#amount) | Amount to be payed. `Currency: SalesOrder.DocumentCurrency` `Required` 
 | [AmountPercent](Crm.Sales.SalesOrderPaymentPlans.md#amountpercent) | decimal (7, 6) __nullable__ | Percent of the sales order amount to be payed. 
 | [DueDateFormMethod](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | [PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. `Required` 
 | [ExplicitPaymentDueDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduedate) | datetime __nullable__ | Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'. 
@@ -52,7 +52,7 @@ Aggregate Root:
 
 Amount to be payed. `Currency: SalesOrder.DocumentCurrency` `Required`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

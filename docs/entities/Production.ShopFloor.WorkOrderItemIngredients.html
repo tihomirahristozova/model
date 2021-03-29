@@ -109,7 +109,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#fixedscrapquantity">FixedScrapQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The quantity of the material, which will be used for setup. <code>Unit: UsedQuantityUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -129,17 +129,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedquantity">UsedQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The quantity of the material consumed in the operation. <code>Unit: UsedQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedquantitybase">UsedQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The equivalence of Used Quantity in the base measurement category of the material. <code>Unit: Material.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedstandardquantitybase">UsedStandardQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. <code>Unit: Material.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 </tbody>
@@ -255,7 +255,7 @@ Allowed values for the <code>DistributeBy</code>(Production.ShopFloor.WorkOrderI
 <code>IIF( ( obj.WorkOrderItem != null), null, obj.DistributeBy)</code></p>
 <h3 id="fixedscrapquantity">FixedScrapQuantity</h3>
 <p>The quantity of the material, which will be used for setup. <code>Unit: UsedQuantityUnit</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -281,13 +281,13 @@ Allowed values for the <code>DistributeBy</code>(Production.ShopFloor.WorkOrderI
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="usedquantity">UsedQuantity</h3>
 <p>The quantity of the material consumed in the operation. <code>Unit: UsedQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="usedquantitybase">UsedQuantityBase</h3>
 <p>The equivalence of Used Quantity in the base measurement category of the material. <code>Unit: Material.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -296,7 +296,7 @@ Allowed values for the <code>DistributeBy</code>(Production.ShopFloor.WorkOrderI
 <code>IIF( ( ( ( obj.Material != null) AndAlso ( obj.UsedQuantity != null)) AndAlso ( obj.UsedQuantityUnit != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedQuantityBase)</code></p>
 <h3 id="usedstandardquantitybase">UsedStandardQuantityBase</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. <code>Unit: Material.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>

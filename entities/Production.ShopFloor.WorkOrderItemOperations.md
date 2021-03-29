@@ -39,7 +39,7 @@ Aggregate Root:
 | [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#scraprate) | decimal (7, 6) | Projected scrap rate of the operation. `Required` `Default(0)` 
 | [SetupTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment in minutes. `Required` `Default(0)` 
 | [Tooling](Production.ShopFloor.WorkOrderItemOperations.md#tooling) | string (max) __nullable__ | The tools needed for the routing step. 
-| [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the resource, that should be allocated for the operation. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
+| [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the resource, that should be allocated for the operation. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
 | [WaitTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` 
 
 ## References
@@ -188,7 +188,7 @@ _Maximum Length_: **2147483647**
 
 Quantity of the resource, that should be allocated for the operation. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

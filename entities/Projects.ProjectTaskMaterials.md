@@ -25,10 +25,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetedMaterialAmount](Projects.ProjectTaskMaterials.md#budgetedmaterialamount) | [Amount](../data-types.md#amount) __nullable__ | Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. `Currency: ProjectTask.Project.BudgetingCurrency` 
+| [BudgetedMaterialAmount](Projects.ProjectTaskMaterials.md#budgetedmaterialamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. `Currency: ProjectTask.Project.BudgetingCurrency` 
 | [Id](Projects.ProjectTaskMaterials.md#id) | guid |  
 | [LineNumber](Projects.ProjectTaskMaterials.md#linenumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes. `Required` `Default(0)` 
-| [Quantity](Projects.ProjectTaskMaterials.md#quantity) | [Quantity](../data-types.md#quantity) | The required quantity of the material. `Unit: QuantityUnit` `Required` `Default(1)` 
+| [Quantity](Projects.ProjectTaskMaterials.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The required quantity of the material. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Projects.ProjectTaskMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `ReadOnly` 
 
 ## References
@@ -46,7 +46,7 @@ Aggregate Root:
 
 Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. `Currency: ProjectTask.Project.BudgetingCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -77,7 +77,7 @@ _Front-End Recalc Expressions:_
 
 The required quantity of the material. `Unit: QuantityUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

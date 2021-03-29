@@ -26,8 +26,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceInvoicing.md#id) | guid |  
-| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity](../data-types.md#quantity) | The quantity to invoice. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [QuantityOfService](Applications.Service.ServiceInvoicing.md#quantityofservice) | [Quantity](../data-types.md#quantity) | The quantity of service for which the invoicing is specified. `Unit: Service.MeasurementUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity to invoice. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityOfService](Applications.Service.ServiceInvoicing.md#quantityofservice) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of service for which the invoicing is specified. `Unit: Service.MeasurementUnit` `Required` `Default(1)` `Filter(ge;le)` 
 
 ## References
 
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 The quantity to invoice. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -59,7 +59,7 @@ _Default Value_: **Constant**
 
 The quantity of service for which the invoicing is specified. `Unit: Service.MeasurementUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

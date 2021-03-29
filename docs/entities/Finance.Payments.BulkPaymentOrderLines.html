@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#invoiceamount">InvoiceAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
 <td>The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). <code>Currency: InvoiceAmountCurrency</code></td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#totalamount">TotalAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
 <td>Total amount that should be payed. <code>Currency: TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
@@ -300,7 +300,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderL
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="invoiceamount">InvoiceAmount</h3>
 <p>The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). <code>Currency: InvoiceAmountCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isamountwithvat">IsAmountWithVAT</h3>
@@ -344,7 +344,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderL
 <em>Maximum Length</em>: <strong>20</strong></p>
 <h3 id="totalamount">TotalAmount</h3>
 <p>Total amount that should be payed. <code>Currency: TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

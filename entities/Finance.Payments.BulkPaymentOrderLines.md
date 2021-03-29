@@ -30,7 +30,7 @@ Aggregate Root:
 | [DueDate](Finance.Payments.BulkPaymentOrderLines.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(ge;le)` 
 | [Id](Finance.Payments.BulkPaymentOrderLines.md#id) | guid |  
 | [InstallmentNumber](Finance.Payments.BulkPaymentOrderLines.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. 
-| [InvoiceAmount](Finance.Payments.BulkPaymentOrderLines.md#invoiceamount) | [Amount](../data-types.md#amount) __nullable__ | The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency` 
+| [InvoiceAmount](Finance.Payments.BulkPaymentOrderLines.md#invoiceamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency` 
 | [IsAmountWithVAT](Finance.Payments.BulkPaymentOrderLines.md#isamountwithvat) | boolean | Is_Amount_With_VAT=true if the requested amount includes VAT. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Finance.Payments.BulkPaymentOrderLines.md#notes) | string (254) __nullable__ | Notes for this BulkPaymentOrderLine. 
 | [RefDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refdocumentdate) | datetime __nullable__ | The date of the base document. null means that it is unknown. 
@@ -38,7 +38,7 @@ Aggregate Root:
 | [RefInvoiceApplyDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoiceapplydate) | datetime __nullable__ | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. 
 | [RefInvoiceDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. 
 | [RefInvoiceDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. 
-| [TotalAmount](Finance.Payments.BulkPaymentOrderLines.md#totalamount) | [Amount](../data-types.md#amount) | Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
+| [TotalAmount](Finance.Payments.BulkPaymentOrderLines.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
 
 ## References
 
@@ -117,7 +117,7 @@ _Supports Order By_: **False**
 
 The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -185,7 +185,7 @@ _Maximum Length_: **20**
 
 Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

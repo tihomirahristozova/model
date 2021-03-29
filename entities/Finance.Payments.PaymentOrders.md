@@ -51,7 +51,7 @@ Aggregate Tree
 | [EntityName](Finance.Payments.PaymentOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Finance.Payments.PaymentOrders.md#id) | guid |  
 | [InstallmentNumber](Finance.Payments.PaymentOrders.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. `Filter(eq)` 
-| [InvoiceAmount](Finance.Payments.PaymentOrders.md#invoiceamount) | [Amount](../data-types.md#amount) __nullable__ | The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency` 
+| [InvoiceAmount](Finance.Payments.PaymentOrders.md#invoiceamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency` 
 | [IsAmountWithVAT](Finance.Payments.PaymentOrders.md#isamountwithvat) | boolean | Is_Amount_With_VAT=true if the requested amount includes VAT. `Required` `Default(true)` `Filter(eq)` 
 | [IsReleased](Finance.Payments.PaymentOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Finance.Payments.PaymentOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
@@ -68,7 +68,7 @@ Aggregate Tree
 | [RefInvoiceDocumentNo](Finance.Payments.PaymentOrders.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(eq)` 
 | [ReleaseTime](Finance.Payments.PaymentOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Finance.Payments.PaymentOrders.md#state) | [DocumentState](Finance.Payments.PaymentOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [TotalAmount](Finance.Payments.PaymentOrders.md#totalamount) | [Amount](../data-types.md#amount) | Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [TotalAmount](Finance.Payments.PaymentOrders.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Void](Finance.Payments.PaymentOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Finance.Payments.PaymentOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidTime](Finance.Payments.PaymentOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -302,7 +302,7 @@ _Supports Order By_: **False**
 
 The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -495,7 +495,7 @@ _Default Value_: **0**
 
 Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` `Filter(eq;ge;le)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

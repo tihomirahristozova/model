@@ -36,7 +36,7 @@ Aggregate Tree
 | [AdjustmentNumber](Finance.Vat.Entries.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentTime](Finance.Vat.Entries.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentUser](Finance.Vat.Entries.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [AmountBase](Finance.Vat.Entries.md#amountbase) | [Amount](../data-types.md#amount) | Amount of the operation without the tax in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
+| [AmountBase](Finance.Vat.Entries.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Amount of the operation without the tax in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
 | [ApplyDate](Finance.Vat.Entries.md#applydate) | date | Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period. `Required` `Filter(ge;le)` 
 | [CashReportingMode](Finance.Vat.Entries.md#cashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. `Required` `Default(false)` 
 | [CompleteTime](Finance.Vat.Entries.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -61,7 +61,7 @@ Aggregate Tree
 | [RegistrationVATNumber](Finance.Vat.Entries.md#registrationvatnumber) | string (16) | VAT number by registration (or national number) for the party specified by Party_Id. `Required` `Filter(eq)` 
 | [ReleaseTime](Finance.Vat.Entries.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Finance.Vat.Entries.md#state) | [DocumentState](Finance.Vat.Entries.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VATAmountBase](Finance.Vat.Entries.md#vatamountbase) | [Amount](../data-types.md#amount) | The amount of the tax for the operation in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
+| [VATAmountBase](Finance.Vat.Entries.md#vatamountbase) | [Amount (14, 2)](../data-types.md#amount) | The amount of the tax for the operation in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
 | [Void](Finance.Vat.Entries.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Finance.Vat.Entries.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidTime](Finance.Vat.Entries.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -139,7 +139,7 @@ _Maximum Length_: **64**
 
 Amount of the operation without the tax in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -397,7 +397,7 @@ _Default Value_: **0**
 
 The amount of the tax for the operation in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

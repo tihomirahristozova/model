@@ -30,10 +30,10 @@ Aggregate Root:
 | [Id](Logistics.Inventory.TransferOrderLines.md#id) | guid |  
 | [LineOrd](Logistics.Inventory.TransferOrderLines.md#lineord) | int32 | Line ordinal position within the transaction. Duplicates are allowed, but not advised. `Required` 
 | [Notes](Logistics.Inventory.TransferOrderLines.md#notes) | string (254) __nullable__ | Notes for this TransferOrderLine. 
-| [Quantity](Logistics.Inventory.TransferOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity ordered for transfer. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [QuantityBase](Logistics.Inventory.TransferOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` 
-| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#standardunitprice) | [Amount](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the transfer order line. `Currency: TransferOrder.DocumentCurrency` 
+| [Quantity](Logistics.Inventory.TransferOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity ordered for transfer. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityBase](Logistics.Inventory.TransferOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` 
+| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#standardunitprice) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the transfer order line. `Currency: TransferOrder.DocumentCurrency` 
 
 ## References
 
@@ -112,7 +112,7 @@ _Maximum Length_: **254**
 
 Quantity ordered for transfer. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -121,7 +121,7 @@ _Default Value_: **Constant**
 
 Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -134,7 +134,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -147,7 +147,7 @@ _Front-End Recalc Expressions:_
 
 Standard unit price of the product during the creation of the transfer order line. `Currency: TransferOrder.DocumentCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -23,10 +23,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCost](Logistics.Inventory.CurrentBalances.md#basecost) | [Amount](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Filter(ge;le)` 
-| [ProductCost](Logistics.Inventory.CurrentBalances.md#productcost) | [Amount](../data-types.md#amount) | The cost of the inventory in the products currency. `Currency: Product.CostingCurrency` `Required` 
-| [QuantityBase](Logistics.Inventory.CurrentBalances.md#quantitybase) | [Quantity](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` `ReadOnly` 
-| [StoreCost](Logistics.Inventory.CurrentBalances.md#storecost) | [Amount](../data-types.md#amount) | The cost of the inventory in the stores currency. `Currency: Store.Currency` `Required` 
+| [BaseCost](Logistics.Inventory.CurrentBalances.md#basecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Filter(ge;le)` 
+| [ProductCost](Logistics.Inventory.CurrentBalances.md#productcost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the products currency. `Currency: Product.CostingCurrency` `Required` 
+| [QuantityBase](Logistics.Inventory.CurrentBalances.md#quantitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` `ReadOnly` 
+| [StoreCost](Logistics.Inventory.CurrentBalances.md#storecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the stores currency. `Currency: Store.Currency` `Required` 
 
 ## References
 
@@ -47,7 +47,7 @@ Aggregate Tree
 
 The cost of the inventory in base currency of the enterprise company. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Filter(ge;le)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 The cost of the inventory in the products currency. `Currency: Product.CostingCurrency` `Required`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` `ReadOnly`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 The cost of the inventory in the stores currency. `Currency: Store.Currency` `Required`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

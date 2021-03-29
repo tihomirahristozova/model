@@ -124,12 +124,12 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#orderamount">OrderAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
 <td>The total amount of the payment order. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#paidamount">PaidAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
 <td>The paid amount. Taken from released payment transactions. <code>Currency: Currency</code> <code>Required</code></td>
 </tr>
 <tr>
@@ -258,14 +258,14 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderamount">OrderAmount</h3>
 <p>The total amount of the payment order. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Total_Amount</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="paidamount">PaidAmount</h3>
 <p>The paid amount. Taken from released payment transactions. <code>Currency: Currency</code> <code>Required</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>

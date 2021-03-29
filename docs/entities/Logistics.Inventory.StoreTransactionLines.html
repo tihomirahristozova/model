@@ -124,17 +124,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linebasecost">LineBaseCost</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>The cost of the transaction in the currency of the enterprise company. <code>Currency: TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linecost">LineCost</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Total cost for the line. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linedocumentcost">LineDocumentCost</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>The cost of the transaction in the currency of the document. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -144,12 +144,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lineproductcost">LineProductCost</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>The cost of the transaction in the currency of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linestorecost">LineStoreCost</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>The cost of the transaction in the currency of the warehouse. <code>Currency: TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
@@ -169,17 +169,17 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantity">Quantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantitybase">QuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#standardquantitybase">StandardQuantityBase</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
@@ -194,7 +194,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#unitcost">UnitCost</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
 <td>Cost for 1 of the specified quantity. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
@@ -298,19 +298,19 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="linebasecost">LineBaseCost</h3>
 <p>The cost of the transaction in the currency of the enterprise company. <code>Currency: TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="linecost">LineCost</h3>
 <p>Total cost for the line. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="linedocumentcost">LineDocumentCost</h3>
 <p>The cost of the transaction in the currency of the document. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -325,13 +325,13 @@ Aggregate Root:<br>
 <code>( obj.TransactionObj.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="lineproductcost">LineProductCost</h3>
 <p>The cost of the transaction in the currency of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="linestorecost">LineStoreCost</h3>
 <p>The cost of the transaction in the currency of the warehouse. <code>Currency: TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -353,13 +353,13 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <p>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -369,7 +369,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -390,7 +390,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="unitcost">UnitCost</h3>
 <p>Cost for 1 of the specified quantity. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

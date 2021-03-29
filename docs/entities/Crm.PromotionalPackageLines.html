@@ -114,7 +114,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackageLines.html#quantity">Quantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
 <td>The quantity of the product in the package in the base measurement unit of the Product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackageLines.html#unitprice">UnitPrice</a></td>
-<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#amount">Amount (13, 5)</a> <strong>nullable</strong></td>
 <td>When not null specifies directly unit price for the product. When null, the package specifies only discount. <code>Currency: UnitPriceCurrency</code></td>
 </tr>
 </tbody>
@@ -183,7 +183,7 @@ Aggregate Root:<br>
 <code>( obj.PromotionalPackage.Lines.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity of the product in the package in the base measurement unit of the Product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -225,7 +225,7 @@ Allowed values for the <code>StandardDiscountAdjustOrReplace</code>(Crm.Promotio
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="unitprice">UnitPrice</h3>
 <p>When not null specifies directly unit price for the product. When null, the package specifies only discount. <code>Currency: UnitPriceCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (13, 5)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

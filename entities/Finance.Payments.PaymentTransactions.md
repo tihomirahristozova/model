@@ -60,7 +60,7 @@ Aggregate Tree
 | [RequiresAllocation](Finance.Payments.PaymentTransactions.md#requiresallocation) | boolean | True=The total amount should be allocated to payment orders; false=Payment orders are not required. `Required` `Default(true)` `Filter(eq)` 
 | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__ | The reason for the reversal of the payment. `Introduced in version 20.1` 
 | [State](Finance.Payments.PaymentTransactions.md#state) | [DocumentState](Finance.Payments.PaymentTransactions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [TotalAmount](Finance.Payments.PaymentTransactions.md#totalamount) | [Amount](../data-types.md#amount) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
+| [TotalAmount](Finance.Payments.PaymentTransactions.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
 | [Void](Finance.Payments.PaymentTransactions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Finance.Payments.PaymentTransactions.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidTime](Finance.Payments.PaymentTransactions.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -389,7 +389,7 @@ _Default Value_: **0**
 
 The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. `Currency: TotalAmountCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

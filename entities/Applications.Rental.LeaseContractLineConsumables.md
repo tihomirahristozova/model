@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#consumablequantity) | [Quantity](../data-types.md#quantity) | The quantity sold of the consumable. `Unit: ConsumableQuantityUnit` `Required` `Default(0)` 
+| [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity sold of the consumable. `Unit: ConsumableQuantityUnit` `Required` `Default(0)` 
 | [Id](Applications.Rental.LeaseContractLineConsumables.md#id) | guid |  
 | [LineNo](Applications.Rental.LeaseContractLineConsumables.md#lineno) | int32 | Consecutive number of the consumable within the lease contract line. `Required` `Filter(eq;ge;le)` 
 
@@ -45,7 +45,7 @@ Aggregate Root:
 
 The quantity sold of the consumable. `Unit: ConsumableQuantityUnit` `Required` `Default(0)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

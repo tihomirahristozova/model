@@ -29,7 +29,7 @@ Aggregate Root:
 | [LineNo](Logistics.Wms.WarehouseRequisitionLines.md#lineno) | int32 | The unique, consecutive line number within the requisition. `Required` 
 | [Notes](Logistics.Wms.WarehouseRequisitionLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseRequisitionLine. 
 | [ParentLineNo](Logistics.Wms.WarehouseRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
-| [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
+| [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
 | [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | decimal (12, 3) | Quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
 
 ## References
@@ -88,7 +88,7 @@ _Supports Order By_: **False**
 
 The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

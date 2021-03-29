@@ -23,12 +23,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ATPBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#atpbase) | [Quantity](../data-types.md#quantity) | Indicates the quantity available to promise (in a base unit). It is valid from this date on. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [CurrentAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#currentavailabilitybase) | [Quantity](../data-types.md#quantity) | The current availability in а base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [ATPBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#atpbase) | [Quantity (38, 3)](../data-types.md#quantity) | Indicates the quantity available to promise (in a base unit). It is valid from this date on. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [CurrentAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#currentavailabilitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The current availability in а base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
 | [FromDate](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#fromdate) | datetime | Тhe date from which the available to promise quantity is valid. `Required` `Filter(eq;ge;le)` 
-| [MovementsBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#movementsbase) | [Quantity](../data-types.md#quantity) | The sum of the quantity of all planned stock movements on this date in а base measurement unit. . `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [MovementsToDateBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#movementstodatebase) | [Quantity](../data-types.md#quantity) | The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [ProjectedAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#projectedavailabilitybase) | [Quantity](../data-types.md#quantity) | Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [MovementsBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#movementsbase) | [Quantity (38, 3)](../data-types.md#quantity) | The sum of the quantity of all planned stock movements on this date in а base measurement unit. . `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [MovementsToDateBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#movementstodatebase) | [Quantity (38, 3)](../data-types.md#quantity) | The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [ProjectedAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#projectedavailabilitybase) | [Quantity (38, 3)](../data-types.md#quantity) | Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
 
 ## References
 
@@ -46,7 +46,7 @@ Aggregate Tree
 
 Indicates the quantity available to promise (in a base unit). It is valid from this date on. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -54,7 +54,7 @@ _Supports Order By_: **False**
 
 The current availability in а base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 The sum of the quantity of all planned stock movements on this date in а base measurement unit. . `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

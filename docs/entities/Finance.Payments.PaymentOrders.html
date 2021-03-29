@@ -210,7 +210,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#invoiceamount">InvoiceAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
 <td>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). <code>Currency: InvoiceAmountCurrency</code></td>
 </tr>
 <tr>
@@ -295,7 +295,7 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#totalamount">TotalAmount</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
 <td>Total amount that should be payed. <code>Currency: TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
@@ -677,7 +677,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="invoiceamount">InvoiceAmount</h3>
 <p>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). <code>Currency: InvoiceAmountCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isamountwithvat">IsAmountWithVAT</h3>
@@ -853,7 +853,7 @@ Enumeration of document system states<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="totalamount">TotalAmount</h3>
 <p>Total amount that should be payed. <code>Currency: TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

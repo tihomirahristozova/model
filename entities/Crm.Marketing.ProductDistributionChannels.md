@@ -28,7 +28,7 @@ Aggregate Root:
 | [FromDate](Crm.Marketing.ProductDistributionChannels.md#fromdate) | date __nullable__ | When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). `Default(Today)` `Filter(ge;le)` 
 | [Id](Crm.Marketing.ProductDistributionChannels.md#id) | guid |  
 | [IsActive](Crm.Marketing.ProductDistributionChannels.md#isactive) | boolean | Is this product listing active? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
-| [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#minimalsalespriceperlot) | [Amount](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: Product.CostingCurrency` 
+| [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: Product.CostingCurrency` 
 | [MinimalSalesQuantityBase](Crm.Marketing.ProductDistributionChannels.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of the current product that has to be specified in any sale for this distribution channel. 
 | [ToDate](Crm.Marketing.ProductDistributionChannels.md#todate) | date __nullable__ | When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). `Filter(ge;le)` 
 
@@ -71,7 +71,7 @@ _Default Value_: **True**
 
 Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: Product.CostingCurrency`
 
-_Type_: **[Amount](../data-types.md#amount) __nullable__**  
+_Type_: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

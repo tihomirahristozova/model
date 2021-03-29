@@ -25,9 +25,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedQuantity](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantity) | [Quantity](../data-types.md#quantity) | Requested quantity of the material. `Unit: ConsumedQuantityUnit` `Required` `Filter(ge;le)` 
-| [ConsumedQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantitybase) | [Quantity](../data-types.md#quantity) | The requested quantity equivalence in the base measurement category of the requested material. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
-| [ConsumedStandard<br />QuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [ConsumedQuantity](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Requested quantity of the material. `Unit: ConsumedQuantityUnit` `Required` `Filter(ge;le)` 
+| [ConsumedQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The requested quantity equivalence in the base measurement category of the requested material. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [ConsumedStandard<br />QuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). `Required` `Filter(eq)` `ReadOnly` 
 | [Id](Production.ShopFloor.ConsumptionOrderLines.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.ConsumptionOrderLines.md#lineord) | int32 | Non-unique line number within the order. `Required` 
@@ -55,7 +55,7 @@ Aggregate Root:
 
 Requested quantity of the material. `Unit: ConsumedQuantityUnit` `Required` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -65,7 +65,7 @@ _Front-End Recalc Expressions:_
 
 The requested quantity equivalence in the base measurement category of the requested material. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -78,7 +78,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

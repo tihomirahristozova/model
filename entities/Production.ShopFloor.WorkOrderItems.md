@@ -28,14 +28,14 @@ Aggregate Root:
 | [CompletionDate](Production.ShopFloor.WorkOrderItems.md#completiondate) | datetime __nullable__ | The date, when the item should be completed. null means that there is no constraint for completion date. 
 | [Id](Production.ShopFloor.WorkOrderItems.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.WorkOrderItems.md#lineord) | int32 | The order of the line within the work order. `Required` `Filter(eq;like)` 
-| [LotSize](Production.ShopFloor.WorkOrderItems.md#lotsize) | [Quantity](../data-types.md#quantity) | Quantity produced in one production run. `Unit: ProducedQuantityUnit` `Required` `Default(1)` 
+| [LotSize](Production.ShopFloor.WorkOrderItems.md#lotsize) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity produced in one production run. `Unit: ProducedQuantityUnit` `Required` `Default(1)` 
 | [Notes](Production.ShopFloor.WorkOrderItems.md#notes) | string (max) __nullable__ | Notes for this WorkOrderItem. 
 | [ParentLineId](Production.ShopFloor.WorkOrderItems.md#parentlineid) | guid __nullable__ | If not null contains the Id of the line of the parent document, that created the current row. `Filter(multi eq)` 
 | [ParentLineNo](Production.ShopFloor.WorkOrderItems.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)` 
 | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. `Required` `Default(3)` 
-| [ProducedQuantity](Production.ShopFloor.WorkOrderItems.md#producedquantity) | [Quantity](../data-types.md#quantity) | The quantity produced in the operation. `Unit: ProducedQuantityUnit` `Required` `Default(1)` 
-| [ProducedQuantityBase](Production.ShopFloor.WorkOrderItems.md#producedquantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
-| [ProducedStandard<br />QuantityBase](Production.ShopFloor.WorkOrderItems.md#producedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [ProducedQuantity](Production.ShopFloor.WorkOrderItems.md#producedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity produced in the operation. `Unit: ProducedQuantityUnit` `Required` `Default(1)` 
+| [ProducedQuantityBase](Production.ShopFloor.WorkOrderItems.md#producedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [ProducedStandard<br />QuantityBase](Production.ShopFloor.WorkOrderItems.md#producedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [ReleaseDate](Production.ShopFloor.WorkOrderItems.md#releasedate) | datetime __nullable__ | The date, when the item is released to production. null means that still there is no plan when the item will be released to production. 
 | [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledenddatetime) | datetime __nullable__ | Date and time when the production of this item is scheduled to end. 
 | [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledstartdatetime) | datetime __nullable__ | Date and time when the production of this item is scheduled to begin. 
@@ -102,7 +102,7 @@ _Front-End Recalc Expressions:_
 
 Quantity produced in one production run. `Unit: ProducedQuantityUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -157,7 +157,7 @@ _Default Value_: **3**
 
 The quantity produced in the operation. `Unit: ProducedQuantityUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -168,7 +168,7 @@ _Front-End Recalc Expressions:_
 
 The equivalence of Produced Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -181,7 +181,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

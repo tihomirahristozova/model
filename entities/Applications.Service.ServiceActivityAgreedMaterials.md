@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#agreedquantity) | [Quantity](../data-types.md#quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. `Unit: ServiceAgreementMaterial.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
+| [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. `Unit: ServiceAgreementMaterial.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
 | [Id](Applications.Service.ServiceActivityAgreedMaterials.md#id) | guid |  
 
 ## References
@@ -42,7 +42,7 @@ Aggregate Root:
 
 Quantity from the service agreement material line that is accounted for this service activity material line. `Unit: ServiceAgreementMaterial.QuantityUnit` `Required` `Default(0)` `ReadOnly`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

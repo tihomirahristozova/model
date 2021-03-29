@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationvalue) | [Amount](../data-types.md#amount) | Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. `Currency: DepreciationPlanLine.Asset.ValuationCurrency` `Required` `Default(0)` 
+| [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. `Currency: DepreciationPlanLine.Asset.ValuationCurrency` `Required` `Default(0)` 
 | [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodmonth) | byte | Month of the period for which the depreciation value is fixed. `Required` 
 | [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodyear) | int16 | Year of the period for which the depreciation value is fixed. `Required` 
 | [Id](Finance.Assets.DepreciationPlanLineFixedValues.md#id) | guid |  
@@ -43,7 +43,7 @@ Aggregate Root:
 
 Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. `Currency: DepreciationPlanLine.Asset.ValuationCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

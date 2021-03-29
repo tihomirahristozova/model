@@ -35,7 +35,7 @@ Aggregate Root:
 | [SetupTimeMinutes](Production.Resources.Operations.md#setuptimeminutes) | int32 | The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. `Required` `Default(0)` 
 | [StandardPricePerHour](Production.Resources.Operations.md#standardpriceperhour) | decimal (18, 6) | Standard price for 1 hour work for this operation. `Required` `Default(0)` 
 | [Tooling](Production.Resources.Operations.md#tooling) | string (254) __nullable__ | Short description of the needed instruments for the operation. 
-| [UseQuantityBase](Production.Resources.Operations.md#usequantitybase) | [Quantity](../data-types.md#quantity) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
+| [UseQuantityBase](Production.Resources.Operations.md#usequantitybase) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
 | [WaitTimeMinutes](Production.Resources.Operations.md#waittimeminutes) | int32 | The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. `Required` `Default(0)` 
 
 ## References
@@ -139,7 +139,7 @@ _Maximum Length_: **254**
 
 Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

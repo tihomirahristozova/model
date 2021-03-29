@@ -30,18 +30,18 @@ Aggregate Root:
 | [Id](Crm.Invoicing.InvoiceLines.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Crm.Invoicing.InvoiceLines.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Invoicing.InvoiceLines.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Invoicing.InvoiceLines.md#intrastattransportmodecode) | [TransportMode](Crm.Invoicing.InvoiceLines.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
-| [LineAmount](Crm.Invoicing.InvoiceLines.md#lineamount) | [Amount](../data-types.md#amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. `Currency: Invoice.DocumentCurrency` `Required` `Default(0)` 
+| [LineAmount](Crm.Invoicing.InvoiceLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. `Currency: Invoice.DocumentCurrency` `Required` `Default(0)` 
 | [LineCustomDiscountPercent](Crm.Invoicing.InvoiceLines.md#linecustomdiscountpercent) | decimal (7, 6) | User-defined discount for the line. `Required` `Default(0)` `Filter(ge;le)` 
 | [LineNo](Crm.Invoicing.InvoiceLines.md#lineno) | int32 | Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
 | [LineStandardDiscount<br />Percent](Crm.Invoicing.InvoiceLines.md#linestandarddiscountpercent) | decimal (7, 6) | Standard discount for the line. This is automatically computed according to discount conditions. `Required` `Default(0)` 
 | [Notes](Crm.Invoicing.InvoiceLines.md#notes) | string (254) __nullable__ | Notes for this InvoiceLine. 
 | [ParentLineNo](Crm.Invoicing.InvoiceLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 18.2` 
 | [ProductDescription](Crm.Invoicing.InvoiceLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. `Required` 
-| [Quantity](Crm.Invoicing.InvoiceLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the invoiced product. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [QuantityBase](Crm.Invoicing.InvoiceLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [Quantity](Crm.Invoicing.InvoiceLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the invoiced product. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityBase](Crm.Invoicing.InvoiceLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
 | [SalesOrderAmount](Crm.Invoicing.InvoiceLines.md#salesorderamount) | decimal (14, 2) __nullable__ | Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing. 
-| [StandardQuantityBase](Crm.Invoicing.InvoiceLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [UnitPrice](Crm.Invoicing.InvoiceLines.md#unitprice) | [Amount](../data-types.md#amount) | The unit selling price of Quantity. `Currency: Invoice.DocumentCurrency` `Required` `Default(0)` 
+| [StandardQuantityBase](Crm.Invoicing.InvoiceLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [UnitPrice](Crm.Invoicing.InvoiceLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | The unit selling price of Quantity. `Currency: Invoice.DocumentCurrency` `Required` `Default(0)` 
 
 ## References
 
@@ -189,7 +189,7 @@ _Front-End Recalc Expressions:_
 
 Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. `Currency: Invoice.DocumentCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -260,7 +260,7 @@ _Front-End Recalc Expressions:_
 
 The quantity of the invoiced product. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -269,7 +269,7 @@ _Default Value_: **Constant**
 
 The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -290,7 +290,7 @@ _Supports Order By_: **False**
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -303,7 +303,7 @@ _Front-End Recalc Expressions:_
 
 The unit selling price of Quantity. `Currency: Invoice.DocumentCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 5)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

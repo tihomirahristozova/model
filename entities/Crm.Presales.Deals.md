@@ -45,7 +45,7 @@ Aggregate Tree
 | [DocumentNotes](Crm.Presales.Deals.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
 | [DocumentVersion](Crm.Presales.Deals.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Crm.Presales.Deals.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [ExpectedRevenue](Crm.Presales.Deals.md#expectedrevenue) | [Amount](../data-types.md#amount) | Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. `Currency: ExpectedRevenueCurrency` `Required` `Default(0)` `Filter(ge;le)` 
+| [ExpectedRevenue](Crm.Presales.Deals.md#expectedrevenue) | [Amount (18, 2)](../data-types.md#amount) | Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. `Currency: ExpectedRevenueCurrency` `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](Crm.Presales.Deals.md#id) | guid |  
 | [IsReleased](Crm.Presales.Deals.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Crm.Presales.Deals.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
@@ -229,7 +229,7 @@ _Maximum Length_: **64**
 
 Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. `Currency: ExpectedRevenueCurrency` `Required` `Default(0)` `Filter(ge;le)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

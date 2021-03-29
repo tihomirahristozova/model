@@ -40,8 +40,8 @@ Aggregate Tree
 | [CompleteTime](Finance.Vat.BGVATDeclarations.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationTime](Finance.Vat.BGVATDeclarations.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationUser](Finance.Vat.BGVATDeclarations.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [DeductedVATAmount<br />Article92Paragraph1](Finance.Vat.BGVATDeclarations.md#deductedvatamountarticle92paragraph1) | [Amount](../data-types.md#amount) | Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [DepositedVATAmount](Finance.Vat.BGVATDeclarations.md#depositedvatamount) | [Amount](../data-types.md#amount) | Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [DeductedVATAmount<br />Article92Paragraph1](Finance.Vat.BGVATDeclarations.md#deductedvatamountarticle92paragraph1) | [Amount (14, 2)](../data-types.md#amount) | Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [DepositedVATAmount](Finance.Vat.BGVATDeclarations.md#depositedvatamount) | [Amount (14, 2)](../data-types.md#amount) | Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [DocumentDate](Finance.Vat.BGVATDeclarations.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Finance.Vat.BGVATDeclarations.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Finance.Vat.BGVATDeclarations.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -57,9 +57,9 @@ Aggregate Tree
 | [ReferenceDocumentNo](Finance.Vat.BGVATDeclarations.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Finance.Vat.BGVATDeclarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Finance.Vat.BGVATDeclarations.md#state) | [DocumentState](Finance.Vat.BGVATDeclarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [VATAmountToRecoup<br />Article92Paragraph1](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph1) | [Amount](../data-types.md#amount) | Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [VATAmountToRecoup<br />Article92Paragraph3](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph3) | [Amount](../data-types.md#amount) | Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [VATAmountToRecoup<br />Article92Paragraph4](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph4) | [Amount](../data-types.md#amount) | Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [VATAmountToRecoup<br />Article92Paragraph1](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph1) | [Amount (14, 2)](../data-types.md#amount) | Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [VATAmountToRecoup<br />Article92Paragraph3](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph3) | [Amount (14, 2)](../data-types.md#amount) | Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [VATAmountToRecoup<br />Article92Paragraph4](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph4) | [Amount (14, 2)](../data-types.md#amount) | Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [VATDeclaration<br />RepresentingPerson<br />Position](Finance.Vat.BGVATDeclarations.md#vatdeclarationrepresentingpersonposition) | string (64) __nullable__ | Position of the representing person for the purposes of submitting of VAT declarations. 
 | [VATPeriodEnd](Finance.Vat.BGVATDeclarations.md#vatperiodend) | date | End date of the period fot which the VAT declaration is made. `Required` `Filter(ge;le)` 
 | [VATPeriodStart](Finance.Vat.BGVATDeclarations.md#vatperiodstart) | date | Start date of the period fot which the VAT declaration is made. `Required` `Filter(ge;le)` 
@@ -174,7 +174,7 @@ _Maximum Length_: **64**
 
 Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -183,7 +183,7 @@ _Default Value_: **Constant**
 
 Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -347,7 +347,7 @@ _Default Value_: **0**
 
 Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -356,7 +356,7 @@ _Default Value_: **Constant**
 
 Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -365,7 +365,7 @@ _Default Value_: **Constant**
 
 Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  

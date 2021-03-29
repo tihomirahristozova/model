@@ -149,12 +149,12 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#standardcostperhour">StandardCostPerHour</a></td>
-<td><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></td>
 <td>Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. <code>Currency: Recipe.Product.CostingCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#standardpriceperhour">StandardPricePerHour</a></td>
-<td><a href="../data-types.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount (18, 6)</a></td>
 <td>Standard price for 1 hour work. <code>Currency: Recipe.Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#usequantity">UseQuantity</a></td>
-<td><a href="../data-types.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
 <td>Quantity of the workgroup resource that should be allocated for the operation. <code>Unit: UseQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
@@ -269,12 +269,12 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="standardcostperhour">StandardCostPerHour</h3>
 <p>Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. <code>Currency: Recipe.Product.CostingCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
 <p>Standard price for 1 hour work. <code>Currency: Recipe.Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 6)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -286,7 +286,7 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="usequantity">UseQuantity</h3>
 <p>Quantity of the workgroup resource that should be allocated for the operation. <code>Unit: UseQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>

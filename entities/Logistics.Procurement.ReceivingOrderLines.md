@@ -25,19 +25,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConfirmedQuantity](Logistics.Procurement.ReceivingOrderLines.md#confirmedquantity) | [Quantity](../data-types.md#quantity) __nullable__ | The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. `Unit: QuantityUnit` 
-| [ConfirmedQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#confirmedquantitybase) | [Quantity](../data-types.md#quantity) __nullable__ | The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
-| [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#confirmedstandardquantitybase) | [Quantity](../data-types.md#quantity) __nullable__ | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2` 
+| [ConfirmedQuantity](Logistics.Procurement.ReceivingOrderLines.md#confirmedquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. `Unit: QuantityUnit` 
+| [ConfirmedQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#confirmedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
+| [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#confirmedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2` 
 | [Finished](Logistics.Procurement.ReceivingOrderLines.md#finished) | boolean | When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected. `Required` `Default(false)` 
 | [Id](Logistics.Procurement.ReceivingOrderLines.md#id) | guid |  
-| [LineAmount](Logistics.Procurement.ReceivingOrderLines.md#lineamount) | [Amount](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Price_Per_Unit. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)` 
+| [LineAmount](Logistics.Procurement.ReceivingOrderLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Price_Per_Unit. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)` 
 | [LineNo](Logistics.Procurement.ReceivingOrderLines.md#lineno) | int32 | Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Logistics.Procurement.ReceivingOrderLines.md#notes) | string (254) __nullable__ | Notes for this ReceivingOrderLine. 
-| [PricePerUnit](Logistics.Procurement.ReceivingOrderLines.md#priceperunit) | [Amount](../data-types.md#amount) | The unit price of the received products, in the documents currency. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)` 
+| [PricePerUnit](Logistics.Procurement.ReceivingOrderLines.md#priceperunit) | [Amount (14, 5)](../data-types.md#amount) | The unit price of the received products, in the documents currency. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)` 
 | [ProductDescription](Logistics.Procurement.ReceivingOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. `Required` 
-| [Quantity](Logistics.Procurement.ReceivingOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The received quantity. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [StandardQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [Quantity](Logistics.Procurement.ReceivingOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The received quantity. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [StandardQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. `Unit: QuantityUnit`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -81,7 +81,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity) __nullable__**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -107,7 +107,7 @@ _Default Value_: **NewGuid**
 
 The total amount for the line. Equals to Quantity * Price_Per_Unit. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -143,7 +143,7 @@ _Maximum Length_: **254**
 
 The unit price of the received products, in the documents currency. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount](../data-types.md#amount)**  
+_Type_: **[Amount (14, 5)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -167,7 +167,7 @@ _Front-End Recalc Expressions:_
 
 The received quantity. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -176,7 +176,7 @@ _Default Value_: **Constant**
 
 The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -189,7 +189,7 @@ _Front-End Recalc Expressions:_
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
-_Type_: **[Quantity](../data-types.md#quantity)**  
+_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
