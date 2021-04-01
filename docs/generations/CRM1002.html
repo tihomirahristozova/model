@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CRM1002 Create Offers | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CRM1002 Create Offers | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crm1002-create-offers">CRM1002 Create Offers</h1>
+
+<h2 id="general-information">General Information</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th>Crm.Presales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Code</td>
+<td>CRM1002</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent Document</td>
+<td>Deals</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-document</td>
+<td>Offers</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full Name</td>
+<td>Create Offers</td>
+</tr>
+<tr>
+<td style="text-align: left;">Deterministic</td>
+<td><a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/194314241/Document+Generation+And+Transitional+Documents">YES</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Status</td>
+<td><a href="https://olddocs.erp.net/tech/generation-procedures-lifetime-stages-215777330.html">NEW</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Supports Transitional Documents</td>
+<td>NO</td>
+</tr>
+<tr>
+<td style="text-align: left;">Replaces</td>
+<td>Create Offers (To be deleted: 2.2021; use CRM1002)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Orphan Rows</td>
+<td>None</td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduced In Version</td>
+<td>2018.2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Suspension</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-logic">Business Logic</h2>
+<p>The current generation procedure is meant to create template offers from a Deal. The generated Offers contain data only in their header and have no lines. The lines are filled in later by the user.</p>
+<p>To create an offer, the customer has to be specified. The customer is extracted from the party, selected in the Deal - Deal.Party - and the up to date customer definition of this party in the enterprise company of the offer - Offer.EnterpriseCompany(so Customer.Party = Deal.Party &amp;&amp; Customer.EnterpriseCompany == Offer.EnterpriseCompany). If no such customer is found, the generation procedure is stopped and an error is thrown. The error text is:</p>
+<blockquote>
+<p>Party '{Deal.Party.PartyName}' is not defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'. In order to create an offer the party has to be defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'.</p>
+</blockquote>
+<p>The rest of the offer attributes are filled as follows:</p>
+<pre><code>Offer.Customer = Customer 
+Offer.DocumentCurrency = Offer.EnterpriseCompany.BaseCurrency 
+Offer.Deal = Deal 
+Offer.SalesPerson = Deal.LeadingSalesPerson
+</code></pre>
+<p>The offer attributes RequiredDeliveryDate and PaymentDueDate are calculated by the data in the customer definition compared to the DocumentDate as follows:</p>
+<ul>
+<li>RequiredDeliveryDate = DocumentDate + Customer.DefaultDeliveryTermDays</li>
+<li>PaymentDueDate = DocumentDate + Customer.DefaultPaymentTermDays</li>
+</ul>
+<p>The attributes PriceList and PaymentType are copied from the customer definition. If in the customer definition they are empty, they are empty in the offer too.</p>
+<p>The Document table attributes:</p>
+<pre><code>Offer.DocumentDate = Deal.DocumentDate
+* the attributes which are not specified here are filled in as described in Standard Document Attributes
+</code></pre>
+<p>The custom properties are copied to the offer only if they are defined in the offer document type.</p>
+<h2 id="fulfillments">Fulfillments</h2>
+<p>No fulfilments and metrics are used for the current generation procedure. Each time the procedure is started, it creates new sub-document no matter if there are documents already created from previous procedure executions.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/CRM1002.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

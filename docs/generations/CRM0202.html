@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CRM0202 Create Invoices | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CRM0202 Create Invoices | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crm0202-create-invoices">CRM0202 Create Invoices</h1>
+
+<h2 id="basic-information">Basic Information</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th>Crm.Invoicing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Code</td>
+<td>CRM0202</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent Document</td>
+<td>InvoiceOrder</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-document</td>
+<td>Invoice</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full Name</td>
+<td>Create Invoices</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status</td>
+<td><a href="https://confluence.erp.net/display/techdoc/Generation+Procedures+Lifetime+Stages">ACTIVE</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Deterministic/Non-deterministic</td>
+<td>Deterministic</td>
+</tr>
+<tr>
+<td style="text-align: left;">Supports Transitional Documents</td>
+<td><a href="https://confluence.erp.net/display/techdoc/Document+Generation+And+Transitional+Documents">NO</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Supports Single Execution</td>
+<td>YES</td>
+</tr>
+<tr>
+<td style="text-align: left;">Replace Generation Procedures</td>
+<td>GenerateInvoices</td>
+</tr>
+<tr>
+<td style="text-align: left;">Processing Orphan Rows</td>
+<td>Ignore</td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduced In Version</td>
+<td>2019.1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Suspension</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-logic">Business Logic</h2>
+<p>The current generation creates Invoice directly from an already existing Invoice Order. The invoice is almost identical to the invoice order and the generation is used in cases when the invoicing is automatic and is nor not executed by the users through a specialized navigator.</p>
+<p>The Invoice header is created based on the Invoice Order header as follows:</p>
+<pre><code>Invoice.DocumentDate = today
+
+Invoice.Customer = InvoiceOrder.Customer
+
+Invoice.Notes = InvoiceOrder.Notes
+
+Invoice.DocumentCurrency = InvoiceOrder.DocumentCurrency
+
+Invoice.PaymentType = InvoiceOrder.PaymentType
+
+Invoice.PaymentTypeDescription = InvoiceOrder.PaymentTypeDescription
+
+Invoice.PaymentAccount = InvoiceOrder.PaymentAccount
+
+Invoice.PaymentDueDate = if InvoiceOrder.PaymentDueDate.HasValue
+
+then MAX(InvoiceOrder.PaymentDueDate, InvoiceOrder.DocumentDate) + (today - InvoiceOrder.DocumentDate)
+
+else empty
+
+Invoice.CreditNoteOriginalInvoice = InvoiceOrder.CreditNoteOriginalInvoice
+
+Invoice.CreditNoteDescription = InvoiceOrder.CreditNoteDescription
+
+Invoice.DeliveryDate = if InvoiceOrder.DeliveryDate.HasValue,
+
+​    then InvoiceOrder.DeliveryDate
+
+​    else Invoice.DocumentDate
+
+Invoice.DealType = InvoiceOrder.DealType
+
+Invoice.ApplyDate = InvoiceOrder.ApplyDate
+
+Invoice.PaymentDueStartDate = InvoiceOrder.PaymentDueStartDate
+</code></pre>
+<p>The rest of the Document table attributes which are not listed here are filled in as described in <a href="https://confluence.erp.net/display/techdoc/Standard+Document+Attributes">Standard Document Attributes</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The new invoice is saved then and only when there is at least one line in it.</p>
+</div>
+<h2 id="fulfillments">Fulfillments</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th>InvoiceOrderLineToInvoiceLine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Parent Entity</td>
+<td>InvoiceOrderLine</td>
+</tr>
+<tr>
+<td style="text-align: left;">Child Entity</td>
+<td>InvoiceLine</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent / Child Relationship</td>
+<td>InvoiceLine.ParentDocument = InvoiceOrder;InvoiceLine.ParentLineNo = InvoiceOrderLine.LineNo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="metrics"><a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/246054946/Metrics">Metrics</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fulfillment Name</th>
+<th style="text-align: center;">Metric Name</th>
+<th style="text-align: center;">Measurement Unit</th>
+<th style="text-align: left;">Parent Value</th>
+<th style="text-align: left;">Child Value</th>
+<th style="text-align: left;">New Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">InvoiceOrderLineToInvoiceLine</td>
+<td style="text-align: center;">MStandardQuantityBase</td>
+<td style="text-align: center;">InvoiceOrderLine.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">InvoiceOrderLine.StandardQuantityBase</td>
+<td style="text-align: left;">iInvoiceLine.StandardQuantityBase</td>
+<td style="text-align: left;">YES</td>
+</tr>
+<tr>
+<td style="text-align: left;">InvoiceOrderLineToInvoiceLine</td>
+<td style="text-align: center;">MQuantity</td>
+<td style="text-align: center;">InvoiceOrderLine.QuantityUnit</td>
+<td style="text-align: left;">InvoiceOrderLine.Quantity</td>
+<td style="text-align: left;">InvoiceLine.Quantity</td>
+<td style="text-align: left;">NO</td>
+</tr>
+<tr>
+<td style="text-align: left;">InvoiceOrderLineToInvoiceLine</td>
+<td style="text-align: center;">MQuantityBase</td>
+<td style="text-align: center;">InvoiceOrderLine.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">InvoiceOrderLine.QuantityBase</td>
+<td style="text-align: left;">InvoiceLine.QuantityBase</td>
+<td style="text-align: left;">NO</td>
+</tr>
+<tr>
+<td style="text-align: left;">InvoiceOrderLineToInvoiceLine</td>
+<td style="text-align: center;">MLineAmount</td>
+<td style="text-align: center;">InvoiceOrder.DocumentCurrency</td>
+<td style="text-align: left;">InvoiceOrderLine.LineAmount</td>
+<td style="text-align: left;">InvoiceLine.LineAmount</td>
+<td style="text-align: left;">YES</td>
+</tr>
+</tbody>
+</table>
+<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities and amounts by Invoices that are already created (for more information, see topic <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/22380546/Discrepancy+System">Discrepancy System</a>).
+The new InvoiceLine is created as follows:</p>
+<pre><code>InvoiceLine.LineNo = InvoiceOrderLine.LineNo
+InvoiceLine.Product = InvoiceOrderLine.Product
+InvoiceLine.ProductDescription = InvoiceOrderLine.ProductDescription
+InvoiceLine.Quantity = InvoiceOrderLine.REMAINING(MQuantity)
+InvoiceLine.QuantityUnit = InvoiceOrderLine.QuantityUnit
+InvoiceLine.LineDiscount = InvoiceOrderLine.LineDiscount
+InvoiceLine.LineStandardDiscountPercent = InvoiceOrderLine.LineStandardDiscountPercent
+InvoiceLine.LineCustomDiscountPercent = InvoiceOrderLine.LineCustomDiscountPercent
+InvoiceLine.LineAmount = InvoiceOrderLine.REMAINING(MLineAmount)
+InvoiceLine.ParentSalesOrderLine = InvoiceOrderLine.SalesOrderLine
+InvoiceLine.LineDealType = InvoiceOrderLine.LineDealType
+InvoiceLine.InvoiceOrderLine = InvoiceOrderLine
+InvoiceLine.BusinessReason = InvoiceOrderLine.BusinessReason
+InvoiceLine.SalesOrder = InvoiceOrderLine.SalesOrder
+InvoiceLine.PaymentTransaction = InvoiceOrderLine.PaymentTransaction
+InvoiceLine.TransactionLine = InvoiceOrderLine.TransactionLine
+InvoiceLine.QuantityBase = InvoiceOrderLine.REMAINING(MQuantityBase)
+InvoiceLine.StandardQuantityBase = InvoiceOrderLine.REMAINING(MStandardQuantityBase)
+if InvoiceOrderLine.SalesOrderLine.HasValue then
+    InvoiceLine.SalesOrderAmount = InvoiceOrderLine.REMAINING(MLineAmount)
+InvoiceLine.SerialNumber = InvoiceOrderLine.SerialNumber
+InvoiceLine.ParentLineNo = InvoiceOrderLine.LineNo
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/CRM0202.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
