@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>LOG0204 Create VAT Sales Ledger Entries | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="LOG0204 Create VAT Sales Ledger Entries | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="log0204-create-vat-sales-ledger-entries">LOG0204 Create VAT Sales Ledger Entries</h1>
+
+<h2 id="basic-information">Basic Information</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th>Logistics.Inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Code</td>
+<td>LOG0204</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent Document</td>
+<td>StoreTransaction</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-document</td>
+<td>Entry</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full Name</td>
+<td>Create VAT sales ledger entries</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status</td>
+<td><a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/215777330/Generation+Procedures+Lifetime+Stages">NEW</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Deterministic/Non-deterministic</td>
+<td>Deterministic</td>
+</tr>
+<tr>
+<td style="text-align: left;">Transitional Documents</td>
+<td>No</td>
+</tr>
+<tr>
+<td style="text-align: left;">Replace Generation Procedures</td>
+<td>GenerateEntry</td>
+</tr>
+<tr>
+<td style="text-align: left;">Processing Orphan Rows</td>
+<td>Reverse</td>
+</tr>
+<tr>
+<td style="text-align: left;">Settings Table</td>
+<td>TransationEntryTemplate</td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduced In Version</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Suspension</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-logic">Business Logic</h2>
+<p>The generation procedure is used to generate VAT sales ledger entries in cases of VAT-self-accruement, when the VAT data is part of the Store Transaction and it does not reach the invoices.
+These records contain the VAT amount and its base from the current store transaction and the deal type is specified in the document route.
+The records are used to create data for the current document in the sales VAT register in the VAT declaration of the respective month.</p>
+<p>VAT amount and VAT base for the specified deal type are calculated as described in <a href="https://confluence.erp.net/display/techdoc/Defining+VAT+And+Base+For+VAT+Entries">Defining VAT And Base For VAT Entries</a>.
+The deal type is part of the TransactionEntryTemplate table.
+The algorithm forms a list of deal types and for each deal type there are two values - <strong>AmountBase</strong> (the VAT base) and <strong>VATAmountBase</strong> (the VAT amount).</p>
+<p>Also, the To Party attribute from the Store Transaction provide the <strong>RegistrationVATNumber</strong> and the <strong>RegistrationNumber</strong> of the Entry.
+If the party in the To Party attribute is a Company - then the data is extracted from the Company definition, if the party is Person then the <strong>RegistrationNumber</strong> is the person's NationalNumber and the <strong>RegistrationVATNumber</strong> is empty string.</p>
+<p>If the To Party attribute is null then the generation procedure breaks and an error is thrown:</p>
+<pre><code>&gt; The To Party attribute is required because it is used in the RegistrationNumber and RegistrationVATNumber establishment in the Entry record.
+
+&gt; Please, fill in To Party.
+</code></pre>
+<p>The TransactionEntryTemplate table also has <strong>DocumentNotesFixedText</strong> attribute which provides VAT notes.</p>
+<p>If the document route has no TransactionEntryTemplate specified, the generetion procedure breaks and and error is thrown:</p>
+<pre><code>&gt; No entry generation template for this document route was found. The user doesn't have access to the template or the template was never created. Entry generation template for this route can be created from the definition of the document route (or in the routes section in the definition of the document type).
+</code></pre>
+<p>Then, for each <strong>DealType</strong>, StoreTransaction.ToParty.<strong>RegistrationNumber</strong>, StoreTransaction.ToParty.<strong>RegistrationVATNumber</strong> and StoreTransaction.<strong>DocumentDate</strong> the unfulfilled through VAT Entries values are defined - <strong>EntryRemainingAmountBase</strong> and <strong>EntryRemainingVATAmountBase</strong>.
+This is calculated by the principles of the <a href="https://confluence.erp.net/display/techdoc/Discrepancy+System">Discrepancy System</a>.
+If at least one of these values is not equal to 0, than a new Entry is generated.
+Also, if both values are equal to 0 - a new record may still be created but this happens only if there is no record created for the DealType, RegistrationNumber, RegistrationVATNumber and Apply Date (i.e. the initial values - before the unfulfilled values are calculated - are 0 and no Entry is created by now).</p>
+<p><strong>The Entry is generated from the current Store Transaction as follows:</strong></p>
+<pre><code>Entry.EntryType = Sales
+
+Entry.DealType = DealType
+
+Entry.Party = StoreTransaction.ToParty
+
+Entry.RegistrationVATNumber = StoreTransaction.ToParty.RegistrationVATNumber
+
+if StoreTransaction.ToParty.RegistrationNumber.HasValue then
+
+​       Entry .RegistrationNumber = StoreTransaction.ToParty.RegistrationNumber
+
+Entry.ReferencedDocumentType = StoreTransaction.DocumentType
+
+Entry.ReferencedDocumentNo = StoreTransaction.DocumentNo
+
+Entry.AmountBase = REMAINING(MAmountBase)
+
+Entry.VATAmountBase = REMAINING(MVATAmountBase)
+
+Entry.ApplyDate = StoreTransaction.DocumentDate
+
+if (DocumentNotesFixedText != null) then
+
+  Entry.Notes = DocumentNotesFixedText
+
+else if (StoreTransaction.Notes != null || StoreTransaction.Notes != &quot;&quot;)
+
+  Entry.Notes = StoreTransaction.Notes
+
+else if (Entry.EnterpriseCompany.Company.Country == Bulgaria) &amp;&amp; (StoreTransaction.Notes == null || StoreTransaction.Notes == &quot;&quot;)
+
+  Entry.Notes = &quot;VAT-self-accruement.&quot;
+
+else Entry.Notes = null
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The attributes which are not specified here are filled in as described in <a href="https://confluence.erp.net/display/techdoc/Standard+Document+Attributes">Standard Document Attributes</a></p>
+</div>
+<h2 id="fulfillments">Fulfillments</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th>DocumentAmountToEntry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Parent Entity</td>
+<td>DocumentAmount</td>
+</tr>
+<tr>
+<td style="text-align: left;">Child Entity</td>
+<td>Entry</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent / Child Relationship</td>
+<td>Entry.ParentDocument = StoreTransaction; Entry.DealType = DealType;Entry.RegistrationVATNumber = StoreTransaction.ToParty.RegistrationVATNumber; Entry.RegistrationNumber = StoreTransaction.ToParty.RegistrationNumber; Entry.ApplyDate = StoreTransaction.DocumentDate;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="metrics"><a href="https://confluence.erp.net/display/techdoc/Metrics">Metrics</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fulfillment Name</th>
+<th style="text-align: center;">Metric Name</th>
+<th style="text-align: left;">Measurement Unit</th>
+<th style="text-align: center;">Parent Value</th>
+<th style="text-align: left;">Child Value</th>
+<th style="text-align: left;">New Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">DocumentAmountToEntry</td>
+<td style="text-align: center;">MAmountBase</td>
+<td style="text-align: left;">StoreTransaction.EnterpriseCompany.BaseCurrency</td>
+<td style="text-align: center;">DocumentAmount[StoreTransaction; StoreTransaction.EnterpriseCompany.VATDocumentAmountType].BaseAmount(in StoreTransaction.EnterpriseCompany.BaseCurrency)</td>
+<td style="text-align: left;">Entry.AmountBase</td>
+<td style="text-align: left;">If (ParentValue.MAmountBase == 0 OR REMAINIG(MAmountBase) &gt; 0) {New Record = YES},else {New Record = NO}</td>
+</tr>
+<tr>
+<td style="text-align: left;">MVATAmountBase</td>
+<td style="text-align: center;">StoreTransaction.EnterpriseCompany.BaseCurrency</td>
+<td style="text-align: left;">DocumentAmount[StoreTransaction; StoreTransaction.EnterpriseCompany.VATDocumentAmountType].TotalDistributedAmount(in StoreTransaction.EnterpriseCompany.BaseCurrency)</td>
+<td style="text-align: center;">Entry.VATAmountBase</td>
+<td style="text-align: left;">If (ParentValue.MVATAmountBase == 0 OR REMAINIG(MVATAmountBase) &gt; 0) {New Record = YES},else {New Record = NO}</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/LOG0204.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

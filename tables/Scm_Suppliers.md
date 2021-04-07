@@ -7,10 +7,6 @@ Entity: [Logistics.Procurement.Suppliers](~/entities/Logistics.Procurement.Suppl
 
 Contains supplier conditions (contracts). Entity: Scm_Suppliers
 
-## Owner Tables Hierarchy
-
-* [Gen_Parties](Gen_Parties.md)
-
 ## Summary
 
 | Name | Type | Description |
@@ -460,7 +456,7 @@ Indicates whether the current supplier is active.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|yes|
+|Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

@@ -7,10 +7,6 @@ Entity: [Crm.Dealers](~/entities/Crm.Dealers.md)
 
 External dealers. Entity: Crm_Dealers
 
-## Owner Tables Hierarchy
-
-* [Gen_Parties](Gen_Parties.md)
-
 ## Summary
 
 | Name | Type | Description |
@@ -174,7 +170,7 @@ The base party record of the dealer
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|yes|
+|Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

@@ -7,10 +7,6 @@ Entity: [Crm.Customers](~/entities/Crm.Customers.md)
 
 Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers
 
-## Owner Tables Hierarchy
-
-* [Gen_Parties](Gen_Parties.md)
-
 ## Summary
 
 | Name | Type | Description |
@@ -791,7 +787,7 @@ Base party Id
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|yes|
+|Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

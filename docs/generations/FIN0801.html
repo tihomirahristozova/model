@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FIN0801 Create Store Transactions | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="FIN0801 Create Store Transactions | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="fin0801-create-store-transactions">FIN0801 Create Store Transactions</h1>
+
+<p>The generation procedure generates new Store Transactions.
+Their purpose is to distribute the cost, calculated in the Results table of the Distribution document, in the store transaction lines from the Outputs table.</p>
+<h2 id="general-information">General Information</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th>Finance.CostAccounting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Code</td>
+<td>FIN0801</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent Document</td>
+<td>Distribution</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-document</td>
+<td>Store Transactions</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full Name</td>
+<td>Create store transactions for the distributed amounts</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status</td>
+<td><a href="https://olddocs.erp.net/tech/generation-procedures-lifetime-stages-215777330.html">ACTIVE</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Supports Transitional Documents</td>
+<td>NO</td>
+</tr>
+<tr>
+<td style="text-align: left;">Replaces</td>
+<td>GenerateStoreTransactions</td>
+</tr>
+<tr>
+<td style="text-align: left;">Orphan Rows</td>
+<td>Ignore</td>
+</tr>
+<tr>
+<td style="text-align: left;">Split Function</td>
+<td>Output[DistributionResult.OutputLineNo].StoreTransactionLine.StoreTransaction.Store <br> *find the Store of the StoreTransaction of the StoreTransactionLine of the Output with LineNo equal to the DistributionResult.OutputLineNo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduced In Version</td>
+<td>2018.2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Suspension</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-logic">Business Logic</h2>
+<p>The generation procedure is used to create cost store transactions from Distribution document.
+When the Distribution document calculate the cost distribution amounts for all cost types and all cost objects, these amounts are added in the store for the same product as it is in the original store transaction line (all parameters are copied from the original store transaction - like lots, product variants, serial numbers, store bins and measurement units).
+The cost store transaction is with quantities of <strong>0</strong> and LineCost carrying the amount from the Distribution.
+The new store transaction movement type is always <strong>Receipt</strong>.
+When created, the document notes are filled with the automatic message of &quot;<strong>Generated for cost distribution purposes.</strong>&quot;</p>
+<p>The generation procedure creates separated document for each store from the Distribution document cost objects.</p>
+<p>The header of the Store Transaction is created with the following data:</p>
+<pre><code>StoreTransaction.Store = DistributionResult.Output[OutputLineNo == Output.LineNo; Distribution == Output.CostDistribution].StoreTransactionLine.StoreTransaction.Store
+StoreTransaction.DocumentDate = Distribution.DocumentDate
+StoreTransaction.MovementType = Receipt 
+StoreTransaction.ParentStoreOrder = null 
+StoreTransaction.CostSource = Document
+StoreTransaction.IsScrap = false
+StoreTransaction.FromParty = Distribution.EnterpriseCompany.Party
+StoreTransaction.ScrapType = null
+StoreTransaction.IssuingPerson = null
+StoreTransaction.ReceivingPerson = null
+StoreTransaction.DocumentCurrency = Distribution.EnterpriseCompany.BaseCurrency
+StoreTransaction.ToParty = null
+StoreTransaction.DocumentNotes = &quot;Generated for cost distribution purposes.&quot;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The attributes which are not specified here are filled in as described in <a href="https://confluence.erp.net/display/techdoc/Standard+Document+Attributes">Standard Document Attributes</a></p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The new store transaction is saved only if it has at least one row.</p>
+</div>
+<h2 id="fulfillments">Fulfillments</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th>DistributionResultToStoreTransactionLine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Parent Entity</td>
+<td>Distribution Result</td>
+</tr>
+<tr>
+<td style="text-align: left;">Child Entity</td>
+<td>StoreTransactionLine</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent / Child Relationship</td>
+<td>StoreTransactionLine.ParentDocument = DistributionResult.Distribution;StoreTransactionLine.ParentLineNo = DistributionResult.LineNo</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fulfillment Name</th>
+<th style="text-align: center;">Metric Name</th>
+<th style="text-align: center;">Measurement Unit</th>
+<th style="text-align: left;">Parent Value</th>
+<th style="text-align: left;">Child Value</th>
+<th style="text-align: left;">New Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">DistributionResultToStoreTransactionLine</td>
+<td style="text-align: center;">DistributedAmountBase</td>
+<td style="text-align: center;">Distribution.EnterpriseCompany.BaseCurrency</td>
+<td style="text-align: left;">DistributionResult.DistributedAmountBase</td>
+<td style="text-align: left;">StoreTransactionLine.LineCost</td>
+<td style="text-align: left;">YES</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The DistributionResultToStoreTransactionLine fulfilment creates StoreTransactionLines as follows:</strong></p>
+<pre><code>StoreTransactionLine.Quantity = 0
+
+StoreTransactionLine.QuantityBase = 0
+
+StoreTransactionLine.Product = DistributionResult.DistributionOutput[LineNo=OutputLineNo].StoreTransactionLine.Product
+StoreTransactionLine.OriginalProduct = DistributionResult.DistributionOutput[LineNo=OutputLineNo].StoreTransactionLine.Product
+
+StoreTransactionLine.TransactionTimestamp = DistributionResult.DistributionOutput[LineNo=OutputLineNo].StoreTransactionLine.TransactionTimestamp
+
+StoreTransactionLine.MeasurementUnit = DistributionResult.DistributionOutput[LineNo=OutputLineNo].StoreTransactionLine.MeasurementUnit
+
+StoreTransactionLine.ProductVariant = DistributionResult.DistributionOutput[LineNo=OutputLineNo].StoreTransactionLine.ProductVariant
+
+StoreTransactionLine.SerialNumber = DistributionResult.DistributionOutput[LineNo=OutputLineNo].StoreTransactionLine.SerialNumber
+
+StoreTransactionLine.Lot = DistributionResult.DistributionOutput[LineNo=OutputLineNo].StoreTransactionLine.Lot
+
+StoreTransactionLine.StoreBin = DistributionResult.DistributionOutput[LineNo=OutputLineNo].StoreTransactionLine.StoreBin
+
+StoreTransactionLine.LineCost = REMAINING(DistributedAmountBase)
+
+StoreTransactionLine.LineBaseCost = StoreTransaction.StoreTransactionLine.LineCost
+
+StoreTransactionLine.ParentDocument = Distribution
+
+StoreTransactionLine.ParentLineNo = DistributionResult.LineNo
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/FIN0801.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

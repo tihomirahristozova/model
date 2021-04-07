@@ -10,7 +10,6 @@ Contains the products, that are contracted (listed) with a customer. Entity: Crm
 ## Owner Tables Hierarchy
 
 * [Crm_Customers](Crm_Customers.md)
-* [Gen_Parties](Gen_Parties.md)
 
 ## Summary
 

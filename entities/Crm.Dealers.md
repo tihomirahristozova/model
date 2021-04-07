@@ -9,17 +9,15 @@ External dealers. Entity: Crm_Dealers
 
 ## Default Visualization
 Default Display Text Format:  
-_{Party.PartyCode}: {Party.PartyName:T}_  
+_{Id}_  
 Default Search Member:  
-_Party.PartyCode_  
+_Id_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Parent:  
-[General.Contacts.Parties](General.Contacts.Parties.md)  
-Aggregate Root:  
-[General.Contacts.Parties](General.Contacts.Parties.md)  
+Aggregate Tree  
+* [Crm.Dealers](Crm.Dealers.md)  
 
 ## Attributes
 
@@ -35,7 +33,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EnterpriseCompany](Crm.Dealers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. `Filter(multi eq)` |
-| [Party](Crm.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer. `Required` `Filter(multi eq)` `Owner` |
+| [Party](Crm.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -85,7 +83,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Party
 
-The base party record of the dealer. `Required` `Filter(multi eq)` `Owner`
+The base party record of the dealer. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  

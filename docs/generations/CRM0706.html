@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CRM0706 Create Offers | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CRM0706 Create Offers | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crm0706-create-offers">CRM0706 Create Offers</h1>
+
+<h2 id="basic-information">Basic Information</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th>Applications.Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Code</td>
+<td>CRM0706</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent Document</td>
+<td>Service Activity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-document</td>
+<td>Offer</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full Name</td>
+<td>Create Offers</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status</td>
+<td><a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/215777330/Generation+Procedures+Lifetime+Stages">NEW</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Deterministic/Non-deterministic</td>
+<td>Deterministic</td>
+</tr>
+<tr>
+<td style="text-align: left;">Transitional Documents</td>
+<td>NO</td>
+</tr>
+<tr>
+<td style="text-align: left;">Replace Generation Procedures</td>
+<td>GenerateOffer</td>
+</tr>
+<tr>
+<td style="text-align: left;">Processing Orphan Rows</td>
+<td>None</td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduced In Version</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Suspension</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-logic">Business Logic</h2>
+<p>The generation procedure creates Offer which purpose is to offer to the customer the used materials and the completed services listed in the service activity.
+The generation includes only materials and services which are not covered by the guarantee determined by the Service Agreements.</p>
+<p><strong>The offer header is based on the service activity header as follows:</strong></p>
+<pre><code>Offer.Customer = ServiceActivity.Customer
+Offer.ShipToCustomer = ServiceActivity.ShipToCustomer
+Offer.Store = ServiceActivity.Store
+Offer.DocumentCurrency = ServiceActivity.EnterpriseCompany.BaseCurrency
+</code></pre>
+<p>When the customer is filled in the offer a validation is performed which secures that the customer has up to date conditions in its definition (or that the Offer date is included in the period of those conditions) and the customer has no up to date condition - the generation procedure stops and throws an error.
+Up to date customer conditions are conditions where:</p>
+<pre><code>- (Offer.DocumentDate &gt;= Customer.FromDate || Customer.FromDate == null ) &amp;&amp; (Offer.DocumentDate &lt;= Customer.thruDate || Customer.ThruDate == null)
+</code></pre>
+<p>The Offer Lines are created according to the calculations of the non agreed materials and services (as described in <a href="https://confluence.erp.net/display/techdoc/Non+Agreed+Services+And+Materials">Non Agreed Services And Materials</a>).
+So for each material of the current Service Activity the non agreed quantity of the material is calculated and the calculation for the services is a bit more complicated - for each service and for each product which invoice the service (these products are listed in the service definition), the non agreed quantity of the product is calculated.</p>
+<p>Thus for each material ServiceActivityMaterial which has CoveredByGuarantee = false, the non agreed quantity is defined - <strong>NonagreedQuantity</strong> - and if it is not <strong>0</strong>, a new OfferLine is created in the new Offer as follows:</p>
+<pre><code>OfferLine.LineNo = new line number
+OfferLine.Product = ServiceActivityMaterial.Product
+OfferLine.Quantity = ServiceActivityMaterial.NonagreedQuantity
+OfferLine.QuantityUnit = ServiceActivityMaterial.QuantityUnit
+OfferLine.LineStore = ServiceActivityMaterial.LineStore
+OfferLine.ParentLineNo = ServiceActivityMaterial.LineNo
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The attributes which are not specified here are filled in as described in <a href="https://confluence.erp.net/display/techdoc/Standard+Document+Attributes">Standard Document Attributes</a></p>
+</div>
+<p>The new store order is saved then and only when there is at least one line in it.</p>
+<p>Then for each service ServiceActivityService which has CoveredByGuarantee = false, and for each product <strong>InvoicingProduct</strong> - which invoice the current service (the products are listed as ServiceInvoicing where Service = current service), the non agreed quantity is defined - <strong>NonagreedQuantity</strong> - and if it is not <strong>0</strong>, a new OfferLine in the new Offer is added as follows:</p>
+<pre><code>OfferLine.LineNo = new line number
+OfferLine.Product = InvoicingProduct
+OfferLine.Quantity = NonagreedQuantity
+OfferLine.QuantityUnit = InvoicingProduct.BaseMeasurementUnit
+OfferLine.ParentLineNo = ServiceActivityService.LineNo
+</code></pre>
+<h2 id="fulfillments">Fulfillments</h2>
+<p>No fulfilments and metrics are used for the current generation procedure.
+Each time the procedure is started, it creates new sub-document no matter if there are documents already created from previous procedure executions.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/CRM0706.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

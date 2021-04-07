@@ -19,7 +19,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 Aggregate Parent:  
 [Crm.Customers](Crm.Customers.md)  
 Aggregate Root:  
-[General.Contacts.Parties](General.Contacts.Parties.md)  
+[Crm.Customers](Crm.Customers.md)  
 
 ## Attributes
 

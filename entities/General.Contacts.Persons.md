@@ -21,9 +21,6 @@ Aggregate Tree
 * [General.Contacts.Persons](General.Contacts.Persons.md)  
   * [Crm.SalesPersons](Crm.SalesPersons.md)  
   * [General.Contacts.CompanyEmployees](General.Contacts.CompanyEmployees.md)  
-  * [Crm.Customers](Crm.Customers.md)  
-    * [Crm.CustomerProducts](Crm.CustomerProducts.md)  
-  * [Crm.Dealers](Crm.Dealers.md)  
   * [Crm.Distributors](Crm.Distributors.md)  
   * [General.PartyApplicableLegislations](General.PartyApplicableLegislations.md)  
   * [General.PartyLocationNumbers](General.PartyLocationNumbers.md)  
@@ -31,7 +28,6 @@ Aggregate Tree
   * [General.Contacts.PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md)  
   * [General.Contacts.PartyBankAccounts](General.Contacts.PartyBankAccounts.md)  
   * [General.Contacts.PartyPictures](General.Contacts.PartyPictures.md)  
-  * [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md)  
 
 ## Attributes
 
@@ -84,13 +80,10 @@ Aggregate Tree
 | BankAccounts | [PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of `PartyBankAccount`(General.Contacts.PartyBankAccounts.md) child objects, based on the `General.Contacts.PartyBankAccount.Party`(General.Contacts.PartyBankAccounts.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
 | CompanyEmployees | [CompanyEmployees](General.Contacts.CompanyEmployees.md) | List of `CompanyEmployee`(General.Contacts.CompanyEmployees.md) child objects, based on the `General.Contacts.CompanyEmployee.Person`(General.Contacts.CompanyEmployees.md#person) back reference 
 | ContactMechanisms | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of `PartyContactMechanism`(General.Contacts.PartyContactMechanisms.md) child objects, based on the `General.Contacts.PartyContactMechanism.Party`(General.Contacts.PartyContactMechanisms.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
-| Customers | [Customers](Crm.Customers.md) | List of `Customer`(Crm.Customers.md) child objects, based on the `Crm.Customer.Party`(Crm.Customers.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
-| Dealers | [Dealers](Crm.Dealers.md) | List of `Dealer`(Crm.Dealers.md) child objects, based on the `Crm.Dealer.Party`(Crm.Dealers.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
 | Distributors | [Distributors](Crm.Distributors.md) | List of `Distributor`(Crm.Distributors.md) child objects, based on the `Crm.Distributor.Party`(Crm.Distributors.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
 | LocationNumbers | [PartyLocationNumbers](General.PartyLocationNumbers.md) | List of `PartyLocationNumber`(General.PartyLocationNumbers.md) child objects, based on the `General.PartyLocationNumber.Party`(General.PartyLocationNumbers.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
 | Pictures | [PartyPictures](General.Contacts.PartyPictures.md) | List of `PartyPicture`(General.Contacts.PartyPictures.md) child objects, based on the `General.Contacts.PartyPicture.Party`(General.Contacts.PartyPictures.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
 | SalesPersons | [SalesPersons](Crm.SalesPersons.md) | List of `SalesPerson`(Crm.SalesPersons.md) child objects, based on the `Crm.SalesPerson.Person`(Crm.SalesPersons.md#person) back reference 
-| Suppliers | [Suppliers](Logistics.Procurement.Suppliers.md) | List of `Supplier`(Logistics.Procurement.Suppliers.md) child objects, based on the `Logistics.Procurement.Supplier.Party`(Logistics.Procurement.Suppliers.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
 
 
 ## Attribute Details

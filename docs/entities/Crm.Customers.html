@@ -88,10 +88,14 @@ Default Search Member:<br>
 <em>Number</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Parent:<br>
-<a href="General.Contacts.Parties.html">General.Contacts.Parties</a><br>
-Aggregate Root:<br>
-<a href="General.Contacts.Parties.html">General.Contacts.Parties</a></p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Crm.Customers.html">Crm.Customers</a>
+<ul>
+<li><a href="Crm.CustomerProducts.html">Crm.CustomerProducts</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -242,7 +246,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Customers.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>Base party Id. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>Base party Id. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#salesperson">SalesPerson</a></td>
@@ -418,7 +422,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Transaction.CurrentEnterpriseCompany</code></p>
 <h3 id="party">Party</h3>
-<p>Base party Id. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>Base party Id. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Metrics | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Metrics | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="metrics">Metrics</h1>
+
+<h2 id="details">Details</h2>
+<p>Sometimes, when creating a new child/sub document by a generation procedure, some of the values of the child fields are not just copied from the parent document but need to be calculated.
+<strong>The Metrics</strong> are used when the calculation is based on the data about the unfulfilled quantities and amounts by the child documents that have already been created.
+It usually applies when the parent value has to be fully exhausted by its child values.
+<strong>Metrics</strong> bring the information which values have to be compared, how and whether the remaining result (if different from zero) has to lead to the creation of a new document or not.
+Each comparison is a separate metric.</p>
+<h2 id="example">Example:</h2>
+<p><strong>If we have the information about two metrics with the following description:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fulfillment Name</th>
+<th style="text-align: left;">Metric Name</th>
+<th style="text-align: left;">Measurement Unit</th>
+<th style="text-align: left;">Parent Value</th>
+<th style="text-align: left;">Child Value</th>
+<th style="text-align: left;">New Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">StoreOrderLineToStoreTransactionLine</td>
+<td style="text-align: left;">MStandardQuantityBase</td>
+<td style="text-align: left;">StoreOrderLine.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">StoreOrderLine.StandardQuantityBase</td>
+<td style="text-align: left;">TransactionLine.StandardQuantityBase</td>
+<td style="text-align: left;">YES</td>
+</tr>
+<tr>
+<td style="text-align: left;">StoreOrderLineToStoreTransactionLine</td>
+<td style="text-align: left;">MQuantityBase</td>
+<td style="text-align: left;">StoreOrderLine.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">StoreOrderLine.QuantityBase</td>
+<td style="text-align: left;">TransactionLine.QuantityBase</td>
+<td style="text-align: left;">NO</td>
+</tr>
+</tbody>
+</table>
+<p><strong>And we know that:</strong></p>
+<pre><code>TransactionLine.StandardQuantityBase = StoreOrderLine.REMAINING(StandardQuantityBase)
+
+TransactionLine.QuantityBase = StoreOrderLine.REMAINING(QuantityBase)
+
+, where:
+
+&quot;TransactionLine.StandardQuantityBase&quot; and &quot;TransactionLine.QuantityBase&quot; are the ordered by the parent line quantity values;
+&quot;StoreOrderLine.REMAINING(StandardQuantityBase)&quot; and &quot;StoreOrderLine.REMAINING(QuantityBase)&quot; are the ordered quantities which are not yet fullfilled by subdocumets i.e. (TransactionLine.StandardQuantityBase - SUM(Child.StoreOrderLine.StandardQuantityBase) and (TransactionLine.QuantityBase - SUM(Child.StoreOrderLine.QuantityBase).
+</code></pre>
+<p><strong>Then if we have the following documents:</strong></p>
+<pre><code>Parent.StoreOrderLine  - StandardQuantityBase = 10.00 PCS, QuantityBase = 10.00 PCS
+
+Child.TransactionLine1  - StandardQuantityBase = 4.00 PCS, QuantityBase = 4.00 PCS
+</code></pre>
+<p><strong>And we are creating a new Child.TransactionLine2 by a generation procedure from the same parent, then the procedure will create:</strong></p>
+<pre><code>Child.TransactionLine2 - StandardQuantityBase = REMAINING(Quantity) = (10.00 PCS - 4.00 PCS) = 6.00 PCS, QuantityBase = REMAINING(QuantityBase) = (10.00 PCS - 4.00 PCS) = 6.00 PCS
+</code></pre>
+<h2 id="new-record">New Record</h2>
+<p>The last column of the metrics table is called &quot;New Record&quot;.
+This column determines whether a new record must be created if the REMAINING() value of the metric is if different from zero.</p>
+<p>Let's imagine that in the previous example:</p>
+<pre><code>Child.TransactionLine1 - StandardQuantityBase = 10.00 PCS, QuantityBase = 4.00 PCS
+</code></pre>
+<p>This may be the case if the product in the line is using <a href="https://confluence.erp.net/display/techdoc/Variable+(Dynamic)+Measurement+Ratios">Variable (Dynamic) Measurement Ratios</a>.
+The ordered StandardQuantityBase is completely fulfilled by the child document the Child.QuantityBase may be bellow or to exceed the QuantityBase ordered by parent document (i.e. REMAINING(QuantityBase) will be different from zero).
+But we can see that in the table above for the metric MQuantityBase is set &quot;New Record = NO&quot;.
+Which means that in this situation, when the generation procedure is executed - a new record &quot;Child.TransactionLine2&quot; for remaining <strong>6.00 PCS</strong> of QuantityBase <strong>WON'T</strong> be created.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/reference/metrics.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
