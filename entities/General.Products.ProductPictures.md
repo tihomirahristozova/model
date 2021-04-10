@@ -68,7 +68,7 @@ _Supports Order By_: **False**
 _Default Value_: **False**  
 
 _Front-End Recalc Expressions:_  
-`( obj.Product.Pictures.Take( 1).Count( ) == 0)`
+`( obj.Product.Pictures.Take( 2).Count( ) == 1)`
 ### LastUpdateTime
 
 The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly`
