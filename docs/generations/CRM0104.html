@@ -99,7 +99,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Status</td>
-<td><a href="https://olddocs.erp.net/tech/generation-procedures-lifetime-stages-215777330.html">ACTIVE</a></td>
+<td><a href="xref:generation-procedures">ACTIVE</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">Deterministic</td>
@@ -107,7 +107,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Supports Transitional Documents</td>
-<td><a href="https://olddocs.erp.net/tech/document-generation-and-transitional-documents-194314241.html">YES</a></td>
+<td>YES</td>
 </tr>
 <tr>
 <td style="text-align: left;">Replaces</td>
@@ -179,7 +179,7 @@ StoreOrder.DocumentCurrency = SalesOrder.DocumentCurrency
 </tr>
 </tbody>
 </table>
-<h2 id="metrics"><a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/246054946/Metrics">Metrics</a></h2>
+<h2 id="metrics"><a href="../reference/metrics.html">Metrics</a></h2>
 <table>
 <thead>
 <tr>
@@ -218,7 +218,7 @@ StoreOrder.DocumentCurrency = SalesOrder.DocumentCurrency
 </tr>
 </tbody>
 </table>
-<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Orders has already been created (for more information, see topic <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/22380546/Discrepancy+System">Discrepancy System</a> and <a href="https://olddocs.erp.net/tech/metrics-246054946.html">Metrics</a>). The new StoreOrderLine is created as follows:</p>
+<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Orders has already been created (for more information, see topic <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/22380546/Discrepancy+System">Discrepancy System</a> and <a href="../reference/metrics.html">Metrics</a>. The new StoreOrderLine is created as follows:</p>
 <pre><code>StoreOrderLine.LineNo = SalesOrderLine.LineNo
 
 StoreOrderLine.ParentLineId = SalesOrderLine.SalesOrderLineId
