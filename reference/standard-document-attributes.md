@@ -12,7 +12,7 @@ sub.ReadOnly = SubDocumentsReadOnly;
 sub.ParentDocumentRelationshipType = RelationshipType;
 sub.Parent = ParentDocument;
 ```
-- and then, setting the value in the sub.ParentDocument attribute rises the event of filling in the MasterDocument. This is processed as follows (not the sub-document is current document, so we refer it as "*this*" and the parent document is **"Parent**):
+- and then, setting the value in the sub.ParentDocument attribute rises the event of filling in the MasterDocument. This is processed as follows (not the sub-document is current document, so we refer it as "*this*" and the parent document is **"Parent"**):
 
 this.MasterDocument = Parent.MasterDocument;
 
