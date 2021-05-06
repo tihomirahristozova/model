@@ -155,7 +155,7 @@ StoreOrder.DocumentCurrency = SalesOrder.DocumentCurrency
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The attributes which are not specified here are filled in as described in <a href="https://olddocs.erp.net/tech/standard-document-attributes-221773862.html">Standard Document Attributes</a></p>
+<p>The attributes which are not specified here are filled in as described in <a href="../reference/standard-document-attributes.html">Standard Document Attributes</a></p>
 </div>
 <h2 id="fulfillments">Fulfillments</h2>
 <table>
@@ -219,7 +219,8 @@ StoreOrder.DocumentCurrency = SalesOrder.DocumentCurrency
 </tr>
 </tbody>
 </table>
-<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Orders has already been created (for more information, see topic <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/22380546/Discrepancy+System">Discrepancy System</a> and <a href="https://olddocs.erp.net/tech/metrics-246054946.html">Metrics</a>). The new StoreOrderLine is created as follows:</p>
+<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Orders has already been created (for more information, see topic <a href="../reference/discrepancy-system.html">Discrepancy System</a> and <a href="../reference/metrics.html">Metrics</a>).
+The new StoreOrderLine is created as follows:</p>
 <pre><code>StoreOrderLine.LineNo = SalesOrderLine.LineNo
 
 StoreOrderLine.ParentLineId = SalesOrderLine.SalesOrderLineId

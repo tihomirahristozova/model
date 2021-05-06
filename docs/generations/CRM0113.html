@@ -132,7 +132,9 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>This Generation Procedure is used to create Payment Orders by the Sales Oder Payment Plan of the current Sales Order. For each instalment of the payment plan could be created one or more Payment Orders (depending on whether the amount of the instalment is broken down by invoice or not). Currently, for the Generation there are three available settings (set in &quot;SalesOrderPaymentOrdersTemplate&quot; of the line of the particular Route):</p>
+<p>This Generation Procedure is used to create Payment Orders by the Sales Oder Payment Plan of the current Sales Order.
+For each instalment of the payment plan could be created one or more Payment Orders (depending on whether the amount of the instalment is broken down by invoice or not).
+Currently, for the Generation there are three available settings (set in &quot;SalesOrderPaymentOrdersTemplate&quot; of the line of the particular Route):</p>
 <ul>
 <li>&quot;Is Amount With VAT&quot; - this setting specifies whether or not the field &quot;IsAmountWithVAT&quot; in the created Payment Orders will be check-marked;</li>
 <li>&quot;Create For Not Invoiced Amounts&quot; - this setting specifies whether Payment Orders for the payment plan Amounts that have not yet been invoiced will be created;</li>
@@ -201,7 +203,7 @@ These amounts are then being broken down by the Invoices that have been created 
 Calculation of amounts depends on the &quot;Create For Not Invoiced Amounts&quot; and &quot;Create For Invoiced Amounts&quot; settings.
 This is detailed in the topic <a href="https://olddocs.erp.net/tech/sales-order-payment-plan-728006666.html">Sales Order Payment Plan</a>.
 Thus, for the current Sales Order is determined a list of Amounts.
-Then for each Amount are calculated the amounts of the metrics that are not yet fulfilled by other Payment Orders that have already been created (for more information, see topic <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/22380546/Discrepancy+System">Discrepancy System</a> and <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/246054946/Metrics">Metrics</a>).
+Then for each Amount are calculated the amounts of the metrics that are not yet fulfilled by other Payment Orders that have already been created (for more information, see topic <a href="../reference/discrepancy-system.html">Discrepancy System</a> and <a href="../reference/metrics.html">Metrics</a>).
 If for an Amount any of the Metrics with &quot;New Record = YES&quot; is different from 0, then for this Amount is created a new Payment Order.</p>
 <p>The new Payment Order is created as follows (the determination of the Amount's attributes' values is described in the topic <a href="https://olddocs.erp.net/tech/sales-order-payment-plan-728006666.html">Sales Order Payment Plan</a>):</p>
 <pre><code>PaymentOder.Notes = Amount.DocumentNotes

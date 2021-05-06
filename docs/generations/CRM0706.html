@@ -152,7 +152,7 @@ OfferLine.ParentLineNo = ServiceActivityMaterial.LineNo
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The attributes which are not specified here are filled in as described in <a href="https://confluence.erp.net/display/techdoc/Standard+Document+Attributes">Standard Document Attributes</a></p>
+<p>The attributes which are not specified here are filled in as described in <a href="../reference/standard-document-attributes.html">Standard Document Attributes</a></p>
 </div>
 <p>The new store order is saved then and only when there is at least one line in it.</p>
 <p>Then for each service ServiceActivityService which has CoveredByGuarantee = false, and for each product <strong>InvoicingProduct</strong> - which invoice the current service (the products are listed as ServiceInvoicing where Service = current service), the non agreed quantity is defined - <strong>NonagreedQuantity</strong> - and if it is not <strong>0</strong>, a new OfferLine in the new Offer is added as follows:</p>

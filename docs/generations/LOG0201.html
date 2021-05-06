@@ -141,7 +141,7 @@ Transaction.DocumentCurrency = StoreOrder.DocumentCurrency
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The attributes which are not specified here are filled in as described in <a href="https://confluence.erp.net/display/techdoc/Standard+Document+Attributes">Standard Document Attributes</a></p>
+<p>The attributes which are not specified here are filled in as described in <a href="../reference/standard-document-attributes.html">Standard Document Attributes</a></p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
@@ -217,7 +217,7 @@ Transaction.DocumentCurrency = StoreOrder.DocumentCurrency
 </tr>
 </tbody>
 </table>
-<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Transactions that are already created (for more information, see topic <a href="https://enterpriseone.atlassian.net/wiki/spaces/techdoc/pages/22380546/Discrepancy+System">Discrepancy System</a>). The new StoreTransactionLine is created as follows:</p>
+<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Transactions that are already created (for more information, see topic <a href="../reference/discrepancy-system.html">Discrepancy System</a>). The new StoreTransactionLine is created as follows:</p>
 <pre><code>StoreTransactionLine.LineNo = StoreOrderLine.LineNo
 
 StoreTransactionLine.ParentStoreOrderLine = StoreOrderLine

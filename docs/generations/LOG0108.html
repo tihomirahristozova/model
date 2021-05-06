@@ -251,7 +251,7 @@ StoreOrderLine.Lot =
 
 ​                 if ShipmentOrderLine.Lot is not Null then ShipmentOrderLine.Lot
 
-​                 else if [Lots Issue ](https://docs.erp.net/tech/lots-issue-598245377.html)is Null then Null else [Lots Issue](https://docs.erp.net/tech/lots-issue-598245377.html)
+​                 else if Lots Issue is Null then Null else Lots Issue
 
 StoreOrderLine.GuaranteePeriodDays =
 
@@ -273,26 +273,26 @@ StoreOrderLine.ParentLineNo = ShipmentOrderLine.LineNo
 
 StoreOrderLine.TransactionTimestamp = 
 
-​                               if ShipmentOrderLine.Quantity &gt;= 0 Then Null
+​                       if ShipmentOrderLine.Quantity &gt;= 0 Then Null
 
-​                               else
+​                       else
 
-​                              MAX (OriginalSalesOrderLine.ShipmentOrderLines.StoreOrderLine.StoreTransactionLine.TransactionTimestamp)
+​                       MAX (OriginalSalesOrderLine.ShipmentOrderLines.StoreOrderLine.StoreTransactionLine.TransactionTimestamp)
 
-​                              WHERE
+​                       WHERE
 
-​                              OriginalSalesOrderLine =
+​                       OriginalSalesOrderLine =
 
-​                                                 if ShipmentOrderLines.ParentSalesOrderLine.ReturnForSalesOrderLine is not Null
+​                                    if ShipmentOrderLines.ParentSalesOrderLine.ReturnForSalesOrderLine is not Null
 
-​                                                 then ShipmentOrderLines.ParentSalesOrderLine.ReturnForSalesOrderLine
+​                                    then ShipmentOrderLines.ParentSalesOrderLine.ReturnForSalesOrderLine
 
-​                                                 else ShipmentOrderLines.ParentSalesOrderLine
+​                                    else ShipmentOrderLines.ParentSalesOrderLine
 
 
-                              ShipmentOrderLines.ShipmentOrder.IsReleased = True
-                              StoreOrderLine.StoreOrder.IsReleased = True
-                              StoreTransactionLine.StoreTransaction = True
+                         ShipmentOrderLines.ShipmentOrder.IsReleased = True
+                         StoreOrderLine.StoreOrder.IsReleased = True
+                         StoreTransactionLine.StoreTransaction = True
 
 </code></pre>
 <p><a href="https://docs.erp.net/tech/lots-issue-598245377.html">Lots Issue</a> is algorithm than determine Lots from Available To Promise Lots.</p>
