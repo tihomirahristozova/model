@@ -1,7 +1,7 @@
 # Standard Document Attributes
 
 The current article describes standard attributes from the Documents table when a document is created through generation procedure.
-When the described attributes are not mentioned in a generation procedure, they are filled as follows (* the sub-document is referred as **"sub"**):
+When the described attributes are not mentioned in a generation procedure, they are filled as follows (the sub-document is referred as **"sub"**):
 
 - at first, the document route sets the following:
 ```
@@ -12,7 +12,7 @@ sub.ReadOnly = SubDocumentsReadOnly;
 sub.ParentDocumentRelationshipType = RelationshipType;
 sub.Parent = ParentDocument;
 ```
-- and then, setting the value in the sub.ParentDocument attribute rises the event of filling in the MasterDocument. This is processed as follows (not the sub-document is current document, so we refer it as "*this*" and the parent document is **"Parent"**):
+- and then, setting the value in the sub.ParentDocument attribute rises the event of filling in the MasterDocument. This is processed as follows (not the sub-document is current document, so we refer it as **"this"** and the parent document is **"Parent"**):
 
 this.MasterDocument = Parent.MasterDocument;
 
