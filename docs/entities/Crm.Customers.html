@@ -246,7 +246,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Customers.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>Base party Id. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Base party Id. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Customers.html#salesperson">SalesPerson</a></td>
@@ -422,10 +422,11 @@ Default Search Member:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Transaction.CurrentEnterpriseCompany</code></p>
 <h3 id="party">Party</h3>
-<p>Base party Id. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Base party Id. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Can filter by attributes of referenced entity</em>: <strong>True</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
 <p>The default sales person for new sales documents for this customer. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.SalesPersons.html">SalesPersons</a> (nullable)</strong><br>

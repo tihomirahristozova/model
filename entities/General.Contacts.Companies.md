@@ -349,11 +349,6 @@ The country, where the company is registered. `Filter(multi eq)`
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
-_Back-End Default Expression:_  
-`obj.Transaction.CurrentEnterpriseCompany.Company.Country`
-
-_Front-End Recalc Expressions:_  
-`obj.Transaction.CurrentEnterpriseCompany.Company.Country`
 ### DefaultProductCodingSystem
 
 When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))

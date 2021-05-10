@@ -150,7 +150,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.Messages.html#servermessageid">ServerMessageID</a></td>
 <td>string (256) <strong>nullable</strong></td>
-<td>Message ID as it appears on the mail server. <code>Filter(eq)</code></td>
+<td>Message ID as it appears on the mail server. <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#subject">Subject</a></td>
@@ -256,10 +256,11 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="servermessageid">ServerMessageID</h3>
-<p>Message ID as it appears on the mail server. <code>Filter(eq)</code></p>
+<p>Message ID as it appears on the mail server. <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (256) <strong>nullable</strong></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>256</strong></p>
 <h3 id="subject">Subject</h3>
 <p>The message subject. <code>Filter(like)</code></p>

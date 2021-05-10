@@ -197,6 +197,7 @@ _Supported Filters_: **Equals, EqualsIn**
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### SupplierType
 

@@ -34,7 +34,7 @@ Aggregate Root:
 | [IsRead](Applications.Mail.Messages.md#isread) | boolean | True when the message was read by the user. `Required` `Default(false)` `Filter(eq)` 
 | [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received. `Filter(ge;le)` 
 | [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent. `Filter(ge;le)` 
-| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server. `Filter(eq)` 
+| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server. `Filter(eq)` `ORD` 
 | [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject. `Filter(like)` 
 | [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of receiving email addresses. `Filter(like)` 
 
@@ -133,11 +133,12 @@ _Supports Order By_: **False**
 
 ### ServerMessageID
 
-Message ID as it appears on the mail server. `Filter(eq)`
+Message ID as it appears on the mail server. `Filter(eq)` `ORD`
 
 _Type_: **string (256) __nullable__**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Maximum Length_: **256**  
 
 ### Subject

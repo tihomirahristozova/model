@@ -54,7 +54,7 @@ Aggregate Tree
 | [DefaultPaymentType](Crm.Customers.md#defaultpaymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | If not null, specifies default payment type for the sales, offers and invoices for this customer. `Filter(multi eq)` |
 | [DefaultPriceList](Crm.Customers.md#defaultpricelist) | [PriceLists](Crm.PriceLists.md) (nullable) | If not null, specifies default price list when selling to this customer. `Filter(multi eq)` |
 | [EnterpriseCompany](Crm.Customers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. `Filter(multi eq)` |
-| [Party](Crm.Customers.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id. `Required` `Filter(multi eq)` |
+| [Party](Crm.Customers.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id. `Required` `Filter(multi eq)` `FilterableReference` |
 | [SalesPerson](Crm.Customers.md#salesperson) | [SalesPersons](Crm.SalesPersons.md) (nullable) | The default sales person for new sales documents for this customer. `Filter(multi eq)` |
 | [ServicedByEnterprise<br />CompanyLocation](Crm.Customers.md#servicedbyenterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, which sells to this client by default. `Filter(multi eq)` |
 
@@ -289,11 +289,12 @@ _Front-End Recalc Expressions:_
 `obj.Transaction.CurrentEnterpriseCompany`
 ### Party
 
-Base party Id. `Required` `Filter(multi eq)`
+Base party Id. `Required` `Filter(multi eq)` `FilterableReference`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### SalesPerson
 
