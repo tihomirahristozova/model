@@ -926,7 +926,7 @@ Allowed values for the <code>SystemType</code>(General.Contacts.Activities.md#sy
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Materials.Select( c =&gt; c.ServiceObject).Distinct( ).OnlyIfSingle( )</code></p>
+<code>obj.Services.Select( c =&gt; c.ServiceObject).Union( obj.Materials.Select( c =&gt; c.ServiceObject)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="documenttype">DocumentType</h3>
 <p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>

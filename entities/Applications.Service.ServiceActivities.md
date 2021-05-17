@@ -561,7 +561,7 @@ _Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Materials.Select( c => c.ServiceObject).Distinct( ).OnlyIfSingle( )`
+`obj.Services.Select( c => c.ServiceObject).Union( obj.Materials.Select( c => c.ServiceObject)).Distinct( ).OnlyIfSingle( )`
 ### DocumentType
 
 The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
