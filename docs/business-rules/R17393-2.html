@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model </title>
+    <title>R17393-2 Product - Product And Product Group Use Lots Are Different | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model ">
+    <meta name="title" content="R17393-2 Product - Product And Product Group Use Lots Are Different | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r18067-storetransaction---store-enterprise-company">R18067 StoreTransaction - Store Enterprise Company</h1>
+<h1 id="r17393-2-product---product-and-product-group-use-lots-are-different">R17393-2 Product - Product And Product Group Use Lots Are Different</h1>
 
 <table>
 <col style="width:25%">
@@ -78,19 +78,19 @@
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R18067</td>
+<td>R17393-2</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions Entity</a>                                                                      |</td>
+<td><a class="xref" href="../entities/General.Products.Products.html">General.Products.Products Entity</a>                                                                               |</td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>StoreEnterpriseCompany</td>
+<td>ProductAndProductGroupUseLotsAreDifferent</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>Store</td>
+<td>UseLots</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -98,7 +98,7 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>Planning +</td>
+<td>Commit</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -115,29 +115,26 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>Store.EnterpriseCompany == null || Store.EnterpriseCompany == EnterpriseCompany</p>
+<td><p>If ( ProductGroup != Null &amp;&amp; ProductGroup.UseLots != Null ) ,</p>
+<p>validate that:  UseLots = ProductGroup.UseLots</p>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule validates that the Store that is filled in the current Store Transaction
-does not belong to another Enterprise Company</td>
+<td>If the field Use Lots in Product group is filled in, then the field Use Lots in the
+product must have the same value.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Invalid value for Store.
- 
-The selected store '{Store.StoreName}' is not in the same Enterprise Company as the
-document '{DocumentText}', which is not allowed.</p>
-<p>Select a store from the same Enterprise Company.</p>
-<p>The message is also used in:</p>
-<p><a href="R31213.md">R31213 SalesOrder - Check Store Enterprise Company</a></p>
+<td><p>The value of the field 'Use Lots' in product with code '{PartNumber}' is
+different from the value set in the product group.</p>
+<p>If the field 'Use Lots' in the product group contains a value, then this value has
+to be set in the product as well.</p>
 </td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 2015 CTP8</td>
+<td>Introduced: 2016</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -155,7 +152,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sy
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R18067.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R17393-2.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

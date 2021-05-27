@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model </title>
+    <title>R24875-2 - Master / Detail - Release Date | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model ">
+    <meta name="title" content="R24875-2 - Master / Detail - Release Date | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,83 +70,53 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r18067-storetransaction---store-enterprise-company">R18067 StoreTransaction - Store Enterprise Company</h1>
+<h1 id="r24875-2---master--detail---release-date">R24875-2 - Master / Detail - Release Date</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<col style="width:18.97%">
+<col style="width:81.03%">
 <tbody>
 <tr>
-<td><strong>Code</strong></td>
-<td>R18067</td>
+<td style="text-align: left;"><strong>Code</strong></td>
+<td style="text-align: left;">24875-2</td>
 </tr>
 <tr>
-<td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions Entity</a>                                                                      |</td>
+<td style="text-align: left;"><strong>Master Entity</strong></td>
+<td style="text-align: left;">WorkOrder</td>
 </tr>
 <tr>
-<td><strong>Name</strong></td>
-<td>StoreEnterpriseCompany</td>
+<td style="text-align: left;"><strong>Detail Entity</strong></td>
+<td style="text-align: left;">WorkOrderItem</td>
 </tr>
 <tr>
-<td><strong>Attribute</strong></td>
-<td>Store</td>
+<td style="text-align: left;"><strong>Master Attribute</strong></td>
+<td style="text-align: left;">WorkOrder.ReleaseDate</td>
 </tr>
 <tr>
-<td><strong>Layer</strong></td>
-<td>Back-End</td>
+<td style="text-align: left;"><strong>Detail Attribute</strong></td>
+<td style="text-align: left;">WorkOrderItem.ReleaseDate</td>
 </tr>
 <tr>
-<td><strong>Events</strong></td>
-<td>Planning +</td>
+<td style="text-align: left;"><strong>Layer</strong></td>
+<td style="text-align: left;">Front-End, BackEnd</td>
 </tr>
 <tr>
-<td><strong>Priority</strong></td>
-<td>Normal</td>
+<td style="text-align: left;"><strong>Modify</strong></td>
+<td style="text-align: left;">YES</td>
 </tr>
 <tr>
-<td><strong>Modify</strong></td>
-<td>NO</td>
+<td style="text-align: left;"><strong>Action</strong></td>
+<td style="text-align: left;">See the Rules section in the <a href="https://confluence.erp.net/pages/viewpage.action?pageId=2523212">Master / Detail
+Attributes</a> topic.</td>
 </tr>
 <tr>
-<td><strong>Applicable Legislations</strong></td>
-<td><a href="https://confluence.erp.net/display/techdoc/Country+Specific+Functionality">ALL // no condition
-needed</a></td>
-</tr>
-<tr>
-<td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>Store.EnterpriseCompany == null || Store.EnterpriseCompany == EnterpriseCompany</p>
+<td style="text-align: left;"><strong>Version</strong></td>
+<td style="text-align: left;"><p>Introduced: 21</p>
+<p>Updated: -</p>
 </td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>The rule validates that the Store that is filled in the current Store Transaction
-does not belong to another Enterprise Company</td>
-</tr>
-<tr>
-<td><strong>Message</strong></td>
-<td><p>Invalid value for Store.
- 
-The selected store '{Store.StoreName}' is not in the same Enterprise Company as the
-document '{DocumentText}', which is not allowed.</p>
-<p>Select a store from the same Enterprise Company.</p>
-<p>The message is also used in:</p>
-<p><a href="R31213.md">R31213 SalesOrder - Check Store Enterprise Company</a></p>
-</td>
-</tr>
-<tr>
-<td><strong>Version</strong></td>
-<td>Introduced: 2015 CTP8</td>
-</tr>
-<tr>
-<td><strong>Revocable</strong></td>
-<td>NO</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 </article>
           </div>
           
@@ -155,7 +125,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sy
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R18067.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R24875-2.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model </title>
+    <title>R26466 CurrencyDirectory - Validate Document Making Void | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model ">
+    <meta name="title" content="R26466 CurrencyDirectory - Validate Document Making Void | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,83 +70,63 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r18067-storetransaction---store-enterprise-company">R18067 StoreTransaction - Store Enterprise Company</h1>
+<h1 id="r26466-currencydirectory---validate-document-making-void">R26466 CurrencyDirectory - Validate Document Making Void</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<col style="width:16.24%">
+<col style="width:83.76%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R18067</td>
-</tr>
-<tr>
-<td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions Entity</a>                                                                      |</td>
+<td>26466</td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>StoreEnterpriseCompany</td>
+<td>ValidateDocumentMakingVoid</td>
 </tr>
 <tr>
-<td><strong>Attribute</strong></td>
-<td>Store</td>
+<td><strong>Entity</strong></td>
+<td><a class="xref" href="../entities/General.CurrencyDirectories.html">General.CurrencyDirectories Entity</a>                                                                                |</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
 <td>Back-End</td>
 </tr>
 <tr>
-<td><strong>Events</strong></td>
-<td>Planning +</td>
+<td><strong>Attribute</strong></td>
+<td>--</td>
 </tr>
 <tr>
-<td><strong>Priority</strong></td>
-<td>Normal</td>
+<td><strong>Events</strong></td>
+<td>DocumentMakingVoid</td>
 </tr>
 <tr>
 <td><strong>Modify</strong></td>
 <td>NO</td>
 </tr>
 <tr>
-<td><strong>Applicable Legislations</strong></td>
-<td><a href="https://confluence.erp.net/display/techdoc/Country+Specific+Functionality">ALL // no condition
-needed</a></td>
-</tr>
-<tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>Store.EnterpriseCompany == null || Store.EnterpriseCompany == EnterpriseCompany</p>
-</td>
+<td>ValidateDocumentMakingVoid() = true if there are no other non-voided documents using it.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule validates that the Store that is filled in the current Store Transaction
-does not belong to another Enterprise Company</td>
+<td>If there is a non-voided document in the database, using the same CurrencyDirectory, then the
+CurrencyDirectory cannot be voided.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Invalid value for Store.
- 
-The selected store '{Store.StoreName}' is not in the same Enterprise Company as the
-document '{DocumentText}', which is not allowed.</p>
-<p>Select a store from the same Enterprise Company.</p>
-<p>The message is also used in:</p>
-<p><a href="R31213.md">R31213 SalesOrder - Check Store Enterprise Company</a></p>
-</td>
+<td>&quot;Currency directory {0} can't be void because it is used by other documents that aren't void.
+The documents that use that currency directory are
+{ListOfDocumentsUsingTheCurrencyDirectory[0-n]}.&quot;, DocumentText,
+ListOfDocumentsUsingTheCurrencyDirectory[]</td>
 </tr>
 <tr>
-<td><strong>Version</strong></td>
-<td>Introduced: 2015 CTP8</td>
-</tr>
-<tr>
-<td><strong>Revocable</strong></td>
-<td>NO</td>
+<td><strong>Introduced In
+Version</strong></td>
+<td>2017</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 </article>
           </div>
           
@@ -155,7 +135,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sy
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R18067.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R26466.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

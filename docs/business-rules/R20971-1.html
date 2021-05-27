@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model </title>
+    <title>R20971-1.1 StoreTransactionLine - Check Product Variant | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model ">
+    <meta name="title" content="R20971-1.1 StoreTransactionLine - Check Product Variant | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r18067-storetransaction---store-enterprise-company">R18067 StoreTransaction - Store Enterprise Company</h1>
+<h1 id="r20971-11-storetransactionline---check-product-variant">R20971-1.1 StoreTransactionLine - Check Product Variant</h1>
 
 <table>
 <col style="width:25%">
@@ -78,19 +78,19 @@
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R18067</td>
+<td>R20971-1.1</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions Entity</a>                                                                      |</td>
+<td><a class="xref" href="../entities/Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines Entity</a>                                                                  |</td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>StoreEnterpriseCompany</td>
+<td>CheckProductVariant</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>Store</td>
+<td>ProductVariant</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -98,7 +98,7 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>Planning +</td>
+<td>Commit</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -115,29 +115,31 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>Store.EnterpriseCompany == null || Store.EnterpriseCompany == EnterpriseCompany</p>
+<td><p>If (ProductVariant !=Null)</p>
+<p>, validate that: Product = ProductVariant.Product</p>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule validates that the Store that is filled in the current Store Transaction
-does not belong to another Enterprise Company</td>
+<td>If the field &quot;Product Variant&quot; has a value, then we need to make sure that this value
+(the product variant) corresponds to the product which is set in the line. This means
+that the product set in the particular product variant's definition must be the same
+as the one filled in the line. The rule ensures that the accidental switch between
+different product's variants is avoided.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Invalid value for Store.
- 
-The selected store '{Store.StoreName}' is not in the same Enterprise Company as the
-document '{DocumentText}', which is not allowed.</p>
-<p>Select a store from the same Enterprise Company.</p>
-<p>The message is also used in:</p>
-<p><a href="R31213.md">R31213 SalesOrder - Check Store Enterprise Company</a></p>
+<td><p>In line number '{LineNo}' of document '{DocumentText}' is selected an
+invalid product variant.</p>
+<p>The product in the line should match the product specified in the definition of the
+product variant.</p>
 </td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 2015 CTP8</td>
+<td><p>Introduced: 2015</p>
+<p>Updated: -</p>
+</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -155,7 +157,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sy
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R18067.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R20971-1.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model </title>
+    <title>R20750-5 PaymentTransfer - Payment Account Enterprise Company Should Equal EC | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model ">
+    <meta name="title" content="R20750-5 PaymentTransfer - Payment Account Enterprise Company Should Equal EC | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r18067-storetransaction---store-enterprise-company">R18067 StoreTransaction - Store Enterprise Company</h1>
+<h1 id="r20750-5-paymenttransfer---payment-account-enterprise-company-should-equal-ec">R20750-5 PaymentTransfer - Payment Account Enterprise Company Should Equal EC</h1>
 
 <table>
 <col style="width:25%">
@@ -78,19 +78,19 @@
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R18067</td>
+<td>R20750-5</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions Entity</a>                                                                      |</td>
+<td><a class="xref" href="../entities/Finance.Payments.Transfers.html">Finance.Payments.Transfers Entity</a>                                                                       |</td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>StoreEnterpriseCompany</td>
+<td>PaymentAccountEnterpriseCompanyShouldEqualEC</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>Store</td>
+<td>SourcePaymentAccount, DestinationPaymentAccount, EnterpriseCompany</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -115,29 +115,29 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>Store.EnterpriseCompany == null || Store.EnterpriseCompany == EnterpriseCompany</p>
-</td>
+<td>Validate that:
+(SourcePaymentAccount.EnterpriseCompany == EnterpriseCompany
+OR SourcePaymentAccount.EnterpriseCompany = Null )
+AND
+(DestinationPaymentAccount.EnterpriseCompany == EnterpriseCompany
+OR DestinationPaymentAccount.EnterpriseCompany = Null)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule validates that the Store that is filled in the current Store Transaction
-does not belong to another Enterprise Company</td>
+<td>If the source and the destination payment accounts contain enterprise companies, then
+make sure that the payment transfer's enterprise company is the same as the
+enterprise companies of both payment accounts.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Invalid value for Store.
- 
-The selected store '{Store.StoreName}' is not in the same Enterprise Company as the
-document '{DocumentText}', which is not allowed.</p>
-<p>Select a store from the same Enterprise Company.</p>
-<p>The message is also used in:</p>
-<p><a href="R31213.md">R31213 SalesOrder - Check Store Enterprise Company</a></p>
+<td><p>Use the message from:</p>
+<p><a href="R20750-3.html">R20750-3 PaymentSlip - Payment Account Enterprise Company Should Equal
+EC</a></p>
 </td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 2015 CTP8</td>
+<td>Introduced: 2015</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -155,7 +155,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sy
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R18067.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R20750-5.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
