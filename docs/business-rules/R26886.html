@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R17784 PartyContactMechanism - Unique Contact Mechanism By Type Party And Line Ord | ERP.net Domain Model </title>
+    <title>R26886 Shipment - Line Fixed Measurement Ratios | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R17784 PartyContactMechanism - Unique Contact Mechanism By Type Party And Line Ord | ERP.net Domain Model ">
+    <meta name="title" content="R26886 Shipment - Line Fixed Measurement Ratios | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,27 +70,27 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r17784-partycontactmechanism---unique-contact-mechanism-by-type-party-and-line-ord">R17784 PartyContactMechanism - Unique Contact Mechanism By Type Party And Line Ord</h1>
+<h1 id="r26886-shipment---line-fixed-measurement-ratios">R26886 Shipment - Line Fixed Measurement Ratios</h1>
 
 <table>
-<col style="width:18.8%">
-<col style="width:81.2%">
+<col style="width:16.24%">
+<col style="width:83.76%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R17784</td>
+<td>R26886</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/General.Contacts.PartyContactMechanisms.html">General.Contacts.PartyContactMechanisms Entity</a>                                                                         |</td>
+<td><a class="xref" href="../entities/Logistics.Shipment.Shipments.html">Logistics.Shipment.Shipments Entity</a>                                                                                         |</td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>UniqueContactMechanismByTypePartyAndLineOrd</td>
+<td>LineFixedMeasurementRatios</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>LineOrd</td>
+<td>Quantity Base </td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -98,57 +98,46 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>Commit</td>
-</tr>
-<tr>
-<td><strong>Priority</strong></td>
-<td>Normal</td>
+<td>Released +</td>
 </tr>
 <tr>
 <td><strong>Modify</strong></td>
 <td>NO</td>
 </tr>
 <tr>
-<td><strong>Applicable
-Legislations</strong></td>
-<td><a href="https://confluence.erp.net/display/techdoc/Country+Specific+Functionality">ALL // no condition
-needed</a></td>
-</tr>
-<tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>PartyContactMechanisms [Party = PartyContactMechanism.Party &amp;&amp;
-ContactMechanism.ContactMechanismType =
-PartyContactMechanism.ContactMechanism.ContactMechanismType &amp;&amp; LineOrd =
-PartyContactMechanism.LineOrd]. Count() &gt;1</p>
-</td>
+<td>For every line - if &quot;Product.AllowVariableMeasurementRatios == false&quot;, validate that
+&quot;Quantity Base = ROUND (Quantity * Product Dimension Dest Quantity / Product Dimension Source
+Quantity, 3)&quot;</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule prevents duplication of numbering of the party contact mechanisms with the same
-type. For this reason the rule validates that for a single Party there could be only one
-party contact mechanisms with same type and 'LineOrd'.</td>
+<td>Base quantity could be edited in shipment's lines only for products that are allowed to use
+variable measurement ratios. For those products base quantity may stay the same although the
+quantity in additional measurement units may vary to a certain extent. That's why the user has
+the opportunity to manually adjust the right base amount in the particular situation. Otherwise
+if in the product definition is not set that it is allowed to use variable measurement ratios,
+then product dimensions must be followed properly while recalculating base quantity.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>There are more than one Party Contact Mechanisms with Line Order '{LineOrd}', Party
-'{Party.PartyName}' and Contact Mechanism Type '{ContactMechanism.ContactMechanismType}'.
-They should be unique.</td>
+<td>Use the message from Rule [R26881
+StoreTransaction.LineFixedMeasurementRatios](<a href="https://enterpriseone.atlass">https://enterpriseone.atlass</a>
+ian.net/wiki/display/techdoc/R26881+StoreTransaction.LineFixedMeasurementRatios){.external-link}</td>
 </tr>
 <tr>
-<td><strong>Version</strong></td>
-<td><p>Introduced: 2015</p>
-<p>Updated: -</p>
-</td>
+<td><strong>Introduced In
+Version</strong></td>
+<td>2017</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
-<td>NO</td>
+<td>YES</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 </article>
           </div>
           
@@ -157,7 +146,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sy
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R17784.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R26886.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
