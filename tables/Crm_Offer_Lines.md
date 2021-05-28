@@ -23,6 +23,7 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 |[Line_Amount](#line_amount)|`decimal(14, 2)` |Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.|
 |[Line_Custom_Discount_Percent](#line_custom_discount_percent)|`decimal(7, 6)` |Operator defined discount percentage, specified for this line.|
 |[Line_Discount_Id](#line_discount_id)|`uniqueidentifier` |When not NULL, contains the discount policy selected for this line.|
+|[Line_End_Customer_Party_Id](#line_end_customer_party_id)|`uniqueidentifier` |The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party.|
 |[Line_No](#line_no)|`int` ||
 |[Line_Standard_Discount_Percent](#line_standard_discount_percent)|`decimal(7, 6)` |The discount percentage, applied through the standard discount policy.|
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -257,6 +258,43 @@ When not NULL, contains the discount policy selected for this line.
 |Visible|yes|
 
 #### Line_Discount_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Line_End_Customer_Party_Id
+
+
+The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Parties](Gen_Parties.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_End_Customer_Party_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

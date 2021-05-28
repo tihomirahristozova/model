@@ -210,6 +210,11 @@ Aggregate Root:<br>
 <td>When not null, contains the discount policy selected for this line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Presales.OfferLines.html#lineendcustomerparty">LineEndCustomerParty</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
+<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.2.96</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Presales.OfferLines.html#offer">Offer</a></td>
 <td><a href="Crm.Presales.Offers.html">Offers</a></td>
 <td>The <code>Offer</code>(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
@@ -379,6 +384,14 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.DetermineLineDiscount( obj.RequiredDeliveryDate, obj.Offer.Customer, obj.Offer.ShipToCustomer, obj.Product, obj.Quantity, obj.QuantityUnit, obj.Offer.EnterpriseCompany, obj.Offer.EnterpriseCompanyLocation, obj.Offer.PriceList, obj.LineDiscount)</code></p>
+<h3 id="lineendcustomerparty">LineEndCustomerParty</h3>
+<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.2.96</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.Offer.EndCustomerParty</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Offer.EndCustomerParty</code></p>
 <h3 id="offer">Offer</h3>
 <p>The <code>Offer</code>(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Presales.Offers.html">Offers</a></strong><br>

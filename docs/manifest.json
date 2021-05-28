@@ -2401,7 +2401,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.OfferLines.html",
-          "hash": "2dLkuIMajeq3FDeVRx5jmw=="
+          "hash": "bqhON142zar+d5R9yXFgyQ=="
         }
       },
       "is_incremental": false,
@@ -2413,7 +2413,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.Offers.html",
-          "hash": "zELyvxIeJbZfb0HSCbmIXQ=="
+          "hash": "VRYX0U+lHitVh4XKEYVB6w=="
         }
       },
       "is_incremental": false,
@@ -7762,6 +7762,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "reference/code-validation.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/code-validation.html",
+          "hash": "3qbI0J0XhhiGlBOJNuov3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "reference/discrepancy-system.md",
       "output": {
@@ -9639,7 +9654,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Offer_Lines.html",
-          "hash": "xXivtNamBQFRdLjnXv+h2g=="
+          "hash": "aZsrYV/gqY5D/vz/SjRAUQ=="
         }
       },
       "is_incremental": false,
@@ -9651,7 +9666,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Offers.html",
-          "hash": "quV4rvJ3pqF8n+SxVvdaAA=="
+          "hash": "ryCHawGFVI9pSgqNWmnRSQ=="
         }
       },
       "is_incremental": false,

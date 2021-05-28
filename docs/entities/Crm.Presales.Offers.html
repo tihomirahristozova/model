@@ -322,6 +322,11 @@ Default Search Member:<br>
 <td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
+<td><a href="Crm.Presales.Offers.html#endcustomerparty">EndCustomerParty</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
+<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.2.96</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Presales.Offers.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
 <td>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
@@ -754,6 +759,12 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="endcustomerparty">EndCustomerParty</h3>
+<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.2.96</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; c.LineEndCustomerParty).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>

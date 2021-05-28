@@ -77,6 +77,7 @@ Aggregate Tree
 | [Deal](Crm.Presales.Offers.md#deal) | [Deals](Crm.Presales.Deals.md) (nullable) | The opportunity (deal) on which this offer is based. `Filter(multi eq)` |
 | [DocumentCurrency](Crm.Presales.Offers.md#documentcurrency) | [Currencies](General.Currencies.md) | The currency in which the document is issued. All amounts are in this currency. `Required` `Filter(multi eq)` |
 | [DocumentType](Crm.Presales.Offers.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [EndCustomerParty](Crm.Presales.Offers.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. `Filter(multi eq)` `Introduced in version 21.1.2.96` |
 | [EnterpriseCompany](Crm.Presales.Offers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [EnterpriseCompanyLocation](Crm.Presales.Offers.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [FromCompanyDivision](Crm.Presales.Offers.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
@@ -469,6 +470,15 @@ _Type_: **[DocumentTypes](General.DocumentTypes.md)**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+### EndCustomerParty
+
+The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. `Filter(multi eq)` `Introduced in version 21.1.2.96`
+
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => c.LineEndCustomerParty).Distinct( ).OnlyIfSingle( )`
 ### EnterpriseCompany
 
 The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))

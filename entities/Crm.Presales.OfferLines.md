@@ -49,6 +49,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Document](Crm.Presales.OfferLines.md#document) | [Offers](Crm.Presales.Offers.md) | The `Offer`(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. `Required` `Filter(multi eq)` |
 | [LineDiscount](Crm.Presales.OfferLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | When not null, contains the discount policy selected for this line. `Filter(multi eq)` |
+| [LineEndCustomerParty](Crm.Presales.OfferLines.md#lineendcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. `Filter(multi eq)` `Introduced in version 21.1.2.96` |
 | [Offer](Crm.Presales.OfferLines.md#offer) | [Offers](Crm.Presales.Offers.md) | The `Offer`(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Product](Crm.Presales.OfferLines.md#product) | [Products](General.Products.Products.md) | The offered product. `Required` `Filter(multi eq)` |
 | [ProductCode](Crm.Presales.OfferLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Not null, when the product is selected using a coding system code. `Filter(multi eq)` |
@@ -266,6 +267,18 @@ _Supported Filters_: **Equals, EqualsIn**
 
 _Front-End Recalc Expressions:_  
 `obj.DetermineLineDiscount( obj.RequiredDeliveryDate, obj.Offer.Customer, obj.Offer.ShipToCustomer, obj.Product, obj.Quantity, obj.QuantityUnit, obj.Offer.EnterpriseCompany, obj.Offer.EnterpriseCompanyLocation, obj.Offer.PriceList, obj.LineDiscount)`
+### LineEndCustomerParty
+
+The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. `Filter(multi eq)` `Introduced in version 21.1.2.96`
+
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+_Back-End Default Expression:_  
+`obj.Offer.EndCustomerParty`
+
+_Front-End Recalc Expressions:_  
+`obj.Offer.EndCustomerParty`
 ### Offer
 
 The `Offer`(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. `Required` `Filter(multi eq)` `Owner`

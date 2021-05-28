@@ -20,6 +20,7 @@ Offers (quotes) for sales of products. Can contain variants and choice groups. T
 |[Deal_Id](#deal_id)|`uniqueidentifier` |The opportunity (deal) on which this offer is based.|
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency in which the document is issued. All amounts are in this currency|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
+|[End_Customer_Party_Id](#end_customer_party_id)|`uniqueidentifier` |The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -211,6 +212,43 @@ The currency in which the document is issued. All amounts are in this currency
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+
+### End_Customer_Party_Id
+
+
+The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Parties](Gen_Parties.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### End_Customer_Party_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Is_Released
 
