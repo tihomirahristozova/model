@@ -106,35 +106,37 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If there is at least one SalesOrderPaymentPlan for the particular Sales Order, validate that:</p>
-<p>In the Sales Order there is only one 'SalesOrderPaymentPlan.Remainder = True'.</p>
-</td>
+<td>If there is at least one SalesOrderPaymentPlan for the particular Sales Order, validate that:
+<br><br>
+In the Sales Order there is only one 'SalesOrderPaymentPlan.Remainder = True'.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When creating a Sales Order Payment Plan we have to make sure that the Total Amount of the
+<td>When creating a Sales Order Payment Plan we have to make sure that the Total Amount of the
 document is fully distributed amount it's lines, because the exact amount have to be paid by
 the customer.
-<br><br>                                                                                              |
+<br><br>
 In order to make the distribution possible and easier we must specify a line whose Amount is
 a Remainder. If the field is check-marked then the Amount for the particular line is
 calculated automatically by the system. The remainer amount's value is the TotalAmount of the
-Sales Order minus the sum of the Amount of the rest of the Payment Plan Lines.</p>
-<p>There must be only one Payment Plan Line for which the field Remainder is check-marked.</p>
-</td>
+Sales Order minus the sum of the Amount of the rest of the Payment Plan Lines.
+<br><br>
+There must be only one Payment Plan Line for which the field Remainder is check-marked.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>There are no or more than one lines in the payment plan of sales order
+<td>There are no or more than one lines in the payment plan of sales order
 '[Document.DocumentType] [Document.DocumentNo]' that are marked as a 'Remainder'.
-Exactly one line must be a remainder.</p>
-<p><em>Sort Messages By Attribute: InstallmentNumber</em></p>
-</td>
+Exactly one line must be a remainder.
+<br><br>
+<em>Sort Messages By Attribute: InstallmentNumber</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In
 Version</strong></td>
-<td>2018.1</td>
+<td><p>2018.1</p>
+<p><br><br></p>
+</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

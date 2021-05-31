@@ -90,11 +90,13 @@
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td><p>BonusProgram,</p>
-<p>PromotionalPackage,</p>
-<p>ProductGroup, </p>
-<p>TargetAmountCurrency</p>
-</td>
+<td>BonusProgram,
+<br><br>
+PromotionalPackage,
+<br><br>
+ProductGroup, 
+<br><br>
+TargetAmountCurrency</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -119,18 +121,22 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(TargetType = SalesAmount)</p>
-<p>BonusProgram = null;
-PromotionalPackage = null;</p>
-<p>IF(TargetType = NumberOfAppliedBonusPrograms)</p>
-<p>ProductGroup = null;
-TargetAmountCurrency = null;
-PromotionalPackage = null;</p>
-<p>IF(TargetType = NumberOfPromotionalPackages)</p>
-<p>BonusProgram = null;
+<td>IF(TargetType = SalesAmount)
+<br><br>
+BonusProgram = null;
+PromotionalPackage = null;
+<br><br>
+IF(TargetType = NumberOfAppliedBonusPrograms)
+<br><br>
 ProductGroup = null;
-TargetAmountCurrency = null;</p>
-</td>
+TargetAmountCurrency = null;
+PromotionalPackage = null;
+<br><br>
+IF(TargetType = NumberOfPromotionalPackages)
+<br><br>
+BonusProgram = null;
+ProductGroup = null;
+TargetAmountCurrency = null;</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -144,9 +150,9 @@ selected Target Type.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 20</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 20
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

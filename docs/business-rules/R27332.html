@@ -116,13 +116,17 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (Payment.ParentDocument.DocumentType.EntityName == Transfer)</p>
-<p>Validate that:</p>
-<p>SUM(all at least released non-voided Payments which ParentDocument == currentTransfer AND
+<td>If (Payment.ParentDocument.DocumentType.EntityName == Transfer)
+<br><br>
+Validate that:
+<br><br>
+SUM(all at least released non-voided Payments which ParentDocument == currentTransfer AND
 Payment.Direction == Expense) &gt;= SUM (all at least released non-voided Payments which
-ParentDocument == currentTransfer AND Payment.Direction == Income)</p>
-<p>(in all SUMs the current Payment.TotalAmount is included)</p>
-</td>
+ParentDocument == currentTransfer AND Payment.Direction == Income)
+<br><br>
+<br><br>
+<br><br>
+(in all SUMs the current Payment.TotalAmount is included)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -142,9 +146,9 @@ currency], [sum of the total income and its currency]</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2017</p>
-<p>Updated: 2019.1 - &quot;Revocable&quot; changed from &quot;NO&quot; to &quot;YES&quot;</p>
-</td>
+<td>Introduced: 2017
+<br><br>
+Updated: 2019.1 - &quot;Revocable&quot; changed from &quot;NO&quot; to &quot;YES&quot;</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

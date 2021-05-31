@@ -115,34 +115,38 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>WarehouseZone.GetNextCode(parentZone):</p>
+<td><p>WarehouseZone.GetNextCode(parentZone):
+<br><br></p>
 <ul>
 <li>if Zone.Warehouse.Zones (different from current) are null, return &quot;01&quot;</li>
-<li>if parentZone is null :</li>
-</ul>
-<p>lastCode = Warehouse.Zones (different from current).Where(Parent == null)
+<li>if parentZone is null :
+<br><br>
+lastCode = Warehouse.Zones (different from current).Where(Parent == null)
 .OrderByDescending(Zone.Code).FirstOrDefault().Code;
-return lastCode.IncrementNumberInString();</p>
-<ul>
+return lastCode.IncrementNumberInString();
+<br><br></li>
 <li>if parentZone is not null and there are Warehouse.Zones(different from
-current).Where(Parent == parentZone)</li>
-</ul>
-<p>lastCode = Warehouse.Zones (different from current).Where(Parent == parentZone)
+current).Where(Parent == parentZone)
+<br><br>
+lastCode = Warehouse.Zones (different from current).Where(Parent == parentZone)
 .OrderByDescending(Zone.Code).FirstOrDefault().Code;
-return lastCode.IncrementNumberInString();</p>
-<ul>
+return lastCode.IncrementNumberInString();
+<br><br></li>
 <li>if parentZone is not null but there no Warehouse.Zones(different from
 current).Where(Parent == parentZone)
-return parentZone.Code + &quot;-01&quot;;</li>
+return parentZone.Code + &quot;-01&quot;;
+<br><br>
+<br><br></li>
 </ul>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>Determines the next Code which should be set for the Warehouse Zone.</p>
-<p>(RecalcExpression)</p>
-<p>(LateDefault)</p>
-</td>
+<td>Determines the next Code which should be set for the Warehouse Zone.
+<br><br>
+(RecalcExpression)
+<br><br>
+(LateDefault)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -150,9 +154,9 @@ return parentZone.Code + &quot;-01&quot;;</li>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

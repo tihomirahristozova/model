@@ -116,16 +116,19 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (InvoiceLine.SalesOrderAmount != null)
-{</p>
-<p>IF( InvoiceLine.Product is not NULL AND oldQuantity != newQuantity - <em>considering its Value
-and QuantityUnit</em>)</p>
-<p>{oldQuantity = oldQuantity .ConvertTo(newQuantity .Unit, InvoiceLine.Product); <em>- old
+<td>if (InvoiceLine.SalesOrderAmount != null)
+{
+<br><br>
+IF( InvoiceLine.Product is not NULL AND oldQuantity != newQuantity - <em>considering its Value
+and QuantityUnit</em>)
+<br><br>
+{oldQuantity = oldQuantity .ConvertTo(newQuantity .Unit, InvoiceLine.Product); <em>- old
 Quantity is converted to newQuantity's Unit</em>
-var divisor =&gt; IF(oldQuantity  == 0 )  then divisor =1  else divisor = oldQuantity ;</p>
-<p>InvoiceLine.SalesOrderAmount = (InvoiceLine.SalesOrderAmount * newQuantity ) / divisor;}</p>
-<p>}</p>
-</td>
+var divisor =&gt; IF(oldQuantity  == 0 )  then divisor =1  else divisor = oldQuantity ;
+<br><br>
+InvoiceLine.SalesOrderAmount = (InvoiceLine.SalesOrderAmount * newQuantity ) / divisor;}
+<br><br>
+}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

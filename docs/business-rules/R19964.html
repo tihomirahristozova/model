@@ -115,12 +115,13 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (Active == true &amp;&amp; ProductGroup != Null &amp;&amp; ProductGroup.RequiredProperties !=
-Null)</p>
-<p>, validate that:</p>
-<p>ProductGroup.RequiredProperties.All(RequiredProperty.Required==false ||
-Product.CustomProperties[RequiredProperty.Property.Code]!= null )</p>
-</td>
+<td>If (Active == true &amp;&amp; ProductGroup != Null &amp;&amp; ProductGroup.RequiredProperties !=
+Null)
+<br><br>
+, validate that:
+<br><br>
+ProductGroup.RequiredProperties.All(RequiredProperty.Required==false ||
+Product.CustomProperties[RequiredProperty.Property.Code]!= null )</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -131,10 +132,10 @@ correctly when they are all set as Custom Properties for the Product and have va
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Product with code '{PartNumber}' can not be activated.</p>
-<p>There are no values for all required custom properties -
-{JOIN(RequiredProperties.Property.Name)}.</p>
-</td>
+<td>Product with code '{PartNumber}' can not be activated.
+<br><br>
+There are no values for all required custom properties -
+{JOIN(RequiredProperties.Property.Name)}.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>

@@ -106,22 +106,23 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For each LeaseContractLine, validate that:</p>
-<p>The &quot;LeaseContractLine. RentalAsset&quot; has not already been rented with another
+<td><p>For each LeaseContractLine, validate that:
+<br><br>
+The &quot;LeaseContractLine. RentalAsset&quot; has not already been rented with another
 LeaseContractLine (including the lines of the current document) for which &quot;LeaseContract.State
 &gt;= Released&quot; and &quot;LeaseContract.Void = False&quot; and it's Leasing Period* overlaps with the
-Leasing Period of the current LeaseContractLine.</p>
+Leasing Period of the current LeaseContractLine.
+<br><br></p>
 <ul>
-<li><p>The leasing Leasing Period is determined as follows:</p>
-</li>
-<li><p>Start date is the earliest TransactionTimestamp of a rental Transactions that refer to the
+<li>The leasing Leasing Period is determined as follows:
+<br><br></li>
+<li>Start date is the earliest TransactionTimestamp of a rental Transactions that refer to the
 particular LeaseContract for which &quot;TransactionType = Deliver&quot;. If no rental Transaction is
-found, then Start date is the &quot;LeaseContractLine.StartDate&quot;.</p>
-</li>
-<li><p>End date is the latest TransactionTimestamp of a rental Transactions that refer to the
+found, then Start date is the &quot;LeaseContractLine.StartDate&quot;.
+<br><br></li>
+<li>End date is the latest TransactionTimestamp of a rental Transactions that refer to the
 particular LeaseContract for which &quot;TransactionType = Receive&quot;. If no rental Transaction is
-found, then Start date is the &quot;LeaseContractLine.EndDate&quot;.</p>
-</li>
+found, then Start date is the &quot;LeaseContractLine.EndDate&quot;.</li>
 </ul>
 </td>
 </tr>
@@ -129,29 +130,31 @@ found, then Start date is the &quot;LeaseContractLine.EndDate&quot;.</p>
 <td><strong>Description</strong></td>
 <td><p>The same Asset can't be rented twice for the same period of time. For this reason, each line of
 the particular Lease Contract is validated, that the Rental Asset has not already been rented
-with another line (including the lines of the current document).</p>
-<p>A Rental Asset is considered as rented if:</p>
+with another line (including the lines of the current document).
+<br><br>
+A Rental Asset is considered as rented if:
+<br><br></p>
 <ul>
-<li><p>it is used in a Lease Contract with a Document State Released, Completed or Closed that is
-not Voided;</p>
-</li>
-<li><p>the Leasing Period of the line overlaps with the Leasing Period of the current
-LeaseContractLine.</p>
-</li>
-</ul>
-<p>The Leasing Period is determined by the Transaction Timestamps of the rental Transaction with
+<li>it is used in a Lease Contract with a Document State Released, Completed or Closed that is
+not Voided;
+<br><br></li>
+<li>the Leasing Period of the line overlaps with the Leasing Period of the current
+LeaseContractLine.
+<br><br>
+The Leasing Period is determined by the Transaction Timestamps of the rental Transaction with
 which it has been delivered or received. If for the particular Rental Asset there are no rental
 Transactions, then the start and end date of this period are determined by the Start and End
-Date set in the Lease Contract Lines.</p>
+Date set in the Lease Contract Lines.</li>
+</ul>
 </td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Line number '[LineNo]' contains an asset '[RentalAssetCodе]' which has already been
+<td>Line number '[LineNo]' contains an asset '[RentalAssetCodе]' which has already been
 rented with another rental contract for the same leasing period. For more information, see
-report 'Assets status'.</p>
-<p><em>Sort Messages By Attribute: LineNo</em></p>
-</td>
+report 'Assets status'.
+<br><br>
+<em>Sort Messages By Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

@@ -110,34 +110,43 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>if (VATPeriodStart &lt; 2014/01/01)</p>
-<p><strong>for each</strong> Entries[ApplyDate &lt;=BGVATDeclaration.VATPeriodEnd; ApplyDate &gt;=
+<td>Validate that:
+<br><br>
+if (VATPeriodStart &lt; 2014/01/01)
+<br><br>
+<strong>for each</strong> Entries[ApplyDate &lt;=BGVATDeclaration.VATPeriodEnd; ApplyDate &gt;=
 BGVATDeclaration.VATPeriodStart; Entry.Void = False; Entry.State &gt;= 30; EnterpriseCompany =
 BGVATDeclaration.EnterpriseCompany; BGVATPeriodStart &lt;
-2014/01/01].<strong>ReferencedDocumentType:</strong></p>
-<p>BGVATDocumentTypeVATCode[DocumentType = ReferencedDocumentType &amp;&amp; VATCode != null].Count()
-== 1</p>
-<p>else</p>
-<p><strong>for each</strong> Entries[ApplyDate &lt;=BGVATDeclaration.VATPeriodEnd; ApplyDate &gt;=
+2014/01/01].<strong>ReferencedDocumentType:</strong>
+<br><br>
+BGVATDocumentTypeVATCode[DocumentType = ReferencedDocumentType &amp;&amp; VATCode != null].Count()
+== 1
+<br><br>
+else
+<br><br>
+<strong>for each</strong> Entries[ApplyDate &lt;=BGVATDeclaration.VATPeriodEnd; ApplyDate &gt;=
 BGVATDeclaration.VATPeriodStart; Entry.Void = False; Entry.State &gt;= 30; EnterpriseCompany =
-BGVATDeclaration.EnterpriseCompany; CashReportingMode = False].<strong>ReferencedDocumentType:</strong></p>
-<p>BGVATDocumentTypeVATCode[DocumentType = ReferencedDocumentType &amp;&amp; VATCode != null ].Count()
-== 1</p>
-<p>&amp;&amp;</p>
-<p><strong>for each</strong> Entries[ApplyDate &lt;=BGVATDeclaration.VATPeriodEnd; ApplyDate &gt;=
+BGVATDeclaration.EnterpriseCompany; CashReportingMode = False].<strong>ReferencedDocumentType:</strong>
+<br><br>
+BGVATDocumentTypeVATCode[DocumentType = ReferencedDocumentType &amp;&amp; VATCode != null ].Count()
+== 1
+<br><br>
+&amp;&amp;
+<br><br>
+<strong>for each</strong> Entries[ApplyDate &lt;=BGVATDeclaration.VATPeriodEnd; ApplyDate &gt;=
 BGVATDeclaration.VATPeriodStart; Entry.Void = False; Entry.State &gt;= 30; EnterpriseCompany =
-BGVATDeclaration.EnterpriseCompany; CashReportingMode = True].<strong>ReferencedDocumentType:</strong></p>
-<p>BGVATDocumentTypeVATCode[DocumentType = ReferencedDocumentType &amp;&amp; CashReportingVATCode !=
-null].Count() == 1</p>
-</td>
+BGVATDeclaration.EnterpriseCompany; CashReportingMode = True].<strong>ReferencedDocumentType:</strong>
+<br><br>
+BGVATDocumentTypeVATCode[DocumentType = ReferencedDocumentType &amp;&amp; CashReportingVATCode !=
+null].Count() == 1</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td><p>VAT codes are used when creating VAT export files for the specified Document Type. The VAT
 codes are required by the government and their values are government-regulated. The
 declarations which are submitted in the National Revenue Agency must contain entries with
-specified VAT codes and a specified VAT code is as follows:</p>
+specified VAT codes and a specified VAT code is as follows:
+<br><br></p>
 <ul>
 <li>if the start period of the BGVATDeclaration is before 01 Jan 2014 , then the document
 type (referenced by the VAT entry) must have record in Document Type VAT Codes table with

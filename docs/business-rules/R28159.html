@@ -106,25 +106,37 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (Depreciation1.DepreciationRange == AllAssets)</p>
-<p>there is no other Depreciation with the following data:</p>
-<p>Depreciation2.EnterpriseCompany == Depreciation1.EnterpriseCompany</p>
-<p>Depreciation2.Void == False</p>
-<p>Depreciation2.DepreciationRange == AllAssets</p>
-<p>Depreciation2.DocumentState &gt;= Released (30)</p>
-<p>(Depreciation1.StartDate &lt;= Depreciation2.StartDate AND Depreciation1.EndDate
-&gt;= Depreciation2.EndDate)</p>
-<p>OR</p>
-<p>(Depreciation1.StartDate &gt;= Depreciation2.StartDate AND Depreciation1.EndDate
-&lt;= Depreciation2.EndDate)</p>
-<p>OR</p>
-<p>(Depreciation1.StartDate &gt;= Depreciation2.StartDate AND Depreciation1.StartDate&lt;
-Depreciation2.EndDate)</p>
-<p>OR</p>
-<p>(Depreciation1.StartDate &lt;= Depreciation2.StartDate AND Depreciation1.EndDate&gt;
-Depreciation2.StartDate)</p>
-</td>
+<td>Validate that:
+<br><br>
+If (Depreciation1.DepreciationRange == AllAssets)
+<br><br>
+there is no other Depreciation with the following data:
+<br><br>
+Depreciation2.EnterpriseCompany == Depreciation1.EnterpriseCompany
+<br><br>
+Depreciation2.Void == False
+<br><br>
+Depreciation2.DepreciationRange == AllAssets
+<br><br>
+Depreciation2.DocumentState &gt;= Released (30)
+<br><br>
+(Depreciation1.StartDate &lt;= Depreciation2.StartDate AND Depreciation1.EndDate
+&gt;= Depreciation2.EndDate)
+<br><br>
+OR
+<br><br>
+(Depreciation1.StartDate &gt;= Depreciation2.StartDate AND Depreciation1.EndDate
+&lt;= Depreciation2.EndDate)
+<br><br>
+OR
+<br><br>
+(Depreciation1.StartDate &gt;= Depreciation2.StartDate AND Depreciation1.StartDate&lt;
+Depreciation2.EndDate)
+<br><br>
+OR
+<br><br>
+(Depreciation1.StartDate &lt;= Depreciation2.StartDate AND Depreciation1.EndDate&gt;
+Depreciation2.StartDate)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

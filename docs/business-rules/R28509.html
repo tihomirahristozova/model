@@ -110,25 +110,28 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For each line validate that:</p>
-<p>OutputOrderLine.WorkOrderItem.WorkOrder.Void == false</p>
-</td>
+<td>For each line validate that:
+<br><br>
+OutputOrderLine.WorkOrderItem.WorkOrder.Void == false</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>There are cases when a document or a referred document becomes voided while a user is using
+<td>There are cases when a document or a referred document becomes voided while a user is using
 data from the voided document. For example someone may void a WorkOrder while a user is using
-its work order items and select them in an OutputOrder lines.</p>
-<p>The current validation prevents the user to enter and release such OutputOrders.</p>
-</td>
+its work order items and select them in an OutputOrder lines.
+<br><br>
+The current validation prevents the user to enter and release such OutputOrders.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Line {LineOrd} of {OutputOrderLine.OutputOrder.DocumentText} refers to a Work Order Item
-which is a part of a voided Work Order.</p>
-<p>Please, select a correct Work Order Item.</p>
-<p><em>Sort Messages By Attribute: LineOrd</em></p>
-</td>
+<td>Line {LineOrd} of {OutputOrderLine.OutputOrder.DocumentText} refers to a Work Order Item
+which is a part of a voided Work Order.
+<br><br>
+Please, select a correct Work Order Item.
+<br><br>
+<br><br>
+<br><br>
+<em>Sort Messages By Attribute: LineOrd</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

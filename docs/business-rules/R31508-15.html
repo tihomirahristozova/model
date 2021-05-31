@@ -116,15 +116,16 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(oldCurrency is not null and CurrencyDirectory is not null)</p>
-<p>foreach (line in Lines)
-if (line.UnitPrice.Value != 0) {</p>
-<p>IF(new Amount(line.UnitPrice.Value, oldCurrency).ConvertToOrDefault(DocumentCurrency,
+<td>IF(oldCurrency is not null and CurrencyDirectory is not null)
+<br><br>
+foreach (line in Lines)
+if (line.UnitPrice.Value != 0) {
+<br><br>
+IF(new Amount(line.UnitPrice.Value, oldCurrency).ConvertToOrDefault(DocumentCurrency,
 CurrencyDirectory)) is not null
 line.UnitPrice= new Amount(line.UnitPrice.Value,
 oldCurrency).ConvertToOrDefault(DocumentCurrency, CurrencyDirectory)
-if (null) IssueWarning once</p>
-</td>
+if (null) IssueWarning once</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

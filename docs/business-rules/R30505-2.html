@@ -116,17 +116,17 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(Supplier!=null)</p>
-<p>PlannedDeliveryDate= DocumentDate.ADDDAYS(Supplier.DefaultDeliveryTermDays)</p>
-</td>
+<td>IF(Supplier!=null)
+<br><br>
+PlannedDeliveryDate= DocumentDate.ADDDAYS(Supplier.DefaultDeliveryTermDays)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When the Supplier or the Document Date is changed, Planned Delivery Date should be
+<td>When the Supplier or the Document Date is changed, Planned Delivery Date should be
 recalculated as the Document Date plus the number of days specified in Default Delivery Term
-Days in the supplier's definition.</p>
-<p>(RecalcExpression)</p>
-</td>
+Days in the supplier's definition.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

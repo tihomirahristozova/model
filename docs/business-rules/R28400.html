@@ -106,19 +106,27 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>if (WorkOrder.OldState &lt; 30 &amp;&amp; WorkOrder.NewState &gt;= 30)</p>
-<p>For each work order item ingredient:</p>
-<p>If (WorkOrderItemIngredient.DistributeBy == Measurement)</p>
-<p>{ </p>
-<p>for each Work Order item:</p>
-<p>WorkOrderItem.Product.BaseMeasurementCategory ==
-WorkOrderItemIngredient.DistributeByMeasurementCategory </p>
-<p>||</p>
-<p>WorkOrderItem.Product.ProductDimensions(MeasurementCategory ==
-WorkOrderItemIngredient.DistributeByMeasurementCategory).Count() &gt;= 1</p>
-<p>}</p>
-</td>
+<td>Validate that:
+<br><br>
+if (WorkOrder.OldState &lt; 30 &amp;&amp; WorkOrder.NewState &gt;= 30)
+<br><br>
+For each work order item ingredient:
+<br><br>
+If (WorkOrderItemIngredient.DistributeBy == Measurement)
+<br><br>
+{ 
+<br><br>
+for each Work Order item:
+<br><br>
+WorkOrderItem.Product.BaseMeasurementCategory ==
+WorkOrderItemIngredient.DistributeByMeasurementCategory 
+<br><br>
+||
+<br><br>
+WorkOrderItem.Product.ProductDimensions(MeasurementCategory ==
+WorkOrderItemIngredient.DistributeByMeasurementCategory).Count() &gt;= 1
+<br><br>
+}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -131,16 +139,17 @@ Products</a>.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>There is no conversion ratio between
+<td>There is no conversion ratio between
 {WorkOrderItem.ProducedQuantityUnit.MeasurementCategory.Name} and
 {WorkOrderItemIngredient.DistributeByMeasurementCategory.MeasurementCategory.Name} for
 product {WorkOrderItem.ProductCode}.
 The conversion ration is required for the distribution of ingredient
 {WorkOrderItemIngredient.Material.PartNumber}.
 Please specify such ratio or change the measurement category used in the ingredient
-distribution.</p>
-<p>*Sort Messages By Attribute: *<strong>LineOrd</strong></p>
-</td>
+distribution.
+<br><br>
+<br><br>
+*Sort Messages By Attribute: *<strong>LineOrd</strong></td>
 </tr>
 <tr>
 <td><strong>Introduced In

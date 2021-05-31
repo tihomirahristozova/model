@@ -116,18 +116,20 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(Product.ProductType.IsServiced)</p>
-<p>GuaranteePeriodDays = Product.GuaranteePeriodDays</p>
-<p>ELSE</p>
-<p>GuaranteePeriodDays =null</p>
-</td>
+<td>IF(Product.ProductType.IsServiced)
+<br><br>
+GuaranteePeriodDays = Product.GuaranteePeriodDays
+<br><br>
+ELSE
+<br><br>
+GuaranteePeriodDays =null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Product is changed, if the Product is serviced, Guarantee Period Days is set to the
-Guarantee Period Days from the product's definition.</p>
-<p>(RecalcExpression)</p>
-</td>
+<td>When Product is changed, if the Product is serviced, Guarantee Period Days is set to the
+Guarantee Period Days from the product's definition.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

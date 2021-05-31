@@ -106,17 +106,21 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (SalesOrder.DocumentType.DocumentTypePaymentOptions[EnterpriseCompany ==
-SalesOrder.EnterpriseCompany].DeferredPaymentMinimalAmmount != null</p>
-<p>&amp;&amp; </p>
-<p>SalesOrder.DocumentType.DocumentTypePaymentOptions[EnterpriseCompany ==
+<td>Validate that:
+<br><br>
+If (SalesOrder.DocumentType.DocumentTypePaymentOptions[EnterpriseCompany ==
+SalesOrder.EnterpriseCompany].DeferredPaymentMinimalAmmount != null
+<br><br>
+&amp;&amp; 
+<br><br>
+SalesOrder.DocumentType.DocumentTypePaymentOptions[EnterpriseCompany ==
 SalesOrder.EnterpriseCompany].DeferredPaymentMinimalAmmount &gt; SalesOrder.AmountToPay*
-//converted SalesOrder currency)</p>
-<p>SalesOrderPaymentPlans[SalesOrder == currentSalesOrder].Count() == 0</p>
-<p>* For more information about the calculation of AmountToPay, see <a href="https://confluence.erp.net/display/techdoc/Amount+To+Pay">Amount To
-Pay</a>.</p>
-</td>
+//converted SalesOrder currency)
+<br><br>
+SalesOrderPaymentPlans[SalesOrder == currentSalesOrder].Count() == 0
+<br><br>
+* For more information about the calculation of AmountToPay, see <a href="https://confluence.erp.net/display/techdoc/Amount+To+Pay">Amount To
+Pay</a>.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -131,12 +135,12 @@ policies.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Document {DocumentText} has a payment plan. This defines deferred payment which is not
+<td>Document {DocumentText} has a payment plan. This defines deferred payment which is not
 allowed because the Sales Order amount is less than the deferred payment minimum amount -
 {SalesOrder.DocumentType.DocumentTypePaymentOption.DeferredPaymentMinimalAmount}
-{SalesOrder.DocumentType.DocumentTypePaymentOption.DeferredPaymentMinimalAmmountCurrency}.</p>
-<p>Please delete the payment plan.</p>
-</td>
+{SalesOrder.DocumentType.DocumentTypePaymentOption.DeferredPaymentMinimalAmmountCurrency}.
+<br><br>
+Please delete the payment plan.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

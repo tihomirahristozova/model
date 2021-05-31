@@ -115,44 +115,55 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If OriginalPaymentTransaction is not NULL Then Check That:</p>
-<p>Direction == OriginalPaymentTransaction.Direction</p>
-<p>Sign (TotalAmount) != Sign (OriginalPaymentTransaction.TotalAmount)</p>
-<p>OriginalPaymentTransaction.State &gt;= Completed</p>
-<p>ReversalReason is not NULL</p>
-</td>
+<td>If OriginalPaymentTransaction is not NULL Then Check That:
+<br><br>
+Direction == OriginalPaymentTransaction.Direction
+<br><br>
+Sign (TotalAmount) != Sign (OriginalPaymentTransaction.TotalAmount)
+<br><br>
+OriginalPaymentTransaction.State &gt;= Completed
+<br><br>
+ReversalReason is not NULL</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>If the Payment Transаction is Reversal (the field Original Payment Transaction has a
-value), then on Releasing check that requirements are met.</p>
-<p>The requirements are:</p>
-<p>- The directions of the reversal and the original payment transactions must be the
-same.</p>
-<p>- The sign of the total amount must be opposite to the sign of the total amount of
-the original payment.</p>
-<p>- The document state of the original payment transaction must be Completed or higher.</p>
-<p>- The field &quot;Reversal Reason&quot; must have a value.</p>
-</td>
+<td>If the Payment Transаction is Reversal (the field Original Payment Transaction has a
+value), then on Releasing check that requirements are met.
+<br><br>
+The requirements are:
+<br><br>
+- The directions of the reversal and the original payment transactions must be the
+same.
+<br><br>
+- The sign of the total amount must be opposite to the sign of the total amount of
+the original payment.
+<br><br>
+- The document state of the original payment transaction must be Completed or higher.
+<br><br>
+- The field &quot;Reversal Reason&quot; must have a value.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field 'Original Payment Transaction' in document '{DocumentText}' is filled in
-but not all requirements for a reversal payment transaction are met.</p>
-<p>The requirements for reversal payment transactions are:</p>
-<p>- The directions of the reversal and the original payment transactions must be the
-same.</p>
-<p>- The sign of the total amount must be opposite to the sign of the total amount of
-the original payment.</p>
-<p>- The document state of the original payment transaction must be Completed or higher.</p>
-<p>- The field 'Reversal Reason' must have a value.</p>
-</td>
+<td>The field 'Original Payment Transaction' in document '{DocumentText}' is filled in
+but not all requirements for a reversal payment transaction are met.
+<br><br>
+The requirements for reversal payment transactions are:
+<br><br>
+- The directions of the reversal and the original payment transactions must be the
+same.
+<br><br>
+- The sign of the total amount must be opposite to the sign of the total amount of
+the original payment.
+<br><br>
+- The document state of the original payment transaction must be Completed or higher.
+<br><br>
+- The field 'Reversal Reason' must have a value.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2020.1</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 2020.1
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

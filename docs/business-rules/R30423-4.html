@@ -115,13 +115,15 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>unshippedQuantity = ShipmentOrderLine.GetUnshippedQuantity();
+<td>unshippedQuantity = ShipmentOrderLine.GetUnshippedQuantity();
 ShipmentLine .QuantityUnit = unshippedQuantity.Unit;
-ShipmentLine .Quantity = unshippedQuantity;</p>
-<p>using NoEvents</p>
-<p>ShipmentLine .ParentSalesOrderLine = ShipmentOrderLine.ParentSalesOrderLine</p>
-<p>ShipmentLine.Lot = ShipmentLine.ParentSalesOrderLine.Lot</p>
-</td>
+ShipmentLine .Quantity = unshippedQuantity;
+<br><br>
+using NoEvents
+<br><br>
+ShipmentLine .ParentSalesOrderLine = ShipmentOrderLine.ParentSalesOrderLine
+<br><br>
+ShipmentLine.Lot = ShipmentLine.ParentSalesOrderLine.Lot</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

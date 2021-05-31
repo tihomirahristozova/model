@@ -116,19 +116,22 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(Store.Currency==null)</p>
-<p>IF(Store.EnterpriseCompany!=NULL)</p>
-<p>Store.Currency = Store.EnterpriseCompany.BaseCurrency</p>
-<p>ELSE</p>
-<p>Store.Currency = CurrentEnterpriseCompany.BaseCurrency</p>
-</td>
+<td>IF(Store.Currency==null)
+<br><br>
+IF(Store.EnterpriseCompany!=NULL)
+<br><br>
+Store.Currency = Store.EnterpriseCompany.BaseCurrency
+<br><br>
+ELSE
+<br><br>
+Store.Currency = CurrentEnterpriseCompany.BaseCurrency</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>If Store's Currency is not set, it is equal to the Store's Enterprise Company's Base
-Currency or if it's Null to the Base Currency of the Enterprise Company of the Transaction.</p>
-<p>(RecalcExpression)</p>
-</td>
+<td>If Store's Currency is not set, it is equal to the Store's Enterprise Company's Base
+Currency or if it's Null to the Base Currency of the Enterprise Company of the Transaction.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

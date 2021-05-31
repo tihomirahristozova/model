@@ -98,11 +98,13 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td><p>AttributeChanged(ConsumedQuantity)</p>
-<p>AttributeChanged(ConsumedQuantityUnit)</p>
-<p>AttributeChanged(Product)</p>
-<p>AttributeChanged(ConsumedQuantityBase)</p>
-</td>
+<td>AttributeChanged(ConsumedQuantity)
+<br><br>
+AttributeChanged(ConsumedQuantityUnit)
+<br><br>
+AttributeChanged(Product)
+<br><br>
+AttributeChanged(ConsumedQuantityBase)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -119,18 +121,19 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF( ConsumedQuantity != null &amp;&amp; ConsumedQuantityUnit != null &amp;&amp; Product != null)</p>
-<p>ConsumedStandardQuantityBase = ConsumedQuantity.ConvertTo(Product.BaseUnit, Product) </p>
-</td>
+<td>IF( ConsumedQuantity != null &amp;&amp; ConsumedQuantityUnit != null &amp;&amp; Product != null)
+<br><br>
+ConsumedStandardQuantityBase = ConsumedQuantity.ConvertTo(Product.BaseUnit, Product) </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Product, Consumed Quantity or  Consumed Quantity Unit is changed,
+<td>When Product, Consumed Quantity or  Consumed Quantity Unit is changed,
 Consumed Standard Quantity Base is calculated as the Consumed Quantity is converted
-to the Product's Base Unit.</p>
-<p>(RecalcExpression)</p>
-<p>(LateDefault)</p>
-</td>
+to the Product's Base Unit.
+<br><br>
+(RecalcExpression)
+<br><br>
+(LateDefault)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -138,9 +141,9 @@ to the Product's Base Unit.</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

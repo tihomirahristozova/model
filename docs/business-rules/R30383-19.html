@@ -117,22 +117,27 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(UnitPrice!=null AND Quantity!=null)</p>
-<p>line.CalculateLineAmount(Quantity,UnitPrice,LineStandardDiscountPercent,
-LineCustomDiscountPercent,Invoice.DocumentCurrency)</p>
-<p><strong>CalculateLineAmount</strong> has the following action:</p>
-<p>IF(LineAmount != 0 and LineAmount!=null and Quantity=0) LineAmount = current LineAmount</p>
-<p>LineAmount=(Quantity*Price
-*(1-LineStandardDiscountPercent)*(1-LineCustomDiscountPercent)).Round()</p>
-</td>
+<td>IF(UnitPrice!=null AND Quantity!=null)
+<br><br>
+line.CalculateLineAmount(Quantity,UnitPrice,LineStandardDiscountPercent,
+LineCustomDiscountPercent,Invoice.DocumentCurrency)
+<br><br>
+<br><br>
+<br><br>
+<strong>CalculateLineAmount</strong> has the following action:
+<br><br>
+IF(LineAmount != 0 and LineAmount!=null and Quantity=0) LineAmount = current LineAmount
+<br><br>
+LineAmount=(Quantity*Price
+*(1-LineStandardDiscountPercent)*(1-LineCustomDiscountPercent)).Round()</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When any of the components that form the Line Amount value is changed, the Line Amount should
+<td>When any of the components that form the Line Amount value is changed, the Line Amount should
 be recalculated. Except for the case when the line is for amount only, then Line Amount is
-directly entered and is not a result of any calculations.</p>
-<p>(RecalcExpression)</p>
-</td>
+directly entered and is not a result of any calculations.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

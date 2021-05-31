@@ -110,27 +110,34 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (StandardQuantity == NULL)</p>
-<p>{</p>
-<p>    if (LogisticsDocumentLine.Product.AllowVariableMeasurementRatios == False) </p>
-<p>    {StandardQuantity = QuantityBase;}</p>
-<p>    else {StandardQuantity = CONVERT(Quantity);}</p>
-<p>}</p>
-</td>
+<td>if (StandardQuantity == NULL)
+<br><br>
+{
+<br><br>
+    if (LogisticsDocumentLine.Product.AllowVariableMeasurementRatios == False) 
+<br><br>
+    {StandardQuantity = QuantityBase;}
+<br><br>
+    else {StandardQuantity = CONVERT(Quantity);}
+<br><br>
+}
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The field Standard Quantity contains the equivalence of the Quantity calculated in base
-measurement unit. </p>
-<p>It is very important Standard Quantity to have values in all logistics document lines.
+<td>The field Standard Quantity contains the equivalence of the Quantity calculated in base
+measurement unit. 
+<br><br>
+It is very important Standard Quantity to have values in all logistics document lines.
 The field is used by the generation procedures to determine whether the quantities of the
-document are fully exhausted by its child documents or not.</p>
-<p>In order to make sure that the field is filled in, if Standard Quantity does not have a
+document are fully exhausted by its child documents or not.
+<br><br>
+In order to make sure that the field is filled in, if Standard Quantity does not have a
 value, the current rule calculates Standard Quantity and sets its value. If the product in
 the particular line does not support Variable Measurement Ratios, then Standard Quantity is
 copied from Quantity Base. Otherwise, the value is calculated from Quantity using the
-measurement ratios.</p>
-</td>
+measurement ratios.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

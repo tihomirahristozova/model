@@ -115,38 +115,47 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>calls Customer.DetermineShipToCustomer(EntepriseCompany, EnterpriseCompanyLocation,
-currentShipToCustomer):</p>
-<p>chidlrenParties = Query&lt;Customer&gt;().Where(c =&gt;
+<td>calls Customer.DetermineShipToCustomer(EntepriseCompany, EnterpriseCompanyLocation,
+currentShipToCustomer):
+<br><br>
+chidlrenParties = Query&lt;Customer&gt;().Where(c =&gt;
 c.Party.ParentParty == this.Party &amp;&amp;
-c.Party.PartyType == PartiesRepository.PartyType.CompanyLocation);</p>
-<p>if (enterpriseCompany != null)
+c.Party.PartyType == PartiesRepository.PartyType.CompanyLocation);
+<br><br>
+if (enterpriseCompany != null)
 children = children.Where(c =&gt; (c.EnterpriseCompany ?? enterpriseCompany) ==
 enterpriseCompany);
 if (enterpriseCompanyLocation != null)
 children = children.Where(c =&gt; (c.ServicedByEnterpriseCompanyLocation ??
-enterpriseCompanyLocation) == enterpriseCompanyLocation);</p>
-<p>chidlrenParties = chidlrenParties.Take(2);</p>
-<p>if(chidlrenParties.Count==1)</p>
-<p>return chidlrenParty</p>
-<p>else if currentShipToCustomer is not in the childrenParties list, return null;</p>
-<p>else return currentShipToCustomer;</p>
-</td>
+enterpriseCompanyLocation) == enterpriseCompanyLocation);
+<br><br>
+chidlrenParties = chidlrenParties.Take(2);
+<br><br>
+if(chidlrenParties.Count==1)
+<br><br>
+return chidlrenParty
+<br><br>
+else if currentShipToCustomer is not in the childrenParties list, return null;
+<br><br>
+else return currentShipToCustomer;</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td><p>The rule sets Ship To Customer when Cutomer is changed, but only if there is exactly
-one customer which meets the following conditions:</p>
+one customer which meets the following conditions:
+<br><br></p>
 <ul>
 <li>Parent Party = Customer.Party</li>
 <li>Party Type = CompanyLocation</li>
 <li>Enterprise Company = current Enterprise Company</li>
-<li>Serviced By Enterprise Company Location = current Enterprise Company Location</li>
-</ul>
-<p>If there are no or more than one results and there is a value in Ship To Customer, it
+<li>Serviced By Enterprise Company Location = current Enterprise Company Location
+<br><br>
+If there are no or more than one results and there is a value in Ship To Customer, it
 is checked if the value meets the conditions. If is meets them, the value is not
-recalculated and remains the same, otherwise Ship To Customer becomes empty.</p>
-<p>(RecalcExpression)</p>
+recalculated and remains the same, otherwise Ship To Customer becomes empty.
+<br><br>
+(RecalcExpression)</li>
+</ul>
 </td>
 </tr>
 <tr>

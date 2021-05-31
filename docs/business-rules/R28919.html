@@ -110,37 +110,45 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>For each SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine:</p>
-<p>SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine.Quantity
+<td>Validate that:
+<br><br>
+For each SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine:
+<br><br>
+SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine.Quantity
 * SalesOrderPromotionalPackage.NumberOfPackges == SalesOrderLines[SalesOrder; Product ==
-SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine.Product].QuantityBase</p>
-</td>
+SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine.Product].QuantityBase</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td><p>The current validation prevents the user to sell promotional package which definition is
 changed while he operates with the SalesOrder. For example - the user adds 2 packages of
-promotional package X to the sales order. The promotional package X has the following lines:</p>
+promotional package X to the sales order. The promotional package X has the following lines:
+<br><br></p>
 <ol>
 <li>Product A - 2 pcs</li>
-<li>Product B - 3 pcs</li>
+<li>Product B - 3 pcs
+<br><br>
+So in the sales order lines the following lines are added:
+<br><br></li>
 </ol>
-<p>So in the sales order lines the following lines are added:</p>
 <ul>
 <li>line 1 - product A - 4 pcs</li>
-<li>line 2 - product B - 6 pcs</li>
+<li>line 2 - product B - 6 pcs
+<br><br>
+Before the user releases the sales order, other user updates the promotional package and its
+lines are now:
+<br><br></li>
 </ul>
-<p>Before the user releases the sales order, other user updates the promotional package and its
-lines are now:</p>
 <ol>
 <li>Product A - 3 pcs</li>
 <li>Product B - 3 pcs</li>
-<li>Product C - 1 pcs</li>
-</ol>
-<p>If the user release the SalesOrder as it is, it would be incorrect. The sales order lines
+<li>Product C - 1 pcs
+<br><br>
+If the user release the SalesOrder as it is, it would be incorrect. The sales order lines
 which result from the promotional package X must be updated and the sales order must contain
-the following lines:</p>
+the following lines:
+<br><br></li>
+</ol>
 <ul>
 <li>line 1 - product A - 6 pcs</li>
 <li>line 2 - product B - 6 pcs</li>
@@ -150,15 +158,19 @@ the following lines:</p>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>&quot;In Sales Order '{DocumentText}' {SalesOrderPromotionalPackage.NumberOfPackages} packages
+<td>&quot;In Sales Order '{DocumentText}' {SalesOrderPromotionalPackage.NumberOfPackages} packages
 are sold from '{PromotionalPackage.Name}' promotional package, but the lines of the sales
 order do not contain the products and their quantities from the promotional package
-definition.</p>
-<p>The promotional package is probably changed.</p>
-<p>Please, add the promotional package again so the latest information of it is added to the
-sales order.&quot;</p>
-<p><em>Sort Messages By Attribute:</em>** SalesOrderPromotionalPackage.PromotionalPackage**</p>
-</td>
+definition.
+<br><br>
+The promotional package is probably changed.
+<br><br>
+Please, add the promotional package again so the latest information of it is added to the
+sales order.&quot;
+<br><br>
+<br><br>
+<br><br>
+<em>Sort Messages By Attribute:</em>** SalesOrderPromotionalPackage.PromotionalPackage**</td>
 </tr>
 <tr>
 <td><strong>Introduced In

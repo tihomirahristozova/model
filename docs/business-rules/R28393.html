@@ -106,11 +106,12 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For each SalesOrderPromotionalPackage:</p>
-<p>If (SalesOrderPromotionalPackage.NumberOfPackages &gt; 0)</p>
-<p>SalesOrderLines(PromotionalPackage ==
-SalesOrderPromotionalPackage.PromotionalPackage).Count() &gt; 0</p>
-</td>
+<td>For each SalesOrderPromotionalPackage:
+<br><br>
+If (SalesOrderPromotionalPackage.NumberOfPackages &gt; 0)
+<br><br>
+SalesOrderLines(PromotionalPackage ==
+SalesOrderPromotionalPackage.PromotionalPackage).Count() &gt; 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -122,11 +123,13 @@ are incorrect and such packages cannot be sold to the customers.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Promotional package '{SalesOrderPromotionalPackage.PromotionalPackage.Code}' with number of
+<td>Promotional package '{SalesOrderPromotionalPackage.PromotionalPackage.Code}' with number of
 packages {SalesOrderPromotionalPackage.NumberOfPackages} is not part of any of the sales
-order lines.</p>
-<p><em>Sort Messages By Attribute:</em> <strong>SalesOrderPromotionalPackage.PromotionalPackage.Code</strong></p>
-</td>
+order lines.
+<br><br>
+<br><br>
+<br><br>
+<em>Sort Messages By Attribute:</em> <strong>SalesOrderPromotionalPackage.PromotionalPackage.Code</strong></td>
 </tr>
 <tr>
 <td><strong>Introduced In

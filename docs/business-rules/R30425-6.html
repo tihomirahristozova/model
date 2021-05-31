@@ -116,7 +116,7 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (Product!=null AND StoreTransaction.ParentStoreOrder!=null)
+<td>if (Product!=null AND StoreTransaction.ParentStoreOrder!=null)
 {
 if(ParentStoreOrder.Lines.Any(sol=&gt;sol.LineNo==l.ParentLineNo &amp;&amp; sol.Product==l.Product))
 {
@@ -124,9 +124,9 @@ l.ParentStoreOrderLine = l.TransactionObj.ParentStoreOrder.Lines.FirstOrDefault(
 sol.LineNo == l.ParentLineNo &amp;&amp; sol.Product == l.Product);
 }
 else
-{l.ParentStoreOrderLine = null;</p>
-<p>throw}</p>
-</td>
+{l.ParentStoreOrderLine = null;
+<br><br>
+throw}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -136,13 +136,18 @@ Order, an exception is thrown.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field Parent Store Order Line does not have a value.</p>
-<p>In the header of document '{DocumentText}' is set a Parent Store Order, but the field
-Parent Store Order Line in line '{LineNo}' is empty, which is not allowed.</p>
-<p>Please remove the Parent Store Order or select a Parent Store Order Line.</p>
-<p>The message is also used in:</p>
-<p><a href="R30425-8.html">R30425-8 StoreTransactionLine - Check Parent Store Order Line</a></p>
-</td>
+<td>The field Parent Store Order Line does not have a value.
+<br><br>
+In the header of document '{DocumentText}' is set a Parent Store Order, but the field
+Parent Store Order Line in line '{LineNo}' is empty, which is not allowed.
+<br><br>
+Please remove the Parent Store Order or select a Parent Store Order Line.
+<br><br>
+<br><br>
+<br><br>
+The message is also used in:
+<br><br>
+<a href="R30425-8.html">R30425-8 StoreTransactionLine - Check Parent Store Order Line</a></td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>

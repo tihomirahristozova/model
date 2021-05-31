@@ -116,19 +116,23 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (ReceivingOrder.AdjustedDocument == null AND (ConfirmedQuantity ?? Quantity) != null)
-{</p>
-<p>if (LineAmount != LineAmount.Round())
+<td>if (ReceivingOrder.AdjustedDocument == null AND (ConfirmedQuantity ?? Quantity) != null)
+{
+<br><br>
+if (LineAmount != LineAmount.Round())
 LineAmount = LineAmount.Round();
 var quantity = (ConfirmedQuantity ?? Quantity).Value;
 var price = (LineAmount / (quantity == 0 ? 1 : quantity)).RoundUnitPrice();
 if (PricePerUnit != price &amp;&amp; PricePerUnit.Round() != price.Round())
 PricePerUnit = price;
-}</p>
-<p>*RoundUnitPrice() is rounding with precision 5 - this is for Unit Prices and Price Per Unit</p>
-<p>*Round() is rounding with precision depending on the currency precision which is 2 - this is
-for Line Amounts</p>
-</td>
+}
+<br><br>
+<br><br>
+<br><br>
+*RoundUnitPrice() is rounding with precision 5 - this is for Unit Prices and Price Per Unit
+<br><br>
+*Round() is rounding with precision depending on the currency precision which is 2 - this is
+for Line Amounts</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

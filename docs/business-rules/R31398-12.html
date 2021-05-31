@@ -115,14 +115,14 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (ResourceInstance != null and ResourceInstance.Party != null)
+<td>if (ResourceInstance != null and ResourceInstance.Party != null)
 {
-var person = Persons.Where(Person == ResourceInstance.Party).FirstOrDefault();</p>
-<p>if (!ProjectTask.Participants.Any(ParticipantPerson == person))
+var person = Persons.Where(Person == ResourceInstance.Party).FirstOrDefault();
+<br><br>
+if (!ProjectTask.Participants.Any(ParticipantPerson == person))
 ProjectTask.Participants.Add(new ProjectTaskParticipant{NotifyOnStatusChange =
 true,WorkLoadPercent = 1,ParticipantPerson = person})
-}</p>
-</td>
+}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -137,9 +137,9 @@ Person.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

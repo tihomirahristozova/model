@@ -110,28 +110,31 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (DefaultPercent != null)</p>
-<p>DefaultInputUnitAmount == null &amp;&amp; DefaultInputAmount == null</p>
-<p>else if (DefaultInputUnitAmount != null)</p>
-<p>DefaultInputAmount == null</p>
-</td>
+<td>Validate that:
+<br><br>
+If (DefaultPercent != null)
+<br><br>
+DefaultInputUnitAmount == null &amp;&amp; DefaultInputAmount == null
+<br><br>
+else if (DefaultInputUnitAmount != null)
+<br><br>
+DefaultInputAmount == null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The DefaultPercent, DefaultInputUnitAmount and DefaultInputAmount attributes contain values
+<td>The DefaultPercent, DefaultInputUnitAmount and DefaultInputAmount attributes contain values
 to be loaded when a new document of the document type is created. As a document amount is
 expected to implicitly define its value, it could only have value for one of the InputAmount,
-InputPercent or InputUnitAmount attributes.</p>
-<p>So only one default value is expected when a document type is tuned.</p>
-</td>
+InputPercent or InputUnitAmount attributes.
+<br><br>
+So only one default value is expected when a document type is tuned.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Only one of the DefaultPercent, DefaultInputUnitAmount and DefaultInputAmount attributes may
-have value.</p>
-<p>Please, specify only one of them.</p>
-</td>
+<td>Only one of the DefaultPercent, DefaultInputUnitAmount and DefaultInputAmount attributes may
+have value.
+<br><br>
+Please, specify only one of them.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

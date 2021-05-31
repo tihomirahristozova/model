@@ -115,21 +115,25 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(Parent.IsDocumentTypeEntityInvoice())</p>
-<p>ReferencedDocumentType= Parent.DocumentType</p>
-<p>*Document.IsDocumentTypeEntityInvoice():</p>
-<p>return (DocumentType != null &amp;&amp; (DocumentType.EntityName ==
+<td>IF(Parent.IsDocumentTypeEntityInvoice())
+<br><br>
+ReferencedDocumentType= Parent.DocumentType
+<br><br>
+<br><br>
+<br><br>
+*Document.IsDocumentTypeEntityInvoice():
+<br><br>
+return (DocumentType != null &amp;&amp; (DocumentType.EntityName ==
 InvoicesRepository.TableName ||
-DocumentType.EntityName == PurchaseInvoicesRepository.TableName));</p>
-</td>
+DocumentType.EntityName == PurchaseInvoicesRepository.TableName));</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Parent Document is changed, the Entity of that Parent Document's Document Type
+<td>When Parent Document is changed, the Entity of that Parent Document's Document Type
 is checked. If it is Invoices or Purchase Invoices, Referenced Document Type is
-changed to the Parent Document's Document Type.</p>
-<p>(RecalcExpression)</p>
-</td>
+changed to the Parent Document's Document Type.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -137,9 +141,9 @@ changed to the Parent Document's Document Type.</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

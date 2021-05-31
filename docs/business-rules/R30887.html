@@ -116,15 +116,18 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (RelativeUrl !=NULL)</p>
-<p>, then REGEX(RelativeUrl, ^(?!sys$)[a-z0-9-_]*$ ) = True</p>
-</td>
+<td>Validate that:
+<br><br>
+If (RelativeUrl !=NULL)
+<br><br>
+, then REGEX(RelativeUrl, ^(?!sys$)[a-z0-9-_]*$ ) = True</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The current rule makes sure that the Relative Url of the Website is valid.</p>
-<p>The Relative Url have to meet the following conditions:</p>
+<td><p>The current rule makes sure that the Relative Url of the Website is valid.
+<br><br>
+The Relative Url have to meet the following conditions:
+<br><br></p>
 <ul>
 <li>is not &quot;sys&quot; - &quot;sys&quot; has a special use and is reserved by the system;</li>
 <li>contains only allowed characters. The allowed characters are digits (0-9), lower-case
@@ -134,16 +137,16 @@ letters (a-z), '-' and '</li>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field 'Relative Url' contains an invalid value '{Relative Url}'.</p>
-<p>Please make sure that the value is not 'sys' and contains only allowed characters. The
-allowed characters are digits (0-9), lower-case letters (a-z), '-' and '_'.</p>
-</td>
+<td>The field 'Relative Url' contains an invalid value '{Relative Url}'.
+<br><br>
+Please make sure that the value is not 'sys' and contains only allowed characters. The
+allowed characters are digits (0-9), lower-case letters (a-z), '-' and '_'.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: (in implementation)</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: (in implementation)
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

@@ -115,18 +115,22 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>WorkOrderItem.CopyIngredientsAndOperationsFromRecipe()</p>
-<p>*<strong>CopyIngredientsAndOperationsFromRecipe(</strong>) - the method clears all ingredient and
+<td>WorkOrderItem.CopyIngredientsAndOperationsFromRecipe()
+<br><br>
+*<strong>CopyIngredientsAndOperationsFromRecipe(</strong>) - the method clears all ingredient and
 operations related to the current Work order item and creates new, according to the
-selected Recipe.</p>
-<p>if (Recipe != null)
+selected Recipe.
+<br><br>
+if (Recipe != null)
 {
 foreach (Ingredients) Delete();
-foreach (Operations) Delete();</p>
-<p>operationScrapRateMultiplier = 1;
+foreach (Operations) Delete();
+<br><br>
+operationScrapRateMultiplier = 1;
 foreach (Recipe.Operations.OrderBy(LineOrd))
-{</p>
-<p>WorkOrderItem.Operations.Add(RecipeOperation) with the following values:
+{
+<br><br>
+WorkOrderItem.Operations.Add(RecipeOperation) with the following values:
 UseQuantity  = Math.Round(UseQuantity* ProducedQuantityBase /
 Recipe.ProduceQuantity, 3,) in UseQuantityUnit
 OperationDescription = RecipeOperation.OperationDescription,
@@ -139,25 +143,32 @@ MoveTimeMinutes = RecipeOperation.MoveTimeMinutes,
 MinimumConcurrentStartTimeMinutes =
 RecipeOperation.MinimumConcurrentStartTimeMinutes,
 Tooling = RecipeOperation.Tooling,
-Notes = RecipeOperation.Notes</p>
-<p>operationScrapRateMultiplier *= (1 + RecipeOperation.ScrapRate);
-}</p>
-<p>foreach (Recipe.Ingredients.OrderBy(LineOrd))</p>
-<p>WorkOrder.ItemIngredients.Add(RecipeIngredient) with the following values:
+Notes = RecipeOperation.Notes
+<br><br>
+operationScrapRateMultiplier *= (1 + RecipeOperation.ScrapRate);
+}
+<br><br>
+foreach (Recipe.Ingredients.OrderBy(LineOrd))
+<br><br>
+<br><br>
+WorkOrder.ItemIngredients.Add(RecipeIngredient) with the following values:
 {
 Material = RecipeIngredient.Material,
-UsedQuantityUnit = RecipeIngredient.UsageUnit,</p>
-<p>FixedScrapQuantity = RecipeIngredient.FixedScrapQuantity,
+UsedQuantityUnit = RecipeIngredient.UsageUnit,
+<br><br>
+FixedScrapQuantity = RecipeIngredient.FixedScrapQuantity,
 UsedQuantity = Math.Round(RecipeIngredient.FixedScrapQuantity +
 (((RecipeIngredient.UsageQuantity * (this.ProducedQuantityBase* (1 +
 RecipeIngredient.ScrapRate) / RecipeIngredient.Recipe.ProduceQuantity)) *
 operationScrapRateMultiplier, 3) in UsedQuantityUnit,
 Store = RecipeIngredient.Store,
-Notes = RecipeIngredient.Notes,</p>
-<p>Operation = RecipeIngredient.Operation,
+Notes = RecipeIngredient.Notes,
+<br><br>
+Operation = RecipeIngredient.Operation,
 PrincipalRecipeIngredient = RecipeIngredient.PrincipalRecipeIngredient
-}</p>
-</td>
+}
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -170,9 +181,9 @@ should be changed in order to correspond to the Recipe. </td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

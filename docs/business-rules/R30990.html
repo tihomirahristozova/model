@@ -106,7 +106,8 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
+<td><p>Validate that:
+<br><br></p>
 <ul>
 <li>If 'PurchaseInvoice.DocumentType.InvoicesOption.TotalAmountSignRestriction ==
 (-1) AllowOnlyNegative', then the sign of the total amount to pay of the Purchase Invoice
@@ -122,15 +123,15 @@ is '+'.</li>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>According to the particular business purpose of the Purchase Invoice, we are able to manually
+<td>According to the particular business purpose of the Purchase Invoice, we are able to manually
 restrict the sign of the Total Amount of the document. For example, using this option we can
 specify that a certain document can be used when returning goods (in this situation the Total
-Amount is with a negative sign) or not.</p>
-<p>The option is called 'Total amount Sign Restriction' and is set in the Entity Settings panel
+Amount is with a negative sign) or not.
+<br><br>
+The option is called 'Total amount Sign Restriction' and is set in the Entity Settings panel
 in the Document Type's definition. In order to assure that this restriction is not violated -
 we need to check if the sign of the Total Amount of the Purchase Invoice corresponds to the
-value set 'Total amount Sign Restriction' for the particular document type.</p>
-</td>
+value set 'Total amount Sign Restriction' for the particular document type.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

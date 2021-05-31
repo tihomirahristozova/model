@@ -116,18 +116,18 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(PaymentType!=null)</p>
-<p>PaymentAccount =
-PaymentType.GetDefaultPaymentAccount().IfNullThen(BulkPaymentOrderLine.PaymentAccount)</p>
-</td>
+<td>IF(PaymentType!=null)
+<br><br>
+PaymentAccount =
+PaymentType.GetDefaultPaymentAccount().IfNullThen(BulkPaymentOrderLine.PaymentAccount)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Payment Type is changed, Payment Account should be changed to the Default Payment
+<td>When Payment Type is changed, Payment Account should be changed to the Default Payment
 Account for the selected Payment Type, or the one and only Payment Account with the same
-Payment Type if there is one. If no payment account is found - the value stays the same.</p>
-<p>(RecalcExpression)</p>
-</td>
+Payment Type if there is one. If no payment account is found - the value stays the same.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

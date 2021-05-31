@@ -115,55 +115,73 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF (SourcePaymentAccount!=null AND DestinationPaymentAccount!=null AND
-DestinationAmount !=null)</p>
-<p>     {</p>
-<p>       IF(SourcePaymentAccount.Currency = DestinationPaymentAccount.Currency)
-            {SourceAmount = DestinationAmount}</p>
-<p>        , else if ((CurrencyDirectory != null)</p>
-<p>         { </p>
-<p>               if (SourceAmount == 0.00 OR null))
+<td>IF (SourcePaymentAccount!=null AND DestinationPaymentAccount!=null AND
+DestinationAmount !=null)
+<br><br>
+     {
+<br><br>
+       IF(SourcePaymentAccount.Currency = DestinationPaymentAccount.Currency)
+            {SourceAmount = DestinationAmount}
+<br><br>
+        , else if ((CurrencyDirectory != null)
+<br><br>
+         { 
+<br><br>
+               if (SourceAmount == 0.00 OR null))
                {SourceAmount
-= DestinationAmount.ConvertTo(SourcePaymentAccount.Currency,CurrencyDirectory)}</p>
-<p>               , else if (DestinationAmount !=
+= DestinationAmount.ConvertTo(SourcePaymentAccount.Currency,CurrencyDirectory)}
+<br><br>
+               , else if (DestinationAmount !=
 SourceAmount.ConvertTo(DestinationPaymentAccount.Currency,CurrencyDirectory)
-               {throw error}</p>
-<p>         }</p>
-<p>         ,else {throw error}</p>
-<p>     }</p>
-</td>
+               {throw error}
+<br><br>
+         }
+<br><br>
+         ,else {throw error}
+<br><br>
+     }</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The current rule recalculates SourceAmount when DestinationAmount is changed. </p>
-<p>If the Currencies of both amounts are the same, the DestinationAmount is copied
-to SourceAmount.</p>
-<p>If the Currencies are different, the recalculation is performed only if:</p>
+<td><p>The current rule recalculates SourceAmount when DestinationAmount is changed. 
+<br><br>
+<br><br>
+<br><br>
+If the Currencies of both amounts are the same, the DestinationAmount is copied
+to SourceAmount.
+<br><br>
+If the Currencies are different, the recalculation is performed only if:
+<br><br></p>
 <ul>
 <li>there is a CurrencyDirectory;</li>
-<li>the SourceAmount is 0.00 or empty.</li>
-</ul>
-<p>Otherwise, if there is an explicitly set SourceAmount the system won't change this
+<li>the SourceAmount is 0.00 or empty.
+<br><br>
+Otherwise, if there is an explicitly set SourceAmount the system won't change this
 value but will throw a notification which informs that SourceAmount is not
-recalculated. </p>
-<p>This allows flexibility when we are making transfers that reflect external to the
+recalculated. 
+<br><br>
+<br><br>
+<br><br>
+This allows flexibility when we are making transfers that reflect external to the
 system transactions that must be entered as they are. Аt the same time allows
-automatic calculation of the SourceAmount if its value is not explicitly set.</p>
+automatic calculation of the SourceAmount if its value is not explicitly set.</li>
+</ul>
 </td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>'Source Amount' was not recalculated on the change of 'Destination amount'.</p>
-<p>Please check the amounts.</p>
-<p>If you want 'Source Amount' to be recalculated according to the Currency Directory,
-please remove the value in 'Source Amount' and reset 'Destination amount'.</p>
-</td>
+<td>'Source Amount' was not recalculated on the change of 'Destination amount'.
+<br><br>
+Please check the amounts.
+<br><br>
+If you want 'Source Amount' to be recalculated according to the Currency Directory,
+please remove the value in 'Source Amount' and reset 'Destination amount'.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2020 SP4</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 2020 SP4
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

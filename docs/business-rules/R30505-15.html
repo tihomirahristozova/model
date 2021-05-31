@@ -116,15 +116,21 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (Lot?.Product != Product) Lot = null;</p>
-<p>if (ProductCode is changed and ProductCode.NewValue != null)
-Product = ProductCode.Product;</p>
-<p>if (Product != null)</p>
-<p>{</p>
-<p>IF(Product is Changed) {if (ProductCode?.Product != Product) ProductCode = null;}</p>
-<p>ProductDescription = Product.Name;</p>
-<p>}</p>
-</td>
+<td>if (Lot?.Product != Product) Lot = null;
+<br><br>
+<br><br>
+if (ProductCode is changed and ProductCode.NewValue != null)
+Product = ProductCode.Product;
+<br><br>
+if (Product != null)
+<br><br>
+{
+<br><br>
+IF(Product is Changed) {if (ProductCode?.Product != Product) ProductCode = null;}
+<br><br>
+ProductDescription = Product.Name;
+<br><br>
+}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -136,11 +142,12 @@ Product = ProductCode.Product;</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2020.1</p>
-<p>Updated: 20 and 21 (Removed setting Serial Number, because it's covered with 30707-2)</p>
-<p>(Removed setting Quantity Unit, because it's covered with <a href="R30505-16.html">R30505-16 ReceivingOrderLine -
-Set Quantity Unit</a>)</p>
-</td>
+<td>Introduced: 2020.1
+<br><br>
+Updated: 20 and 21 (Removed setting Serial Number, because it's covered with 30707-2)
+<br><br>
+(Removed setting Quantity Unit, because it's covered with <a href="R30505-16.html">R30505-16 ReceivingOrderLine -
+Set Quantity Unit</a>)</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

@@ -110,42 +110,55 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For every voucher line, the CorrespondantAmount is calculated as follows:</p>
+<td><p>For every voucher line, the CorrespondantAmount is calculated as follows:
+<br><br></p>
 <ol>
 <li>The lines of each correspondence are divided into two lists &quot;CorrespondanceDebitRows&quot; and
-&quot;CorrespondanceCreditRows&quot; following these steps:</li>
-</ol>
-<p>- divide all non-zero rows into these lists, depending on whether (VoucherLine.Debit != 0 &amp;&amp;
- VoucherLine.DebitBase != 0) OR (VoucherLine.Credit != 0 &amp;&amp; VoucherLine.CreditBase != 0);</p>
-<p>- divide all zero lines (if any) according to the clauses:</p>
-<p>-- if in the correspondence (VoucherLines(VoucherLine.Debit != 0 &amp;&amp;  VoucherLine.DebitBase
-!= 0).Count() == 0 || 1) - then the zero line is counted as credit;</p>
-<p>-- else if (VoucherLines(VoucherLine.Debit != 0 &amp;&amp;  VoucherLine.DebitBase != 0).Count() &gt;
- 1), the zero line is also counted as debit.</p>
-<p>2. Calculate CorrespondantAmount:</p>
-<p>- if the correspondence's relationship is one-to-one, then in each of the two lines in the
+&quot;CorrespondanceCreditRows&quot; following these steps:
+<br><br>
+- divide all non-zero rows into these lists, depending on whether (VoucherLine.Debit != 0 &amp;&amp;
+ VoucherLine.DebitBase != 0) OR (VoucherLine.Credit != 0 &amp;&amp; VoucherLine.CreditBase != 0);
+<br><br>
+- divide all zero lines (if any) according to the clauses:
+<br><br>
+-- if in the correspondence (VoucherLines(VoucherLine.Debit != 0 &amp;&amp;  VoucherLine.DebitBase
+!= 0).Count() == 0 || 1) - then the zero line is counted as credit;
+<br><br>
+-- else if (VoucherLines(VoucherLine.Debit != 0 &amp;&amp;  VoucherLine.DebitBase != 0).Count() &gt;
+ 1), the zero line is also counted as debit.
+<br><br>
+<br><br>
+<br><br>
+2. Calculate CorrespondantAmount:
+<br><br>
+- if the correspondence's relationship is one-to-one, then in each of the two lines in the
 &quot;VoucherLine.CorrespondantAmount = corresponding CreditAmount OR DebitAmount&quot; of the other
-line, depending on its type.</p>
-<p>- else if the correspondence is one-to-many:</p>
-<p>-- a NULL value is set as a CorrespondantAmount for the single line;</p>
-<p>-- for the rest of the lines (the many) -- as a CorrespondantAmount is set the amount
+line, depending on its type.
+<br><br>
+- else if the correspondence is one-to-many:
+<br><br>
+-- a NULL value is set as a CorrespondantAmount for the single line;
+<br><br>
+-- for the rest of the lines (the many) -- as a CorrespondantAmount is set the amount
 (credit or debit) of the current line converted to the currency of the &quot;single line&quot;. The
 single-line amount has to be fully distributed between the rest of the lines. If there is a
 remainder because of the rounding, it is added in the CorrespondantAmount of the line with
 Max(Abs(CorrespondantAmount) so far, for more details, can be seen the
-RecalculateCorrespondantAmounts method of the entity Acc_Vouchers.</p>
+RecalculateCorrespondantAmounts method of the entity Acc_Vouchers.</li>
+</ol>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The field Correspondant Amount contains the amount or a part of the amount of the voucher
+<td>The field Correspondant Amount contains the amount or a part of the amount of the voucher
 line (in the currency of the corresponding line) to which the amount in this line is
 corresponding. This field has value only when the current line is corresponding to only one
-line (e.g. null means that the current line is corresponding to many lines).</p>
-<p>The calculation is made in advance (when changing the state of the document). The result is
+line (e.g. null means that the current line is corresponding to many lines).
+<br><br>
+<br><br>
+The calculation is made in advance (when changing the state of the document). The result is
 stored in the Correspondant Amount and it is later used for the calculations of General
-Ledger and Correspondant Chronology reports.</p>
-</td>
+Ledger and Correspondant Chronology reports.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -154,7 +167,9 @@ Ledger and Correspondant Chronology reports.</p>
 <tr>
 <td><strong>Introduced In
 Version</strong></td>
-<td>2018.1</td>
+<td><p>2018.1</p>
+<p><br><br></p>
+</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

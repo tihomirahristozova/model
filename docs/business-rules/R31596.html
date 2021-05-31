@@ -115,22 +115,25 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (Activity.Reminders[IsDefault=True].Count() &gt;= 1)</p>
-<p>{ get the first Activity.Reminders[IsDefault=True] and set
-ReminderTime=Activity.ReminderTime }</p>
-<p>, else</p>
-<p>{ create new Reminder and set IsDefault=True AND ReminderTime=Activity.ReminderTime }</p>
-</td>
+<td>If (Activity.Reminders[IsDefault=True].Count() &gt;= 1)
+<br><br>
+{ get the first Activity.Reminders[IsDefault=True] and set
+ReminderTime=Activity.ReminderTime }
+<br><br>
+, else
+<br><br>
+{ create new Reminder and set IsDefault=True AND ReminderTime=Activity.ReminderTime }</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The current rule updates the Reminders of the Activity, when the 'Reminder Time'
-field of the Activity's header is changed.</p>
-<p>If there already is a Reminder for which the field 'Is Default' is checked-marked -
-the rule copies the Reminder Time of the activity into this record.</p>
-<p>If there is not - then the rule creates a new default reminder and fills in
-its Reminder Time with the Reminder Time of the Activity,</p>
-</td>
+<td>The current rule updates the Reminders of the Activity, when the 'Reminder Time'
+field of the Activity's header is changed.
+<br><br>
+If there already is a Reminder for which the field 'Is Default' is checked-marked -
+the rule copies the Reminder Time of the activity into this record.
+<br><br>
+If there is not - then the rule creates a new default reminder and fills in
+its Reminder Time with the Reminder Time of the Activity,</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -138,9 +141,9 @@ its Reminder Time with the Reminder Time of the Activity,</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2020</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 2020
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

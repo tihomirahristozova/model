@@ -116,18 +116,22 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (Product != null AND QuantityUnit != null AND Invoice.DocumentCurrency != null)
-muRatio = Product.GetRatioToBaseOrDefault(QuantityUnit)</p>
-<p>pricePerUnit = (Product.StandardPricePerLot * muRatio.Divisor) /
-(Product.StandardLotSizeBase* muRatio.Multiplier)</p>
-<p>//convert the product price to the document currency
-productCurrency = Product.CostingCurrency or if null CurrentEnterpriseCompany.BaseCurrency</p>
-<p>if (productCurrency != null AND productCurrency != Invoice.DocumentCurrency)</p>
-<p>if (Invoice.CurrencyDirectory == null) =&gt; can't calculate
+<td>if (Product != null AND QuantityUnit != null AND Invoice.DocumentCurrency != null)
+muRatio = Product.GetRatioToBaseOrDefault(QuantityUnit)
+<br><br>
+pricePerUnit = (Product.StandardPricePerLot * muRatio.Divisor) /
+(Product.StandardLotSizeBase* muRatio.Multiplier)
+<br><br>
+//convert the product price to the document currency
+productCurrency = Product.CostingCurrency or if null CurrentEnterpriseCompany.BaseCurrency
+<br><br>
+if (productCurrency != null AND productCurrency != Invoice.DocumentCurrency)
+<br><br>
+if (Invoice.CurrencyDirectory == null) =&gt; can't calculate
 if (Invoice.CurrencyDirectory != null) =&gt; pricePerUnit =
-pricePerUnit.ConvertTo(Invoice.DocumentCurrency, Invoice.CurrencyDirectory)</p>
-<p>UnitPrice = pricePerUnit</p>
-</td>
+pricePerUnit.ConvertTo(Invoice.DocumentCurrency, Invoice.CurrencyDirectory)
+<br><br>
+UnitPrice = pricePerUnit</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

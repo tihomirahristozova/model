@@ -98,9 +98,9 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td><p>AttributeChanged(MaterialProduct)</p>
-<p>AttributeChanged(Quantity)</p>
-</td>
+<td>AttributeChanged(MaterialProduct)
+<br><br>
+AttributeChanged(Quantity)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -117,20 +117,31 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(MaterialProduct!=null)</p>
-<p>BudgetedMaterialAmount = CalculateBudgetMaterialAmount(Quantity)</p>
-<p>ELSE</p>
-<p>BudgetedMaterialAmount = new Amount(0,ProjectTask.Project.BudgetingCurrency)</p>
-<p><strong>ProjectTaskMaterial.CalculateBudgetMaterialAmount(parameterQuantity):</strong></p>
-<p>IF(ProjectTask.Project.BudgetingCurrency is not null)</p>
-<p>IF(MaterialProduct.CostingCurrency is null
-OR MaterialProduct.CostingCurrency!=ProjectTask.Project.BudgetingCurrency)</p>
-<p>error M1</p>
-<p>ELSE</p>
-<p>return (MaterialProduct.StandardPricePerLot /
-MaterialProduct.StandardLotSizeBase.Value) * parameterQuantity.Value;</p>
-<p>in all other cases returns Amount(0, ProjectTask.Project?.BudgetingCurrency)</p>
-</td>
+<td>IF(MaterialProduct!=null)
+<br><br>
+BudgetedMaterialAmount = CalculateBudgetMaterialAmount(Quantity)
+<br><br>
+ELSE
+<br><br>
+BudgetedMaterialAmount = new Amount(0,ProjectTask.Project.BudgetingCurrency)
+<br><br>
+<br><br>
+<br><br>
+<strong>ProjectTaskMaterial.CalculateBudgetMaterialAmount(parameterQuantity):</strong>
+<br><br>
+IF(ProjectTask.Project.BudgetingCurrency is not null)
+<br><br>
+IF(MaterialProduct.CostingCurrency is null
+OR MaterialProduct.CostingCurrency!=ProjectTask.Project.BudgetingCurrency)
+<br><br>
+error M1
+<br><br>
+ELSE
+<br><br>
+return (MaterialProduct.StandardPricePerLot /
+MaterialProduct.StandardLotSizeBase.Value) * parameterQuantity.Value;
+<br><br>
+in all other cases returns Amount(0, ProjectTask.Project?.BudgetingCurrency)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -145,9 +156,9 @@ MaterialProduct.StandardLotSizeBase.Value) * parameterQuantity.Value;</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

@@ -117,39 +117,45 @@ eCompany.Company)</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (FiscalSalesNumber != NULL)</p>
-<p>, then REGEX(FiscalSalesNumber , ^.{8}-.{4}-[0-9]{7}$) = True</p>
-</td>
+<td>Validate that:
+<br><br>
+If (FiscalSalesNumber != NULL)
+<br><br>
+, then REGEX(FiscalSalesNumber , ^.{8}-.{4}-[0-9]{7}$) = True</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td><p>When a POS Sales Order is created into database, according to the Bulgarian legislation the
 software must generate a unique sales number with the following format
-'XXXXXXXX-ZZZZ-0000001', where:</p>
+'XXXXXXXX-ZZZZ-0000001', where:
+<br><br></p>
 <ul>
 <li>XXXXXXXX - the 8-digit individual Fiscal Printer number assigned by the manufacturer;</li>
 <li>ZZZZ - the 4-digit operator code entered the sales data according to the software
 nomenclature;</li>
 <li>0000001 - 7-digit individual number of the sales order, formed separately for each Fiscal
-Printer.</li>
-</ul>
-<p>Separating the elements in the unique sales number with a &quot;-&quot; sign is required.</p>
-<p>The current rule reassures that if the Applicable Legislation of the document's Enterprise
+Printer.
+<br><br>
+Separating the elements in the unique sales number with a &quot;-&quot; sign is required.
+<br><br>
+The current rule reassures that if the Applicable Legislation of the document's Enterprise
 Company is Bulgaria, then the format of the Fiscal Sales Number meets the requirements of the
-Bulgarian legislation.</p>
+Bulgarian legislation.</li>
+</ul>
 </td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Document '{DocumentText}' contains a Fiscal Sales Number '{FiscalSalesNumber}' that does
+<td>Document '{DocumentText}' contains a Fiscal Sales Number '{FiscalSalesNumber}' that does
 not meet the format requirements of the Bulgarian legislation. The format of the Fiscal Sales
-Number must be 'XXXXXXXX-ZZZZ-0000001', where:</p>
-<p>* XXXXXXXX - 8-digit Individual Number of the POS Fiscal Printer;</p>
-<p>* ZZZZ - 4-digit POS Operator code;</p>
-<p>* 0000001 - 7-digit individual number of the Sales Order, formed by the active POS Fiscal
-Printer's Sequence.</p>
-</td>
+Number must be 'XXXXXXXX-ZZZZ-0000001', where:
+<br><br>
+* XXXXXXXX - 8-digit Individual Number of the POS Fiscal Printer;
+<br><br>
+* ZZZZ - 4-digit POS Operator code;
+<br><br>
+* 0000001 - 7-digit individual number of the Sales Order, formed by the active POS Fiscal
+Printer's Sequence.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

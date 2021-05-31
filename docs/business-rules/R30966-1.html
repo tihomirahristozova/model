@@ -116,34 +116,47 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF</p>
-<p>(SourcePaymentAccount!=null</p>
-<p>AND</p>
-<p>DestinationPaymentAccount!=null</p>
-<p>AND</p>
-<p>OldValue(DestinationPaymentAccount.Currency) !=
-NewValue(DestinationPaymentAccount.Currency)</p>
-<p>AND </p>
-<p>OldValue(SourcePaymentAccount.Currency) != NewValue(SourcePaymentAccount.Currency) )</p>
-<p>     {</p>
-<p>       IF(SourcePaymentAccount.Currency = DestinationPaymentAccount.Currency)</p>
-<p>            {DestinationAmount = SourceAmount}</p>
-<p>        , else if (CurrencyDirectory = null)</p>
-<p>             {DestinationAmount = null}</p>
-<p>        , else {DestinationAmount =
-SourceAmount.ConvertTo(DestinationPaymentAccount.Currency,CurrencyDirectory)}</p>
-<p>     }</p>
-</td>
+<td>IF
+<br><br>
+(SourcePaymentAccount!=null
+<br><br>
+AND
+<br><br>
+DestinationPaymentAccount!=null
+<br><br>
+AND
+<br><br>
+OldValue(DestinationPaymentAccount.Currency) !=
+NewValue(DestinationPaymentAccount.Currency)
+<br><br>
+AND 
+<br><br>
+OldValue(SourcePaymentAccount.Currency) != NewValue(SourcePaymentAccount.Currency) )
+<br><br>
+     {
+<br><br>
+       IF(SourcePaymentAccount.Currency = DestinationPaymentAccount.Currency)
+<br><br>
+            {DestinationAmount = SourceAmount}
+<br><br>
+        , else if (CurrencyDirectory = null)
+<br><br>
+             {DestinationAmount = null}
+<br><br>
+        , else {DestinationAmount =
+SourceAmount.ConvertTo(DestinationPaymentAccount.Currency,CurrencyDirectory)}
+<br><br>
+     }</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When the Source Amount, the Currencies (depending on the Payment Accounts) or the
+<td>When the Source Amount, the Currencies (depending on the Payment Accounts) or the
 Currency Directory of the document are changed, Destination Amount is recalculated
-based on all of the components. </p>
-<p>The recalculation is performed only if both Payment Accounts are filled in. If the
+based on all of the components. 
+<br><br>
+The recalculation is performed only if both Payment Accounts are filled in. If the
 rule is triggered by a change of a Payment Account the recalculation will be
-performed only if the currencies of the old and new payment accounts are different.</p>
-</td>
+performed only if the currencies of the old and new payment accounts are different.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -151,9 +164,9 @@ performed only if the currencies of the old and new payment accounts are differe
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2020.1</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 2020.1
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

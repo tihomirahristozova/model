@@ -106,7 +106,8 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
+<td><p>Validate that:
+<br><br></p>
 <ul>
 <li>If 'StoreTransaction.MovementType == Receipt', then the current user has permission to
 'Release receipt Store Transactions' for the particular 'StoreTransaction.Store';</li>
@@ -126,15 +127,16 @@ the Store Transaction.</td>
 <td><strong>Message</strong></td>
 <td>
 <ul>
-<li>If 'StoreTransaction.MovementType == Receipt':</li>
+<li>If 'StoreTransaction.MovementType == Receipt':
+<br><br>
+'User '[User.Login]' has no permission to release store transactions with movement type
+'Receipt' for store '[Store.StoreName]'.'
+<br><br></li>
+<li>If 'StoreTransaction.MovementType == Issue':
+<br><br>
+'User '[User.Login]' has no permission to release store transactions with movement type
+'Issue' for store '[Store.StoreName]'.'</li>
 </ul>
-<p>'User '[User.Login]' has no permission to release store transactions with movement type
-'Receipt' for store '[Store.StoreName]'.'</p>
-<ul>
-<li>If 'StoreTransaction.MovementType == Issue':</li>
-</ul>
-<p>'User '[User.Login]' has no permission to release store transactions with movement type
-'Issue' for store '[Store.StoreName]'.'</p>
 </td>
 </tr>
 <tr>

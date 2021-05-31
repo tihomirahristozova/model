@@ -106,26 +106,33 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Let:</p>
-<p>C1 = DocumentState &lt; Released</p>
-<p>C2 = DocumentState &gt;= Released</p>
-<p>C6 = DeclarationFunction = DeclarationFunction.Corrective</p>
-<p>C7 = its ReleaseDate is the greatest of all ReleaseDates of non-voided corrective
+<td>Let:
+<br><br>
+C1 = DocumentState &lt; Released
+<br><br>
+C2 = DocumentState &gt;= Released
+<br><br>
+C6 = DeclarationFunction = DeclarationFunction.Corrective
+<br><br>
+C7 = its ReleaseDate is the greatest of all ReleaseDates of non-voided corrective
 IntrastatDeclarations with the same reference period and with the same Goods flow direction and the
-same Enterprise Company</p>
-<p>The rule should validate that:</p>
-<p>C1</p>
-<p>OR</p>
-<p>C2 AND C6 AND C7</p>
-</td>
+same Enterprise Company
+<br><br>
+The rule should validate that:
+<br><br>
+C1
+<br><br>
+OR
+<br><br>
+C2 AND C6 AND C7</td>
 </tr>
 <tr>
 <td>Description</td>
-<td><p>If an Intrastat Declaration is less then Released, then it may be made void anytime.</p>
-<p>If it is released and the Intrastat Declaration is corrective, it may be made void if it is the last
+<td>If an Intrastat Declaration is less then Released, then it may be made void anytime.
+<br><br>
+If it is released and the Intrastat Declaration is corrective, it may be made void if it is the last
 released corrective declaration for the reference period with the same goods flow direction and the
-same Enterprise Company.</p>
-</td>
+same Enterprise Company.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -135,11 +142,12 @@ released after {DocumentText}.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2017</p>
-<p>Updated: 2019.1 - in action's parts C4, C5 and C7 is added a new condition by Goods flow direction</p>
-<p>Updated: 2020.1 - separated by Declaration Function in two rules, added new condition by Enterprise
-Company</p>
-</td>
+<td>Introduced: 2017
+<br><br>
+Updated: 2019.1 - in action's parts C4, C5 and C7 is added a new condition by Goods flow direction
+<br><br>
+Updated: 2020.1 - separated by Declaration Function in two rules, added new condition by Enterprise
+Company</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

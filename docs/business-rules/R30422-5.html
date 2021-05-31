@@ -116,7 +116,7 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (ParentSalesOrderLine !=null and ParentSalesOrderLine .Product !=null and Quantity != null
+<td>if (ParentSalesOrderLine !=null and ParentSalesOrderLine .Product !=null and Quantity != null
 and sol.QuantityUnit != null)
 {
 NetWeightkg = Quantity.ConvertToOrDefault(GetSystemMeasurementUnit(SystemUnit.NetKilograms),
@@ -132,15 +132,24 @@ Lengthm = Quantity.ConvertToOrDefault(GetSystemMeasurementUnitSystemUnit.LengthM
 Product, true);
 Widthm = Quantity.ConvertToOrDefault(GetSystemMeasurementUnit(SystemUnit.WidthMeters),
 Product, true);
-}</p>
-<p>GetSystemMeasurementUnit =&gt;</p>
-<p>measurementUnits = transaction.Query&lt;MeasurementUnit&gt;().Where(mu =&gt; mu.SystemUnit ==
-systemUnit)</p>
-<p>IF(measurementUnits.Count==0)</p>
-<p>throw M1</p>
-<p>IF(measurementUnits .Count&gt;1)</p>
-<p>throw M2</p>
-</td>
+}
+<br><br>
+<br><br>
+<br><br>
+GetSystemMeasurementUnit =&gt;
+<br><br>
+measurementUnits = transaction.Query&lt;MeasurementUnit&gt;().Where(mu =&gt; mu.SystemUnit ==
+systemUnit)
+<br><br>
+IF(measurementUnits.Count==0)
+<br><br>
+throw M1
+<br><br>
+IF(measurementUnits .Count&gt;1)
+<br><br>
+throw M2
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -149,11 +158,11 @@ units' fields should be recalculated.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>M1: Cannot find a Measurement Unit that corresponds to system unit '{SystemUnit}'.</p>
-<p>M2: The Measurement unit that corresponds to system unit '{0}' cannot be determined because
+<td>M1: Cannot find a Measurement Unit that corresponds to system unit '{SystemUnit}'.
+<br><br>
+M2: The Measurement unit that corresponds to system unit '{0}' cannot be determined because
 there are more than one measurement units that has the field System Unit filled with
-'{SystemUnit}'.</p>
-</td>
+'{SystemUnit}'.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>

@@ -116,13 +116,13 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(Activity.State == DocumentState.New)</p>
-<p>if (StartTime is not null &amp;&amp; PlannedDurationMinutes is not null)
+<td>IF(Activity.State == DocumentState.New)
+<br><br>
+if (StartTime is not null &amp;&amp; PlannedDurationMinutes is not null)
 {
 if (EndTime != StartTime.AddMinutes(PlannedDurationMinutes))
 EndTime = StartTime.AddMinutes(PlannedDurationMinutes);
-}</p>
-</td>
+}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

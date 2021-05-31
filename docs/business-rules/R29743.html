@@ -117,32 +117,37 @@ eCompany.Company)</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If ((SalesOrdersOptions [DocumentType=SalesOrder.DocumentType].AllowedDirections !=
+<td>If ((SalesOrdersOptions [DocumentType=SalesOrder.DocumentType].AllowedDirections !=
 SalesReturn) &amp;&amp; (FiscalSalesNumber = NULL) &amp;&amp; (PosOperator != NULL ) &amp;&amp; (PosFiscalPrinter !=
 NULL) &amp;&amp; (PosSequences[(PosDevice == SalesOrder.PosFiscalPrinter) &amp;&amp; (Active ==
-True)].Count() == 1))</p>
-<p>, then:</p>
-<p>(1) set a value: FiscalSalesNumber = CONCAT('PosFiscalPrinter.DeviceRegistrationNo' +
+True)].Count() == 1))
+<br><br>
+, then:
+<br><br>
+(1) set a value: FiscalSalesNumber = CONCAT('PosFiscalPrinter.DeviceRegistrationNo' +
 '-' + 'PosOperator.PosOperatorCode' + '-' + 'FIRST(PosSequences[(PosDevice ==
-SalesOrder.PosFiscalPrinter) &amp;&amp; (Active == True)]).NextNo')</p>
-<p>(2) set a value: FIRST(PosSequences[(PosDevice == SalesOrder.PosFiscalPrinter) &amp;&amp; (Active ==
-True)]).NextNo = <a href="https://confluence.erp.net/display/techdoc/INCNUM">INCNUM</a>(NextNo)</p>
-</td>
+SalesOrder.PosFiscalPrinter) &amp;&amp; (Active == True)]).NextNo')
+<br><br>
+(2) set a value: FIRST(PosSequences[(PosDevice == SalesOrder.PosFiscalPrinter) &amp;&amp; (Active ==
+True)]).NextNo = <a href="https://confluence.erp.net/display/techdoc/INCNUM">INCNUM</a>(NextNo)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When a POS Sales Order is created into database, according to the Bulgarian legislation the
-software must generate a unique sales number, which is formed as follows:</p>
-<p>'Individual Number of the Fiscal Printer - Operator code - Next number of the Sales Order'.</p>
-<p>In EnterpriseOne the unique sales number is filled in the Sales Order's field Fiscal Sales
-Number.</p>
-<p>The purpose of the current rule is to create a unique sales number for the POS Sales Orders
+<td>When a POS Sales Order is created into database, according to the Bulgarian legislation the
+software must generate a unique sales number, which is formed as follows:
+<br><br>
+'Individual Number of the Fiscal Printer - Operator code - Next number of the Sales Order'.
+<br><br>
+In EnterpriseOne the unique sales number is filled in the Sales Order's field Fiscal Sales
+Number.
+<br><br>
+The purpose of the current rule is to create a unique sales number for the POS Sales Orders
 based on the required format, to set the value in the Fiscal Sales Number field and to
-increment the POS Sequence's Next No.</p>
-<p>Note that the rule activates only for the normal sales orders and not for sales return, for
+increment the POS Sequence's Next No.
+<br><br>
+Note that the rule activates only for the normal sales orders and not for sales return, for
 more information about normal and return sales, see <a href="https://confluence.erp.net/display/techdoc/Sales+Order+Row+Types">Sales Order Row
-Types</a>.</p>
-</td>
+Types</a>.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

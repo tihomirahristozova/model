@@ -116,17 +116,20 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (LineAmount != null)
-{</p>
-<p>lineAmount= (lineAmount / (1 - lineStandardDiscountPercent))/ (1 -
-LineCustomDiscountPercent);</p>
-<p>if (Quantity != 0)
+<td>if (LineAmount != null)
+{
+<br><br>
+lineAmount= (lineAmount / (1 - lineStandardDiscountPercent))/ (1 -
+LineCustomDiscountPercent);
+<br><br>
+if (Quantity != 0)
 {
 UnitPrice= lineAmount / Quantity;
-}</p>
-<p>ELSE</p>
-<p>UnitPrice=lineAmount</p>
-</td>
+}
+<br><br>
+ELSE
+<br><br>
+UnitPrice=lineAmount</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

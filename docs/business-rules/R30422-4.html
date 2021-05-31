@@ -116,20 +116,22 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ParentSalesOrderLine.Product.ProductType.IsServiced ?? true)</p>
-<p>GuaranteePeriodDays = ParentSalesOrderLine.Product.GuaranteePeriodDays</p>
-<p>ELSE</p>
-<p>GuaranteePeriodDays = null</p>
-</td>
+<td>IF(ParentSalesOrderLine.Product.ProductType.IsServiced ?? true)
+<br><br>
+GuaranteePeriodDays = ParentSalesOrderLine.Product.GuaranteePeriodDays
+<br><br>
+ELSE
+<br><br>
+GuaranteePeriodDays = null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When ParentSalesOrderLine is changed, if the line has a product with a product type that is
+<td>When ParentSalesOrderLine is changed, if the line has a product with a product type that is
 serviced, GuaranteePeriodDays should be chnaged to the number of days specified in the
 product's GuaranteePeriodDays. GuaranteePeriodDays should be changed to null if any of the
-line, product or product type is null.</p>
-<p>(RecalcExpression)</p>
-</td>
+line, product or product type is null.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

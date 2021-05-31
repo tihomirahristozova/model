@@ -110,9 +110,9 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (ReturnForSalesOrderLine != null &amp;&amp; ReturnForInvoiceLine != null)</p>
-<p>ReturnForSalesOrderLine = ReturnForInvoiceLine.ParentSalesOrderLine</p>
-</td>
+<td>If (ReturnForSalesOrderLine != null &amp;&amp; ReturnForInvoiceLine != null)
+<br><br>
+ReturnForSalesOrderLine = ReturnForInvoiceLine.ParentSalesOrderLine</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -121,14 +121,15 @@ as the sales order line specified in the same line in ReturnForSalesOrderLine.</
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>In line {LineNo} both attributes ReturnForSalesOrderLine and ReturnForSalesOrderLine are
+<td>In line {LineNo} both attributes ReturnForSalesOrderLine and ReturnForSalesOrderLine are
 specified but the ReturnForSalesOrderLine - '{ReturnForSalesOrderLine}', is not the sales
 order line invoiced by the ReturnForInvoiceLine -
-'{ReturnForInvoiceLine.ParentSalesOrderLine}'.</p>
-<p>When the invoice line and the sales order line to which the goods are returned are specified,
-they must point to one and the same original Sales Order Line.</p>
-<p>Please change the ReturnForSalesOrderLine attribute.</p>
-</td>
+'{ReturnForInvoiceLine.ParentSalesOrderLine}'.
+<br><br>
+When the invoice line and the sales order line to which the goods are returned are specified,
+they must point to one and the same original Sales Order Line.
+<br><br>
+Please change the ReturnForSalesOrderLine attribute.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

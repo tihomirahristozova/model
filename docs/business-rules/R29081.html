@@ -110,10 +110,11 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>for every line validate that:</p>
-<p>if ((Quantity &lt; 0 || LineAmount &lt; 0) &amp;&amp; Product.ProductType.IsStocked == True)</p>
-<p>HistoricalUnitCost ! = null OR ReturnForSalesOrderLine ! = null</p>
-</td>
+<td>for every line validate that:
+<br><br>
+if ((Quantity &lt; 0 || LineAmount &lt; 0) &amp;&amp; Product.ProductType.IsStocked == True)
+<br><br>
+HistoricalUnitCost ! = null OR ReturnForSalesOrderLine ! = null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -122,13 +123,13 @@ ReturnForSalesOrderLine have to have а value.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Line {LineNo} in '{DocumentText}' is considered to return products (because it has negative
+<td>Line {LineNo} in '{DocumentText}' is considered to return products (because it has negative
 quantity or amount) but columns 'Return For Sales Order Line' or 'Historical Unit Cost'
 don't have value. 'Return For Sales Order Line' and 'Historical Unit Cost' are used to
 determine the cost at which the products are returned. They can not be both empty in this
-case.</p>
-<p>Please fill in 'Return For Sales Order Line' or  'Historical Unit Cost'.</p>
-</td>
+case.
+<br><br>
+Please fill in 'Return For Sales Order Line' or  'Historical Unit Cost'.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

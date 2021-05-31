@@ -110,10 +110,11 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>if (SalesOrderLine.PromotionalPackage != null)</p>
-<p>SalesOrderPromotionalPackage[SalesOrderLine.PromotionalPackage].Count() &gt;0</p>
-</td>
+<td>Validate that:
+<br><br>
+if (SalesOrderLine.PromotionalPackage != null)
+<br><br>
+SalesOrderPromotionalPackage[SalesOrderLine.PromotionalPackage].Count() &gt;0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -123,13 +124,16 @@ to be listed in the SalesOrder Promotional Package table.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Repeat the message for each line:</p>
-<p>&quot;Promotional package '{SalesOrderLine.PromotionalPackage}' in line {LineNo} does not exist
+<td>Repeat the message for each line:
+<br><br>
+&quot;Promotional package '{SalesOrderLine.PromotionalPackage}' in line {LineNo} does not exist
 in the sales order promotional packages table.
 All sales order lines which are part of promotional packages must be added through the
-SalesOrder Promotional Package table.&quot;</p>
-<p><em>Sort Messages By Attribute: LineNo</em></p>
-</td>
+SalesOrder Promotional Package table.&quot;
+<br><br>
+<br><br>
+<br><br>
+<em>Sort Messages By Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

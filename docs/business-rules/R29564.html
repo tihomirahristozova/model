@@ -110,11 +110,12 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (WorkOrderItem.OutputStore != null &amp;&amp; WorkOrderItem.Recipe != null)</p>
-<p>then WorkOrderItem.Recipe.Store == WorkOrderItem.OutputStore or WorkOrderItem.Recipe.Store ==
-null</p>
-</td>
+<td>Validate that:
+<br><br>
+If (WorkOrderItem.OutputStore != null &amp;&amp; WorkOrderItem.Recipe != null)
+<br><br>
+then WorkOrderItem.Recipe.Store == WorkOrderItem.OutputStore or WorkOrderItem.Recipe.Store ==
+null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -124,12 +125,15 @@ recipe whose store is null.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The recipe '{Recipe}' in line '{LineNo}' in document '{DocumentText}' is not valid for
-the store '{OutputStore}'.</p>
-<p>The store in the recipe should be the same as the store in the work order item line or the
-store in the recipe should be NULL.</p>
-<p><em>Sort messages by Attribute: LineNo</em></p>
-</td>
+<td>The recipe '{Recipe}' in line '{LineNo}' in document '{DocumentText}' is not valid for
+the store '{OutputStore}'.
+<br><br>
+The store in the recipe should be the same as the store in the work order item line or the
+store in the recipe should be NULL.
+<br><br>
+<br><br>
+<br><br>
+<em>Sort messages by Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

@@ -115,18 +115,18 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(Product!=null AND QuantityUnit!=null)</p>
-<p>StandardUnitPrice =
+<td>IF(Product!=null AND QuantityUnit!=null)
+<br><br>
+StandardUnitPrice =
 Produc
-t.GetStandardUnitPrice(QuantityUnit,ToStore.Currency,TransferOrder.CurrencyDirectory)</p>
-</td>
+t.GetStandardUnitPrice(QuantityUnit,ToStore.Currency,TransferOrder.CurrencyDirectory)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Product, Quantity Unit or To Store is changed, Standard Unit Price should be
-recalculated. </p>
-<p>(RecalcExpression)</p>
-</td>
+<td>When Product, Quantity Unit or To Store is changed, Standard Unit Price should be
+recalculated. 
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

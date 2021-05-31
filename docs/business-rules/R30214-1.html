@@ -116,17 +116,17 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(Customer.EnterpriseCompany!=null &amp;&amp; Customer.DefaultCurrency!=null)</p>
-<p>THEN Customer.CreditLimit=Customer.EnterpriseCompany.DefaultCustomerCreditLimitBase</p>
-</td>
+<td>IF(Customer.EnterpriseCompany!=null &amp;&amp; Customer.DefaultCurrency!=null)
+<br><br>
+THEN Customer.CreditLimit=Customer.EnterpriseCompany.DefaultCustomerCreditLimitBase</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>If Enterprise Company or Default Currency are not null the customer's Credit Limit is equal
+<td>If Enterprise Company or Default Currency are not null the customer's Credit Limit is equal
 to the Default Customer Credit Limit Base of the selected Enterprise Company. It is
-recalculated when there is a change in the Enteprise Company or the Default Currency.</p>
-<p>RecalcExpression</p>
-</td>
+recalculated when there is a change in the Enteprise Company or the Default Currency.
+<br><br>
+RecalcExpression</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

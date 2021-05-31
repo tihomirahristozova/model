@@ -116,14 +116,19 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (OldValue != NewValue)
+<td>if (OldValue != NewValue)
 {
 PurchaseInvoiceLine.RefreshCustomPropertyValues(Product);
-}</p>
-<p>*PurchaseInvoiceLine.RefreshCustomPropertyValues(Product):</p>
-<p>propertiesByProdType = Transaction.Query&lt;ProductTypePurchaseInvoiceLineProperty&gt;()
-.Where(ProductType == product.ProductType);</p>
-<p>requiredProp = propertiesByProdType.Select(Property);
+}
+<br><br>
+<br><br>
+<br><br>
+*PurchaseInvoiceLine.RefreshCustomPropertyValues(Product):
+<br><br>
+propertiesByProdType = Transaction.Query&lt;ProductTypePurchaseInvoiceLineProperty&gt;()
+.Where(ProductType == product.ProductType);
+<br><br>
+requiredProp = propertiesByProdType.Select(Property);
 actualProp = CustomProperties.GetActualPropertyValues();
 foreach (actualProp)
 {
@@ -135,8 +140,7 @@ foreach (requiredProp)
 currentPV = CustomProperties.GetPropertyValue(requiredProperty);
 if (currentPV == null) PropertyValue newPV = new PropertyValue{Property = item, EntityItemId
 = PurchaseInvoiceLine.Id)
-}</p>
-</td>
+}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

@@ -106,33 +106,36 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>The party of the dealer has maximum one dealer definition (including the current one) that
-points to it for each Enterprise Company.</p>
-<p>NOTE: If 'Dealer. EnterpriseCompany=NULL', then the dealer is defined for all Enterprise
+<td>Validate that:
+<br><br>
+The party of the dealer has maximum one dealer definition (including the current one) that
+points to it for each Enterprise Company.
+<br><br>
+NOTE: If 'Dealer. EnterpriseCompany=NULL', then the dealer is defined for all Enterprise
 companies. Parties with such a dealer definition pointing to them, cannot have more dealer
-definitions.</p>
-</td>
+definitions.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>Dealer is a definition which originates from Party ( like Customer and Supplier, for example).
-Which means that every Dealer always refers to only one particular Party.</p>
-<p>We can manually choose the Enterprise Company for which the particular Dealer definition is
-valid.</p>
-<p>In order to make sure that we haven't already defined the specific Dealer for certain
+<td>Dealer is a definition which originates from Party ( like Customer and Supplier, for example).
+Which means that every Dealer always refers to only one particular Party.
+<br><br>
+We can manually choose the Enterprise Company for which the particular Dealer definition is
+valid.
+<br><br>
+In order to make sure that we haven't already defined the specific Dealer for certain
 Enterprise Company, we need to check that in the dealer's Enterprise Company there is only one
-Dealer that refers the same Party as the one of the current record.</p>
-<p>If the field 'Enterprise Company' in the Dealer's definition is empty, then it is considered
+Dealer that refers the same Party as the one of the current record.
+<br><br>
+If the field 'Enterprise Company' in the Dealer's definition is empty, then it is considered
 that the Dealer is defined for all Enterprise Companies and no other Dealers that refer the
-current Party could be created.</p>
-</td>
+current Party could be created.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>There is another dealer defined for party '{Dealer.Party}' in the same enterprise company.</p>
-<p>Please, check in the right enterprise company is set or if the record has already been created.</p>
-</td>
+<td>There is another dealer defined for party '{Dealer.Party}' in the same enterprise company.
+<br><br>
+Please, check in the right enterprise company is set or if the record has already been created.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

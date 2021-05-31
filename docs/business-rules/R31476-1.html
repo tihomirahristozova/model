@@ -115,20 +115,25 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>DeclaringPersonAddress = Person.GetValidAddress().Name</p>
-<p>*Person.GetValidAddress():</p>
-<p>if (Party.IsGhost)
+<td>DeclaringPersonAddress = Person.GetValidAddress().Name
+<br><br>
+<br><br>
+<br><br>
+*Person.GetValidAddress():
+<br><br>
+if (Party.IsGhost)
 return Ghost&lt;ContactMechanism&gt;
-else</p>
-<p>FirstValidPartyContactMechanism = Party.ContactMechanisms
+else
+<br><br>
+FirstValidPartyContactMechanism = Party.ContactMechanisms
 .Where(ContactMechanism.ContactMechanismType == Address
 AND ThruDate.GreaterEqualNull(DateTime.Today)
 AND FromDate.LessEqualNull(DateTime.Today))
-.OrderByDescending(IsDefault).FirstOrDefault()</p>
-<p>then if FirstValidPartyContactMechanism !=null,
+.OrderByDescending(IsDefault).FirstOrDefault()
+<br><br>
+then if FirstValidPartyContactMechanism !=null,
 return FirstValidPartyContactMechanism.ContactMechanism
-else if FirstValidPartyContactMechanism  is null, return Ghost&lt;ContactMechanism&gt;</p>
-</td>
+else if FirstValidPartyContactMechanism  is null, return Ghost&lt;ContactMechanism&gt;</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -142,9 +147,9 @@ Contact Mechanisms are ordered first.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

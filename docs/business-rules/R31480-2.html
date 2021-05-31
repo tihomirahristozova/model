@@ -98,10 +98,11 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td><p>AttributeChanged(FromCurrency)</p>
-<p>AttributeChanged(RateDivisor)</p>
-<p>AttributeChanged(CurrencyDirectory.ToCurrency)</p>
-</td>
+<td>AttributeChanged(FromCurrency)
+<br><br>
+AttributeChanged(RateDivisor)
+<br><br>
+AttributeChanged(CurrencyDirectory.ToCurrency)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -118,18 +119,18 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF((FromCurrency!=null &amp;&amp; CurrencyDirectory.ToCurrency!=null &amp;&amp;
-FromCurrency==CurrencyDirectory.ToCurrency) || RateDivisor==0)</p>
-<p>RateDivisor = 1</p>
-</td>
+<td>IF((FromCurrency!=null &amp;&amp; CurrencyDirectory.ToCurrency!=null &amp;&amp;
+FromCurrency==CurrencyDirectory.ToCurrency) || RateDivisor==0)
+<br><br>
+RateDivisor = 1</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When From Currency or Rate Divisor is changed, if From Currency and Currency
+<td>When From Currency or Rate Divisor is changed, if From Currency and Currency
 Directory's To Currency are equal and not null, or Rate Divisor is 0, then Rate
-Divisor is set to 1.</p>
-<p>(RecalcExpression)</p>
-</td>
+Divisor is set to 1.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -137,9 +138,9 @@ Divisor is set to 1.</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

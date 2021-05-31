@@ -110,36 +110,54 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>if (Offer.oldState &lt; 30 &amp;&amp; Offer.newState &gt;=30 &amp;&amp; Offer.Deal == null &amp;&amp;
-Offer.DocumentType.OfferOption.DealDocumentType != null)</p>
-<p>(</p>
-<p>new Deal is created as follows:</p>
-<p>Deal.DocumentType = DealDocumentType</p>
-<p>Deal.Notes = Offer.Notes</p>
-<p>Deal.Party = Offer.Customer.Party</p>
-<p>Deal.LeadingSalesPerson = Offer.SalesPerson</p>
-<p>Deal.ExpectedRevenue = Sum(OfferLines.LineAmount)</p>
-<p>Deal.ExpectedRevenueCurrency = Offer.DocumentCurrency</p>
-<p>Deal.RevenueStartDate = Offer.DocumentDate</p>
-<p>Deal.RevenueEndDate = Offer.DocumentDate</p>
-<p>Deal.SuccessProbability = 1</p>
-<p>Deal.DealStatus = Successful</p>
-<p>)</p>
-<p>&amp;&amp;</p>
-<p>(</p>
-<p>Offer.Deal == Deal //the newly created Deal</p>
-<p>Offer.PrimeCauseDocument = Deal</p>
-<p>)</p>
-</td>
+<td>Validate that:
+<br><br>
+if (Offer.oldState &lt; 30 &amp;&amp; Offer.newState &gt;=30 &amp;&amp; Offer.Deal == null &amp;&amp;
+Offer.DocumentType.OfferOption.DealDocumentType != null)
+<br><br>
+(
+<br><br>
+new Deal is created as follows:
+<br><br>
+Deal.DocumentType = DealDocumentType
+<br><br>
+Deal.Notes = Offer.Notes
+<br><br>
+Deal.Party = Offer.Customer.Party
+<br><br>
+Deal.LeadingSalesPerson = Offer.SalesPerson
+<br><br>
+Deal.ExpectedRevenue = Sum(OfferLines.LineAmount)
+<br><br>
+Deal.ExpectedRevenueCurrency = Offer.DocumentCurrency
+<br><br>
+Deal.RevenueStartDate = Offer.DocumentDate
+<br><br>
+Deal.RevenueEndDate = Offer.DocumentDate
+<br><br>
+Deal.SuccessProbability = 1
+<br><br>
+Deal.DealStatus = Successful
+<br><br>
+)
+<br><br>
+&amp;&amp;
+<br><br>
+(
+<br><br>
+Offer.Deal == Deal //the newly created Deal
+<br><br>
+Offer.PrimeCauseDocument = Deal
+<br><br>
+)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The current business rule give the user an option to automatically create deal for the
+<td>The current business rule give the user an option to automatically create deal for the
 current offer, if none is created by now. This keeps the data consistency when the company
-has model where salesman work on deals and create offers based on those deals.</p>
-<p>If for some reason there is an offer with no deal, such is automatically created.</p>
-</td>
+has model where salesman work on deals and create offers based on those deals.
+<br><br>
+If for some reason there is an offer with no deal, such is automatically created.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

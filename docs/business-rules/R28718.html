@@ -110,25 +110,26 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For every LogisticsDocument.DocumentType.DocumentTypeAmount validate that:</p>
-<p>If ((RequiredFromDate == NULL || RequiredFromDate &lt;= LogisticsDocument.DocumentDate) &amp;&amp;
-(RequiredThruDate == NULL || RequiredThruDate &gt;= LogisticsDocument.DocumentDate))</p>
-<p>, then LogisticsDocument.DocumentAmounts[DocumentAmountType ==
-LogisticsDocument.DocumentType.DocumentTypeAmount.DocumentAmountType].Count() &gt; 0</p>
-</td>
+<td>For every LogisticsDocument.DocumentType.DocumentTypeAmount validate that:
+<br><br>
+If ((RequiredFromDate == NULL || RequiredFromDate &lt;= LogisticsDocument.DocumentDate) &amp;&amp;
+(RequiredThruDate == NULL || RequiredThruDate &gt;= LogisticsDocument.DocumentDate))
+<br><br>
+, then LogisticsDocument.DocumentAmounts[DocumentAmountType ==
+LogisticsDocument.DocumentType.DocumentTypeAmount.DocumentAmountType].Count() &gt; 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>In the document type's definition there is a &quot;Document TypesFormAmounts&quot; panel where the
+<td>In the document type's definition there is a &quot;Document TypesFormAmounts&quot; panel where the
 consultant can set Document Amount Types (such as VAT) which are required. When a Document
 Amount Type is required there must be at least one record with this Document Amount Type in
-the Additional Document Amounts panel of the documents with this document type.</p>
-<p>The period for which the Document Amount Types are required can be adjusted through the
+the Additional Document Amounts panel of the documents with this document type.
+<br><br>
+The period for which the Document Amount Types are required can be adjusted through the
 fields &quot;RequiredFromDate&quot; and &quot;RequiredThruDate&quot;. If the fields don't have a value then the
 Document Amount Type is required for any period. If any of them have value it specifies the
 date, after/ up to which the amount becomes/is required for the current document type. The
-date is compared against the document date.</p>
-</td>
+date is compared against the document date.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -140,7 +141,9 @@ for document '{DocumentText}' are specified in the definition of document type
 <tr>
 <td><strong>Introduced In
 Version</strong></td>
-<td>2018.2</td>
+<td><p>2018.2</p>
+<p><br><br></p>
+</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

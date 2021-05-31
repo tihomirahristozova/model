@@ -115,8 +115,9 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF (line.SupportsConfirmedQuantities)</p>
-<p>if(Product != null
+<td>IF (line.SupportsConfirmedQuantities)
+<br><br>
+if(Product != null
                 &amp;&amp; QuantityUnit != null
                 &amp;&amp; ConfirmedQuantityBase != null
                 &amp;&amp; ConfirmedQuantityBase !=
@@ -127,8 +128,7 @@ ConfirmedQuantity.ConvertTo(Product.BaseUnit, Product))
 Product);
                 else if (Product.BaseUnit == QuantityUnit)
                     ConfirmedQuantity = ConfirmedQuantityBase;
-            }</p>
-</td>
+            }</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

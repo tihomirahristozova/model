@@ -106,11 +106,13 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
+<td><p>Validate that:
+<br><br></p>
 <ul>
 <li>if &quot;Product.UseLots == Required&quot;, then &quot;StoreTransactionLine.Lot&quot; has value;</li>
 <li>if &quot;Product.UseLots == NotAllowed&quot;, then &quot;StoreTransactionLine.Lot = NULL&quot;;</li>
-<li>if &quot;Product.UseLots == Allowed&quot;, then &quot;StoreTransactionLine.Lot = NULL or has value&quot;.</li>
+<li>if &quot;Product.UseLots == Allowed&quot;, then &quot;StoreTransactionLine.Lot = NULL or has value&quot;.
+<br><br></li>
 </ul>
 </td>
 </tr>
@@ -119,24 +121,26 @@
 <td><p>High traceability is important for some products and not for others and therefore those products
 have different requirements for obligatory use of lots. That's why through the field &quot;Use
 Lots&quot; in the products definition could be specified if the particular product uses lots. The
-possible values for the field are:</p>
+possible values for the field are:
+<br><br></p>
 <ul>
 <li>Allowed -- This setting allows lots to be used for this product, but does not make use of
 lots required;</li>
 <li>NotAllowed - This setting does not allow lots to be used for this product;</li>
 <li>Required - This setting makes use of lots compulsory. It requires the use of lots in each
-form in which the product is used.</li>
+form in which the product is used.
+<br><br>
+The current business rule validates that the use of lots in the store transaction lines
+corresponds to the specified option in the products definitions.</li>
 </ul>
-<p>The current business rule validates that the use of lots in the store transaction lines
-corresponds to the specified option in the products definitions.</p>
 </td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field &quot;Lot&quot; in line [LineNo] in document [DocumentType] [DocumentNo] is invalid.</p>
-<p>The product [Product.PartNumber] is [Product.UseLots] to use lots, but the value [Lot] in
-the field &quot;Lot&quot; violates this setting.</p>
-</td>
+<td>The field &quot;Lot&quot; in line [LineNo] in document [DocumentType] [DocumentNo] is invalid.
+<br><br>
+The product [Product.PartNumber] is [Product.UseLots] to use lots, but the value [Lot] in
+the field &quot;Lot&quot; violates this setting.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

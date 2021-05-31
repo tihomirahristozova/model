@@ -90,9 +90,9 @@
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td><p>PaymentTransaction.TotalAmount,</p>
-<p>PaymentTransactionLine.Amount</p>
-</td>
+<td>PaymentTransaction.TotalAmount,
+<br><br>
+PaymentTransactionLine.Amount</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -118,15 +118,16 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if( oldTotalAmountCurrency != newTotalAmountCurrency AND CurrencyDirectory != null)</p>
-<p>TotalAmount = new Amount(TotalAmount.Value, oldTotalAmountCurrency
-).ConvertTo(newTotalAmountCurrency, CurrencyDirectory);</p>
-<p>foreach (Lines)
+<td>if( oldTotalAmountCurrency != newTotalAmountCurrency AND CurrencyDirectory != null)
+<br><br>
+TotalAmount = new Amount(TotalAmount.Value, oldTotalAmountCurrency
+).ConvertTo(newTotalAmountCurrency, CurrencyDirectory);
+<br><br>
+foreach (Lines)
 {
 line.Amount = new Amount(line.Amount.Value,
 oldTotalAmountCurrency).ConvertTo(newTotalAmountCurrency, CurrencyDirectory);
-}</p>
-</td>
+}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -140,7 +141,9 @@ Amount in all lines should be converted, too.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 21</td>
+<td>Introduced: 21
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

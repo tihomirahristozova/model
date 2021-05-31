@@ -106,16 +106,19 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If the following is not true for all rows of the Intrastat Declaration, throw an error:</p>
-<p>If ((CommodityCode.ValidFrom &lt;= IntrastatDeclaration.Period AND CommodityCode.ValidTo &gt;=
+<td>If the following is not true for all rows of the Intrastat Declaration, throw an error:
+<br><br>
+If ((CommodityCode.ValidFrom &lt;= IntrastatDeclaration.Period AND CommodityCode.ValidTo &gt;=
 IntrastatDeclaration.Period) OR (CommodityCode.ValidFrom &lt;= IntrastatDeclaration.Period AND
 CommodityCode.ValidTo == null) OR (CommodityCode.ValidFrom == null AND CommodityCode.ValidTo &gt;=
 IntrastatDeclaration.Period) OR (CommodityCode.ValidFrom == null AND CommodityCode.ValidTo ==
-null))</p>
-<p>LineIntastatCommodityCode() = true</p>
-<p>else</p>
-<p>LineIntastatCommodityCode() = false</p>
-</td>
+null))
+<br><br>
+LineIntastatCommodityCode() = true
+<br><br>
+else
+<br><br>
+LineIntastatCommodityCode() = false</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

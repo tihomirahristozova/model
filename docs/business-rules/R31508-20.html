@@ -116,19 +116,21 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ReceivingOrderLine!=null)</p>
-<p>if(ReceivingOrderLine.ConfirmedQuantity!=null)</p>
-<p>Quantity= ReceivingOrderLine.ConfirmedQuantity</p>
-<p>else Quantity = ReceivingOrderLine.Quantity</p>
-</td>
+<td>IF(ReceivingOrderLine!=null)
+<br><br>
+if(ReceivingOrderLine.ConfirmedQuantity!=null)
+<br><br>
+Quantity= ReceivingOrderLine.ConfirmedQuantity
+<br><br>
+else Quantity = ReceivingOrderLine.Quantity</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Receiving Order Line changed and is not null, Quantity is changed to the Receiving Order
+<td>When Receiving Order Line changed and is not null, Quantity is changed to the Receiving Order
 Line's Confirmed Quantity. If Confirmed Quantity is null,  Quantity is changed to the
-Receiving Order Line's Quantity.</p>
-<p>(RecalcExpression)</p>
-</td>
+Receiving Order Line's Quantity.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

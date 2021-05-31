@@ -115,28 +115,36 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If(Product!=null)</p>
-<p>Recipe = Product.GetDefaultRecipe(ReleaseDate.IfNullThen(WorkOrder.DocumentDate),
-OutputStore.IfNullThen(WorkOrder.DefaultOutputStore))</p>
-<p>*<strong>GetDefaultRecipe(ForDate, ForStore</strong>) - the method searches for a Recipe with the
-following filter:</p>
-<p>Recipe.Product == this
+<td>If(Product!=null)
+<br><br>
+Recipe = Product.GetDefaultRecipe(ReleaseDate.IfNullThen(WorkOrder.DocumentDate),
+OutputStore.IfNullThen(WorkOrder.DefaultOutputStore))
+<br><br>
+*<strong>GetDefaultRecipe(ForDate, ForStore</strong>) - the method searches for a Recipe with the
+following filter:
+<br><br>
+Recipe.Product == this
 Recipe.IsDefault == true
 RecipeReleaseDate &lt;= forDate
-Recipe.ExpiryDate.IfNullThen( DateTime.MaxValue) &gt;= forDate</p>
-<p>then if ForStore is not null:</p>
-<p>Recipe.Store == ForStore or null</p>
-<p>if a store has been specified and in the results there is a recipe with that store,
-it is returned from the method</p>
-<p>if the store is null, the first recipe with null store is returned.</p>
-</td>
+Recipe.ExpiryDate.IfNullThen( DateTime.MaxValue) &gt;= forDate
+<br><br>
+then if ForStore is not null:
+<br><br>
+Recipe.Store == ForStore or null
+<br><br>
+if a store has been specified and in the results there is a recipe with that store,
+it is returned from the method
+<br><br>
+if the store is null, the first recipe with null store is returned.
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Product is changed, Recipe should be changed to the selected Product's default
-Recipe. </p>
-<p>(RecalcExpression)</p>
-</td>
+<td>When Product is changed, Recipe should be changed to the selected Product's default
+Recipe. 
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -144,9 +152,9 @@ Recipe. </p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

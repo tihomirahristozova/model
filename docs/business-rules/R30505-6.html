@@ -116,17 +116,17 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(DocumentCurrency==null)</p>
-<p>Supp
-lier?.DefaultCurrency.IfNullThen(EnterpriseCompany.BaseCurrency).IfNullThen(DocumentCurrency)</p>
-</td>
+<td>IF(DocumentCurrency==null)
+<br><br>
+Supp
+lier?.DefaultCurrency.IfNullThen(EnterpriseCompany.BaseCurrency).IfNullThen(DocumentCurrency)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When the Supplier is changed, if Document Currency doesn't have a value, it should be
-changed to the DefaultCurrency of the supplier.</p>
-<p>(RecalcExpression)</p>
-</td>
+<td>When the Supplier is changed, if Document Currency doesn't have a value, it should be
+changed to the DefaultCurrency of the supplier.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

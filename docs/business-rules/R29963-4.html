@@ -120,14 +120,16 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The rule updates the Product Type when the Products Group of the Products is changed.</p>
-<p>The new value is defined according the following algorithm:</p>
-<p>If the Product Group doesn't have a Default Product Type, it checks all the parents in the
+<td>The rule updates the Product Type when the Products Group of the Products is changed.
+<br><br>
+The new value is defined according the following algorithm:
+<br><br>
+If the Product Group doesn't have a Default Product Type, it checks all the parents in the
 hierarchy. If there is a Default Product Type in the current product group or any of it's
-parents, the method return the product type found.</p>
-<p>If there is no default product type in the product groups, it gets the first Product Type
-that has Is Default = true. If there isn't any, it returns NULL.</p>
-</td>
+parents, the method return the product type found.
+<br><br>
+If there is no default product type in the product groups, it gets the first Product Type
+that has Is Default = true. If there isn't any, it returns NULL.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

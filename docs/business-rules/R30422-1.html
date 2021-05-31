@@ -116,25 +116,32 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ShipmentOrder.ToParty?.GetCustomer(EnterpriseCompany) !=null)</p>
-<p>using (ShipmentOrder.NoEvents)
+<td>IF(ShipmentOrder.ToParty?.GetCustomer(EnterpriseCompany) !=null)
+<br><br>
+using (ShipmentOrder.NoEvents)
 {
 ShipmentOrder.Customer = ShipmentOrder.ToParty?.GetCustomer(EnterpriseCompany);
-}</p>
-<p>=&gt;Extension method GetCustomer in PartyExtensions:</p>
-<p>Transaction.Query&lt;Customer&gt;().Where(c =&gt; c.Party == party &amp;&amp;
+}
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+=&gt;Extension method GetCustomer in PartyExtensions:
+<br><br>
+Transaction.Query&lt;Customer&gt;().Where(c =&gt; c.Party == party &amp;&amp;
 c.EnterpriseCompany.EqualNull(enterpriseCompany)) .OrderByDescending(c =&gt;
-c.EnterpriseCompany).FirstOrDefault();</p>
-</td>
+c.EnterpriseCompany).FirstOrDefault();
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When To Party is changed, Customer should be changed to a customer with same Party and valid
+<td>When To Party is changed, Customer should be changed to a customer with same Party and valid
 for the Enterprise Company. Valid customers are those with the specified Enterprise company
-or with empty enterprise company. If more than one customers are found,</p>
-<p>they are ordered by Enterprise Company in a descending order and the first record is the
-selected result.</p>
-</td>
+or with empty enterprise company. If more than one customers are found,
+<br><br>
+they are ordered by Enterprise Company in a descending order and the first record is the
+selected result.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

@@ -116,31 +116,32 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If ((EntityName != Inv_Transactions) &amp;&amp; (ParentDocument != NULL))</p>
-<p>, validate that:</p>
-<p> DocumentDate &gt;= ParentDocument.DocumentDate</p>
-</td>
+<td>If ((EntityName != Inv_Transactions) &amp;&amp; (ParentDocument != NULL))
+<br><br>
+, validate that:
+<br><br>
+ DocumentDate &gt;= ParentDocument.DocumentDate</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>On release check that the Document Date is greater or equal than Parent Document's Document
-Date.</p>
-<p>The rule does not activate for Store Transactions.</p>
-</td>
+<td>On release check that the Document Date is greater or equal than Parent Document's Document
+Date.
+<br><br>
+The rule does not activate for Store Transactions.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Document '[DocumentText]' has an invalid document date.</p>
-<p>The document date is before the document date of its parent document
+<td>Document '[DocumentText]' has an invalid document date.
+<br><br>
+The document date is before the document date of its parent document
 '[ParentDocument.DocumentText]'. The Document Date must be greater or equal than parent's
-Document Date.</p>
-</td>
+Document Date.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2020.1</p>
-<p>Updated: 2020.1 SP1// Added condition '(EntityName != Inv_Transactions)'.</p>
-</td>
+<td>Introduced: 2020.1
+<br><br>
+Updated: 2020.1 SP1// Added condition '(EntityName != Inv_Transactions)'.</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

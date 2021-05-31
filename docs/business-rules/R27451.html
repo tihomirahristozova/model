@@ -106,7 +106,8 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For every line, validate that:</p>
+<td><p>For every line, validate that:
+<br><br></p>
 <ul>
 <li>If 'Invoice.DocumentType.InvoicesOption. SignRestriction == (-1) AllowOnlyNegative', then the
 sign of the 'LineAmount' is '-' ;</li>
@@ -120,22 +121,22 @@ sign of the 'LineAmount' is '+'.</li>
 <tr>
 <td>**
 Description**</td>
-<td><p>Acording to the particular business purpose of the Invoice, we are able to manually restrict the
+<td>Acording to the particular business purpose of the Invoice, we are able to manually restrict the
 signs of the Line Amounts in the document. For example, using this option we can specify that the
 certain document can be used when returning goods (in this situation both Quantity and Line Amount
-are with negative signs) or not.</p>
-<p>The option is called 'Sign Restriction' and is set in the Entity Settings panel in the Document
+are with negative signs) or not.
+<br><br>
+The option is called 'Sign Restriction' and is set in the Entity Settings panel in the Document
 Type's definition. In order to assure that this restriction is not valuated - we need to check if
 the signs of the Total Amount in all document lines correspond to the value set 'Total amount Sign
-Restriction' for the particular document.</p>
-</td>
+Restriction' for the particular document.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field 'Line Amount' in line '{Invoice.LineNo}' contains a value with an invalid sign.</p>
-<p>There is a sign restriction set in the document type definition, but the line amount sign violates
-this setting.</p>
-</td>
+<td>The field 'Line Amount' in line '{Invoice.LineNo}' contains a value with an invalid sign.
+<br><br>
+There is a sign restriction set in the document type definition, but the line amount sign violates
+this setting.</td>
 </tr>
 <tr>
 <td><strong>Introduced

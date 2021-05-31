@@ -110,12 +110,15 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>for each WorkOrderItemIngredient:</p>
-<p>   If (DistributeBy == Measurement)</p>
-<p>         WorkOrderItemIngredient.DistributeByMeasurementCategory != null</p>
-<p>   }</p>
-</td>
+<td>Validate that:
+<br><br>
+for each WorkOrderItemIngredient:
+<br><br>
+   If (DistributeBy == Measurement)
+<br><br>
+         WorkOrderItemIngredient.DistributeByMeasurementCategory != null
+<br><br>
+   }</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -124,11 +127,11 @@ measurement category becomes mandatory as it is key parameter in the distributio
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Material {WorkOrderItemIngerient.Material.PartNumber} of document {DocumentText} is
-distributed by Measurement Category and no Measurement Category is specified.</p>
-<p>Please, select a measurement category in the Distribute By Measurement Category
-attribute.</p>
-</td>
+<td>Material {WorkOrderItemIngerient.Material.PartNumber} of document {DocumentText} is
+distributed by Measurement Category and no Measurement Category is specified.
+<br><br>
+Please, select a measurement category in the Distribute By Measurement Category
+attribute.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

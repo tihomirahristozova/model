@@ -115,18 +115,19 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ShipToCustomer!=null &amp;&amp; Customer!=null)</p>
-<p>IF(ShipToCustomer.Party.ParentParty!=obj.Customer)</p>
-<p>ShipToCustomer=null;</p>
-</td>
+<td>IF(ShipToCustomer!=null &amp;&amp; Customer!=null)
+<br><br>
+IF(ShipToCustomer.Party.ParentParty!=obj.Customer)
+<br><br>
+ShipToCustomer=null;</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Customer is changed, if Ship To Customer has a value and the Parent Party of
+<td>When Customer is changed, if Ship To Customer has a value and the Parent Party of
 Ship To Customer is different from the selected Customer, Ship To Customer is set to
-null.</p>
-<p>(RecalcExpression)</p>
-</td>
+null.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -134,9 +135,9 @@ null.</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

@@ -98,9 +98,9 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td><p>AttributeChanged(PurchaseProductPrice)</p>
-<p>AttributeChanged(QuantityUnit)</p>
-</td>
+<td>AttributeChanged(PurchaseProductPrice)
+<br><br>
+AttributeChanged(QuantityUnit)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -117,8 +117,9 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>GetPurchasePriceForProductPriceUnit(purchaseProductPrice ,quantityUnit ):</p>
-<p>if (purchaseProductPrice != null &amp;&amp; quantityUnit != null &amp;&amp;
+<td>GetPurchasePriceForProductPriceUnit(purchaseProductPrice ,quantityUnit ):
+<br><br>
+if (purchaseProductPrice != null &amp;&amp; quantityUnit != null &amp;&amp;
 PurchaseOrder.DocumentCurrency != null)
 {
 return purchaseProductPrice.GetPurchasePrice(
@@ -129,17 +130,18 @@ this.PurchaseOrder.DocumentCurrency);
 else if (this.PurchaseOrder.DocumentCurrency == null)
 {
 throw
-}</p>
-</td>
+}
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>Calculates a price in the specified currency from the price in the Purchase product
+<td>Calculates a price in the specified currency from the price in the Purchase product
 price. The Price from the definition of the Purchase product price is divided by the
 value of Price Quantity, which is converted to the required measurement unit. Then
-the calculated Price is converted to the required currency.</p>
-<p>(RecalcExpression)</p>
-</td>
+the calculated Price is converted to the required currency.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -148,9 +150,9 @@ be loaded. Document Currency is null.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

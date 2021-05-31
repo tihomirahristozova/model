@@ -98,9 +98,9 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td><p>AttributeChanged(ReceivingOrderLine)</p>
-<p>AttributeChanged(Product)</p>
-</td>
+<td>AttributeChanged(ReceivingOrderLine)
+<br><br>
+AttributeChanged(Product)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -118,19 +118,21 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ReceivingOrderLine!=null)</p>
-<p>QuantityUnit= ReceivingOrderLine.QuantityUnit</p>
-<p>ELSE</p>
-<p>QuantityUnit=Product.MeasurementUnit</p>
-</td>
+<td>IF(ReceivingOrderLine!=null)
+<br><br>
+QuantityUnit= ReceivingOrderLine.QuantityUnit
+<br><br>
+ELSE
+<br><br>
+QuantityUnit=Product.MeasurementUnit</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Receiving Order Line or Product is changed, Quantity Unit is changed. If Receiving Order
+<td>When Receiving Order Line or Product is changed, Quantity Unit is changed. If Receiving Order
 Line is not null, Quantity Unit is changed to the Receiving Order Line's Quantity Unit. If
-Receiving Order Line is null, Quantity Unit is the Product's Measurement Unit.</p>
-<p>(RecalcExpression)</p>
-</td>
+Receiving Order Line is null, Quantity Unit is the Product's Measurement Unit.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

@@ -110,7 +110,8 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For every line: Recalculate the *ItemKey.</p>
+<td><p>For every line: Recalculate the *ItemKey.
+<br><br></p>
 <ul>
 <li>Each ItemKey is a concatenation of the values of the Key RequiredProperties (Key Property
 = True) for the voucher line ordered by the KeyOrder of the AccountRequiredProperties set
@@ -122,14 +123,14 @@ for the Account (the separator between the values is &quot;.&quot;).</li>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The &quot;item key&quot; contains the values of the Key Required Properties of the Account which are
+<td>The &quot;item key&quot; contains the values of the Key Required Properties of the Account which are
 set for the particular voucher line. In order to make sure that the right values are stored
 in the system the Item Key is recalculated on every document state change when the new state
-is greater than &quot;New&quot;</p>
-<p>* Note: If not all Required Properties's values which are marked as Key Properties (Key
+is greater than &quot;New&quot;
+<br><br>
+* Note: If not all Required Properties's values which are marked as Key Properties (Key
 Property = True) are filled in for the lines, then the recalculation of the item key will be
-terminated and the rule will throw an error.</p>
-</td>
+terminated and the rule will throw an error.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

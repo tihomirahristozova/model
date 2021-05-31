@@ -107,13 +107,14 @@ required ProductTypePurchaseInvoiceLineProperties in the current line product's 
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For each line and for each Product.ProductType.ProductTypePurchaseInvoiceLineProperty in
-each line validate that:</p>
-<p>If (PurchaseInvoiceLine.Product.ProductType.ProductTypePurchaseInvoiceLineProperty.Required
-== True)</p>
-<p>PurchaseInvoiceLine.PurchaseInvoiceLineUserProperty != null AND
-PurchaseInvoiceLine.PurchaseInvoiceLineUserProperty != &quot;&quot;</p>
-</td>
+<td>For each line and for each Product.ProductType.ProductTypePurchaseInvoiceLineProperty in
+each line validate that:
+<br><br>
+If (PurchaseInvoiceLine.Product.ProductType.ProductTypePurchaseInvoiceLineProperty.Required
+== True)
+<br><br>
+PurchaseInvoiceLine.PurchaseInvoiceLineUserProperty != null AND
+PurchaseInvoiceLine.PurchaseInvoiceLineUserProperty != &quot;&quot;</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -124,12 +125,12 @@ voucher to be created properly.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>&quot;The properties {[ListOfRequiredProductTypePurchaseInvoiceLineProperties]} of line
+<td>&quot;The properties {[ListOfRequiredProductTypePurchaseInvoiceLineProperties]} of line
 {[LineNo]} in {[DocumentText]} must have values because they are marked as required.
 The required properties for the current line are specified in the product type definition
-of the product in the line.&quot;</p>
-<p><em>Sort Messages By Attribute: LineNo</em></p>
-</td>
+of the product in the line.&quot;
+<br><br>
+<em>Sort Messages By Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

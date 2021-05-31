@@ -106,33 +106,36 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>There is only one 'ProductType' with 'ProductType.IsDefault = True'.</p>
-</td>
+<td>Validate that:
+<br><br>
+There is only one 'ProductType' with 'ProductType.IsDefault = True'.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td><p> When creating a new Product the Product type could be set manually. But it if the field is
-still empty while choosing the Product group, the field will automatically be filled in if:</p>
+still empty while choosing the Product group, the field will automatically be filled in if:
+<br><br></p>
 <ul>
-<li>in the Product group's definition is set a 'Default Product Type';</li>
-</ul>
-<p>or</p>
-<ul>
-<li>there is a Product Type in which definition the field 'Is Default' is checked.</li>
-</ul>
-<p>This means that if the field 'Is Default' in the Product Type's definition is checked, this
+<li>in the Product group's definition is set a 'Default Product Type';
+<br><br>
+or
+<br><br></li>
+<li>there is a Product Type in which definition the field 'Is Default' is checked.
+<br><br>
+<br><br>
+This means that if the field 'Is Default' in the Product Type's definition is checked, this
 specifies that this type is set by default for new products unless another type is specified in
 the product groups. In order to make sure that the right Product Type is going to be
 automatically selected in new products, we validate that there is only one Product Type in
-which's definition 'Is Default' is checked.</p>
+which's definition 'Is Default' is checked.</li>
+</ul>
 </td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Тhere is more than one product type in which definition the field 'Is Default' is checked.</p>
-<p>Please, choose only one default product type.</p>
-</td>
+<td>Тhere is more than one product type in which definition the field 'Is Default' is checked.
+<br><br>
+Please, choose only one default product type.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

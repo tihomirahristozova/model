@@ -116,9 +116,9 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (EventType == AGGREGATECLIENTCOMMIT)</p>
-<p>, validate that GetAggregateRoot(UserBusinessRule.RepositoryName.Entity) = null</p>
-</td>
+<td>If (EventType == AGGREGATECLIENTCOMMIT)
+<br><br>
+, validate that GetAggregateRoot(UserBusinessRule.RepositoryName.Entity) = null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -131,18 +131,18 @@ COMMIT</a>.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p> The 'Event Type' field in the event of user business rule with code
-'{UserBusinessRule.Code}' has an invalid value.</p>
-<p>'Aggregate client commit' event type could be used only for repositories that are a
+<td> The 'Event Type' field in the event of user business rule with code
+'{UserBusinessRule.Code}' has an invalid value.
+<br><br>
+'Aggregate client commit' event type could be used only for repositories that are a
 root of the aggregate. The aggregate root of the currently specified repository is
-'{UserBusinessRule.RepositoryName.Entity.AggregateRoot.EntityName}'.</p>
-</td>
+'{UserBusinessRule.RepositoryName.Entity.AggregateRoot.EntityName}'.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: in implementation</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: in implementation
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

@@ -117,27 +117,33 @@ eCompany.Company)</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If ((PosOperatorCode == NULL) &amp;&amp; PosOperators [(PosLocation =
-PosOperator.PosLocation)].Count() &lt;= 1*</p>
-<p>, then set a value: PosOperatorCode = '0001'</p>
-<p>, else set a value: PosOperatorCode =
+<td>If ((PosOperatorCode == NULL) &amp;&amp; PosOperators [(PosLocation =
+PosOperator.PosLocation)].Count() &lt;= 1*
+<br><br>
+, then set a value: PosOperatorCode = '0001'
+<br><br>
+, else set a value: PosOperatorCode =
 <a href="https://confluence.erp.net/display/techdoc/INCNUM">INCNUM</a> (MAX
-(PosOperator.PosOperatorCode[(PosLocation = PosOperator.PosLocation)]))</p>
-<p>* Note: The count includes the current POS Operator</p>
-</td>
+(PosOperator.PosOperatorCode[(PosLocation = PosOperator.PosLocation)]))
+<br><br>
+<br><br>
+<br><br>
+* Note: The count includes the current POS Operator</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td><p>When selecting a POS Location for the current POS Operator, if the field 'PosOperatorCode'
-is not yet filled in, it is loaded a value, as follows:</p>
+is not yet filled in, it is loaded a value, as follows:
+<br><br></p>
 <ul>
 <li>if it is the first POS Operator with this POS Location selected in it, then in the
 'PosOperatorCode' field is loaded number '0001'</li>
 <li>if the POS Operators with the current POS Operator's POS Location are two or more, 
 including the current POS Operator, then in the 'PosOperatorCode' field is loaded the
-maximum POS Operator Code of those POS Operators, increased by 1.</li>
+maximum POS Operator Code of those POS Operators, increased by 1.
+<br><br>
+The rule is executed only if the Applicable Legislation is BG.</li>
 </ul>
-<p>The rule is executed only if the Applicable Legislation is BG.</p>
 </td>
 </tr>
 <tr>

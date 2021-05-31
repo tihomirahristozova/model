@@ -117,32 +117,40 @@ eCompany.Company)</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If ((FiscalSalesNumber == NULL)</p>
-<p>, validate that:</p>
-<p>(PosLocations[(EnterpriseCompanyLocation = SalesOrder.EnterpriseCompanyLocation) &amp;&amp; (Active
-= True)].Count() = 0)</p>
-<p>||</p>
-<p>(SalesOrdersOptions [DocumentType=SalesOrder.DocumentType].AllowedDirections =
-SalesReturn)</p>
-</td>
+<td>If ((FiscalSalesNumber == NULL)
+<br><br>
+, validate that:
+<br><br>
+(PosLocations[(EnterpriseCompanyLocation = SalesOrder.EnterpriseCompanyLocation) &amp;&amp; (Active
+= True)].Count() = 0)
+<br><br>
+||
+<br><br>
+(SalesOrdersOptions [DocumentType=SalesOrder.DocumentType].AllowedDirections =
+SalesReturn)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When a POS Sales Order is created into database, according to the Bulgarian legislation it
-must contain a unique sales number. The current rule validates if this requirement is met.</p>
-<p>Note: In EnterpriseOne the unique sales number is filled in the Sales Order's field Fiscal
-Sales Number.</p>
-</td>
+<td>When a POS Sales Order is created into database, according to the Bulgarian legislation it
+must contain a unique sales number. The current rule validates if this requirement is met.
+<br><br>
+Note: In EnterpriseOne the unique sales number is filled in the Sales Order's field Fiscal
+Sales Number.
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Sales Order '{DocumentText}' is created in an Enterprise Company Location that has an
-active POS Location but the field Fiscal Sales Number does not contain a value.</p>
-<p>Possible reasons why the 'Fiscal Sales Number' is not filled in automatically:</p>
-<p>* the field POS Operator does not contain a value;</p>
-<p>* the field POS Fiscal Printer does not contain a value;</p>
-<p>* there is no active POS Sequence for this POS Fiscal Printer.</p>
-</td>
+<td>Sales Order '{DocumentText}' is created in an Enterprise Company Location that has an
+active POS Location but the field Fiscal Sales Number does not contain a value.
+<br><br>
+Possible reasons why the 'Fiscal Sales Number' is not filled in automatically:
+<br><br>
+* the field POS Operator does not contain a value;
+<br><br>
+* the field POS Fiscal Printer does not contain a value;
+<br><br>
+* there is no active POS Sequence for this POS Fiscal Printer.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

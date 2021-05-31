@@ -106,48 +106,59 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For every line :</p>
-<p>If 'Config.CheckForOverinvoicedQuantityInSalesOrderLinesDisabled.KeyValue '== NULL' or '!=
-1'', validate that 'InvoiceLine.ParentSalesOrderLine' is not over-invoiced.</p>
-<p>A SalesOrderLine is over-invoiced when:</p>
+<td><p>For every line :
+<br><br>
+If 'Config.CheckForOverinvoicedQuantityInSalesOrderLinesDisabled.KeyValue '== NULL' or '!=
+1'', validate that 'InvoiceLine.ParentSalesOrderLine' is not over-invoiced.
+<br><br>
+<br><br>
+<br><br>
+A SalesOrderLine is over-invoiced when:
+<br><br></p>
 <ul>
 <li>'SalesOrderLine.Quantity &gt; 0' and
 ''SUM(InvoiceLine.Quantity[InvoiceLine.ParentSalesOrderLine=SalesOrderLine])' &gt;
-SalesOrderLine.Quantity';</li>
-</ul>
-<p> </p>
-<ul>
+SalesOrderLine.Quantity';
+<br><br>
+ 
+<br><br></li>
 <li>'SalesOrderLine.Quantity &lt; 0' and
 ''SUM(InvoiceLine.Quantity[InvoiceLine.ParentSalesOrderLine=SalesOrderLine])' &lt;
-SalesOrderLine.Quantity'.</li>
-</ul>
-<p><strong>NOTE:</strong> 'SUM(InvoiceLine.Quantity[InvoiceLine.ParentSalesOrderLine=SalesOrderLine])' is the
+SalesOrderLine.Quantity'.
+<br><br>
+<br><br>
+<strong>NOTE:</strong> 'SUM(InvoiceLine.Quantity[InvoiceLine.ParentSalesOrderLine=SalesOrderLine])' is the
 sum of the quantity/es of the lines in all non-voided Invoices on document state Released + that
-refer the particular SalesOrderLine <strong>and</strong> the quantity of the current InvoiceLine.</p>
+refer the particular SalesOrderLine <strong>and</strong> the quantity of the current InvoiceLine.
+<br><br>
+<br><br></li>
+</ul>
 </td>
 </tr>
 <tr>
 <td>**
 Description**</td>
-<td><p>Invoice is a primary accounting document with which a supplier (seller) documents the sale of goods,
+<td>Invoice is a primary accounting document with which a supplier (seller) documents the sale of goods,
 materials, services and others. Which generally means that Invoices are based on sales. That's why
-the quantity in the invoice can not exceed the quantity of the particular sale.</p>
-<p>In order to make sure that the Sales Order is not over-invoiced (not only by the current invoice but
+the quantity in the invoice can not exceed the quantity of the particular sale.
+<br><br>
+In order to make sure that the Sales Order is not over-invoiced (not only by the current invoice but
 in general), the system validates that the described rule is not valuated. The rule throws an error
 only if for the configuration key path 'CheckForOverinvoicedQuantityInSalesOrderLinesDisabled' is
 not configured or its key value is different from '1'. Otherwise,  the sum of the quantity/es of
 the lines in all non-voided Invoices on document state Released + that refer the particular Sales
 Order Line does not have to exceed its quantity. Sales Order Line are referred by the Invoice Lines
-through the field 'Parent Sales Order Line'.</p>
-</td>
+through the field 'Parent Sales Order Line'.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field 'Parent Sales Order Line' in line '{Invoice.LineNo}' refers a sales order line which
-quantity is over-invoiced.</p>
-<p>Please, check if the right quantity is set in the line or if the sales order line is invoiced by
-other documents.</p>
-</td>
+<td>The field 'Parent Sales Order Line' in line '{Invoice.LineNo}' refers a sales order line which
+quantity is over-invoiced.
+<br><br>
+Please, check if the right quantity is set in the line or if the sales order line is invoiced by
+other documents.
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Introduced

@@ -106,17 +106,20 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For of the following groups</p>
+<td><p>For of the following groups
+<br><br></p>
 <ul>
 <li>rows with null EnterpriseCompany;</li>
 <li>rows with not null EnterpriseCompany and null EnterpriseCompanyLocation and null
 EnterpriseCompany - a group for each EnterpriseCompany+null EnterpriseCompany;</li>
 <li>rows with not null EnterpriseCompany and not null EnterpriseCompanyLocation and null
 EnterpriseCompany - a group for each EnterpriseCompany and EnterpriseCompanyLocation and
-null EnterpriseCompany;</li>
+null EnterpriseCompany;
+<br><br>
+Validate that:
+<br><br>
+DefaultSalesOrderPaymentPlan.AmountPercent.Sum() &lt;= 100</li>
 </ul>
-<p>Validate that:</p>
-<p>DefaultSalesOrderPaymentPlan.AmountPercent.Sum() &lt;= 100</p>
 </td>
 </tr>
 <tr>

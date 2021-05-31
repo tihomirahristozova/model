@@ -106,11 +106,12 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (ProcurementType == Buy) than GenerateDocumentType.EntityName == PurchaseOrder
-else if (ProdurementType == Make) than GenerateDocumentType.EntityName == WorkOrder </p>
-<p>Else GenerateDocumentType.EntityName == TransferOrder</p>
-</td>
+<td>Validate that:
+<br><br>
+If (ProcurementType == Buy) than GenerateDocumentType.EntityName == PurchaseOrder
+else if (ProdurementType == Make) than GenerateDocumentType.EntityName == WorkOrder 
+<br><br>
+Else GenerateDocumentType.EntityName == TransferOrder</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -125,14 +126,14 @@ Order should be generated.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>&quot;Product supply method for product '{ProductSupply.Product.PartNumber}' has invalid document
+<td>&quot;Product supply method for product '{ProductSupply.Product.PartNumber}' has invalid document
 type. The document type is '{ProductSupply.GenerateDocumentType.TypeName}' and the procurement
-type is '{ProductSupply.ProcurementType}'.</p>
-<p>The procurement type 'Buy' requires the entity of the document type to be Purchase Order.
+type is '{ProductSupply.ProcurementType}'.
+<br><br>
+The procurement type 'Buy' requires the entity of the document type to be Purchase Order.
 Procurement type 'Make' requires the entity of the document type to be Work Order. And the
 procurement type 'Transfer' requires the entity of the document type to be 'Store
-Transfer'.&quot;</p>
-</td>
+Transfer'.&quot;</td>
 </tr>
 <tr>
 <td><strong>Introduced In

@@ -106,27 +106,28 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (ShipToPartyContactMechanism.Party != null)</p>
-<p>ShipToPartyContactMechanism.Party == Customer.Party || ShipToPartyContactMechanism.Party ==
-ShipToCustomer.Party</p>
-</td>
+<td>Validate that:
+<br><br>
+If (ShipToPartyContactMechanism.Party != null)
+<br><br>
+ShipToPartyContactMechanism.Party == Customer.Party || ShipToPartyContactMechanism.Party ==
+ShipToCustomer.Party</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The user may select address which is not address of the customer or its locations. And as the
+<td>The user may select address which is not address of the customer or its locations. And as the
 Logistics and the Shipment module learn about the customer by the address (the party of the
-address) this may lead to incorrect information.</p>
-<p>Also, perhaps there are cases/businesses/practices when goods are delivered to addresses
-which are not addresses of the customer, so the current rule may be revoked.</p>
-</td>
+address) this may lead to incorrect information.
+<br><br>
+Also, perhaps there are cases/businesses/practices when goods are delivered to addresses
+which are not addresses of the customer, so the current rule may be revoked.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>&quot;The selected delivery address is address of party '{ShipToPartyContactMechanism.Party}'.</p>
-<p>Please select address in Ship To Party Contact Mechanism field which is address of the
-customer or its locations.&quot;</p>
-</td>
+<td>&quot;The selected delivery address is address of party '{ShipToPartyContactMechanism.Party}'.
+<br><br>
+Please select address in Ship To Party Contact Mechanism field which is address of the
+customer or its locations.&quot;</td>
 </tr>
 <tr>
 <td><strong>Introduced In

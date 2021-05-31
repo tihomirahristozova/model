@@ -110,12 +110,15 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>for each OutputOrderLine for each WorkOrderItem :</p>
-<p>    OutputOrder.Lines[WorkOrderItem].Quantity &gt; = 0</p>
-<p>||</p>
-<p>    OutputOrder.Lines[WorkOrderItem].Quantity &lt; = 0</p>
-</td>
+<td>Validate that:
+<br><br>
+for each OutputOrderLine for each WorkOrderItem :
+<br><br>
+    OutputOrder.Lines[WorkOrderItem].Quantity &gt; = 0
+<br><br>
+||
+<br><br>
+    OutputOrder.Lines[WorkOrderItem].Quantity &lt; = 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -125,13 +128,16 @@ the distribution of the material consumptions to be correct.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>For each WorkOrderItem:</p>
-<p>&quot;The output order lines for work order item {WorkOderItem.Product.Name} in output order
+<td>For each WorkOrderItem:
+<br><br>
+&quot;The output order lines for work order item {WorkOderItem.Product.Name} in output order
 '{DocumentText}' have different quantity signs.
 All lines for a work order item must be with positive or negative quantity.
-Please, review the Produce Quantity attributes of the specified work order item.&quot;</p>
-<p><em>Sort Messages By Attribute: <strong>WorkOrderItem</strong></em></p>
-</td>
+Please, review the Produce Quantity attributes of the specified work order item.&quot;
+<br><br>
+<br><br>
+<br><br>
+<em>Sort Messages By Attribute: <strong>WorkOrderItem</strong></em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

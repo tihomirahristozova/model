@@ -117,19 +117,19 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(PurchaseOrderLine==NULL)</p>
-<p>PurchaseProductPrice.DeterminePurchaseProductPrice(ReceivingOrder.DocumentDate,
+<td>IF(PurchaseOrderLine==NULL)
+<br><br>
+PurchaseProductPrice.DeterminePurchaseProductPrice(ReceivingOrder.DocumentDate,
 ReceivingOrder.Supplier, Product, (ConfirmedQuantity ?? Quantity),
-ReceivingOrder.EnterpriseCompany, ReceivingOrder.PurchasePriceList, PurchaseProductPrice)</p>
-</td>
+ReceivingOrder.EnterpriseCompany, ReceivingOrder.PurchasePriceList, PurchaseProductPrice)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>Determines Purchase Product Price using the DocumentDate, Supplier, Enterprise Company,
+<td>Determines Purchase Product Price using the DocumentDate, Supplier, Enterprise Company,
 Purchase Price List, Product, Confirmed Quantity or Quantity if the first one doesn't have a
-value and the current Purchase Product Price as filtering values.</p>
-<p>(RecalcExpression)</p>
-</td>
+value and the current Purchase Product Price as filtering values.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

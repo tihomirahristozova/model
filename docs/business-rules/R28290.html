@@ -106,30 +106,33 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>for every line validate that:</p>
-<p>if ((Quantity &lt; 0 || LineAmount &lt; 0) &amp;&amp; Product.ProductType.IsStocked == False)</p>
-<p>HistoricalUnitCost == null</p>
-</td>
+<td>for every line validate that:
+<br><br>
+if ((Quantity &lt; 0 || LineAmount &lt; 0) &amp;&amp; Product.ProductType.IsStocked == False)
+<br><br>
+HistoricalUnitCost == null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>A SalesOrder line is considered as returning of a service when the line amount or the
-quantity are negative and the product is not stocked. </p>
-<p>The HistoricUnitCost field is used only for goods which are stocked and we can return in the
-store.</p>
-<p>So when a service is returned, the HistoricUnitCost is null.</p>
-<p>For more information see <a href="https://confluence.erp.net/display/techdoc/Sales+Order+Row+Types">Sales Order Row
-Types</a>.</p>
-</td>
+<td>A SalesOrder line is considered as returning of a service when the line amount or the
+quantity are negative and the product is not stocked. 
+<br><br>
+The HistoricUnitCost field is used only for goods which are stocked and we can return in the
+store.
+<br><br>
+So when a service is returned, the HistoricUnitCost is null.
+<br><br>
+For more information see <a href="https://confluence.erp.net/display/techdoc/Sales+Order+Row+Types">Sales Order Row
+Types</a>.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Line {LineNo} in '{DocumentText}' is considered to return services (because it has negative
+<td>Line {LineNo} in '{DocumentText}' is considered to return services (because it has negative
 quantity or amount and the product in it isn't stocked) but column 'Historical_Unit_Cost'
 has value. 'Historical Unit Cost' is used only when the product in the line is stocked.
-Clear the value in 'Historical Unit Cost' for this line.</p>
-<p><em>Sort Messages By Attribute: LineNo</em></p>
-</td>
+Clear the value in 'Historical Unit Cost' for this line.
+<br><br>
+<em>Sort Messages By Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

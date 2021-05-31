@@ -98,10 +98,11 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td><p>AttributeChanged(Quantity)</p>
-<p>AttributeChanged(QuantityUnit)</p>
-<p>AttributeChanged(Product)</p>
-</td>
+<td>AttributeChanged(Quantity)
+<br><br>
+AttributeChanged(QuantityUnit)
+<br><br>
+AttributeChanged(Product)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -118,17 +119,18 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF( Quantity != null &amp;&amp; QuantityUnit != null &amp;&amp; Product != null)</p>
-<p>QuantityBase = Quantity.ConvertTo(Product.BaseUnit, Product) </p>
-</td>
+<td>IF( Quantity != null &amp;&amp; QuantityUnit != null &amp;&amp; Product != null)
+<br><br>
+QuantityBase = Quantity.ConvertTo(Product.BaseUnit, Product) </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Product, Quantity or  Quantity Unit is changed, Quantity Base is calculated as
-the Quantity is converted to the Product's Base Unit.</p>
-<p>(RecalcExpression)</p>
-<p>(LateDefault)</p>
-</td>
+<td>When Product, Quantity or  Quantity Unit is changed, Quantity Base is calculated as
+the Quantity is converted to the Product's Base Unit.
+<br><br>
+(RecalcExpression)
+<br><br>
+(LateDefault)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

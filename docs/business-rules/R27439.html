@@ -106,19 +106,19 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If &quot;ParentLine.PersistLots == True&quot;,  then &quot;StoreOrderLine.Lot == ParentLine.Lot&quot;</p>
-</td>
+<td>Validate that:
+<br><br>
+If &quot;ParentLine.PersistLots == True&quot;,  then &quot;StoreOrderLine.Lot == ParentLine.Lot&quot;</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>On First Released and Corrective on the current Store Order is finding the Parent document (if
-present such) and a revision is done whether the field &quot;Persist Lots&quot; is marked.</p>
-<p>In this revision each line of Store Order is checked and for this line is found the parent line
+<td>On First Released and Corrective on the current Store Order is finding the Parent document (if
+present such) and a revision is done whether the field &quot;Persist Lots&quot; is marked.
+<br><br>
+In this revision each line of Store Order is checked and for this line is found the parent line
 (connection is established with Parent_Line_Id) and if in Parent line the field &quot;Persist Lots&quot;
 is marked, then checked in Store Order line value in the field 'Lot' must be equal to the value
-in its parent line.</p>
-</td>
+in its parent line.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

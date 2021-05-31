@@ -106,17 +106,21 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (SalesOrder.DocumentType.DocumentTypePaymentOptions[EnterpriseCompany ==
-SalesOrder.EnterpriseCompany].DeferredPaymentMinimalAmmount != null</p>
-<p>&amp;&amp; </p>
-<p>SalesOrder.DocumentType.DocumentTypePaymentOptions[EnterpriseCompany ==
+<td>Validate that:
+<br><br>
+If (SalesOrder.DocumentType.DocumentTypePaymentOptions[EnterpriseCompany ==
+SalesOrder.EnterpriseCompany].DeferredPaymentMinimalAmmount != null
+<br><br>
+&amp;&amp; 
+<br><br>
+SalesOrder.DocumentType.DocumentTypePaymentOptions[EnterpriseCompany ==
 SalesOrder.EnterpriseCompany].DeferredPaymentMinimalAmmount &gt; SalesOrder.AmountToPay*
-//converted to SalesOrder currency)</p>
-<p>PaymentDueDate &lt;= DocumentDate</p>
-<p>*For more information see <a href="https://confluence.erp.net/display/techdoc/Amount+To+Pay">Amount To
-Pay</a></p>
-</td>
+//converted to SalesOrder currency)
+<br><br>
+PaymentDueDate &lt;= DocumentDate
+<br><br>
+*For more information see <a href="https://confluence.erp.net/display/techdoc/Amount+To+Pay">Amount To
+Pay</a></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -128,13 +132,13 @@ This is a SalesOrder tool which EnterpriseOne clients use to apply certain sales
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The 'Payment Due Date' of document {DocumentText} is after the Document Date. This defines
+<td>The 'Payment Due Date' of document {DocumentText} is after the Document Date. This defines
 deferred payment which is not allowed because the Sales Order amount is less than the
 deferred payment minimum amount -
 {SalesOrder.DocumentType.DocumentTypePaymentOption.DeferredPaymentMinimalAmount}
-{SalesOrder.DocumentType.DocumentTypePaymentOption.DeferredPaymentMinimalAmmountCurrency}.</p>
-<p>Please change the 'Payment Due Date'.</p>
-</td>
+{SalesOrder.DocumentType.DocumentTypePaymentOption.DeferredPaymentMinimalAmmountCurrency}.
+<br><br>
+Please change the 'Payment Due Date'.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

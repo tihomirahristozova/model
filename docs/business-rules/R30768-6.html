@@ -116,9 +116,10 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF (Document.CurrencyDirectory != null AND oldCurrency
-!= newCurrency)</p>
-<p>foreach PaymentSlipAmount
+<td>IF (Document.CurrencyDirectory != null AND oldCurrency
+!= newCurrency)
+<br><br>
+foreach PaymentSlipAmount
 {
 PaymentSlipAmount.TotalAmount =
 PaymentSlipAmount.TotalAmount.ConvertTo(newCurrency,
@@ -126,9 +127,9 @@ CurrencyDirectory);
 foreach (PaymentSlipLine) PaymentSlipLine.Amount =
 PaymentSlipLine.Amount.ConvertTo(newCurrency,
 CurrencyDirectory);
-}</p>
-<p>throws if there is no conversion ratio</p>
-</td>
+}
+<br><br>
+throws if there is no conversion ratio</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -143,9 +144,9 @@ new Currency.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2020.1</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 2020.1
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

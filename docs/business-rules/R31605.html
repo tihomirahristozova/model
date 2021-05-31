@@ -119,19 +119,28 @@ needed</a></td>
 <td><strong>Action</strong></td>
 <td>
 <ol>
-<li>Validate that:</li>
-</ol>
-<p>ProductSupply.EnterpriseCompany == null                                 OR</p>
-<p>(ProductSupply.EnterpriseCompany != null                                  AND 
+<li>Validate that:
+<br><br>
+ProductSupply.EnterpriseCompany == null                                 OR
+<br><br>
+(ProductSupply.EnterpriseCompany != null                                  AND 
 (ProductSupply.Product == null                                                   OR
 ProductSupply.Product.EnterpriseCompany == null                    OR 
-ProductSupply.Product.EnterpriseCompany == ProductSupply.EnterpriseCompany ))  </p>
-<p> 2. Validate that:</p>
-<p>ProductSupply.EnterpriseCompany == null                                  OR</p>
-<p>(ProductSupply.EnterpriseCompany != null                                   AND 
+ProductSupply.Product.EnterpriseCompany == ProductSupply.EnterpriseCompany ))  
+<br><br>
+<br><br>
+<br><br>
+ 2. Validate that:
+<br><br>
+ProductSupply.EnterpriseCompany == null                                  OR
+<br><br>
+(ProductSupply.EnterpriseCompany != null                                   AND 
 (ProductSupply.ProductGroup == null                                          OR
 ProductSupply.ProductGroup.EnterpriseCompany == null           OR
-ProductSupply.ProductGroup.EnterpriseCompany == ProductSupply.EnterpriseCompany))</p>
+ProductSupply.ProductGroup.EnterpriseCompany == ProductSupply.EnterpriseCompany))
+<br><br>
+<br><br></li>
+</ol>
 </td>
 </tr>
 <tr>

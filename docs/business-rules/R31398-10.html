@@ -115,21 +115,24 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ProjectTask!=null)</p>
-<p>IF(ProjectTask.PlannedDurationHours==0)</p>
-<p>ResourceUsagePercent = 0</p>
-<p>ELSE</p>
-<p>ResourceUsagePercent = ResourceUsageHours/ProjectTask.PlannedDurationHours</p>
-</td>
+<td>IF(ProjectTask!=null)
+<br><br>
+IF(ProjectTask.PlannedDurationHours==0)
+<br><br>
+ResourceUsagePercent = 0
+<br><br>
+ELSE
+<br><br>
+ResourceUsagePercent = ResourceUsageHours/ProjectTask.PlannedDurationHours</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Resource Usage Hours  is changed, Resource Usage Percent is recalculated as
+<td>When Resource Usage Hours  is changed, Resource Usage Percent is recalculated as
 Resource Usage Hours are divided by the Planned Duration Hours of the Project Task.
 If Planned Duration Hours of the Project Task is 0, then Resource Usage Percent is
-set to 0.</p>
-<p>(RecalcExpression)</p>
-</td>
+set to 0.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -137,9 +140,9 @@ set to 0.</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

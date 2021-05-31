@@ -106,22 +106,29 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For every line:</p>
-<p>If &quot;Invoice. AutomaticOrderLinking == true&quot; and &quot;InvoiceLine.InvoiceOrderLine == NULL&quot;,
+<td>For every line:
+<br><br>
+If &quot;Invoice. AutomaticOrderLinking == true&quot; and &quot;InvoiceLine.InvoiceOrderLine == NULL&quot;,
 then find the InvoiceOrderLine corresponding to the current InvoiceLine and set its Id in the
-field &quot;InvoiceLine.InvoiceOrderLine&quot;.</p>
-<p>The corresponding InvoiceOrderLine is determined as follows:</p>
-<p>1.If &quot;InvoiceLine.ParentSalesOrderLine = Null&quot;, the validation throws an error.</p>
-<p>2. If &quot;InvoiceLine.ParentSalesOrderLine&quot; has value, then find all Lines from all non-voided
-InvoiceOrders with a document state at least Released that refer the current InvoiceLine.</p>
-<p>3. If the count of the lines determined in the previous step is &gt; 1, then throw an error.</p>
-<p>4. For the determined line: if &quot;InvoiceOrderLine.Product != InvoiceLine.Product&quot;, then
-throw an error.</p>
-<p>5. For the determined line:  if &quot;InvoiceOrderLine.QuantityBase != InvoiceLine.
-QuantityBase&quot;, then throw an error.</p>
-<p>6. If all of the above is completed without throwing an error, then set the Id of the
-determined &quot;InvoiceOrderLine&quot; in the field &quot;InvoiceLine. InvoiceOrderLine&quot;.</p>
-</td>
+field &quot;InvoiceLine.InvoiceOrderLine&quot;.
+<br><br>
+The corresponding InvoiceOrderLine is determined as follows:
+<br><br>
+1.If &quot;InvoiceLine.ParentSalesOrderLine = Null&quot;, the validation throws an error.
+<br><br>
+2. If &quot;InvoiceLine.ParentSalesOrderLine&quot; has value, then find all Lines from all non-voided
+InvoiceOrders with a document state at least Released that refer the current InvoiceLine.
+<br><br>
+3. If the count of the lines determined in the previous step is &gt; 1, then throw an error.
+<br><br>
+4. For the determined line: if &quot;InvoiceOrderLine.Product != InvoiceLine.Product&quot;, then
+throw an error.
+<br><br>
+5. For the determined line:  if &quot;InvoiceOrderLine.QuantityBase != InvoiceLine.
+QuantityBase&quot;, then throw an error.
+<br><br>
+6. If all of the above is completed without throwing an error, then set the Id of the
+determined &quot;InvoiceOrderLine&quot; in the field &quot;InvoiceLine. InvoiceOrderLine&quot;.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -133,29 +140,45 @@ determined invoice order line in the field &quot;Invoice Order Line&quot;.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The messages according to the steps in the &quot;Action&quot;:</p>
-<p>Step 1:</p>
-<p>&quot;The field 'Parent Sales Order Line' in line number '{InvoiceLine.LineNo}' is empty.</p>
-<p>The document is marked for „Automatic Order Linking&quot; but the field 'Parent Store Order Line'
-in the line does not have a value.</p>
-<p>Please fill in a parent sales order line and try again.&quot;</p>
-<p>Step 3:</p>
-<p>&quot;More than one invoice order lines.</p>
-<p>The document is marked for „Automatic Order Linking&quot; but for line number
-'{InvoiceLine.LineNo}' are found more than one invoice order lines.</p>
-<p>Please void the unnecessary lines and try again.&quot;</p>
-<p>Step 4:</p>
-<p>&quot;The product in the invoice line and the invoice order line is not the same.</p>
-<p>The document is marked for „Automatic Order Linking&quot; but the product in line number
-'{InvoiceLine.LineNo}' in not the same as the product in the invoice order line.</p>
-<p>Please unify the product and try again.&quot;</p>
-<p>Step 5:</p>
-<p>&quot;The base quantity in the invoice line and the invoice order line is not the same.</p>
-<p>The document is marked for „Automatic Order Linking&quot; but the base quantity in line number
-'{InvoiceLine.LineNo}' in not the same as the base quantity in the invoice order line.</p>
-<p>Please unify the base quantity and try again.&quot;</p>
-<p><em>Sort Messages By Attribute: LineNo</em></p>
-</td>
+<td>The messages according to the steps in the &quot;Action&quot;:
+<br><br>
+Step 1:
+<br><br>
+&quot;The field 'Parent Sales Order Line' in line number '{InvoiceLine.LineNo}' is empty.
+<br><br>
+The document is marked for „Automatic Order Linking&quot; but the field 'Parent Store Order Line'
+in the line does not have a value.
+<br><br>
+Please fill in a parent sales order line and try again.&quot;
+<br><br>
+Step 3:
+<br><br>
+&quot;More than one invoice order lines.
+<br><br>
+The document is marked for „Automatic Order Linking&quot; but for line number
+'{InvoiceLine.LineNo}' are found more than one invoice order lines.
+<br><br>
+Please void the unnecessary lines and try again.&quot;
+<br><br>
+Step 4:
+<br><br>
+&quot;The product in the invoice line and the invoice order line is not the same.
+<br><br>
+The document is marked for „Automatic Order Linking&quot; but the product in line number
+'{InvoiceLine.LineNo}' in not the same as the product in the invoice order line.
+<br><br>
+Please unify the product and try again.&quot;
+<br><br>
+Step 5:
+<br><br>
+&quot;The base quantity in the invoice line and the invoice order line is not the same.
+<br><br>
+The document is marked for „Automatic Order Linking&quot; but the base quantity in line number
+'{InvoiceLine.LineNo}' in not the same as the base quantity in the invoice order line.
+<br><br>
+Please unify the base quantity and try again.&quot;
+<br><br>
+<em>Sort Messages By Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

@@ -106,27 +106,33 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>DocumentDate &gt;= Customer.FromDate &amp;&amp; DocumentDate &lt;= Customer.ThruDate</p>
-<p>||  </p>
-<p>Customer.FromDate == null &amp;&amp; DocumentDate &lt;= Customer.ThruDate</p>
-<p>||  </p>
-<p>DocumentDate &gt;= Customer.FromDate &amp;&amp; Customer.ThruDate == null</p>
-<p>||</p>
-<p>Customer.FromDate == null &amp;&amp; Customer.ThruDate == null</p>
-</td>
+<td>Validate that:
+<br><br>
+DocumentDate &gt;= Customer.FromDate &amp;&amp; DocumentDate &lt;= Customer.ThruDate
+<br><br>
+||  
+<br><br>
+Customer.FromDate == null &amp;&amp; DocumentDate &lt;= Customer.ThruDate
+<br><br>
+||  
+<br><br>
+DocumentDate &gt;= Customer.FromDate &amp;&amp; Customer.ThruDate == null
+<br><br>
+||
+<br><br>
+Customer.FromDate == null &amp;&amp; Customer.ThruDate == null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The customer has his own customer terms and conditions and these conditions are valid for
+<td>The customer has his own customer terms and conditions and these conditions are valid for
 specified period. If the customer's conditions expire the user cannot sell him anymore by
 the same conditions. There is a need for new conditions. For example a customer is part of
 specific price list for a season and then we revise his activity and there is a chance to
 change his terms and conditions. While the has no specified terms and conditions we cannot
-sell him anything as there is knowledge which prices to use and more.</p>
-<p>The validity of the customer's term and conditions are not mandatory and the fields may be
-null - From Date and/or Thru Date.</p>
-</td>
+sell him anything as there is knowledge which prices to use and more.
+<br><br>
+The validity of the customer's term and conditions are not mandatory and the fields may be
+null - From Date and/or Thru Date.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

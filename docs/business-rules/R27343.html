@@ -106,17 +106,20 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For each of the following groups:</p>
+<td><p>For each of the following groups:
+<br><br></p>
 <ul>
 <li>rows with null EnterpriseCompany;</li>
 <li>rows with not null EnterpriseCompany and null EnterpriseCompanyLocation and null
 EnterpriseCompany - a group for each EnterpriseCompany+null EnterpriseCompany;</li>
 <li>rows with not null EnterpriseCompany and not null EnterpriseCompanyLocation and null
 EnterpriseCompany - a group for each EnterpriseCompany and EnterpriseCompanyLocation and
-null EnterpriseCompany;</li>
+null EnterpriseCompany;
+<br><br>
+Validate that:
+<br><br>
+Rows(Remainder==True).Count() &lt;= 1</li>
 </ul>
-<p>Validate that:</p>
-<p>Rows(Remainder==True).Count() &lt;= 1</p>
 </td>
 </tr>
 <tr>

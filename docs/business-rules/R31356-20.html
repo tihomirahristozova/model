@@ -116,26 +116,36 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF( ProducedQuantity != null &amp;&amp; ProducedQuantityUnit != null &amp;&amp; Product != null )</p>
-<p>LateDefault:</p>
-<p>ProducedStandardQuantityBase =</p>
-<p>IF(Product.AllowVariableMeasurementRatios)
-ProducedQuantity.ConvertTo(Product.BaseUnit, Product) </p>
-<p>ELSE ProducedQuantityBase)</p>
-<p>RecalcExpression:</p>
-<p>ProducedStandardQuantityBase = ProducedQuantity.ConvertTo(Product.BaseUnit, Product)</p>
-</td>
+<td>IF( ProducedQuantity != null &amp;&amp; ProducedQuantityUnit != null &amp;&amp; Product != null )
+<br><br>
+LateDefault:
+<br><br>
+ProducedStandardQuantityBase =
+<br><br>
+IF(Product.AllowVariableMeasurementRatios)
+ProducedQuantity.ConvertTo(Product.BaseUnit, Product) 
+<br><br>
+ELSE ProducedQuantityBase)
+<br><br>
+<br><br>
+<br><br>
+RecalcExpression:
+<br><br>
+ProducedStandardQuantityBase = ProducedQuantity.ConvertTo(Product.BaseUnit, Product)
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Product, Produced Quantity, Produced Quantity Base or  Produced Quantity Unit is
+<td>When Product, Produced Quantity, Produced Quantity Base or  Produced Quantity Unit is
 changed, Produced Standard Quantity Base is calculated as the Produced Quantity is
 converted to the Product's Base Unit if the Product is using variable measurement
 ratios. If the Product is not using variable measurement ratios, Produced Standard
-Quantity Base is changed to be equal to Produced Quantity Base.</p>
-<p>(RecalcExpression)</p>
-<p>(LateDefault)</p>
-</td>
+Quantity Base is changed to be equal to Produced Quantity Base.
+<br><br>
+(RecalcExpression)
+<br><br>
+(LateDefault)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -143,9 +153,9 @@ Quantity Base is changed to be equal to Produced Quantity Base.</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

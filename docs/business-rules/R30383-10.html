@@ -116,20 +116,22 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(EnterpriseCompany == null)</p>
-<p>VATCashReportingMode = false;</p>
-<p>ELSE</p>
-<p>VATCashReportingMode =EnterpriseCompany.Company.IsVATCashReportingRegistered</p>
-</td>
+<td>IF(EnterpriseCompany == null)
+<br><br>
+VATCashReportingMode = false;
+<br><br>
+ELSE
+<br><br>
+VATCashReportingMode =EnterpriseCompany.Company.IsVATCashReportingRegistered</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When the Enterprise Company is changed, VATCashReportingMode should be recalculated.
+<td>When the Enterprise Company is changed, VATCashReportingMode should be recalculated.
 VATCashReportingMode should be equal to false if there is no Enterprise Company. If
 Enterprise Company is not empty, VATCashReportingMode is equal to
-IsVATCashReportingRegistered from the definition of the company of the enterprise company.</p>
-<p>(RecalcExpression)</p>
-</td>
+IsVATCashReportingRegistered from the definition of the company of the enterprise company.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

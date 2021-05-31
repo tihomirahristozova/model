@@ -116,10 +116,10 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (PosLocation == NULL &amp;&amp; EnterpriseCompanyLocation != NULL)</p>
-<p>, validate that: PosLocations[(EnterpriseCompanyLocation =
-SalesOrder.EnterpriseCompanyLocation) &amp;&amp; (Active = True)].Count() = 0</p>
-</td>
+<td>If (PosLocation == NULL &amp;&amp; EnterpriseCompanyLocation != NULL)
+<br><br>
+, validate that: PosLocations[(EnterpriseCompanyLocation =
+SalesOrder.EnterpriseCompanyLocation) &amp;&amp; (Active = True)].Count() = 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -128,15 +128,17 @@ created in a Enterprise Company Location for which there is no active POS Locati
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Sales Order '{DocumentText}' is created in an Enterprise Company Location that has an
-active POS Location but the field POS Location in this document does not contain a value.</p>
-<p>Please enter a POS Location.</p>
-</td>
+<td>Sales Order '{DocumentText}' is created in an Enterprise Company Location that has an
+active POS Location but the field POS Location in this document does not contain a value.
+<br><br>
+Please enter a POS Location.</td>
 </tr>
 <tr>
 <td><strong>Introduced In
 Version</strong></td>
-<td>2019.1</td>
+<td><p>2019.1</p>
+<p><br><br></p>
+</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

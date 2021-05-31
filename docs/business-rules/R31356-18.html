@@ -115,20 +115,24 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>oldProducedQuantityBase = oldProducedQuantityBase (if null then 0);
+<td>oldProducedQuantityBase = oldProducedQuantityBase (if null then 0);
 coef = newProducedQuantityBase;
-if (oldProducedQuantityBase != 0) coef = coef / oldProducedQuantityBase;</p>
-<p>foreach (Ingredients)
+if (oldProducedQuantityBase != 0) coef = coef / oldProducedQuantityBase;
+<br><br>
+foreach (Ingredients)
 {
-if (Ingredient.UsedQuantity !=null)</p>
-<p>Ingredient.UsedQuantity = new Quantity(Math.Round(Ingredient.FixedScrapQuantity +
+if (Ingredient.UsedQuantity !=null)
+<br><br>
+Ingredient.UsedQuantity = new Quantity(Math.Round(Ingredient.FixedScrapQuantity +
 (Ingredients.UsedQuantity - Ingredients.FixedScrapQuantity) * coef, 3), Unit);
-}</p>
-<p>foreach (Operations)
+}
+<br><br>
+foreach (Operations)
 {
 Operation.RunTimeMinutes = (Operation.RunTimeMinutes * coef);
-}</p>
-</td>
+}
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -142,9 +146,9 @@ in order to change them with the same ratio. </td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

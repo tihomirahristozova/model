@@ -106,29 +106,30 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>There is only one PartyContactMechanism for which  'PartyContactMechanism.IsDefault = True' AND
-'PartyContactMechanism.Party = current PartyContactMechanism.Party'.</p>
-</td>
+<td>Validate that:
+<br><br>
+There is only one PartyContactMechanism for which  'PartyContactMechanism.IsDefault = True' AND
+'PartyContactMechanism.Party = current PartyContactMechanism.Party'.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>For each party, one of its 'Party Contact Mechanism' can be set as a default. The default
+<td>For each party, one of its 'Party Contact Mechanism' can be set as a default. The default
 record will be used for certain automations in the system. For Example, when selecting a Customer
 in Sales Orders, if a default Party Contact Mechanism is set for the customer's party then this
-record is going to be automatically set in the field 'Ship To Party Contact Mechanism'.</p>
-<p>In order to make sure that the right Contact Mechanism is going to be automatically selected, the
+record is going to be automatically set in the field 'Ship To Party Contact Mechanism'.
+<br><br>
+In order to make sure that the right Contact Mechanism is going to be automatically selected, the
 current rule validates that there is only one Party Contact Mechanism in whose definition 'Is
-Default' is checked.</p>
-</td>
+Default' is checked.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>For party '[PartyContactMechanism.Party]' there is more than one party contact
-mechanism where 'Is Default' is checked</p>
-<p>Please, choose only one default party contact mechanism for this party.</p>
-<p>*Sort Messages By Attribute: *<strong>LineOrd</strong></p>
-</td>
+<td>For party '[PartyContactMechanism.Party]' there is more than one party contact
+mechanism where 'Is Default' is checked
+<br><br>
+Please, choose only one default party contact mechanism for this party.
+<br><br>
+*Sort Messages By Attribute: *<strong>LineOrd</strong></td>
 </tr>
 <tr>
 <td><strong>Introduced In

@@ -106,27 +106,34 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>DestQuantityunit.MeasurementCategory == Product.BaseMeasurementCategory</p>
-</td>
+<td>Validate that:
+<br><br>
+DestQuantityunit.MeasurementCategory == Product.BaseMeasurementCategory</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>Product Dimensions may only be declared from a source measurement unit to a measurement unit
+<td>Product Dimensions may only be declared from a source measurement unit to a measurement unit
 which is part of the product's base measurement category. If such dimension was possible, the
-user would be available to enter contradictory data.</p>
-<p>If there is a need of a product dimension from unit from one category (different than the base
+user would be available to enter contradictory data.
+<br><br>
+If there is a need of a product dimension from unit from one category (different than the base
 category of the product) to second unit (with category different than the base category of the
 product) than this dimension may be declared not directly but separately for each measurement
-unit towards the base category. For example:</p>
-<p>Product A has base measurement category of Pieces.</p>
-<p>Product A has the following dimensions:</p>
-<p>10 pcs = 1 box (Measurement Category is Set)</p>
-<p>1 box = 13 kg (Measurement Category is Set)</p>
-<p>Such product dimensions for Product A are incorrect. The user have to enter:</p>
-<p>10 pcs = 1 box</p>
-<p><strong>10 pcs = 13 kg or 1 pcs = 1.3 kg</strong></p>
-</td>
+unit towards the base category. For example:
+<br><br>
+Product A has base measurement category of Pieces.
+<br><br>
+Product A has the following dimensions:
+<br><br>
+10 pcs = 1 box (Measurement Category is Set)
+<br><br>
+1 box = 13 kg (Measurement Category is Set)
+<br><br>
+Such product dimensions for Product A are incorrect. The user have to enter:
+<br><br>
+10 pcs = 1 box
+<br><br>
+<strong>10 pcs = 13 kg or 1 pcs = 1.3 kg</strong></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

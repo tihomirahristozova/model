@@ -110,30 +110,32 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For each OutputOrderLine, validate that:</p>
-<p>OutputOrderLines.LineWorkOrder.WorkOrder ==
-OutputOrderLines.WorkOrderItemOperation.WorkOrderItem.WorkOrder</p>
-</td>
+<td>For each OutputOrderLine, validate that:
+<br><br>
+<br><br>
+OutputOrderLines.LineWorkOrder.WorkOrder ==
+OutputOrderLines.WorkOrderItemOperation.WorkOrderItem.WorkOrder</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>Work Order Item Operations in the Output Order Lines could be selected manually by the users.
+<td>Work Order Item Operations in the Output Order Lines could be selected manually by the users.
 Usually, they are picked up from the field's drop-down list, which is already filtered by
 the Work Order Item that is set in the line and it's work order. But there are also
 situations (such as pasting lines from another document) when the user may
-unintentionally fill in an Item Operations which refer to another work order.</p>
-<p>For this reason, the current rule validates that the work order of the Line Work Order that
-set in the line corresponds to the work order of the Work Order Item Operation.</p>
-</td>
+unintentionally fill in an Item Operations which refer to another work order.
+<br><br>
+For this reason, the current rule validates that the work order of the Line Work Order that
+set in the line corresponds to the work order of the Work Order Item Operation.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Line number {OutputOrderLine.LineOrder} contains a 'Work Order Item Operation' which refers
-to a different work order than the work order of the 'Line Work Order' set in the line.</p>
-<p>Please check that the correct 'Line Work Order' is set in the line and reselect the 'Work
-Order Item' and it's operations from the field's drop-down lists.</p>
-<p>Sort Messages By Attribute: {OutputOrderLine.LineOrder}</p>
-</td>
+<td>Line number {OutputOrderLine.LineOrder} contains a 'Work Order Item Operation' which refers
+to a different work order than the work order of the 'Line Work Order' set in the line.
+<br><br>
+Please check that the correct 'Line Work Order' is set in the line and reselect the 'Work
+Order Item' and it's operations from the field's drop-down lists.
+<br><br>
+Sort Messages By Attribute: {OutputOrderLine.LineOrder}</td>
 </tr>
 <tr>
 <td><strong>Introduced In

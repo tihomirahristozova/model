@@ -115,17 +115,18 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if (oldCurrency != null &amp;&amp; newCurrency != null &amp;&amp; oldCurrency != newCurrency ){
-foreach (line in ReceivingOrder.Lines){</p>
-<p>if (line.PricePerUnit.Value != 0){
+<td>if (oldCurrency != null &amp;&amp; newCurrency != null &amp;&amp; oldCurrency != newCurrency ){
+foreach (line in ReceivingOrder.Lines){
+<br><br>
+if (line.PricePerUnit.Value != 0){
 convertedPricePerUnit = Amount(PricePerUnit,
 oldCurrency).ConvertToOrDefault(newCurrency, CurrencyDirectory);
 if (convertedPricePerUnit == null) fail = true;
-else PricePerUnit = convertedPricePerUnit .RoundUnitPrice();</p>
-<p>}
+else PricePerUnit = convertedPricePerUnit .RoundUnitPrice();
+<br><br>
+}
 if (fail)
-IssueWarning once</p>
-</td>
+IssueWarning once</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

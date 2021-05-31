@@ -117,17 +117,22 @@ needed</a></td>
 <tr>
 <td><strong>Action</strong></td>
 <td><p>IF OriginalPaymentTransaction is not NULL THEN  validate that 'OriginalPaymentTransaction'
-is not over-returned.</p>
-<p>A 'OriginalPaymentTransaction' is over-returned when:</p>
+is not over-returned.
+<br><br>
+A 'OriginalPaymentTransaction' is over-returned when:
+<br><br></p>
 <ul>
 <li>'SUM(ABS(PaymentTransacti
 on.TotalAmount[PaymentTransaction.OriginalPaymentTransaction=OriginalPaymentTransaction]))'
-&gt; ABS(OriginalPaymentTransaction.TotalAmount)';</li>
-</ul>
-<p><strong>NOTE:</strong>
+&gt; ABS(OriginalPaymentTransaction.TotalAmount)';
+<br><br>
+<br><br>
+<br><br>
+<strong>NOTE:</strong>
 'SUM(ABS(PaymentTransactio
 n.TotalAmount[PaymentTransaction.OriginalPaymentTransaction=OriginalPaymentTransaction]))' 
-is the sum of the TotalAmount in all non-voided Payment Transaction on document state Released</p>
+is the sum of the TotalAmount in all non-voided Payment Transaction on document state Released</li>
+</ul>
 <ul>
 <li>that refer the particular OriginalPaymentTransaction <strong>and</strong> the TotalAmount of the current
 Payment Transaction.</li>
@@ -136,26 +141,26 @@ Payment Transaction.</li>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When we are making а return Payment Transaction we have to ensure that the total returned
+<td>When we are making а return Payment Transaction we have to ensure that the total returned
 amount of all return Payment Transactions is less or equal to the original Payment
-Transaction's amount.</p>
-<p>In other words, the current rule reassures that we are not over-returning the original Payment
-Transaction.</p>
-</td>
+Transaction's amount.
+<br><br>
+In other words, the current rule reassures that we are not over-returning the original Payment
+Transaction.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field 'Original Payment Transaction' in document '{DocumentText}' refers to a Payment
-Transaction whose Total Amount is over-returned.</p>
-<p>Please, check the Total Amount of the current document and all Payment Transactions which
-return amount for the Original Payment Transaction</p>
-</td>
+<td>The field 'Original Payment Transaction' in document '{DocumentText}' refers to a Payment
+Transaction whose Total Amount is over-returned.
+<br><br>
+Please, check the Total Amount of the current document and all Payment Transactions which
+return amount for the Original Payment Transaction</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2020.1</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 2020.1
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

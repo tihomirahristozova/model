@@ -116,29 +116,29 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that, for every line:</p>
-<p>ROUND(CONVERT(LogisticsDocumentLine.Quantity),3) -- 0.999 &lt;=
-LogisticsDocumentLine.StandardQuantityBase &lt;= ROUND(CONVERT(Quantity),3) + 0.999</p>
-</td>
+<td>Validate that, for every line:
+<br><br>
+ROUND(CONVERT(LogisticsDocumentLine.Quantity),3) -- 0.999 &lt;=
+LogisticsDocumentLine.StandardQuantityBase &lt;= ROUND(CONVERT(Quantity),3) + 0.999</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The field Standard Quantity Base contains the equivalence of the Quantity calculated in base
+<td>The field Standard Quantity Base contains the equivalence of the Quantity calculated in base
 measurement unit. Although small variations between both values are possible due to
 ordered/executed exhaustion, big differences could mean that the quantities are not properly
-filled in or updated.</p>
-<p>For this reason, the current rule validates that the difference between Standard Quantity Base
-and the Quantity calculated in base measurement unit is not bigger that 0.999.</p>
-</td>
+filled in or updated.
+<br><br>
+For this reason, the current rule validates that the difference between Standard Quantity Base
+and the Quantity calculated in base measurement unit is not bigger that 0.999.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field 'Standard Quantity Base' in line number '[LineNo]' in document
-'[DocumentText]' contains an invalid value.</p>
-<p>The field 'Standard Quantity Base' should contain the equivalence of the 'Quantity'
+<td>The field 'Standard Quantity Base' in line number '[LineNo]' in document
+'[DocumentText]' contains an invalid value.
+<br><br>
+The field 'Standard Quantity Base' should contain the equivalence of the 'Quantity'
 calculated in base measurement unit according to the product's measurement ratios. Please
-check if the values in both fields are correctly filled in.</p>
-</td>
+check if the values in both fields are correctly filled in.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

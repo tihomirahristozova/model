@@ -98,9 +98,9 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td><p>AttributeChanged(PlannedDurationHour)</p>
-<p>AttributeChanged(WorkType)</p>
-</td>
+<td>AttributeChanged(PlannedDurationHour)
+<br><br>
+AttributeChanged(WorkType)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -117,23 +117,36 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(PlannedDurationHours!=0 and WorkType!=null)</p>
-<p>BudgetLaborAmount=  CalculateBudgetLaborAmount()</p>
-<p>ELSE</p>
-<p>BudgetLaborAmount =  new Amount(0,Project.BudgetingCurrency)</p>
-<p><strong>*ProjectTask.CalculateBudgetLaborAmount():</strong></p>
-<p>IF(WorkType is not null and WorkType.BilledWithProduct is not null, and
-Project.BudgetingCurrency is not null)</p>
-<p>product is WorkType.BilledWithProduct</p>
-<p>IF(product.CostingCurrency==null OR product.CostingCurrency !=
-Project.BudgetingCurrency)</p>
-<p>Error M1</p>
-<p>ELSE</p>
-<p>if(product.MeasurementUnit.SystemUnit != SystemUnit.TimeHours) error M2</p>
-<p>else return (product.StandardPricePerLot / product.StandardLotSizeBase.Value) *
-this.PlannedDurationHours</p>
-<p>all other cases returns Amount(0, Project?.BudgetingCurrency)</p>
-</td>
+<td>IF(PlannedDurationHours!=0 and WorkType!=null)
+<br><br>
+BudgetLaborAmount=  CalculateBudgetLaborAmount()
+<br><br>
+ELSE
+<br><br>
+BudgetLaborAmount =  new Amount(0,Project.BudgetingCurrency)
+<br><br>
+<br><br>
+<br><br>
+<strong>*ProjectTask.CalculateBudgetLaborAmount():</strong>
+<br><br>
+IF(WorkType is not null and WorkType.BilledWithProduct is not null, and
+Project.BudgetingCurrency is not null)
+<br><br>
+product is WorkType.BilledWithProduct
+<br><br>
+IF(product.CostingCurrency==null OR product.CostingCurrency !=
+Project.BudgetingCurrency)
+<br><br>
+Error M1
+<br><br>
+ELSE
+<br><br>
+if(product.MeasurementUnit.SystemUnit != SystemUnit.TimeHours) error M2
+<br><br>
+else return (product.StandardPricePerLot / product.StandardLotSizeBase.Value) *
+this.PlannedDurationHours
+<br><br>
+all other cases returns Amount(0, Project?.BudgetingCurrency)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -141,18 +154,18 @@ this.PlannedDurationHours</p>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>M1: Failed to set budgeted amount. The costing currency
+<td>M1: Failed to set budgeted amount. The costing currency
 '{BillingProduct.Currency.Name}' of product '{BillingProduct.PartNumber}' is
-different from project budgeting currency '{Project.BudgetingCurrency.Name}'.</p>
-<p>M2: The measurement unit of product '{BillingProduct.PartNumber}' must be defined
-as Time system unit measured in hours.</p>
-</td>
+different from project budgeting currency '{Project.BudgetingCurrency.Name}'.
+<br><br>
+M2: The measurement unit of product '{BillingProduct.PartNumber}' must be defined
+as Time system unit measured in hours.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

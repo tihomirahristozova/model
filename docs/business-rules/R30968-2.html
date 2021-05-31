@@ -115,18 +115,19 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(RevenueStartDate!=null AND RevenueEndDate!=null)</p>
-<p>IF(RevenueStartDate&gt;=RevenueEndDate)</p>
-<p>RevenueEndDate = RevenueStartDate</p>
-</td>
+<td>IF(RevenueStartDate!=null AND RevenueEndDate!=null)
+<br><br>
+IF(RevenueStartDate&gt;=RevenueEndDate)
+<br><br>
+RevenueEndDate = RevenueStartDate</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Revenue Start Date is changed, if both Revenue Start Date and Revenue End Date
+<td>When Revenue Start Date is changed, if both Revenue Start Date and Revenue End Date
 have values and Revenue Start Date is greater than Revenue End Date, then Revenue End
-Date is changed to Revenue Start Date.</p>
-<p>(RecalcExpression)</p>
-</td>
+Date is changed to Revenue Start Date.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

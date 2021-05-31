@@ -116,27 +116,27 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (TrackChangesLevel != DoNotTrackChanges)</p>
-<p>, validate that GetAggregateRoot() = null</p>
-</td>
+<td>If (TrackChangesLevel != DoNotTrackChanges)
+<br><br>
+, validate that GetAggregateRoot() = null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>Currently, changes can be tracked only for the whole aggregate (for more information, see
+<td>Currently, changes can be tracked only for the whole aggregate (for more information, see
 <a href="https://confluence.erp.net/display/techdoc/Aggregates">Aggregates</a>). In order to start
 tracking changes for a particular aggregate we should set a 'Track Changes Level' other than
-'0 - Do Not Track Changes' in the definition of the entity that is an 'Aggregate Root'.</p>
-<p>For this reason, the current rule validates that when we are setting a 'Track Changes Level'
-other than '0 - Do Not Track Changes' we are editing exactly the root of the aggregate.</p>
-</td>
+'0 - Do Not Track Changes' in the definition of the entity that is an 'Aggregate Root'.
+<br><br>
+For this reason, the current rule validates that when we are setting a 'Track Changes Level'
+other than '0 - Do Not Track Changes' we are editing exactly the root of the aggregate.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The 'Track Changes Level' field in the definition of entity '{EntityName}' has an invalid
-value. The only valid value for this entity is '0 - Do Not Track Changes'.</p>
-<p>Track changes could be activated only for the entity that is a root of the aggregate. The
-aggregate root of the current entity is '{AggregateRoot.EntityName}'.</p>
-</td>
+<td>The 'Track Changes Level' field in the definition of entity '{EntityName}' has an invalid
+value. The only valid value for this entity is '0 - Do Not Track Changes'.
+<br><br>
+Track changes could be activated only for the entity that is a root of the aggregate. The
+aggregate root of the current entity is '{AggregateRoot.EntityName}'.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

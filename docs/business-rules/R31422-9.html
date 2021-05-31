@@ -116,16 +116,16 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(PaymentOrder!=null AND TotalAmountCurrency!=null)</p>
-<p>CoveredOrderAmount =
-Amount.ConvertTo(PaymentOrder.TotalAmountCurrency,PaymentTransaction.CurrencyDirectory)</p>
-</td>
+<td>IF(PaymentOrder!=null AND TotalAmountCurrency!=null)
+<br><br>
+CoveredOrderAmount =
+Amount.ConvertTo(PaymentOrder.TotalAmountCurrency,PaymentTransaction.CurrencyDirectory)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Amount is changed, Covered Order Amount should be recalculated. </p>
-<p>(RecalcExpression)</p>
-</td>
+<td>When Amount is changed, Covered Order Amount should be recalculated. 
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -133,7 +133,9 @@ Amount.ConvertTo(PaymentOrder.TotalAmountCurrency,PaymentTransaction.CurrencyDir
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 21</td>
+<td>Introduced: 21
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

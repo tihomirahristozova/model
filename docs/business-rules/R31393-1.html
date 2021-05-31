@@ -115,18 +115,19 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(PreferredSupplier != null)</p>
-<p>IF(PreferredSuppllier.DefaultDeliveryTermDays != null)</p>
-<p>PlanningLeadTimeDays = PreferredSuppllier.DefaultDeliveryTermDay</p>
-</td>
+<td>IF(PreferredSupplier != null)
+<br><br>
+IF(PreferredSuppllier.DefaultDeliveryTermDays != null)
+<br><br>
+PlanningLeadTimeDays = PreferredSuppllier.DefaultDeliveryTermDay</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Preferred Supplier is changed, if the selected Supplier has Default Delivery
+<td>When Preferred Supplier is changed, if the selected Supplier has Default Delivery
 Term Days specified, Planning Lead Time Days is changed to the specified Default
-Delivery Term Days.</p>
-<p>(RecalcExpression)</p>
-</td>
+Delivery Term Days.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

@@ -109,19 +109,19 @@
 <td>
 <pre><code> If ((Document
 </code></pre>
-<p>Date == Today OR DocumentDate &gt; Today) AND (ReconciliationLine.TransactionTimestamp == null))</p>
-<pre><code> ReconciliationLine.TransactionTimestamp = DateTime.Now()
-
- else if ((DocumentDate &lt; Today) AND (ReconciliationLine.TransactionTimestamp == null))
-
- {
-
- ReconciliationLine.TransactionTimestamp.Date = DocumentDate
-
- ReconciliationLine.TransactionTimestamp.Time = 23:59:00
-
- }
-</code></pre>
+<p>Date == Today OR DocumentDate &gt; Today) AND (ReconciliationLine.TransactionTimestamp == null))
+<br><br>
+ReconciliationLine.TransactionTimestamp = DateTime.Now()
+<br><br>
+else if ((DocumentDate &lt; Today) AND (ReconciliationLine.TransactionTimestamp == null))
+<br><br>
+{
+<br><br>
+ReconciliationLine.TransactionTimestamp.Date = DocumentDate
+<br><br>
+ReconciliationLine.TransactionTimestamp.Time = 23:59:00
+<br><br>
+}</p>
 </td>
 </tr>
 <tr>

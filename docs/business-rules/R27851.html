@@ -110,17 +110,22 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (Party.PartyType == Company)</p>
-<p>Party.PartyUniqueNumber = Party.RegistrationNumber</p>
-<p>else if (Party.PartyType == Person)</p>
-<p>Party.PartyUniqueNumber = Party.NationalNumber</p>
-<p>else</p>
-<p>Party.PartyUniqueNumber = null</p>
-</td>
+<td>If (Party.PartyType == Company)
+<br><br>
+Party.PartyUniqueNumber = Party.RegistrationNumber
+<br><br>
+else if (Party.PartyType == Person)
+<br><br>
+Party.PartyUniqueNumber = Party.NationalNumber
+<br><br>
+else
+<br><br>
+Party.PartyUniqueNumber = null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When new party is created, the PartyUniqueNumber ia automatically filled as follows:</p>
+<td><p>When new party is created, the PartyUniqueNumber ia automatically filled as follows:
+<br><br></p>
 <ul>
 <li>if the party is a company - its PartyUniqueNumber is its registration number;</li>
 <li>if the party is a person - its PartyUniqueNumber is he's national number;</li>

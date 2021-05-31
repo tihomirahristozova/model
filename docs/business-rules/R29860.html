@@ -116,10 +116,11 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that, for every line:</p>
-<p>If (LogisticsDocumentLine.Product.AllowVariableMeasurementRatios == False)</p>
-<p>, then LogisticsDocumentLine.StandardQuantityBase == LogisticsDocumentLine.QuantityBase</p>
-</td>
+<td>Validate that, for every line:
+<br><br>
+If (LogisticsDocumentLine.Product.AllowVariableMeasurementRatios == False)
+<br><br>
+, then LogisticsDocumentLine.StandardQuantityBase == LogisticsDocumentLine.QuantityBase</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -129,12 +130,12 @@ Quantity Base is equal Quantity Base.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The field 'Standard Quantity Base' in line number '[LineNo]' in document
-'[DocumentText]' contains an invalid value.</p>
-<p>The values in the fields 'Standard Quantity Base' and 'Quantity Base' must be equal for
+<td>The field 'Standard Quantity Base' in line number '[LineNo]' in document
+'[DocumentText]' contains an invalid value.
+<br><br>
+The values in the fields 'Standard Quantity Base' and 'Quantity Base' must be equal for
 products that do not use variable measurement ratios. Please check if the values in both
-fields are correctly filled in.</p>
-</td>
+fields are correctly filled in.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

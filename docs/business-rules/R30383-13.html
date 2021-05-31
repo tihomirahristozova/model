@@ -116,18 +116,18 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(PaymentType!=null)</p>
-<p>Invoice.PaymentType.GetDefaultPaymentAccount().IfNullThen(Invoice.PaymentAccount)</p>
-</td>
+<td>IF(PaymentType!=null)
+<br><br>
+Invoice.PaymentType.GetDefaultPaymentAccount().IfNullThen(Invoice.PaymentAccount)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When the PaymentType is changed, the PaymentAccount should be recalculated. PaymentAccount
+<td>When the PaymentType is changed, the PaymentAccount should be recalculated. PaymentAccount
 should be equal to the Default payment account from the definition of the Payment type, or if
 it is not set, to the payment account with the same payment type if there is <strong>only</strong> <strong>one</strong>
-found.</p>
-<p>(RecalcExpression)</p>
-</td>
+found.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

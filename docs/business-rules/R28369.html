@@ -106,30 +106,39 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If (ShipToCustomer != null)</p>
-<p>{</p>
-<p>(DocumentDate &gt;= ShipToCustomer.FromDate &amp;&amp; DocumentDate &lt;= ShipToCustomer.ThruDate)</p>
-<p>||  </p>
-<p>(ShipToCustomer.FromDate == null &amp;&amp; DocumentDate &lt;= ShipToCustomer.ThruDate)</p>
-<p>||  </p>
-<p>(DocumentDate &gt;= ShipToCustomer.FromDate &amp;&amp; ShipToCustomer.ThruDate== null)</p>
-<p>||</p>
-<p>(ShipToCustomer.FromDate == null &amp;&amp; ShipToCustomer.ThruDate == null)</p>
-<p>}</p>
-</td>
+<td>Validate that:
+<br><br>
+If (ShipToCustomer != null)
+<br><br>
+{
+<br><br>
+(DocumentDate &gt;= ShipToCustomer.FromDate &amp;&amp; DocumentDate &lt;= ShipToCustomer.ThruDate)
+<br><br>
+||  
+<br><br>
+(ShipToCustomer.FromDate == null &amp;&amp; DocumentDate &lt;= ShipToCustomer.ThruDate)
+<br><br>
+||  
+<br><br>
+(DocumentDate &gt;= ShipToCustomer.FromDate &amp;&amp; ShipToCustomer.ThruDate== null)
+<br><br>
+||
+<br><br>
+(ShipToCustomer.FromDate == null &amp;&amp; ShipToCustomer.ThruDate == null)
+<br><br>
+}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The customer locations has their own customer terms and conditions and these conditions are
+<td>The customer locations has their own customer terms and conditions and these conditions are
 valid for specified period. If the they expire the user cannot sell to the specific location
 anymore by the same conditions. There is a need for new conditions. For example a customer
 location is part of specific price list for a season and then we revise his activity and
 there is a chance to change his terms and conditions. While the has no specified terms and
-conditions we cannot sell him anything as there is knowledge which prices to use and more.</p>
-<p>The validity of the customer location's term and conditions are not mandatory and the fields
-may be null - From Date and/or Thru Date.</p>
-</td>
+conditions we cannot sell him anything as there is knowledge which prices to use and more.
+<br><br>
+The validity of the customer location's term and conditions are not mandatory and the fields
+may be null - From Date and/or Thru Date.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

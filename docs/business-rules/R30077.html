@@ -117,45 +117,49 @@ any.Company)</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If ((PosLocation != NULL) &amp;&amp; </p>
-<p>(SalesOrdersOptions [DocumentType=SalesOrder.DocumentType].AllowedDirections =
-SalesReturn))</p>
-<p>, then Child.Lines[(HistoricalDataJson = NULL) &amp;&amp; (ReturnForSalesOrderLine =
-NULL)].Count() == 0</p>
-</td>
+<td>Validate that:
+<br><br>
+If ((PosLocation != NULL) &amp;&amp; 
+<br><br>
+(SalesOrdersOptions [DocumentType=SalesOrder.DocumentType].AllowedDirections =
+SalesReturn))
+<br><br>
+, then Child.Lines[(HistoricalDataJson = NULL) &amp;&amp; (ReturnForSalesOrderLine =
+NULL)].Count() == 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When returning products in a POS Location, according to the Bulgarian legislation, the
+<td>When returning products in a POS Location, according to the Bulgarian legislation, the
 return receipt must contain particular information about the Sales Order and the fiscal
 receipt with which the products are sold. Such information is the Fiscal Sales Number of
 the original Sales Order and the number, date and time, amount and fiscal memory number
-of the original fiscal receipt.</p>
-<p>This information can be gathered automatically by the system. In this case the relation
+of the original fiscal receipt.
+<br><br>
+This information can be gathered automatically by the system. In this case the relation
 between the return sale and the sales order for the sale of the products is made through
-the field 'Return For Sales Order Line' in the return sale's lines.</p>
-<p>Alternatively, the information can be entered manually in the filed Historical Data Json
-in the lines of the return Sales Order.</p>
-<p>For this reason, the current rule reassures that if the Allowed Direction of the Sales
+the field 'Return For Sales Order Line' in the return sale's lines.
+<br><br>
+Alternatively, the information can be entered manually in the filed Historical Data Json
+in the lines of the return Sales Order.
+<br><br>
+For this reason, the current rule reassures that if the Allowed Direction of the Sales
 Orders's document type is 'Sales Return' and the field POS Location has a value -
 then at least one of the fields 'Return For Sales Order Line' or 'Historical Data
-Json' is filled in.</p>
-</td>
+Json' is filled in.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>The fields 'Return For Sales Order Line' and 'Historical Data Json' in line number
-'{LineNo}' of document '{DocumentText}' do not have values.</p>
-<p>Please, make sure that at least one of the fields 'Return For Sales Order Line' or
-'Historical Data Json' is filled in all of the lines of the return sales order.</p>
-</td>
+<td>The fields 'Return For Sales Order Line' and 'Historical Data Json' in line number
+'{LineNo}' of document '{DocumentText}' do not have values.
+<br><br>
+Please, make sure that at least one of the fields 'Return For Sales Order Line' or
+'Historical Data Json' is filled in all of the lines of the return sales order.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2019.1</p>
-<p>Updated: 2019.1 - Added condition HistoricalDataJson = NULL</p>
-</td>
+<td>Introduced: 2019.1
+<br><br>
+Updated: 2019.1 - Added condition HistoricalDataJson = NULL</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

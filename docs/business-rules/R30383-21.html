@@ -115,17 +115,17 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ParentSalesOrderLine==null) SalesOrder=null</p>
-<p>IF(ParentSalesOrderLine!=null) SalesOrder =ParentSalesOrderLine.SalesOrder</p>
-</td>
+<td>IF(ParentSalesOrderLine==null) SalesOrder=null
+<br><br>
+IF(ParentSalesOrderLine!=null) SalesOrder =ParentSalesOrderLine.SalesOrder</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When ParentSalesOrderLine is changed, SalesOrder should be updated. If
+<td>When ParentSalesOrderLine is changed, SalesOrder should be updated. If
 ParentSalesOrder is set to null, SalesOrder should be null. If ParentSalesOrder has a
-value, then SalesOrder should be equal to the SalesOrder of the sales order line.</p>
-<p>(RecalcExpression)</p>
-</td>
+value, then SalesOrder should be equal to the SalesOrder of the sales order line.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

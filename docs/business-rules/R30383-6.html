@@ -116,17 +116,17 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(DocumentDate!=null AND Customer!=null)</p>
-<p>PaymentDueDate = DocumentDate + Customer.DefaultPaymentTermDays</p>
-</td>
+<td>IF(DocumentDate!=null AND Customer!=null)
+<br><br>
+PaymentDueDate = DocumentDate + Customer.DefaultPaymentTermDays</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When the Document date is changed or the Customer is changed, the PaymentDueDate should be
+<td>When the Document date is changed or the Customer is changed, the PaymentDueDate should be
 recalculated. PaymentDueDate should be equal to the DocumentDate increased with the number of
-days set in DefaultPaymentTermDays from the customer's definition.</p>
-<p>(RecalExpression)</p>
-</td>
+days set in DefaultPaymentTermDays from the customer's definition.
+<br><br>
+(RecalExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

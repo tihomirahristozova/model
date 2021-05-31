@@ -116,13 +116,16 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ReceivingOrder.AdjustedDocument == null)</p>
-<p>IF((ConfirmedQuantity ?? Quantity)!=null &amp;&amp; (ConfirmedQuantity ?? Quantity).Value=0 and
-PricePerUnit !=null)</p>
-<p>LineAmount = (ConfirmedQuantity ?? Quantity * PricePerUnit).Round()</p>
-<p>ELSE</p>
-<p>LineAmount=LineAmount</p>
-</td>
+<td>IF(ReceivingOrder.AdjustedDocument == null)
+<br><br>
+IF((ConfirmedQuantity ?? Quantity)!=null &amp;&amp; (ConfirmedQuantity ?? Quantity).Value=0 and
+PricePerUnit !=null)
+<br><br>
+LineAmount = (ConfirmedQuantity ?? Quantity * PricePerUnit).Round()
+<br><br>
+ELSE
+<br><br>
+LineAmount=LineAmount</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

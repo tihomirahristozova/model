@@ -110,12 +110,14 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If the LogisticsDocumentsLine supports confirmed quantities, validate that, for every line::</p>
-<p>ConfirmedQuantity &gt;= 0 &amp;&amp; ConfirmedQuantityBase &gt;= 0 &amp;&amp; ConfirmedStandardQuantityBase &gt;= 0</p>
-<p>||</p>
-<p>  ConfirmedQuantity &lt;= 0 &amp;&amp; ConfirmedQuantityBase &lt;= 0 &amp;&amp; ConfirmedStandardQuantity Base
-&lt;= 0</p>
-</td>
+<td>If the LogisticsDocumentsLine supports confirmed quantities, validate that, for every line::
+<br><br>
+ConfirmedQuantity &gt;= 0 &amp;&amp; ConfirmedQuantityBase &gt;= 0 &amp;&amp; ConfirmedStandardQuantityBase &gt;= 0
+<br><br>
+||
+<br><br>
+  ConfirmedQuantity &lt;= 0 &amp;&amp; ConfirmedQuantityBase &lt;= 0 &amp;&amp; ConfirmedStandardQuantity Base
+&lt;= 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -127,11 +129,13 @@ confirmed quantities must have the same sign.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Line number '[LineNo]' in document '[DocumentText]' contains quantities with
+<td>Line number '[LineNo]' in document '[DocumentText]' contains quantities with
 different signs. The values of the fields 'Confirmed Quantity', 'Confirmed Quantity Base'
-and 'Confirmed Standard Quantity Base'  in the line must have the same sign.</p>
-<p><em>Sort Messages By Attribute: LineNo</em></p>
-</td>
+and 'Confirmed Standard Quantity Base'  in the line must have the same sign.
+<br><br>
+<br><br>
+<br><br>
+<em>Sort Messages By Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

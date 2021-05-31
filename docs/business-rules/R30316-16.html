@@ -116,13 +116,19 @@ LineStandardDiscountPercent, InvoiceOrder.DocumentCurrency)</td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>if(Quantity!=null and UnitPrice!=null)</p>
-<p>lineAmount = quantity * unitPrice;</p>
-<p>if (lineCustomDiscountPercent != null) lineAmount *= (1 -
+<td><p>if(Quantity!=null and UnitPrice!=null)
+<br><br>
+lineAmount = quantity * unitPrice;
+<br><br>
+if (lineCustomDiscountPercent != null) lineAmount *= (1 -
 lineCustomDiscountPercent.Value);
 if (lineStandardDiscountPercent != null) lineAmount *= (1 -
-lineStandardDiscountPercent.Value);</p>
-<p>if (documentCurrency != null) Round(lineAmount, documentCurrency);</p>
+lineStandardDiscountPercent.Value);
+<br><br>
+if (documentCurrency != null) Round(lineAmount, documentCurrency);
+<br><br>
+<br><br>
+<br><br></p>
 <ul>
 <li>this is method CalculateLineAmount in InvoiceOrderLine entity</li>
 </ul>

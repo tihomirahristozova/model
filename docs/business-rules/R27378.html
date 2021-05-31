@@ -106,21 +106,22 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>If the costing currency of the product is changed, validate that there are no non-voided Store
-Transactions with the current product.</p>
-<p>If the previous value of costing currency is null then costing currency can be changed to base
-currency.</p>
-</td>
+<td>Validate that:
+<br><br>
+If the costing currency of the product is changed, validate that there are no non-voided Store
+Transactions with the current product.
+<br><br>
+If the previous value of costing currency is null then costing currency can be changed to base
+currency.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>The current validation is required because if the product participates in store transactions
+<td>The current validation is required because if the product participates in store transactions
 with the old costing currency, then these transactions have calculated costs which use the old
-currency and these costs would become incorrect.</p>
-<p>If the previous value of costing currency is null then costing currency can be changed to the
-base currency. In this case, the Enterprise Company of the product cannot be null.</p>
-</td>
+currency and these costs would become incorrect.
+<br><br>
+If the previous value of costing currency is null then costing currency can be changed to the
+base currency. In this case, the Enterprise Company of the product cannot be null.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

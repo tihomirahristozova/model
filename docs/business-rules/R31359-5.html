@@ -115,34 +115,45 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(ConsumedQuantityUnit==null)</p>
-<p>ConsumedQuantity = null</p>
-<p>ELSE</p>
-<p>if(WorkOrderItemIngredient!=null)</p>
-<p>ConsumedQuantity =
-WorkOrderItemIngredient.GetSumConsumedQuantity(ConsumedQuantityUnit)</p>
-<p>*<strong>GetSumConsumedQuantity</strong> -  a method in WorkOrderItemIngredient</p>
-<p>Parameters: destination Measurement unit</p>
-<p>Action: Selects Consumption Order Lines where:</p>
+<td><p>IF(ConsumedQuantityUnit==null)
+<br><br>
+ConsumedQuantity = null
+<br><br>
+ELSE
+<br><br>
+if(WorkOrderItemIngredient!=null)
+<br><br>
+ConsumedQuantity =
+WorkOrderItemIngredient.GetSumConsumedQuantity(ConsumedQuantityUnit)
+<br><br>
+<br><br>
+<br><br>
+*<strong>GetSumConsumedQuantity</strong> -  a method in WorkOrderItemIngredient
+<br><br>
+Parameters: destination Measurement unit
+<br><br>
+Action: Selects Consumption Order Lines where:
+<br><br></p>
 <ul>
 <li>WorkOrderItemIngredient = current WorkOrderItemIngredient</li>
 <li>WorkOrderItemIngredient.WorkOrder.State &gt;= DocumentState.Released</li>
-<li>WorkOrderItemIngredient.WorkOrder.Void == false</li>
+<li>WorkOrderItemIngredient.WorkOrder.Void == false
+<br><br>
+Then calculates the Sum of all lines' ConsumedQuantity converted to
+destinationMeasurementUnit in advance and return that calculation as a result.</li>
 </ul>
-<p>Then calculates the Sum of all lines' ConsumedQuantity converted to
-destinationMeasurementUnit in advance and return that calculation as a result.</p>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Work Order Item Ingredient is changed or Consumed Quantity Unit is changed,
+<td>When Work Order Item Ingredient is changed or Consumed Quantity Unit is changed,
 Consumed Quantity is recalculated. If there is no Quantity Unit set, Consumed
 Quantity is set to null. If Quantity Unit and Work Order Item Ingredient both have
 values, Consumed Quantity is calculated as the sum of Consumed Quantities of all
 lines related to the current Work Order Item Ingredient which belong to at least
-released and not voided documents. </p>
-<p>(RecalcExpression)</p>
-</td>
+released and not voided documents. 
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -150,9 +161,9 @@ released and not voided documents. </p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

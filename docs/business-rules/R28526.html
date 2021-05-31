@@ -110,25 +110,25 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Validate that:</p>
-<p>LogisticsDocument.LogisticsDocumentLines.Count() &lt;= 5000</p>
-</td>
+<td>Validate that:
+<br><br>
+LogisticsDocument.LogisticsDocumentLines.Count() &lt;= 5000</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>There are calculations in system, whose speed is proportional (directly proportional or in
+<td>There are calculations in system, whose speed is proportional (directly proportional or in
 same cases even proportional to the square of value) to the count of the document lines.
 That's why there are certain prohibitions for the maximum count of lines that a single
-document could contain.</p>
-<p>The current rule ensures that saving a logistic document which contains more than 5000 lines
-won't be allowed.</p>
-</td>
+document could contain.
+<br><br>
+The current rule ensures that saving a logistic document which contains more than 5000 lines
+won't be allowed.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Document '{DocumentText}' contains more than 5000 lines, which is not allowed.</p>
-<p>Please, split the lines of the current document into several smaller documents.</p>
-</td>
+<td>Document '{DocumentText}' contains more than 5000 lines, which is not allowed.
+<br><br>
+Please, split the lines of the current document into several smaller documents.</td>
 </tr>
 <tr>
 <td><strong>Introduced In

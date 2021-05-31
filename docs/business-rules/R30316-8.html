@@ -116,14 +116,19 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>FOREACH( line)</p>
-<p>IF(DocumentCurrency != line.LineAmount.Currency){</p>
-<p>if(line.LineAmount==0 )</p>
-<p>if(line.UnitPrice!=0)</p>
-<p>line.UnitPrice = line.UnitPrice.ConvertTo(DocumentCurrency)</p>
-<p>if(line,LineAmount!=0)</p>
-<p>line.LineAmount = line.LineAmount.ConvertTo(DocumentCurrency)}</p>
-</td>
+<td>FOREACH( line)
+<br><br>
+IF(DocumentCurrency != line.LineAmount.Currency){
+<br><br>
+if(line.LineAmount==0 )
+<br><br>
+if(line.UnitPrice!=0)
+<br><br>
+line.UnitPrice = line.UnitPrice.ConvertTo(DocumentCurrency)
+<br><br>
+if(line,LineAmount!=0)
+<br><br>
+line.LineAmount = line.LineAmount.ConvertTo(DocumentCurrency)}</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

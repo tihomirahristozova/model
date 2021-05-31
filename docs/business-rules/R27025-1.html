@@ -106,29 +106,41 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>Let:</p>
-<p>C1 = DocumentState &lt; Released</p>
-<p>C2 = DocumentState &gt;= Released</p>
-<p>C3 = DeclarationFunction = DeclarationFunction.Regular</p>
-<p>C4 = its ReleaseDate is not the greatest of all ReleaseDates of non-voided regular
+<td>Let:
+<br><br>
+C1 = DocumentState &lt; Released
+<br><br>
+C2 = DocumentState &gt;= Released
+<br><br>
+C3 = DeclarationFunction = DeclarationFunction.Regular
+<br><br>
+C4 = its ReleaseDate is not the greatest of all ReleaseDates of non-voided regular
 IntrastatDeclarations with the same reference period and the same Goods flow direction and same
-Enterprise Company</p>
-<p>C5 = there are no released non-voided corrective IntrastatDeclarations for the same reference period
-and the same Goods flow direction and the same Enterprise Company</p>
-<p>The rule should validate that:</p>
-<p>C1</p>
-<p>OR</p>
-<p>C2 AND C3 AND (C4 OR C5)</p>
-</td>
+Enterprise Company
+<br><br>
+C5 = there are no released non-voided corrective IntrastatDeclarations for the same reference period
+and the same Goods flow direction and the same Enterprise Company
+<br><br>
+<br><br>
+<br><br>
+The rule should validate that:
+<br><br>
+C1
+<br><br>
+OR
+<br><br>
+C2 AND C3 AND (C4 OR C5)
+<br><br>
+<br><br></td>
 </tr>
 <tr>
 <td>Description</td>
-<td><p>If an Intrastat Declaration is less then Released, then it may be made void anytime.</p>
-<p>If it is released and the Intrastat Declaration is regular it may be voided if it is not the last
+<td>If an Intrastat Declaration is less then Released, then it may be made void anytime.
+<br><br>
+If it is released and the Intrastat Declaration is regular it may be voided if it is not the last
 released intrastat declaration for the same reference period with the same goods flow direction and
 the same Enterprise Company and there are no any released corrective declarations for the same
-reference period with the same goods flow direction and the same Enterprise Company.</p>
-</td>
+reference period with the same goods flow direction and the same Enterprise Company.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -138,11 +150,12 @@ direction and the same Enterprise Company.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 2017</p>
-<p>Updated: 2019.1 - in action's parts C4, C5 and C7 is added a new condition by Goods flow direction</p>
-<p>Updated: 2020.1 - separated by Declaration Function in two rules, added new condition by Enterprise
-Company</p>
-</td>
+<td>Introduced: 2017
+<br><br>
+Updated: 2019.1 - in action's parts C4, C5 and C7 is added a new condition by Goods flow direction
+<br><br>
+Updated: 2020.1 - separated by Declaration Function in two rules, added new condition by Enterprise
+Company</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

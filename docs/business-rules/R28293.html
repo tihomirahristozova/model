@@ -106,37 +106,42 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>for every line validate that:</p>
-<p>if (ReturnForSalesOrderLine ! = null || HistoricalUnitCost ! = null)</p>
-<p>if ((Quantity &lt; 0 || LineAmount &lt; 0) &amp;&amp; ReturnForSalesOrderLine ! = null &amp;&amp;
-Product.ProductType.IsStocked == True)</p>
-<p>HistoricalUnitCost == null</p>
-<p>else</p>
-<p>if ((Quantity &lt; 0 || LineAmount &lt; 0) &amp;&amp; HistoricalUnitCost  ! = null &amp;&amp;
-Product.ProductType.IsStocked == True)</p>
-<p>ReturnForSalesOrderLine == null</p>
-</td>
+<td>for every line validate that:
+<br><br>
+if (ReturnForSalesOrderLine ! = null || HistoricalUnitCost ! = null)
+<br><br>
+if ((Quantity &lt; 0 || LineAmount &lt; 0) &amp;&amp; ReturnForSalesOrderLine ! = null &amp;&amp;
+Product.ProductType.IsStocked == True)
+<br><br>
+HistoricalUnitCost == null
+<br><br>
+else
+<br><br>
+if ((Quantity &lt; 0 || LineAmount &lt; 0) &amp;&amp; HistoricalUnitCost  ! = null &amp;&amp;
+Product.ProductType.IsStocked == True)
+<br><br>
+ReturnForSalesOrderLine == null</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>Return For Sales Order Line and Historical Unit Cost fields are alternative and they cannot
+<td>Return For Sales Order Line and Historical Unit Cost fields are alternative and they cannot
 have value at the same time in one returning sales order row because they are used to
 determine the returning cost of the products. If both fields have value the cost
-determination would be not accurate and ambiguously.</p>
-<p>For more information see <a href="https://confluence.erp.net/display/techdoc/Sales+Order+Row+Types">Sales Order Row
-Types</a>.</p>
-</td>
+determination would be not accurate and ambiguously.
+<br><br>
+For more information see <a href="https://confluence.erp.net/display/techdoc/Sales+Order+Row+Types">Sales Order Row
+Types</a>.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>Line {LineNo} in '{DocumentText}' is considered to return products (because it has negative
+<td>Line {LineNo} in '{DocumentText}' is considered to return products (because it has negative
 quantity or amount) but columns 'Return For Sales Order Line' and 'Historical Unit Cost'
 are both specified. 'Return For Sales Order Line' and 'Historical Unit Cost' are used to
 determine the cost at which the products are returned.
 Clear either 'Return For Sales Order Line' or 'Historical Unit Cost' so that the cost
-could be unambiguously determined.</p>
-<p><em>Sort Messages By Attribute: LineNo</em></p>
-</td>
+could be unambiguously determined.
+<br><br>
+<em>Sort Messages By Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Introduced In

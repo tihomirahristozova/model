@@ -116,22 +116,29 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>IF(DefaultPaymentType!=NULL)</p>
-<p>DefaultPaymentType.GetDefaultPaymentAccount().IfNullThen(Customer.DefaultPaymentAccount)</p>
+<td><p><br><br>
+IF(DefaultPaymentType!=NULL)
+<br><br>
+DefaultPaymentType.GetDefaultPaymentAccount().IfNullThen(Customer.DefaultPaymentAccount)
+<br><br>
+<br><br>
+<br><br></p>
 <ul>
-<li>PaymentType.GetDefaultPaymentAccount() has the following action:</li>
+<li>PaymentType.GetDefaultPaymentAccount() has the following action:
+<br><br>
+IF (PaymentAccounts(PaymentType=DefaultPaymentType).Count=1)
+<br><br>
+DefaultPaymentAccount=PaymentAccounts(PaymentType=DefaultPaymentType).First()</li>
 </ul>
-<p>IF (PaymentAccounts(PaymentType=DefaultPaymentType).Count=1)</p>
-<p>DefaultPaymentAccount=PaymentAccounts(PaymentType=DefaultPaymentType).First()</p>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When the Default Payment Type of a customer is changed, if there is exactly one Payment
+<td>When the Default Payment Type of a customer is changed, if there is exactly one Payment
 Account with the selected payment type, it should be set as customer's Default Payment
-Account.</p>
-<p>RecalcExpression</p>
-</td>
+Account.
+<br><br>
+RecalcExpression</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

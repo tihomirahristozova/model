@@ -115,22 +115,25 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If(Product!=null)</p>
-<p>If(ProductCode!=null AND ProductCode.CodingSystem.DefaultMeasurementUnit!=null)</p>
-<p>ProducedQuantityUnit = ProductCode.CodingSystem.DefaultMeasurementUnit</p>
-<p>ELSE</p>
-<p>ProducedQuantityUnit = Product.MeasurementUnit</p>
-</td>
+<td>If(Product!=null)
+<br><br>
+If(ProductCode!=null AND ProductCode.CodingSystem.DefaultMeasurementUnit!=null)
+<br><br>
+ProducedQuantityUnit = ProductCode.CodingSystem.DefaultMeasurementUnit
+<br><br>
+ELSE
+<br><br>
+ProducedQuantityUnit = Product.MeasurementUnit</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td><p>When Product is changed, Produced Quantity Unit is changed. If Product Code is not
+<td>When Product is changed, Produced Quantity Unit is changed. If Product Code is not
 null and there is a Default Measurement Unit specified in the definition of the
 Coding System, Produced Quantity Unit is changed to the  Default Measurement Unit. If
 Product Code is not specified, Produced Quantity Unit is filled in with
-the Product's Measurement Unit.</p>
-<p>(RecalcExpression)</p>
-</td>
+the Product's Measurement Unit.
+<br><br>
+(RecalcExpression)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -138,9 +141,9 @@ the Product's Measurement Unit.</p>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td><p>Introduced: 21</p>
-<p>Updated: -</p>
-</td>
+<td>Introduced: 21
+<br><br>
+Updated: -</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
