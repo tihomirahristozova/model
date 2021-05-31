@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>R29644 SalesOrder - Set Pos Attributes (DEPRECATED) | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="R29644 SalesOrder - Set Pos Attributes (DEPRECATED) | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="r29644-salesorder---set-pos-attributes-deprecated">R29644 SalesOrder - Set Pos Attributes (DEPRECATED)</h1>
+
+<table>
+<col style="width:13.68%">
+<col style="width:86.32%">
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>R29644</td>
+</tr>
+<tr>
+<td><strong>Entity</strong></td>
+<td>@Crm.Sales.SalesOrders </td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>SetPosAttributes</td>
+</tr>
+<tr>
+<td><strong>Attribute</strong></td>
+<td>PosLocation, PosOperator, PosTerminal, PosFiscalPrinter</td>
+</tr>
+<tr>
+<td><strong>Layer</strong></td>
+<td>Back-End</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>Commit</td>
+</tr>
+<tr>
+<td><strong>Priority</strong></td>
+<td>Early</td>
+</tr>
+<tr>
+<td><strong>Modify</strong></td>
+<td>YES</td>
+</tr>
+<tr>
+<td><strong>Applicable
+Legislations</strong></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition
+needed</a></td>
+</tr>
+<tr>
+<td><strong>Action</strong></td>
+<td><p>The rule sets values in PosLocation, PosOperator, PosTerminal and PosFiscalPrinter, according to
+the following conditions:</p>
+<p>// The order of execution of the actions must be retained!</p>
+<p>1) If ((PosLocation == NULL) &amp;&amp; (EnterpriseCompanyLocation != NULL) &amp;&amp;
+(PosLocations[(EnterpriseCompanyLocation = SalesOrder.EnterpriseCompanyLocation) &amp;&amp; (Active =
+True)].Count() == 1))</p>
+<p>, set value: PosLocation = PosLocations[(EnterpriseCompanyLocation =
+SalesOrder.EnterpriseCompanyLocation) &amp;&amp; (Active = True)]</p>
+<p>(2) If ((PosOperator == NULL) &amp;&amp; (PosLocation != NULL) &amp;&amp; (PosOperators[(User = CurrentUser*)
+&amp;&amp; (PosLocation = SalesOrder. PosLocation) &amp;&amp; (Active = True) &amp;&amp; (StartingDate &gt;= CurrentDate) &amp;&amp;
+((CurrentDate &lt;= TerminationDate) || (TerminationDate == NULL))].Count() == 1))</p>
+<p>, set value: PosOperator = PosOperator [(User = CurrentUser*) &amp;&amp; (PosLocation = SalesOrder.
+PosLocation) &amp;&amp; (Active = True) &amp;&amp; (StartingDate &gt;= CurrentDate) &amp;&amp; ((CurrentDate &lt;=
+TerminationDate) || (TerminationDate == NULL))]</p>
+<p>* CurrentUser - the user that is currently logged into the system.</p>
+<p>(3) If ((PosTerminal == NULL) &amp;&amp; (PosLocation != NULL) &amp;&amp; (PosOperator != NULL))</p>
+<p>, set value: PosTerminal = PosOperator.DefaultPosTerminal</p>
+<p>(4) If ((PosFiscalPrinter == NULL) &amp;&amp; (PosTerminal != NULL) &amp;&amp; (PosDevices[(PosTerminal =
+SalesOrder.PosTerminal) &amp;&amp; (Active = True) &amp;&amp; (DeviceType = FiscalPrinter)].Count() = =1 )</p>
+<p>, set value:  PosFiscalPrinter = PosDevice[(PosTerminal = SalesOrder.PosTerminal) &amp;&amp; (Active =
+True) &amp;&amp; (DeviceType = FiscalPrinter)</p>
+</td>
+</tr>
+<tr>
+<td>
+<ul>
+<li></li>
+</ul>
+<p><em>Description</em>*</p>
+</td>
+<td><p>The rule successively sets values in the POS Location, POS Operator, POS Terminal and POS
+FiscalPrinter fields of the Sales Order if the following conditions are met:</p>
+<p>(1) POS Location - if the field is not yet filled in, the field Enterprise Company Location has a
+value and there is exactly one active POS Location with the same Enterprise Company Location as the
+Sales Order's Enterprise Company Location.</p>
+<p>(2) POS Operator - if the field is not yet filled in, the field POS Location has a value and for
+the user that is currently logged into the system there is only one Active (and according to the
+Starting and Termination dates and the Active check-mark) POS Operator with the Sales Order's POS
+Location.</p>
+<p>(3) POS Terminal - with the value of the POS Operator's Default Pos Terminal - if the field is not
+yet filled in, and the fields POS Location and POS Operator have values.</p>
+<p>(4) POS Fiscal Printer - if the field is not yet filled in, the Sales Order's POS Terminal has a
+value and for this POS Terminal there is only one Active POS Device with Fiscal Printer type.</p>
+</td>
+</tr>
+<tr>
+<td><strong>Message</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td><p>Introduced: 2019.1</p>
+<p>Deprecated: 2019.1 SP7</p>
+</td>
+</tr>
+<tr>
+<td><strong>Revocable</strong></td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R29644.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

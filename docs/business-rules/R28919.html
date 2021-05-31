@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>R28919 SalesOrder - Promotional Package Products And Quantities Are Up To Date | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="R28919 SalesOrder - Promotional Package Products And Quantities Are Up To Date | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="r28919-salesorder---promotional-package-products-and-quantities-are-up-to-date">R28919 SalesOrder - Promotional Package Products And Quantities Are Up To Date</h1>
+
+<table>
+<col style="width:18.8%">
+<col style="width:81.2%">
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>R28919</td>
+</tr>
+<tr>
+<td><strong>Entity</strong></td>
+<td><a class="xref" href="../entities/Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders Entity</a></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>PromotionalPackageProductsAndQuantitiesAreUpToDate</td>
+</tr>
+<tr>
+<td><strong>Attribute</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Layer</strong></td>
+<td>Back-End</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>Releasing +</td>
+</tr>
+<tr>
+<td><strong>Priority</strong></td>
+<td>Normal</td>
+</tr>
+<tr>
+<td><strong>Modify</strong></td>
+<td>NO</td>
+</tr>
+<tr>
+<td><strong>Action</strong></td>
+<td><p>Validate that:</p>
+<p>For each SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine:</p>
+<p>SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine.Quantity
+* SalesOrderPromotionalPackage.NumberOfPackges == SalesOrderLines[SalesOrder; Product ==
+SalesOrderPromotionalPackage.PromotionalPackage.PromotionalPackageLine.Product].QuantityBase</p>
+</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td><p>The current validation prevents the user to sell promotional package which definition is
+changed while he operates with the SalesOrder. For example - the user adds 2 packages of
+promotional package X to the sales order. The promotional package X has the following lines:</p>
+<ol>
+<li>Product A - 2 pcs</li>
+<li>Product B - 3 pcs</li>
+</ol>
+<p>So in the sales order lines the following lines are added:</p>
+<ul>
+<li>line 1 - product A - 4 pcs</li>
+<li>line 2 - product B - 6 pcs</li>
+</ul>
+<p>Before the user releases the sales order, other user updates the promotional package and its
+lines are now:</p>
+<ol>
+<li>Product A - 3 pcs</li>
+<li>Product B - 3 pcs</li>
+<li>Product C - 1 pcs</li>
+</ol>
+<p>If the user release the SalesOrder as it is, it would be incorrect. The sales order lines
+which result from the promotional package X must be updated and the sales order must contain
+the following lines:</p>
+<ul>
+<li>line 1 - product A - 6 pcs</li>
+<li>line 2 - product B - 6 pcs</li>
+<li>line 3 - product C - 2 pcs</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Message</strong></td>
+<td><p>&quot;In Sales Order '{DocumentText}' {SalesOrderPromotionalPackage.NumberOfPackages} packages
+are sold from '{PromotionalPackage.Name}' promotional package, but the lines of the sales
+order do not contain the products and their quantities from the promotional package
+definition.</p>
+<p>The promotional package is probably changed.</p>
+<p>Please, add the promotional package again so the latest information of it is added to the
+sales order.&quot;</p>
+<p><em>Sort Messages By Attribute:</em>** SalesOrderPromotionalPackage.PromotionalPackage**</p>
+</td>
+</tr>
+<tr>
+<td><strong>Introduced In
+Version</strong></td>
+<td>2018.2</td>
+</tr>
+<tr>
+<td><strong>Revocable</strong></td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R28919.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

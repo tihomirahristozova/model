@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>R27851 Party - Party Unique Number | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="R27851 Party - Party Unique Number | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="r27851-party---party-unique-number">R27851 Party - Party Unique Number</h1>
+
+<table>
+<col style="width:18.8%">
+<col style="width:81.2%">
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>R27851</td>
+</tr>
+<tr>
+<td><strong>Entity</strong></td>
+<td><a class="xref" href="../entities/General.Contacts.Parties.html">General.Contacts.Parties Entity</a></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>PartyUniqueNumber</td>
+</tr>
+<tr>
+<td><strong>Attribute</strong></td>
+<td>PartyUniqueNumber</td>
+</tr>
+<tr>
+<td><strong>Layer</strong></td>
+<td>Back-End</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>Commit</td>
+</tr>
+<tr>
+<td><strong>Priority</strong></td>
+<td>Normal</td>
+</tr>
+<tr>
+<td><strong>Modify</strong></td>
+<td>YES</td>
+</tr>
+<tr>
+<td><strong>Action</strong></td>
+<td><p>If (Party.PartyType == Company)</p>
+<p>Party.PartyUniqueNumber = Party.RegistrationNumber</p>
+<p>else if (Party.PartyType == Person)</p>
+<p>Party.PartyUniqueNumber = Party.NationalNumber</p>
+<p>else</p>
+<p>Party.PartyUniqueNumber = null</p>
+</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td><p>When new party is created, the PartyUniqueNumber ia automatically filled as follows:</p>
+<ul>
+<li>if the party is a company - its PartyUniqueNumber is its registration number;</li>
+<li>if the party is a person - its PartyUniqueNumber is he's national number;</li>
+<li>in all other cases the PartyUniqueNumber is null.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Message</strong></td>
+<td>The party unique number does not correspond to the specific number of the object. For example
+for person the party unique number should equal national number and for company -
+registration number.</td>
+</tr>
+<tr>
+<td><strong>Introduced In
+Version</strong></td>
+<td>2017.1</td>
+</tr>
+<tr>
+<td><strong>Revocable</strong></td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R27851.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

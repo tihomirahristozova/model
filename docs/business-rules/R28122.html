@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>R28122 Invoice - Automatic Order Linking | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="R28122 Invoice - Automatic Order Linking | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="r28122-invoice---automatic-order-linking">R28122 Invoice - Automatic Order Linking</h1>
+
+<table>
+<col style="width:17.95%">
+<col style="width:82.05%">
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>R28122</td>
+</tr>
+<tr>
+<td><strong>Entity</strong></td>
+<td><a class="xref" href="../entities/Crm.Invoicing.Invoices.html">Crm.Invoicing.Invoices Entity</a></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>AutomaticOrderLinking</td>
+</tr>
+<tr>
+<td><strong>Attribute</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Layer</strong></td>
+<td>Back-End</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>First Releasing</td>
+</tr>
+<tr>
+<td><strong>Modify</strong></td>
+<td>YES</td>
+</tr>
+<tr>
+<td><strong>Action</strong></td>
+<td><p>For every line:</p>
+<p>If &quot;Invoice. AutomaticOrderLinking == true&quot; and &quot;InvoiceLine.InvoiceOrderLine == NULL&quot;,
+then find the InvoiceOrderLine corresponding to the current InvoiceLine and set its Id in the
+field &quot;InvoiceLine.InvoiceOrderLine&quot;.</p>
+<p>The corresponding InvoiceOrderLine is determined as follows:</p>
+<p>1.If &quot;InvoiceLine.ParentSalesOrderLine = Null&quot;, the validation throws an error.</p>
+<p>2. If &quot;InvoiceLine.ParentSalesOrderLine&quot; has value, then find all Lines from all non-voided
+InvoiceOrders with a document state at least Released that refer the current InvoiceLine.</p>
+<p>3. If the count of the lines determined in the previous step is &gt; 1, then throw an error.</p>
+<p>4. For the determined line: if &quot;InvoiceOrderLine.Product != InvoiceLine.Product&quot;, then
+throw an error.</p>
+<p>5. For the determined line:  if &quot;InvoiceOrderLine.QuantityBase != InvoiceLine.
+QuantityBase&quot;, then throw an error.</p>
+<p>6. If all of the above is completed without throwing an error, then set the Id of the
+determined &quot;InvoiceOrderLine&quot; in the field &quot;InvoiceLine. InvoiceOrderLine&quot;.</p>
+</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>The filed &quot;Automatic Order Linking&quot; specifies whether to automatically set the Invoice Order
+Line by searching invoice orders upon first release. If the check mark in the field is set,
+the current rule completes the search. If all of the conditions described in the &quot;Action&quot;
+section are fulfilled and the validation does not throw an error then the rule sets the
+determined invoice order line in the field &quot;Invoice Order Line&quot;.</td>
+</tr>
+<tr>
+<td><strong>Message</strong></td>
+<td><p>The messages according to the steps in the &quot;Action&quot;:</p>
+<p>Step 1:</p>
+<p>&quot;The field 'Parent Sales Order Line' in line number '{InvoiceLine.LineNo}' is empty.</p>
+<p>The document is marked for „Automatic Order Linking&quot; but the field 'Parent Store Order Line'
+in the line does not have a value.</p>
+<p>Please fill in a parent sales order line and try again.&quot;</p>
+<p>Step 3:</p>
+<p>&quot;More than one invoice order lines.</p>
+<p>The document is marked for „Automatic Order Linking&quot; but for line number
+'{InvoiceLine.LineNo}' are found more than one invoice order lines.</p>
+<p>Please void the unnecessary lines and try again.&quot;</p>
+<p>Step 4:</p>
+<p>&quot;The product in the invoice line and the invoice order line is not the same.</p>
+<p>The document is marked for „Automatic Order Linking&quot; but the product in line number
+'{InvoiceLine.LineNo}' in not the same as the product in the invoice order line.</p>
+<p>Please unify the product and try again.&quot;</p>
+<p>Step 5:</p>
+<p>&quot;The base quantity in the invoice line and the invoice order line is not the same.</p>
+<p>The document is marked for „Automatic Order Linking&quot; but the base quantity in line number
+'{InvoiceLine.LineNo}' in not the same as the base quantity in the invoice order line.</p>
+<p>Please unify the base quantity and try again.&quot;</p>
+</td>
+</tr>
+<tr>
+<td><p>Sort Messages By
+Attribute:</p>
+<p><em>~^(applies
+\ only\ when\ messa
+ge\ is\ repeated\ m
+ore\ than\ once;\ e
+.g.\ &quot;LineNo&quot;)^~</em></p>
+</td>
+<td>LineNo</td>
+</tr>
+<tr>
+<td><strong>Introduced In
+Version</strong></td>
+<td>2018.1</td>
+</tr>
+<tr>
+<td><strong>Revocable</strong></td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R28122.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

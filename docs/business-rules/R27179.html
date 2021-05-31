@@ -73,59 +73,72 @@
 <h1 id="r27179-salesorder---check-customer-enterprise-company">R27179 SalesOrder - Check Customer Enterprise Company</h1>
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Value</th>
-</tr>
-</thead>
+<col style="width:16.24%">
+<col style="width:83.76%">
 <tbody>
 <tr>
-<td>Code</td>
+<td><strong>Code</strong></td>
 <td>R27179</td>
 </tr>
 <tr>
-<td>Entity</td>
+<td><strong>Entity</strong></td>
 <td><a class="xref" href="../entities/Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders Entity</a></td>
 </tr>
 <tr>
-<td>Name</td>
+<td><strong>Name</strong></td>
 <td>CheckCustomerEnterpriseCompany</td>
 </tr>
 <tr>
-<td>Attribute</td>
+<td><strong>Attribute</strong></td>
 <td>Customer</td>
 </tr>
 <tr>
-<td>Layer</td>
+<td><strong>Layer</strong></td>
 <td>Back-End</td>
 </tr>
 <tr>
-<td>Events</td>
-<td>Planned+</td>
+<td><strong>Events</strong></td>
+<td>Planned +</td>
 </tr>
 <tr>
-<td>Modify</td>
+<td><strong>Modify</strong></td>
 <td>NO</td>
 </tr>
 <tr>
-<td>Action</td>
-<td>Validate that: Customer.EnterpriseCompany == SalesOrder.EnterpriseCompany OR Customer.EnterpriseCompany == null</td>
+<td><strong>Action</strong></td>
+<td><p>Validate that:</p>
+<p>Customer.EnterpriseCompany == SalesOrder.EnterpriseCompany OR Customer.EnterpriseCompany == null</p>
+</td>
 </tr>
 <tr>
-<td>Description</td>
-<td>When the user sets the document state to Planned or higher, the system checks that if the customer has enterprise company, then this enterprise company is equal to the document enterprise company. If the customer has no enterprise company, then it is considered that this customer is valid customer to all enterprise companies in the database and this is a valid SalesOrder.<br>The idea of this business rule is to prevent the user to make Sales Orders to a customer which is not registered as such in the current enterprise company. When registering a customer, the user enters sales terms which the company will apply with the specified customer.</td>
+<td><strong>Description</strong></td>
+<td><p>When the user sets the document state to Planned or higher, the system checks that if the
+customer has enterprise company, then this enterprise company is equal to the document
+enterprise company. If the customer has no enterprise company, then it is considered that this
+customer is valid customer to all enterprise companies in the database and this is a valid
+SalesOrder.</p>
+<p>The idea of this business rule is to prevent the user to make Sales Orders to a customer which
+is not registered as such in the current enterprise company. When registering a customer, the
+user enters sales terms which the company will apply with the specified customer.</p>
+</td>
 </tr>
 <tr>
-<td>Message</td>
+<td><strong>Message</strong></td>
 <td>Customer's enterprise company is different than the document's enterprise company.</td>
 </tr>
 <tr>
-<td>Introduced In Version</td>
+<td><strong>Introduced In
+Version</strong></td>
 <td>2017</td>
+</tr>
+<tr>
+<td><strong>Revocable</strong></td>
+<td>NO</td>
 </tr>
 </tbody>
 </table>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 </article>
           </div>
           
