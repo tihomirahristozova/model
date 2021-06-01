@@ -264,7 +264,7 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( Convert( obj.PreferredSupplier.DefaultDeliveryTermDays, Nullable`1) != null), obj.PreferredSupplier.DefaultDeliveryTermDays, obj.PlanningLeadTimeDays)`
+`obj.PreferredSupplier.DefaultDeliveryTermDays`
 ### PlanningMaximumInventoryQuantityBase
 
 Maximum inventory. null if N/A. `Unit: Product.BaseMeasurementCategory.BaseUnit`

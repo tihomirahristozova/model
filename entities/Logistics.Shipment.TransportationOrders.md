@@ -521,6 +521,9 @@ The party which should receive the document. `Filter(multi eq)` (Inherited from 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.ObtainToParty( )`
+
 ### TransportationMode
 
 The mode of transportation which should be used for this order. null when it is unknown or doesn't matter. `Filter(multi eq)`

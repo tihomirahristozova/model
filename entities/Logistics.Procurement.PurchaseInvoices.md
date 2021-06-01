@@ -737,6 +737,9 @@ The party which should receive the document. `Filter(multi eq)` (Inherited from 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.ObtainToParty( )`
+
 ### UserStatus
 
 The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))

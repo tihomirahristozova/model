@@ -650,6 +650,9 @@ The party which should receive the document. `Filter(multi eq)` (Inherited from 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.ObtainToParty( )`
+
 ### TotalAmountCurrency
 
 The currency of the total amount. `Required` `Filter(multi eq)`

@@ -733,6 +733,8 @@ Enumeration of document system states<br>
 <p>The party which should receive the document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.ObtainToParty( )</code></p>
 <h3 id="userstatus">UserStatus</h3>
 <p>The user status of this document if applicable for this document type. null means unknown or not yet set. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>

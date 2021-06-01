@@ -493,7 +493,7 @@ Allowed values for the <code>OrderPolicy</code>(General.Products.ProductSupply.m
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( Convert( obj.PreferredSupplier.DefaultDeliveryTermDays, Nullable</code>1) != null), obj.PreferredSupplier.DefaultDeliveryTermDays, obj.PlanningLeadTimeDays)`</p>
+<code>obj.PreferredSupplier.DefaultDeliveryTermDays</code></p>
 <h3 id="planningmaximuminventoryquantitybase">PlanningMaximumInventoryQuantityBase</h3>
 <p>Maximum inventory. null if N/A. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>

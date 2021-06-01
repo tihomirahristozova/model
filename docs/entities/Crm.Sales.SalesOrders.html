@@ -1274,6 +1274,8 @@ Enumeration of document system states<br>
 <p>The party which should receive the document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.ObtainToParty( )</code></p>
 <h3 id="userstatus">UserStatus</h3>
 <p>The user status of this document if applicable for this document type. null means unknown or not yet set. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
@@ -1462,11 +1464,11 @@ if set to true the current document is included.<br>
 <li><a href="../business-rules/R27179.html">R27179 SalesOrder - Check Customer Enterprise Company</a></li>
 <li><a href="../business-rules/R28322.html">R28322 SalesOrder - Promotional Package Enterprise Company Location</a></li>
 <li><a href="../business-rules/R28330.html">R28330 SalesOrder - Bonus Program Enterprise Company</a></li>
-<li><a href="../business-rules/R28331.html">R28331 SalesOrder - Bonus Program Enterprise Company Location</a></li>
-<li><a href="../business-rules/R28393.html">R28393 SalesOrder - Check If Sold Promotional Package Appear In The Lines</a></li>
-<li><a href="../business-rules/R28439.html">R28439 SalesOrder - Check If Payment Type Meets Deferred Payment Options</a></li>
+<li><a href="../business-rules/R28369.html">R28369 SalesOrder - Check Customer Location Validity</a></li>
 <li><a href="../business-rules/R28440.html">R28440 SalesOrder - Check If Payment Plan Meets Deferred Payment Options</a></li>
-<li><a href="../business-rules/R28659.html">R28659 SalesOrder - Generate Deal</a></li>
+<li><a href="../business-rules/R28700.html">R28700 SalesOrder - Promotional Package Properly Added To Sales Order Promotional Package Table</a></li>
+<li><a href="../business-rules/R29753.html">R29753 SalesOrder - Pos Location Required</a></li>
+<li><a href="../business-rules/R29759.html">R29759 SalesOrder - Sequence Required</a></li>
 <li><a href="../business-rules/R31213.html">R31213 SalesOrder - Check Store Enterprise Company</a></li>
 <li><a href="../business-rules/R31215.html">R31215 SalesOrder - Check Line Store Enterprise Company</a></li>
 <li>...</li>
