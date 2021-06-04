@@ -81,6 +81,7 @@ The `DepreciationPlanLine`(Finance.Assets.DepreciationPlanLineFixedValues.md#dep
 _Type_: **[DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

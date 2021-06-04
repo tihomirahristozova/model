@@ -204,6 +204,7 @@ The `AssetTransaction`(Finance.Assets.AssetTransactionLines.md#assettransaction)
 _Type_: **[AssetTransactions](Finance.Assets.AssetTransactions.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### ValuationModel
 

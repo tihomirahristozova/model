@@ -98,6 +98,7 @@ The `AccountingVoucher`(Finance.Accounting.AccountingVouchers.md) to which this 
 
 _Type_: **[AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

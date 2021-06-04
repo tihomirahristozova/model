@@ -88,6 +88,7 @@ The `ResourceGroup`(General.Resources.Resources.md#resourcegroup) to which this 
 _Type_: **[ResourceGroups](General.Resources.ResourceGroups.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

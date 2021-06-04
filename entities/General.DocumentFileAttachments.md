@@ -101,6 +101,7 @@ The `Document`(General.DocumentFileAttachments.md#document) to which this Docume
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

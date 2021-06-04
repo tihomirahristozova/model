@@ -83,6 +83,7 @@ The `Workgroup`(Production.Resources.WorkgroupShifts.md#workgroup) to which this
 
 _Type_: **[Workgroups](Production.Resources.Workgroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### WorkSchedule
 

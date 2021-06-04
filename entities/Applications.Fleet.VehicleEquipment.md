@@ -98,6 +98,7 @@ The vehicle that is holding the equipment. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

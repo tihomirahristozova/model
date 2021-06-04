@@ -53,6 +53,7 @@ The `Template`(Projects.Templates.md) to which this TemplateWorkElement belongs.
 
 _Type_: **[Templates](Projects.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### ProjectTypeWorkElement
 

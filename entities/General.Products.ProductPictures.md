@@ -123,6 +123,7 @@ The `Product`(General.Products.ProductPictures.md#product) to which this Product
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

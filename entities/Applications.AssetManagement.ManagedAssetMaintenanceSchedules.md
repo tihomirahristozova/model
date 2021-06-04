@@ -98,6 +98,7 @@ The managed asset for which the maintenance schedule applies. `Required` `Filter
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

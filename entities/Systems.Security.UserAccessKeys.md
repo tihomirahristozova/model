@@ -178,6 +178,7 @@ Obsolete. Not used. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

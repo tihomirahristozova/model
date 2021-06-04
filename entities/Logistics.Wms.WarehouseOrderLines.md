@@ -188,6 +188,7 @@ The `WarehouseOrder`(Logistics.Wms.WarehouseOrderLines.md#warehouseorder) to whi
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### WarehouseWorker
 

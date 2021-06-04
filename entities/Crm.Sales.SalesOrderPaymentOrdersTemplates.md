@@ -88,6 +88,7 @@ The route to which the current option set is assigned. `Required` `Filter(multi 
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

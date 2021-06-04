@@ -62,6 +62,7 @@ Base party Id. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

@@ -161,6 +161,7 @@ The `ServiceActivity`(Applications.Service.ServiceActivityMaterials.md#serviceac
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### ServiceObject
 

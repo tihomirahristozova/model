@@ -156,6 +156,7 @@ The logical group of the rental asset. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[AssetGroups](Applications.Rental.AssetGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### RentalAssetType
 

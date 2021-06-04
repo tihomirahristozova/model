@@ -200,6 +200,7 @@ The `BulkPaymentOrder`(Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorde
 _Type_: **[BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### InvoiceAmountCurrency
 

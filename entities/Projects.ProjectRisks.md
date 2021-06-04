@@ -138,6 +138,7 @@ The project for which this risk applies. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### ResponsiblePerson
 

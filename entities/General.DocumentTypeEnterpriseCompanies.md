@@ -54,6 +54,7 @@ The document type for which visibility (availability) is set. `Required` `Filter
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### EnterpriseCompany
 

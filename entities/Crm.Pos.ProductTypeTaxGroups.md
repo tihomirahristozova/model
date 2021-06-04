@@ -126,6 +126,7 @@ The product type for which the tax group is specified. `Required` `Filter(multi 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

@@ -109,6 +109,7 @@ The warehouse, where the worker works. `Required` `Filter(multi eq)` `Owner`
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

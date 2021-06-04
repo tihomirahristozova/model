@@ -106,6 +106,7 @@ The personal data of the employee. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

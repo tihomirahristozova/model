@@ -73,6 +73,7 @@ The `Company`(General.Contacts.CompanyDepartments.md#company) to which this Comp
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### Parent
 

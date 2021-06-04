@@ -54,6 +54,7 @@ Route for which the specified template will be activated. `Required` `Filter(mul
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### Template
 

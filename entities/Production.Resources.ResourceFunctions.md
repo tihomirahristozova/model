@@ -70,6 +70,7 @@ The `Resource`(Production.Resources.ResourceFunctions.md#resource) to which this
 
 _Type_: **[Resources](Production.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

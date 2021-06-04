@@ -180,6 +180,7 @@ The `PurchaseControlDocument`(Logistics.Procurement.PurchaseControlDocumentLines
 _Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### PurchaseInvoice
 

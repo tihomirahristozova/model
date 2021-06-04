@@ -117,6 +117,7 @@ The `TemplateLine`(Finance.Accounting.TemplateLineProperties.md#templateline) to
 _Type_: **[TemplateLines](Finance.Accounting.TemplateLines.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

@@ -236,6 +236,7 @@ The `CalculatedAttribute`(Systems.Bpm.CalculatedAttributeExpressions.md#calculat
 _Type_: **[CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

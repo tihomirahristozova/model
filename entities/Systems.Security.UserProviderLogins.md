@@ -82,6 +82,7 @@ The user for which the login is defined. `Required` `Filter(multi eq)` `Owner`
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

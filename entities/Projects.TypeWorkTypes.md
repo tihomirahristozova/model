@@ -80,6 +80,7 @@ The `ProjectType`(Projects.TypeWorkTypes.md#projecttype) to which this TypeWorkT
 
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

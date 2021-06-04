@@ -190,6 +190,7 @@ The `TransportationExecution`(Logistics.Shipment.TransportationExecutionLines.md
 _Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

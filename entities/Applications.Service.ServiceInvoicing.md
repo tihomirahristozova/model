@@ -80,6 +80,7 @@ The service for which the invoicing instructions are. `Required` `Filter(multi e
 
 _Type_: **[Services](Applications.Service.Services.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

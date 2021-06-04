@@ -111,6 +111,7 @@ The `WorkReport`(Projects.WorkReportResources.md#workreport) to which this WorkR
 
 _Type_: **[WorkReports](Projects.WorkReports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

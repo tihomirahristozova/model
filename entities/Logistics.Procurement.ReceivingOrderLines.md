@@ -286,6 +286,7 @@ The `ReceivingOrder`(Logistics.Procurement.ReceivingOrderLines.md#receivingorder
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### SerialNumber
 

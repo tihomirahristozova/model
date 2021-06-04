@@ -109,6 +109,7 @@ The listed product. `Required` `Filter(multi eq)` `Owner`
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

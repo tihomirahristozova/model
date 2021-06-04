@@ -146,6 +146,7 @@ The task for which the resource is planned. `Required` `Filter(multi eq)` `Owner
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### Resource
 

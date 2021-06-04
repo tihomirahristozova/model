@@ -116,6 +116,7 @@ The application, which is authorized. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[TrustedApplications](Systems.Security.TrustedApplications.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

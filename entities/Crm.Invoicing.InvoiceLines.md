@@ -338,6 +338,7 @@ The `Invoice`(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine b
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### InvoiceOrderLine
 

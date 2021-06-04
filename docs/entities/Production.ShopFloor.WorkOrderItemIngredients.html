@@ -369,7 +369,8 @@ Allowed values for the <code>DistributeBy</code>(Production.ShopFloor.WorkOrderI
 <p>The <code>WorkOrder</code>(Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Can filter by attributes of referenced entity</em>: <strong>True</strong></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
 <p>The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a> (nullable)</strong><br>

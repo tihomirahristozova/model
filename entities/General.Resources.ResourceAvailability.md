@@ -80,6 +80,7 @@ The resource, for which we provide availability. `Required` `Filter(multi eq)` `
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

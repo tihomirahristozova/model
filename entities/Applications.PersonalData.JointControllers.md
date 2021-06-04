@@ -70,6 +70,7 @@ The process, which is managed jointly. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

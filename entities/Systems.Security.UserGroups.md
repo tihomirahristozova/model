@@ -61,6 +61,7 @@ The `User`(Systems.Security.UserGroups.md#user) to which this UserGroup belongs.
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

@@ -103,6 +103,7 @@ The `ProjectType`(Projects.TypeWorkElements.md#projecttype) to which this TypeWo
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

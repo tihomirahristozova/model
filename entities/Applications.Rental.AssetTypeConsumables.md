@@ -88,6 +88,7 @@ The rental asset type for which the consumable would be offered. `Required` `Fil
 
 _Type_: **[AssetTypes](Applications.Rental.AssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### Store
 

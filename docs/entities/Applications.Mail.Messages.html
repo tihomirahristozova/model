@@ -279,7 +279,8 @@ Aggregate Root:<br>
 <p>The <code>BoxFolder</code>(Applications.Mail.BoxFolders.md) to which this Message belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Can filter by attributes of referenced entity</em>: <strong>True</strong></p>
 <h3 id="relatedtoparty">RelatedToParty</h3>
 <p>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>

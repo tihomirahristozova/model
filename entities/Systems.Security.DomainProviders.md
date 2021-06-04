@@ -130,6 +130,7 @@ The domain for which the provider is setup. `Required` `Filter(multi eq)` `Owner
 
 _Type_: **[Domains](Systems.Security.Domains.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

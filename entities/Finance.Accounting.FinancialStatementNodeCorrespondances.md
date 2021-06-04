@@ -78,6 +78,7 @@ The `FinancialStatementNode`(Finance.Accounting.FinancialStatementNodeCorrespond
 
 _Type_: **[FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

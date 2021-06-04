@@ -94,6 +94,7 @@ The warehouse in which the zone is located. `Required` `Filter(multi eq)` `Owner
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

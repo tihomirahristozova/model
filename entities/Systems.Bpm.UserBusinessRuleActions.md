@@ -176,6 +176,7 @@ The business rule, for which the action is defined. `Required` `Filter(multi eq)
 
 _Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

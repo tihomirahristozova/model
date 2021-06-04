@@ -89,6 +89,7 @@ The `ProjectRisk`(Projects.ProjectRiskDiscussion.md#projectrisk) to which this P
 
 _Type_: **[ProjectRisks](Projects.ProjectRisks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

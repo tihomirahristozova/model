@@ -61,6 +61,7 @@ The amount for which the base amount is specified. `Required` `Filter(multi eq)`
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

@@ -200,6 +200,7 @@ The `Template`(Finance.Accounting.TemplateLines.md#template) to which this Templ
 _Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

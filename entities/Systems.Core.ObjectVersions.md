@@ -108,6 +108,7 @@ The object, for which a version is stored. `Required` `Filter(multi eq)` `Owner`
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### User
 

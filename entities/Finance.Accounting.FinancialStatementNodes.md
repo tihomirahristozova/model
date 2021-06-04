@@ -98,6 +98,7 @@ The `FinancialStatement`(Finance.Accounting.FinancialStatementNodes.md#financial
 _Type_: **[FinancialStatements](Finance.Accounting.FinancialStatements.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

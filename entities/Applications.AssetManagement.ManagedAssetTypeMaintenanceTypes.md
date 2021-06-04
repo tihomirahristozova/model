@@ -98,6 +98,7 @@ The asset type for which the allowed maintenance type is defined. `Required` `Fi
 _Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

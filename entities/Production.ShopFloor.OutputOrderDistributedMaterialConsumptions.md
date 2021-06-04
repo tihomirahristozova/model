@@ -82,6 +82,7 @@ The output order line for which the distribution is recorded. `Required` `Filter
 _Type_: **[OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

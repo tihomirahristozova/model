@@ -74,6 +74,7 @@ The `FunctionGroup`(Production.Resources.Functions.md#functiongroup) to which th
 _Type_: **[FunctionGroups](Production.Resources.FunctionGroups.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### PrimaryUnit
 

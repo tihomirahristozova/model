@@ -115,6 +115,7 @@ Base personal record. `Required` `Filter(multi eq)` `Owner`
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### SalesPersonGroup
 

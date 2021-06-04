@@ -123,6 +123,7 @@ The enterprise company for which the person is presenting the declaration. `Requ
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### Person
 

@@ -86,6 +86,7 @@ Id of the workgroup, containing the resource. `Required` `Filter(multi eq)` `Own
 
 _Type_: **[Workgroups](Production.Resources.Workgroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

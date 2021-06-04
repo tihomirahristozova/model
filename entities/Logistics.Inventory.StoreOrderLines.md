@@ -279,6 +279,7 @@ The `StoreOrder`(Logistics.Inventory.StoreOrderLines.md#storeorder) to which thi
 _Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

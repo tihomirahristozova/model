@@ -114,6 +114,7 @@ The `Transaction`(Applications.Rental.Transactions.md) to which this Transaction
 
 _Type_: **[Transactions](Applications.Rental.Transactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

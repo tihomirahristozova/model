@@ -119,6 +119,7 @@ The `Party`(General.Contacts.PartyBankAccounts.md#party) to which this PartyBank
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

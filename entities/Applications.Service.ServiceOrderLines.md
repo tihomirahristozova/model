@@ -85,6 +85,7 @@ The `ServiceOrder`(Applications.Service.ServiceOrderLines.md#serviceorder) to wh
 _Type_: **[ServiceOrders](Applications.Service.ServiceOrders.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

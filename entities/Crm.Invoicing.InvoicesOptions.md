@@ -109,6 +109,7 @@ The document type for which the invoice option applies. `Required` `Filter(multi
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### VATDeviationDocumentAmountType
 

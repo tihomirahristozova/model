@@ -102,6 +102,7 @@ The `ProductGroup`(General.Products.ProductGroupRangeProperties.md#productgroup)
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### Property
 

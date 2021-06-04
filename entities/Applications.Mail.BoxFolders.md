@@ -110,6 +110,7 @@ The `Box`(Applications.Mail.Boxes.md) to which this BoxFolder belongs. `Required
 _Type_: **[Boxes](Applications.Mail.Boxes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### ParentFolder
 

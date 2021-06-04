@@ -426,8 +426,9 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Base Table.Column|[Inv_Transaction_Lines](Inv_Transaction_Lines.md).[Parent_Store_Order_Line_Id](Inv_Transaction_Lines.md#parent_store_order_line_id)|
 |Data Filter|no|
-|Default Value|NewGuid|
+|Default Value|None|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -438,11 +439,12 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Inv_Store_Order_Lines](Inv_Store_Order_Lines.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -452,6 +454,6 @@ Which serial number to receive/issue. NULL means that serial number is unknown o
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 

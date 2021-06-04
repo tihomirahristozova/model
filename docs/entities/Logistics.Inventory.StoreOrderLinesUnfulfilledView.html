@@ -172,7 +172,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#storeorderline">StoreOrderLine</a></td>
 <td><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a></td>
-<td>Store order line Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_&lt;br /&gt;Lines_Table.Store_Order_Line_Id</code></td>
+<td>Store order line Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_&lt;br /&gt;Lines_Table.Store_Order_Line_Id</code> <code>FilterableReference</code></td>
 </tr>
 </tbody>
 </table>
@@ -236,10 +236,11 @@ Default Search Member:<br>
 <em>Inherited From</em>: <strong>Inv_Store_Orders_Table.Store_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storeorderline">StoreOrderLine</h3>
-<p>Store order line Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Store_Order_Line_Id</code></p>
+<p>Store order line Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Store_Order_Line_Id</code> <code>FilterableReference</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a></strong><br>
 <em>Inherited From</em>: <strong>Inv_Store_Order_Lines_Table.Store_Order_Line_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Can filter by attributes of referenced entity</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Query:

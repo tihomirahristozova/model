@@ -331,7 +331,8 @@ Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.m
 <p>The <code>WarehouseOrder</code>(Logistics.Wms.WarehouseOrderLines.md#warehouseorder) to which this WarehouseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Can filter by attributes of referenced entity</em>: <strong>True</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
 <p>Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>

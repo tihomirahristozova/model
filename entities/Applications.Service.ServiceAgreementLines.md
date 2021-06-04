@@ -117,6 +117,7 @@ The `ServiceAgreement`(Applications.Service.ServiceAgreementLines.md#serviceagre
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### ServiceObject
 

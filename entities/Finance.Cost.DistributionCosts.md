@@ -72,6 +72,7 @@ The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionCost
 
 _Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### CostType
 

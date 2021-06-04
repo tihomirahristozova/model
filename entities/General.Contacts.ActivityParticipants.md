@@ -73,6 +73,7 @@ The `Activity`(General.Contacts.ActivityParticipants.md#activity) to which this 
 
 _Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### ParticipantPerson
 

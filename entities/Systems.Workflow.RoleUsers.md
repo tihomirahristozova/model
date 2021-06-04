@@ -54,6 +54,7 @@ The `Role`(Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. `
 _Type_: **[Roles](Systems.Workflow.Roles.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### User
 

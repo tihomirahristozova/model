@@ -79,6 +79,7 @@ The `VehicleSet`(Applications.Fleet.VehicleSetVehicles.md#vehicleset) to which t
 
 _Type_: **[VehicleSets](Applications.Fleet.VehicleSets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

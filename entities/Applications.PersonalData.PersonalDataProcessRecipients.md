@@ -63,6 +63,7 @@ The process, whose data is disclosed to the recipient. `Required` `Filter(multi 
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### RecipientParty
 

@@ -89,6 +89,7 @@ The capacity-constrained resource. `Required` `Filter(multi eq)` `Owner`
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

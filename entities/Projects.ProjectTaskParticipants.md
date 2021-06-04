@@ -91,6 +91,7 @@ The project task for which the participant is planned. `Required` `Filter(multi 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 

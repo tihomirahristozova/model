@@ -120,6 +120,7 @@ The document type for which the sales order option applies. `Required` `Filter(m
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 ### MinimumAmountCurrency
 

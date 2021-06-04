@@ -105,6 +105,7 @@ The trip for which the segment is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Trips](Applications.Fleet.Trips.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Can filter by attributes of referenced entity_: **True**  
 
 
 
