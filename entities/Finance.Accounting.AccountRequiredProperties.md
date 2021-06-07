@@ -78,7 +78,7 @@ The `Account`(Finance.Accounting.AccountRequiredProperties.md#account) to which 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### Property
 

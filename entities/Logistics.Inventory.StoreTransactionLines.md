@@ -343,7 +343,7 @@ The transaction to which the transaction line belongs. `Required` `Filter(multi 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 

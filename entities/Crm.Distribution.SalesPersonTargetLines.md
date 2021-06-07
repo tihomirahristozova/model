@@ -171,7 +171,7 @@ The `SalesPersonTarget`(Crm.Distribution.SalesPersonTargetLines.md#salespersonta
 
 _Type_: **[SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### TargetAmountCurrency
 

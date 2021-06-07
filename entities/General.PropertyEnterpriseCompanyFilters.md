@@ -70,7 +70,7 @@ The `CustomProperty`(General.CustomProperties.md) to which this PropertyEnterpri
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 

@@ -144,7 +144,7 @@ Store order line Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherite
 _Type_: **[StoreOrderLines](Logistics.Inventory.StoreOrderLines.md)**  
 _Inherited From_: **Inv_Store_Order_Lines_Table.Store_Order_Line_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Default Value_: **NewGuid**  
 
 

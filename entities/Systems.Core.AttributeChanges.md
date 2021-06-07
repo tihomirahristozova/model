@@ -67,7 +67,7 @@ The object change. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_C
 _Type_: **[ObjectChanges](Systems.Core.ObjectChanges.md)**  
 _Inherited From_: **Sys_Attribute_Changes_Table.Object_Change_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 ## API

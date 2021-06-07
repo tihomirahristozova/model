@@ -99,7 +99,7 @@ The `SupplySchema`(Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to wh
 _Type_: **[SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 

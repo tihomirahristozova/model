@@ -82,7 +82,7 @@ The document to which to attach the comment. `Required` `Filter(multi eq)` `Owne
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### User
 

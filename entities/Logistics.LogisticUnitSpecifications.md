@@ -92,7 +92,7 @@ The logistic unit, which is detailed by this specification. `Required` `Filter(m
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 

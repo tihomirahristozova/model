@@ -254,7 +254,7 @@ The `WorkOrder`(Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to w
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### WorkOrderItem
 

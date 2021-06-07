@@ -131,7 +131,7 @@ The `Report`(General.ReportQueries.md#report) to which this ReportQuery belongs.
 
 _Type_: **[Reports](General.Reports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Can filter by attributes of referenced entity_: **True**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 
