@@ -171,8 +171,8 @@ Default Search Member:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#storeorderline">StoreOrderLine</a></td>
-<td><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a></td>
-<td>Store order line Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_&lt;br /&gt;Lines_Table.Store_Order_Line_Id</code> <code>FilterableReference</code></td>
+<td><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</td>
+<td>The line, containing the ordered quantity, which this execution line executes. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_&lt;br /&gt;Lines_Table.Parent_Store_Order_&lt;br /&gt;Line_Id</code> <code>FilterableReference</code></td>
 </tr>
 </tbody>
 </table>
@@ -236,12 +236,11 @@ Default Search Member:<br>
 <em>Inherited From</em>: <strong>Inv_Store_Orders_Table.Store_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storeorderline">StoreOrderLine</h3>
-<p>Store order line Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Store_Order_Line_Id</code> <code>FilterableReference</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a></strong><br>
-<em>Inherited From</em>: <strong>Inv_Store_Order_Lines_Table.Store_Order_Line_Id</strong><br>
+<p>The line, containing the ordered quantity, which this execution line executes. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Parent_Store_Order_Line_Id</code> <code>FilterableReference</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</strong><br>
+<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Parent_Store_Order_Line_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_StoreOrderLinesUnfulfilledView?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_StoreOrderLinesUnfulfilledView?$top=10</a></p>

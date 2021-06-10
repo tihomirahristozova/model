@@ -39,7 +39,7 @@ Aggregate Tree
 | [ProductVariant](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Product_Variant_Id` |
 | [SerialNumber](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Serial_Number_Id` |
 | [Store](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#store) | [Stores](Logistics.Inventory.Stores.md) | The designated warehouse for the operation. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Store_Id` |
-| [StoreOrderLine](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#storeorderline) | [StoreOrderLines](Logistics.Inventory.StoreOrderLines.md) | Store order line Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Store_Order_Line_Id` `FilterableReference` |
+| [StoreOrderLine](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#storeorderline) | [StoreOrderLines](Logistics.Inventory.StoreOrderLines.md) (nullable) | The line, containing the ordered quantity, which this execution line executes. `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Parent_Store_Order_<br />Line_Id` `FilterableReference` |
 
 
 ## Attribute Details
@@ -139,13 +139,12 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### StoreOrderLine
 
-Store order line Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Store_Order_Line_Id` `FilterableReference`
+The line, containing the ordered quantity, which this execution line executes. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Parent_Store_Order_Line_Id` `FilterableReference`
 
-_Type_: **[StoreOrderLines](Logistics.Inventory.StoreOrderLines.md)**  
-_Inherited From_: **Inv_Store_Order_Lines_Table.Store_Order_Line_Id**  
+_Type_: **[StoreOrderLines](Logistics.Inventory.StoreOrderLines.md) (nullable)**  
+_Inherited From_: **Inv_Transaction_Lines_Table.Parent_Store_Order_Line_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Default Value_: **NewGuid**  
 
 
 ## API
