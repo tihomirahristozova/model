@@ -25,6 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Active](Logistics.Inventory.StoreBins.md#active) | boolean | Indicates whether the current store bin is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 21.1.3.13` 
 | [Id](Logistics.Inventory.StoreBins.md#id) | guid |  
 | [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store. `Required` `Default(false)` 
 | [Name](Logistics.Inventory.StoreBins.md#name) | string (254) | Name of the store bin. `Required` `Filter(like)` 
@@ -38,6 +39,15 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### Active
+
+Indicates whether the current store bin is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 21.1.3.13`
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
 
 ### Id
 
