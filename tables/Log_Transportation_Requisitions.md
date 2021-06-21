@@ -57,7 +57,7 @@ Client requisition for transportation. Entity: Log_Transportation_Requisitions
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Document_Id - Supported Filters
 
@@ -483,7 +483,7 @@ Receiving party.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Transportation_Requisition_Id - Supported Filters
 

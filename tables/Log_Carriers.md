@@ -122,7 +122,7 @@ The start date of the agreement with this carrier.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Carrier_Id - Supported Filters
 

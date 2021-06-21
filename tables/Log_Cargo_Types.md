@@ -78,7 +78,7 @@ Represents a cargo type. Different cargo types might require different types of 
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Cargo_Type_Id - Supported Filters
 

@@ -315,7 +315,7 @@ The mode of transportation provided by this transportation vehicle. The same bas
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Transportation_Vehicle_Id - Supported Filters
 

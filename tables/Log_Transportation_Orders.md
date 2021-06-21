@@ -275,7 +275,7 @@ Planned departure time.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Document_Id - Supported Filters
 
@@ -446,7 +446,7 @@ The mode of transportation which should be used for this order. NULL when it is 
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Transportation_Order_Id - Supported Filters
 

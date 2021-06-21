@@ -138,7 +138,7 @@ Unique transportation mode code.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Transportation_Mode_Id - Supported Filters
 
