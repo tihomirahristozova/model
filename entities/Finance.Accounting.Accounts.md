@@ -58,6 +58,8 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
 
+_Front-End Recalc Expressions:_  
+`( obj.AccountGroup.Number + obj.Number)`
 ### CurrencyValuationMethod
 
 Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. `Required` `Default("ACB")`
