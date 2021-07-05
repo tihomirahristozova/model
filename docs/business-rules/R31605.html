@@ -123,24 +123,20 @@ needed</a></td>
 <br><br>
 ProductSupply.EnterpriseCompany == null                                 OR
 <br><br>
-(ProductSupply.EnterpriseCompany != null                                  AND 
-(ProductSupply.Product == null                                                   OR
-ProductSupply.Product.EnterpriseCompany == null                    OR 
+(ProductSupply.EnterpriseCompany != null                          AND         <br>   
+(ProductSupply.Product == null                                         OR    <br>   
+ProductSupply.Product.EnterpriseCompany == null            OR     <br>   
 ProductSupply.Product.EnterpriseCompany == ProductSupply.EnterpriseCompany ))  
-<br><br>
-<br><br>
-<br><br>
- 2. Validate that:
+<br><br></li>
+</ol>
+<p> 2. Validate that:
 <br><br>
 ProductSupply.EnterpriseCompany == null                                  OR
 <br><br>
-(ProductSupply.EnterpriseCompany != null                                   AND 
-(ProductSupply.ProductGroup == null                                          OR
-ProductSupply.ProductGroup.EnterpriseCompany == null           OR
-ProductSupply.ProductGroup.EnterpriseCompany == ProductSupply.EnterpriseCompany))
-<br><br>
-<br><br></li>
-</ol>
+(ProductSupply.EnterpriseCompany != null                         AND      <br>   
+(ProductSupply.ProductGroup == null                                  OR   <br>   
+ProductSupply.ProductGroup.EnterpriseCompany == null   OR       <br>   
+ProductSupply.ProductGroup.EnterpriseCompany == ProductSupply.EnterpriseCompany))</p>
 </td>
 </tr>
 <tr>
