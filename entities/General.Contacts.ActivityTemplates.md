@@ -73,6 +73,8 @@ _Type_: **time __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.StartTime > FromMinutes( 30)), ( obj.StartTime - FromMinutes( 30)), obj.StartTime)`
 ### SourceDateField
 
 A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required`

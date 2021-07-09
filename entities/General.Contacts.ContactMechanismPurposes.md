@@ -60,6 +60,7 @@ _Allowed Values (General.Contacts.ContactMechanismsRepository.ContactMechanismTy
 | Telephone | Telephone value. Stored as 'T'. <br /> _Database Value:_ 'T' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Telephone' |
 | WebSite | WebSite value. Stored as 'W'. <br /> _Database Value:_ 'W' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'WebSite' |
 | PostalCode | PostalCode value. Stored as 'P'. <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'PostalCode' |
+| WebProfile | WebProfile value. Stored as 'X'. <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'WebProfile' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
