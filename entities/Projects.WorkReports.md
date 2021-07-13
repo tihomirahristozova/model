@@ -455,7 +455,7 @@ _Type_: **[ProjectTasks](Projects.ProjectTasks.md) (nullable)**
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Materials.Select( c => c.ProjectTask).Distinct( ).OnlyIfSingle( )`
+`obj.Resources.Select( c => c.ProjectTask).Union( obj.Materials.Select( c => c.ProjectTask)).Distinct( ).OnlyIfSingle( )`
 ### ResponsiblePerson
 
 The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))

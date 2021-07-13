@@ -1,12 +1,6 @@
 # Table Bpm_Process_Groups
 
 
-## Entity
-
-Entity: [Systems.Bpm.ProcessGroups](~/entities/Systems.Bpm.ProcessGroups.md)
-
-Represents a node in the hierarchy of process groups. Entity: Bpm_Process_Groups
-
 ## Summary
 
 | Name | Type | Description |

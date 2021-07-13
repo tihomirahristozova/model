@@ -1,12 +1,6 @@
 # Table Bpm_Processes
 
 
-## Entity
-
-Entity: [Systems.Bpm.Processes](~/entities/Systems.Bpm.Processes.md)
-
-Represents one business process version. All process model elements and execution instances are bound to specfic process version. Entity: Bpm_Processes
-
 ## Summary
 
 | Name | Type | Description |

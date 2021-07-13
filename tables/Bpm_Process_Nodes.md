@@ -1,12 +1,6 @@
 # Table Bpm_Process_Nodes
 
 
-## Entity
-
-Entity: [Systems.Bpm.ProcessNodes](~/entities/Systems.Bpm.ProcessNodes.md)
-
-Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes
-
 ## Owner Tables Hierarchy
 
 * [Bpm_Processes](Bpm_Processes.md)

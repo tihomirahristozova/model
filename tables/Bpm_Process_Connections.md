@@ -1,12 +1,6 @@
 # Table Bpm_Process_Connections
 
 
-## Entity
-
-Entity: [Systems.Bpm.ProcessConnections](~/entities/Systems.Bpm.ProcessConnections.md)
-
-Contains the connections between process elements. Part of the process model. Entity: Bpm_Process_Connections
-
 ## Owner Tables Hierarchy
 
 * [Bpm_Processes](Bpm_Processes.md)

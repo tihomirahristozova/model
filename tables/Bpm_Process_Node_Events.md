@@ -1,12 +1,6 @@
 # Table Bpm_Process_Node_Events
 
 
-## Entity
-
-Entity: [Systems.Bpm.ProcessNodeEvents](~/entities/Systems.Bpm.ProcessNodeEvents.md)
-
-Abstract root of all process node events. Currently - not used. Entity: Bpm_Process_Node_Events
-
 ## Summary
 
 | Name | Type | Description |

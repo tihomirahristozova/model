@@ -694,7 +694,7 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Materials.Select( c =&gt; c.ProjectTask).Distinct( ).OnlyIfSingle( )</code></p>
+<code>obj.Resources.Select( c =&gt; c.ProjectTask).Union( obj.Materials.Select( c =&gt; c.ProjectTask)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
 <p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>

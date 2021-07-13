@@ -1,12 +1,6 @@
 # Table Bpm_Process_Lanes
 
 
-## Entity
-
-Entity: [Systems.Bpm.ProcessLanes](~/entities/Systems.Bpm.ProcessLanes.md)
-
-The process lanes categorize elements in the process and contain logic for executor selection. Entity: Bpm_Process_Lanes
-
 ## Owner Tables Hierarchy
 
 * [Bpm_Processes](Bpm_Processes.md)

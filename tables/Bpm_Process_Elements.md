@@ -1,12 +1,6 @@
 # Table Bpm_Process_Elements
 
 
-## Entity
-
-Entity: [Systems.Bpm.ProcessElements](~/entities/Systems.Bpm.ProcessElements.md)
-
-Contains the flow elements of the process model. Entity: Bpm_Process_Elements
-
 ## Owner Tables Hierarchy
 
 * [Bpm_Processes](Bpm_Processes.md)

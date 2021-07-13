@@ -1,12 +1,6 @@
 # Table Bpm_Process_Instances
 
 
-## Entity
-
-Entity: [Systems.Bpm.ProcessInstances](~/entities/Systems.Bpm.ProcessInstances.md)
-
-Contains the running instances of the processes. Entity: Bpm_Process_Instances
-
 ## Summary
 
 | Name | Type | Description |

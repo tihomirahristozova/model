@@ -1,12 +1,6 @@
 # Table Bpm_Process_Node_Timer_Events
 
 
-## Entity
-
-Entity: [Systems.Bpm.ProcessNodeTimerEvents](~/entities/Systems.Bpm.ProcessNodeTimerEvents.md)
-
-Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Events
-
 ## Summary
 
 | Name | Type | Description |

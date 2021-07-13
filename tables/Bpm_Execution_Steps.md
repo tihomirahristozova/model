@@ -1,12 +1,6 @@
 # Table Bpm_Execution_Steps
 
 
-## Entity
-
-Entity: [Systems.Bpm.ExecutionSteps](~/entities/Systems.Bpm.ExecutionSteps.md)
-
-Contains both historical and active steps in the execution of the business processes. Entity: Bpm_Execution_Steps
-
 ## Summary
 
 | Name | Type | Description |
