@@ -8973,7 +8973,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R31579.html",
-          "hash": "AITAgUDRba9YCyBt6iZP5Q=="
+          "hash": "OgUJxVHdDlGziPr9ZjyhOw=="
         }
       },
       "is_incremental": false,
@@ -9082,6 +9082,18 @@
         ".html": {
           "relative_path": "business-rules/R32222.html",
           "hash": "ZW715T4jgKOwo38q6AHj/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32229.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32229.html",
+          "hash": "2tJyJbzYjv5ZKqtfZxgH1w=="
         }
       },
       "is_incremental": false,
@@ -10435,7 +10447,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Invoicing.InvoiceLines.html",
-          "hash": "OGz84U7D2pVdlTgUOc89Og=="
+          "hash": "1NgTJbRn0wmth8VLfPtH7Q=="
         }
       },
       "is_incremental": false,
@@ -10471,7 +10483,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Invoicing.Invoices.html",
-          "hash": "obvR5dCZM4LknUzInMOArw=="
+          "hash": "JRCANF8HHAWhvfl0JQJ+Mg=="
         }
       },
       "is_incremental": false,
@@ -10879,7 +10891,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.PromotionalPackageLines.html",
-          "hash": "5Q3ZklTb4U0OtwdL9nzfAg=="
+          "hash": "5jqsVF/QmntzQQmgU4RCJQ=="
         }
       },
       "is_incremental": false,
@@ -10987,7 +10999,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Sales.SalesOrders.html",
-          "hash": "GeVc3INVh1FkOL6KIKB1lg=="
+          "hash": "9WtWsvp6Jk3OYHn9L3io3A=="
         }
       },
       "is_incremental": false,
@@ -11779,7 +11791,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.PaymentOrders.html",
-          "hash": "wrre6Cpi5wLAIl5lc5HZFQ=="
+          "hash": "FGUo/Zxwfg7m7AIjEZusZw=="
         }
       },
       "is_incremental": false,
@@ -11863,7 +11875,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.PaymentTransactions.html",
-          "hash": "sdLXae71DKb5sA2Ilhsiiw=="
+          "hash": "LsAVvOKaZVup/AbEylcsag=="
         }
       },
       "is_incremental": false,
@@ -12595,7 +12607,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.Documents.html",
-          "hash": "5edxXi1z14naiyQokGMQ+w=="
+          "hash": "pvRsSj9FnOOY7bsv4nexHQ=="
         }
       },
       "is_incremental": false,
@@ -12955,7 +12967,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.Products.Products.html",
-          "hash": "/yYfRhXDtAmuLHkc5DsVig=="
+          "hash": "w2PgazghaZQjSko+kAPYmQ=="
         }
       },
       "is_incremental": false,
@@ -13495,7 +13507,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.StoreTransactionLines.html",
-          "hash": "CH4Pt5jcBPIfEg7Yl50FBA=="
+          "hash": "BFTvJqIr+MW77IyphMfN/w=="
         }
       },
       "is_incremental": false,
@@ -13507,7 +13519,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.StoreTransactions.html",
-          "hash": "Tt+QBoESt8pPBlKBX5MQ+A=="
+          "hash": "HkSCn/CP1WvsDPW8Y1ysSA=="
         }
       },
       "is_incremental": false,
@@ -13699,7 +13711,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseInvoiceLines.html",
-          "hash": "0V3i0hfbWbhQfa55OF2dvQ=="
+          "hash": "o1JTiABd4x4xAU50x0hnvQ=="
         }
       },
       "is_incremental": false,
@@ -14515,7 +14527,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Production.ShopFloor.WorkOrderItems.html",
-          "hash": "0uZ2vkzq1WEghNtoG8w4PQ=="
+          "hash": "kdXU1NoujKSv5XOLatVZLA=="
         }
       },
       "is_incremental": false,
