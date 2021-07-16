@@ -17,7 +17,7 @@ Each depreciation plan document can create depreciation plans for numerous asset
 | - | - | --- |
 |[Depreciation_Plan_Id](#depreciation_plan_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Row_Version](#row_version)|`timestamp` ||
 
@@ -93,7 +93,7 @@ Each depreciation plan document can create depreciation plans for numerous asset
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

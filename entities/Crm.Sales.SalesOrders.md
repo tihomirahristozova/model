@@ -56,7 +56,6 @@ Aggregate Tree
 | [Id](Crm.Sales.SalesOrders.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
-| [IsReleased](Crm.Sales.SalesOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Crm.Sales.SalesOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsValidField](Crm.Sales.SalesOrders.md#isvalidfield) | boolean | True when the order is valid (e.g. released and not void). Used for internal processing. `Required` `Default(false)` `ReadOnly` 
 | [Notes](Crm.Sales.SalesOrders.md#notes) | string (254) __nullable__ | Notes for this SalesOrder. 
@@ -378,15 +377,6 @@ _Supports Order By_: **False**
 
 _Front-End Recalc Expressions:_  
 `obj.Lines.Select( c => SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
-### IsReleased
-
-True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-
 ### IsSingleExecution
 
 Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`

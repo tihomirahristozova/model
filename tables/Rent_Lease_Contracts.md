@@ -19,7 +19,7 @@ Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency of the lease contract amounts|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[End_Date](#end_date)|`date` |Ending date (inclusive) of the lease contract|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Lease_Contract_Id](#lease_contract_id)|`uniqueidentifier` `PK`||
 |[Lessee_Customer_Id](#lessee_customer_id)|`uniqueidentifier` |The customer record of the lessee|
@@ -167,7 +167,7 @@ Ending date (inclusive) of the lease contract
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

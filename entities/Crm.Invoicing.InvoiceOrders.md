@@ -49,7 +49,6 @@ Aggregate Tree
 | [DocumentVersion](Crm.Invoicing.InvoiceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Crm.Invoicing.InvoiceOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Crm.Invoicing.InvoiceOrders.md#id) | guid |  
-| [IsReleased](Crm.Invoicing.InvoiceOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Crm.Invoicing.InvoiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Crm.Invoicing.InvoiceOrders.md#notes) | string (254) __nullable__ | Notes for this InvoiceOrder. 
 | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -246,15 +245,6 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
-
-### IsReleased
-
-True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
 
 ### IsSingleExecution
 

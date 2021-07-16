@@ -52,7 +52,6 @@ Aggregate Tree
 | [DurationHour](Production.ShopFloor.WorkOrders.md#durationhour) | decimal (10, 0) | The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders). `Required` `Default(0)` 
 | [EntityName](Production.ShopFloor.WorkOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Production.ShopFloor.WorkOrders.md#id) | guid |  
-| [IsReleased](Production.ShopFloor.WorkOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Production.ShopFloor.WorkOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Production.ShopFloor.WorkOrders.md#notes) | string (max) __nullable__ | User notes for the production order. 
 | [ParentDocument<br />RelationshipType](Production.ShopFloor.WorkOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Production.ShopFloor.WorkOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -246,15 +245,6 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
-
-### IsReleased
-
-True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
 
 ### IsSingleExecution
 

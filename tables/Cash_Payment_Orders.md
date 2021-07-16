@@ -26,7 +26,7 @@ Each payment order contains a receivable or payable amount. Entity: Cash_Payment
 |[Invoice_Amount](#invoice_amount)|`decimal(18, 2)` |The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)|
 |[Invoice_Amount_Currency_Id](#invoice_amount_currency_id)|`uniqueidentifier` |The currency of Invoice Amount|
 |[Is_Amount_With_VAT](#is_amount_with_vat)|`bit` |Is_Amount_With_VAT=1 if the requested amount includes VAT|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Location_Party_Id](#location_party_id)|`uniqueidentifier` |Location or sub-party of the Party_Id in the order|
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -449,7 +449,7 @@ Is_Amount_With_VAT=1 if the requested amount includes VAT
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

@@ -19,7 +19,7 @@ Depreciation documents contain actual depreciation values for one or more assets
 |[Depreciation_Range](#depreciation_range)|`nvarchar(1)` Allowed: `A`, `S`|Determines whether all assets in the system will be depreciated or only the assets specified in the current document will be depreciated. A = 'All assets', S = 'Specified assets'|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[End_Date](#end_date)|`datetime` |End date of the depreciation period accounted with this document|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Start_Date](#start_date)|`datetime` |Start date of the depreciation period accounted with this document|
@@ -163,7 +163,7 @@ End date of the depreciation period accounted with this document
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

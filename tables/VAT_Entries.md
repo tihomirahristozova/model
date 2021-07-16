@@ -22,7 +22,7 @@ Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Entry_Id](#entry_id)|`uniqueidentifier` `PK`|Unique identification number of this VAT entry.|
 |[Entry_Type](#entry_type)|`nvarchar(1)` Allowed: `P`, `S`|Type of the VAT entry. S=Sales, P=Purchases.|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Party_Id](#party_id)|`uniqueidentifier` |The corresponding party that is involved in the operation that caused this entry.|
 |[Referenced_Document_No](#referenced_document_no)|`nvarchar(20)` |Number of the document that represents the operation that caused this entry.|
@@ -277,7 +277,7 @@ Type of the VAT entry. S=Sales, P=Purchases.
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

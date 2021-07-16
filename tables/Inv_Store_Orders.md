@@ -19,7 +19,7 @@ Orders for store transactions. After an order is executed, store transaction is 
 |[Document_Id](#document_id)|`uniqueidentifier` |The Id of the store order document entry|
 |[Driver_Name](#driver_name)|`nvarchar(64)` |The name of the driver, who will deliver the stocks.|
 |[Due_Date](#due_date)|`datetime` |The final date, when the store transaction should occur.|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Issued_By_Party_Id](#issued_by_party_id)|`uniqueidentifier` |The party, which issued the goods.|
 |[Movement_Type](#movement_type)|`nvarchar(1)` Allowed: `I`, `R`|Store order movement type. R=RECEIPT, I=ISSUE|
@@ -179,7 +179,7 @@ The final date, when the store transaction should occur.
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

@@ -21,7 +21,7 @@ Contains the headers of the Intrastat declarations, issued by the enterprise com
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Goods_Flow_Direction](#goods_flow_direction)|`nvarchar(1)` Allowed: `A`, `D`|The flow direction of the goods. A=Arrival, D=Dispatch|
 |[Intrastat_Declaration_Id](#intrastat_declaration_id)|`uniqueidentifier` `PK`|Intrastat declaration id|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Postal_Code](#postal_code)|`nvarchar(64)` |This field contains the postal code part of the submitter’s address|
 |[Reference_Month](#reference_month)|`tinyint` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`|Month, for which the declaration is prepared|
@@ -251,7 +251,7 @@ Intrastat declaration id
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

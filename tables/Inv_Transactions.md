@@ -18,7 +18,7 @@ Executed store-receipts(in) and store-issues(out). Store-issues are recorded wit
 |[Cost_Source](#cost_source)|`nvarchar(1)` Allowed: `S`, `D`, Readonly|Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document|
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency in which the document amounts are recorded.|
 |[Document_Id](#document_id)|`uniqueidentifier` |The main document data of the transaction|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Scrap](#is_scrap)|`bit` |0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Issuing_Person_Id](#issuing_person_id)|`uniqueidentifier` |The person, responsible for the issuing of the document.|
@@ -141,7 +141,7 @@ The main document data of the transaction
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

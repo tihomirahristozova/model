@@ -18,7 +18,7 @@ Contains purchase order headers. The purchase orders are documents, sent to a su
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency of the unit prices and amounts in the document.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Invoice_Document_No](#invoice_document_no)|`nvarchar(20)` |Contains the purchase invoice number when it is known in advance, null otherwise.|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` ||
@@ -144,7 +144,7 @@ Contains the purchase invoice number when it is known in advance, null otherwise
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

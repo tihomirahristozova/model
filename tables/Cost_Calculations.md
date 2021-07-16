@@ -19,7 +19,7 @@ Represents one cost calculation and allocation. Entity: Cost_Calculations
 |[Cost_Template_Id](#cost_template_id)|`uniqueidentifier` |The cost template used to drive the cost calculation and allocation.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[From_Date](#from_date)|`datetime` |Starting date for which to extract source data from other modules for this calculation|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Thru_Date](#thru_date)|`datetime` |Ending date (inclusive) for which to extract source data from other modules for this calculation|
@@ -169,7 +169,7 @@ Starting date for which to extract source data from other modules for this calcu
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

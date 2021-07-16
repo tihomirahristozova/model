@@ -16,7 +16,7 @@ Contains all transactions of Record of Handover / Handing-Over Record . Entity: 
 | Name | Type | Description |
 | - | - | --- |
 |[Document_Id](#document_id)|`uniqueidentifier` |Document Id|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Lease_Contract_Id](#lease_contract_id)|`uniqueidentifier` |Lease Contract|
 |[Lessee_Customer_Id](#lessee_customer_id)|`uniqueidentifier` |Lessee Customer|
@@ -67,7 +67,7 @@ Document Id
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

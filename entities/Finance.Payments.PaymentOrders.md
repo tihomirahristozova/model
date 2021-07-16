@@ -53,7 +53,6 @@ Aggregate Tree
 | [InstallmentNumber](Finance.Payments.PaymentOrders.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. `Filter(eq)` 
 | [InvoiceAmount](Finance.Payments.PaymentOrders.md#invoiceamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency` 
 | [IsAmountWithVAT](Finance.Payments.PaymentOrders.md#isamountwithvat) | boolean | Is_Amount_With_VAT=true if the requested amount includes VAT. `Required` `Default(true)` `Filter(eq)` 
-| [IsReleased](Finance.Payments.PaymentOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Finance.Payments.PaymentOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Finance.Payments.PaymentOrders.md#notes) | string (254) __nullable__ | Notes for this PaymentOrder. 
 | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -314,15 +313,6 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
-
-### IsReleased
-
-True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
 
 ### IsSingleExecution
 

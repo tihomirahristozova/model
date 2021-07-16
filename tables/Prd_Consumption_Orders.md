@@ -18,7 +18,7 @@ Headers of material consuption orders of the work orders. Entity: Prd_Consumptio
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` ||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Id](#id)|`uniqueidentifier` `PK`||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Status](#status)|`nvarchar(1)` |N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed|
@@ -131,7 +131,7 @@ Headers of material consuption orders of the work orders. Entity: Prd_Consumptio
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

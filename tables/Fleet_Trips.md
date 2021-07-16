@@ -17,7 +17,7 @@ Represents actual trip made by the vehicles. Entity: Fleet_Trips
 | - | - | --- |
 |[Crew_Id](#crew_id)|`uniqueidentifier` |The crew, which operated the vehicle set|
 |[Document_Id](#document_id)|`uniqueidentifier` |Trip document data|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Primary_Vehicle_Ending_Mileage](#primary_vehicle_ending_mileage)|`decimal(9, 0)` |Mileage of the primary vehicle in the vehicle set at the ending of the trip. NULL means unknown|
 |[Primary_Vehicle_Starting_Mileage](#primary_vehicle_starting_mileage)|`decimal(9, 0)` |Mileage of the primary vehicle in the vehicle set at the begining of the trip. NULL means unknown|
@@ -104,7 +104,7 @@ Trip document data
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

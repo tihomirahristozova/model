@@ -51,7 +51,6 @@ Aggregate Tree
 | [Id](Logistics.Procurement.PurchaseInvoices.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
-| [IsReleased](Logistics.Procurement.PurchaseInvoices.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Logistics.Procurement.PurchaseInvoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PaymentDueDate](Logistics.Procurement.PurchaseInvoices.md#paymentduedate) | datetime __nullable__ | Due date for paying the invoice. null means to use the default . `Filter(ge;le)` 
@@ -334,15 +333,6 @@ _Supports Order By_: **False**
 
 _Front-End Recalc Expressions:_  
 `obj.Lines.Select( c => PurchaseInvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
-### IsReleased
-
-True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-
 ### IsSingleExecution
 
 Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`

@@ -47,7 +47,6 @@ Aggregate Tree
 | [EntityName](Logistics.Procurement.ReceivingOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Logistics.Procurement.ReceivingOrders.md#id) | guid |  
 | [InvoiceDocumentNo](Logistics.Procurement.ReceivingOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise. `Filter(eq)` 
-| [IsReleased](Logistics.Procurement.ReceivingOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Logistics.Procurement.ReceivingOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Logistics.Procurement.ReceivingOrders.md#notes) | string (254) __nullable__ | Notes for this ReceivingOrder. 
 | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -228,15 +227,6 @@ _Type_: **string (20) __nullable__**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
-
-### IsReleased
-
-True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
 
 ### IsSingleExecution
 

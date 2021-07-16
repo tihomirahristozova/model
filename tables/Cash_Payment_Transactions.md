@@ -18,7 +18,7 @@ Represents actual payments, which increase or decrease the balance of a payment 
 |[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
 |[Document_Id](#document_id)|`uniqueidentifier` |The document data of the payment transaction|
 |[Fiscal_Printer_Pos_Device_Id](#fiscal_printer_pos_device_id)|`uniqueidentifier` |For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Original_Payment_Transaction_Id](#original_payment_transaction_id)|`uniqueidentifier` |Original Payment Transaction|
@@ -154,7 +154,7 @@ For POS Sales Order payments. Specifies the POS Device from fiscal printer type 
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

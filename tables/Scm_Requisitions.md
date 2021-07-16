@@ -16,7 +16,7 @@ Contains the internal requisitions for products. Requisitions are consolidated b
 | Name | Type | Description |
 | - | - | --- |
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Requested_By_Party_Id](#requested_by_party_id)|`uniqueidentifier` |The party, which is requesting the purchase order.|
@@ -64,7 +64,7 @@ Contains the internal requisitions for products. Requisitions are consolidated b
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

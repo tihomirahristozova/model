@@ -20,7 +20,7 @@ Generic activity. Provides task management functionality. Activity can be one of
 |[Deadline_Time](#deadline_time)|`datetime` |The deadline for the task. NULL if there is no deadline|
 |[Document_Id](#document_id)|`uniqueidentifier` |The task's document (for entry date, task type, status)|
 |[End_Time](#end_time)|`datetime` |Currently planned ending time of the task|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Owner_Party_Id](#owner_party_id)|`uniqueidentifier` |The party that owns the task. Initially this is the party that has created the task|
@@ -222,7 +222,7 @@ Currently planned ending time of the task
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

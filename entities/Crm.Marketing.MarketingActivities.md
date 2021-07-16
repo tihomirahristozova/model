@@ -52,7 +52,6 @@ Aggregate Tree
 | [EntityName](Crm.Marketing.MarketingActivities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ForecastedCost](Crm.Marketing.MarketingActivities.md#forecastedcost) | [Amount (18, 0)](../data-types.md#amount) | Forecasted cost of the activity in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [Id](Crm.Marketing.MarketingActivities.md#id) | guid |  
-| [IsReleased](Crm.Marketing.MarketingActivities.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [IsSingleExecution](Crm.Marketing.MarketingActivities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [Notes](Crm.Marketing.MarketingActivities.md#notes) | string (254) __nullable__ | Notes for this Activity. (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [ParentDocument<br />RelationshipType](Crm.Marketing.MarketingActivities.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Marketing.MarketingActivities.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -263,15 +262,6 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
-
-### IsReleased
-
-True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md))
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
 
 ### IsSingleExecution
 

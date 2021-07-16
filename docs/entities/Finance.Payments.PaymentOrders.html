@@ -219,11 +219,6 @@ Default Search Member:<br>
 <td>Is_Amount_With_VAT=true if the requested amount includes VAT. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
-<td><a href="Finance.Payments.PaymentOrders.html#isreleased">IsReleased</a></td>
-<td>boolean</td>
-<td>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
 <td><a href="Finance.Payments.PaymentOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
@@ -686,12 +681,6 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
-<h3 id="isreleased">IsReleased</h3>
-<p>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
 <p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -1217,10 +1206,10 @@ if set to true the current document is included.<br>
 </ul>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <ul>
-<li><a href="../business-rules/R30755-1.html">R30755-1 PaymentOrder - Set Ref Document Type</a></li>
-<li><a href="../business-rules/R30755-10.html">R30755-10 PaymentOrder - Set Payment Account</a></li>
-<li><a href="../business-rules/R30755-11.html">R30755-11 PaymentOrder - Convert Total Amount</a></li>
 <li><a href="../business-rules/R30755-12.html">R30755-12 PaymentOrder - Convert Invoice Amount</a></li>
+<li><a href="../business-rules/R30755-13.html">R30755-13 PaymentOrder - Set Ref Invoice Apply Date</a></li>
+<li><a href="../business-rules/R30755-2.html">R30755-2 PaymentOrder - Set Ref Document No</a></li>
+<li><a href="../business-rules/R30755-3.html">R30755-3 PaymentOrder - Set Ref Document Date</a></li>
 <li><a href="../business-rules/R30755-4.html">R30755-4 PaymentOrder - Set Ref Invoice Document Type</a></li>
 <li><a href="../business-rules/R30755-5.html">R30755-5 PaymentOrder - Set Ref Invoice Document No</a></li>
 <li><a href="../business-rules/R30755-6.html">R30755-6 PaymentOrder - Set Ref Invoice Document Date</a></li>

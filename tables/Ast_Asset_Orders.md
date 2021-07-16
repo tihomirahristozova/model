@@ -17,7 +17,7 @@ Asset purchase or sales order. Entity: Ast_Asset_Orders
 | - | - | --- |
 |[Asset_Order_Id](#asset_order_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Operation](#operation)|`nvarchar(3)` Allowed: `PUR`, `SLS`|Operation performed with this order: PUR = Purchase, SLS = Sale|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -94,7 +94,7 @@ Asset purchase or sales order. Entity: Ast_Asset_Orders
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

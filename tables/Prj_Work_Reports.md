@@ -16,7 +16,7 @@ Contains project work report documents. Each work report contains consumed mater
 | Name | Type | Description |
 | - | - | --- |
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Project_Id](#project_id)|`uniqueidentifier` |The project for which the work report is recorded.|
 |[Project_Task_Id](#project_task_id)|`uniqueidentifier` |The project task for which the work report is recorded. NULL means that the report contains entries for many project tasks.|
@@ -62,7 +62,7 @@ Contains project work report documents. Each work report contains consumed mater
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

@@ -55,7 +55,6 @@ Aggregate Tree
 | [EndTime](Applications.Service.ServiceActivities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [EntityName](Applications.Service.ServiceActivities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Applications.Service.ServiceActivities.md#id) | guid |  
-| [IsReleased](Applications.Service.ServiceActivities.md#isreleased) | boolean | True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [IsSingleExecution](Applications.Service.ServiceActivities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [Notes](Applications.Service.ServiceActivities.md#notes) | string (254) __nullable__ | Notes for this Activity. (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [ParentDocument<br />RelationshipType](Applications.Service.ServiceActivities.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Applications.Service.ServiceActivities.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -265,15 +264,6 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
-
-### IsReleased
-
-True if the document is not void and its state is released or greater. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md))
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
 
 ### IsSingleExecution
 

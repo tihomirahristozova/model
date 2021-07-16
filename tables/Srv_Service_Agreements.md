@@ -18,7 +18,7 @@ Service agreements represent SLAs between the enterprise company and its clients
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The client of the service agreement.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[End_Date_Time](#end_date_time)|`datetime` |End date and time of the validity of the agreement.|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Service_Agreement_Id](#service_agreement_id)|`uniqueidentifier` `PK`||
@@ -137,7 +137,7 @@ End date and time of the validity of the agreement.
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

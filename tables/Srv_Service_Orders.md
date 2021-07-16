@@ -17,7 +17,7 @@ Service Orders are issued when a new servicing is required. Entity: Srv_Service_
 | - | - | --- |
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The client, requesting servicing.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Service_Agreement_Id](#service_agreement_id)|`uniqueidentifier` |When not NULL denotes that the order will be bound to the terms in the specified agreement.|
@@ -101,7 +101,7 @@ The client, requesting servicing.
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

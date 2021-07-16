@@ -186,11 +186,6 @@ Default Search Member:<br>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.StoreTransactions.html#isreleased">IsReleased</a></td>
-<td>boolean</td>
-<td>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#isscrap">IsScrap</a></td>
 <td>boolean</td>
 <td>False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
@@ -554,12 +549,6 @@ Allowed values for the <code>CostSource</code>(Logistics.Inventory.StoreTransact
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="isreleased">IsReleased</h3>
-<p>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isscrap">IsScrap</h3>
 <p>False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -1020,12 +1009,12 @@ if set to true the current document is included.<br>
 <ul>
 <li><a href="../business-rules/R18067.html">R18067 StoreTransaction - Store Enterprise Company</a></li>
 <li><a href="../business-rules/R26709.html">R26709 StoreTransaction - Line Product Use Lots</a></li>
-<li><a href="../business-rules/R27305.html">R27305 StoreTransaction - Parent Store Order Movement Type</a></li>
-<li><a href="../business-rules/R27322.html">R27322 StoreTransaction - Parent Store Order Line</a></li>
+<li><a href="../business-rules/R26881.html">R26881 StoreTransaction - Line Fixed Measurement Ratios</a></li>
+<li><a href="../business-rules/R27243.html">R27243  StoreTransaction - Line Quantity Base</a></li>
 <li><a href="../business-rules/R28301.html">R28301 StoreTransaction - Line Lot Keep Product</a></li>
 <li><a href="../business-rules/R28660.html">R28660 StoreTransaction - Product Is Stocked</a></li>
-<li><a href="../business-rules/R29157.html">R29157 StoreTransaction - Set Quantity Base 2</a></li>
 <li><a href="../business-rules/R29159.html">R29159 StoreTransaction -  Is Quantity Base 2 Null</a></li>
+<li><a href="../business-rules/R29161.html">R29161 StoreTransaction - Line Quantity Base 2</a></li>
 <li><a href="../business-rules/R29163.html">R29163 StoreTransaction - Line Quantity Base 2 Has The Same Sign</a></li>
 <li><a href="../business-rules/R31412.html">R31412 StoreTransaction - Check Line Store Bin</a></li>
 <li>...</li>

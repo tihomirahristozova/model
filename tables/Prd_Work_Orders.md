@@ -22,7 +22,7 @@ Scheduled and released production orders. Each order can contain the production 
 |[Due_Date](#due_date)|`datetime` |The final due date, when the production should be ready.|
 |[Duration_Hour](#duration_hour)|`decimal(10, 0)` |The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)|
 |[Id](#id)|`uniqueidentifier` `PK`||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(max)` |User notes for the production order|
 |[Priority](#priority)|`smallint` Allowed: `1`, `2`, `3`, `4`, `5`|Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest|
@@ -269,7 +269,7 @@ The duration of all operations in the protocol either planned (for planned order
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

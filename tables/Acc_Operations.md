@@ -16,7 +16,7 @@ Generic accounting operations. Since templates can be bound to such operations, 
 | Name | Type | Description |
 | - | - | --- |
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Operation_Id](#operation_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -60,7 +60,7 @@ Generic accounting operations. Since templates can be bound to such operations, 
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

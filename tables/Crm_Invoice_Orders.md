@@ -25,7 +25,7 @@ Invoice Orders can be created by different modules and order the creation of Inv
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency in which the document is issued. All amounts are in this currency|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Invoice_Order_Id](#invoice_order_id)|`uniqueidentifier` `PK`||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` |When not NULL, specifies the default payment account for the payment order|
@@ -384,7 +384,7 @@ The currency in which the document is issued. All amounts are in this currency
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

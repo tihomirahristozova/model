@@ -21,7 +21,7 @@ Potential deals (Opportunities). Entity: Crm_Deals
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Expected_Revenue](#expected_revenue)|`decimal(18, 2)` |Expected total revenue. For automatically renewed contracts it's the amount until the first renewal.|
 |[Expected_Revenue_Currency_Id](#expected_revenue_currency_id)|`uniqueidentifier` |The currency of Expected Revenue|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Leading_Sales_Person_Id](#leading_sales_person_id)|`uniqueidentifier` |The sales person, responsible for the opportunity|
 |[Party_Id](#party_id)|`uniqueidentifier` |The prospect customers party. The party might not yet have a customer record.|
@@ -250,7 +250,7 @@ The currency of Expected Revenue
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

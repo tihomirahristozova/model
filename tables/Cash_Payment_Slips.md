@@ -17,7 +17,7 @@ Represents mass payment document (payment slip). Entity: Cash_Payment_Slips
 | - | - | --- |
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency of the amounts in this document|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` |The account towards which the payments was effected|
 |[Payment_Slip_Id](#payment_slip_id)|`uniqueidentifier` `PK`||
@@ -101,7 +101,7 @@ The currency of the amounts in this document
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

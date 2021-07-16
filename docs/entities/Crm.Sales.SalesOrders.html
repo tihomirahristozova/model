@@ -222,11 +222,6 @@ Default Search Member:<br>
 <td>Transport mode; used for Intrastat reporting.</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesOrders.html#isreleased">IsReleased</a></td>
-<td>boolean</td>
-<td>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
 <td><a href="Crm.Sales.SalesOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
@@ -908,12 +903,6 @@ Generic enum type for TransportMode properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Lines.Select( c =&gt; SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
-<h3 id="isreleased">IsReleased</h3>
-<p>True if the document is not void and its state is released or greater. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
 <p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -1461,15 +1450,15 @@ if set to true the current document is included.<br>
 </ul>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
-<li><a href="../business-rules/R28290.html">R28290 SalesOrder - Null Historic Unit Cost When Product Is Not Stocked</a></li>
-<li><a href="../business-rules/R28293.html">R28293 SalesOrder - Only Return For Sales Order Line Or Historical Unit Cost Has Value</a></li>
-<li><a href="../business-rules/R28299.html">R28299 SalesOrder - Check If Payment Due Date Meets Deferred Payment Options</a></li>
-<li><a href="../business-rules/R28339.html">R28339 SalesOrder - Check Contact Mechanism Party</a></li>
-<li><a href="../business-rules/R28358.html">R28358 SalesOrder - Sales Return Allowed Directions</a></li>
-<li><a href="../business-rules/R28393.html">R28393 SalesOrder - Check If Sold Promotional Package Appear In The Lines</a></li>
-<li><a href="../business-rules/R28439.html">R28439 SalesOrder - Check If Payment Type Meets Deferred Payment Options</a></li>
-<li><a href="../business-rules/R28440.html">R28440 SalesOrder - Check If Payment Plan Meets Deferred Payment Options</a></li>
-<li><a href="../business-rules/R29929.html">R29929 SalesOrder - Valid Fiscal Sales Number</a></li>
+<li><a href="../business-rules/R27179.html">R27179 SalesOrder - Check Customer Enterprise Company</a></li>
+<li><a href="../business-rules/R28322.html">R28322 SalesOrder - Promotional Package Enterprise Company Location</a></li>
+<li><a href="../business-rules/R28330.html">R28330 SalesOrder - Bonus Program Enterprise Company</a></li>
+<li><a href="../business-rules/R28331.html">R28331 SalesOrder - Bonus Program Enterprise Company Location</a></li>
+<li><a href="../business-rules/R28659.html">R28659 SalesOrder - Generate Deal</a></li>
+<li><a href="../business-rules/R28700.html">R28700 SalesOrder - Promotional Package Properly Added To Sales Order Promotional Package Table</a></li>
+<li><a href="../business-rules/R28919.html">R28919 SalesOrder - Promotional Package Products And Quantities Are Up To Date</a></li>
+<li><a href="../business-rules/R30077.html">R30077 SalesOrder - POS Return For Sales Order Line Required</a></li>
+<li><a href="../business-rules/R30596.html">R30596 SalesOrder - Set Pos Location</a></li>
 <li><a href="../business-rules/R30704.html">R30704 SalesOrder - Completed State Cannot Be Revoked</a></li>
 <li>...</li>
 </ul>

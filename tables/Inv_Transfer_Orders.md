@@ -19,7 +19,7 @@ Orders for stock transfers between stores. Entity: Inv_Transfer_Orders
 |[Default_Due_Date_Out](#default_due_date_out)|`datetime` |When the transfer is scheduled to issue the goods from the source warehouse|
 |[Document_Id](#document_id)|`uniqueidentifier` |The unique stock transfer order id, as per documents table|
 |[From_Store_Id](#from_store_id)|`uniqueidentifier` |Specifies the store, from which the goods will be issued.|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -178,7 +178,7 @@ Specifies the store, from which the goods will be issued.
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

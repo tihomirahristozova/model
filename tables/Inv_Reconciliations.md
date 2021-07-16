@@ -20,7 +20,7 @@ Store reconciliations (physical counting). Usefull for real-world reconciliation
 |[Default_Store_Id](#default_store_id)|`uniqueidentifier` |Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.|
 |[Default_Valuation_Group_Id](#default_valuation_group_id)|`uniqueidentifier` ||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Reconciliation_Id](#reconciliation_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -209,7 +209,7 @@ Default (but not mandatory) store for the lines. NULL means that the store shoul
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

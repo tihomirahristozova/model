@@ -19,7 +19,7 @@ Cost corrections provide a way to correct the cost of stock transactions after t
 |[Cost_Correction_Id](#cost_correction_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[From_Date](#from_date)|`datetime` |The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is NULL.|
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[IsValid](#isvalid)|`bit` |Obsolete. Not used. (Should be set to 1 if the document is completed and not void. Required for the indexed view Inv_Cost_Corrections_Summary, because Gen_Documents_Table cannot be included in the view)|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -165,7 +165,7 @@ The date from which to start looking for transactions, needing cost correction. 
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |

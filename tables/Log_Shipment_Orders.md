@@ -17,7 +17,7 @@ Represnts order for shipment of sales orders to customers. Entity: Log_Shipment_
 | - | - | --- |
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The customer, to which we are shipping.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater|
+|[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Issued_By_Person_Id](#issued_by_person_id)|`uniqueidentifier` |The person who signed for the shipment|
 |[Received_By_Person_Id](#received_by_person_id)|`uniqueidentifier` |The person who should receive the goods for/from the shipment |
@@ -103,7 +103,7 @@ The customer, to which we are shipping.
 ### Is_Released
 
 
-True if the document is not void and its state is released or greater
+True if the document is not void and its state is released or greater. Deprecated
 
 | Property | Value |
 | - | - |
