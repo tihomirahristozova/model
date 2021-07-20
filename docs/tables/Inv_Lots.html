@@ -83,28 +83,97 @@
 <p>Entity: <a href="../entities/Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a></p>
 <p>Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots</p>
 <h2 id="summary">Summary</h2>
-<p>| Name | Type | Description |
-| - | - | --- |
-|<a href="#blocked_for_document_id">Blocked_For_Document_Id</a>|<code>uniqueidentifier</code> |If non-null, contains the document for which the lot is blocked|
-|<a href="#blocked_for_party_id">Blocked_For_Party_Id</a>|<code>uniqueidentifier</code> |Non-NULL when the warehouse lot is blocked specifically for some party|
-|<a href="#certificate_document_id">Certificate_Document_Id</a>|<code>uniqueidentifier</code> ||
-|<a href="#description">Description</a>|<code>nvarchar(254)</code> <code>ML</code>||
-|<a href="#excise_measuring_transaction_id">Excise_Measuring_Transaction_Id</a>|<code>uniqueidentifier</code> |When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.|
-|<a href="#expiry_date">Expiry_Date</a>|<code>datetime</code> ||
-|<a href="#license_no">License_No</a>|<code>nvarchar(50)</code> |The license number for this lot. Null when license number is N/A or unknown.|
-|<a href="#lot_id">Lot_Id</a>|<code>uniqueidentifier</code> <code>PK</code>||
-|<a href="#lot_number">Lot_Number</a>|<code>nvarchar(30)</code> ||
-|<a href="#product_id">Product_Id</a>|<code>uniqueidentifier</code> |The product to which the lot is bound|
-|<a href="#production_batch_id">Production_Batch_Id</a>|<code>uniqueidentifier</code> |Non-NULL if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods|
-|<a href="#purchase_lot_number">Purchase_Lot_Number</a>|<code>nvarchar(30)</code> |Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.|
-|<a href="#receipt_date">Receipt_Date</a>|<code>date</code> Readonly|The date of the first receipt of products in this lot.|
-|<a href="#receipt_store_transaction_id">Receipt_Store_Transaction_Id</a>|<code>uniqueidentifier</code> |The store receipt transaction, which created the lot. NULL if the lot is manually created|
-|<a href="#row_version">Row_Version</a>|<code>timestamp</code> ||
-|<a href="#status">Status</a>|<code>int</code> Allowed: <code>0</code>, <code>-1</code>, <code>-2</code>, <code>-3</code>|Status of the warehouse lot. Minus statuses describe blocked conditions.
--3 blocked for document (sales or service order)
--2 blocked for party
--1 blocked for inspection
-0 free to use|</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#blocked_for_document_id">Blocked_For_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If non-null, contains the document for which the lot is blocked</td>
+</tr>
+<tr>
+<td><a href="#blocked_for_party_id">Blocked_For_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Non-NULL when the warehouse lot is blocked specifically for some party</td>
+</tr>
+<tr>
+<td><a href="#certificate_document_id">Certificate_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#excise_measuring_transaction_id">Excise_Measuring_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.</td>
+</tr>
+<tr>
+<td><a href="#expiry_date">Expiry_Date</a></td>
+<td><code>datetime</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#license_no">License_No</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>The license number for this lot. Null when license number is N/A or unknown.</td>
+</tr>
+<tr>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#lot_number">Lot_Number</a></td>
+<td><code>nvarchar(30)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product to which the lot is bound</td>
+</tr>
+<tr>
+<td><a href="#production_batch_id">Production_Batch_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Non-NULL if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods</td>
+</tr>
+<tr>
+<td><a href="#purchase_lot_number">Purchase_Lot_Number</a></td>
+<td><code>nvarchar(30)</code></td>
+<td>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.</td>
+</tr>
+<tr>
+<td><a href="#receipt_date">Receipt_Date</a></td>
+<td><code>date</code> Readonly</td>
+<td>The date of the first receipt of products in this lot.</td>
+</tr>
+<tr>
+<td><a href="#receipt_store_transaction_id">Receipt_Store_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store receipt transaction, which created the lot. NULL if the lot is manually created</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#status">Status</a></td>
+<td><code>int</code> Allowed: <code>0</code>, <code>-1</code>, <code>-2</code>, <code>-3</code></td>
+<td>Status of the warehouse lot. Minus statuses describe blocked conditions.<br>-3 blocked for document (sales or service order)<br>-2 blocked for party<br>-1 blocked for inspection<br>0 free to use</td>
+</tr>
+</tbody>
+</table>
 <h2 id="columns">Columns</h2>
 <h3 id="blocked_for_document_id">Blocked_For_Document_Id</h3>
 <p>If non-null, contains the document for which the lot is blocked</p>

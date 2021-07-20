@@ -26,11 +26,7 @@ Warehouse lots. They contain one row for each specific product, status, producti
 |[Receipt_Date](#receipt_date)|`date` Readonly|The date of the first receipt of products in this lot.|
 |[Receipt_Store_Transaction_Id](#receipt_store_transaction_id)|`uniqueidentifier` |The store receipt transaction, which created the lot. NULL if the lot is manually created|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Status](#status)|`int` Allowed: `0`, `-1`, `-2`, `-3`|Status of the warehouse lot. Minus statuses describe blocked conditions.
--3 blocked for document (sales or service order)
--2 blocked for party
--1 blocked for inspection
-0 free to use|
+|[Status](#status)|`int` Allowed: `0`, `-1`, `-2`, `-3`|Status of the warehouse lot. Minus statuses describe blocked conditions.<br>-3 blocked for document (sales or service order)<br>-2 blocked for party<br>-1 blocked for inspection<br>0 free to use|
 
 ## Columns
 
